@@ -9,14 +9,16 @@
 //   - 클라이언트 only · 서버 전송 0건.
 //   - 갱신: 15초 + 30m 임계값.
 //
-// v7 §8.7 paper map 타일:
-//   - MapLibre + OSM raster (무료, 키 없음).
-//   - paper tone: 배경 paper-d · 도로 bone · 강·바다 paper 보다 진한 회색 · 라벨 ink Fraunces italic · 액센트 0.
-//   - Mapbox/Maptiler X (유료).
-//
-// ⚠ TODO (PR3): 지금 paper tone 은 OSM raster 위 CSS filter 로 임시 근사.
-//    PR3 안에 Maputnik 또는 OSM Bright fork 의 vector style 로 영구 교체.
-//    CSS filter 영구 X. (검수 항목 B)
+// v7 §8.7 paper map 타일 (정정 — v1/v2 분리, 사용자 결정 후):
+//   v1 (현재): OSM raster + CSS filter — 운영비 0 우선. 솔로 파운더 시간 우선.
+//     - MapLibre + OSM raster (무료, 키 없음)
+//     - paper tone: 배경 paper-d 근사 (CSS filter)
+//     - Mapbox/Maptiler X (유료, §13 위배)
+//     - trade-off 인정: 도로·라벨 §17.5 정밀 통과 X (paper × road 1.05~1.16:1)
+//   v2 (Y2+, 사용자 5,000명+ 후): vector style 도입 검토.
+//     - 옵션: 자체 pmtiles 호스팅 R2 + Maputnik 또는 OSM Bright fork
+//     - 운영비 추정: R2 도시 단위 ($0~$0.5/월)
+//     - PR3 자체검수 B 항목 → v2 백로그 이동 (사용자 결정).
 //
 // Lazy load: MapLibre CDN 은 사용자가 MAP 토글 클릭하는 시점에만 로드.
 // (검수 항목 A — atlas 진입 자체는 부담 X)
