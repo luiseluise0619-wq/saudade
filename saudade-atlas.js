@@ -374,6 +374,29 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
     letter-spacing: var(--tr-mono-data);
     color: var(--ink);
 }
+.sdd-atlas-d-foot {
+    margin-top: clamp(40px, 6vw, 80px);
+    padding-top: clamp(16px, 2vw, 24px);
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-atlas-d-disclaimer {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    max-width: 60ch;
+    margin: 0;
+}
+.sdd-atlas-d-disclaimer strong {
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: var(--tr-mono-mast);
+    display: block;
+    margin-bottom: 6px;
+}
 .sdd-atlas-d-toggle {
     background: transparent;
     border: 0.5px solid var(--ink);
@@ -608,6 +631,21 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         const lines = Array.isArray(cafe.two_lines) ? cafe.two_lines : [];
         const visited = getVisited()[cafe.id];
 
+        // v7 §8.10 면책 노출 필요 — list footer 와 동일 카피
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const noteTitle = T({
+            en: 'A note on places.', ko: '편집부 메모.',
+            ja: '場所についての覚書。', pt: 'Uma nota sobre os lugares.',
+            es: 'Una nota sobre los lugares.'
+        });
+        const noteBody = T({
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+        });
+
         detail.innerHTML = `
             <header class="sdd-atlas-d-head">
                 <button class="sdd-atlas-d-back" data-d-back>← BACK TO ATLAS</button>
@@ -635,6 +673,13 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     ${visited ? 'MARK UNVISITED' : 'MARK AS VISITED'}
                 </button>
             </div>
+            <!-- v7 §8.10 — cafe detail 페이지에도 면책 노출 (어디서든 보이게) -->
+            <footer class="sdd-atlas-d-foot">
+                <p class="sdd-atlas-d-disclaimer">
+                    <strong>${escapeHtml(noteTitle)}</strong>
+                    ${escapeHtml(noteBody)}
+                </p>
+            </footer>
         `;
         document.body.classList.add('atlas-detail-open');
 
