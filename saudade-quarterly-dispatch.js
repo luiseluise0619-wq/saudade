@@ -131,6 +131,37 @@ body.qdispatch-active .sdd-masthead { display: none; }
     margin: 12px 0 0;
 }
 
+/* v6 §10.6 — 분기 D-14 발행 락 배지. 카드 X, 1px rule + signal 컬러. */
+.sdd-qdisp-lock {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--signal);
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-qdisp-lock strong {
+    font-weight: 500;
+    color: var(--signal);
+    margin-right: 8px;
+}
+.sdd-qdisp-lock.overdue,
+.sdd-qdisp-lock.overdue strong { color: var(--rust); }
+.sdd-qdisp-lock-sub {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(13px, 1.2vw, 15px);
+    letter-spacing: var(--tr-fraunces-body-d);
+    text-transform: none;
+    color: var(--bone-d);
+    margin: 4px 0 0;
+}
+
 .sdd-qdisp-city {
     margin: clamp(28px, 4vw, 56px) 0 0;
     padding-top: clamp(20px, 3vw, 32px);
@@ -346,6 +377,23 @@ body.qdispatch-active .sdd-masthead { display: none; }
         catch (e) { return ''; }
     }
 
+    // v6 §10.6 — 분기 D-14 발행 락. next_filing 이 14일 이내면 편집 창구 닫힘.
+    // 음수면 발행일 지남 (overdue) — 편집자가 분기를 놓친 상태.
+    function daysUntilFiling(data) {
+        const iso = data && data.next_filing;
+        if (!iso) return null;
+        const ts = new Date(iso).getTime();
+        if (!Number.isFinite(ts)) return null;
+        return Math.floor((ts - Date.now()) / 86400000);
+    }
+    function lockState(data) {
+        const d = daysUntilFiling(data);
+        if (d === null)   return { state: 'open',    days: null };
+        if (d < 0)        return { state: 'overdue', days: -d   };
+        if (d <= 14)      return { state: 'lock',    days: d    };
+        return                   { state: 'open',    days: d    };
+    }
+
     // 헌법 §0.5 — 도시당 3건, 3 도시. 그 이상은 잡지 페이지가 아님.
     function clamp3(arr) { return Array.isArray(arr) ? arr.slice(0, 3) : []; }
 
@@ -438,7 +486,38 @@ body.qdispatch-active .sdd-masthead { display: none; }
                 ja: '都市ごとに三本、三都市。四半期に一度。',
                 pt: 'Três itens por cidade. Três cidades. Publicado uma vez por trimestre.',
                 es: 'Tres por ciudad. Tres ciudades. Publicado una vez por trimestre.'
-            })
+            }),
+            // v6 §10.6 — 분기 D-14 락 표시
+            lockedHead: L({
+                en: 'FILING WINDOW LOCKED',
+                ko: '발행 창구 닫힘',
+                ja: '発行ウィンドウ閉鎖',
+                pt: 'JANELA DE PUBLICAÇÃO FECHADA',
+                es: 'VENTANA DE PUBLICACIÓN CERRADA'
+            }),
+            lockedSub: L({
+                en: 'No edits until next filing.',
+                ko: '다음 발행일까지 편집 정지.',
+                ja: '次回発行まで編集停止。',
+                pt: 'Sem edições até a próxima publicação.',
+                es: 'Sin ediciones hasta la próxima publicación.'
+            }),
+            overdueHead: L({
+                en: 'FILING WINDOW PASSED',
+                ko: '발행 기한 지남',
+                ja: '発行期限超過',
+                pt: 'PRAZO DE PUBLICAÇÃO ULTRAPASSADO',
+                es: 'PLAZO DE PUBLICACIÓN VENCIDO'
+            }),
+            overdueDays: function(n) {
+                return L({
+                    en: `OVERDUE BY ${n} ${n === 1 ? 'DAY' : 'DAYS'}`,
+                    ko: `${n}일 초과`,
+                    ja: `${n}日超過`,
+                    pt: `ATRASO DE ${n} ${n === 1 ? 'DIA' : 'DIAS'}`,
+                    es: `RETRASO DE ${n} ${n === 1 ? 'DÍA' : 'DÍAS'}`
+                });
+            }
         };
     }
 
@@ -508,6 +587,24 @@ body.qdispatch-active .sdd-masthead { display: none; }
             </header>
         `;
 
+        // v6 §10.6 — 분기 D-14 발행 락 배지
+        const lock = lockState(data);
+        let lockHtml = '';
+        if (lock.state === 'lock') {
+            lockHtml = `
+                <p class="sdd-qdisp-lock">
+                    <strong>${escapeHtml(c.lockedHead)}</strong>D-${lock.days}
+                </p>
+                <p class="sdd-qdisp-lock-sub">${escapeHtml(c.lockedSub)}</p>
+            `;
+        } else if (lock.state === 'overdue') {
+            lockHtml = `
+                <p class="sdd-qdisp-lock overdue">
+                    <strong>${escapeHtml(c.overdueHead)}</strong>${escapeHtml(c.overdueDays(lock.days))}
+                </p>
+            `;
+        }
+
         const intro = `
             <header class="sdd-qdisp-head">
                 <h2 class="sdd-qdisp-h2">
@@ -516,6 +613,7 @@ body.qdispatch-active .sdd-masthead { display: none; }
                 </h2>
                 <p class="sdd-qdisp-sub">${escapeHtml(c.line)} <em>${escapeHtml(c.sub)}</em></p>
                 <p class="sdd-qdisp-meta">${escapeHtml(c.filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(c.nextLabel)} ${escapeHtml(next)}</p>
+                ${lockHtml}
             </header>
         `;
 
@@ -647,6 +745,9 @@ body.qdispatch-active .sdd-masthead { display: none; }
 
     window.SAUDADE_QUARTERLY = {
         open, close,
-        reload: () => { _cache = {}; load().then(render); }
+        reload: () => { _cache = {}; load().then(render); },
+        // v6 §10.6 — 다른 모듈이 락 상태 조회 가능하도록 노출
+        lockState: () => load().then(lockState),
+        daysUntilFiling: () => load().then(daysUntilFiling)
     };
 })();
