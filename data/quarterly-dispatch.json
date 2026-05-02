@@ -15,7 +15,8 @@
                     "lede": "The clock you keep in the ledger is still correct.",
                     "source": "EU COUNCIL",
                     "source_date": "2026.04.22",
-                    "source_url": "https://www.consilium.europa.eu/"
+                    "source_url": "https://www.consilium.europa.eu/",
+                    "human_rewritten": true
                 },
                 {
                     "n": "02",
@@ -23,7 +24,8 @@
                     "lede": "Rooms booked before May are grandfathered.",
                     "source": "RTP",
                     "source_date": "2026.04.18",
-                    "source_url": "https://www.rtp.pt/"
+                    "source_url": "https://www.rtp.pt/",
+                    "human_rewritten": false
                 },
                 {
                     "n": "03",
@@ -31,7 +33,8 @@
                     "lede": "Plan extra eight hours into the next move.",
                     "source": "AVIATION WEEK",
                     "source_date": "2026.04.11",
-                    "source_url": "https://aviationweek.com/"
+                    "source_url": "https://aviationweek.com/",
+                    "human_rewritten": false
                 }
             ]
         },
@@ -45,7 +48,8 @@
                     "lede": "Border guidance unchanged on departure tax.",
                     "source": "MOJ JAPAN",
                     "source_date": "2026.04.24",
-                    "source_url": "https://www.moj.go.jp/"
+                    "source_url": "https://www.moj.go.jp/",
+                    "human_rewritten": true
                 },
                 {
                     "n": "02",
@@ -53,7 +57,8 @@
                     "lede": "The river will be quieter on August 9.",
                     "source": "OSAKA CITY NOTICE",
                     "source_date": "2026.04.20",
-                    "source_url": "https://www.city.osaka.lg.jp/"
+                    "source_url": "https://www.city.osaka.lg.jp/",
+                    "human_rewritten": false
                 },
                 {
                     "n": "03",
@@ -61,7 +66,8 @@
                     "lede": "Expo Park reports peak around April 10 next time.",
                     "source": "EXPO PARK BULLETIN",
                     "source_date": "2026.04.15",
-                    "source_url": "https://www.expo-park.or.jp/"
+                    "source_url": "https://www.expo-park.or.jp/",
+                    "human_rewritten": false
                 }
             ]
         },
@@ -75,7 +81,8 @@
                     "lede": "The clock restarts only after one full day out of country.",
                     "source": "MFA GEORGIA",
                     "source_date": "2026.04.19",
-                    "source_url": "https://mfa.gov.ge/"
+                    "source_url": "https://mfa.gov.ge/",
+                    "human_rewritten": true
                 },
                 {
                     "n": "02",
@@ -83,7 +90,8 @@
                     "lede": "The smaller hammam at #5 stays open through Easter.",
                     "source": "TBILISI CITY HALL",
                     "source_date": "2026.04.25",
-                    "source_url": "https://tbilisi.gov.ge/"
+                    "source_url": "https://tbilisi.gov.ge/",
+                    "human_rewritten": false
                 },
                 {
                     "n": "03",
@@ -91,7 +99,8 @@
                     "lede": "Kakheti expects a quieter season than last year.",
                     "source": "NATIONAL WINE AGENCY",
                     "source_date": "2026.04.12",
-                    "source_url": "https://www.wine.gov.ge/"
+                    "source_url": "https://www.wine.gov.ge/",
+                    "human_rewritten": false
                 }
             ]
         }

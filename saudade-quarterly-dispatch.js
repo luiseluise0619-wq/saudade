@@ -162,6 +162,43 @@ body.qdispatch-active .sdd-masthead { display: none; }
     margin: 4px 0 0;
 }
 
+/* v6 §9.5 — 편집자 30% 재작성 카운터. body[data-editor="1"] 일 때만 표시. */
+.sdd-qdisp-editor {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--jade);
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--rule);
+    display: none;
+}
+body[data-editor="1"] .sdd-qdisp-editor { display: block; }
+.sdd-qdisp-editor strong {
+    font-weight: 500;
+    color: var(--jade);
+    margin-right: 8px;
+}
+.sdd-qdisp-editor.below,
+.sdd-qdisp-editor.below strong { color: var(--rust); }
+
+.sdd-qdisp-rewrite-tag {
+    display: none;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
+.sdd-qdisp-rewrite-tag.rewritten { color: var(--jade); }
+.sdd-qdisp-rewrite-tag.draft     { color: var(--signal); }
+
 .sdd-qdisp-city {
     margin: clamp(28px, 4vw, 56px) 0 0;
     padding-top: clamp(20px, 3vw, 32px);
@@ -394,6 +431,36 @@ body.qdispatch-active .sdd-masthead { display: none; }
         return                   { state: 'open',    days: d    };
     }
 
+    // v6 §9.5 — 30% 인간 재작성 카운터 (편집자 전용 UI).
+    // 데이터의 각 item.human_rewritten boolean → 분기 비율 산출.
+    // 30% 미만이면 BELOW THRESHOLD 경고. 헌법 §0.5: AI 보조 작성 후 사람 편집장이 다시 쓴다.
+    const REWRITE_THRESHOLD = 0.30;
+    const EDITOR_KEY = 'saudade.editor';
+
+    function isEditorMode() {
+        try { return localStorage.getItem(EDITOR_KEY) === '1'; }
+        catch (e) { return false; }
+    }
+    function setEditorMode(on) {
+        try { localStorage.setItem(EDITOR_KEY, on ? '1' : '0'); } catch (e) {}
+    }
+    function rewriteRatio(data) {
+        const cities = (data && data.cities) || [];
+        let total = 0, rewritten = 0;
+        for (const city of cities) {
+            for (const it of clamp3(city.items)) {
+                total++;
+                if (it && it.human_rewritten === true) rewritten++;
+            }
+        }
+        const ratio = total ? rewritten / total : 0;
+        return {
+            rewritten, total, ratio,
+            threshold: REWRITE_THRESHOLD,
+            passes: ratio >= REWRITE_THRESHOLD
+        };
+    }
+
     // 헌법 §0.5 — 도시당 3건, 3 도시. 그 이상은 잡지 페이지가 아님.
     function clamp3(arr) { return Array.isArray(arr) ? arr.slice(0, 3) : []; }
 
@@ -517,20 +584,61 @@ body.qdispatch-active .sdd-masthead { display: none; }
                     pt: `ATRASO DE ${n} ${n === 1 ? 'DIA' : 'DIAS'}`,
                     es: `RETRASO DE ${n} ${n === 1 ? 'DÍA' : 'DÍAS'}`
                 });
-            }
+            },
+            // v6 §9.5 — 편집자 카운터
+            editorHead: L({
+                en: 'EDITOR', ko: '편집자', ja: '編集者',
+                pt: 'EDITOR', es: 'EDITOR'
+            }),
+            rewriteCount: function(n, total, pct) {
+                return L({
+                    en: `${n}/${total} REWRITTEN · ${pct}%`,
+                    ko: `${total}편 중 ${n}편 재작성 · ${pct}%`,
+                    ja: `${total}本中${n}本 書き直し済 · ${pct}%`,
+                    pt: `${n}/${total} REESCRITOS · ${pct}%`,
+                    es: `${n}/${total} REESCRITOS · ${pct}%`
+                });
+            },
+            aboveThreshold: L({
+                en: 'ABOVE 30% THRESHOLD',
+                ko: '30% 트레숄드 통과',
+                ja: '三割しきい値クリア',
+                pt: 'ACIMA DO LIMITE DE 30%',
+                es: 'POR ENCIMA DEL UMBRAL DEL 30%'
+            }),
+            belowThreshold: L({
+                en: 'BELOW 30% THRESHOLD',
+                ko: '30% 트레숄드 미달',
+                ja: '三割しきい値未達',
+                pt: 'ABAIXO DO LIMITE DE 30%',
+                es: 'POR DEBAJO DEL UMBRAL DEL 30%'
+            }),
+            tagRewritten: L({
+                en: 'REWRITTEN', ko: '재작성', ja: '書き直し済',
+                pt: 'REESCRITO', es: 'REESCRITO'
+            }),
+            tagDraft: L({
+                en: 'AI DRAFT', ko: 'AI 초고', ja: 'AI 草稿',
+                pt: 'RASCUNHO IA', es: 'BORRADOR IA'
+            })
         };
     }
 
-    function renderItem(it) {
+    function renderItem(it, c) {
         const safeSrc = safeUrl(it.source_url);
         const srcLine = `${escapeHtml(it.source || '')}${it.source_date ? ' · ' + escapeHtml(it.source_date) : ''}`;
         const srcAnchor = safeSrc
             ? `<a href="${safeSrc}" target="_blank" rel="noopener noreferrer">${srcLine}</a>`
             : srcLine;
+        // v6 §9.5 — body[data-editor="1"] 시 CSS 가 자동 표시. 데이터에 플래그 없으면 default DRAFT.
+        const rewritten = it && it.human_rewritten === true;
+        const tagClass = rewritten ? 'rewritten' : 'draft';
+        const tagText  = rewritten ? c.tagRewritten : c.tagDraft;
         return `
             <article class="sdd-qdisp-item">
                 <span class="sdd-qdisp-num">${escapeHtml(it.n || '')}</span>
                 <div class="sdd-qdisp-body">
+                    <span class="sdd-qdisp-rewrite-tag ${tagClass}">${escapeHtml(tagText)}</span>
                     <h3 class="sdd-qdisp-headline">${escapeHtml(it.headline || '')}</h3>
                     <p class="sdd-qdisp-lede">${escapeHtml(it.lede || '')}</p>
                     <p class="sdd-qdisp-source">${srcAnchor}</p>
@@ -540,7 +648,7 @@ body.qdispatch-active .sdd-masthead { display: none; }
     }
 
     function renderCity(city, c) {
-        const items = clamp3(city.items).map(renderItem).join('');
+        const items = clamp3(city.items).map(it => renderItem(it, c)).join('');
         const seasonHtml = city.season
             ? `<span class="season">${escapeHtml(city.season)}</span>`
             : '';
@@ -605,6 +713,16 @@ body.qdispatch-active .sdd-masthead { display: none; }
             `;
         }
 
+        // v6 §9.5 — 30% 인간 재작성 카운터 (편집자 모드에서만 가시화)
+        const rw = rewriteRatio(data);
+        const pct = Math.round(rw.ratio * 100);
+        const editorLine = rw.passes ? c.aboveThreshold : c.belowThreshold;
+        const editorHtml = `
+            <p class="sdd-qdisp-editor ${rw.passes ? 'above' : 'below'}">
+                <strong>${escapeHtml(c.editorHead)}</strong>${escapeHtml(c.rewriteCount(rw.rewritten, rw.total, pct))} · ${escapeHtml(editorLine)}
+            </p>
+        `;
+
         const intro = `
             <header class="sdd-qdisp-head">
                 <h2 class="sdd-qdisp-h2">
@@ -614,6 +732,7 @@ body.qdispatch-active .sdd-masthead { display: none; }
                 <p class="sdd-qdisp-sub">${escapeHtml(c.line)} <em>${escapeHtml(c.sub)}</em></p>
                 <p class="sdd-qdisp-meta">${escapeHtml(c.filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(c.nextLabel)} ${escapeHtml(next)}</p>
                 ${lockHtml}
+                ${editorHtml}
             </header>
         `;
 
@@ -725,11 +844,28 @@ body.qdispatch-active .sdd-masthead { display: none; }
                 e.stopPropagation();
                 close();
             }
+            // v6 §9.5 — Ctrl+Shift+E 로 편집자 모드 토글 (편집자 전용 UI)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) {
+                e.preventDefault();
+                const next = !isEditorMode();
+                setEditorMode(next);
+                applyEditorBodyAttr();
+                // 페이지 열려 있으면 재렌더 (배지/카운터 가시화)
+                if (document.body.classList.contains('qdispatch-active')) {
+                    load().then(render);
+                }
+            }
         });
+    }
+
+    function applyEditorBodyAttr() {
+        if (isEditorMode()) document.body.setAttribute('data-editor', '1');
+        else document.body.removeAttribute('data-editor');
     }
 
     function init() {
         injectStyles();
+        applyEditorBodyAttr();
         // 사전 로딩 (force-cache)
         load();
         watchAtlas();
@@ -748,6 +884,14 @@ body.qdispatch-active .sdd-masthead { display: none; }
         reload: () => { _cache = {}; load().then(render); },
         // v6 §10.6 — 다른 모듈이 락 상태 조회 가능하도록 노출
         lockState: () => load().then(lockState),
-        daysUntilFiling: () => load().then(daysUntilFiling)
+        daysUntilFiling: () => load().then(daysUntilFiling),
+        // v6 §9.5 — 편집자 모드 토글 + 카운터 조회
+        rewriteRatio: () => load().then(rewriteRatio),
+        isEditorMode,
+        setEditorMode: (on) => {
+            setEditorMode(on);
+            applyEditorBodyAttr();
+            if (document.body.classList.contains('qdispatch-active')) load().then(render);
+        }
     };
 })();
