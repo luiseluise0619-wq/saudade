@@ -162,7 +162,7 @@
     line-height: 1.5;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: var(--bone);
+    color: var(--bone-d);
 }
 
 .inline-code {

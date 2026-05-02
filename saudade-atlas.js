@@ -119,7 +119,7 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     outline: none;
 }
 .sdd-atlas-search input:focus { border-bottom-color: var(--ink); }
-.sdd-atlas-search input::placeholder { color: var(--bone); }
+.sdd-atlas-search input::placeholder { color: var(--bone-d); }
 .sdd-atlas-q-count {
     font-family: var(--mono);
     font-weight: 400;
