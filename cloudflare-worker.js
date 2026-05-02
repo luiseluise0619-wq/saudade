@@ -40,6 +40,8 @@ const RL = {
     '/cities/locked':  { max: 30, win: 60000 },
     '/ai-trip':        { max: 10, win: 60000 },
     '/coworking':      { max: 30, win: 60000 },
+    '/editor/leave-status': { max: 60, win: 60000 },
+    '/editor/log':          { max: 30, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -225,6 +227,8 @@ export default {
                     return E(req, 'GONE_FREE_MODE', 'Subscription disabled — app is free', 410);
                 case '/ai-trip':           return aiTrip(req, env, ctx);
                 case '/coworking':         return coworking(req, env, ctx);
+                case '/editor/leave-status': return editorLeaveStatus(req, env, ctx);
+                case '/editor/log':          return editorLog(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -961,3 +965,98 @@ async function coworking(req, env, ctx) {
         return new Response(text, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS', 'Content-Type': 'application/json; charset=utf-8' }) });
     } catch { return E(req, 'FETCH_FAIL', 'Overpass error', 502); }
 }
+
+// ─── v6 §9.10 — Editor-on-Leave Auto-Pause ─────────────────────────────────
+// 트래킹 액션은 dispatch.* 만. 로그인·외부 ping 무시. KV 안 씀, D1 만.
+// Stage thresholds (in days):
+//   active        — last activity within 7 days
+//   soft pause    — 7  ≤ idle <  14   (UI: UNEDITED label, 발행 계속)
+//   hard pause    — 14 ≤ idle <  30   (발행 cron 정지, Cover 메시지)
+//   subscription  — idle ≥ 30         (Stripe 자동 일시중지 — 현 build free-mode 라 stub)
+const EDITOR_ACTIONS = ['dispatch.review', 'dispatch.edit', 'dispatch.headline_edit', 'dispatch.retract'];
+const STAGE_SOFT_DAYS = 7;
+const STAGE_HARD_DAYS = 14;
+const STAGE_SUB_DAYS  = 30;
+
+function computeStage(daysIdle) {
+    if (daysIdle === null || daysIdle < STAGE_SOFT_DAYS) return 'active';
+    if (daysIdle < STAGE_HARD_DAYS) return 'soft';
+    if (daysIdle < STAGE_SUB_DAYS)  return 'hard';
+    return 'subscription';
+}
+
+// GET /editor/leave-status — 누구나 호출 가능. SELECT MAX(at) 결과 캐시 10분.
+// D1 미바인딩이면 stage='active' 폴백 (개발 환경/장애 시 안전 기본값).
+async function editorLeaveStatus(req, env, ctx) {
+    const k = 'editor:leave-status:v1';
+    const cached = await cGet(k, env);
+    if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
+
+    let lastAt = null;
+    let dbBound = !!env?.LOUNJ_DB;
+    if (dbBound) {
+        try {
+            const inList = EDITOR_ACTIONS.map(() => '?').join(',');
+            const row = await env.LOUNJ_DB.prepare(
+                `SELECT MAX(at) AS at FROM editor_log WHERE action IN (${inList})`
+            ).bind(...EDITOR_ACTIONS).first();
+            const v = row && row.at;
+            lastAt = (typeof v === 'number' && Number.isFinite(v)) ? v : null;
+        } catch (e) { dbBound = false; }
+    }
+    const now = Date.now();
+    const daysIdle = lastAt !== null ? Math.floor((now - lastAt) / 86400000) : null;
+    const stage = computeStage(daysIdle);
+
+    const body = JSON.stringify({
+        stage,
+        last_activity: lastAt,
+        days_idle: daysIdle,
+        thresholds: { soft: STAGE_SOFT_DAYS, hard: STAGE_HARD_DAYS, subscription: STAGE_SUB_DAYS },
+        db: dbBound ? 'bound' : 'unbound',
+        ts: now
+    });
+    await cPut(k, body, 600, env, ctx);   // 10 min
+    return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
+}
+
+// POST /editor/log — Bearer EDITOR_TOKEN 필수. body: { action, editor?, target? }.
+// 입력 시 캐시 무효화 → 다음 leave-status 호출에서 새 MAX(at) 반영.
+async function editorLog(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.LOUNJ_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const action = clean(body.action, 64);
+    if (!EDITOR_ACTIONS.includes(action)) {
+        return E(req, 'BAD_ACTION', `Action must be one of ${EDITOR_ACTIONS.join(', ')}`, 400);
+    }
+    const editor = clean(body.editor, 128) || null;
+    const target = clean(body.target, 256) || null;
+    const at = Date.now();
+
+    try {
+        const r = await env.LOUNJ_DB.prepare(
+            'INSERT INTO editor_log (at, action, editor, target) VALUES (?, ?, ?, ?)'
+        ).bind(at, action, editor, target).run();
+        // leave-status 캐시 즉시 무효화 — 새 액션이 stage 를 active 로 되돌려야 하므로
+        ctx.waitUntil(caches.default.delete(new Request('https://cache.aura/editor:leave-status:v1')));
+        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, at, action });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Insert failed', 500);
+    }
+}
+
+// TODO (Stripe re-enable): when stage transitions to 'subscription', auto-pause
+// active subscriptions. Currently free-mode (license endpoints return 410), so
+// this is a no-op stub. When subscriptions are re-enabled, add a scheduled
+// handler that calls Stripe Subscriptions.update({ pause_collection: { behavior: 'mark_uncollectible' } })
+// for each customer when leave-status returns stage='subscription'.

@@ -20,3 +20,16 @@ enabled = true
 
 # 시크릿 등록은 Dashboard → 해당 Worker → Settings → Variables and Secrets:
 #   PEXELS_KEY, COVERR_KEY, GEMINI_KEY, LICENSE_SIGNING_KEY (모두 Type: Secret)
+
+# v6 §9.10 — D1 (편집자 활동 로그). 만든 후 database_id 채우면 활성화됨.
+# 생성: wrangler d1 create lounj_db
+# 스키마 적용: wrangler d1 execute lounj_db --file=schema/editor_log.sql
+# 받은 database_id 를 아래 빈칸에 넣고 다시 push 하면 D1 활성. 비어있어도 Worker 는 작동
+# (/editor/leave-status 가 stage='active' 폴백 응답).
+# [[d1_databases]]
+# binding = "LOUNJ_DB"
+# database_name = "lounj_db"
+# database_id = "여기에-d1-database-id"
+
+# v6 §9.10 — 편집자 액션 로그 시크릿. Dashboard 또는 wrangler secret put EDITOR_TOKEN.
+# /editor/log POST 요청 시 Authorization: Bearer ${EDITOR_TOKEN} 으로 검증.
