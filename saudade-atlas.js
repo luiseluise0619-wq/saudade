@@ -444,13 +444,26 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             pt: 'BUSCAR NOME · BAIRRO · COMODIDADE',
             es: 'BUSCAR NOMBRE · BARRIO · COMODIDAD'
         });
+        // v7 §8.7 PR1 — LIST/MAP 뷰 토글 (5 에디션)
+        const _curView = root.getAttribute('data-view') || 'list';
+        const toggleLabel = T({
+            en: _curView === 'list' ? 'MAP'  : 'LIST',
+            ko: _curView === 'list' ? '지도' : '목록',
+            ja: _curView === 'list' ? '地図' : '一覧',
+            pt: _curView === 'list' ? 'MAPA' : 'LISTA',
+            es: _curView === 'list' ? 'MAPA' : 'LISTA'
+        });
         const headHtml = `
             <header class="sdd-atlas-head">
                 <h2 class="sdd-atlas-h2">
                     ${escapeHtml(headLabel)}
                     <span class="sdd-atlas-h2-italic">${escapeHtml(headItalic)}</span>
                 </h2>
-                <div class="sdd-atlas-count">${escapeHtml(visitedLabel)}</div>
+                <div class="sdd-atlas-count">
+                    ${escapeHtml(visitedLabel)}
+                    <button type="button" class="sdd-atlas-view-toggle"
+                            data-view-toggle aria-label="Toggle list / map view">${escapeHtml(toggleLabel)}</button>
+                </div>
             </header>
             <div class="sdd-atlas-search">
                 <input type="search" id="sddAtlasQ" placeholder="${escapeHtml(searchPh)}"
@@ -517,10 +530,41 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             </div>
         `;
 
+        // v7 §8.7 PR1 — data-view 속성 first-render 기본값
+        if (!root.hasAttribute('data-view')) root.setAttribute('data-view', 'list');
+
         root.innerHTML = headHtml +
             `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>` +
+            `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
+
+        // v7 §8.7 PR1 — LIST/MAP 토글 핸들러. MAP 첫 진입 시 lazy load.
+        root.querySelector('[data-view-toggle]')?.addEventListener('click', async (e) => {
+            const cur = root.getAttribute('data-view') || 'list';
+            const next = cur === 'list' ? 'map' : 'list';
+            root.setAttribute('data-view', next);
+            // 라벨 즉시 토글 (재렌더 안 함 — search input focus 보존)
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const labels = {
+                en: { list: 'MAP',  map: 'LIST' },
+                ko: { list: '지도', map: '목록' },
+                ja: { list: '地図', map: '一覧' },
+                pt: { list: 'MAPA', map: 'LISTA' },
+                es: { list: 'MAPA', map: 'LISTA' }
+            };
+            e.target.textContent = (labels[ed] || labels.en)[cur];
+            if (next === 'map') {
+                const container = root.querySelector('#sddAtlasMap');
+                try {
+                    await window.SAUDADE_ATLAS_MAP?.initMap(container);
+                } catch (err) {
+                    container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · CHECK CONNECTION</p>';
+                }
+            } else {
+                // LIST 로 돌아갈 때 map 인스턴스는 유지 — 다시 토글하면 같은 상태로
+            }
+        });
 
         // v607 — search input 핸들러 (입력 변화 시 즉시 재렌더, focus 유지)
         const qInput = root.querySelector('#sddAtlasQ');
