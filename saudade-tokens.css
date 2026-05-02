@@ -1,0 +1,120 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · TOKENS
+   매거진 미학 — paper / ink / rust / bone. 다크 글래스 X, light paper O.
+   SAUDADE_BUILD_PROMPT.md §2 디자인 토큰 그대로 박음. 절대 임의 변경 금지.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ─── paper system (light, magazine print 느낌) ─── */
+    --paper:    #F2EEE3;
+    --paper-d:  #E5DFD0;
+    --ink:      #16151A;
+    --ink-soft: #0F0E12;
+
+    /* ─── accent (rust = 비자 D-day, 섹션 번호. signal/jade 절제 사용) ─── */
+    --rust:     #9A3324;
+    --signal:   #E07B43;
+    --jade:     #5BA890;
+    --gold:     #D4A574;     /* v1 비활성, 변수만 보존 */
+
+    /* ─── label / divider ─── */
+    --bone:     #A8A398;
+    --bone-d:   #6B6660;
+    --rule:     rgba(11,11,15,.18);
+    --rule-2:   rgba(11,11,15,.4);
+
+    /* ─── fonts (오직 두 개) ─── */
+    --serif:  "Fraunces", Georgia, serif;
+    --mono:   "JetBrains Mono", "SF Mono", "Menlo", monospace;
+    /* Cormorant Garamond / Inter / Roboto 등 v1 사용 금지 */
+
+    /* ─── spacing — 모두 4의 배수 ─── */
+    --s-1: 4px;
+    --s-2: 8px;
+    --s-3: 12px;
+    --s-4: 16px;
+    --s-5: 24px;
+    --s-6: 32px;
+    --s-7: 48px;
+    --s-8: 64px;
+
+    /* ─── type sizes — 모바일 우선 ─── */
+    --t-mast: 11px;          /* JetBrains Mono masthead */
+    --t-body: 14.5px;        /* Fraunces body */
+    --t-h3:   11px;          /* mono section title */
+    --t-h2:   36px;          /* Fraunces 300 — desktop 54px */
+    --t-h1:   56px;          /* Fraunces 300 — desktop 96px */
+
+    /* ─── tracking — 절대 변경 금지. SAUDADE_TYPOGRAPHY.md 참조 ─── */
+    --tr-fraunces-h1-d:    -0.04em;
+    --tr-fraunces-h1-m:    -0.035em;
+    --tr-fraunces-h2-d:    -0.03em;
+    --tr-fraunces-h2-m:    -0.025em;
+    --tr-fraunces-h3:      -0.02em;
+    --tr-fraunces-body-d:   0;
+    --tr-fraunces-body-m:   0.005em;
+    --tr-fraunces-lede:     0;
+
+    --tr-mono-data:         0.04em;
+    --tr-mono-meta:         0.18em;
+    --tr-mono-label:        0.22em;     /* 디폴트 */
+    --tr-mono-mast:         0.32em;
+    --tr-mono-code:         0.02em;     /* inline-code (SAUDADE_TYPOGRAPHY.md ②) */
+
+    /* v603 추가 — § 00 ISSUE COVER 거대 워드마크 (도시명, "saudade." 워드마크) */
+    --tr-fraunces-cover:    -0.045em;
+    --tr-fraunces-data-num: -0.02em;
+
+    /* ─── 기존 LOUNJ 토큰들을 새 paper system 으로 매핑 (style.css 의 --bg, --text 등이 자동 전환) ─── */
+    --bg: var(--paper);
+    --bg-glass: var(--paper);
+    --bg-elevated: var(--paper-d);
+    --bg-raised: var(--paper-d);
+    --surface: var(--paper-d);
+    --text: var(--ink);
+    --text-primary: var(--ink);
+    --text-secondary: var(--bone-d);
+    --text-tertiary: var(--bone);
+    --sub: var(--bone-d);
+    --border: var(--rule);
+    --border-strong: var(--rule-2);
+    --border-glass: var(--rule);
+    --separator: var(--rule);
+
+    /* accent → rust */
+    --accent: var(--rust);
+    --accent-rgb: 154, 51, 36;
+    --linear-purple: var(--rust);
+    --linear-cyan: var(--ink);
+    --blue: var(--rust);
+    --good: var(--jade);
+    --warn: var(--signal);
+    --bad: var(--rust);
+    --yellow: var(--gold);
+
+    /* shadow 무력화 — SAUDADE 는 box-shadow 금지 */
+    --shadow-fab: 0 0 0 1px var(--rule);
+    --shadow-sm: 0 0 0 0.5px var(--rule);
+    --shadow-md: 0 0 0 0.5px var(--rule);
+    --shadow-lg: 0 0 0 0.5px var(--rule);
+
+    /* radius 강제 0~4px (SAUDADE 룰: 8px 이상 금지) */
+    --radius-xs: 0;
+    --radius-sm: 0;
+    --radius: 4px;
+    --radius-md: 4px;
+    --radius-lg: 4px;
+    --radius-pill: 0;
+}
+
+/* 다크 모드 (Reading Room 등 풀스크린 영상 모드만 자동 반전) — 일반 페이지는 light paper 유지 */
+body.cafe-mode,
+body.reading-room {
+    --paper:    #16151A;
+    --paper-d:  #0F0E12;
+    --ink:      #F2EEE3;
+    --ink-soft: #FAF7EE;
+    --bone:     #6B6660;
+    --bone-d:   #A8A398;
+    --rule:     rgba(242,238,227,.18);
+}

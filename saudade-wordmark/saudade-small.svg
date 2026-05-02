@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" aria-label="saudade">
+    <text x="0" y="42"
+        font-family="Fraunces, Georgia, serif"
+        font-style="italic"
+        font-weight="300"
+        font-size="48"
+        letter-spacing="-1.5"
+        fill="#16151A">saudade</text>
+    <circle cx="118" cy="32" r="4" fill="none" stroke="#9A3324" stroke-width="1.5"/>
+</svg>

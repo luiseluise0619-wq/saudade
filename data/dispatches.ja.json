@@ -1,0 +1,124 @@
+{
+    "edition": "ja",
+    "filed_at": "2026-05-01T06:00:00+09:00",
+    "next_filing": "2026-05-02T06:00:00+09:00",
+    "cities": [
+        {
+            "city": "東京",
+            "season": "春",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "上野公園の遅咲きが、今年は十日ほど続く。",
+                    "lede": "桜は終わっても、八重桜は今が盛り。",
+                    "body": "公園管理事務所は四月最後の週から五月第一週までを見頃と発表した。台東区側の八重桜並木が一番見やすい。早朝の人出は少ない。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "東京都公園協会",
+                    "source_date": "2026-04-25",
+                    "source_url": "https://www.tokyo-park.or.jp/"
+                },
+                {
+                    "n": "02",
+                    "headline": "羽田空港の第三ターミナル、深夜便が一便増えた。",
+                    "lede": "ICN行きは午前一時十五分発に。",
+                    "body": "国土交通省は四月二十二日付で深夜枠の追加を認可した。ソウル仁川行きは大韓航空便が新規就航する。早朝バスは始発が二時に繰り上がる。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "国土交通省",
+                    "source_date": "2026-04-22",
+                    "source_url": "https://www.mlit.go.jp/"
+                },
+                {
+                    "n": "03",
+                    "headline": "神田の古書店街で、五月の青空市が再開する。",
+                    "lede": "二年ぶりの開催、初日は十一日。",
+                    "body": "神田古書店連盟は五月十一日から十三日までの日程を公表した。会場は靖国通り沿い。雨天決行。地下鉄神保町駅A6出口から徒歩三分。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "神田古書店連盟",
+                    "source_date": "2026-04-19",
+                    "source_url": "https://jimbou.info/"
+                }
+            ]
+        },
+        {
+            "city": "大阪",
+            "season": "春",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "淀川の水位が、今春一番低い。",
+                    "lede": "降水量が平年の四割で推移。",
+                    "body": "大阪管区気象台は四月の累積降水量を平年比四十二%と発表した。淀川河川公園のグラウンドは予定通り使用可能だが、五月初旬まで散水車が出る予定。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "大阪管区気象台",
+                    "source_date": "2026-04-28",
+                    "source_url": "https://www.jma-net.go.jp/osaka/"
+                },
+                {
+                    "n": "02",
+                    "headline": "天王寺公園の動物園、夜間開園が五月十日からはじまる。",
+                    "lede": "金曜と土曜のみ、二十一時まで。",
+                    "body": "大阪市は夏季夜間開園の日程を発表した。五月十日から九月末まで、毎週金土の二日間に限る。入園料は通常通り、夕方割引はなし。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "大阪市公園局",
+                    "source_date": "2026-04-26",
+                    "source_url": "https://www.tennojizoo.jp/"
+                },
+                {
+                    "n": "03",
+                    "headline": "中之島図書館の読書室が、新装開室する。",
+                    "lede": "五月一日、改修工事が完了。",
+                    "body": "府立図書館は五月一日から平日九時、土曜十時開室の通常運営に戻ると告知した。閲覧席は二十席増えた。古典籍コーナーは別予約制。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "大阪府立中之島図書館",
+                    "source_date": "2026-04-30",
+                    "source_url": "https://www.nakanoshima-library.jp/"
+                }
+            ]
+        },
+        {
+            "city": "京都",
+            "season": "春",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "鴨川の床営業が、今年は四月二十九日から始まった。",
+                    "lede": "例年より三日早い、五月の連休に合わせて。",
+                    "body": "京都鴨川納涼床協同組合は四月最終週からの営業を発表した。河原町三条から五条までの店舗が対象。降雨時は終日休業。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "京都鴨川納涼床協同組合",
+                    "source_date": "2026-04-27",
+                    "source_url": "https://www.kyoto-yuka.jp/"
+                },
+                {
+                    "n": "02",
+                    "headline": "嵐山の竹林が、夜間ライトアップを縮小する。",
+                    "lede": "五月の点灯は週末のみ、三十分早く消える。",
+                    "body": "右京区観光協会は気温対策として点灯時間を短縮すると公表した。五月は金土日の三日のみ十九時から二十一時。例年は連日二十二時まで。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "右京区観光協会",
+                    "source_date": "2026-04-24",
+                    "source_url": "https://www.kyoto-arashiyama.jp/"
+                },
+                {
+                    "n": "03",
+                    "headline": "西陣の織元四軒で、ふだん非公開の工房が一般に開く。",
+                    "lede": "五月十七日と十八日、午前十時から十六時まで。",
+                    "body": "西陣織工業組合は二日間の工房公開を行う。要事前予約、定員は各日二十名。地下鉄今出川駅から徒歩五分の集合場所で受付。",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "西陣織工業組合",
+                    "source_date": "2026-04-20",
+                    "source_url": "https://nishijin.or.jp/"
+                }
+            ]
+        }
+    ]
+}

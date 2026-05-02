@@ -1,0 +1,23 @@
+[
+    {
+        "issue": 4,
+        "status": "IN_POST",
+        "city": "LISBON",
+        "subtitle": "City of Tile.",
+        "meta": "VISA-FREE 90D · €1,200/MO · 17°C · ICN 1 STOP"
+    },
+    {
+        "issue": 5,
+        "status": "QUEUED",
+        "city": "MEXICO CITY",
+        "subtitle": "City of Stone.",
+        "meta": "VISA-FREE 180D · $1,500/MO · 19°C · ICN 1 STOP"
+    },
+    {
+        "issue": 6,
+        "status": "QUEUED",
+        "city": "TBILISI",
+        "subtitle": "City of Sulfur.",
+        "meta": "VISA-FREE 365D · $1,000/MO · 13°C · ICN 2 STOPS"
+    }
+]

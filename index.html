@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- CSP: 인라인 스크립트 모두 bootstrap.js 로 추출됨 → script-src 에서 'unsafe-inline' 제거.
+         스타일은 컴포넌트들이 동적으로 인젝트하는 인라인 <style> 노드 때문에 'unsafe-inline' 유지. -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; connect-src 'self' https: wss:; img-src 'self' https: data: blob:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' https: data:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com https:; media-src 'self' https: blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="author" content="LEEJAEJIN (JADDY)" />
+    <meta name="description" content="LOUNJ — 도시 마커 클릭 → 영상·lo-fi 음악·실시간 정보가 한 화면에 켜지는 무료 카페 모드 데스크톱." />
+    <!-- 서버 엔드포인트 (배포 시 설정) - 비워두면 로컬 DB만 사용 -->
+    <!-- 부트 로직 (서버 URL · 캐시 마이그 · SW · CDN 로딩 · 로딩 타임아웃) — bootstrap.js 한 곳으로 통합 -->
+    <script src="bootstrap.js?v=v623"></script>
+    <meta name="theme-color" content="#F2EEE3" />
+    <!-- v598 SAUDADE — favicon = 동심원 두 개 (워드마크 생략, 16px 가독성).
+         paper 배경 + ink 링. 어떤 그라디언트도 없음. -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23F2EEE3'/><circle cx='32' cy='32' r='22' fill='none' stroke='%2316151A' stroke-width='1.5'/><circle cx='32' cy='32' r='12' fill='none' stroke='%2316151A' stroke-width='1'/></svg>" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%23F2EEE3'/><circle cx='256' cy='256' r='180' fill='none' stroke='%2316151A' stroke-width='10'/><circle cx='256' cy='256' r='100' fill='none' stroke='%2316151A' stroke-width='8'/><circle cx='256' cy='256' r='40' fill='none' stroke='%239A3324' stroke-width='6'/></svg>" />
+    <title>saudade — a longing for what cannot return</title>
+    <!-- PWA: 홈 화면 설치 + 오프라인 모드 -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#F2EEE3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LOUNJ" />
+    <link rel="canonical" href="https://lounj.app/" />
+
+    <!-- v568 SEO + Open Graph / Twitter cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LOUNJ" />
+    <meta property="og:title" content="LOUNJ — 디지털 노마드의 결정 도구" />
+    <meta property="og:description" content="비자 카운터 · 세금 거주자 추적 · 타임존 오버랩 · 위치 알림 · 다음 도시 추천 · 노마드 카페. 한 화면에서 떠날 시점을 판단." />
+    <meta property="og:url" content="https://lounj.app/" />
+    <meta property="og:image" content="https://lounj.app/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LOUNJ — 디지털 노마드의 결정 도구" />
+    <meta name="twitter:description" content="비자 D-day · 세금 임계값 · 타임존 · 위치 알림 · 다음 도시 추천. 노마드 한 화면 결정 도구." />
+    <meta name="twitter:image" content="https://lounj.app/og-cover.png" />
+    <meta name="keywords" content="digital nomad,visa tracker,schengen calculator,tax residency,timezone overlap,next city,nomad cafe,디지털 노마드,비자 계산기,세금 거주자" />
+    <meta name="author" content="LEEJAEJIN (JADDY)" />
+
+    <!-- JSON-LD structured data — search engines + AI agents (LLM crawlers) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "LOUNJ",
+        "url": "https://lounj.app/",
+        "description": "Digital nomad decision tool — visa counter, tax residency, timezone overlap, location alerts, next city engine, nomad cafe map.",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "JavaScript enabled",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "LEEJAEJIN" },
+        "featureList": [
+            "Schengen 90/180 visa counter",
+            "Multi-country tax residency tracker (183-day)",
+            "Timezone overlap (5 people, 09-18h work hours)",
+            "Location-based alerts (200km radius — earthquakes, disasters, news)",
+            "Next-city recommendation engine (visa + cost + weather + infra)",
+            "Nomad cafe map (curated, wifi/outlet/quiet filters)",
+            "Cafe mode (city videos + lo-fi BGM, offline)"
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- perf: 자주 쓰는 외부 호스트 DNS 미리 해결 — 첫 fetch latency ~100-300ms↓ -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="dns-prefetch" href="https://api.pexels.com" />
+    <link rel="dns-prefetch" href="https://earthquake.usgs.gov" />
+    <link rel="dns-prefetch" href="https://api.open-meteo.com" />
+    <link rel="dns-prefetch" href="https://api.frankfurter.app" />
+    <link rel="dns-prefetch" href="https://www.reddit.com" />
+    <link rel="dns-prefetch" href="https://rss.applemarketingtools.com" />
+    <link rel="dns-prefetch" href="https://w.soundcloud.com" />
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+    <!-- v621 SAUDADE — 5 별쇄 폰트 모두 로드 (Handoff v6 §3):
+         · en: Fraunces 300 italic + roman
+         · ko: Noto Serif KR Light + Pretendard (별도 CDN)
+         · ja: Shippori Mincho B1 + Noto Sans JP
+         · pt: Cormorant Infant Light italic
+         · es: Crimson Pro
+         · 모든 에디션 데이터: JetBrains Mono 300/400/500
+         이 라인이 누락되어 ko/ja/pt/es 클릭해도 시각 변화 없던 버그 fix. -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
+        rel="stylesheet" />
+    <!-- v562: design tokens (Linear/Raycast/Vercel hybrid) — style.css 보다 먼저 로드 -->
+    <link rel="stylesheet" href="design-tokens.css?v=v623" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <!-- Geist Mono — mono-num / eyebrow / FX 숫자 표시용 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css" />
+    <link rel="stylesheet" href="style.css?v=v623" />
+    <!-- v598 SAUDADE 스킨 — paper / ink / rust 매거진 톤. style.css 보다 뒤에 로드해서 강제 override.
+         tokens → typography → skin 순서. -->
+    <link rel="stylesheet" href="saudade-tokens.css?v=v623" />
+    <link rel="stylesheet" href="saudade-typography.css?v=v623" />
+    <!-- v608 SAUDADE Handoff v2 — 5 edition DNA tokens (en/ko/ja/pt/es) -->
+    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v623" />
+    <link rel="stylesheet" href="saudade-skin.css?v=v623" />
+    <link rel="stylesheet" href="style-color.css?v=v623" />
+    <!-- globe.gl + 로딩 안전장치는 bootstrap.js 에서 처리 -->
+
+
+    <!-- SECRETS - 가장 먼저 로드 (window.AURA_PEXELS_KEY 등 설정) -->
+    <!-- ⚠️ aura-secrets.js는 .gitignore에 포함되어 git에 올라가지 않음 -->
+    <script src="aura-secrets.js?v=v623"></script>
+    <!-- CONSENT (GDPR/PIPA) — must load before any analytics or tracking script -->
+    <script src="consent.js?v=v623"></script>
+    <!-- AI / 추정치 / 어필리에이트 면책 헬퍼 (window.AURA_DISCLAIMER) -->
+    <script defer src="aura-common.js?v=v623"></script>
+    <!-- AMBIENT MODE -->
+    <script defer src="city-videos.js?v=v623"></script>
+    <script defer src="https://w.soundcloud.com/player/api.js"></script>
+    <script defer src="ambient-mode.js?v=v623"></script>
+    <script defer src="cafe-mode.js?v=v623"></script>
+    <!-- optimize.js 제거 (404, 파일 존재 X) -->
+    <script defer src="security-patch.js?v=v623"></script>
+    <script defer src="app.js?v=v623"></script>
+    <!-- 사용자 큐레이션 도시 (data moat — localStorage). -->
+    <!-- v558 — 햅틱 + 노마드/v1 트래커 4종 -->
+    <script defer src="haptic.js?v=v623"></script>
+    <!-- v566 — 발열 완화 (visibilitychange 시 setInterval pause). 트래커보다 먼저 로드. -->
+    <script defer src="perf-throttle.js?v=v623"></script>
+    <!-- v560 — 다음 도시 추천 + 노마드 카페 큐레이션 -->
+    <!-- v601 SAUDADE PR#2 — 동심원 + § 00 ISSUE COVER (신규 컴포넌트, 기존 JS 손 안 댐) -->
+    <!-- v608 Handoff v2 — Edition system (5 별쇄). lang-lock 대체. 가장 먼저 로드. -->
+    <script src="saudade-edition.js?v=v623"></script>
+    <!-- v623 Handoff v6 §5 — 도시 시스템 (home + adjacent + Switch the Desk) -->
+    <script defer src="saudade-city.js?v=v623"></script>
+    <!-- v614 — print HUD corner marks (헌법 §1.4) -->
+    <script defer src="saudade-hud.js?v=v623"></script>
+    <script defer src="saudade-rings.js?v=v623"></script>
+    <script defer src="saudade-cover.js?v=v623"></script>
+    <!-- v602 SAUDADE PR#3+4 — 섹션 마스트헤드 + 푸터 룰 + dock click 라우터 -->
+    <script defer src="saudade-masthead.js?v=v623"></script>
+    <script defer src="saudade-footer-rule.js?v=v623"></script>
+    <!-- v604 SAUDADE 보강 — § 04 NEXT ISSUE wrapper + wordmark 인라인 + skins C/D -->
+    <script defer src="saudade-wordmark.js?v=v623"></script>
+    <!-- v605 정합성 — § 02 ATLAS + § 03 OVERLAP + colophon (헌법 §4-3, §4-4, 콜로폰) -->
+    <script defer src="saudade-atlas.js?v=v623"></script>
+    <!-- v606 — § 01 LEDGER 풀 구현 -->
+    <script defer src="saudade-ledger.js?v=v623"></script>
+    <!-- v608 Handoff v2 — § 03 DISPATCHES + § 04 DESK -->
+    <script defer src="saudade-dispatches.js?v=v623"></script>
+    <script defer src="saudade-desk.js?v=v623"></script>
+    <!-- v609 — § 05 LISTENING ROOM (cover 우하단 진입) + 한국어판 dispatches -->
+    <script defer src="saudade-listening.js?v=v623"></script>
+    <style>
+    /* 좌측 패널 - 깔끔 재정의 (main.css 충돌 해결) */
+    .left-drawer {
+        /* 별 배경 비침 방지: 완전 불투명 + blur */
+        background: linear-gradient(180deg, rgba(8, 10, 18, 0.98), rgba(5, 7, 12, 0.98)) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-right: 1px solid rgba(255,255,255,.08) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 240px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        transition: width 0.3s ease;
+        z-index: 100;
+        position: relative;
+        isolation: isolate;
+    }
+    /* 별 배경 안 보이게 - 불투명 배경 강제 (방어용) */
+    .left-drawer::before, .left-drawer::after { display: none !important; }
+    .left-drawer.collapsed {
+        width: 36px !important;
+        overflow: hidden;
+    }
+    .left-drawer.collapsed .drawer-body { display: none; }
+    .left-drawer.collapsed .drawer-title { display: none; }
+    .drawer-head {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(255,255,255,.05);
+        background: rgba(0,0,0,0.3);
+        flex-shrink: 0;
+    }
+    .drawer-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #cbd5e1;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+    }
+    .drawer-toggle {
+        width: 24px !important; height: 24px !important;
+        border-radius: 4px;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.15);
+        color: #e2e8f0;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    .drawer-toggle:hover { background: rgba(255,255,255,.18); }
+    .left-drawer .drawer-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px;
+        background: transparent;
+    }
+    .left-news-list { display: flex; flex-direction: column; gap: 6px; }
+    .left-news-empty { color: #64748b; font-size: 11px; padding: 12px; text-align: center; }
+    .left-news-card {
+        padding: 8px 10px; background: rgba(255,255,255,.04);
+        border-left: 2px solid #64748b; border-radius: 4px; cursor: pointer;
+        transition: background 0.15s;
+    }
+    .left-news-card:hover { background: rgba(255,255,255,.08); }
+    .left-news-card.news { border-left-color: #ef4444; }
+    .left-news-card.tech { border-left-color: #8b5cf6; }
+    .left-news-card.biz { border-left-color: #10b981; }
+    .left-news-source {
+        font-size: 9px; color: #94a3b8; text-transform: uppercase;
+        letter-spacing: 0.5px; margin-bottom: 3px;
+    }
+    .left-news-title {
+        font-size: 11.5px; line-height: 1.35; color: #e2e8f0;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .left-news-time { font-size: 9px; color: #64748b; margin-top: 4px; }
+    body.cafe-mode .left-drawer { display: none !important; }
+
+    /* 음악 컨트롤 패널 - 좌하단 (카페 버튼 위) */
+    .music-control {
+        position: fixed;
+        bottom: 70px;
+        left: 16px;
+        /* 음악 컨트롤 — 모서리 둥글게 + 컬러 스킨 적용 */
+        background: var(--mc-bg, linear-gradient(160deg, rgba(15,18,28,.95), rgba(8,10,18,.95)));
+        border: 1px solid var(--mc-border, rgba(255,255,255,.12));
+        border-radius: 18px;             /* 사용자 요청: 모서리 더 깎기 */
+        padding: 12px 14px;
+        z-index: 9500;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 10px 32px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04) inset;
+        min-width: 240px;
+        cursor: grab;                    /* 사용자 요청: 마우스 집는 모양 */
+        /* v596 모바일/데스크톱 자유 드래그 — touch-action:none 없으면 모바일에서 pointermove 가
+           브라우저 스크롤로 가로채져 드래그 안 먹힘. user-select:none 으로 텍스트 선택 차단. */
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .music-control:active { cursor: grabbing; }
+    .music-control.dragging { opacity: .92; transition: none; }
+    /* input/select/button 위에선 grab 커서 X */
+    .music-control input,
+    .music-control select,
+    .music-control button { cursor: pointer; }
+    .music-control input[type=range] { cursor: ew-resize; }
+    body.cafe-mode .music-control { display: none; }
+    .mc-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 4px 0;
+    }
+    .mc-icon { font-size: 14px; }
+    .mc-select {
+        flex: 1;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.12);
+        color: #e2e8f0;
+        font-size: 11px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+    .mc-select:focus { outline: 1px solid var(--mc-accent, #8b5cf6); outline-offset: 1px; }
+    .mc-btn {
+        width: 32px; height: 32px;
+        background: var(--mc-btn-bg, rgba(139, 92, 246, .22));
+        border: 1px solid var(--mc-btn-border, rgba(139, 92, 246, .5));
+        color: #fff;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        padding: 0; line-height: 1;
+        transition: background .15s, transform .1s, box-shadow .2s;
+        flex-shrink: 0;
+    }
+    .mc-btn svg { width: 13px; height: 13px; display: block; pointer-events: none; }
+    .mc-btn:hover { background: var(--mc-btn-hover, rgba(139, 92, 246, .42)); transform: scale(1.06); }
+    .mc-btn:active { transform: scale(0.94); }
+    .mc-btn.on,
+    .mc-btn.playing {
+        background: var(--mc-btn-hover, rgba(139, 92, 246, .55));
+        box-shadow: 0 0 0 3px var(--mc-btn-bg, rgba(139, 92, 246, .14));
+    }
+    .mc-vol-label { font-size: 12px; }
+    .mc-volume {
+        flex: 1;
+        height: 4px;
+        accent-color: var(--mc-accent, #8b5cf6);
+    }
+    .mc-vol-num {
+        font-size: 10px;
+        color: #94a3b8;
+        min-width: 24px;
+        text-align: right;
+        font-family: monospace;
+    }
+
+    /* 음악 컨트롤 스킨 — body[data-mc-skin] 으로 전환 */
+    body[data-mc-skin="violet"] .music-control { --mc-accent: #8b5cf6; --mc-btn-bg: rgba(139,92,246,.25); --mc-btn-border: rgba(139,92,246,.55); --mc-btn-hover: rgba(139,92,246,.45); --mc-bg: linear-gradient(160deg, rgba(46,16,101,.55), rgba(8,10,18,.95)); --mc-border: rgba(139,92,246,.2); }
+    body[data-mc-skin="ocean"]  .music-control { --mc-accent: #0ea5e9; --mc-btn-bg: rgba(14,165,233,.25); --mc-btn-border: rgba(14,165,233,.55); --mc-btn-hover: rgba(14,165,233,.45); --mc-bg: linear-gradient(160deg, rgba(7,46,68,.6),  rgba(8,12,20,.95)); --mc-border: rgba(14,165,233,.2); }
+    body[data-mc-skin="ember"]  .music-control { --mc-accent: #f97316; --mc-btn-bg: rgba(249,115,22,.25); --mc-btn-border: rgba(249,115,22,.55); --mc-btn-hover: rgba(249,115,22,.45); --mc-bg: linear-gradient(160deg, rgba(76,23,4,.55),  rgba(14,8,4,.95)); --mc-border: rgba(249,115,22,.2); }
+    body[data-mc-skin="mint"]   .music-control { --mc-accent: #10b981; --mc-btn-bg: rgba(16,185,129,.25); --mc-btn-border: rgba(16,185,129,.55); --mc-btn-hover: rgba(16,185,129,.45); --mc-bg: linear-gradient(160deg, rgba(6,46,33,.55),  rgba(4,12,8,.95)); --mc-border: rgba(16,185,129,.2); }
+    body[data-mc-skin="rose"]   .music-control { --mc-accent: #ec4899; --mc-btn-bg: rgba(236,72,153,.25); --mc-btn-border: rgba(236,72,153,.55); --mc-btn-hover: rgba(236,72,153,.45); --mc-bg: linear-gradient(160deg, rgba(74,4,40,.55),   rgba(14,4,10,.95)); --mc-border: rgba(236,72,153,.2); }
+    body[data-mc-skin="mono"]   .music-control { --mc-accent: #e2e8f0; --mc-btn-bg: rgba(255,255,255,.12); --mc-btn-border: rgba(255,255,255,.3); --mc-btn-hover: rgba(255,255,255,.22); --mc-bg: linear-gradient(160deg, rgba(30,30,32,.85),  rgba(10,10,12,.95)); --mc-border: rgba(255,255,255,.16); }
+
+    /* 우측 뉴스 패널 — 나라 picker (클릭 시 위에서 아래로 펼쳐짐) */
+    .country-picker-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
+        background: transparent;
+        border: 1px solid transparent;
+        color: inherit;
+        padding: 4px 6px;
+        margin: -4px -6px;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: left;
+        flex: 1;
+        min-width: 0;
+        transition: background 0.15s, border-color 0.15s;
+    }
+    .country-picker-btn:hover {
+        background: rgba(255,255,255,.06);
+        border-color: rgba(255,255,255,.1);
+    }
+    .country-heading-text { flex: 1; min-width: 0; }
+    .country-heading-text h2 { margin: 0; font-size: 18px; line-height: 1.2; }
+    .country-heading-text p { margin: 2px 0 0; font-size: 11px; color: rgba(255,255,255,.55); }
+    .country-picker-chevron {
+        font-size: 14px;
+        color: rgba(255,255,255,.55);
+        transition: transform 0.2s;
+        flex-shrink: 0;
+    }
+    .country-picker-btn[aria-expanded="true"] .country-picker-chevron {
+        transform: rotate(180deg);
+        color: #fff;
+    }
+    .country-picker-panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(8, 10, 18, 0.98);
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        backdrop-filter: blur(14px);
+        z-index: 50;
+        max-height: 380px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform-origin: top;
+        animation: pickerDropIn 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 12px 32px rgba(0,0,0,.5);
+    }
+    @keyframes pickerDropIn {
+        from { opacity: 0; transform: translateY(-8px) scaleY(0.92); }
+        to   { opacity: 1; transform: translateY(0) scaleY(1); }
+    }
+    .country-picker-search {
+        width: 100%;
+        padding: 10px 12px;
+        background: rgba(255,255,255,.04);
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        color: #e2e8f0;
+        font-size: 12px;
+        outline: none;
+        flex-shrink: 0;
+    }
+    .country-picker-search:focus { background: rgba(255,255,255,.07); }
+    .country-picker-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 6px;
+    }
+    .country-picker-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 8px 10px;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        color: #e2e8f0;
+        cursor: pointer;
+        font-size: 12px;
+        text-align: left;
+        transition: background 0.12s;
+    }
+    .country-picker-item:hover { background: rgba(255,255,255,.07); }
+    .country-picker-item.active {
+        background: rgba(139, 92, 246, .15);
+        border-color: rgba(139, 92, 246, .35);
+        color: #fff;
+    }
+    .country-picker-flag { font-size: 16px; flex-shrink: 0; }
+    .country-picker-name { flex: 1; min-width: 0; }
+    .country-picker-count {
+        font-size: 10px;
+        color: rgba(255,255,255,.4);
+        font-family: ui-monospace, monospace;
+        flex-shrink: 0;
+    }
+    .country-picker-empty {
+        padding: 30px 10px;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255,255,255,.4);
+    }
+    .right-drawer .sticky-head {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .right-drawer .sticky-head .head-actions { flex-shrink: 0; }
+
+    /* 뉴스 패널 — 위에서 내려오는 모드 (사용자 요청) */
+    body.news-top-mode .right-drawer {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 75vh !important;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255,255,255,.12) !important;
+        z-index: 90;
+        transform: translateY(-100%) !important;
+        opacity: 1 !important;
+        pointer-events: none !important;
+        transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 16px 48px rgba(0,0,0,.55);
+    }
+    body.news-top-mode.news-top-open .right-drawer {
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+    }
+    /* 상단 모드에선 grid가 옆에 자리 차지 안 하게 */
+    body.news-top-mode .shell {
+        grid-template-columns: 0 1fr 0 !important;
+    }
+    body.news-top-mode.left-open .shell {
+        grid-template-columns: var(--left-w) 1fr 0 !important;
+    }
+    /* 상단 토글 버튼 */
+    .news-top-toggle {
+        position: fixed;
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 91;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(8, 10, 18, 0.92);
+        border: 1px solid rgba(255,255,255,.14);
+        border-radius: 0 0 12px 12px;
+        color: #e2e8f0;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(0,0,0,.35);
+        transition: top 0.32s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s, border-color 0.15s;
+    }
+    .news-top-toggle:hover {
+        background: rgba(15, 18, 28, 1);
+        border-color: rgba(255,255,255,.28);
+    }
+    .news-top-toggle-chevron {
+        font-size: 12px;
+        color: #8b5cf6;
+        transition: transform 0.25s;
+    }
+    body.news-top-open .news-top-toggle {
+        /* 패널이 펼쳐져 있을 땐 패널 바닥 가까이로 내려와서 손잡이처럼 보임 */
+        top: calc(min(75vh, 100% - 60px) - 4px);
+    }
+    body.news-top-open .news-top-toggle-chevron { transform: rotate(180deg); }
+    body.cafe-mode .news-top-toggle { display: none; }
+
+    /* 위에서 내려오는 모드: 우측 패널 토글 버튼은 숨김 (중복) */
+    body.news-top-mode #toggleRightBtn { display: none; }
+
+    /* country-picker-panel은 이제 위 sticky-head 아래에서 펼쳐지는 dropdown 그대로 사용 */
+
+    /* Ken Burns 애니메이션 - 정적 도시 이미지에 부드러운 zoom/pan (영상 느낌) */
+    @keyframes ken-burns {
+        0%   { transform: scale(1.0) translate(0, 0); }
+        50%  { transform: scale(1.15) translate(-2%, -2%); }
+        100% { transform: scale(1.0) translate(0, 0); }
+    }
+    .city-visual-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: ken-burns 30s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    /* SoundCloud widget - 숨김 모드 (음악만, UI 안 보임) */
+    .sc-player-container {
+        position: fixed;
+        bottom: -1000px;     /* 화면 밖으로 */
+        right: -1000px;
+        width: 10px;
+        height: 10px;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .sc-player-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .sc-player-close { display: none; }
+    </style>
+</head>
+
+<body class="theme-default right-open">
+
+    <!-- SVG SYMBOLS: LOUNJ prism + AURA legacy + UI icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <defs>
+            <!-- LOUNJ 브랜드 마크 — cyan→purple→amber 프리즘. 로딩 + topbar 양쪽 사용. -->
+            <linearGradient id="lounjGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="50%" stop-color="#7B61FF"/>
+                <stop offset="100%" stop-color="#FFB800"/>
+            </linearGradient>
+            <symbol id="lounj-mark" viewBox="0 0 512 512">
+                <!-- v580 사용자 제공 새 로고 — Synthesis Lens (L_STATION + VIEW_PORTAL_v2)
+                     하이엔드 silver gradient + portal core + 글래스 효과 -->
+                <defs>
+                    <!-- v596 — '로고 색 흰색만 보임' fix. v594 의 0% pure-white start +
+                         feGaussianBlur stdDeviation 18 조합이 컬러를 다 희석. 시작 stop 을
+                         vivid cyan 으로 바꾸고 blur 14→6 으로 줄여 본래 색 살아남게.
+                         포털 코어도 white 시작 → cyan 시작으로 색감 보존. -->
+                    <linearGradient id="lounjSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%"   stop-color="#5EFFFF"/>
+                        <stop offset="35%"  stop-color="#A98AFF"/>
+                        <stop offset="70%"  stop-color="#FFAA66"/>
+                        <stop offset="100%" stop-color="#FF6FB7"/>
+                    </linearGradient>
+                    <filter id="lounjHyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="6" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                    <radialGradient id="lounjPortalCore" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%"   stop-color="#5EFFFF" stop-opacity="1.0"/>
+                        <stop offset="40%"  stop-color="#B794F6" stop-opacity="0.75"/>
+                        <stop offset="75%"  stop-color="#FFAA66" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="transparent"/>
+                    </radialGradient>
+                </defs>
+                <!-- 1. 배경 앰비언트 오빗 -->
+                <g style="transform-origin:center">
+                    <circle cx="256" cy="256" r="235" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5" stroke-dasharray="2 12"/>
+                    <path d="M 256,10 L 256,25 M 256,487 L 256,502 M 10,256 L 25,256 M 487,256 L 502,256" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+                </g>
+                <!-- 2. 메인 심볼: SYNTHESIS LENS — v584 사용자 '너무 얇아서 안보임' fix.
+                     stroke-width 28→52 (가시성 ↑), portal core opacity 0.4→0.85,
+                     중심 점 r 14→24, ring stroke 1.5→4 -->
+                <g filter="url(#lounjHyperGlow)">
+                    <path d="M 110,70 V 390 H 340 C 420,390 450,330 450,280 C 450,190 390,140 320,140 C 250,140 210,200 210,280" fill="none" stroke="rgba(0,0,0,0.5)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" transform="translate(5, 5)"/>
+                    <path d="M 110,70 V 390 H 340 C 420,390 450,330 450,280 C 450,190 390,140 320,140 C 250,140 210,200 210,280" fill="none" stroke="url(#lounjSilverGrad)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 110,70 V 390 H 340" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.45" transform="translate(-10, 0)"/>
+                    <circle cx="320" cy="280" r="110" fill="url(#lounjPortalCore)" opacity="0.85"/>
+                    <circle cx="320" cy="280" r="24" fill="#fff"/>
+                    <circle cx="320" cy="280" r="55" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="10 14" opacity="0.6"/>
+                    <rect x="316" y="70" width="8" height="210" rx="4" fill="#fff" opacity="0.5"/>
+                </g>
+                <!-- 3. 기술적 메타데이터 마킹 -->
+                <g fill="rgba(255,255,255,0.15)" font-family="monospace" font-size="8" font-weight="900" letter-spacing="4">
+                    <text x="135" y="90">L_STATION</text>
+                    <text x="440" y="405" text-anchor="end">VIEW_PORTAL_v2</text>
+                </g>
+            </symbol>
+
+            <!-- AURA WORLD PULSE LOGO: Omega + Saturn planet + cosmos -->
+            <symbol id="aura-logo" viewBox="0 0 200 200">
+                <!-- Omega (Ω) outer shape: thick ring with flat base feet -->
+                <path fill="currentColor" d="
+                    M 100 22
+                    C 55 22, 22 55, 22 100
+                    C 22 125, 32 145, 48 158
+                    L 48 168
+                    L 22 168
+                    L 22 178
+                    L 78 178
+                    L 78 155
+                    C 62 145, 48 128, 48 100
+                    C 48 70, 72 48, 100 48
+                    C 128 48, 152 70, 152 100
+                    C 152 128, 138 145, 122 155
+                    L 122 178
+                    L 178 178
+                    L 178 168
+                    L 152 168
+                    L 152 158
+                    C 168 145, 178 125, 178 100
+                    C 178 55, 145 22, 100 22
+                    Z
+                "/>
+                
+                <!-- Saturn planet in center (black filled circle) -->
+                <circle cx="100" cy="95" r="16" fill="currentColor"/>
+                
+                <!-- Saturn ring (elliptical, crossing over planet) -->
+                <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                    <!-- back half of ring (behind planet) -->
+                    <path d="M 62 98 Q 100 76, 138 92" opacity="0.95"/>
+                    <!-- front half of ring (in front of planet, thicker) -->
+                    <path d="M 62 98 Q 100 118, 138 92" stroke-width="2.8"/>
+                    <!-- outer ring edge (thin, on the left side tips) -->
+                    <path d="M 60 96 Q 100 74, 140 91" opacity="0.6" stroke-width="1.2"/>
+                    <path d="M 60 100 Q 100 122, 140 94" opacity="0.6" stroke-width="1.2"/>
+                </g>
+                
+                <!-- Stars & cosmos dots -->
+                <g fill="currentColor">
+                    <!-- Top star (4-point) -->
+                    <path d="M 108 60 L 110 66 L 116 68 L 110 70 L 108 76 L 106 70 L 100 68 L 106 66 Z"/>
+                    <!-- Bottom-right star (4-point, smaller) -->
+                    <path d="M 125 120 L 126.5 124 L 130.5 125.5 L 126.5 127 L 125 131 L 123.5 127 L 119.5 125.5 L 123.5 124 Z"/>
+                    <!-- Small dots scattered -->
+                    <circle cx="78" cy="82" r="1.3"/>
+                    <circle cx="125" cy="75" r="1.1"/>
+                    <circle cx="85" cy="115" r="1.2"/>
+                    <circle cx="118" cy="105" r="1"/>
+                    <circle cx="72" cy="105" r="0.9"/>
+                    <circle cx="132" cy="110" r="0.8"/>
+                </g>
+            </symbol>
+
+            <!-- LOUNJ wordmark with heartbeat pulse line (for loading / large display) -->
+            <symbol id="aura-wordmark" viewBox="0 0 400 120">
+                <g fill="currentColor" font-family="Sora, sans-serif" font-weight="700" font-size="56" letter-spacing="10">
+                    <text x="200" y="50" text-anchor="middle">LOUNJ</text>
+                </g>
+                <g fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="75" r="2.5"/>
+                    <line x1="22" y1="75" x2="160" y2="75" stroke-linecap="round"/>
+                    <path d="M 160 75 L 170 75 L 175 65 L 182 85 L 190 55 L 197 90 L 204 75 L 214 75 L 225 75 L 232 70 L 240 75"
+                          fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                    <line x1="240" y1="75" x2="378" y2="75" stroke-linecap="round"/>
+                    <circle cx="380" cy="75" r="2.5"/>
+                </g>
+                <g fill="currentColor" font-family="Sora, sans-serif" font-weight="500" font-size="14" letter-spacing="10">
+                    <text x="200" y="108" text-anchor="middle">CAFE MODE</text>
+                </g>
+            </symbol>
+
+            <!-- HUD Icons -->
+            <symbol id="ic-refresh" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/>
+            </symbol>
+            <symbol id="ic-settings" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>
+            </symbol>
+            <symbol id="ic-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="ic-close" viewBox="0 0 24 24">
+                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="ic-info" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="8" r="1" fill="currentColor"/>
+                <line x1="12" y1="11" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="ic-globe" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+            </symbol>
+            <symbol id="ic-social" viewBox="0 0 24 24">
+                <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/>
+            </symbol>
+            <symbol id="ic-layers" viewBox="0 0 24 24">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <polyline points="2 17 12 22 22 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <polyline points="2 12 12 17 22 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </symbol>
+            <symbol id="ic-news" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"
+                    d="M4 4h14v16H4zM18 8h2v12a2 2 0 0 1-2-2M8 8h6M8 12h6M8 16h6"/>
+            </symbol>
+            <symbol id="ic-share" viewBox="0 0 24 24">
+                <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/>
+            </symbol>
+            <symbol id="ic-lock" viewBox="0 0 24 24">
+                <rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path fill="none" stroke="currentColor" stroke-width="1.5" d="M8 11V7a4 4 0 1 1 8 0v4"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <div id="app">
+        <div class="scanlines" aria-hidden="true"></div>
+        <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+        <!-- LOADING OVERLAY — LOUNJ 프리즘 마크 + 워드마크 -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-shell-min">
+                <div class="aura-logo-mark">
+                    <!-- v584 사용자 '로고로 글자 대체 + 더 잘 보이게' — 120→200px, LOUNJ 텍스트 hide -->
+                    <svg class="lounj-prism-mark" width="200" height="200" viewBox="0 0 512 512" aria-hidden="true">
+                        <use href="#lounj-mark"/>
+                    </svg>
+                    <div class="aura-logo-text" style="display:none">LOUNJ</div>
+                    <div class="aura-pulse-line">
+                        <svg viewBox="0 0 240 20" preserveAspectRatio="none" width="100%" height="20">
+                            <line x1="2" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                            <polyline points="90,10 100,10 105,2 110,18 115,4 120,16 125,10 240,10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+                            <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                            <circle cx="238" cy="10" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="aura-logo-sub" style="display:none">CAFE MODE</div>
+                </div>
+                <div class="loading-spinner"></div>
+                <div class="loading-text" id="loadingStatus">LOADING</div>
+                <div class="loading-detail-min" id="loadingDetail">Preparing...</div>
+                <div class="loading-bar-wrap">
+                    <div class="loading-bar" id="loadingBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP BAR — v612 정리. saudade 워드마크 + 단일 SETTINGS 버튼만 (콜로폰 진입). -->
+        <header class="topbar">
+            <div class="topbar-left"></div>
+            <div class="brand-stack">
+                <span data-saudade-wordmark="small" data-sdd-wordmark aria-label="Saudade — back to cover"></span>
+            </div>
+            <div class="topbar-right">
+                <button id="settingsBtn" class="os-btn" title="Settings · § 04 The Desk" aria-label="Open The Desk">
+                    SETTINGS
+                </button>
+            </div>
+            <!-- 호환용 hidden — app.js / 기존 모듈 ?. 옵셔널 체이닝 silent fail -->
+            <span id="statusDot" hidden></span>
+            <span id="feedStatus" hidden></span>
+            <span id="datetime" hidden></span>
+            <span id="countdown" hidden></span>
+            <span id="spinIcon" hidden></span>
+            <span id="languageSelect" hidden></span>
+            <span id="bookmarksBtn" hidden></span>
+            <span id="refreshBtn" hidden></span>
+        </header>
+
+        <!-- v612 — news-top-toggle / control-bar / left-drawer DOM 제거.
+             SAUDADE 매거진 톤으로 통합. saudade-* 가 자체 페이지 마운트. -->
+
+        <!-- SHELL (main grid) -->
+        <div class="shell">
+
+            <!-- 호환용 hidden span — app.js 가 ?. 옵셔널 체이닝으로 참조 -->
+            <span id="searchInput" hidden></span>
+            <span id="categorySelect" hidden></span>
+            <span id="countrySelect" hidden></span>
+            <span id="leftNewsList" hidden></span>
+            <span id="newsList" hidden></span>
+
+            <!-- 음악 컨트롤 패널 (좌하단 카페 버튼 위) -->
+            <div id="musicControl" class="music-control">
+                <div class="mc-row">
+                    <span class="mc-icon">🎵</span>
+                    <select id="mcGenre" class="mc-select" title="장르">
+                        <optgroup label="🎧 Chill / Work">
+                            <option value="lofi">Lofi Hip Hop 24/7</option>
+                            <option value="study">Study Beats</option>
+                            <option value="chill">Chillhop Cafe</option>
+                            <option value="ambient">Ambient Sleep</option>
+                        </optgroup>
+                        <optgroup label="☕ Cafe Vibes">
+                            <option value="jazz">Jazz Cafe</option>
+                            <option value="bossa">Bossa Nova</option>
+                            <option value="coffee">Coffee Shop</option>
+                            <option value="piano">Piano Cafe</option>
+                        </optgroup>
+                        <optgroup label="🌃 Night / Energy">
+                            <option value="synthwave">Synthwave 80s</option>
+                            <option value="cityPop">City Pop (Japan)</option>
+                            <option value="hiphop">Lofi Hip Hop (free)</option>
+                            <option value="kpop">K-Indie Mix</option>
+                        </optgroup>
+                        <optgroup label="🌍 World">
+                            <option value="latin">Latin Jazz</option>
+                            <option value="reggae">Reggae Vibes</option>
+                            <option value="classical">Classical Cafe</option>
+                            <option value="nature">Nature + Rain</option>
+                        </optgroup>
+                    </select>
+                    <button type="button" id="mcToggle" class="mc-btn" title="Play / Pause" aria-label="Play / Pause">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+                    <button type="button" id="mcNext" class="mc-btn mc-next-btn" title="다른 채널로 넘기기" aria-label="Next stream">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6l8.5 6L6 18V6zm10 0h2v12h-2V6z"/></svg>
+                    </button>
+                </div>
+                <div class="mc-row">
+                    <span class="mc-vol-label">🔉</span>
+                    <input type="range" id="mcVolume" class="mc-volume" min="0" max="100" value="50">
+                    <span id="mcVolumeNum" class="mc-vol-num">50</span>
+                </div>
+            </div>
+
+            <!-- v612 SAUDADE — STAGE / right-drawer 모두 제거.
+                 saudade-cover/atlas/dispatches/desk 가 자체 페이지로 마운트.
+                 호환용 hidden span 만 남김 — app.js 옵셔널 체이닝 silent fail. -->
+            <main class="stage-shell" hidden></main>
+            <span id="globe" hidden></span>
+            <span id="countryPickerBtn" hidden></span>
+            <span id="countryFlagBadge" hidden></span>
+            <span id="countryName" hidden></span>
+            <span id="headlineCount" hidden></span>
+            <span id="bookmarksTabContent" hidden></span>
+
+        </div>
+
+        <!-- BOTTOM DOCK -->
+        <footer class="bottom-dock">
+            <button id="toggleDockBtnInner" class="dock-toggle-btn" type="button" aria-label="Toggle dock"></button>
+            <div class="dock-handle">
+                <div class="dock-stats" id="dockMainButtons">
+                    <!-- v610 SAUDADE — § 01-04 4 dock-btn 만. 라벨은 saudade-skin §27 의
+                         ::before/::after 가 'LEDGER/ATLAS/DISPATCHES/THE DESK' 로 강제. -->
+                    <button type="button" class="dock-btn" data-cat="visa" aria-label="Section 01: Ledger"></button>
+                    <button type="button" class="dock-btn" data-cat="cafe" aria-label="Section 02: Atlas"></button>
+                    <button type="button" class="dock-btn" data-cat="tz"   aria-label="Section 03: Dispatches"></button>
+                    <button type="button" class="dock-btn" data-cat="trip" aria-label="Section 04: The Desk"></button>
+                    <!-- 호환용 hidden — app.js 가 참조 -->
+                    <span id="feedsLive" style="display:none">0/0</span>
+                    <span id="articleCount" style="display:none">0</span>
+                    <span id="nextSync" style="display:none">--:--</span>
+                    <span id="riskScore" style="display:none">0.0</span>
+                    <span id="aircraftCount" style="display:none">0</span>
+                    <span id="quakeCount" style="display:none">0</span>
+                </div>
+            </div>
+
+            <div class="dock-content" style="display:none">
+                <!-- 환율은 이제 상단 dock 버튼으로 이동, 시스템 박스 제거 -->
+                <select id="fxBaseSelect" class="os-select"></select>
+                <select id="fxQuoteSelect" class="os-select"></select>
+                <strong id="fxRateValue">--</strong>
+                <span id="fxRateLabel">--</span>
+                <div id="fxSummary"></div>
+                <button id="layersAllOnBtn" class="text-btn">ALL ON</button>
+                <button id="layersAllOffBtn" class="text-btn">ALL OFF</button>
+                <span id="hotCountValue">0</span>
+                <span id="breakingCountValue">0</span>
+                <span id="disasterCount">0</span>
+            </div>
+        </footer>
+
+        <!-- LEGAL pill 트리거 — 라벨이 보이는 알약 버튼. 클릭 시 메뉴 펼침. -->
+        <!-- 법무 의무(PIPA §30 / GDPR Art.13)는 클릭 한 번이면 닿는 거리이면 충족. -->
+        <div id="auraLegalStrip" style="position:fixed;left:10px;bottom:10px;z-index:1500;font:10px/1.3 ui-monospace,monospace;color:rgba(255,255,255,.7);letter-spacing:.08em;pointer-events:auto;display:flex;align-items:center;gap:8px">
+            <button type="button" id="auraLegalToggle" aria-label="Open menu (privacy, terms, credits)" aria-expanded="false"
+                    style="all:unset;cursor:pointer;height:28px;padding:0 12px;border-radius:14px;display:inline-flex;align-items:center;gap:6px;background:rgba(15,18,22,.85);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);font:600 11px ui-monospace,monospace;letter-spacing:.1em;backdrop-filter:blur(8px);box-shadow:0 4px 12px rgba(0,0,0,.4);transition:all .2s"><span style="font-size:13px;line-height:1">ⓘ</span><span>MENU</span></button>
+            <span id="auraLegalMenu" hidden style="margin-left:8px">
+                <a href="privacy.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">PRIVACY</a>
+                <span style="opacity:.4;margin:0 6px">·</span>
+                <a href="terms.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">TERMS</a>
+                <span style="opacity:.4;margin:0 6px">·</span>
+                <a href="credits.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">CREDITS</a>
+                <span style="opacity:.4;margin:0 6px">·</span>
+                <a href="#" id="auraAddCityLink" style="color:#ff5d50;text-decoration:none;border-bottom:1px dotted rgba(255,93,80,.5);padding-bottom:1px">+ MY CITY</a>
+                <span style="opacity:.4;margin:0 6px">·</span>
+                <a href="#" id="auraConsentLink" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">PRIVACY CHOICES</a>
+            </span>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggle = document.getElementById('auraLegalToggle');
+                var menu = document.getElementById('auraLegalMenu');
+                if (toggle && menu) {
+                    toggle.addEventListener('click', function() {
+                        var open = menu.hasAttribute('hidden') ? false : true;
+                        if (open) {
+                            menu.setAttribute('hidden','');
+                            toggle.setAttribute('aria-expanded','false');
+                            toggle.style.background = 'rgba(15,18,22,.85)';
+                            toggle.style.borderColor = 'rgba(255,255,255,.18)';
+                            toggle.style.color = 'rgba(255,255,255,.9)';
+                        } else {
+                            menu.removeAttribute('hidden');
+                            toggle.setAttribute('aria-expanded','true');
+                            toggle.style.background = 'rgba(255,93,80,.22)';
+                            toggle.style.borderColor = 'rgba(255,93,80,.6)';
+                            toggle.style.color = '#ff5d50';
+                        }
+                    });
+                }
+                var l = document.getElementById('auraConsentLink');
+                if (l) l.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.AURA_CONSENT && window.AURA_CONSENT.openSettings) window.AURA_CONSENT.openSettings();
+                });
+                var add = document.getElementById('auraAddCityLink');
+                if (add) add.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.AURA_USER_CITIES && window.AURA_USER_CITIES.openAddModal) window.AURA_USER_CITIES.openAddModal();
+                });
+            });
+        </script>
+
+        <!-- COUNTRY MODAL (Command Center) -->
+        <div id="countryModal" class="country-modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" aria-hidden="true">
+            <div class="cm-window">
+                <div class="cm-header">
+                    <div class="cm-title-wrap">
+                        <span id="cmFlag" class="cm-flag" aria-hidden="true">🇺🇸</span>
+                        <div>
+                            <h2 id="cmTitle">United States</h2>
+                            <p id="cmSubtitle">COMMAND CENTER</p>
+                        </div>
+                    </div>
+                    <button id="closeCountryModalBtn" class="os-btn">
+                        <svg width="12" height="12" style="vertical-align:middle"><use href="#ic-close"/></svg>
+                    </button>
+                </div>
+                <div class="cm-grid">
+                    <section>
+                        <div class="block-head">
+                            <span class="block-kicker" data-i18n="signals">SIGNALS</span>
+                        </div>
+                        <div id="cmSignals" class="cm-signals"></div>
+                    </section>
+                    <section>
+                        <div class="cm-news-head">
+                            <span class="block-kicker" data-i18n="relatedNews">RELATED NEWS</span>
+                        </div>
+                        <div id="cmNewsList" class="cm-news-list"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- SETTINGS MODAL -->
+        <div id="settingsModal" class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settingsModalTitle" aria-hidden="true">
+            <div class="settings-content">
+                <div class="settings-header">
+                    <div class="settings-title" id="settingsModalTitle" data-i18n="settings">SETTINGS</div>
+                    <button id="closeSettingsBtn" class="os-btn">
+                        <svg width="12" height="12" style="vertical-align:middle"><use href="#ic-close"/></svg>
+                    </button>
+                </div>
+                <div class="settings-body">
+                    <section class="settings-section">
+                        <div class="settings-section-title" data-i18n="theme">THEME</div>
+                        <div class="setting-row">
+                            <div class="setting-label">Visual theme</div>
+                            <div class="setting-control">
+                                <select id="themeSelect" class="os-select">
+                                    <option value="default">Solar Red</option>
+                                    <option value="ice">Ice Blue</option>
+                                    <option value="forest">Forest Green</option>
+                                    <option value="sunset">Sunset Amber</option>
+                                    <option value="purple">Nebula Violet</option>
+                                    <option value="gold">Signal Gold</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-label">🌍 Globe skin</div>
+                            <div class="setting-control">
+                                <button type="button" id="globeSkinBtn" class="os-select" style="cursor:pointer;text-align:left;padding:8px 14px;">
+                                    <span data-i18n="changeSkin">Change skin →</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-label">🗺️ Map mode</div>
+                            <div class="setting-control">
+                                <select id="mapModeSelect" class="os-select" aria-label="Map mode">
+                                    <option value="auto">Auto (recommended)</option>
+                                    <option value="3d">3D Globe</option>
+                                    <option value="2d">2D Map</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="settings-section">
+                        <div class="settings-section-title" data-i18n="notifications">NOTIFICATIONS</div>
+                        <div class="setting-row">
+                            <div class="setting-label" data-i18n="breakingAlerts">Breaking alerts</div>
+                            <div class="setting-control">
+                                <input type="checkbox" id="notificationsToggle" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="settings-section" id="personalizationSection">
+                        <div class="settings-section-title">PERSONALIZATION</div>
+                        <div id="personalizationBody" style="padding:14px;border-radius:12px;border:1px solid var(--border);background:var(--surface);font-size:11px;line-height:1.7;color:var(--text-dim);">
+                            Reading signals are learning your interests...
+                        </div>
+                        <button id="resetPersonalizationBtn" class="text-btn" style="margin-top:10px;width:100%;height:34px;">RESET LEARNING DATA</button>
+                    </section>
+
+                    <section class="credits">
+                        <div class="credits-title">LOUNJ · CAFE MODE</div>
+                        <div class="credits-author">LEEJAEJIN (JADDY)</div>
+                        <div class="credits-handle">@jaddy_102 · OBSERVE THE WORLD</div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

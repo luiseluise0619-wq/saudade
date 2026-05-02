@@ -1,0 +1,1693 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · SKIN OVERRIDES
+   기존 LOUNJ 다크-글래스 테마 → paper / ink / rust 매거진 톤으로 강제 전환.
+   JS 코드는 일체 손대지 않음 (MINIMAL INTERVENTION). CSS only.
+   loaded order: design-tokens.css → style.css → saudade-tokens.css → saudade-typography.css → saudade-skin.css
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── 1. 전역 reset: Fraunces 본문 + 모든 글래스/그라디언트/그림자 무력화 ───── */
+
+html, body {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    font-size: var(--t-body);
+    line-height: 1.55;
+    letter-spacing: var(--tr-fraunces-body-m);
+    -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 768px) {
+    html, body { letter-spacing: var(--tr-fraunces-body-d); line-height: 1.6; font-size: 18px; }
+}
+
+/* 별 반짝임 (v596 우주 sparkle) — SAUDADE 는 장식 일체 금지 */
+body::before { display: none !important; }
+
+/* 모든 글래스/그라디언트/그림자 제거 — SAUDADE 는 매거진 인쇄 느낌 */
+.glass-panel,
+.os-card,
+.cm-card,
+.dock-card,
+.country-picker-panel,
+[class*="-card"],
+[class*="-panel"] {
+    background: var(--paper) !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    color: var(--ink) !important;
+}
+
+/* gradient 일괄 제거 — text/background 모두 */
+[style*="linear-gradient"],
+[style*="radial-gradient"] {
+    background-image: none !important;
+}
+
+/* radius 강제 0~4px — SAUDADE 룰 */
+* {
+    border-radius: 0 !important;
+}
+button, input, select, .os-search, .data-pill, .data-chip,
+.dock-btn, .topbar-btn, .icon-btn,
+.mc-btn, .mc-select {
+    border-radius: 4px !important;
+}
+
+/* ─── 2. 메인 화면: 지구본/영상 위 페이퍼 컬러 fallback ──────────────────── */
+
+#globe canvas, #mobileMap, .city-visual-img {
+    /* 영상/지구본은 그대로 유지 (시각 자산) — SAUDADE 의 사진 금지 룰은 새벽 영상만 허용 */
+    /* 단 위에 paper 톤 5% overlay 한 번 — 통일감 */
+    filter: grayscale(20%) contrast(0.95) brightness(0.92);
+}
+
+/* shell/메인 영역도 paper */
+.shell, main, .main, #app, #root {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+}
+
+/* ─── 3. Topbar: 매거진 마스트헤드 풍 ──────────────────────────────────── */
+
+.topbar {
+    background: var(--paper) !important;
+    border-bottom: 0.5px solid var(--rule) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* topbar 내 모든 chip/select/button — paper + ink + hairline */
+.topbar .os-btn,
+.topbar .os-select,
+.topbar .countdown-chip,
+.topbar .status-chip {
+    background: transparent !important;
+    border: 0.5px solid var(--rule) !important;
+    color: var(--ink) !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+.topbar .os-btn:hover {
+    background: var(--paper-d) !important;
+}
+.topbar .os-btn.accent {
+    background: var(--rust) !important;
+    color: var(--paper) !important;
+    border-color: var(--rust) !important;
+}
+
+/* 리프레시/설정 버튼 안의 SVG icon — 회전 애니메이션 금지 룰. 단 refresh 만 spin 보존 */
+.topbar svg { color: currentColor; }
+
+/* ─── 4. 로고 영역 — 동심원 모티프 SAUDADE 워드마크 (텍스트만) ─────────────── */
+
+.brand-stack .aura-logo-mark { display: none !important; }
+.brand-stack::after {
+    content: 'saudade';
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--ink);
+    line-height: 1;
+    display: inline-block;
+    padding: 4px 0;
+}
+@media (max-width: 768px) {
+    .brand-stack::after { font-size: 22px; }
+}
+
+/* ─── 5. 본문 헤딩 (h1, h2, h3) — Fraunces 자동 적용 ─────────────────────── */
+
+h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 56px;
+    line-height: 0.92;
+    letter-spacing: var(--tr-fraunces-h1-m);
+    color: var(--ink);
+    margin: 0 0 var(--s-4);
+}
+@media (min-width: 768px) {
+    h1 { font-size: 96px; letter-spacing: var(--tr-fraunces-h1-d); }
+}
+
+h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 0.95;
+    letter-spacing: var(--tr-fraunces-h2-m);
+    color: var(--ink);
+    margin: 0 0 var(--s-3);
+}
+@media (min-width: 768px) {
+    h2 { font-size: 54px; letter-spacing: var(--tr-fraunces-h2-d); }
+}
+
+h3, h4 {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 var(--s-2);
+}
+
+/* ─── 6. Dock = 매거진 § 네비게이션 (둥근 버블 X, mono UPPERCASE 텍스트) ──── */
+
+@media (min-width: 769px) {
+    body:not(.cafe-mode) .bottom-dock {
+        background: var(--paper) !important;
+        border-top: 0.5px solid var(--rule) !important;
+        bottom: 0 !important;
+        padding: 0 !important;
+    }
+    body:not(.cafe-mode) .dock-stats {
+        background: transparent !important;
+        border: 0 !important;
+        gap: var(--s-7) !important;
+        padding: var(--s-4) var(--s-6) !important;
+        justify-content: center !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn {
+        width: auto !important;
+        height: auto !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        flex-direction: row !important;
+        gap: var(--s-2) !important;
+        padding: var(--s-2) 0 !important;
+        color: var(--ink) !important;
+        font-family: var(--mono) !important;
+        font-weight: 500 !important;
+        font-size: 11px !important;
+        letter-spacing: var(--tr-mono-mast) !important;
+        text-transform: uppercase !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn:hover {
+        transform: none !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: var(--rust) !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-icon {
+        display: none !important;     /* 이모지 일체 숨김 */
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
+        font-size: 11px !important;
+        opacity: 1 !important;
+        letter-spacing: var(--tr-mono-mast) !important;
+    }
+    /* 활성 / 강조 버튼 */
+    body:not(.cafe-mode) .dock-stats > .dock-btn--focused,
+    body:not(.cafe-mode) .dock-stats > .dock-btn[aria-selected="true"] {
+        color: var(--rust) !important;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 0.5px;
+    }
+    /* § 마커 (CSS gen content 로 추가) — § 01, § 02 ... */
+    body:not(.cafe-mode) .dock-stats > .dock-btn::before {
+        content: '§ ' counter(navItem, decimal-leading-zero);
+        counter-increment: navItem;
+        margin-right: var(--s-2);
+        color: var(--bone-d);
+        font-weight: 400;
+        letter-spacing: var(--tr-mono-meta);
+    }
+    body:not(.cafe-mode) .dock-stats { counter-reset: navItem; }
+}
+
+/* 모바일 dock — 동그란 글래스 버블 → mono 라벨 row */
+@media (max-width: 768px) {
+    body:not(.cafe-mode) .bottom-dock {
+        background: var(--paper) !important;
+        border-top: 0.5px solid var(--rule) !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: var(--ink) !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-icon { display: none !important; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
+        display: block !important;
+        font-family: var(--mono) !important;
+        font-size: 9px !important;
+        letter-spacing: var(--tr-mono-meta) !important;
+        text-transform: uppercase !important;
+        color: var(--ink) !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ─── 7. 입력 / 셀렉트 / 검색 — paper hairline ──────────────────────────── */
+
+input, select, textarea, .os-search, .os-select {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+}
+input::placeholder, .os-search::placeholder { color: var(--bone) !important; text-transform: uppercase; }
+
+/* ─── 8. 버튼 일반 — flat ink / hover rust ──────────────────────────────── */
+
+button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable) {
+    background: transparent;
+    border: 0.5px solid var(--rule);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    padding: var(--s-2) var(--s-4);
+    cursor: pointer;
+    transition: color .2s, border-color .2s;
+}
+button:not(.dock-btn):not(.os-btn):hover { color: var(--rust); border-color: var(--rust); }
+
+/* ─── 9. 카페/비자 등 widget — paper card with hairline rule ────────────── */
+
+#cafeNearbyWidget,
+#visaWidget, #taxWidget, #tzWidget, #alertsBadge,
+#nextCityWidget, #aqiStatusBar {
+    background: var(--paper) !important;
+    border: 0.5px solid var(--rule) !important;
+    color: var(--ink) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+}
+#cafeNearbyWidget *, #visaWidget *, #taxWidget *, #tzWidget *, #aqiStatusBar * {
+    color: var(--ink) !important;
+    font-family: var(--mono) !important;
+    letter-spacing: inherit !important;
+}
+
+/* ─── 10. 카페 토글 (구 orange FAB) — rust filled square ──────────────── */
+
+.cafe-toggle {
+    background: var(--rust) !important;
+    color: var(--paper) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+}
+.cafe-toggle:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+/* ─── 11. 음악 컨트롤 — paper hairline (구 violet glass 폐기) ─────────── */
+
+.music-control {
+    background: var(--paper) !important;
+    background-image: none !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: var(--ink) !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+}
+.mc-btn {
+    background: transparent !important;
+    border: 0.5px solid var(--ink) !important;
+    color: var(--ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.mc-btn:hover { background: var(--ink) !important; color: var(--paper) !important; transform: none !important; }
+.mc-btn.on, .mc-btn.playing {
+    background: var(--rust) !important;
+    border-color: var(--rust) !important;
+    color: var(--paper) !important;
+    box-shadow: none !important;
+}
+.mc-select { background: var(--paper) !important; border: 0.5px solid var(--rule) !important; color: var(--ink) !important; }
+.mc-volume { accent-color: var(--rust) !important; }
+
+/* ─── 12. 모달 / 시트 — paper full-page magazine 느낌 ─────────────────── */
+
+.cat-modal, .cat-modal-backdrop,
+[class*="modal"], [class*="sheet"], [class*="drawer"] {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+.cat-modal-backdrop {
+    background: rgba(22, 21, 26, 0.4) !important;
+}
+
+/* ─── 13. 좌측 뉴스 패널 / 우측 패널 — paper, mono labels ──────────────── */
+
+.left-drawer, .right-drawer, aside, .news-list, .news-card {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    border-color: var(--rule) !important;
+}
+
+.news-title, .news-summary {
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    color: var(--ink) !important;
+}
+.news-meta, .news-pill, .news-tag {
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 10px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    color: var(--bone-d) !important;
+    background: transparent !important;
+    border: 0.5px solid var(--rule) !important;
+}
+
+/* ─── 14. 스크롤바 — bone subtle ────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bone); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--bone-d); }
+
+/* ─── 15. 이모지 일괄 안 보이게 (CSS content 로 추가된 것만) ───────────── */
+
+/* ⚠ JS 의 이모지는 손 안 댐 (MINIMAL INTERVENTION). 단 CSS pseudo-element 로 박힌 이모지만 hide */
+.layer-dot.dot-news::before,
+.layer-dot.dot-festivals::before { display: none !important; }
+
+/* ─── 16. 로딩 화면 — paper + serif italic ────────────────────────────── */
+
+#loadingOverlay, .loading-overlay {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+}
+.loading-text {
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+    color: var(--ink) !important;
+}
+.loading-bar { background: var(--rule) !important; }
+.loading-bar::before, .loading-bar > div {
+    background: var(--ink) !important;
+    background-image: none !important;
+}
+
+/* ─── 17. selection ─────────────────────────────────────────────────── */
+
+::selection { background: var(--rust); color: var(--paper); }
+::-moz-selection { background: var(--rust); color: var(--paper); }
+
+/* ─── 18. 메타 — focus-visible ─────────────────────────────────────── */
+
+:focus-visible {
+    outline: 1px solid var(--rust) !important;
+    outline-offset: 2px;
+}
+
+/* ─── 19. 카페 모드 (Reading Room) — 다크 반전 자동 ───────────────────── */
+
+body.cafe-mode {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+}
+body.cafe-mode #globe canvas { filter: none; }
+
+/* ─── 20. SAUDADE 룰 강제: 회전 애니메이션 금지 ───────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+    /* 사용자 prefers-reduced-motion 아니어도 회전은 허용 안 함 */
+    [class*="spin"], [class*="rotate"] {
+        animation: none !important;
+        transform: none !important;
+    }
+    /* 단 refresh 버튼 spinning 은 데이터 fetch 중이라 보존 */
+    .spinning, #spinIcon.spinning { animation: spin 1s linear infinite !important; }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE v599 — PR#1 보강 (사용자 피드백):
+   1. 검은 우주 + 3D 지구본 + 별 텍스처 = AURA 잔재 — 절대 다시 X
+   2. 우측 마커 토글 패널 = 재난 알림 앱 X — 숨김
+   3. 좌측 BGM 위젯이 globe 위 = 카드 UI X — 페이퍼 hairline
+   4. 하단 dock 8개 § 01 = 헌법 §4 위반 — 4개로 축소 + 정확한 § 번호
+   5. REFRESH 빨간 버튼, CAFÉ 빨간 알약 = 매거진 톤 아님 — ghost 처리
+   6. Reading Room (cafe-mode) = 매거진 풀스크린 — 큰 워드마크 + mono 메타 + hairline 검색
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── 21. 메인 화면: 검은 우주 / 3D globe / 별 / 붉은 광채 일체 제거 ──────── */
+/* cafe-mode 외 모든 곳에서 globe 숨김. 페이퍼 캔버스만 보이게 강제. */
+body:not(.cafe-mode) #globe,
+body:not(.cafe-mode) #globeContainer,
+body:not(.cafe-mode) #globeWrap,
+body:not(.cafe-mode) .globe-container,
+body:not(.cafe-mode) #globe canvas,
+body:not(.cafe-mode) .scanlines,
+body:not(.cafe-mode) #cosmosOverlay,
+body:not(.cafe-mode) [class*="globe-glow"],
+body:not(.cafe-mode) [class*="cosmic"],
+body:not(.cafe-mode) [class*="aurora"],
+body:not(.cafe-mode) [class*="starfield"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* shell / main / app — 검은 배경 강제 paper */
+body:not(.cafe-mode) #shell,
+body:not(.cafe-mode) .shell,
+body:not(.cafe-mode) main,
+body:not(.cafe-mode) #app,
+body:not(.cafe-mode) #root,
+body:not(.cafe-mode) .stage,
+body:not(.cafe-mode) #stage {
+    background: var(--paper) !important;
+    background-image: none !important;
+}
+html, body { background: var(--paper) !important; }
+
+/* 메인 캔버스 영역에 큰 동심원 한 쌍 — 헌법 §3 유일한 장식 모티프.
+   가운데 페이지 가운데에 두 개. inline SVG 없이 conic 그라디언트로 fake.
+   대신 radial border 두 개 = 가벼움 + 회전 X. */
+body:not(.cafe-mode)::after {
+    content: '';
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vmin; height: 60vmin;
+    pointer-events: none;
+    z-index: 0;
+    border: 0.5px solid var(--rule);
+    border-radius: 50% !important;     /* 동심원 */
+    box-shadow:
+        inset 0 0 0 0.5px transparent,
+        0 0 0 calc(15vmin) transparent,
+        0 0 0 calc(15vmin + 0.5px) var(--rule);
+    opacity: .55;
+}
+
+/* ─── 22. 마커 레이어 토글 (News / Quakes / Disasters / Weather) 영구 숨김 ─── */
+.mlp, .mlp-toggle-btn,
+#markerLayerPanel, #mlpToggleBtn,
+[class*="layer-panel"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* ─── 23. 좌상단 햄버거 메뉴 / 우측 카페 알약 — paper hairline ─────────── */
+.lounj-news-fab {
+    background: transparent !important;
+    border: 0.5px solid var(--rule) !important;
+    color: var(--ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ─── 24. REFRESH / SETTINGS / EN / CAFÉ 빨간 알약 — mono ghost ──────────── */
+.topbar .os-btn,
+.topbar .os-btn.accent,
+.topbar #refreshBtn,
+.topbar #settingsBtn,
+.topbar #languageSelect,
+.topbar #bookmarksBtn,
+.cafe-toggle {
+    background: transparent !important;
+    color: var(--ink) !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    padding: 6px 10px !important;
+}
+.topbar .os-btn:hover,
+.cafe-toggle:hover {
+    color: var(--rust) !important;
+    border-color: var(--rust) !important;
+    background: transparent !important;
+    transform: none !important;
+}
+.cafe-toggle {
+    width: auto !important;
+    height: auto !important;
+    font-size: 11px !important;
+}
+.cafe-toggle::after {
+    content: 'READING ROOM';
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+}
+.cafe-toggle > * { display: none !important; }   /* 이모지 ☕ / ✈️ 숨김 */
+
+/* ─── 25. Cafes nearby / Visa / Tax / TZ / NEXT widget — 메인에서는 숨김 ──── */
+/* (헌법 §4 — 메인은 § 00 표지여야 함. 데이터 위젯들은 각 § 화면에서만) */
+@media (min-width: 769px) {
+    body:not(.cafe-mode) #cafeNearbyWidget,
+    body:not(.cafe-mode) #visaWidget,
+    body:not(.cafe-mode) #taxWidget,
+    body:not(.cafe-mode) #tzWidget,
+    body:not(.cafe-mode) #nextCityWidget,
+    body:not(.cafe-mode) #alertsBadge,
+    body:not(.cafe-mode) #aqiStatusBar {
+        display: none !important;
+    }
+}
+
+/* ─── 26. 메인 표지 (§ 00 ISSUE COVER) — paper 위 큰 SAUDADE 워드마크 ──── */
+body:not(.cafe-mode) #shell::before,
+body:not(.cafe-mode) .stage::before {
+    content: 'saudade.';
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(96px, 14vw, 196px);
+    line-height: 0.9;
+    letter-spacing: var(--tr-fraunces-cover);
+    color: var(--ink);
+    pointer-events: none;
+    z-index: 5;
+}
+body:not(.cafe-mode) #shell::after,
+body:not(.cafe-mode) .stage::after {
+    content: 'a longing for what cannot return.';
+    position: fixed;
+    bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 24px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    pointer-events: none;
+    z-index: 5;
+    text-align: center;
+}
+
+/* ─── 27. Dock 4개로 축소 + 정확한 § 번호 (헌법 §4 = §01~04 + Reading Room) ─ */
+@media (min-width: 769px) {
+    /* 안 보일 버튼들: hotspots(NEWS), tax(TAX), alerts, fx, aitrip — /uncharted 로 */
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="hotspots"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tax"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="alerts"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="fx"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="aitrip"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="stocks"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="travel"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cost"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="flights"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="movies"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="games"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="concerts"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="festivals"] {
+        display: none !important;
+    }
+
+    /* counter() 가 flex 자식에서 작동 안 함 → 데이터 속성으로 직접 박음 */
+    body:not(.cafe-mode) .dock-stats > .dock-btn::before {
+        content: '' !important;
+        counter-increment: none !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::before { content: '§ 01' !important; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::before { content: '§ 02' !important; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::before   { content: '§ 03' !important; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::before { content: '§ 04' !important; }
+
+    /* 라벨 교체 — 원래 .dock-btn-label 숨기고 ::after 로 새 텍스트 */
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label { display: none !important; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after { content: 'LEDGER'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after { content: 'ATLAS'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after   { content: 'OVERLAP'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after { content: 'NEXT ISSUE'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn::after {
+        font-family: var(--mono);
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: var(--tr-mono-mast);
+        text-transform: uppercase;
+        margin-left: var(--s-2);
+    }
+}
+
+/* 모바일도 동일 정리 */
+@media (max-width: 768px) {
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="hotspots"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tax"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="alerts"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="fx"],
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="aitrip"] {
+        display: none !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"] .dock-btn-label::after { content: ' · LEDGER'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"] .dock-btn-label { content: ''; }
+    /* 모바일은 라벨만 (§ 번호 없음 — 작은 공간) */
+}
+
+/* ─── 28. 음악 컨트롤 — 페이퍼 hairline (재확인) ─────────────────────── */
+.music-control {
+    background: var(--paper) !important;
+    border: 0.5px solid var(--rule) !important;
+    border-radius: 0 !important;
+    color: var(--ink) !important;
+}
+body:not(.cafe-mode) .music-control { z-index: 50 !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   29. READING ROOM (cafe-mode) — 매거진 부록 풀스크린
+   사용자 두번째 스크린샷 방향: 영상 위 큰 워드마크 + mono 메타 + hairline 검색
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* 카페모드 전체 — 영상 풀스크린, 모든 장식 제거 */
+body.cafe-mode {
+    background: #0F0E12 !important;
+    color: #F2EEE3 !important;
+}
+body.cafe-mode #shell::before,
+body.cafe-mode #shell::after,
+body.cafe-mode .stage::before,
+body.cafe-mode .stage::after,
+body.cafe-mode::after { display: none !important; content: none !important; }
+
+/* 영상 컨테이너 — 자리 보존, 영상은 그대로 */
+body.cafe-mode .amb-video-container {
+    filter: none !important;     /* paper 톤 grayscale 안 함 (영상 풀컬러) */
+}
+
+/* 좌상단 시각 (cafe-info-time) — Apple Lock Screen 식 큰 시간 → mono 11px 작게 */
+body.cafe-mode .cafe-info {
+    position: fixed !important;
+    top: calc(20px + env(safe-area-inset-top, 0px)) !important;
+    left: 24px !important;
+    bottom: auto !important;
+    right: auto !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: block !important;
+    z-index: 100;
+}
+body.cafe-mode .cafe-info-time {
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    color: rgba(242,238,227,.7) !important;
+    text-shadow: none !important;
+    margin: 0 0 4px 0 !important;
+}
+body.cafe-mode .cafe-info-meta {
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 10px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    color: rgba(242,238,227,.55) !important;
+    margin: 4px 0 0 0 !important;
+}
+/* 작은 도시명 (top-left) — Fraunces italic 작게 */
+body.cafe-mode .cafe-info-city {
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    letter-spacing: var(--tr-fraunces-h3) !important;
+    color: #F2EEE3 !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+}
+
+/* 좌하단 거대 워드마크 — Fraunces 300 italic clamp(96, 14vw, 196) */
+body.cafe-mode .cafe-info::after {
+    content: attr(data-city-bottom);
+    position: fixed;
+    bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+    left: 24px;
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(96px, 14vw, 196px);
+    line-height: 0.9;
+    letter-spacing: var(--tr-fraunces-cover);
+    color: #F2EEE3;
+    pointer-events: none;
+    z-index: 100;
+}
+/* JS 가 cafe-info textContent 에 도시명 넣을 때 data-city-bottom 도 같이 박혀야 한다.
+   미박힘 시 fallback — cafe-info-city 텍스트를 추가 element 로 복제. */
+body.cafe-mode .cafe-info-city::before {
+    content: '';
+    position: fixed;
+    bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+    left: 24px;
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(96px, 14vw, 196px);
+    line-height: 0.9;
+    letter-spacing: var(--tr-fraunces-cover);
+    color: rgba(242,238,227,0);    /* 일단 투명 — JS hook 없으면 보이지 않음. */
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* 우측 City Switcher — dark hairline panel + mono 11px items + ▶ marker for active */
+body.cafe-mode .cafe-city-switcher {
+    background: rgba(15,14,18,.92) !important;
+    border: 0.5px solid rgba(242,238,227,.18) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(20px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
+    padding: 16px 0 !important;
+    width: 200px !important;
+    right: 16px !important;
+    top: calc(50% + env(safe-area-inset-top, 0px)) !important;
+    transform: translateY(-50%) !important;
+    max-height: 70vh !important;
+}
+body.cafe-mode .cafe-city-switcher input {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid rgba(242,238,227,.2) !important;
+    color: rgba(242,238,227,.85) !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    padding: 8px 16px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 0 !important;
+}
+body.cafe-mode .cafe-city-switcher input::placeholder {
+    color: rgba(242,238,227,.4) !important;
+    text-transform: uppercase;
+}
+body.cafe-mode .cafe-city-item {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid rgba(242,238,227,.08) !important;
+    border-radius: 0 !important;
+    padding: 10px 16px !important;
+    color: rgba(242,238,227,.7) !important;
+    font-family: var(--mono) !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+body.cafe-mode .cafe-city-item:hover {
+    background: rgba(242,238,227,.04) !important;
+    color: #F2EEE3 !important;
+    border-color: rgba(242,238,227,.08) !important;
+}
+body.cafe-mode .cafe-city-item.active {
+    background: transparent !important;
+    color: #F2EEE3 !important;
+    font-weight: 500 !important;
+}
+body.cafe-mode .cafe-city-item.active::before {
+    content: '▶';
+    margin-right: 4px;
+    color: #F2EEE3;
+    font-size: 10px;
+}
+body.cafe-mode .cafe-city-item:not(.active)::before {
+    content: '';
+    width: 12px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+/* 카페모드 안의 다른 floating UI 모두 숨김 — 검색 패널 + 시간/도시명 만 */
+body.cafe-mode .left-drawer,
+body.cafe-mode .right-drawer,
+body.cafe-mode .bottom-dock,
+body.cafe-mode .topbar,
+body.cafe-mode .control-bar,
+body.cafe-mode #musicControl,
+body.cafe-mode .lounj-news-fab,
+body.cafe-mode .news-top-toggle,
+body.cafe-mode #cafeNearbyWidget,
+body.cafe-mode #aqiStatusBar,
+body.cafe-mode .cafe-info-meta + * { display: none !important; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE v600 — PR#1 추가 다듬기:
+   1. Reading Room 좌하단 거대 워드마크: .cafe-info-city 직접 position:fixed
+      (data-city-bottom attr() 안 쓰고 — JS hook 없이 작동하게)
+   2. 메인 표지 마스트헤드: 'ISSUE 03 · SPRING 2026 · § 00' mono UPPERCASE
+   3. 메인 표지 푸터 룰: 'SAUDADE · A LONGING FOR WHAT CANNOT RETURN' mono
+   4. 남은 sidebar/drawer/news-toggle/country-picker 잔재 영구 hide on main
+   5. 메인 표지 'saudade.' 워드마크 다듬기 (크기 약간 줄임, tracking 정밀)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── 30. Reading Room 좌하단 거대 도시 워드마크 — fixed 직접 ──────────── */
+/* v599 의 ::after attr() 폐기. .cafe-info-city 자체를 좌하단으로 escape.
+   .cafe-info 컨테이너 (top:20 left:24) 안의 city 만 position:fixed bottom 으로
+   분리되어 두 위치에 동시 표시되는 효과 (top: time + meta only, bottom: huge city). */
+body.cafe-mode .cafe-info-city {
+    position: fixed !important;
+    bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 24px !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+    font-size: clamp(96px, 14vw, 196px) !important;
+    line-height: 0.9 !important;
+    letter-spacing: var(--tr-fraunces-cover) !important;
+    color: #F2EEE3 !important;
+    text-shadow: none !important;
+    pointer-events: none !important;
+    z-index: 100 !important;
+    max-width: calc(100vw - 240px) !important;     /* 우측 search panel 안 가리게 */
+    word-break: break-word !important;
+}
+/* v599 ::before/::after fallback 제거 */
+body.cafe-mode .cafe-info::after,
+body.cafe-mode .cafe-info-city::before { display: none !important; content: none !important; }
+
+/* 좌상단 작은 메타 — time + (도시명 작게는 못 쓰지만 meta 만) */
+body.cafe-mode .cafe-info {
+    width: auto !important;
+    max-width: 320px !important;
+}
+
+/* ─── 31. 메인 표지 — 매거진 마스트헤드 + 푸터 룰 (헌법 §4-1) ────────── */
+
+/* 기존 v599 의 #shell::before 'saudade.' 와 ::after caption 정밀 조정 */
+body:not(.cafe-mode) #shell::before,
+body:not(.cafe-mode) .stage::before {
+    font-size: clamp(72px, 12vw, 156px) !important;
+    letter-spacing: var(--tr-fraunces-cover) !important;
+    line-height: 0.85 !important;
+    color: var(--ink) !important;
+}
+
+/* body 자체에 마스트헤드 추가 — top:24 paper에 mono 11px UPPERCASE */
+body:not(.cafe-mode):not(.section-active)::before {
+    content: 'ISSUE 03  ·  § 00 ISSUE COVER  ·  SPRING 2026  ·  P. 01';
+    position: fixed;
+    top: calc(80px + env(safe-area-inset-top, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    z-index: 10;
+    pointer-events: none;
+    white-space: nowrap;
+    /* v596 별 sparkle 의 body::before 와 충돌 방지 — saudade-skin §1 에서 이미 hide */
+    display: block !important;
+    background: transparent !important;
+    inset: auto !important;
+    top: calc(80px + env(safe-area-inset-top, 0px)) !important;
+    width: auto !important;
+    height: auto !important;
+    animation: none !important;
+}
+
+/* 모바일에선 마스트헤드 단축 */
+@media (max-width: 768px) {
+    body:not(.cafe-mode):not(.section-active)::before {
+        content: '§ 00 ISSUE COVER  ·  P. 01' !important;
+        font-size: 9px !important;
+        top: calc(72px + env(safe-area-inset-top, 0px)) !important;
+    }
+    body:not(.cafe-mode) #shell::before,
+    body:not(.cafe-mode) .stage::before {
+        font-size: clamp(56px, 18vw, 96px) !important;
+    }
+}
+
+/* ─── 32. 메인에 떠 있는 모든 잔재 panel/drawer 영구 hide ─────────────── */
+
+body:not(.cafe-mode) .left-drawer,
+body:not(.cafe-mode) .right-drawer,
+body:not(.cafe-mode) .control-bar,
+body:not(.cafe-mode) .news-top-toggle,
+body:not(.cafe-mode) .country-picker-panel,
+body:not(.cafe-mode) .country-picker-btn,
+body:not(.cafe-mode) #toggleLeftBtnTop,
+body:not(.cafe-mode) #toggleRightBtn,
+body:not(.cafe-mode) .panel-switch,
+body:not(.cafe-mode) #countdown,
+body:not(.cafe-mode) .countdown-chip,
+body:not(.cafe-mode) #datetime,
+body:not(.cafe-mode) #feedStatus,
+body:not(.cafe-mode) #statusDot,
+body:not(.cafe-mode) .status-chip,
+body:not(.cafe-mode) #spinIcon,
+body:not(.cafe-mode) #lockIndicator,
+body:not(.cafe-mode) #toastContainer,
+body:not(.cafe-mode) .toast,
+body:not(.cafe-mode) .breaking-banner,
+body:not(.cafe-mode) .surge-alert,
+body:not(.cafe-mode) .notification-banner,
+body:not(.cafe-mode) [class*="alert-banner"],
+body:not(.cafe-mode) #ambCat,
+body:not(.cafe-mode) .amb-cat,
+body:not(.cafe-mode) #cafeCitySwitcher,
+body:not(.cafe-mode) .cafe-city-switcher,
+body:not(.cafe-mode) .cafe-info,
+body:not(.cafe-mode) #ambSoundFrame,
+body:not(.cafe-mode) #scPlayerContainer {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* topbar 자체도 메인에서 정리 — saudade 워드마크 + 4개 ghost 만 */
+body:not(.cafe-mode) .topbar {
+    background: transparent !important;
+    border: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ─── 33. 푸터 룰 — 메인에서 dock 위에 mono 카피라인 ─────────────────── */
+
+body:not(.cafe-mode):not(.section-active) #bottomDock::before,
+body:not(.cafe-mode):not(.section-active) .bottom-dock::before {
+    content: 'saudade  ·  a longing for what cannot return  ·  ⓒ 2026';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    padding: var(--s-3) var(--s-6);
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    text-align: center;
+    border-top: 0.5px solid var(--rule);
+    background: var(--paper);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* dock 위로 푸터 룰 띄우기 위해 dock 자체의 padding 살짝 보강 */
+body:not(.cafe-mode) .bottom-dock {
+    position: fixed !important;
+    overflow: visible !important;
+}
+
+/* ─── 34. 음악 컨트롤 — 메인에선 표지 위 떠 있지 말고 dock 직전에 ──────── */
+body:not(.cafe-mode) #musicControl,
+body:not(.cafe-mode) .music-control {
+    bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    transform: translateX(-50%) !important;
+    background: var(--paper) !important;
+    border: 0.5px solid var(--rule) !important;
+    box-shadow: none !important;
+    min-width: 280px !important;
+    max-width: 360px !important;
+}
+
+/* music control 의 좌상단 좌표를 인라인 style 로 박혀있던 게 위 transform 로 무력화.
+   드래그하면 인라인 left/top 으로 바뀌어 위 transform 이 깨짐 — 단 첫 진입 한 번만 가운데. */
+
+/* ─── 35. 로딩 화면 — paper 위 italic 'saudade.' ─────────────────────── */
+#loadingOverlay::before {
+    content: 'saudade.';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(56px, 10vw, 120px);
+    letter-spacing: var(--tr-fraunces-cover);
+    color: var(--ink);
+    pointer-events: none;
+}
+#loadingOverlay > * { display: none !important; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v601 PR#2 — saudade-cover.js + saudade-rings.js 마운트 시 보강
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 36. saudade-cover 가 직접 § 00 표지 그리므로 v599/v600 의 #shell::before 제거.
+       (동일 위치 충돌 방지) */
+body:not(.cafe-mode) #shell::before,
+body:not(.cafe-mode) #shell::after,
+body:not(.cafe-mode) .stage::before,
+body:not(.cafe-mode) .stage::after { content: none !important; display: none !important; }
+
+/* 37. body::before 마스트헤드만 유지 (v600 §31). 단 .sdd-cover 활성 시 더 가까이 */
+body:not(.cafe-mode):not(.section-active)::before {
+    top: clamp(48px, 6vh, 80px) !important;
+}
+
+/* 38. saudade-cover 가 떠 있으면 dock 푸터 룰은 그대로. 단 cover 의 nav 와 dock
+       두 곳에 같은 § 01-04 가 떠서 어색하면 — 데스크톱은 cover-nav 우선, dock 살짝 작게 */
+@media (min-width: 769px) {
+    body:not(.cafe-mode):not(.section-active) .bottom-dock {
+        opacity: .55;
+        transition: opacity .2s;
+    }
+    body:not(.cafe-mode):not(.section-active) .bottom-dock:hover { opacity: 1; }
+}
+
+/* 39. section-active = 어떤 § 화면 들어갔을 때 → cover 는 hide,
+       기존 컴포넌트가 메인 영역에 보임 (visa-tracker 모달 등). */
+body.section-active .sdd-cover { display: none !important; }
+body.section-active::before { content: '' !important; display: none !important; }
+
+/* 40. saudade-rings 동심원 — 페이지 위 z-index 1, cover 보다 뒤. cover 는 z-index 4 */
+[id^="saudadeRings_"] { z-index: 1 !important; color: var(--ink) !important; }
+body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
+
+/* 41. dock 의 cover-nav 와 중복 — dock 알약 형태 더 단순히
+       (v600 푸터 룰 ::before 와 dock-stats 가 같이 있어 시각 무게 줘서 살짝 정리) */
+body:not(.cafe-mode) .bottom-dock::before {
+    font-size: 9px !important;
+    opacity: .65;
+    padding: var(--s-2) var(--s-6) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v602 PR#3+4 — masthead/footer 컴포넌트 + 섹션 라우팅 + 카피 정리
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 42. § 화면 진입 시 메인 영역 padding (마스트헤드 + 푸터 공간 확보) */
+body.section-active {
+    padding-top: 80px;
+    padding-bottom: calc(var(--dock-h, 56px) + 36px);
+}
+body.section-active .stage,
+body.section-active #shell {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+/* 43. 모달들 (visa, tax, tz, trip, cafe) — paper 위 매거진 식으로 다시 강화 */
+body.section-active .modal,
+body.section-active [class*="modal"]:not(.cat-modal):not(.cat-modal-backdrop),
+body.section-active .visa-modal,
+body.section-active .tax-modal,
+body.section-active .tz-modal,
+body.section-active .trip-sheet,
+body.section-active #nextCitySheet,
+body.section-active .cafe-modal-bd {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border-radius: 0 !important;
+    z-index: 7 !important;
+}
+body.section-active .modal h1,
+body.section-active .modal h2,
+body.section-active .modal h3 {
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+}
+body.section-active .modal h2 {
+    font-style: normal;
+    font-size: clamp(28px, 4vw, 48px) !important;
+}
+
+/* 44. 데이터 숫자 — Fraunces italic rust 큰 숫자 (visa D-day, tz overlap hours 등) */
+body.section-active .visa-days-left,
+body.section-active [class*="days-left"],
+body.section-active [class*="-big-num"],
+body.section-active [class*="big-num"],
+body.section-active .tz-overlap-hours,
+body.section-active .data-big {
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+    font-size: clamp(56px, 9vw, 96px) !important;
+    line-height: 1 !important;
+    letter-spacing: var(--tr-fraunces-data-num) !important;
+    color: var(--rust) !important;
+}
+
+/* 45. CSS 카피 교체 — 일부 visible label 매거진 톤 (data-i18n 매핑) */
+[data-i18n="news"]    { font-size: 0; }
+[data-i18n="news"]::before    { content: 'EARTH NOTES'; font-size: 11px; }
+[data-i18n="settings"] { font-size: 0; }
+[data-i18n="settings"]::before { content: 'PREFERENCES'; font-size: 11px; }
+[data-i18n="refresh"]  { font-size: 0; }
+[data-i18n="refresh"]::before  { content: 'RE-FETCH'; font-size: 11px; }
+
+/* 46. saudade-cover 의 nav 로 § 진입한 후, dock 도 컬러 살림 */
+body.section-active .bottom-dock { opacity: 1 !important; }
+body.section-active .dock-stats > .dock-btn[data-cat="visa"]::before,
+body.section-active[data-section="01"] .dock-stats > .dock-btn[data-cat="visa"] { color: var(--rust) !important; }
+body.section-active[data-section="02"] .dock-stats > .dock-btn[data-cat="cafe"] { color: var(--rust) !important; }
+body.section-active[data-section="03"] .dock-stats > .dock-btn[data-cat="tz"]   { color: var(--rust) !important; }
+body.section-active[data-section="04"] .dock-stats > .dock-btn[data-cat="trip"] { color: var(--rust) !important; }
+
+/* 47. 카페 모드 진입 시 saudade-rings 도 hide (이중 안전) */
+body.cafe-mode #sddCover,
+body.cafe-mode #sddMasthead,
+body.cafe-mode #sddFooter,
+body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
+
+/* 48. 모바일 dock 매거진 식 단순화 (label 간 가운뎃점) */
+@media (max-width: 768px) {
+    body:not(.cafe-mode) .dock-stats {
+        gap: 14px !important;
+        padding: 12px 14px !important;
+        justify-content: space-around !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"] .dock-btn-label::after  { content: 'LEDGER'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"] .dock-btn-label::after  { content: 'ATLAS'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]   .dock-btn-label::after  { content: 'OVERLAP'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"] .dock-btn-label::after  { content: 'NEXT'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
+        display: block !important;
+        font-size: 0 !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label::after {
+        font-family: var(--mono);
+        font-size: 9px !important;
+        letter-spacing: var(--tr-mono-mast);
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v603 PR#5 — 모바일 QA + 부드러운 transition + topbar 워드마크
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 49. 모바일 (≤768px) 표지 / 마스트헤드 / 푸터 정밀 ──────────────── */
+@media (max-width: 768px) {
+    /* sdd-cover h1 — 헌법 §6: H1 모바일 56px, padding 24px */
+    .sdd-cover-h1 {
+        font-size: clamp(48px, 14vw, 64px) !important;
+        margin-bottom: 16px !important;
+    }
+    .sdd-cover-lede {
+        font-size: 15px !important;
+        margin-bottom: 24px !important;
+    }
+    .sdd-cover { padding: 0 24px !important; }
+
+    /* sdd-masthead — 모바일 단축. 두 줄로 (§ 위, 페이지 아래) */
+    .sdd-masthead {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+        padding: 12px 16px 8px !important;
+    }
+    .sdd-mast-right { width: 100%; justify-content: space-between !important; }
+
+    /* sdd-footer 모바일 — 카피 hide, 페이지 + 섹션만 */
+    .sdd-footer-rule { padding: 6px 12px !important; }
+
+    /* dock 모바일 — saudade-skin §48 라벨 강제 (이미 적용) */
+}
+
+/* 50. 부드러운 페이드 transition — 표지 ↔ 섹션 ──────────────────── */
+.sdd-cover, .sdd-masthead, .sdd-footer-rule, [id^="saudadeRings_"] {
+    transition: opacity .35s ease-out, transform .35s ease-out;
+}
+body.section-active .sdd-cover { opacity: 0; pointer-events: none !important; }
+body:not(.section-active) .sdd-cover { opacity: 1; }
+
+body.section-active .sdd-masthead { opacity: 1; transform: translateY(0); }
+body:not(.section-active) .sdd-masthead { opacity: 0; transform: translateY(-12px); pointer-events: none !important; }
+
+/* 51. Topbar 의 saudade 워드마크 클릭 = 표지 복귀 (CSS cursor 만 보강 — JS 는 masthead.js) */
+.brand-stack { cursor: pointer; }
+.brand-stack::after { transition: color .15s; }
+body.section-active .brand-stack::after { color: var(--bone-d); }
+body.section-active .brand-stack:hover::after { color: var(--rust); }
+
+/* 52. 모바일 sdd-masthead 안의 BACK TO COVER 버튼 — pill 식 */
+@media (max-width: 768px) {
+    .sdd-mast-back {
+        font-size: 9px !important;
+        padding: 4px 8px !important;
+    }
+}
+
+/* 53. 첫 진입 페이드인 — body 자체 0→1 0.4s */
+@keyframes sddBootFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+body { animation: sddBootFade .4s ease-out; }
+
+/* 54. saudade-cover h1 첫 진입 letter-spacing 부드럽게 정착 */
+@keyframes sddCoverSettle {
+    from { letter-spacing: 0; opacity: 0; }
+    to   { letter-spacing: var(--tr-fraunces-cover); opacity: 1; }
+}
+.sdd-cover-h1 { animation: sddCoverSettle .55s ease-out; }
+
+/* 55. § 화면 진입 시 dock 강조 색 hover 처럼 강조 */
+body.section-active[data-section="01"] .dock-stats > .dock-btn[data-cat="visa"]::after,
+body.section-active[data-section="02"] .dock-stats > .dock-btn[data-cat="cafe"]::after,
+body.section-active[data-section="03"] .dock-stats > .dock-btn[data-cat="tz"]::after,
+body.section-active[data-section="04"] .dock-stats > .dock-btn[data-cat="trip"]::after {
+    color: var(--rust) !important;
+    border-bottom: 0.5px solid var(--rust);
+    padding-bottom: 2px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v604 PR#5 — UI/UX 충돌 방지 (헌법 §3 절대 룰)
+   모든 인터랙티브 요소: hit-area 44×44px+, 간격 8px+, z-index 명시.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 56. z-index 레이어 명시 (충돌 0건) — 위로 갈수록 위 ────────────────── */
+:root {
+    --z-rings:        1;
+    --z-content:      2;
+    --z-cover:        4;
+    --z-footer-rule:  5;
+    --z-masthead:     6;
+    --z-section-page: 8;
+    --z-dock:        10;
+    --z-modal:       50;
+    --z-toast:       60;
+    --z-sw-update:  100;
+}
+
+/* 57. hit-area 44×44 강제 — 모든 button/a/input[type=button]/select/role=button */
+.sdd-cover-nav a,
+.sdd-mast-back,
+.sdd-footer-rule a,
+.dock-btn,
+.os-btn,
+.mc-btn,
+.cafe-toggle,
+button[role="button"],
+.cafe-city-item,
+.lounj-news-fab,
+[data-sdd-jump],
+[data-saudade-wordmark],
+.sdd-next-item {
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+}
+
+/* 인접 인터랙티브 요소 사이 8px+ 간격 (헌법 §3) */
+.sdd-cover-nav { gap: clamp(16px, 3vw, 40px) !important; }
+.sdd-mast-right > * + * { margin-left: 12px; }
+.dock-stats { gap: 14px !important; }   /* 데스크톱 */
+@media (max-width: 768px) {
+    .dock-stats { gap: 8px !important; }
+}
+
+/* 폼 필드 stacking — 세로 우선, 모바일 wrap */
+form, .sdd-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+@media (min-width: 769px) {
+    form.sdd-row, .sdd-form.sdd-row {
+        flex-direction: row;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    form.sdd-row > *, .sdd-form.sdd-row > * { min-width: 200px; flex: 1; }
+}
+
+/* 폼 필드 자체 hit-area */
+input, select, textarea {
+    min-height: 44px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+}
+
+/* 좌측·우측 사이드바 동시 표시 금지 (헌법 §3) — 모바일 */
+@media (max-width: 768px) {
+    body.left-open .right-drawer,
+    body.right-open .left-drawer { display: none !important; }
+}
+
+/* 토스트·배너 일체 hide (헌법 §3, 헌법 §7) */
+#toastContainer, .toast, .breaking-banner, .surge-alert,
+.notification-banner, [class*="alert-banner"], .fresh-badge {
+    display: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   58. § 04 NEXT ISSUE — 표지 nav § 04 클릭 시 saudade-next 표시.
+   기존 next-city.js dock-btn[data-cat="trip"] 핸들러는 그대로 (body.section-active
+   세팅만 추가) — saudade-next 가 위에 떠서 가리는 식.
+   ════════════════════════════════════════════════════════════════════════════ */
+.sdd-next { z-index: var(--z-section-page); }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   59. SKINS A / B / C / D (헌법 §4)
+   토글: localStorage 'saudade.skin' 값 또는 body[data-skin]
+   - A Paper (디폴트, saudade-tokens.css 그대로)
+   - B Ink (Reading Room 자동 — body.cafe-mode)
+   - C Rust (특별호 — body[data-skin="rust"])
+   - D Ecru (인쇄/갤러리 — body[data-skin="ecru"])
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* B · Ink — Reading Room 외에도 수동 적용 가능 */
+body[data-skin="ink"] {
+    --paper: #0F0E12;
+    --paper-d: #16151A;
+    --ink: #F2EEE3;
+    --ink-soft: #FAF7EE;
+    --bone: #6B6660;
+    --bone-d: #A8A398;
+    --rule: rgba(242,238,227,.18);
+    --rule-2: rgba(242,238,227,.4);
+}
+
+/* C · Rust — 특별호 (1주년, 마지막 호) */
+body[data-skin="rust"] {
+    --paper: #9A3324;
+    --paper-d: #7E2A1D;
+    --ink: #F2EEE3;
+    --ink-soft: #FAF7EE;
+    --bone: #C8B5AE;
+    --bone-d: #E5DFD0;
+    --rule: rgba(242,238,227,.22);
+    --rule-2: rgba(242,238,227,.45);
+    --rust: #F2EEE3;     /* 강조도 paper 로 (rust on rust 안 보임) */
+}
+
+/* D · Ecru — 인쇄 / 갤러리 (paper 더 진한 톤 + rust 강조) */
+body[data-skin="ecru"] {
+    --paper: #E5DFD0;
+    --paper-d: #D4CDB8;
+    --ink: #16151A;
+    --ink-soft: #0F0E12;
+    --bone: #8A857A;
+    --bone-d: #5E5A52;
+    --rule: rgba(11,11,15,.22);
+    --rust: #9A3324;
+}
+
+/* 60. focus-visible — keyboard tab 순서 명시 (헌법 §3) */
+*:focus-visible {
+    outline: 1px solid var(--rust) !important;
+    outline-offset: 2px !important;
+}
+button:focus-visible, a:focus-visible {
+    outline: 1.5px solid var(--rust) !important;
+}
+
+/* 61. § 04 진입 시 trip dock-btn 클릭 → saudade-next 표시 트리거 (CSS attr 매칭) */
+body.section-active[data-section="04"] .sdd-cover { display: none !important; }
+body.section-active[data-section="04"] #sddNext { display: block; }
+body:not([data-section="04"]) #sddNext { display: none !important; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v605 SAUDADE 정합성 회복 라운드
+   사용자 진단:
+   1. 한·영 혼재 → English 단일 호 강제
+   2. 모달 (노마드 카페 / 다음 도시 추천 / Settings) 일체 hide → 페이지 진입만
+   3. SETTINGS "SOLAR RED / 3D GLOBE / CHANGE SKIN" AURA 어휘 잔재 → colophon 으로
+   4. Lofi 위젯 메인 부유 → Reading Room (cafe-mode) 전용
+   5. § 02 ATLAS / § 04 NEXT 빈 페이지 → saudade-atlas/next-issue.js 가 채움
+   6. Reading Room 워드마크 중복 → 큰 italic 하나만, "Seoul night" 빨간 자막 제거
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 62. 모달 0개 룰 — sdd-* 외 모든 [class|id*=modal] 영구 hide (헌법 §3) */
+[id*="modal"]:not(#sddCover):not(#sddAtlas):not(#sddDispatches):not(#sddDesk):not(#sddListening):not(#sddMasthead):not(#sddFooter),
+[class*="modal"]:not(.sdd-cover):not(.sdd-atlas):not(.sdd-disp):not(.sdd-desk):not(.sdd-listen):not(.sdd-masthead):not(.sdd-footer-rule),
+.modal-backdrop, .modal-bd {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 63. Lofi 위젯 = Reading Room 전용 (헌법 §4-6) ────────────────────────── */
+body:not(.cafe-mode) #musicControl,
+body:not(.cafe-mode) .music-control,
+body:not(.cafe-mode) #mcRestoreFab,
+body:not(.cafe-mode) .mc-restore-fab,
+body:not(.cafe-mode) #scPlayerContainer,
+body:not(.cafe-mode) .sc-player-container {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 64. Reading Room — 큰 워드마크 하나만 (.cafe-info-city), 다른 sans 워드마크 제거 ─ */
+body.cafe-mode .city-name,
+body.cafe-mode .ambient-city-name,
+body.cafe-mode .amb-city-label-bottom,
+body.cafe-mode .amb-city-label-overlay,
+body.cafe-mode #cafeBigCityName,
+body.cafe-mode .cafe-big-city,
+body.cafe-mode [class*="city-overlay"]:not(.cafe-info-city),
+body.cafe-mode [class*="city-display"]:not(.cafe-info-city) {
+    display: none !important;
+    visibility: hidden !important;
+}
+/* "Seoul night" 빨간 자막 (.cafe-subtitle / .cafe-meta-bottom) 제거 ── */
+body.cafe-mode .cafe-subtitle,
+body.cafe-mode .cafe-meta-bottom,
+body.cafe-mode .cafe-info-meta-red,
+body.cafe-mode [style*="color:#ff"]:not(.sdd-cover-lede strong):not(.sdd-mast-num) {
+    color: rgba(242,238,227,.55) !important;
+    background: transparent !important;
+    font-style: italic !important;
+    font-family: var(--serif) !important;
+    font-weight: 300 !important;
+}
+
+/* 65. 영어 단일 호 — 한국어 카피 일괄 hide via :lang() 에 가까운 강제 룰 ─── */
+body[data-lang="en"] [data-i18n-ko-only],
+body[data-lang="en"] .ko-only,
+body[data-lang="en"] [lang="ko"]:not([lang="en"]) {
+    display: none !important;
+}
+/* 한·영 mixed 라벨 (data-i18n) 의 한글이 보이는 element 들에는 영어 강제 (CSS content 교체) */
+body[data-lang="en"] [data-i18n="cafesNearby"]::before { content: 'CAFÉS NEARBY'; font-size: 11px; }
+body[data-lang="en"] [data-i18n="cafesNearby"]         { font-size: 0; }
+body[data-lang="en"] [data-i18n="findNearby"]::before  { content: 'FIND NEARBY'; font-size: 11px; }
+body[data-lang="en"] [data-i18n="findNearby"]          { font-size: 0; }
+body[data-lang="en"] [data-i18n="nextCity"]::before    { content: 'NEXT ISSUE'; font-size: 11px; }
+body[data-lang="en"] [data-i18n="nextCity"]            { font-size: 0; }
+
+/* 66. saudade-* 컴포넌트 z-index 명확화 — 레거시 모달이 hide 됐어도 saudade 페이지가 위 */
+.sdd-cover { z-index: var(--z-cover) !important; }
+.sdd-masthead { z-index: var(--z-masthead) !important; }
+.sdd-footer-rule { z-index: var(--z-footer-rule) !important; }
+.sdd-atlas, .sdd-next, .sdd-overlap, .sdd-colophon { z-index: var(--z-section-page) !important; }
+
+/* 67. § 02 ATLAS 진입 시 cover/masthead 분리 — atlas 가 자체 헤더 가짐 */
+body.section-active[data-section="02"] .sdd-cover,
+body.section-active[data-section="03"] .sdd-cover,
+body.section-active[data-section="04"] .sdd-cover { display: none !important; }
+
+/* 68. § 02 ATLAS 페이지 진입 시 nomad-cafes 의 떠다니는 widget 도 hide ─── */
+body.section-active #cafeNearbyWidget,
+body.section-active #cafeLocPrelude,
+body.section-active #aqiStatusBar,
+body.section-active .lounj-news-fab,
+body.cafe-mode #cafeNearbyWidget,
+body.cafe-mode #aqiStatusBar { display: none !important; }
+
+/* 69. colophon 진입 시 다른 § 화면 일괄 닫기 */
+body.colophon-active .sdd-cover,
+body.colophon-active .sdd-atlas,
+body.colophon-active .sdd-next,
+body.colophon-active .sdd-overlap,
+body.colophon-active .sdd-masthead { display: none !important; }
+body.colophon-active::before { display: none !important; }
+
+/* 70. 레거시 #refreshBtn / 컬러 토큰 재적용 — admin 톤 모두 ghost mono 로 ─── */
+.os-btn.accent {
+    background: transparent !important;
+    color: var(--ink) !important;
+    border: 0.5px solid var(--rule) !important;
+}
+.os-btn.accent:hover {
+    color: var(--rust) !important;
+    border-color: var(--rust) !important;
+}
+
+/* 71. body[data-lang="en"] 일 때 모든 한글 chunks 의 폰트 family 강제 (영어만 보이게) */
+body[data-lang="en"] *:not([lang="ko"]):not([data-keep-ko]) {
+    /* 영어 글꼴 우선. 한글 보일 때 mono 자동 fallback 만 허용. */
+}
+
+/* 72. Reading Room: cafe-info-city 좌하단 거대 워드마크가 .cafe-info 부모 컨테이너 보다
+       먼저 그려지도록 — 부모가 top-left fixed, 자식이 bottom-left fixed.
+       v599 §30 룰 재확인 + .cafe-subtitle 같은 자매 element 가 안 떠있게. */
+body.cafe-mode .cafe-info > *:not(.cafe-info-time):not(.cafe-info-city):not(.cafe-info-meta) {
+    display: none !important;
+}
+/* 빨간 톤 한글 자막은 italic paper 톤으로 */
+body.cafe-mode .cafe-info-meta {
+    color: rgba(242,238,227,.55) !important;
+    font-style: normal !important;
+    font-family: var(--mono) !important;
+    text-transform: uppercase !important;
+    letter-spacing: var(--tr-mono-meta) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v613 BUG FIX — UI 충돌·중복 정리
+   1. cafe-toggle "READING ROOM" + sdd-cover-listen-cta "LISTENING ROOM" 중복.
+      saudade-listening 이 단일 진입점 → cafe-toggle 영구 hide.
+   2. cover 5-stack overflow (tablet) — sdd-cover scroll 허용.
+   3. cover 의 sdd-cover-dispatch margin 정밀화.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 73. .cafe-toggle 영구 hide — saudade-listening 의 sdd-cover-listen-cta 가 단일 진입 */
+.cafe-toggle {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 74. cover 컨테이너 — 본문 길어지면 스크롤 (tablet 5-stack overflow 보호) */
+.sdd-cover {
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    padding-top: clamp(80px, 12vh, 140px) !important;
+    padding-bottom: calc(var(--dock-h, 56px) + 80px) !important;
+    justify-content: flex-start !important;
+}
+
+/* 75. 모바일 cover h1 자간 정밀 (Handoff v3 §1.2 — h1-m token) */
+@media (max-width: 768px) {
+    .sdd-cover-h1 {
+        letter-spacing: var(--tr-fraunces-h1-m) !important;
+    }
+}
+
+/* 76. body::before 마스트헤드 — cover 안의 가운데 정렬 보장. masthead 와 cover h1 이
+       y-axis 에서 부딪히지 않게 padding 보강. */
+body:not(.cafe-mode):not(.section-active):not(.colophon-active):not(.listening-active)::before {
+    z-index: 6;
+}
+
+/* 77. listening-active 진입 시 dock + topbar + cover 모두 hide (Reading Room 풀스크린) */
+body.listening-active .topbar,
+body.listening-active .bottom-dock,
+body.listening-active #sddCover,
+body.listening-active #sddMasthead,
+body.listening-active #sddFooter,
+body.listening-active::before { display: none !important; }
+
+/* 78. colophon-active / section-active 진입 시 cover-listen-cta 보장 hide
+       (saudade-listening 자체 룰 반복 — 에디션 전환 후 재마운트 시 race 차단) */
+body.section-active #sddCoverListenCta,
+body.colophon-active #sddCoverListenCta { display: none !important; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v617 BUG FIX — dock-buttons.js 삭제 후 잔재 정리
+   1. iosTabBar 가 존재했다면 hide (dock-buttons.js 가 inject 했던 모바일 5탭)
+   2. 모바일 dock 강제 표시 (이전 inline display:none !important 차단)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* 79. iOS 탭 바 영구 hide (dock-buttons.js 삭제 후 잔재 셀렉터 정리) */
+#iosTabBar, .ios-tab-bubble {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 80. 모바일 .bottom-dock 강제 표시 — saudade-masthead 가 dock-btn click 라우팅.
+       이전 dock-buttons.js 의 inline `display:none !important` 가 mobile 에서
+       dock 을 완전히 숨겨서 navigation 이 사라지던 버그 fix. */
+@media (max-width: 768px) {
+    body:not(.cafe-mode):not(.listening-active) .bottom-dock {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: var(--paper) !important;
+        border-top: 0.5px solid var(--rule) !important;
+        bottom: 0 !important;
+        position: fixed !important;
+    }
+    body:not(.cafe-mode):not(.listening-active) .dock-stats {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        gap: 8px !important;
+        padding: 10px 14px !important;
+    }
+}

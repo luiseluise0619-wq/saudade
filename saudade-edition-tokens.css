@@ -1,0 +1,149 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · EDITION DNA TOKENS (Handoff v2 §2)
+   5 별쇄. 사용자가 에디션을 바꾸면 다른 잡지가 펼쳐진다.
+   각 에디션은 paper × ink × accent 명시 선언 (자동 계산 X).
+   대비비 락: ink × paper ≥ 11:1, bone-d × paper ≥ 7:1, accent × paper ≥ 5:1
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* English Edition (베이스, Y1) ────────────────────────────────────────── */
+/* WCAG AAA 검증 통과:
+   ink #16151A × paper #F2EEE3 = 15.67:1 (≥11:1 ✓)
+   bone-d #4A4540 × paper        = 7.45:1 (≥7:1 ✓)
+   bone #757067 × paper          = 4.62:1 (≥4.5:1 ✓)
+   accent #9A3324 × paper        = 6.31:1 (≥5:1 ✓) */
+body.edition-en, body[data-edition="en"] {
+    --paper:    #F2EEE3;
+    --paper-d:  #E5DFD0;
+    --ink:      #16151A;
+    --ink-soft: #0F0E12;
+    --accent:   #9A3324;
+    --rust:     #9A3324;
+    --jade:     #5BA890;
+    --bone:     #6F6A60;
+    --bone-d:   #4A4540;
+    --rule:     rgba(11,11,15,.16);
+    --rule-2:   rgba(11,11,15,.42);
+    --serif:    "Fraunces", Georgia, serif;
+    --sans:     "JetBrains Mono", monospace;
+    --mono:     "JetBrains Mono", monospace;
+    quotes: '"' '"' "'" "'";
+}
+
+/* 한국어판 (Y2) — celadon 청자색. WCAG AAA accent 충족 위해 채도 낮춤. */
+body.edition-ko, body[data-edition="ko"] {
+    --paper:    #F0EBE0;
+    --paper-d:  #E2DCCC;
+    --ink:      #1A1815;
+    --ink-soft: #100E0B;
+    --accent:   #3E6147;
+    --rust:     #3E6147;
+    --jade:     #3E6147;
+    --bone:     #6E6960;
+    --bone-d:   #45413B;
+    --rule:     rgba(26,24,21,.16);
+    --rule-2:   rgba(26,24,21,.42);
+    --serif:    "Noto Serif KR", "Source Han Serif KR", Georgia, serif;
+    --sans:     "Pretendard Variable", "Noto Sans KR", system-ui;
+    --mono:     "JetBrains Mono", monospace;
+    quotes: '\201C' '\201D' '\2018' '\2019';
+}
+body.edition-ko .sdd-cover-h1,
+body.edition-ko .sdd-disp-headline,
+body.edition-ko h1, body.edition-ko h2 {
+    /* 한글 자간 — 라틴보다 살짝 더 좁힘 */
+    letter-spacing: -0.02em !important;
+}
+
+/* 日本語版 (Y3) — indigo 남색 ───────────────────────────────────────── */
+body.edition-ja, body[data-edition="ja"] {
+    --paper:    #F4F0E6;
+    --paper-d:  #E6E1D2;
+    --ink:      #1B1A1F;
+    --ink-soft: #100F14;
+    --accent:   #2B3A55;
+    --rust:     #2B3A55;
+    --jade:     #2B3A55;
+    --bone:     #6F6A60;
+    --bone-d:   #45413A;
+    --rule:     rgba(27,26,31,.16);
+    --rule-2:   rgba(27,26,31,.42);
+    --serif:    "Shippori Mincho B1", "Noto Serif JP", serif;
+    --sans:     "Noto Sans JP", system-ui;
+    --mono:     "JetBrains Mono", monospace;
+}
+body.edition-ja .sdd-cover-h1,
+body.edition-ja .sdd-disp-headline {
+    /* 일본어 본문 자간 살짝 벌림 */
+    letter-spacing: 0.02em !important;
+}
+/* 점·괄호 강조 (傍点) */
+body.edition-ja em {
+    font-style: normal;
+    text-emphasis: dot;
+    text-emphasis-color: var(--accent);
+}
+body.edition-ja .sdd-disp::before {
+    /* 보일 듯 말 듯한 noise overlay (헌법 §2.3) — 단순 dotted */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(27,26,31,.04) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(27,26,31,.04) 1px, transparent 1px);
+    background-size: 4px 4px;
+    pointer-events: none;
+    opacity: .55;
+}
+
+/* Português Edition (Y3+) — saudade의 모국어. azulejo 타일 블루 ───── */
+body.edition-pt, body[data-edition="pt"] {
+    --paper:    #EDE6D3;
+    --paper-d:  #DFD6BD;
+    --ink:      #2A1D14;
+    --ink-soft: #1B120B;
+    --accent:   #3E5C76;
+    --rust:     #3E5C76;
+    --jade:     #3E5C76;
+    --bone:     #6E6055;
+    --bone-d:   #423831;
+    --rule:     rgba(42,29,20,.16);
+    --rule-2:   rgba(42,29,20,.42);
+    --serif:    "Cormorant Infant", "Cormorant", Georgia, serif;
+    --sans:     "Fraunces", Georgia, serif;
+    --mono:     "JetBrains Mono", monospace;
+    quotes: '\AB' '\BB' '\2039' '\203A';
+}
+
+/* Español Edition (Y3+) — sangre 진한 적색 ──────────────────────────── */
+body.edition-es, body[data-edition="es"] {
+    --paper:    #F1ECDB;
+    --paper-d:  #E3DEC9;
+    --ink:      #1F1A12;
+    --ink-soft: #100D08;
+    --accent:   #8B2E1F;
+    --rust:     #8B2E1F;
+    --jade:     #8B2E1F;
+    --bone:     #706A5D;
+    --bone-d:   #443D33;
+    --rule:     rgba(31,26,18,.16);
+    --rule-2:   rgba(31,26,18,.42);
+    --serif:    "Crimson Pro", "Crimson Text", Georgia, serif;
+    --sans:     "JetBrains Mono", monospace;
+    --mono:     "JetBrains Mono", monospace;
+    quotes: '\AB' '\BB' '\2039' '\203A';
+}
+
+/* 모든 에디션 공통 — mono 숫자는 tabular-nums + lining-nums */
+body[data-edition] [class*="-mono"],
+body[data-edition] [class*="data-"],
+body[data-edition] .sdd-disp-num,
+body[data-edition] .sdd-atlas-meta,
+body[data-edition] .sdd-ld-tax-num,
+body[data-edition] .sdd-ld-dday-info dd,
+body[data-edition] [data-mono] {
+    font-feature-settings: "tnum", "lnum";
+    font-variant-numeric: tabular-nums;
+}
+
+/* 액센트 가드 — 한 화면 max 2회 (Steve Rule, 헌법 §1.5).
+   ESLint 룰 또는 컴포넌트 테스트로 검증. CSS 자체는 색만 정의. */

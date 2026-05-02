@@ -1,0 +1,272 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   AURA — Color & Glassmorphism Layer (v525+)
+   Loaded AFTER style.css. Adds:
+     B) Category color tokens (music tag, news bias, sponsor, status)
+     C) Glassmorphism polish (gradient borders, hover gradients, vignettes)
+   Designed to be additive — remove this <link> to revert to mono baseline.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Music tag color tokens ──────────────────────────────────────────── */
+:root {
+    --tag-kpop:        #ff4d8d;
+    --tag-jazz:        #fbbf24;
+    --tag-electronic:  #06b6d4;
+    --tag-ambient:     #34d399;
+    --tag-lofi:        #a78bfa;
+    --tag-hiphop:      #fb923c;
+    --tag-classical:   #c084fc;
+    --tag-latin:       #fb7185;
+    --tag-cinematic:   #818cf8;
+    --tag-chill:       #38bdf8;
+    --tag-tropical:    #2dd4bf;
+    --tag-samba:       #84cc16;
+    --tag-tango:       #f43f5e;
+    --tag-thai-pop:    #e879f9;
+    --tag-bollywood:   #f97316;
+    --tag-cityPop:     #f472b6;
+    /* runtime: ambient-mode sets --current-tag-color on body data-tag change */
+    --current-tag-color: var(--accent);
+}
+
+/* tag → runtime variable mapping (body.data-tag="kpop" → --current-tag-color) */
+body[data-tag="kpop"]       { --current-tag-color: var(--tag-kpop); }
+body[data-tag="jazz"]       { --current-tag-color: var(--tag-jazz); }
+body[data-tag="electronic"] { --current-tag-color: var(--tag-electronic); }
+body[data-tag="ambient"]    { --current-tag-color: var(--tag-ambient); }
+body[data-tag="lofi"]       { --current-tag-color: var(--tag-lofi); }
+body[data-tag="hiphop"]     { --current-tag-color: var(--tag-hiphop); }
+body[data-tag="classical"]  { --current-tag-color: var(--tag-classical); }
+body[data-tag="latin"]      { --current-tag-color: var(--tag-latin); }
+body[data-tag="cinematic"]  { --current-tag-color: var(--tag-cinematic); }
+body[data-tag="chill"]      { --current-tag-color: var(--tag-chill); }
+body[data-tag="tropical"]   { --current-tag-color: var(--tag-tropical); }
+body[data-tag="samba"]      { --current-tag-color: var(--tag-samba); }
+body[data-tag="tango"]      { --current-tag-color: var(--tag-tango); }
+body[data-tag="thai-pop"]   { --current-tag-color: var(--tag-thai-pop); }
+body[data-tag="bollywood"]  { --current-tag-color: var(--tag-bollywood); }
+body[data-tag="cityPop"]    { --current-tag-color: var(--tag-cityPop); }
+
+/* ── 2. News bias color band (left border on news cards) ────────────────── */
+.news-card[data-bias="left"]       { box-shadow: inset 3px 0 0 #6366f1; }
+.news-card[data-bias="lean-left"]  { box-shadow: inset 3px 0 0 #818cf8; }
+.news-card[data-bias="center"]     { box-shadow: inset 3px 0 0 #94a3b8; }
+.news-card[data-bias="lean-right"] { box-shadow: inset 3px 0 0 #fb923c; }
+.news-card[data-bias="right"]      { box-shadow: inset 3px 0 0 #ef4444; }
+.news-card[data-bias="left"]:hover       { box-shadow: inset 3px 0 0 #6366f1, 0 6px 24px rgba(99,102,241,.18); }
+.news-card[data-bias="lean-left"]:hover  { box-shadow: inset 3px 0 0 #818cf8, 0 6px 24px rgba(129,140,248,.18); }
+.news-card[data-bias="center"]:hover     { box-shadow: inset 3px 0 0 #94a3b8, 0 6px 24px rgba(148,163,184,.14); }
+.news-card[data-bias="lean-right"]:hover { box-shadow: inset 3px 0 0 #fb923c, 0 6px 24px rgba(251,146,60,.18); }
+.news-card[data-bias="right"]:hover      { box-shadow: inset 3px 0 0 #ef4444, 0 6px 24px rgba(239,68,68,.18); }
+
+/* ── 3. Music control panel — tag-tinted glow + gradient border ─────────── */
+#ambMusicCtrl, #aura-music-panel, .amb-music-panel, .music-control-panel {
+    position: relative;
+    background:
+        linear-gradient(180deg, rgba(20,16,30,.88), rgba(10,12,18,.92)) !important;
+    border: 1px solid transparent !important;
+    background-clip: padding-box !important;
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.55),
+        0 0 0 1px rgba(255,255,255,.04),
+        0 0 30px color-mix(in srgb, var(--current-tag-color) 22%, transparent) !important;
+    transition: box-shadow .35s ease;
+}
+#ambMusicCtrl::before, .amb-music-panel::before, .music-control-panel::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--current-tag-color) 70%, transparent),
+        rgba(255,255,255,.08) 50%,
+        color-mix(in srgb, var(--current-tag-color) 35%, transparent));
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    opacity: .7;
+}
+
+/* ── 4. Cat — outline glow keyed to current tag ─────────────────────────── */
+.amb-cat {
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.7),
+        0 0 24px color-mix(in srgb, var(--current-tag-color) 40%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--current-tag-color) 35%, transparent) !important;
+}
+
+/* ── 5. City status badge in ambient — tinted with tag color ────────────── */
+.amb-status, .amb-video-container .city-name, .amb-video-status {
+    color: color-mix(in srgb, var(--current-tag-color) 80%, white) !important;
+    text-shadow:
+        0 0 14px color-mix(in srgb, var(--current-tag-color) 40%, transparent),
+        0 1px 3px rgba(0,0,0,.7);
+}
+
+/* ── 6. Cafe mode — vignette glow keyed to tag ──────────────────────────── */
+body.cafe-mode::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 8500;
+    background:
+        radial-gradient(ellipse 70% 50% at 50% 100%,
+            color-mix(in srgb, var(--current-tag-color) 14%, transparent),
+            transparent 65%),
+        radial-gradient(ellipse 50% 35% at 50% 0%,
+            color-mix(in srgb, var(--current-tag-color) 8%, transparent),
+            transparent 60%);
+    mix-blend-mode: screen;
+    opacity: .9;
+    transition: background .8s ease;
+}
+
+/* ── 7. Drawer headers — gradient underline ─────────────────────────────── */
+.drawer .sticky-head, .left-drawer .sticky-head, .right-drawer .sticky-head {
+    position: relative;
+}
+.drawer .sticky-head::after {
+    content: '';
+    position: absolute;
+    left: 14px; right: 14px; bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        transparent,
+        color-mix(in srgb, var(--accent) 60%, transparent) 30%,
+        color-mix(in srgb, var(--accent) 60%, transparent) 70%,
+        transparent);
+    opacity: .6;
+}
+
+/* ── 8. Buttons — gradient hover (subtle, not loud) ─────────────────────── */
+.os-btn, .text-btn, .tab-btn {
+    transition: background .2s, border-color .2s, transform .15s, box-shadow .25s;
+    position: relative;
+}
+.os-btn:hover, .text-btn:hover {
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 18%, var(--surface-hover)),
+        var(--surface-hover)) !important;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--accent) 22%, transparent);
+    transform: translateY(-1px);
+}
+.os-btn.accent {
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 90%, white),
+        var(--accent)) !important;
+    color: #0a0d12 !important;
+    border: none !important;
+    font-weight: 700;
+}
+.os-btn.accent:hover {
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--accent) 45%, transparent),
+                inset 0 0 0 1px rgba(255,255,255,.2);
+}
+
+/* ── 9. Tab buttons — active state with gradient ────────────────────────── */
+.tab-btn.active {
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--current-tag-color) 22%, var(--surface)),
+        var(--surface)) !important;
+    border-color: color-mix(in srgb, var(--current-tag-color) 45%, transparent) !important;
+    color: color-mix(in srgb, var(--current-tag-color) 60%, white) !important;
+}
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    left: 14%; right: 14%; bottom: -1px;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--current-tag-color) 35%,
+        var(--current-tag-color) 65%,
+        transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 12px var(--current-tag-color);
+}
+
+/* ── 10. News pills — bias-aware version (when data-bias on parent) ─────── */
+.news-card[data-bias] .news-pill:first-of-type {
+    border-color: color-mix(in srgb, var(--current-tag-color) 30%, var(--border));
+}
+
+/* ── 11. Country drawer header — country flag glow ──────────────────────── */
+.country-heading-flag {
+    filter: drop-shadow(0 0 14px color-mix(in srgb, var(--current-tag-color) 50%, transparent));
+    transition: filter .4s;
+}
+
+/* ── 12. Hud pills — accent halo on active ──────────────────────────────── */
+.hud-pill.active {
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 20%, var(--surface)),
+        var(--surface)) !important;
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border)) !important;
+    box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+/* ── 13. Toasts — type-aware gradients ──────────────────────────────────── */
+.toast {
+    background: linear-gradient(135deg,
+        rgba(20,16,30,.96),
+        rgba(10,12,18,.96)) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border-strong)) !important;
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.55),
+        0 0 30px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.toast-warn { border-color: color-mix(in srgb, var(--warn) 50%, var(--border)) !important; }
+.toast-error { border-color: color-mix(in srgb, var(--bad) 50%, var(--border)) !important; }
+
+/* ── 14. Sponsor markers/popup — keep gold but with depth ───────────────── */
+.sponsor-popup {
+    background: linear-gradient(180deg,
+        rgba(28,22,8,.98),
+        rgba(14,10,4,.98)) !important;
+    border: 1px solid rgba(251, 191, 36, .45) !important;
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.7),
+        0 0 50px rgba(251,191,36,.18) !important;
+}
+
+/* ── 15. Stage shell ambient bg — picks up current tag (very subtle) ────── */
+.stage-shell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 50% 110%,
+            color-mix(in srgb, var(--current-tag-color) 7%, transparent),
+            transparent 70%);
+    transition: background 1s ease;
+}
+
+/* ── 16. Drawer body — gradient column rim (very faint) ─────────────────── */
+.left-drawer { border-right: 1px solid transparent; background-clip: padding-box; }
+.right-drawer { border-left: 1px solid transparent; background-clip: padding-box; }
+.left-drawer { background-image: linear-gradient(var(--panel), var(--panel)),
+                                  linear-gradient(180deg, transparent, color-mix(in srgb, var(--accent) 35%, transparent), transparent);
+               background-origin: border-box; background-clip: padding-box, border-box; }
+.right-drawer { background-image: linear-gradient(var(--panel), var(--panel)),
+                                   linear-gradient(180deg, transparent, color-mix(in srgb, var(--current-tag-color) 35%, transparent), transparent);
+                background-origin: border-box; background-clip: padding-box, border-box; }
+
+/* ── 17. Reduce motion respect ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .os-btn:hover, .text-btn:hover { transform: none; }
+    body.cafe-mode::after, .stage-shell::before { transition: none; }
+}
+
+/* ── 18. Browsers without color-mix fallback (very old) ─────────────────── */
+@supports not (color: color-mix(in srgb, red, blue)) {
+    /* color-mix unavailable → use accent var directly (loses tag-tinting) */
+    .amb-cat, #ambMusicCtrl, .amb-music-panel, .music-control-panel {
+        box-shadow: 0 6px 20px rgba(0,0,0,.7), 0 0 24px var(--halo) !important;
+    }
+}

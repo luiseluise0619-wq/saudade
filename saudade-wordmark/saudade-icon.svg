@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-label="saudade icon">
+    <!-- 'S' Fraunces italic + 동심원 3개 — 60-120px 사용 -->
+    <circle cx="60" cy="60" r="54" fill="none" stroke="#16151A" stroke-width="1"/>
+    <circle cx="60" cy="60" r="36" fill="none" stroke="#16151A" stroke-width="1"/>
+    <circle cx="60" cy="60" r="18" fill="none" stroke="#9A3324" stroke-width="1.2"/>
+    <text x="60" y="78"
+        text-anchor="middle"
+        font-family="Fraunces, Georgia, serif"
+        font-style="italic"
+        font-weight="300"
+        font-size="48"
+        letter-spacing="-2"
+        fill="#16151A">s</text>
+</svg>

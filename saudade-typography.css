@@ -1,0 +1,175 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · TYPOGRAPHY LOCK
+   SAUDADE_TYPOGRAPHY.md 의 수치 그대로. 자간 임의 변경 PR 머지 금지.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── ① Fraunces (Serif · Heading) ───────────────────────────────────────── */
+
+.h1-cover {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 56px;
+    line-height: 0.92;
+    letter-spacing: var(--tr-fraunces-h1-m);
+    color: var(--ink);
+}
+@media (min-width: 768px) {
+    .h1-cover {
+        font-size: 96px;
+        letter-spacing: var(--tr-fraunces-h1-d);
+    }
+}
+
+.h2-section {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 0.95;
+    letter-spacing: var(--tr-fraunces-h2-m);
+    color: var(--ink);
+}
+@media (min-width: 768px) {
+    .h2-section {
+        font-size: 54px;
+        letter-spacing: var(--tr-fraunces-h2-d);
+    }
+}
+
+.h3-data-num {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--rust);
+}
+
+.lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-fraunces-lede);
+    color: var(--ink);
+}
+
+.body-text {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14.5px;
+    line-height: 1.55;
+    letter-spacing: var(--tr-fraunces-body-m);
+    color: var(--ink);
+}
+@media (min-width: 768px) {
+    .body-text {
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: var(--tr-fraunces-body-d);
+    }
+}
+
+.caption-city {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--ink);
+}
+
+/* ─── ② JetBrains Mono (Mono · Data & Label) ──────────────────────────────── */
+
+.mast-section {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.mast-page {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+
+.h3-mini {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.footer-rule-copy {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+
+.data-label {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+
+.data-value {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: var(--tr-mono-data);
+    color: var(--ink);
+}
+
+.meta-info {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+
+.caption-tiny {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone);
+}
+
+.inline-code {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: var(--tr-mono-code);
+    color: var(--ink);
+}

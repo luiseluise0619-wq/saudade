@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" aria-label="saudade">
+    <text x="0" y="120"
+        font-family="Fraunces, Georgia, serif"
+        font-style="italic"
+        font-weight="300"
+        font-size="140"
+        letter-spacing="-6"
+        fill="#16151A">saudade</text>
+    <!-- micro halo on 'a' (4번째 글자, x≈340) — 헌법 §3 마이크로 동심원 -->
+    <circle cx="345" cy="92" r="10" fill="none" stroke="#9A3324" stroke-width="1"/>
+</svg>

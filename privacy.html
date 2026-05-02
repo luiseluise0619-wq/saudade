@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>LOUNJ — 개인정보처리방침 / Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 820px; margin: 0 auto; padding: 32px 20px; line-height: 1.65; color: #111; background: #fafafa; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 28px 0 10px; border-left: 3px solid #ff5d50; padding-left: 10px; }
+  h3 { font-size: 14px; margin: 20px 0 6px; color: #444; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
+  th, td { border: 1px solid #ddd; padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: #f0f0f0; }
+  small, .meta { color: #666; font-size: 12px; }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 28px 0; }
+  ul { padding-left: 20px; }
+  code { background: #eee; padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+  .note { background: #fff8e1; border: 1px solid #ffe082; padding: 10px 12px; border-radius: 6px; font-size: 13px; margin: 12px 0; }
+</style>
+</head>
+<body>
+
+<h1>LOUNJ — 개인정보처리방침</h1>
+<div class="meta">최종 개정일: 2026-04-30 · 시행일: 2026-04-30 · 운영자: LEEJAEJIN (JADDY) · 구 명칭: AURA : World Pulse</div>
+
+<p>본 개인정보처리방침(이하 "방침")은 LEEJAEJIN(이하 "운영자")이 운영하는 LOUNJ(이하 "서비스", 구 명칭: AURA : World Pulse)가 「개인정보 보호법」 및 EU 일반개인정보보호규정(GDPR)에 따라 이용자의 개인정보를 보호하고 처리하는 방법을 설명합니다.</p>
+
+<h2>1. 처리하는 개인정보 항목</h2>
+<table>
+<thead><tr><th>구분</th><th>항목</th><th>수집 시점 / 방법</th><th>법적 근거</th></tr></thead>
+<tbody>
+<tr><td>이용기록</td><td>방문 페이지, 클릭 이벤트, 사용 모드(ambient/cafe), 접속 IP(익명화)</td><td>Google Analytics 4 (이용자가 동의한 경우에 한함)</td><td>이용자 동의 (PIPA §15, GDPR Art.6(1)(a))</td></tr>
+<tr><td>기기 식별자</td><td>UA, 화면 해상도, 시간대, 언어, hardwareConcurrency 의 SHA-256 해시 32자(디바이스 fingerprint)</td><td>유료 라이선스 검증 시</td><td>계약 이행 (PIPA §15·22, GDPR Art.6(1)(b))</td></tr>
+<tr><td>결제 정보</td><td>이메일, 결제 식별자, 구독 상태</td><td>Stripe / Toss Payments 결제 시 (운영자는 카드번호 직접 보관 X)</td><td>계약 이행 / 법령상 의무</td></tr>
+<tr><td>이용자 입력 키</td><td>TMDB / Anthropic / Gemini / Groq API 키</td><td>이용자가 직접 설정 시 (브라우저 localStorage 만 보관, 서버 미전송)</td><td>이용자 자가 설정</td></tr>
+<tr><td>오류 신고</td><td>잘못된 도시 매칭 신고, 초상권 신고 시 입력 텍스트와 IP</td><td>이용자가 신고 버튼 클릭 시</td><td>정당한 이익 (서비스 품질)</td></tr>
+</tbody>
+</table>
+
+<div class="note">서비스는 이름·주민등록번호·전화번호·주소·생체정보 등 민감정보를 일체 수집하지 않습니다.</div>
+
+<h2>2. 처리 목적</h2>
+<ul>
+  <li>서비스 제공, 유지·운영, 장애 대응</li>
+  <li>유료 라이선스 검증 및 부정 사용 방지</li>
+  <li>결제 및 환불 처리</li>
+  <li>서비스 품질 개선 (집계된 통계 분석)</li>
+</ul>
+
+<h2>3. 보유 및 이용 기간</h2>
+<table>
+<thead><tr><th>항목</th><th>보유기간</th><th>근거</th></tr></thead>
+<tbody>
+<tr><td>이용기록 (GA)</td><td>최대 14개월</td><td>GA4 자동 만료</td></tr>
+<tr><td>디바이스 fingerprint</td><td>마지막 라이선스 검증 후 90일</td><td>운영자 자체 정책 (KV TTL)</td></tr>
+<tr><td>결제 기록</td><td>5년</td><td>전자상거래법 §6 (계약·결제·청약철회)</td></tr>
+<tr><td>이용자 입력 키</td><td>이용자 디바이스에만 보관 (운영자 미보관)</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>4. 제3자 제공 및 처리위탁</h2>
+<table>
+<thead><tr><th>수탁자</th><th>위탁 업무</th><th>국외이전</th></tr></thead>
+<tbody>
+<tr><td>Cloudflare, Inc. (미국)</td><td>CDN, 엣지 캐시, KV 저장소</td><td>예 (미국)</td></tr>
+<tr><td>Google LLC (미국)</td><td>Google Analytics 4 / gtag</td><td>예 (미국)</td></tr>
+<tr><td>Stripe, Inc. (미국) / 토스페이먼츠 (대한민국)</td><td>결제 대행</td><td>Stripe: 예 / 토스: 아니오</td></tr>
+<tr><td>Pexels (Vimeo, 미국·독일)</td><td>도시 영상 호스팅 (이용자 브라우저가 직접 호출)</td><td>해당 없음 (운영자 미수집)</td></tr>
+<tr><td>YouTube LLC (미국)</td><td>음악·영상 임베드 (이용자 브라우저가 직접 호출)</td><td>해당 없음 (운영자 미수집)</td></tr>
+</tbody>
+</table>
+
+<h2>5. 이용자의 권리</h2>
+<p>이용자는 운영자에 대해 언제든지 다음 권리를 행사할 수 있습니다:</p>
+<ul>
+  <li>개인정보 열람·정정·삭제 요구 (PIPA §35·36, GDPR Art.15·16·17)</li>
+  <li>처리 정지 요구 (PIPA §37, GDPR Art.18)</li>
+  <li>개인정보 이동권 (GDPR Art.20)</li>
+  <li>동의 철회 (예: GA opt-out — 본 서비스 좌측 하단 [Privacy] 메뉴)</li>
+</ul>
+<p>요청 방법: <code>luiseluise0619@gmail.com</code> 으로 이메일. 운영자는 접수 후 10일(GDPR은 1개월) 이내에 처리합니다.</p>
+
+<h2>6. 자동화된 의사결정 / 프로파일링</h2>
+<p>본 서비스는 GDPR Art.22 의 의미에서의 자동화된 의사결정이나 프로파일링을 수행하지 않습니다. 다만 GA4 의 통계 집계는 GDPR Art.6(1)(a) 의 동의에 기반합니다.</p>
+
+<h2>7. 쿠키 / 로컬 저장소 사용</h2>
+<table>
+<thead><tr><th>이름</th><th>용도</th><th>보존</th><th>차단 시 영향</th></tr></thead>
+<tbody>
+<tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Google Analytics</td><td>최대 13개월</td><td>없음 (분석 비활성)</td></tr>
+<tr><td><code>aura_consent</code></td><td>동의 저장</td><td>1년</td><td>매 방문 시 동의 모달 재표시</td></tr>
+<tr><td><code>aura_license_key</code>, <code>aura_license_token</code>, <code>aura_device_fp</code></td><td>유료 기능 인증</td><td>해지 시 자동 삭제</td><td>유료 기능 사용 불가</td></tr>
+<tr><td><code>aura_anthropic_key</code> 등</td><td>이용자가 직접 입력한 외부 AI 키</td><td>이용자 삭제 시까지</td><td>해당 AI 기능 사용 불가</td></tr>
+<tr><td><code>aura_bookmarks</code>, <code>aura_version</code></td><td>북마크, 캐시 마이그레이션</td><td>이용자 삭제 시까지</td><td>북마크 사라짐</td></tr>
+</tbody>
+</table>
+
+<h2>8. 만 14세 미만 아동</h2>
+<p>본 서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 의식적으로 만 14세 미만의 개인정보를 수집하지 않습니다. EU 거주 아동의 경우 만 16세 미만에 대해서도 동일하게 적용합니다.</p>
+
+<h2>9. 안전성 확보 조치</h2>
+<ul>
+  <li>전송 구간 암호화 (HTTPS / TLS 1.2+)</li>
+  <li>외부 API 키 서버 환경변수 보관 (client 노출 금지)</li>
+  <li>Content-Security-Policy 적용으로 XSS 차단</li>
+  <li>접근 권한 최소화 (운영자 1인 외 접근 불가)</li>
+  <li>침해 사고 발생 시 72시간 이내 GDPR 감독기구 통지 (GDPR Art.33)</li>
+</ul>
+
+<h2>10. 개인정보보호책임자 / Data Protection Contact</h2>
+<p>이름: LEEJAEJIN (JADDY)<br />
+연락처: <code>luiseluise0619@gmail.com</code><br />
+※ EU 거주자: 동일 연락처로 영문 문의 가능. 별도 EU 대리인 임명 시 본 방침을 갱신합니다.</p>
+
+<h2>11. 분쟁 / 신고</h2>
+<ul>
+  <li>개인정보분쟁조정위원회: 1833-6972 / privacy.go.kr</li>
+  <li>개인정보침해신고센터: 118 / privacy.kisa.or.kr</li>
+  <li>대검찰청 사이버수사과: 1301</li>
+  <li>EU: 거주국 데이터보호감독기구 (e.g. CNIL, BfDI)</li>
+</ul>
+
+<h2>12. 방침의 변경</h2>
+<p>본 방침이 변경될 경우, 변경 7일 전부터 서비스 내 공지를 통해 알립니다. 중대한 변경은 30일 전 공지하며, 필요한 경우 재동의를 받습니다.</p>
+
+<hr />
+
+<h1>LOUNJ — Privacy Policy (English)</h1>
+<div class="meta">Effective: 2026-04-30 · Operator: LEEJAEJIN (JADDY) · Formerly: AURA : World Pulse</div>
+<p>This policy summarizes how LOUNJ handles personal information in accordance with the Korean Personal Information Protection Act (PIPA) and the EU General Data Protection Regulation (GDPR). The Korean text above is authoritative; in case of conflict, the Korean text controls.</p>
+<p><strong>Data we process:</strong> usage analytics (Google Analytics, only with consent), a 32-char SHA-256 device fingerprint (only when validating a paid licence), payment metadata via Stripe/Toss, and your own API keys you optionally enter (stored only in your browser, never sent to us).</p>
+<p><strong>Legal bases:</strong> consent for analytics; performance of contract for licence and payment; legitimate interests for spam/abuse prevention.</p>
+<p><strong>Your rights (GDPR Art.15–22, PIPA §35–37):</strong> access, rectify, erase, restrict, port, withdraw consent. Email <code>luiseluise0619@gmail.com</code>.</p>
+<p><strong>Retention:</strong> GA up to 14 months · device fingerprints 90 days after last validation · payment records 5 years (KR e-commerce law).</p>
+<p><strong>Sub-processors:</strong> Cloudflare (US), Google (US), Stripe (US) / Toss (KR).</p>
+<p><strong>Children:</strong> not directed to children under 14 (KR) / 16 (EU).</p>
+
+</body>
+</html>

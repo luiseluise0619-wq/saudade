@@ -1,0 +1,441 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOUNJ — design tokens v2 (Linear · Raycast · Vercel hybrid)
+   v562 — 사용자 awesome-design-md ZIP 기반. iOS26 토큰을 정밀화 + 진화.
+   기존 토큰은 alias 유지 → style.css / 위젯 깨짐 없음.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ── 배경 (Linear soft-black + 표면 단계) ───────────────────────── */
+    --bg:          #08090A;          /* Linear black w/ blue undertone */
+    --bg-base:     #08090A;
+    --bg-elevated: #111214;          /* card / sheet floor */
+    --bg-grouped:  #16181C;          /* nested card */
+    --bg-raised:   #1B1D21;          /* hover / active surface */
+    --bg-glass:    rgba(11, 13, 17, 0.72);
+
+    /* radial mesh (Raycast hero, 매우 옅음 — bg 위에 깔림) */
+    --mesh:
+        radial-gradient(60% 60% at 20% 0%,
+            rgba(94, 106, 210, 0.10), transparent 70%),
+        radial-gradient(50% 50% at 100% 30%,
+            rgba(191, 90, 242, 0.06), transparent 70%),
+        radial-gradient(70% 70% at 50% 100%,
+            rgba(255, 69, 58, 0.04), transparent 70%);
+
+    /* ── 텍스트 (Linear soft-white) ─────────────────────────────────── */
+    --text-primary:   #F7F8F8;
+    --text-secondary: #B4B4B4;       /* 60% white → 명도 통일 */
+    --text-tertiary:  #6F6F6F;
+    --text-muted:     #4A4A4A;
+    --text-on-accent: #FFFFFF;
+
+    /* ── Accent (iOS purple + Linear purple 보조) ──────────────────── */
+    --red:    #FF453A;
+    --orange: #FF9F0A;
+    --yellow: #FFD60A;
+    --green:  #32D74B;
+    --blue:   #0A84FF;
+    --indigo: #5E5CE6;
+    --purple: #BF5AF2;
+
+    /* Linear / Raycast 보조 — CTA / focus ring / chip */
+    --linear-purple: #5E6AD2;
+    --linear-purple-soft: rgba(94, 106, 210, 0.16);
+    --raycast-red:   #FF6363;
+    --emerald:       #2BD4A0;        /* Vercel/Supabase 강세 */
+
+    /* ── 보더 (Linear hairline) ───────────────────────────────────── */
+    --separator:    rgba(255, 255, 255, 0.06);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --border-focus: var(--linear-purple);
+
+    /* ── 곡률 (한 단계 sharper — Linear 정밀감) ───────────────────── */
+    --radius-xs:   6px;
+    --radius-sm:   10px;
+    --radius-md:   14px;
+    --radius-lg:   20px;
+    --radius-xl:   28px;
+    --radius-pill: 999px;
+
+    /* ── 그림자 (layered subtle — Raycast) ────────────────────────── */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-sm:
+        0 1px 2px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.25);
+    --shadow-md:
+        0 1px 2px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.35),
+        0 12px 24px rgba(0, 0, 0, 0.25);
+    --shadow-lg:
+        0 2px 4px rgba(0, 0, 0, 0.5),
+        0 12px 32px rgba(0, 0, 0, 0.5),
+        0 24px 56px rgba(0, 0, 0, 0.45);
+    --shadow-fab:
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+        0 4px 12px rgba(255, 69, 58, 0.32),
+        0 12px 28px rgba(0, 0, 0, 0.55);
+    --shadow-glow-purple:
+        0 0 0 1px var(--linear-purple-soft),
+        0 0 24px rgba(94, 106, 210, 0.35);
+
+    /* ── 폰트 (Geist + SF Pro + Pretendard 하이브리드) ─────────────── */
+    --font-ui:
+        -apple-system, 'SF Pro Display', 'SF Pro Text',
+        'Inter', 'Pretendard', system-ui, sans-serif;
+    --font-display:
+        -apple-system, 'SF Pro Display',
+        'Inter', 'Pretendard', system-ui, sans-serif;
+    --font-mono:
+        'Geist Mono', ui-monospace, 'SF Mono',
+        'JetBrains Mono', monospace;
+
+    /* Letter-spacing (Linear/Geist 의 시그니처 tight) */
+    --ls-display: -0.024em;
+    --ls-ui:      -0.011em;
+    --ls-caps:     0.04em;
+
+    /* ── Spacing scale (4px base) ─────────────────────────────────── */
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-7:  28px;
+    --space-8:  32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* ── Easing ───────────────────────────────────────────────────── */
+    --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-ios:      cubic-bezier(0.32, 0.72, 0, 1);
+    --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-linear:   cubic-bezier(0.4,  0,    0.2, 1);
+
+    /* ── z-index 위계 (Stage 2 사용자 보고 버그 C 대비) ─────────── */
+    /* 절대값은 기존 literal (9000~9999) 와 호환되도록 충분히 큰 값.   */
+    /* 상대 순서: globe < cafe < controls < panel < widget < tab     */
+    /*           < drawer < modal < toast.                          */
+    --z-globe:       1;
+    --z-overlay-bg:  5;
+    --z-controls:   80;
+    --z-panel:      90;
+    --z-widget:    100;     /* visa/tax/tz/alerts/next-city 알약 */
+    --z-tab:       150;     /* iosTabBar / dock */
+    --z-drawer:    198;
+    --z-fab:       250;
+    --z-modal:    9000;     /* bottom sheet / 모달 */
+    --z-toast:   10000;
+
+    /* ── Legacy alias — 기존 style.css selector 깨짐 방지 ─────────── */
+    --accent:        var(--red);
+    --accent-rgb:    255, 69, 58;
+    --panel:         var(--bg-glass);
+    --panel-strong:  rgba(17, 18, 20, 0.96);
+    --surface:       rgba(255, 255, 255, 0.03);
+    --surface-hover: rgba(255, 255, 255, 0.06);
+    --border:        var(--separator);
+    --text:          var(--text-primary);
+    --text-dim:      var(--text-secondary);
+    --sub:           var(--text-tertiary);
+    --good:          var(--green);
+    --warn:          var(--orange);
+    --bad:           var(--red);
+    --halo:          rgba(var(--accent-rgb), 0.22);
+    --glow:          0 0 20px rgba(var(--accent-rgb), 0.32);
+    --radius:        var(--radius-sm);
+    --font-body:     var(--font-ui);
+}
+
+/* ─── Body 베이스 — radial mesh + 톤 보정 ─────────────────────────── */
+body {
+    background-color: var(--bg-base);
+    background-image: var(--mesh);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    letter-spacing: var(--ls-ui);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── v567 모바일 발열 완화 (공격적) ────────────────────────────── */
+/* v566 의 blur 16px 으로도 발열 지속 — backdrop-filter 자체가 모바일 GPU
+   에서 매 frame compositor 작업 강요. flat bg + hairline 으로 Linear 무드
+   대부분 유지하면서 GPU 부하 ~80% 감소. */
+@media (max-width: 768px) {
+    body {
+        background-image: none !important;
+        background-attachment: scroll !important;
+    }
+    /* backdrop-filter 전역 제거 — 가장 큰 발열 주범 */
+    .glass-panel,
+    .lounj-news-fab,
+    .mlp,
+    .mlp-toggle-btn,
+    #iosTabBar,
+    .cafe-toggle,
+    #cafeVideoStatus,
+    .countdown-chip,
+    #refreshBtn, #settingsBtn,
+    .topbar, .control-bar {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    /* 대신 bg-elevated 로 솔리드 배경 + hairline 으로 Linear 느낌 유지 */
+    .glass-panel,
+    .lounj-news-fab,
+    #iosTabBar,
+    .mlp {
+        background: rgba(17, 18, 20, 0.94) !important;  /* var(--bg-elevated) +alpha */
+    }
+    /* anim 자체도 줄임 — pulse 거의 안 보일 정도 */
+    .anim-shimmer, .skeleton {
+        animation-duration: 3.2s !important;
+    }
+    .anim-ios-pulse {
+        animation-duration: 3.5s !important;
+    }
+    /* will-change 강제 제거 — composer layer 분리로 GPU 메모리 점유 */
+    * {
+        will-change: auto !important;
+    }
+}
+
+/* 데이터 절약 / 저전력 — 모든 anim + transition 정지 */
+@media (prefers-reduced-data: reduce) {
+    body { background-image: none !important; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ─── Glass panel (Linear hairline + Raycast layered shadow) ──────── */
+/* v582 데스크톱 발열: blur 36→20px, saturate 180→140% (GPU compositor 부하 ~50% ↓) */
+.glass-panel {
+    background: var(--bg-glass);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 0.5px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.02),
+        var(--shadow-md);
+}
+
+/* ─── Editorial — Linear 식 카드 (덜 glass, 더 sharp) ────────────── */
+.editorial {
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        var(--shadow-sm);
+}
+
+/* ─── Hairline divider — Linear ─────────────────────────────────── */
+.hairline {
+    border: 0;
+    border-top: 0.5px solid var(--separator);
+    height: 0;
+    margin: var(--space-4) 0;
+}
+
+/* ─── Mesh background utility ───────────────────────────────────── */
+.mesh-bg {
+    background-image: var(--mesh);
+}
+
+/* ─── Gradient text (Raycast 헤로) ───────────────────────────────── */
+.gradient-text {
+    background: linear-gradient(135deg,
+        var(--text-primary) 0%,
+        var(--linear-purple) 60%,
+        var(--purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ─── Tappable — Linear 식 hover 가산 + active scale 약화 ────────── */
+.tappable {
+    transition:
+        background-color 0.14s var(--ease-linear),
+        border-color 0.14s var(--ease-linear),
+        transform 0.1s var(--ease-linear);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.tappable:active {
+    transform: scale(0.97);
+}
+
+/* ─── Linear-style 버튼 (보조) ───────────────────────────────────── */
+.btn-linear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 8px 14px;
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 0.5px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    font: 500 13px/1.2 var(--font-ui);
+    letter-spacing: var(--ls-ui);
+    cursor: pointer;
+    transition: background 0.14s var(--ease-linear),
+                border-color 0.14s var(--ease-linear);
+}
+.btn-linear:hover {
+    background: var(--bg-raised);
+    border-color: var(--border-strong);
+}
+.btn-linear:active { transform: scale(0.97); }
+.btn-linear--primary {
+    background: var(--linear-purple);
+    border-color: transparent;
+    color: var(--text-on-accent);
+}
+.btn-linear--primary:hover {
+    background: #4F5BC4;
+}
+
+/* ─── Focus ring (Linear purple, 키보드 사용자 친화) ──────────────── */
+:focus-visible {
+    outline: 2px solid var(--linear-purple);
+    outline-offset: 2px;
+}
+
+/* ─── Display headings (Linear/Vercel tight) ────────────────────── */
+.display-1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: var(--ls-display);
+}
+.display-2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: var(--ls-display);
+}
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+
+/* ─── 키프레임 5종 (값 정밀 조정) ────────────────────────────────── */
+
+@keyframes ios-enter {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0);   }
+}
+.anim-ios-enter {
+    animation: ios-enter 0.36s var(--ease-emphasis) both;
+}
+
+@keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0);    }
+}
+.anim-sheet-up {
+    animation: sheet-up 0.42s var(--ease-emphasis) both;
+}
+
+@keyframes island-bounce {
+    0%   { opacity: 0; transform: translateY(-12px) scale(0.86); }
+    60%  { opacity: 1; transform: translateY(2px)   scale(1.04); }
+    100% { opacity: 1; transform: translateY(0)     scale(1);    }
+}
+.anim-island-bounce {
+    animation: island-bounce 0.5s var(--ease-spring) both;
+}
+
+@keyframes ios-pulse {
+    0%   { box-shadow: 0 0 0 0   rgba(255, 69, 58, 0.55); }
+    70%  { box-shadow: 0 0 0 14px rgba(255, 69, 58, 0);   }
+    100% { box-shadow: 0 0 0 0   rgba(255, 69, 58, 0);    }
+}
+.anim-ios-pulse { animation: ios-pulse 1.6s ease-out infinite; }
+
+@keyframes glow-purple {
+    0%, 100% { box-shadow: 0 0 0 0   rgba(94, 106, 210, 0.0); }
+    50%      { box-shadow: 0 0 0 12px rgba(94, 106, 210, 0.18); }
+}
+.anim-glow-purple { animation: glow-purple 2.4s var(--ease-linear) infinite; }
+
+@keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+}
+.anim-shimmer {
+    background: linear-gradient(90deg,
+        var(--bg-elevated) 0%,
+        var(--bg-raised) 50%,
+        var(--bg-elevated) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes active-scale {
+    from { transform: scale(1);    }
+    to   { transform: scale(0.97); }
+}
+
+/* ─── Spacing / stack utility ─────────────────────────────────── */
+.stack-2 > * + * { margin-top: var(--space-2); }
+.stack-3 > * + * { margin-top: var(--space-3); }
+.stack-4 > * + * { margin-top: var(--space-4); }
+.stack-5 > * + * { margin-top: var(--space-5); }
+.pad-edge {
+    padding-left:  var(--space-5);
+    padding-right: var(--space-5);
+}
+.pad-card { padding: var(--space-4); }
+.pad-card-lg { padding: var(--space-6); }
+
+/* ─── Numeric / mono utility (Geist Mono) ────────────────────────── */
+.mono-num {
+    font-family: var(--font-mono);
+    font-feature-settings: 'tnum' 1, 'cv11' 1;
+    letter-spacing: 0;
+}
+
+/* ─── Skeleton loader (Stage 2 패널 빈 화면 fix 준비) ────────────── */
+.skeleton {
+    background: linear-gradient(90deg,
+        var(--bg-elevated) 0%,
+        var(--bg-raised) 50%,
+        var(--bg-elevated) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+    border-radius: var(--radius-sm);
+}
+
+/* ─── Reduced motion 대응 ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .anim-ios-enter,
+    .anim-sheet-up,
+    .anim-island-bounce,
+    .anim-ios-pulse,
+    .anim-glow-purple,
+    .anim-shimmer,
+    .skeleton {
+        animation: none !important;
+    }
+    .tappable:active { transform: none; }
+}

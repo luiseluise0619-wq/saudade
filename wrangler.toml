@@ -1,0 +1,22 @@
+# Cloudflare Worker 배포 설정 (lounj-api)
+# main = cloudflare-worker.js 만 업로드. static 자산 X (Pages 가 처리).
+# 자동 스캐폴드가 전체 repo (node_modules 포함) 를 assets 로 잡아 119MiB 초과 fail 발생 → 이 파일이 그걸 막음.
+
+name = "lounj"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-04-30"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+# KV namespace (캐시·rate-limit·quota 추적). 만든 후 id 채우면 활성화됨.
+# 생성 방법: Cloudflare Dashboard → Workers & Pages → KV → Create namespace ('aura-cache')
+#         또는 CLI: wrangler kv namespace create AURA_KV
+# 받은 id 를 아래 빈칸에 넣고 다시 push 하면 KV 활성. 비어있어도 Worker 는 작동 (캐시만 비활성).
+# [[kv_namespaces]]
+# binding = "AURA_KV"
+# id = "여기에-네임스페이스-id"
+
+# 시크릿 등록은 Dashboard → 해당 Worker → Settings → Variables and Secrets:
+#   PEXELS_KEY, COVERR_KEY, GEMINI_KEY, LICENSE_SIGNING_KEY (모두 Type: Secret)

@@ -1,0 +1,125 @@
+{
+    "Lisbon": {
+        "en": { "city": "Lisbon",   "noun": "Tile." },
+        "ko": { "city": "리스본",   "noun": "타일." },
+        "ja": { "city": "リスボン", "noun": "タイル。" },
+        "pt": { "city": "Lisboa",   "noun": "azulejo." },
+        "es": { "city": "Lisboa",   "noun": "azulejo." }
+    },
+    "Porto": {
+        "en": { "city": "Porto",   "noun": "Granite." },
+        "ko": { "city": "포르투",  "noun": "화강암." },
+        "ja": { "city": "ポルト",  "noun": "花崗岩。" },
+        "pt": { "city": "Porto",   "noun": "granito." },
+        "es": { "city": "Oporto",  "noun": "granito." }
+    },
+    "Seoul": {
+        "en": { "city": "Seoul", "noun": "Granite." },
+        "ko": { "city": "서울",  "noun": "화강암." },
+        "ja": { "city": "ソウル","noun": "花崗岩。" },
+        "pt": { "city": "Seul",  "noun": "granito." },
+        "es": { "city": "Seúl",  "noun": "granito." }
+    },
+    "Busan": {
+        "en": { "city": "Busan",  "noun": "Tide." },
+        "ko": { "city": "부산",   "noun": "조수." },
+        "ja": { "city": "釜山",   "noun": "潮。" },
+        "pt": { "city": "Busan",  "noun": "maré." },
+        "es": { "city": "Busán",  "noun": "marea." }
+    },
+    "Tokyo": {
+        "en": { "city": "Tokyo",  "noun": "Steam." },
+        "ko": { "city": "도쿄",   "noun": "증기." },
+        "ja": { "city": "東京",   "noun": "蒸気。" },
+        "pt": { "city": "Tóquio", "noun": "vapor." },
+        "es": { "city": "Tokio",  "noun": "vapor." }
+    },
+    "Osaka": {
+        "en": { "city": "Osaka",  "noun": "Steel." },
+        "ko": { "city": "오사카",  "noun": "강철." },
+        "ja": { "city": "大阪",   "noun": "鋼。" },
+        "pt": { "city": "Osaca",  "noun": "aço." },
+        "es": { "city": "Osaka",  "noun": "acero." }
+    },
+    "Kyoto": {
+        "en": { "city": "Kyoto",  "noun": "Cedar." },
+        "ko": { "city": "교토",   "noun": "삼나무." },
+        "ja": { "city": "京都",   "noun": "杉。" },
+        "pt": { "city": "Quioto", "noun": "cedro." },
+        "es": { "city": "Kioto",  "noun": "cedro." }
+    },
+    "Madrid": {
+        "en": { "city": "Madrid", "noun": "Tile." },
+        "ko": { "city": "마드리드","noun": "타일." },
+        "ja": { "city": "マドリード","noun": "タイル。" },
+        "pt": { "city": "Madrid", "noun": "azulejo." },
+        "es": { "city": "Madrid", "noun": "azulejo." }
+    },
+    "Barcelona": {
+        "en": { "city": "Barcelona", "noun": "Brick." },
+        "ko": { "city": "바르셀로나","noun": "벽돌." },
+        "ja": { "city": "バルセロナ","noun": "煉瓦。" },
+        "pt": { "city": "Barcelona", "noun": "tijolo." },
+        "es": { "city": "Barcelona", "noun": "ladrillo." }
+    },
+    "Buenos Aires": {
+        "en": { "city": "Buenos Aires", "noun": "Mate." },
+        "ko": { "city": "부에노스아이레스","noun": "마테차." },
+        "ja": { "city": "ブエノスアイレス","noun": "マテ茶。" },
+        "pt": { "city": "Buenos Aires", "noun": "mate." },
+        "es": { "city": "Buenos Aires", "noun": "mate." }
+    },
+    "Mexico City": {
+        "en": { "city": "Mexico City",  "noun": "Stone." },
+        "ko": { "city": "멕시코시티",  "noun": "돌." },
+        "ja": { "city": "メキシコシティ","noun": "石。" },
+        "pt": { "city": "Cidade do México","noun": "pedra." },
+        "es": { "city": "Ciudad de México","noun": "piedra." }
+    },
+    "Tbilisi": {
+        "en": { "city": "Tbilisi", "noun": "Sulfur." },
+        "ko": { "city": "트빌리시","noun": "유황." },
+        "ja": { "city": "トビリシ","noun": "硫黄。" },
+        "pt": { "city": "Tbilisi", "noun": "enxofre." },
+        "es": { "city": "Tiflis",  "noun": "azufre." }
+    },
+    "Sintra": {
+        "en": { "city": "Sintra", "noun": "Mist." },
+        "ko": { "city": "신트라", "noun": "안개." },
+        "ja": { "city": "シントラ","noun": "霧。" },
+        "pt": { "city": "Sintra", "noun": "neblina." },
+        "es": { "city": "Sintra", "noun": "niebla." }
+    },
+    "Berlin":      { "noun": "Concrete.", "ko": "콘크리트." },
+    "Amsterdam":   { "noun": "Glass.",    "ko": "유리." },
+    "London":      { "noun": "Iron.",     "ko": "철." },
+    "Paris":       { "noun": "Limestone.", "ko": "석회석." },
+    "Singapore":   { "noun": "Glass.",    "ko": "유리." },
+    "Hong Kong":   { "noun": "Light.",    "ko": "빛." },
+    "Taipei":      { "noun": "Tea.",      "ko": "차." },
+    "Ho Chi Minh": { "noun": "Smoke.",    "ko": "연기." },
+    "Hanoi":       { "noun": "Lacquer.",  "ko": "옻칠." },
+    "Bangkok":     { "noun": "Smoke.",    "ko": "연기." },
+    "Chiang Mai":  { "noun": "Smoke.",    "ko": "연기." },
+    "Bali":        { "noun": "Rice.",     "ko": "벼." },
+    "New York":    { "noun": "Steel.",    "ko": "강철." },
+    "San Francisco":{ "noun": "Fog.",     "ko": "안개." },
+    "Los Angeles": { "noun": "Sun.",      "ko": "햇빛." },
+    "Toronto":     { "noun": "Snow.",     "ko": "눈." },
+    "Medellin":    { "noun": "Spring.",   "ko": "봄." },
+    "Cape Town":   { "noun": "Wind.",     "ko": "바람." },
+    "Tallinn":     { "noun": "Pine.",     "ko": "소나무." },
+    "Belgrade":    { "noun": "Brick.",    "ko": "벽돌." },
+    "Sofia":       { "noun": "Stone.",    "ko": "돌." },
+    "Athens":      { "noun": "Marble.",   "ko": "대리석." },
+    "Prague":      { "noun": "Spires.",   "ko": "첨탑." },
+    "Budapest":    { "noun": "Steam.",    "ko": "증기." },
+    "Vienna":      { "noun": "Coffee.",   "ko": "커피." },
+    "Istanbul":    { "noun": "Bridges.",  "ko": "다리." },
+    "Marrakech":   { "noun": "Clay.",     "ko": "점토." },
+    "Da Nang":     { "noun": "Sand.",     "ko": "모래." },
+    "Tulum":       { "noun": "Coral.",    "ko": "산호." },
+    "Lima":        { "noun": "Mist.",     "ko": "안개." },
+    "Rio de Janeiro":{ "noun": "Granite.","ko": "화강암." },
+    "Dubai":       { "noun": "Glass.",    "ko": "유리." }
+}

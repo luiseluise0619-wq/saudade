@@ -1,0 +1,124 @@
+{
+    "edition": "es",
+    "filed_at": "2026-05-01T06:00:00+09:00",
+    "next_filing": "2026-05-02T06:00:00+09:00",
+    "cities": [
+        {
+            "city": "MADRID",
+            "season": "Primavera",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "El Retiro abre por la noche los viernes de mayo.",
+                    "lede": "Hasta las once, con linternas en los caminos principales.",
+                    "body": "El Ayuntamiento de Madrid confirmó la apertura nocturna en el Boletín Oficial. Las puertas de Alcalá y O'Donnell permanecen abiertas. Las barcas de la Casa de Vacas no funcionan después del crepúsculo.",
+                    "quote": "Volvemos al jardín cuando el día baja.",
+                    "quote_source": "Ayuntamiento de Madrid",
+                    "source": "AYUNTAMIENTO DE MADRID",
+                    "source_date": "2026-04-27",
+                    "source_url": "https://www.madrid.es/"
+                },
+                {
+                    "n": "02",
+                    "headline": "El Museo del Prado prolonga la exposición de Sorolla.",
+                    "lede": "Hasta el 30 de junio, con entrada reducida los lunes.",
+                    "body": "La dirección anunció la prórroga de seis semanas. Las salas 50 y 51 mantienen el recorrido completo. La audioguía está disponible en cinco idiomas.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "MUSEO DEL PRADO",
+                    "source_date": "2026-04-22",
+                    "source_url": "https://www.museodelprado.es/"
+                },
+                {
+                    "n": "03",
+                    "headline": "Las terrazas del Barrio de las Letras pierden cuatro mesas cada una.",
+                    "lede": "Nueva ordenanza desde el 1 de junio.",
+                    "body": "El distrito Centro publicó la actualización de la ordenanza de terrazas. La medida busca recuperar paso peatonal en las calles Huertas y León. Los locales pueden solicitar revisión hasta el 15 de mayo.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "JUNTA MUNICIPAL CENTRO",
+                    "source_date": "2026-04-30",
+                    "source_url": "https://www.madrid.es/"
+                }
+            ]
+        },
+        {
+            "city": "BARCELONA",
+            "season": "Primavera",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "El metro L9 Sur amplía su servicio nocturno los sábados.",
+                    "lede": "Hasta la una y cuarto, desde Aeropuerto T1.",
+                    "body": "TMB confirmó la ampliación del horario en su web oficial. La medida durará todo mayo y junio. Los autobuses NitBus mantienen la frecuencia habitual.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "TMB",
+                    "source_date": "2026-04-26",
+                    "source_url": "https://www.tmb.cat/"
+                },
+                {
+                    "n": "02",
+                    "headline": "La Sagrada Família anuncia obras finales en la torre central.",
+                    "lede": "Apertura prevista para finales de 2026.",
+                    "body": "La fundación publicó el calendario actualizado en su comunicado mensual. La torre de Jesucristo alcanzará 172,5 metros. Las visitas a la nave central no se ven afectadas.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "FUNDACIÓ SAGRADA FAMÍLIA",
+                    "source_date": "2026-04-24",
+                    "source_url": "https://sagradafamilia.org/"
+                },
+                {
+                    "n": "03",
+                    "headline": "El mercado de la Boquería cierra los lunes de mayo.",
+                    "lede": "Reformas en el techo del pasillo central.",
+                    "body": "El gremio del mercado avisó a los visitantes con quince días de antelación. Los puestos de fruta volverán a abrir el 1 de junio. Las paradas de Sant Antoni y Santa Caterina cubren el horario habitual.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "GREMI DE COMERCIANTS DE LA BOQUERIA",
+                    "source_date": "2026-04-19",
+                    "source_url": "https://www.boqueria.barcelona/"
+                }
+            ]
+        },
+        {
+            "city": "BUENOS AIRES",
+            "season": "Otoño",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "El Teatro Colón estrena temporada con butacas reformadas.",
+                    "lede": "Mil quinientas plazas restauradas durante el verano austral.",
+                    "body": "La dirección artística publicó el calendario de mayo a julio. Las localidades de paraíso conservan los precios populares. El abono completo de seis funciones queda disponible desde el 5 de mayo.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "TEATRO COLÓN",
+                    "source_date": "2026-04-28",
+                    "source_url": "https://teatrocolon.org.ar/"
+                },
+                {
+                    "n": "02",
+                    "headline": "Palermo cambia el sentido de circulación en cinco calles.",
+                    "lede": "Desde el 12 de mayo, en horario diurno.",
+                    "body": "La Secretaría de Tránsito porteña explicó la medida en conferencia técnica. La señalización quedará lista para la primera semana. Las líneas de colectivos no modifican recorrido.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "GCBA · SECRETARÍA DE TRÁNSITO",
+                    "source_date": "2026-04-25",
+                    "source_url": "https://www.buenosaires.gob.ar/"
+                },
+                {
+                    "n": "03",
+                    "headline": "La Feria del Libro mantiene el cierre a las 22h00.",
+                    "lede": "Sin extensión nocturna, por primera vez en cinco años.",
+                    "body": "La Cámara Argentina del Libro confirmó el horario reducido. La medida responde a un protocolo conjunto con La Rural. Las charlas con escritores se concentran entre las 17h00 y las 21h00.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "FUNDACIÓN EL LIBRO",
+                    "source_date": "2026-04-21",
+                    "source_url": "https://www.el-libro.org.ar/"
+                }
+            ]
+        }
+    ]
+}

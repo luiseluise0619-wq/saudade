@@ -1,0 +1,86 @@
+{
+    "edition_default_home": {
+        "en": "Lisbon",
+        "ko": "Seoul",
+        "ja": "Osaka",
+        "pt": "Lisbon",
+        "es": "Madrid"
+    },
+    "cities": {
+        "Lisbon": {
+            "lat": 38.7223, "lng": -9.1393,
+            "adjacent": ["Porto", "Madrid", "Seville"],
+            "names": { "en": "Lisbon", "ko": "리스본", "ja": "リスボン", "pt": "Lisboa", "es": "Lisboa" }
+        },
+        "Porto": {
+            "lat": 41.1579, "lng": -8.6291,
+            "adjacent": ["Lisbon", "Madrid", "Braga"],
+            "names": { "en": "Porto", "ko": "포르투", "ja": "ポルト", "pt": "Porto", "es": "Oporto" }
+        },
+        "Seoul": {
+            "lat": 37.5665, "lng": 126.9780,
+            "adjacent": ["Tokyo", "Osaka", "Taipei"],
+            "names": { "en": "Seoul", "ko": "서울", "ja": "ソウル", "pt": "Seul", "es": "Seúl" }
+        },
+        "Busan": {
+            "lat": 35.1796, "lng": 129.0756,
+            "adjacent": ["Fukuoka", "Osaka", "Seoul"],
+            "names": { "en": "Busan", "ko": "부산", "ja": "釜山", "pt": "Busan", "es": "Busán" }
+        },
+        "Tokyo": {
+            "lat": 35.6762, "lng": 139.6503,
+            "adjacent": ["Osaka", "Seoul", "Taipei"],
+            "names": { "en": "Tokyo", "ko": "도쿄", "ja": "東京", "pt": "Tóquio", "es": "Tokio" }
+        },
+        "Osaka": {
+            "lat": 34.6937, "lng": 135.5023,
+            "adjacent": ["Tokyo", "Kyoto", "Busan"],
+            "names": { "en": "Osaka", "ko": "오사카", "ja": "大阪", "pt": "Osaca", "es": "Osaka" }
+        },
+        "Kyoto": {
+            "lat": 35.0116, "lng": 135.7681,
+            "adjacent": ["Osaka", "Tokyo", "Nara"],
+            "names": { "en": "Kyoto", "ko": "교토", "ja": "京都", "pt": "Quioto", "es": "Kioto" }
+        },
+        "Chiang Mai": {
+            "lat": 18.7883, "lng": 98.9853,
+            "adjacent": ["Bangkok", "Hanoi", "Penang"],
+            "names": { "en": "Chiang Mai", "ko": "치앙마이", "ja": "チェンマイ", "pt": "Chiang Mai", "es": "Chiang Mai" }
+        },
+        "Bali": {
+            "lat": -8.4095, "lng": 115.1889,
+            "adjacent": ["Singapore", "Kuala Lumpur", "Bangkok"],
+            "names": { "en": "Bali", "ko": "발리", "ja": "バリ", "pt": "Bali", "es": "Bali" }
+        },
+        "Mexico City": {
+            "lat": 19.4326, "lng": -99.1332,
+            "adjacent": ["Oaxaca", "Guatemala City", "Medellin"],
+            "names": { "en": "Mexico City", "ko": "멕시코시티", "ja": "メキシコシティ", "pt": "Cidade do México", "es": "Ciudad de México" }
+        },
+        "Madrid": {
+            "lat": 40.4168, "lng": -3.7038,
+            "adjacent": ["Barcelona", "Lisbon", "Seville"],
+            "names": { "en": "Madrid", "ko": "마드리드", "ja": "マドリード", "pt": "Madrid", "es": "Madrid" }
+        },
+        "Barcelona": {
+            "lat": 41.3851, "lng": 2.1734,
+            "adjacent": ["Madrid", "Valencia", "Marseille"],
+            "names": { "en": "Barcelona", "ko": "바르셀로나", "ja": "バルセロナ", "pt": "Barcelona", "es": "Barcelona" }
+        },
+        "Berlin": {
+            "lat": 52.5200, "lng": 13.4050,
+            "adjacent": ["Prague", "Vienna", "Warsaw"],
+            "names": { "en": "Berlin", "ko": "베를린", "ja": "ベルリン", "pt": "Berlim", "es": "Berlín" }
+        },
+        "Buenos Aires": {
+            "lat": -34.6037, "lng": -58.3816,
+            "adjacent": ["Montevideo", "Santiago", "Sao Paulo"],
+            "names": { "en": "Buenos Aires", "ko": "부에노스아이레스", "ja": "ブエノスアイレス", "pt": "Buenos Aires", "es": "Buenos Aires" }
+        },
+        "Tbilisi": {
+            "lat": 41.7151, "lng": 44.8271,
+            "adjacent": ["Yerevan", "Baku", "Istanbul"],
+            "names": { "en": "Tbilisi", "ko": "트빌리시", "ja": "トビリシ", "pt": "Tbilisi", "es": "Tiflis" }
+        }
+    }
+}

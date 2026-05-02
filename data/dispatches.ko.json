@@ -1,0 +1,124 @@
+{
+    "edition": "ko",
+    "filed_at": "2026-05-01T06:00:00+09:00",
+    "next_filing": "2026-05-02T06:00:00+09:00",
+    "cities": [
+        {
+            "city": "서울",
+            "season": "봄",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "북촌의 한옥 지붕에서, 빗방울이 늦게 떨어진다.",
+                    "lede": "올해 첫 봄비, 평년보다 사흘 늦었다.",
+                    "body": "서울시 기후정보과는 4월 마지막 주 강수량이 평년의 절반에 못 미쳤다고 발표했다. 5월 첫 주 평균 기온은 평년 수준으로 회복될 전망이다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "서울시청 공지",
+                    "source_date": "2026-04-28",
+                    "source_url": "https://www.seoul.go.kr/"
+                },
+                {
+                    "n": "02",
+                    "headline": "광화문에서, 늦은 모란이 핀다.",
+                    "lede": "경복궁 향원지 일대 모란이 일주일 늦게 만개.",
+                    "body": "문화재청은 향원정 인근 모란이 5월 둘째 주에 절정에 이를 것으로 예상했다. 출입은 오전 9시부터 오후 5시까지. 사진 촬영은 무료.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "문화재청",
+                    "source_date": "2026-04-22",
+                    "source_url": "https://www.cha.go.kr/"
+                },
+                {
+                    "n": "03",
+                    "headline": "한강 산책로 일부 구간이, 보수를 위해 닫힌다.",
+                    "lede": "5월 12일부터 14일까지, 잠수교 남단.",
+                    "body": "서울시 한강사업본부는 잠수교 남단 600미터 구간을 사흘간 폐쇄한다고 알렸다. 우회 경로는 동작대교 또는 반포대교를 이용하면 된다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "한강사업본부",
+                    "source_date": "2026-04-25",
+                    "source_url": "https://hangang.seoul.go.kr/"
+                }
+            ]
+        },
+        {
+            "city": "부산",
+            "season": "봄",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "광안리 모래사장이, 하루 동안 비어 있었다.",
+                    "lede": "5월 1일 새벽 청소 후, 인적이 늦게 돌아왔다.",
+                    "body": "수영구청은 정기 모래 청소를 새벽 4시부터 9시까지 진행했다. 같은 날 광안대교 야간 점등은 평소대로 9시에 켜진다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "수영구청",
+                    "source_date": "2026-05-01",
+                    "source_url": "https://www.suyeong.go.kr/"
+                },
+                {
+                    "n": "02",
+                    "headline": "해운대에서, 까나리 어선이 다시 나가기 시작했다.",
+                    "lede": "올해 어획량은 평년의 90% 수준으로 예상.",
+                    "body": "부산수산자원연구소는 4월 말 첫 출항 이후 평년 대비 어획량이 양호하다고 분석했다. 시민들에게는 새벽 5시 이전 부두 접근 자제를 안내했다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "부산수산자원연구소",
+                    "source_date": "2026-04-26",
+                    "source_url": "https://www.busan.go.kr/"
+                },
+                {
+                    "n": "03",
+                    "headline": "감천문화마을의 골목길이, 새로 도색되었다.",
+                    "lede": "여름 관광 성수기 전, 마지막 손질.",
+                    "body": "사하구청은 한 달 간의 도색 작업을 마쳤다고 공지했다. 골목 끝의 하늘마중길 전망대는 5월 5일부터 정상 운영한다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "사하구청",
+                    "source_date": "2026-04-30",
+                    "source_url": "https://www.saha.go.kr/"
+                }
+            ]
+        },
+        {
+            "city": "제주",
+            "season": "봄",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "한라산의 철쭉이, 이주째 전성기에 머물러 있다.",
+                    "lede": "윗세오름 일대, 평년보다 일주일 길게 핀다.",
+                    "body": "한라산국립공원은 4월 셋째 주부터 시작된 철쭉 개화가 5월 첫 주까지 이어질 것으로 보고 있다. 영실 코스가 가장 가까운 진입 경로다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "한라산국립공원",
+                    "source_date": "2026-04-24",
+                    "source_url": "https://www.jeju.go.kr/hallasan.htm"
+                },
+                {
+                    "n": "02",
+                    "headline": "성산일출봉의 일출 시각이, 5시 21분으로 빨라졌다.",
+                    "lede": "관람용 등대는 새벽 4시 30분 개방.",
+                    "body": "서귀포시 관광과는 5월 평균 일출 시각을 5시 21분으로 안내했다. 정상까지 도보 25분, 매표소는 새벽 4시 30분에 연다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "서귀포시청",
+                    "source_date": "2026-04-29",
+                    "source_url": "https://www.seogwipo.go.kr/"
+                },
+                {
+                    "n": "03",
+                    "headline": "동백동산이, 비 온 다음 날 가장 조용하다.",
+                    "lede": "동굴 입구의 이끼는 4월 말부터 푸르러졌다.",
+                    "body": "조천읍 사무소는 동백동산 람사르 습지의 출입을 새벽 6시부터 오후 5시까지로 운영한다고 공지했다. 비 온 다음 날 정오 이후가 가장 한산하다.",
+                    "quote": null,
+                    "quote_source": null,
+                    "source": "조천읍 사무소",
+                    "source_date": "2026-04-23",
+                    "source_url": "https://www.jeju.go.kr/"
+                }
+            ]
+        }
+    ]
+}
