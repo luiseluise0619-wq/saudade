@@ -329,6 +329,37 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     text-align: center;
     padding: clamp(40px, 6vw, 80px) 0;
 }
+
+/* v7 §9.5 데일리 디스패치 30% 재작성 (편집자 모드 전용) */
+.sdd-disp-editor {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--jade);
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--rule);
+    display: none;
+}
+body[data-editor="1"] .sdd-disp-editor { display: block; }
+.sdd-disp-editor strong { font-weight: 500; color: var(--jade); margin-right: 8px; }
+.sdd-disp-editor.below,
+.sdd-disp-editor.below strong { color: var(--rust); }
+.sdd-disp-rewrite-tag {
+    display: none;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
+.sdd-disp-rewrite-tag.rewritten { color: var(--jade); }
+.sdd-disp-rewrite-tag.draft     { color: var(--signal); }
 
 @media (max-width: 768px) {
     .sdd-disp { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
@@ -434,6 +465,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
                 <span class="sdd-disp-num">${escapeHtml(it.n || '')}</span>
                 <div class="sdd-disp-body">
                     ${cityTag}
+                    <span class="sdd-disp-rewrite-tag ${it.human_rewritten === true ? 'rewritten' : 'draft'}">${it.human_rewritten === true ? 'REWRITTEN' : 'AI DRAFT'}</span>
                     <h3 class="sdd-disp-headline">${escapeHtml(it.headline || '')}</h3>
                     <p class="sdd-disp-lede">${escapeHtml(it.lede || '')}</p>
                     ${fulltext}
