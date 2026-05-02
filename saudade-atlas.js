@@ -492,8 +492,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         });
         const noteBody = T({
             en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
-            ko: '직접 방문한 곳만 게재합니다. 입점료를 받지 않습니다. 본인이 촬영하지 않은 사진은 사용하지 않습니다. 점주께서 삭제를 원하시면 desk@saudade.app 으로 연락 부탁드립니다.',
-            ja: '実際に訪れた場所のみを掲載します。掲載料はいただきません。自身で撮影していない写真は使用しません。掲載をご辞退される場合は desk@saudade.app までご連絡ください。',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
             pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
             es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
         });

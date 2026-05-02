@@ -381,23 +381,23 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
         ko: {
             1: '비자·정책', 2: '박물관·갤러리', 3: '시·구청 공지',
             4: '편집부 신간', 5: '편집장의 사진', 6: '단신',
-            sundayMsg: 'Saudade는 일요일에 발행하지 않습니다.',
+            sundayMsg: 'Saudade는 일요일에 발행하지 않는다.',
             sundaySub:  '월요일 새벽 6시(KST) 디스패치 재개.',
-            todayLabel: '오늘', archiveLabel: '지난 한 주', empty: '오늘 발행된 디스패치가 아직 없습니다.'
+            todayLabel: '오늘', archiveLabel: '지난 한 주', empty: '오늘 발행된 디스패치가 아직 없다.'
         },
         ja: {
             1: 'ビザ・政策', 2: '美術館・ギャラリー', 3: '市役所通知',
             4: '編集部の新着', 5: '編集長の写真', 6: '小さなニュース',
-            sundayMsg: 'Saudadeは日曜日に発行いたしません。',
-            sundaySub:  '月曜日 朝6時(KST)に通信を再開いたします。',
-            todayLabel: '本日', archiveLabel: '今週', empty: '本日の通信はまだ届いておりません。'
+            sundayMsg: 'Saudadeは日曜日に発行しない。',
+            sundaySub:  '月曜日 朝6時(KST)に通信を再開する。',
+            todayLabel: '本日', archiveLabel: '今週', empty: '本日の通信はまだ届いていない。'
         },
         pt: {
             1: 'VISTOS & POLÍTICA', 2: 'MUSEUS & GALERIAS', 3: 'AVISOS MUNICIPAIS',
             4: 'NOVO NA REDAÇÃO', 5: 'A FOTOGRAFIA DO EDITOR', 6: 'NOTÍCIAS QUIETAS',
             sundayMsg: 'A Saudade não publica aos domingos.',
             sundaySub:  'Os despachos voltam segunda às 06h00 KST.',
-            todayLabel: 'HOJE', archiveLabel: 'A SEMANA PASSADA', empty: 'Nenhum despacho foi filed hoje.'
+            todayLabel: 'HOJE', archiveLabel: 'A SEMANA PASSADA', empty: 'Nenhum despacho publicado hoje.'
         },
         es: {
             1: 'VISADOS Y POLÍTICA', 2: 'MUSEO Y GALERÍA', 3: 'AVISOS DEL AYUNTAMIENTO',
@@ -541,8 +541,8 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
         });
         const noteBody = T({
             en: 'Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. We do not republish AP, Reuters, or Bloomberg copy. We never use photographs we did not take ourselves. Dispatches are AI-assisted and reviewed by a human editor.',
-            ko: '각 디스패치는 명시된 출처에서 우리의 언어로 다시 씁니다. 인용은 25 단어를 넘지 않습니다. 원문 링크를 답니다. AP·Reuters·Bloomberg 의 기사는 재배포하지 않습니다. 본인이 촬영하지 않은 사진은 사용하지 않습니다. 디스패치는 AI 보조 작성 후 사람 편집장이 다시 씁니다.',
-            ja: '各通信は明示された出典から自らの言葉で書き直しています。引用は二十五語以内。出典リンクを付けます。AP・Reuters・Bloomberg の記事は再配布しません。自身で撮影していない写真は使いません。通信はAIの補助で執筆し、人間の編集長が手を入れます。',
+            ko: '각 디스패치는 명시된 출처에서 우리의 언어로 다시 쓴다. 인용은 25 단어를 넘지 않는다. 원문 링크를 단다. AP·Reuters·Bloomberg 의 기사는 재배포하지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 디스패치는 AI 보조 작성 후 사람 편집장이 다시 쓴다.',
+            ja: '各通信は明示された出典から自らの言葉で書き直す。引用は二十五語以内。出典リンクを付ける。AP・Reuters・Bloomberg の記事は再配布しない。自身で撮影していない写真は使わない。通信はAIの補助で執筆し、人間の編集長が手を入れる。',
             pt: 'Cada despacho é reescrito em nossas próprias palavras a partir da fonte listada. Citamos no máximo vinte e cinco palavras. Ligamos ao original. Não republicamos AP, Reuters ou Bloomberg. Nunca usamos fotografias que não tirámos. Os despachos são assistidos por IA e revistos por um editor humano.',
             es: 'Cada despacho se reescribe con nuestras propias palabras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. No reeditamos copia de AP, Reuters o Bloomberg. Nunca usamos fotografías que no tomamos nosotros. Los despachos son asistidos por IA y revisados por un editor humano.'
         });

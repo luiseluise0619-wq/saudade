@@ -413,15 +413,15 @@ body.qdispatch-active .sdd-masthead { display: none; }
             }),
             noteBody: L({
                 en: 'Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. Quarterly only — we do not chase the wire.',
-                ko: '각 디스패치는 명시된 출처에서 우리의 언어로 다시 씁니다. 인용은 25 단어를 넘지 않습니다. 원문 링크를 답니다. 분기 발행만 — 속보를 쫓지 않습니다.',
-                ja: '各通信は明示された出典から自らの言葉で書き直しています。引用は二十五語以内。出典リンクを付けます。四半期発行のみ — 速報は追いません。',
+                ko: '각 디스패치는 명시된 출처에서 우리의 언어로 다시 쓴다. 인용은 25 단어를 넘지 않는다. 원문 링크를 단다. 분기 발행만 — 속보를 쫓지 않는다.',
+                ja: '各通信は明示された出典から自らの言葉で書き直す。引用は二十五語以内。出典リンクを付ける。四半期発行のみ — 速報は追わない。',
                 pt: 'Cada despacho é reescrito em nossas próprias palavras a partir da fonte listada. Citamos no máximo vinte e cinco palavras. Ligamos ao original. Apenas trimestral — não corremos atrás do telegrama.',
                 es: 'Cada despacho se reescribe con nuestras propias palabras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. Solo trimestral — no perseguimos el teletipo.'
             }),
             empty: L({
                 en: 'No dispatches filed for this quarter yet.',
-                ko: '이번 분기 발행된 디스패치가 아직 없습니다.',
-                ja: '今四半期の通信はまだありません。',
+                ko: '이번 분기 발행된 디스패치가 아직 없다.',
+                ja: '今四半期の通信はまだない。',
                 pt: 'Ainda não há despachos para este trimestre.',
                 es: 'Aún no hay despachos para este trimestre.'
             }),

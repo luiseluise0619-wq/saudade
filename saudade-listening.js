@@ -651,11 +651,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         const T = window.SAUDADE_T || ((s) => s.en);
         const headLabel = T({
-            en: 'The', ko: '리스닝', ja: 'リスニング',
+            en: 'The', ko: '듣는', ja: '聴く',
             pt: 'A', es: 'La'
         });
         const headItalic = T({
-            en: 'listening room.', ko: '룸.', ja: 'ルーム。',
+            en: 'listening room.', ko: '방.', ja: '部屋。',
             pt: 'sala de escuta.', es: 'sala de escucha.'
         });
         const backLabel = T({
