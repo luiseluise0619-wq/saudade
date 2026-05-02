@@ -995,11 +995,11 @@ async function editorLeaveStatus(req, env, ctx) {
     if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
 
     let lastAt = null;
-    let dbBound = !!env?.LOUNJ_DB;
+    let dbBound = !!env?.SAUDADE_DB;
     if (dbBound) {
         try {
             const inList = EDITOR_ACTIONS.map(() => '?').join(',');
-            const row = await env.LOUNJ_DB.prepare(
+            const row = await env.SAUDADE_DB.prepare(
                 `SELECT MAX(at) AS at FROM editor_log WHERE action IN (${inList})`
             ).bind(...EDITOR_ACTIONS).first();
             const v = row && row.at;
@@ -1031,7 +1031,7 @@ async function editorLog(req, env, ctx) {
     if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
         return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
     }
-    if (!env.LOUNJ_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1046,7 +1046,7 @@ async function editorLog(req, env, ctx) {
     const at = Date.now();
 
     try {
-        const r = await env.LOUNJ_DB.prepare(
+        const r = await env.SAUDADE_DB.prepare(
             'INSERT INTO editor_log (at, action, editor, target) VALUES (?, ?, ?, ?)'
         ).bind(at, action, editor, target).run();
         // leave-status 캐시 즉시 무효화 — 새 액션이 stage 를 active 로 되돌려야 하므로
@@ -1068,7 +1068,7 @@ async function editorLog(req, env, ctx) {
 // D1 미바인딩 시 503 — 클라이언트가 magazine-tone 실패 메시지 표시.
 async function cafeSubmit(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
-    if (!env.LOUNJ_DB) return E(req, 'NO_DB', 'Submissions are not yet open. Try again later.', 503);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Submissions are not yet open. Try again later.', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1087,7 +1087,7 @@ async function cafeSubmit(req, env, ctx) {
 
     const at = Date.now();
     try {
-        const r = await env.LOUNJ_DB.prepare(
+        const r = await env.SAUDADE_DB.prepare(
             'INSERT INTO cafe_submissions (at, name, city, neighborhood, lat, lng, submitter, note, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
         ).bind(at, name, city, neighborhood, lat, lng, submitter, note, 'queued').run();
         return J(req, { ok: true, id: r.meta && r.meta.last_row_id, at, status: 'queued' });

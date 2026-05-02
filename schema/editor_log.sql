@@ -1,8 +1,8 @@
 -- v6 §9.10 — Editor activity log for auto-pause computation.
 -- Cloudflare D1 (SQLite). Apply with:
---   wrangler d1 execute lounj_db --file=schema/editor_log.sql
+--   wrangler d1 execute saudade_db --file=schema/editor_log.sql
 -- Or, for a remote (production) DB:
---   wrangler d1 execute lounj_db --remote --file=schema/editor_log.sql
+--   wrangler d1 execute saudade_db --remote --file=schema/editor_log.sql
 --
 -- Tracked actions (only these count toward auto-pause):
 --   dispatch.review        — editor opened a daily dispatch for review

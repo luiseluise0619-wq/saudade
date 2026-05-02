@@ -1,8 +1,8 @@
 -- v7 §8.9 — Cafe submissions table.
 -- Cloudflare D1 (SQLite). Apply with:
---   wrangler d1 execute lounj_db --file=schema/cafe_submissions.sql
+--   wrangler d1 execute saudade_db --file=schema/cafe_submissions.sql
 -- Or remote:
---   wrangler d1 execute lounj_db --remote --file=schema/cafe_submissions.sql
+--   wrangler d1 execute saudade_db --remote --file=schema/cafe_submissions.sql
 --
 -- 사용자가 "Submit a café" 폼으로 제출 → 다음 분기 발행 시 편집부 검수.
 -- 입점료·광고·추천 협찬 0건. status 가 'queued' 인 것만 검수 대상.
