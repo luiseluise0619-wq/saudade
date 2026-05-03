@@ -235,30 +235,172 @@ async function gather(env, ctx) {
     }
     return { ok: true, phase: 'gather', sources: sources.length, inserted, blocked, errors };
 }
+// v8 §02 — sort/score/write 가 도시-단위로 작동.
+// city-pool.json 의 14 도시 각각에 대해 raw_feeds 가 존재하면 dispatch 1개씩 생성.
+// 사용자별 매칭은 /dispatches/today 가 user_following_cities 조회 후 처리.
+
+const CITY_POOL_SLUGS = [
+    'lisbon', 'porto', 'madrid', 'barcelona', 'berlin',
+    'tokyo', 'seoul', 'chiang-mai', 'bali', 'da-nang',
+    'mexico-city', 'medellin', 'buenos-aires', 'tbilisi'
+];
+
 async function sort(env, ctx, llm) {
-    // TODO: SELECT raw_feeds WHERE city IS NULL → llm.classify → UPDATE
-    return { ok: true, phase: 'sort', count: 0, todo: true };
+    // raw_feeds WHERE city IS NULL → Llama classify → UPDATE city
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'sort', reason: 'no_db' };
+    if (!llm || !llm.classify) return { ok: false, phase: 'sort', reason: 'no_llm' };
+    const db = env.SAUDADE_DB;
+    let updated = 0, errors = 0;
+    try {
+        const rows = await db.prepare(
+            `SELECT id, raw_title, raw_summary FROM raw_feeds WHERE city IS NULL LIMIT 50`
+        ).all();
+        const items = (rows && rows.results) || [];
+        for (const r of items) {
+            const text = (r.raw_title || '') + '\n' + (r.raw_summary || '');
+            const city = await llm.classify(text, CITY_POOL_SLUGS);
+            if (city) {
+                await db.prepare(`UPDATE raw_feeds SET city = ? WHERE id = ?`).bind(city, r.id).run();
+                updated++;
+            } else { errors++; }
+        }
+    } catch (e) { return { ok: false, phase: 'sort', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'sort', updated, errors };
 }
+
 async function score(env, ctx, llm) {
-    // TODO: SELECT raw_feeds WHERE ai_score IS NULL → llm.score → UPDATE
-    return { ok: true, phase: 'score', count: 0, todo: true };
+    // raw_feeds WHERE ai_score IS NULL → Llama score 1-10 → UPDATE
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'score', reason: 'no_db' };
+    if (!llm || !llm.score) return { ok: false, phase: 'score', reason: 'no_llm' };
+    const db = env.SAUDADE_DB;
+    let updated = 0;
+    try {
+        const rows = await db.prepare(
+            `SELECT id, raw_title, raw_summary FROM raw_feeds
+             WHERE ai_score IS NULL AND city IS NOT NULL LIMIT 50`
+        ).all();
+        for (const r of (rows.results || [])) {
+            const text = (r.raw_title || '') + '\n' + (r.raw_summary || '');
+            const s = await llm.score(text);
+            if (s != null) {
+                await db.prepare(`UPDATE raw_feeds SET ai_score = ? WHERE id = ?`).bind(s, r.id).run();
+                updated++;
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'score', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'score', updated };
 }
+
 async function writeRewrites(env, ctx, llm) {
-    // TODO: top scored → llm.rewrite (per weekday prompt) → INSERT dispatches_staged
-    // 금지어 hasForbidden() → 폐기 + 재시도 max 3
-    return { ok: true, phase: 'write', count: 0, todo: true };
+    // v8 §02 — 도시별 dispatch 1개씩 (정착+주변 폐기). 사용자별 매칭은 file 단계에서.
+    // 각 city 의 ai_score 상위 1개 → llm.rewrite (요일 프롬프트) → dispatches_staged INSERT.
+    // 금지어 hasForbidden 검사 후 재시도 max 3.
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'write', reason: 'no_db' };
+    if (!llm || !llm.rewrite) return { ok: false, phase: 'write', reason: 'no_llm' };
+    const db = env.SAUDADE_DB;
+    const today = new Date();
+    const weekday = today.getDay() || 1;   // 0(Sun)→1(Mon)
+    if (weekday > 6) return { ok: true, phase: 'write', skipped: 'sunday' };
+    const prompt = WEEKDAY_PROMPTS[weekday] || WEEKDAY_PROMPTS[1];
+    const stagedAt = Date.now();
+    let written = 0, blocked = 0;
+
+    for (const city of CITY_POOL_SLUGS) {
+        try {
+            const top = await db.prepare(
+                `SELECT id, raw_title, raw_summary, source_url
+                 FROM raw_feeds
+                 WHERE city = ? AND processed_at IS NULL AND ai_score IS NOT NULL
+                 ORDER BY ai_score DESC LIMIT 1`
+            ).bind(city).first();
+            if (!top) continue;
+
+            let attempts = 0, drafted = null;
+            while (attempts < 3 && !drafted) {
+                attempts++;
+                const text = (top.raw_title || '') + '\n' + (top.raw_summary || '');
+                const out = await llm.rewrite(text, prompt);
+                if (out && !hasForbidden(out)) drafted = out; else if (out) blocked++;
+            }
+            if (!drafted) continue;
+            // 첫 줄 = headline, 둘째 줄 = lede, 나머지 = body. 단순 split.
+            const lines = drafted.split('\n').map(s => s.trim()).filter(Boolean);
+            const headline = (lines[0] || '').slice(0, 160);
+            const lede     = (lines[1] || '').slice(0, 240);
+            const body     = lines.slice(2).join(' ').slice(0, 1200);
+
+            await db.prepare(
+                `INSERT INTO dispatches_staged
+                    (raw_feed_id, edition, weekday, headline, lede, body, source_url, ai_score, status, staged_at)
+                 VALUES (?, 'en', ?, ?, ?, ?, ?, ?, 'staged', ?)`
+            ).bind(top.id, weekday, headline, lede, body, top.source_url, top.ai_score || 0, stagedAt).run();
+            await db.prepare(
+                `UPDATE raw_feeds SET processed_at = ? WHERE id = ?`
+            ).bind(stagedAt, top.id).run();
+            written++;
+        } catch (e) { /* skip */ }
+    }
+    return { ok: true, phase: 'write', written, blocked, weekday };
 }
+
 async function translateAll(env, ctx, llm) {
-    // TODO: dispatches_staged WHERE edition='en' → llm.translate × 4 에디션 → INSERT
-    return { ok: true, phase: 'translate', count: 0, todo: true };
+    // dispatches_staged WHERE edition='en' AND status='staged' → 4 에디션 별쇄 INSERT
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'translate', reason: 'no_db' };
+    if (!llm || !llm.translate) return { ok: false, phase: 'translate', reason: 'no_llm' };
+    const db = env.SAUDADE_DB;
+    const editions = ['ko', 'ja', 'pt', 'es'];
+    let translated = 0;
+    try {
+        const rows = await db.prepare(
+            `SELECT id, headline, lede, body, raw_feed_id, weekday, source_url, ai_score
+             FROM dispatches_staged
+             WHERE edition='en' AND status='staged' AND staged_at > ?
+             LIMIT 30`
+        ).bind(Date.now() - 24 * 3600 * 1000).all();
+        for (const r of (rows.results || [])) {
+            for (const ed of editions) {
+                // 이미 번역됐는지 체크
+                const exists = await db.prepare(
+                    `SELECT id FROM dispatches_staged WHERE raw_feed_id = ? AND edition = ?`
+                ).bind(r.raw_feed_id, ed).first();
+                if (exists) continue;
+                const trH = await llm.translate(r.headline || '', 'en', ed);
+                const trL = await llm.translate(r.lede || '', 'en', ed);
+                const trB = r.body ? await llm.translate(r.body, 'en', ed) : '';
+                if (trH || trL || trB) {
+                    await db.prepare(
+                        `INSERT INTO dispatches_staged
+                            (raw_feed_id, edition, weekday, headline, lede, body, source_url, ai_score, status, staged_at)
+                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'staged', ?)`
+                    ).bind(r.raw_feed_id, ed, r.weekday, trH || r.headline,
+                           trL || r.lede, trB || r.body, r.source_url, r.ai_score, Date.now()).run();
+                    translated++;
+                }
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'translate', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'translate', translated };
 }
+
 async function stage(env, ctx) {
-    // 검수 큐 marker (no-op — 편집장 /desk 가 처리)
-    return { ok: true, phase: 'stage', todo: true };
+    // 검수 큐 marker — 편집장 /desk 가 처리. 단순 pass-through.
+    return { ok: true, phase: 'stage' };
 }
+
 async function file(env, ctx) {
-    // top 3 staged → published, today's dispatches.json regenerate
-    return { ok: true, phase: 'file', count: 0, todo: true };
+    // v8 §02 — staged 전체 published 상태로 전환. 사용자별 매칭은
+    // /dispatches/today endpoint 가 user_following_cities 조회 후 수행.
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'file', reason: 'no_db' };
+    const db = env.SAUDADE_DB;
+    const now = Date.now();
+    try {
+        const r = await db.prepare(
+            `UPDATE dispatches_staged
+             SET status='published', published_at = ?
+             WHERE status='staged' AND staged_at > ?`
+        ).bind(now, now - 24 * 3600 * 1000).run();
+        return { ok: true, phase: 'file', published: r.meta && r.meta.changes };
+    } catch (e) { return { ok: false, phase: 'file', error: String(e).slice(0, 200) }; }
 }
 
 // 테스트/수동 트리거용 export (모듈 export 형태로 변경 가능)

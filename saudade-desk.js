@@ -339,24 +339,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     color: var(--accent, var(--rust));
 }
 
-/* v6 §5.4 — Switch the Desk active state */
-.sdd-desk-switch-active {
-    padding: clamp(16px, 2vw, 24px);
-    border: 0.5px solid var(--accent, var(--rust));
-    margin: 0 0 16px;
-}
-.sdd-desk-switch-msg {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(15px, 1.4vw, 18px);
-    line-height: 1.4;
-    color: var(--accent, var(--rust));
-    margin: 0 0 14px;
-}
-.sdd-desk-switch-actions {
-    display: flex; flex-wrap: wrap; gap: 10px;
-}
+/* v8 §02 — v6 §5.4 Switch the desk 폐기. Following 섹션이 도시 변경 담당. */
 
 .sdd-desk-disclaimer {
     font-family: var(--mono);
@@ -572,58 +555,27 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         `;
     }
 
-    // v6 §5.4 — Switch the Desk + Home City UI (v8: Switch the desk 폐기, home city 만 유지)
+    // v8 §02 — v7 §5.4 Switch the desk 폐기. Home city 표시 + 도시 요청 폼만 유지.
+    // Atlas/Ledger 컨텍스트의 home city 개념은 그대로 유지 (Following 과 별개).
+    // 도시 변경은 Following 섹션에서 직접 함.
     function renderHomeDeskSection() {
         if (!window.SAUDADE_CITY) return '';
         const T = window.SAUDADE_T || ((s) => s.en);
         const home = window.SAUDADE_CITY.getHomeCity();
-        const sw = window.SAUDADE_CITY.getSwitch();
         const ed = window.SAUDADE_EDITION?.get?.() || 'en';
         const homeName = window.SAUDADE_CITY.cityName(home, ed);
-        const adjacent = window.SAUDADE_CITY.adjacentCities();
 
         const labels = {
             label:    T({ en: 'Home Desk', ko: '정착 책상', ja: '本拠デスク', pt: 'Mesa Permanente', es: 'Mesa Permanente' }),
-            sub:      T({ en: 'Where you sleep this month', ko: '이번 달 머무는 곳', ja: '今月の住まい', pt: 'Onde dorme este mês', es: 'Dónde duermes este mes' }),
-            switchTo: T({ en: 'Switch the desk to', ko: '책상을 옮기기', ja: 'デスクを移す', pt: 'Mudar a mesa para', es: 'Mover la mesa a' }),
-            returnIn: T({ en: 'Returning to $home in $days days', ko: '$days일 후 $home 으로 복귀', ja: '$days日後に $home に戻ります', pt: 'Regresso a $home em $days dias', es: 'Regreso a $home en $days días' }),
-            returnNow:T({ en: 'Return now', ko: '지금 복귀', ja: '今すぐ戻る', pt: 'Voltar agora', es: 'Volver ahora' }),
-            keepHere: T({ en: 'Keep me on $to permanently', ko: '$to 를 정착 도시로', ja: '$to を本拠に', pt: 'Manter $to permanente', es: 'Mantener $to permanente' }),
-            requestNew: T({ en: 'Request a new desk', ko: '새 책상 요청', ja: '新しいデスクを要請', pt: 'Pedir uma nova mesa', es: 'Solicitar una nueva mesa' }),
+            sub:      T({ en: 'Where you sleep this month — used by Atlas and Ledger.',
+                          ko: '이번 달 머무는 곳 — 아틀라스와 레저에서 사용한다.',
+                          ja: '今月の住まい — アトラスと台帳で使う。',
+                          pt: 'Onde dorme este mês — usado pelo Atlas e pelo Livro-Razão.',
+                          es: 'Dónde duermes este mes — usado por el Atlas y el Libro Mayor.' }),
+            requestNew: T({ en: 'Request a new city', ko: '새 도시 요청', ja: '新しい街を要請', pt: 'Pedir uma nova cidade', es: 'Solicitar una nueva ciudad' }),
             requestPh:  T({ en: 'CITY NAME', ko: '도시 이름', ja: '都市名', pt: 'NOME DA CIDADE', es: 'NOMBRE DE LA CIUDAD' }),
             requestSent:T({ en: 'Submitted, queued for next issue.', ko: '제출됐다. 다음 호에 검토한다.', ja: '提出された。次号で検討する。', pt: 'Submetido, em fila para a próxima edição.', es: 'Enviado, en cola para la próxima edición.' })
         };
-
-        // Switch active 시
-        let switchHtml = '';
-        if (sw && sw.to) {
-            const daysLeft = Math.max(0, Math.ceil((new Date(sw.returns_at).getTime() - Date.now()) / 86400000));
-            const fromName = window.SAUDADE_CITY.cityName(sw.from, ed);
-            const toName = window.SAUDADE_CITY.cityName(sw.to, ed);
-            switchHtml = `
-                <div class="sdd-desk-switch-active">
-                    <p class="sdd-desk-switch-msg">
-                        ${escapeHtml(labels.returnIn.replace('$home', fromName).replace('$days', String(daysLeft)))}
-                    </p>
-                    <div class="sdd-desk-switch-actions">
-                        <button class="sdd-desk-edition-opt" data-switch-end>
-                            ${escapeHtml(labels.returnNow)}
-                        </button>
-                        <button class="sdd-desk-edition-opt" data-switch-permanent>
-                            ${escapeHtml(labels.keepHere.replace('$to', toName))}
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
-
-        // 주변 도시 → switch buttons
-        const adjacentBtnsHtml = !sw && adjacent.length ? adjacent.map(c => {
-            const name = window.SAUDADE_CITY.cityName(c, ed);
-            return `<button class="sdd-desk-edition-opt" data-switch-to="${escapeHtml(c)}">
-                        ${escapeHtml(labels.switchTo)} ${escapeHtml(name)}
-                    </button>`;
-        }).join('') : '';
 
         return `
             <section class="sdd-desk-section">
@@ -631,11 +583,9 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(20px,2.4vw,28px);line-height:1.2;color:var(--ink);margin:0 0 16px">
                     ${escapeHtml(homeName)}
                 </p>
-                ${switchHtml}
-                ${adjacentBtnsHtml ? `<div class="sdd-desk-edition-list" style="margin-top:12px">${adjacentBtnsHtml}</div>` : ''}
                 <form class="sdd-desk-request-form" data-request-form style="margin-top:24px;display:flex;gap:8px;flex-wrap:wrap">
                     <input type="text" name="city" placeholder="${escapeHtml(labels.requestPh)}"
-                           style="background:transparent;border:0;border-bottom:0.5px solid var(--rule);font-family:var(--mono);font-size:11px;letter-spacing:var(--tr-mono-meta);text-transform:uppercase;padding:10px 0;min-height:44px;flex:1;min-width:200px;color:var(--ink);outline:none" />
+                           style="background:transparent !important;border:0 !important;border-bottom:0.5px solid var(--rule) !important;font-family:var(--mono);font-size:11px;letter-spacing:var(--tr-mono-meta);text-transform:uppercase;padding:10px 0;min-height:44px;flex:1;min-width:200px;color:var(--ink);outline:none;border-radius:0 !important" />
                     <button type="submit" class="sdd-desk-edition-opt">${escapeHtml(labels.requestNew)}</button>
                 </form>
                 <p class="sdd-desk-request-status" data-request-status style="font-family:var(--mono);font-size:10px;letter-spacing:var(--tr-mono-meta);text-transform:uppercase;color:var(--bone-d);margin:8px 0 0;min-height:14px"></p>
@@ -782,19 +732,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             render();
         });
 
-        // v6 §5.4 — Switch the Desk handlers
-        root.querySelectorAll('[data-switch-to]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const to = btn.getAttribute('data-switch-to');
-                if (window.SAUDADE_CITY?.startSwitch) window.SAUDADE_CITY.startSwitch(to);
-            });
-        });
-        root.querySelector('[data-switch-end]')?.addEventListener('click', () => {
-            window.SAUDADE_CITY?.endSwitch?.();
-        });
-        root.querySelector('[data-switch-permanent]')?.addEventListener('click', () => {
-            window.SAUDADE_CITY?.makePermanent?.();
-        });
+        // v8 §02 — v6 §5.4 Switch the desk 핸들러 제거 (Following 이 도시 변경 담당)
 
         // v6 §5.5 — 정의 안 된 도시 요청 폼
         const reqForm = root.querySelector('[data-request-form]');
