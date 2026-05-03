@@ -950,17 +950,30 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // v8 §07 — 도크 LEDGER 탭 visa expiry 긴급 도트 (조용한 알림, 알림 API X)
+    function refreshVisaUrgent() {
+        const v = activeVisa();
+        const days = v ? daysLeft(v.expiry) : null;
+        if (days != null && days <= 7) {
+            document.body.setAttribute('data-visa-urgent', '1');
+        } else {
+            document.body.removeAttribute('data-visa-urgent');
+        }
+    }
+
     function init() {
         injectStyles();
         render();
+        refreshVisaUrgent();
         // body section 변경 감지 — 01 진입 시 재렌더
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '01') render();
         });
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section'] });
-        // 1분마다 D-day 갱신
+        // 1분마다 D-day 갱신 + visa urgency 재계산
         setInterval(() => {
             if (document.body.getAttribute('data-section') === '01') render();
+            refreshVisaUrgent();
         }, 60000);
     }
 
@@ -970,5 +983,5 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         init();
     }
 
-    window.SAUDADE_LEDGER = { render, getVisas, setVisas, activeVisa, daysLeft, taxResidency };
+    window.SAUDADE_LEDGER = { render, getVisas, setVisas, activeVisa, daysLeft, taxResidency, refreshVisaUrgent };
 })();

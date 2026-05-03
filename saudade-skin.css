@@ -280,7 +280,7 @@ input::placeholder, .os-search::placeholder { color: var(--bone-d) !important; t
 /* ─── 8. 버튼 일반 — flat ink / hover rust ──────────────────────────────── */
 
 /* v7 검토 정정 — sdd-* 잡지 톤 버튼은 자체 스타일 보유. 전역 box border 제외. */
-button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):not(.sdd-listen-ctl):not(.sdd-listen-back):not(.sdd-mast-back):not(.sdd-atlas-d-back):not(.sdd-gps-modal-btn):not(.sdd-gps-pin-prompt-cancel):not(.sdd-gps-status-btn):not(.sdd-disp-disclaimer-toggle):not(.sdd-listen-mode-btn):not(.sdd-desk-account-btn):not(.sdd-following-remove):not(.sdd-following-opt):not(.sdd-following-pairing):not(.sdd-gps-locate):not(.sdd-disp-pairing) {
+button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):not(.sdd-listen-ctl):not(.sdd-listen-back):not(.sdd-mast-back):not(.sdd-atlas-d-back):not(.sdd-gps-modal-btn):not(.sdd-gps-pin-prompt-cancel):not(.sdd-gps-status-btn):not(.sdd-disp-disclaimer-toggle):not(.sdd-listen-mode-btn):not(.sdd-desk-account-btn):not(.sdd-following-remove):not(.sdd-following-opt):not(.sdd-following-pairing):not(.sdd-gps-locate):not(.sdd-disp-pairing):not(.sdd-cover-edition-opt) {
     background: transparent;
     border: 0.5px solid var(--rule);
     color: var(--ink);
@@ -1804,3 +1804,89 @@ body.colophon-active #sddCoverListenCta { display: none !important; }
     }
     a[href^="#"]::after, a[href^="mailto:"]::after { content: ""; }
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v8 §07 — LEDGER 도크 탭 visa expiry 긴급 도트 (조용한 알림, 알림 API X)
+   body[data-visa-urgent="1"] 일 때 .dock-btn[data-cat="visa"] 우상단 rust 점.
+   saudade-ledger.js 가 매 분 SAUDADE_LEDGER.activeVisa() 검사 후 attribute 갱신.
+   ════════════════════════════════════════════════════════════════════════════ */
+body[data-visa-urgent="1"] .dock-btn[data-cat="visa"] {
+    position: relative;
+}
+body[data-visa-urgent="1"] .dock-btn[data-cat="visa"]::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background: var(--rust);
+    border-radius: 50%;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    body[data-visa-urgent="1"] .dock-stats > .dock-btn[data-cat="visa"]::before {
+        top: 4px;
+        right: 4px;
+    }
+}
+
+/* v8 §02 — Cover 우상단 edition 스위처 (작은 mono 드롭다운) */
+.sdd-cover-edition {
+    position: fixed;
+    top: clamp(16px, 2vw, 24px);
+    right: clamp(16px, 2vw, 24px);
+    z-index: var(--z-cover, 4);
+    pointer-events: auto;
+}
+body.section-active .sdd-cover-edition,
+body.cafe-mode .sdd-cover-edition,
+body.listening-active .sdd-cover-edition { display: none !important; }
+.sdd-cover-edition > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 6px 8px;
+    user-select: none;
+    background: transparent;
+    border: 0.5px solid transparent;
+    border-radius: 0;
+}
+.sdd-cover-edition > summary:hover { color: var(--ink); border-color: var(--rule); }
+.sdd-cover-edition > summary::-webkit-details-marker { display: none; }
+.sdd-cover-edition > summary::after { content: ' \25BE'; opacity: .6; }
+.sdd-cover-edition[open] > summary { color: var(--ink); border-color: var(--rule); }
+.sdd-cover-edition[open] > summary::after { content: ' \25B4'; opacity: 1; }
+.sdd-cover-edition-list {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    min-width: 140px;
+}
+.sdd-cover-edition-list li { border-top: 0.5px solid var(--rule); }
+.sdd-cover-edition-list li:first-child { border-top: 0; }
+.sdd-cover-edition-list button.sdd-cover-edition-opt {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+    color: var(--ink) !important;
+    padding: 10px 12px !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    min-height: 44px !important;
+}
+.sdd-cover-edition-list button.sdd-cover-edition-opt:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
+.sdd-cover-edition-list button.sdd-cover-edition-opt[aria-current="true"] { color: var(--rust) !important; }
