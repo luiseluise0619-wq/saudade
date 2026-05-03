@@ -603,11 +603,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: 'Una nota sobre los lugares.'
         });
         const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
         });
         const noMatches = T({
             en: 'No matches.', ko: '검색 결과 없음.', ja: '該当なし。',
@@ -748,7 +748,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                         window.SAUDADE_ATLAS_SUBMIT.open();
                     } else {
                         // fallback — mailto desk
-                        window.location.href = 'mailto:desk@saudade.app?subject=Café suggestion';
+                        window.location.href = 'mailto:luiseluise0619@gmail.com?subject=Café suggestion';
                     }
                 }
             });
@@ -789,11 +789,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: 'Una nota sobre los lugares.'
         });
         const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
         });
 
         detail.innerHTML = `

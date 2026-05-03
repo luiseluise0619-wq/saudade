@@ -508,7 +508,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                     We list only what we have visited. We accept no payment for
                     inclusion. We never use a photograph that is not our own. If
                     you are an owner and would like to be removed, write to
-                    desk@saudade.app.
+                    luiseluise0619@gmail.com.
                 </p>
             </section>
 
