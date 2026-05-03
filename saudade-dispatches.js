@@ -386,6 +386,63 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 .sdd-disp-awaiting { opacity: 0.6; }
 .sdd-disp-awaiting .sdd-disp-citytag { color: var(--rust); }
 
+/* v8 §02 — Inline onboarding (Following 비었을 때) */
+.sdd-disp-onboarding { padding: clamp(20px, 3vw, 32px) 0; }
+.sdd-disp-onboarding-h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+.sdd-disp-onboarding-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+.sdd-disp-onboarding-pairings {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-disp-onboarding-pairings li { border-bottom: 0.5px solid var(--rule); }
+.sdd-disp-pairing {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding: 14px 0 !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    min-height: 44px !important;
+}
+.sdd-disp-pairing-label {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--ink);
+}
+.sdd-disp-pairing-cities {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-disp-pairing:hover .sdd-disp-pairing-label { color: var(--rust); }
+
 /* v7 §9.9 retract placeholder */
 .sdd-disp-retracted { opacity: 0.7; }
 .sdd-disp-retract-msg {
@@ -737,20 +794,44 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             return;
         }
 
-        // v8 §02 — Following 도시 안 골랐으면 onboarding 안내. 그렇지 않으면 매핑.
+        // v8 §02 — Following 도시 안 골랐으면 inline onboarding (popular pairings 카드).
+        // Desk 강제 진입 X — 여기서 한 클릭으로 시작.
         const followingList = (window.SAUDADE_FOLLOWING?.list?.() || []);
         const todayItems = flattenForDay(data, wdIdx);
         const todaySection = W[wdIdx] || W[1];
         let todayHtml;
         if (!followingList.length) {
-            const onboarding = T({
-                en: 'No cities chosen yet. Open The Desk and pick three.',
-                ko: '아직 선택한 도시가 없다. 데스크에서 세 곳을 고른다.',
-                ja: 'まだ街を選んでいない。デスクで三つ選ぶ。',
-                pt: 'Sem cidades escolhidas. Abra A Mesa e escolha três.',
-                es: 'Sin ciudades elegidas. Abre La Mesa y elige tres.'
+            const onboardingHead = T({
+                en: 'No cities yet.', ko: '아직 도시가 없다.', ja: 'まだ街がない。',
+                pt: 'Ainda sem cidades.', es: 'Aún sin ciudades.'
             });
-            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(onboarding)}</p>`;
+            const onboardingBody = T({
+                en: 'Pick a starting set below — or open The Desk to choose three cities yourself.',
+                ko: '아래에서 시작 묶음을 고른다 — 또는 데스크에서 세 도시를 직접 고른다.',
+                ja: '下から始まりの組み合わせを選ぶ — またはデスクで三つの街を自分で選ぶ。',
+                pt: 'Escolha um conjunto inicial abaixo — ou abra A Mesa para escolher três cidades você mesmo.',
+                es: 'Elija un conjunto inicial abajo — o abra La Mesa para elegir tres ciudades usted mismo.'
+            });
+            const pairings = window.SAUDADE_FOLLOWING?.pairings?.() || [];
+            const pairingsHtml = pairings.map(p => {
+                const lbl = window.SAUDADE_FOLLOWING.pairingLabel(p, ed);
+                const cityNames = (p.cities || []).map(s => window.SAUDADE_FOLLOWING.cityName(s, ed)).join(' · ');
+                return `
+                    <li>
+                        <button type="button" class="sdd-disp-pairing" data-disp-pairing="${escapeHtml(p.id)}">
+                            <span class="sdd-disp-pairing-label">${escapeHtml(lbl)}</span>
+                            <span class="sdd-disp-pairing-cities">${escapeHtml(cityNames)}</span>
+                        </button>
+                    </li>
+                `;
+            }).join('');
+            todayHtml = `
+                <section class="sdd-disp-onboarding">
+                    <h3 class="sdd-disp-onboarding-h3">${dropItalicPunct(onboardingHead)}</h3>
+                    <p class="sdd-disp-onboarding-body">${escapeHtml(onboardingBody)}</p>
+                    <ul class="sdd-disp-onboarding-pairings">${pairingsHtml}</ul>
+                </section>
+            `;
         } else if (!todayItems.length) {
             todayHtml = `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
         } else {
@@ -810,6 +891,15 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         `;
 
         root.innerHTML = headHtml + todayBlock + archiveBlock + disclaimer;
+
+        // v8 §02 — onboarding pairing 카드 클릭 → Following 적용 + 즉시 재렌더
+        root.querySelectorAll('[data-disp-pairing]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-disp-pairing');
+                window.SAUDADE_FOLLOWING?.applyPairing?.(id);
+                load().then(render);
+            });
+        });
     }
 
     function init() {

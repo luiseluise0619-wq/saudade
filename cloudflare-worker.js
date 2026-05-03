@@ -1593,9 +1593,25 @@ async function dispatchesToday(req, env, ctx) {
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
     const url = new URL(req.url);
     const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    const userId  = (url.searchParams.get('user_id') || '').trim();
     if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
 
-    const k = `dispatches:today:${edition}`;
+    // v8 §02 — user_following_cities 조회 후 도시 필터.
+    // user_id 없거나 Following 비었으면 그냥 published 전체 (legacy).
+    let followingCities = [];
+    if (userId) {
+        try {
+            const fr = await env.SAUDADE_DB.prepare(
+                'SELECT city FROM user_following_cities WHERE user_id = ? ORDER BY position'
+            ).bind(userId).all();
+            followingCities = ((fr && fr.results) || []).map(r => r.city).slice(0, 3);
+        } catch (e) {}
+    }
+
+    // 캐시 키에 user_id 포함 (Following 마다 다른 결과)
+    const k = userId
+        ? `dispatches:today:${edition}:u:${userId}`
+        : `dispatches:today:${edition}`;
     const cached = await cGet(k, env);
     if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
 
@@ -1603,20 +1619,57 @@ async function dispatchesToday(req, env, ctx) {
         // KST 자정 ~ 현재 사이 published 만
         const kstNow = Date.now();
         const kstMidnight = kstNow - ((kstNow + 9 * 3600 * 1000) % (24 * 3600 * 1000));
-        const rows = await env.SAUDADE_DB.prepare(
-            "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
-        ).bind(edition, kstMidnight).all();
-        const items = ((rows && rows.results) || []).map((r, i) => ({
-            n: String(i + 1).padStart(2, '0'),
-            headline: r.headline,
-            lede: r.lede,
-            body: r.body,
-            source_url: r.source_url,
-            ai_score: r.ai_score
-        }));
+
+        let items = [];
+        if (followingCities.length) {
+            // v8 — Following 도시 각각의 best published dispatch 1개
+            for (let i = 0; i < followingCities.length; i++) {
+                const city = followingCities[i];
+                const row = await env.SAUDADE_DB.prepare(
+                    `SELECT s.headline, s.lede, s.body, s.source_url, s.ai_score, s.weekday, r.city
+                     FROM dispatches_staged s
+                     JOIN raw_feeds r ON s.raw_feed_id = r.id
+                     WHERE s.edition = ? AND s.status = 'published'
+                       AND s.published_at >= ? AND r.city = ?
+                     ORDER BY s.ai_score DESC LIMIT 1`
+                ).bind(edition, kstMidnight, city).first();
+                if (row) {
+                    items.push({
+                        n: String(i + 1).padStart(2, '0'),
+                        headline: row.headline,
+                        lede: row.lede,
+                        body: row.body,
+                        source_url: row.source_url,
+                        ai_score: row.ai_score,
+                        _city: row.city
+                    });
+                } else {
+                    // placeholder — 클라이언트가 "Awaiting" 표시
+                    items.push({
+                        n: String(i + 1).padStart(2, '0'),
+                        _awaiting: true,
+                        _city: city
+                    });
+                }
+            }
+        } else {
+            // legacy fallback — published 전체 top 9 (Following 안 정한 사용자)
+            const rows = await env.SAUDADE_DB.prepare(
+                "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
+            ).bind(edition, kstMidnight).all();
+            items = ((rows && rows.results) || []).map((r, i) => ({
+                n: String(i + 1).padStart(2, '0'),
+                headline: r.headline,
+                lede: r.lede,
+                body: r.body,
+                source_url: r.source_url,
+                ai_score: r.ai_score
+            }));
+        }
+
         const body = JSON.stringify({
             edition,
-            weekday: ((rows && rows.results || [])[0] || {}).weekday || null,
+            following: followingCities,
             published_at: kstMidnight,
             items
         });
