@@ -581,10 +581,16 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             e.target.textContent = (labels[ed] || labels.en)[cur];
             if (next === 'map') {
                 const container = root.querySelector('#sddAtlasMap');
+                if (!window.SAUDADE_ATLAS_MAP || !window.SAUDADE_ATLAS_MAP.initMap) {
+                    if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP MODULE NOT LOADED · RELOAD PAGE</p>';
+                    console.warn('[ATLAS] SAUDADE_ATLAS_MAP unavailable — saudade-atlas-map.js failed to load');
+                    return;
+                }
                 try {
-                    await window.SAUDADE_ATLAS_MAP?.initMap(container);
+                    await window.SAUDADE_ATLAS_MAP.initMap(container);
                 } catch (err) {
-                    container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · CHECK CONNECTION</p>';
+                    if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + (err && err.message || 'UNKNOWN ERROR').toUpperCase() + '</p>';
+                    console.warn('[ATLAS] map init failed:', err);
                 }
             } else {
                 // LIST 로 돌아갈 때 map 인스턴스는 유지 — 다시 토글하면 같은 상태로
