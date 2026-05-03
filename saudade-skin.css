@@ -1232,9 +1232,11 @@ body.cafe-mode #sddFooter,
 body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 
 /* 48. 모바일 dock 매거진 식 단순화 (label 간 가운뎃점) */
-/* v7 검토 — 모바일 topbar SETTINGS 숨김 (데스크톱은 유지) */
+/* v7 검토 — 모바일 topbar 전체 숨김
+   (dock 5탭 + footer-rule 라 네비게이션 충분.
+    데스크톱은 wordmark + SETTINGS 유지). */
 @media (max-width: 768px) {
-    .topbar #settingsBtn { display: none !important; }
+    body:not(.cafe-mode) .topbar { display: none !important; }
 }
 
 @media (max-width: 768px) {
@@ -1262,6 +1264,15 @@ body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 /* ════════════════════════════════════════════════════════════════════════════
    v603 PR#5 — 모바일 QA + 부드러운 transition + topbar 워드마크
    ════════════════════════════════════════════════════════════════════════════ */
+
+/* v7 모바일 검토 — cover masthead 하드코딩 마스트 정밀 (화면 너무 좁을 때 잘림 방지) */
+@media (max-width: 768px) {
+    body:not(.cafe-mode):not(.section-active)::before {
+        font-size: 9px !important;
+        padding: 0 12px !important;
+        text-align: center !important;
+    }
+}
 
 /* 49. 모바일 (≤768px) 표지 / 마스트헤드 / 푸터 정밀 ──────────────── */
 @media (max-width: 768px) {
