@@ -1238,19 +1238,19 @@ body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
         padding: 12px 14px !important;
         justify-content: space-around !important;
     }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"] .dock-btn-label::after  { content: 'LEDGER'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"] .dock-btn-label::after  { content: 'ATLAS'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]   .dock-btn-label::after  { content: 'DISPATCHES'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"] .dock-btn-label::after  { content: 'DESK'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"] .dock-btn-label::after  { content: 'LISTEN'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
-        display: block !important;
-        font-size: 0 !important;
-    }
-    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label::after {
+    /* v7 모바일 dock 라벨 — .dock-btn 직접 ::after (inner .dock-btn-label 요소 없음) */
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after  { content: 'LEDGER'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after  { content: 'ATLAS'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after    { content: 'DISPATCHES'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after  { content: 'DESK'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTEN'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
+        font-weight: 500;
         font-size: 9px !important;
         letter-spacing: var(--tr-mono-mast);
+        text-transform: uppercase;
+        color: var(--bone-d);
     }
 }
 
