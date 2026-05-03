@@ -276,29 +276,31 @@
 }
 .sdd-gps-pin-prompt-cancel:hover { color: var(--rust); }
 
-/* §8.5 사용자 위치 마커 — 8px outline 원 + 1px 점. 펄스/그림자/라벨 X. */
+/* §8.5 사용자 위치 마커 — 가시성 정정 (사용자 "내 위치 안 떠"):
+   16px ring + 4px center dot, ink 2px outline + paper halo (지도 어디든 대비). */
 .sdd-gps-marker {
     position: relative;
-    width: 11px;
-    height: 11px;
+    width: 22px;
+    height: 22px;
     pointer-events: none;
 }
 .sdd-gps-marker::before {
     content: '';
     position: absolute;
-    left: 0; top: 0;
-    width: 8px; height: 8px;
-    border: 1.5px solid var(--ink);
+    left: 1px; top: 1px;
+    width: 16px; height: 16px;
+    border: 2px solid var(--ink);
     border-radius: 50%;
-    background: transparent;
+    background: rgba(242,238,227,.4);
     box-sizing: content-box;
+    box-shadow: 0 0 0 1px var(--paper);
 }
 .sdd-gps-marker::after {
     content: '';
     position: absolute;
     left: 50%; top: 50%;
-    width: 1px; height: 1px;
-    background: var(--ink);
+    width: 4px; height: 4px;
+    background: var(--rust);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -518,14 +520,32 @@
     function onMapOpened() {
         ensureStatusBadge();
         renderStatusBadge();
-        // 좌표 있으면 표시 + 모달 X
-        if (_currentCenter) {
-            updateMarker();
-            centerMapOnUser();
-            return;
-        }
-        // 권한도 핀도 없음 — 사전 모달
-        if (!isGranted() && !getPin()) showModal();
+        // v7 검토 정정 — map 이 아직 init/load 안 됐을 수 있음 → 대기 후 진행 (사용자 "내 위치 안 떠")
+        waitForMapReady(() => {
+            if (_currentCenter) {
+                updateMarker();
+                centerMapOnUser();
+                return;
+            }
+            // 권한 있으면 즉시 위치 요청 (sticky permission 활용)
+            if (isGranted() && 'geolocation' in navigator) {
+                renderStatusBadge();   // LOCATING…
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => { onPosition(pos); startWatch(); centerMapOnUser(); },
+                    () => { setStored(KEY_GRANTED, null); renderStatusBadge(); }
+                );
+                return;
+            }
+            // 권한도 핀도 없음 — 사전 모달
+            if (!isGranted() && !getPin()) showModal();
+        });
+    }
+    function waitForMapReady(cb, attempts = 0) {
+        const map = window.SAUDADE_ATLAS_MAP && window.SAUDADE_ATLAS_MAP.getMap && window.SAUDADE_ATLAS_MAP.getMap();
+        if (map && map.loaded && map.loaded()) { cb(); return; }
+        if (map && map.once) { map.once('load', cb); return; }
+        if (attempts > 50) { cb(); return; }   // 10s timeout — 무리하지 않음
+        setTimeout(() => waitForMapReady(cb, attempts + 1), 200);
     }
 
     // v7 검토 정정 — 좌상단 GPS 상태 배지 (사용자가 위치 표시 여부 인지)

@@ -113,7 +113,9 @@
 .sdd-atlas[data-view="map"]  .sdd-atlas-list,
 .sdd-atlas[data-view="map"]  .sdd-atlas-search,
 .sdd-atlas[data-view="map"]  .sdd-atlas-foot,
-.sdd-atlas[data-view="map"]  .sdd-atlas-note { display: none; }
+.sdd-atlas[data-view="map"]  .sdd-atlas-note,
+.sdd-atlas[data-view="map"]  .sdd-atlas-empty-state { display: none; }
+/* MAP 뷰에선 지도가 화면 대부분을 차지 — empty state 가 위에 떠서 지도 가리던 문제 정정 */
 
 /* v7 §8.7 — paper tone. CSS filter 임시 (PR3 안에 vector style 로 교체).
    목표 근사: bg ≈ paper-d, 도로 ≈ bone. 디지털 잡지 종이 톤. */

@@ -59,6 +59,68 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
 }
 .sdd-desk-section:last-child { border-bottom: 0.5px solid var(--rule); }
 
+/* v7 §13 — Account section */
+.sdd-desk-account-headline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 28px);
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 8px;
+}
+.sdd-desk-account-email {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: var(--tr-mono-data);
+    color: var(--ink);
+    margin: 0 0 clamp(16px, 2vw, 20px);
+}
+.sdd-desk-account-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(16px, 2vw, 20px);
+}
+.sdd-desk-account-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.sdd-desk-account-actions li {
+    border-top: 0.5px solid var(--rule);
+    margin: 0;
+}
+.sdd-desk-account-btn {
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--ink) !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    min-height: 44px !important;
+    transition: color .12s;
+}
+.sdd-desk-account-btn:hover { color: var(--rust) !important; }
+.sdd-desk-account .sdd-desk-account-actions + .sdd-desk-account-btn,
+.sdd-desk-account-headline + .sdd-desk-account-email + .sdd-desk-account-btn {
+    border-top: 0.5px solid var(--rule) !important;
+}
+
 .sdd-desk-label {
     font-family: var(--mono);
     font-weight: 500;
@@ -208,6 +270,87 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // v7 §13 — Account section (sign-in / tour / sign-out). 헌법 §13 매직 링크.
+    function renderAccountSection() {
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const user   = window.SAUDADE_AUTH?.getUser?.() || null;
+        const onTour = window.SAUDADE_AUTH?.isTour?.() || false;
+
+        const labelTitle = T({
+            en: 'Account', ko: '계정', ja: 'アカウント',
+            pt: 'Conta', es: 'Cuenta'
+        });
+        const headSignedIn = T({
+            en: 'Signed in.', ko: '로그인됨.', ja: 'サインイン済み。',
+            pt: 'Sessão iniciada.', es: 'Sesión iniciada.'
+        });
+        const headTour = T({
+            en: 'Browsing as guest.', ko: '둘러보는 중.', ja: 'ゲストとして閲覧中。',
+            pt: 'A navegar como convidado.', es: 'Navegando como invitado.'
+        });
+        const headAnon = T({
+            en: 'Not signed in.', ko: '로그인 전.', ja: 'サインインなし。',
+            pt: 'Sem sessão.', es: 'Sin sesión.'
+        });
+        const bodyAnon = T({
+            en: 'One line. We send a sign-in link to your inbox. No password.',
+            ko: '한 줄. 이메일로 로그인 링크를 보낸다. 비밀번호 없음.',
+            ja: '一行。メールにサインインリンクを送る。パスワードなし。',
+            pt: 'Uma linha. Enviamos um link para a sua caixa de entrada. Sem palavra-passe.',
+            es: 'Una línea. Enviamos un enlace al correo. Sin contraseña.'
+        });
+        const btnSignIn = T({
+            en: 'SIGN IN WITH EMAIL', ko: '이메일로 로그인',
+            ja: 'メールでサインイン', pt: 'ENTRAR COM EMAIL',
+            es: 'INICIAR SESIÓN CON CORREO'
+        });
+        const btnTour = T({
+            en: 'BROWSE WITHOUT SIGNING IN', ko: '가입 없이 둘러보기',
+            ja: '登録せずに見る', pt: 'NAVEGAR SEM REGISTO',
+            es: 'NAVEGAR SIN REGISTRO'
+        });
+        const btnSignOut = T({
+            en: 'SIGN OUT', ko: '로그아웃', ja: 'サインアウト',
+            pt: 'TERMINAR SESSÃO', es: 'CERRAR SESIÓN'
+        });
+        const btnEndTour = T({
+            en: 'END TOUR · SIGN IN', ko: '둘러보기 종료 · 로그인',
+            ja: 'ツアー終了 · サインイン',
+            pt: 'TERMINAR VISITA · ENTRAR',
+            es: 'FINALIZAR VISITA · ENTRAR'
+        });
+
+        let stateHtml;
+        if (user) {
+            stateHtml = `
+                <p class="sdd-desk-account-headline">${escapeHtml(headSignedIn)}</p>
+                <p class="sdd-desk-account-email">${escapeHtml(user.email || '')}</p>
+                <button type="button" class="sdd-desk-account-btn" data-account-signout>${escapeHtml(btnSignOut)}</button>
+            `;
+        } else if (onTour) {
+            stateHtml = `
+                <p class="sdd-desk-account-headline">${escapeHtml(headTour)}</p>
+                <p class="sdd-desk-account-body">${escapeHtml(bodyAnon)}</p>
+                <button type="button" class="sdd-desk-account-btn" data-account-signin>${escapeHtml(btnEndTour)}</button>
+            `;
+        } else {
+            stateHtml = `
+                <p class="sdd-desk-account-headline">${escapeHtml(headAnon)}</p>
+                <p class="sdd-desk-account-body">${escapeHtml(bodyAnon)}</p>
+                <ul class="sdd-desk-account-actions">
+                    <li><button type="button" class="sdd-desk-account-btn" data-account-signin>${escapeHtml(btnSignIn)}</button></li>
+                    <li><button type="button" class="sdd-desk-account-btn" data-account-tour>${escapeHtml(btnTour)}</button></li>
+                </ul>
+            `;
+        }
+        return `
+            <section class="sdd-desk-section sdd-desk-account">
+                <p class="sdd-desk-label">${escapeHtml(labelTitle)}</p>
+                ${stateHtml}
+            </section>
+        `;
+    }
+
     // v6 §5.4 — Switch the Desk + Home City UI
     function renderHomeDeskSection() {
         if (!window.SAUDADE_CITY) return '';
@@ -338,6 +481,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             </section>
 
             ${renderHomeDeskSection()}
+            ${renderAccountSection()}
 
             <section class="sdd-desk-section">
                 <p class="sdd-desk-disclaimer">
@@ -378,6 +522,19 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 const code = btn.getAttribute('data-edition');
                 if (window.SAUDADE_EDITION?.set) window.SAUDADE_EDITION.set(code);
             });
+        });
+
+        // v7 §13 — Account handlers
+        root.querySelector('[data-account-signin]')?.addEventListener('click', () => {
+            window.SAUDADE_AUTH?.openModal?.();
+        });
+        root.querySelector('[data-account-tour]')?.addEventListener('click', () => {
+            window.SAUDADE_AUTH?.startTour?.();
+            render();
+        });
+        root.querySelector('[data-account-signout]')?.addEventListener('click', () => {
+            window.SAUDADE_AUTH?.signOut?.();
+            render();
         });
 
         // v6 §5.4 — Switch the Desk handlers
