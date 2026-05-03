@@ -40,6 +40,7 @@ const RL = {
     '/cities/locked':  { max: 30, win: 60000 },
     '/ai-trip':        { max: 10, win: 60000 },
     '/coworking':      { max: 30, win: 60000 },
+    '/dispatches/today': { max: 60, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -225,6 +226,7 @@ export default {
                     return E(req, 'GONE_FREE_MODE', 'Subscription disabled — app is free', 410);
                 case '/ai-trip':           return aiTrip(req, env, ctx);
                 case '/coworking':         return coworking(req, env, ctx);
+                case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -960,4 +962,202 @@ async function coworking(req, env, ctx) {
         await cPut(k, text, 86400, env, ctx);
         return new Response(text, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS', 'Content-Type': 'application/json; charset=utf-8' }) });
     } catch { return E(req, 'FETCH_FAIL', 'Overpass error', 502); }
+}
+
+// ─── v7 §10 — AI Pipeline write/translate/file phases ──────────────────────
+// PR #5 (gather/sort/score) 의 후속. 같은 scheduled() switch 에 inline 되어야 함.
+// 이 파일이 PR #5 와 머지될 때 7 phase 모두 활성화.
+
+const PUBLISH_WEEKDAY_PROMPTS = {
+    1: 'Visa or policy notice. 3 sentences. Magazine tone. Declarative. No "breaking" or "alert". Quote at most 25 words. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    2: 'Museum or gallery announcement. 3-4 sentences. Contemplative. Declarative. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    3: 'City hall notice. 3 sentences. Plain language. No urgency. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    4: 'New cafe / coworking note. 3 sentences. Sensory detail (walls, light, hours). Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    5: "Editor's photograph note. 2 sentences. First person, restrained. Return ONLY JSON: {\"headline\":\"...\",\"lede\":\"...\",\"body\":\"...\"}",
+    6: 'Quiet news. 3 sentences. Local, small, undramatic. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}'
+};
+const PUBLISH_TARGET_EDITIONS = ['ko','ja','pt','es'];   // 'en' 은 source
+
+function publishLLMRewrite(env) {
+    return async function(text, instructions) {
+        if (!env || !env.GEMINI_KEY) return null;
+        const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + env.GEMINI_KEY;
+        const body = {
+            contents: [{ parts: [{ text: instructions + '\n\nSource:\n' + text }] }],
+            generationConfig: { temperature: 0.4, maxOutputTokens: 600, responseMimeType: 'application/json' }
+        };
+        try {
+            const r = await fetchT(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            }, 18000);
+            if (!r.ok) return null;
+            const j = await r.json();
+            return (((j.candidates || [])[0] || {}).content || {}).parts?.[0]?.text || null;
+        } catch (e) { return null; }
+    };
+}
+
+function parseRewrite(raw) {
+    if (!raw) return null;
+    // Gemini 가 ```json fence 또는 plain JSON 반환 — 둘 다 처리
+    const cleaned = String(raw).replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    try {
+        const o = JSON.parse(cleaned);
+        if (o && typeof o.headline === 'string') return o;
+    } catch (e) {}
+    // Fallback: 첫 줄 = headline, 두 번째 = lede, 나머지 = body
+    const lines = String(raw).split(/\n+/).map(s => s.trim()).filter(Boolean);
+    if (!lines.length) return null;
+    return {
+        headline: lines[0].slice(0, 200),
+        lede:     (lines[1] || '').slice(0, 300),
+        body:     lines.slice(2).join('\n').slice(0, 1000)
+    };
+}
+
+const PUBLISH_FORBIDDEN = ['breaking','urgent','alert','crisis','shocking','tragic','outrage','scandal','controversy'];
+function publishHasForbidden(text) {
+    if (!text) return false;
+    return PUBLISH_FORBIDDEN.some(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+}
+
+// Phase 4: write — top scored unprocessed → Gemini rewrite → INSERT staged (en)
+async function pipelineWrite(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'write', reason: 'no_db' };
+    if (!env.GEMINI_KEY) return { ok: false, phase: 'write', reason: 'no_gemini' };
+    const rewrite = publishLLMRewrite(env);
+    const weekday = ((new Date().getUTCDay() + 9 / 24) | 0) % 7 || 7;   // KST 기준 weekday 1~7 (일=7)
+    const wd = weekday === 7 ? 6 : weekday;   // 일요일은 토요일 프롬프트 fallback (publish 자체 안 함이지만 안전망)
+    const prompt = PUBLISH_WEEKDAY_PROMPTS[wd] || PUBLISH_WEEKDAY_PROMPTS[6];
+    let written = 0, skipped = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            'SELECT id, raw_title, raw_summary, source_url, ai_score, city, weekday_section FROM raw_feeds WHERE processed_at IS NULL AND ai_score >= 5 ORDER BY ai_score DESC LIMIT 12'
+        ).all();
+        const list = (rows && rows.results) || [];
+        const now = Date.now();
+        for (const row of list) {
+            const sourceText = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            const out = await rewrite(sourceText, prompt);
+            const parsed = parseRewrite(out);
+            if (!parsed || publishHasForbidden(parsed.headline + ' ' + parsed.body)) {
+                // 폐기 (재시도 안 함 — 다음 cron 에서 다른 row 처리)
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
+                skipped++;
+                continue;
+            }
+            const totalWords = (parsed.body || '').split(/\s+/).filter(Boolean).length;
+            try {
+                await env.SAUDADE_DB.prepare(
+                    'INSERT INTO dispatches_staged (raw_feed_id, edition, weekday, headline, lede, body, source_name, source_url, ai_score, edited_words, total_words, edited_by_human, status, staged_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+                ).bind(row.id, 'en', wd, parsed.headline, parsed.lede || '', parsed.body || '', null, row.source_url, row.ai_score, 0, totalWords, 0, 'staged', now).run();
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
+                written++;
+            } catch (e) { skipped++; }
+        }
+    } catch (e) { return { ok: false, phase: 'write', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'write', weekday: wd, written, skipped };
+}
+
+// Phase 5: translate — staged en → ko/ja/pt/es fan-out
+async function pipelineTranslate(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'translate', reason: 'no_db' };
+    if (!env.GEMINI_KEY) return { ok: false, phase: 'translate', reason: 'no_gemini' };
+    const rewrite = publishLLMRewrite(env);
+    let translated = 0, failed = 0;
+    try {
+        // 오늘 staged 중 en 만, 아직 다른 에디션 fan-out 안 된 것
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT id, headline, lede, body, weekday, source_url, ai_score, raw_feed_id, total_words FROM dispatches_staged WHERE edition = 'en' AND status = 'staged' ORDER BY staged_at DESC LIMIT 9"
+        ).all();
+        const list = (rows && rows.results) || [];
+        for (const en of list) {
+            for (const targetEd of PUBLISH_TARGET_EDITIONS) {
+                // 이미 fan-out 되었는지 체크
+                const exists = await env.SAUDADE_DB.prepare(
+                    'SELECT id FROM dispatches_staged WHERE raw_feed_id = ? AND edition = ?'
+                ).bind(en.raw_feed_id, targetEd).first();
+                if (exists) continue;
+                const langName = { ko: 'Korean', ja: 'Japanese', pt: 'Portuguese', es: 'Spanish' }[targetEd];
+                const prompt = `Translate from English to ${langName}. Magazine tone, declarative voice (평어체/平叙). Preserve meaning. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}`;
+                const out = await rewrite(JSON.stringify({ headline: en.headline, lede: en.lede, body: en.body }), prompt);
+                const parsed = parseRewrite(out);
+                if (!parsed) { failed++; continue; }
+                try {
+                    await env.SAUDADE_DB.prepare(
+                        'INSERT INTO dispatches_staged (raw_feed_id, edition, weekday, headline, lede, body, source_name, source_url, ai_score, edited_words, total_words, edited_by_human, status, staged_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+                    ).bind(en.raw_feed_id, targetEd, en.weekday, parsed.headline, parsed.lede || '', parsed.body || '', null, en.source_url, en.ai_score, 0, en.total_words, 0, 'staged', Date.now()).run();
+                    translated++;
+                } catch (e) { failed++; }
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'translate', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'translate', translated, failed };
+}
+
+// Phase 7: file — top 3 staged (en) → published. KST 일요일 skip.
+async function pipelineFile(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'file', reason: 'no_db' };
+    // KST Sunday check (UTC Sat 15:00 ~ Sun 14:59 = KST Sunday)
+    const nowKstDay = (new Date(Date.now() + 9 * 3600 * 1000)).getUTCDay();
+    if (nowKstDay === 0) return { ok: true, phase: 'file', skipped_sunday: true };
+
+    let published = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT id, raw_feed_id FROM dispatches_staged WHERE edition = 'en' AND status = 'staged' ORDER BY ai_score DESC, staged_at DESC LIMIT 3"
+        ).all();
+        const list = (rows && rows.results) || [];
+        const now = Date.now();
+        for (const row of list) {
+            // en 및 동일 raw_feed_id 의 모든 에디션 published 로 전환
+            await env.SAUDADE_DB.prepare(
+                "UPDATE dispatches_staged SET status = 'published', published_at = ? WHERE raw_feed_id = ? AND status = 'staged'"
+            ).bind(now, row.raw_feed_id).run();
+            published++;
+        }
+    } catch (e) { return { ok: false, phase: 'file', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'file', published };
+}
+
+// ─── /dispatches/today endpoint ────────────────────────────────────────────
+// 프런트에서 D1 published 읽기. 정적 dispatches.json fallback 보존.
+async function dispatchesToday(req, env, ctx) {
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
+
+    const k = `dispatches:today:${edition}`;
+    const cached = await cGet(k, env);
+    if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
+
+    try {
+        // KST 자정 ~ 현재 사이 published 만
+        const kstNow = Date.now();
+        const kstMidnight = kstNow - ((kstNow + 9 * 3600 * 1000) % (24 * 3600 * 1000));
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
+        ).bind(edition, kstMidnight).all();
+        const items = ((rows && rows.results) || []).map((r, i) => ({
+            n: String(i + 1).padStart(2, '0'),
+            headline: r.headline,
+            lede: r.lede,
+            body: r.body,
+            source_url: r.source_url,
+            ai_score: r.ai_score
+        }));
+        const body = JSON.stringify({
+            edition,
+            weekday: ((rows && rows.results || [])[0] || {}).weekday || null,
+            published_at: kstMidnight,
+            items
+        });
+        await cPut(k, body, 600, env, ctx);   // 10 min cache
+        return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
+    } catch (e) {
+        return E(req, 'DB_ERROR', 'Read failed', 500);
+    }
 }
