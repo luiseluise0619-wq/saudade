@@ -16,7 +16,42 @@
     function load() {
         const ed = currentEdition();
         if (_cache[ed]) return Promise.resolve(_cache[ed]);
-        // ed-specific 파일 우선, 없으면 EN base fallback
+
+        // v8 §02 — D1 활성 + signed-in 사용자면 worker /dispatches/today fetch.
+        // (Following 도시 user_id 기반 매칭 → fresh 데이터). 실패 시 static JSON fallback.
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const user = window.SAUDADE_AUTH?.getUser?.();
+        if (base && user && user.id) {
+            const wUrl = base + '/dispatches/today?edition=' + encodeURIComponent(ed) +
+                                          '&user_id=' + encodeURIComponent(user.id);
+            return fetch(wUrl, { cache: 'no-cache', credentials: 'omit' })
+                .then(r => r.ok ? r.json() : null)
+                .then(j => {
+                    if (j && Array.isArray(j.items) && j.items.length) {
+                        // worker 응답을 v7 cities 구조로 변환 — flattenForDay 가 그대로 매핑.
+                        const synthetic = { edition: ed, cities: [] };
+                        const byCity = {};
+                        j.items.forEach(it => {
+                            const city = it._city || 'UNKNOWN';
+                            if (!byCity[city]) {
+                                byCity[city] = { city, items: [] };
+                                synthetic.cities.push(byCity[city]);
+                            }
+                            byCity[city].items.push(it);
+                        });
+                        synthetic.filed_at = new Date(j.published_at || Date.now()).toISOString();
+                        synthetic._source = 'worker';   // 디버그
+                        _cache[ed] = synthetic;
+                        return synthetic;
+                    }
+                    return loadStatic(ed);
+                })
+                .catch(() => loadStatic(ed));
+        }
+        return loadStatic(ed);
+    }
+
+    function loadStatic(ed) {
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)

@@ -706,6 +706,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         try { localStorage.setItem(SESSION_KEY, JSON.stringify(all)); } catch (e) {}
     }
 
+    let _sessionLogId = null;       // v8 §11 — worker INSERT 후 받는 row id
     function startSession() {
         if (_sessionPhase === 'work') return;
         _sessionStart = Date.now();
@@ -714,11 +715,12 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         if (_sessionTickIv) clearInterval(_sessionTickIv);
         _sessionTickIv = setInterval(tickSession, 1000);
         renderSessionState();
-        // v8 §11 — 약한 연결 집계용 세션 로그 (worker fire-and-forget · D1)
+        // v8 §11 — 약한 연결 집계용 세션 로그 (worker · D1)
         logListeningSessionStart();
     }
-    // v8 §11 — listening_sessions 테이블에 세션 시작 INSERT (M3 약한 연결 표시 데이터 모음)
+    // v8 §11 — listening_sessions INSERT, row id 캡처 (UPDATE duration 용)
     function logListeningSessionStart() {
+        _sessionLogId = null;
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) return;
         const tracks = _data?.tracks || [];
@@ -735,20 +737,45 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     city: t.city || null,
                     started_at: _sessionStart
                 }),
+                credentials: 'omit'
+            }).then(r => r.ok ? r.json() : null)
+              .then(j => { if (j && j.id) _sessionLogId = j.id; })
+              .catch(() => {});
+        } catch (e) {}
+    }
+    // v8 §11 — duration_seconds UPDATE (세션 종료 시. 정확한 약한 연결 집계).
+    function logListeningSessionEnd() {
+        if (!_sessionLogId || !_sessionStart) return;
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return;
+        const duration = Math.max(0, Math.floor((Date.now() - _sessionStart) / 1000));
+        try {
+            fetch(base + '/listening/log', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: _sessionLogId, duration_seconds: duration }),
                 credentials: 'omit',
-                keepalive: true
+                keepalive: true   // 페이지 떠나도 전송 보장
             }).catch(() => {});
         } catch (e) {}
+        _sessionLogId = null;
     }
     function pauseSession() {
         // 일시정지 = phase 유지, tick 만 멈춤. 재개 시 elapsed 보존 위해 _pausedAt 저장.
         if (_sessionTickIv) { clearInterval(_sessionTickIv); _sessionTickIv = null; }
     }
     function endSession() {
+        // v8 §11 — duration UPDATE 먼저 (start 값 살아있을 때)
+        logListeningSessionEnd();
         _sessionPhase = 'idle';
         _sessionStart = null;
         if (_sessionTickIv) { clearInterval(_sessionTickIv); _sessionTickIv = null; }
         renderSessionState();
+    }
+    // v8 §11 — 페이지 종료 시 마지막 세션 duration UPDATE (keepalive 로 전송 보장)
+    if (typeof window !== 'undefined') {
+        window.addEventListener('pagehide', () => { logListeningSessionEnd(); });
+        window.addEventListener('beforeunload', () => { logListeningSessionEnd(); });
     }
     function tickSession() {
         if (_sessionPhase === 'idle' || !_sessionStart) return;

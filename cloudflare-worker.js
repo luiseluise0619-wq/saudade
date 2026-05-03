@@ -1877,8 +1877,10 @@ async function followingHandler(req, env, ctx) {
 }
 
 // ─── v8 §11 — /listening/log ──────────────────────────────────────────
-// POST body: { user_id?, track_id, city?, started_at }
-// fire-and-forget INSERT — 약한 연결 집계용. 사용자별 이력 페이지 X.
+// POST body 두 가지 모드:
+//   START: { user_id?, track_id, city?, started_at } → INSERT, return { id }
+//   END:   { id, duration_seconds }                  → UPDATE duration_seconds
+// 약한 연결 집계용. 사용자별 이력 페이지 X.
 async function listeningLog(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return J(req, { ok: true, logged: false });   // graceful
@@ -1886,6 +1888,23 @@ async function listeningLog(req, env, ctx) {
     let body;
     try { body = await req.json(); }
     catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    // END 모드 — duration UPDATE
+    if (body.id) {
+        const id = parseInt(body.id, 10);
+        const duration = Math.max(0, Math.min(86400, parseInt(body.duration_seconds, 10) || 0));
+        if (!Number.isFinite(id) || id < 1) return E(req, 'BAD_ID', 'id invalid', 400);
+        try {
+            await env.SAUDADE_DB.prepare(
+                'UPDATE listening_sessions SET duration_seconds = ? WHERE id = ?'
+            ).bind(duration, id).run();
+            return J(req, { ok: true, updated: true, id, duration });
+        } catch (e) {
+            return J(req, { ok: true, updated: false });
+        }
+    }
+
+    // START 모드 — INSERT, return id
     const userId   = clean(body.user_id, 64) || null;
     const trackId  = clean(body.track_id, 256);
     const city     = clean(body.city, 64) || null;
@@ -1893,10 +1912,10 @@ async function listeningLog(req, env, ctx) {
     if (!trackId) return E(req, 'NO_TRACK', 'track_id required', 400);
 
     try {
-        await env.SAUDADE_DB.prepare(
+        const r = await env.SAUDADE_DB.prepare(
             'INSERT INTO listening_sessions (user_id, track_id, city, started_at, duration_seconds) VALUES (?, ?, ?, ?, 0)'
         ).bind(userId, trackId, city, startedAt).run();
-        return J(req, { ok: true, logged: true });
+        return J(req, { ok: true, logged: true, id: r.meta && r.meta.last_row_id });
     } catch (e) {
         return J(req, { ok: true, logged: false });   // graceful — 클라이언트 fire-and-forget
     }

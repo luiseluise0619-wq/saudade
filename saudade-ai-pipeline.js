@@ -106,8 +106,66 @@ async function runCronJob(event, env, ctx) {
         case '0 20 * * *': return translateAll(env, ctx, llm);       // 05:00 KST
         case '30 20 * * *': return stage(env, ctx);                  // 05:30 KST
         case '0 21 * * *': return file(env, ctx);                    // 06:00 KST
+        case '0 15 * * 1': return weeklyStats(env, ctx);             // 월요일 00:00 KST 약한 연결 집계
         default: return { ok: false, reason: 'unknown_cron', cron };
     }
+}
+
+// v8 §11 §13 — 약한 연결 표시용 주간 통계 집계 (M3 활성화 시 UI 가 읽음).
+// 매주 월요일 자정에 listening_sessions / cafe_submissions / users 집계 → weekly_stats.
+async function weeklyStats(env, ctx) {
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'weekly_stats', reason: 'no_db' };
+    const db = env.SAUDADE_DB;
+    const now = Date.now();
+    const weekStart = now - 7 * 86400 * 1000;
+    const nextMonday = now + 7 * 86400 * 1000;
+    let written = 0;
+
+    async function setStat(key, value) {
+        await db.prepare(
+            `INSERT INTO weekly_stats (stat_key, stat_value, computed_at, expires_at)
+             VALUES (?, ?, ?, ?)
+             ON CONFLICT(stat_key) DO UPDATE SET
+                 stat_value = excluded.stat_value,
+                 computed_at = excluded.computed_at,
+                 expires_at = excluded.expires_at`
+        ).bind(key, JSON.stringify(value), now, nextMonday).run();
+        written++;
+    }
+
+    try {
+        // listening:weekly_total — 전체 세션 수 + 도시 distinct count
+        const listenStats = await db.prepare(
+            `SELECT COUNT(*) AS sessions, COUNT(DISTINCT city) AS cities
+             FROM listening_sessions WHERE started_at >= ?`
+        ).bind(weekStart).first();
+        await setStat('listening:weekly_total', {
+            sessions: listenStats.sessions || 0,
+            cities:   listenStats.cities   || 0
+        });
+
+        // atlas:weekly_submissions — 상위 3 도시별 카페 제출 수 (status='pending')
+        const atlasStats = await db.prepare(
+            `SELECT city, COUNT(*) AS n
+             FROM cafe_submissions WHERE submitted_at >= ?
+             GROUP BY city ORDER BY n DESC LIMIT 3`
+        ).bind(weekStart).all();
+        await setStat('atlas:weekly_submissions', {
+            top_cities: ((atlasStats && atlasStats.results) || []).map(r => ({ city: r.city, count: r.n }))
+        });
+
+        // cover:{city}:readers — 도시별 Following 사용자 수 (slot 1 만 — 정착 의미)
+        const followingStats = await db.prepare(
+            `SELECT city, COUNT(*) AS n FROM user_following_cities
+             WHERE position = 1 GROUP BY city`
+        ).all();
+        for (const row of ((followingStats && followingStats.results) || [])) {
+            await setStat('cover:' + row.city + ':readers', { city: row.city, readers: row.n });
+        }
+    } catch (e) {
+        return { ok: false, phase: 'weekly_stats', error: String(e).slice(0, 200) };
+    }
+    return { ok: true, phase: 'weekly_stats', written };
 }
 
 // ─── RSS sources / forbidden 로더 (v7 §3 / §9.3) ───────────────────────
