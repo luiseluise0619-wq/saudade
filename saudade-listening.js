@@ -75,21 +75,23 @@ body.listening-active .sdd-listen { display: block; }
 
 .sdd-listen-back {
     position: fixed;
-    top: 24px; left: 24px;
-    z-index: calc(var(--z-section-page, 8) + 1);
-    background: transparent;
-    border: 0.5px solid rgba(242,238,227,.32);
-    color: rgba(242,238,227,.85);
+    top: 16px; left: 16px;
+    z-index: calc(var(--z-section-page, 8) + 2);
+    background: rgba(15,14,18,.7);
+    border: 0.5px solid var(--paper);
+    color: var(--paper);
     font-family: var(--mono);
-    font-weight: 400;
-    font-size: 10px;
-    letter-spacing: var(--tr-mono-meta);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    padding: 10px 14px;
+    padding: 12px 16px;
     min-height: 44px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: color .12s, border-color .12s;
+    border-radius: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: color .12s, border-color .12s, background .12s;
 }
 .sdd-listen-back:hover { color: var(--paper); border-color: var(--paper); }
 .sdd-listen-back::before { content: '← '; }
@@ -260,13 +262,32 @@ body.listening-active .sdd-listen { display: block; }
     color: rgba(242,238,227,.55);
 }
 .sdd-listen-vol {
-    -webkit-appearance: none;
-    appearance: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
     width: 100px;
     height: 1px;
     background: rgba(242,238,227,.3);
     outline: none;
     cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 4px;
+}
+.sdd-listen-vol::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1px;
+    background: rgba(242,238,227,.3);
+    border: 0;
+    border-radius: 0;
+}
+.sdd-listen-vol::-moz-range-track {
+    height: 1px;
+    background: rgba(242,238,227,.3);
+    border: 0;
+    border-radius: 0;
 }
 .sdd-listen-vol::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -276,6 +297,7 @@ body.listening-active .sdd-listen { display: block; }
     background: var(--paper);
     border-radius: 50%;
     cursor: pointer;
+    margin-top: -3.5px;
 }
 .sdd-listen-vol::-moz-range-thumb {
     width: 8px;
