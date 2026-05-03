@@ -2,10 +2,13 @@
 // All external APIs proxied · Cache API + KV · Rate limit
 // © 2026 LEEJAEJIN
 
-// LOUNJ 운영 도메인 + 로컬 개발 + Cloudflare Pages preview/production.
+// Saudade 운영 도메인 + 로컬 개발 + Cloudflare Pages preview/production.
 // .pages.dev 와일드카드: Cloudflare Pages 가 자동 발급하는 모든 preview deployment 허용
-// (예: aura-os-cao.pages.dev, abc1234.aura-os-cao.pages.dev — 운영자 본인 계정).
+// (예: <hash>.saudade.pages.dev — 운영자 본인 계정).
 const ALLOWED_ORIGINS = [
+    'https://saudade.app',
+    'https://www.saudade.app',
+    'https://saudade.pages.dev',
     'https://lounj.app',
     'https://www.lounj.app',
     'https://aura-os-cao.pages.dev',
@@ -17,10 +20,9 @@ const ALLOWED_ORIGINS = [
     'tauri://localhost', 'null'
 ];
 // .pages.dev preview / production 서브도메인 자동 허용
-//   - <hash>.aura-os-cao.pages.dev (Pages 프로젝트 'aura-os-cao' 의 preview)
-//   - <hash>.lounj01.pages.dev (Pages 프로젝트 'lounj01' 의 preview)
-//   - lounj01.pages.dev (production)
-const ALLOWED_ORIGIN_RX = /^https:\/\/([a-z0-9-]+\.)?(aura-os-cao|lounj01)\.pages\.dev$/;
+//   - <hash>.saudade.pages.dev (현재 프로젝트 — production + preview)
+//   - <hash>.aura-os-cao.pages.dev / <hash>.lounj01.pages.dev (역사 — 옛 프로젝트)
+const ALLOWED_ORIGIN_RX = /^https:\/\/([a-z0-9-]+\.)?(saudade|aura-os-cao|lounj01)\.pages\.dev$/;
 
 const RL = {
     '/rss':            { max: 30,  win: 60000 },

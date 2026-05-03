@@ -47,6 +47,7 @@ const RSS_HOSTS = new Set([
 ]);
 
 const JSON_HOSTS = new Set([
+    'saudade.absbjj1230.workers.dev',
     'lounj.absbjj1230.workers.dev',
     'api.open-meteo.com',
     'air-quality-api.open-meteo.com',

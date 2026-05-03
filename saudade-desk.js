@@ -107,9 +107,9 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     color: var(--bone-d) !important;
     font-family: var(--mono) !important;
     font-size: 16px !important;
-    width: 32px !important;
-    height: 32px !important;
-    min-height: 32px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
     cursor: pointer;
     border-radius: 0 !important;
     padding: 0 !important;

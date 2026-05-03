@@ -1253,7 +1253,7 @@ body.ambient-mode .amb-favs { display: flex; }
                 v.playsInline = true;
                 // v567 발열: preload auto → metadata (영상 전체 미리 다운로드 X)
                 v.preload = 'metadata';
-                v.dataset.lounjVideo = '1';   // visibilitychange 핸들러가 추적
+                v.dataset.saudadeVideo = '1';   // visibilitychange 핸들러가 추적
                 // 모바일 + viewport 작으면 inline scale (network/decoder ↓)
                 try {
                     if (window.innerWidth <= 768) v.setAttribute('disableremoteplayback', '');

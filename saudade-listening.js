@@ -186,7 +186,8 @@ body.listening-active .sdd-listen { display: block; }
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
     cursor: pointer;
-    padding: 6px 0;
+    padding: 14px 4px;
+    min-height: 44px;
     border-bottom: 1px solid transparent;
     border-radius: 0;
     text-decoration: none;
@@ -314,8 +315,8 @@ body.listening-active .sdd-listen { display: block; }
     font: inherit !important;
     text-transform: inherit !important;
     letter-spacing: inherit !important;
-    padding: 4px 0 !important;
-    min-height: 0 !important;
+    padding: 14px 4px !important;
+    min-height: 44px !important;
     cursor: pointer;
     border-radius: 0 !important;
     transition: color .12s, border-color .12s;

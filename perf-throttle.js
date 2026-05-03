@@ -63,7 +63,7 @@
         });
     }
     function resumeVideos() {
-        document.querySelectorAll('video[data-saudade-video][data-lounj-paused="1"], video.cafe-mode-video[data-lounj-paused="1"]').forEach(v => {
+        document.querySelectorAll('video[data-saudade-video][data-saudade-paused="1"], video.cafe-mode-video[data-saudade-paused="1"]').forEach(v => {
             try { v.play().catch(() => {}); delete v.dataset.saudadePaused; } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
         });
     }

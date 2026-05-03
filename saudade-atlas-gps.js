@@ -390,8 +390,8 @@
     font: inherit !important;
     text-transform: inherit !important;
     letter-spacing: inherit !important;
-    padding: 2px 0 !important;
-    min-height: 0 !important;
+    padding: 12px 4px !important;
+    min-height: 44px !important;
     cursor: pointer;
     pointer-events: auto;
     border-radius: 0 !important;
