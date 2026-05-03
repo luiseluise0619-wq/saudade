@@ -389,7 +389,7 @@ body.section-active .sdd-cover { display: none !important; }
     transition: color .15s, border-color .15s;
 }
 .sdd-cover-nav a:hover { color: var(--rust); border-bottom-color: var(--rust); }
-.sdd-cover-nav a .sdd-mark { color: var(--bone); margin-right: 4px; font-weight: 400; }
+.sdd-cover-nav a .sdd-mark { color: var(--bone-d); margin-right: 4px; font-weight: 400; }
 
 @media (max-width: 768px) {
     .sdd-cover { justify-content: center; padding: 0 24px; }

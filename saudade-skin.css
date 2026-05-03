@@ -275,7 +275,7 @@ input, select, textarea, .os-search, .os-select {
     font-size: 12px !important;
     letter-spacing: var(--tr-mono-meta) !important;
 }
-input::placeholder, .os-search::placeholder { color: var(--bone) !important; text-transform: uppercase; }
+input::placeholder, .os-search::placeholder { color: var(--bone-d) !important; text-transform: uppercase; }
 
 /* ─── 8. 버튼 일반 — flat ink / hover rust ──────────────────────────────── */
 

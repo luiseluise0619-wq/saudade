@@ -18,10 +18,13 @@
     --gold:     #D4A574;     /* v1 비활성, 변수만 보존 */
 
     /* ─── label / divider ─── */
-    --bone:     #A8A398;
-    --bone-d:   #6B6660;
-    --rule:     rgba(11,11,15,.18);
-    --rule-2:   rgba(11,11,15,.4);
+    /* v7 §4.1 — bone × paper 토큰은 비-텍스트 데코 전용 (rules, dividers,
+       8px dot markers, hairline). 텍스트는 모두 bone-d 사용.
+       값은 edition-en override 와 동기화 (4.64:1, 8.17:1, ≥4.5/≥7 통과). */
+    --bone:     #6F6A60;
+    --bone-d:   #4A4540;
+    --rule:     rgba(11,11,15,.16);
+    --rule-2:   rgba(11,11,15,.42);
 
     /* ─── fonts (오직 두 개) ─── */
     --serif:  "Fraunces", Georgia, serif;
@@ -74,7 +77,7 @@
     --text: var(--ink);
     --text-primary: var(--ink);
     --text-secondary: var(--bone-d);
-    --text-tertiary: var(--bone);
+    --text-tertiary: var(--bone-d);
     --sub: var(--bone-d);
     --border: var(--rule);
     --border-strong: var(--rule-2);

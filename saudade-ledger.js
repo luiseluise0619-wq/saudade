@@ -177,7 +177,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     margin: 0;
 }
 .sdd-ld-dday-num.warn { color: var(--signal); }
-.sdd-ld-dday-num.expired { color: var(--bone); }
+.sdd-ld-dday-num.expired { color: var(--bone-d); }
 .sdd-ld-dday-unit {
     font-family: var(--mono);
     font-weight: 400;
@@ -376,7 +376,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: var(--bone);
+    color: var(--bone-d);
     padding: 16px 0;
 }
 
@@ -449,7 +449,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     margin: 0;
 }
 .sdd-ld-record-num.warn { color: var(--signal); }
-.sdd-ld-record-num.expired { color: var(--bone); }
+.sdd-ld-record-num.expired { color: var(--bone-d); }
 .sdd-ld-record-unit {
     font-family: var(--mono);
     font-weight: 400;

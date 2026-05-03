@@ -1,0 +1,58 @@
+{
+    "_v7_section": "§8.8 — amenities 어휘 풀 + 3태그. 자유 입력 X. 5 에디션 평어체.",
+    "amenity_phrases": {
+        "outlets_plenty":     { "en": "Plenty of outlets",        "ko": "콘센트 충분",       "ja": "コンセント豊富",         "pt": "Tomadas abundantes",     "es": "Tomas en abundancia" },
+        "outlets_some":       { "en": "A few outlets",            "ko": "콘센트 몇 개",      "ja": "コンセントいくつか",     "pt": "Algumas tomadas",        "es": "Algunas tomas" },
+        "outlets_few":        { "en": "Outlets scarce",           "ko": "콘센트 부족",       "ja": "コンセント少ない",       "pt": "Tomadas escassas",       "es": "Pocas tomas" },
+        "outlets_none":       { "en": "No outlets",               "ko": "콘센트 없음",       "ja": "コンセントなし",         "pt": "Sem tomadas",            "es": "Sin tomas" },
+
+        "wifi_strong":        { "en": "Wifi reliable",            "ko": "와이파이 안정",     "ja": "Wi-Fi 安定",             "pt": "Wifi fiável",            "es": "Wifi fiable" },
+        "wifi_ok":            { "en": "Wifi works",               "ko": "와이파이 됨",       "ja": "Wi-Fi 使える",           "pt": "Wifi funciona",          "es": "Wifi funciona" },
+        "wifi_spotty":        { "en": "Wifi unreliable",          "ko": "와이파이 불안정",   "ja": "Wi-Fi 不安定",           "pt": "Wifi instável",          "es": "Wifi inestable" },
+        "wifi_none":          { "en": "No wifi",                  "ko": "와이파이 없음",     "ja": "Wi-Fi なし",             "pt": "Sem wifi",               "es": "Sin wifi" },
+
+        "ac_summer":          { "en": "AC in summer",             "ko": "여름 냉방",         "ja": "夏は冷房",               "pt": "Ar no verão",            "es": "AC en verano" },
+        "ac_always":          { "en": "Cool throughout",          "ko": "내내 시원",         "ja": "通年 涼しい",            "pt": "Sempre fresco",          "es": "Siempre fresco" },
+        "warm_summer":        { "en": "Warm afternoons",          "ko": "오후 더움",         "ja": "午後は暑い",             "pt": "Tardes quentes",         "es": "Tardes cálidas" },
+        "no_ac":              { "en": "No AC",                    "ko": "냉방 없음",         "ja": "冷房なし",               "pt": "Sem ar",                 "es": "Sin AC" },
+        "heated_winter":      { "en": "Heated in winter",         "ko": "겨울 난방",         "ja": "冬は暖房",               "pt": "Aquecido no inverno",    "es": "Calefacción en invierno" },
+        "cold_winter":        { "en": "Cold in January",          "ko": "1월 추움",          "ja": "1月は寒い",              "pt": "Frio em janeiro",        "es": "Frío en enero" },
+
+        "noise_quiet":        { "en": "Quiet",                    "ko": "조용",              "ja": "静か",                   "pt": "Silencioso",             "es": "Silencioso" },
+        "noise_lively":       { "en": "Lively",                   "ko": "활기",              "ja": "賑やか",                 "pt": "Animado",                "es": "Animado" },
+        "noise_loud_evening": { "en": "Loud after five",          "ko": "다섯 시 후 시끄러움","ja": "五時以降は騒がしい",     "pt": "Barulhento depois das cinco","es": "Ruidoso tras las cinco" },
+        "noise_calls_no":     { "en": "Calls discouraged",        "ko": "통화 자제",         "ja": "通話お控えを",           "pt": "Chamadas desencorajadas","es": "Llamadas desaconsejadas" },
+
+        "stay_long":          { "en": "Long sessions welcome",    "ko": "장시간 환영",       "ja": "長居歓迎",               "pt": "Estadias longas bem-vindas","es": "Estancias largas bienvenidas" },
+        "stay_short":         { "en": "Quick stops only",         "ko": "짧은 방문만",       "ja": "短時間のみ",             "pt": "Apenas paragens curtas", "es": "Solo paradas cortas" },
+        "stay_patient":       { "en": "The owner doesn't mind",   "ko": "점주가 편함",       "ja": "オーナーは気にしない",   "pt": "O dono não se importa",  "es": "Al dueño no le importa" },
+
+        "no_bathroom":        { "en": "No bathroom",              "ko": "화장실 없음",       "ja": "トイレなし",             "pt": "Sem casa de banho",      "es": "Sin baño" },
+        "laptop_limited":     { "en": "Laptops on second floor",  "ko": "노트북은 2층만",    "ja": "ノートPCは2階のみ",       "pt": "Portáteis no 2.º andar", "es": "Portátiles en planta alta" },
+        "laptop_no_weekend":  { "en": "No laptops weekends",      "ko": "주말 노트북 X",     "ja": "週末ノートPC不可",       "pt": "Sem portáteis ao fim de semana","es": "Sin portátiles los fines de semana" }
+    },
+    "best_for": {
+        "long_sessions":   { "en": "long sessions",   "ko": "긴 작업",      "ja": "長時間作業",  "pt": "estadias longas",  "es": "sesiones largas" },
+        "morning_light":   { "en": "morning light",   "ko": "아침 햇살",    "ja": "朝の光",      "pt": "luz da manhã",     "es": "luz matinal" },
+        "afternoon_focus": { "en": "afternoon focus", "ko": "오후 집중",    "ja": "午後の集中",  "pt": "foco à tarde",     "es": "foco vespertino" },
+        "quick_stops":     { "en": "quick stops",     "ko": "짧은 방문",    "ja": "短時間",      "pt": "paragens curtas",  "es": "paradas cortas" },
+        "calls":           { "en": "calls",           "ko": "통화",          "ja": "通話",        "pt": "chamadas",         "es": "llamadas" },
+        "weekend_reading": { "en": "weekend reading", "ko": "주말 독서",    "ja": "週末の読書",  "pt": "leitura ao fim de semana","es": "lectura de fin de semana" }
+    },
+    "known_for": {
+        "granite_walls":   { "en": "granite walls",   "ko": "화강암 벽",    "ja": "御影石の壁",  "pt": "paredes de granito",   "es": "muros de granito" },
+        "garden":          { "en": "garden",          "ko": "정원",          "ja": "庭",          "pt": "jardim",               "es": "jardín" },
+        "rooftop":         { "en": "rooftop",         "ko": "옥상",          "ja": "屋上",        "pt": "terraço",              "es": "azotea" },
+        "owner_patience":  { "en": "owner's patience","ko": "점주의 너그러움","ja": "店主の寛容", "pt": "paciência do dono",    "es": "paciencia del dueño" },
+        "house_pastries":  { "en": "house pastries",  "ko": "직접 만든 빵",  "ja": "自家製ペストリー","pt": "pastéis da casa",    "es": "bollería casera" },
+        "vintage_feel":    { "en": "vintage feel",    "ko": "빈티지 분위기", "ja": "ヴィンテージな雰囲気","pt": "ar vintage",   "es": "aire vintage" }
+    },
+    "not_for": {
+        "phone_calls":     { "en": "phone calls",     "ko": "통화",          "ja": "電話",        "pt": "chamadas",             "es": "llamadas" },
+        "fast_wifi":       { "en": "fast wifi",       "ko": "빠른 와이파이",  "ja": "高速 Wi-Fi",  "pt": "wifi rápido",          "es": "wifi rápido" },
+        "groups":          { "en": "groups",          "ko": "단체",          "ja": "団体",        "pt": "grupos",               "es": "grupos" },
+        "weekends":        { "en": "weekends",        "ko": "주말",          "ja": "週末",        "pt": "fins de semana",       "es": "fines de semana" },
+        "after_dark":      { "en": "after dark",      "ko": "저녁 이후",     "ja": "暗くなってから","pt": "depois de escurecer", "es": "tras anochecer" },
+        "rainy_days":      { "en": "rainy days",      "ko": "비 오는 날",    "ja": "雨の日",      "pt": "dias de chuva",        "es": "días de lluvia" }
+    }
+}

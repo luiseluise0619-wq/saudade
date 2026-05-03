@@ -42,6 +42,7 @@ const RL = {
     '/coworking':      { max: 30, win: 60000 },
     '/editor/leave-status': { max: 60, win: 60000 },
     '/editor/log':          { max: 30, win: 60000 },
+    '/cafe/submit':         { max: 5,  win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -229,6 +230,7 @@ export default {
                 case '/coworking':         return coworking(req, env, ctx);
                 case '/editor/leave-status': return editorLeaveStatus(req, env, ctx);
                 case '/editor/log':          return editorLog(req, env, ctx);
+                case '/cafe/submit':         return cafeSubmit(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -993,11 +995,11 @@ async function editorLeaveStatus(req, env, ctx) {
     if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
 
     let lastAt = null;
-    let dbBound = !!env?.LOUNJ_DB;
+    let dbBound = !!env?.SAUDADE_DB;
     if (dbBound) {
         try {
             const inList = EDITOR_ACTIONS.map(() => '?').join(',');
-            const row = await env.LOUNJ_DB.prepare(
+            const row = await env.SAUDADE_DB.prepare(
                 `SELECT MAX(at) AS at FROM editor_log WHERE action IN (${inList})`
             ).bind(...EDITOR_ACTIONS).first();
             const v = row && row.at;
@@ -1029,7 +1031,7 @@ async function editorLog(req, env, ctx) {
     if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
         return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
     }
-    if (!env.LOUNJ_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1044,7 +1046,7 @@ async function editorLog(req, env, ctx) {
     const at = Date.now();
 
     try {
-        const r = await env.LOUNJ_DB.prepare(
+        const r = await env.SAUDADE_DB.prepare(
             'INSERT INTO editor_log (at, action, editor, target) VALUES (?, ?, ?, ?)'
         ).bind(at, action, editor, target).run();
         // leave-status 캐시 즉시 무효화 — 새 액션이 stage 를 active 로 되돌려야 하므로
@@ -1060,3 +1062,36 @@ async function editorLog(req, env, ctx) {
 // this is a no-op stub. When subscriptions are re-enabled, add a scheduled
 // handler that calls Stripe Subscriptions.update({ pause_collection: { behavior: 'mark_uncollectible' } })
 // for each customer when leave-status returns stage='subscription'.
+
+// ─── v7 §8.9 — Cafe submissions ────────────────────────────────────────────
+// 누구나 POST 가능 (auth X). 다음 분기 발행 시 편집부 D1 쿼리로 검수.
+// D1 미바인딩 시 503 — 클라이언트가 magazine-tone 실패 메시지 표시.
+async function cafeSubmit(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Submissions are not yet open. Try again later.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400);  }
+
+    const name         = clean(body.name, 200);
+    const city         = clean(body.city, 100);
+    const neighborhood = clean(body.neighborhood, 100) || null;
+    const submitter    = clean(body.submitter, 200) || null;
+    const note         = clean(body.note, 500) || null;
+    const lat = (typeof body.lat === 'number' && Number.isFinite(body.lat) && body.lat >= -90 && body.lat <= 90) ? body.lat : null;
+    const lng = (typeof body.lng === 'number' && Number.isFinite(body.lng) && body.lng >= -180 && body.lng <= 180) ? body.lng : null;
+
+    if (!name) return E(req, 'BAD_NAME', 'Café name required', 400);
+    if (!city) return E(req, 'BAD_CITY', 'City required', 400);
+
+    const at = Date.now();
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            'INSERT INTO cafe_submissions (at, name, city, neighborhood, lat, lng, submitter, note, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+        ).bind(at, name, city, neighborhood, lat, lng, submitter, note, 'queued').run();
+        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, at, status: 'queued' });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Submission failed', 500);
+    }
+}

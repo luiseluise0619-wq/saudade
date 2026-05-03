@@ -326,7 +326,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: var(--bone);
+    color: var(--bone-d);
     text-align: center;
     padding: clamp(40px, 6vw, 80px) 0;
 }
