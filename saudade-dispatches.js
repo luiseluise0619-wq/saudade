@@ -49,7 +49,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
 .sdd-disp-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: 다음 .sdd-disp-day-head / .sdd-disp-city 가 자체 border 가짐 */
 }
 .sdd-disp-h2 {
     font-family: var(--serif);
@@ -421,6 +421,13 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
+    // v7 검토 정정 — italic 헤드라인 끝 마침표/쉼표는 regular 로 분리 (영문 잡지 표준)
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
+    }
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
         try { const url = new URL(u); return /^https?:$/.test(url.protocol) ? url.toString() : null; }
@@ -672,8 +679,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             root.innerHTML = `
                 <header class="sdd-disp-head">
                     <h2 class="sdd-disp-h2">
-                        ${escapeHtml(headLabel)}
-                        <span class="it">${escapeHtml(headResting)}</span>
+                        ${dropItalicPunct(headLabel)}
+                        <span class="it">${dropItalicPunct(headResting)}</span>
                     </h2>
                 </header>
                 <section class="sdd-disp-sunday">
@@ -713,8 +720,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const headHtml = `
             <header class="sdd-disp-head">
                 <h2 class="sdd-disp-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headEdited)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headEdited)}</span>
                 </h2>
                 <p class="sdd-disp-sub">${escapeHtml(subFilled)}</p>
                 <p class="sdd-disp-meta">${escapeHtml(filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(nextLabel)} ${escapeHtml(next)}</p>

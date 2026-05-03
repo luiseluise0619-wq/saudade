@@ -124,7 +124,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 .sdd-ld-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: 다음 .sdd-ld-article 또는 empty-state 가 자체 border 가짐 */
 }
 .sdd-ld-h2 {
     font-family: var(--serif);
@@ -838,8 +838,8 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         root.innerHTML = `
             <header class="sdd-ld-head">
                 <h2 class="sdd-ld-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headItalic)}</span>
                 </h2>
             </header>
             ${articleIntro}
@@ -941,6 +941,13 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
     function init() {

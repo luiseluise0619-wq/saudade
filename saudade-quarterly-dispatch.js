@@ -388,6 +388,13 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
+    }
 
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
@@ -726,8 +733,8 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         const intro = `
             <header class="sdd-qdisp-head">
                 <h2 class="sdd-qdisp-h2">
-                    ${escapeHtml(c.head1)}
-                    <span class="it">${escapeHtml(c.head2)}</span>
+                    ${dropItalicPunct(c.head1)}
+                    <span class="it">${dropItalicPunct(c.head2)}</span>
                 </h2>
                 <p class="sdd-qdisp-sub">${escapeHtml(c.line)} <em>${escapeHtml(c.sub)}</em></p>
                 <p class="sdd-qdisp-meta">${escapeHtml(c.filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(c.nextLabel)} ${escapeHtml(next)}</p>

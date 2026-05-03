@@ -67,7 +67,7 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     align-items: baseline;
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: search input 의 border-bottom 이 분리선 역할 */
 }
 .sdd-atlas-h2 {
     font-family: var(--serif);
@@ -141,6 +141,63 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     color: var(--bone-d);
     text-align: center;
 }
+
+/* v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때) */
+.sdd-atlas-empty-state {
+    padding: clamp(32px, 5vw, 56px) 0;
+    margin: 0 0 clamp(24px, 4vw, 40px);
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-atlas-empty-h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.2;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+.sdd-atlas-empty-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+.sdd-atlas-empty-actions {
+    list-style: none;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.sdd-atlas-empty-actions li {
+    border-top: 0.5px solid var(--rule);
+    margin: 0;
+}
+.sdd-atlas-empty-actions li:last-child { border-bottom: 0.5px solid var(--rule); }
+.sdd-atlas-empty-btn {
+    background: transparent;
+    border: 0;
+    color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 14px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+    transition: color .12s;
+}
+.sdd-atlas-empty-btn:hover { color: var(--rust); }
 
 .sdd-atlas-list { display: flex; flex-direction: column; gap: 0; }
 
@@ -476,8 +533,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         const headHtml = `
             <header class="sdd-atlas-head">
                 <h2 class="sdd-atlas-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="sdd-atlas-h2-italic">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="sdd-atlas-h2-italic">${dropItalicPunct(headItalic)}</span>
                 </h2>
                 <div class="sdd-atlas-count">
                     ${escapeHtml(visitedLabel)}
@@ -542,11 +599,21 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             pt: 'Sem resultados.', es: 'Sin resultados.'
         });
         const footLine = T({
-            en: `${total} of 100 places · 0 user reviews · 0 stars`,
-            ko: `100곳 중 ${total}곳 · 사용자 리뷰 0건 · 별점 0건`,
-            ja: `100軒中 ${total}軒 · ユーザーレビュー 0件 · 星 0件`,
-            pt: `${total} de 100 lugares · 0 avaliações · 0 estrelas`,
-            es: `${total} de 100 lugares · 0 reseñas · 0 estrellas`
+            en: total === 0
+                ? 'Awaiting first entry · 0 user reviews · 0 stars'
+                : `${total} ${total === 1 ? 'place' : 'places'} · 0 user reviews · 0 stars`,
+            ko: total === 0
+                ? '첫 항목 대기 중 · 사용자 리뷰 0건 · 별점 0건'
+                : `${total}곳 · 사용자 리뷰 0건 · 별점 0건`,
+            ja: total === 0
+                ? '最初の一件を待つ · ユーザーレビュー 0件 · 星 0件'
+                : `${total} 軒 · ユーザーレビュー 0件 · 星 0件`,
+            pt: total === 0
+                ? 'A aguardar primeira entrada · 0 avaliações · 0 estrelas'
+                : `${total} ${total === 1 ? 'lugar' : 'lugares'} · 0 avaliações · 0 estrelas`,
+            es: total === 0
+                ? 'Esperando primera entrada · 0 reseñas · 0 estrellas'
+                : `${total} ${total === 1 ? 'lugar' : 'lugares'} · 0 reseñas · 0 estrellas`
         });
         const noteHtml = `
             <div class="sdd-atlas-note">
@@ -560,8 +627,50 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         // v7 §8.7 PR1 — data-view 속성 first-render 기본값
         if (!root.hasAttribute('data-view')) root.setAttribute('data-view', 'list');
 
+        // v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때만)
+        const emptyAtlasH3 = T({
+            en: 'The atlas opens with a city.',
+            ko: '아틀라스는 도시 한 곳에서 시작한다.',
+            ja: 'アトラスは一つの街から始まる。',
+            pt: 'O atlas abre com uma cidade.',
+            es: 'El atlas se abre con una ciudad.'
+        });
+        const emptyAtlasBody = T({
+            en: 'Each café in this list is a place we have walked into. We list none until we have. Switch the desk to the city you live in, or write to suggest one we should visit.',
+            ko: '이 목록에 오른 카페는 모두 우리가 직접 걸어 들어간 곳이다. 들르기 전에는 적지 않는다. 거주하는 도시로 데스크를 옮기거나, 들렀으면 하는 곳을 제안한다.',
+            ja: 'この一覧に並ぶカフェは、いずれも私たちが実際に足を運んだ場所だ。訪れるまでは載せない。住む街にデスクを切り替えるか、訪ねるべき場所を知らせてほしい。',
+            pt: 'Cada café desta lista é um lugar onde entrámos. Não listamos nenhum antes disso. Mude a redação para a cidade onde vive, ou escreva-nos a sugerir um que devíamos visitar.',
+            es: 'Cada café de esta lista es un lugar al que hemos entrado. No listamos ninguno hasta haberlo hecho. Cambia la mesa a la ciudad donde vives, o escríbenos para sugerir uno que deberíamos visitar.'
+        });
+        const emptyAtlasSwitch = T({
+            en: '+ Switch the desk to your home city',
+            ko: '+ 데스크를 거주 도시로 옮기기',
+            ja: '+ デスクを住む街へ切り替える',
+            pt: '+ Mudar a redação para a sua cidade',
+            es: '+ Cambiar la mesa a tu ciudad'
+        });
+        const emptyAtlasSubmit = T({
+            en: '+ Submit a café we should visit',
+            ko: '+ 들렀으면 하는 카페 제안하기',
+            ja: '+ 訪ねるべきカフェを知らせる',
+            pt: '+ Sugerir um café que devíamos visitar',
+            es: '+ Sugerir un café que deberíamos visitar'
+        });
+        const isAtlasEmpty = total === 0;
+        const atlasEmptyHtml = isAtlasEmpty ? `
+            <section class="sdd-atlas-empty-state">
+                <h3 class="sdd-atlas-empty-h3">${escapeHtml(emptyAtlasH3)}</h3>
+                <p class="sdd-atlas-empty-body">${escapeHtml(emptyAtlasBody)}</p>
+                <ul class="sdd-atlas-empty-actions">
+                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="switch">${escapeHtml(emptyAtlasSwitch)}</button></li>
+                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="submit">${escapeHtml(emptyAtlasSubmit)}</button></li>
+                </ul>
+            </section>
+        ` : '';
+
         root.innerHTML = headHtml +
-            `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>` +
+            atlasEmptyHtml +
+            (isAtlasEmpty ? '' : `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>`) +
             `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
@@ -609,6 +718,26 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 }
             });
         }
+
+        // v7 검토 정정 — 빈 상태 액션 (Switch desk / Submit a café)
+        root.querySelectorAll('[data-empty-action]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.getAttribute('data-empty-action');
+                if (action === 'switch') {
+                    // Desk 섹션으로 이동 (THE DESK = section 04)
+                    const deskBtn = document.querySelector('.dock-btn[data-cat="trip"]');
+                    if (deskBtn) deskBtn.click();
+                } else if (action === 'submit') {
+                    // Submit a café 모듈 (saudade-atlas-submit.js)
+                    if (window.SAUDADE_ATLAS_SUBMIT?.open) {
+                        window.SAUDADE_ATLAS_SUBMIT.open();
+                    } else {
+                        // fallback — mailto desk
+                        window.location.href = 'mailto:desk@saudade.app?subject=Café suggestion';
+                    }
+                }
+            });
+        });
 
         // 클릭 시 cafe detail 페이지 진입 (모달 X — 헌법 §3)
         root.querySelectorAll('.sdd-atlas-item').forEach(el => {
@@ -703,6 +832,13 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
     function init() {

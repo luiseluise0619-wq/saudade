@@ -200,6 +200,13 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
+    }
 
     // v6 §5.4 — Switch the Desk + Home City UI
     function renderHomeDeskSection() {
@@ -312,8 +319,8 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         root.innerHTML = `
             <header class="sdd-desk-head">
                 <h2 class="sdd-desk-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headItalic)}</span>
                 </h2>
             </header>
 

@@ -13,6 +13,19 @@
     let _audio = null;          // HTML5 Audio element (singleton)
     let _wakeLock = null;       // Wake Lock sentinel
     let _isPlaying = false;
+    // v7 검토 정정 — R2 셋업 전 404 트랙을 "AWAITING UPLOAD" 로 표시
+    const _unavailable = new Set();
+    function markTrackUnavailable(idx) {
+        _unavailable.add(idx);
+        const root = document.getElementById('sddListening');
+        if (!root) return;
+        const row = root.querySelector(`[data-track-idx="${idx}"]`);
+        if (!row) return;
+        row.classList.add('sdd-listen-track-unavail');
+        row.setAttribute('aria-disabled', 'true');
+        const durEl = row.querySelector('.sdd-listen-duration');
+        if (durEl) durEl.textContent = 'AWAITING UPLOAD';
+    }
     // v6 §11.2 — Work session timer (50 min work + 10 min rest)
     let _sessionStart = null;   // ms timestamp 세션 시작
     let _sessionPhase = 'idle'; // 'idle' | 'work' | 'rest'
@@ -37,8 +50,8 @@
 .sdd-listen {
     position: fixed; inset: 0;
     z-index: var(--z-section-page, 8);
-    background: var(--ink);          /* Listening Room = Skin B (Ink) 자동 */
-    color: var(--paper);
+    background: var(--paper);        /* v7 검토 정정 — paper 통일 (다른 § 와 톤 일치) */
+    color: var(--ink);
     overflow-y: auto;
     padding: 88px clamp(24px, 6vw, 80px) calc(var(--dock-h, 56px) + 88px);
     display: none;
@@ -48,7 +61,7 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid rgba(242,238,227,.18);
+    /* v7 검토 정정 — 이중선 방지: catnav 가 자체 border-bottom 가짐 */
 }
 .sdd-listen-h2 {
     font-family: var(--serif);
@@ -57,7 +70,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);
-    color: var(--paper);
+    color: var(--ink);
     margin: 0;
 }
 .sdd-listen-h2 .it { font-style: italic; display: block; }
@@ -69,7 +82,7 @@ body.listening-active .sdd-listen { display: block; }
     line-height: 1.6;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
     margin: 12px 0 0;
 }
 
@@ -77,9 +90,9 @@ body.listening-active .sdd-listen { display: block; }
     position: fixed;
     top: 16px; left: 16px;
     z-index: calc(var(--z-section-page, 8) + 2);
-    background: rgba(15,14,18,.7);
-    border: 0.5px solid var(--paper);
-    color: var(--paper);
+    background: rgba(242,238,227,.85);
+    border: 0.5px solid var(--ink);
+    color: var(--ink);
     font-family: var(--mono);
     font-weight: 500;
     font-size: 11px;
@@ -93,7 +106,7 @@ body.listening-active .sdd-listen { display: block; }
     -webkit-backdrop-filter: blur(8px);
     transition: color .12s, border-color .12s, background .12s;
 }
-.sdd-listen-back:hover { color: var(--paper); border-color: var(--paper); }
+.sdd-listen-back:hover { color: var(--ink); border-color: var(--ink); }
 .sdd-listen-back::before { content: '← '; }
 
 .sdd-listen-track {
@@ -101,14 +114,14 @@ body.listening-active .sdd-listen { display: block; }
     grid-template-columns: 80px 1fr 100px;
     gap: clamp(12px, 2vw, 24px);
     padding: clamp(20px, 3vw, 32px) 0;
-    border-top: 0.5px solid rgba(242,238,227,.18);
+    border-top: 0.5px solid rgba(15,14,18,.18);
     align-items: baseline;
     cursor: pointer;
     transition: background .12s;
 }
-.sdd-listen-track:last-child { border-bottom: 0.5px solid rgba(242,238,227,.18); }
-.sdd-listen-track:hover { background: rgba(242,238,227,.04); }
-.sdd-listen-track[aria-current="true"] { background: rgba(242,238,227,.06); }
+.sdd-listen-track:last-child { border-bottom: 0.5px solid rgba(15,14,18,.18); }
+.sdd-listen-track:hover { background: rgba(15,14,18,.04); }
+.sdd-listen-track[aria-current="true"] { background: rgba(15,14,18,.06); }
 
 .sdd-listen-num {
     font-family: var(--mono);
@@ -116,14 +129,14 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
 }
 .sdd-listen-num .marker {
     display: inline-block;
     margin-right: 6px;
-    color: rgba(242,238,227,.4);
+    color: rgba(15,14,18,.4);
 }
-.sdd-listen-track[aria-current="true"] .sdd-listen-num .marker { color: var(--paper); }
+.sdd-listen-track[aria-current="true"] .sdd-listen-num .marker { color: var(--ink); }
 .sdd-listen-track[aria-current="true"] .sdd-listen-num .marker::before { content: '\\25B6 '; }
 
 .sdd-listen-body { display: flex; flex-direction: column; gap: 6px; }
@@ -132,7 +145,7 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-cat-head {
     margin: clamp(40px, 6vw, 72px) 0 clamp(8px, 1.5vw, 12px);
     padding-bottom: clamp(8px, 1vw, 12px);
-    border-bottom: 0.5px solid rgba(242,238,227,.32);
+    border-bottom: 0.5px solid rgba(15,14,18,.32);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -147,8 +160,8 @@ body.listening-active .sdd-listen { display: block; }
     z-index: 2;
     margin: 0 calc(clamp(24px, 6vw, 80px) * -1) clamp(20px, 3vw, 32px);
     padding: 12px clamp(24px, 6vw, 80px);
-    background: var(--ink);
-    border-bottom: 0.5px solid rgba(242,238,227,.18);
+    background: var(--paper);
+    border-bottom: 0.5px solid rgba(15,14,18,.18);
     display: flex;
     gap: 18px;
     overflow-x: auto;
@@ -161,7 +174,7 @@ body.listening-active .sdd-listen { display: block; }
     flex: 0 0 auto;
     background: transparent;
     border: 0;
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
     font-family: var(--mono);
     font-weight: 500;
     font-size: 10px;
@@ -175,10 +188,10 @@ body.listening-active .sdd-listen { display: block; }
     white-space: nowrap;
     transition: color .12s, border-color .12s;
 }
-.sdd-listen-catnav-link:hover { color: var(--paper); }
-.sdd-listen-catnav-link:focus { outline: 0.5px solid rgba(242,238,227,.55); outline-offset: 2px; }
+.sdd-listen-catnav-link:hover { color: var(--ink); }
+.sdd-listen-catnav-link:focus { outline: 0.5px solid rgba(15,14,18,.55); outline-offset: 2px; }
 .sdd-listen-catnav-link[aria-current="true"] {
-    color: var(--paper);
+    color: var(--ink);
     border-bottom-color: var(--rust);
 }
 @media (max-width: 768px) {
@@ -194,7 +207,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 12px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: var(--paper);
+    color: var(--ink);
 }
 .sdd-listen-cat-count {
     font-family: var(--mono);
@@ -202,7 +215,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
 }
 
 .sdd-listen-title {
@@ -211,7 +224,7 @@ body.listening-active .sdd-listen { display: block; }
     font-style: italic;
     font-size: clamp(15px, 1.4vw, 18px);
     line-height: 1.45;
-    color: rgba(242,238,227,.85);
+    color: rgba(15,14,18,.85);
 }
 .sdd-listen-license {
     font-family: var(--mono);
@@ -219,30 +232,43 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(242,238,227,.45);
+    color: rgba(15,14,18,.45);
     margin-top: 4px;
 }
 .sdd-listen-license a {
-    color: rgba(242,238,227,.65);
-    border-bottom: 0.5px solid rgba(242,238,227,.18);
+    color: rgba(15,14,18,.65);
+    border-bottom: 0.5px solid rgba(15,14,18,.18);
     text-decoration: none;
 }
-.sdd-listen-license a:hover { color: var(--paper); }
+.sdd-listen-license a:hover { color: var(--ink); }
 
 .sdd-listen-duration {
     font-family: var(--mono);
     font-weight: 400;
     font-size: 11px;
     letter-spacing: var(--tr-mono-data);
-    color: rgba(242,238,227,.65);
+    color: rgba(15,14,18,.65);
     text-align: right;
     white-space: nowrap;
+}
+
+/* v7 검토 정정 — 비가용 트랙 (R2 셋업 전 404) */
+.sdd-listen-track-unavail {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.sdd-listen-track-unavail:hover { background: transparent; }
+.sdd-listen-track-unavail .sdd-listen-duration {
+    color: var(--rust);
+    font-style: italic;
+    font-size: 9.5px;
+    letter-spacing: var(--tr-mono-mast);
 }
 
 .sdd-listen-foot {
     margin-top: clamp(40px, 6vw, 80px);
     padding-top: clamp(16px, 2vw, 24px);
-    border-top: 0.5px solid rgba(242,238,227,.18);
+    border-top: 0.5px solid rgba(15,14,18,.18);
 }
 .sdd-listen-foot p {
     font-family: var(--mono);
@@ -251,13 +277,13 @@ body.listening-active .sdd-listen { display: block; }
     line-height: 1.7;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
     max-width: 60ch;
     margin: 0;
 }
 .sdd-listen-foot p strong {
     font-weight: 500;
-    color: var(--paper);
+    color: var(--ink);
     letter-spacing: var(--tr-mono-mast);
     display: block;
     margin-bottom: 6px;
@@ -273,8 +299,8 @@ body.listening-active .sdd-listen { display: block; }
     align-items: center;
     gap: 14px;
     padding: 10px 18px;
-    background: rgba(15,14,18,.92);
-    border: 0.5px solid rgba(242,238,227,.32);
+    background: rgba(242,238,227,.92);
+    border: 0.5px solid rgba(15,14,18,.32);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
     z-index: calc(var(--z-section-page, 8) + 1);
@@ -284,12 +310,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(242,238,227,.85);
+    color: rgba(15,14,18,.85);
 }
 .sdd-listen-ctl {
     background: transparent;
     border: 0;
-    color: rgba(242,238,227,.85);
+    color: rgba(15,14,18,.85);
     font-family: var(--mono);
     font-weight: 500;
     font-size: 11px;
@@ -301,15 +327,15 @@ body.listening-active .sdd-listen { display: block; }
     border-radius: 0;
     transition: color .12s;
 }
-.sdd-listen-ctl:hover { color: var(--paper); }
-.sdd-listen-ctl[aria-pressed="true"] { color: var(--paper); }
-.sdd-listen-ctl-sep { color: rgba(242,238,227,.35); }
+.sdd-listen-ctl:hover { color: var(--ink); }
+.sdd-listen-ctl[aria-pressed="true"] { color: var(--ink); }
+.sdd-listen-ctl-sep { color: rgba(15,14,18,.35); }
 .sdd-listen-vol-label {
     font-family: var(--mono);
     font-weight: 400;
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
-    color: rgba(242,238,227,.55);
+    color: rgba(15,14,18,.55);
 }
 /* v7 §11.5 — 1px hairline 슬라이더. 브라우저 기본 fill·accent 강제 제거. */
 .sdd-listen-vol {
@@ -332,8 +358,8 @@ body.listening-active .sdd-listen { display: block; }
         to bottom,
         transparent 0,
         transparent 7.5px,
-        rgba(242,238,227,.3) 7.5px,
-        rgba(242,238,227,.3) 8.5px,
+        rgba(15,14,18,.3) 7.5px,
+        rgba(15,14,18,.3) 8.5px,
         transparent 8.5px,
         transparent 16px
     ) !important;
@@ -348,12 +374,12 @@ body.listening-active .sdd-listen { display: block; }
 }
 .sdd-listen-vol::-moz-range-track {
     height: 1px;
-    background: rgba(242,238,227,.3) !important;
+    background: rgba(15,14,18,.3) !important;
     border: 0;
     border-radius: 0;
 }
 .sdd-listen-vol::-moz-range-progress {
-    background: rgba(242,238,227,.3) !important;
+    background: rgba(15,14,18,.3) !important;
     height: 1px;
 }
 .sdd-listen-vol::-webkit-slider-thumb {
@@ -361,7 +387,7 @@ body.listening-active .sdd-listen { display: block; }
     appearance: none !important;
     width: 8px;
     height: 8px;
-    background: var(--paper);
+    background: var(--ink);
     border-radius: 50%;
     cursor: pointer;
     margin-top: -3.5px;
@@ -371,7 +397,7 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-vol::-moz-range-thumb {
     width: 8px;
     height: 8px;
-    background: var(--paper);
+    background: var(--ink);
     border-radius: 50%;
     border: 0;
     cursor: pointer;
@@ -382,7 +408,7 @@ body.listening-active .sdd-listen { display: block; }
     font-weight: 400;
     font-size: 10px;
     letter-spacing: var(--tr-mono-data);
-    color: rgba(242,238,227,.65);
+    color: rgba(15,14,18,.65);
     min-width: 24px;
     text-align: right;
 }
@@ -394,12 +420,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(242,238,227,.85);
+    color: rgba(15,14,18,.85);
     min-width: 80px;
     text-align: right;
 }
-.sdd-listen-session-state.work { color: var(--paper); }
-.sdd-listen-session-state.rest { color: rgba(242,238,227,.55); }
+.sdd-listen-session-state.work { color: var(--ink); }
+.sdd-listen-session-state.rest { color: rgba(15,14,18,.55); }
 
 .sdd-listen-session-counter {
     position: fixed;
@@ -412,7 +438,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(242,238,227,.4);
+    color: rgba(15,14,18,.4);
     margin: 0;
     pointer-events: none;
     text-align: center;
@@ -442,7 +468,7 @@ body.listening-active .sdd-listen { display: block; }
 }
 
 /* Body 톤 락 — Listening Room 자체 다크 */
-body.listening-active { background: var(--ink) !important; }
+body.listening-active { background: var(--paper) !important; }
 
 /* § 00 cover 우하단 진입 링크 */
 .sdd-cover-listen-cta {
@@ -650,6 +676,8 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             _isPlaying = false;
             syncControlState();
             releaseWakeLock();
+            // v7 검토 정정 — 404 / decode 실패 시 트랙을 비가용으로 표시
+            if (_activeIdx != null) markTrackUnavailable(_activeIdx);
         });
         return _audio;
     }
@@ -657,6 +685,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     function playTrack(idx) {
         const tracks = _data?.tracks || [];
         if (idx < 0 || idx >= tracks.length) return;
+        if (_unavailable.has(idx)) return;   // 비가용 트랙은 재생 시도 X
         const t = tracks[idx];
         if (!t.audio_url) return;
         const a = ensureAudio();
@@ -670,9 +699,14 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             }
         } catch (e) {}
         a.play().catch((err) => {
-            // autoplay 차단 또는 audio file 없음 — UI 만 업데이트, 사용자 다시 클릭 유도
+            // autoplay 차단 또는 audio file 없음 — UI 만 업데이트
             _isPlaying = false;
             syncControlState();
+            // 자동 차단 (NotAllowedError) 은 사용자 제스처 부족 — 다시 클릭 유도
+            // 그 외 (NotSupportedError 등) 는 비가용 트랙으로 표시
+            if (err && err.name && err.name !== 'NotAllowedError') {
+                markTrackUnavailable(idx);
+            }
         });
         syncTrackHighlight();
     }
@@ -715,6 +749,13 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
@@ -764,17 +805,20 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 `;
                 lastCat = cat;
             }
+            const isUnavail = _unavailable.has(i);
+            const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
             return prefix + `
-                <article class="sdd-listen-track"
+                <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
                          data-track-idx="${i}"
                          tabindex="0" role="button"
+                         ${isUnavail ? 'aria-disabled="true"' : ''}
                          aria-label="${escapeHtml(cat)} — ${escapeHtml(t.title)}">
                     <span class="sdd-listen-num"><span class="marker">  </span>${String(i + 1).padStart(2, '0')}</span>
                     <div class="sdd-listen-body">
                         <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
                         <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
                     </div>
-                    <span class="sdd-listen-duration">${dur}</span>
+                    <span class="sdd-listen-duration">${durDisplay}</span>
                 </article>
             `;
         }).join('');
@@ -835,8 +879,8 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             <button class="sdd-listen-back" data-listen-back>${escapeHtml(backLabel)}</button>
             <header class="sdd-listen-head">
                 <h2 class="sdd-listen-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headItalic)}</span>
                 </h2>
                 <p class="sdd-listen-meta">${escapeHtml(libraryLabel)} · ${escapeHtml(tracksLabel)} · ${escapeHtml(categoriesLabel)}</p>
             </header>
