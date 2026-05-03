@@ -678,6 +678,7 @@ body:not(.cafe-mode) .stage::after {
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after { content: 'ATLAS'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after   { content: 'DISPATCHES'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after { content: 'THE DESK'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTENING'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
         font-weight: 500;
@@ -1241,6 +1242,7 @@ body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"] .dock-btn-label::after  { content: 'ATLAS'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]   .dock-btn-label::after  { content: 'DISPATCHES'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"] .dock-btn-label::after  { content: 'DESK'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"] .dock-btn-label::after  { content: 'LISTEN'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
         display: block !important;
         font-size: 0 !important;

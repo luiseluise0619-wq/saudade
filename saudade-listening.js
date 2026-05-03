@@ -786,6 +786,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         ensureCoverCTA();
         load().then(render);
         watchEsc();
+        // v7 §6 — � 05 dock 버튼 (5탭). cover CTA 와 병행.
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest && e.target.closest('.dock-btn[data-cat="listen"]');
+            if (btn) { e.preventDefault(); open(); }
+        }, true);
     }
 
     if (document.readyState === 'loading') {

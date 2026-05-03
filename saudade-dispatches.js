@@ -577,7 +577,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
             pt: 'editados.', es: 'editados.'
         });
         const headResting = T({
-            en: 'resting.', ko: '쉬는 중.', ja: '休止中。',
+            en: 'resting.', ko: '휴간.', ja: '休刊。',
             pt: 'em descanso.', es: 'en descanso.'
         });
         const subTpl = T({
