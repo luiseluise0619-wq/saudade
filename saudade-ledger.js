@@ -129,6 +129,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 .sdd-ld-h2 {
     font-family: var(--serif);
     font-weight: 300;
+    font-style: italic;
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);
@@ -177,7 +178,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     margin: 0;
 }
 .sdd-ld-dday-num.warn { color: var(--signal); }
-.sdd-ld-dday-num.expired { color: var(--bone); }
+.sdd-ld-dday-num.expired { color: var(--bone-d); }
 .sdd-ld-dday-unit {
     font-family: var(--mono);
     font-weight: 400;
@@ -376,7 +377,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: var(--bone);
+    color: var(--bone-d);
     padding: 16px 0;
 }
 
@@ -449,7 +450,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     margin: 0;
 }
 .sdd-ld-record-num.warn { color: var(--signal); }
-.sdd-ld-record-num.expired { color: var(--bone); }
+.sdd-ld-record-num.expired { color: var(--bone-d); }
 .sdd-ld-record-unit {
     font-family: var(--mono);
     font-weight: 400;
@@ -458,6 +459,24 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     text-transform: uppercase;
     color: var(--bone-d);
     margin: 0;
+}
+
+/* v7 검토 정정 — 편집부 배지 + 사용자 기록 라벨 */
+.sdd-ld-editorial-badge {
+    color: var(--rust);
+    font-weight: 500;
+    letter-spacing: var(--tr-mono-mast);
+}
+.sdd-ld-records-label {
+    margin: clamp(20px, 3vw, 28px) 0 8px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding-bottom: 6px;
+    border-bottom: 0.5px solid var(--rule);
 }
 
 /* v6 §7.2 — 기사 인트로 (Ledger 를 잡지 톤으로) */
@@ -610,10 +629,11 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             return `
                 <section class="sdd-ld-cat" data-cat="${cat.type}">
                     <header class="sdd-ld-cat-head">
-                        <p class="sdd-ld-cat-eyebrow">§ ${escapeHtml(cat.label)}</p>
+                        <p class="sdd-ld-cat-eyebrow">§ ${escapeHtml(cat.label)} · <span class="sdd-ld-editorial-badge">${escapeHtml(editorialBadge)}</span></p>
                         <h3 class="sdd-ld-cat-headline">${escapeHtml(cat.article)}</h3>
                         <p class="sdd-ld-cat-body">${escapeHtml(cat.articleBody)}</p>
                     </header>
+                    ${cat.records && cat.records.length ? `<p class="sdd-ld-records-label">${escapeHtml(yourRecordsLabel)}</p>` : ''}
                     <div class="sdd-ld-cat-records">${cardsHtml}</div>
                     <p class="sdd-ld-cat-note">${cat.note}</p>
                 </section>
@@ -660,6 +680,16 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 
         // v6 §7.2 — Ledger 기사 톤 (PORTUGAL D7, IN FIVE LINES) — 5 에디션 i18n
         const T = window.SAUDADE_T || ((s) => s.en);
+        // v7 검토 정정 — 사용자 record 와 편집부 기사 구분
+        const editorialBadge = T({
+            en: 'EDITORIAL',  ko: '편집부',  ja: '編集部',
+            pt: 'EDITORIAL',  es: 'EDITORIAL'
+        });
+        const yourRecordsLabel = T({
+            en: 'YOUR RECORDS', ko: '내 기록',
+            ja: 'あなたの記録',
+            pt: 'OS SEUS REGISTOS', es: 'TUS REGISTROS'
+        });
         const headLabel = T({
             en: 'How many days',  ko: '며칠이',
             ja: 'のこされた日々',  pt: 'Quantos dias',

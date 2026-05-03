@@ -54,6 +54,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
 .sdd-disp-h2 {
     font-family: var(--serif);
     font-weight: 300;
+    font-style: italic;
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);
@@ -325,9 +326,53 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: var(--bone);
+    color: var(--bone-d);
     text-align: center;
     padding: clamp(40px, 6vw, 80px) 0;
+}
+
+/* v7 §9.5 데일리 디스패치 30% 재작성 (편집자 모드 전용) */
+.sdd-disp-editor {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--jade);
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--rule);
+    display: none;
+}
+body[data-editor="1"] .sdd-disp-editor { display: block; }
+.sdd-disp-editor strong { font-weight: 500; color: var(--jade); margin-right: 8px; }
+.sdd-disp-editor.below,
+.sdd-disp-editor.below strong { color: var(--rust); }
+.sdd-disp-rewrite-tag {
+    display: none;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
+.sdd-disp-rewrite-tag.rewritten { color: var(--jade); }
+.sdd-disp-rewrite-tag.draft     { color: var(--signal); }
+
+/* v7 §9.9 retract placeholder */
+.sdd-disp-retracted { opacity: 0.7; }
+.sdd-disp-retract-msg {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -416,7 +461,54 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
         return todayWeekday() === 0;
     }
 
+    // v7 §9.9 — dispatch retracts (worker /dispatches/retracted)
+    let _retracts = null;
+    let _retractsAt = 0;
+    const RETRACTS_TTL = 60 * 1000;
+    function fetchRetracts() {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return Promise.resolve([]);
+        if (_retracts && (Date.now() - _retractsAt) < RETRACTS_TTL) return Promise.resolve(_retracts);
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        return fetch(base + '/dispatches/retracted?edition=' + encodeURIComponent(ed), { cache: 'no-cache', credentials: 'omit' })
+            .then(r => r.ok ? r.json() : null)
+            .then(j => { _retracts = (j && j.retracts) || []; _retractsAt = Date.now(); return _retracts; })
+            .catch(() => { _retracts = []; _retractsAt = Date.now(); return _retracts; });
+    }
+    function dispatchIdFor(item) {
+        const city = (item._city || '').toLowerCase().replace(/\s+/g, '-');
+        return city + '-' + (item.n || '');
+    }
+    function isRetracted(item) {
+        if (!_retracts) return null;
+        const id = dispatchIdFor(item);
+        return _retracts.find(r => r.dispatch_id === id);
+    }
+    const RETRACT_MSG = {
+        en: 'This dispatch was retracted by the editor.',
+        ko: '편집장이 이 디스패치를 철회했다.',
+        ja: 'この通信は編集長により撤回された。',
+        pt: 'Este despacho foi retirado pelo editor.',
+        es: 'Este despacho fue retirado por el editor.'
+    };
+
+
     function renderItem(it) {
+        // v7 §9.9 retract check
+        const retract = isRetracted(it);
+        if (retract) {
+            if (retract.age_minutes < 30) return '';   // 완전 hide
+            const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+            const msg = RETRACT_MSG[ed] || RETRACT_MSG.en;
+            return `
+                <article class="sdd-disp-item sdd-disp-retracted">
+                    <span class="sdd-disp-num">${escapeHtml(it.n || '')}</span>
+                    <div class="sdd-disp-body">
+                        <p class="sdd-disp-retract-msg">${escapeHtml(msg)}</p>
+                    </div>
+                </article>
+            `;
+        }
         const safeSrc = safeUrl(it.source_url);
         const fulltext = it.body ? `<p class="sdd-disp-fulltext">${escapeHtml(it.body)}</p>` : '';
         const quoteHtml = it.quote
@@ -434,6 +526,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
                 <span class="sdd-disp-num">${escapeHtml(it.n || '')}</span>
                 <div class="sdd-disp-body">
                     ${cityTag}
+                    <span class="sdd-disp-rewrite-tag ${it.human_rewritten === true ? 'rewritten' : 'draft'}">${it.human_rewritten === true ? 'REWRITTEN' : 'AI DRAFT'}</span>
                     <h3 class="sdd-disp-headline">${escapeHtml(it.headline || '')}</h3>
                     <p class="sdd-disp-lede">${escapeHtml(it.lede || '')}</p>
                     ${fulltext}
@@ -517,7 +610,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
             pt: 'editados.', es: 'editados.'
         });
         const headResting = T({
-            en: 'resting.', ko: '쉬는 중.', ja: '休止中。',
+            en: 'resting.', ko: '휴간.', ja: '休刊。',
             pt: 'em descanso.', es: 'en descanso.'
         });
         const subTpl = T({
@@ -633,7 +726,8 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
 
     function init() {
         injectStyles();
-        load().then(render);
+        // 두 fetch 다 끝나고 render — retract 리스트가 생겨야 필터링 정확
+        Promise.all([load(), fetchRetracts()]).then(([d]) => render(d));
         // section 진입 + edition 변경 시 재로드
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '03') {

@@ -42,6 +42,13 @@ const RL = {
     '/coworking':      { max: 30, win: 60000 },
     '/editor/leave-status': { max: 60, win: 60000 },
     '/editor/log':          { max: 30, win: 60000 },
+    '/cafe/submit':         { max: 5,  win: 60000 },
+    '/auth/request':   { max: 5,  win: 60000 },
+    '/auth/verify':    { max: 10, win: 60000 },
+    '/city/request':   { max: 5,  win: 60000 },
+    '/dispatches/today': { max: 60, win: 60000 },
+    '/dispatches/retract':   { max: 30, win: 60000 },
+    '/dispatches/retracted': { max: 60, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -189,7 +196,145 @@ async function sha(s) {
     return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('').slice(0, 32);
 }
 
+// ─── v7 §10 — AI Pipeline cron (Workers scheduled) ──────────────────────────
+// 7 phase 일일 cron — wrangler.toml triggers 에서 시간 설정.
+// gather(00:00) → sort(00:30) → score(02:00) → write(04:00) → translate(05:00)
+//   → stage(05:30) → file(06:00). KST 기준 (cron 은 UTC).
+//
+// 배포 시 wrangler.toml 추가:
+//   [triggers]
+//   crons = ["0 15 * * *","30 15 * * *","0 17 * * *","0 19 * * *","0 20 * * *","30 20 * * *","0 21 * * *"]
+//   [ai]
+//   binding = "AI"
+//
+// D1 schema: schema/ai_pipeline.sql (raw_feeds + dispatches_staged).
+const RSS_PIPELINE_FEEDS = [
+    { url: 'https://www.cidadedelisboa.pt/rss',     city: 'Lisbon', section: 'cityhall' },
+    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml', city: null, section: 'quiet' },
+    { url: 'https://www.tate.org.uk/rss/whats-on',  city: 'London', section: 'museum' }
+];
+const PIPELINE_CITIES = ['Lisbon','Seoul','Tokyo','Osaka','Tbilisi','Berlin','Bangkok','Mexico City','Bali','Buenos Aires','Chiang Mai'];
+const PIPELINE_FORBIDDEN = ['breaking','urgent','alert','crisis','shocking','tragic','outrage','scandal','controversy'];
+
+function pipelineHasForbidden(text) {
+    if (!text) return false;
+    return PIPELINE_FORBIDDEN.some(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+}
+function pipelineLLM(env) {
+    return {
+        async classify(text, cities) {
+            if (!env || !env.AI) return null;
+            const prompt = `Classify into one of: ${cities.join(', ')}. Return only the city name. If none match, return "none".\n\n${text.slice(0, 600)}`;
+            try {
+                const r = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', { prompt });
+                const out = ((r && r.response) || '').trim();
+                return cities.find(c => out.toLowerCase().includes(c.toLowerCase())) || null;
+            } catch (e) { return null; }
+        },
+        async score(text) {
+            if (!env || !env.AI) return null;
+            const prompt = `Rate quietness/dignity 1-10. 10=magazine tone (Monocle/Kinfolk). 1=breaking-news shouting. Number only.\n\n${text.slice(0, 600)}`;
+            try {
+                const r = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', { prompt });
+                const m = (((r && r.response) || '')).match(/(\d+(?:\.\d+)?)/);
+                return m ? Math.max(0, Math.min(10, parseFloat(m[1]))) : null;
+            } catch (e) { return null; }
+        }
+    };
+}
+async function pipelineGather(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'gather', reason: 'no_db' };
+    let added = 0, skipped = 0, failed = 0;
+    for (const feed of RSS_PIPELINE_FEEDS) {
+        try {
+            const r = await fetchT(feed.url, { headers: { 'User-Agent': 'AuraWorldPulse/4.0', 'Accept': 'application/rss+xml,application/xml,text/xml' } }, 12000);
+            if (!r.ok) { failed++; continue; }
+            const text = await r.text();
+            const matches = text.match(/<item[\s\S]*?<\/item>/gi) || [];
+            for (const m of matches.slice(0, 5)) {
+                const t   = (m.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '';
+                const d   = (m.match(/<description[^>]*>([\s\S]*?)<\/description>/i) || [])[1] || '';
+                const pd  = (m.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) || [])[1] || '';
+                const guid= (m.match(/<guid[^>]*>([\s\S]*?)<\/guid>/i) || [])[1] || '';
+                const link= (m.match(/<link[^>]*>([\s\S]*?)<\/link>/i) || [])[1] || '';
+                const it = {
+                    title:   t.replace(/<\/?\w[^>]*>/g, '').trim(),
+                    summary: d.replace(/<\/?\w[^>]*>/g, '').trim().slice(0, 800),
+                    pub:     pd,
+                    url:     (guid || link).trim()
+                };
+                if (!it.title || !it.url) continue;
+                try {
+                    await env.SAUDADE_DB.prepare(
+                        'INSERT OR IGNORE INTO raw_feeds (fetched_at, source_url, raw_title, raw_summary, raw_pub_date, city, weekday_section) VALUES (?, ?, ?, ?, ?, ?, ?)'
+                    ).bind(Date.now(), it.url, it.title, it.summary, Date.parse(it.pub) || null, feed.city || null, feed.section || null).run();
+                    added++;
+                } catch (e) { skipped++; }
+            }
+        } catch (e) { failed++; }
+    }
+    return { ok: true, phase: 'gather', added, skipped, failed, feeds: RSS_PIPELINE_FEEDS.length };
+}
+async function pipelineSort(env, llm) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'sort', reason: 'no_db' };
+    if (!env.AI) return { ok: false, phase: 'sort', reason: 'no_ai' };
+    let updated = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare('SELECT id, raw_title, raw_summary FROM raw_feeds WHERE city IS NULL AND processed_at IS NULL LIMIT 30').all();
+        for (const row of (rows && rows.results) || []) {
+            const text = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            const city = await llm.classify(text, PIPELINE_CITIES);
+            if (city) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET city = ? WHERE id = ?').bind(city, row.id).run();
+                updated++;
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'sort', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'sort', updated };
+}
+async function pipelineScore(env, llm) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'score', reason: 'no_db' };
+    if (!env.AI) return { ok: false, phase: 'score', reason: 'no_ai' };
+    let updated = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare('SELECT id, raw_title, raw_summary FROM raw_feeds WHERE ai_score IS NULL AND city IS NOT NULL AND processed_at IS NULL LIMIT 30').all();
+        for (const row of (rows && rows.results) || []) {
+            const text = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            if (pipelineHasForbidden(text)) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET ai_score = 0 WHERE id = ?').bind(row.id).run();
+                updated++; continue;
+            }
+            const score = await llm.score(text);
+            if (score !== null) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET ai_score = ? WHERE id = ?').bind(score, row.id).run();
+                updated++;
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'score', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'score', updated };
+}
+async function pipelineStub(phase) { return { ok: true, phase, todo: 'next PR' }; }
+
 export default {
+    async scheduled(event, env, ctx) {
+        const llm = pipelineLLM(env);
+        let result;
+        switch (event.cron) {
+            case '0 15 * * *':  result = await pipelineGather(env); break;
+            case '30 15 * * *': result = await pipelineSort(env, llm); break;
+            case '0 17 * * *':  result = await pipelineScore(env, llm); break;
+            case '0 19 * * *':  result = await pipelineStub('write'); break;
+            case '0 20 * * *':  result = await pipelineStub('translate'); break;
+            case '30 20 * * *': result = await pipelineStub('stage'); break;
+            case '0 21 * * *':  result = await pipelineStub('file'); break;
+            default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+        }
+        if (env.AURA_KV) {
+            try { await env.AURA_KV.put('pipeline:last:' + (event.cron || 'manual'), JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
+        }
+        return result;
+    },
+
     async fetch(req, env, ctx) {
         try {
             const url = new URL(req.url);
@@ -229,6 +374,13 @@ export default {
                 case '/coworking':         return coworking(req, env, ctx);
                 case '/editor/leave-status': return editorLeaveStatus(req, env, ctx);
                 case '/editor/log':          return editorLog(req, env, ctx);
+                case '/cafe/submit':         return cafeSubmit(req, env, ctx);
+                case '/auth/request':      return authRequest(req, env, ctx);
+                case '/auth/verify':       return authVerify(req, env, ctx);
+                case '/city/request':      return cityRequest(req, env, ctx);
+                case '/dispatches/today':  return dispatchesToday(req, env, ctx);
+                case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
+                case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -993,11 +1145,11 @@ async function editorLeaveStatus(req, env, ctx) {
     if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
 
     let lastAt = null;
-    let dbBound = !!env?.LOUNJ_DB;
+    let dbBound = !!env?.SAUDADE_DB;
     if (dbBound) {
         try {
             const inList = EDITOR_ACTIONS.map(() => '?').join(',');
-            const row = await env.LOUNJ_DB.prepare(
+            const row = await env.SAUDADE_DB.prepare(
                 `SELECT MAX(at) AS at FROM editor_log WHERE action IN (${inList})`
             ).bind(...EDITOR_ACTIONS).first();
             const v = row && row.at;
@@ -1029,7 +1181,13 @@ async function editorLog(req, env, ctx) {
     if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
         return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
     }
-    if (!env.LOUNJ_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+// ─── v7 §5.5 — City requests ─────────────────────────────────────────────
+// "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.
+// D1 INSERT + 응답에 현재 카운트 포함.
+async function cityRequest(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Requests not yet open.', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1044,7 +1202,7 @@ async function editorLog(req, env, ctx) {
     const at = Date.now();
 
     try {
-        const r = await env.LOUNJ_DB.prepare(
+        const r = await env.SAUDADE_DB.prepare(
             'INSERT INTO editor_log (at, action, editor, target) VALUES (?, ?, ?, ?)'
         ).bind(at, action, editor, target).run();
         // leave-status 캐시 즉시 무효화 — 새 액션이 stage 를 active 로 되돌려야 하므로
@@ -1060,3 +1218,452 @@ async function editorLog(req, env, ctx) {
 // this is a no-op stub. When subscriptions are re-enabled, add a scheduled
 // handler that calls Stripe Subscriptions.update({ pause_collection: { behavior: 'mark_uncollectible' } })
 // for each customer when leave-status returns stage='subscription'.
+
+// ─── v7 §8.9 — Cafe submissions ────────────────────────────────────────────
+// 누구나 POST 가능 (auth X). 다음 분기 발행 시 편집부 D1 쿼리로 검수.
+// D1 미바인딩 시 503 — 클라이언트가 magazine-tone 실패 메시지 표시.
+async function cafeSubmit(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Submissions are not yet open. Try again later.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400);  }
+
+    const name         = clean(body.name, 200);
+    const city         = clean(body.city, 100);
+    const neighborhood = clean(body.neighborhood, 100) || null;
+    const submitter    = clean(body.submitter, 200) || null;
+    const note         = clean(body.note, 500) || null;
+    const lat = (typeof body.lat === 'number' && Number.isFinite(body.lat) && body.lat >= -90 && body.lat <= 90) ? body.lat : null;
+    const lng = (typeof body.lng === 'number' && Number.isFinite(body.lng) && body.lng >= -180 && body.lng <= 180) ? body.lng : null;
+
+    if (!name) return E(req, 'BAD_NAME', 'Café name required', 400);
+    if (!city) return E(req, 'BAD_CITY', 'City required', 400);
+
+    const at = Date.now();
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            'INSERT INTO cafe_submissions (at, name, city, neighborhood, lat, lng, submitter, note, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+        ).bind(at, name, city, neighborhood, lat, lng, submitter, note, 'queued').run();
+        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, at, status: 'queued' });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Submission failed', 500);
+    }
+}
+
+// ─── v7 §13 — Auth (Magic Link) ────────────────────────────────────────────
+// 이메일만. Lucia-style 토큰 (단일 사용 · 15분 유효). 비밀번호 0건.
+// 무료 인프라: D1 (토큰 + 사용자) + Resend (이메일, 옵션). RESEND_KEY 미설정 시
+// 응답 body 에 magic link 노출 — 솔로 파운더 / 베타 단계 fallback.
+
+const MAGIC_TOKEN_TTL_MS = 15 * 60 * 1000;   // 15 분
+const MAGIC_LINK_BASE    = 'https://saudade.app/?token=';   // 운영자 도메인 변경 가능
+
+function genToken() {
+    // 32 byte hex token
+    const buf = new Uint8Array(32);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function genUserId() {
+    // 21 char nanoid-like
+    const alphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict';
+    const buf = new Uint8Array(21);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => alphabet[b % alphabet.length]).join('');
+}
+
+function isValidEmail(s) {
+    return typeof s === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) && s.length <= 200;
+}
+
+// POST /auth/request  body: { email }  →  magic link 발송 (또는 응답)
+async function authRequest(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open. Try again later.', 503);
+
+// ─── v7 §9.9 — Dispatch retracts ────────────────────────────────────────────
+// 편집장이 dispatch 를 철회. 30분 이내 archive 삭제, 이후 placeholder.
+
+// POST /dispatches/retract — Bearer EDITOR_TOKEN
+async function dispatchRetract(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const email = clean(body.email, 200).toLowerCase();
+    if (!isValidEmail(email)) return E(req, 'BAD_EMAIL', 'Email looks invalid', 400);
+
+    const token = genToken();
+    const tokenHash = await sha(token);
+    const now = Date.now();
+    const expiresAt = now + MAGIC_TOKEN_TTL_MS;
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO magic_tokens (token_hash, email, created_at, expires_at) VALUES (?, ?, ?, ?)'
+        ).bind(tokenHash, email, now, expiresAt).run();
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Could not request link', 500);
+    }
+
+    const link = MAGIC_LINK_BASE + token;
+
+    // Resend 미설정 — 응답 body 로 link 노출 (베타 / 솔로 파운더 모드)
+    if (!env.RESEND_KEY) {
+        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt });
+    }
+
+    // Resend 이메일 발송
+    try {
+        const r = await fetchT('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + env.RESEND_KEY,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                from:    env.RESEND_FROM || 'Saudade <desk@saudade.app>',
+                to:      [email],
+                subject: 'Sign in to Saudade',
+                text:    `Click to sign in. Link expires in 15 minutes.\n\n${link}\n\n— Saudade`
+            })
+        }, 10000);
+        if (!r.ok) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_failed' });
+        return J(req, { ok: true, mode: 'sent', expires_at: expiresAt });
+    } catch (e) {
+        // 이메일 fallback — 응답 body 로
+        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_offline' });
+    }
+}
+
+// GET /auth/verify?token=XXX  →  user object + 1회용 세션 ID
+async function authVerify(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+
+    const u = new URL(req.url);
+    const token = (u.searchParams.get('token') || '').trim();
+    if (!token || token.length !== 64) return E(req, 'BAD_TOKEN', 'Token invalid', 400);
+
+    const tokenHash = await sha(token);
+    const now = Date.now();
+
+    try {
+        const row = await env.SAUDADE_DB.prepare(
+            'SELECT email, expires_at, used_at FROM magic_tokens WHERE token_hash = ?'
+        ).bind(tokenHash).first();
+
+        if (!row)              return E(req, 'BAD_TOKEN', 'Token not found',  404);
+        if (row.used_at)       return E(req, 'USED_TOKEN','Token already used', 410);
+        if (row.expires_at < now) return E(req, 'EXPIRED', 'Token expired',     410);
+
+        const email = row.email;
+
+        // mark used (single-use)
+        await env.SAUDADE_DB.prepare(
+            'UPDATE magic_tokens SET used_at = ? WHERE token_hash = ?'
+        ).bind(now, tokenHash).run();
+
+        // user 존재 여부 확인 / 신규 생성
+        let user = await env.SAUDADE_DB.prepare(
+            'SELECT id, email, edition, tier, created_at FROM users WHERE email = ?'
+        ).bind(email).first();
+
+        if (!user) {
+            const id = genUserId();
+            await env.SAUDADE_DB.prepare(
+                'INSERT INTO users (id, email, edition, tier, created_at, last_login_at) VALUES (?, ?, ?, ?, ?, ?)'
+            ).bind(id, email, 'en', 'free', now, now).run();
+            user = { id, email, edition: 'en', tier: 'free', created_at: now };
+        } else {
+            await env.SAUDADE_DB.prepare(
+                'UPDATE users SET last_login_at = ? WHERE id = ?'
+            ).bind(now, user.id).run();
+        }
+
+        return J(req, { ok: true, user });
+    } catch (e) {
+        return E(req, 'DB_ERROR', 'Verify failed', 500);
+    }
+}
+    const requested = clean(body.requested_city, 100).toLowerCase();
+    const edition   = clean(body.edition, 8) || 'en';
+    const email     = clean(body.user_email, 200) || null;
+
+    if (!requested) return E(req, 'BAD_CITY', 'City name required', 400);
+
+    const at = Date.now();
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO city_requests (at, requested_city, user_email, edition) VALUES (?, ?, ?, ?)'
+        ).bind(at, requested, email, edition).run();
+
+        const row = await env.SAUDADE_DB.prepare(
+            'SELECT COUNT(*) AS n FROM city_requests WHERE requested_city = ?'
+        ).bind(requested).first();
+        const count = (row && row.n) || 0;
+        const threshold = 100;
+
+        return J(req, {
+            ok: true,
+            requested_city: requested,
+            count,
+            threshold,
+            opens_when: Math.max(0, threshold - count)
+        });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Request failed', 500);
+// ─── v7 §10 — AI Pipeline write/translate/file phases ──────────────────────
+// PR #5 (gather/sort/score) 의 후속. 같은 scheduled() switch 에 inline 되어야 함.
+// 이 파일이 PR #5 와 머지될 때 7 phase 모두 활성화.
+
+const PUBLISH_WEEKDAY_PROMPTS = {
+    1: 'Visa or policy notice. 3 sentences. Magazine tone. Declarative. No "breaking" or "alert". Quote at most 25 words. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    2: 'Museum or gallery announcement. 3-4 sentences. Contemplative. Declarative. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    3: 'City hall notice. 3 sentences. Plain language. No urgency. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    4: 'New cafe / coworking note. 3 sentences. Sensory detail (walls, light, hours). Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}',
+    5: "Editor's photograph note. 2 sentences. First person, restrained. Return ONLY JSON: {\"headline\":\"...\",\"lede\":\"...\",\"body\":\"...\"}",
+    6: 'Quiet news. 3 sentences. Local, small, undramatic. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}'
+};
+const PUBLISH_TARGET_EDITIONS = ['ko','ja','pt','es'];   // 'en' 은 source
+
+function publishLLMRewrite(env) {
+    return async function(text, instructions) {
+        if (!env || !env.GEMINI_KEY) return null;
+        const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + env.GEMINI_KEY;
+        const body = {
+            contents: [{ parts: [{ text: instructions + '\n\nSource:\n' + text }] }],
+            generationConfig: { temperature: 0.4, maxOutputTokens: 600, responseMimeType: 'application/json' }
+        };
+        try {
+            const r = await fetchT(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            }, 18000);
+            if (!r.ok) return null;
+            const j = await r.json();
+            return (((j.candidates || [])[0] || {}).content || {}).parts?.[0]?.text || null;
+        } catch (e) { return null; }
+    };
+}
+
+function parseRewrite(raw) {
+    if (!raw) return null;
+    // Gemini 가 ```json fence 또는 plain JSON 반환 — 둘 다 처리
+    const cleaned = String(raw).replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    try {
+        const o = JSON.parse(cleaned);
+        if (o && typeof o.headline === 'string') return o;
+    } catch (e) {}
+    // Fallback: 첫 줄 = headline, 두 번째 = lede, 나머지 = body
+    const lines = String(raw).split(/\n+/).map(s => s.trim()).filter(Boolean);
+    if (!lines.length) return null;
+    return {
+        headline: lines[0].slice(0, 200),
+        lede:     (lines[1] || '').slice(0, 300),
+        body:     lines.slice(2).join('\n').slice(0, 1000)
+    };
+}
+
+const PUBLISH_FORBIDDEN = ['breaking','urgent','alert','crisis','shocking','tragic','outrage','scandal','controversy'];
+function publishHasForbidden(text) {
+    if (!text) return false;
+    return PUBLISH_FORBIDDEN.some(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+}
+
+// Phase 4: write — top scored unprocessed → Gemini rewrite → INSERT staged (en)
+async function pipelineWrite(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'write', reason: 'no_db' };
+    if (!env.GEMINI_KEY) return { ok: false, phase: 'write', reason: 'no_gemini' };
+    const rewrite = publishLLMRewrite(env);
+    const weekday = ((new Date().getUTCDay() + 9 / 24) | 0) % 7 || 7;   // KST 기준 weekday 1~7 (일=7)
+    const wd = weekday === 7 ? 6 : weekday;   // 일요일은 토요일 프롬프트 fallback (publish 자체 안 함이지만 안전망)
+    const prompt = PUBLISH_WEEKDAY_PROMPTS[wd] || PUBLISH_WEEKDAY_PROMPTS[6];
+    let written = 0, skipped = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            'SELECT id, raw_title, raw_summary, source_url, ai_score, city, weekday_section FROM raw_feeds WHERE processed_at IS NULL AND ai_score >= 5 ORDER BY ai_score DESC LIMIT 12'
+        ).all();
+        const list = (rows && rows.results) || [];
+        const now = Date.now();
+        for (const row of list) {
+            const sourceText = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            const out = await rewrite(sourceText, prompt);
+            const parsed = parseRewrite(out);
+            if (!parsed || publishHasForbidden(parsed.headline + ' ' + parsed.body)) {
+                // 폐기 (재시도 안 함 — 다음 cron 에서 다른 row 처리)
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
+                skipped++;
+                continue;
+            }
+            const totalWords = (parsed.body || '').split(/\s+/).filter(Boolean).length;
+            try {
+                await env.SAUDADE_DB.prepare(
+                    'INSERT INTO dispatches_staged (raw_feed_id, edition, weekday, headline, lede, body, source_name, source_url, ai_score, edited_words, total_words, edited_by_human, status, staged_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+                ).bind(row.id, 'en', wd, parsed.headline, parsed.lede || '', parsed.body || '', null, row.source_url, row.ai_score, 0, totalWords, 0, 'staged', now).run();
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
+                written++;
+            } catch (e) { skipped++; }
+        }
+    } catch (e) { return { ok: false, phase: 'write', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'write', weekday: wd, written, skipped };
+}
+
+// Phase 5: translate — staged en → ko/ja/pt/es fan-out
+async function pipelineTranslate(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'translate', reason: 'no_db' };
+    if (!env.GEMINI_KEY) return { ok: false, phase: 'translate', reason: 'no_gemini' };
+    const rewrite = publishLLMRewrite(env);
+    let translated = 0, failed = 0;
+    try {
+        // 오늘 staged 중 en 만, 아직 다른 에디션 fan-out 안 된 것
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT id, headline, lede, body, weekday, source_url, ai_score, raw_feed_id, total_words FROM dispatches_staged WHERE edition = 'en' AND status = 'staged' ORDER BY staged_at DESC LIMIT 9"
+        ).all();
+        const list = (rows && rows.results) || [];
+        for (const en of list) {
+            for (const targetEd of PUBLISH_TARGET_EDITIONS) {
+                // 이미 fan-out 되었는지 체크
+                const exists = await env.SAUDADE_DB.prepare(
+                    'SELECT id FROM dispatches_staged WHERE raw_feed_id = ? AND edition = ?'
+                ).bind(en.raw_feed_id, targetEd).first();
+                if (exists) continue;
+                const langName = { ko: 'Korean', ja: 'Japanese', pt: 'Portuguese', es: 'Spanish' }[targetEd];
+                const prompt = `Translate from English to ${langName}. Magazine tone, declarative voice (평어체/平叙). Preserve meaning. Return ONLY JSON: {"headline":"...","lede":"...","body":"..."}`;
+                const out = await rewrite(JSON.stringify({ headline: en.headline, lede: en.lede, body: en.body }), prompt);
+                const parsed = parseRewrite(out);
+                if (!parsed) { failed++; continue; }
+                try {
+                    await env.SAUDADE_DB.prepare(
+                        'INSERT INTO dispatches_staged (raw_feed_id, edition, weekday, headline, lede, body, source_name, source_url, ai_score, edited_words, total_words, edited_by_human, status, staged_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+                    ).bind(en.raw_feed_id, targetEd, en.weekday, parsed.headline, parsed.lede || '', parsed.body || '', null, en.source_url, en.ai_score, 0, en.total_words, 0, 'staged', Date.now()).run();
+                    translated++;
+                } catch (e) { failed++; }
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'translate', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'translate', translated, failed };
+}
+
+// Phase 7: file — top 3 staged (en) → published. KST 일요일 skip.
+async function pipelineFile(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'file', reason: 'no_db' };
+    // KST Sunday check (UTC Sat 15:00 ~ Sun 14:59 = KST Sunday)
+    const nowKstDay = (new Date(Date.now() + 9 * 3600 * 1000)).getUTCDay();
+    if (nowKstDay === 0) return { ok: true, phase: 'file', skipped_sunday: true };
+
+    let published = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT id, raw_feed_id FROM dispatches_staged WHERE edition = 'en' AND status = 'staged' ORDER BY ai_score DESC, staged_at DESC LIMIT 3"
+        ).all();
+        const list = (rows && rows.results) || [];
+        const now = Date.now();
+        for (const row of list) {
+            // en 및 동일 raw_feed_id 의 모든 에디션 published 로 전환
+            await env.SAUDADE_DB.prepare(
+                "UPDATE dispatches_staged SET status = 'published', published_at = ? WHERE raw_feed_id = ? AND status = 'staged'"
+            ).bind(now, row.raw_feed_id).run();
+            published++;
+        }
+    } catch (e) { return { ok: false, phase: 'file', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'file', published };
+}
+
+// ─── /dispatches/today endpoint ────────────────────────────────────────────
+// 프런트에서 D1 published 읽기. 정적 dispatches.json fallback 보존.
+async function dispatchesToday(req, env, ctx) {
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
+
+    const k = `dispatches:today:${edition}`;
+    const cached = await cGet(k, env);
+    if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
+
+    try {
+        // KST 자정 ~ 현재 사이 published 만
+        const kstNow = Date.now();
+        const kstMidnight = kstNow - ((kstNow + 9 * 3600 * 1000) % (24 * 3600 * 1000));
+        const rows = await env.SAUDADE_DB.prepare(
+            "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
+        ).bind(edition, kstMidnight).all();
+        const items = ((rows && rows.results) || []).map((r, i) => ({
+            n: String(i + 1).padStart(2, '0'),
+            headline: r.headline,
+            lede: r.lede,
+            body: r.body,
+            source_url: r.source_url,
+            ai_score: r.ai_score
+        }));
+        const body = JSON.stringify({
+            edition,
+            weekday: ((rows && rows.results || [])[0] || {}).weekday || null,
+            published_at: kstMidnight,
+            items
+        });
+        await cPut(k, body, 600, env, ctx);   // 10 min cache
+        return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
+    } catch (e) {
+        return E(req, 'DB_ERROR', 'Read failed', 500);
+    }
+}
+    const dispatchId = clean(body.dispatch_id, 100).toLowerCase();
+    const edition    = clean(body.edition, 8) || 'en';
+    const reason     = clean(body.reason, 500) || null;
+    const editor     = clean(body.editor, 128) || null;
+
+    if (!dispatchId) return E(req, 'BAD_ID', 'dispatch_id required', 400);
+
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            'INSERT INTO dispatch_retracts (dispatch_id, edition, retracted_at, reason, editor) VALUES (?, ?, ?, ?, ?)'
+        ).bind(dispatchId, edition, Date.now(), reason, editor).run();
+        // 캐시 무효화 — 즉시 retract 반영
+        ctx.waitUntil(caches.default.delete(new Request(`https://cache.aura/dispatches:retracted:${edition}`)));
+        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, dispatch_id: dispatchId });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Retract failed', 500);
+    }
+}
+
+// GET /dispatches/retracted?edition=en — public, 24h 내 retract 목록
+async function dispatchesRetracted(req, env, ctx) {
+    if (!env.SAUDADE_DB) return J(req, { ok: true, retracts: [] });   // graceful empty
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+
+    const k = `dispatches:retracted:${edition}`;
+    const cached = await cGet(k, env);
+    if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
+
+    try {
+        const since = Date.now() - 24 * 3600 * 1000;
+        const rows = await env.SAUDADE_DB.prepare(
+            'SELECT dispatch_id, retracted_at FROM dispatch_retracts WHERE edition = ? AND retracted_at >= ? ORDER BY retracted_at DESC LIMIT 50'
+        ).bind(edition, since).all();
+        const items = ((rows && rows.results) || []).map(r => ({
+            dispatch_id: r.dispatch_id,
+            retracted_at: r.retracted_at,
+            age_minutes: Math.floor((Date.now() - r.retracted_at) / 60000)
+        }));
+        const body = JSON.stringify({ ok: true, edition, retracts: items });
+        await cPut(k, body, 60, env, ctx);   // 1 min cache (retract 빠르게 전파)
+        return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
+    } catch (e) {
+        return J(req, { ok: true, retracts: [] });   // graceful — 503 X
+    }
+}

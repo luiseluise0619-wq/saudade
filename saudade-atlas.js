@@ -72,6 +72,8 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 .sdd-atlas-h2 {
     font-family: var(--serif);
     font-weight: 300;
+    font-style: italic;
+    /* v7 §2.2 — 헤드라인 전체 italic */
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);
@@ -119,7 +121,7 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     outline: none;
 }
 .sdd-atlas-search input:focus { border-bottom-color: var(--ink); }
-.sdd-atlas-search input::placeholder { color: var(--bone); }
+.sdd-atlas-search input::placeholder { color: var(--bone-d); }
 .sdd-atlas-q-count {
     font-family: var(--mono);
     font-weight: 400;
@@ -374,6 +376,29 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
     letter-spacing: var(--tr-mono-data);
     color: var(--ink);
 }
+.sdd-atlas-d-foot {
+    margin-top: clamp(40px, 6vw, 80px);
+    padding-top: clamp(16px, 2vw, 24px);
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-atlas-d-disclaimer {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    max-width: 60ch;
+    margin: 0;
+}
+.sdd-atlas-d-disclaimer strong {
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: var(--tr-mono-mast);
+    display: block;
+    margin-bottom: 6px;
+}
 .sdd-atlas-d-toggle {
     background: transparent;
     border: 0.5px solid var(--ink);
@@ -425,10 +450,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 
         const T = window.SAUDADE_T || ((s) => s.en);
         const headLabel = T({
-            en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés'
+            en: 'Cafés', ko: '카페,', ja: 'カフェ、', pt: 'Cafés', es: 'Cafés'
         });
         const headItalic = T({
-            en: 'verified.', ko: '검증된.', ja: '検証ずみ。', pt: 'verificados.', es: 'verificados.'
+            en: 'verified.', ko: '들른 곳.', ja: '訪れた場所。', pt: 'verificados.', es: 'verificados.'
         });
         const visitedLabel = T({
             en: `${visited} of ${total} visited`,
@@ -444,13 +469,26 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             pt: 'BUSCAR NOME · BAIRRO · COMODIDADE',
             es: 'BUSCAR NOMBRE · BARRIO · COMODIDAD'
         });
+        // v7 §8.7 PR1 — LIST/MAP 뷰 토글 (5 에디션)
+        const _curView = root.getAttribute('data-view') || 'list';
+        const toggleLabel = T({
+            en: _curView === 'list' ? 'MAP'  : 'LIST',
+            ko: _curView === 'list' ? '지도' : '목록',
+            ja: _curView === 'list' ? '地図' : '一覧',
+            pt: _curView === 'list' ? 'MAPA' : 'LISTA',
+            es: _curView === 'list' ? 'MAPA' : 'LISTA'
+        });
         const headHtml = `
             <header class="sdd-atlas-head">
                 <h2 class="sdd-atlas-h2">
                     ${escapeHtml(headLabel)}
                     <span class="sdd-atlas-h2-italic">${escapeHtml(headItalic)}</span>
                 </h2>
-                <div class="sdd-atlas-count">${escapeHtml(visitedLabel)}</div>
+                <div class="sdd-atlas-count">
+                    ${escapeHtml(visitedLabel)}
+                    <button type="button" class="sdd-atlas-view-toggle"
+                            data-view-toggle aria-label="Toggle list / map view">${escapeHtml(toggleLabel)}</button>
+                </div>
             </header>
             <div class="sdd-atlas-search">
                 <input type="search" id="sddAtlasQ" placeholder="${escapeHtml(searchPh)}"
@@ -517,10 +555,41 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             </div>
         `;
 
+        // v7 §8.7 PR1 — data-view 속성 first-render 기본값
+        if (!root.hasAttribute('data-view')) root.setAttribute('data-view', 'list');
+
         root.innerHTML = headHtml +
             `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>` +
+            `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
+
+        // v7 §8.7 PR1 — LIST/MAP 토글 핸들러. MAP 첫 진입 시 lazy load.
+        root.querySelector('[data-view-toggle]')?.addEventListener('click', async (e) => {
+            const cur = root.getAttribute('data-view') || 'list';
+            const next = cur === 'list' ? 'map' : 'list';
+            root.setAttribute('data-view', next);
+            // 라벨 즉시 토글 (재렌더 안 함 — search input focus 보존)
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const labels = {
+                en: { list: 'MAP',  map: 'LIST' },
+                ko: { list: '지도', map: '목록' },
+                ja: { list: '地図', map: '一覧' },
+                pt: { list: 'MAPA', map: 'LISTA' },
+                es: { list: 'MAPA', map: 'LISTA' }
+            };
+            e.target.textContent = (labels[ed] || labels.en)[cur];
+            if (next === 'map') {
+                const container = root.querySelector('#sddAtlasMap');
+                try {
+                    await window.SAUDADE_ATLAS_MAP?.initMap(container);
+                } catch (err) {
+                    container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · CHECK CONNECTION</p>';
+                }
+            } else {
+                // LIST 로 돌아갈 때 map 인스턴스는 유지 — 다시 토글하면 같은 상태로
+            }
+        });
 
         // v607 — search input 핸들러 (입력 변화 시 즉시 재렌더, focus 유지)
         const qInput = root.querySelector('#sddAtlasQ');
@@ -564,6 +633,21 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         const lines = Array.isArray(cafe.two_lines) ? cafe.two_lines : [];
         const visited = getVisited()[cafe.id];
 
+        // v7 §8.10 면책 노출 필요 — list footer 와 동일 카피
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const noteTitle = T({
+            en: 'A note on places.', ko: '편집부 메모.',
+            ja: '場所についての覚書。', pt: 'Uma nota sobre os lugares.',
+            es: 'Una nota sobre los lugares.'
+        });
+        const noteBody = T({
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+        });
+
         detail.innerHTML = `
             <header class="sdd-atlas-d-head">
                 <button class="sdd-atlas-d-back" data-d-back>← BACK TO ATLAS</button>
@@ -579,18 +663,23 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             <dl class="sdd-atlas-d-data">
                 <dt>Status</dt>
                 <dd>${status}${visited ? ' · visited ' + new Date(visited).toISOString().slice(0,10) : ''}</dd>
-                <dt>Verified</dt>
-                <dd>${escapeHtml(cafe.verified || '—')}${cafe.source_count ? ' · ' + cafe.source_count + ' sources' : ''}</dd>
+                <dt>Seen</dt>
+                <dd>${cafe.visited_at ? new Date(cafe.visited_at).toISOString().slice(0,10) : 'pending review'}</dd>
                 <dt>Amenities</dt>
                 <dd>${escapeHtml(cafe.amenities || '')}</dd>
-                <dt>Coordinates</dt>
-                <dd>${cafe.lat?.toFixed(4) || '—'}, ${cafe.lng?.toFixed(4) || '—'}</dd>
             </dl>
             <div class="sdd-atlas-d-actions">
                 <button class="sdd-atlas-d-toggle" data-toggle-visit>
                     ${visited ? 'MARK UNVISITED' : 'MARK AS VISITED'}
                 </button>
             </div>
+            <!-- v7 §8.10 — cafe detail 페이지에도 면책 노출 (어디서든 보이게) -->
+            <footer class="sdd-atlas-d-foot">
+                <p class="sdd-atlas-d-disclaimer">
+                    <strong>${escapeHtml(noteTitle)}</strong>
+                    ${escapeHtml(noteBody)}
+                </p>
+            </footer>
         `;
         document.body.classList.add('atlas-detail-open');
 
