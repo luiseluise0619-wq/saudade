@@ -188,7 +188,145 @@ async function sha(s) {
     return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('').slice(0, 32);
 }
 
+// ─── v7 §10 — AI Pipeline cron (Workers scheduled) ──────────────────────────
+// 7 phase 일일 cron — wrangler.toml triggers 에서 시간 설정.
+// gather(00:00) → sort(00:30) → score(02:00) → write(04:00) → translate(05:00)
+//   → stage(05:30) → file(06:00). KST 기준 (cron 은 UTC).
+//
+// 배포 시 wrangler.toml 추가:
+//   [triggers]
+//   crons = ["0 15 * * *","30 15 * * *","0 17 * * *","0 19 * * *","0 20 * * *","30 20 * * *","0 21 * * *"]
+//   [ai]
+//   binding = "AI"
+//
+// D1 schema: schema/ai_pipeline.sql (raw_feeds + dispatches_staged).
+const RSS_PIPELINE_FEEDS = [
+    { url: 'https://www.cidadedelisboa.pt/rss',     city: 'Lisbon', section: 'cityhall' },
+    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml', city: null, section: 'quiet' },
+    { url: 'https://www.tate.org.uk/rss/whats-on',  city: 'London', section: 'museum' }
+];
+const PIPELINE_CITIES = ['Lisbon','Seoul','Tokyo','Osaka','Tbilisi','Berlin','Bangkok','Mexico City','Bali','Buenos Aires','Chiang Mai'];
+const PIPELINE_FORBIDDEN = ['breaking','urgent','alert','crisis','shocking','tragic','outrage','scandal','controversy'];
+
+function pipelineHasForbidden(text) {
+    if (!text) return false;
+    return PIPELINE_FORBIDDEN.some(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
+}
+function pipelineLLM(env) {
+    return {
+        async classify(text, cities) {
+            if (!env || !env.AI) return null;
+            const prompt = `Classify into one of: ${cities.join(', ')}. Return only the city name. If none match, return "none".\n\n${text.slice(0, 600)}`;
+            try {
+                const r = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', { prompt });
+                const out = ((r && r.response) || '').trim();
+                return cities.find(c => out.toLowerCase().includes(c.toLowerCase())) || null;
+            } catch (e) { return null; }
+        },
+        async score(text) {
+            if (!env || !env.AI) return null;
+            const prompt = `Rate quietness/dignity 1-10. 10=magazine tone (Monocle/Kinfolk). 1=breaking-news shouting. Number only.\n\n${text.slice(0, 600)}`;
+            try {
+                const r = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', { prompt });
+                const m = (((r && r.response) || '')).match(/(\d+(?:\.\d+)?)/);
+                return m ? Math.max(0, Math.min(10, parseFloat(m[1]))) : null;
+            } catch (e) { return null; }
+        }
+    };
+}
+async function pipelineGather(env) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'gather', reason: 'no_db' };
+    let added = 0, skipped = 0, failed = 0;
+    for (const feed of RSS_PIPELINE_FEEDS) {
+        try {
+            const r = await fetchT(feed.url, { headers: { 'User-Agent': 'AuraWorldPulse/4.0', 'Accept': 'application/rss+xml,application/xml,text/xml' } }, 12000);
+            if (!r.ok) { failed++; continue; }
+            const text = await r.text();
+            const matches = text.match(/<item[\s\S]*?<\/item>/gi) || [];
+            for (const m of matches.slice(0, 5)) {
+                const t   = (m.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '';
+                const d   = (m.match(/<description[^>]*>([\s\S]*?)<\/description>/i) || [])[1] || '';
+                const pd  = (m.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) || [])[1] || '';
+                const guid= (m.match(/<guid[^>]*>([\s\S]*?)<\/guid>/i) || [])[1] || '';
+                const link= (m.match(/<link[^>]*>([\s\S]*?)<\/link>/i) || [])[1] || '';
+                const it = {
+                    title:   t.replace(/<\/?\w[^>]*>/g, '').trim(),
+                    summary: d.replace(/<\/?\w[^>]*>/g, '').trim().slice(0, 800),
+                    pub:     pd,
+                    url:     (guid || link).trim()
+                };
+                if (!it.title || !it.url) continue;
+                try {
+                    await env.SAUDADE_DB.prepare(
+                        'INSERT OR IGNORE INTO raw_feeds (fetched_at, source_url, raw_title, raw_summary, raw_pub_date, city, weekday_section) VALUES (?, ?, ?, ?, ?, ?, ?)'
+                    ).bind(Date.now(), it.url, it.title, it.summary, Date.parse(it.pub) || null, feed.city || null, feed.section || null).run();
+                    added++;
+                } catch (e) { skipped++; }
+            }
+        } catch (e) { failed++; }
+    }
+    return { ok: true, phase: 'gather', added, skipped, failed, feeds: RSS_PIPELINE_FEEDS.length };
+}
+async function pipelineSort(env, llm) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'sort', reason: 'no_db' };
+    if (!env.AI) return { ok: false, phase: 'sort', reason: 'no_ai' };
+    let updated = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare('SELECT id, raw_title, raw_summary FROM raw_feeds WHERE city IS NULL AND processed_at IS NULL LIMIT 30').all();
+        for (const row of (rows && rows.results) || []) {
+            const text = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            const city = await llm.classify(text, PIPELINE_CITIES);
+            if (city) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET city = ? WHERE id = ?').bind(city, row.id).run();
+                updated++;
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'sort', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'sort', updated };
+}
+async function pipelineScore(env, llm) {
+    if (!env.SAUDADE_DB) return { ok: false, phase: 'score', reason: 'no_db' };
+    if (!env.AI) return { ok: false, phase: 'score', reason: 'no_ai' };
+    let updated = 0;
+    try {
+        const rows = await env.SAUDADE_DB.prepare('SELECT id, raw_title, raw_summary FROM raw_feeds WHERE ai_score IS NULL AND city IS NOT NULL AND processed_at IS NULL LIMIT 30').all();
+        for (const row of (rows && rows.results) || []) {
+            const text = (row.raw_title || '') + '\n' + (row.raw_summary || '');
+            if (pipelineHasForbidden(text)) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET ai_score = 0 WHERE id = ?').bind(row.id).run();
+                updated++; continue;
+            }
+            const score = await llm.score(text);
+            if (score !== null) {
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET ai_score = ? WHERE id = ?').bind(score, row.id).run();
+                updated++;
+            }
+        }
+    } catch (e) { return { ok: false, phase: 'score', reason: 'db_error', error: String(e).slice(0, 200) }; }
+    return { ok: true, phase: 'score', updated };
+}
+async function pipelineStub(phase) { return { ok: true, phase, todo: 'next PR' }; }
+
 export default {
+    async scheduled(event, env, ctx) {
+        const llm = pipelineLLM(env);
+        let result;
+        switch (event.cron) {
+            case '0 15 * * *':  result = await pipelineGather(env); break;
+            case '30 15 * * *': result = await pipelineSort(env, llm); break;
+            case '0 17 * * *':  result = await pipelineScore(env, llm); break;
+            case '0 19 * * *':  result = await pipelineStub('write'); break;
+            case '0 20 * * *':  result = await pipelineStub('translate'); break;
+            case '30 20 * * *': result = await pipelineStub('stage'); break;
+            case '0 21 * * *':  result = await pipelineStub('file'); break;
+            default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+        }
+        if (env.AURA_KV) {
+            try { await env.AURA_KV.put('pipeline:last:' + (event.cron || 'manual'), JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
+        }
+        return result;
+    },
+
     async fetch(req, env, ctx) {
         try {
             const url = new URL(req.url);
