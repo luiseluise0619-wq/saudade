@@ -47,6 +47,8 @@ const RL = {
     '/auth/verify':    { max: 10, win: 60000 },
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
+    '/dispatches/retract':   { max: 30, win: 60000 },
+    '/dispatches/retracted': { max: 60, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -377,6 +379,8 @@ export default {
                 case '/auth/verify':       return authVerify(req, env, ctx);
                 case '/city/request':      return cityRequest(req, env, ctx);
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
+                case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
+                case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -1280,6 +1284,19 @@ async function authRequest(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open. Try again later.', 503);
 
+// ─── v7 §9.9 — Dispatch retracts ────────────────────────────────────────────
+// 편집장이 dispatch 를 철회. 30분 이내 archive 삭제, 이후 placeholder.
+
+// POST /dispatches/retract — Bearer EDITOR_TOKEN
+async function dispatchRetract(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
     let body;
     try { body = await req.json(); }
     catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
@@ -1602,5 +1619,51 @@ async function dispatchesToday(req, env, ctx) {
         return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
     } catch (e) {
         return E(req, 'DB_ERROR', 'Read failed', 500);
+    }
+}
+    const dispatchId = clean(body.dispatch_id, 100).toLowerCase();
+    const edition    = clean(body.edition, 8) || 'en';
+    const reason     = clean(body.reason, 500) || null;
+    const editor     = clean(body.editor, 128) || null;
+
+    if (!dispatchId) return E(req, 'BAD_ID', 'dispatch_id required', 400);
+
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            'INSERT INTO dispatch_retracts (dispatch_id, edition, retracted_at, reason, editor) VALUES (?, ?, ?, ?, ?)'
+        ).bind(dispatchId, edition, Date.now(), reason, editor).run();
+        // 캐시 무효화 — 즉시 retract 반영
+        ctx.waitUntil(caches.default.delete(new Request(`https://cache.aura/dispatches:retracted:${edition}`)));
+        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, dispatch_id: dispatchId });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Retract failed', 500);
+    }
+}
+
+// GET /dispatches/retracted?edition=en — public, 24h 내 retract 목록
+async function dispatchesRetracted(req, env, ctx) {
+    if (!env.SAUDADE_DB) return J(req, { ok: true, retracts: [] });   // graceful empty
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+
+    const k = `dispatches:retracted:${edition}`;
+    const cached = await cGet(k, env);
+    if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
+
+    try {
+        const since = Date.now() - 24 * 3600 * 1000;
+        const rows = await env.SAUDADE_DB.prepare(
+            'SELECT dispatch_id, retracted_at FROM dispatch_retracts WHERE edition = ? AND retracted_at >= ? ORDER BY retracted_at DESC LIMIT 50'
+        ).bind(edition, since).all();
+        const items = ((rows && rows.results) || []).map(r => ({
+            dispatch_id: r.dispatch_id,
+            retracted_at: r.retracted_at,
+            age_minutes: Math.floor((Date.now() - r.retracted_at) / 60000)
+        }));
+        const body = JSON.stringify({ ok: true, edition, retracts: items });
+        await cPut(k, body, 60, env, ctx);   // 1 min cache (retract 빠르게 전파)
+        return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
+    } catch (e) {
+        return J(req, { ok: true, retracts: [] });   // graceful — 503 X
     }
 }

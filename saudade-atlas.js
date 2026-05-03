@@ -72,6 +72,8 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 .sdd-atlas-h2 {
     font-family: var(--serif);
     font-weight: 300;
+    font-style: italic;
+    /* v7 §2.2 — 헤드라인 전체 italic */
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);
@@ -448,10 +450,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 
         const T = window.SAUDADE_T || ((s) => s.en);
         const headLabel = T({
-            en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés'
+            en: 'Cafés', ko: '카페,', ja: 'カフェ、', pt: 'Cafés', es: 'Cafés'
         });
         const headItalic = T({
-            en: 'verified.', ko: '검증된.', ja: '検証ずみ。', pt: 'verificados.', es: 'verificados.'
+            en: 'verified.', ko: '들른 곳.', ja: '訪れた場所。', pt: 'verificados.', es: 'verificados.'
         });
         const visitedLabel = T({
             en: `${visited} of ${total} visited`,
@@ -661,12 +663,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             <dl class="sdd-atlas-d-data">
                 <dt>Status</dt>
                 <dd>${status}${visited ? ' · visited ' + new Date(visited).toISOString().slice(0,10) : ''}</dd>
-                <dt>Verified</dt>
-                <dd>${escapeHtml(cafe.verified || '—')}${cafe.source_count ? ' · ' + cafe.source_count + ' sources' : ''}</dd>
+                <dt>Seen</dt>
+                <dd>${cafe.visited_at ? new Date(cafe.visited_at).toISOString().slice(0,10) : 'pending review'}</dd>
                 <dt>Amenities</dt>
                 <dd>${escapeHtml(cafe.amenities || '')}</dd>
-                <dt>Coordinates</dt>
-                <dd>${cafe.lat?.toFixed(4) || '—'}, ${cafe.lng?.toFixed(4) || '—'}</dd>
             </dl>
             <div class="sdd-atlas-d-actions">
                 <button class="sdd-atlas-d-toggle" data-toggle-visit>

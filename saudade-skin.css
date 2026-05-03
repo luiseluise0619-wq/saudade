@@ -676,8 +676,9 @@ body:not(.cafe-mode) .stage::after {
     body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label { display: none !important; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after { content: 'LEDGER'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after { content: 'ATLAS'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after   { content: 'OVERLAP'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after { content: 'NEXT ISSUE'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after   { content: 'DISPATCHES'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after { content: 'THE DESK'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTENING'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
         font-weight: 500;
@@ -960,7 +961,7 @@ body:not(.cafe-mode) .stage::before {
 
 /* body 자체에 마스트헤드 추가 — top:24 paper에 mono 11px UPPERCASE */
 body:not(.cafe-mode):not(.section-active)::before {
-    content: 'ISSUE 03  ·  § 00 ISSUE COVER  ·  SPRING 2026  ·  P. 01';
+    content: var(--sdd-cover-mast, 'ISSUE 03  ·  § 00 ISSUE COVER  ·  MAR–MAY 2026  ·  P. 01');
     position: fixed;
     top: calc(80px + env(safe-area-inset-top, 0px));
     left: 50%;
@@ -1231,24 +1232,30 @@ body.cafe-mode #sddFooter,
 body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 
 /* 48. 모바일 dock 매거진 식 단순화 (label 간 가운뎃점) */
+/* v7 검토 — 모바일 topbar SETTINGS 숨김 (데스크톱은 유지) */
+@media (max-width: 768px) {
+    .topbar #settingsBtn { display: none !important; }
+}
+
 @media (max-width: 768px) {
     body:not(.cafe-mode) .dock-stats {
         gap: 14px !important;
         padding: 12px 14px !important;
         justify-content: space-around !important;
     }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"] .dock-btn-label::after  { content: 'LEDGER'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"] .dock-btn-label::after  { content: 'ATLAS'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]   .dock-btn-label::after  { content: 'OVERLAP'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"] .dock-btn-label::after  { content: 'NEXT'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label {
-        display: block !important;
-        font-size: 0 !important;
-    }
-    body:not(.cafe-mode) .dock-stats > .dock-btn .dock-btn-label::after {
+    /* v7 모바일 dock 라벨 — .dock-btn 직접 ::after (inner .dock-btn-label 요소 없음) */
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after  { content: 'LEDGER'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after  { content: 'ATLAS'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after    { content: 'DISPATCHES'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after  { content: 'DESK'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTEN'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
+        font-weight: 500;
         font-size: 9px !important;
         letter-spacing: var(--tr-mono-mast);
+        text-transform: uppercase;
+        color: var(--bone-d);
     }
 }
 
