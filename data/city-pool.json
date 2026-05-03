@@ -1,0 +1,47 @@
+{
+    "version": "v8.1",
+    "updated_at": "2026-05-03",
+    "cities": [
+        { "slug": "lisbon",        "names": { "en": "Lisbon",        "ko": "리스본",       "ja": "リスボン",       "pt": "Lisboa",         "es": "Lisboa" },         "iso": "PT" },
+        { "slug": "porto",         "names": { "en": "Porto",         "ko": "포르투",       "ja": "ポルト",         "pt": "Porto",          "es": "Oporto" },         "iso": "PT" },
+        { "slug": "madrid",        "names": { "en": "Madrid",        "ko": "마드리드",     "ja": "マドリード",     "pt": "Madrid",         "es": "Madrid" },         "iso": "ES" },
+        { "slug": "barcelona",     "names": { "en": "Barcelona",     "ko": "바르셀로나",   "ja": "バルセロナ",     "pt": "Barcelona",      "es": "Barcelona" },      "iso": "ES" },
+        { "slug": "berlin",        "names": { "en": "Berlin",        "ko": "베를린",       "ja": "ベルリン",       "pt": "Berlim",         "es": "Berlín" },         "iso": "DE" },
+        { "slug": "tokyo",         "names": { "en": "Tokyo",         "ko": "도쿄",         "ja": "東京",           "pt": "Tóquio",         "es": "Tokio" },          "iso": "JP" },
+        { "slug": "seoul",         "names": { "en": "Seoul",         "ko": "서울",         "ja": "ソウル",         "pt": "Seul",           "es": "Seúl" },           "iso": "KR" },
+        { "slug": "chiang-mai",    "names": { "en": "Chiang Mai",    "ko": "치앙마이",     "ja": "チェンマイ",     "pt": "Chiang Mai",     "es": "Chiang Mai" },     "iso": "TH" },
+        { "slug": "bali",          "names": { "en": "Bali",          "ko": "발리",         "ja": "バリ",           "pt": "Bali",           "es": "Bali" },           "iso": "ID" },
+        { "slug": "da-nang",       "names": { "en": "Da Nang",       "ko": "다낭",         "ja": "ダナン",         "pt": "Da Nang",        "es": "Da Nang" },        "iso": "VN" },
+        { "slug": "mexico-city",   "names": { "en": "Mexico City",   "ko": "멕시코시티",   "ja": "メキシコシティ", "pt": "Cidade do México","es": "Ciudad de México" },"iso": "MX" },
+        { "slug": "medellin",      "names": { "en": "Medellín",      "ko": "메데인",       "ja": "メデジン",       "pt": "Medellín",       "es": "Medellín" },       "iso": "CO" },
+        { "slug": "buenos-aires",  "names": { "en": "Buenos Aires",  "ko": "부에노스아이레스","ja": "ブエノスアイレス","pt": "Buenos Aires",   "es": "Buenos Aires" },   "iso": "AR" },
+        { "slug": "tbilisi",       "names": { "en": "Tbilisi",       "ko": "트빌리시",     "ja": "トビリシ",       "pt": "Tiblíssi",       "es": "Tiflis" },         "iso": "GE" }
+    ],
+    "popular_pairings": [
+        {
+            "id": "iberian-desk",
+            "label": { "en": "The Iberian desk", "ko": "이베리아 책상", "ja": "イベリアの机", "pt": "A redação ibérica", "es": "La mesa ibérica" },
+            "cities": ["lisbon", "porto", "madrid"]
+        },
+        {
+            "id": "southeast-asia-desk",
+            "label": { "en": "The Southeast Asia desk", "ko": "동남아 책상", "ja": "東南アジアの机", "pt": "A redação do sudeste asiático", "es": "La mesa del sudeste asiático" },
+            "cities": ["chiang-mai", "bali", "da-nang"]
+        },
+        {
+            "id": "east-asia-desk",
+            "label": { "en": "The East Asia desk", "ko": "동아시아 책상", "ja": "東アジアの机", "pt": "A redação do leste asiático", "es": "La mesa de Asia oriental" },
+            "cities": ["tokyo", "seoul", "chiang-mai"]
+        },
+        {
+            "id": "latin-america-desk",
+            "label": { "en": "The Latin America desk", "ko": "라틴 아메리카 책상", "ja": "ラテンアメリカの机", "pt": "A redação da América Latina", "es": "La mesa de América Latina" },
+            "cities": ["mexico-city", "medellin", "buenos-aires"]
+        },
+        {
+            "id": "europe-desk",
+            "label": { "en": "The European desk", "ko": "유럽 책상", "ja": "ヨーロッパの机", "pt": "A redação europeia", "es": "La mesa europea" },
+            "cities": ["lisbon", "berlin", "barcelona"]
+        }
+    ]
+}

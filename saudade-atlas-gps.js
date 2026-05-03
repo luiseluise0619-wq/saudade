@@ -706,24 +706,36 @@
     }
 
     function watchAtlasState() {
-        // atlas root 의 data-view 변경 감지 — 첫 로드 시 root 가 늦게 생길 수 있어 폴링
+        // atlas root 의 data-view 변경 감지 — 첫 로드 시 root 가 늦게 생길 수 있어 폴링.
+        // v8 정정 (사용자 "내 위치 여전히 안뜸") — sddAtlasMap 이 생기면 즉시
+        // status badge + locate button 미리 마운트 (MAP 토글 안 해도 DOM 에 존재).
+        // 사용자가 MAP 보면 바로 우측 하단 버튼 노출 → MO/setTimeout 의존 X.
         let observed = false;
         const startObs = setInterval(() => {
             const atlas = document.getElementById('sddAtlas');
-            if (!atlas || observed) return;
+            const mapEl = document.getElementById('sddAtlasMap');
+            if (!atlas) return;
+            // 즉시 마운트 — MAP 토글과 무관하게 DOM 에 존재. CSS 가 list 뷰에선 hide.
+            if (mapEl) {
+                ensureStatusBadge();
+                ensureLocateBtn();
+                renderStatusBadge();
+                renderLocateBtn();
+            }
+            if (observed) return;
             const mo = new MutationObserver(() => {
                 if (atlas.getAttribute('data-view') === 'map') {
-                    setTimeout(onMapOpened, 200);
+                    onMapOpened();   // 즉시 (setTimeout 200ms 제거)
                 }
             });
             mo.observe(atlas, { attributes: true, attributeFilter: ['data-view'] });
             observed = true;
             // 이미 map 뷰면 즉시 트리거
             if (atlas.getAttribute('data-view') === 'map') {
-                setTimeout(onMapOpened, 200);
+                onMapOpened();
             }
             clearInterval(startObs);
-        }, 300);
+        }, 200);
     }
 
     function watchEdition() {
