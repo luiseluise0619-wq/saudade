@@ -578,7 +578,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 pt: { list: 'MAPA', map: 'LISTA' },
                 es: { list: 'MAPA', map: 'LISTA' }
             };
-            e.target.textContent = (labels[ed] || labels.en)[cur];
+            e.target.textContent = (labels[ed] || labels.en)[next];
             if (next === 'map') {
                 const container = root.querySelector('#sddAtlasMap');
                 if (!window.SAUDADE_ATLAS_MAP || !window.SAUDADE_ATLAS_MAP.initMap) {
