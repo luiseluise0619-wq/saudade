@@ -121,7 +121,7 @@
     filter: grayscale(1) contrast(0.92) brightness(1.06) sepia(0.18);
 }
 
-/* MapLibre 컨트롤 잡지 톤 재스타일 (검수 항목 D) — 둥근 모서리 X, 그림자 X */
+/* MapLibre 컨트롤 잡지 톤 재스타일 (v7 검토 정정) — 둥근/그림자 X, +/− 텍스트 명시 */
 .sdd-atlas-map .maplibregl-ctrl-group {
     background: var(--paper);
     border: 0.5px solid var(--rule);
@@ -136,13 +136,30 @@
     width: 36px;
     height: 36px;
     color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 .sdd-atlas-map .maplibregl-ctrl-group button:last-child { border-bottom: 0; }
 .sdd-atlas-map .maplibregl-ctrl-group button:hover     { background: var(--paper-d); }
-.sdd-atlas-map .maplibregl-ctrl-group button:focus     { outline: 1px dotted var(--ink); outline-offset: -3px; }
-.sdd-atlas-map .maplibregl-ctrl-icon {
-    /* 기본 + 아이콘 색을 ink 로 강제 — paper 위 ink 11:1 */
-    filter: brightness(0);
+.sdd-atlas-map .maplibregl-ctrl-group button:focus     { outline: 0.5px solid var(--ink); outline-offset: -3px; }
+
+/* SVG 아이콘 숨기고 명확한 +/− 글리프로 교체 (mock-up "|" "·" 알아보기 X 정정) */
+.sdd-atlas-map .maplibregl-ctrl-icon { display: none; }
+.sdd-atlas-map .maplibregl-ctrl-zoom-in::before  { content: '+'; }
+.sdd-atlas-map .maplibregl-ctrl-zoom-out::before { content: '−'; }
+.sdd-atlas-map .maplibregl-ctrl-zoom-in::before,
+.sdd-atlas-map .maplibregl-ctrl-zoom-out::before {
+    color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    display: block;
 }
 
 /* attribution — 항상 노출 (검수 항목 E, OSM TOS) */
@@ -176,11 +193,16 @@
     border: 0.5px solid var(--rule);
 }
 
-/* MAP/LIST 토글 버튼 — 잡지 톤. 둥근 X, 그림자 X. */
-.sdd-atlas-view-toggle {
+/* MAP/LIST 토글 페어 — 두 라벨 모두 노출, 현재 모드 강조 (v7 검토 정정) */
+.sdd-atlas-view-pair {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-left: 16px;
+}
+.sdd-atlas-view-btn {
     background: transparent;
     border: 0;
-    border-bottom: 0.5px solid var(--rule);
     color: var(--bone-d);
     font-family: var(--mono);
     font-weight: 500;
@@ -188,13 +210,25 @@
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
     cursor: pointer;
-    padding: 6px 10px;
-    margin-left: 16px;
+    padding: 6px 4px;
     min-height: 44px;
     border-radius: 0;
+    border-bottom: 1px solid transparent;
+    transition: color .12s, border-color .12s;
 }
-.sdd-atlas-view-toggle:hover { color: var(--rust); border-bottom-color: var(--rust); }
-.sdd-atlas-view-toggle:focus { outline: 1px dotted var(--ink); outline-offset: 2px; }
+.sdd-atlas-view-btn:hover { color: var(--ink); }
+.sdd-atlas-view-btn:focus { outline: 0.5px solid var(--ink); outline-offset: 2px; }
+.sdd-atlas-view-btn[aria-selected="true"] {
+    color: var(--ink);
+    border-bottom-color: var(--rust);
+}
+.sdd-atlas-view-sep {
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-size: 11px;
+    opacity: 0.5;
+    user-select: none;
+}
 
 /* 로드 실패 안내 — 잡지 톤 */
 .sdd-atlas-map-error {
@@ -217,12 +251,14 @@
 
 @media (max-width: 768px) {
     .sdd-atlas-map { height: calc(100vh - 200px); }
+    /* 모바일은 핀치 줌 우선 — 컨트롤 제거로 화면 정리 (v7 검토 정정) */
+    .sdd-atlas-map .maplibregl-ctrl-top-right { display: none !important; }
 }
 
 /* 검수 항목 F — 인쇄 시 LIST 강제. 지도 무력화. */
 @media print {
     .sdd-atlas-map { display: none !important; }
-    .sdd-atlas-view-toggle { display: none !important; }
+    .sdd-atlas-view-pair { display: none !important; }
     .sdd-atlas[data-view="map"] .sdd-atlas-list,
     .sdd-atlas[data-view="map"] .sdd-atlas-search,
     .sdd-atlas[data-view="map"] .sdd-atlas-foot,

@@ -202,6 +202,25 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     padding-top: clamp(16px, 2vw, 24px);
     border-top: 0.5px solid var(--rule);
 }
+/* v7 검토 정정 — 면책 토글 (기본 접힘, 클릭 시 펼침). 콘텐츠가 압도되지 않게. */
+.sdd-disp-disclaimer-toggle {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 6px 0;
+    transition: color .12s;
+    user-select: none;
+}
+.sdd-disp-disclaimer-toggle::-webkit-details-marker { display: none; }
+.sdd-disp-disclaimer-toggle::marker { content: ''; }
+.sdd-disp-disclaimer-toggle::after { content: ' →'; opacity: .6; }
+.sdd-disp-foot[open] .sdd-disp-disclaimer-toggle::after { content: ' ↓'; opacity: 1; }
+.sdd-disp-disclaimer-toggle:hover { color: var(--ink); }
 .sdd-disp-disclaimer {
     font-family: var(--mono);
     font-weight: 400;
@@ -211,6 +230,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     text-transform: uppercase;
     color: var(--bone-d);
     max-width: 60ch;
+    margin: clamp(12px, 1.5vw, 16px) 0 0;
 }
 .sdd-disp-disclaimer strong {
     font-weight: 500;
@@ -330,7 +350,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     text-align: center;
     padding: clamp(40px, 6vw, 80px) 0;
 }
-
+
 /* v7 §9.5 데일리 디스패치 30% 재작성 (편집자 모드 전용) */
 .sdd-disp-editor {
     font-family: var(--mono);
@@ -376,7 +396,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-disp { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-disp { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
     .sdd-disp-item { grid-template-columns: 32px 1fr; gap: 12px; }
     .sdd-disp-city-head { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
@@ -640,6 +660,13 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             es: 'Cada despacho se reescribe con nuestras propias palabras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. No reeditamos copia de AP, Reuters o Bloomberg. Nunca usamos fotografías que no tomamos nosotros. Los despachos son asistidos por IA y revisados por un editor humano.'
         });
 
+        // v7 검토 정정 — 면책 라벨 (toggle summary)
+        const noteToggleLabel = T({
+            en: 'A note on sources', ko: '출처에 대한 메모',
+            ja: '出典についての覚書', pt: 'Uma nota sobre as fontes',
+            es: 'Una nota sobre las fuentes'
+        });
+
         // 일요일 휴간 (v6 §9.1)
         if (isSundayToday()) {
             root.innerHTML = `
@@ -653,12 +680,12 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                     <p class="sdd-disp-sunday-line">${escapeHtml(W.sundayMsg)}</p>
                     <p class="sdd-disp-sunday-sub">${escapeHtml(W.sundaySub)}</p>
                 </section>
-                <footer class="sdd-disp-foot">
+                <details class="sdd-disp-foot">
+                    <summary class="sdd-disp-disclaimer-toggle">${escapeHtml(noteToggleLabel)}</summary>
                     <p class="sdd-disp-disclaimer">
                         <strong>${escapeHtml(noteTitle)}</strong> ${escapeHtml(noteBody)}
-                        Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. We do not republish AP, Reuters, or Bloomberg copy. We never use photographs we did not take ourselves. Dispatches are AI-assisted and reviewed by a human editor.
                     </p>
-                </footer>
+                </details>
             `;
             return;
         }
@@ -714,11 +741,12 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         ` : '';
 
         const disclaimer = `
-            <footer class="sdd-disp-foot">
+            <details class="sdd-disp-foot">
+                <summary class="sdd-disp-disclaimer-toggle">${escapeHtml(noteToggleLabel)}</summary>
                 <p class="sdd-disp-disclaimer">
                     <strong>${escapeHtml(noteTitle)}</strong> ${escapeHtml(noteBody)}
                 </p>
-            </footer>
+            </details>
         `;
 
         root.innerHTML = headHtml + todayBlock + archiveBlock + disclaimer;

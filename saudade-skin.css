@@ -1240,17 +1240,23 @@ body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 }
 
 @media (max-width: 768px) {
+    /* v7 검토 정정 — 터치 친화 dock 높이 (iOS·Android 표준 49~60px) */
     body:not(.cafe-mode) .dock-stats {
         gap: 14px !important;
-        padding: 12px 14px !important;
+        padding: 16px 14px !important;
         justify-content: space-around !important;
+        min-height: 60px !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn {
+        min-height: 44px !important;
+        padding: 8px 4px !important;
     }
     /* v7 모바일 dock 라벨 — .dock-btn 직접 ::after (inner .dock-btn-label 요소 없음) */
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after  { content: 'LEDGER'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after  { content: 'ATLAS'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after    { content: 'DISPATCHES'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after  { content: 'DESK'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTEN'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTENING'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
         font-weight: 500;

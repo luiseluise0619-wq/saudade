@@ -136,8 +136,58 @@ body.listening-active .sdd-listen { display: block; }
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    scroll-margin-top: 88px;
 }
 .sdd-listen-cat-head:first-of-type { margin-top: clamp(20px, 3vw, 32px); }
+
+/* v7 검토 정정 — 11 카테고리 anchor navigation (가로 스크롤) */
+.sdd-listen-catnav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0 calc(clamp(24px, 6vw, 80px) * -1) clamp(20px, 3vw, 32px);
+    padding: 12px clamp(24px, 6vw, 80px);
+    background: var(--ink);
+    border-bottom: 0.5px solid rgba(242,238,227,.18);
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.sdd-listen-catnav::-webkit-scrollbar { display: none; }
+.sdd-listen-catnav-link {
+    flex: 0 0 auto;
+    background: transparent;
+    border: 0;
+    color: rgba(242,238,227,.55);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .12s, border-color .12s;
+}
+.sdd-listen-catnav-link:hover { color: var(--paper); }
+.sdd-listen-catnav-link:focus { outline: 0.5px solid rgba(242,238,227,.55); outline-offset: 2px; }
+.sdd-listen-catnav-link[aria-current="true"] {
+    color: var(--paper);
+    border-bottom-color: var(--rust);
+}
+@media (max-width: 768px) {
+    .sdd-listen-catnav {
+        margin: 0 -16px clamp(16px, 2vw, 24px);
+        padding: 10px 16px;
+        gap: 14px;
+    }
+}
 .sdd-listen-cat-name {
     font-family: var(--mono);
     font-weight: 500;
@@ -261,43 +311,62 @@ body.listening-active .sdd-listen { display: block; }
     letter-spacing: var(--tr-mono-meta);
     color: rgba(242,238,227,.55);
 }
+/* v7 §11.5 — 1px hairline 슬라이더. 브라우저 기본 fill·accent 강제 제거. */
 .sdd-listen-vol {
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
+    background: transparent !important;
+    accent-color: transparent;
     width: 100px;
-    height: 1px;
-    background: rgba(242,238,227,.3);
+    height: 16px;
     outline: none;
     cursor: pointer;
     border: 0;
     border-radius: 0;
     padding: 0;
     margin: 0 4px;
+    box-sizing: border-box;
+    /* 가운데 1px hairline 만 보이도록 inline gradient (브라우저 progress fill 무력화) */
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 7.5px,
+        rgba(242,238,227,.3) 7.5px,
+        rgba(242,238,227,.3) 8.5px,
+        transparent 8.5px,
+        transparent 16px
+    ) !important;
 }
 .sdd-listen-vol::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    appearance: none;
+    -webkit-appearance: none !important;
+    appearance: none !important;
     height: 1px;
-    background: rgba(242,238,227,.3);
+    background: transparent !important;
     border: 0;
     border-radius: 0;
 }
 .sdd-listen-vol::-moz-range-track {
     height: 1px;
-    background: rgba(242,238,227,.3);
+    background: rgba(242,238,227,.3) !important;
     border: 0;
     border-radius: 0;
 }
+.sdd-listen-vol::-moz-range-progress {
+    background: rgba(242,238,227,.3) !important;
+    height: 1px;
+}
 .sdd-listen-vol::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
+    -webkit-appearance: none !important;
+    appearance: none !important;
     width: 8px;
     height: 8px;
     background: var(--paper);
     border-radius: 50%;
     cursor: pointer;
     margin-top: -3.5px;
+    border: 0;
+    box-shadow: none;
 }
 .sdd-listen-vol::-moz-range-thumb {
     width: 8px;
@@ -306,6 +375,7 @@ body.listening-active .sdd-listen { display: block; }
     border-radius: 50%;
     border: 0;
     cursor: pointer;
+    box-shadow: none;
 }
 .sdd-listen-vol-num {
     font-family: var(--mono);
@@ -359,7 +429,7 @@ body.listening-active .sdd-listen { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-listen { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-listen { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
     .sdd-listen-track {
         grid-template-columns: 60px 1fr;
         gap: 12px;
@@ -673,6 +743,8 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             counts[c] = (counts[c] || 0) + 1;
         }
 
+        const catSlug = (c) => 'cat-' + (c || 'other').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
         let lastCat = null;
         const tracksHtml = tracks.map((t, i) => {
             const dur = t.duration_minutes ? `${t.duration_minutes} MIN` : '';
@@ -685,7 +757,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             if (cat !== lastCat) {
                 const n = counts[cat];
                 prefix = `
-                    <header class="sdd-listen-cat-head">
+                    <header class="sdd-listen-cat-head" id="${catSlug(cat)}">
                         <span class="sdd-listen-cat-name">${escapeHtml(cat)}</span>
                         <span class="sdd-listen-cat-count">${String(n).padStart(2, '0')} ${n === 1 ? 'TRACK' : 'TRACKS'}</span>
                     </header>
@@ -748,6 +820,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             es: 'BIBLIOTECA ASMR'
         });
 
+        // v7 검토 정정 — 11 카테고리 anchor nav (가로 스크롤)
+        const catNavHtml = categoriesInOrder.length > 1 ? `
+            <nav class="sdd-listen-catnav" aria-label="Jump to category">
+                ${categoriesInOrder.map((cat, idx) => `
+                    <button type="button" class="sdd-listen-catnav-link"
+                            data-jump-cat="${catSlug(cat)}"
+                            aria-current="${idx === 0}">${escapeHtml(cat)}</button>
+                `).join('')}
+            </nav>
+        ` : '';
+
         root.innerHTML = `
             <button class="sdd-listen-back" data-listen-back>${escapeHtml(backLabel)}</button>
             <header class="sdd-listen-head">
@@ -757,6 +840,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 </h2>
                 <p class="sdd-listen-meta">${escapeHtml(libraryLabel)} · ${escapeHtml(tracksLabel)} · ${escapeHtml(categoriesLabel)}</p>
             </header>
+            ${catNavHtml}
             ${tracksHtml}
             <footer class="sdd-listen-foot">
                 <p>
@@ -783,6 +867,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         `;
 
         root.querySelector('[data-listen-back]')?.addEventListener('click', () => close());
+
+        // v7 검토 정정 — 카테고리 anchor 점프
+        root.querySelectorAll('[data-jump-cat]').forEach(link => {
+            link.addEventListener('click', () => {
+                const id = link.getAttribute('data-jump-cat');
+                const target = id && root.querySelector('#' + CSS.escape(id));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                root.querySelectorAll('[data-jump-cat]').forEach(l => l.setAttribute('aria-current', 'false'));
+                link.setAttribute('aria-current', 'true');
+            });
+        });
 
         // 트랙 클릭 = 재생 시작
         root.querySelectorAll('[data-track-idx]').forEach(el => {
@@ -861,7 +956,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         ensureCoverCTA();
         load().then(render);
         watchEsc();
-        // v7 §6 — � 05 dock 버튼 (5탭). cover CTA 와 병행.
+        // v7 §6 — � 05 dock 버튼 (5탭). cover CTA 와 병행.
         document.addEventListener('click', (e) => {
             const btn = e.target.closest && e.target.closest('.dock-btn[data-cat="listen"]');
             if (btn) { e.preventDefault(); open(); }
