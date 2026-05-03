@@ -23,6 +23,15 @@
     }
 
     // 메인 SVG 빌더 — 14개 macro rings 또는 8개 meso rings
+    function injectMobileStyles() {
+        if (document.getElementById('sddRingsMobileStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'sddRingsMobileStyles';
+        s.textContent = '@media (max-width: 768px) { .sdd-rings-svg, [data-sdd-rings] { opacity: 0.35 !important; } }';
+        document.head.appendChild(s);
+    }
+    injectMobileStyles();
+
     function buildSvg(scale, origin) {
         const w = 1600, h = 1200;     // viewBox — 16:12 매거진 비율
         const { cx, cy } = originXY(origin, w, h);
@@ -38,6 +47,7 @@
         svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
         svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
         svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('data-sdd-rings', '');
         svg.style.cssText = [
             'position:fixed', 'inset:0',
             'width:100%', 'height:100%',
