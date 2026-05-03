@@ -193,7 +193,8 @@
     border: 0.5px solid var(--rule);
 }
 
-/* MAP/LIST 토글 페어 — 두 라벨 모두 노출, 현재 모드 강조 (v7 검토 정정) */
+/* MAP/LIST 토글 페어 — 두 라벨 모두 노출, 현재 모드 강조 (v7 검토 정정).
+   global button:not(...) 규칙이 box border 강제하므로 !important 명시. */
 .sdd-atlas-view-pair {
     display: inline-flex;
     align-items: baseline;
@@ -201,26 +202,26 @@
     margin-left: 16px;
 }
 .sdd-atlas-view-btn {
-    background: transparent;
-    border: 0;
-    color: var(--bone-d);
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid transparent !important;
+    color: var(--bone-d) !important;
     font-family: var(--mono);
     font-weight: 500;
     font-size: 11px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
     cursor: pointer;
-    padding: 6px 4px;
+    padding: 6px 4px !important;
     min-height: 44px;
-    border-radius: 0;
-    border-bottom: 1px solid transparent;
+    border-radius: 0 !important;
     transition: color .12s, border-color .12s;
 }
-.sdd-atlas-view-btn:hover { color: var(--ink); }
+.sdd-atlas-view-btn:hover { color: var(--ink) !important; border-color: transparent !important; }
 .sdd-atlas-view-btn:focus { outline: 0.5px solid var(--ink); outline-offset: 2px; }
 .sdd-atlas-view-btn[aria-selected="true"] {
-    color: var(--ink);
-    border-bottom-color: var(--rust);
+    color: var(--ink) !important;
+    border-bottom: 1px solid var(--rust) !important;
 }
 .sdd-atlas-view-sep {
     color: var(--bone-d);

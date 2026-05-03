@@ -381,6 +381,8 @@ export default {
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
+                case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
+                case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -1665,5 +1667,106 @@ async function dispatchesRetracted(req, env, ctx) {
         return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
     } catch (e) {
         return J(req, { ok: true, retracts: [] });   // graceful — 503 X
+    }
+}
+
+// ─── /admin/rss-sources ────────────────────────────────────────────────
+// GET  ?city=  → 출처 목록 (편집부 검토 대시보드용). Bearer EDITOR_TOKEN 필수.
+// PATCH body: { id, rss_url?, terms_status?, terms_notes?, active? }
+//   → 운영자가 사이트 검증 후 RSS URL / 약관 상태 / 활성화 갱신.
+// 절대 INSERT/DELETE 안 함 — 시드는 data/rss-sources-seed.sql 통해서만 추가.
+async function adminRssSources(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
+    if (req.method === 'GET') {
+        const url = new URL(req.url);
+        const city = (url.searchParams.get('city') || '').toLowerCase();
+        try {
+            const stmt = city
+                ? env.SAUDADE_DB.prepare(
+                    `SELECT id, city_slug, source_name, site_url, rss_url, weekday_section,
+                            license_type, terms_status, terms_notes, last_verified,
+                            last_fetch_at, last_fetch_ok, fetch_error, active, created_at
+                     FROM rss_sources WHERE city_slug = ? ORDER BY weekday_section, source_name`
+                  ).bind(city)
+                : env.SAUDADE_DB.prepare(
+                    `SELECT id, city_slug, source_name, site_url, rss_url, weekday_section,
+                            license_type, terms_status, terms_notes, last_verified,
+                            last_fetch_at, last_fetch_ok, fetch_error, active, created_at
+                     FROM rss_sources ORDER BY city_slug, weekday_section, source_name`
+                  );
+            const rows = await stmt.all();
+            return J(req, { ok: true, sources: (rows && rows.results) || [] });
+        } catch (e) {
+            return E(req, 'DB_QUERY', 'Query failed', 500);
+        }
+    }
+
+    if (req.method === 'PATCH') {
+        let body;
+        try { body = await req.json(); }
+        catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+        const id = parseInt(body.id, 10);
+        if (!Number.isFinite(id) || id < 1) return E(req, 'BAD_ID', 'id required', 400);
+
+        const updates = [];
+        const values = [];
+        if (body.rss_url !== undefined) {
+            const u = String(body.rss_url || '').trim();
+            if (u && !/^https?:\/\//i.test(u)) return E(req, 'BAD_URL', 'rss_url must be http(s)', 400);
+            updates.push('rss_url = ?'); values.push(u || null);
+        }
+        if (body.terms_status !== undefined) {
+            const s = String(body.terms_status || '').toLowerCase();
+            if (!['pending', 'approved', 'rejected'].includes(s)) {
+                return E(req, 'BAD_STATUS', 'terms_status must be pending|approved|rejected', 400);
+            }
+            updates.push('terms_status = ?'); values.push(s);
+        }
+        if (body.terms_notes !== undefined) {
+            updates.push('terms_notes = ?'); values.push(String(body.terms_notes || '').slice(0, 2000));
+        }
+        if (body.active !== undefined) {
+            updates.push('active = ?'); values.push(body.active ? 1 : 0);
+        }
+        if (!updates.length) return E(req, 'NO_FIELDS', 'No update fields', 400);
+        updates.push('last_verified = ?'); values.push(Date.now());
+        values.push(id);
+
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                `UPDATE rss_sources SET ${updates.join(', ')} WHERE id = ?`
+            ).bind(...values).run();
+            return J(req, { ok: true, id, changed: r.meta && r.meta.changes });
+        } catch (e) {
+            return E(req, 'DB_UPDATE', 'Update failed', 500);
+        }
+    }
+
+    return E(req, 'METHOD', 'GET or PATCH required', 405);
+}
+
+// GET /admin/rss-forbidden — 금지 출처 목록 (조회만, 시드 통해서만 추가)
+async function adminRssForbidden(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            `SELECT id, domain_pattern, reason, notes, created_at
+             FROM forbidden_sources ORDER BY reason, domain_pattern`
+        ).all();
+        return J(req, { ok: true, forbidden: (rows && rows.results) || [] });
+    } catch (e) {
+        return E(req, 'DB_QUERY', 'Query failed', 500);
     }
 }

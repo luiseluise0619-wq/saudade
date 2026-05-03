@@ -110,10 +110,130 @@ async function runCronJob(event, env, ctx) {
     }
 }
 
-// 각 phase — 스텁 (실제 구현은 점진적으로)
+// ─── RSS sources / forbidden 로더 (v7 §3 / §9.3) ───────────────────────
+// gather() 가 D1 의 rss_sources WHERE active=1 AND terms_status='approved'
+// AND rss_url IS NOT NULL 만 조회. forbidden_sources 도메인은 raw_feeds INSERT 전 차단.
+
+async function loadActiveSources(db) {
+    if (!db) return [];
+    try {
+        const r = await db.prepare(
+            `SELECT id, city_slug, source_name, rss_url, weekday_section, license_type
+             FROM rss_sources
+             WHERE active = 1 AND terms_status = 'approved' AND rss_url IS NOT NULL`
+        ).all();
+        return (r && r.results) || [];
+    } catch (e) { return []; }
+}
+
+async function loadForbiddenDomains(db) {
+    if (!db) return [];
+    try {
+        const r = await db.prepare(
+            `SELECT domain_pattern FROM forbidden_sources`
+        ).all();
+        return ((r && r.results) || []).map(row => String(row.domain_pattern || '').toLowerCase());
+    } catch (e) { return []; }
+}
+
+function isUrlForbidden(url, forbiddenList) {
+    if (!url || !forbiddenList || !forbiddenList.length) return false;
+    let host = '';
+    try { host = new URL(url).hostname.toLowerCase(); } catch (e) { return false; }
+    return forbiddenList.some(pat => host === pat || host.endsWith('.' + pat));
+}
+
+// ─── 미니 RSS 파서 (의존성 X — Workers 환경) ────────────────────────
+// rss-parser 는 Workers 호환 X. RSS 2.0 / Atom 1.0 핵심 필드만 정규식 추출.
+// 큰 spec X — title / link / pubDate / description 만.
+
+function parseFeedXml(xml) {
+    if (!xml || typeof xml !== 'string') return [];
+    const items = [];
+    // <item>...</item> (RSS) 또는 <entry>...</entry> (Atom)
+    const itemRe = /<(item|entry)\b[\s\S]*?<\/\1>/gi;
+    let m;
+    while ((m = itemRe.exec(xml)) !== null) {
+        const block = m[0];
+        const pick = (tag) => {
+            const re = new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i');
+            const mm = block.match(re);
+            if (!mm) return '';
+            return mm[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim();
+        };
+        const link = (() => {
+            const linkText = pick('link');
+            if (linkText && /^https?:/i.test(linkText)) return linkText;
+            // Atom: <link href="..."/>
+            const atomMatch = block.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*\/?>/i);
+            return atomMatch ? atomMatch[1] : '';
+        })();
+        const title = pick('title').replace(/<[^>]+>/g, '');
+        const summary = (pick('description') || pick('summary') || pick('content')).replace(/<[^>]+>/g, '').slice(0, 1000);
+        const pubDate = pick('pubDate') || pick('published') || pick('updated');
+        const pubMs = pubDate ? Date.parse(pubDate) : 0;
+        if (link && title) {
+            items.push({ title, link, summary, pub_ms: Number.isFinite(pubMs) ? pubMs : 0 });
+        }
+    }
+    return items;
+}
+
+// 각 phase — 점진적 구현 (스텁에서 D1 통합으로 단계 이전)
 async function gather(env, ctx) {
-    // TODO: rss-parser 로 RSS_FEEDS 모아 raw_feeds INSERT
-    return { ok: true, phase: 'gather', count: 0, todo: true };
+    if (!env || !env.SAUDADE_DB) return { ok: false, phase: 'gather', reason: 'no_db' };
+    const db = env.SAUDADE_DB;
+    const sources = await loadActiveSources(db);
+    const forbidden = await loadForbiddenDomains(db);
+    if (!sources.length) {
+        return { ok: true, phase: 'gather', count: 0, sources: 0, note: 'no active rss_sources — operator setup pending' };
+    }
+    const now = Date.now();
+    let inserted = 0, blocked = 0, errors = 0;
+
+    for (const src of sources) {
+        let xml = '';
+        try {
+            const r = await fetch(src.rss_url, {
+                headers: { 'User-Agent': 'Saudade/1.0 (+https://saudade.app/about)' },
+                cf: { cacheTtl: 0 }
+            });
+            if (!r.ok) {
+                await db.prepare(
+                    `UPDATE rss_sources SET last_fetch_at=?, last_fetch_ok=0, fetch_error=? WHERE id=?`
+                ).bind(now, 'HTTP ' + r.status, src.id).run();
+                errors++;
+                continue;
+            }
+            xml = await r.text();
+        } catch (e) {
+            await db.prepare(
+                `UPDATE rss_sources SET last_fetch_at=?, last_fetch_ok=0, fetch_error=? WHERE id=?`
+            ).bind(now, String(e && e.message || e).slice(0, 200), src.id).run();
+            errors++;
+            continue;
+        }
+
+        const items = parseFeedXml(xml).slice(0, 20);   // per-feed cap
+        for (const it of items) {
+            if (isUrlForbidden(it.link, forbidden)) { blocked++; continue; }
+            try {
+                await db.prepare(
+                    `INSERT OR IGNORE INTO raw_feeds
+                        (fetched_at, source_url, raw_title, raw_summary, raw_pub_date, city, weekday_section)
+                     VALUES (?, ?, ?, ?, ?, ?, ?)`
+                ).bind(
+                    now, it.link, it.title, it.summary,
+                    it.pub_ms || now, src.city_slug, src.weekday_section
+                ).run();
+                inserted++;
+            } catch (e) { /* dedup unique constraint or other — skip */ }
+        }
+        await db.prepare(
+            `UPDATE rss_sources SET last_fetch_at=?, last_fetch_ok=1, fetch_error=NULL WHERE id=?`
+        ).bind(now, src.id).run();
+    }
+    return { ok: true, phase: 'gather', sources: sources.length, inserted, blocked, errors };
 }
 async function sort(env, ctx, llm) {
     // TODO: SELECT raw_feeds WHERE city IS NULL → llm.classify → UPDATE
