@@ -40,6 +40,7 @@ const RL = {
     '/cities/locked':  { max: 30, win: 60000 },
     '/ai-trip':        { max: 10, win: 60000 },
     '/coworking':      { max: 30, win: 60000 },
+    '/city/request':   { max: 5,  win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -225,6 +226,7 @@ export default {
                     return E(req, 'GONE_FREE_MODE', 'Subscription disabled — app is free', 410);
                 case '/ai-trip':           return aiTrip(req, env, ctx);
                 case '/coworking':         return coworking(req, env, ctx);
+                case '/city/request':      return cityRequest(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -960,4 +962,45 @@ async function coworking(req, env, ctx) {
         await cPut(k, text, 86400, env, ctx);
         return new Response(text, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS', 'Content-Type': 'application/json; charset=utf-8' }) });
     } catch { return E(req, 'FETCH_FAIL', 'Overpass error', 502); }
+}
+
+// ─── v7 §5.5 — City requests ─────────────────────────────────────────────
+// "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.
+// D1 INSERT + 응답에 현재 카운트 포함.
+async function cityRequest(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Requests not yet open.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const requested = clean(body.requested_city, 100).toLowerCase();
+    const edition   = clean(body.edition, 8) || 'en';
+    const email     = clean(body.user_email, 200) || null;
+
+    if (!requested) return E(req, 'BAD_CITY', 'City name required', 400);
+
+    const at = Date.now();
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO city_requests (at, requested_city, user_email, edition) VALUES (?, ?, ?, ?)'
+        ).bind(at, requested, email, edition).run();
+
+        const row = await env.SAUDADE_DB.prepare(
+            'SELECT COUNT(*) AS n FROM city_requests WHERE requested_city = ?'
+        ).bind(requested).first();
+        const count = (row && row.n) || 0;
+        const threshold = 100;
+
+        return J(req, {
+            ok: true,
+            requested_city: requested,
+            count,
+            threshold,
+            opens_when: Math.max(0, threshold - count)
+        });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Request failed', 500);
+    }
 }
