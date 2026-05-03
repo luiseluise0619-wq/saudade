@@ -42,7 +42,7 @@ database_id = "0eaf0d89-ec73-4d00-aace-34f385e89c03"
 
 # v7 §10.1 — 일일 cron triggers (KST 기준 → UTC -9h). D1 활성 후 운영자가
 # 시드된 rss_sources 를 검증·active=1 로 켜야 gather() 가 실제 fetch 시작.
- [triggers]
+[triggers]
  crons = [
    "0 15 * * *",     # 00:00 KST  Gather   (RSS → raw_feeds)
    "30 15 * * *",    # 00:30 KST  Sort     (Workers AI 도시 분류)
