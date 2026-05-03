@@ -43,6 +43,8 @@ const RL = {
     '/editor/leave-status': { max: 60, win: 60000 },
     '/editor/log':          { max: 30, win: 60000 },
     '/cafe/submit':         { max: 5,  win: 60000 },
+    '/auth/request':   { max: 5,  win: 60000 },
+    '/auth/verify':    { max: 10, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -231,6 +233,8 @@ export default {
                 case '/editor/leave-status': return editorLeaveStatus(req, env, ctx);
                 case '/editor/log':          return editorLog(req, env, ctx);
                 case '/cafe/submit':         return cafeSubmit(req, env, ctx);
+                case '/auth/request':      return authRequest(req, env, ctx);
+                case '/auth/verify':       return authVerify(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -1093,5 +1097,138 @@ async function cafeSubmit(req, env, ctx) {
         return J(req, { ok: true, id: r.meta && r.meta.last_row_id, at, status: 'queued' });
     } catch (e) {
         return E(req, 'DB_INSERT', 'Submission failed', 500);
+    }
+}
+
+// ─── v7 §13 — Auth (Magic Link) ────────────────────────────────────────────
+// 이메일만. Lucia-style 토큰 (단일 사용 · 15분 유효). 비밀번호 0건.
+// 무료 인프라: D1 (토큰 + 사용자) + Resend (이메일, 옵션). RESEND_KEY 미설정 시
+// 응답 body 에 magic link 노출 — 솔로 파운더 / 베타 단계 fallback.
+
+const MAGIC_TOKEN_TTL_MS = 15 * 60 * 1000;   // 15 분
+const MAGIC_LINK_BASE    = 'https://saudade.app/?token=';   // 운영자 도메인 변경 가능
+
+function genToken() {
+    // 32 byte hex token
+    const buf = new Uint8Array(32);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function genUserId() {
+    // 21 char nanoid-like
+    const alphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict';
+    const buf = new Uint8Array(21);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => alphabet[b % alphabet.length]).join('');
+}
+
+function isValidEmail(s) {
+    return typeof s === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) && s.length <= 200;
+}
+
+// POST /auth/request  body: { email }  →  magic link 발송 (또는 응답)
+async function authRequest(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open. Try again later.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const email = clean(body.email, 200).toLowerCase();
+    if (!isValidEmail(email)) return E(req, 'BAD_EMAIL', 'Email looks invalid', 400);
+
+    const token = genToken();
+    const tokenHash = await sha(token);
+    const now = Date.now();
+    const expiresAt = now + MAGIC_TOKEN_TTL_MS;
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO magic_tokens (token_hash, email, created_at, expires_at) VALUES (?, ?, ?, ?)'
+        ).bind(tokenHash, email, now, expiresAt).run();
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Could not request link', 500);
+    }
+
+    const link = MAGIC_LINK_BASE + token;
+
+    // Resend 미설정 — 응답 body 로 link 노출 (베타 / 솔로 파운더 모드)
+    if (!env.RESEND_KEY) {
+        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt });
+    }
+
+    // Resend 이메일 발송
+    try {
+        const r = await fetchT('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + env.RESEND_KEY,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                from:    env.RESEND_FROM || 'Saudade <desk@saudade.app>',
+                to:      [email],
+                subject: 'Sign in to Saudade',
+                text:    `Click to sign in. Link expires in 15 minutes.\n\n${link}\n\n— Saudade`
+            })
+        }, 10000);
+        if (!r.ok) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_failed' });
+        return J(req, { ok: true, mode: 'sent', expires_at: expiresAt });
+    } catch (e) {
+        // 이메일 fallback — 응답 body 로
+        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_offline' });
+    }
+}
+
+// GET /auth/verify?token=XXX  →  user object + 1회용 세션 ID
+async function authVerify(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+
+    const u = new URL(req.url);
+    const token = (u.searchParams.get('token') || '').trim();
+    if (!token || token.length !== 64) return E(req, 'BAD_TOKEN', 'Token invalid', 400);
+
+    const tokenHash = await sha(token);
+    const now = Date.now();
+
+    try {
+        const row = await env.SAUDADE_DB.prepare(
+            'SELECT email, expires_at, used_at FROM magic_tokens WHERE token_hash = ?'
+        ).bind(tokenHash).first();
+
+        if (!row)              return E(req, 'BAD_TOKEN', 'Token not found',  404);
+        if (row.used_at)       return E(req, 'USED_TOKEN','Token already used', 410);
+        if (row.expires_at < now) return E(req, 'EXPIRED', 'Token expired',     410);
+
+        const email = row.email;
+
+        // mark used (single-use)
+        await env.SAUDADE_DB.prepare(
+            'UPDATE magic_tokens SET used_at = ? WHERE token_hash = ?'
+        ).bind(now, tokenHash).run();
+
+        // user 존재 여부 확인 / 신규 생성
+        let user = await env.SAUDADE_DB.prepare(
+            'SELECT id, email, edition, tier, created_at FROM users WHERE email = ?'
+        ).bind(email).first();
+
+        if (!user) {
+            const id = genUserId();
+            await env.SAUDADE_DB.prepare(
+                'INSERT INTO users (id, email, edition, tier, created_at, last_login_at) VALUES (?, ?, ?, ?, ?, ?)'
+            ).bind(id, email, 'en', 'free', now, now).run();
+            user = { id, email, edition: 'en', tier: 'free', created_at: now };
+        } else {
+            await env.SAUDADE_DB.prepare(
+                'UPDATE users SET last_login_at = ? WHERE id = ?'
+            ).bind(now, user.id).run();
+        }
+
+        return J(req, { ok: true, user });
+    } catch (e) {
+        return E(req, 'DB_ERROR', 'Verify failed', 500);
     }
 }
