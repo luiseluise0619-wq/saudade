@@ -516,7 +516,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     border-top: 0.5px solid var(--rule);
     margin: 0;
 }
-.sdd-ld-empty-actions li:last-child { border-bottom: 0.5px solid var(--rule); }
+/* 마지막 항목 border-bottom 없음 — 잡지 리스트 분리선만 (박스 X) */
 .sdd-ld-empty-btn {
     background: transparent;
     border: 0;
@@ -602,7 +602,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-ledger { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-ledger { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-ld-dday { grid-template-columns: 1fr; gap: 16px; }
     .sdd-ld-dday-num { text-align: left; font-size: clamp(64px, 18vw, 96px); }
     .sdd-ld-dday-unit { text-align: left; }

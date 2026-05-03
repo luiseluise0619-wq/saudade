@@ -232,7 +232,7 @@
 }
 
 @media (max-width: 768px) {
-    .sdd-deskadm { padding: 72px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-deskadm { padding: 72px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-deskadm-mast { padding: 14px 16px 8px; font-size: 9px; }
     .sdd-deskadm-item { grid-template-columns: 32px 1fr; gap: 8px; }
     .sdd-deskadm-actions { grid-column: 1 / -1; flex-direction: row; border-left: 0; padding-left: 0; border-top: 0.5px solid var(--rule); padding-top: 8px; }

@@ -368,7 +368,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-qdisp { padding: 72px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-qdisp { padding: 72px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-qdisp-mast { padding: 14px 16px 8px; font-size: 9px; flex-wrap: wrap; gap: 6px; }
     .sdd-qdisp-mast-issue, .sdd-qdisp-mast-page { display: none; }
     .sdd-qdisp-item { grid-template-columns: 32px 1fr; gap: 12px; }

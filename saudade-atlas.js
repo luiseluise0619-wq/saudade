@@ -103,24 +103,26 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     align-items: center;
     gap: 12px;
 }
+/* v7 검토 정정 — global input rule (saudade-skin.css:268) 이 4면 box border 강제하므로
+   !important 로 hairline border-bottom only 강제. */
 .sdd-atlas-search input {
     flex: 1;
-    background: transparent;
-    border: 0;
-    border-bottom: 0.5px solid var(--rule);
-    color: var(--ink);
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid var(--rule) !important;
+    color: var(--ink) !important;
     font-family: var(--mono);
     font-weight: 400;
     font-size: 11px;
     line-height: 1.4;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    padding: 14px 0;
-    border-radius: 0;
+    padding: 14px 0 !important;
+    border-radius: 0 !important;
     min-height: 44px;
     outline: none;
 }
-.sdd-atlas-search input:focus { border-bottom-color: var(--ink); }
+.sdd-atlas-search input:focus { border-bottom-color: var(--ink) !important; }
 .sdd-atlas-search input::placeholder { color: var(--bone-d); }
 .sdd-atlas-q-count {
     font-family: var(--mono);
@@ -144,9 +146,8 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 /* v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때) */
 .sdd-atlas-empty-state {
-    padding: clamp(32px, 5vw, 56px) 0;
-    margin: 0 0 clamp(24px, 4vw, 40px);
-    border-bottom: 0.5px solid var(--rule);
+    padding: clamp(16px, 2vw, 24px) 0;
+    margin: 0 0 clamp(20px, 3vw, 32px);
 }
 .sdd-atlas-empty-h3 {
     font-family: var(--serif);
@@ -179,7 +180,7 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     border-top: 0.5px solid var(--rule);
     margin: 0;
 }
-.sdd-atlas-empty-actions li:last-child { border-bottom: 0.5px solid var(--rule); }
+/* 마지막 항목 border-bottom 없음 — 잡지 리스트 분리선만 (박스 X) */
 .sdd-atlas-empty-btn {
     background: transparent;
     border: 0;
@@ -328,7 +329,21 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-atlas { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-atlas { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
+    /* v7 검토 정정 — mobile head 세로 스택, count + toggle 한 행에 노출 */
+    .sdd-atlas-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .sdd-atlas-count {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        white-space: normal;
+    }
+    .sdd-atlas-view-pair { margin-left: 0; }
     .sdd-atlas-item {
         grid-template-columns: 16px 1fr;
         grid-template-areas:
@@ -474,7 +489,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 .sdd-atlas-d-toggle:hover { background: var(--ink); color: var(--paper); }
 
 @media (max-width: 768px) {
-    .sdd-atlas-detail { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-atlas-detail { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-atlas-d-data { grid-template-columns: 1fr; gap: 4px 0; }
     .sdd-atlas-d-data dd { margin-bottom: 12px; }
 }

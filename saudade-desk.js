@@ -184,7 +184,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-desk { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-desk { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-desk-step {
         grid-template-columns: 1fr;
         gap: 4px;

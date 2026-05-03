@@ -455,7 +455,7 @@ body.listening-active .sdd-listen { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-listen { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-listen { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-listen-track {
         grid-template-columns: 60px 1fr;
         gap: 12px;

@@ -396,7 +396,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-disp { padding: 56px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-disp { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-disp-item { grid-template-columns: 32px 1fr; gap: 12px; }
     .sdd-disp-city-head { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
