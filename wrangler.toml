@@ -21,16 +21,37 @@ enabled = true
 # 시크릿 등록은 Dashboard → 해당 Worker → Settings → Variables and Secrets:
 #   PEXELS_KEY, COVERR_KEY, GEMINI_KEY, LICENSE_SIGNING_KEY (모두 Type: Secret)
 
-# v6 §9.10 — D1 (편집자 활동 로그). 만든 후 database_id 채우면 활성화됨.
+# v6 §9.10 + v7 §10.1 — D1 (편집자 활동 로그 + AI 파이프라인 + RSS 출처).
 # 생성: wrangler d1 create saudade_db
-# 스키마 적용: wrangler d1 execute saudade_db --file=schema/editor_log.sql
-#             wrangler d1 execute saudade_db --file=schema/cafe_submissions.sql
+# 스키마 적용 (순서대로 — 의존성 없음):
+#   wrangler d1 execute saudade_db --remote --file=schema/editor_log.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/cafe_submissions.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/auth.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/city_requests.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/dispatch_retracts.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/ai_pipeline.sql
+#   wrangler d1 execute saudade_db --remote --file=schema/rss_sources.sql
+# RSS 시드 (운영자 검증 대기 상태):
+#   wrangler d1 execute saudade_db --remote --file=data/rss-sources-seed.sql
 # 받은 database_id 를 아래 빈칸에 넣고 다시 push 하면 D1 활성. 비어있어도 Worker 는 작동
-# (/editor/leave-status 가 stage='active' 폴백 응답, /cafe/submit 은 503 반환).
-# [[d1_databases]]
-# binding = "SAUDADE_DB"
-# database_name = "saudade_db"
-# database_id = "여기에-d1-database-id"
+# (/editor/leave-status 가 stage='active' 폴백, /cafe/submit·/admin/rss-* 는 503 반환).
+[[d1_databases]]
+binding = "SAUDADE_DB"
+database_name = "saudade_db"
+database_id = "0eaf0d89-ec73-4d00-aace-34f385e89c03"
+
+# v7 §10.1 — 일일 cron triggers (KST 기준 → UTC -9h). D1 활성 후 운영자가
+# 시드된 rss_sources 를 검증·active=1 로 켜야 gather() 가 실제 fetch 시작.
+ [triggers]
+ crons = [
+   "0 15 * * *",     # 00:00 KST  Gather   (RSS → raw_feeds)
+   "30 15 * * *",    # 00:30 KST  Sort     (Workers AI 도시 분류)
+   "0 17 * * *",     # 02:00 KST  Score    (quietness/dignity 1-10)
+   "0 19 * * *",     # 04:00 KST  Write    (Gemini 재작성)
+   "0 20 * * *",     # 05:00 KST  Translate (별쇄 번역)
+   "30 20 * * *",    # 05:30 KST  Stage    (검수 큐)
+   "0 21 * * *"      # 06:00 KST  File     (Top 3 publish)
+ ]
 
 # v6 §9.10 — 편집자 액션 로그 시크릿. Dashboard 또는 wrangler secret put EDITOR_TOKEN.
 # /editor/log POST 요청 시 Authorization: Bearer ${EDITOR_TOKEN} 으로 검증.

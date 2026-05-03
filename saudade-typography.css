@@ -173,3 +173,11 @@
     letter-spacing: var(--tr-mono-code);
     color: var(--ink);
 }
+
+/* v7 검토 정정 — italic 헤드라인 끝 마침표는 regular (영문 잡지 표준).
+   사용: <h2>From the desk<span class="sdd-punct">.</span></h2>
+   적용: 모든 italic h2 (Ledger / Atlas / Dispatches / Listening / Quarterly). */
+.sdd-punct {
+    font-style: normal;
+    font-feature-settings: "ss01";
+}

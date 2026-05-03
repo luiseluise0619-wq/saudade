@@ -67,7 +67,7 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     align-items: baseline;
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: search input 의 border-bottom 이 분리선 역할 */
 }
 .sdd-atlas-h2 {
     font-family: var(--serif);
@@ -103,24 +103,26 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     align-items: center;
     gap: 12px;
 }
+/* v7 검토 정정 — global input rule (saudade-skin.css:268) 이 4면 box border 강제하므로
+   !important 로 hairline border-bottom only 강제. */
 .sdd-atlas-search input {
     flex: 1;
-    background: transparent;
-    border: 0;
-    border-bottom: 0.5px solid var(--rule);
-    color: var(--ink);
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid var(--rule) !important;
+    color: var(--ink) !important;
     font-family: var(--mono);
     font-weight: 400;
     font-size: 11px;
     line-height: 1.4;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    padding: 14px 0;
-    border-radius: 0;
+    padding: 14px 0 !important;
+    border-radius: 0 !important;
     min-height: 44px;
     outline: none;
 }
-.sdd-atlas-search input:focus { border-bottom-color: var(--ink); }
+.sdd-atlas-search input:focus { border-bottom-color: var(--ink) !important; }
 .sdd-atlas-search input::placeholder { color: var(--bone-d); }
 .sdd-atlas-q-count {
     font-family: var(--mono);
@@ -141,6 +143,62 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     color: var(--bone-d);
     text-align: center;
 }
+
+/* v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때) */
+.sdd-atlas-empty-state {
+    padding: clamp(16px, 2vw, 24px) 0;
+    margin: 0 0 clamp(20px, 3vw, 32px);
+}
+.sdd-atlas-empty-h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.2;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+.sdd-atlas-empty-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+.sdd-atlas-empty-actions {
+    list-style: none;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.sdd-atlas-empty-actions li {
+    border-top: 0.5px solid var(--rule);
+    margin: 0;
+}
+/* 마지막 항목 border-bottom 없음 — 잡지 리스트 분리선만 (박스 X) */
+.sdd-atlas-empty-btn {
+    background: transparent;
+    border: 0;
+    color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 14px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+    transition: color .12s;
+}
+.sdd-atlas-empty-btn:hover { color: var(--rust); }
 
 .sdd-atlas-list { display: flex; flex-direction: column; gap: 0; }
 
@@ -271,7 +329,21 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-atlas { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-atlas { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
+    /* v7 검토 정정 — mobile head 세로 스택, count + toggle 한 행에 노출 */
+    .sdd-atlas-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .sdd-atlas-count {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        white-space: normal;
+    }
+    .sdd-atlas-view-pair { margin-left: 0; }
     .sdd-atlas-item {
         grid-template-columns: 16px 1fr;
         grid-template-areas:
@@ -417,7 +489,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 .sdd-atlas-d-toggle:hover { background: var(--ink); color: var(--paper); }
 
 @media (max-width: 768px) {
-    .sdd-atlas-detail { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-atlas-detail { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-atlas-d-data { grid-template-columns: 1fr; gap: 4px 0; }
     .sdd-atlas-d-data dd { margin-bottom: 12px; }
 }
@@ -469,25 +541,27 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             pt: 'BUSCAR NOME · BAIRRO · COMODIDADE',
             es: 'BUSCAR NOMBRE · BARRIO · COMODIDAD'
         });
-        // v7 §8.7 PR1 — LIST/MAP 뷰 토글 (5 에디션)
+        // v7 §8.7 PR1 — LIST/MAP 뷰 토글 (5 에디션). 두 라벨 모두 노출, 현재 모드 강조.
         const _curView = root.getAttribute('data-view') || 'list';
-        const toggleLabel = T({
-            en: _curView === 'list' ? 'MAP'  : 'LIST',
-            ko: _curView === 'list' ? '지도' : '목록',
-            ja: _curView === 'list' ? '地図' : '一覧',
-            pt: _curView === 'list' ? 'MAPA' : 'LISTA',
-            es: _curView === 'list' ? 'MAPA' : 'LISTA'
-        });
+        const labelList = T({ en: 'LIST', ko: '목록', ja: '一覧', pt: 'LISTA', es: 'LISTA' });
+        const labelMap  = T({ en: 'MAP',  ko: '지도', ja: '地図', pt: 'MAPA',  es: 'MAPA'  });
         const headHtml = `
             <header class="sdd-atlas-head">
                 <h2 class="sdd-atlas-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="sdd-atlas-h2-italic">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="sdd-atlas-h2-italic">${dropItalicPunct(headItalic)}</span>
                 </h2>
                 <div class="sdd-atlas-count">
                     ${escapeHtml(visitedLabel)}
-                    <button type="button" class="sdd-atlas-view-toggle"
-                            data-view-toggle aria-label="Toggle list / map view">${escapeHtml(toggleLabel)}</button>
+                    <span class="sdd-atlas-view-pair" role="tablist" aria-label="View mode">
+                        <button type="button" class="sdd-atlas-view-btn"
+                                data-view-set="list" role="tab"
+                                aria-selected="${_curView === 'list'}">${escapeHtml(labelList)}</button>
+                        <span class="sdd-atlas-view-sep" aria-hidden="true">/</span>
+                        <button type="button" class="sdd-atlas-view-btn"
+                                data-view-set="map" role="tab"
+                                aria-selected="${_curView === 'map'}">${escapeHtml(labelMap)}</button>
+                    </span>
                 </div>
             </header>
             <div class="sdd-atlas-search">
@@ -529,22 +603,32 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: 'Una nota sobre los lugares.'
         });
         const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
         });
         const noMatches = T({
             en: 'No matches.', ko: '검색 결과 없음.', ja: '該当なし。',
             pt: 'Sem resultados.', es: 'Sin resultados.'
         });
         const footLine = T({
-            en: `${total} of 100 places · 0 user reviews · 0 stars`,
-            ko: `100곳 중 ${total}곳 · 사용자 리뷰 0건 · 별점 0건`,
-            ja: `100軒中 ${total}軒 · ユーザーレビュー 0件 · 星 0件`,
-            pt: `${total} de 100 lugares · 0 avaliações · 0 estrelas`,
-            es: `${total} de 100 lugares · 0 reseñas · 0 estrellas`
+            en: total === 0
+                ? 'Awaiting first entry · 0 user reviews · 0 stars'
+                : `${total} ${total === 1 ? 'place' : 'places'} · 0 user reviews · 0 stars`,
+            ko: total === 0
+                ? '첫 항목 대기 중 · 사용자 리뷰 0건 · 별점 0건'
+                : `${total}곳 · 사용자 리뷰 0건 · 별점 0건`,
+            ja: total === 0
+                ? '最初の一件を待つ · ユーザーレビュー 0件 · 星 0件'
+                : `${total} 軒 · ユーザーレビュー 0件 · 星 0件`,
+            pt: total === 0
+                ? 'A aguardar primeira entrada · 0 avaliações · 0 estrelas'
+                : `${total} ${total === 1 ? 'lugar' : 'lugares'} · 0 avaliações · 0 estrelas`,
+            es: total === 0
+                ? 'Esperando primera entrada · 0 reseñas · 0 estrellas'
+                : `${total} ${total === 1 ? 'lugar' : 'lugares'} · 0 reseñas · 0 estrellas`
         });
         const noteHtml = `
             <div class="sdd-atlas-note">
@@ -558,43 +642,81 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         // v7 §8.7 PR1 — data-view 속성 first-render 기본값
         if (!root.hasAttribute('data-view')) root.setAttribute('data-view', 'list');
 
+        // v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때만)
+        const emptyAtlasH3 = T({
+            en: 'The atlas opens with a city.',
+            ko: '아틀라스는 도시 한 곳에서 시작한다.',
+            ja: 'アトラスは一つの街から始まる。',
+            pt: 'O atlas abre com uma cidade.',
+            es: 'El atlas se abre con una ciudad.'
+        });
+        const emptyAtlasBody = T({
+            en: 'Each café in this list is a place we have walked into. We list none until we have. Switch the desk to the city you live in, or write to suggest one we should visit.',
+            ko: '이 목록에 오른 카페는 모두 우리가 직접 걸어 들어간 곳이다. 들르기 전에는 적지 않는다. 거주하는 도시로 데스크를 옮기거나, 들렀으면 하는 곳을 제안한다.',
+            ja: 'この一覧に並ぶカフェは、いずれも私たちが実際に足を運んだ場所だ。訪れるまでは載せない。住む街にデスクを切り替えるか、訪ねるべき場所を知らせてほしい。',
+            pt: 'Cada café desta lista é um lugar onde entrámos. Não listamos nenhum antes disso. Mude a redação para a cidade onde vive, ou escreva-nos a sugerir um que devíamos visitar.',
+            es: 'Cada café de esta lista es un lugar al que hemos entrado. No listamos ninguno hasta haberlo hecho. Cambia la mesa a la ciudad donde vives, o escríbenos para sugerir uno que deberíamos visitar.'
+        });
+        const emptyAtlasSwitch = T({
+            en: '+ Switch the desk to your home city',
+            ko: '+ 데스크를 거주 도시로 옮기기',
+            ja: '+ デスクを住む街へ切り替える',
+            pt: '+ Mudar a redação para a sua cidade',
+            es: '+ Cambiar la mesa a tu ciudad'
+        });
+        const emptyAtlasSubmit = T({
+            en: '+ Submit a café we should visit',
+            ko: '+ 들렀으면 하는 카페 제안하기',
+            ja: '+ 訪ねるべきカフェを知らせる',
+            pt: '+ Sugerir um café que devíamos visitar',
+            es: '+ Sugerir un café que deberíamos visitar'
+        });
+        const isAtlasEmpty = total === 0;
+        const atlasEmptyHtml = isAtlasEmpty ? `
+            <section class="sdd-atlas-empty-state">
+                <h3 class="sdd-atlas-empty-h3">${escapeHtml(emptyAtlasH3)}</h3>
+                <p class="sdd-atlas-empty-body">${escapeHtml(emptyAtlasBody)}</p>
+                <ul class="sdd-atlas-empty-actions">
+                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="switch">${escapeHtml(emptyAtlasSwitch)}</button></li>
+                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="submit">${escapeHtml(emptyAtlasSubmit)}</button></li>
+                </ul>
+            </section>
+        ` : '';
+
         root.innerHTML = headHtml +
-            `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>` +
+            atlasEmptyHtml +
+            (isAtlasEmpty ? '' : `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>`) +
             `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
 
-        // v7 §8.7 PR1 — LIST/MAP 토글 핸들러. MAP 첫 진입 시 lazy load.
-        root.querySelector('[data-view-toggle]')?.addEventListener('click', async (e) => {
-            const cur = root.getAttribute('data-view') || 'list';
-            const next = cur === 'list' ? 'map' : 'list';
-            root.setAttribute('data-view', next);
-            // 라벨 즉시 토글 (재렌더 안 함 — search input focus 보존)
-            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
-            const labels = {
-                en: { list: 'MAP',  map: 'LIST' },
-                ko: { list: '지도', map: '목록' },
-                ja: { list: '地図', map: '一覧' },
-                pt: { list: 'MAPA', map: 'LISTA' },
-                es: { list: 'MAPA', map: 'LISTA' }
-            };
-            e.target.textContent = (labels[ed] || labels.en)[next];
-            if (next === 'map') {
-                const container = root.querySelector('#sddAtlasMap');
-                if (!window.SAUDADE_ATLAS_MAP || !window.SAUDADE_ATLAS_MAP.initMap) {
-                    if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP MODULE NOT LOADED · RELOAD PAGE</p>';
-                    console.warn('[ATLAS] SAUDADE_ATLAS_MAP unavailable — saudade-atlas-map.js failed to load');
-                    return;
+        // v7 §8.7 PR1 — LIST/MAP 토글 핸들러 (페어 버튼). MAP 첫 진입 시 lazy load.
+        root.querySelectorAll('[data-view-set]').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const next = btn.getAttribute('data-view-set');
+                const cur  = root.getAttribute('data-view') || 'list';
+                if (next === cur) return;
+                root.setAttribute('data-view', next);
+                // aria-selected 즉시 갱신 (재렌더 X — search focus 보존)
+                root.querySelectorAll('[data-view-set]').forEach(b => {
+                    b.setAttribute('aria-selected', String(b.getAttribute('data-view-set') === next));
+                });
+                if (next === 'map') {
+                    const container = root.querySelector('#sddAtlasMap');
+                    if (!window.SAUDADE_ATLAS_MAP || !window.SAUDADE_ATLAS_MAP.initMap) {
+                        if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP MODULE NOT LOADED · RELOAD PAGE</p>';
+                        console.warn('[ATLAS] SAUDADE_ATLAS_MAP unavailable — saudade-atlas-map.js failed to load');
+                        return;
+                    }
+                    try {
+                        await window.SAUDADE_ATLAS_MAP.initMap(container);
+                    } catch (err) {
+                        if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + (err && err.message || 'UNKNOWN ERROR').toUpperCase() + '</p>';
+                        console.warn('[ATLAS] map init failed:', err);
+                    }
                 }
-                try {
-                    await window.SAUDADE_ATLAS_MAP.initMap(container);
-                } catch (err) {
-                    if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + (err && err.message || 'UNKNOWN ERROR').toUpperCase() + '</p>';
-                    console.warn('[ATLAS] map init failed:', err);
-                }
-            } else {
                 // LIST 로 돌아갈 때 map 인스턴스는 유지 — 다시 토글하면 같은 상태로
-            }
+            });
         });
 
         // v607 — search input 핸들러 (입력 변화 시 즉시 재렌더, focus 유지)
@@ -611,6 +733,26 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 }
             });
         }
+
+        // v7 검토 정정 — 빈 상태 액션 (Switch desk / Submit a café)
+        root.querySelectorAll('[data-empty-action]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.getAttribute('data-empty-action');
+                if (action === 'switch') {
+                    // Desk 섹션으로 이동 (THE DESK = section 04)
+                    const deskBtn = document.querySelector('.dock-btn[data-cat="trip"]');
+                    if (deskBtn) deskBtn.click();
+                } else if (action === 'submit') {
+                    // Submit a café 모듈 (saudade-atlas-submit.js)
+                    if (window.SAUDADE_ATLAS_SUBMIT?.open) {
+                        window.SAUDADE_ATLAS_SUBMIT.open();
+                    } else {
+                        // fallback — mailto desk
+                        window.location.href = 'mailto:luiseluise0619@gmail.com?subject=Café suggestion';
+                    }
+                }
+            });
+        });
 
         // 클릭 시 cafe detail 페이지 진입 (모달 X — 헌법 §3)
         root.querySelectorAll('.sdd-atlas-item').forEach(el => {
@@ -647,11 +789,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: 'Una nota sobre los lugares.'
         });
         const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to desk@saudade.app.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 desk@saudade.app 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は desk@saudade.app まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para desk@saudade.app.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a desk@saudade.app.'
+            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
+            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
+            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
+            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
+            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
         });
 
         detail.innerHTML = `
@@ -705,6 +847,13 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
     function init() {

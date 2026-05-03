@@ -16,7 +16,42 @@
     function load() {
         const ed = currentEdition();
         if (_cache[ed]) return Promise.resolve(_cache[ed]);
-        // ed-specific 파일 우선, 없으면 EN base fallback
+
+        // v8 §02 — D1 활성 + signed-in 사용자면 worker /dispatches/today fetch.
+        // (Following 도시 user_id 기반 매칭 → fresh 데이터). 실패 시 static JSON fallback.
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const user = window.SAUDADE_AUTH?.getUser?.();
+        if (base && user && user.id) {
+            const wUrl = base + '/dispatches/today?edition=' + encodeURIComponent(ed) +
+                                          '&user_id=' + encodeURIComponent(user.id);
+            return fetch(wUrl, { cache: 'no-cache', credentials: 'omit' })
+                .then(r => r.ok ? r.json() : null)
+                .then(j => {
+                    if (j && Array.isArray(j.items) && j.items.length) {
+                        // worker 응답을 v7 cities 구조로 변환 — flattenForDay 가 그대로 매핑.
+                        const synthetic = { edition: ed, cities: [] };
+                        const byCity = {};
+                        j.items.forEach(it => {
+                            const city = it._city || 'UNKNOWN';
+                            if (!byCity[city]) {
+                                byCity[city] = { city, items: [] };
+                                synthetic.cities.push(byCity[city]);
+                            }
+                            byCity[city].items.push(it);
+                        });
+                        synthetic.filed_at = new Date(j.published_at || Date.now()).toISOString();
+                        synthetic._source = 'worker';   // 디버그
+                        _cache[ed] = synthetic;
+                        return synthetic;
+                    }
+                    return loadStatic(ed);
+                })
+                .catch(() => loadStatic(ed));
+        }
+        return loadStatic(ed);
+    }
+
+    function loadStatic(ed) {
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
@@ -49,7 +84,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
 .sdd-disp-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: 다음 .sdd-disp-day-head / .sdd-disp-city 가 자체 border 가짐 */
 }
 .sdd-disp-h2 {
     font-family: var(--serif);
@@ -61,7 +96,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-disp-h2 .it { font-style: italic; display: block; }
+.sdd-disp-h2 .it { font-style: italic; display: inline; }
 
 .sdd-disp-sub {
     font-family: var(--serif);
@@ -202,6 +237,25 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     padding-top: clamp(16px, 2vw, 24px);
     border-top: 0.5px solid var(--rule);
 }
+/* v7 검토 정정 — 면책 토글 (기본 접힘, 클릭 시 펼침). 콘텐츠가 압도되지 않게. */
+.sdd-disp-disclaimer-toggle {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 6px 0;
+    transition: color .12s;
+    user-select: none;
+}
+.sdd-disp-disclaimer-toggle::-webkit-details-marker { display: none; }
+.sdd-disp-disclaimer-toggle::marker { content: ''; }
+.sdd-disp-disclaimer-toggle::after { content: ' →'; opacity: .6; }
+.sdd-disp-foot[open] .sdd-disp-disclaimer-toggle::after { content: ' ↓'; opacity: 1; }
+.sdd-disp-disclaimer-toggle:hover { color: var(--ink); }
 .sdd-disp-disclaimer {
     font-family: var(--mono);
     font-weight: 400;
@@ -211,6 +265,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     text-transform: uppercase;
     color: var(--bone-d);
     max-width: 60ch;
+    margin: clamp(12px, 1.5vw, 16px) 0 0;
 }
 .sdd-disp-disclaimer strong {
     font-weight: 500;
@@ -330,7 +385,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     text-align: center;
     padding: clamp(40px, 6vw, 80px) 0;
 }
-
+
 /* v7 §9.5 데일리 디스패치 30% 재작성 (편집자 모드 전용) */
 .sdd-disp-editor {
     font-family: var(--mono);
@@ -362,6 +417,67 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 .sdd-disp-rewrite-tag.rewritten { color: var(--jade); }
 .sdd-disp-rewrite-tag.draft     { color: var(--signal); }
 
+/* v8 §02 — Awaiting placeholder (Following 도시이지만 dispatch 없을 때) */
+.sdd-disp-awaiting { opacity: 0.6; }
+.sdd-disp-awaiting .sdd-disp-citytag { color: var(--rust); }
+
+/* v8 §02 — Inline onboarding (Following 비었을 때) */
+.sdd-disp-onboarding { padding: clamp(20px, 3vw, 32px) 0; }
+.sdd-disp-onboarding-h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+.sdd-disp-onboarding-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+.sdd-disp-onboarding-pairings {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-disp-onboarding-pairings li { border-bottom: 0.5px solid var(--rule); }
+.sdd-disp-pairing {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding: 14px 0 !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    min-height: 44px !important;
+}
+.sdd-disp-pairing-label {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--ink);
+}
+.sdd-disp-pairing-cities {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-disp-pairing:hover .sdd-disp-pairing-label { color: var(--rust); }
+
 /* v7 §9.9 retract placeholder */
 .sdd-disp-retracted { opacity: 0.7; }
 .sdd-disp-retract-msg {
@@ -376,7 +492,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-disp { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-disp { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-disp-item { grid-template-columns: 32px 1fr; gap: 12px; }
     .sdd-disp-city-head { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
@@ -400,6 +516,13 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 끝 마침표/쉼표는 regular 로 분리 (영문 잡지 표준)
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
@@ -494,6 +617,27 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 
 
     function renderItem(it) {
+        // v8 §02 — Awaiting placeholder (Following 도시이지만 dispatches.json 에 없을 때)
+        if (it && it._awaiting) {
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const T = window.SAUDADE_T || ((s) => s.en);
+            const msg = T({
+                en: 'Awaiting first dispatch from $city.',
+                ko: '$city 의 첫 디스패치를 기다리는 중.',
+                ja: '$city からの最初の通信を待っている。',
+                pt: 'A aguardar o primeiro despacho de $city.',
+                es: 'Esperando el primer despacho de $city.'
+            }).replace('$city', it._city || '');
+            return `
+                <article class="sdd-disp-item sdd-disp-awaiting">
+                    <span class="sdd-disp-num">${escapeHtml(it.n || '')}</span>
+                    <div class="sdd-disp-body">
+                        <span class="sdd-disp-citytag">${escapeHtml(it._city || '')}</span>
+                        <p class="sdd-disp-lede" style="font-style:italic">${escapeHtml(msg)}</p>
+                    </div>
+                </article>
+            `;
+        }
         // v7 §9.9 retract check
         const retract = isRetracted(it);
         if (retract) {
@@ -537,29 +681,44 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         `;
     }
 
-    // 시드 JSON 의 cities × items 9개 → 요일별 3개로 분배.
-    // 정착 도시 2 + 주변 도시 1 (v6 §5.3 노출 비율).
+    // v8 §02 — 사용자 도시 선택 모델. 정착 + 주변 자동 매핑 폐기.
+    // 사용자의 SAUDADE_FOLLOWING.list() 3 도시 각각에서 1개씩 추출.
+    // dispatches.json 에 해당 도시 없으면 "Awaiting first dispatch" 플레이스홀더.
     function flattenForDay(data, weekdayIdx /* 1..6 */) {
         const cities = (data && data.cities) || [];
-        if (!cities.length) return [];
-        const home = cities[0];        // 첫 번째 = 정착 도시
-        const adjacent = cities.slice(1);    // 나머지 = 주변
-        const homeItems = (home.items || []).slice(0, 9);
-        const adjIdx = (weekdayIdx - 1) % Math.max(1, adjacent.length);
-        const adjCity = adjacent[adjIdx];
-        const adjItem = adjCity?.items?.[0] || null;
+        const following = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        if (!following.length) return [];     // 사용자가 도시 안 골랐으면 빈 배열 → 안내 노출
 
-        // weekdayIdx 별로 home 의 다른 2개 + adjacent 1개
-        // weekday 1 (Mon) → home items 0,1 + adj 0
-        // weekday 2 (Tue) → home items 2,3 + adj 1
-        // ...
-        const baseHome = ((weekdayIdx - 1) * 2) % Math.max(1, homeItems.length);
+        // 도시명 매칭 (case-insensitive · slug ↔ display name)
+        const findCityData = (slug) => {
+            const s = String(slug).toLowerCase().replace(/-/g, ' ');
+            return cities.find(c => String(c.city || '').toLowerCase() === s)
+                || cities.find(c => String(c.city || '').toLowerCase().replace(/[\s-]/g, '') === s.replace(/[\s-]/g, ''));
+        };
+        // weekday 별 item rotation — 같은 도시도 요일마다 다른 item
+        const baseIdx = (weekdayIdx - 1) % 9;
+
         const out = [];
-        const item1 = homeItems[baseHome] && { ...homeItems[baseHome], n: '01', _city: home.city, _adjacent: false };
-        const item2 = homeItems[(baseHome + 1) % homeItems.length] && { ...homeItems[(baseHome + 1) % homeItems.length], n: '02', _city: home.city, _adjacent: false };
-        if (item1) out.push(item1);
-        if (item2) out.push(item2);
-        if (adjItem) out.push({ ...adjItem, n: '03', _city: adjCity.city, _adjacent: true });
+        following.forEach((slug, slotIdx) => {
+            const cityData = findCityData(slug);
+            const slot = String(slotIdx + 1).padStart(2, '0');
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const displayName = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+            if (!cityData || !cityData.items || !cityData.items.length) {
+                // Placeholder — operator 가 AI 파이프라인 active=1 후 채워짐
+                out.push({
+                    n: slot,
+                    headline: '',
+                    lede: '',
+                    _city: displayName,
+                    _awaiting: true
+                });
+                return;
+            }
+            const items = cityData.items;
+            const item = items[baseIdx % items.length];
+            out.push({ ...item, n: slot, _city: cityData.city || displayName });
+        });
         return out;
     }
 
@@ -640,35 +799,79 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             es: 'Cada despacho se reescribe con nuestras propias palabras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. No reeditamos copia de AP, Reuters o Bloomberg. Nunca usamos fotografías que no tomamos nosotros. Los despachos son asistidos por IA y revisados por un editor humano.'
         });
 
+        // v7 검토 정정 — 면책 라벨 (toggle summary)
+        const noteToggleLabel = T({
+            en: 'A note on sources', ko: '출처에 대한 메모',
+            ja: '出典についての覚書', pt: 'Uma nota sobre as fontes',
+            es: 'Una nota sobre las fuentes'
+        });
+
         // 일요일 휴간 (v6 §9.1)
         if (isSundayToday()) {
             root.innerHTML = `
                 <header class="sdd-disp-head">
                     <h2 class="sdd-disp-h2">
-                        ${escapeHtml(headLabel)}
-                        <span class="it">${escapeHtml(headResting)}</span>
+                        ${dropItalicPunct(headLabel)}
+                        <span class="it">${dropItalicPunct(headResting)}</span>
                     </h2>
                 </header>
                 <section class="sdd-disp-sunday">
                     <p class="sdd-disp-sunday-line">${escapeHtml(W.sundayMsg)}</p>
                     <p class="sdd-disp-sunday-sub">${escapeHtml(W.sundaySub)}</p>
                 </section>
-                <footer class="sdd-disp-foot">
+                <details class="sdd-disp-foot">
+                    <summary class="sdd-disp-disclaimer-toggle">${escapeHtml(noteToggleLabel)}</summary>
                     <p class="sdd-disp-disclaimer">
                         <strong>${escapeHtml(noteTitle)}</strong> ${escapeHtml(noteBody)}
-                        Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. We do not republish AP, Reuters, or Bloomberg copy. We never use photographs we did not take ourselves. Dispatches are AI-assisted and reviewed by a human editor.
                     </p>
-                </footer>
+                </details>
             `;
             return;
         }
 
-        // 오늘의 3 dispatch (정착 2 + 주변 1)
+        // v8 §02 — Following 도시 안 골랐으면 inline onboarding (popular pairings 카드).
+        // Desk 강제 진입 X — 여기서 한 클릭으로 시작.
+        const followingList = (window.SAUDADE_FOLLOWING?.list?.() || []);
         const todayItems = flattenForDay(data, wdIdx);
         const todaySection = W[wdIdx] || W[1];
-        const todayHtml = todayItems.length
-            ? todayItems.map(renderItem).join('')
-            : `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+        let todayHtml;
+        if (!followingList.length) {
+            const onboardingHead = T({
+                en: 'No cities yet.', ko: '아직 도시가 없다.', ja: 'まだ街がない。',
+                pt: 'Ainda sem cidades.', es: 'Aún sin ciudades.'
+            });
+            const onboardingBody = T({
+                en: 'Pick a starting set below — or open The Desk to choose three cities yourself.',
+                ko: '아래에서 시작 묶음을 고른다 — 또는 데스크에서 세 도시를 직접 고른다.',
+                ja: '下から始まりの組み合わせを選ぶ — またはデスクで三つの街を自分で選ぶ。',
+                pt: 'Escolha um conjunto inicial abaixo — ou abra A Mesa para escolher três cidades você mesmo.',
+                es: 'Elija un conjunto inicial abajo — o abra La Mesa para elegir tres ciudades usted mismo.'
+            });
+            const pairings = window.SAUDADE_FOLLOWING?.pairings?.() || [];
+            const pairingsHtml = pairings.map(p => {
+                const lbl = window.SAUDADE_FOLLOWING.pairingLabel(p, ed);
+                const cityNames = (p.cities || []).map(s => window.SAUDADE_FOLLOWING.cityName(s, ed)).join(' · ');
+                return `
+                    <li>
+                        <button type="button" class="sdd-disp-pairing" data-disp-pairing="${escapeHtml(p.id)}">
+                            <span class="sdd-disp-pairing-label">${escapeHtml(lbl)}</span>
+                            <span class="sdd-disp-pairing-cities">${escapeHtml(cityNames)}</span>
+                        </button>
+                    </li>
+                `;
+            }).join('');
+            todayHtml = `
+                <section class="sdd-disp-onboarding">
+                    <h3 class="sdd-disp-onboarding-h3">${dropItalicPunct(onboardingHead)}</h3>
+                    <p class="sdd-disp-onboarding-body">${escapeHtml(onboardingBody)}</p>
+                    <ul class="sdd-disp-onboarding-pairings">${pairingsHtml}</ul>
+                </section>
+            `;
+        } else if (!todayItems.length) {
+            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+        } else {
+            todayHtml = todayItems.map(renderItem).join('');
+        }
 
         // 지난 6일 archive stack
         const past = flattenPastWeek(data, wdIdx);
@@ -686,8 +889,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const headHtml = `
             <header class="sdd-disp-head">
                 <h2 class="sdd-disp-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headEdited)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headEdited)}</span>
                 </h2>
                 <p class="sdd-disp-sub">${escapeHtml(subFilled)}</p>
                 <p class="sdd-disp-meta">${escapeHtml(filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(nextLabel)} ${escapeHtml(next)}</p>
@@ -714,14 +917,24 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         ` : '';
 
         const disclaimer = `
-            <footer class="sdd-disp-foot">
+            <details class="sdd-disp-foot">
+                <summary class="sdd-disp-disclaimer-toggle">${escapeHtml(noteToggleLabel)}</summary>
                 <p class="sdd-disp-disclaimer">
                     <strong>${escapeHtml(noteTitle)}</strong> ${escapeHtml(noteBody)}
                 </p>
-            </footer>
+            </details>
         `;
 
         root.innerHTML = headHtml + todayBlock + archiveBlock + disclaimer;
+
+        // v8 §02 — onboarding pairing 카드 클릭 → Following 적용 + 즉시 재렌더
+        root.querySelectorAll('[data-disp-pairing]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-disp-pairing');
+                window.SAUDADE_FOLLOWING?.applyPairing?.(id);
+                load().then(render);
+            });
+        });
     }
 
     function init() {

@@ -5,68 +5,156 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; object-src 'none'; base-uri 'self'" />
-<title>LOUNJ — Credits & Data Sources</title>
+<title>Saudade — Credits & Sources</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 820px; margin: 0 auto; padding: 32px 20px; line-height: 1.65; color: #111; background: #fafafa; }
-  h1 { font-size: 22px; margin: 0 0 4px; }
-  h2 { font-size: 16px; margin: 24px 0 8px; border-left: 3px solid #ff5d50; padding-left: 10px; }
-  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13px; }
-  th, td { border: 1px solid #ddd; padding: 6px 9px; text-align: left; vertical-align: top; }
-  th { background: #f0f0f0; }
-  small, .meta { color: #666; font-size: 12px; }
-  a { color: #1565c0; }
+  body {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    background: var(--paper);
+    color: var(--ink);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px);
+    line-height: 1.55;
+  }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 0.95;
+    margin: 0 0 clamp(24px, 4vw, 48px);
+    padding-bottom: clamp(12px, 2vw, 20px);
+  }
+  h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: clamp(32px, 4vw, 48px) 0 clamp(12px, 1.5vw, 20px);
+    padding-top: clamp(16px, 2vw, 24px);
+    border-top: 0.5px solid var(--rule);
+  }
+  p { margin: 0 0 16px; max-width: 60ch; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 0;
+    border-top: 0.5px solid var(--rule);
+  }
+  th {
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+  }
+  td:first-child { width: 25%; padding-right: 16px; }
+  td:nth-child(2) { width: 30%; padding-right: 16px; color: var(--bone-d); }
+  td:nth-child(3) { color: var(--ink); }
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--rule);
+  }
+  a:hover { color: var(--rust); border-bottom-color: var(--rust); }
+  .footnote {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: clamp(40px, 6vw, 80px) 0 0;
+    padding-top: clamp(16px, 2vw, 24px);
+    border-top: 0.5px solid var(--rule);
+    max-width: 60ch;
+  }
+  .footnote strong {
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.32em;
+    display: block;
+    margin-bottom: 6px;
+  }
 </style>
 </head>
 <body>
 
-<h1>Credits & Data Sources</h1>
-<div class="meta">LOUNJ — third-party content & APIs</div>
+<p class="meta">Saudade · Issue 03 · Spring 2026</p>
+<h1><em>Credits and sources.</em></h1>
 
-<h2>📡 데이터 / Data APIs</h2>
+<p>Each item below is a third-party we depend on. Where a license required attribution, the credit appears here. Where a service offered itself freely, the credit appears here too &mdash; we owe a record either way.</p>
+
+<h2>Maps and geolocation</h2>
 <table>
-<thead><tr><th>출처</th><th>용도</th><th>표기</th></tr></thead>
-<tbody>
-<tr><td><a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></td><td>박스오피스 / 영화 메타데이터</td><td>This product uses the TMDB API but is not endorsed or certified by TMDB.</td></tr>
-<tr><td><a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></td><td>날씨, AQI</td><td>Weather data by Open-Meteo.com (CC-BY 4.0)</td></tr>
-<tr><td><a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener">USGS</a></td><td>실시간 지진</td><td>Source: U.S. Geological Survey (Public Domain)</td></tr>
-<tr><td><a href="https://eonet.gsfc.nasa.gov/" target="_blank" rel="noopener">NASA EONET</a></td><td>자연재해 이벤트</td><td>Source: NASA Earth Observatory Natural Event Tracker</td></tr>
-<tr><td><a href="https://www.frankfurter.app/" target="_blank" rel="noopener">Frankfurter</a> / ECB</td><td>외환 환율</td><td>FX rates: European Central Bank via Frankfurter</td></tr>
-<tr><td><a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko</a></td><td>암호화폐 시세</td><td>Crypto data: CoinGecko</td></tr>
-<tr><td><a href="https://mymemory.translated.net/" target="_blank" rel="noopener">MyMemory</a></td><td>실시간 번역</td><td>Translation: MyMemory</td></tr>
-<tr><td><a href="https://www.thesportsdb.com/" target="_blank" rel="noopener">TheSportsDB</a></td><td>스포츠 일정</td><td>Sports data: TheSportsDB</td></tr>
-<tr><td>BBC, Reuters, NHK, Yonhap 외 130 RSS publishers</td><td>실시간 뉴스 헤드라인</td><td>각 기사 제목 옆 출처 명시 + 원본 링크</td></tr>
-</tbody>
+<tr><td><a href="https://maplibre.org/" target="_blank" rel="noopener">MapLibre GL JS</a></td><td>Atlas map renderer</td><td>BSD-3-Clause</td></tr>
+<tr><td><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></td><td>Atlas tile data</td><td>&copy; OpenStreetMap contributors, ODbL</td></tr>
 </table>
 
-<h2>🎬 미디어 / Media</h2>
+<h2>City videos and photographs</h2>
 <table>
-<thead><tr><th>출처</th><th>용도</th><th>표기 / 약관 요약</th></tr></thead>
-<tbody>
-<tr><td><a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></td><td>도시 영상 (1순위)</td><td>Pexels License (free for commercial use, no model release).</td></tr>
-<tr><td><a href="https://coverr.co/" target="_blank" rel="noopener">Coverr</a></td><td>도시 영상 (시네마틱 화질)</td><td>Coverr License — free for commercial use. API: 50 req/h demo tier.</td></tr>
-<tr><td><a href="https://tenor.com/" target="_blank" rel="noopener">Tenor</a></td><td>도시별 GIF · 댄싱 고양이</td><td>Powered by Tenor (Tenor API Terms)</td></tr>
-<tr><td><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></td><td>음악 라디오 임베드 (Lofi Girl 등)</td><td>YouTube Embed Player Terms. 임베드된 콘텐츠 권리는 각 채널 운영자에게 있음.</td></tr>
-<tr><td><a href="https://soundcloud.com/" target="_blank" rel="noopener">SoundCloud</a></td><td>음악 임베드</td><td>SoundCloud Widget Terms.</td></tr>
-<tr><td><a href="https://somafm.com/" target="_blank" rel="noopener">SomaFM</a></td><td>로열티-프리 라디오</td><td>Music from SomaFM. 매장 BGM·공공 디스플레이는 별도 라이선스 필요.</td></tr>
-</tbody>
+<tr><td><a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></td><td>Cover videos (primary)</td><td>Pexels License &mdash; free for editorial use, attribution appreciated</td></tr>
+<tr><td><a href="https://coverr.co/" target="_blank" rel="noopener">Coverr</a></td><td>Cover videos (cinema-grade)</td><td>Coverr License &mdash; free for commercial use, 50 req/h demo tier</td></tr>
 </table>
 
-<h2>🛠 라이브러리 / Libraries</h2>
+<h2>The Listening Room (ASMR)</h2>
 <table>
-<thead><tr><th>이름</th><th>라이선스</th></tr></thead>
-<tbody>
-<tr><td><a href="https://threejs.org/" target="_blank" rel="noopener">three.js</a></td><td>MIT</td></tr>
-<tr><td><a href="https://github.com/vasturiano/globe.gl" target="_blank" rel="noopener">globe.gl</a></td><td>MIT</td></tr>
-<tr><td><a href="https://www.electronjs.org/" target="_blank" rel="noopener">Electron</a></td><td>MIT</td></tr>
-</tbody>
+<tr><td><a href="https://freesound.org/" target="_blank" rel="noopener">Freesound</a></td><td>ASMR stems (CC0)</td><td>Public domain stems with attribution where given</td></tr>
+<tr><td>Creative Commons</td><td>ASMR stems (CC-BY 4.0)</td><td>Attribution per track in the listening room</td></tr>
+<tr><td>Saudade Editor</td><td>Owned recordings</td><td>Recorded in person by the editor; all rights reserved</td></tr>
 </table>
 
-<h2>📌 Takedown / 신고</h2>
-<p>표시되는 영상·GIF·기사·이미지가 본인 또는 타인의 권리를 침해한다고 판단되시면 다음 채널로 알려주세요. 검토 후 7일 이내 노출에서 제외됩니다.</p>
-<ul>
-  <li>이메일: <code>luiseluise0619@gmail.com</code> (운영자: LEEJAEJIN / JADDY)</li>
-  <li>콘솔: <code>AURA_CITY_VIDEOS.block('https://...')</code> 로 즉시 본인 디바이스에서 차단 가능</li>
-</ul>
+<h2>AI models (Dispatches, §03)</h2>
+<table>
+<tr><td><a href="https://developers.cloudflare.com/workers-ai/" target="_blank" rel="noopener">Workers AI</a></td><td>Llama 3.1 8B (sort &middot; score)</td><td>Cloudflare Workers AI; Llama community license</td></tr>
+<tr><td><a href="https://ai.google.dev/" target="_blank" rel="noopener">Gemini 2.0 Flash</a></td><td>Rewrite &middot; translate</td><td>Google AI Studio API; commercial license</td></tr>
+</table>
+
+<h2>News sources (Dispatches, §03)</h2>
+<p>Each daily dispatch lists its source by name and links to the original. We never republish AP, Reuters, or Bloomberg copy. We never use a photograph that is not our own. The full active source list is at <code>/admin/rss-sources</code> (editor access).</p>
+
+<h2>Infrastructure</h2>
+<table>
+<tr><td><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a></td><td>Workers, D1, R2, Pages, KV</td><td>Self-serve; free tier sufficient for current scale</td></tr>
+</table>
+
+<h2>Typography</h2>
+<table>
+<tr><td><a href="https://github.com/undercasetype/Fraunces" target="_blank" rel="noopener">Fraunces</a></td><td>Serif headings &middot; magazine body</td><td>SIL Open Font License 1.1 &mdash; Undercase Type</td></tr>
+<tr><td><a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">JetBrains Mono</a></td><td>Monospaced labels &middot; metadata</td><td>SIL Open Font License 1.1</td></tr>
+</table>
+
+<p class="footnote">
+    <strong>A note on takedown.</strong>
+    If a video, photograph, audio stem, or news fragment infringes your rights or those of another, write to <a href="mailto:luiseluise0619@gmail.com">luiseluise0619@gmail.com</a>. We review within seven days and remove from publication. You may also reply to any dispatch with the URL of the offending item.
+</p>
+
+<p class="footnote">
+    <strong>Operator.</strong>
+    Saudade is published by an independent editor. Issue 03 was edited from Seoul. Operating cost: zero. No advertising. No subscription. No tracking. The user&rsquo;s data lives on the user&rsquo;s device.
+</p>
 
 </body>
 </html>

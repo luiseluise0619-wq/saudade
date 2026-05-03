@@ -381,6 +381,11 @@ export default {
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
+                case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
+                case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
+                case '/following':            return followingHandler(req, env, ctx);
+                case '/listening/log':        return listeningLog(req, env, ctx);
+                case '/stats/weekly':         return statsWeekly(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -1588,9 +1593,25 @@ async function dispatchesToday(req, env, ctx) {
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
     const url = new URL(req.url);
     const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    const userId  = (url.searchParams.get('user_id') || '').trim();
     if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
 
-    const k = `dispatches:today:${edition}`;
+    // v8 §02 — user_following_cities 조회 후 도시 필터.
+    // user_id 없거나 Following 비었으면 그냥 published 전체 (legacy).
+    let followingCities = [];
+    if (userId) {
+        try {
+            const fr = await env.SAUDADE_DB.prepare(
+                'SELECT city FROM user_following_cities WHERE user_id = ? ORDER BY position'
+            ).bind(userId).all();
+            followingCities = ((fr && fr.results) || []).map(r => r.city).slice(0, 3);
+        } catch (e) {}
+    }
+
+    // 캐시 키에 user_id 포함 (Following 마다 다른 결과)
+    const k = userId
+        ? `dispatches:today:${edition}:u:${userId}`
+        : `dispatches:today:${edition}`;
     const cached = await cGet(k, env);
     if (cached) return new Response(cached, { status: 200, headers: hdrs(req, { 'X-Cache': 'HIT' }) });
 
@@ -1598,20 +1619,57 @@ async function dispatchesToday(req, env, ctx) {
         // KST 자정 ~ 현재 사이 published 만
         const kstNow = Date.now();
         const kstMidnight = kstNow - ((kstNow + 9 * 3600 * 1000) % (24 * 3600 * 1000));
-        const rows = await env.SAUDADE_DB.prepare(
-            "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
-        ).bind(edition, kstMidnight).all();
-        const items = ((rows && rows.results) || []).map((r, i) => ({
-            n: String(i + 1).padStart(2, '0'),
-            headline: r.headline,
-            lede: r.lede,
-            body: r.body,
-            source_url: r.source_url,
-            ai_score: r.ai_score
-        }));
+
+        let items = [];
+        if (followingCities.length) {
+            // v8 — Following 도시 각각의 best published dispatch 1개
+            for (let i = 0; i < followingCities.length; i++) {
+                const city = followingCities[i];
+                const row = await env.SAUDADE_DB.prepare(
+                    `SELECT s.headline, s.lede, s.body, s.source_url, s.ai_score, s.weekday, r.city
+                     FROM dispatches_staged s
+                     JOIN raw_feeds r ON s.raw_feed_id = r.id
+                     WHERE s.edition = ? AND s.status = 'published'
+                       AND s.published_at >= ? AND r.city = ?
+                     ORDER BY s.ai_score DESC LIMIT 1`
+                ).bind(edition, kstMidnight, city).first();
+                if (row) {
+                    items.push({
+                        n: String(i + 1).padStart(2, '0'),
+                        headline: row.headline,
+                        lede: row.lede,
+                        body: row.body,
+                        source_url: row.source_url,
+                        ai_score: row.ai_score,
+                        _city: row.city
+                    });
+                } else {
+                    // placeholder — 클라이언트가 "Awaiting" 표시
+                    items.push({
+                        n: String(i + 1).padStart(2, '0'),
+                        _awaiting: true,
+                        _city: city
+                    });
+                }
+            }
+        } else {
+            // legacy fallback — published 전체 top 9 (Following 안 정한 사용자)
+            const rows = await env.SAUDADE_DB.prepare(
+                "SELECT headline, lede, body, source_url, ai_score, weekday FROM dispatches_staged WHERE edition = ? AND status = 'published' AND published_at >= ? ORDER BY ai_score DESC LIMIT 9"
+            ).bind(edition, kstMidnight).all();
+            items = ((rows && rows.results) || []).map((r, i) => ({
+                n: String(i + 1).padStart(2, '0'),
+                headline: r.headline,
+                lede: r.lede,
+                body: r.body,
+                source_url: r.source_url,
+                ai_score: r.ai_score
+            }));
+        }
+
         const body = JSON.stringify({
             edition,
-            weekday: ((rows && rows.results || [])[0] || {}).weekday || null,
+            following: followingCities,
             published_at: kstMidnight,
             items
         });
@@ -1665,5 +1723,228 @@ async function dispatchesRetracted(req, env, ctx) {
         return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
     } catch (e) {
         return J(req, { ok: true, retracts: [] });   // graceful — 503 X
+    }
+}
+
+// ─── /admin/rss-sources ────────────────────────────────────────────────
+// GET  ?city=  → 출처 목록 (편집부 검토 대시보드용). Bearer EDITOR_TOKEN 필수.
+// PATCH body: { id, rss_url?, terms_status?, terms_notes?, active? }
+//   → 운영자가 사이트 검증 후 RSS URL / 약관 상태 / 활성화 갱신.
+// 절대 INSERT/DELETE 안 함 — 시드는 data/rss-sources-seed.sql 통해서만 추가.
+async function adminRssSources(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
+    if (req.method === 'GET') {
+        const url = new URL(req.url);
+        const city = (url.searchParams.get('city') || '').toLowerCase();
+        try {
+            const stmt = city
+                ? env.SAUDADE_DB.prepare(
+                    `SELECT id, city_slug, source_name, site_url, rss_url, weekday_section,
+                            license_type, terms_status, terms_notes, last_verified,
+                            last_fetch_at, last_fetch_ok, fetch_error, active, created_at
+                     FROM rss_sources WHERE city_slug = ? ORDER BY weekday_section, source_name`
+                  ).bind(city)
+                : env.SAUDADE_DB.prepare(
+                    `SELECT id, city_slug, source_name, site_url, rss_url, weekday_section,
+                            license_type, terms_status, terms_notes, last_verified,
+                            last_fetch_at, last_fetch_ok, fetch_error, active, created_at
+                     FROM rss_sources ORDER BY city_slug, weekday_section, source_name`
+                  );
+            const rows = await stmt.all();
+            return J(req, { ok: true, sources: (rows && rows.results) || [] });
+        } catch (e) {
+            return E(req, 'DB_QUERY', 'Query failed', 500);
+        }
+    }
+
+    if (req.method === 'PATCH') {
+        let body;
+        try { body = await req.json(); }
+        catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+        const id = parseInt(body.id, 10);
+        if (!Number.isFinite(id) || id < 1) return E(req, 'BAD_ID', 'id required', 400);
+
+        const updates = [];
+        const values = [];
+        if (body.rss_url !== undefined) {
+            const u = String(body.rss_url || '').trim();
+            if (u && !/^https?:\/\//i.test(u)) return E(req, 'BAD_URL', 'rss_url must be http(s)', 400);
+            updates.push('rss_url = ?'); values.push(u || null);
+        }
+        if (body.terms_status !== undefined) {
+            const s = String(body.terms_status || '').toLowerCase();
+            if (!['pending', 'approved', 'rejected'].includes(s)) {
+                return E(req, 'BAD_STATUS', 'terms_status must be pending|approved|rejected', 400);
+            }
+            updates.push('terms_status = ?'); values.push(s);
+        }
+        if (body.terms_notes !== undefined) {
+            updates.push('terms_notes = ?'); values.push(String(body.terms_notes || '').slice(0, 2000));
+        }
+        if (body.active !== undefined) {
+            updates.push('active = ?'); values.push(body.active ? 1 : 0);
+        }
+        if (!updates.length) return E(req, 'NO_FIELDS', 'No update fields', 400);
+        updates.push('last_verified = ?'); values.push(Date.now());
+        values.push(id);
+
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                `UPDATE rss_sources SET ${updates.join(', ')} WHERE id = ?`
+            ).bind(...values).run();
+            return J(req, { ok: true, id, changed: r.meta && r.meta.changes });
+        } catch (e) {
+            return E(req, 'DB_UPDATE', 'Update failed', 500);
+        }
+    }
+
+    return E(req, 'METHOD', 'GET or PATCH required', 405);
+}
+
+// GET /admin/rss-forbidden — 금지 출처 목록 (조회만, 시드 통해서만 추가)
+async function adminRssForbidden(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    try {
+        const rows = await env.SAUDADE_DB.prepare(
+            `SELECT id, domain_pattern, reason, notes, created_at
+             FROM forbidden_sources ORDER BY reason, domain_pattern`
+        ).all();
+        return J(req, { ok: true, forbidden: (rows && rows.results) || [] });
+    } catch (e) {
+        return E(req, 'DB_QUERY', 'Query failed', 500);
+    }
+}
+
+// ─── v8 §02 — /following ─────────────────────────────────────────────
+// GET  ?user_id= → ['lisbon', 'tokyo', 'berlin']
+// PUT  body: { user_id, cities: [slug, slug, slug] } → REPLACE 3
+// 인증: user_id 신뢰 (Magic Link 세션이 클라이언트 측 user.id 보유). 추후 token 전환 가능.
+async function followingHandler(req, env, ctx) {
+    if (!env.SAUDADE_DB) return J(req, { ok: true, cities: [] });   // graceful
+
+    if (req.method === 'GET') {
+        const url = new URL(req.url);
+        const userId = (url.searchParams.get('user_id') || '').trim();
+        if (!userId) return E(req, 'NO_USER', 'user_id required', 400);
+        try {
+            const rows = await env.SAUDADE_DB.prepare(
+                'SELECT city, position FROM user_following_cities WHERE user_id = ? ORDER BY position'
+            ).bind(userId).all();
+            const cities = ((rows && rows.results) || []).sort((a, b) => a.position - b.position).map(r => r.city);
+            return J(req, { ok: true, user_id: userId, cities });
+        } catch (e) {
+            return E(req, 'DB_QUERY', 'Query failed', 500);
+        }
+    }
+
+    if (req.method === 'PUT') {
+        let body;
+        try { body = await req.json(); }
+        catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+        const userId = clean(body.user_id, 64);
+        const cities = Array.isArray(body.cities) ? body.cities.filter(s => typeof s === 'string').slice(0, 3) : [];
+        if (!userId) return E(req, 'NO_USER', 'user_id required', 400);
+        const at = Date.now();
+        try {
+            // REPLACE pattern — DELETE + INSERT (D1 batch 권장)
+            await env.SAUDADE_DB.prepare(
+                'DELETE FROM user_following_cities WHERE user_id = ?'
+            ).bind(userId).run();
+            for (let i = 0; i < cities.length; i++) {
+                await env.SAUDADE_DB.prepare(
+                    'INSERT OR IGNORE INTO user_following_cities (user_id, city, position, added_at) VALUES (?, ?, ?, ?)'
+                ).bind(userId, cities[i], i + 1, at).run();
+            }
+            return J(req, { ok: true, user_id: userId, cities });
+        } catch (e) {
+            return E(req, 'DB_WRITE', 'Write failed', 500);
+        }
+    }
+
+    return E(req, 'METHOD', 'GET or PUT required', 405);
+}
+
+// ─── v8 §11 — /listening/log ──────────────────────────────────────────
+// POST body 두 가지 모드:
+//   START: { user_id?, track_id, city?, started_at } → INSERT, return { id }
+//   END:   { id, duration_seconds }                  → UPDATE duration_seconds
+// 약한 연결 집계용. 사용자별 이력 페이지 X.
+async function listeningLog(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, logged: false });   // graceful
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    // END 모드 — duration UPDATE
+    if (body.id) {
+        const id = parseInt(body.id, 10);
+        const duration = Math.max(0, Math.min(86400, parseInt(body.duration_seconds, 10) || 0));
+        if (!Number.isFinite(id) || id < 1) return E(req, 'BAD_ID', 'id invalid', 400);
+        try {
+            await env.SAUDADE_DB.prepare(
+                'UPDATE listening_sessions SET duration_seconds = ? WHERE id = ?'
+            ).bind(duration, id).run();
+            return J(req, { ok: true, updated: true, id, duration });
+        } catch (e) {
+            return J(req, { ok: true, updated: false });
+        }
+    }
+
+    // START 모드 — INSERT, return id
+    const userId   = clean(body.user_id, 64) || null;
+    const trackId  = clean(body.track_id, 256);
+    const city     = clean(body.city, 64) || null;
+    const startedAt = parseInt(body.started_at, 10) || Date.now();
+    if (!trackId) return E(req, 'NO_TRACK', 'track_id required', 400);
+
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            'INSERT INTO listening_sessions (user_id, track_id, city, started_at, duration_seconds) VALUES (?, ?, ?, ?, 0)'
+        ).bind(userId, trackId, city, startedAt).run();
+        return J(req, { ok: true, logged: true, id: r.meta && r.meta.last_row_id });
+    } catch (e) {
+        return J(req, { ok: true, logged: false });   // graceful — 클라이언트 fire-and-forget
+    }
+}
+
+// ─── v8 §13 — /stats/weekly ──────────────────────────────────────────
+// GET ?key=cover:lisbon:readers (or 'all' → 전체 dump)
+// weekly_stats 테이블 캐시 hit 우선. M3 약한 연결 표시용 (현재는 데이터만 모음).
+async function statsWeekly(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, stats: {} });
+    const url = new URL(req.url);
+    const key = (url.searchParams.get('key') || 'all').trim();
+    try {
+        const stmt = key === 'all'
+            ? env.SAUDADE_DB.prepare(
+                'SELECT stat_key, stat_value, computed_at, expires_at FROM weekly_stats WHERE expires_at > ?'
+              ).bind(Date.now())
+            : env.SAUDADE_DB.prepare(
+                'SELECT stat_key, stat_value, computed_at, expires_at FROM weekly_stats WHERE stat_key = ? AND expires_at > ?'
+              ).bind(key, Date.now());
+        const rows = await stmt.all();
+        const stats = {};
+        ((rows && rows.results) || []).forEach(r => {
+            try { stats[r.stat_key] = { value: JSON.parse(r.stat_value), computed_at: r.computed_at, expires_at: r.expires_at }; }
+            catch (e) { stats[r.stat_key] = { value: r.stat_value, computed_at: r.computed_at, expires_at: r.expires_at }; }
+        });
+        return J(req, { ok: true, stats });
+    } catch (e) {
+        return J(req, { ok: true, stats: {} });
     }
 }

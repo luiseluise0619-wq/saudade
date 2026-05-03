@@ -124,7 +124,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 .sdd-ld-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v7 검토 정정 — 이중선 방지: 다음 .sdd-ld-article 또는 empty-state 가 자체 border 가짐 */
 }
 .sdd-ld-h2 {
     font-family: var(--serif);
@@ -136,7 +136,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-ld-h2 .it { font-style: italic; display: block; }
+.sdd-ld-h2 .it { font-style: italic; display: inline; }
 
 /* D-day 큰 숫자 (헌법 §4-2: Fraunces italic 88px rust) */
 .sdd-ld-dday {
@@ -479,6 +479,74 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     border-bottom: 0.5px solid var(--rule);
 }
 
+/* v7 검토 정정 — 빈 상태 (잡지의 빈 페이지처럼) */
+.sdd-ld-empty-state {
+    padding: clamp(24px, 4vw, 40px) 0;
+    margin: 0 0 clamp(24px, 4vw, 40px);
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-ld-empty-h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.2;
+    letter-spacing: var(--tr-fraunces-h3);
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+.sdd-ld-empty-body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 60ch;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+.sdd-ld-empty-actions {
+    list-style: none;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.sdd-ld-empty-actions li {
+    border-top: 0.5px solid var(--rule);
+    margin: 0;
+}
+/* 마지막 항목 border-bottom 없음 — 잡지 리스트 분리선만 (박스 X) */
+.sdd-ld-empty-btn {
+    background: transparent;
+    border: 0;
+    color: var(--ink);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 14px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    transition: color .12s;
+    min-height: 44px;
+}
+.sdd-ld-empty-btn:hover { color: var(--rust); }
+.sdd-ld-empty-note {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    max-width: 60ch;
+    margin: 0;
+}
+
 /* v6 §7.2 — 기사 인트로 (Ledger 를 잡지 톤으로) */
 .sdd-ld-article {
     padding: clamp(20px, 3vw, 32px) 0;
@@ -534,7 +602,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-ledger { padding: 88px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-ledger { padding: 56px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-ld-dday { grid-template-columns: 1fr; gap: 16px; }
     .sdd-ld-dday-num { text-align: left; font-size: clamp(64px, 18vw, 96px); }
     .sdd-ld-dday-unit { text-align: left; }
@@ -563,6 +631,20 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 
         const records = getVisas();   // unified ledger (각 record 에 type 필드)
         const today = new Date().toISOString().slice(0, 10);
+
+        // v7 검토 정정 — i18n 헬퍼와 라벨은 categoriesHtml 평가 전에 선언해야 한다 (TDZ 방지).
+        // 이전엔 const editorialBadge / yourRecordsLabel 가 .map() 콜백 뒤에 선언되어
+        // ReferenceError 로 render() 자체가 throw → Ledger 가 빈 화면으로 보임.
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const editorialBadge = T({
+            en: 'EDITORIAL',  ko: '편집부',  ja: '編集部',
+            pt: 'EDITORIAL',  es: 'EDITORIAL'
+        });
+        const yourRecordsLabel = T({
+            en: 'YOUR RECORDS', ko: '내 기록',
+            ja: 'あなたの記録',
+            pt: 'OS SEUS REGISTOS', es: 'TUS REGISTROS'
+        });
 
         // category 별로 records 그룹 (v6 §7.1)
         // legacy 호환: typeCategory 없으면 모두 'visa' 로 (v617 이전 데이터).
@@ -633,7 +715,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                         <h3 class="sdd-ld-cat-headline">${escapeHtml(cat.article)}</h3>
                         <p class="sdd-ld-cat-body">${escapeHtml(cat.articleBody)}</p>
                     </header>
-                    ${cat.records && cat.records.length ? `<p class="sdd-ld-records-label">${escapeHtml(yourRecordsLabel)}</p>` : ''}
+                    ${rows.length ? `<p class="sdd-ld-records-label">${escapeHtml(yourRecordsLabel)}</p>` : ''}
                     <div class="sdd-ld-cat-records">${cardsHtml}</div>
                     <p class="sdd-ld-cat-note">${cat.note}</p>
                 </section>
@@ -679,17 +761,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         `;
 
         // v6 §7.2 — Ledger 기사 톤 (PORTUGAL D7, IN FIVE LINES) — 5 에디션 i18n
-        const T = window.SAUDADE_T || ((s) => s.en);
-        // v7 검토 정정 — 사용자 record 와 편집부 기사 구분
-        const editorialBadge = T({
-            en: 'EDITORIAL',  ko: '편집부',  ja: '編集部',
-            pt: 'EDITORIAL',  es: 'EDITORIAL'
-        });
-        const yourRecordsLabel = T({
-            en: 'YOUR RECORDS', ko: '내 기록',
-            ja: 'あなたの記録',
-            pt: 'OS SEUS REGISTOS', es: 'TUS REGISTROS'
-        });
+        // (T / editorialBadge / yourRecordsLabel 는 위에서 이미 선언 — TDZ 방지)
         const headLabel = T({
             en: 'How many days',  ko: '며칠이',
             ja: 'のこされた日々',  pt: 'Quantos dias',
@@ -719,14 +791,59 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             </article>
         `;
 
+        // v7 검토 정정 — 전체 빈 상태 안내 (records 0일 때만)
+        // 잡지의 빈 페이지처럼 — 추가 액션 4개 + 편집부 메모.
+        const emptyHeadline = T({
+            en: 'Nothing on the ledger yet.',
+            ko: '아직 장부에 적힌 것이 없다.',
+            ja: 'まだ台帳に何も書かれていない。',
+            pt: 'Nada no livro-razão ainda.',
+            es: 'Nada en el libro mayor todavía.'
+        });
+        const emptyBody = T({
+            en: 'Add a visa, a tax-residency entry, a health-insurance pause, or a pension filing below. Each entry is a row this newspaper will count from tomorrow morning.',
+            ko: '아래에서 비자·세금 거주일·건강보험 정지·연금 신고를 추가한다. 각 항목은 이 신문이 내일 아침부터 헤아릴 한 줄이 된다.',
+            ja: '下のフォームからビザ・税居住日・健康保険の停止・年金届出を加える。一つひとつが、明朝からこの新聞が数える一行になる。',
+            pt: 'Adicione um visto, uma entrada de residência fiscal, uma pausa de seguro de saúde ou um registo de pensão em baixo. Cada entrada é uma linha que este jornal contará a partir de amanhã de manhã.',
+            es: 'Añade un visado, una entrada de residencia fiscal, una pausa de seguro de salud o un registro de pensión abajo. Cada entrada es una fila que este periódico contará desde mañana por la mañana.'
+        });
+        const addLabel = {
+            visa:      T({ en: 'Add a visa',                ko: '비자 추가',          ja: 'ビザを追加',           pt: 'Adicionar um visto',                  es: 'Añadir un visado' }),
+            tax:       T({ en: 'Add a tax-residency entry', ko: '세금 거주일 추가',    ja: '税居住日を追加',        pt: 'Adicionar entrada fiscal',            es: 'Añadir entrada fiscal' }),
+            insurance: T({ en: 'Add a health-insurance entry', ko: '건강보험 항목 추가',  ja: '健康保険を追加',        pt: 'Adicionar entrada de seguro',         es: 'Añadir entrada de seguro' }),
+            pension:   T({ en: 'Add a pension entry',       ko: '연금 항목 추가',      ja: '年金届出を追加',        pt: 'Adicionar entrada de pensão',         es: 'Añadir entrada de pensión' })
+        };
+        const editorNote = T({
+            en: 'A note from the editor. We never store your visa data on a server. It lives on this device only — clear your browser, and it disappears with you.',
+            ko: '편집장의 메모. 비자 데이터는 서버에 저장하지 않는다. 이 기기에만 머문다 — 브라우저를 비우면 함께 사라진다.',
+            ja: '編集長より。ビザの情報はサーバーに保存しない。この端末だけにある — ブラウザを消せば、ともに消える。',
+            pt: 'Uma nota do editor. Nunca guardamos os seus dados de visto num servidor. Vivem apenas neste dispositivo — limpe o navegador, e desaparecem consigo.',
+            es: 'Una nota del editor. Nunca guardamos sus datos de visado en un servidor. Viven sólo en este dispositivo — limpie el navegador, y desaparecen con usted.'
+        });
+        const isLedgerEmpty = records.length === 0;
+        const emptyStateHtml = isLedgerEmpty ? `
+            <section class="sdd-ld-empty-state">
+                <h3 class="sdd-ld-empty-h3">${escapeHtml(emptyHeadline)}</h3>
+                <p class="sdd-ld-empty-body">${escapeHtml(emptyBody)}</p>
+                <ul class="sdd-ld-empty-actions">
+                    <li><button type="button" class="sdd-ld-empty-btn" data-jump-cat="visa">+ ${escapeHtml(addLabel.visa)}</button></li>
+                    <li><button type="button" class="sdd-ld-empty-btn" data-jump-cat="tax">+ ${escapeHtml(addLabel.tax)}</button></li>
+                    <li><button type="button" class="sdd-ld-empty-btn" data-jump-cat="insurance">+ ${escapeHtml(addLabel.insurance)}</button></li>
+                    <li><button type="button" class="sdd-ld-empty-btn" data-jump-cat="pension">+ ${escapeHtml(addLabel.pension)}</button></li>
+                </ul>
+                <p class="sdd-ld-empty-note">${escapeHtml(editorNote)}</p>
+            </section>
+        ` : '';
+
         root.innerHTML = `
             <header class="sdd-ld-head">
                 <h2 class="sdd-ld-h2">
-                    ${escapeHtml(headLabel)}
-                    <span class="it">${escapeHtml(headItalic)}</span>
+                    ${dropItalicPunct(headLabel)}
+                    <span class="it">${dropItalicPunct(headItalic)}</span>
                 </h2>
             </header>
             ${articleIntro}
+            ${emptyStateHtml}
             ${categoriesHtml}
             ${formHtml}
         `;
@@ -792,6 +909,22 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             onCatChange();
         }
 
+        // 빈 상태 quick-add — 카테고리 pre-select 후 폼으로 스크롤
+        root.querySelectorAll('[data-jump-cat]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-jump-cat');
+                const catSel = root.querySelector('#ld-cat');
+                const isoInp = root.querySelector('#ld-iso');
+                if (catSel) {
+                    catSel.value = target;
+                    catSel.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                const formEl = root.querySelector('[data-add-entry]');
+                if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => isoInp?.focus(), 320);
+            });
+        });
+
         // 삭제
         root.querySelectorAll('[data-rm]').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -809,18 +942,38 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
+    }
+
+    // v8 §07 — 도크 LEDGER 탭 visa expiry 긴급 도트 (조용한 알림, 알림 API X)
+    function refreshVisaUrgent() {
+        const v = activeVisa();
+        const days = v ? daysLeft(v.expiry) : null;
+        if (days != null && days <= 7) {
+            document.body.setAttribute('data-visa-urgent', '1');
+        } else {
+            document.body.removeAttribute('data-visa-urgent');
+        }
+    }
 
     function init() {
         injectStyles();
         render();
+        refreshVisaUrgent();
         // body section 변경 감지 — 01 진입 시 재렌더
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '01') render();
         });
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section'] });
-        // 1분마다 D-day 갱신
+        // 1분마다 D-day 갱신 + visa urgency 재계산
         setInterval(() => {
             if (document.body.getAttribute('data-section') === '01') render();
+            refreshVisaUrgent();
         }, 60000);
     }
 
@@ -830,5 +983,5 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         init();
     }
 
-    window.SAUDADE_LEDGER = { render, getVisas, setVisas, activeVisa, daysLeft, taxResidency };
+    window.SAUDADE_LEDGER = { render, getVisas, setVisas, activeVisa, daysLeft, taxResidency, refreshVisaUrgent };
 })();

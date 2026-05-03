@@ -107,7 +107,7 @@ body.qdispatch-active .sdd-masthead { display: none; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-qdisp-h2 .it { font-style: italic; display: block; }
+.sdd-qdisp-h2 .it { font-style: italic; display: inline; }
 .sdd-qdisp-sub {
     font-family: var(--serif);
     font-weight: 300;
@@ -368,7 +368,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
 }
 
 @media (max-width: 768px) {
-    .sdd-qdisp { padding: 72px 16px calc(var(--dock-h, 56px) + 80px); }
+    .sdd-qdisp { padding: 72px 16px calc(var(--dock-h, 56px) + 24px); }
     .sdd-qdisp-mast { padding: 14px 16px 8px; font-size: 9px; flex-wrap: wrap; gap: 6px; }
     .sdd-qdisp-mast-issue, .sdd-qdisp-mast-page { display: none; }
     .sdd-qdisp-item { grid-template-columns: 32px 1fr; gap: 12px; }
@@ -387,6 +387,13 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
+    }
+    // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
+    function dropItalicPunct(s) {
+        if (!s) return '';
+        const m = String(s).match(/^([\s\S]*?)([.,;:!?。、！？]+)$/);
+        if (!m) return escapeHtml(s);
+        return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
     function safeUrl(u) {
@@ -726,8 +733,8 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         const intro = `
             <header class="sdd-qdisp-head">
                 <h2 class="sdd-qdisp-h2">
-                    ${escapeHtml(c.head1)}
-                    <span class="it">${escapeHtml(c.head2)}</span>
+                    ${dropItalicPunct(c.head1)}
+                    <span class="it">${dropItalicPunct(c.head2)}</span>
                 </h2>
                 <p class="sdd-qdisp-sub">${escapeHtml(c.line)} <em>${escapeHtml(c.sub)}</em></p>
                 <p class="sdd-qdisp-meta">${escapeHtml(c.filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(c.nextLabel)} ${escapeHtml(next)}</p>

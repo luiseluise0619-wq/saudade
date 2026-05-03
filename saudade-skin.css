@@ -279,7 +279,8 @@ input::placeholder, .os-search::placeholder { color: var(--bone-d) !important; t
 
 /* ─── 8. 버튼 일반 — flat ink / hover rust ──────────────────────────────── */
 
-button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable) {
+/* v7 검토 정정 — sdd-* 잡지 톤 버튼은 자체 스타일 보유. 전역 box border 제외. */
+button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):not(.sdd-listen-ctl):not(.sdd-listen-back):not(.sdd-mast-back):not(.sdd-atlas-d-back):not(.sdd-gps-modal-btn):not(.sdd-gps-pin-prompt-cancel):not(.sdd-gps-status-btn):not(.sdd-disp-disclaimer-toggle):not(.sdd-listen-mode-btn):not(.sdd-desk-account-btn):not(.sdd-following-remove):not(.sdd-following-opt):not(.sdd-following-pairing):not(.sdd-gps-locate):not(.sdd-disp-pairing):not(.sdd-cover-edition-opt) {
     background: transparent;
     border: 0.5px solid var(--rule);
     color: var(--ink);
@@ -292,7 +293,7 @@ button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable)
     cursor: pointer;
     transition: color .2s, border-color .2s;
 }
-button:not(.dock-btn):not(.os-btn):hover { color: var(--rust); border-color: var(--rust); }
+button:not(.dock-btn):not(.os-btn):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):hover { color: var(--rust); border-color: var(--rust); }
 
 /* ─── 9. 카페/비자 등 widget — paper card with hairline rule ────────────── */
 
@@ -1240,17 +1241,23 @@ body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 }
 
 @media (max-width: 768px) {
+    /* v7 검토 정정 — 터치 친화 dock 높이 (iOS·Android 표준 49~60px) */
     body:not(.cafe-mode) .dock-stats {
         gap: 14px !important;
-        padding: 12px 14px !important;
+        padding: 16px 14px !important;
         justify-content: space-around !important;
+        min-height: 60px !important;
+    }
+    body:not(.cafe-mode) .dock-stats > .dock-btn {
+        min-height: 44px !important;
+        padding: 8px 4px !important;
     }
     /* v7 모바일 dock 라벨 — .dock-btn 직접 ::after (inner .dock-btn-label 요소 없음) */
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="visa"]::after  { content: 'LEDGER'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="cafe"]::after  { content: 'ATLAS'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="tz"]::after    { content: 'DISPATCHES'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="trip"]::after  { content: 'DESK'; }
-    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTEN'; }
+    body:not(.cafe-mode) .dock-stats > .dock-btn[data-cat="listen"]::after { content: 'LISTENING'; }
     body:not(.cafe-mode) .dock-stats > .dock-btn::after {
         font-family: var(--mono);
         font-weight: 500;
@@ -1717,3 +1724,169 @@ body.colophon-active #sddCoverListenCta { display: none !important; }
         padding: 10px 14px !important;
     }
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v7 §2.3 + §13 — Print A4 잡지 레이아웃 (구독 출력 / 편집부 검수용)
+   사용자 ⌘P → 인쇄 미리보기에서 잡지 한 지면 톤 유지.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 18mm 16mm 20mm;
+    }
+    /* 색상 정확 출력 (paper/ink 토큰) */
+    html, body {
+        background: #F2EEE3 !important;
+        color: #0F0E12 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    /* 노이즈 일체 hide — dock / topbar / 워드마크 / rings / cover videos / GPS modal */
+    .bottom-dock, .dock-stats, .dock-handle,
+    .topbar, .topbar-btn, #settingsBtn,
+    .brand-stack, [data-sdd-wordmark],
+    .sdd-cover-video, .sdd-cover-listen-cta,
+    .sdd-rings, .sdd-rings-canvas,
+    .sdd-mast-back, .sdd-listen-back, .sdd-atlas-d-back,
+    .sdd-listen-controls, .sdd-listen-session-counter,
+    .sdd-listen-catnav, .sdd-listen-mode, .sdd-listen-city-switcher,
+    .sdd-atlas-view-pair, .sdd-atlas-search,
+    .sdd-gps-modal, .sdd-gps-pin-prompt, .sdd-gps-status,
+    .sdd-atlas-empty-actions, .sdd-ld-empty-actions, .sdd-ld-form,
+    .sdd-disp-disclaimer-toggle::after,
+    .sdd-desk-account, .sdd-desk-edition-list,
+    .sdd-desk-switch-actions, .sdd-desk-switch-active,
+    [data-request-form], [data-add-entry], [data-toggle-visit] {
+        display: none !important;
+    }
+    /* 모달·sticky 해제 */
+    .sdd-masthead { position: static !important; border-bottom: 0.5pt solid #888 !important; }
+    .sdd-ledger, .sdd-atlas, .sdd-disp, .sdd-listen, .sdd-desk, .sdd-qdisp {
+        position: static !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: transparent !important;
+        display: block !important;
+    }
+    /* 면책 details 접힘 무력화 — 인쇄 시 항상 펼침 */
+    details.sdd-disp-foot, details.sdd-disp-foot[open] {
+        display: block !important;
+    }
+    details.sdd-disp-foot > summary { display: none !important; }
+    /* 도시 사진 — 잡지 한 컬럼 */
+    .sdd-listen-city-photo {
+        page-break-inside: avoid;
+        max-width: 100%;
+    }
+    /* 잡지 톤 hairline — 인쇄에선 0.25pt */
+    [class*="border-top"], [class*="border-bottom"],
+    .sdd-ld-cat, .sdd-ld-record, .sdd-ld-empty-actions li,
+    .sdd-disp-item, .sdd-disp-city, .sdd-disp-archive-day,
+    .sdd-listen-track, .sdd-listen-cat-head,
+    .sdd-atlas-item, .sdd-atlas-empty-actions li,
+    .sdd-desk-section, .sdd-desk-step {
+        border-color: #888 !important;
+    }
+    /* 페이지 분할 힌트 */
+    h1, h2, h3, .sdd-ld-h2, .sdd-atlas-h2, .sdd-disp-h2, .sdd-listen-h2, .sdd-desk-h2 {
+        page-break-after: avoid;
+    }
+    article, .sdd-disp-item, .sdd-ld-cat, .sdd-listen-track {
+        page-break-inside: avoid;
+    }
+    /* 링크 URL 인쇄 노출 (인쇄 후에도 출처 추적 가능) */
+    a[href]::after {
+        content: " [" attr(href) "]";
+        font-size: 8pt;
+        color: #666;
+        font-style: normal;
+    }
+    a[href^="#"]::after, a[href^="mailto:"]::after { content: ""; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v8 §07 — LEDGER 도크 탭 visa expiry 긴급 도트 (조용한 알림, 알림 API X)
+   body[data-visa-urgent="1"] 일 때 .dock-btn[data-cat="visa"] 우상단 rust 점.
+   saudade-ledger.js 가 매 분 SAUDADE_LEDGER.activeVisa() 검사 후 attribute 갱신.
+   ════════════════════════════════════════════════════════════════════════════ */
+body[data-visa-urgent="1"] .dock-btn[data-cat="visa"] {
+    position: relative;
+}
+body[data-visa-urgent="1"] .dock-btn[data-cat="visa"]::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background: var(--rust);
+    border-radius: 50%;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    body[data-visa-urgent="1"] .dock-stats > .dock-btn[data-cat="visa"]::before {
+        top: 4px;
+        right: 4px;
+    }
+}
+
+/* v8 §02 — Cover 우상단 edition 스위처 (작은 mono 드롭다운) */
+.sdd-cover-edition {
+    position: fixed;
+    top: clamp(16px, 2vw, 24px);
+    right: clamp(16px, 2vw, 24px);
+    z-index: var(--z-cover, 4);
+    pointer-events: auto;
+}
+body.section-active .sdd-cover-edition,
+body.cafe-mode .sdd-cover-edition,
+body.listening-active .sdd-cover-edition { display: none !important; }
+.sdd-cover-edition > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 6px 8px;
+    user-select: none;
+    background: transparent;
+    border: 0.5px solid transparent;
+    border-radius: 0;
+}
+.sdd-cover-edition > summary:hover { color: var(--ink); border-color: var(--rule); }
+.sdd-cover-edition > summary::-webkit-details-marker { display: none; }
+.sdd-cover-edition > summary::after { content: ' \25BE'; opacity: .6; }
+.sdd-cover-edition[open] > summary { color: var(--ink); border-color: var(--rule); }
+.sdd-cover-edition[open] > summary::after { content: ' \25B4'; opacity: 1; }
+.sdd-cover-edition-list {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    min-width: 140px;
+}
+.sdd-cover-edition-list li { border-top: 0.5px solid var(--rule); }
+.sdd-cover-edition-list li:first-child { border-top: 0; }
+.sdd-cover-edition-list button.sdd-cover-edition-opt {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+    color: var(--ink) !important;
+    padding: 10px 12px !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    min-height: 44px !important;
+}
+.sdd-cover-edition-list button.sdd-cover-edition-opt:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
+.sdd-cover-edition-list button.sdd-cover-edition-opt[aria-current="true"] { color: var(--rust) !important; }
