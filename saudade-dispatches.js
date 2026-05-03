@@ -61,7 +61,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-disp-h2 .it { font-style: italic; display: block; }
+.sdd-disp-h2 .it { font-style: italic; display: inline; }
 
 .sdd-disp-sub {
     font-family: var(--serif);

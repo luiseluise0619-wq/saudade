@@ -1724,3 +1724,83 @@ body.colophon-active #sddCoverListenCta { display: none !important; }
         padding: 10px 14px !important;
     }
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v7 §2.3 + §13 — Print A4 잡지 레이아웃 (구독 출력 / 편집부 검수용)
+   사용자 ⌘P → 인쇄 미리보기에서 잡지 한 지면 톤 유지.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 18mm 16mm 20mm;
+    }
+    /* 색상 정확 출력 (paper/ink 토큰) */
+    html, body {
+        background: #F2EEE3 !important;
+        color: #0F0E12 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    /* 노이즈 일체 hide — dock / topbar / 워드마크 / rings / cover videos / GPS modal */
+    .bottom-dock, .dock-stats, .dock-handle,
+    .topbar, .topbar-btn, #settingsBtn,
+    .brand-stack, [data-sdd-wordmark],
+    .sdd-cover-video, .sdd-cover-listen-cta,
+    .sdd-rings, .sdd-rings-canvas,
+    .sdd-mast-back, .sdd-listen-back, .sdd-atlas-d-back,
+    .sdd-listen-controls, .sdd-listen-session-counter,
+    .sdd-listen-catnav, .sdd-listen-mode, .sdd-listen-city-switcher,
+    .sdd-atlas-view-pair, .sdd-atlas-search,
+    .sdd-gps-modal, .sdd-gps-pin-prompt, .sdd-gps-status,
+    .sdd-atlas-empty-actions, .sdd-ld-empty-actions, .sdd-ld-form,
+    .sdd-disp-disclaimer-toggle::after,
+    .sdd-desk-account, .sdd-desk-edition-list,
+    .sdd-desk-switch-actions, .sdd-desk-switch-active,
+    [data-request-form], [data-add-entry], [data-toggle-visit] {
+        display: none !important;
+    }
+    /* 모달·sticky 해제 */
+    .sdd-masthead { position: static !important; border-bottom: 0.5pt solid #888 !important; }
+    .sdd-ledger, .sdd-atlas, .sdd-disp, .sdd-listen, .sdd-desk, .sdd-qdisp {
+        position: static !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: transparent !important;
+        display: block !important;
+    }
+    /* 면책 details 접힘 무력화 — 인쇄 시 항상 펼침 */
+    details.sdd-disp-foot, details.sdd-disp-foot[open] {
+        display: block !important;
+    }
+    details.sdd-disp-foot > summary { display: none !important; }
+    /* 도시 사진 — 잡지 한 컬럼 */
+    .sdd-listen-city-photo {
+        page-break-inside: avoid;
+        max-width: 100%;
+    }
+    /* 잡지 톤 hairline — 인쇄에선 0.25pt */
+    [class*="border-top"], [class*="border-bottom"],
+    .sdd-ld-cat, .sdd-ld-record, .sdd-ld-empty-actions li,
+    .sdd-disp-item, .sdd-disp-city, .sdd-disp-archive-day,
+    .sdd-listen-track, .sdd-listen-cat-head,
+    .sdd-atlas-item, .sdd-atlas-empty-actions li,
+    .sdd-desk-section, .sdd-desk-step {
+        border-color: #888 !important;
+    }
+    /* 페이지 분할 힌트 */
+    h1, h2, h3, .sdd-ld-h2, .sdd-atlas-h2, .sdd-disp-h2, .sdd-listen-h2, .sdd-desk-h2 {
+        page-break-after: avoid;
+    }
+    article, .sdd-disp-item, .sdd-ld-cat, .sdd-listen-track {
+        page-break-inside: avoid;
+    }
+    /* 링크 URL 인쇄 노출 (인쇄 후에도 출처 추적 가능) */
+    a[href]::after {
+        content: " [" attr(href) "]";
+        font-size: 8pt;
+        color: #666;
+        font-style: normal;
+    }
+    a[href^="#"]::after, a[href^="mailto:"]::after { content: ""; }
+}

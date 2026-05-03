@@ -78,7 +78,7 @@ body.listening-active .sdd-listen { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-listen-h2 .it { font-style: italic; display: block; }
+.sdd-listen-h2 .it { font-style: italic; display: inline; }
 
 .sdd-listen-meta {
     font-family: var(--mono);

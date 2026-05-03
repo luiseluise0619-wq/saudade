@@ -136,7 +136,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-ld-h2 .it { font-style: italic; display: block; }
+.sdd-ld-h2 .it { font-style: italic; display: inline; }
 
 /* D-day 큰 숫자 (헌법 §4-2: Fraunces italic 88px rust) */
 .sdd-ld-dday {

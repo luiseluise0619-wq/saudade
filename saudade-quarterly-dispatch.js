@@ -107,7 +107,7 @@ body.qdispatch-active .sdd-masthead { display: none; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-qdisp-h2 .it { font-style: italic; display: block; }
+.sdd-qdisp-h2 .it { font-style: italic; display: inline; }
 .sdd-qdisp-sub {
     font-family: var(--serif);
     font-weight: 300;

@@ -185,8 +185,11 @@ body.section-active::before { content: none !important; }
         injectStyles();
         ensureMasthead();
         watchDock();
-        // v607 새로고침 시 마지막 § 복원
-        setTimeout(restoreLastScreen, 200);   // saudade-* 컴포넌트 init 후 실행
+        // v7 검토 정정 — 사용자 "두 번 들어가는" 체감 정정.
+        // 이전엔 setTimeout 200ms → cover 가 잠깐 보였다가 section 으로 점프 = 두 번 진입 느낌.
+        // 이제 init 에서 동기적으로 attribute 만 설정 → cover 자체가 한 번도 안 보임.
+        // 각 § 모듈의 MutationObserver 가 attribute 변경 감지하여 콘텐츠 렌더 (마이크로태스크).
+        restoreLastScreen();
         window.SAUDADE_MASTHEAD = { setSection, backToCover, restoreLastScreen, SECTIONS };
     }
 

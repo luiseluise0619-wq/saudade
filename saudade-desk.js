@@ -51,7 +51,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     color: var(--ink);
     margin: 0;
 }
-.sdd-desk-h2 .it { font-style: italic; display: block; }
+.sdd-desk-h2 .it { font-style: italic; display: inline; }
 
 .sdd-desk-section {
     padding: clamp(20px, 3vw, 32px) 0;

@@ -133,7 +133,7 @@
     color: var(--ink);
     margin: 0;
 }
-.sdd-deskadm-h2 .it { font-style: italic; display: block; }
+.sdd-deskadm-h2 .it { font-style: italic; display: inline; }
 .sdd-deskadm-sub {
     font-family: var(--serif);
     font-weight: 300;
