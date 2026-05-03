@@ -306,8 +306,59 @@
 /* 핀 모드 — 지도 커서 crosshair */
 .sdd-atlas[data-pin-mode="1"] .maplibregl-canvas { cursor: crosshair !important; }
 
+/* v7 검토 정정 — GPS 상태 배지 (MAP 뷰 좌상단). 사용자가 위치 표시 여부를 알 수 있게.
+   states: locating | located | pin | denied | unsupported */
+.sdd-gps-status {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    pointer-events: none;
+}
+.sdd-gps-status::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--bone);
+    flex-shrink: 0;
+}
+.sdd-gps-status[data-state="located"]::before    { background: var(--rust); }
+.sdd-gps-status[data-state="located"]            { color: var(--ink); }
+.sdd-gps-status[data-state="pin"]::before        { background: var(--ink); }
+.sdd-gps-status[data-state="pin"]                { color: var(--ink); }
+.sdd-gps-status[data-state="locating"]::before   { background: var(--signal); }
+.sdd-gps-status[data-state="denied"]::before     { background: var(--bone); }
+.sdd-gps-status-btn {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 0.5px solid currentColor !important;
+    color: var(--rust) !important;
+    font: inherit !important;
+    text-transform: inherit !important;
+    letter-spacing: inherit !important;
+    padding: 2px 0 !important;
+    min-height: 0 !important;
+    cursor: pointer;
+    pointer-events: auto;
+    border-radius: 0 !important;
+}
+.sdd-gps-status-btn:hover { color: var(--ink) !important; }
+.sdd-atlas[data-view="list"] .sdd-gps-status { display: none; }
+
 @media print {
-    .sdd-gps-modal, .sdd-gps-pin-prompt { display: none !important; }
+    .sdd-gps-modal, .sdd-gps-pin-prompt, .sdd-gps-status { display: none !important; }
 }
         `;
         document.head.appendChild(s);
@@ -385,10 +436,10 @@
         _pinPending = true;
         const atlas = document.getElementById('sddAtlas');
         if (!atlas) return;
-        // MAP 뷰 강제
+        // MAP 뷰 강제 (v7 검토 정정 — pair toggle 로 selector 변경됨)
         if (atlas.getAttribute('data-view') !== 'map') {
-            const toggle = atlas.querySelector('[data-view-toggle]');
-            if (toggle) toggle.click();
+            const mapBtn = atlas.querySelector('[data-view-set="map"]');
+            if (mapBtn) mapBtn.click();
         }
         atlas.setAttribute('data-pin-mode', '1');
         ensurePinPrompt().classList.add('active');
@@ -453,6 +504,7 @@
     // ─── 통합 흐름 ────────────────────────────────────────────
     function publishUpdate() {
         updateMarker();
+        renderStatusBadge();
         _subscribers.forEach(fn => { try { fn(_currentCenter); } catch (e) {} });
     }
 
@@ -464,6 +516,8 @@
     }
 
     function onMapOpened() {
+        ensureStatusBadge();
+        renderStatusBadge();
         // 좌표 있으면 표시 + 모달 X
         if (_currentCenter) {
             updateMarker();
@@ -472,6 +526,53 @@
         }
         // 권한도 핀도 없음 — 사전 모달
         if (!isGranted() && !getPin()) showModal();
+    }
+
+    // v7 검토 정정 — 좌상단 GPS 상태 배지 (사용자가 위치 표시 여부 인지)
+    let _statusEl = null;
+    function ensureStatusBadge() {
+        if (_statusEl && document.body.contains(_statusEl)) return _statusEl;
+        const mapContainer = document.getElementById('sddAtlasMap');
+        if (!mapContainer) return null;
+        _statusEl = document.createElement('div');
+        _statusEl.className = 'sdd-gps-status';
+        _statusEl.setAttribute('aria-live', 'polite');
+        mapContainer.appendChild(_statusEl);
+        return _statusEl;
+    }
+    function statusCopy(state) {
+        const T = {
+            locating:    L({ en: 'LOCATING…',     ko: '위치 찾는 중…',  ja: '位置確認中…',     pt: 'A LOCALIZAR…',  es: 'LOCALIZANDO…' }),
+            located:     L({ en: 'LOCATED',        ko: '위치 표시 중',    ja: '位置表示中',       pt: 'LOCALIZADO',     es: 'LOCALIZADO' }),
+            pin:         L({ en: 'PIN SET',        ko: '핀 설정됨',       ja: 'ピン設定済',       pt: 'ALFINETE FIXO',  es: 'ALFILER FIJO' }),
+            denied:      L({ en: 'LOCATION OFF',   ko: '위치 꺼짐',       ja: '位置情報オフ',     pt: 'LOCALIZAÇÃO DESLIGADA', es: 'UBICACIÓN APAGADA' }),
+            unsupported: L({ en: 'NOT SUPPORTED',  ko: '미지원',          ja: '非対応',           pt: 'NÃO SUPORTADO',  es: 'NO COMPATIBLE' }),
+            retry:       L({ en: 'TAP TO LOCATE',  ko: '눌러서 위치',     ja: 'タップで位置',     pt: 'TOQUE PARA LOCALIZAR', es: 'TOCAR PARA LOCALIZAR' })
+        };
+        return T[state] || '';
+    }
+    function renderStatusBadge() {
+        const el = ensureStatusBadge();
+        if (!el) return;
+        let state;
+        if (!('geolocation' in navigator)) state = 'unsupported';
+        else if (_currentCenter && _currentCenter.source === 'gps') state = 'located';
+        else if (_currentCenter && _currentCenter.source === 'pin') state = 'pin';
+        else if (isDeclined()) state = 'denied';
+        else state = 'retry';
+        el.setAttribute('data-state', state);
+        // 'denied' 또는 'retry' 일 땐 클릭으로 재요청 가능
+        const canRetry = (state === 'denied' || state === 'retry');
+        el.innerHTML = canRetry
+            ? `<span>${escapeHtml(statusCopy(state))}</span><button type="button" class="sdd-gps-status-btn" data-gps-retry>${escapeHtml(statusCopy('retry'))}</button>`
+            : `<span>${escapeHtml(statusCopy(state))}</span>`;
+        const retryBtn = el.querySelector('[data-gps-retry]');
+        if (retryBtn) {
+            retryBtn.addEventListener('click', () => {
+                setStored(KEY_DECLINED, null);   // 거부 마커 초기화
+                showModal();
+            });
+        }
     }
 
     function watchAtlasState() {
