@@ -1,0 +1,18 @@
+# build artefacts
+dist/
+node_modules/
+*.log
+
+# secrets
+aura-secrets.js
+.dev.vars
+.wrangler/
+
+# editor
+.DS_Store
+.vscode/
+.idea/
+
+# coverage / temp
+coverage/
+.cache/

@@ -671,7 +671,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                         <div class="sdd-ld-record-meta">
                             <span class="iso">${escapeHtml(r.iso || '—')}</span>
                             <span class="label">${escapeHtml(r.label || cat.label.toLowerCase())}</span>
-                            <button class="rm" data-rm="${r._idx}" aria-label="Remove">×</button>
+                            <button class="rm" data-rm="${r._idx}" aria-label="${escapeHtml(T({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }))}">×</button>
                         </div>
                         <p class="sdd-ld-record-line">
                             You entered <strong>${escapeHtml(r.iso || '—')}</strong> on
@@ -692,7 +692,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                     <div class="sdd-ld-record-meta">
                         <span class="iso">${escapeHtml(r.iso || '—')}</span>
                         <span class="label">${escapeHtml(r.type || r.label || '')}</span>
-                        <button class="rm" data-rm="${r._idx}" aria-label="Remove">×</button>
+                        <button class="rm" data-rm="${r._idx}" aria-label="${escapeHtml(T({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }))}">×</button>
                     </div>
                     <div class="sdd-ld-record-dday">
                         <p class="sdd-ld-record-num ${cls}">${dleft != null ? Math.max(0, dleft) : '—'}</p>
@@ -844,9 +844,20 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             </header>
             ${articleIntro}
             ${emptyStateHtml}
+            <div id="sddSchPanel"></div>
             ${categoriesHtml}
             ${formHtml}
         `;
+
+        // Schengen 90/180 panel — only when the user has at least one Schengen-flagged record.
+        try {
+            const schStays = records
+                .filter(r => (r.iso === 'EU') || (r.type === 'shengen') || (r.type === 'd7-pt'))
+                .map(r => ({ in: r.entered, out: r.expiry, country: r.iso }));
+            if (window.SAUDADE_SCHENGEN && schStays.length) {
+                window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: schStays });
+            }
+        } catch (e) {}
 
         // 폼 핸들러 — type 변경 시 expiry 자동 계산
         const form = root.querySelector('[data-add-entry]');

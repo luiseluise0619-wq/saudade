@@ -1,0 +1,136 @@
+/* saudade · print stylesheet
+   Used for both browser printing (Cmd/Ctrl-P → PDF) and the scripts/build-issue.js
+   single-file generator. Optimised for A4 / Letter portrait.
+*/
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 18mm 16mm 22mm 16mm;
+        @bottom-center {
+            content: "saudade · " counter(page) " / " counter(pages);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 9pt;
+            letter-spacing: 0.18em;
+            color: #5e554a;
+        }
+        @top-right {
+            content: string(issuelabel);
+            font-family: "JetBrains Mono", monospace;
+            font-size: 8pt;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: #5e554a;
+        }
+    }
+    @page :first { @top-right { content: ""; } }
+
+    html, body {
+        background: #ffffff !important;
+        color: #1d1a16 !important;
+        font-size: 10.5pt;
+        line-height: 1.5;
+    }
+
+    /* Hide chrome that has no place on paper. */
+    .sdd-cover-actions, .sdd-auth-modal, .sdd-acct-modal,
+    .sdd-listen-room, .sdd-listening, audio, video,
+    .sdd-following-bar, .sdd-tabbar, .sdd-hud,
+    .sdd-cover-listen-cta, .sdd-disp-toggle,
+    .sdd-mast-edition, .sdd-edition-switcher,
+    [data-no-print] {
+        display: none !important;
+    }
+
+    /* Section headings → italic Fraunces, big, but page-budget-aware. */
+    h1, .sdd-cover-h1, .sdd-disp-h2, .sdd-ld-h2 {
+        font-family: "Fraunces", "Times New Roman", serif !important;
+        font-style: italic;
+        font-weight: 300;
+        page-break-after: avoid;
+    }
+    h1, .sdd-cover-h1 { font-size: 38pt; line-height: 1.0; }
+    h2, .sdd-disp-h2, .sdd-ld-h2 { font-size: 24pt; line-height: 1.05; }
+    h3 { font-size: 14pt; }
+
+    /* Italic punctuation drops handled in-DOM, leave alone. */
+
+    /* Dispatch items — typeset like a newspaper column, no bg colour. */
+    .sdd-disp-item {
+        page-break-inside: avoid;
+        margin: 14pt 0;
+        padding: 10pt 0;
+        border-top: 0.5pt solid #5e554a;
+    }
+    .sdd-disp-num, .sdd-disp-citytag, .sdd-disp-rewrite-tag {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #5e554a;
+    }
+    .sdd-disp-headline {
+        font-family: "Fraunces", serif;
+        font-weight: 400;
+        font-size: 14pt;
+        line-height: 1.25;
+        margin: 4pt 0;
+    }
+    .sdd-disp-lede {
+        font-family: "Fraunces", serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 11pt;
+        margin: 0 0 4pt;
+    }
+    .sdd-disp-fulltext { font-family: "Fraunces", serif; font-weight: 300; }
+    .sdd-disp-quote {
+        font-family: "Fraunces", serif;
+        font-style: italic;
+        border-left: 1pt solid #b35028;
+        padding-left: 10pt;
+        margin: 6pt 0;
+    }
+    .sdd-disp-source {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        letter-spacing: 0.06em;
+        color: #5e554a;
+    }
+    .sdd-disp-source a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 0.5pt solid #5e554a;
+    }
+    .sdd-disp-source a::after {
+        content: " " attr(href);
+        font-size: 7pt;
+        color: #8a7e6e;
+    }
+
+    /* Schengen panel — the key utility, keep it but flatten. */
+    .sdd-sch-panel {
+        page-break-inside: avoid;
+        background: none !important;
+        border-top: 0.5pt solid #5e554a;
+        border-bottom: 0.5pt solid #5e554a;
+        padding: 10pt 0;
+    }
+    .sdd-sch-num { font-size: 48pt; }
+
+    /* Tables in privacy / terms become readable. */
+    table { border-collapse: collapse; width: 100%; font-size: 9pt; }
+    th, td { border: 0.3pt solid #5e554a; padding: 4pt 6pt; vertical-align: top; }
+    th { font-family: "JetBrains Mono", monospace; font-weight: 500; text-align: left; }
+
+    a { color: inherit; }
+
+    /* OpenStreetMap attribution must remain visible — leave it alone. */
+}
+
+/* Browser print button helper — visible only in print preview screens
+   when the user clicks "Print issue" from the cover. */
+.sdd-print-only {
+    display: none;
+}
+@media print { .sdd-print-only { display: block; } }

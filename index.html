@@ -106,6 +106,10 @@
     <link rel="stylesheet" href="saudade-typography.css?v=v635" />
     <!-- v608 SAUDADE Handoff v2 — 5 edition DNA tokens (en/ko/ja/pt/es) -->
     <link rel="stylesheet" href="saudade-edition-tokens.css?v=v635" />
+    <link rel="stylesheet" href="saudade-print.css?v=v635" media="print" />
+    <!-- Atom feed for nomad-friendly readers (Feedly, NetNewsWire, NewsBlur) -->
+    <link rel="alternate" type="application/atom+xml" title="saudade — dispatches (en)"
+          href="/feed.atom?edition=en" />
     <link rel="stylesheet" href="saudade-skin.css?v=v635" />
     <link rel="stylesheet" href="style-color.css?v=v635" />
     <!-- globe.gl + 로딩 안전장치는 bootstrap.js 에서 처리 -->
@@ -179,6 +183,8 @@
     <script defer src="saudade-auth.js?v=v635"></script>
     <!-- account & permissions panel — sign out / export / delete / consent (GDPR, PIPA, CCPA, LGPD, APPI) -->
     <script defer src="saudade-account.js?v=v635"></script>
+    <!-- Schengen 90/180 rolling calculator — saudade's core nomad utility -->
+    <script defer src="saudade-schengen.js?v=v635"></script>
     <!-- v8 §02 — v7 §5.4 Switch the desk 폐기 (Following 으로 대체). 모듈 미로드. -->
     <!-- <script defer src="saudade-switch-desk.js?v=v635"></script> -->
     <!-- v7 §5.5 — saudade-city.js 의 startSwitch/endSwitch/makePermanent 도 dead code -->

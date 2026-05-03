@@ -48,12 +48,13 @@ grep -nE '"[A-Z][A-Za-z][A-Za-z ]{3,40}"' \
 
 echo
 echo "----------------------------------------------------"
-echo "[CHECK] privacy.html / terms.html — should exist for each edition"
+echo "[CHECK] privacy.* — per-edition file should exist"
 for ed in en ko ja es pt; do
-    if grep -q "lang=\"$ed\"" privacy.html 2>/dev/null; then
-        echo "  privacy.html declares $ed: yes"
+    if [ "$ed" = "ko" ]; then f=privacy.html; else f=privacy.$ed.html; fi
+    if [ -f "$f" ]; then
+        echo "  $f: present"
     else
-        echo "  privacy.html declares $ed: no  ← consider adding edition-specific copy"
+        echo "  $f: MISSING"
     fi
 done
 

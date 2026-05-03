@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — Política de Privacidad</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<style>
+  body { font-family: 'Fraunces', Georgia, serif; font-weight: 300; background: var(--paper); color: var(--ink); max-width: 720px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px); line-height: 1.65; }
+  h1 { font-style: italic; font-size: clamp(36px, 5vw, 54px); line-height: 0.95; margin: 0 0 8px; }
+  h2 { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: clamp(28px, 4vw, 40px) 0 12px; padding-top: clamp(12px, 2vw, 18px); border-top: 0.5px solid var(--rule); }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.32em; color: var(--bone-d); margin: 0 0 28px; }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--paper-d); padding: 1px 6px; border: 0.5px solid var(--rule); }
+  a { color: var(--ink); border-bottom: 0.5px solid var(--rule); text-decoration: none; }
+  ul { padding-left: 1.2em; }
+  .lang-bar { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; padding-bottom: 18px; border-bottom: 0.5px solid var(--rule); margin-bottom: 28px; }
+  .lang-bar a { margin-right: 14px; }
+  .lang-bar a.active { color: var(--rust); border-bottom-color: var(--rust); }
+</style>
+</head>
+<body>
+<nav class="lang-bar">
+  <a href="privacy.html">한국어</a>
+  <a href="privacy.en.html">English</a>
+  <a href="privacy.ja.html">日本語</a>
+  <a href="privacy.pt.html">Português</a>
+  <a class="active" href="privacy.es.html">Español</a>
+</nav>
+
+<h1>saudade — Política de Privacidad</h1>
+<div class="meta">Vigencia 2026-04-30 · Operador LEEJAEJIN · privacy@saudade.app</div>
+
+<p>La versión coreana en <a href="privacy.html">privacy.html</a> es el texto vinculante. Esta traducción al español se ofrece como cortesía y para cumplir con el RGPD (UE), la LOPDGDD (España), la CCPA/CPRA (EE.UU.-CA), la PIPA (KR), la LGPD (BR) y la APPI (JP). En caso de discrepancia prevalece el coreano.</p>
+
+<h2>1. Datos que recopilamos</h2>
+<ul>
+  <li>Cuenta — correo electrónico, edición, plan</li>
+  <li>Sesiones — id de sesión opaco, etiqueta de dispositivo, IP/UA hashed</li>
+  <li>Analítica — sólo con consentimiento</li>
+  <li>Contenido del usuario — envíos de cafés, solicitudes de ciudad</li>
+  <li>Registro de consentimientos — categoría, concedido/revocado, hora</li>
+</ul>
+
+<h2>2. Bases jurídicas</h2>
+<p>Consentimiento (analítica, marketing, IA), ejecución de contrato (autenticación, plan), interés legítimo (prevención del abuso). RGPD Art.6, LGPD Art.7.</p>
+
+<h2>3. Subencargados</h2>
+<p>Cloudflare (EE.UU.), Google (EE.UU., Analytics con consentimiento), Resend (EE.UU., correos de inicio de sesión), Stripe (EE.UU.) / Toss (KR). Las transferencias internacionales se realizan bajo Cláusulas Contractuales Tipo.</p>
+
+<h2>4. Sus derechos</h2>
+<p>Acceso, rectificación, supresión, limitación, portabilidad, oposición, revocación del consentimiento, y oposición a decisiones automatizadas (RGPD Arts.15–22, LOPDGDD, LGPD Art.18, PIPA §35–37, CCPA, APPI).</p>
+<p><strong>En la propia aplicación:</strong> abra el panel <code>#account</code> para ver sesiones activas, cerrar sesión (en este dispositivo), cerrar sesión en todas partes (también invalida los enlaces de acceso pendientes), exportar sus datos en JSON, eliminar su cuenta o activar/revocar consentimientos por categoría.</p>
+<p><strong>Por correo:</strong> <code>luiseluise0619@gmail.com</code>. Responderemos en los plazos de RGPD (1 mes), CCPA (45 días), LGPD (15 días), PIPA (10 días), APPI ("sin demora").</p>
+
+<h2>5. Aviso de IA (EU AI Act §50)</h2>
+<p>Los despachos del §03 se clasifican/puntúan con Cloudflare Workers AI (Llama 3.1 8B) y se reescriben/traducen con Google Gemini 2.0 Flash. Cada elemento lleva la etiqueta <code>AI DRAFT</code> o <code>REWRITTEN</code>. El JSON de cada edición incluye <code>ai_assisted: true</code> y la lista de modelos para que sea legible por máquinas. Puede revocar el consentimiento de IA en <code>#account</code>.</p>
+
+<h2>6. Menores</h2>
+<p>El servicio no está dirigido a menores de 14 años (KR) / 16 años (UE) / 13 años (EE.UU.-COPPA / BR-LGPD).</p>
+
+<h2>7. Retención</h2>
+<ul>
+  <li>Sesiones — 30 días desde el último uso, o hasta su revocación</li>
+  <li>Enlaces mágicos — 15 minutos, uso único</li>
+  <li>Analítica — hasta 14 meses (predeterminado de GA4)</li>
+  <li>Pagos — 5 años (ley coreana de comercio electrónico)</li>
+  <li>Registro de eliminación — sólo hashes (auditoría)</li>
+</ul>
+
+<h2>8. Autoridades de control</h2>
+<ul>
+  <li>🇪🇸 Agencia Española de Protección de Datos (AEPD) — aepd.es</li>
+  <li>🇪🇺 DPA de su país de residencia</li>
+  <li>🇲🇽 INAI — inicio.inai.org.mx</li>
+  <li>🇺🇸 California AG — oag.ca.gov/privacy</li>
+  <li>🇧🇷 ANPD — gov.br/anpd</li>
+  <li>🇰🇷 PIPC — privacy.go.kr</li>
+</ul>
+
+</body></html>

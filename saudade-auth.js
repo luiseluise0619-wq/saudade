@@ -44,10 +44,10 @@
             btnCancel:L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }),
             sentMsg:  L({
                 en: 'Link sent. Check your inbox in a minute.',
-                ko: '링크를 보냈다. 1분 안에 받은편지함 확인.',
-                ja: 'リンクを送った。1分以内に受信箱を確認。',
-                pt: 'Link enviado. Verifique a caixa em um minuto.',
-                es: 'Enlace enviado. Revisa tu bandeja en un minuto.'
+                ko: '링크를 보냈다. 1분 안에 받은편지함을 확인하라.',
+                ja: 'リンクを送った。一分以内に受信箱を確認。',
+                pt: 'Link enviado. Verifique a sua caixa de entrada dentro de um minuto.',
+                es: 'Enlace enviado. Revise su bandeja de entrada en un minuto.'
             }),
             sentInline: L({
                 en: 'Link ready (inline mode):',
@@ -58,17 +58,17 @@
             }),
             failGeneric: L({
                 en: 'Could not send. Please try again.',
-                ko: '전송 실패. 다시 시도 바람.',
-                ja: '送信できなかった。再度お試しを。',
+                ko: '전송에 실패했다. 잠시 후 다시 시도하라.',
+                ja: '送信できなかった。少し時間を置いて再試行。',
                 pt: 'Não foi possível enviar. Tente novamente.',
-                es: 'No se pudo enviar. Inténtalo de nuevo.'
+                es: 'No se pudo enviar. Inténtelo de nuevo.'
             }),
             failClosed: L({
-                en: 'Auth not yet open. Try again later.',
-                ko: '아직 가입 창구가 열리지 않았다.',
-                ja: '認証窓口はまだ開いていない。',
-                pt: 'O registo ainda não está aberto.',
-                es: 'El registro aún no está abierto.'
+                en: 'Sign-in is not yet open. Try again later.',
+                ko: '아직 로그인 창구가 열려 있지 않다. 잠시 후 다시 시도하라.',
+                ja: 'サインインはまだ開いていない。後ほど再試行。',
+                pt: 'O início de sessão ainda não está disponível. Tente mais tarde.',
+                es: 'El inicio de sesión aún no está disponible. Inténtelo más tarde.'
             }),
             verifying: L({
                 en: 'Verifying…', ko: '확인 중…', ja: '確認中…',

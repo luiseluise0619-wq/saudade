@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — Privacy Policy</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<style>
+  body { font-family: 'Fraunces', Georgia, serif; font-weight: 300; background: var(--paper); color: var(--ink); max-width: 720px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px); line-height: 1.6; }
+  h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-style: italic; font-size: clamp(36px, 5vw, 54px); line-height: 0.95; margin: 0 0 8px; }
+  h2 { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: clamp(28px, 4vw, 40px) 0 12px; padding-top: clamp(12px, 2vw, 18px); border-top: 0.5px solid var(--rule); }
+  .meta { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d); margin: 0 0 clamp(24px, 4vw, 40px); }
+  p, li { max-width: 60ch; }
+  ul { padding-left: 1.2em; }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--paper-d); padding: 1px 6px; border: 0.5px solid var(--rule); }
+  a { color: var(--ink); border-bottom: 0.5px solid var(--rule); text-decoration: none; }
+  a:hover { color: var(--rust); }
+  table { border-collapse: collapse; width: 100%; font-family: 'JetBrains Mono', monospace; font-size: 12px; margin: 12px 0; }
+  th, td { border: 0.5px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+  .lang-bar { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 18px; border-bottom: 0.5px solid var(--rule); margin-bottom: 28px; }
+  .lang-bar a { margin-right: 14px; }
+  .lang-bar a.active { color: var(--rust); border-bottom-color: var(--rust); }
+</style>
+</head>
+<body>
+<nav class="lang-bar">
+  <a href="privacy.html">한국어</a>
+  <a class="active" href="privacy.en.html">English</a>
+  <a href="privacy.ja.html">日本語</a>
+  <a href="privacy.pt.html">Português</a>
+  <a href="privacy.es.html">Español</a>
+</nav>
+
+<h1>saudade — Privacy Policy</h1>
+<div class="meta">Effective 2026-04-30 · Operator LEEJAEJIN · privacy@saudade.app</div>
+
+<p>This is the English summary. The Korean text in <a href="privacy.html">privacy.html</a> is the authoritative version under PIPA; the English text is provided for convenience and to satisfy the right-to-be-informed requirements of GDPR, UK GDPR, CCPA/CPRA, LGPD, and APPI. In case of conflict the Korean text controls.</p>
+
+<h2>1. What we collect</h2>
+<table>
+  <tr><th>Category</th><th>Items</th><th>When</th><th>Lawful basis</th></tr>
+  <tr><td>Account</td><td>email, edition, tier</td><td>at sign-in</td><td>contract (GDPR 6(1)(b))</td></tr>
+  <tr><td>Sessions</td><td>opaque session id, device label, hashed IP/UA</td><td>each sign-in</td><td>contract + legitimate interest (security)</td></tr>
+  <tr><td>Usage analytics</td><td>page views, click events</td><td>only with consent</td><td>consent (GDPR 6(1)(a))</td></tr>
+  <tr><td>UGC</td><td>café submissions, city requests</td><td>when you submit</td><td>contract</td></tr>
+  <tr><td>Consent log</td><td>category, granted/revoked, timestamp</td><td>each toggle</td><td>legal obligation (GDPR Art.7)</td></tr>
+</table>
+
+<h2>2. What we don't collect</h2>
+<p>We do not collect names, phone numbers, addresses, government IDs, biometrics, payment card numbers (Stripe/Toss handle those), or precise geolocation without explicit opt-in.</p>
+
+<h2>3. Sharing</h2>
+<p>Sub-processors: Cloudflare (hosting), Google (Analytics, only with consent), Resend (sign-in email), Stripe / Toss (payments). We never sell or share personal information for cross-context behavioural advertising as defined by Cal. Civ. Code §1798.140(ad).</p>
+
+<h2>4. Your rights</h2>
+<p>Under GDPR Arts.15–22, UK GDPR, CCPA/CPRA, LGPD Art.18, APPI §28–30, and PIPA §35–37 you may: access, rectify, erase, restrict, port, withdraw consent, object to automated decisions, and opt out of "sale/share" (we do neither).</p>
+<p><strong>In-app, instantly:</strong> open the Account &amp; Permissions panel (<code>#account</code>) to list active sessions, sign out (this device), sign out everywhere (also burns unused sign-in links), export your data as JSON, delete your account, or revoke any consent category.</p>
+<p><strong>By email:</strong> <code>luiseluise0619@gmail.com</code>. We answer within PIPA 10 days · GDPR 1 month · CCPA 45 days · LGPD 15 days · APPI "without delay."</p>
+
+<h2>5. AI Act §50 disclosure</h2>
+<p>The Dispatches section uses Cloudflare Workers AI (Llama 3.1 8B) for classification/scoring and Google Gemini 2.0 Flash for rewriting and translation. Each item is labelled <code>AI DRAFT</code> or <code>REWRITTEN</code>. Each edition's JSON carries machine-readable <code>ai_assisted: true</code> + <code>ai_models</code> metadata so external readers and aggregators can detect AI provenance. You can revoke AI consent in <code>#account</code>.</p>
+
+<h2>6. Children</h2>
+<p>Not directed to children under 14 (KR) / 16 (EU) / 13 (US, COPPA) / 13 (BR, LGPD).</p>
+
+<h2>7. Retention</h2>
+<ul>
+  <li>Sessions — 30 days from last use, or until you revoke them</li>
+  <li>Magic-link tokens — 15 minutes, single-use</li>
+  <li>Analytics — up to 14 months (GA4 default)</li>
+  <li>Payment records — 5 years (Korean e-commerce law)</li>
+  <li>Deletion log — kept (only hashed user_id and email_hash) for audit</li>
+</ul>
+
+<h2>8. Security</h2>
+<p>HTTPS only, Content-Security-Policy, no third-party scripts on the auth path, server-side session revocation, and 72-hour breach notification under GDPR Art.33.</p>
+
+<h2>9. Supervisory authorities</h2>
+<ul>
+  <li>EU — your local DPA (CNIL, BfDI, AEPD, CNPD, etc.)</li>
+  <li>UK — ICO (ico.org.uk)</li>
+  <li>US (California) — Attorney General (oag.ca.gov/privacy)</li>
+  <li>Brazil — ANPD (gov.br/anpd)</li>
+  <li>Japan — Personal Information Protection Commission (ppc.go.jp)</li>
+  <li>Korea — privacy.go.kr · 1833-6972</li>
+</ul>
+
+<h2>10. Endpoints called when you exercise a right</h2>
+<ul>
+  <li><code>POST /auth/signout</code> — sign out this device</li>
+  <li><code>POST /auth/signout-all</code> — revoke every session, burn unused sign-in links</li>
+  <li><code>GET  /auth/export</code> — JSON of everything we hold</li>
+  <li><code>POST /auth/delete</code> — hard-delete account</li>
+  <li><code>POST /auth/consent</code> — log a consent grant or revocation</li>
+</ul>
+
+</body></html>

@@ -1119,7 +1119,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         // v7 검토 정정 — 11 카테고리 anchor nav (가로 스크롤) — category 모드에서만
         const catNavHtml = (effectiveMode === 'category' && categoriesInOrder.length > 1) ? `
-            <nav class="sdd-listen-catnav" aria-label="Jump to category">
+            <nav class="sdd-listen-catnav" aria-label="${escapeHtml(T({ en: 'Jump to category', ko: '카테고리로 이동', ja: 'カテゴリーへ移動', pt: 'Saltar para a categoria', es: 'Saltar a la categoría' }))}">
                 ${categoriesInOrder.map((cat, idx) => `
                     <button type="button" class="sdd-listen-catnav-link"
                             data-jump-cat="${catSlug(cat)}"
@@ -1139,7 +1139,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             es: 'Todas las pistas'
         });
         const modeToggleHtml = cityModeAvailable ? `
-            <div class="sdd-listen-mode" role="tablist" aria-label="Listening mode">
+            <div class="sdd-listen-mode" role="tablist" aria-label="${escapeHtml(T({ en: 'Listening mode', ko: '청취 모드', ja: 'リスニングモード', pt: 'Modo de escuta', es: 'Modo de escucha' }))}">
                 <button type="button" class="sdd-listen-mode-btn"
                         data-set-mode="city" role="tab"
                         aria-current="${effectiveMode === 'city'}">${escapeHtml(labelByCity)}</button>
@@ -1292,7 +1292,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 <label class="sdd-listen-vol-label" for="sddListenVol">VOL</label>
                 <input type="range" id="sddListenVol" class="sdd-listen-vol"
                        min="0" max="1" step="0.05" value="${initialVolume}"
-                       aria-label="Volume" />
+                       aria-label="${escapeHtml(T({ en: 'Volume', ko: '볼륨', ja: '音量', pt: 'Volume', es: 'Volumen' }))}" />
                 <span class="sdd-listen-vol-num" data-vol-num>${Math.round(initialVolume * 100)}</span>
                 <span class="sdd-listen-ctl-sep">·</span>
                 <span class="sdd-listen-session-state" data-session-state></span>

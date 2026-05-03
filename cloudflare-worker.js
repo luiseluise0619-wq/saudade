@@ -57,6 +57,9 @@ const RL = {
     '/dispatches/today': { max: 60, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
     '/dispatches/retracted': { max: 60, win: 60000 },
+    '/feed':       { max: 60, win: 60000 },
+    '/feed.xml':   { max: 60, win: 60000 },
+    '/feed.atom':  { max: 60, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -395,6 +398,9 @@ export default {
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
+                case '/feed':
+                case '/feed.xml':
+                case '/feed.atom':         return feedAtom(req, env, ctx);
                 case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
                 case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
                 case '/following':            return followingHandler(req, env, ctx);
@@ -2209,6 +2215,111 @@ async function listeningLog(req, env, ctx) {
     } catch (e) {
         return J(req, { ok: true, logged: false });   // graceful — 클라이언트 fire-and-forget
     }
+}
+
+// ─── /feed.atom — published dispatches as Atom 1.0 (per-edition) ──────
+// Lets readers subscribe in Feedly / NetNewsWire. Standards:
+//   • Atom 1.0 (RFC 4287)
+//   • UTF-8
+//   • <category term="ai-assisted"> when AI was used
+function escXml(s) {
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+async function feedAtom(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
+    const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '30', 10) || 30, 1), 100);
+
+    const cacheKey = `feed:atom:${edition}:${limit}`;
+    const cached = await cGet(cacheKey, env);
+    if (cached) return new Response(cached, {
+        status: 200,
+        headers: hdrs(req, { 'Content-Type': 'application/atom+xml; charset=utf-8', 'X-Cache': 'HIT' })
+    });
+
+    let items = [];
+    if (env.SAUDADE_DB) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                `SELECT s.headline, s.lede, s.body, s.source_url, s.published_at, r.city, s.id
+                 FROM dispatches_staged s
+                 JOIN raw_feeds r ON s.raw_feed_id = r.id
+                 WHERE s.edition = ? AND s.status = 'published'
+                 ORDER BY s.published_at DESC
+                 LIMIT ?`
+            ).bind(edition, limit).all();
+            items = (r && r.results) || [];
+        } catch (e) {}
+    }
+
+    const self = url.origin + '/feed.atom?edition=' + edition;
+    const homeMap = { en: 'https://saudade.app/', ko: 'https://saudade.app/?edition=ko',
+                      ja: 'https://saudade.app/?edition=ja', pt: 'https://saudade.app/?edition=pt',
+                      es: 'https://saudade.app/?edition=es' };
+    const titleMap = {
+        en: 'saudade — dispatches', ko: 'saudade — 디스패치',
+        ja: 'saudade — ディスパッチ', pt: 'saudade — despachos',
+        es: 'saudade — despachos'
+    };
+    const subMap = {
+        en: 'Three cities, no schedule. Edited from Lisbon.',
+        ko: '세 도시, 정해진 시간 없음. 리스본에서 편집.',
+        ja: '三つの都市、時刻表なし。リスボン編集。',
+        pt: 'Três cidades, sem horário. Editado em Lisboa.',
+        es: 'Tres ciudades, sin horario. Editado desde Lisboa.'
+    };
+
+    const updated = items[0] && items[0].published_at
+        ? new Date(items[0].published_at).toISOString()
+        : new Date().toISOString();
+
+    const entries = items.map(it => {
+        const link = it.source_url || (homeMap[edition] || homeMap.en);
+        const id   = self + '#' + (it.id || link);
+        const upd  = it.published_at ? new Date(it.published_at).toISOString() : updated;
+        const summary = (it.lede || '').slice(0, 200);
+        const content = (it.body || it.lede || '').slice(0, 800);
+        return `  <entry>
+    <title>${escXml(it.headline || '')}</title>
+    <id>${escXml(id)}</id>
+    <updated>${upd}</updated>
+    <link rel="alternate" href="${escXml(link)}"/>
+    ${it.city ? `<category term="${escXml(String(it.city).toLowerCase())}"/>` : ''}
+    <category term="ai-assisted"/>
+    <summary>${escXml(summary)}</summary>
+    <content type="text">${escXml(content)}</content>
+    <author><name>saudade</name></author>
+    <rights>© saudade. ≤200-char quote per CONTENT-LICENSE.md.</rights>
+  </entry>`;
+    }).join('\n');
+
+    const xml =
+`<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="${edition}">
+  <title>${escXml(titleMap[edition] || titleMap.en)}</title>
+  <subtitle>${escXml(subMap[edition] || subMap.en)}</subtitle>
+  <id>${escXml(self)}</id>
+  <link rel="self" href="${escXml(self)}"/>
+  <link rel="alternate" href="${escXml(homeMap[edition] || homeMap.en)}"/>
+  <updated>${updated}</updated>
+  <generator uri="https://saudade.app/" version="1">saudade-worker</generator>
+  <rights>© saudade. AI-assisted editions disclosed per item.</rights>
+${entries}
+</feed>
+`;
+
+    if (ctx && ctx.waitUntil) {
+        // 30 minute cache
+        await cPut(cacheKey, xml, 1800, env, ctx);
+    }
+    return new Response(xml, {
+        status: 200,
+        headers: hdrs(req, { 'Content-Type': 'application/atom+xml; charset=utf-8', 'X-Cache': 'MISS' })
+    });
 }
 
 // ─── v8 §13 — /stats/weekly ──────────────────────────────────────────

@@ -553,7 +553,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 </h2>
                 <div class="sdd-atlas-count">
                     ${escapeHtml(visitedLabel)}
-                    <span class="sdd-atlas-view-pair" role="tablist" aria-label="View mode">
+                    <span class="sdd-atlas-view-pair" role="tablist" aria-label="${escapeHtml(T({ en: 'View mode', ko: '보기 모드', ja: '表示モード', pt: 'Modo de visualização', es: 'Modo de visualización' }))}">
                         <button type="button" class="sdd-atlas-view-btn"
                                 data-view-set="list" role="tab"
                                 aria-selected="${_curView === 'list'}">${escapeHtml(labelList)}</button>
