@@ -1,0 +1,32 @@
+name: v7 §17 check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: contrast · forbidden · syntax · JSON
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run scripts/check.sh
+        run: bash scripts/check.sh
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "v7 §17 verification suite"
+          echo "  - contrast (paper × ink/bone-d/bone/accent, 5 editions + base)"
+          echo "  - forbidden grep (font/word/pulse/'You are here')"
+          echo "  - JS syntax (saudade-*.js, worker, bootstrap, sw)"
+          echo "  - JSON validity (data/*, manifest)"
