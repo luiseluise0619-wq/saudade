@@ -452,11 +452,11 @@ body.section-active .sdd-cover { display: none !important; }
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
     const ISSUE_LEDE_5 = {
-        en: 'Three cities, nine tracks. Edited from $editorCity.',
-        ko: '세 도시, 아홉 트랙. $editorCity에서 편집.',
-        ja: '三つの街、九つのトラック。$editorCityで編集。',
-        pt: 'Três cidades, nove faixas. Editada a partir de $editorCity.',
-        es: 'Tres ciudades, nueve pistas. Editada desde $editorCity.'
+        en: 'Three cities, no schedule. Edited from $editorCity.',
+        ko: '세 도시, 일정 없음. $editorCity에서 편집.',
+        ja: '三つの街、日程なし。$editorCityで編集。',
+        pt: 'Três cidades, sem agenda. Editada a partir de $editorCity.',
+        es: 'Tres ciudades, sin agenda. Editada desde $editorCity.'
     };
 
     function formatMastDate(ed) {
@@ -473,13 +473,22 @@ body.section-active .sdd-cover { display: none !important; }
     }
 
     function quarterRange(ed) {
-        // 분기 발행: 3·6·9·12월 1일. 가까운 분기.
+        // v7 §10.6 — 분기 발행일 3/6/9/12월 1일.
+        // 3개월 범위: Mar–May / Jun–Aug / Sep–Nov / Dec–Feb.
         const d = new Date();
         const m = d.getMonth();          // 0-11
-        const startMonth = Math.floor(m / 3) * 3;
-        const endMonth = startMonth + 2;
+        const y = d.getFullYear();
+        // 가장 최근 발행월 찾기 (Mar=2, Jun=5, Sep=8, Dec=11)
+        const PUB_MONTHS = [2, 5, 8, 11];
+        let startMonth = -1;
+        for (const pm of PUB_MONTHS) { if (pm <= m) startMonth = pm; }
+        let startYear = y;
+        if (startMonth === -1) { startMonth = 11; startYear = y - 1; }   // Jan/Feb → 지난해 Dec
+        const endMonth = (startMonth + 2) % 12;
+        const endYear = endMonth < startMonth ? startYear + 1 : startYear;
         const mo = MONTH_NAMES[ed] || MONTH_NAMES.en;
-        return `${mo[startMonth]}–${mo[endMonth]} ${d.getFullYear()}`;
+        if (startYear === endYear) return `${mo[startMonth]}–${mo[endMonth]} ${endYear}`;
+        return `${mo[startMonth]} ${startYear}–${mo[endMonth]} ${endYear}`;
     }
 
     // TODAY 요약 4줄 — 실제 데이터 조회
