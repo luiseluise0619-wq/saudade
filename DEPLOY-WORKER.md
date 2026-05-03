@@ -1,3 +1,9 @@
+> **DEPRECATED — see [DEPLOY-v8.md](./DEPLOY-v8.md) for current runbook.**
+>
+> 이 문서는 역사 자료. v8 단일 운영자 가이드는 DEPLOY-v8.md.
+
+---
+
 # Cloudflare Worker 배포 가이드 (LOUNJ Proxy + API)
 
 `cloudflare-worker.js` 를 자체 호스팅해서 외부 무료 CORS 프록시 (allorigins,

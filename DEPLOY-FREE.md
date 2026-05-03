@@ -1,3 +1,9 @@
+> **DEPRECATED — see [DEPLOY-v8.md](./DEPLOY-v8.md) for current runbook.**
+>
+> 이 문서는 역사 자료. v8 단일 운영자 가이드는 DEPLOY-v8.md.
+
+---
+
 # AURA — 무료 배포 가이드
 
 이 문서는 **0원으로** AURA 를 인터넷에 공개하는 방법입니다.

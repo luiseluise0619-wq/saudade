@@ -1,3 +1,9 @@
+> **DEPRECATED — see [DEPLOY-v8.md](./DEPLOY-v8.md) for current runbook.**
+>
+> 이 문서는 역사 자료. v8 단일 운영자 가이드는 DEPLOY-v8.md.
+
+---
+
 # SAUDADE — v7 운영자 활성화 가이드
 
 7 PR 머지 후 한 번 실행. 모든 D1 schema · secrets · wrangler.toml 추가 통합.

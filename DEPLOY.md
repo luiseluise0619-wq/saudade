@@ -1,3 +1,9 @@
+> **DEPRECATED — see [DEPLOY-v8.md](./DEPLOY-v8.md) for current runbook.**
+>
+> 이 문서는 역사 자료. v8 단일 운영자 가이드는 DEPLOY-v8.md.
+
+---
+
 # 🚀 AURA : WORLD PULSE — 완전 실행 가이드 v2
 
 © 2026 LEEJAEJIN (JADDY) · @jaddy_102
