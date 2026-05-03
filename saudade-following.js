@@ -110,8 +110,39 @@
         }
     }
 
+    // v8 §02 — 다른 기기 동기화. signed-in + localStorage 비었으면 worker 에서 pull.
+    // 서버가 새 디바이스 진실원: localStorage 비어있을 때만 덮어씀 (사용자 최근 변경 보존).
+    function pullFromWorker() {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const user = window.SAUDADE_AUTH?.getUser?.();
+        if (!base || !user || !user.id) return Promise.resolve(null);
+        const cur = readList();
+        if (cur.length > 0) return Promise.resolve(cur);   // 로컬 우선
+        return fetch(base + '/following?user_id=' + encodeURIComponent(user.id), {
+            cache: 'no-cache', credentials: 'omit'
+        })
+        .then(r => r.ok ? r.json() : null)
+        .then(j => {
+            if (j && Array.isArray(j.cities) && j.cities.length) {
+                // 직접 localStorage 만 쓰고 SUB notify (writeList 가 다시 PUT 하지 않게)
+                const sanitized = j.cities.filter(s => typeof s === 'string').slice(0, 3);
+                try { localStorage.setItem(KEY, JSON.stringify(sanitized)); } catch (e) {}
+                SUB.forEach(fn => { try { fn(sanitized); } catch (e) {} });
+                return sanitized;
+            }
+            return cur;
+        })
+        .catch(() => cur);
+    }
+
     function init() {
-        loadPool().then(() => autoMigrate());
+        loadPool().then(() => {
+            // 우선 worker pull (signed-in 다른 기기 동기화)
+            pullFromWorker().then(() => {
+                // 그래도 비어있으면 home city 로 마이그레이션
+                autoMigrate();
+            });
+        });
     }
 
     if (document.readyState === 'loading') {
