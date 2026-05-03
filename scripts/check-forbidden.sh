@@ -42,7 +42,8 @@ echo
 echo "[금지어 — UI 카피 (en/ko/ja/pt/es)]"
 # 가드 리스트 자체는 worker/quarterly 등에 등장 — 'FORBIDDEN_WORDS' 같은 변수 정의는 제외
 HITS=$(grep -rnwE '(BREAKING|URGENT|ALERT|CRISIS|SHOCKING|TRAGIC|OUTRAGE|SCANDAL|CONTROVERSY)' $INCLUDE $EXCLUDE_DIRS $EXCLUDE_LEGACY . 2>/dev/null | \
-       grep -vE 'FORBIDDEN|forbidden|PIPELINE_FORBIDDEN|hasForbidden|alert\(|console\.alert|TRACK|setInterval|clearInterval|interval' || true)
+       grep -vE 'FORBIDDEN|forbidden|PIPELINE_FORBIDDEN|hasForbidden|alert\(|console\.alert|TRACK|setInterval|clearInterval|interval' | \
+       grep -vE '^[^:]+:[0-9]+:[[:space:]]*(//|\*|--|#)' || true)
 if [ -n "$HITS" ]; then
     echo "$HITS"
     FAIL=$((FAIL+1))
