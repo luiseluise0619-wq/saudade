@@ -428,7 +428,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés'
         });
         const headItalic = T({
-            en: 'verified.', ko: '검증된.', ja: '検証ずみ。', pt: 'verificados.', es: 'verificados.'
+            en: 'verified.', ko: '검증.', ja: '検証ずみ。', pt: 'verificados.', es: 'verificados.'
         });
         const visitedLabel = T({
             en: `${visited} of ${total} visited`,
