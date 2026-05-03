@@ -54,6 +54,7 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
 .sdd-disp-h2 {
     font-family: var(--serif);
     font-weight: 300;
+    font-style: italic;
     font-size: clamp(36px, 5vw, 54px);
     line-height: 0.95;
     letter-spacing: var(--tr-fraunces-h2-d);

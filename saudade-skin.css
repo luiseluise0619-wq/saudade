@@ -1232,6 +1232,11 @@ body.cafe-mode #sddFooter,
 body.cafe-mode [id^="saudadeRings_"] { display: none !important; }
 
 /* 48. 모바일 dock 매거진 식 단순화 (label 간 가운뎃점) */
+/* v7 검토 — 모바일 topbar SETTINGS 숨김 (데스크톱은 유지) */
+@media (max-width: 768px) {
+    .topbar #settingsBtn { display: none !important; }
+}
+
 @media (max-width: 768px) {
     body:not(.cafe-mode) .dock-stats {
         gap: 14px !important;
