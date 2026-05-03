@@ -714,6 +714,31 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         if (_sessionTickIv) clearInterval(_sessionTickIv);
         _sessionTickIv = setInterval(tickSession, 1000);
         renderSessionState();
+        // v8 §11 — 약한 연결 집계용 세션 로그 (worker fire-and-forget · D1)
+        logListeningSessionStart();
+    }
+    // v8 §11 — listening_sessions 테이블에 세션 시작 INSERT (M3 약한 연결 표시 데이터 모음)
+    function logListeningSessionStart() {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return;
+        const tracks = _data?.tracks || [];
+        const t = (_activeIdx != null) ? tracks[_activeIdx] : null;
+        if (!t) return;
+        const user = window.SAUDADE_AUTH?.getUser?.() || null;
+        try {
+            fetch(base + '/listening/log', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: user?.id || null,
+                    track_id: t.audio_url || t.title,
+                    city: t.city || null,
+                    started_at: _sessionStart
+                }),
+                credentials: 'omit',
+                keepalive: true
+            }).catch(() => {});
+        } catch (e) {}
     }
     function pauseSession() {
         // 일시정지 = phase 유지, tick 만 멈춤. 재개 시 elapsed 보존 위해 _pausedAt 저장.

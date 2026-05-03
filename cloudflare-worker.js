@@ -383,6 +383,9 @@ export default {
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
                 case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
                 case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
+                case '/following':            return followingHandler(req, env, ctx);
+                case '/listening/log':        return listeningLog(req, env, ctx);
+                case '/stats/weekly':         return statsWeekly(req, env, ctx);
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
@@ -1768,5 +1771,108 @@ async function adminRssForbidden(req, env, ctx) {
         return J(req, { ok: true, forbidden: (rows && rows.results) || [] });
     } catch (e) {
         return E(req, 'DB_QUERY', 'Query failed', 500);
+    }
+}
+
+// ─── v8 §02 — /following ─────────────────────────────────────────────
+// GET  ?user_id= → ['lisbon', 'tokyo', 'berlin']
+// PUT  body: { user_id, cities: [slug, slug, slug] } → REPLACE 3
+// 인증: user_id 신뢰 (Magic Link 세션이 클라이언트 측 user.id 보유). 추후 token 전환 가능.
+async function followingHandler(req, env, ctx) {
+    if (!env.SAUDADE_DB) return J(req, { ok: true, cities: [] });   // graceful
+
+    if (req.method === 'GET') {
+        const url = new URL(req.url);
+        const userId = (url.searchParams.get('user_id') || '').trim();
+        if (!userId) return E(req, 'NO_USER', 'user_id required', 400);
+        try {
+            const rows = await env.SAUDADE_DB.prepare(
+                'SELECT city, position FROM user_following_cities WHERE user_id = ? ORDER BY position'
+            ).bind(userId).all();
+            const cities = ((rows && rows.results) || []).sort((a, b) => a.position - b.position).map(r => r.city);
+            return J(req, { ok: true, user_id: userId, cities });
+        } catch (e) {
+            return E(req, 'DB_QUERY', 'Query failed', 500);
+        }
+    }
+
+    if (req.method === 'PUT') {
+        let body;
+        try { body = await req.json(); }
+        catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+        const userId = clean(body.user_id, 64);
+        const cities = Array.isArray(body.cities) ? body.cities.filter(s => typeof s === 'string').slice(0, 3) : [];
+        if (!userId) return E(req, 'NO_USER', 'user_id required', 400);
+        const at = Date.now();
+        try {
+            // REPLACE pattern — DELETE + INSERT (D1 batch 권장)
+            await env.SAUDADE_DB.prepare(
+                'DELETE FROM user_following_cities WHERE user_id = ?'
+            ).bind(userId).run();
+            for (let i = 0; i < cities.length; i++) {
+                await env.SAUDADE_DB.prepare(
+                    'INSERT OR IGNORE INTO user_following_cities (user_id, city, position, added_at) VALUES (?, ?, ?, ?)'
+                ).bind(userId, cities[i], i + 1, at).run();
+            }
+            return J(req, { ok: true, user_id: userId, cities });
+        } catch (e) {
+            return E(req, 'DB_WRITE', 'Write failed', 500);
+        }
+    }
+
+    return E(req, 'METHOD', 'GET or PUT required', 405);
+}
+
+// ─── v8 §11 — /listening/log ──────────────────────────────────────────
+// POST body: { user_id?, track_id, city?, started_at }
+// fire-and-forget INSERT — 약한 연결 집계용. 사용자별 이력 페이지 X.
+async function listeningLog(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, logged: false });   // graceful
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+    const userId   = clean(body.user_id, 64) || null;
+    const trackId  = clean(body.track_id, 256);
+    const city     = clean(body.city, 64) || null;
+    const startedAt = parseInt(body.started_at, 10) || Date.now();
+    if (!trackId) return E(req, 'NO_TRACK', 'track_id required', 400);
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO listening_sessions (user_id, track_id, city, started_at, duration_seconds) VALUES (?, ?, ?, ?, 0)'
+        ).bind(userId, trackId, city, startedAt).run();
+        return J(req, { ok: true, logged: true });
+    } catch (e) {
+        return J(req, { ok: true, logged: false });   // graceful — 클라이언트 fire-and-forget
+    }
+}
+
+// ─── v8 §13 — /stats/weekly ──────────────────────────────────────────
+// GET ?key=cover:lisbon:readers (or 'all' → 전체 dump)
+// weekly_stats 테이블 캐시 hit 우선. M3 약한 연결 표시용 (현재는 데이터만 모음).
+async function statsWeekly(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, stats: {} });
+    const url = new URL(req.url);
+    const key = (url.searchParams.get('key') || 'all').trim();
+    try {
+        const stmt = key === 'all'
+            ? env.SAUDADE_DB.prepare(
+                'SELECT stat_key, stat_value, computed_at, expires_at FROM weekly_stats WHERE expires_at > ?'
+              ).bind(Date.now())
+            : env.SAUDADE_DB.prepare(
+                'SELECT stat_key, stat_value, computed_at, expires_at FROM weekly_stats WHERE stat_key = ? AND expires_at > ?'
+              ).bind(key, Date.now());
+        const rows = await stmt.all();
+        const stats = {};
+        ((rows && rows.results) || []).forEach(r => {
+            try { stats[r.stat_key] = { value: JSON.parse(r.stat_value), computed_at: r.computed_at, expires_at: r.expires_at }; }
+            catch (e) { stats[r.stat_key] = { value: r.stat_value, computed_at: r.computed_at, expires_at: r.expires_at }; }
+        });
+        return J(req, { ok: true, stats });
+    } catch (e) {
+        return J(req, { ok: true, stats: {} });
     }
 }

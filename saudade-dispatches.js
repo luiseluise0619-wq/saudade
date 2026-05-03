@@ -382,6 +382,10 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 .sdd-disp-rewrite-tag.rewritten { color: var(--jade); }
 .sdd-disp-rewrite-tag.draft     { color: var(--signal); }
 
+/* v8 §02 — Awaiting placeholder (Following 도시이지만 dispatch 없을 때) */
+.sdd-disp-awaiting { opacity: 0.6; }
+.sdd-disp-awaiting .sdd-disp-citytag { color: var(--rust); }
+
 /* v7 §9.9 retract placeholder */
 .sdd-disp-retracted { opacity: 0.7; }
 .sdd-disp-retract-msg {
@@ -521,6 +525,27 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 
 
     function renderItem(it) {
+        // v8 §02 — Awaiting placeholder (Following 도시이지만 dispatches.json 에 없을 때)
+        if (it && it._awaiting) {
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const T = window.SAUDADE_T || ((s) => s.en);
+            const msg = T({
+                en: 'Awaiting first dispatch from $city.',
+                ko: '$city 의 첫 디스패치를 기다리는 중.',
+                ja: '$city からの最初の通信を待っている。',
+                pt: 'A aguardar o primeiro despacho de $city.',
+                es: 'Esperando el primer despacho de $city.'
+            }).replace('$city', it._city || '');
+            return `
+                <article class="sdd-disp-item sdd-disp-awaiting">
+                    <span class="sdd-disp-num">${escapeHtml(it.n || '')}</span>
+                    <div class="sdd-disp-body">
+                        <span class="sdd-disp-citytag">${escapeHtml(it._city || '')}</span>
+                        <p class="sdd-disp-lede" style="font-style:italic">${escapeHtml(msg)}</p>
+                    </div>
+                </article>
+            `;
+        }
         // v7 §9.9 retract check
         const retract = isRetracted(it);
         if (retract) {
@@ -564,29 +589,44 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         `;
     }
 
-    // 시드 JSON 의 cities × items 9개 → 요일별 3개로 분배.
-    // 정착 도시 2 + 주변 도시 1 (v6 §5.3 노출 비율).
+    // v8 §02 — 사용자 도시 선택 모델. 정착 + 주변 자동 매핑 폐기.
+    // 사용자의 SAUDADE_FOLLOWING.list() 3 도시 각각에서 1개씩 추출.
+    // dispatches.json 에 해당 도시 없으면 "Awaiting first dispatch" 플레이스홀더.
     function flattenForDay(data, weekdayIdx /* 1..6 */) {
         const cities = (data && data.cities) || [];
-        if (!cities.length) return [];
-        const home = cities[0];        // 첫 번째 = 정착 도시
-        const adjacent = cities.slice(1);    // 나머지 = 주변
-        const homeItems = (home.items || []).slice(0, 9);
-        const adjIdx = (weekdayIdx - 1) % Math.max(1, adjacent.length);
-        const adjCity = adjacent[adjIdx];
-        const adjItem = adjCity?.items?.[0] || null;
+        const following = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        if (!following.length) return [];     // 사용자가 도시 안 골랐으면 빈 배열 → 안내 노출
 
-        // weekdayIdx 별로 home 의 다른 2개 + adjacent 1개
-        // weekday 1 (Mon) → home items 0,1 + adj 0
-        // weekday 2 (Tue) → home items 2,3 + adj 1
-        // ...
-        const baseHome = ((weekdayIdx - 1) * 2) % Math.max(1, homeItems.length);
+        // 도시명 매칭 (case-insensitive · slug ↔ display name)
+        const findCityData = (slug) => {
+            const s = String(slug).toLowerCase().replace(/-/g, ' ');
+            return cities.find(c => String(c.city || '').toLowerCase() === s)
+                || cities.find(c => String(c.city || '').toLowerCase().replace(/[\s-]/g, '') === s.replace(/[\s-]/g, ''));
+        };
+        // weekday 별 item rotation — 같은 도시도 요일마다 다른 item
+        const baseIdx = (weekdayIdx - 1) % 9;
+
         const out = [];
-        const item1 = homeItems[baseHome] && { ...homeItems[baseHome], n: '01', _city: home.city, _adjacent: false };
-        const item2 = homeItems[(baseHome + 1) % homeItems.length] && { ...homeItems[(baseHome + 1) % homeItems.length], n: '02', _city: home.city, _adjacent: false };
-        if (item1) out.push(item1);
-        if (item2) out.push(item2);
-        if (adjItem) out.push({ ...adjItem, n: '03', _city: adjCity.city, _adjacent: true });
+        following.forEach((slug, slotIdx) => {
+            const cityData = findCityData(slug);
+            const slot = String(slotIdx + 1).padStart(2, '0');
+            const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+            const displayName = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+            if (!cityData || !cityData.items || !cityData.items.length) {
+                // Placeholder — operator 가 AI 파이프라인 active=1 후 채워짐
+                out.push({
+                    n: slot,
+                    headline: '',
+                    lede: '',
+                    _city: displayName,
+                    _awaiting: true
+                });
+                return;
+            }
+            const items = cityData.items;
+            const item = items[baseIdx % items.length];
+            out.push({ ...item, n: slot, _city: cityData.city || displayName });
+        });
         return out;
     }
 
@@ -697,12 +737,25 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             return;
         }
 
-        // 오늘의 3 dispatch (정착 2 + 주변 1)
+        // v8 §02 — Following 도시 안 골랐으면 onboarding 안내. 그렇지 않으면 매핑.
+        const followingList = (window.SAUDADE_FOLLOWING?.list?.() || []);
         const todayItems = flattenForDay(data, wdIdx);
         const todaySection = W[wdIdx] || W[1];
-        const todayHtml = todayItems.length
-            ? todayItems.map(renderItem).join('')
-            : `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+        let todayHtml;
+        if (!followingList.length) {
+            const onboarding = T({
+                en: 'No cities chosen yet. Open The Desk and pick three.',
+                ko: '아직 선택한 도시가 없다. 데스크에서 세 곳을 고른다.',
+                ja: 'まだ街を選んでいない。デスクで三つ選ぶ。',
+                pt: 'Sem cidades escolhidas. Abra A Mesa e escolha três.',
+                es: 'Sin ciudades elegidas. Abre La Mesa y elige tres.'
+            });
+            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(onboarding)}</p>`;
+        } else if (!todayItems.length) {
+            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+        } else {
+            todayHtml = todayItems.map(renderItem).join('');
+        }
 
         // 지난 6일 archive stack
         const past = flattenPastWeek(data, wdIdx);
