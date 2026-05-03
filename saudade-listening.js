@@ -13,6 +13,11 @@
     let _audio = null;          // HTML5 Audio element (singleton)
     let _wakeLock = null;       // Wake Lock sentinel
     let _isPlaying = false;
+    // v7 §11 By City — 모드 + 활성 도시 (localStorage 영속)
+    const KEY_MODE = 'saudade.listening.mode';     // 'city' | 'category'
+    const KEY_CITY = 'saudade.listening.city';     // slug
+    let _mode = (() => { try { return localStorage.getItem(KEY_MODE) || 'city'; } catch (e) { return 'city'; } })();
+    let _activeCity = (() => { try { return localStorage.getItem(KEY_CITY); } catch (e) { return null; } })();
     // v7 검토 정정 — R2 셋업 전 404 트랙을 "AWAITING UPLOAD" 로 표시
     const _unavailable = new Set();
     function markTrackUnavailable(idx) {
@@ -287,6 +292,171 @@ body.listening-active .sdd-listen { display: block; }
     letter-spacing: var(--tr-mono-mast);
     display: block;
     margin-bottom: 6px;
+}
+
+/* v7 §11 By City — 도시별 시그니처 사진 + 트랙 (잡지 "이 도시의 소리" 코너 톤) */
+.sdd-listen-mode {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    margin: 12px 0 clamp(20px, 3vw, 32px);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+}
+.sdd-listen-mode-btn {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid transparent !important;
+    color: rgba(15,14,18,.55) !important;
+    font: inherit !important;
+    text-transform: inherit !important;
+    letter-spacing: inherit !important;
+    padding: 4px 0 !important;
+    min-height: 0 !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    transition: color .12s, border-color .12s;
+}
+.sdd-listen-mode-btn:hover { color: var(--ink) !important; }
+.sdd-listen-mode-btn[aria-current="true"] {
+    color: var(--ink) !important;
+    border-bottom-color: var(--rust) !important;
+}
+.sdd-listen-mode-sep { color: var(--bone-d); opacity: .5; user-select: none; }
+
+/* 도시 선택 dropdown — 우상단, paper-d 1px hairline */
+.sdd-listen-city-switcher {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+.sdd-listen-city-switcher > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 6px 12px;
+    border: 0.5px solid var(--rule);
+    background: var(--paper-d);
+    border-radius: 0;
+    user-select: none;
+}
+.sdd-listen-city-switcher > summary::-webkit-details-marker { display: none; }
+.sdd-listen-city-switcher > summary::after { content: ' \\25BE'; opacity: .6; }
+.sdd-listen-city-switcher[open] > summary::after { content: ' \\25B4'; opacity: 1; }
+.sdd-listen-city-switcher-list {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 4px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--paper-d);
+    border: 0.5px solid var(--rule);
+    min-width: 160px;
+    z-index: 3;
+}
+.sdd-listen-city-switcher-list li { border-top: 0.5px solid var(--rule); }
+.sdd-listen-city-switcher-list li:first-child { border-top: 0; }
+.sdd-listen-city-switcher-list button {
+    background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+    color: var(--ink) !important;
+    padding: 12px 14px !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    min-height: 44px !important;
+}
+.sdd-listen-city-switcher-list button:hover { color: var(--rust) !important; background: rgba(15,14,18,.04) !important; }
+.sdd-listen-city-switcher-list button[aria-current="true"] { color: var(--rust) !important; }
+
+/* 사진 헤더 — 화면 상단, 4px paper frame, 14px 여백 (풀블리드 X) */
+.sdd-listen-city-photo {
+    margin: 0 0 12px;
+    padding: 4px;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    position: relative;
+}
+.sdd-listen-city-photo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--paper-d);
+}
+.sdd-listen-city-photo-placeholder {
+    position: absolute;
+    inset: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--paper-d);
+    color: var(--bone-d);
+    text-align: center;
+    padding: 24px;
+}
+.sdd-listen-city-photo-placeholder .city {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1;
+    color: var(--ink);
+}
+.sdd-listen-city-photo-placeholder .note {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+}
+.sdd-listen-city-caption {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.5;
+    color: var(--bone-d);
+    margin: 0 0 clamp(20px, 3vw, 32px);
+    max-width: 60ch;
+}
+
+/* 도시 트랙 리스트 — 사진 아래 */
+.sdd-listen-city-tracks { margin: 0; }
+.sdd-listen-empty {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--bone-d);
+    text-align: center;
+    padding: clamp(40px, 6vw, 80px) 0;
+    border-top: 0.5px solid var(--rule);
+    border-bottom: 0.5px solid var(--rule);
+}
+
+@media (max-width: 768px) {
+    .sdd-listen-city-photo { aspect-ratio: 4 / 3; }
 }
 
 /* 컨트롤 바 — 직선 + 점만 (헌법 §5.5 둥근 버튼 금지) */
@@ -763,6 +933,32 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         catch (e) { return null; }
     }
 
+    // v7 §11 By City — 도시 우선 모드 결정 (priority: 명시 > localStorage > home city > 첫 도시)
+    function resolveActiveCity(data) {
+        const cities = (data && data.cities) || [];
+        if (!cities.length) return null;
+        const has = (slug) => cities.some(c => c.slug === slug);
+        if (_activeCity && has(_activeCity)) return _activeCity;
+        // home city — Atlas / Desk 의 정착 도시 활용 (분리된 임시 모드, §5.4 와 별개)
+        const home = window.SAUDADE_CITY?.persistentHomeCity?.();
+        if (home) {
+            const homeSlug = String(home).toLowerCase().replace(/\s+/g, '-');
+            if (has(homeSlug)) return homeSlug;
+        }
+        return cities[0].slug;
+    }
+
+    function setMode(m) {
+        _mode = m === 'category' ? 'category' : 'city';
+        try { localStorage.setItem(KEY_MODE, _mode); } catch (e) {}
+        render(_data);
+    }
+    function setActiveCity(slug) {
+        _activeCity = slug;
+        try { localStorage.setItem(KEY_CITY, slug); } catch (e) {}
+        render(_data);
+    }
+
     function render(data) {
         let root = document.getElementById('sddListening');
         if (!root) {
@@ -773,6 +969,10 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         }
 
         const tracks = (data && data.tracks) || [];
+        const cities = (data && data.cities) || [];
+        // 도시 모드 가능 여부 (cities 0 이면 category 강제)
+        const cityModeAvailable = cities.length > 0 && tracks.some(t => t.city);
+        const effectiveMode = (cityModeAvailable && _mode === 'city') ? 'city' : 'category';
 
         // v6 §11 simplify — ASMR 라이브러리. 카테고리별 그룹 헤더 + 평면 인덱스로 클릭→재생.
         // 분기/도시 매칭 X. 발행 호수 X. 사용자가 카테고리 보고 직접 고름.
@@ -864,8 +1064,8 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             es: 'BIBLIOTECA ASMR'
         });
 
-        // v7 검토 정정 — 11 카테고리 anchor nav (가로 스크롤)
-        const catNavHtml = categoriesInOrder.length > 1 ? `
+        // v7 검토 정정 — 11 카테고리 anchor nav (가로 스크롤) — category 모드에서만
+        const catNavHtml = (effectiveMode === 'category' && categoriesInOrder.length > 1) ? `
             <nav class="sdd-listen-catnav" aria-label="Jump to category">
                 ${categoriesInOrder.map((cat, idx) => `
                     <button type="button" class="sdd-listen-catnav-link"
@@ -875,8 +1075,139 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             </nav>
         ` : '';
 
-        root.innerHTML = `
-            <button class="sdd-listen-back" data-listen-back>${escapeHtml(backLabel)}</button>
+        // v7 §11 By City — 모드 토글 라벨
+        const labelByCity = T({
+            en: 'By city', ko: '도시별', ja: '街ごと',
+            pt: 'Por cidade', es: 'Por ciudad'
+        });
+        const labelBrowseAll = T({
+            en: 'Browse all tracks', ko: '전체 트랙',
+            ja: '全トラック', pt: 'Todas as faixas',
+            es: 'Todas las pistas'
+        });
+        const modeToggleHtml = cityModeAvailable ? `
+            <div class="sdd-listen-mode" role="tablist" aria-label="Listening mode">
+                <button type="button" class="sdd-listen-mode-btn"
+                        data-set-mode="city" role="tab"
+                        aria-current="${effectiveMode === 'city'}">${escapeHtml(labelByCity)}</button>
+                <span class="sdd-listen-mode-sep" aria-hidden="true">·</span>
+                <button type="button" class="sdd-listen-mode-btn"
+                        data-set-mode="category" role="tab"
+                        aria-current="${effectiveMode === 'category'}">${escapeHtml(labelBrowseAll)}</button>
+            </div>
+        ` : '';
+
+        // v7 §11 By City — 도시 모드 전용 HTML (사진 + 캡션 + 도시 트랙 + 도시 dropdown)
+        let cityModeHtml = '';
+        let cityTrackIndices = [];   // tracks 의 원본 인덱스 (playTrack 호환)
+        if (effectiveMode === 'city') {
+            const activeSlug = resolveActiveCity(data);
+            const activeCity = cities.find(c => c.slug === activeSlug) || cities[0];
+            const activeName = activeCity?.names?.[(window.SAUDADE_EDITION?.get?.() || 'en')] || activeCity?.slug || '';
+            const photoUrl = activeCity?.default_photo_url || '';
+            const caption  = activeCity?.photo_caption?.[(window.SAUDADE_EDITION?.get?.() || 'en')] || '';
+
+            // 도시 dropdown — cities 1개면 정적 텍스트, 그 외 details/summary
+            const switcherLabel = T({
+                en: 'Choose a city', ko: '도시 선택',
+                ja: '街を選ぶ', pt: 'Escolher cidade',
+                es: 'Elegir ciudad'
+            });
+            const switcherHtml = cities.length > 1 ? `
+                <details class="sdd-listen-city-switcher">
+                    <summary aria-label="${escapeHtml(switcherLabel)}">${escapeHtml(activeName)}</summary>
+                    <ul class="sdd-listen-city-switcher-list">
+                        ${cities.map(c => {
+                            const cName = c.names?.[(window.SAUDADE_EDITION?.get?.() || 'en')] || c.slug;
+                            return `<li><button type="button" data-set-city="${escapeHtml(c.slug)}" aria-current="${c.slug === activeSlug}">${escapeHtml(cName)}</button></li>`;
+                        }).join('')}
+                    </ul>
+                </details>
+            ` : '';
+
+            // 사진 영역 — 4px paper frame + onerror placeholder fallback
+            const placeholderText = T({
+                en: 'Awaiting photograph.', ko: '사진을 기다리는 중.',
+                ja: '写真を準備中。', pt: 'A aguardar fotografia.',
+                es: 'Esperando fotografía.'
+            });
+            const photoHtml = photoUrl ? `
+                <figure class="sdd-listen-city-photo">
+                    <img class="sdd-listen-city-photo-img"
+                         src="${escapeHtml(photoUrl)}"
+                         alt="${escapeHtml(activeName)}"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="sdd-listen-city-photo-placeholder" style="display:none">
+                        <p class="city">${escapeHtml(activeName)}</p>
+                        <p class="note">${escapeHtml(placeholderText)}</p>
+                    </div>
+                </figure>
+            ` : `
+                <figure class="sdd-listen-city-photo">
+                    <div class="sdd-listen-city-photo-placeholder">
+                        <p class="city">${escapeHtml(activeName)}</p>
+                        <p class="note">${escapeHtml(placeholderText)}</p>
+                    </div>
+                </figure>
+            `;
+            const captionHtml = caption ? `<p class="sdd-listen-city-caption">${escapeHtml(caption)}</p>` : '';
+
+            // 활성 도시 트랙만 필터 + 원본 인덱스 보존 (재생 시 _data.tracks[idx] 참조)
+            cityTrackIndices = tracks
+                .map((t, i) => ({ t, i }))
+                .filter(({ t }) => t.city === activeSlug)
+                .map(({ i }) => i);
+
+            const cityTracksHtml = cityTrackIndices.length
+                ? cityTrackIndices.map(idx => {
+                    const t = tracks[idx];
+                    const dur = t.duration_minutes ? `${t.duration_minutes} MIN` : '';
+                    const licenseUrl = safeUrl(t.license_url);
+                    const licenseLine = licenseUrl
+                        ? `<a href="${licenseUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.license || '')}</a>`
+                        : escapeHtml(t.license || '');
+                    const isUnavail = _unavailable.has(idx);
+                    const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
+                    return `
+                        <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
+                                 data-track-idx="${idx}"
+                                 tabindex="0" role="button"
+                                 ${isUnavail ? 'aria-disabled="true"' : ''}
+                                 aria-label="${escapeHtml(activeName)} — ${escapeHtml(t.title)}">
+                            <span class="sdd-listen-num"><span class="marker">  </span>${String(idx + 1).padStart(2, '0')}</span>
+                            <div class="sdd-listen-body">
+                                <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
+                                <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
+                            </div>
+                            <span class="sdd-listen-duration">${durDisplay}</span>
+                        </article>
+                    `;
+                }).join('')
+                : `<p class="sdd-listen-empty">${escapeHtml(T({
+                    en: 'No tracks for this city yet.',
+                    ko: '이 도시에 등록된 트랙이 아직 없다.',
+                    ja: 'この街にはまだ録音がない。',
+                    pt: 'Ainda sem faixas para esta cidade.',
+                    es: 'Sin pistas para esta ciudad aún.'
+                  }))}</p>`;
+
+            cityModeHtml = `
+                <div class="sdd-listen-head" style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+                    <h2 class="sdd-listen-h2" style="flex:1 1 auto">
+                        ${dropItalicPunct(headLabel)}
+                        <span class="it">${dropItalicPunct(headItalic)}</span>
+                    </h2>
+                    ${switcherHtml}
+                </div>
+                ${modeToggleHtml}
+                ${photoHtml}
+                ${captionHtml}
+                <div class="sdd-listen-city-tracks">${cityTracksHtml}</div>
+            `;
+        }
+
+        // 카테고리 모드 HTML — 기존 라이브러리 흐름
+        const categoryModeHtml = effectiveMode === 'category' ? `
             <header class="sdd-listen-head">
                 <h2 class="sdd-listen-h2">
                     ${dropItalicPunct(headLabel)}
@@ -884,8 +1215,15 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 </h2>
                 <p class="sdd-listen-meta">${escapeHtml(libraryLabel)} · ${escapeHtml(tracksLabel)} · ${escapeHtml(categoriesLabel)}</p>
             </header>
+            ${modeToggleHtml}
             ${catNavHtml}
             ${tracksHtml}
+        ` : '';
+
+        root.innerHTML = `
+            <button class="sdd-listen-back" data-listen-back>${escapeHtml(backLabel)}</button>
+            ${cityModeHtml}
+            ${categoryModeHtml}
             <footer class="sdd-listen-foot">
                 <p>
                     <strong>A note on sound.</strong>
@@ -911,6 +1249,19 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         `;
 
         root.querySelector('[data-listen-back]')?.addEventListener('click', () => close());
+
+        // v7 §11 By City — 모드 토글 + 도시 전환
+        root.querySelectorAll('[data-set-mode]').forEach(btn => {
+            btn.addEventListener('click', () => setMode(btn.getAttribute('data-set-mode')));
+        });
+        root.querySelectorAll('[data-set-city]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setActiveCity(btn.getAttribute('data-set-city'));
+                // dropdown 닫기
+                const det = btn.closest('details');
+                if (det) det.removeAttribute('open');
+            });
+        });
 
         // v7 검토 정정 — 카테고리 anchor 점프
         root.querySelectorAll('[data-jump-cat]').forEach(link => {

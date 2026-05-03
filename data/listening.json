@@ -45,6 +45,27 @@
 
         { "category": "WHITE NOISE", "title": "Brown noise, deep",           "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-brown.mp3" },
         { "category": "WHITE NOISE", "title": "Pink noise, soft",            "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-pink.mp3" },
-        { "category": "WHITE NOISE", "title": "White noise, even",           "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-white.mp3" }
+        { "category": "WHITE NOISE", "title": "White noise, even",           "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-white.mp3" },
+
+        { "city": "lisbon",      "category": "CITY", "title": "Tram bells and gulls, Alfama hill",      "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null, "credits": "Recorded in Lisbon, August 2025.",  "audio_url": "/audio/asmr/lisbon-tram-bells.mp3",   "photo_url": "/photos/cities/lisbon-alfama.webp" },
+        { "city": "lisbon",      "category": "WATER","title": "The Tagus at dusk",                       "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null, "credits": "Recorded in Lisbon, August 2025.",  "audio_url": "/audio/asmr/lisbon-tagus-dusk.mp3",   "photo_url": "/photos/cities/lisbon-tagus.webp" },
+        { "city": "lisbon",      "category": "RAIN", "title": "Rain on tile rooftops, Bairro Alto",      "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null, "credits": "Recorded in Lisbon, August 2025.",  "audio_url": "/audio/asmr/lisbon-rain-tiles.mp3",   "photo_url": "/photos/cities/lisbon-bairro.webp" }
+    ],
+    "cities": [
+        {
+            "slug": "lisbon",
+            "names": { "en": "Lisbon", "ko": "리스본", "ja": "リスボン", "pt": "Lisboa", "es": "Lisboa" },
+            "default_photo_url": "/photos/cities/lisbon-alfama.webp",
+            "photo_caption": {
+                "en": "Lisbon — Alfama hill, August. Photograph by the editor.",
+                "ko": "리스본 — 알파마 언덕, 8월. 편집장 촬영.",
+                "ja": "リスボン — アルファマの丘、八月。編集長撮影。",
+                "pt": "Lisboa — Alfama, em agosto. Fotografia do editor.",
+                "es": "Lisboa — colina de Alfama, agosto. Fotografía del editor."
+            },
+            "photographer": "Saudade Editor",
+            "photo_source": "own",
+            "license_url": null
+        }
     ]
 }

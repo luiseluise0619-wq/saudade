@@ -280,7 +280,7 @@ input::placeholder, .os-search::placeholder { color: var(--bone-d) !important; t
 /* ─── 8. 버튼 일반 — flat ink / hover rust ──────────────────────────────── */
 
 /* v7 검토 정정 — sdd-* 잡지 톤 버튼은 자체 스타일 보유. 전역 box border 제외. */
-button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):not(.sdd-listen-ctl):not(.sdd-listen-back):not(.sdd-mast-back):not(.sdd-atlas-d-back):not(.sdd-gps-modal-btn):not(.sdd-gps-pin-prompt-cancel):not(.sdd-gps-status-btn):not(.sdd-disp-disclaimer-toggle) {
+button:not(.dock-btn):not(.os-btn):not(.cafe-toggle):not(.mc-btn):not(.tappable):not(.sdd-atlas-view-btn):not(.sdd-listen-catnav-link):not(.sdd-ld-empty-btn):not(.sdd-atlas-empty-btn):not(.sdd-listen-ctl):not(.sdd-listen-back):not(.sdd-mast-back):not(.sdd-atlas-d-back):not(.sdd-gps-modal-btn):not(.sdd-gps-pin-prompt-cancel):not(.sdd-gps-status-btn):not(.sdd-disp-disclaimer-toggle):not(.sdd-listen-mode-btn):not(.sdd-desk-account-btn) {
     background: transparent;
     border: 0.5px solid var(--rule);
     color: var(--ink);
