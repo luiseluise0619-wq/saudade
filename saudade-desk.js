@@ -218,7 +218,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             keepHere: T({ en: 'Keep me on $to permanently', ko: '$to 를 정착 도시로', ja: '$to を本拠に', pt: 'Manter $to permanente', es: 'Mantener $to permanente' }),
             requestNew: T({ en: 'Request a new desk', ko: '새 책상 요청', ja: '新しいデスクを要請', pt: 'Pedir uma nova mesa', es: 'Solicitar una nueva mesa' }),
             requestPh:  T({ en: 'CITY NAME', ko: '도시 이름', ja: '都市名', pt: 'NOME DA CIDADE', es: 'NOMBRE DE LA CIUDAD' }),
-            requestSent:T({ en: 'Submitted, queued for next issue.', ko: '제출됐습니다. 다음 호에 검토합니다.', ja: '提出されました。次号で検討します。', pt: 'Submetido, em fila para a próxima edição.', es: 'Enviado, en cola para la próxima edición.' })
+            requestSent:T({ en: 'Submitted, queued for next issue.', ko: '제출됐다. 다음 호에 검토한다.', ja: '提出された。次号で検討する。', pt: 'Submetido, em fila para a próxima edição.', es: 'Enviado, en cola para la próxima edición.' })
         };
 
         // Switch active 시
@@ -406,8 +406,8 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 if (status) {
                     const msg = T({
                         en: `“${cityName}” isn't on our desk yet. We've noted your request. When 100 readers ask for a city, we open the desk. Currently: ${count} of 100.`,
-                        ko: `"${cityName}" 은 아직 책상 위에 없습니다. 요청을 기록했습니다. 100명이 모이면 다음 분기에 책상을 엽니다. 현재 ${count} / 100.`,
-                        ja: `「${cityName}」はまだ机にありません。要請を記録いたしました。百名集まれば次号で机を開きます。現在 ${count} / 100。`,
+                        ko: `"${cityName}" 은 아직 책상 위에 없다. 요청을 기록했다. 100명이 모이면 다음 분기에 책상을 연다. 현재 ${count} / 100.`,
+                        ja: `「${cityName}」はまだ机にない。要請を記録した。百名集まれば次号で机を開く。現在 ${count} / 100。`,
                         pt: `“${cityName}” ainda não está na nossa mesa. Registámos o seu pedido. Quando 100 leitores pedirem uma cidade, abrimos a mesa. Atualmente: ${count} de 100.`,
                         es: `“${cityName}” aún no está en nuestra mesa. Hemos anotado su solicitud. Cuando 100 lectores pidan una ciudad, abrimos la mesa. Actualmente: ${count} de 100.`
                     });

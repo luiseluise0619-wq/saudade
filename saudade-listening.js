@@ -1,5 +1,6 @@
-// SAUDADE · § 05 THE LISTENING ROOM (Handoff v2 §5.5)
-// 분기 발행. 도시 사운드 1시간 트랙 (3~4곡). 음악 X — 자연 + 기계 소리만.
+// SAUDADE · § 05 THE LISTENING ROOM (Handoff v2 §5.5 + v6 §11 simplify)
+// ASMR 라이브러리. 카테고리별 30~50 트랙. 사용자가 직접 클릭해서 듣는다.
+// 분기 매칭 X · 도시 자동 매칭 X · 발행 호수 X. work session timer 만 유지.
 // 진입: § 00 표지 우하단 한 곳 (다른 화면 진입 X — 헌법 §4-6).
 // 라이선스 트래커 필수 표시 (Freesound CC0/CC-BY · own recording).
 'use strict';
@@ -123,15 +124,34 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-track[aria-current="true"] .sdd-listen-num .marker::before { content: '\\25B6 '; }
 
 .sdd-listen-body { display: flex; flex-direction: column; gap: 6px; }
-.sdd-listen-city {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(28px, 3.5vw, 40px);
-    line-height: 1;
-    letter-spacing: var(--tr-fraunces-h3);
+
+/* v6 §11 simplify — ASMR library category headers (mono caps, between groups) */
+.sdd-listen-cat-head {
+    margin: clamp(40px, 6vw, 72px) 0 clamp(8px, 1.5vw, 12px);
+    padding-bottom: clamp(8px, 1vw, 12px);
+    border-bottom: 0.5px solid rgba(242,238,227,.32);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.sdd-listen-cat-head:first-of-type { margin-top: clamp(20px, 3vw, 32px); }
+.sdd-listen-cat-name {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
     color: var(--paper);
 }
+.sdd-listen-cat-count {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta);
+    text-transform: uppercase;
+    color: rgba(242,238,227,.55);
+}
+
 .sdd-listen-title {
     font-family: var(--serif);
     font-weight: 300;
@@ -510,7 +530,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             _isPlaying = false;
             syncControlState();
             releaseWakeLock();
-            // 끝나면 자연스럽게 다음 도시로 (헌법 §5.5.1) — 단순 다음 idx
+            // 끝나면 자연스럽게 다음 트랙으로 (v6 §11 simplify) — 단순 다음 idx
             if (_data && _data.tracks && _activeIdx != null) {
                 const next = _activeIdx + 1;
                 if (next < _data.tracks.length) {
@@ -526,7 +546,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 if (Math.floor(_audio.currentTime) % 30 === 0) {
                     localStorage.setItem('saudade.reading.position', JSON.stringify({
                         idx: _activeIdx,
-                        city: _data?.tracks?.[_activeIdx]?.city || '',
+                        category: _data?.tracks?.[_activeIdx]?.category || '',
                         position: _audio.currentTime,
                         ts: Date.now()
                     }));
@@ -619,23 +639,43 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         }
 
         const tracks = (data && data.tracks) || [];
-        const issue = data?.issue || 3;
-        const season = data?.season || 'Spring 2026';
 
+        // v6 §11 simplify — ASMR 라이브러리. 카테고리별 그룹 헤더 + 평면 인덱스로 클릭→재생.
+        // 분기/도시 매칭 X. 발행 호수 X. 사용자가 카테고리 보고 직접 고름.
+        const categoriesInOrder = [];
+        const counts = {};
+        for (const t of tracks) {
+            const c = t.category || 'OTHER';
+            if (!(c in counts)) categoriesInOrder.push(c);
+            counts[c] = (counts[c] || 0) + 1;
+        }
+
+        let lastCat = null;
         const tracksHtml = tracks.map((t, i) => {
             const dur = t.duration_minutes ? `${t.duration_minutes} MIN` : '';
             const licenseUrl = safeUrl(t.license_url);
             const licenseLine = licenseUrl
                 ? `<a href="${licenseUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.license || '')}</a>`
                 : escapeHtml(t.license || '');
-            return `
+            const cat = t.category || 'OTHER';
+            let prefix = '';
+            if (cat !== lastCat) {
+                const n = counts[cat];
+                prefix = `
+                    <header class="sdd-listen-cat-head">
+                        <span class="sdd-listen-cat-name">${escapeHtml(cat)}</span>
+                        <span class="sdd-listen-cat-count">${String(n).padStart(2, '0')} ${n === 1 ? 'TRACK' : 'TRACKS'}</span>
+                    </header>
+                `;
+                lastCat = cat;
+            }
+            return prefix + `
                 <article class="sdd-listen-track"
                          data-track-idx="${i}"
                          tabindex="0" role="button"
-                         aria-label="${escapeHtml(t.city)} — ${escapeHtml(t.title)}">
+                         aria-label="${escapeHtml(cat)} — ${escapeHtml(t.title)}">
                     <span class="sdd-listen-num"><span class="marker">  </span>${String(i + 1).padStart(2, '0')}</span>
                     <div class="sdd-listen-body">
-                        <h3 class="sdd-listen-city">${escapeHtml(t.city)}</h3>
                         <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
                         <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
                     </div>
@@ -651,11 +691,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         const T = window.SAUDADE_T || ((s) => s.en);
         const headLabel = T({
-            en: 'The', ko: '리스닝', ja: 'リスニング',
+            en: 'The', ko: '듣는', ja: '聴く',
             pt: 'A', es: 'La'
         });
         const headItalic = T({
-            en: 'listening room.', ko: '룸.', ja: 'ルーム。',
+            en: 'listening room.', ko: '방.', ja: '部屋。',
             pt: 'sala de escuta.', es: 'sala de escucha.'
         });
         const backLabel = T({
@@ -669,8 +709,20 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             pt: `${tracks.length} FAIXAS`,
             es: `${tracks.length} PISTAS`
         });
-        const issueLabel = T({
-            en: 'ISSUE', ko: '호', ja: '号', pt: 'EDIÇÃO', es: 'EDICIÓN'
+        const catsCount = categoriesInOrder.length;
+        const categoriesLabel = T({
+            en: `${catsCount} CATEGORIES`,
+            ko: `카테고리 ${catsCount}개`,
+            ja: `${catsCount} カテゴリ`,
+            pt: `${catsCount} CATEGORIAS`,
+            es: `${catsCount} CATEGORÍAS`
+        });
+        const libraryLabel = T({
+            en: 'ASMR LIBRARY',
+            ko: 'ASMR 라이브러리',
+            ja: 'ASMR ライブラリ',
+            pt: 'BIBLIOTECA ASMR',
+            es: 'BIBLIOTECA ASMR'
         });
 
         root.innerHTML = `
@@ -680,7 +732,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     ${escapeHtml(headLabel)}
                     <span class="it">${escapeHtml(headItalic)}</span>
                 </h2>
-                <p class="sdd-listen-meta">${escapeHtml(issueLabel)} ${String(issue).padStart(2, '0')} · ${escapeHtml(season)} · ${escapeHtml(tracksLabel)}</p>
+                <p class="sdd-listen-meta">${escapeHtml(libraryLabel)} · ${escapeHtml(tracksLabel)} · ${escapeHtml(categoriesLabel)}</p>
             </header>
             ${tracksHtml}
             <footer class="sdd-listen-foot">

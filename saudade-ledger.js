@@ -661,12 +661,12 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         // v6 §7.2 — Ledger 기사 톤 (PORTUGAL D7, IN FIVE LINES) — 5 에디션 i18n
         const T = window.SAUDADE_T || ((s) => s.en);
         const headLabel = T({
-            en: 'How many days',  ko: '남은 날짜는',
+            en: 'How many days',  ko: '며칠이',
             ja: 'のこされた日々',  pt: 'Quantos dias',
             es: 'Cuántos días'
         });
         const headItalic = T({
-            en: 'remain.', ko: '얼마나 남았는가.', ja: 'いくつ。',
+            en: 'remain.', ko: '남았는가.', ja: 'いくつ。',
             pt: 'restam.', es: 'quedan.'
         });
         const introEyebrow = T({
@@ -676,10 +676,10 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         });
         const introBody = T({
             en: 'The four numbers a digital nomad watches each morning: <em>how many days the visa permits, how long since the last entry to a tax country, when health insurance pauses, when pension residency files.</em> This page is a calendar, not advice.',
-            ko: '디지털 노마드가 매일 아침 들여다보는 네 가지 숫자입니다: <em>비자가 허용한 날짜, 가장 최근 입국 후 며칠 지났는가, 건강보험은 언제 정지되는가, 연금 해외체류 신고는 언제인가.</em> 이 페이지는 달력이지 조언이 아닙니다.',
-            ja: 'デジタルノマドが毎朝確かめる四つの数字 — <em>ビザの許可する日数、最後の入国から何日たったか、健康保険がいつ止まるか、年金の海外居住届はいつか。</em>このページは暦であり、助言ではありません。',
+            ko: '디지털 노마드가 매일 아침 들여다보는 네 가지 숫자다: <em>비자가 허용한 날짜, 가장 최근 입국 후 며칠 지났는가, 건강보험은 언제 정지되는가, 연금 해외체류 신고는 언제인가.</em> 이 페이지는 달력이지 조언이 아니다.',
+            ja: 'デジタルノマドが毎朝確かめる四つの数字 — <em>ビザの許可する日数、最後の入国から何日たったか、健康保険がいつ止まるか、年金の海外居住届はいつか。</em>このページは暦であり、助言ではない。',
             pt: 'Os quatro números que um nómada digital observa todas as manhãs: <em>quantos dias o visto permite, quanto tempo desde a última entrada num país fiscal, quando o seguro de saúde pausa, quando o registo de pensão é apresentado.</em> Esta página é um calendário, não um conselho.',
-            es: 'Los cuatro números que un nómada digital mira cada mañana: <em>cuántos días permite el visado, cuánto tiempo desde la última entrada a un país fiscal, cuándo se pausa el seguro de salud, cuándo se presenta la residencia del pensión.</em> Esta página es un calendario, no un consejo.'
+            es: 'Los cuatro números que un nómada digital mira cada mañana: <em>cuántos días permite el visado, cuánto tiempo desde la última entrada a un país fiscal, cuándo se pausa el seguro de salud, cuándo se presenta la residencia de pensión.</em> Esta página es un calendario, no un consejo.'
         });
 
         const articleIntro = `

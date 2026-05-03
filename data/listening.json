@@ -1,54 +1,50 @@
 {
-    "issue": 3,
-    "season": "Spring 2026",
+    "library": "ASMR",
     "tracks": [
-        {
-            "city": "SEOUL",
-            "title": "Rain on a hanok roof, Bukchon, after midnight",
-            "duration_minutes": 60,
-            "neighborhood": "Bukchon",
-            "recorded_at": "2026-04-12T01:30:00+09:00",
-            "source": "own_recording",
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/seoul-bukchon-rain.mp3"
-        },
-        {
-            "city": "LISBON",
-            "title": "Tram bells and gulls, Alfama hill",
-            "duration_minutes": 60,
-            "neighborhood": "Alfama",
-            "recorded_at": "2026-03-22T11:00:00+00:00",
-            "source": "freesound",
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Composed from Freesound CC0 stems.",
-            "audio_url": "/audio/lisbon-alfama-trams.mp3"
-        },
-        {
-            "city": "OSAKA",
-            "title": "The Yodogawa at dusk, geese passing",
-            "duration_minutes": 60,
-            "neighborhood": "Yodogawa",
-            "recorded_at": "2026-04-04T18:45:00+09:00",
-            "source": "own_recording",
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded on a windless evening.",
-            "audio_url": "/audio/osaka-yodogawa-dusk.mp3"
-        },
-        {
-            "city": "CHIANG MAI",
-            "title": "Monsoon on a tin roof, Nimman",
-            "duration_minutes": 60,
-            "neighborhood": "Nimman",
-            "recorded_at": "2026-04-18T16:20:00+07:00",
-            "source": "freesound",
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "Stems by atmospheric_collective on Freesound. CC-BY 4.0.",
-            "audio_url": "/audio/chiangmai-nimman-monsoon.mp3"
-        }
+        { "category": "RAIN", "title": "Heavy rain on a wooden roof",        "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/rain-roof.mp3" },
+        { "category": "RAIN", "title": "Rain on a window, distant traffic",  "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/rain-window.mp3" },
+        { "category": "RAIN", "title": "Monsoon on a tin roof",              "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "Recorded in Chiang Mai. CC-BY 4.0.",       "audio_url": "/audio/asmr/rain-monsoon.mp3" },
+        { "category": "RAIN", "title": "Light drizzle in a forest",          "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/rain-drizzle.mp3" },
+
+        { "category": "THUNDER", "title": "Distant thunder, no rain",        "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/thunder-distant.mp3" },
+        { "category": "THUNDER", "title": "Storm at night, heavy rain",      "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/thunder-storm.mp3" },
+        { "category": "THUNDER", "title": "Rolling thunder, summer rain",    "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "Stems by atmospheric_collective. CC-BY 4.0.", "audio_url": "/audio/asmr/thunder-rolling.mp3" },
+
+        { "category": "FIRE", "title": "Campfire, slow burn",                "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/fire-campfire.mp3" },
+        { "category": "FIRE", "title": "Fireplace, occasional pop",          "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/fire-fireplace.mp3" },
+        { "category": "FIRE", "title": "Candles, soft hiss",                 "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded by the editor.",                  "audio_url": "/audio/asmr/fire-candles.mp3" },
+
+        { "category": "WATER", "title": "Ocean waves on a pebble beach",     "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/water-ocean.mp3" },
+        { "category": "WATER", "title": "River stream, midsummer",           "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/water-river.mp3" },
+        { "category": "WATER", "title": "Mountain creek, light wind",        "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/water-creek.mp3" },
+        { "category": "WATER", "title": "Stone fountain, evening",           "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded in Lisbon.",                       "audio_url": "/audio/asmr/water-fountain.mp3" },
+
+        { "category": "FOREST", "title": "Forest at dawn, soft birds",       "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/forest-dawn.mp3" },
+        { "category": "FOREST", "title": "Deep woods, hidden water",         "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/forest-deep.mp3" },
+        { "category": "FOREST", "title": "Rustling leaves, dry forest",      "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/forest-leaves.mp3" },
+
+        { "category": "WIND", "title": "Wind through pine trees",            "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/wind-pine.mp3" },
+        { "category": "WIND", "title": "Prairie wind, low and steady",       "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/wind-prairie.mp3" },
+        { "category": "WIND", "title": "Soft breeze, open window",           "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded by the editor.",                   "audio_url": "/audio/asmr/wind-window.mp3" },
+
+        { "category": "COFFEE SHOP", "title": "Cafe ambience, mid-morning",  "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/cafe-ambience.mp3" },
+        { "category": "COFFEE SHOP", "title": "Espresso machine, distant",   "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded in Seoul.",                        "audio_url": "/audio/asmr/cafe-espresso.mp3" },
+        { "category": "COFFEE SHOP", "title": "Coffee shop chatter, soft",   "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/cafe-chatter.mp3" },
+
+        { "category": "LIBRARY", "title": "Page turning, slow",              "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded by the editor.",                   "audio_url": "/audio/asmr/library-pages.mp3" },
+        { "category": "LIBRARY", "title": "Pencil on paper, writing",        "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded by the editor.",                   "audio_url": "/audio/asmr/library-pencil.mp3" },
+        { "category": "LIBRARY", "title": "Library quiet, distant footsteps","duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/library-quiet.mp3" },
+
+        { "category": "NIGHT", "title": "Crickets, summer porch",            "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/night-crickets.mp3" },
+        { "category": "NIGHT", "title": "Owls, midnight forest",             "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/night-owls.mp3" },
+        { "category": "NIGHT", "title": "Summer night, far cars",            "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded by the editor.",                   "audio_url": "/audio/asmr/night-summer.mp3" },
+
+        { "category": "CITY", "title": "Distant traffic, rooftop",           "duration_minutes": 60, "license": "Owned recording · Saudade", "license_url": null,                                              "credits": "Recorded in Tokyo.",                        "audio_url": "/audio/asmr/city-rooftop.mp3" },
+        { "category": "CITY", "title": "Rain on a city street, evening",     "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Freesound CC0 stem.",                       "audio_url": "/audio/asmr/city-rain-street.mp3" },
+        { "category": "CITY", "title": "Train passing, viaduct",             "duration_minutes": 60, "license": "CC-BY", "license_url": "https://creativecommons.org/licenses/by/4.0/",   "credits": "CC-BY 4.0.",                                "audio_url": "/audio/asmr/city-train.mp3" },
+
+        { "category": "WHITE NOISE", "title": "Brown noise, deep",           "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-brown.mp3" },
+        { "category": "WHITE NOISE", "title": "Pink noise, soft",            "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-pink.mp3" },
+        { "category": "WHITE NOISE", "title": "White noise, even",           "duration_minutes": 60, "license": "CC0",   "license_url": "https://freesound.org/help/faq/#what-licenses", "credits": "Generated, CC0.",                            "audio_url": "/audio/asmr/noise-white.mp3" }
     ]
 }

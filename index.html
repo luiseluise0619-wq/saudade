@@ -13,7 +13,7 @@
     <meta name="description" content="LOUNJ — 도시 마커 클릭 → 영상·lo-fi 음악·실시간 정보가 한 화면에 켜지는 무료 카페 모드 데스크톱." />
     <!-- 서버 엔드포인트 (배포 시 설정) - 비워두면 로컬 DB만 사용 -->
     <!-- 부트 로직 (서버 URL · 캐시 마이그 · SW · CDN 로딩 · 로딩 타임아웃) — bootstrap.js 한 곳으로 통합 -->
-    <script src="bootstrap.js?v=v623"></script>
+    <script src="bootstrap.js?v=v624"></script>
     <meta name="theme-color" content="#F2EEE3" />
     <!-- v598 SAUDADE — favicon = 동심원 두 개 (워드마크 생략, 16px 가독성).
          paper 배경 + ink 링. 어떤 그라디언트도 없음. -->
@@ -95,66 +95,70 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
         rel="stylesheet" />
     <!-- v562: design tokens (Linear/Raycast/Vercel hybrid) — style.css 보다 먼저 로드 -->
-    <link rel="stylesheet" href="design-tokens.css?v=v623" />
+    <link rel="stylesheet" href="design-tokens.css?v=v624" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <!-- Geist Mono — mono-num / eyebrow / FX 숫자 표시용 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css" />
-    <link rel="stylesheet" href="style.css?v=v623" />
+    <link rel="stylesheet" href="style.css?v=v624" />
     <!-- v598 SAUDADE 스킨 — paper / ink / rust 매거진 톤. style.css 보다 뒤에 로드해서 강제 override.
          tokens → typography → skin 순서. -->
-    <link rel="stylesheet" href="saudade-tokens.css?v=v623" />
-    <link rel="stylesheet" href="saudade-typography.css?v=v623" />
+    <link rel="stylesheet" href="saudade-tokens.css?v=v624" />
+    <link rel="stylesheet" href="saudade-typography.css?v=v624" />
     <!-- v608 SAUDADE Handoff v2 — 5 edition DNA tokens (en/ko/ja/pt/es) -->
-    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v623" />
-    <link rel="stylesheet" href="saudade-skin.css?v=v623" />
-    <link rel="stylesheet" href="style-color.css?v=v623" />
+    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v624" />
+    <link rel="stylesheet" href="saudade-skin.css?v=v624" />
+    <link rel="stylesheet" href="style-color.css?v=v624" />
     <!-- globe.gl + 로딩 안전장치는 bootstrap.js 에서 처리 -->
 
 
     <!-- SECRETS - 가장 먼저 로드 (window.AURA_PEXELS_KEY 등 설정) -->
     <!-- ⚠️ aura-secrets.js는 .gitignore에 포함되어 git에 올라가지 않음 -->
-    <script src="aura-secrets.js?v=v623"></script>
+    <script src="aura-secrets.js?v=v624"></script>
     <!-- CONSENT (GDPR/PIPA) — must load before any analytics or tracking script -->
-    <script src="consent.js?v=v623"></script>
+    <script src="consent.js?v=v624"></script>
     <!-- AI / 추정치 / 어필리에이트 면책 헬퍼 (window.AURA_DISCLAIMER) -->
-    <script defer src="aura-common.js?v=v623"></script>
+    <script defer src="aura-common.js?v=v624"></script>
     <!-- AMBIENT MODE -->
-    <script defer src="city-videos.js?v=v623"></script>
+    <script defer src="city-videos.js?v=v624"></script>
     <script defer src="https://w.soundcloud.com/player/api.js"></script>
-    <script defer src="ambient-mode.js?v=v623"></script>
-    <script defer src="cafe-mode.js?v=v623"></script>
+    <script defer src="ambient-mode.js?v=v624"></script>
+    <script defer src="cafe-mode.js?v=v624"></script>
     <!-- optimize.js 제거 (404, 파일 존재 X) -->
-    <script defer src="security-patch.js?v=v623"></script>
-    <script defer src="app.js?v=v623"></script>
+    <script defer src="security-patch.js?v=v624"></script>
+    <script defer src="app.js?v=v624"></script>
     <!-- 사용자 큐레이션 도시 (data moat — localStorage). -->
     <!-- v558 — 햅틱 + 노마드/v1 트래커 4종 -->
-    <script defer src="haptic.js?v=v623"></script>
+    <script defer src="haptic.js?v=v624"></script>
     <!-- v566 — 발열 완화 (visibilitychange 시 setInterval pause). 트래커보다 먼저 로드. -->
-    <script defer src="perf-throttle.js?v=v623"></script>
+    <script defer src="perf-throttle.js?v=v624"></script>
     <!-- v560 — 다음 도시 추천 + 노마드 카페 큐레이션 -->
     <!-- v601 SAUDADE PR#2 — 동심원 + § 00 ISSUE COVER (신규 컴포넌트, 기존 JS 손 안 댐) -->
     <!-- v608 Handoff v2 — Edition system (5 별쇄). lang-lock 대체. 가장 먼저 로드. -->
-    <script src="saudade-edition.js?v=v623"></script>
+    <script src="saudade-edition.js?v=v624"></script>
     <!-- v623 Handoff v6 §5 — 도시 시스템 (home + adjacent + Switch the Desk) -->
-    <script defer src="saudade-city.js?v=v623"></script>
+    <script defer src="saudade-city.js?v=v624"></script>
     <!-- v614 — print HUD corner marks (헌법 §1.4) -->
-    <script defer src="saudade-hud.js?v=v623"></script>
-    <script defer src="saudade-rings.js?v=v623"></script>
-    <script defer src="saudade-cover.js?v=v623"></script>
+    <script defer src="saudade-hud.js?v=v624"></script>
+    <script defer src="saudade-rings.js?v=v624"></script>
+    <script defer src="saudade-cover.js?v=v624"></script>
     <!-- v602 SAUDADE PR#3+4 — 섹션 마스트헤드 + 푸터 룰 + dock click 라우터 -->
-    <script defer src="saudade-masthead.js?v=v623"></script>
-    <script defer src="saudade-footer-rule.js?v=v623"></script>
+    <script defer src="saudade-masthead.js?v=v624"></script>
+    <script defer src="saudade-footer-rule.js?v=v624"></script>
     <!-- v604 SAUDADE 보강 — § 04 NEXT ISSUE wrapper + wordmark 인라인 + skins C/D -->
-    <script defer src="saudade-wordmark.js?v=v623"></script>
+    <script defer src="saudade-wordmark.js?v=v624"></script>
     <!-- v605 정합성 — § 02 ATLAS + § 03 OVERLAP + colophon (헌법 §4-3, §4-4, 콜로폰) -->
-    <script defer src="saudade-atlas.js?v=v623"></script>
+    <script defer src="saudade-atlas.js?v=v624"></script>
+    <!-- v624 부록 — § 02b QUARTERLY DISPATCH (헌법 §0.5 잡지 톤). 도시당 3건 · 분기 1회 발행. -->
+    <script defer src="saudade-quarterly-dispatch.js?v=v624"></script>
     <!-- v606 — § 01 LEDGER 풀 구현 -->
-    <script defer src="saudade-ledger.js?v=v623"></script>
+    <script defer src="saudade-ledger.js?v=v624"></script>
     <!-- v608 Handoff v2 — § 03 DISPATCHES + § 04 DESK -->
-    <script defer src="saudade-dispatches.js?v=v623"></script>
-    <script defer src="saudade-desk.js?v=v623"></script>
+    <script defer src="saudade-dispatches.js?v=v624"></script>
+    <script defer src="saudade-desk.js?v=v624"></script>
     <!-- v609 — § 05 LISTENING ROOM (cover 우하단 진입) + 한국어판 dispatches -->
-    <script defer src="saudade-listening.js?v=v623"></script>
+    <script defer src="saudade-listening.js?v=v624"></script>
+    <!-- v624 — v6 §9.10 Editor-on-Leave Auto-Pause (worker /editor/leave-status 어댑터) -->
+    <script defer src="saudade-editor-leave.js?v=v624"></script>
     <style>
     /* 좌측 패널 - 깔끔 재정의 (main.css 충돌 해결) */
     .left-drawer {

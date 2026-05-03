@@ -14,7 +14,7 @@
     const META = {
         en: { name: 'English',   loading: 'Opening English edition…' },
         ko: { name: '한국어',    loading: '한국어판을 펼치는 중…' },
-        ja: { name: '日本語',    loading: '日本語版をひらいています…' },
+        ja: { name: '日本語',    loading: '日本語版をひらいている…' },
         pt: { name: 'Português', loading: 'A abrir a edição portuguesa…' },
         es: { name: 'Español',   loading: 'Abriendo la edición en español…' }
     };

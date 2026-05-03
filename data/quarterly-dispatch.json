@@ -1,0 +1,108 @@
+{
+    "edition": "en",
+    "issue": "2026 · Q2",
+    "page": "P. 13",
+    "filed_at": "2026-04-28T14:00:00+09:00",
+    "next_filing": "2026-07-28T14:00:00+09:00",
+    "cities": [
+        {
+            "city": "LISBON",
+            "season": "Spring",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "Schengen 90/180 stays unchanged through 2027.",
+                    "lede": "The clock you keep in the ledger is still correct.",
+                    "source": "EU COUNCIL",
+                    "source_date": "2026.04.22",
+                    "source_url": "https://www.consilium.europa.eu/",
+                    "human_rewritten": true
+                },
+                {
+                    "n": "02",
+                    "headline": "Lisbon raises short-let tax from 8% to 11%.",
+                    "lede": "Rooms booked before May are grandfathered.",
+                    "source": "RTP",
+                    "source_date": "2026.04.18",
+                    "source_url": "https://www.rtp.pt/",
+                    "human_rewritten": false
+                },
+                {
+                    "n": "03",
+                    "headline": "TAP cuts ICN–LIS direct, one-stop only after June.",
+                    "lede": "Plan extra eight hours into the next move.",
+                    "source": "AVIATION WEEK",
+                    "source_date": "2026.04.11",
+                    "source_url": "https://aviationweek.com/",
+                    "human_rewritten": false
+                }
+            ]
+        },
+        {
+            "city": "OSAKA",
+            "season": "Summer queued",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "Visa-free 90 days extended to all OECD passports.",
+                    "lede": "Border guidance unchanged on departure tax.",
+                    "source": "MOJ JAPAN",
+                    "source_date": "2026.04.24",
+                    "source_url": "https://www.moj.go.jp/",
+                    "human_rewritten": true
+                },
+                {
+                    "n": "02",
+                    "headline": "Yodogawa fireworks scaled back, half hour shorter.",
+                    "lede": "The river will be quieter on August 9.",
+                    "source": "OSAKA CITY NOTICE",
+                    "source_date": "2026.04.20",
+                    "source_url": "https://www.city.osaka.lg.jp/",
+                    "human_rewritten": false
+                },
+                {
+                    "n": "03",
+                    "headline": "Mokuren plum blossoms, one week late this year.",
+                    "lede": "Expo Park reports peak around April 10 next time.",
+                    "source": "EXPO PARK BULLETIN",
+                    "source_date": "2026.04.15",
+                    "source_url": "https://www.expo-park.or.jp/",
+                    "human_rewritten": false
+                }
+            ]
+        },
+        {
+            "city": "TBILISI",
+            "season": "Spring",
+            "items": [
+                {
+                    "n": "01",
+                    "headline": "365-day visa-free renewed; reset by exit-and-return.",
+                    "lede": "The clock restarts only after one full day out of country.",
+                    "source": "MFA GEORGIA",
+                    "source_date": "2026.04.19",
+                    "source_url": "https://mfa.gov.ge/",
+                    "human_rewritten": true
+                },
+                {
+                    "n": "02",
+                    "headline": "Sulfur baths in Abanotubani close two weeks for repair.",
+                    "lede": "The smaller hammam at #5 stays open through Easter.",
+                    "source": "TBILISI CITY HALL",
+                    "source_date": "2026.04.25",
+                    "source_url": "https://tbilisi.gov.ge/",
+                    "human_rewritten": false
+                },
+                {
+                    "n": "03",
+                    "headline": "Wine-grape harvest forecast steady at 250,000 tonnes.",
+                    "lede": "Kakheti expects a quieter season than last year.",
+                    "source": "NATIONAL WINE AGENCY",
+                    "source_date": "2026.04.12",
+                    "source_url": "https://www.wine.gov.ge/",
+                    "human_rewritten": false
+                }
+            ]
+        }
+    ]
+}
