@@ -400,9 +400,28 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                     render();
                     return;
                 }
-                // 미정의 → 요청 누적 + 거절 메시지
-                const count = window.SAUDADE_CITY?.recordRequest?.(cityName) || 0;
+                // 미정의 → worker D1 INSERT (v7 §5.5) + local fallback
+                let count = window.SAUDADE_CITY?.recordRequest?.(cityName) || 0;
                 const status = root.querySelector('[data-request-status]');
+                // POST /city/request — fire-and-forget, count 갱신
+                const _base = (window.AURA_SERVER || '').replace(/\/$/, '');
+                if (_base) {
+                    fetch(_base + '/city/request', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            requested_city: cityName,
+                            edition: (window.SAUDADE_EDITION?.get?.() || 'en'),
+                            user_email: (window.SAUDADE_AUTH?.getUser?.() || {}).email || null
+                        }),
+                        credentials: 'omit'
+                    }).then(r => r.json()).then(j => {
+                        if (j && typeof j.count === 'number' && status) {
+                            count = j.count;
+                            status.textContent = status.textContent.replace(/\d+\s*\/\s*100/, count + ' / 100');
+                        }
+                    }).catch(() => {});
+                }
                 if (status) {
                     const msg = T({
                         en: `“${cityName}” isn't on our desk yet. We've noted your request. When 100 readers ask for a city, we open the desk. Currently: ${count} of 100.`,
