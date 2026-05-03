@@ -10,10 +10,10 @@
         content="default-src 'self' https:; connect-src 'self' https: wss:; img-src 'self' https: data: blob:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https:; font-src 'self' https: data:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com https:; media-src 'self' https: blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="author" content="LEEJAEJIN (JADDY)" />
-    <meta name="description" content="LOUNJ — 도시 마커 클릭 → 영상·lo-fi 음악·실시간 정보가 한 화면에 켜지는 무료 카페 모드 데스크톱." />
+    <meta name="description" content="Saudade — a daily magazine for digital nomads. Weather, dispatches, atlas, listening room. Quiet by design." />
     <!-- 서버 엔드포인트 (배포 시 설정) - 비워두면 로컬 DB만 사용 -->
     <!-- 부트 로직 (서버 URL · 캐시 마이그 · SW · CDN 로딩 · 로딩 타임아웃) — bootstrap.js 한 곳으로 통합 -->
-    <script src="bootstrap.js?v=v633"></script>
+    <script src="bootstrap.js?v=v634"></script>
     <meta name="theme-color" content="#F2EEE3" />
     <!-- v598 SAUDADE — favicon = 동심원 두 개 (워드마크 생략, 16px 가독성).
          paper 배경 + ink 링. 어떤 그라디언트도 없음. -->
@@ -25,24 +25,24 @@
     <meta name="theme-color" content="#F2EEE3" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="LOUNJ" />
-    <link rel="canonical" href="https://lounj.app/" />
+    <meta name="apple-mobile-web-app-title" content="Saudade" />
+    <link rel="canonical" href="https://saudade.pages.dev/" />
 
     <!-- v568 SEO + Open Graph / Twitter cards -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="LOUNJ" />
-    <meta property="og:title" content="LOUNJ — 디지털 노마드의 결정 도구" />
+    <meta property="og:site_name" content="Saudade" />
+    <meta property="og:title" content="Saudade — magazine for digital nomads" />
     <meta property="og:description" content="비자 카운터 · 세금 거주자 추적 · 타임존 오버랩 · 위치 알림 · 다음 도시 추천 · 노마드 카페. 한 화면에서 떠날 시점을 판단." />
-    <meta property="og:url" content="https://lounj.app/" />
-    <meta property="og:image" content="https://lounj.app/og-cover.png" />
+    <meta property="og:url" content="https://saudade.pages.dev/" />
+    <meta property="og:image" content="https://saudade.pages.dev/og-cover.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="LOUNJ — 디지털 노마드의 결정 도구" />
+    <meta name="twitter:title" content="Saudade — magazine for digital nomads" />
     <meta name="twitter:description" content="비자 D-day · 세금 임계값 · 타임존 · 위치 알림 · 다음 도시 추천. 노마드 한 화면 결정 도구." />
-    <meta name="twitter:image" content="https://lounj.app/og-cover.png" />
+    <meta name="twitter:image" content="https://saudade.pages.dev/og-cover.png" />
     <meta name="keywords" content="digital nomad,visa tracker,schengen calculator,tax residency,timezone overlap,next city,nomad cafe,디지털 노마드,비자 계산기,세금 거주자" />
     <meta name="author" content="LEEJAEJIN (JADDY)" />
 
@@ -51,8 +51,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "LOUNJ",
-        "url": "https://lounj.app/",
+        "name": "Saudade",
+        "url": "https://saudade.pages.dev/",
         "description": "Digital nomad decision tool — visa counter, tax residency, timezone overlap, location alerts, next city engine, nomad cafe map.",
         "applicationCategory": "TravelApplication",
         "operatingSystem": "Web",
@@ -95,97 +95,97 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
         rel="stylesheet" />
     <!-- v562: design tokens (Linear/Raycast/Vercel hybrid) — style.css 보다 먼저 로드 -->
-    <link rel="stylesheet" href="design-tokens.css?v=v633" />
+    <link rel="stylesheet" href="design-tokens.css?v=v634" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <!-- Geist Mono — mono-num / eyebrow / FX 숫자 표시용 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css" />
-    <link rel="stylesheet" href="style.css?v=v633" />
+    <link rel="stylesheet" href="style.css?v=v634" />
     <!-- v598 SAUDADE 스킨 — paper / ink / rust 매거진 톤. style.css 보다 뒤에 로드해서 강제 override.
          tokens → typography → skin 순서. -->
-    <link rel="stylesheet" href="saudade-tokens.css?v=v633" />
-    <link rel="stylesheet" href="saudade-typography.css?v=v633" />
+    <link rel="stylesheet" href="saudade-tokens.css?v=v634" />
+    <link rel="stylesheet" href="saudade-typography.css?v=v634" />
     <!-- v608 SAUDADE Handoff v2 — 5 edition DNA tokens (en/ko/ja/pt/es) -->
-    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v633" />
-    <link rel="stylesheet" href="saudade-skin.css?v=v633" />
-    <link rel="stylesheet" href="style-color.css?v=v633" />
+    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v634" />
+    <link rel="stylesheet" href="saudade-skin.css?v=v634" />
+    <link rel="stylesheet" href="style-color.css?v=v634" />
     <!-- globe.gl + 로딩 안전장치는 bootstrap.js 에서 처리 -->
 
 
     <!-- SECRETS - 가장 먼저 로드 (window.AURA_PEXELS_KEY 등 설정) -->
     <!-- ⚠️ aura-secrets.js는 .gitignore에 포함되어 git에 올라가지 않음 -->
-    <script src="aura-secrets.js?v=v633"></script>
+    <script src="aura-secrets.js?v=v634"></script>
     <!-- CONSENT (GDPR/PIPA) — must load before any analytics or tracking script -->
-    <script src="consent.js?v=v633"></script>
+    <script src="consent.js?v=v634"></script>
     <!-- AI / 추정치 / 어필리에이트 면책 헬퍼 (window.AURA_DISCLAIMER) -->
-    <script defer src="aura-common.js?v=v633"></script>
+    <script defer src="aura-common.js?v=v634"></script>
     <!-- AMBIENT MODE -->
-    <script defer src="city-videos.js?v=v633"></script>
+    <script defer src="city-videos.js?v=v634"></script>
     <script defer src="https://w.soundcloud.com/player/api.js"></script>
-    <script defer src="ambient-mode.js?v=v633"></script>
-    <script defer src="cafe-mode.js?v=v633"></script>
+    <script defer src="ambient-mode.js?v=v634"></script>
+    <script defer src="cafe-mode.js?v=v634"></script>
     <!-- optimize.js 제거 (404, 파일 존재 X) -->
-    <script defer src="security-patch.js?v=v633"></script>
-    <script defer src="app.js?v=v633"></script>
+    <script defer src="security-patch.js?v=v634"></script>
+    <script defer src="app.js?v=v634"></script>
     <!-- 사용자 큐레이션 도시 (data moat — localStorage). -->
     <!-- v558 — 햅틱 + 노마드/v1 트래커 4종 -->
-    <script defer src="haptic.js?v=v633"></script>
+    <script defer src="haptic.js?v=v634"></script>
     <!-- v566 — 발열 완화 (visibilitychange 시 setInterval pause). 트래커보다 먼저 로드. -->
-    <script defer src="perf-throttle.js?v=v633"></script>
+    <script defer src="perf-throttle.js?v=v634"></script>
     <!-- v560 — 다음 도시 추천 + 노마드 카페 큐레이션 -->
     <!-- v601 SAUDADE PR#2 — 동심원 + § 00 ISSUE COVER (신규 컴포넌트, 기존 JS 손 안 댐) -->
     <!-- v608 Handoff v2 — Edition system (5 별쇄). lang-lock 대체. 가장 먼저 로드. -->
-    <script src="saudade-edition.js?v=v633"></script>
+    <script src="saudade-edition.js?v=v634"></script>
     <!-- v623 Handoff v6 §5 — 도시 시스템 (home + adjacent + Switch the Desk) -->
-    <script defer src="saudade-city.js?v=v633"></script>
+    <script defer src="saudade-city.js?v=v634"></script>
     <!-- v8 §02 — 사용자 도시 선택 Dispatches (Following 3) -->
-    <script defer src="saudade-following.js?v=v633"></script>
+    <script defer src="saudade-following.js?v=v634"></script>
     <!-- v8 §13 — 약한 연결 표시 (M3 활성화 시 자동 노출, 데이터 없으면 hide) -->
-    <script defer src="saudade-weak-signals.js?v=v633"></script>
+    <script defer src="saudade-weak-signals.js?v=v634"></script>
     <!-- v614 — print HUD corner marks (헌법 §1.4) -->
-    <script defer src="saudade-hud.js?v=v633"></script>
-    <script defer src="saudade-rings.js?v=v633"></script>
-    <script defer src="saudade-cover.js?v=v633"></script>
+    <script defer src="saudade-hud.js?v=v634"></script>
+    <script defer src="saudade-rings.js?v=v634"></script>
+    <script defer src="saudade-cover.js?v=v634"></script>
     <!-- v8 §02 — Cover 우상단 edition 스위처 (5에디션 작은 dropdown) -->
-    <script defer src="saudade-cover-edition.js?v=v633"></script>
+    <script defer src="saudade-cover-edition.js?v=v634"></script>
     <!-- v602 SAUDADE PR#3+4 — 섹션 마스트헤드 + 푸터 룰 + dock click 라우터 -->
-    <script defer src="saudade-masthead.js?v=v633"></script>
-    <script defer src="saudade-footer-rule.js?v=v633"></script>
+    <script defer src="saudade-masthead.js?v=v634"></script>
+    <script defer src="saudade-footer-rule.js?v=v634"></script>
     <!-- v604 SAUDADE 보강 — § 04 NEXT ISSUE wrapper + wordmark 인라인 + skins C/D -->
-    <script defer src="saudade-wordmark.js?v=v633"></script>
+    <script defer src="saudade-wordmark.js?v=v634"></script>
     <!-- v605 정합성 — § 02 ATLAS + § 03 OVERLAP + colophon (헌법 §4-3, §4-4, 콜로폰) -->
-    <script defer src="saudade-atlas.js?v=v633"></script>
+    <script defer src="saudade-atlas.js?v=v634"></script>
     <!-- v7 §8 PR1 — Atlas paper map (MapLibre lazy + OSM raster + paper-tone CSS filter) -->
-    <script defer src="saudade-atlas-map.js?v=v633"></script>
+    <script defer src="saudade-atlas-map.js?v=v634"></script>
     <!-- v7 §8 PR2 — Atlas GPS · 사전 모달 · 핀 fallback · 사용자 위치 마커 (§8.1·§8.2·§8.3·§8.5) -->
-    <script defer src="saudade-atlas-gps.js?v=v633"></script>
+    <script defer src="saudade-atlas-gps.js?v=v634"></script>
     <!-- v7 §8 PR3 — Atlas walkring 동심원 200m/500m/1km (§8.4) -->
-    <script defer src="saudade-atlas-walkring.js?v=v633"></script>
+    <script defer src="saudade-atlas-walkring.js?v=v634"></script>
     <!-- v7 §8 PR4 — Atlas 카페 마커 (§8.6) + 메타데이터 어휘 풀 (§8.8) -->
-    <script defer src="saudade-atlas-cafes.js?v=v633"></script>
+    <script defer src="saudade-atlas-cafes.js?v=v634"></script>
     <!-- v7 §8 PR5 — Atlas 카페 제출 (§8.9) + 면책 강화 (§8.10) -->
-    <script defer src="saudade-atlas-submit.js?v=v633"></script>
+    <script defer src="saudade-atlas-submit.js?v=v634"></script>
     <!-- v624 부록 — § 02b QUARTERLY DISPATCH (헌법 §0.5 잡지 톤). 도시당 3건 · 분기 1회 발행. -->
-    <script defer src="saudade-quarterly-dispatch.js?v=v633"></script>
+    <script defer src="saudade-quarterly-dispatch.js?v=v634"></script>
     <!-- v606 — § 01 LEDGER 풀 구현 -->
-    <script defer src="saudade-ledger.js?v=v633"></script>
+    <script defer src="saudade-ledger.js?v=v634"></script>
     <!-- v608 Handoff v2 — § 03 DISPATCHES + § 04 DESK -->
-    <script defer src="saudade-dispatches.js?v=v633"></script>
-    <script defer src="saudade-desk.js?v=v633"></script>
+    <script defer src="saudade-dispatches.js?v=v634"></script>
+    <script defer src="saudade-desk.js?v=v634"></script>
     <!-- v609 — § 05 LISTENING ROOM (cover 우하단 진입) + 한국어판 dispatches -->
-    <script defer src="saudade-listening.js?v=v633"></script>
+    <script defer src="saudade-listening.js?v=v634"></script>
     <!-- v624 — v6 §9.10 Editor-on-Leave Auto-Pause (worker /editor/leave-status 어댑터) -->
-    <script defer src="saudade-editor-leave.js?v=v633"></script>
+    <script defer src="saudade-editor-leave.js?v=v634"></script>
     <!-- v7 §13 — Magic Link auth + Tour mode (이메일 1줄, 비밀번호 0건) -->
-    <script defer src="saudade-auth.js?v=v633"></script>
+    <script defer src="saudade-auth.js?v=v634"></script>
     <!-- v8 §02 — v7 §5.4 Switch the desk 폐기 (Following 으로 대체). 모듈 미로드. -->
-    <!-- <script defer src="saudade-switch-desk.js?v=v633"></script> -->
+    <!-- <script defer src="saudade-switch-desk.js?v=v634"></script> -->
     <!-- v7 §5.5 — saudade-city.js 의 startSwitch/endSwitch/makePermanent 도 dead code -->
-    <!-- <script defer src="saudade-city.js?v=v633"></script>  ← 이미 위에서 로드됨 (Atlas home city 용) -->
+    <!-- <script defer src="saudade-city.js?v=v634"></script>  ← 이미 위에서 로드됨 (Atlas home city 용) -->
     <!-- v6 §9.10 — saudade-editor-leave.js 는 편집부 자동 정지 로직으로 유지 -->
     <!-- v7 §10 — desk-admin 은 키보드 단축키만, 로드 유지 (UI 노출 X) -->
 
     <!-- v7 §10 — /desk admin route (Ctrl+Shift+D 또는 #desk) -->
-    <script defer src="saudade-desk-admin.js?v=v633"></script>
+    <script defer src="saudade-desk-admin.js?v=v634"></script>
     <style>
     /* 좌측 패널 - 깔끔 재정의 (main.css 충돌 해결) */
     .left-drawer {
@@ -614,16 +614,16 @@
 
 <body class="theme-default right-open">
 
-    <!-- SVG SYMBOLS: LOUNJ prism + AURA legacy + UI icons -->
+    <!-- SVG SYMBOLS: Saudade prism + AURA legacy + UI icons -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <defs>
-            <!-- LOUNJ 브랜드 마크 — cyan→purple→amber 프리즘. 로딩 + topbar 양쪽 사용. -->
-            <linearGradient id="lounjGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <!-- Saudade 브랜드 마크 — cyan→purple→amber 프리즘. 로딩 + topbar 양쪽 사용. -->
+            <linearGradient id="saudadeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#00F5FF"/>
                 <stop offset="50%" stop-color="#7B61FF"/>
                 <stop offset="100%" stop-color="#FFB800"/>
             </linearGradient>
-            <symbol id="lounj-mark" viewBox="0 0 512 512">
+            <symbol id="saudade-mark" viewBox="0 0 512 512">
                 <!-- v580 사용자 제공 새 로고 — Synthesis Lens (L_STATION + VIEW_PORTAL_v2)
                      하이엔드 silver gradient + portal core + 글래스 효과 -->
                 <defs>
@@ -631,17 +631,17 @@
                          feGaussianBlur stdDeviation 18 조합이 컬러를 다 희석. 시작 stop 을
                          vivid cyan 으로 바꾸고 blur 14→6 으로 줄여 본래 색 살아남게.
                          포털 코어도 white 시작 → cyan 시작으로 색감 보존. -->
-                    <linearGradient id="lounjSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="saudadeSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%"   stop-color="#5EFFFF"/>
                         <stop offset="35%"  stop-color="#A98AFF"/>
                         <stop offset="70%"  stop-color="#FFAA66"/>
                         <stop offset="100%" stop-color="#FF6FB7"/>
                     </linearGradient>
-                    <filter id="lounjHyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <filter id="saudadeHyperGlow" x="-50%" y="-50%" width="200%" height="200%">
                         <feGaussianBlur stdDeviation="6" result="blur"/>
                         <feComposite in="SourceGraphic" in2="blur" operator="over"/>
                     </filter>
-                    <radialGradient id="lounjPortalCore" cx="50%" cy="50%" r="50%">
+                    <radialGradient id="saudadePortalCore" cx="50%" cy="50%" r="50%">
                         <stop offset="0%"   stop-color="#5EFFFF" stop-opacity="1.0"/>
                         <stop offset="40%"  stop-color="#B794F6" stop-opacity="0.75"/>
                         <stop offset="75%"  stop-color="#FFAA66" stop-opacity="0.35"/>
@@ -656,11 +656,11 @@
                 <!-- 2. 메인 심볼: SYNTHESIS LENS — v584 사용자 '너무 얇아서 안보임' fix.
                      stroke-width 28→52 (가시성 ↑), portal core opacity 0.4→0.85,
                      중심 점 r 14→24, ring stroke 1.5→4 -->
-                <g filter="url(#lounjHyperGlow)">
+                <g filter="url(#saudadeHyperGlow)">
                     <path d="M 110,70 V 390 H 340 C 420,390 450,330 450,280 C 450,190 390,140 320,140 C 250,140 210,200 210,280" fill="none" stroke="rgba(0,0,0,0.5)" stroke-width="58" stroke-linecap="round" stroke-linejoin="round" transform="translate(5, 5)"/>
-                    <path d="M 110,70 V 390 H 340 C 420,390 450,330 450,280 C 450,190 390,140 320,140 C 250,140 210,200 210,280" fill="none" stroke="url(#lounjSilverGrad)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 110,70 V 390 H 340 C 420,390 450,330 450,280 C 450,190 390,140 320,140 C 250,140 210,200 210,280" fill="none" stroke="url(#saudadeSilverGrad)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M 110,70 V 390 H 340" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.45" transform="translate(-10, 0)"/>
-                    <circle cx="320" cy="280" r="110" fill="url(#lounjPortalCore)" opacity="0.85"/>
+                    <circle cx="320" cy="280" r="110" fill="url(#saudadePortalCore)" opacity="0.85"/>
                     <circle cx="320" cy="280" r="24" fill="#fff"/>
                     <circle cx="320" cy="280" r="55" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="10 14" opacity="0.6"/>
                     <rect x="316" y="70" width="8" height="210" rx="4" fill="#fff" opacity="0.5"/>
@@ -728,10 +728,10 @@
                 </g>
             </symbol>
 
-            <!-- LOUNJ wordmark with heartbeat pulse line (for loading / large display) -->
+            <!-- Saudade wordmark with heartbeat pulse line (for loading / large display) -->
             <symbol id="aura-wordmark" viewBox="0 0 400 120">
                 <g fill="currentColor" font-family="Sora, sans-serif" font-weight="700" font-size="56" letter-spacing="10">
-                    <text x="200" y="50" text-anchor="middle">LOUNJ</text>
+                    <text x="200" y="50" text-anchor="middle">SAUDADE</text>
                 </g>
                 <g fill="currentColor" stroke="currentColor" stroke-width="1.5">
                     <circle cx="20" cy="75" r="2.5"/>
@@ -807,15 +807,15 @@
         <div class="scanlines" aria-hidden="true"></div>
         <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
 
-        <!-- LOADING OVERLAY — LOUNJ 프리즘 마크 + 워드마크 -->
+        <!-- LOADING OVERLAY — Saudade 프리즘 마크 + 워드마크 -->
         <div id="loadingOverlay" class="loading-overlay">
             <div class="loading-shell-min">
                 <div class="aura-logo-mark">
-                    <!-- v584 사용자 '로고로 글자 대체 + 더 잘 보이게' — 120→200px, LOUNJ 텍스트 hide -->
-                    <svg class="lounj-prism-mark" width="200" height="200" viewBox="0 0 512 512" aria-hidden="true">
-                        <use href="#lounj-mark"/>
+                    <!-- v584 사용자 '로고로 글자 대체 + 더 잘 보이게' — 120→200px, SAUDADE 텍스트 hide -->
+                    <svg class="saudade-prism-mark" width="200" height="200" viewBox="0 0 512 512" aria-hidden="true">
+                        <use href="#saudade-mark"/>
                     </svg>
-                    <div class="aura-logo-text" style="display:none">LOUNJ</div>
+                    <div class="aura-logo-text" style="display:none">SAUDADE</div>
                     <div class="aura-pulse-line">
                         <svg viewBox="0 0 240 20" preserveAspectRatio="none" width="100%" height="20">
                             <line x1="2" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
@@ -1110,7 +1110,7 @@
                     </section>
 
                     <section class="credits">
-                        <div class="credits-title">LOUNJ · CAFE MODE</div>
+                        <div class="credits-title">SAUDADE</div>
                         <div class="credits-author">LEEJAEJIN (JADDY)</div>
                         <div class="credits-handle">@jaddy_102 · OBSERVE THE WORLD</div>
                     </section>

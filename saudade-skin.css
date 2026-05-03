@@ -543,7 +543,7 @@ body:not(.cafe-mode)::after {
 }
 
 /* ─── 23. 좌상단 햄버거 메뉴 / 우측 카페 알약 — paper hairline ─────────── */
-.lounj-news-fab {
+.saudade-news-fab {
     background: transparent !important;
     border: 0.5px solid var(--rule) !important;
     color: var(--ink) !important;
@@ -898,7 +898,7 @@ body.cafe-mode .bottom-dock,
 body.cafe-mode .topbar,
 body.cafe-mode .control-bar,
 body.cafe-mode #musicControl,
-body.cafe-mode .lounj-news-fab,
+body.cafe-mode .saudade-news-fab,
 body.cafe-mode .news-top-toggle,
 body.cafe-mode #cafeNearbyWidget,
 body.cafe-mode #aqiStatusBar,
@@ -1386,7 +1386,7 @@ body.section-active[data-section="04"] .dock-stats > .dock-btn[data-cat="trip"]:
 .cafe-toggle,
 button[role="button"],
 .cafe-city-item,
-.lounj-news-fab,
+.saudade-news-fab,
 [data-sdd-jump],
 [data-saudade-wordmark],
 .sdd-next-item {
@@ -1590,7 +1590,7 @@ body.section-active[data-section="04"] .sdd-cover { display: none !important; }
 body.section-active #cafeNearbyWidget,
 body.section-active #cafeLocPrelude,
 body.section-active #aqiStatusBar,
-body.section-active .lounj-news-fab,
+body.section-active .saudade-news-fab,
 body.cafe-mode #cafeNearbyWidget,
 body.cafe-mode #aqiStatusBar { display: none !important; }
 

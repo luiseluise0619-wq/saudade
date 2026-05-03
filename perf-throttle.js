@@ -58,13 +58,13 @@
 
     // v567 — cafe-mode video element 도 자동 pause (GPU decode ↓).
     function pauseVideos() {
-        document.querySelectorAll('video[data-lounj-video], video.cafe-mode-video').forEach(v => {
-            try { v.pause(); v.dataset.lounjPaused = '1'; } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
+        document.querySelectorAll('video[data-saudade-video], video.cafe-mode-video').forEach(v => {
+            try { v.pause(); v.dataset.saudadePaused = '1'; } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
         });
     }
     function resumeVideos() {
-        document.querySelectorAll('video[data-lounj-video][data-lounj-paused="1"], video.cafe-mode-video[data-lounj-paused="1"]').forEach(v => {
-            try { v.play().catch(() => {}); delete v.dataset.lounjPaused; } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
+        document.querySelectorAll('video[data-saudade-video][data-lounj-paused="1"], video.cafe-mode-video[data-lounj-paused="1"]').forEach(v => {
+            try { v.play().catch(() => {}); delete v.dataset.saudadePaused; } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
         });
     }
 
@@ -92,7 +92,7 @@
             if (g.controls && g.controls()) g.controls().autoRotate = false;
             // globe.gl 내부 renderer.setAnimationLoop(null) — 가능하면 stop
             if (g.renderer && g.renderer().setAnimationLoop) {
-                g._lounjAnimWasOn = true;
+                g._saudadeAnimWasOn = true;
                 g.renderer().setAnimationLoop(null);
             }
         } catch (e) {}
@@ -102,11 +102,11 @@
             const g = window.globeInstance;
             if (!g) return;
             if (g.controls && g.controls()) g.controls().autoRotate = true;
-            if (g._lounjAnimWasOn && g.renderer && g.renderer().setAnimationLoop) {
+            if (g._saudadeAnimWasOn && g.renderer && g.renderer().setAnimationLoop) {
                 // globe.gl 내부 _animate fn 재구동 — set null 후 다시 set 해야 함.
                 // 가장 안전한 방법: g._animationFrameRequestId 등 내부 API 없으니
                 // controls 재활성만으로 raf 자동 복귀.
-                g._lounjAnimWasOn = false;
+                g._saudadeAnimWasOn = false;
             }
         } catch (e) {}
     }

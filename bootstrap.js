@@ -18,8 +18,8 @@ function safeStorageRemove(storage, key) {
 // ─── 1) 서버 URL 설정 (배포 시 한 줄만 바꾸면 됨) ─────────────────────────────
 // ⚠ 형식: https://<worker-name>.<account-subdomain>.workers.dev   (slash 없이 끝남)
 //   Cloudflare Dashboard → Workers & Pages → 해당 Worker → 상단 표시된 URL 그대로 복붙
-//   현재: Worker 이름 'lounj' (wrangler.toml) + 계정 subdomain 'absbjj1230'
-window.AURA_SERVER = 'https://lounj.absbjj1230.workers.dev';
+//   현재: Worker 이름 'saudade' (wrangler.toml) + 계정 subdomain 'absbjj1230'
+window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // window.AURA_SERVER = 'https://aura-api.your-name.workers.dev';
 
 // ─── 2) 버전 마이그레이션: 오래된 캐시 자동 정리 ────────────────────────────
@@ -41,13 +41,13 @@ window.AURA_SERVER = 'https://lounj.absbjj1230.workers.dev';
 
 // ─── 3) PWA Service Worker — 1회성 강제 nuke 후 재등록 ─────────────────────
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
-// 옛 SW (aura-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
+// 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const LOUNJ_RELEASE = 'v633';
+const SAUDADE_RELEASE = 'v634';
 
 // v557 — v1 출시 정리: 삭제된 모듈 (dancing-cat, movies, games, music-charts,
 // tmdb-auto, sports-sidebar) 의 localStorage 키 청소. 남아있어 봤자 의미 없음.
-(function lounjLegacyKeyCleanup() {
+(function saudadeLegacyKeyCleanup() {
     try {
         const stale = [
             'aura_cat_gif_cache_v5',     // dancing-cat
@@ -67,25 +67,25 @@ const LOUNJ_RELEASE = 'v633';
     } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
 })();
 
-(function lounjReleaseGuard() {
+(function saudadeReleaseGuard() {
     if (!('serviceWorker' in navigator)) return;
     if (location.protocol !== 'https:' || navigator.userAgent.includes('Electron')) {
         navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister())).catch(() => {});
         return;
     }
-    const prev = safeStorageGet(localStorage, 'lounj_release');
+    const prev = safeStorageGet(localStorage, 'saudade_release');
 
-    if (prev !== LOUNJ_RELEASE) {
+    if (prev !== SAUDADE_RELEASE) {
         // 새 release — 모든 SW + cache 한 번 nuke 후 reload
         Promise.all([
             navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister()))).catch(() => {}),
             (typeof caches !== 'undefined' && caches.keys ? caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))) : Promise.resolve()).catch(() => {})
         ]).then(() => {
-            safeStorageSet(localStorage, 'lounj_release', LOUNJ_RELEASE);
+            safeStorageSet(localStorage, 'saudade_release', SAUDADE_RELEASE);
             // 이미 reload 한 번 했는지 체크 (무한 루프 방지)
-            const reloadedFlag = safeStorageGet(sessionStorage, 'lounj_release_reloaded') === LOUNJ_RELEASE;
+            const reloadedFlag = safeStorageGet(sessionStorage, 'saudade_release_reloaded') === SAUDADE_RELEASE;
             if (!reloadedFlag) {
-                safeStorageSet(sessionStorage, 'lounj_release_reloaded', LOUNJ_RELEASE);
+                safeStorageSet(sessionStorage, 'saudade_release_reloaded', SAUDADE_RELEASE);
                 // 잠깐 기다린 후 reload (브라우저가 unregister 처리 시간 확보)
                 setTimeout(() => location.reload(), 300);
             }
@@ -95,7 +95,7 @@ const LOUNJ_RELEASE = 'v633';
 
     // 같은 release — 정상 SW 등록 흐름
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=' + LOUNJ_RELEASE).then(reg => {
+        navigator.serviceWorker.register('./sw.js?v=' + SAUDADE_RELEASE).then(reg => {
             let _reloaded = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
                 if (_reloaded) return;

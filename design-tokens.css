@@ -173,7 +173,7 @@ body {
     }
     /* backdrop-filter 전역 제거 — 가장 큰 발열 주범 */
     .glass-panel,
-    .lounj-news-fab,
+    .saudade-news-fab,
     .mlp,
     .mlp-toggle-btn,
     #iosTabBar,
@@ -187,7 +187,7 @@ body {
     }
     /* 대신 bg-elevated 로 솔리드 배경 + hairline 으로 Linear 느낌 유지 */
     .glass-panel,
-    .lounj-news-fab,
+    .saudade-news-fab,
     #iosTabBar,
     .mlp {
         background: rgba(17, 18, 20, 0.94) !important;  /* var(--bg-elevated) +alpha */
