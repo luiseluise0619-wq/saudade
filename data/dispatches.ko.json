@@ -2,6 +2,9 @@
     "edition": "ko",
     "filed_at": "2026-05-01T06:00:00+09:00",
     "next_filing": "2026-05-02T06:00:00+09:00",
+    "ai_assisted": true,
+    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
+    "ai_disclosure": "본 호의 항목은 AI 보조로 분류·점수·번역되었습니다. 각 항목에 'AI DRAFT' 또는 'REWRITTEN' 라벨이 표시되며, REWRITTEN 은 사람 편집장이 다시 쓴 항목입니다. 자세한 내용은 CONTENT-LICENSE.md §7 참조.",
     "cities": [
         {
             "city": "서울",

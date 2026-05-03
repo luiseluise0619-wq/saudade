@@ -47,6 +47,12 @@ const RL = {
     '/cafe/submit':         { max: 5,  win: 60000 },
     '/auth/request':   { max: 5,  win: 60000 },
     '/auth/verify':    { max: 10, win: 60000 },
+    '/auth/sessions':  { max: 30, win: 60000 },
+    '/auth/signout':   { max: 30, win: 60000 },
+    '/auth/signout-all': { max: 10, win: 60000 },
+    '/auth/export':    { max: 5,  win: 60000 },
+    '/auth/delete':    { max: 3,  win: 60000 },
+    '/auth/consent':   { max: 30, win: 60000 },
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
@@ -379,6 +385,12 @@ export default {
                 case '/cafe/submit':         return cafeSubmit(req, env, ctx);
                 case '/auth/request':      return authRequest(req, env, ctx);
                 case '/auth/verify':       return authVerify(req, env, ctx);
+                case '/auth/sessions':     return authSessions(req, env, ctx);
+                case '/auth/signout':      return authSignOut(req, env, ctx);
+                case '/auth/signout-all':  return authSignOutAll(req, env, ctx);
+                case '/auth/export':       return authExport(req, env, ctx);
+                case '/auth/delete':       return authDelete(req, env, ctx);
+                case '/auth/consent':      return authConsent(req, env, ctx);
                 case '/city/request':      return cityRequest(req, env, ctx);
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
@@ -1380,10 +1392,276 @@ async function authVerify(req, env, ctx) {
             ).bind(now, user.id).run();
         }
 
-        return J(req, { ok: true, user });
+        // Issue a server-side session so the user can revoke it later.
+        const session = await issueSession(env, req, user.id);
+        return J(req, { ok: true, user, session });
     } catch (e) {
         return E(req, 'DB_ERROR', 'Verify failed', 500);
     }
+}
+
+// ─── permission revocation — sessions, export, delete, consent ────────────
+const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;   // 30 days
+
+function genSessionToken() {
+    const buf = new Uint8Array(32);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function shortLabelFromUA(ua) {
+    if (!ua) return null;
+    const u = String(ua).slice(0, 400);
+    let browser = 'Browser';
+    if (/Edg\//.test(u))           browser = 'Edge';
+    else if (/Chrome\//.test(u))   browser = 'Chrome';
+    else if (/Firefox\//.test(u))  browser = 'Firefox';
+    else if (/Safari\//.test(u))   browser = 'Safari';
+    let os = 'Device';
+    if (/Windows/.test(u))         os = 'Windows';
+    else if (/Mac OS/.test(u))     os = 'macOS';
+    else if (/iPhone|iPad/.test(u))os = 'iOS';
+    else if (/Android/.test(u))    os = 'Android';
+    else if (/Linux/.test(u))      os = 'Linux';
+    return browser + ' · ' + os;
+}
+
+async function issueSession(env, req, userId) {
+    const token = genSessionToken();
+    const id = await sha(token);
+    const now = Date.now();
+    const ua = req.headers.get('User-Agent') || '';
+    const ip = req.headers.get('CF-Connecting-IP') || req.headers.get('X-Forwarded-For') || '';
+    const uaHash = ua ? await sha(ua) : null;
+    const ipHash = ip ? await sha(ip + ':' + new Date().toISOString().slice(0, 10)) : null;
+    const label  = shortLabelFromUA(ua);
+
+    await env.SAUDADE_DB.prepare(
+        'INSERT INTO sessions (id, user_id, created_at, last_used_at, expires_at, ua_hash, ip_hash, label) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+    ).bind(id, userId, now, now, now + SESSION_TTL_MS, uaHash, ipHash, label).run();
+
+    return { token, expires_at: now + SESSION_TTL_MS, label };
+}
+
+async function readSession(env, sessionToken) {
+    if (!sessionToken || typeof sessionToken !== 'string' || sessionToken.length !== 64) return null;
+    const id = await sha(sessionToken);
+    const row = await env.SAUDADE_DB.prepare(
+        'SELECT id, user_id, created_at, last_used_at, expires_at, label, revoked_at FROM sessions WHERE id = ?'
+    ).bind(id).first();
+    if (!row) return null;
+    if (row.revoked_at) return null;
+    if (row.expires_at && row.expires_at < Date.now()) return null;
+    return row;
+}
+
+async function authedUser(req, env) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : null;
+    const session = await readSession(env, token);
+    if (!session) return null;
+    // touch last_used_at (best-effort, no await on response)
+    try {
+        await env.SAUDADE_DB.prepare(
+            'UPDATE sessions SET last_used_at = ? WHERE id = ?'
+        ).bind(Date.now(), session.id).run();
+    } catch (e) {}
+    const user = await env.SAUDADE_DB.prepare(
+        'SELECT id, email, edition, tier, created_at FROM users WHERE id = ?'
+    ).bind(session.user_id).first();
+    if (!user) return null;
+    return { user, session };
+}
+
+// GET /auth/sessions — list active sessions for current user
+async function authSessions(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const rows = await env.SAUDADE_DB.prepare(
+        'SELECT id, label, created_at, last_used_at, expires_at FROM sessions WHERE user_id = ? AND revoked_at IS NULL AND expires_at > ? ORDER BY last_used_at DESC'
+    ).bind(ctxAuth.user.id, Date.now()).all();
+
+    const list = (rows.results || []).map(r => ({
+        id_short:    r.id.slice(0, 8),
+        is_current:  r.id === ctxAuth.session.id,
+        label:       r.label || 'Unknown device',
+        created_at:  r.created_at,
+        last_used_at: r.last_used_at,
+        expires_at:  r.expires_at
+    }));
+    return J(req, { ok: true, sessions: list });
+}
+
+// POST /auth/signout — revoke current session only
+async function authSignOut(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return J(req, { ok: true, already: true });   // idempotent
+
+    await env.SAUDADE_DB.prepare(
+        'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE id = ? AND revoked_at IS NULL'
+    ).bind(Date.now(), 'user', ctxAuth.session.id).run();
+
+    return J(req, { ok: true });
+}
+
+// POST /auth/signout-all — revoke every session and pending magic link for this user
+async function authSignOutAll(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const now = Date.now();
+    await env.SAUDADE_DB.prepare(
+        'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE user_id = ? AND revoked_at IS NULL'
+    ).bind(now, 'user_all', ctxAuth.user.id).run();
+
+    // Also burn every unused magic link for this email (in case attacker has it).
+    try {
+        await env.SAUDADE_DB.prepare(
+            'UPDATE magic_tokens SET used_at = ? WHERE email = ? AND used_at IS NULL'
+        ).bind(now, ctxAuth.user.email).run();
+    } catch (e) {}
+
+    return J(req, { ok: true, revoked_at: now });
+}
+
+// GET /auth/export — JSON dump of everything we hold for this user (GDPR Art.20)
+async function authExport(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const uid   = ctxAuth.user.id;
+    const email = ctxAuth.user.email;
+
+    async function safeAll(sql, ...params) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(sql).bind(...params).all();
+            return r.results || [];
+        } catch (e) { return []; }
+    }
+
+    const out = {
+        format: 'saudade.user-export.v1',
+        generated_at: new Date().toISOString(),
+        notice: 'This file contains every record Saudade currently holds linked to your account. ' +
+                'It is shared under GDPR Art.20 and PIPA §35.',
+        user: ctxAuth.user,
+        sessions: await safeAll(
+            'SELECT id, label, created_at, last_used_at, expires_at, revoked_at, revoked_by FROM sessions WHERE user_id = ?', uid
+        ),
+        magic_tokens: (await safeAll(
+            'SELECT created_at, expires_at, used_at FROM magic_tokens WHERE email = ?', email
+        )),
+        consent_log: await safeAll(
+            'SELECT category, granted, at, edition, policy_ver FROM consent_log WHERE user_id = ?', uid
+        ),
+        cafe_submissions: await safeAll(
+            'SELECT * FROM cafe_submissions WHERE user_email = ?', email
+        ),
+        city_requests: await safeAll(
+            'SELECT * FROM city_requests WHERE user_email = ?', email
+        ),
+        listening_log: await safeAll(
+            'SELECT * FROM listening_log WHERE user_id = ?', uid
+        ),
+        following: await safeAll(
+            'SELECT * FROM user_following_cities WHERE user_id = ?', uid
+        )
+    };
+    return J(req, out, 200, {
+        'Content-Disposition': 'attachment; filename="saudade-export.json"'
+    });
+}
+
+// POST /auth/delete  body: { confirm: 'DELETE', reason?: string }
+//   Hard-deletes the user row, every session, every magic token, and every UGC row tied to email.
+//   Writes a hashed-only tombstone to deletion_log for audit.
+async function authDelete(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    if ((body.confirm || '').toString() !== 'DELETE') {
+        return E(req, 'BAD_CONFIRM', 'Type DELETE to confirm', 400);
+    }
+
+    const uid    = ctxAuth.user.id;
+    const email  = ctxAuth.user.email;
+    const now    = Date.now();
+    const reason = clean(body.reason, 500) || null;
+    const uidHash   = await sha(uid);
+    const emailHash = await sha(email);
+
+    // Best-effort cascade. SQLite/D1 lacks cross-table FKs guarantees here.
+    const deletes = [
+        ['DELETE FROM sessions      WHERE user_id = ?', uid],
+        ['DELETE FROM magic_tokens  WHERE email   = ?', email],
+        ['DELETE FROM consent_log   WHERE user_id = ?', uid],
+        ['DELETE FROM cafe_submissions   WHERE user_email = ?', email],
+        ['DELETE FROM city_requests      WHERE user_email = ?', email],
+        ['DELETE FROM listening_log      WHERE user_id    = ?', uid],
+        ['DELETE FROM user_following_cities WHERE user_id = ?', uid],
+        ['DELETE FROM users           WHERE id = ?', uid]
+    ];
+    for (const [sql, p] of deletes) {
+        try { await env.SAUDADE_DB.prepare(sql).bind(p).run(); }
+        catch (e) { /* table may not exist in early deployments */ }
+    }
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO deletion_log (user_id_hash, email_hash, requested_at, deleted_at, reason) VALUES (?, ?, ?, ?, ?)'
+        ).bind(uidHash, emailHash, now, now, reason).run();
+    } catch (e) {}
+
+    return J(req, { ok: true, deleted_at: now });
+}
+
+// POST /auth/consent  body: { category, granted, anon_id?, policy_ver? }
+//   Writes a row regardless of whether the user is signed in (anon_id for guests).
+async function authConsent(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, stored: false });   // graceful no-op
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const allowed = ['analytics', 'marketing', 'functional', 'ai'];
+    const category = clean(body.category, 32);
+    if (!allowed.includes(category)) return E(req, 'BAD_CATEGORY', 'Unknown consent category', 400);
+    const granted    = body.granted ? 1 : 0;
+    const anonId     = clean(body.anon_id, 64) || null;
+    const policyVer  = clean(body.policy_ver, 16) || null;
+    const edition    = clean(body.edition, 8) || null;
+    const ua         = req.headers.get('User-Agent') || '';
+    const uaHash     = ua ? await sha(ua) : null;
+
+    let userId = null;
+    const ctxAuth = await authedUser(req, env);
+    if (ctxAuth) userId = ctxAuth.user.id;
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO consent_log (user_id, anon_id, category, granted, at, edition, ua_hash, policy_ver) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+        ).bind(userId, anonId, category, granted, Date.now(), edition, uaHash, policyVer).run();
+    } catch (e) {
+        return J(req, { ok: true, stored: false });
+    }
+    return J(req, { ok: true });
 }
 // ─── v7 §5.5 — City requests ─────────────────────────────────────────────
 // "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.

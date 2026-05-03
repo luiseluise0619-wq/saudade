@@ -2,6 +2,9 @@
     "edition": "pt",
     "filed_at": "2026-05-01T06:00:00+09:00",
     "next_filing": "2026-05-02T06:00:00+09:00",
+    "ai_assisted": true,
+    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
+    "ai_disclosure": "Os itens desta edição foram classificados, pontuados e traduzidos com assistência de IA. Cada item leva uma etiqueta 'AI DRAFT' ou 'REWRITTEN'; REWRITTEN indica que um editor humano o reescreveu. Ver CONTENT-LICENSE.md §7.",
     "cities": [
         {
             "city": "LISBOA",
