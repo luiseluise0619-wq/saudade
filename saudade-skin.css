@@ -1666,10 +1666,18 @@ body:not(.cafe-mode):not(.section-active):not(.colophon-active):not(.listening-a
 /* 77. listening-active 진입 시 dock + topbar + cover 모두 hide (Reading Room 풀스크린) */
 body.listening-active .topbar,
 body.listening-active .bottom-dock,
+body.listening-active .bottom-dock *,
+body.listening-active #bottomDock,
+body.listening-active .dock-stats,
+body.listening-active .dock-handle,
 body.listening-active #sddCover,
 body.listening-active #sddMasthead,
 body.listening-active #sddFooter,
-body.listening-active::before { display: none !important; }
+body.listening-active::before {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
 
 /* 78. colophon-active / section-active 진입 시 cover-listen-cta 보장 hide
        (saudade-listening 자체 룰 반복 — 에디션 전환 후 재마운트 시 race 차단) */
