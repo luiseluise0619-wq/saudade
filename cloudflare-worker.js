@@ -1187,12 +1187,6 @@ async function editorLog(req, env, ctx) {
         return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
     }
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
-// ─── v7 §5.5 — City requests ─────────────────────────────────────────────
-// "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.
-// D1 INSERT + 응답에 현재 카운트 포함.
-async function cityRequest(req, env, ctx) {
-    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
-    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Requests not yet open.', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1288,19 +1282,6 @@ function isValidEmail(s) {
 async function authRequest(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open. Try again later.', 503);
-
-// ─── v7 §9.9 — Dispatch retracts ────────────────────────────────────────────
-// 편집장이 dispatch 를 철회. 30분 이내 archive 삭제, 이후 placeholder.
-
-// POST /dispatches/retract — Bearer EDITOR_TOKEN
-async function dispatchRetract(req, env, ctx) {
-    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
-    const auth = req.headers.get('Authorization') || '';
-    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
-    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
-        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
-    }
-    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
 
     let body;
     try { body = await req.json(); }
@@ -1402,6 +1383,17 @@ async function authVerify(req, env, ctx) {
         return E(req, 'DB_ERROR', 'Verify failed', 500);
     }
 }
+// ─── v7 §5.5 — City requests ─────────────────────────────────────────────
+// "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.
+// D1 INSERT + 응답에 현재 카운트 포함.
+async function cityRequest(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Requests not yet open.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
     const requested = clean(body.requested_city, 100).toLowerCase();
     const edition   = clean(body.edition, 8) || 'en';
     const email     = clean(body.user_email, 200) || null;
@@ -1429,6 +1421,42 @@ async function authVerify(req, env, ctx) {
         });
     } catch (e) {
         return E(req, 'DB_INSERT', 'Request failed', 500);
+    }
+}
+
+// ─── v7 §9.9 — Dispatch retracts ────────────────────────────────────────────
+// 편집장이 dispatch 를 철회. dispatch_retracts 테이블에 INSERT.
+// POST /dispatches/retract — Bearer EDITOR_TOKEN
+async function dispatchRetract(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const editorToken = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || editorToken !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const dispatchId = clean(body.dispatch_id, 128);
+    const edition    = clean(body.edition, 8) || 'en';
+    if (!dispatchId) return E(req, 'BAD_ID', 'dispatch_id required', 400);
+
+    const retractedAt = Date.now();
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO dispatch_retracts (dispatch_id, edition, retracted_at) VALUES (?, ?, ?)'
+        ).bind(dispatchId, edition, retractedAt).run();
+        // 캐시 무효화 — retracted 목록을 즉시 갱신
+        ctx.waitUntil(caches.default.delete(new Request(`https://cache.aura/dispatches:retracted:${edition}`)));
+        return J(req, { ok: true, dispatch_id: dispatchId, edition, retracted_at: retractedAt });
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Retract failed', 500);
+    }
+}
+
 // ─── v7 §10 — AI Pipeline write/translate/file phases ──────────────────────
 // PR #5 (gather/sort/score) 의 후속. 같은 scheduled() switch 에 inline 되어야 함.
 // 이 파일이 PR #5 와 머지될 때 7 phase 모두 활성화.
@@ -1677,24 +1705,6 @@ async function dispatchesToday(req, env, ctx) {
         return new Response(body, { status: 200, headers: hdrs(req, { 'X-Cache': 'MISS' }) });
     } catch (e) {
         return E(req, 'DB_ERROR', 'Read failed', 500);
-    }
-}
-    const dispatchId = clean(body.dispatch_id, 100).toLowerCase();
-    const edition    = clean(body.edition, 8) || 'en';
-    const reason     = clean(body.reason, 500) || null;
-    const editor     = clean(body.editor, 128) || null;
-
-    if (!dispatchId) return E(req, 'BAD_ID', 'dispatch_id required', 400);
-
-    try {
-        const r = await env.SAUDADE_DB.prepare(
-            'INSERT INTO dispatch_retracts (dispatch_id, edition, retracted_at, reason, editor) VALUES (?, ?, ?, ?, ?)'
-        ).bind(dispatchId, edition, Date.now(), reason, editor).run();
-        // 캐시 무효화 — 즉시 retract 반영
-        ctx.waitUntil(caches.default.delete(new Request(`https://cache.aura/dispatches:retracted:${edition}`)));
-        return J(req, { ok: true, id: r.meta && r.meta.last_row_id, dispatch_id: dispatchId });
-    } catch (e) {
-        return E(req, 'DB_INSERT', 'Retract failed', 500);
     }
 }
 

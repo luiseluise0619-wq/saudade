@@ -100,13 +100,20 @@ async function runCronJob(event, env, ctx) {
 
     switch (cron) {
         case '0 15 * * *': return gather(env, ctx);                  // 00:00 KST
-        case '30 15 * * *': return sort(env, ctx, llm);              // 00:30 KST
-        case '0 17 * * *': return score(env, ctx, llm);              // 02:00 KST
+        // 02:00 KST: Sort + Score 함께 실행 (무료 cron 5개 한도 — Sort 별도 슬롯 제거)
+        case '0 17 * * *':
+            await sort(env, ctx, llm);
+            return score(env, ctx, llm);
         case '0 19 * * *': return writeRewrites(env, ctx, llm);      // 04:00 KST
         case '0 20 * * *': return translateAll(env, ctx, llm);       // 05:00 KST
-        case '30 20 * * *': return stage(env, ctx);                  // 05:30 KST
-        case '0 21 * * *': return file(env, ctx);                    // 06:00 KST
-        case '0 15 * * 1': return weeklyStats(env, ctx);             // 월요일 00:00 KST 약한 연결 집계
+        // 06:00 KST: File 발행 + 일요일이면 weeklyStats 같이 (별도 cron 슬롯 절약)
+        case '0 21 * * *': {
+            const r = await file(env, ctx);
+            if (new Date().getDay() === 1) {   // 월요일 06:00 KST = 일요일 21:00 UTC 의 다음날 06:00 → KST 기준 매주 월
+                ctx.waitUntil(weeklyStats(env, ctx));
+            }
+            return r;
+        }
         default: return { ok: false, reason: 'unknown_cron', cron };
     }
 }
