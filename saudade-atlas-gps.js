@@ -329,6 +329,46 @@
     color: var(--bone-d);
     pointer-events: none;
 }
+
+/* v7 검토 정정 (사용자 "내 위치 안 떠") — 명확한 floating 위치 버튼.
+   Google/Apple Maps 의 "내 위치" 버튼과 같은 패턴. 우측 하단 고정.
+   click 핸들러가 user gesture 안에서 navigator.geolocation 호출 → iOS 권한 prompt 신뢰. */
+.sdd-gps-locate {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 5;
+    background: var(--paper) !important;
+    border: 0.5px solid var(--ink) !important;
+    color: var(--ink) !important;
+    font-family: var(--mono) !important;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    letter-spacing: var(--tr-mono-mast) !important;
+    text-transform: uppercase !important;
+    padding: 12px 16px !important;
+    min-height: 44px !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+    box-shadow: 0 1px 0 rgba(15,14,18,.04);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color .12s, border-color .12s;
+}
+.sdd-gps-locate:hover { color: var(--rust) !important; border-color: var(--rust) !important; }
+.sdd-gps-locate::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+.sdd-gps-locate[data-state="located"]::before { background: var(--rust); border-color: var(--rust); }
+.sdd-gps-locate[data-state="pin"]::before     { background: var(--ink); }
+.sdd-gps-locate[data-state="locating"] { color: var(--bone-d) !important; }
+.sdd-atlas[data-view="list"] .sdd-gps-locate { display: none; }
 .sdd-gps-status::before {
     content: '';
     width: 6px; height: 6px;
@@ -507,6 +547,7 @@
     function publishUpdate() {
         updateMarker();
         renderStatusBadge();
+        renderLocateBtn();
         _subscribers.forEach(fn => { try { fn(_currentCenter); } catch (e) {} });
     }
 
@@ -517,9 +558,78 @@
         if (isGranted()) startWatch();
     }
 
+    // v7 검토 정정 — 우측 하단 floating 위치 버튼 (사용자 가시성)
+    let _locateBtn = null;
+    function ensureLocateBtn() {
+        if (_locateBtn && document.body.contains(_locateBtn)) return _locateBtn;
+        const mapContainer = document.getElementById('sddAtlasMap');
+        if (!mapContainer) return null;
+        _locateBtn = document.createElement('button');
+        _locateBtn.type = 'button';
+        _locateBtn.className = 'sdd-gps-locate';
+        _locateBtn.setAttribute('data-gps-locate', '');
+        // CRITICAL — click 핸들러는 user gesture 안에서 직접 geolocation 호출
+        // 이래야 iOS 권한 prompt 가 띄워짐 (setTimeout/MO 통하면 prompt 차단됨).
+        _locateBtn.addEventListener('click', requestLocationFromGesture);
+        mapContainer.appendChild(_locateBtn);
+        return _locateBtn;
+    }
+    function renderLocateBtn() {
+        const btn = ensureLocateBtn();
+        if (!btn) return;
+        let state, label;
+        if (!('geolocation' in navigator)) {
+            state = 'unsupported';
+            label = L({ en: 'NOT SUPPORTED', ko: '미지원', ja: '非対応', pt: 'INDISPONÍVEL', es: 'NO COMPATIBLE' });
+        } else if (_currentCenter && _currentCenter.source === 'gps') {
+            state = 'located';
+            label = L({ en: 'RECENTER', ko: '내 위치', ja: '現在地', pt: 'CENTRAR', es: 'CENTRAR' });
+        } else if (_currentCenter && _currentCenter.source === 'pin') {
+            state = 'pin';
+            label = L({ en: 'PIN SET · RELOCATE', ko: '핀 설정됨 · 위치', ja: 'ピン設定済 · 位置', pt: 'ALFINETE · LOCALIZAR', es: 'ALFILER · LOCALIZAR' });
+        } else if (_locateBusy) {
+            state = 'locating';
+            label = L({ en: 'LOCATING…', ko: '위치 찾는 중…', ja: '位置確認中…', pt: 'A LOCALIZAR…', es: 'LOCALIZANDO…' });
+        } else {
+            state = 'idle';
+            label = L({ en: 'SHOW MY LOCATION', ko: '내 위치 보기', ja: '現在地を表示', pt: 'MOSTRAR LOCALIZAÇÃO', es: 'MOSTRAR UBICACIÓN' });
+        }
+        btn.setAttribute('data-state', state);
+        btn.disabled = (state === 'unsupported' || state === 'locating');
+        btn.textContent = label;
+    }
+    let _locateBusy = false;
+    function requestLocationFromGesture() {
+        if (!('geolocation' in navigator)) return;
+        // 권한 거부 마커 무시 — 사용자가 명시 클릭했으므로 다시 시도
+        setStored(KEY_DECLINED, null);
+        _locateBusy = true;
+        renderLocateBtn();
+        // 직접 OS prompt 호출 (사용자 click 제스처 내) — iOS 호환
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                _locateBusy = false;
+                setStored(KEY_GRANTED, '1');
+                onPosition(pos);
+                startWatch();
+                waitForMapReady(() => { updateMarker(); centerMapOnUser(); });
+                renderLocateBtn();
+            },
+            (err) => {
+                _locateBusy = false;
+                if (err && err.code === 1) setStored(KEY_DECLINED, '1');   // PERMISSION_DENIED
+                renderLocateBtn();
+                renderStatusBadge();
+            },
+            { enableHighAccuracy: true, timeout: 12000, maximumAge: 60000 }
+        );
+    }
+
     function onMapOpened() {
         ensureStatusBadge();
         renderStatusBadge();
+        ensureLocateBtn();
+        renderLocateBtn();
         // v7 검토 정정 — map 이 아직 init/load 안 됐을 수 있음 → 대기 후 진행 (사용자 "내 위치 안 떠")
         waitForMapReady(() => {
             if (_currentCenter) {
