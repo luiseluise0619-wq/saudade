@@ -204,21 +204,62 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 .sdd-atlas-item {
     display: grid;
-    grid-template-columns: 32px 1fr auto;
+    /* v637 — added a 96px photo slot on the right of the card. The photo is
+       optional; when absent a paper placeholder fills the same footprint so
+       the row hierarchy stays consistent across the list.                  */
+    grid-template-columns: 32px 1fr auto 96px;
     grid-template-areas:
-        'badge head meta'
-        '.     body body'
-        '.     amen amen';
+        'badge head meta photo'
+        '.     body body photo'
+        '.     amen amen photo';
     gap: 4px clamp(12px, 2vw, 20px);
     padding: clamp(14px, 2.4vw, 20px) 0;
     border-top: 0.5px solid var(--rule);
     align-items: baseline;
-    min-height: 60px;
+    min-height: 96px;
     cursor: pointer;
     transition: background .12s;
 }
 .sdd-atlas-item:last-child { border-bottom: 0.5px solid var(--rule); }
 .sdd-atlas-item:hover { background: var(--paper-d); }
+
+.sdd-atlas-photo {
+    grid-area: photo;
+    align-self: stretch;
+    position: relative;
+    background: var(--paper-d);
+    border: 0.5px solid var(--rule);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    width: 96px;
+}
+.sdd-atlas-photo__ph {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-weight: 500;
+    font-size: 9px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--bone-d);
+    text-align: center;
+    padding: 6px;
+}
+.sdd-atlas-photo__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.sdd-atlas-photo__img.is-loaded { opacity: 1; }
+@media (max-width: 600px) {
+    .sdd-atlas-item {
+        grid-template-columns: 32px 1fr auto;
+        grid-template-areas:
+            'badge head meta'
+            'photo body body'
+            'photo amen amen';
+    }
+    .sdd-atlas-photo { width: auto; aspect-ratio: 4 / 3; }
+}
 
 .sdd-atlas-badge {
     grid-area: badge;
@@ -625,6 +666,22 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     const cls      = negative ? 'is-negative' : (note ? 'is-note' : '');
                     return `<span class="sdd-atlas-chip ${cls}">${escapeHtml(a.replace(/_/g, ' '))}</span>`;
                 }).join('');
+            // v637 — optional photo slot. Placeholder is the default visible
+            // element; when the optional cafe.photo path resolves, the <img>
+            // fades in over it. If 404 / decode fails the placeholder remains.
+            const photoSrc = c.photo ? `/photos/cafes/${c.photo}` : null;
+            const photoAlt = `${c.name} · ${c.neighborhood || ''}`.trim();
+            const photoHtml = `
+                <figure class="sdd-atlas-photo" aria-hidden="true">
+                    <div class="sdd-atlas-photo__ph">${escapeHtml(c.name.split(' ').slice(0, 2).join(' '))}</div>
+                    ${photoSrc ? `<img class="sdd-atlas-photo__img"
+                        src="${escapeHtml(photoSrc)}"
+                        alt="${escapeHtml(photoAlt)}"
+                        loading="lazy" decoding="async"
+                        onload="this.classList.add('is-loaded')"
+                        onerror="this.remove()" />` : ''}
+                </figure>
+            `;
             return `
                 <article class="sdd-atlas-item" data-cafe-id="${c.id}" tabindex="0" role="button"
                          aria-label="${c.name}, ${c.neighborhood || ''}, ${distKm}">
@@ -641,6 +698,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                         <span class="sdd-atlas-status ${status === 'JADE' ? 'is-jade' : ''}">${escapeHtml(status)}</span>
                         ${amenityChips}
                     </div>
+                    ${photoHtml}
                 </article>
             `;
         }).join('');
