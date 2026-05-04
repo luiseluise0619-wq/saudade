@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-04T06:14:15.451Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-04T08:31:20.532Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -2746,19 +2746,23 @@ body[data-tour="1"] .sdd-cover::before {
     function paint(host, lang) {
         const c = copy(lang);
         const stays = getStays();
+        // v647 — when there are no stays, hide the column headers (COUNTRY /
+        // IN / OUT) entirely. An empty table with hairline-thin column heads
+        // and one tiny italic line read as "broken UI". Show only the title
+        // + help + a single inviting button.
         host.innerHTML = `
             <section class="sdd-stays">
                 <p class="sdd-stays__h">${escapeHtml(c.title)}</p>
                 <p class="sdd-stays__help">${escapeHtml(c.help)}</p>
-                <div class="sdd-stays__cols">
-                    <span>${escapeHtml(c.colCty)}</span>
-                    <span>${escapeHtml(c.colIn)}</span>
-                    <span>${escapeHtml(c.colOut)}</span>
-                    <span></span>
-                </div>
-                <div data-rows>
-                    ${stays.length ? stays.map((s, i) => row(s, i, c)).join('') : `<p class="sdd-stays__none">${escapeHtml(c.none)}</p>`}
-                </div>
+                ${stays.length ? `
+                    <div class="sdd-stays__cols">
+                        <span>${escapeHtml(c.colCty)}</span>
+                        <span>${escapeHtml(c.colIn)}</span>
+                        <span>${escapeHtml(c.colOut)}</span>
+                        <span></span>
+                    </div>
+                    <div data-rows>${stays.map((s, i) => row(s, i, c)).join('')}</div>
+                ` : `<div data-rows><p class="sdd-stays__none">${escapeHtml(c.none)}</p></div>`}
                 <button type="button" class="sdd-stays__add" data-add>${escapeHtml(c.add)}</button>
             </section>
         `;

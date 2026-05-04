@@ -347,9 +347,12 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--bone-d);
-    padding: 2px 6px 2px 0;
-    border-right: 0.5px solid var(--rule);
-    margin-right: 4px;
+    /* v647 — was a 0.5px hairline that was too thin to read as a divider
+       on a busy chip row. Switch to a longer rust-2 1px rule with extra
+       padding so BONE/JADE reads as a status word distinct from chips. */
+    padding: 4px 10px 4px 0;
+    border-right: 1px solid var(--rule-2, var(--rule));
+    margin-right: 8px;
 }
 .sdd-atlas-status.is-jade { color: var(--jade); }
 .sdd-atlas-chip {
