@@ -328,6 +328,61 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     margin: 0 0 clamp(16px, 2vw, 24px);
     border-bottom: 0.5px solid var(--rule);
 }
+
+/* v651 — inline city-picker chips above today's items. */
+.sdd-disp-cities-bar {
+    margin: 0 0 clamp(20px, 3vw, 32px);
+    padding: 0 0 clamp(14px, 2vw, 20px);
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-disp-cities-eyebrow {
+    font-family: var(--mono); font-weight: 500;
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--rust);
+    margin: 0 0 12px;
+}
+.sdd-disp-cities-row {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    align-items: center;
+}
+.sdd-disp-city-chip {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    background: transparent;
+    border: 0.5px solid var(--rule);
+    padding: 8px 12px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    transition: color .15s, border-color .15s;
+}
+.sdd-disp-city-chip:hover { color: var(--rust); border-color: var(--rust); }
+.sdd-disp-city-chip .n { color: var(--bone-d); font-weight: 500; }
+.sdd-disp-city-chip .name {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 14px; letter-spacing: 0; text-transform: none;
+}
+.sdd-disp-city-chip .x { color: var(--bone-d); font-size: 14px; }
+.sdd-disp-city-chip:hover .x { color: var(--rust); }
+.sdd-disp-cities-cta {
+    background: transparent; border: 0;
+    border-bottom: 0.5px solid var(--rust);
+    color: var(--rust);
+    font-family: var(--mono); font-weight: 500;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    padding: 6px 4px; cursor: pointer;
+    margin-left: auto;
+    transition: color .15s, border-color .15s;
+}
+.sdd-disp-cities-cta:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.sdd-disp-cities-empty {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 14px; color: var(--bone-d);
+    flex: 1;
+}
+@media (max-width: 540px) {
+    .sdd-disp-cities-cta { margin-left: 0; width: 100%; text-align: left; }
+}
 .sdd-disp-day-eyebrow {
     font-family: var(--mono);
     font-weight: 500;
@@ -990,7 +1045,49 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             </header>
         `;
 
+        // v651 — quick city-picker chips on the dispatches view itself.
+        // Earlier the only way to set following cities was through §04 The
+        // Desk → Following pool — too far. This puts the picker right above
+        // today's items.
+        const followNow = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        const followLabel = T({
+            en: 'YOUR THREE CITIES', ko: '내 세 도시', ja: 'あなたの三都市',
+            pt: 'AS SUAS TRÊS CIDADES', es: 'SUS TRES CIUDADES'
+        });
+        const followHelp = T({
+            en: 'Pick up to three. Today\'s dispatch picks one item from each.',
+            ko: '최대 셋. 오늘의 디스패치는 각 도시에서 한 항목씩 가져온다.',
+            ja: '最大三つ。本日の通信は各都市から一本ずつ。',
+            pt: 'Até três. O despacho de hoje pega um item de cada.',
+            es: 'Hasta tres. El despacho de hoy toma un elemento de cada.'
+        });
+        const followCta = T({
+            en: 'CHANGE →', ko: '변경 →', ja: '変更 →', pt: 'ALTERAR →', es: 'CAMBIAR →'
+        });
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        const chipsHtml = followNow.length
+            ? followNow.map((slug, i) => {
+                const name = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+                return `<button type="button" class="sdd-disp-city-chip" data-city-slug="${escapeHtml(slug)}" title="Remove">
+                    <span class="n">${String(i + 1).padStart(2, '0')}</span>
+                    <span class="name">${escapeHtml(name)}</span>
+                    <span class="x">×</span>
+                </button>`;
+              }).join('')
+            : `<span class="sdd-disp-cities-empty">${escapeHtml(followHelp)}</span>`;
+
+        const cityBar = `
+            <section class="sdd-disp-cities-bar">
+                <p class="sdd-disp-cities-eyebrow">${escapeHtml(followLabel)}</p>
+                <div class="sdd-disp-cities-row">
+                    ${chipsHtml}
+                    <button type="button" class="sdd-disp-cities-cta" data-open-city-picker>${escapeHtml(followCta)}</button>
+                </div>
+            </section>
+        `;
+
         const todayBlock = `
+            ${cityBar}
             <section class="sdd-disp-today">
                 <header class="sdd-disp-day-head">
                     <span class="sdd-disp-day-eyebrow">${escapeHtml(W.todayLabel)}</span>
@@ -1028,6 +1125,35 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 load().then(render);
             });
         });
+
+        // v651 — city chip click → remove from following.
+        root.querySelectorAll('[data-city-slug]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const slug = btn.getAttribute('data-city-slug');
+                if (slug) window.SAUDADE_FOLLOWING?.remove?.(slug);
+                load().then(render);
+            });
+        });
+
+        // v651 — "CHANGE →" CTA opens the desk's city picker by routing to
+        // §04 The Desk where saudade-desk.js renders the full pool with
+        // pairings. Falls back to a simple prompt() if desk not available.
+        const cta = root.querySelector('[data-open-city-picker]');
+        if (cta) {
+            cta.addEventListener('click', () => {
+                const dock = document.querySelector('.dock-btn[data-cat="trip"]');
+                if (dock) {
+                    dock.click();
+                    document.body.classList.add('section-active');
+                    setTimeout(() => {
+                        const pool = document.querySelector('.sdd-following-pool');
+                        if (pool && pool.scrollIntoView) {
+                            pool.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 250);
+                }
+            });
+        }
     }
 
     function init() {

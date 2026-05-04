@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-04T09:04:36.550Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-04T10:18:26.287Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
