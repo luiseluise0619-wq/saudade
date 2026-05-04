@@ -687,8 +687,14 @@ body.section-active .sdd-cover { display: none !important; }
         window.addEventListener('storage', (e) => {
             if (e.key && /lang|state/i.test(e.key)) render();
         });
-        // 1분마다 D-day 갱신 (날짜 변경 대응)
-        setInterval(render, 60000);
+        // 1분마다 D-day 갱신 (날짜 변경 대응).
+        // v651 — wrap in pausableInterval so it auto-stops when the tab is
+        // hidden. Reduces battery drain + phone heat on mobile.
+        if (window.SAUDADE_BOOT && window.SAUDADE_BOOT.pausableInterval) {
+            window.SAUDADE_BOOT.pausableInterval(render, 60000);
+        } else {
+            setInterval(render, 60000);
+        }
     }
 
     if (document.readyState === 'loading') {

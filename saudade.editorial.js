@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-04T08:57:13.801Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-04T09:04:36.550Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -690,8 +690,14 @@ body.section-active .sdd-cover { display: none !important; }
         window.addEventListener('storage', (e) => {
             if (e.key && /lang|state/i.test(e.key)) render();
         });
-        // 1분마다 D-day 갱신 (날짜 변경 대응)
-        setInterval(render, 60000);
+        // 1분마다 D-day 갱신 (날짜 변경 대응).
+        // v651 — wrap in pausableInterval so it auto-stops when the tab is
+        // hidden. Reduces battery drain + phone heat on mobile.
+        if (window.SAUDADE_BOOT && window.SAUDADE_BOOT.pausableInterval) {
+            window.SAUDADE_BOOT.pausableInterval(render, 60000);
+        } else {
+            setInterval(render, 60000);
+        }
     }
 
     if (document.readyState === 'loading') {

@@ -116,28 +116,8 @@ const SAUDADE_RELEASE = 'v635';
 window.__CDN_READY = true;
 window.AURA_USE_2D_MAP = true;
 
-// ─── 5) 로딩 오버레이 즉시 fade.
-//        v649 — app.js was responsible for hiding the overlay as soon as
-//        its boot finished. Since app.js was removed (see index.html DEAD
-//        CODE PURGE comment), the overlay used to sit for the full 12s
-//        timeout before yielding. Now we fade it as soon as DOMContentLoaded
-//        fires + saudade-cover.js paints the cover (~300ms typically).
-function fadeLoadingOverlay() {
-    const ov = document.getElementById('loadingOverlay');
-    if (!ov || ov.classList.contains('fade-out')) return;
-    ov.classList.add('fade-out');
-    setTimeout(() => { if (ov) ov.style.display = 'none'; }, 600);
-}
-// Fade once cover renders. Cover does its own fetch+render in saudade-cover.js
-// init(), then dispatches 'sdd-cover-rendered' (we'll add that emission).
-window.addEventListener('sdd-cover-rendered', fadeLoadingOverlay, { once: true });
-// Belt-and-braces: also fade after DOMContentLoaded + 1.5s in case the
-// cover module fails to load for any reason. The user should never sit
-// staring at an empty paper page.
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => setTimeout(fadeLoadingOverlay, 1500));
-} else {
-    setTimeout(fadeLoadingOverlay, 1500);
-}
-// Hard backstop — 4s instead of the old 12.
-setTimeout(fadeLoadingOverlay, 4000);
+// ─── 5) 로딩 오버레이 fade — saudade-boot.js 가 처리.
+//        v650 — moved the cover-rendered listener + backstop timers into
+//        saudade-boot.js so any consumer can await window.SAUDADE_BOOT.ready
+//        for "the overlay is gone, the page is paintable" semantics.
+//        bootstrap.js stays minimal — only legacy SW unregister + secrets.
