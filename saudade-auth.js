@@ -131,7 +131,9 @@
         s.textContent = `
 .sdd-auth-modal {
     position: fixed; inset: 0;
-    z-index: 100;
+    /* z-9000 ladder: auth(9980) < account(9990) < welcome(9999).
+       Sits above any in-page chrome (which lives ≤2000) and below toasts. */
+    z-index: 9980;
     background: var(--paper);
     color: var(--ink);
     display: none;

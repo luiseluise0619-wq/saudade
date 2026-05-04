@@ -96,7 +96,7 @@
         s.id = 'sddAcctStyles';
         s.textContent = `
 .sdd-acct-modal {
-    position: fixed; inset: 0; z-index: 110;
+    position: fixed; inset: 0; z-index: 9990;
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);

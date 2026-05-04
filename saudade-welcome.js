@@ -94,7 +94,7 @@
         s.id = 'sddWelcomeStyles';
         s.textContent = `
 .sdd-welcome {
-    position: fixed; inset: 0; z-index: 120;
+    position: fixed; inset: 0; z-index: 9999;
     background: var(--paper);
     color: var(--ink);
     display: none;

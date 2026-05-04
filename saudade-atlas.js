@@ -672,23 +672,37 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: '+ Sugerir un café que deberíamos visitar'
         });
         const isAtlasEmpty = total === 0;
-        const atlasEmptyHtml = isAtlasEmpty ? `
-            <section class="sdd-atlas-empty-state">
-                <h3 class="sdd-atlas-empty-h3">${escapeHtml(emptyAtlasH3)}</h3>
-                <p class="sdd-atlas-empty-body">${escapeHtml(emptyAtlasBody)}</p>
-                <ul class="sdd-atlas-empty-actions">
-                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="switch">${escapeHtml(emptyAtlasSwitch)}</button></li>
-                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="submit">${escapeHtml(emptyAtlasSubmit)}</button></li>
-                </ul>
-            </section>
-        ` : '';
 
         root.innerHTML = headHtml +
-            atlasEmptyHtml +
+            `<div id="sddAtlasEmpty"></div>` +
             (isAtlasEmpty ? '' : `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>`) +
             `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
+
+        // v636 — unified empty-state component (saudade-empty.js)
+        if (isAtlasEmpty && window.SAUDADE_EMPTY) {
+            window.SAUDADE_EMPTY.render('#sddAtlasEmpty', {
+                eyebrow: T({ en: 'CAFÉS, VERIFIED.', ko: '확인된 카페.', ja: '確認済みカフェ。', pt: 'CAFÉS, VERIFICADOS.', es: 'CAFÉS, VERIFICADOS.' }),
+                headline: emptyAtlasH3,
+                lede: escapeHtml(emptyAtlasBody),
+                actions: [
+                    { label: emptyAtlasSwitch.replace(/^\+\s*/, ''), kind: 'primary',
+                      onClick: () => root.querySelector('[data-empty-action="switch"]')?.click()
+                                  || (window.SAUDADE_FOLLOWING && window.SAUDADE_FOLLOWING.openSwitcher && window.SAUDADE_FOLLOWING.openSwitcher()) },
+                    { label: emptyAtlasSubmit.replace(/^\+\s*/, ''),
+                      onClick: () => root.querySelector('[data-empty-action="submit"]')?.click()
+                                  || (window.SAUDADE_ATLAS_SUBMIT && window.SAUDADE_ATLAS_SUBMIT.openModal && window.SAUDADE_ATLAS_SUBMIT.openModal()) }
+                ],
+                note: T({
+                    en: "We test outlets, noise, and Wi-Fi ourselves. We do not list a café we have not sat in.",
+                    ko: '콘센트·소음·와이파이는 우리가 직접 시험한다. 앉아보지 않은 카페는 등록하지 않는다.',
+                    ja: 'コンセント・騒音・Wi-Fi は自分たちで試す。座ったことのないカフェは載せない。',
+                    pt: 'Testamos as tomadas, o ruído e o Wi-Fi. Não listamos um café onde não nos sentámos.',
+                    es: 'Probamos enchufes, ruido y Wi-Fi. No incluimos un café donde no nos hayamos sentado.'
+                })
+            });
+        }
 
         // v7 §8.7 PR1 — LIST/MAP 토글 핸들러 (페어 버튼). MAP 첫 진입 시 lazy load.
         root.querySelectorAll('[data-view-set]').forEach(btn => {

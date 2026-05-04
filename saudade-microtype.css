@@ -17,7 +17,15 @@
 }
 
 /* ─── Variable axes ─────────────────────────────────────────────────────── */
+/* font-synthesis: none ensures the browser does not fake italic / weight when
+   the variable axes fail to download — we get a system serif fallback instead
+   of a synthesised italic that looks worse than no italic at all.            */
 html { font-optical-sizing: auto; font-synthesis: none; }
+
+/* If Fraunces' opsz/SOFT axes fail to load (e.g. corp proxy blocking
+   fonts.googleapis), the browser ignores font-variation-settings silently —
+   the headings still render with the static 300-weight roman/italic from the
+   same Google Fonts URL. So degradation is graceful by design.               */
 
 /* Fraunces — display headings: lower opsz means tighter optical adjustments
    so the same glyph at 96px feels right vs the same glyph at 14px.          */

@@ -23,6 +23,9 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT  = path.join(ROOT, 'dist', 'bundle');
+// Production bundle is also written to repo root so index.html can reference
+// it directly without a server build step. Commit these files.
+const PUBLIC = ROOT;
 
 const BUNDLES = {
     'saudade.core.js': [
@@ -79,11 +82,17 @@ function main() {
         }
         const outFile = path.join(OUT, name);
         fs.writeFileSync(outFile, body, 'utf8');
+        // Also publish to repo root so the live HTML can reference it. The
+        // committed file is the production artefact; dist/bundle/ is the
+        // development copy.
+        const publicFile = path.join(PUBLIC, name);
+        fs.writeFileSync(publicFile, body, 'utf8');
         totalOut += body.length;
         bundleCount++;
         const min = tryEsbuild(outFile, outFile);
         const sizeKb = (body.length / 1024).toFixed(1);
         console.log(`[ok]  ${name}: ${present.length} modules · ${sizeKb} KB${min ? ' (+ .min.js via esbuild)' : ''}`);
+        console.log(`      → ${path.relative(ROOT, publicFile)} (committed) + ${path.relative(ROOT, outFile)} (dev)`);
     }
     console.log(`\nBuilt ${bundleCount} bundle(s) into ${path.relative(ROOT, OUT)}/`);
     console.log(`Total: ${(totalIn/1024).toFixed(1)} KB → ${(totalOut/1024).toFixed(1)} KB (concatenated, unminified)`);

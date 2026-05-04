@@ -868,7 +868,16 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 </section>
             `;
         } else if (!todayItems.length) {
-            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+            // v636 — unified empty-state when nothing has been filed yet today.
+            todayHtml = `<div id="sddDispEmpty"></div><p class="sdd-disp-empty" style="display:none">${escapeHtml(W.empty)}</p>`;
+            // Render after this method returns (root.innerHTML is set below).
+            setTimeout(() => {
+                if (!window.SAUDADE_EMPTY) return;
+                const t = window.SAUDADE_EMPTY.text('dispatches');
+                window.SAUDADE_EMPTY.render('#sddDispEmpty', {
+                    eyebrow: t.eyebrow, headline: W.empty || t.headline, lede: t.lede, note: t.note
+                });
+            }, 0);
         } else {
             todayHtml = todayItems.map(renderItem).join('');
         }

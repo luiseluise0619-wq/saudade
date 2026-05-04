@@ -401,7 +401,15 @@ body.listening-active .sdd-listen { display: block; }
     height: 100%;
     object-fit: cover;
     background: var(--paper-d);
+    /* v636 — placeholder lives BEHIND the img by default; img only fades
+       in when its onload fires. If the image 404s (or returns a 200 fallback
+       page that fails to decode), the placeholder stays visible. */
+    opacity: 0;
+    transition: opacity .45s ease;
+    position: relative;
+    z-index: 1;
 }
+.sdd-listen-city-photo-img.is-loaded { opacity: 1; }
 .sdd-listen-city-photo-placeholder {
     position: absolute;
     inset: 4px;
@@ -1186,14 +1194,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             });
             const photoHtml = photoUrl ? `
                 <figure class="sdd-listen-city-photo">
-                    <img class="sdd-listen-city-photo-img"
-                         src="${escapeHtml(photoUrl)}"
-                         alt="${escapeHtml(activeName)}"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                    <div class="sdd-listen-city-photo-placeholder" style="display:none">
+                    <div class="sdd-listen-city-photo-placeholder">
                         <p class="city">${escapeHtml(activeName)}</p>
                         <p class="note">${escapeHtml(placeholderText)}</p>
                     </div>
+                    <img class="sdd-listen-city-photo-img"
+                         src="${escapeHtml(photoUrl)}"
+                         alt="${escapeHtml(activeName)}"
+                         loading="lazy"
+                         decoding="async"
+                         onload="this.classList.add('is-loaded')"
+                         onerror="this.remove()" />
                 </figure>
             ` : `
                 <figure class="sdd-listen-city-photo">

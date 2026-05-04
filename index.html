@@ -92,7 +92,7 @@
          · 모든 에디션 데이터: JetBrains Mono 300/400/500
          이 라인이 누락되어 ko/ja/pt/es 클릭해도 시각 변화 없던 버그 fix. -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,0..100;1,9..144,300..500,0..100&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
         rel="stylesheet" />
     <!-- v562: design tokens (Linear/Raycast/Vercel hybrid) — style.css 보다 먼저 로드 -->
     <link rel="stylesheet" href="design-tokens.css?v=v635" />
@@ -157,7 +157,16 @@
     <script defer src="saudade-cover-edition.js?v=v635"></script>
     <!-- v602 SAUDADE PR#3+4 — 섹션 마스트헤드 + 푸터 룰 + dock click 라우터 -->
     <script defer src="saudade-masthead.js?v=v635"></script>
-    <script defer src="saudade-footer-rule.js?v=v635"></script>
+    <!--
+      v637 — saudade.core.js bundles 7 modules into one HTTP request:
+      auth + account + schengen + schengen-form + empty + welcome + footer-rule.
+      Built by `npm run bundle`; the artefact is committed alongside the source
+      modules. Individual sources stay in the tree for dev iteration — their
+      IIFE guards (`if (window.X) return;`) make them no-ops if also loaded.
+    -->
+    <script defer src="saudade.core.js?v=v637"></script>
+    <!-- footer-rule is in saudade.core.js -->
+    <!-- <script defer src="saudade-footer-rule.js?v=v635"></script>     in bundle -->
     <!-- v604 SAUDADE 보강 — § 04 NEXT ISSUE wrapper + wordmark 인라인 + skins C/D -->
     <script defer src="saudade-wordmark.js?v=v635"></script>
     <!-- v605 정합성 — § 02 ATLAS + § 03 OVERLAP + colophon (헌법 §4-3, §4-4, 콜로폰) -->
@@ -183,18 +192,20 @@
     <script defer src="saudade-listening.js?v=v635"></script>
     <!-- v624 — v6 §9.10 Editor-on-Leave Auto-Pause (worker /editor/leave-status 어댑터) -->
     <script defer src="saudade-editor-leave.js?v=v635"></script>
-    <!-- v7 §13 — Magic Link auth + Tour mode (이메일 1줄, 비밀번호 0건) -->
-    <script defer src="saudade-auth.js?v=v635"></script>
-    <!-- account & permissions panel — sign out / export / delete / consent (GDPR, PIPA, CCPA, LGPD, APPI) -->
-    <script defer src="saudade-account.js?v=v635"></script>
-    <!-- Schengen 90/180 rolling calculator — saudade's core nomad utility -->
-    <script defer src="saudade-schengen.js?v=v635"></script>
-    <!-- v636 — Schengen entry form (lets the user type stays into the calculator) -->
-    <script defer src="saudade-schengen-form.js?v=v636"></script>
-    <!-- v636 — unified empty-state component used across all sections -->
-    <script defer src="saudade-empty.js?v=v636"></script>
-    <!-- v636 — first-run welcome (3 cards, runs once per device) -->
-    <script defer src="saudade-welcome.js?v=v636"></script>
+    <!--
+      v637 — auth / account / schengen / schengen-form / empty / welcome /
+      footer-rule are bundled into saudade.core.js (loaded at line 167).
+      Keeping the source files in the tree for dev iteration; their IIFE
+      guards (`if (window.X) return;`) make them no-ops once the bundle
+      defines the globals. Re-enable any single line to debug that module
+      in isolation.
+    -->
+    <!-- <script defer src="saudade-auth.js?v=v635"></script>            in bundle -->
+    <!-- <script defer src="saudade-account.js?v=v635"></script>         in bundle -->
+    <!-- <script defer src="saudade-schengen.js?v=v635"></script>        in bundle -->
+    <!-- <script defer src="saudade-schengen-form.js?v=v636"></script>   in bundle -->
+    <!-- <script defer src="saudade-empty.js?v=v636"></script>           in bundle -->
+    <!-- <script defer src="saudade-welcome.js?v=v636"></script>         in bundle -->
     <!-- v8 §02 — v7 §5.4 Switch the desk 폐기 (Following 으로 대체). 모듈 미로드. -->
     <!-- <script defer src="saudade-switch-desk.js?v=v635"></script> -->
     <!-- v7 §5.5 — saudade-city.js 의 startSwitch/endSwitch/makePermanent 도 dead code -->
