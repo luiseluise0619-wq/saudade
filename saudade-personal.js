@@ -303,16 +303,7 @@
     margin: 0 0 12px;
     display: flex; gap: 8px; align-items: baseline;
 }
-.sdd-personal__eyebrow::after {
-    content: '— for you';
-    font-family: var(--serif); font-style: italic; font-weight: 300;
-    font-size: 12px; color: var(--bone-d);
-    text-transform: none; letter-spacing: 0;
-}
-.sdd-personal:lang(ko) .sdd-personal__eyebrow::after { content: '— 당신에게'; }
-.sdd-personal:lang(ja) .sdd-personal__eyebrow::after { content: '— あなたへ'; }
-.sdd-personal:lang(pt) .sdd-personal__eyebrow::after { content: '— para você'; }
-.sdd-personal:lang(es) .sdd-personal__eyebrow::after { content: '— para usted'; }
+/* v644 — eyebrow alone is enough; the "— for you" suffix was self-narration. */
 .sdd-personal__line {
     font-family: var(--serif); font-weight: 300; font-style: italic;
     font-size: clamp(15px, 1.4vw, 19px);
@@ -360,11 +351,11 @@
         const moments = compute({ lang: ed, max: (opts && opts.max) || 4 });
 
         const eyebrowLabel = L({
-            en: 'TODAY · NOTES FOR ONE READER',
-            ko: '오늘 · 한 사람을 위한 메모',
-            ja: '本日 · 一人の読者へ',
-            pt: 'HOJE · NOTAS PARA UM LEITOR',
-            es: 'HOY · NOTAS PARA UN LECTOR'
+            en: 'NOTES FOR ONE READER',
+            ko: '한 사람을 위한 메모',
+            ja: '一人の読者へ',
+            pt: 'NOTAS PARA UM LEITOR',
+            es: 'NOTAS PARA UN LECTOR'
         }, ed);
 
         if (!moments.length) {

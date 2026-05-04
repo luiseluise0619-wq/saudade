@@ -37,6 +37,7 @@ const BUNDLES = {
         'saudade-tax-form.js',
         'saudade-coverage.js',
         'saudade-coverage-form.js',
+        'saudade-stays-form.js',
         'saudade-empty.js',
         'saudade-welcome.js',
         'saudade-demo.js',
@@ -45,6 +46,8 @@ const BUNDLES = {
         'saudade-homes.js',
         'saudade-letters.js',
         'saudade-desks.js',
+        'saudade-contribute.js',
+        'saudade-focus.js',
         'saudade-footer-rule.js'
     ],
     'saudade.editorial.js': [

@@ -845,10 +845,11 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             ${articleIntro}
             <div id="sddLedgerEmpty"></div>
             ${isLedgerEmpty ? '' : emptyStateHtml}
+            <!-- v644 — one stays form drives both Schengen + Tax panels.
+                 Replaces the previous duplicate schengen-form + tax-form. -->
+            <div id="sddStaysForm"></div>
             <div id="sddSchPanel"></div>
-            <div id="sddSchForm"></div>
             <div id="sddTaxPanel"></div>
-            <div id="sddTaxForm"></div>
             <div id="sddInsPanel"></div>
             <div id="sddPenPanel"></div>
             <div id="sddCoverageForm"></div>
@@ -903,26 +904,29 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         // standalone form's localStorage. Otherwise we silently skip.
         try {
             // Auto-import Schengen-flagged ledger entries into the calc.
-            const schStays = records
-                .filter(r => (r.iso === 'EU') || (r.type === 'shengen') || (r.type === 'd7-pt'))
-                .map(r => ({ in: r.entered, out: r.expiry, country: r.iso }));
-            const formStays = (window.SAUDADE_SCHENGEN_FORM && window.SAUDADE_SCHENGEN_FORM.getStays && window.SAUDADE_SCHENGEN_FORM.getStays()) || [];
-            const merged = schStays.concat(formStays.filter(s => s.in));
-            if (window.SAUDADE_SCHENGEN && merged.length) {
-                window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: merged });
-            }
-            if (window.SAUDADE_SCHENGEN_FORM) {
-                window.SAUDADE_SCHENGEN_FORM.mount(document.getElementById('sddSchForm'));
+            // v644 — single unified stays form. mount() also runs the
+            // Schengen + Tax panels internally on every keystroke, so we no
+            // longer need to wire them separately here.
+            if (window.SAUDADE_STAYS_FORM) {
+                window.SAUDADE_STAYS_FORM.mount(document.getElementById('sddStaysForm'));
             }
 
-            // v637 — tax-residency 183-day counter. Maps tax-category records
-            // (any record with typeCategory === 'tax' OR a country code on a
-            // visa record) into [{ country, in, out }].
-            const taxStays = records
+            // Records added via the legacy Ledger record system (visa rows
+            // with ISO codes) still feed the panels alongside form data.
+            const legacySchStays = records
+                .filter(r => (r.iso === 'EU') || (r.type === 'shengen') || (r.type === 'd7-pt'))
+                .map(r => ({ in: r.entered, out: r.expiry, country: r.iso }));
+            const legacyTaxStays = records
                 .filter(r => (r.typeCategory === 'tax') || (r.iso && r.entered))
                 .map(r => ({ country: (r.iso || '').replace(/^EU$/, 'PT'), in: r.entered, out: r.expiry }));
-            if (window.SAUDADE_TAX && taxStays.length) {
-                window.SAUDADE_TAX.render(document.getElementById('sddTaxPanel'), { stays: taxStays });
+            const formStays = (window.SAUDADE_STAYS_FORM && window.SAUDADE_STAYS_FORM.getStays && window.SAUDADE_STAYS_FORM.getStays()) || [];
+            if (window.SAUDADE_SCHENGEN) {
+                const all = legacySchStays.concat(formStays.filter(s => s.country && s.in));
+                if (all.length) window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: all });
+            }
+            if (window.SAUDADE_TAX) {
+                const all = legacyTaxStays.concat(formStays.filter(s => s.country && s.in));
+                if (all.length) window.SAUDADE_TAX.render(document.getElementById('sddTaxPanel'), { stays: all });
             }
 
             // v640 — direct input forms for tax + coverage. The forms feed

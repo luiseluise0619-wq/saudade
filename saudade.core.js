@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-04T05:17:23.872Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-04T05:31:16.941Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -1086,7 +1086,7 @@ body[data-tour="1"] .sdd-cover::before {
                 <div class="sdd-sch-grid">
                     <div class="sdd-sch-cell">
                         <p class="sdd-sch-label">${escapeHtml(c.usedLab)}</p>
-                        <p class="sdd-sch-num">${r.used_in_window}<span class="sdd-sch-of"> / ${r.max}</span></p>
+                        <p class="sdd-sch-num">${Math.min(r.used_in_window, r.max)}<span class="sdd-sch-of"> / ${r.max}</span>${r.used_in_window > r.max ? `<span class="sdd-sch-over"> · +${r.used_in_window - r.max} OVER</span>` : ''}</p>
                     </div>
                     <div class="sdd-sch-cell">
                         <p class="sdd-sch-label">${escapeHtml(c.remLab)}</p>
@@ -1141,6 +1141,13 @@ body[data-tour="1"] .sdd-cover::before {
 .sdd-sch-of {
     font-size: 0.35em; color: var(--bone-d);
     font-style: normal; letter-spacing: 0.06em;
+}
+.sdd-sch-over {
+    font-size: 0.30em; color: var(--rust);
+    font-style: normal; letter-spacing: 0.32em;
+    font-family: var(--mono); font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 8px;
 }
 .sdd-sch-window, .sdd-sch-status {
     font-family: var(--mono); font-weight: 400; font-size: 11px;
@@ -2531,6 +2538,296 @@ body[data-tour="1"] .sdd-cover::before {
     window.SAUDADE_COVERAGE_FORM = { mount, getInsurance: () => get(KEY_INS), getPension: () => get(KEY_PEN) };
 })();
 
+/* ── saudade-stays-form.js ──────────────────────────────────────────────────── */
+// saudade · unified stays form
+//
+// One source of truth for "where I was, when". A single row drives both
+// Schengen 90/180 and Tax 183 — Schengen is the same data filtered to
+// the 27 Schengen-area countries.
+//
+// Replaces saudade-schengen-form.js + saudade-tax-form.js for the user-
+// facing input. The two older forms still load (bundle-compatible) but
+// the Ledger no longer mounts them — it mounts this one instead.
+//
+// Storage:
+//   saudade.stays = [{ country, in, out }]   ← master
+//   saudade.schengen.stays / saudade.tax.stays are mirrored on every save
+//   so the calculators (which still read those keys) keep working without
+//   changes.
+//
+// Migration: on first load, if saudade.stays is empty but tax/schengen
+// keys have data, merge with country|in|out dedupe.
+//
+// API:
+//   window.SAUDADE_STAYS_FORM.mount(container, { lang? })
+//   window.SAUDADE_STAYS_FORM.getStays()
+'use strict';
+
+(function() {
+    if (window.SAUDADE_STAYS_FORM) return;
+
+    const KEY      = 'saudade.stays';
+    const KEY_SCH  = 'saudade.schengen.stays';
+    const KEY_TAX  = 'saudade.tax.stays';
+
+    // Schengen Area as of 2026 — Bulgaria, Romania, Croatia in; Cyprus pending.
+    const SCHENGEN_27 = new Set([
+        'AT','BE','BG','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IT',
+        'LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH'
+    ]);
+
+    // Country list for the select — alpha sorted, Schengen + common nomad.
+    const COUNTRIES = [
+        'AE','AR','AT','AU','BE','BG','BR','CA','CH','CL','CN','CO','CY','CZ',
+        'DE','DK','EE','ES','FI','FR','GB','GE','GR','HR','HU','ID','IE','IL',
+        'IN','IS','IT','JP','KH','KR','LT','LU','LV','MA','MT','MX','MY','NL',
+        'NO','NZ','PA','PE','PH','PL','PT','RO','RS','SE','SG','SI','SK','TH',
+        'TR','UA','US','UY','VN','ZA'
+    ];
+
+    function L(strings, lang) {
+        const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        return strings[ed] || strings.en;
+    }
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        })[ch]);
+    }
+    function safeRead(k) {
+        try { const r = localStorage.getItem(k); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
+        catch (e) { return []; }
+    }
+    function safeWrite(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+
+    // ─── One-shot migration ─────────────────────────────────────────────
+    function migrateOnce() {
+        const stays = safeRead(KEY);
+        if (stays.length) return;            // already in the new model
+        const tax = safeRead(KEY_TAX);
+        const sch = safeRead(KEY_SCH);
+        if (!tax.length && !sch.length) return;
+        const seen = new Set();
+        const merged = [];
+        for (const r of [...tax, ...sch]) {
+            if (!r || !r.in) continue;
+            const country = (r.country || '').toUpperCase().slice(0, 3);
+            if (!country) continue;
+            const key = `${country}|${r.in}|${r.out || ''}`;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            merged.push({ country, in: r.in, out: r.out || '' });
+        }
+        if (merged.length) safeWrite(KEY, merged);
+    }
+
+    function getStays() { return safeRead(KEY); }
+    function setStays(arr) {
+        safeWrite(KEY, arr);
+        // Mirror into the calculator-specific keys so saudade-tax + saudade-schengen
+        // (which read those keys) keep working without modification.
+        safeWrite(KEY_TAX, arr.slice());
+        safeWrite(KEY_SCH, arr.filter(s => SCHENGEN_27.has((s.country || '').toUpperCase())));
+    }
+
+    function copy(lang) {
+        return {
+            title: L({
+                en: 'Where you were, when.',
+                ko: '어디에, 언제 있었나.',
+                ja: 'いつ、どこにいたか。',
+                pt: 'Onde esteve, quando.',
+                es: 'Dónde estuvo, cuándo.'
+            }, lang),
+            help:  L({
+                en: 'One row per stay. We compute Schengen 90/180 and tax 183 from the same data — no need to enter twice.',
+                ko: '한 줄에 한 체류. 같은 데이터로 셰겐 90/180 과 세금 183 을 함께 계산한다 — 두 번 입력하지 않아도 된다.',
+                ja: '一行に一滞在。同じデータからシェンゲン 90/180 と税 183 を一緒に計算する — 二度入力しなくていい。',
+                pt: 'Uma linha por estadia. Calculamos Schengen 90/180 e fiscal 183 a partir dos mesmos dados — sem precisar repetir.',
+                es: 'Una fila por estancia. Calculamos Schengen 90/180 y fiscal 183 a partir de los mismos datos — sin repetir.'
+            }, lang),
+            colCty:  L({ en: 'COUNTRY', ko: '국가', ja: '国', pt: 'PAÍS', es: 'PAÍS' }, lang),
+            colIn:   L({ en: 'IN',  ko: '입국',  ja: '入国',  pt: 'ENTRADA', es: 'ENTRADA' }, lang),
+            colOut:  L({ en: 'OUT', ko: '출국',  ja: '出国',  pt: 'SAÍDA',   es: 'SALIDA' }, lang),
+            colDrives: L({ en: 'FEEDS', ko: '계산기', ja: '計算機', pt: 'ALIMENTA', es: 'ALIMENTA' }, lang),
+            add:     L({ en: 'ADD STAY', ko: '체류 추가', ja: '滞在を追加', pt: 'ADICIONAR', es: 'AÑADIR' }, lang),
+            none:    L({ en: 'No stays yet. Add the most recent first.', ko: '아직 체류 기록이 없다. 가장 최근부터 입력하라.', ja: 'まだ滞在記録がない。直近から追加。', pt: 'Sem estadias ainda. Comece pela mais recente.', es: 'Sin estancias aún. Empiece por la más reciente.' }, lang),
+            remove:  L({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }, lang),
+            empty:   L({ en: 'still there', ko: '체류 중', ja: '滞在中', pt: 'ainda lá', es: 'aún ahí' }, lang),
+            sch:     L({ en: 'SCHENGEN', ko: '셰겐', ja: 'シェンゲン', pt: 'SCHENGEN', es: 'SCHENGEN' }, lang),
+            tax:     L({ en: 'TAX', ko: '세금', ja: '税', pt: 'FISCAL', es: 'FISCAL' }, lang)
+        };
+    }
+
+    function injectStyles() {
+        if (document.getElementById('sddStaysFormStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'sddStaysFormStyles';
+        s.textContent = `
+.sdd-stays {
+    border-top: 0.5px solid var(--rule);
+    padding: clamp(20px, 3vw, 28px) 0;
+    margin: clamp(16px, 3vw, 28px) 0;
+}
+.sdd-stays__h { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: 0 0 8px; }
+.sdd-stays__help { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 13px; color: var(--bone-d); margin: 0 0 16px; max-width: 56ch; }
+.sdd-stays__cols, .sdd-stays__row {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr auto;
+    gap: 8px; align-items: center;
+}
+.sdd-stays__cols {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d); padding: 6px 0; border-bottom: 0.5px solid var(--rule);
+}
+.sdd-stays__row { padding: 8px 0; border-bottom: 0.5px solid var(--rule); }
+.sdd-stays__row input, .sdd-stays__row select {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    color: var(--ink); font-family: var(--mono); font-size: 13px;
+    letter-spacing: 0.04em; padding: 6px 0; min-height: 36px; width: 100%;
+    box-sizing: border-box; outline: none; border-radius: 0;
+}
+.sdd-stays__row input:focus, .sdd-stays__row select:focus { border-bottom-color: var(--ink); }
+.sdd-stays__row.is-invalid input[data-field="out"] {
+    border-bottom-color: var(--rust);
+    color: var(--rust);
+}
+.sdd-stays__row.is-invalid::before {
+    content: '⚠ check the dates';
+    grid-column: 1 / -1;
+    font-family: var(--mono); font-weight: 500; font-size: 9px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--rust);
+    padding: 4px 0;
+}
+.sdd-stays__rm { background: transparent; border: 0; color: var(--bone-d); cursor: pointer;
+    font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1; padding: 4px 8px; min-height: 36px; }
+.sdd-stays__rm:hover { color: var(--rust); }
+.sdd-stays__add {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    font-family: var(--mono); font-weight: 500; font-size: 12px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 4px; cursor: pointer;
+    width: 100%; text-align: left; min-height: 44px; transition: color .15s;
+}
+.sdd-stays__add:hover { color: var(--rust); }
+.sdd-stays__add::before { content: "+"; color: var(--rust); margin-right: 12px; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.sdd-stays__none { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--bone-d); padding: 14px 0; border-bottom: 0.5px solid var(--rule); }
+@media (max-width: 720px) {
+    .sdd-stays__cols, .sdd-stays__row {
+        grid-template-columns: 0.7fr 1fr 1fr auto;
+    }
+}
+        `;
+        document.head.appendChild(s);
+    }
+
+    function isInvalid(s) {
+        return s && s.in && s.out && s.out < s.in;   // ISO date strings sort lexically
+    }
+
+    function row(s, i, c) {
+        const invalid = isInvalid(s);
+        return `
+            <div class="sdd-stays__row ${invalid ? 'is-invalid' : ''}" data-idx="${i}">
+                <select data-field="country">
+                    <option value="">—</option>
+                    ${COUNTRIES.map(co => `<option value="${co}" ${s.country === co ? 'selected' : ''}>${co}</option>`).join('')}
+                </select>
+                <input type="date" data-field="in"  value="${escapeHtml(s.in || '')}" />
+                <input type="date" data-field="out" value="${escapeHtml(s.out || '')}"
+                       placeholder="${escapeHtml(c.empty)}" />
+                <button type="button" class="sdd-stays__rm" data-rm aria-label="${escapeHtml(c.remove)}">×</button>
+            </div>
+        `;
+    }
+
+    function paint(host, lang) {
+        const c = copy(lang);
+        const stays = getStays();
+        host.innerHTML = `
+            <section class="sdd-stays">
+                <p class="sdd-stays__h">${escapeHtml(c.title)}</p>
+                <p class="sdd-stays__help">${escapeHtml(c.help)}</p>
+                <div class="sdd-stays__cols">
+                    <span>${escapeHtml(c.colCty)}</span>
+                    <span>${escapeHtml(c.colIn)}</span>
+                    <span>${escapeHtml(c.colOut)}</span>
+                    <span></span>
+                </div>
+                <div data-rows>
+                    ${stays.length ? stays.map((s, i) => row(s, i, c)).join('') : `<p class="sdd-stays__none">${escapeHtml(c.none)}</p>`}
+                </div>
+                <button type="button" class="sdd-stays__add" data-add>${escapeHtml(c.add)}</button>
+            </section>
+        `;
+        host.querySelector('[data-add]').addEventListener('click', () => {
+            setStays(getStays().concat([{ country: '', in: '', out: '' }]));
+            paint(host, lang); rerunCalcs();
+        });
+        host.querySelectorAll('.sdd-stays__row').forEach(rowEl => {
+            const idx = +rowEl.dataset.idx;
+            function syncValid() {
+                rowEl.classList.toggle('is-invalid', isInvalid(getStays()[idx]));
+            }
+            rowEl.querySelector('[data-field="country"]').addEventListener('change', e => {
+                const cur = getStays(); cur[idx].country = e.target.value; setStays(cur);
+                syncValid(); rerunCalcs();
+            });
+            rowEl.querySelectorAll('input[data-field]').forEach(input => {
+                input.addEventListener('input', e => {
+                    const cur = getStays(); cur[idx][input.dataset.field] = e.target.value; setStays(cur);
+                    syncValid(); rerunCalcs();
+                });
+            });
+            rowEl.querySelector('[data-rm]').addEventListener('click', () => {
+                const cur = getStays(); cur.splice(idx, 1); setStays(cur);
+                paint(host, lang); rerunCalcs();
+            });
+        });
+    }
+
+    function rerunCalcs() {
+        const stays = getStays().filter(s => s.country && s.in);
+        try {
+            if (window.SAUDADE_SCHENGEN) {
+                const schPanel = document.getElementById('sddSchPanel');
+                if (schPanel) {
+                    const filtered = stays.filter(s => SCHENGEN_27.has((s.country || '').toUpperCase()));
+                    window.SAUDADE_SCHENGEN.render(schPanel, { stays: filtered });
+                }
+            }
+            if (window.SAUDADE_TAX) {
+                const taxPanel = document.getElementById('sddTaxPanel');
+                if (taxPanel) window.SAUDADE_TAX.render(taxPanel, { stays });
+            }
+            // Personal block on the cover, if mounted.
+            if (window.SAUDADE_PERSONAL) {
+                const cov = document.getElementById('sddCoverPersonal');
+                if (cov && window.SAUDADE_PERSONAL.render) window.SAUDADE_PERSONAL.render(cov);
+            }
+        } catch (e) {}
+    }
+
+    function mount(target, opts) {
+        injectStyles();
+        migrateOnce();
+        const host = (typeof target === 'string') ? document.querySelector(target) : target;
+        if (!host) return;
+        paint(host, opts && opts.lang);
+        rerunCalcs();
+    }
+
+    if (typeof document !== 'undefined') {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', migrateOnce);
+        } else { migrateOnce(); }
+    }
+
+    window.SAUDADE_STAYS_FORM = { mount, getStays, setStays };
+})();
+
 /* ── saudade-empty.js ──────────────────────────────────────────────────── */
 // saudade · unified empty-state component
 //
@@ -3020,8 +3317,30 @@ body[data-tour="1"] .sdd-cover::before {
     // the cover: "184 days since you last sat in a Seoul café."
     const HOMES = ['LIS', 'SEL', 'DPS'];
 
-    function load() {
+    function load(opts) {
+        opts = opts || {};
+        // v644 — refuse to overwrite real user data unless explicitly forced.
+        // Detect any pre-existing non-empty entries; if we find one, ask
+        // the user via a native confirm() before stomping it.
+        if (!opts.force) {
+            const keys = ['saudade.stays', 'saudade.schengen.stays',
+                          'saudade.tax.stays', 'saudade.insurance.policies',
+                          'saudade.pension.filings', 'saudade.homes'];
+            const hasReal = keys.some(k => {
+                try { const v = localStorage.getItem(k); if (!v) return false; const a = JSON.parse(v); return Array.isArray(a) ? a.length > 0 : true; } catch (e) { return false; }
+            });
+            const flagged = (function () { try { return localStorage.getItem(FLAG) === '1'; } catch (e) { return false; } })();
+            if (hasReal && !flagged) {
+                const ok = (typeof confirm === 'function') && confirm(
+                    'You have your own data in saudade.\n\n' +
+                    'Loading the demo replaces it with a sample year. Your real data will be lost.\n\n' +
+                    'Continue?'
+                );
+                if (!ok) return false;
+            }
+        }
         try {
+            localStorage.setItem('saudade.stays',              JSON.stringify(TAX_STAYS));
             localStorage.setItem('saudade.schengen.stays',     JSON.stringify(SCHENGEN_STAYS));
             localStorage.setItem('saudade.tax.stays',          JSON.stringify(TAX_STAYS));
             localStorage.setItem('saudade.insurance.policies', JSON.stringify(INS_POLICIES));
@@ -3029,7 +3348,8 @@ body[data-tour="1"] .sdd-cover::before {
             localStorage.setItem('saudade.homes',              JSON.stringify(HOMES));
             localStorage.setItem(FLAG, '1');
         } catch (e) { return false; }
-        // Re-render the four calculator panels if their forms are mounted.
+        // Re-render the calculator forms if mounted.
+        if (window.SAUDADE_STAYS_FORM)     refreshForm(window.SAUDADE_STAYS_FORM);
         if (window.SAUDADE_SCHENGEN_FORM)  refreshForm(window.SAUDADE_SCHENGEN_FORM);
         if (window.SAUDADE_TAX_FORM)       refreshForm(window.SAUDADE_TAX_FORM);
         if (window.SAUDADE_COVERAGE_FORM)  refreshForm(window.SAUDADE_COVERAGE_FORM);
@@ -3043,7 +3363,8 @@ body[data-tour="1"] .sdd-cover::before {
 
     function refreshForm(mod) {
         // Re-paint the form by remounting it onto its current host.
-        const sel = (mod === window.SAUDADE_SCHENGEN_FORM)  ? '#sddSchForm'
+        const sel = (mod === window.SAUDADE_STAYS_FORM)     ? '#sddStaysForm'
+                  : (mod === window.SAUDADE_SCHENGEN_FORM)  ? '#sddSchForm'
                   : (mod === window.SAUDADE_TAX_FORM)       ? '#sddTaxForm'
                   : (mod === window.SAUDADE_COVERAGE_FORM)  ? '#sddCoverageForm'
                   : null;
@@ -3703,16 +4024,7 @@ body[data-tour="1"] .sdd-cover::before {
     margin: 0 0 12px;
     display: flex; gap: 8px; align-items: baseline;
 }
-.sdd-personal__eyebrow::after {
-    content: '— for you';
-    font-family: var(--serif); font-style: italic; font-weight: 300;
-    font-size: 12px; color: var(--bone-d);
-    text-transform: none; letter-spacing: 0;
-}
-.sdd-personal:lang(ko) .sdd-personal__eyebrow::after { content: '— 당신에게'; }
-.sdd-personal:lang(ja) .sdd-personal__eyebrow::after { content: '— あなたへ'; }
-.sdd-personal:lang(pt) .sdd-personal__eyebrow::after { content: '— para você'; }
-.sdd-personal:lang(es) .sdd-personal__eyebrow::after { content: '— para usted'; }
+/* v644 — eyebrow alone is enough; the "— for you" suffix was self-narration. */
 .sdd-personal__line {
     font-family: var(--serif); font-weight: 300; font-style: italic;
     font-size: clamp(15px, 1.4vw, 19px);
@@ -3760,11 +4072,11 @@ body[data-tour="1"] .sdd-cover::before {
         const moments = compute({ lang: ed, max: (opts && opts.max) || 4 });
 
         const eyebrowLabel = L({
-            en: 'TODAY · NOTES FOR ONE READER',
-            ko: '오늘 · 한 사람을 위한 메모',
-            ja: '本日 · 一人の読者へ',
-            pt: 'HOJE · NOTAS PARA UM LEITOR',
-            es: 'HOY · NOTAS PARA UN LECTOR'
+            en: 'NOTES FOR ONE READER',
+            ko: '한 사람을 위한 메모',
+            ja: '一人の読者へ',
+            pt: 'NOTAS PARA UM LEITOR',
+            es: 'NOTAS PARA UN LECTOR'
         }, ed);
 
         if (!moments.length) {
@@ -4226,10 +4538,8 @@ body[data-tour="1"] .sdd-cover::before {
                 es: 'Hasta 800 caracteres. Leída por un editor antes de publicar.'
             }, lang),
             close:   L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, lang),
-            lblName: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
-            phName:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),
-            lblCity: L({ en: 'CITY (OPTIONAL)', ko: '도시 (선택)', ja: '都市（任意）', pt: 'CIDADE (OPCIONAL)', es: 'CIUDAD (OPCIONAL)' }, lang),
-            phCity:  L({ en: 'lisbon, seoul, …', ko: 'lisbon, seoul, …', ja: 'lisbon, seoul, …', pt: 'lisbon, seoul, …', es: 'lisbon, seoul, …' }, lang),
+            lblSign: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
+            phSign:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),
             lblBody: L({ en: 'YOUR LETTER', ko: '편지 본문', ja: '本文', pt: 'A SUA CARTA', es: 'SU CARTA' }, lang),
             phBody:  L({
                 en: 'Dear editor, …',
@@ -4273,16 +4583,10 @@ body[data-tour="1"] .sdd-cover::before {
                 <p class="sdd-let-lede">${escapeHtml(c.lede)}</p>
 
                 <section class="sdd-let-section">
-                    <p class="sdd-let-label">${escapeHtml(c.lblName)}</p>
-                    <input type="text" class="sdd-let-input" data-name maxlength="80"
-                           placeholder="${escapeHtml(c.phName)}" />
-                </section>
-
-                <section class="sdd-let-section">
-                    <p class="sdd-let-label">${escapeHtml(c.lblCity)}</p>
-                    <input type="text" class="sdd-let-input" data-city maxlength="32"
-                           placeholder="${escapeHtml(c.phCity)}"
-                           value="${escapeHtml(opts.city_tag || '')}" />
+                    <p class="sdd-let-label">${escapeHtml(c.lblSign)}</p>
+                    <input type="text" class="sdd-let-input" data-sign maxlength="120"
+                           placeholder="${escapeHtml(c.phSign)}"
+                           value="${opts.city_tag ? ', ' + escapeHtml(opts.city_tag) : ''}" />
                 </section>
 
                 <section class="sdd-let-section">
@@ -4313,8 +4617,12 @@ body[data-tour="1"] .sdd-cover::before {
         _modal.querySelector('[data-close]').addEventListener('click', closeModal);
         _modal.querySelector('[data-cancel]').addEventListener('click', closeModal);
         _modal.querySelector('[data-send]').addEventListener('click', async () => {
-            const name = _modal.querySelector('[data-name]').value.trim();
-            const city = _modal.querySelector('[data-city]').value.trim();
+            // Single 'Name, City' field — split on the last comma so names with
+            // commas in them survive (e.g. "Lee, Jaejin, Lisbon").
+            const sign = _modal.querySelector('[data-sign]').value.trim();
+            const lastComma = sign.lastIndexOf(',');
+            const name = lastComma > 0 ? sign.slice(0, lastComma).trim() : sign;
+            const city = lastComma > 0 ? sign.slice(lastComma + 1).trim() : '';
             const body = bodyEl.value.trim();
             if (body.length < 30) { setStat(c.tooShort, 'error'); return; }
             if (body.length > 800) { setStat(c.tooLong,  'error'); return; }
@@ -4983,6 +5291,358 @@ body[data-tour="1"] .sdd-cover::before {
     else handleHash();
 
     window.SAUDADE_DESKS = { openApply, openSubmit, closeModal, renderIndex };
+})();
+
+/* ── saudade-contribute.js ──────────────────────────────────────────────────── */
+// saudade · contribute UI (cafe submit + city request)
+//
+// Two small forms wrapped into a single module since they share the same
+// modal scaffolding and the same submission shape. Both endpoints already
+// exist in the worker; the front-ends were promised earlier and hadn't
+// been built. This is them.
+//
+// API:
+//   window.SAUDADE_CONTRIBUTE.openCafe()       → submit a café (Atlas)
+//   window.SAUDADE_CONTRIBUTE.openCity()       → request a new city desk
+// Hashes:
+//   #cafe-submit   #city-request
+'use strict';
+
+(function () {
+    if (window.SAUDADE_CONTRIBUTE) return;
+
+    function L(strings, lang) {
+        const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        return strings[ed] || strings.en;
+    }
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        })[ch]);
+    }
+    function authH() {
+        const h = { 'Content-Type': 'application/json' };
+        if (window.SAUDADE_AUTH && window.SAUDADE_AUTH.authHeaders) {
+            Object.assign(h, window.SAUDADE_AUTH.authHeaders());
+        }
+        return h;
+    }
+
+    let _modal = null;
+    function injectStyles() {
+        if (document.getElementById('sddContribStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'sddContribStyles';
+        s.textContent = `
+.sdd-cb-modal {
+    position: fixed; inset: 0; z-index: 9985;
+    background: var(--paper); color: var(--ink);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
+    overflow-y: auto;
+}
+.sdd-cb-modal.active { display: flex; }
+.sdd-cb-inner { width: 100%; max-width: 520px; }
+.sdd-cb-inner h2 {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: clamp(28px, 4vw, 42px); line-height: 1.05;
+    letter-spacing: -0.02em; margin: 0 0 12px;
+}
+.sdd-cb-lede {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 14px; color: var(--bone-d); margin: 0 0 24px; max-width: 48ch;
+}
+.sdd-cb-section { border-top: 0.5px solid var(--rule); padding: 16px 0; }
+.sdd-cb-label { font-family: var(--mono); font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d); margin: 0 0 6px; }
+.sdd-cb-input, .sdd-cb-textarea {
+    width: 100%; box-sizing: border-box;
+    background: transparent; color: var(--ink);
+    font-family: var(--serif); font-weight: 300; font-size: 16px;
+    border: 0; border-bottom: 0.5px solid var(--rule);
+    padding: 6px 0; outline: none; border-radius: 0;
+}
+.sdd-cb-textarea { min-height: 100px; border: 0.5px solid var(--rule); padding: 12px; line-height: 1.6; }
+.sdd-cb-input:focus, .sdd-cb-textarea:focus { border-bottom-color: var(--ink); }
+.sdd-cb-actions { display: flex; flex-direction: column; border-top: 0.5px solid var(--rule); margin-top: 12px; }
+.sdd-cb-btn {
+    background: transparent; border: 0;
+    border-bottom: 0.5px solid var(--rule);
+    font-family: var(--mono); font-weight: 500; font-size: 12px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 16px 4px; cursor: pointer;
+    text-align: left; min-height: 44px; transition: color .15s;
+}
+.sdd-cb-btn:hover { color: var(--rust); }
+.sdd-cb-btn.is-quiet { color: var(--bone-d); }
+.sdd-cb-status {
+    font-family: var(--mono); font-weight: 500; font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    padding: 12px 0; color: var(--bone-d);
+    min-height: 1em; margin-top: 12px;
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-cb-status.ok    { color: var(--ink); }
+.sdd-cb-status.error { color: var(--rust); }
+.sdd-cb-close {
+    position: absolute; top: clamp(20px, 4vw, 32px); right: clamp(20px, 4vw, 32px);
+    background: transparent; border: 0; cursor: pointer;
+    font-family: var(--mono); font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d);
+}
+.sdd-cb-close:hover { color: var(--rust); }
+        `;
+        document.head.appendChild(s);
+    }
+
+    function ensureModal() {
+        if (_modal) return _modal;
+        injectStyles();
+        _modal = document.createElement('div');
+        _modal.className = 'sdd-cb-modal';
+        _modal.setAttribute('role', 'dialog');
+        _modal.setAttribute('aria-modal', 'true');
+        document.body.appendChild(_modal);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && _modal.classList.contains('active')) closeModal();
+        });
+        return _modal;
+    }
+    function closeModal() { if (_modal) _modal.classList.remove('active'); }
+
+    // ─── Cafe submit ────────────────────────────────────────────────────
+    function openCafe() {
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const c = {
+            title: L({ en: 'Suggest a café.', ko: '카페를 제안.', ja: 'カフェを提案。', pt: 'Sugerir um café.', es: 'Sugerir un café.' }, ed),
+            lede:  L({ en: 'Tell the editor about a place worth visiting. We test outlets, noise, and Wi-Fi ourselves before listing.', ko: '들렀으면 하는 곳을 알려주라. 콘센트·소음·와이파이는 우리가 직접 시험한 뒤에야 목록에 오른다.', ja: '訪ねる価値のある場所を教えてほしい。コンセント・騒音・Wi-Fi を自分たちで試した上で掲載する。', pt: 'Conte ao editor de um lugar que vale a pena. Testamos tomadas, ruído e Wi-Fi antes de listar.', es: 'Cuente al editor de un lugar que valga la pena. Probamos enchufes, ruido y Wi-Fi antes de listar.' }, ed),
+            close: L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, ed),
+            lblName: L({ en: 'CAFÉ NAME', ko: '카페 이름', ja: 'カフェ名', pt: 'NOME DO CAFÉ', es: 'NOMBRE DEL CAFÉ' }, ed),
+            lblNeigh: L({ en: 'NEIGHBOURHOOD / CITY', ko: '동네 / 도시', ja: '地区 / 都市', pt: 'BAIRRO / CIDADE', es: 'BARRIO / CIUDAD' }, ed),
+            lblNotes: L({ en: 'WHY IT IS WORTH A VISIT', ko: '왜 가볼 만한가', ja: '訪ねる価値の理由', pt: 'PORQUE VALE A VISITA', es: 'POR QUÉ VALE LA VISITA' }, ed),
+            phNotes: L({ en: 'Outlets per table, noise, Wi-Fi, hours, anything else.', ko: '테이블당 콘센트, 소음, 와이파이, 영업시간, 그 외.', ja: 'テーブル毎のコンセント、騒音、Wi-Fi、時間、その他。', pt: 'Tomadas, ruído, Wi-Fi, horas, qualquer outra coisa.', es: 'Enchufes, ruido, Wi-Fi, horas, cualquier otra cosa.' }, ed),
+            send:  L({ en: 'SEND TO EDITOR', ko: '편집장에게 보내기', ja: '編集長へ送る', pt: 'ENVIAR AO EDITOR', es: 'ENVIAR AL EDITOR' }, ed),
+            cancel: L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }, ed),
+            ok: L({ en: 'Suggestion received. The editor will visit before listing.', ko: '제안이 도착했다. 등록 전에 편집장이 직접 가본다.', ja: '提案を受け取った。掲載前に編集長が訪ねる。', pt: 'Sugestão recebida. O editor visitará antes de listar.', es: 'Sugerencia recibida. El editor visitará antes de listar.' }, ed),
+            err: L({ en: 'Could not send. Try again.', ko: '전송 실패.', ja: '送信失敗。', pt: 'Falha ao enviar.', es: 'Falló el envío.' }, ed)
+        };
+        ensureModal().innerHTML = `
+            <button type="button" class="sdd-cb-close" data-close>${escapeHtml(c.close)}</button>
+            <div class="sdd-cb-inner">
+                <h2>${escapeHtml(c.title)}</h2>
+                <p class="sdd-cb-lede">${escapeHtml(c.lede)}</p>
+                <section class="sdd-cb-section">
+                    <p class="sdd-cb-label">${escapeHtml(c.lblName)}</p>
+                    <input class="sdd-cb-input" data-name maxlength="80" />
+                </section>
+                <section class="sdd-cb-section">
+                    <p class="sdd-cb-label">${escapeHtml(c.lblNeigh)}</p>
+                    <input class="sdd-cb-input" data-neigh maxlength="80" />
+                </section>
+                <section class="sdd-cb-section">
+                    <p class="sdd-cb-label">${escapeHtml(c.lblNotes)}</p>
+                    <textarea class="sdd-cb-textarea" data-notes maxlength="800"
+                              placeholder="${escapeHtml(c.phNotes)}"></textarea>
+                </section>
+                <div class="sdd-cb-actions">
+                    <button type="button" class="sdd-cb-btn" data-send>${escapeHtml(c.send)}</button>
+                    <button type="button" class="sdd-cb-btn is-quiet" data-cancel>${escapeHtml(c.cancel)}</button>
+                </div>
+                <p class="sdd-cb-status" data-status></p>
+            </div>
+        `;
+        wire('cafe', c);
+        _modal.classList.add('active');
+    }
+
+    // ─── City request ───────────────────────────────────────────────────
+    function openCity() {
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const c = {
+            title: L({ en: 'Ask the desk to open in a city.', ko: '데스크를 열어달라고 요청.', ja: 'デスクを開くよう要請。', pt: 'Pedir uma redação numa cidade.', es: 'Pedir una mesa en una ciudad.' }, ed),
+            lede:  L({ en: 'When 100 readers ask for a city, we open the desk. Tell us where you live, and what an editor in that city should be paying attention to.', ko: '100명의 독자가 한 도시를 요청하면 데스크를 연다. 어디에 사는지, 그곳의 편집자가 무엇에 주의를 기울여야 할지 알려달라.', ja: '百人の読者が一つの都市を求めれば、デスクを開く。どこに住み、その都市の編集者が何に注意すべきか教えてほしい。', pt: 'Quando 100 leitores pedirem uma cidade, abrimos a redação. Diga-nos onde vive, e a que um editor dessa cidade deveria prestar atenção.', es: 'Cuando 100 lectores piden una ciudad, abrimos la mesa. Cuéntenos dónde vive, y a qué debería prestar atención un editor allí.' }, ed),
+            close: L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, ed),
+            lblCity: L({ en: 'CITY', ko: '도시', ja: '都市', pt: 'CIDADE', es: 'CIUDAD' }, ed),
+            phCity:  L({ en: 'mexico-city, hanoi, marrakech, …', ko: 'mexico-city, hanoi, marrakech, …', ja: 'mexico-city, hanoi, marrakech, …', pt: 'mexico-city, hanoi, marrakech, …', es: 'mexico-city, hanoi, marrakech, …' }, ed),
+            lblWhy: L({ en: 'WHY THIS CITY (OPTIONAL)', ko: '왜 이 도시인가 (선택)', ja: 'なぜこの都市か（任意）', pt: 'PORQUÊ ESTA CIDADE (OPCIONAL)', es: 'POR QUÉ ESTA CIUDAD (OPCIONAL)' }, ed),
+            send: L({ en: 'SEND', ko: '보내기', ja: '送る', pt: 'ENVIAR', es: 'ENVIAR' }, ed),
+            cancel: L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }, ed),
+            ok: L({ en: 'Recorded. We open a desk when 100 readers ask.', ko: '기록됨. 100명이 요청하면 데스크를 연다.', ja: '記録した。百人が求めればデスクを開く。', pt: 'Registado. Abrimos uma redação quando 100 leitores pedem.', es: 'Registrado. Abrimos una mesa cuando 100 lectores piden.' }, ed),
+            err: L({ en: 'Could not send.', ko: '전송 실패.', ja: '送信失敗。', pt: 'Falha ao enviar.', es: 'Falló el envío.' }, ed),
+            tooShort: L({ en: 'City required.', ko: '도시명을 입력하라.', ja: '都市が必要。', pt: 'Cidade obrigatória.', es: 'Ciudad obligatoria.' }, ed)
+        };
+        ensureModal().innerHTML = `
+            <button type="button" class="sdd-cb-close" data-close>${escapeHtml(c.close)}</button>
+            <div class="sdd-cb-inner">
+                <h2>${escapeHtml(c.title)}</h2>
+                <p class="sdd-cb-lede">${escapeHtml(c.lede)}</p>
+                <section class="sdd-cb-section">
+                    <p class="sdd-cb-label">${escapeHtml(c.lblCity)}</p>
+                    <input class="sdd-cb-input" data-city maxlength="64"
+                           placeholder="${escapeHtml(c.phCity)}" />
+                </section>
+                <section class="sdd-cb-section">
+                    <p class="sdd-cb-label">${escapeHtml(c.lblWhy)}</p>
+                    <textarea class="sdd-cb-textarea" data-why maxlength="500"></textarea>
+                </section>
+                <div class="sdd-cb-actions">
+                    <button type="button" class="sdd-cb-btn" data-send>${escapeHtml(c.send)}</button>
+                    <button type="button" class="sdd-cb-btn is-quiet" data-cancel>${escapeHtml(c.cancel)}</button>
+                </div>
+                <p class="sdd-cb-status" data-status></p>
+            </div>
+        `;
+        wire('city', c);
+        _modal.classList.add('active');
+    }
+
+    function wire(kind, c) {
+        const status = _modal.querySelector('[data-status]');
+        const setStat = (m, k) => { status.className = 'sdd-cb-status ' + (k || ''); status.textContent = m || ''; };
+        _modal.querySelector('[data-close]').addEventListener('click', closeModal);
+        _modal.querySelector('[data-cancel]').addEventListener('click', closeModal);
+        _modal.querySelector('[data-send]').addEventListener('click', async () => {
+            const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+            if (!base) { setStat(c.err, 'error'); return; }
+            try {
+                setStat('…');
+                let url, body;
+                if (kind === 'cafe') {
+                    const name  = _modal.querySelector('[data-name]').value.trim();
+                    const neigh = _modal.querySelector('[data-neigh]').value.trim();
+                    const notes = _modal.querySelector('[data-notes]').value.trim();
+                    if (!name || !neigh) { setStat(c.tooShort || c.err, 'error'); return; }
+                    url = base + '/cafe/submit';
+                    body = JSON.stringify({ name, neighborhood: neigh, notes });
+                } else {
+                    const city = _modal.querySelector('[data-city]').value.trim().toLowerCase();
+                    const why  = _modal.querySelector('[data-why]').value.trim();
+                    if (!city) { setStat(c.tooShort, 'error'); return; }
+                    const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+                    url = base + '/city/request';
+                    body = JSON.stringify({ requested_city: city, why, edition: ed });
+                }
+                const r = await fetch(url, { method: 'POST', headers: authH(), credentials: 'omit', body });
+                const j = await r.json().catch(() => null);
+                if (!r.ok || !j || (j.error && !j.ok)) { setStat((j && j.error) || c.err, 'error'); return; }
+                setStat(c.ok, 'ok');
+                setTimeout(closeModal, 1600);
+            } catch (e) { setStat(c.err, 'error'); }
+        });
+    }
+
+    function handleHash() {
+        if (location.hash === '#cafe-submit') {
+            openCafe();
+            try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+        } else if (location.hash === '#city-request') {
+            openCity();
+            try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+        }
+    }
+    window.addEventListener('hashchange', handleHash);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
+    else handleHash();
+
+    window.SAUDADE_CONTRIBUTE = { openCafe, openCity, closeModal };
+})();
+
+/* ── saudade-focus.js ──────────────────────────────────────────────────── */
+// saudade · modal focus trap (a11y)
+//
+// Watches every saudade modal class. When a modal becomes .active:
+//   • record the previously-focused element
+//   • move focus into the modal (first tabbable)
+//   • intercept Tab / Shift+Tab so focus stays inside
+// When the modal closes (.active removed) restore focus to the original.
+//
+// Selectors covered: every saudade-* modal class. New modals just need a
+// .sdd-*-modal class with the .active toggle to opt in.
+'use strict';
+
+(function () {
+    if (window.SAUDADE_FOCUS) return;
+
+    const MODAL_SELECTOR = [
+        '.sdd-auth-modal', '.sdd-acct-modal', '.sdd-welcome',
+        '.sdd-homes-modal', '.sdd-let-modal', '.sdd-desk-modal',
+        '.sdd-imp-modal'
+    ].join(',');
+
+    const TABBABLE = [
+        'a[href]', 'button:not([disabled])', 'input:not([disabled]):not([type="hidden"])',
+        'select:not([disabled])', 'textarea:not([disabled])',
+        '[tabindex]:not([tabindex="-1"])'
+    ].join(',');
+
+    let _previousFocus = null;
+    let _activeModal = null;
+
+    function tabbablesIn(el) {
+        return Array.from(el.querySelectorAll(TABBABLE))
+            .filter(n => n.offsetParent !== null || n === document.activeElement);
+    }
+
+    function trapHandler(e) {
+        if (e.key !== 'Tab' || !_activeModal) return;
+        const tabs = tabbablesIn(_activeModal);
+        if (!tabs.length) { e.preventDefault(); return; }
+        const first = tabs[0];
+        const last  = tabs[tabs.length - 1];
+        if (e.shiftKey) {
+            if (document.activeElement === first || !_activeModal.contains(document.activeElement)) {
+                e.preventDefault(); last.focus();
+            }
+        } else {
+            if (document.activeElement === last) {
+                e.preventDefault(); first.focus();
+            }
+        }
+    }
+
+    function watch() {
+        // Use a MutationObserver to detect class="active" toggles on any modal.
+        const observer = new MutationObserver(muts => {
+            for (const m of muts) {
+                if (m.type !== 'attributes' || m.attributeName !== 'class') continue;
+                const el = m.target;
+                if (!el.matches(MODAL_SELECTOR)) continue;
+                if (el.classList.contains('active')) {
+                    if (_activeModal !== el) onOpen(el);
+                } else if (_activeModal === el) {
+                    onClose();
+                }
+            }
+        });
+        observer.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['class'] });
+
+        // Also catch modals that were already .active on first paint (rare).
+        document.querySelectorAll(MODAL_SELECTOR + '.active').forEach(onOpen);
+
+        document.addEventListener('keydown', trapHandler);
+    }
+
+    function onOpen(el) {
+        _previousFocus = document.activeElement;
+        _activeModal = el;
+        const tabs = tabbablesIn(el);
+        // Prefer the first non-close button so a destructive close doesn't get
+        // auto-focused; fall back to whatever is tabbable.
+        const target = tabs.find(t => !/(\bclose\b|\bcancel\b|\bskip\b)/i.test(t.className + ' ' + (t.textContent || '')))
+                    || tabs[0] || el;
+        try { target.focus({ preventScroll: true }); } catch (e) { try { target.focus(); } catch (ee) {} }
+    }
+    function onClose() {
+        _activeModal = null;
+        if (_previousFocus && typeof _previousFocus.focus === 'function') {
+            try { _previousFocus.focus({ preventScroll: true }); } catch (e) {}
+        }
+        _previousFocus = null;
+    }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch);
+    else watch();
+
+    window.SAUDADE_FOCUS = { _activeModal: () => _activeModal };
 })();
 
 /* ── saudade-footer-rule.js ──────────────────────────────────────────────────── */

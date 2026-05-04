@@ -52,8 +52,30 @@
     // the cover: "184 days since you last sat in a Seoul café."
     const HOMES = ['LIS', 'SEL', 'DPS'];
 
-    function load() {
+    function load(opts) {
+        opts = opts || {};
+        // v644 — refuse to overwrite real user data unless explicitly forced.
+        // Detect any pre-existing non-empty entries; if we find one, ask
+        // the user via a native confirm() before stomping it.
+        if (!opts.force) {
+            const keys = ['saudade.stays', 'saudade.schengen.stays',
+                          'saudade.tax.stays', 'saudade.insurance.policies',
+                          'saudade.pension.filings', 'saudade.homes'];
+            const hasReal = keys.some(k => {
+                try { const v = localStorage.getItem(k); if (!v) return false; const a = JSON.parse(v); return Array.isArray(a) ? a.length > 0 : true; } catch (e) { return false; }
+            });
+            const flagged = (function () { try { return localStorage.getItem(FLAG) === '1'; } catch (e) { return false; } })();
+            if (hasReal && !flagged) {
+                const ok = (typeof confirm === 'function') && confirm(
+                    'You have your own data in saudade.\n\n' +
+                    'Loading the demo replaces it with a sample year. Your real data will be lost.\n\n' +
+                    'Continue?'
+                );
+                if (!ok) return false;
+            }
+        }
         try {
+            localStorage.setItem('saudade.stays',              JSON.stringify(TAX_STAYS));
             localStorage.setItem('saudade.schengen.stays',     JSON.stringify(SCHENGEN_STAYS));
             localStorage.setItem('saudade.tax.stays',          JSON.stringify(TAX_STAYS));
             localStorage.setItem('saudade.insurance.policies', JSON.stringify(INS_POLICIES));
@@ -61,7 +83,8 @@
             localStorage.setItem('saudade.homes',              JSON.stringify(HOMES));
             localStorage.setItem(FLAG, '1');
         } catch (e) { return false; }
-        // Re-render the four calculator panels if their forms are mounted.
+        // Re-render the calculator forms if mounted.
+        if (window.SAUDADE_STAYS_FORM)     refreshForm(window.SAUDADE_STAYS_FORM);
         if (window.SAUDADE_SCHENGEN_FORM)  refreshForm(window.SAUDADE_SCHENGEN_FORM);
         if (window.SAUDADE_TAX_FORM)       refreshForm(window.SAUDADE_TAX_FORM);
         if (window.SAUDADE_COVERAGE_FORM)  refreshForm(window.SAUDADE_COVERAGE_FORM);
@@ -75,7 +98,8 @@
 
     function refreshForm(mod) {
         // Re-paint the form by remounting it onto its current host.
-        const sel = (mod === window.SAUDADE_SCHENGEN_FORM)  ? '#sddSchForm'
+        const sel = (mod === window.SAUDADE_STAYS_FORM)     ? '#sddStaysForm'
+                  : (mod === window.SAUDADE_SCHENGEN_FORM)  ? '#sddSchForm'
                   : (mod === window.SAUDADE_TAX_FORM)       ? '#sddTaxForm'
                   : (mod === window.SAUDADE_COVERAGE_FORM)  ? '#sddCoverageForm'
                   : null;

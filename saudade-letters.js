@@ -175,10 +175,8 @@
                 es: 'Hasta 800 caracteres. Leída por un editor antes de publicar.'
             }, lang),
             close:   L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, lang),
-            lblName: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
-            phName:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),
-            lblCity: L({ en: 'CITY (OPTIONAL)', ko: '도시 (선택)', ja: '都市（任意）', pt: 'CIDADE (OPCIONAL)', es: 'CIUDAD (OPCIONAL)' }, lang),
-            phCity:  L({ en: 'lisbon, seoul, …', ko: 'lisbon, seoul, …', ja: 'lisbon, seoul, …', pt: 'lisbon, seoul, …', es: 'lisbon, seoul, …' }, lang),
+            lblSign: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
+            phSign:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),
             lblBody: L({ en: 'YOUR LETTER', ko: '편지 본문', ja: '本文', pt: 'A SUA CARTA', es: 'SU CARTA' }, lang),
             phBody:  L({
                 en: 'Dear editor, …',
@@ -222,16 +220,10 @@
                 <p class="sdd-let-lede">${escapeHtml(c.lede)}</p>
 
                 <section class="sdd-let-section">
-                    <p class="sdd-let-label">${escapeHtml(c.lblName)}</p>
-                    <input type="text" class="sdd-let-input" data-name maxlength="80"
-                           placeholder="${escapeHtml(c.phName)}" />
-                </section>
-
-                <section class="sdd-let-section">
-                    <p class="sdd-let-label">${escapeHtml(c.lblCity)}</p>
-                    <input type="text" class="sdd-let-input" data-city maxlength="32"
-                           placeholder="${escapeHtml(c.phCity)}"
-                           value="${escapeHtml(opts.city_tag || '')}" />
+                    <p class="sdd-let-label">${escapeHtml(c.lblSign)}</p>
+                    <input type="text" class="sdd-let-input" data-sign maxlength="120"
+                           placeholder="${escapeHtml(c.phSign)}"
+                           value="${opts.city_tag ? ', ' + escapeHtml(opts.city_tag) : ''}" />
                 </section>
 
                 <section class="sdd-let-section">
@@ -262,8 +254,12 @@
         _modal.querySelector('[data-close]').addEventListener('click', closeModal);
         _modal.querySelector('[data-cancel]').addEventListener('click', closeModal);
         _modal.querySelector('[data-send]').addEventListener('click', async () => {
-            const name = _modal.querySelector('[data-name]').value.trim();
-            const city = _modal.querySelector('[data-city]').value.trim();
+            // Single 'Name, City' field — split on the last comma so names with
+            // commas in them survive (e.g. "Lee, Jaejin, Lisbon").
+            const sign = _modal.querySelector('[data-sign]').value.trim();
+            const lastComma = sign.lastIndexOf(',');
+            const name = lastComma > 0 ? sign.slice(0, lastComma).trim() : sign;
+            const city = lastComma > 0 ? sign.slice(lastComma + 1).trim() : '';
             const body = bodyEl.value.trim();
             if (body.length < 30) { setStat(c.tooShort, 'error'); return; }
             if (body.length > 800) { setStat(c.tooLong,  'error'); return; }

@@ -171,7 +171,7 @@
                 <div class="sdd-sch-grid">
                     <div class="sdd-sch-cell">
                         <p class="sdd-sch-label">${escapeHtml(c.usedLab)}</p>
-                        <p class="sdd-sch-num">${r.used_in_window}<span class="sdd-sch-of"> / ${r.max}</span></p>
+                        <p class="sdd-sch-num">${Math.min(r.used_in_window, r.max)}<span class="sdd-sch-of"> / ${r.max}</span>${r.used_in_window > r.max ? `<span class="sdd-sch-over"> · +${r.used_in_window - r.max} OVER</span>` : ''}</p>
                     </div>
                     <div class="sdd-sch-cell">
                         <p class="sdd-sch-label">${escapeHtml(c.remLab)}</p>
@@ -226,6 +226,13 @@
 .sdd-sch-of {
     font-size: 0.35em; color: var(--bone-d);
     font-style: normal; letter-spacing: 0.06em;
+}
+.sdd-sch-over {
+    font-size: 0.30em; color: var(--rust);
+    font-style: normal; letter-spacing: 0.32em;
+    font-family: var(--mono); font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 8px;
 }
 .sdd-sch-window, .sdd-sch-status {
     font-family: var(--mono); font-weight: 400; font-size: 11px;

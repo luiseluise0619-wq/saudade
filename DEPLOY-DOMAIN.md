@@ -83,6 +83,9 @@ wrangler d1 execute saudade_db --remote --file=schema/editor_log.sql
 wrangler d1 execute saudade_db --remote --file=schema/rss_sources.sql
 wrangler d1 execute saudade_db --remote --file=schema/v8_following_sessions.sql
 wrangler d1 execute saudade_db --remote --file=schema/ai_pipeline.sql
+# v644 — UGC schemas
+wrangler d1 execute saudade_db --remote --file=schema/letters.sql
+wrangler d1 execute saudade_db --remote --file=schema/desks.sql
 
 # secrets — set them once
 wrangler secret put RESEND_KEY        # paste your Resend API key
