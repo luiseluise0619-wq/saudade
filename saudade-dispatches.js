@@ -1064,7 +1064,6 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const followCta = T({
             en: 'CHANGE →', ko: '변경 →', ja: '変更 →', pt: 'ALTERAR →', es: 'CAMBIAR →'
         });
-        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         const chipsHtml = followNow.length
             ? followNow.map((slug, i) => {
                 const name = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
