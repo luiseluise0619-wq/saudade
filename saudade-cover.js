@@ -650,6 +650,12 @@ body.section-active .sdd-cover { display: none !important; }
                 window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
             }
         } catch (e) {}
+
+        // v649 — let bootstrap.js know we're rendered so it can fade the
+        // loading overlay immediately. Without app.js around, this used to
+        // wait for a 12-second backstop.
+        try { window.dispatchEvent(new CustomEvent('sdd-cover-rendered')); }
+        catch (e) {}
     }
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는

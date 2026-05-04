@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-04T08:53:22.181Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-04T08:57:13.801Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -653,6 +653,12 @@ body.section-active .sdd-cover { display: none !important; }
                 window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
             }
         } catch (e) {}
+
+        // v649 — let bootstrap.js know we're rendered so it can fade the
+        // loading overlay immediately. Without app.js around, this used to
+        // wait for a 12-second backstop.
+        try { window.dispatchEvent(new CustomEvent('sdd-cover-rendered')); }
+        catch (e) {}
     }
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는
