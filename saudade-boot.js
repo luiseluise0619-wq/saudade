@@ -97,6 +97,20 @@
         // Backstops — fade overlay even if no cover-rendered event arrives.
         setTimeout(() => markReady('domcontentloaded'), 1500);
         setTimeout(() => markReady('hard-backstop'),   4000);
+        // v654 — lazy-load quarterly-dispatch only when user navigates to it.
+        // Saves 32 KB on every cold load for the 99% of visits that never see #02b.
+        function maybeLoadQuarterly() {
+            if (location.hash !== '#02b') return;
+            if (window.SAUDADE_QUARTERLY) return;
+            if (document.querySelector('script[data-lazy="quarterly"]')) return;
+            const s = document.createElement('script');
+            s.src = 'saudade-quarterly-dispatch.js?v=v654';
+            s.defer = true;
+            s.dataset.lazy = 'quarterly';
+            document.head.appendChild(s);
+        }
+        window.addEventListener('hashchange', maybeLoadQuarterly);
+        maybeLoadQuarterly();
     }
 
     if (document.readyState === 'loading') {
