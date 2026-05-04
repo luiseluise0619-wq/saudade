@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; connect-src 'self' https:" />
+<title>saudade — editor</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<link rel="stylesheet" href="saudade-microtype.css" />
+<style>
+:root { --paper:#F2EEE3; --ink:#16151A; --rust:#9A3324; --bone-d:#4A4540; --rule:rgba(11,11,15,.16); --jade:#5BA890; --signal:#E07B43; }
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    margin: 0; padding: 0;
+}
+.page { max-width: 980px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(20px, 4vw, 40px); line-height: 1.55; }
+
+h1 {
+    font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px); line-height: 0.95;
+    letter-spacing: -0.04em; margin: 0 0 8px;
+}
+.crumb {
+    font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d);
+    padding: 0 0 16px; margin: 0 0 32px;
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 8px;
+}
+.crumb a { color: inherit; text-decoration: none; border-bottom: 0.5px solid var(--rule); }
+
+.tabs {
+    display: flex; gap: 0; border-bottom: 0.5px solid var(--rule);
+    margin: 0 0 32px;
+}
+.tab {
+    background: transparent; border: 0;
+    font-family: 'JetBrains Mono', monospace; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d); cursor: pointer;
+    padding: 14px 20px 14px 0;
+    border-bottom: 2px solid transparent;
+    margin: 0 24px 0 0; transition: color .15s, border-color .15s;
+}
+.tab.is-active { color: var(--rust); border-bottom-color: var(--rust); }
+.tab:hover { color: var(--ink); }
+
+.token-bar {
+    background: rgba(178, 53, 40, 0.06);
+    border: 0.5px solid var(--rule);
+    padding: 14px 16px;
+    margin: 0 0 32px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px; align-items: center;
+}
+.token-bar input {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    padding: 4px 0; outline: none; width: 100%; box-sizing: border-box;
+    border-radius: 0;
+}
+.token-bar input:focus { border-bottom-color: var(--ink); }
+.token-bar button {
+    background: transparent; border: 0;
+    border: 0.5px solid var(--ink);
+    font-family: 'JetBrains Mono', monospace; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 8px 16px; cursor: pointer;
+    min-height: 36px;
+}
+.token-bar button:hover { color: var(--rust); border-color: var(--rust); }
+.token-bar.is-set { background: rgba(91, 168, 144, 0.06); }
+
+.queue { padding: 0; }
+.queue h2 {
+    font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 12px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust);
+    margin: 0 0 16px;
+}
+
+.row {
+    border-top: 0.5px solid var(--rule);
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.row:last-child { border-bottom: 0.5px solid var(--rule); }
+.row .meta {
+    font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d);
+    display: flex; gap: 16px; flex-wrap: wrap;
+}
+.row .meta b { color: var(--ink); font-weight: 500; }
+.row .body {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    font-size: clamp(15px, 1.4vw, 17px); line-height: 1.6;
+    color: var(--ink);
+    background: rgba(0,0,0,0.02);
+    padding: 14px 16px;
+    border-left: 1px solid var(--rule);
+    text-wrap: pretty;
+}
+.row .application { font-style: italic; }
+.row .actions {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border-top: 0.5px dotted var(--rule);
+    padding-top: 12px;
+}
+.row button {
+    background: transparent; border: 0;
+    border-right: 0.5px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); cursor: pointer;
+    padding: 14px 20px; min-height: 44px;
+    transition: color .15s, background .15s;
+}
+.row button:last-child { border-right: 0; }
+.row button:hover { color: var(--rust); background: rgba(178,53,40,0.04); }
+.row button.is-publish { color: var(--jade); }
+.row button.is-publish:hover { background: rgba(91,168,144,0.08); }
+.row button.is-reject { color: var(--rust); }
+.row button[disabled] { opacity: 0.3; pointer-events: none; }
+
+.row textarea {
+    width: 100%; box-sizing: border-box;
+    border: 0.5px solid var(--rule); padding: 12px;
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    font-size: 16px; line-height: 1.6; min-height: 120px;
+    background: var(--paper); color: var(--ink);
+    border-radius: 0; outline: none;
+    resize: vertical;
+}
+.row textarea:focus { border-color: var(--ink); }
+
+.empty {
+    font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300;
+    font-size: 16px; color: var(--bone-d); padding: 48px 0; text-align: center;
+}
+
+.toast {
+    position: fixed; right: 20px; bottom: 20px;
+    background: var(--ink); color: var(--paper);
+    font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    padding: 12px 18px; border: 0.5px solid var(--rule);
+    transform: translateY(40px); opacity: 0;
+    transition: opacity .25s, transform .25s;
+    z-index: 9000;
+}
+.toast.is-on { transform: none; opacity: 1; }
+.toast.is-error { background: var(--rust); }
+</style>
+</head>
+<body>
+<main class="page">
+
+<nav class="crumb">
+    <a href="/">SAUDADE / COVER</a>
+    <span>·</span>
+    <span>EDITOR — PRIVATE</span>
+</nav>
+
+<h1>The editor's desk.</h1>
+
+<div class="token-bar" data-tokenbar>
+    <input type="password" id="tokenInput" placeholder="Editor token" autocomplete="off" />
+    <button type="button" id="tokenSave">SAVE</button>
+</div>
+
+<nav class="tabs">
+    <button class="tab is-active" data-tab="desks">DESK QUEUE</button>
+    <button class="tab" data-tab="letters">LETTERS QUEUE</button>
+</nav>
+
+<section class="queue" id="paneDesks">
+    <h2>Pending applications</h2>
+    <div id="apps"><p class="empty">No pending applications.</p></div>
+
+    <h2 style="margin-top: 56px">Pending posts</h2>
+    <div id="posts"><p class="empty">No pending posts.</p></div>
+</section>
+
+<section class="queue" id="paneLetters" style="display:none">
+    <h2>Pending letters</h2>
+    <div id="letters"><p class="empty">No pending letters.</p></div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+</main>
+
+<script>
+'use strict';
+(function () {
+    const KEY_TOKEN  = 'saudade.admin.editor_token';
+    const SERVER     = (location.origin || 'https://saudade.app');
+    const tokenInput = document.getElementById('tokenInput');
+    const tokenBar   = document.querySelector('[data-tokenbar]');
+    const toast      = document.getElementById('toast');
+
+    const stored = localStorage.getItem(KEY_TOKEN) || '';
+    if (stored) { tokenInput.value = stored; tokenBar.classList.add('is-set'); refreshAll(); }
+
+    document.getElementById('tokenSave').addEventListener('click', () => {
+        const v = tokenInput.value.trim();
+        if (!v) return;
+        localStorage.setItem(KEY_TOKEN, v);
+        tokenBar.classList.add('is-set');
+        say('SAVED');
+        refreshAll();
+    });
+
+    document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.toggle('is-active', x === t));
+        document.getElementById('paneDesks').style.display   = (t.dataset.tab === 'desks')   ? 'block' : 'none';
+        document.getElementById('paneLetters').style.display = (t.dataset.tab === 'letters') ? 'block' : 'none';
+    }));
+
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        })[ch]);
+    }
+    function fmtDate(ms) {
+        if (!ms) return '—';
+        try { return new Date(ms).toISOString().replace('T',' ').slice(0, 16); }
+        catch (e) { return '—'; }
+    }
+    function token() { return localStorage.getItem(KEY_TOKEN) || ''; }
+    function authH() { return { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token() }; }
+
+    function say(msg, isErr) {
+        toast.textContent = msg;
+        toast.className = 'toast is-on' + (isErr ? ' is-error' : '');
+        setTimeout(() => toast.classList.remove('is-on'), 2000);
+    }
+
+    async function refreshAll() {
+        if (!token()) return;
+        await Promise.all([refreshDesks(), refreshLetters()]);
+    }
+
+    async function refreshDesks() {
+        try {
+            const r = await fetch(SERVER + '/desks/queue', { headers: authH() });
+            if (!r.ok) { say('AUTH FAILED', true); return; }
+            const j = await r.json();
+            renderApps(j.applications || []);
+            renderPosts(j.posts || []);
+        } catch (e) { say('NETWORK ERROR', true); }
+    }
+    async function refreshLetters() {
+        try {
+            const r = await fetch(SERVER + '/letters/queue', { headers: authH() });
+            if (!r.ok) return;
+            const j = await r.json();
+            renderLetters(j.letters || []);
+        } catch (e) {}
+    }
+
+    function renderApps(apps) {
+        const host = document.getElementById('apps');
+        if (!apps.length) { host.innerHTML = '<p class="empty">No pending applications.</p>'; return; }
+        host.innerHTML = apps.map(a => `
+            <article class="row" data-app="${escapeHtml(a.slug)}">
+                <p class="meta">
+                    <span><b>${escapeHtml(a.display_name)}</b></span>
+                    <span>${escapeHtml(a.city || '')}</span>
+                    <span>${escapeHtml(a.edition || '')}</span>
+                    <span>${escapeHtml(a.cadence || '—')}</span>
+                    <span>${escapeHtml(a.user_email || '')}</span>
+                    <span>${fmtDate(a.created_at)}</span>
+                </p>
+                ${a.bio ? `<p class="body">${escapeHtml(a.bio)}</p>` : ''}
+                <p class="body application">${escapeHtml(a.application || '')}</p>
+                <div class="actions">
+                    <button class="is-publish" data-act="invite" data-slug="${escapeHtml(a.slug)}">INVITE</button>
+                    <button data-act="activate" data-slug="${escapeHtml(a.slug)}">ACTIVATE</button>
+                    <button class="is-reject" data-act="reject" data-slug="${escapeHtml(a.slug)}">REJECT</button>
+                </div>
+            </article>
+        `).join('');
+        host.querySelectorAll('button[data-act]').forEach(btn => btn.addEventListener('click', deskAction));
+    }
+
+    function renderPosts(posts) {
+        const host = document.getElementById('posts');
+        if (!posts.length) { host.innerHTML = '<p class="empty">No pending posts.</p>'; return; }
+        host.innerHTML = posts.map(p => `
+            <article class="row" data-post="${escapeHtml(p.id)}">
+                <p class="meta">
+                    <span><b>${escapeHtml(p.title)}</b></span>
+                    <span>${escapeHtml(p.desk_slug)}</span>
+                    <span>${escapeHtml(p.edition || '')}</span>
+                    <span>${escapeHtml(p.status)}</span>
+                    <span>${fmtDate(p.submitted_at)}</span>
+                </p>
+                ${p.lede ? `<p class="body" style="font-style:italic">${escapeHtml(p.lede)}</p>` : ''}
+                <p class="body">${escapeHtml((p.body || '').slice(0, 800))}${(p.body || '').length > 800 ? '…' : ''}</p>
+                <textarea data-edited placeholder="Edited body (leave empty to keep author's)">${escapeHtml(p.body || '')}</textarea>
+                <div class="actions">
+                    <button data-act="edit" data-id="${escapeHtml(p.id)}">SAVE EDIT</button>
+                    <button class="is-publish" data-act="publish" data-id="${escapeHtml(p.id)}">PUBLISH</button>
+                    <button class="is-reject" data-act="reject" data-id="${escapeHtml(p.id)}">REJECT</button>
+                </div>
+            </article>
+        `).join('');
+        host.querySelectorAll('button[data-act]').forEach(btn => btn.addEventListener('click', postAction));
+    }
+
+    function renderLetters(letters) {
+        const host = document.getElementById('letters');
+        if (!letters.length) { host.innerHTML = '<p class="empty">No pending letters.</p>'; return; }
+        host.innerHTML = letters.map(l => `
+            <article class="row" data-letter="${l.id}">
+                <p class="meta">
+                    <span><b>${escapeHtml(l.display_name || 'Anonymous')}</b></span>
+                    <span>${escapeHtml(l.city_tag || '')}</span>
+                    <span>${escapeHtml(l.edition)}</span>
+                    <span>${escapeHtml(l.status)}</span>
+                    <span>${fmtDate(l.submitted_at)}</span>
+                    <span>${escapeHtml(l.user_email || '')}</span>
+                </p>
+                <p class="body">${escapeHtml(l.body)}</p>
+                <textarea data-edited placeholder="Edited body (optional)">${escapeHtml(l.body)}</textarea>
+                <div class="actions">
+                    <button data-act="edit" data-id="${l.id}">SAVE EDIT</button>
+                    <button class="is-publish" data-act="publish" data-id="${l.id}">PUBLISH</button>
+                    <button class="is-reject" data-act="reject" data-id="${l.id}">REJECT</button>
+                </div>
+            </article>
+        `).join('');
+        host.querySelectorAll('button[data-act]').forEach(btn => btn.addEventListener('click', letterAction));
+    }
+
+    async function deskAction(e) {
+        const btn = e.currentTarget;
+        const slug = btn.dataset.slug;
+        const action = btn.dataset.act;
+        const r = await fetch(SERVER + '/desks/queue', {
+            method: 'POST', headers: authH(),
+            body: JSON.stringify({ target: 'desk', slug, action })
+        });
+        if (r.ok) { say(action.toUpperCase()); refreshDesks(); }
+        else { say('FAIL ' + r.status, true); }
+    }
+
+    async function postAction(e) {
+        const btn = e.currentTarget;
+        const id = btn.dataset.id;
+        const action = btn.dataset.act;
+        const row = btn.closest('article');
+        const edited = (row.querySelector('[data-edited]') || {}).value || '';
+        const payload = { target: 'post', id, action };
+        if (action === 'edit') { payload.edited_body = edited; }
+        const r = await fetch(SERVER + '/desks/queue', {
+            method: 'POST', headers: authH(), body: JSON.stringify(payload)
+        });
+        if (r.ok) { say(action.toUpperCase()); refreshDesks(); }
+        else { say('FAIL ' + r.status, true); }
+    }
+
+    async function letterAction(e) {
+        const btn = e.currentTarget;
+        const id = parseInt(btn.dataset.id, 10);
+        const action = btn.dataset.act;
+        const row = btn.closest('article');
+        const edited = (row.querySelector('[data-edited]') || {}).value || '';
+        const payload = { id, action };
+        if (action === 'edit') { payload.edited_body = edited; }
+        const r = await fetch(SERVER + '/letters/queue', {
+            method: 'POST', headers: authH(), body: JSON.stringify(payload)
+        });
+        if (r.ok) { say(action.toUpperCase()); refreshLetters(); }
+        else { say('FAIL ' + r.status, true); }
+    }
+})();
+</script>
+</body>
+</html>
