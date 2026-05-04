@@ -731,10 +731,17 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     // v8 §02 — 사용자 도시 선택 모델. 정착 + 주변 자동 매핑 폐기.
     // 사용자의 SAUDADE_FOLLOWING.list() 3 도시 각각에서 1개씩 추출.
     // dispatches.json 에 해당 도시 없으면 "Awaiting first dispatch" 플레이스홀더.
+    // v649 — when the user has not picked following cities (fresh visitor),
+    // fall back to whatever cities exist in the data for that day instead
+    // of returning []. Was causing the entire Past Week archive to read
+    // empty for any reader who hadn't gone through the city-picker.
     function flattenForDay(data, weekdayIdx /* 1..6 */) {
         const cities = (data && data.cities) || [];
-        const following = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
-        if (!following.length) return [];     // 사용자가 도시 안 골랐으면 빈 배열 → 안내 노출
+        const followingRaw = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        const following = followingRaw.length
+            ? followingRaw
+            : cities.slice(0, 3).map(c => String(c.city || '').toLowerCase());
+        if (!following.length) return [];
 
         // 도시명 매칭 (case-insensitive · slug ↔ display name)
         const findCityData = (slug) => {
@@ -750,7 +757,12 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const cityData = findCityData(slug);
             const slot = String(slotIdx + 1).padStart(2, '0');
             const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
-            const displayName = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+            // v649 — when following is the fallback (no user picks), the
+            // "slug" is actually the city name from the data. Use city.city
+            // directly so display matches what we showed.
+            const displayName = (cityData && cityData.city)
+                || window.SAUDADE_FOLLOWING?.cityName?.(slug, ed)
+                || slug;
             if (!cityData || !cityData.items || !cityData.items.length) {
                 // Placeholder — operator 가 AI 파이프라인 active=1 후 채워짐
                 out.push({
