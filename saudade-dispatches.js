@@ -616,6 +616,35 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     };
 
 
+    // v647 — collapse multiple "Awaiting from X" in a row into a single
+    // pretty statement. If every item in a day is awaiting, render one
+    // italic line listing the cities; otherwise render each item individually.
+    function renderItemsBlock(items) {
+        if (!Array.isArray(items) || !items.length) return '';
+        const allAwaiting = items.every(it => it && it._awaiting);
+        if (!allAwaiting) return items.map(renderItem).join('');
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const cityList = items.map(it => it._city || '').filter(Boolean);
+        const cities = cityList.length === 1
+            ? cityList[0]
+            : cityList.length === 2
+                ? cityList.join(' & ')
+                : cityList.slice(0, -1).join(', ') + ' & ' + cityList[cityList.length - 1];
+        const msg = T({
+            en: `${cities} — awaiting first filings.`,
+            ko: `${cities} — 첫 디스패치를 기다리는 중.`,
+            ja: `${cities} — 最初の通信を待っている。`,
+            pt: `${cities} — a aguardar os primeiros despachos.`,
+            es: `${cities} — esperando los primeros despachos.`
+        });
+        return `
+            <article class="sdd-disp-item sdd-disp-awaiting sdd-disp-awaiting-collapsed">
+                <p class="sdd-disp-lede" style="font-style:italic; margin: 0;">${escapeHtml(msg)}</p>
+            </article>
+        `;
+    }
+
     function renderItem(it) {
         // v8 §02 — Awaiting placeholder (Following 도시이지만 dispatches.json 에 없을 때)
         if (it && it._awaiting) {
@@ -880,20 +909,26 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 });
             }, 0);
         } else {
-            todayHtml = todayItems.map(renderItem).join('');
+            todayHtml = renderItemsBlock(todayItems);
         }
 
         // 지난 6일 archive stack
         const past = flattenPastWeek(data, wdIdx);
-        const pastHtml = past.map(d => `
+        const pastHtml = past.map(d => {
+            // v647 — only show the weekday section tag (e.g. "QUIET NEWS")
+            // when there is actual content. When the whole day is awaiting,
+            // the label is misleading — drop it.
+            const allAwaiting = d.items && d.items.every(it => it && it._awaiting);
+            return `
             <section class="sdd-disp-archive-day">
                 <header class="sdd-disp-archive-head">
                     <span class="sdd-disp-archive-date">${escapeHtml(d.date)}</span>
-                    <span class="sdd-disp-archive-section">${escapeHtml(W[d.weekdayIdx] || '')}</span>
+                    ${allAwaiting ? '' : `<span class="sdd-disp-archive-section">${escapeHtml(W[d.weekdayIdx] || '')}</span>`}
                 </header>
-                ${d.items.map(renderItem).join('')}
+                ${renderItemsBlock(d.items)}
             </section>
-        `).join('');
+        `;
+        }).join('');
 
         const subFilled = subTpl.replace('$section', todaySection);
         const headHtml = `

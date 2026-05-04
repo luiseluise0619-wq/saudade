@@ -19,6 +19,20 @@
     let _mode = (() => { try { return localStorage.getItem(KEY_MODE) || 'city'; } catch (e) { return 'city'; } })();
     let _activeCity = (() => { try { return localStorage.getItem(KEY_CITY); } catch (e) { return null; } })();
     // v7 검토 정정 — R2 셋업 전 404 트랙을 "AWAITING UPLOAD" 로 표시
+    // v647 — track meta was repeating "OWNED RECORDING · SAUDADE · RECORDED
+    // IN LISBON, AUGUST 2025." across all 38 tracks. That's visual noise.
+    // Reduce common phrases to short tokens so each row reads at a glance.
+    function shortenCredit(licenseHtml, credits) {
+        if (!credits) return licenseHtml;
+        let c = String(credits);
+        c = c.replace(/Owned recording\s*·\s*Saudade/gi, 'OWN');
+        c = c.replace(/Saudade\s*·\s*Field recording/gi, 'OWN-FIELD');
+        c = c.replace(/Recorded in\s+([A-Za-zÀ-ÿ' -]+),\s*([A-Za-z]+)\s+(\d{4})/i,
+                      (_, city, mon, yr) => `${city.trim()} ${yr}`);
+        c = c.replace(/\s*\.\s*$/, '');                  // trailing period
+        return licenseHtml + ' · ' + c.toUpperCase();
+    }
+
     const _unavailable = new Set();
     function markTrackUnavailable(idx) {
         _unavailable.add(idx);
@@ -402,9 +416,11 @@ body.listening-active .sdd-listen { display: block; }
     background: var(--paper);
     border: 0.5px solid var(--rule);
     aspect-ratio: 16 / 10;
-    /* v644 — was filling the whole viewport when the placeholder was visible.
-       Cap to a reasonable share of the screen. */
-    max-height: min(56vh, 480px);
+    /* v644/647 — full-width 16:10 was filling the whole viewport (>900px tall
+       on a desktop). v644 went to 56vh which felt too cramped per user
+       feedback. v647 settles at 70vh / 620px which is generous but leaves
+       room for the track list below the placeholder. */
+    max-height: min(70vh, 620px);
     overflow: hidden;
     position: relative;
 }
@@ -1100,7 +1116,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     <span class="sdd-listen-num"><span class="marker">  </span>${String(i + 1).padStart(2, '0')}</span>
                     <div class="sdd-listen-body">
                         <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
-                        <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
+                        <p class="sdd-listen-license">${shortenCredit(licenseLine, t.credits)}</p>
                     </div>
                     <span class="sdd-listen-duration">${durDisplay}</span>
                 </article>
@@ -1264,7 +1280,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                             <span class="sdd-listen-num"><span class="marker">  </span>${String(idx + 1).padStart(2, '0')}</span>
                             <div class="sdd-listen-body">
                                 <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
-                                <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
+                                <p class="sdd-listen-license">${shortenCredit(licenseLine, t.credits)}</p>
                             </div>
                             <span class="sdd-listen-duration">${durDisplay}</span>
                         </article>

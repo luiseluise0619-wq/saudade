@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-04T06:08:02.925Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-04T06:14:15.451Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
