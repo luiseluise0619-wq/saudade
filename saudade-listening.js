@@ -402,6 +402,9 @@ body.listening-active .sdd-listen { display: block; }
     background: var(--paper);
     border: 0.5px solid var(--rule);
     aspect-ratio: 16 / 10;
+    /* v644 — was filling the whole viewport when the placeholder was visible.
+       Cap to a reasonable share of the screen. */
+    max-height: min(56vh, 480px);
     overflow: hidden;
     position: relative;
 }

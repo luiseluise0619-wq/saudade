@@ -874,8 +874,9 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             setTimeout(() => {
                 if (!window.SAUDADE_EMPTY) return;
                 const t = window.SAUDADE_EMPTY.text('dispatches');
+                // v644 — Dispatches header above already shows the eyebrow.
                 window.SAUDADE_EMPTY.render('#sddDispEmpty', {
-                    eyebrow: t.eyebrow, headline: W.empty || t.headline, lede: t.lede, note: t.note
+                    eyebrow: '', headline: W.empty || t.headline, lede: t.lede, note: t.note
                 });
             }, 0);
         } else {

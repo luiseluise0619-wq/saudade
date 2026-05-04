@@ -802,8 +802,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 
         // v636 — unified empty-state component (saudade-empty.js)
         if (isAtlasEmpty && window.SAUDADE_EMPTY) {
+            // v644 — eyebrow suppressed; Atlas already shows 'CAFÉS, VERIFIED.'
+            // as its big italic page header just above this block.
             window.SAUDADE_EMPTY.render('#sddAtlasEmpty', {
-                eyebrow: T({ en: 'CAFÉS, VERIFIED.', ko: '확인된 카페.', ja: '確認済みカフェ。', pt: 'CAFÉS, VERIFICADOS.', es: 'CAFÉS, VERIFICADOS.' }),
+                eyebrow: '',
                 headline: emptyAtlasH3,
                 lede: escapeHtml(emptyAtlasBody),
                 actions: [

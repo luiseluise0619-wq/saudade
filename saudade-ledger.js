@@ -868,8 +868,10 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                 pt: 'Mostrar com dados de exemplo',
                 es: 'Mostrar con datos de ejemplo'
             });
+            // v644 — the article intro above already shows the eyebrow in
+            // big rust caps. Suppress the duplicate inside the empty-state.
             window.SAUDADE_EMPTY.render('#sddLedgerEmpty', {
-                eyebrow: t.eyebrow,
+                eyebrow: '',
                 headline: t.headline,
                 lede: t.lede,
                 actions: [

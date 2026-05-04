@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-04T05:43:43.869Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-04T05:54:47.877Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -222,6 +222,27 @@
 }
 body.cafe-mode .sdd-cover { display: none !important; }
 body.section-active .sdd-cover { display: none !important; }
+
+/* v644 — Archive entry under the cover nav. Mono uppercase row that
+   sends curious readers to /issues/, where every past issue carries a
+   DOWNLOAD PDF button at the top. */
+.sdd-cover-archive {
+    margin: clamp(28px, 4vw, 48px) 0 0;
+    text-align: center;
+}
+.sdd-cover-archive-link {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--rust);
+    padding-bottom: 4px;
+    transition: color .15s, border-color .15s, padding .15s;
+}
+.sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
@@ -602,6 +623,14 @@ body.section-active .sdd-cover { display: none !important; }
                 <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
                 <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
             </nav>
+
+            <!-- v644 — direct path to the issue archive + per-issue PDF download.
+                 Earlier the only entry was via the footer rule, which is too quiet. -->
+            <p class="sdd-cover-archive">
+                <a href="/issues/" class="sdd-cover-archive-link">
+                    READ THE WEEK · DOWNLOAD AS PDF →
+                </a>
+            </p>
         `;
 
         // nav 클릭 시 기존 dock 버튼으로 위임
