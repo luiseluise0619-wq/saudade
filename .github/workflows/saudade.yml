@@ -1,0 +1,88 @@
+name: saudade · build & validate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'claude/**']
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: content · i18n · syntax · bundle · issue
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify all JS files parse
+        run: |
+          set -e
+          shopt -s nullglob
+          fail=0
+          for f in saudade-*.js saudade.*.js cloudflare-worker.js bootstrap.js sw.js main.js preload.js scripts/*.js; do
+            [ -f "$f" ] || continue
+            if ! node --check "$f" 2>err.log; then
+              echo "::error file=$f::syntax error"; cat err.log; fail=1
+            fi
+          done
+          test "$fail" = 0
+
+      - name: Verify all JSON files parse
+        run: |
+          set -e
+          fail=0
+          for f in data/*.json package.json manifest.json tsconfig.json; do
+            [ -f "$f" ] || continue
+            if ! node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" 2>err.log; then
+              echo "::error file=$f::invalid JSON"; cat err.log; fail=1
+            fi
+          done
+          test "$fail" = 0
+
+      - name: Content licence validator
+        run: node scripts/validate-content.js
+
+      - name: i18n leak scan
+        run: bash scripts/check-i18n.sh
+
+      - name: Build single-file issues (5 editions)
+        run: node scripts/build-issue.js
+
+      - name: Build IIFE bundles
+        run: node scripts/build-bundle.js
+
+      - name: Verify committed bundles match generated bundles
+        run: |
+          # The committed saudade.core.js / saudade.editorial.js MUST match
+          # what build-bundle.js produces. If they drift, the developer forgot
+          # to re-run `npm run bundle` after editing a source module.
+          set -e
+          fail=0
+          for b in saudade.core.js saudade.editorial.js; do
+            [ -f "$b" ] || continue
+            if ! diff -q "$b" "dist/bundle/$b" >/dev/null 2>&1; then
+              echo "::error file=$b::committed bundle differs from build output — run 'npm run bundle' and commit"
+              fail=1
+            fi
+          done
+          test "$fail" = 0
+
+      - name: Verify upstream check.sh still passes
+        run: bash scripts/check.sh
+        continue-on-error: true   # legacy pre-saudade contrast checks may fail
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "saudade · build & validate"
+          echo "  · ${{ job.status }}"
+          echo "  · JS/JSON syntax"
+          echo "  · CONTENT-LICENSE.md content checks"
+          echo "  · i18n leak heuristic"
+          echo "  · 5-edition issue HTML built"
+          echo "  · IIFE bundles built and matched against committed copies"

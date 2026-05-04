@@ -1031,6 +1031,16 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         const tracks = (data && data.tracks) || [];
         const cities = (data && data.cities) || [];
+
+        // v637 — full-room empty state (no library at all)
+        if (!tracks.length && window.SAUDADE_EMPTY) {
+            const t = window.SAUDADE_EMPTY.text('listening');
+            window.SAUDADE_EMPTY.render(root, {
+                eyebrow: t.eyebrow, headline: t.headline, lede: t.lede, note: t.note
+            });
+            return;
+        }
+
         // 도시 모드 가능 여부 (cities 0 이면 category 강제)
         const cityModeAvailable = cities.length > 0 && tracks.some(t => t.city);
         const effectiveMode = (cityModeAvailable && _mode === 'city') ? 'city' : 'category';

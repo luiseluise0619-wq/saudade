@@ -847,6 +847,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             ${isLedgerEmpty ? '' : emptyStateHtml}
             <div id="sddSchPanel"></div>
             <div id="sddSchForm"></div>
+            <div id="sddTaxPanel"></div>
             ${categoriesHtml}
             ${formHtml}
         `;
@@ -894,6 +895,16 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             }
             if (window.SAUDADE_SCHENGEN_FORM) {
                 window.SAUDADE_SCHENGEN_FORM.mount(document.getElementById('sddSchForm'));
+            }
+
+            // v637 — tax-residency 183-day counter. Maps tax-category records
+            // (any record with typeCategory === 'tax' OR a country code on a
+            // visa record) into [{ country, in, out }].
+            const taxStays = records
+                .filter(r => (r.typeCategory === 'tax') || (r.iso && r.entered))
+                .map(r => ({ country: (r.iso || '').replace(/^EU$/, 'PT'), in: r.entered, out: r.expiry }));
+            if (window.SAUDADE_TAX && taxStays.length) {
+                window.SAUDADE_TAX.render(document.getElementById('sddTaxPanel'), { stays: taxStays });
             }
         } catch (e) {}
 

@@ -281,14 +281,49 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 .sdd-atlas-amen {
     grid-area: amen;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 0.5px dotted var(--rule);
+}
+.sdd-atlas-status {
     font-family: var(--mono);
-    font-weight: 400;
-    font-size: 9.5px;
-    line-height: 1.4;
-    letter-spacing: var(--tr-mono-meta);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--bone-d);
-    margin-top: 6px;
+    padding: 2px 6px 2px 0;
+    border-right: 0.5px solid var(--rule);
+    margin-right: 4px;
+}
+.sdd-atlas-status.is-jade { color: var(--jade); }
+.sdd-atlas-chip {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 3px 6px;
+    border: 0.5px solid var(--rule);
+    background: var(--paper);
+}
+.sdd-atlas-chip.is-negative {
+    color: var(--rust);
+    border-color: var(--rust);
+    background: transparent;
+    text-decoration: line-through;
+    text-decoration-color: var(--rust);
+    text-decoration-thickness: 0.5px;
+}
+.sdd-atlas-chip.is-note {
+    color: var(--ink);
+    border-color: var(--ink);
 }
 
 .sdd-atlas-foot {
@@ -579,6 +614,17 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 : '';
             const lines = Array.isArray(c.two_lines) ? c.two_lines : [];
             const lineNum = String(i + 1).padStart(2, '0');
+            // v637 — typed amenity chips. The string form ("OUTLET · WIFI ·
+            // QUIET") splits into individual chips with negative-state styling
+            // for NO_OUTLET / NO_CALLS / 24H, etc.
+            const amenityChips = (c.amenities || '').split(/[·,\s]+/)
+                .map(a => a.trim().toUpperCase()).filter(Boolean)
+                .map(a => {
+                    const negative = /^NO_/.test(a);
+                    const note     = /^(24H|CALLS_OK)$/.test(a);
+                    const cls      = negative ? 'is-negative' : (note ? 'is-note' : '');
+                    return `<span class="sdd-atlas-chip ${cls}">${escapeHtml(a.replace(/_/g, ' '))}</span>`;
+                }).join('');
             return `
                 <article class="sdd-atlas-item" data-cafe-id="${c.id}" tabindex="0" role="button"
                          aria-label="${c.name}, ${c.neighborhood || ''}, ${distKm}">
@@ -591,7 +637,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     <div class="sdd-atlas-body">
                         ${lines.map(l => `<p>${escapeHtml(l)}</p>`).join('')}
                     </div>
-                    <div class="sdd-atlas-amen">${status} · ${c.amenities || ''}</div>
+                    <div class="sdd-atlas-amen">
+                        <span class="sdd-atlas-status ${status === 'JADE' ? 'is-jade' : ''}">${escapeHtml(status)}</span>
+                        ${amenityChips}
+                    </div>
                 </article>
             `;
         }).join('');
