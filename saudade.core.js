@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-04T03:44:58.450Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-04T04:04:56.021Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -1709,6 +1709,190 @@ body[data-tour="1"] .sdd-cover::before {
     window.SAUDADE_TAX = { calc, render, THRESHOLD };
 })();
 
+/* ── saudade-tax-form.js ──────────────────────────────────────────────────── */
+// saudade · tax-residency entry form
+//
+// Mirror of saudade-schengen-form.js. Lets the user type one row per stay
+// in any country. Stays go to localStorage (saudade.tax.stays) and feed
+// the saudade-tax 183-day counter live.
+//
+// API:
+//   window.SAUDADE_TAX_FORM.mount(container, { lang? })
+//   window.SAUDADE_TAX_FORM.getStays()
+'use strict';
+
+(function() {
+    if (window.SAUDADE_TAX_FORM) return;
+    const KEY = 'saudade.tax.stays';
+
+    function L(strings, lang) {
+        const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        return strings[ed] || strings.en;
+    }
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        })[ch]);
+    }
+    function getStays() {
+        try { const r = localStorage.getItem(KEY); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
+        catch (e) { return []; }
+    }
+    function setStays(arr) { try { localStorage.setItem(KEY, JSON.stringify(arr)); } catch (e) {} }
+
+    // 60+ tax-relevant ISO countries — alpha-sorted, common nomad destinations first.
+    const COUNTRIES = [
+        'AE','AR','AT','AU','BE','BG','BR','CA','CH','CL','CN','CO','CY','CZ','DE','DK','EE','ES','FI','FR',
+        'GB','GE','GR','HR','HU','ID','IE','IL','IN','IS','IT','JP','KH','KR','LT','LU','LV','MA','MT','MX',
+        'MY','NL','NO','NZ','PA','PE','PH','PL','PT','RO','RS','SE','SG','SI','SK','TH','TR','UA','US','UY','VN','ZA'
+    ];
+
+    function copy(lang) {
+        return {
+            title:    L({ en: 'Your tax days, by country.', ko: '국가별 거주일.', ja: '国別税居住日。', pt: 'Os seus dias fiscais, por país.', es: 'Sus días fiscales, por país.' }, lang),
+            help:     L({
+                en: 'Type each entry and exit by country. The counter shows whole days inside each tax year.',
+                ko: '국가별 입국·출국을 입력하라. 카운터가 각 과세년도의 일수를 보여준다.',
+                ja: '国別の入国と出国を入力。カウンターが各税年度の日数を表示する。',
+                pt: 'Adicione cada entrada e saída por país. O contador mostra dias por ano fiscal.',
+                es: 'Añada cada entrada y salida por país. El contador muestra días por año fiscal.'
+            }, lang),
+            colCty:   L({ en: 'COUNTRY', ko: '국가', ja: '国', pt: 'PAÍS', es: 'PAÍS' }, lang),
+            colIn:    L({ en: 'IN', ko: '입국', ja: '入国', pt: 'ENTRADA', es: 'ENTRADA' }, lang),
+            colOut:   L({ en: 'OUT (or empty if still there)', ko: '출국 (현재 거주 중이면 비워두기)', ja: '出国 (居住中なら空欄)', pt: 'SAÍDA (vazio = ainda lá)', es: 'SALIDA (vacío = aún ahí)' }, lang),
+            add:      L({ en: 'ADD ENTRY', ko: '기록 추가', ja: '入国を追加', pt: 'ADICIONAR', es: 'AÑADIR' }, lang),
+            remove:   L({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }, lang),
+            none:     L({ en: 'No entries yet.', ko: '아직 기록 없음.', ja: 'まだ記録なし。', pt: 'Sem registos.', es: 'Sin registros.' }, lang)
+        };
+    }
+
+    function injectStyles() {
+        if (document.getElementById('sddTaxFormStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'sddTaxFormStyles';
+        s.textContent = `
+.sdd-taxf {
+    border-top: 0.5px solid var(--rule);
+    padding: clamp(20px, 3vw, 28px) 0;
+    margin: clamp(16px, 3vw, 28px) 0;
+}
+.sdd-taxf__h { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: 0 0 8px; }
+.sdd-taxf__help { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 13px; color: var(--bone-d); margin: 0 0 16px; }
+.sdd-taxf__cols, .sdd-taxf__row {
+    display: grid; grid-template-columns: 0.6fr 1.1fr 1.1fr auto;
+    gap: 8px; align-items: center;
+}
+.sdd-taxf__cols {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d); padding: 6px 0; border-bottom: 0.5px solid var(--rule);
+}
+.sdd-taxf__row { padding: 8px 0; border-bottom: 0.5px solid var(--rule); }
+.sdd-taxf__row input, .sdd-taxf__row select {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    color: var(--ink); font-family: var(--mono); font-size: 13px;
+    letter-spacing: 0.04em; padding: 6px 0; min-height: 36px; width: 100%;
+    box-sizing: border-box; outline: none; border-radius: 0;
+}
+.sdd-taxf__row input:focus, .sdd-taxf__row select:focus { border-bottom-color: var(--ink); }
+.sdd-taxf__rm { background: transparent; border: 0; color: var(--bone-d); cursor: pointer;
+    font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1; padding: 4px 8px; min-height: 36px; }
+.sdd-taxf__rm:hover { color: var(--rust); }
+.sdd-taxf__add {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    font-family: var(--mono); font-weight: 500; font-size: 12px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 4px; cursor: pointer;
+    width: 100%; text-align: left; min-height: 44px; transition: color .15s;
+}
+.sdd-taxf__add:hover { color: var(--rust); }
+.sdd-taxf__add::before { content: "+"; color: var(--rust); margin-right: 12px; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.sdd-taxf__none { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--bone-d); padding: 14px 0; border-bottom: 0.5px solid var(--rule); }
+@media (max-width: 620px) {
+    .sdd-taxf__cols, .sdd-taxf__row { grid-template-columns: 1fr 1fr; }
+    .sdd-taxf__cols span:nth-child(3), .sdd-taxf__cols span:nth-child(4) { display: none; }
+    .sdd-taxf__row { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+    .sdd-taxf__row .out { grid-column: 1 / 2; }
+    .sdd-taxf__row .rm  { grid-column: 2 / 3; justify-self: end; }
+}
+        `;
+        document.head.appendChild(s);
+    }
+
+    function row(s, i, c) {
+        return `
+            <div class="sdd-taxf__row" data-idx="${i}">
+                <select data-field="country" class="country">
+                    <option value="">—</option>
+                    ${COUNTRIES.map(co => `<option value="${co}" ${s.country === co ? 'selected' : ''}>${co}</option>`).join('')}
+                </select>
+                <input type="date" data-field="in"  class="in"  value="${escapeHtml(s.in || '')}" />
+                <input type="date" data-field="out" class="out" value="${escapeHtml(s.out || '')}" />
+                <button type="button" class="sdd-taxf__rm rm" data-rm aria-label="${escapeHtml(c.remove)}">×</button>
+            </div>
+        `;
+    }
+
+    function paint(host, lang) {
+        const c = copy(lang);
+        const stays = getStays();
+        host.innerHTML = `
+            <section class="sdd-taxf">
+                <p class="sdd-taxf__h">${escapeHtml(c.title)}</p>
+                <p class="sdd-taxf__help">${escapeHtml(c.help)}</p>
+                <div class="sdd-taxf__cols">
+                    <span>${escapeHtml(c.colCty)}</span>
+                    <span>${escapeHtml(c.colIn)}</span>
+                    <span>${escapeHtml(c.colOut)}</span>
+                    <span></span>
+                </div>
+                <div data-rows>
+                    ${stays.length ? stays.map((s, i) => row(s, i, c)).join('') : `<p class="sdd-taxf__none">${escapeHtml(c.none)}</p>`}
+                </div>
+                <button type="button" class="sdd-taxf__add" data-add>${escapeHtml(c.add)}</button>
+            </section>
+        `;
+        host.querySelector('[data-add]').addEventListener('click', () => {
+            setStays(getStays().concat([{ country: '', in: '', out: '' }]));
+            paint(host, lang); renderCalc();
+        });
+        host.querySelectorAll('.sdd-taxf__row').forEach(rowEl => {
+            const idx = +rowEl.dataset.idx;
+            rowEl.querySelectorAll('[data-field]').forEach(input => {
+                input.addEventListener('input', e => {
+                    const cur = getStays(); cur[idx][input.dataset.field] = e.target.value; setStays(cur); renderCalc();
+                });
+                if (input.tagName === 'SELECT') {
+                    input.addEventListener('change', e => {
+                        const cur = getStays(); cur[idx].country = e.target.value; setStays(cur); renderCalc();
+                    });
+                }
+            });
+            rowEl.querySelector('[data-rm]').addEventListener('click', () => {
+                const cur = getStays(); cur.splice(idx, 1); setStays(cur);
+                paint(host, lang); renderCalc();
+            });
+        });
+    }
+
+    function renderCalc() {
+        const panel = document.getElementById('sddTaxPanel');
+        if (!panel || !window.SAUDADE_TAX) return;
+        const stays = getStays().filter(s => s.country && s.in);
+        window.SAUDADE_TAX.render(panel, { stays });
+    }
+
+    function mount(target, opts) {
+        injectStyles();
+        const host = (typeof target === 'string') ? document.querySelector(target) : target;
+        if (!host) return;
+        paint(host, opts && opts.lang);
+        renderCalc();
+    }
+
+    window.SAUDADE_TAX_FORM = { mount, getStays };
+})();
+
 /* ── saudade-coverage.js ──────────────────────────────────────────────────── */
 // saudade · coverage gaps — health insurance & pension filings
 //
@@ -2123,6 +2307,230 @@ body[data-tour="1"] .sdd-cover::before {
     window.SAUDADE_COVERAGE = { insurance, pension, renderInsurance, renderPension };
 })();
 
+/* ── saudade-coverage-form.js ──────────────────────────────────────────────────── */
+// saudade · health-insurance and pension input form
+//
+// Two stacked editors. Insurance rows feed saudade-coverage.renderInsurance,
+// pension rows feed saudade-coverage.renderPension. Stored separately in
+// localStorage:
+//   saudade.insurance.policies = [{ provider, country, in, out }]
+//   saudade.pension.filings    = [{ scheme, country, in, out }]
+//
+// API:
+//   window.SAUDADE_COVERAGE_FORM.mount(container, { lang? })
+//   window.SAUDADE_COVERAGE_FORM.getInsurance()
+//   window.SAUDADE_COVERAGE_FORM.getPension()
+'use strict';
+
+(function() {
+    if (window.SAUDADE_COVERAGE_FORM) return;
+    const KEY_INS = 'saudade.insurance.policies';
+    const KEY_PEN = 'saudade.pension.filings';
+
+    function L(strings, lang) {
+        const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        return strings[ed] || strings.en;
+    }
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        })[ch]);
+    }
+    function get(key) {
+        try { const r = localStorage.getItem(key); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
+        catch (e) { return []; }
+    }
+    function set(key, arr) { try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) {} }
+
+    const COUNTRIES = ['','AE','AT','AU','BE','BR','CA','CH','CN','DE','DK','ES','FI','FR','GB','GR','HK','HR','HU','ID','IE','IL','IN','IS','IT','JP','KR','MX','MY','NL','NO','NZ','PH','PL','PT','RO','SE','SG','TH','TW','US','VN','ZA','GLOBAL'];
+
+    const KNOWN_INSURERS = ['SafetyWing','Genki','IMG','Cigna Global','Allianz','AXA','GeoBlue','William Russell','InsuredNomads','Bupa','National (KR NHI)','National (PT SNS)','National (FR Sécu)','National (UK NHS)','Other'];
+    const KNOWN_SCHEMES  = ['KR-NPS','UK-NIC','PT-SocSeg','US-SS','DE-DRV','JP-NenKin','CA-CPP','AU-Super','FR-Carsat','ES-SegSocial','Other'];
+
+    function copy(lang) {
+        return {
+            insTitle: L({ en: 'Health insurance windows.', ko: '건강보험 가입 구간.', ja: '健康保険の加入期間。', pt: 'Janelas de seguro de saúde.', es: 'Ventanas de seguro de salud.' }, lang),
+            insHelp:  L({ en: 'Add each policy. Gaps between policies are flagged in the panel above.', ko: '보험 가입 구간을 입력하라. 구간 사이의 공백은 위 패널에서 표시된다.', ja: '加入期間を入力。期間の空白は上のパネルで表示される。', pt: 'Adicione cada apólice. Lacunas entre apólices aparecem no painel acima.', es: 'Añada cada póliza. Las lagunas se muestran arriba.' }, lang),
+            penTitle: L({ en: 'Pension contribution windows.', ko: '연금 납입 구간.', ja: '年金納付期間。', pt: 'Janelas de contribuição de pensão.', es: 'Ventanas de contribución de pensión.' }, lang),
+            penHelp:  L({ en: 'Add each scheme and the months you contributed. The counter sums whole calendar months.', ko: '제도와 납입 구간을 입력하라. 카운터는 달력 월 단위로 합산한다.', ja: '制度と納付期間を入力。カウンターは暦月で合算する。', pt: 'Adicione cada sistema e os meses que contribuiu. Soma por mês civil.', es: 'Añada cada sistema y los meses cotizados. Suma por mes civil.' }, lang),
+            colProv:  L({ en: 'PROVIDER', ko: '보험사', ja: '保険会社', pt: 'SEGURADORA', es: 'ASEGURADORA' }, lang),
+            colSch:   L({ en: 'SCHEME', ko: '제도', ja: '制度', pt: 'SISTEMA', es: 'SISTEMA' }, lang),
+            colCty:   L({ en: 'COUNTRY', ko: '국가', ja: '国', pt: 'PAÍS', es: 'PAÍS' }, lang),
+            colIn:    L({ en: 'FROM', ko: '시작', ja: '開始', pt: 'DESDE', es: 'DESDE' }, lang),
+            colOut:   L({ en: 'TO (or empty if active)', ko: '종료 (현재 유지 중이면 비워두기)', ja: '終了 (継続中なら空欄)', pt: 'ATÉ (vazio = activo)', es: 'HASTA (vacío = activo)' }, lang),
+            addIns:   L({ en: 'ADD POLICY', ko: '보험 추가', ja: '保険を追加', pt: 'ADICIONAR APÓLICE', es: 'AÑADIR PÓLIZA' }, lang),
+            addPen:   L({ en: 'ADD PENSION FILING', ko: '연금 신고 추가', ja: '年金記録を追加', pt: 'ADICIONAR PENSÃO', es: 'AÑADIR PENSIÓN' }, lang),
+            remove:   L({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }, lang),
+            none:     L({ en: 'No entries yet.', ko: '아직 기록 없음.', ja: 'まだ記録なし。', pt: 'Sem registos.', es: 'Sin registros.' }, lang)
+        };
+    }
+
+    function injectStyles() {
+        if (document.getElementById('sddCovFormStyles')) return;
+        const s = document.createElement('style');
+        s.id = 'sddCovFormStyles';
+        s.textContent = `
+.sdd-covf {
+    border-top: 0.5px solid var(--rule);
+    padding: clamp(20px, 3vw, 28px) 0;
+    margin: clamp(16px, 3vw, 28px) 0;
+}
+.sdd-covf__h { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: 0 0 8px; }
+.sdd-covf__help { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 13px; color: var(--bone-d); margin: 0 0 16px; }
+.sdd-covf__cols, .sdd-covf__row {
+    display: grid; grid-template-columns: 1.1fr 0.5fr 1fr 1fr auto;
+    gap: 8px; align-items: center;
+}
+.sdd-covf__cols { font-family: var(--mono); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d); padding: 6px 0; border-bottom: 0.5px solid var(--rule); }
+.sdd-covf__row { padding: 8px 0; border-bottom: 0.5px solid var(--rule); }
+.sdd-covf__row input, .sdd-covf__row select {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    color: var(--ink); font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+    padding: 6px 0; min-height: 36px; width: 100%; box-sizing: border-box; outline: none; border-radius: 0;
+}
+.sdd-covf__row input:focus, .sdd-covf__row select:focus { border-bottom-color: var(--ink); }
+.sdd-covf__rm { background: transparent; border: 0; color: var(--bone-d); cursor: pointer; font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1; padding: 4px 8px; min-height: 36px; }
+.sdd-covf__rm:hover { color: var(--rust); }
+.sdd-covf__add {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--rule);
+    font-family: var(--mono); font-weight: 500; font-size: 12px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 4px; cursor: pointer;
+    width: 100%; text-align: left; min-height: 44px; transition: color .15s;
+}
+.sdd-covf__add:hover { color: var(--rust); }
+.sdd-covf__add::before { content: "+"; color: var(--rust); margin-right: 12px; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.sdd-covf__none { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 14px; color: var(--bone-d); padding: 14px 0; border-bottom: 0.5px solid var(--rule); }
+@media (max-width: 720px) {
+    .sdd-covf__cols, .sdd-covf__row { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
+    .sdd-covf__cols span:nth-child(3), .sdd-covf__cols span:nth-child(4), .sdd-covf__cols span:nth-child(5) { display: none; }
+    .sdd-covf__row > * { grid-row: auto; }
+}
+        `;
+        document.head.appendChild(s);
+    }
+
+    function rowIns(s, i, c) {
+        return `
+            <div class="sdd-covf__row" data-idx="${i}">
+                <select data-field="provider">
+                    <option value="">—</option>
+                    ${KNOWN_INSURERS.map(p => `<option value="${escapeHtml(p)}" ${s.provider === p ? 'selected' : ''}>${escapeHtml(p)}</option>`).join('')}
+                </select>
+                <select data-field="country">
+                    ${COUNTRIES.map(co => `<option value="${co}" ${s.country === co ? 'selected' : ''}>${co || '—'}</option>`).join('')}
+                </select>
+                <input type="date" data-field="in"  value="${escapeHtml(s.in || '')}" />
+                <input type="date" data-field="out" value="${escapeHtml(s.out || '')}" />
+                <button type="button" class="sdd-covf__rm" data-rm aria-label="${escapeHtml(c.remove)}">×</button>
+            </div>
+        `;
+    }
+    function rowPen(s, i, c) {
+        return `
+            <div class="sdd-covf__row" data-idx="${i}">
+                <select data-field="scheme">
+                    <option value="">—</option>
+                    ${KNOWN_SCHEMES.map(p => `<option value="${escapeHtml(p)}" ${s.scheme === p ? 'selected' : ''}>${escapeHtml(p)}</option>`).join('')}
+                </select>
+                <select data-field="country">
+                    ${COUNTRIES.map(co => `<option value="${co}" ${s.country === co ? 'selected' : ''}>${co || '—'}</option>`).join('')}
+                </select>
+                <input type="date" data-field="in"  value="${escapeHtml(s.in || '')}" />
+                <input type="date" data-field="out" value="${escapeHtml(s.out || '')}" />
+                <button type="button" class="sdd-covf__rm" data-rm aria-label="${escapeHtml(c.remove)}">×</button>
+            </div>
+        `;
+    }
+
+    function paint(host, lang) {
+        const c = copy(lang);
+        const ins = get(KEY_INS);
+        const pen = get(KEY_PEN);
+        host.innerHTML = `
+            <section class="sdd-covf" data-section="ins">
+                <p class="sdd-covf__h">${escapeHtml(c.insTitle)}</p>
+                <p class="sdd-covf__help">${escapeHtml(c.insHelp)}</p>
+                <div class="sdd-covf__cols">
+                    <span>${escapeHtml(c.colProv)}</span>
+                    <span>${escapeHtml(c.colCty)}</span>
+                    <span>${escapeHtml(c.colIn)}</span>
+                    <span>${escapeHtml(c.colOut)}</span>
+                    <span></span>
+                </div>
+                <div data-rows-ins>
+                    ${ins.length ? ins.map((s, i) => rowIns(s, i, c)).join('') : `<p class="sdd-covf__none">${escapeHtml(c.none)}</p>`}
+                </div>
+                <button type="button" class="sdd-covf__add" data-add-ins>${escapeHtml(c.addIns)}</button>
+            </section>
+            <section class="sdd-covf" data-section="pen">
+                <p class="sdd-covf__h">${escapeHtml(c.penTitle)}</p>
+                <p class="sdd-covf__help">${escapeHtml(c.penHelp)}</p>
+                <div class="sdd-covf__cols">
+                    <span>${escapeHtml(c.colSch)}</span>
+                    <span>${escapeHtml(c.colCty)}</span>
+                    <span>${escapeHtml(c.colIn)}</span>
+                    <span>${escapeHtml(c.colOut)}</span>
+                    <span></span>
+                </div>
+                <div data-rows-pen>
+                    ${pen.length ? pen.map((s, i) => rowPen(s, i, c)).join('') : `<p class="sdd-covf__none">${escapeHtml(c.none)}</p>`}
+                </div>
+                <button type="button" class="sdd-covf__add" data-add-pen>${escapeHtml(c.addPen)}</button>
+            </section>
+        `;
+        wire(host, KEY_INS, '[data-section="ins"]', '[data-add-ins]', lang);
+        wire(host, KEY_PEN, '[data-section="pen"]', '[data-add-pen]', lang);
+    }
+
+    function wire(host, key, sectionSel, addSel, lang) {
+        host.querySelector(addSel).addEventListener('click', () => {
+            const cur = get(key);
+            const blank = key === KEY_INS ? { provider:'', country:'', in:'', out:'' }
+                                          : { scheme:'',   country:'', in:'', out:'' };
+            set(key, cur.concat([blank]));
+            paint(host, lang); renderCalc();
+        });
+        host.querySelectorAll(`${sectionSel} .sdd-covf__row`).forEach(rowEl => {
+            const idx = +rowEl.dataset.idx;
+            rowEl.querySelectorAll('[data-field]').forEach(input => {
+                const ev = (input.tagName === 'SELECT') ? 'change' : 'input';
+                input.addEventListener(ev, e => {
+                    const cur = get(key); cur[idx][input.dataset.field] = e.target.value; set(key, cur); renderCalc();
+                });
+            });
+            rowEl.querySelector('[data-rm]').addEventListener('click', () => {
+                const cur = get(key); cur.splice(idx, 1); set(key, cur);
+                paint(host, lang); renderCalc();
+            });
+        });
+    }
+
+    function renderCalc() {
+        if (!window.SAUDADE_COVERAGE) return;
+        const insPanel = document.getElementById('sddInsPanel');
+        const penPanel = document.getElementById('sddPenPanel');
+        if (insPanel) {
+            const policies = get(KEY_INS).filter(p => p.in);
+            window.SAUDADE_COVERAGE.renderInsurance(insPanel, { policies });
+        }
+        if (penPanel) {
+            const filings = get(KEY_PEN).filter(p => p.in && p.scheme);
+            window.SAUDADE_COVERAGE.renderPension(penPanel, { filings });
+        }
+    }
+
+    function mount(target, opts) {
+        injectStyles();
+        const host = (typeof target === 'string') ? document.querySelector(target) : target;
+        if (!host) return;
+        paint(host, opts && opts.lang);
+        renderCalc();
+    }
+
+    window.SAUDADE_COVERAGE_FORM = { mount, getInsurance: () => get(KEY_INS), getPension: () => get(KEY_PEN) };
+})();
+
 /* ── saudade-empty.js ──────────────────────────────────────────────────── */
 // saudade · unified empty-state component
 //
@@ -2339,56 +2747,28 @@ body[data-tour="1"] .sdd-cover::before {
     }
 
     function copy() {
+        // v640 — collapsed from 3 cards to 1. The previous deck was the
+        // first thing every visitor saw and read like a brochure on top of
+        // the cover. A single italic headline + one paragraph + one action
+        // is enough to set tone without robbing the cover of its first
+        // impression. Etymology and section overview moved to /etymology.html
+        // and /sitemap.html, which are linked from the cover footer.
         return [
             {
-                eyebrow:  L({ en: 'WELCOME TO SAUDADE.', ko: 'SAUDADE 에 어서 오라.', ja: 'SAUDADE へようこそ。', pt: 'BEM-VINDO À SAUDADE.', es: 'BIENVENIDO A SAUDADE.' }),
+                eyebrow:  L({ en: 'WELCOME.', ko: '어서 오라.', ja: 'ようこそ。', pt: 'BEM-VINDO.', es: 'BIENVENIDO.' }),
                 headline: L({
-                    en: 'A slow newspaper for people who keep moving.',
-                    ko: '계속 움직이는 사람들을 위한 느린 신문.',
-                    ja: '動き続ける人のための、ゆっくりとした新聞。',
-                    pt: 'Um jornal lento para quem continua a mover-se.',
-                    es: 'Un periódico lento para quienes siguen moviéndose.'
+                    en: 'A slow newspaper. Three cities, no schedule.',
+                    ko: '느린 신문. 세 도시, 정해진 시간 없음.',
+                    ja: 'ゆっくりとした新聞。三つの都市、時刻表なし。',
+                    pt: 'Um jornal lento. Três cidades, sem horário.',
+                    es: 'Un periódico lento. Tres ciudades, sin horario.'
                 }),
                 body: L({
-                    en: '<em>saudade</em> is Portuguese for the longing you carry for places you can’t return to. We file three city items, six days a week. Sunday is silence — by design.',
-                    ko: '<em>saudade</em> 는 돌아갈 수 없는 장소에 대한 그리움이라는 뜻의 포르투갈어. 우리는 일주일에 엿새, 도시당 세 항목을 보낸다. 일요일은 침묵 — 의도된 것.',
-                    ja: '<em>saudade</em> は、戻れない場所への切なさを意味するポルトガル語。週六日、都市ごとに三本を届ける。日曜は沈黙 — 意図されたもの。',
-                    pt: '<em>saudade</em> em português é a ausência de algo a que não se pode regressar. Arquivamos três itens por cidade, seis dias por semana. Domingo é silêncio — propositado.',
-                    es: '<em>saudade</em> en portugués significa la añoranza por los lugares a los que no se puede volver. Archivamos tres elementos por ciudad, seis días por semana. El domingo es silencio — intencionado.'
-                })
-            },
-            {
-                eyebrow:  L({ en: 'FOUR SECTIONS.', ko: '네 개의 섹션.', ja: '四つのセクション。', pt: 'QUATRO SECÇÕES.', es: 'CUATRO SECCIONES.' }),
-                headline: L({
-                    en: 'A ledger, an atlas, dispatches, and the desk.',
-                    ko: '장부, 지도, 디스패치, 그리고 편집부.',
-                    ja: '台帳、地図、ディスパッチ、編集部。',
-                    pt: 'Um livro-razão, um atlas, despachos, e a redacção.',
-                    es: 'Un libro mayor, un atlas, despachos, y la redacción.'
-                }),
-                body: L({
-                    en: '<strong>§01 Ledger</strong> counts visa days, tax-residency days, insurance pauses, pension filings. <strong>§02 Atlas</strong> is verified work cafés. <strong>§03 Dispatches</strong> is policy news. <strong>§04 The Desk</strong> shows the daily filing pipeline.',
-                    ko: '<strong>§01 Ledger</strong> 는 비자·세금·보험·연금 일수를 헤아린다. <strong>§02 Atlas</strong> 는 검증된 작업용 카페. <strong>§03 Dispatches</strong> 는 정책 뉴스. <strong>§04 The Desk</strong> 는 일일 발행 파이프라인.',
-                    ja: '<strong>§01 Ledger</strong> はビザ・税・保険・年金の日数を数える。<strong>§02 Atlas</strong> は検証済みの作業向けカフェ。<strong>§03 Dispatches</strong> は政策ニュース。<strong>§04 The Desk</strong> は日次入稿パイプライン。',
-                    pt: '<strong>§01 Ledger</strong> conta dias de visto, residência fiscal, pausas de seguro, pensões. <strong>§02 Atlas</strong> são cafés de trabalho verificados. <strong>§03 Dispatches</strong> é notícia de política. <strong>§04 The Desk</strong> mostra o pipeline diário.',
-                    es: '<strong>§01 Ledger</strong> cuenta días de visado, residencia fiscal, pausas de seguro, pensiones. <strong>§02 Atlas</strong> son cafés de trabajo verificados. <strong>§03 Dispatches</strong> son noticias de política. <strong>§04 The Desk</strong> muestra el pipeline diario.'
-                })
-            },
-            {
-                eyebrow:  L({ en: 'BEFORE YOU READ.', ko: '읽기 전에.', ja: '読む前に。', pt: 'ANTES DE LER.', es: 'ANTES DE LEER.' }),
-                headline: L({
-                    en: 'Sign in, or browse without.',
-                    ko: '로그인하거나, 그냥 둘러보라.',
-                    ja: 'サインインするか、そのまま読む。',
-                    pt: 'Entre, ou navegue sem registar.',
-                    es: 'Inicie sesión, o navegue sin registrarse.'
-                }),
-                body: L({
-                    en: 'Magic-link only — no password, no tracker. Your visa data lives on this device. Whatever we do hold, you can export, delete, or revoke from <code>#account</code> at any time.',
-                    ko: '매직 링크만 사용 — 비밀번호도, 추적도 없다. 비자 데이터는 이 기기에만 머문다. 우리가 보관하는 것은 무엇이든 <code>#account</code> 에서 언제든 내보내기·삭제·회수 가능.',
-                    ja: 'マジックリンクのみ — パスワードも追跡もなし。ビザ情報はこの端末だけにある。我々が保持するものは <code>#account</code> でいつでもエクスポート・削除・取消できる。',
-                    pt: 'Apenas magic-link — sem palavra-passe, sem rastreamento. Os dados de visto vivem neste dispositivo. O que tivermos, pode exportar, apagar, ou revogar em <code>#account</code> a qualquer momento.',
-                    es: 'Sólo magic-link — sin contraseña, sin rastreo. Sus datos de visado viven en este dispositivo. Lo que conservemos, puede exportar, borrar o revocar en <code>#account</code> en cualquier momento.'
+                    en: '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.',
+                    ko: '<em>saudade</em> 는 돌아갈 수 없는 장소에 대한 그리움이라는 뜻의 포르투갈어. 일주일에 엿새, 도시당 세 항목. 일요일은 침묵 — 의도된 것. 그냥 읽어도 좋고, 로그인하면 남은 일수를 헤아려준다.',
+                    ja: '<em>saudade</em> は戻れない場所への切なさを意味するポルトガル語。週六日、都市ごとに三本。日曜は沈黙 — 意図されたもの。そのまま読むも良し、サインインすれば残り日数を数える。',
+                    pt: '<em>saudade</em> em português é a ausência de algo a que não se pode regressar. Três itens por cidade, seis dias por semana. Domingo é silêncio — propositado. Continue a ler, ou entre para contar os dias.',
+                    es: '<em>saudade</em> en portugués significa la añoranza por los lugares a los que no se puede volver. Tres elementos por ciudad, seis días por semana. El domingo es silencio — intencionado. Siga leyendo, o entre para contar los días.'
                 })
             }
         ];
@@ -2621,15 +3001,29 @@ body[data-tour="1"] .sdd-cover::before {
 }
 body.cafe-mode .sdd-footer-rule { display: none; }
 
-.sdd-footer-r .sdd-footer-copy {
+.sdd-footer-r .sdd-footer-copy,
+.sdd-footer-r .sdd-footer-link {
     color: inherit;
     text-decoration: none;
     border-bottom: 0.5px solid transparent;
     transition: color .15s, border-color .15s;
 }
-.sdd-footer-r .sdd-footer-copy:hover {
+.sdd-footer-r .sdd-footer-copy:hover,
+.sdd-footer-r .sdd-footer-link:hover {
     color: var(--rust);
     border-bottom-color: var(--rust);
+}
+.sdd-footer-r .sdd-footer-link {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin-right: 16px;
+}
+@media (max-width: 540px) {
+    .sdd-footer-r .sdd-footer-link { display: none; }
 }
 .sdd-footer-l, .sdd-footer-r {
     display: flex; gap: clamp(8px, 1.5vw, 24px); align-items: center;
@@ -2662,6 +3056,8 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
+                <a class="sdd-footer-link" href="etymology.html" title="saudade /sɐwˈðaðɨ/ — etymology">ETYMOLOGY</a>
+                <a class="sdd-footer-link" href="sitemap.html" title="every page, every endpoint">SITEMAP</a>
                 <a class="sdd-footer-copy" href="etymology.html"
                    title="saudade /sɐwˈðaðɨ/ — read the etymology">saudade · a longing for what cannot return</a>
                 <span class="sdd-footer-issue">© 2026</span>

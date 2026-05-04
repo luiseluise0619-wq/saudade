@@ -24,56 +24,28 @@
     }
 
     function copy() {
+        // v640 — collapsed from 3 cards to 1. The previous deck was the
+        // first thing every visitor saw and read like a brochure on top of
+        // the cover. A single italic headline + one paragraph + one action
+        // is enough to set tone without robbing the cover of its first
+        // impression. Etymology and section overview moved to /etymology.html
+        // and /sitemap.html, which are linked from the cover footer.
         return [
             {
-                eyebrow:  L({ en: 'WELCOME TO SAUDADE.', ko: 'SAUDADE 에 어서 오라.', ja: 'SAUDADE へようこそ。', pt: 'BEM-VINDO À SAUDADE.', es: 'BIENVENIDO A SAUDADE.' }),
+                eyebrow:  L({ en: 'WELCOME.', ko: '어서 오라.', ja: 'ようこそ。', pt: 'BEM-VINDO.', es: 'BIENVENIDO.' }),
                 headline: L({
-                    en: 'A slow newspaper for people who keep moving.',
-                    ko: '계속 움직이는 사람들을 위한 느린 신문.',
-                    ja: '動き続ける人のための、ゆっくりとした新聞。',
-                    pt: 'Um jornal lento para quem continua a mover-se.',
-                    es: 'Un periódico lento para quienes siguen moviéndose.'
+                    en: 'A slow newspaper. Three cities, no schedule.',
+                    ko: '느린 신문. 세 도시, 정해진 시간 없음.',
+                    ja: 'ゆっくりとした新聞。三つの都市、時刻表なし。',
+                    pt: 'Um jornal lento. Três cidades, sem horário.',
+                    es: 'Un periódico lento. Tres ciudades, sin horario.'
                 }),
                 body: L({
-                    en: '<em>saudade</em> is Portuguese for the longing you carry for places you can’t return to. We file three city items, six days a week. Sunday is silence — by design.',
-                    ko: '<em>saudade</em> 는 돌아갈 수 없는 장소에 대한 그리움이라는 뜻의 포르투갈어. 우리는 일주일에 엿새, 도시당 세 항목을 보낸다. 일요일은 침묵 — 의도된 것.',
-                    ja: '<em>saudade</em> は、戻れない場所への切なさを意味するポルトガル語。週六日、都市ごとに三本を届ける。日曜は沈黙 — 意図されたもの。',
-                    pt: '<em>saudade</em> em português é a ausência de algo a que não se pode regressar. Arquivamos três itens por cidade, seis dias por semana. Domingo é silêncio — propositado.',
-                    es: '<em>saudade</em> en portugués significa la añoranza por los lugares a los que no se puede volver. Archivamos tres elementos por ciudad, seis días por semana. El domingo es silencio — intencionado.'
-                })
-            },
-            {
-                eyebrow:  L({ en: 'FOUR SECTIONS.', ko: '네 개의 섹션.', ja: '四つのセクション。', pt: 'QUATRO SECÇÕES.', es: 'CUATRO SECCIONES.' }),
-                headline: L({
-                    en: 'A ledger, an atlas, dispatches, and the desk.',
-                    ko: '장부, 지도, 디스패치, 그리고 편집부.',
-                    ja: '台帳、地図、ディスパッチ、編集部。',
-                    pt: 'Um livro-razão, um atlas, despachos, e a redacção.',
-                    es: 'Un libro mayor, un atlas, despachos, y la redacción.'
-                }),
-                body: L({
-                    en: '<strong>§01 Ledger</strong> counts visa days, tax-residency days, insurance pauses, pension filings. <strong>§02 Atlas</strong> is verified work cafés. <strong>§03 Dispatches</strong> is policy news. <strong>§04 The Desk</strong> shows the daily filing pipeline.',
-                    ko: '<strong>§01 Ledger</strong> 는 비자·세금·보험·연금 일수를 헤아린다. <strong>§02 Atlas</strong> 는 검증된 작업용 카페. <strong>§03 Dispatches</strong> 는 정책 뉴스. <strong>§04 The Desk</strong> 는 일일 발행 파이프라인.',
-                    ja: '<strong>§01 Ledger</strong> はビザ・税・保険・年金の日数を数える。<strong>§02 Atlas</strong> は検証済みの作業向けカフェ。<strong>§03 Dispatches</strong> は政策ニュース。<strong>§04 The Desk</strong> は日次入稿パイプライン。',
-                    pt: '<strong>§01 Ledger</strong> conta dias de visto, residência fiscal, pausas de seguro, pensões. <strong>§02 Atlas</strong> são cafés de trabalho verificados. <strong>§03 Dispatches</strong> é notícia de política. <strong>§04 The Desk</strong> mostra o pipeline diário.',
-                    es: '<strong>§01 Ledger</strong> cuenta días de visado, residencia fiscal, pausas de seguro, pensiones. <strong>§02 Atlas</strong> son cafés de trabajo verificados. <strong>§03 Dispatches</strong> son noticias de política. <strong>§04 The Desk</strong> muestra el pipeline diario.'
-                })
-            },
-            {
-                eyebrow:  L({ en: 'BEFORE YOU READ.', ko: '읽기 전에.', ja: '読む前に。', pt: 'ANTES DE LER.', es: 'ANTES DE LEER.' }),
-                headline: L({
-                    en: 'Sign in, or browse without.',
-                    ko: '로그인하거나, 그냥 둘러보라.',
-                    ja: 'サインインするか、そのまま読む。',
-                    pt: 'Entre, ou navegue sem registar.',
-                    es: 'Inicie sesión, o navegue sin registrarse.'
-                }),
-                body: L({
-                    en: 'Magic-link only — no password, no tracker. Your visa data lives on this device. Whatever we do hold, you can export, delete, or revoke from <code>#account</code> at any time.',
-                    ko: '매직 링크만 사용 — 비밀번호도, 추적도 없다. 비자 데이터는 이 기기에만 머문다. 우리가 보관하는 것은 무엇이든 <code>#account</code> 에서 언제든 내보내기·삭제·회수 가능.',
-                    ja: 'マジックリンクのみ — パスワードも追跡もなし。ビザ情報はこの端末だけにある。我々が保持するものは <code>#account</code> でいつでもエクスポート・削除・取消できる。',
-                    pt: 'Apenas magic-link — sem palavra-passe, sem rastreamento. Os dados de visto vivem neste dispositivo. O que tivermos, pode exportar, apagar, ou revogar em <code>#account</code> a qualquer momento.',
-                    es: 'Sólo magic-link — sin contraseña, sin rastreo. Sus datos de visado viven en este dispositivo. Lo que conservemos, puede exportar, borrar o revocar en <code>#account</code> en cualquier momento.'
+                    en: '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.',
+                    ko: '<em>saudade</em> 는 돌아갈 수 없는 장소에 대한 그리움이라는 뜻의 포르투갈어. 일주일에 엿새, 도시당 세 항목. 일요일은 침묵 — 의도된 것. 그냥 읽어도 좋고, 로그인하면 남은 일수를 헤아려준다.',
+                    ja: '<em>saudade</em> は戻れない場所への切なさを意味するポルトガル語。週六日、都市ごとに三本。日曜は沈黙 — 意図されたもの。そのまま読むも良し、サインインすれば残り日数を数える。',
+                    pt: '<em>saudade</em> em português é a ausência de algo a que não se pode regressar. Três itens por cidade, seis dias por semana. Domingo é silêncio — propositado. Continue a ler, ou entre para contar os dias.',
+                    es: '<em>saudade</em> en portugués significa la añoranza por los lugares a los que no se puede volver. Tres elementos por ciudad, seis días por semana. El domingo es silencio — intencionado. Siga leyendo, o entre para contar los días.'
                 })
             }
         ];

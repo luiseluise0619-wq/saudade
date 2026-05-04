@@ -34,7 +34,9 @@ const BUNDLES = {
         'saudade-schengen.js',
         'saudade-schengen-form.js',
         'saudade-tax.js',
+        'saudade-tax-form.js',
         'saudade-coverage.js',
+        'saudade-coverage-form.js',
         'saudade-empty.js',
         'saudade-welcome.js',
         'saudade-footer-rule.js'

@@ -204,21 +204,31 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 .sdd-atlas-item {
     display: grid;
-    /* v637 — added a 96px photo slot on the right of the card. The photo is
-       optional; when absent a paper placeholder fills the same footprint so
-       the row hierarchy stays consistent across the list.                  */
+    /* v640 — photo slot is opt-in via data-has-photo="1". Cards without a
+       photo collapse back to the original 3-col layout so we don't ship 110
+       orphan placeholders next to the dataset (which currently has no
+       cafe.photo field). When a photo is committed alongside its sidecar
+       under photos/cafes/<file>, the rule below kicks in.                  */
+    grid-template-columns: 32px 1fr auto;
+    grid-template-areas:
+        'badge head meta'
+        '.     body body'
+        '.     amen amen';
+    gap: 4px clamp(12px, 2vw, 20px);
+    padding: clamp(14px, 2.4vw, 20px) 0;
+    border-top: 0.5px solid var(--rule);
+    align-items: baseline;
+    min-height: 60px;
+    cursor: pointer;
+    transition: background .12s;
+}
+.sdd-atlas-item[data-has-photo="1"] {
     grid-template-columns: 32px 1fr auto 96px;
     grid-template-areas:
         'badge head meta photo'
         '.     body body photo'
         '.     amen amen photo';
-    gap: 4px clamp(12px, 2vw, 20px);
-    padding: clamp(14px, 2.4vw, 20px) 0;
-    border-top: 0.5px solid var(--rule);
-    align-items: baseline;
     min-height: 96px;
-    cursor: pointer;
-    transition: background .12s;
 }
 .sdd-atlas-item:last-child { border-bottom: 0.5px solid var(--rule); }
 .sdd-atlas-item:hover { background: var(--paper-d); }
@@ -666,24 +676,27 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     const cls      = negative ? 'is-negative' : (note ? 'is-note' : '');
                     return `<span class="sdd-atlas-chip ${cls}">${escapeHtml(a.replace(/_/g, ' '))}</span>`;
                 }).join('');
-            // v637 — optional photo slot. Placeholder is the default visible
-            // element; when the optional cafe.photo path resolves, the <img>
-            // fades in over it. If 404 / decode fails the placeholder remains.
+            // v640 — photo slot only renders when c.photo exists. Earlier
+            // attempts left a 96px placeholder on every card even though no
+            // café in the dataset carries a photo field — 110 orphan
+            // placeholders. Now the row collapses back to its 32+1fr+auto
+            // grid when there is no photo, via the data-has-photo attr.
             const photoSrc = c.photo ? `/photos/cafes/${c.photo}` : null;
             const photoAlt = `${c.name} · ${c.neighborhood || ''}`.trim();
-            const photoHtml = `
+            const photoHtml = photoSrc ? `
                 <figure class="sdd-atlas-photo" aria-hidden="true">
                     <div class="sdd-atlas-photo__ph">${escapeHtml(c.name.split(' ').slice(0, 2).join(' '))}</div>
-                    ${photoSrc ? `<img class="sdd-atlas-photo__img"
-                        src="${escapeHtml(photoSrc)}"
-                        alt="${escapeHtml(photoAlt)}"
-                        loading="lazy" decoding="async"
-                        onload="this.classList.add('is-loaded')"
-                        onerror="this.remove()" />` : ''}
+                    <img class="sdd-atlas-photo__img"
+                         src="${escapeHtml(photoSrc)}"
+                         alt="${escapeHtml(photoAlt)}"
+                         loading="lazy" decoding="async"
+                         onload="this.classList.add('is-loaded')"
+                         onerror="this.remove()" />
                 </figure>
-            `;
+            ` : '';
             return `
                 <article class="sdd-atlas-item" data-cafe-id="${c.id}" tabindex="0" role="button"
+                         data-has-photo="${photoSrc ? '1' : '0'}"
                          aria-label="${c.name}, ${c.neighborhood || ''}, ${distKm}">
                     <span class="sdd-atlas-badge ${status === 'JADE' ? 'jade' : 'bone'}" aria-hidden="true"></span>
                     <div class="sdd-atlas-head-line">

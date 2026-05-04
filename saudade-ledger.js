@@ -848,8 +848,10 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             <div id="sddSchPanel"></div>
             <div id="sddSchForm"></div>
             <div id="sddTaxPanel"></div>
+            <div id="sddTaxForm"></div>
             <div id="sddInsPanel"></div>
             <div id="sddPenPanel"></div>
+            <div id="sddCoverageForm"></div>
             ${categoriesHtml}
             ${formHtml}
         `;
@@ -909,26 +911,15 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                 window.SAUDADE_TAX.render(document.getElementById('sddTaxPanel'), { stays: taxStays });
             }
 
-            // v637 — health insurance gap counter
-            const insurancePolicies = records
-                .filter(r => r.typeCategory === 'insurance' && r.entered)
-                .map(r => ({ provider: r.label || r.type, in: r.entered, out: r.expiry, country: r.iso }));
-            if (window.SAUDADE_COVERAGE && insurancePolicies.length) {
-                window.SAUDADE_COVERAGE.renderInsurance(
-                    document.getElementById('sddInsPanel'),
-                    { policies: insurancePolicies }
-                );
+            // v640 — direct input forms for tax + coverage. The forms feed
+            // their respective panels live via localStorage, so the user can
+            // type a row and see the calculation update without round-tripping
+            // through the legacy Ledger record system.
+            if (window.SAUDADE_TAX_FORM) {
+                window.SAUDADE_TAX_FORM.mount(document.getElementById('sddTaxForm'));
             }
-
-            // v637 — pension contribution monthly counter
-            const pensionFilings = records
-                .filter(r => r.typeCategory === 'pension' && r.entered)
-                .map(r => ({ scheme: r.label || `${r.iso || '??'}-?`, country: r.iso, in: r.entered, out: r.expiry }));
-            if (window.SAUDADE_COVERAGE && pensionFilings.length) {
-                window.SAUDADE_COVERAGE.renderPension(
-                    document.getElementById('sddPenPanel'),
-                    { filings: pensionFilings }
-                );
+            if (window.SAUDADE_COVERAGE_FORM) {
+                window.SAUDADE_COVERAGE_FORM.mount(document.getElementById('sddCoverageForm'));
             }
         } catch (e) {}
 

@@ -29,7 +29,17 @@
         row.classList.add('sdd-listen-track-unavail');
         row.setAttribute('aria-disabled', 'true');
         const durEl = row.querySelector('.sdd-listen-duration');
-        if (durEl) durEl.textContent = 'AWAITING UPLOAD';
+        // v640 — i18n the unavailable label so non-English readers see
+        // a real explanation instead of the English fallback.
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const label = {
+            en: 'AWAITING RECORDING',
+            ko: '녹음 준비 중',
+            ja: '録音準備中',
+            pt: 'A AGUARDAR GRAVAÇÃO',
+            es: 'PENDIENTE DE GRABACIÓN'
+        }[ed] || 'AWAITING RECORDING';
+        if (durEl) durEl.textContent = label;
     }
     // v6 §11.2 — Work session timer (50 min work + 10 min rest)
     let _sessionStart = null;   // ms timestamp 세션 시작
@@ -918,7 +928,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         if (idx < 0 || idx >= tracks.length) return;
         if (_unavailable.has(idx)) return;   // 비가용 트랙은 재생 시도 X
         const t = tracks[idx];
-        if (!t.audio_url) return;
+        if (!t.audio_url) { markTrackUnavailable(idx); return; }
         const a = ensureAudio();
         _activeIdx = idx;
         a.src = t.audio_url;
