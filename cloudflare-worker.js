@@ -61,6 +61,8 @@ const RL = {
     '/desks/posts':    { max: 60, win: 60000 },
     '/desks/submit':   { max: 5,  win: 60000 },
     '/desks/queue':    { max: 30, win: 60000 },
+    '/admin/pipeline-status':  { max: 30, win: 60000 },
+    '/admin/pipeline-trigger': { max: 6,  win: 60000 },
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
@@ -336,17 +338,30 @@ async function pipelineStub(phase) { return { ok: true, phase, todo: 'next PR' }
 
 export default {
     async scheduled(event, env, ctx) {
+        // v649 — wire the real pipeline functions to cron, not pipelineStub.
+        // Free-tier Cloudflare allows max 5 cron triggers, so Sort runs
+        // inside Score (consolidation) and Stage runs inside File. Result is
+        // tucked into AURA_KV for /admin debugging.
         const llm = pipelineLLM(env);
         let result;
-        switch (event.cron) {
-            case '0 15 * * *':  result = await pipelineGather(env); break;
-            case '30 15 * * *': result = await pipelineSort(env, llm); break;
-            case '0 17 * * *':  result = await pipelineScore(env, llm); break;
-            case '0 19 * * *':  result = await pipelineStub('write'); break;
-            case '0 20 * * *':  result = await pipelineStub('translate'); break;
-            case '30 20 * * *': result = await pipelineStub('stage'); break;
-            case '0 21 * * *':  result = await pipelineStub('file'); break;
-            default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+        try {
+            switch (event.cron) {
+                case '0 15 * * *':  result = await pipelineGather(env); break;
+                case '0 17 * * *':
+                    // Sort + Score together — Score depends on Sort output.
+                    await pipelineSort(env, llm).catch(() => null);
+                    result = await pipelineScore(env, llm);
+                    break;
+                case '0 19 * * *':  result = await pipelineWrite(env); break;
+                case '0 20 * * *':  result = await pipelineTranslate(env); break;
+                case '0 21 * * *':  result = await pipelineFile(env); break;
+                // Legacy slots kept for paid-tier cron upgrade path:
+                case '30 15 * * *': result = await pipelineSort(env, llm); break;
+                case '30 20 * * *': result = await pipelineStub('stage'); break;
+                default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+            }
+        } catch (e) {
+            result = { ok: false, error: String(e && e.message || e), cron: event.cron };
         }
         if (env.AURA_KV) {
             try { await env.AURA_KV.put('pipeline:last:' + (event.cron || 'manual'), JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
@@ -419,6 +434,8 @@ export default {
                 case '/feed.atom':         return feedAtom(req, env, ctx);
                 case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
                 case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
+                case '/admin/pipeline-status':  return adminPipelineStatus(req, env, ctx);
+                case '/admin/pipeline-trigger': return adminPipelineTrigger(req, env, ctx);
                 case '/following':            return followingHandler(req, env, ctx);
                 case '/listening/log':        return listeningLog(req, env, ctx);
                 case '/stats/weekly':         return statsWeekly(req, env, ctx);
@@ -2674,6 +2691,101 @@ async function desksQueue(req, env, ctx) {
     }
     return J(req, { ok: true });
 }
+
+// ─── v649 — Admin: pipeline status + manual trigger ────────────────────
+//
+// /admin/pipeline-status   GET   Bearer EDITOR_TOKEN
+//   → last 7-day cron results stored in AURA_KV by scheduled(),
+//     plus a quick env-config probe (GEMINI_KEY present, D1 bound, etc.)
+//
+// /admin/pipeline-trigger  POST  Bearer EDITOR_TOKEN
+//     body: { phase: 'gather'|'sort'|'score'|'write'|'translate'|'file' }
+//   → manually run any phase right now. Useful for verifying the AI pipeline
+//     before / after a domain swap, without waiting for the next cron tick.
+
+async function adminPipelineStatus(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const tok = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || tok !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+
+    // Config probe — what's wired up.
+    const config = {
+        d1_bound:        !!env.SAUDADE_DB,
+        kv_bound:        !!env.AURA_KV,
+        gemini_key:      !!env.GEMINI_KEY,
+        gemini_model:    env.GEMINI_MODEL || 'gemini-flash-latest',
+        editor_token:    !!env.EDITOR_TOKEN,
+        resend_key:      !!env.RESEND_KEY,
+        resend_from:     env.RESEND_FROM || null,
+        license_signing: !!env.LICENSE_SIGNING_KEY
+    };
+
+    // Last cron results from KV.
+    const phases = [
+        { name: 'gather',    cron: '0 15 * * *', kst: '00:00 KST' },
+        { name: 'sort+score', cron: '0 17 * * *', kst: '02:00 KST' },
+        { name: 'write',     cron: '0 19 * * *', kst: '04:00 KST' },
+        { name: 'translate', cron: '0 20 * * *', kst: '05:00 KST' },
+        { name: 'file',      cron: '0 21 * * *', kst: '06:00 KST' }
+    ];
+    const last = [];
+    if (env.AURA_KV) {
+        for (const p of phases) {
+            const raw = await env.AURA_KV.get('pipeline:last:' + p.cron).catch(() => null);
+            const parsed = raw ? safeJsonParse(raw) : null;
+            last.push({ ...p, last_run: parsed });
+        }
+    }
+
+    // Recent staged dispatches count.
+    let stagedCount = null;
+    if (env.SAUDADE_DB) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                "SELECT status, count(*) as n FROM dispatches_staged GROUP BY status"
+            ).all();
+            stagedCount = (r && r.results) || [];
+        } catch (e) {}
+    }
+
+    return J(req, { ok: true, config, phases: last, dispatches_staged: stagedCount });
+}
+
+async function adminPipelineTrigger(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const tok = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || tok !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    let body; try { body = await req.json(); } catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+    const phase = clean(body.phase, 16);
+    const llm = pipelineLLM(env);
+    let result;
+    try {
+        switch (phase) {
+            case 'gather':    result = await pipelineGather(env); break;
+            case 'sort':      result = await pipelineSort(env, llm); break;
+            case 'score':     result = await pipelineScore(env, llm); break;
+            case 'write':     result = await pipelineWrite(env); break;
+            case 'translate': result = await pipelineTranslate(env); break;
+            case 'file':      result = await pipelineFile(env); break;
+            default: return E(req, 'BAD_PHASE', 'phase must be gather|sort|score|write|translate|file', 400);
+        }
+    } catch (e) {
+        return E(req, 'PIPELINE_ERROR', String(e && e.message || e), 500);
+    }
+    if (env.AURA_KV) {
+        try { await env.AURA_KV.put('pipeline:last:manual:' + phase,
+            JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
+    }
+    return J(req, { ok: true, phase, result });
+}
+
+function safeJsonParse(s) { try { return JSON.parse(s); } catch (e) { return null; } }
 
 // ─── /feed.atom — published dispatches as Atom 1.0 (per-edition) ──────
 // Lets readers subscribe in Feedly / NetNewsWire. Standards:

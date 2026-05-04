@@ -53,14 +53,32 @@
 
     function loadStatic(ed) {
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
+        // v647 — also load dispatches.week.json (when present) and attach
+        // the days array so the Past Week archive can render real per-day
+        // content rather than reusing today's items rotated by weekday.
+        const weekP = fetch('./data/dispatches.week.json', { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .catch(() => null);
+
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
             .then(d => {
-                if (d) { _cache[ed] = d; return d; }
-                // fallback to EN
+                if (d) {
+                    _cache[ed] = d;
+                    return weekP.then(w => {
+                        if (w && Array.isArray(w.days)) d._weekDays = w.days;
+                        return d;
+                    });
+                }
                 return fetch('./data/dispatches.json', { cache: 'force-cache' })
                     .then(r => r.ok ? r.json() : null)
-                    .then(d2 => { _cache[ed] = d2 || { cities: [] }; return _cache[ed]; });
+                    .then(d2 => {
+                        _cache[ed] = d2 || { cities: [] };
+                        return weekP.then(w => {
+                            if (w && Array.isArray(w.days)) _cache[ed]._weekDays = w.days;
+                            return _cache[ed];
+                        });
+                    });
             })
             .catch(() => { _cache[ed] = { cities: [] }; return _cache[ed]; });
     }
@@ -752,22 +770,40 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     }
 
     // 지난 6일치 (월~토 중 오늘 제외) — archive stack
+    // v647 — earlier this iterated flattenForDay(data, weekday) which always
+    // used today's dispatches.json content with a different weekday rotation.
+    // That meant every past-week row showed today's items dressed up in a new
+    // weekday tag — confusing. Now we honour data._weekDays (loaded from
+    // data/dispatches.week.json) when available, looking up each past date
+    // and using its actual cities. Falls back to the old behaviour if no
+    // week data is loaded yet.
     function flattenPastWeek(data, todayIdx) {
         const result = [];
-        // 어제부터 6일 거슬러 (같은 요일 다시 안 보이게 max 6)
-        for (let back = 1; back <= 6; back++) {
+        const weekDays = (data && data._weekDays) || [];
+        const byDate = {};
+        for (const d of weekDays) {
+            const key = (d.filed_at || '').slice(0, 10);
+            if (key) byDate[key] = d;
+        }
+
+        for (let back = 1; back <= 7; back++) {
             const d = new Date();
             d.setDate(d.getDate() - back);
             const wd = d.getDay();
             if (wd === 0) continue;   // 일요일 skip
-            const items = flattenForDay(data, wd);
+            const dateKey = d.toISOString().slice(0, 10);
+            const dayData = byDate[dateKey];
+
+            // Use the simulated week's per-day cities when present.
+            let items;
+            if (dayData && Array.isArray(dayData.cities)) {
+                items = flattenForDay({ cities: dayData.cities }, wd);
+            } else {
+                items = flattenForDay(data, wd);
+            }
             if (!items.length) continue;
-            result.push({
-                date: d.toISOString().slice(0, 10),
-                weekdayIdx: wd,
-                items
-            });
-            if (result.length >= 3) break;   // 표시 max 3 days
+            result.push({ date: dateKey, weekdayIdx: wd, items });
+            if (result.length >= 6) break;
         }
         return result;
     }

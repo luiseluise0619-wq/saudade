@@ -90,17 +90,22 @@ h1, h2, h3, .h1-cover, .h2-section, .lede,
 .sdd-cover-h1, .sdd-disp-h2, .sdd-ld-h2,
 .sdd-disp-headline, .sdd-cover-edition {
     text-wrap: balance;
-    -webkit-hyphens: auto;
-            hyphens: auto;
-    -webkit-hyphenate-limit-chars: 8 4 4;
-            hyphenate-limit-chars: 8 4 4;
+    /* v647 — was `hyphens: auto` with min 8 chars. On a narrow column the
+       browser was hyphenating short Italian/Portuguese words like
+       "awaiting" → "await-/ing" character-by-character. Disable hyphens on
+       headlines entirely; the balance + pretty wrapping handles overflow. */
+    -webkit-hyphens: manual;
+            hyphens: manual;
 }
 
 /* Body — let pretty wrapping kick in (last 4 lines balance widows/orphans) */
 p, .body-text, .sdd-disp-fulltext, .sdd-disp-lede {
     text-wrap: pretty;
-    -webkit-hyphens: auto;
-            hyphens: auto;
+    /* v647 — same: keep hyphenation off in italic body text. The lede is
+       short enough to never need it, and Fraunces italic doesn't ship
+       with hyphenation tables for KO/JA/PT/ES that would wrap correctly. */
+    -webkit-hyphens: manual;
+            hyphens: manual;
 }
 
 /* ─── Hanging punctuation — newspaper drop quotes hang into margin ─────── */

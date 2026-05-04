@@ -32,9 +32,11 @@ const BUNDLES = {
         'saudade-auth.js',
         'saudade-account.js',
         'saudade-schengen.js',
-        'saudade-schengen-form.js',
+        // v649 — saudade-schengen-form.js + saudade-tax-form.js removed.
+        // Both were superseded by saudade-stays-form.js which writes to
+        // saudade.{schengen,tax}.stays directly. Kept the source files in
+        // the tree for reference; just dropped from the production bundle.
         'saudade-tax.js',
-        'saudade-tax-form.js',
         'saudade-coverage.js',
         'saudade-coverage-form.js',
         'saudade-stays-form.js',
