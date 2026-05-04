@@ -46,18 +46,30 @@
         { scheme: 'PT-SocSeg',  country: 'PT', in: '2024-01-01', out: '2026-12-31' }
     ];
 
+    // The persona carries Lisbon (where she is editing the paper from), Seoul
+    // (where she lived through her 20s — KR-NPS roots) and Bali (where she
+    // spent the most days last summer). These drive the personal block on
+    // the cover: "184 days since you last sat in a Seoul café."
+    const HOMES = ['LIS', 'SEL', 'DPS'];
+
     function load() {
         try {
             localStorage.setItem('saudade.schengen.stays',     JSON.stringify(SCHENGEN_STAYS));
             localStorage.setItem('saudade.tax.stays',          JSON.stringify(TAX_STAYS));
             localStorage.setItem('saudade.insurance.policies', JSON.stringify(INS_POLICIES));
             localStorage.setItem('saudade.pension.filings',    JSON.stringify(PEN_FILINGS));
+            localStorage.setItem('saudade.homes',              JSON.stringify(HOMES));
             localStorage.setItem(FLAG, '1');
         } catch (e) { return false; }
         // Re-render the four calculator panels if their forms are mounted.
         if (window.SAUDADE_SCHENGEN_FORM)  refreshForm(window.SAUDADE_SCHENGEN_FORM);
         if (window.SAUDADE_TAX_FORM)       refreshForm(window.SAUDADE_TAX_FORM);
         if (window.SAUDADE_COVERAGE_FORM)  refreshForm(window.SAUDADE_COVERAGE_FORM);
+        // Repaint the cover personal block so the saudade meter populates.
+        if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
+            const target = document.getElementById('sddCoverPersonal');
+            if (target) window.SAUDADE_PERSONAL.render(target);
+        }
         return true;
     }
 
@@ -76,12 +88,17 @@
         if (!isLoaded()) return false;
         try {
             ['saudade.schengen.stays', 'saudade.tax.stays',
-             'saudade.insurance.policies', 'saudade.pension.filings'].forEach(k => localStorage.removeItem(k));
+             'saudade.insurance.policies', 'saudade.pension.filings',
+             'saudade.homes'].forEach(k => localStorage.removeItem(k));
             localStorage.removeItem(FLAG);
         } catch (e) { return false; }
         if (window.SAUDADE_SCHENGEN_FORM)  refreshForm(window.SAUDADE_SCHENGEN_FORM);
         if (window.SAUDADE_TAX_FORM)       refreshForm(window.SAUDADE_TAX_FORM);
         if (window.SAUDADE_COVERAGE_FORM)  refreshForm(window.SAUDADE_COVERAGE_FORM);
+        if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
+            const target = document.getElementById('sddCoverPersonal');
+            if (target) window.SAUDADE_PERSONAL.render(target);
+        }
         return true;
     }
 

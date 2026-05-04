@@ -581,6 +581,13 @@ body.section-active .sdd-cover { display: none !important; }
                 <p class="sdd-cover-issue-lede">${escapeHtml(issueLede)}</p>
             </section>
 
+            <!-- v641 — personal block. Empathy layer that turns the user's
+                 four-calculator data into italic sentences in the saudade
+                 voice ("184 days since you last sat in a Seoul café"). When
+                 there is no data, the block becomes the empty-state empathy
+                 hook with shortcuts to set home cities or load demo data. -->
+            <div id="sddCoverPersonal"></div>
+
             <section class="sdd-cover-today">
                 <p class="sdd-cover-today-eyebrow">${escapeHtml(TODAY_LABEL[ed] || 'TODAY')}</p>
                 <ul class="sdd-cover-today-list">${todayHtml}</ul>
@@ -606,6 +613,14 @@ body.section-active .sdd-cover { display: none !important; }
                 }
             });
         });
+
+        // v641 — paint the personal block. SAUDADE_PERSONAL falls back to
+        // the empty-state empathy hook when there is no data.
+        try {
+            if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
+                window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
+            }
+        } catch (e) {}
     }
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는

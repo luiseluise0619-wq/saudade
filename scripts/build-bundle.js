@@ -41,6 +41,8 @@ const BUNDLES = {
         'saudade-welcome.js',
         'saudade-demo.js',
         'saudade-import.js',
+        'saudade-personal.js',
+        'saudade-homes.js',
         'saudade-footer-rule.js'
     ],
     'saudade.editorial.js': [
