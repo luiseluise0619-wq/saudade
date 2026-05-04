@@ -1,6 +1,6 @@
 {
   "edition": "en",
-  "week_of": "2026-05-04",
+  "week_of": "2026-04-27",
   "ai_assisted": false,
   "ai_disclosure": "Items in this week were drafted from hand-written editorial templates for end-to-end pipeline testing. No AI rewriting was applied at generation time.",
   "cities_covered": [
@@ -17,8 +17,8 @@
   ],
   "days": [
     {
-      "filed_at": "2026-05-04T06:00:00+09:00",
-      "next_filing": "2026-05-05T06:00:00+09:00",
+      "filed_at": "2026-04-27T06:00:00+09:00",
+      "next_filing": "2026-04-28T06:00:00+09:00",
       "cities": [
         {
           "city": "LISBON",
@@ -152,8 +152,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-05T06:00:00+09:00",
-      "next_filing": "2026-05-06T06:00:00+09:00",
+      "filed_at": "2026-04-28T06:00:00+09:00",
+      "next_filing": "2026-04-29T06:00:00+09:00",
       "cities": [
         {
           "city": "BERLIN",
@@ -251,8 +251,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-06T06:00:00+09:00",
-      "next_filing": "2026-05-07T06:00:00+09:00",
+      "filed_at": "2026-04-29T06:00:00+09:00",
+      "next_filing": "2026-04-30T06:00:00+09:00",
       "cities": [
         {
           "city": "BALI",
@@ -350,8 +350,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-07T06:00:00+09:00",
-      "next_filing": "2026-05-08T06:00:00+09:00",
+      "filed_at": "2026-04-30T06:00:00+09:00",
+      "next_filing": "2026-05-01T06:00:00+09:00",
       "cities": [
         {
           "city": "MEDELLÍN",
@@ -473,8 +473,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-08T06:00:00+09:00",
-      "next_filing": "2026-05-09T06:00:00+09:00",
+      "filed_at": "2026-05-01T06:00:00+09:00",
+      "next_filing": "2026-05-02T06:00:00+09:00",
       "cities": [
         {
           "city": "TOKYO",
@@ -584,8 +584,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-09T06:00:00+09:00",
-      "next_filing": "2026-05-10T06:00:00+09:00",
+      "filed_at": "2026-05-02T06:00:00+09:00",
+      "next_filing": "2026-05-03T06:00:00+09:00",
       "cities": [
         {
           "city": "MEXICO CITY",
@@ -683,7 +683,7 @@
       ]
     },
     {
-      "filed_at": "2026-05-10T06:00:00+09:00",
+      "filed_at": "2026-05-03T06:00:00+09:00",
       "rest_day": true,
       "cities": []
     }
