@@ -843,19 +843,57 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                 </h2>
             </header>
             ${articleIntro}
-            ${emptyStateHtml}
+            <div id="sddLedgerEmpty"></div>
+            ${isLedgerEmpty ? '' : emptyStateHtml}
             <div id="sddSchPanel"></div>
+            <div id="sddSchForm"></div>
             ${categoriesHtml}
             ${formHtml}
         `;
 
-        // Schengen 90/180 panel — only when the user has at least one Schengen-flagged record.
+        // Unified empty-state — replaces the old per-section markup when the user
+        // has not yet added a single record.
+        if (isLedgerEmpty && window.SAUDADE_EMPTY) {
+            const t = window.SAUDADE_EMPTY.text('ledger');
+            window.SAUDADE_EMPTY.render('#sddLedgerEmpty', {
+                eyebrow: t.eyebrow,
+                headline: t.headline,
+                lede: t.lede,
+                actions: [
+                    { label: addLabel.visa,      kind: 'primary', onClick: () => jumpToCat('visa') },
+                    { label: addLabel.tax,                          onClick: () => jumpToCat('tax') },
+                    { label: addLabel.insurance,                    onClick: () => jumpToCat('insurance') },
+                    { label: addLabel.pension,                      onClick: () => jumpToCat('pension') }
+                ],
+                note: t.note
+            });
+        }
+
+        function jumpToCat(cat) {
+            const el = root.querySelector(`[data-jump-cat="${cat}"]`)
+                || root.querySelector(`[data-cat="${cat}"]`)
+                || root.querySelector(`[data-form-cat="${cat}"]`);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.click && el.click();
+            }
+        }
+
+        // Schengen 90/180 panel + entry form — both always mount when the
+        // user has any Schengen-flagged record OR has stored stays in the
+        // standalone form's localStorage. Otherwise we silently skip.
         try {
+            // Auto-import Schengen-flagged ledger entries into the calc.
             const schStays = records
                 .filter(r => (r.iso === 'EU') || (r.type === 'shengen') || (r.type === 'd7-pt'))
                 .map(r => ({ in: r.entered, out: r.expiry, country: r.iso }));
-            if (window.SAUDADE_SCHENGEN && schStays.length) {
-                window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: schStays });
+            const formStays = (window.SAUDADE_SCHENGEN_FORM && window.SAUDADE_SCHENGEN_FORM.getStays && window.SAUDADE_SCHENGEN_FORM.getStays()) || [];
+            const merged = schStays.concat(formStays.filter(s => s.in));
+            if (window.SAUDADE_SCHENGEN && merged.length) {
+                window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: merged });
+            }
+            if (window.SAUDADE_SCHENGEN_FORM) {
+                window.SAUDADE_SCHENGEN_FORM.mount(document.getElementById('sddSchForm'));
             }
         } catch (e) {}
 

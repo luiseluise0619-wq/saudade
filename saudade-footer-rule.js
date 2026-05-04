@@ -33,6 +33,16 @@
 }
 body.cafe-mode .sdd-footer-rule { display: none; }
 
+.sdd-footer-r .sdd-footer-copy {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0.5px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+.sdd-footer-r .sdd-footer-copy:hover {
+    color: var(--rust);
+    border-bottom-color: var(--rust);
+}
 .sdd-footer-l, .sdd-footer-r {
     display: flex; gap: clamp(8px, 1.5vw, 24px); align-items: center;
 }
@@ -64,7 +74,8 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
-                <span class="sdd-footer-copy">saudade · a longing for what cannot return</span>
+                <a class="sdd-footer-copy" href="etymology.html"
+                   title="saudade /sɐwˈðaðɨ/ — read the etymology">saudade · a longing for what cannot return</a>
                 <span class="sdd-footer-issue">© 2026</span>
             </div>
         `;

@@ -1,0 +1,148 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · MICROTYPOGRAPHY
+   The details a designer obsesses over: variable-font axes, tabular numbers,
+   discretionary ligatures, hanging punctuation, balanced text, optical sizing.
+   These are the things that take a 9/10 typographic system to 10/10.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* Optical-size targets. Fraunces is a variable font with an `opsz` axis
+       (9–144). Browser support: Chromium 95+, Safari 16+, Firefox 92+.       */
+    --opsz-cover:   144;
+    --opsz-display: 96;
+    --opsz-h2:      54;
+    --opsz-lede:    22;
+    --opsz-body:    18;
+    --opsz-caption: 12;
+}
+
+/* ─── Variable axes ─────────────────────────────────────────────────────── */
+html { font-optical-sizing: auto; font-synthesis: none; }
+
+/* Fraunces — display headings: lower opsz means tighter optical adjustments
+   so the same glyph at 96px feels right vs the same glyph at 14px.          */
+.h1-cover, .sdd-cover-h1, .sdd-mast-saudade { font-variation-settings: "opsz" 144, "SOFT" 50; }
+.h2-section, .sdd-disp-h2, .sdd-ld-h2     { font-variation-settings: "opsz" 96,  "SOFT" 60; }
+.h3-data-num, .sdd-ld-dday-num, .sdd-sch-num { font-variation-settings: "opsz" 144, "SOFT" 100; }
+.lede                                        { font-variation-settings: "opsz" 22; }
+.body-text, .sdd-disp-fulltext, .sdd-disp-lede, p { font-variation-settings: "opsz" 18; }
+.caption-tiny, .data-label, .meta-info       { font-variation-settings: "opsz" 11; }
+
+/* ─── Mono — tabular numbers, slashed zero, contextual alternates ───────── */
+.mono-num, .data-value, .data-label, .meta-info, .mast-section, .mast-page,
+.sdd-disp-num, .sdd-disp-source, .sdd-ld-tax-num, .sdd-ld-tax-iso,
+.sdd-sch-window, .sdd-sch-meta, .sdd-sch-status,
+.sdd-acct-row, .sdd-acct-status,
+code, .inline-code {
+    font-feature-settings:
+        "tnum" 1,    /* tabular numerals — columns line up */
+        "zero" 1,    /* slashed zero — no confusion with 'O' */
+        "calt" 1,    /* contextual alternates */
+        "ss02" 1;    /* JetBrains stylistic set 02 (rounded punctuation) */
+    font-variant-numeric: tabular-nums slashed-zero;
+}
+
+/* ─── Serif body — old-style figures, discretionary ligatures, contextual */
+body, .body-text, .sdd-disp-fulltext, .sdd-disp-lede,
+.sdd-cover-body, .sdd-ld-empty-body, p, blockquote, q,
+.sdd-acct-help, .sdd-sch-note {
+    font-feature-settings:
+        "kern" 1,
+        "liga" 1,    /* standard ligatures fi fl */
+        "clig" 1,    /* contextual ligatures */
+        "calt" 1,
+        "onum" 1,    /* old-style figures in body text */
+        "salt" 1;    /* stylistic alternates */
+    font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+/* Italic headlines — let Fraunces use discretionary ligatures (st, ct, etc.) */
+.h1-cover, .sdd-cover-h1, .lede, .sdd-disp-h2, .sdd-ld-h2,
+.sdd-cover-edition, .sdd-mast-saudade {
+    font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "salt" 1, "swsh" 0;
+}
+
+/* Mast / labels — small caps: §, EDITION, etc. — never lowercase smcp,
+   already uppercase, but enable smcp for §-paragraphs that mix case.        */
+.mast-section, .h3-mini, .footer-rule-copy {
+    font-feature-settings: "kern" 1, "tnum" 1, "ss01" 1;
+}
+
+/* ─── Italic punctuation drop — mature newspaper trick ─────────────────── */
+/* Headlines like "From the desk." should set the period upright.            */
+.sdd-punct, .sdd-italic-punct,
+.sdd-disp-h2 .punct, .sdd-ld-h2 .punct, .sdd-cover-h1 .punct {
+    font-style: normal;
+    font-feature-settings: "ss01";
+    margin-left: -0.04em;   /* compensate visual gap left by italic */
+}
+
+/* ─── Balanced & pretty headline wrapping ──────────────────────────────── */
+h1, h2, h3, .h1-cover, .h2-section, .lede,
+.sdd-cover-h1, .sdd-disp-h2, .sdd-ld-h2,
+.sdd-disp-headline, .sdd-cover-edition {
+    text-wrap: balance;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    -webkit-hyphenate-limit-chars: 8 4 4;
+            hyphenate-limit-chars: 8 4 4;
+}
+
+/* Body — let pretty wrapping kick in (last 4 lines balance widows/orphans) */
+p, .body-text, .sdd-disp-fulltext, .sdd-disp-lede {
+    text-wrap: pretty;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+}
+
+/* ─── Hanging punctuation — newspaper drop quotes hang into margin ─────── */
+.sdd-disp-quote, blockquote, q {
+    hanging-punctuation: first last;
+}
+
+/* ─── Word spacing — italic Fraunces gets a hair more, a known optical
+   compensation for slanted letterforms in cold type.                        */
+.lede, em, i, .h1-cover, .sdd-cover-h1, .sdd-disp-h2, .sdd-ld-h2 {
+    word-spacing: 0.01em;
+}
+
+/* ─── Numerals in tables stay tabular regardless of context ────────────── */
+table, .data-value, .sdd-acct-row .meta {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ─── Drop cap (opt-in via .has-dropcap on an article wrapper) ─────────── */
+.has-dropcap > p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 4.4em;
+    line-height: 0.85;
+    float: left;
+    padding: 0.06em 0.1em 0 0;
+    color: var(--rust);
+    font-variation-settings: "opsz" 144;
+}
+
+/* ─── Selection styling — quiet rust, no harsh blue ─────────────────────── */
+::selection           { background: rgba(154, 51, 36, 0.18); color: var(--ink); }
+::-moz-selection      { background: rgba(154, 51, 36, 0.18); color: var(--ink); }
+
+/* ─── Reduced-opsz on small viewports — opsz axis adapts but make sure
+   the body line height still feels generous.                                */
+@media (max-width: 480px) {
+    body, .body-text { line-height: 1.62; }
+    h1, h2, .sdd-cover-h1, .sdd-disp-h2 { line-height: 1.0; }
+}
+
+/* ─── Print: enforce balanced wrapping + suppress hyphenation
+   (newspapers historically don't hyphenate body in headlines).              */
+@media print {
+    h1, h2, h3, .sdd-disp-headline { -webkit-hyphens: none; hyphens: none; text-wrap: balance; }
+}
+
+/* ─── High-contrast mode — preserve italic punctuation kern ────────────── */
+@media (prefers-contrast: more) {
+    body { color: #000; }
+    a    { color: var(--rust); border-bottom-color: currentColor; }
+}
