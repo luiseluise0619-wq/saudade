@@ -860,15 +860,29 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         // has not yet added a single record.
         if (isLedgerEmpty && window.SAUDADE_EMPTY) {
             const t = window.SAUDADE_EMPTY.text('ledger');
+            const demoLabel = T({
+                en: 'Show me with example data',
+                ko: '예시 데이터로 미리 보기',
+                ja: 'サンプルデータで見る',
+                pt: 'Mostrar com dados de exemplo',
+                es: 'Mostrar con datos de ejemplo'
+            });
             window.SAUDADE_EMPTY.render('#sddLedgerEmpty', {
                 eyebrow: t.eyebrow,
                 headline: t.headline,
                 lede: t.lede,
                 actions: [
-                    { label: addLabel.visa,      kind: 'primary', onClick: () => jumpToCat('visa') },
-                    { label: addLabel.tax,                          onClick: () => jumpToCat('tax') },
-                    { label: addLabel.insurance,                    onClick: () => jumpToCat('insurance') },
-                    { label: addLabel.pension,                      onClick: () => jumpToCat('pension') }
+                    // v640 — primary action is now "show me populated", because
+                    // a fresh user staring at four empty calculators learns
+                    // nothing. The demo persona populates all four panels in
+                    // one click; the legacy add-record entries follow.
+                    { label: demoLabel, kind: 'primary',
+                      hint: '#demo',
+                      onClick: () => { if (window.SAUDADE_DEMO) { window.SAUDADE_DEMO.load(); render(); } } },
+                    { label: addLabel.visa,      onClick: () => jumpToCat('visa') },
+                    { label: addLabel.tax,       onClick: () => jumpToCat('tax') },
+                    { label: addLabel.insurance, onClick: () => jumpToCat('insurance') },
+                    { label: addLabel.pension,   onClick: () => jumpToCat('pension') }
                 ],
                 note: t.note
             });

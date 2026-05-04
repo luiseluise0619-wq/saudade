@@ -44,6 +44,9 @@ jobs:
           done
           test "$fail" = 0
 
+      - name: Calculator unit tests
+        run: node --test test/calculators.test.js
+
       - name: Content licence validator
         run: node scripts/validate-content.js
 

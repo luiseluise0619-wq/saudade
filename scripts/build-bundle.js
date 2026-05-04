@@ -39,6 +39,8 @@ const BUNDLES = {
         'saudade-coverage-form.js',
         'saudade-empty.js',
         'saudade-welcome.js',
+        'saudade-demo.js',
+        'saudade-import.js',
         'saudade-footer-rule.js'
     ],
     'saudade.editorial.js': [
