@@ -197,7 +197,8 @@ function main() {
     // each day's data temporarily as data/dispatches.json shape. Easier path:
     // emit each day as its own dispatches-DAY.json under dist/ and run
     // build-issue.js against a single edition.
-    const issueDir = path.join(ROOT, 'dist', 'issues', 'week-of-' + start);
+    // v644 — committed path so the issues are reachable from the live site.
+    const issueDir = path.join(ROOT, 'issues', 'week-of-' + start);
     fs.mkdirSync(issueDir, { recursive: true });
 
     let issueCount = 0;
@@ -223,7 +224,121 @@ function main() {
     }
 
     console.log(`[ok] ${issueCount} HTML issues built into ${path.relative(ROOT, issueDir)}/`);
-    console.log('     open any of them, Cmd+P → Save as PDF for the print artefact.');
+
+    // ─── Build the archive index page ───────────────────────────────────
+    // /issues/index.html lists every published issue with date + first-city
+    // teaser + a click-through. Same paper aesthetic as the rest of saudade.
+    buildArchiveIndex(start);
+    console.log('[ok] archive index → ' + path.relative(ROOT, path.join(ROOT, 'issues', 'index.html')));
+    console.log('     open /issues/ in the live site to read the week. Each issue has DOWNLOAD PDF.');
+}
+
+function buildArchiveIndex(weekStart) {
+    const issuesRoot = path.join(ROOT, 'issues');
+    fs.mkdirSync(issuesRoot, { recursive: true });
+
+    // Walk every issue HTML in /issues/ (this week's + future) and parse
+    // their filename for date metadata.
+    const findFiles = (dir, list) => {
+        if (!fs.existsSync(dir)) return list;
+        for (const f of fs.readdirSync(dir)) {
+            const p = path.join(dir, f);
+            const stat = fs.statSync(p);
+            if (stat.isDirectory()) findFiles(p, list);
+            else if (f.match(/^saudade-\w+-\d{4}-\d{2}-\d{2}\.html$/)) list.push(p);
+        }
+        return list;
+    };
+    const issueFiles = findFiles(issuesRoot, []).sort().reverse();
+
+    const items = issueFiles.map(p => {
+        const name = path.basename(p);
+        const m = name.match(/^saudade-(\w+)-(\d{4}-\d{2}-\d{2})\.html$/);
+        if (!m) return null;
+        const ed = m[1];
+        const date = m[2];
+        const html = fs.readFileSync(p, 'utf8');
+        const titles = [...html.matchAll(/<p class="city">([^<]+)<\/p>/g)].slice(0, 3).map(x => x[1]);
+        const rel = '/' + path.relative(ROOT, p).replace(/\\/g, '/');
+        return { ed, date, titles, rel };
+    }).filter(Boolean);
+
+    const itemsByMonth = {};
+    for (const it of items) {
+        const m = it.date.slice(0, 7);
+        (itemsByMonth[m] = itemsByMonth[m] || []).push(it);
+    }
+    const monthsDesc = Object.keys(itemsByMonth).sort().reverse();
+
+    const monthSections = monthsDesc.map(month => {
+        const monthRows = itemsByMonth[month].map(it => `
+            <li class="row">
+                <a href="${it.rel}" class="dateline">
+                    <time>${it.date}</time>
+                    <span class="ed">${it.ed.toUpperCase()}</span>
+                </a>
+                <p class="cities">${(it.titles || []).map(c => `<span>${escHtml(c)}</span>`).join(' · ')}</p>
+            </li>
+        `).join('');
+        return `
+            <section class="month">
+                <h2>${month}</h2>
+                <ul class="rows">${monthRows}</ul>
+            </section>
+        `;
+    }).join('');
+
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>saudade — issue archive</title>
+<style>
+:root { --paper:#F2EEE3; --ink:#16151A; --rust:#9A3324; --bone-d:#4A4540; --rule:rgba(11,11,15,.16); }
+html, body { background: var(--paper); color: var(--ink); font-family: 'Fraunces', Georgia, serif; font-weight: 300; margin: 0; padding: 0; }
+.page { max-width: 720px; margin: 0 auto; padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 48px); line-height: 1.6; }
+.crumb { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bone-d); padding-bottom: 16px; border-bottom: 0.5px solid var(--rule); margin: 0 0 32px; display: flex; gap: 8px; }
+.crumb a { color: inherit; text-decoration: none; border-bottom: 0.5px solid var(--rule); }
+.crumb a:hover { color: var(--rust); border-bottom-color: var(--rust); }
+h1 { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: clamp(48px, 7vw, 80px); line-height: 0.95; letter-spacing: -0.04em; margin: 0 0 12px; }
+.lede { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: clamp(15px, 1.4vw, 18px); color: var(--bone-d); margin: 0 0 48px; max-width: 52ch; }
+.month { margin: 0 0 40px; }
+.month h2 { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); padding-top: 12px; border-top: 0.5px solid var(--rule); margin: 0 0 0; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.row { padding: 18px 0; border-top: 0.5px dotted var(--rule); display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: baseline; }
+.row:first-child { border-top: 0; }
+.dateline { display: flex; gap: 12px; align-items: baseline; text-decoration: none; color: inherit; min-width: 140px; }
+.dateline:hover time, .dateline:hover .ed { color: var(--rust); }
+.dateline time { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.04em; }
+.dateline .ed { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 9px; letter-spacing: 0.32em; color: var(--bone-d); }
+.cities { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: clamp(15px, 1.3vw, 17px); margin: 0; color: var(--ink); }
+.cities span { display: inline; }
+.empty { font-family: 'Fraunces', serif; font-style: italic; color: var(--bone-d); padding: 48px 0; text-align: center; }
+.colophon { margin-top: 64px; padding-top: 24px; border-top: 0.5px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bone-d); }
+.colophon a { color: inherit; border-bottom: 0.5px solid var(--rule); text-decoration: none; }
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="crumb"><a href="/">SAUDADE / COVER</a> · <span>ARCHIVE</span></nav>
+<h1>The archive.</h1>
+<p class="lede">Every issue we have filed, in date order. Click a row to read; each issue has a <strong>DOWNLOAD PDF</strong> button at the top.</p>
+${monthSections || '<p class="empty">No issues yet.</p>'}
+<footer class="colophon">
+    <p>SAUDADE → <a href="/">today's edition</a> · <a href="/desks.html">the desks</a> · <a href="/feed.atom?edition=en">atom feed</a></p>
+</footer>
+</main>
+</body>
+</html>`;
+
+    fs.writeFileSync(path.join(issuesRoot, 'index.html'), html, 'utf8');
+}
+
+function escHtml(s) {
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 if (require.main === module) main();

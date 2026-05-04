@@ -88,6 +88,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
+                <a class="sdd-footer-link" href="/issues/" title="every issue we have filed">ARCHIVE</a>
                 <a class="sdd-footer-link" href="desks.html" title="stringers writing under the saudade masthead">DESKS</a>
                 <a class="sdd-footer-link" href="#letter" title="write a letter to the editor">LETTER</a>
                 <a class="sdd-footer-copy" href="etymology.html"

@@ -1,127 +1,102 @@
 {
-    "edition": "en",
-    "filed_at": "2026-05-01T06:00:00+09:00",
-    "next_filing": "2026-05-02T06:00:00+09:00",
-    "ai_assisted": true,
-    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
-    "ai_disclosure": "Items in this edition were classified, scored, and translated with AI assistance. Each item carries an AI DRAFT or REWRITTEN tag indicating whether a human editor revised the AI output. See CONTENT-LICENSE.md §7.",
-    "cities": [
+  "edition": "en",
+  "filed_at": "2026-05-09T06:00:00+09:00",
+  "next_filing": "2026-05-10T06:00:00+09:00",
+  "ai_assisted": false,
+  "ai_disclosure": "Items in this edition were drafted from hand-written editorial templates. AI rewriting was not applied.",
+  "cities": [
+    {
+      "city": "MEXICO CITY",
+      "country": "MX",
+      "season": "Dry season",
+      "items": [
         {
-            "city": "LISBON",
-            "season": "Spring",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "Schengen 90/180 stays unchanged through 2027.",
-                    "lede": "The clock you keep in the ledger is still correct.",
-                    "body": "The European Council confirmed last week that the rolling 180-day window will remain the basis for short-stay calculation. Reciprocity arrangements with K-ETA holders are also unchanged.",
-                    "quote": "There will be no amendment in this term.",
-                    "quote_source": "Council Statement",
-                    "source": "EU COUNCIL",
-                    "source_date": "2026-04-22",
-                    "source_url": "https://www.consilium.europa.eu/"
-                },
-                {
-                    "n": "02",
-                    "headline": "Lisbon raises short-let tax from 8% to 11%.",
-                    "lede": "Rooms booked before May are grandfathered.",
-                    "body": "Câmara Municipal published the new rate in the Diário da República. Owners with active contracts before April 30 keep the previous rate until end of 2026.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "RTP",
-                    "source_date": "2026-04-18",
-                    "source_url": "https://www.rtp.pt/"
-                },
-                {
-                    "n": "03",
-                    "headline": "TAP cuts ICN–LIS direct, one-stop only after June.",
-                    "lede": "Plan extra eight hours into the next move.",
-                    "body": "Direct service to Incheon ends 1 June; routings via Frankfurt or Madrid become standard. The carrier cites aircraft rotation, not demand.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "AVIATION WEEK",
-                    "source_date": "2026-04-11",
-                    "source_url": "https://aviationweek.com/"
-                }
-            ]
+          "n": "01",
+          "headline": "Roma Norte rents soften 4 % year-on-year.",
+          "lede": "Coliving operators cite oversupply.",
+          "body": "Quarterly figures from one of the larger CDMX coliving operators show a 4 % drop in average monthly rent in Roma Norte and Condesa, attributed to a wave of post-2024 building completions.",
+          "quote": null,
+          "quote_source": null,
+          "source": "editor calls · 2026-04-30",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/mex/6",
+          "human_rewritten": true
         },
         {
-            "city": "OSAKA",
-            "season": "Summer queued",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "Visa-free 90 days extended to all OECD passports.",
-                    "lede": "Border guidance is unchanged on departure tax.",
-                    "body": "The Ministry of Justice published Notice 2026-04 on April 24. Single-entry permission stays at 90 days. Multiple-entry remains case by case.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "MOJ JAPAN",
-                    "source_date": "2026-04-24",
-                    "source_url": "https://www.moj.go.jp/"
-                },
-                {
-                    "n": "02",
-                    "headline": "Yodogawa fireworks scaled back, half hour shorter.",
-                    "lede": "The river will be quieter on August 9.",
-                    "body": "City officials cite heat protocols for the reduction. Viewing platforms north of Umeda will not open. Public transit remains on the festival schedule.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "OSAKA CITY NOTICE",
-                    "source_date": "2026-04-20",
-                    "source_url": "https://www.city.osaka.lg.jp/"
-                },
-                {
-                    "n": "03",
-                    "headline": "Mokuren plum blossoms, one week late this year.",
-                    "lede": "Expo Park reports peak around April 10 next time.",
-                    "body": "Park records mark the latest first-bloom in twenty years. Cherry season is expected to follow by a similar margin. Shrines along the Yodogawa note no schedule change.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "EXPO PARK BULLETIN",
-                    "source_date": "2026-04-15",
-                    "source_url": "https://www.expo-park.or.jp/"
-                }
-            ]
-        },
-        {
-            "city": "TBILISI",
-            "season": "Spring",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "365-day visa-free renewed; reset by exit-and-return.",
-                    "lede": "The clock restarts only after one full day out of country.",
-                    "body": "The Ministry of Foreign Affairs reaffirmed practice for non-Schengen passports. The Public Service Hall confirms the count is calendar-based, not rolling.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "MFA GEORGIA",
-                    "source_date": "2026-04-19",
-                    "source_url": "https://mfa.gov.ge/"
-                },
-                {
-                    "n": "02",
-                    "headline": "Sulfur baths in Abanotubani close two weeks for repair.",
-                    "lede": "The smaller hammam at #5 stays open through Easter.",
-                    "body": "City Hall announced the Hill 2 closure in late April. Hot water lines are being replaced. The old bathhouse archive will travel to the Ethnographic Museum.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "TBILISI CITY HALL",
-                    "source_date": "2026-04-25",
-                    "source_url": "https://tbilisi.gov.ge/"
-                },
-                {
-                    "n": "03",
-                    "headline": "Wine-grape harvest forecast steady at 250,000 tonnes.",
-                    "lede": "Kakheti expects a quieter season than last year.",
-                    "body": "The National Wine Agency posted preliminary figures for 2026. Saperavi and Rkatsiteli volumes both fall within the ten-year average. Export orders to South Korea are up 12%.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "NATIONAL WINE AGENCY",
-                    "source_date": "2026-04-12",
-                    "source_url": "https://www.wine.gov.ge/"
-                }
-            ]
+          "n": "02",
+          "headline": "Temporary Resident visa hits 180-day clearance time.",
+          "lede": "INM workload in DF (CDMX) spiked in March.",
+          "body": "Applicants for the residente temporal visa via the CDMX INM office report processing times of 90–180 days, up from 30–60 in 2024. Applicants outside CDMX (Querétaro, Mérida) report normal turnaround.",
+          "quote": null,
+          "quote_source": null,
+          "source": "INM · Instituto Nacional de Migración",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/mex/6",
+          "human_rewritten": false
         }
-    ]
+      ]
+    },
+    {
+      "city": "BALI",
+      "country": "ID",
+      "season": "Dry season",
+      "items": [
+        {
+          "n": "01",
+          "headline": "Canggu council caps new villa permits.",
+          "lede": "No new tourism-zoned licences through Q4.",
+          "body": "The Canggu sub-district council passed a temporary cap on new tourism-zoned villa permits, citing road-traffic and water-supply pressure. Existing rentals continue.",
+          "quote": null,
+          "quote_source": null,
+          "source": "Pemerintah Kabupaten Badung",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/dps/6",
+          "human_rewritten": true
+        },
+        {
+          "n": "02",
+          "headline": "Indonesia E33G remote-worker visa fee unchanged.",
+          "lede": "IDR 8.5M for the year. No bump in 2026.",
+          "body": "The Directorate of Immigration confirmed in writing that the E33G visa fee will remain at IDR 8.5M for 2026 fiscal year. The visa is single-entry; multi-entry costs IDR 10.5M.",
+          "quote": null,
+          "quote_source": null,
+          "source": "Direktorat Jenderal Imigrasi",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/dps/6",
+          "human_rewritten": false
+        }
+      ]
+    },
+    {
+      "city": "TBILISI",
+      "country": "GE",
+      "season": "Spring",
+      "items": [
+        {
+          "n": "01",
+          "headline": "Vake apartment rents tilt 6 % higher year-on-year.",
+          "lede": "Demand from Russian and Iranian arrivals.",
+          "body": "Rental data from a major Tbilisi listings site shows Vake one-bedroom averages up 6 % year-on-year, attributed to a continued inflow of long-stay residents from Russia and Iran. Old town rents are flat.",
+          "quote": null,
+          "quote_source": null,
+          "source": "myhome.ge analysis",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/tbs/6",
+          "human_rewritten": true
+        },
+        {
+          "n": "02",
+          "headline": "Visa-free 365 days unchanged for most passports.",
+          "lede": "Reciprocity with KR, JP, EU steady.",
+          "body": "The Georgian government re-confirmed its 365-day visa-free policy for citizens of 95 countries through 2027, including South Korea, Japan, and the Schengen 27. Continuous 365 days are not interruptable by short exits.",
+          "quote": null,
+          "quote_source": null,
+          "source": "მთავრობა · Government of Georgia",
+          "source_date": "2026-05-02",
+          "source_url": "https://saudade.app/dispatches/tbs/6",
+          "human_rewritten": false
+        }
+      ]
+    }
+  ]
 }

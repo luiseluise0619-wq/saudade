@@ -21,7 +21,9 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
-const DEFAULT_OUT = path.join(ROOT, 'dist', 'issues');
+// v644 — issues are now committed to /issues/ in the repo so they're
+// reachable from the live site. dist/ remains a build cache.
+const DEFAULT_OUT = path.join(ROOT, 'issues');
 
 const EDITIONS = ['en', 'ko', 'ja', 'pt', 'es'];
 
@@ -81,6 +83,36 @@ const STYLE = `
 @page { size: A4 portrait; margin: 18mm 16mm 22mm 16mm; }
 @page :first { @top-right { content: ""; } }
 @page { @bottom-center { content: "saudade · " counter(page) " / " counter(pages); font-family: "JetBrains Mono", monospace; font-size: 9pt; letter-spacing: 0.18em; color: #5e554a; } }
+/* v644 — screen-only top bar with Download / Back buttons. Hidden from print. */
+.actionbar {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--paper);
+    padding: 14px 24px;
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 16px; align-items: center; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+}
+.actionbar a, .actionbar button {
+    background: transparent; border: 0;
+    color: var(--ink); cursor: pointer;
+    text-decoration: none; padding: 4px 8px;
+    border-bottom: 0.5px solid transparent;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    transition: color .15s, border-color .15s;
+}
+.actionbar a:hover, .actionbar button:hover {
+    color: var(--rust); border-bottom-color: var(--rust);
+}
+.actionbar .pdf-btn { color: var(--rust); border: 0.5px solid var(--rust); padding: 8px 14px; }
+.actionbar .pdf-btn:hover { background: var(--rust); color: var(--paper); }
+.actionbar .meta { color: var(--bone-d); flex: 1; text-align: center; }
+@media print { .actionbar { display: none; } }
+@media (max-width: 540px) {
+    .actionbar { padding: 10px 14px; gap: 8px; font-size: 9px; }
+    .actionbar .meta { display: none; }
+}
 html, body {
     background: var(--paper); color: var(--ink);
     font-family: "Fraunces", "Times New Roman", serif;
@@ -253,6 +285,13 @@ function buildHtml(edition, doc) {
 <style>${STYLE}</style>
 </head>
 <body>
+    <nav class="actionbar" aria-label="issue actions">
+        <a href="/issues/">← ARCHIVE</a>
+        <span class="meta">${escHtml(filed)} · ${escHtml(edition.toUpperCase())} EDITION</span>
+        <button type="button" class="pdf-btn" onclick="window.print()" title="Print or save as PDF">
+            DOWNLOAD PDF
+        </button>
+    </nav>
     <header class="cover">
         <h1>${escHtml(TITLES[edition] || TITLES.en).replace(' — ', '<br/>')}</h1>
         <p class="sub">${escHtml(SUBS[edition] || SUBS.en)}</p>

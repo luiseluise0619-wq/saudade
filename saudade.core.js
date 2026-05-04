@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-04T05:31:16.941Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-04T05:43:43.869Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -5736,6 +5736,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
+                <a class="sdd-footer-link" href="/issues/" title="every issue we have filed">ARCHIVE</a>
                 <a class="sdd-footer-link" href="desks.html" title="stringers writing under the saudade masthead">DESKS</a>
                 <a class="sdd-footer-link" href="#letter" title="write a letter to the editor">LETTER</a>
                 <a class="sdd-footer-copy" href="etymology.html"
