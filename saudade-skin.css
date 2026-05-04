@@ -609,8 +609,13 @@ body:not(.cafe-mode)::after {
     }
 }
 
-/* ─── 26. 메인 표지 (§ 00 ISSUE COVER) — paper 위 큰 SAUDADE 워드마크 ──── */
-body:not(.cafe-mode) #shell::before,
+/* ─── 26. 메인 표지 (§ 00 ISSUE COVER) — paper 위 큰 SAUDADE 워드마크 ────
+   v644 — was rendering on BOTH #shell::before AND .stage::before
+   (selector grouping). When both elements exist on the page (which is
+   the legacy Aura layout — they do) the user sees TWO saudade watermarks
+   stacked at center. Pick .stage only — #shell wraps it but .stage is
+   the actual viewport-sized container. Keep #shell::before suppressed. */
+body:not(.cafe-mode) #shell::before { content: none !important; }
 body:not(.cafe-mode) .stage::before {
     content: 'saudade.';
     position: fixed;
@@ -626,7 +631,8 @@ body:not(.cafe-mode) .stage::before {
     pointer-events: none;
     z-index: 5;
 }
-body:not(.cafe-mode) #shell::after,
+/* v644 — same pair-selector duplicate as above. Pick .stage only. */
+body:not(.cafe-mode) #shell::after { content: none !important; }
 body:not(.cafe-mode) .stage::after {
     content: 'a longing for what cannot return.';
     position: fixed;
@@ -1059,7 +1065,8 @@ body:not(.cafe-mode) .topbar {
 
 /* ─── 33. 푸터 룰 — 메인에서 dock 위에 mono 카피라인 ─────────────────── */
 
-body:not(.cafe-mode):not(.section-active) #bottomDock::before,
+/* v644 — pair-selector dedupe; pick .bottom-dock only. */
+body:not(.cafe-mode):not(.section-active) #bottomDock::before { content: none !important; }
 body:not(.cafe-mode):not(.section-active) .bottom-dock::before {
     content: 'saudade  ·  a longing for what cannot return  ·  ⓒ 2026';
     position: absolute;
