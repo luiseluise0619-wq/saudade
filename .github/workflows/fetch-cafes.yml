@@ -1,0 +1,105 @@
+name: Fetch Seoul cafes (Kakao)
+
+# Manually triggered. Pulls Kakao Maps café candidates per neighborhood
+# using the KAKAO_KEY repo secret, writes them to a *separate* file
+# (data/cafes-seoul.fetched.json) for editor curation, and opens a PR.
+#
+# Setup once:
+#   Settings → Secrets and variables → Actions → New repository secret
+#     KAKAO_KEY   (https://developers.kakao.com → REST API key)
+#
+# Run:
+#   Actions tab → "Fetch Seoul cafes (Kakao)" → Run workflow
+#   pick neighborhoods + per-query count.
+#
+# Constitution: "we list only what we have visited." The fetched file is
+# seed only — editor must visit each, write two_lines, set visited_at,
+# then manually copy the chosen entries into data/cafes-seoul.json.
+
+on:
+  workflow_dispatch:
+    inputs:
+      neighborhoods:
+        description: "Comma-separated subset (or empty for default 14 neighborhoods)"
+        required: false
+        default: ""
+      per:
+        description: "Cafés per neighborhood (max 15)"
+        required: false
+        default: "5"
+      radius:
+        description: "Search radius in metres (default 800, max 20000)"
+        required: false
+        default: "800"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+
+      - name: Fetch Kakao cafés
+        env:
+          KAKAO_KEY: ${{ secrets.KAKAO_KEY }}
+        run: |
+          if [ -z "$KAKAO_KEY" ]; then
+            echo "::error::KAKAO_KEY secret not set."
+            echo "Add it: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+          ARGS="--per ${{ inputs.per }} --radius ${{ inputs.radius }}"
+          if [ -n "${{ inputs.neighborhoods }}" ]; then
+            ARGS="$ARGS --neighborhoods '${{ inputs.neighborhoods }}'"
+          fi
+          eval node scripts/fetch-kakao-cafes.js $ARGS
+
+      - name: Validate licenses
+        run: node scripts/validate-content.js
+        continue-on-error: true
+
+      - name: Summarise
+        run: |
+          echo "## Fetched"   >> $GITHUB_STEP_SUMMARY
+          echo               >> $GITHUB_STEP_SUMMARY
+          if [ -f data/cafes-seoul.fetched.json ]; then
+            COUNT=$(node -e "console.log(require('./data/cafes-seoul.fetched.json').cafes.length)")
+            echo "- $COUNT café candidate(s)"   >> $GITHUB_STEP_SUMMARY
+            echo "- separate from data/cafes-seoul.json (curation queue)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "content: fetched Seoul café seed (Kakao)"
+          title: "content: Seoul café seed — Kakao"
+          branch: content/cafes-${{ github.run_id }}
+          delete-branch: true
+          add-paths: |
+            data/cafes-seoul.fetched.json
+            data/licenses/kakao-*.json
+          body: |
+            Automated fetch via `.github/workflows/fetch-cafes.yml`.
+
+            **Run:** per=`${{ inputs.per }}` radius=`${{ inputs.radius }}m`
+            **Neighborhoods:** `${{ inputs.neighborhoods || '(default 14)' }}`
+
+            ### Reviewer checklist (헌법: "we list only what we have visited")
+            - [ ] These are seed candidates — NOT yet on the magazine.
+            - [ ] For each café you actually want to feature:
+              - Visit it.
+              - Write two_lines (mono · 2 short observations).
+              - Decide amenities (`OUTLET · WIFI · QUIET · NO_CALLS · 24H · CALLS_OK`).
+              - Set visited_at.
+              - Move the entry into `data/cafes-seoul.json`.
+            - [ ] Drop the rest (or keep the file as a working set).
+            - [ ] Run `node scripts/validate-content.js` locally.
+            - [ ] Squash-merge.
+
+            Key: `KAKAO_KEY` from repo secrets — never leaves the runner.
+            Attribution: Kakao requires "카카오맵 제공" credit; sidecars carry it.
