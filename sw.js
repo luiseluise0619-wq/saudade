@@ -10,47 +10,36 @@
 // CACHE_VERSION 을 v533 으로 강제 점프 — 사용자 보고 'css/js 변경 안 보임'.
 // 옛 v515 캐시가 남아 있어서 새 자산이 안 들어오던 문제 차단.
 // activate 핸들러가 startsWith(CACHE_VERSION) 외 모든 캐시 삭제.
-const CACHE_VERSION = 'saudade-v654';
+const CACHE_VERSION = 'saudade-v655';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
 // 셸 자산 (오프라인에서도 앱 켜지게 — 실제 데이터는 못 오지만 UI는 뜸)
-// v598 SAUDADE 스킨 3개 추가 (offline 에서도 페이퍼 톤 유지)
+// v655 — 옛 AURA 모듈 (app.js / ambient-mode.js / city-videos.js) 제거됨.
+//        bootstrap + boot + bundle + 표지/마스트헤드만 캐시. 나머지는 runtime 캐시로 흡수.
 const STATIC_ASSETS = [
     './',
     './index.html',
-    './style.css',
-    './app.js',
-    './ambient-mode.js',
-    './city-videos.js',
     './manifest.json',
+    './style.css',
     './saudade-tokens.css',
     './saudade-typography.css',
     './saudade-skin.css',
-    './saudade-rings.js',
+    './saudade-edition-tokens.css',
+    './saudade-microtype.css',
+    './saudade-empty.css',
+    './bootstrap.js',
+    './consent.js',
+    './saudade-boot.js',
+    './saudade.core.js',
+    './saudade-edition.js',
     './saudade-cover.js',
     './saudade-masthead.js',
-    './saudade-footer-rule.js',
+    './saudade-rings.js',
     './saudade-wordmark.js',
-    './saudade-atlas.js',
-    './saudade-ledger.js',
-    './saudade-edition.js',
-    './saudade-edition-tokens.css',
-    './saudade-dispatches.js',
-    './saudade-desk.js',
-    './saudade-listening.js',
-    './saudade-hud.js',
-    './saudade-city.js',
     './data/city-definitions.json',
-    './data/dispatches.json',
-    './data/dispatches.ko.json',
-    './data/dispatches.ja.json',
-    './data/dispatches.pt.json',
-    './data/dispatches.es.json',
-    './data/listening.json',
-    './data/cafes-seoul.json',
-    './data/next-issues.json',
-    './data/cover-titles.json'
+    './data/cover-titles.json',
+    './data/dispatches.json'
 ];
 
 self.addEventListener('install', (e) => {
