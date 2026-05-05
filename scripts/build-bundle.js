@@ -80,9 +80,23 @@ function tryEsbuild(input, output) {
     } catch (e) { return false; }
 }
 
+// Deterministic build stamp: latest mtime among all source modules. Means the
+// banner only changes when actual source content changes — git diffs stay clean
+// even after running `npm run bundle` against an unchanged tree.
+function buildStamp(allFiles) {
+    let latest = 0;
+    for (const f of allFiles) {
+        const p = path.join(ROOT, f);
+        try { const m = fs.statSync(p).mtimeMs; if (m > latest) latest = m; } catch (e) {}
+    }
+    if (!latest) return 'unknown';
+    return new Date(latest).toISOString().slice(0, 19) + 'Z';
+}
+
 function main() {
     fs.mkdirSync(OUT, { recursive: true });
-    const date = new Date().toISOString();
+    const allFiles = Object.values(BUNDLES).flat();
+    const date = buildStamp(allFiles);
     let bundleCount = 0;
     let totalIn = 0, totalOut = 0;
     for (const [name, files] of Object.entries(BUNDLES)) {

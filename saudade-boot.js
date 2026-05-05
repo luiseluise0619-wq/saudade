@@ -191,6 +191,16 @@
         } catch (e) {}
     }
 
+    // ─── currentEd helper ──────────────────────────────────────────────
+    // ~25 modules read the active edition the same way:
+    //   const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+    // Centralised so a future edition rename touches one line.
+    function currentEd() {
+        try {
+            return (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        } catch (e) { return 'en'; }
+    }
+
     window.SAUDADE_BOOT = {
         fadeLoadingOverlay,
         lastSection,
@@ -199,6 +209,7 @@
         debounce,
         throttle,
         pausableInterval,
-        haptic
+        haptic,
+        currentEd
     };
 })();

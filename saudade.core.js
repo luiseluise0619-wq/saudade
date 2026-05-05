@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-05T08:28:41.115Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-05T10:42:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -5142,7 +5142,7 @@ body[data-tour="1"] .sdd-cover::before {
     const MODAL_SELECTOR = [
         '.sdd-auth-modal', '.sdd-acct-modal', '.sdd-welcome',
         '.sdd-homes-modal', '.sdd-let-modal', '.sdd-desk-modal',
-        '.sdd-imp-modal'
+        '.sdd-imp-modal', '.sdd-cb-modal'
     ].join(',');
 
     const TABBABLE = [

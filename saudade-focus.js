@@ -16,7 +16,7 @@
     const MODAL_SELECTOR = [
         '.sdd-auth-modal', '.sdd-acct-modal', '.sdd-welcome',
         '.sdd-homes-modal', '.sdd-let-modal', '.sdd-desk-modal',
-        '.sdd-imp-modal'
+        '.sdd-imp-modal', '.sdd-cb-modal'
     ].join(',');
 
     const TABBABLE = [
