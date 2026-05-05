@@ -705,11 +705,11 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 ? cityList.join(' & ')
                 : cityList.slice(0, -1).join(', ') + ' & ' + cityList[cityList.length - 1];
         const msg = T({
-            en: `${cities} — awaiting first filings.`,
-            ko: `${cities} — 첫 디스패치를 기다리는 중.`,
-            ja: `${cities} — 最初の通信を待っている。`,
-            pt: `${cities} — a aguardar os primeiros despachos.`,
-            es: `${cities} — esperando los primeros despachos.`
+            en: `On the wire from ${cities}.`,
+            ko: `${cities} — 송고 대기.`,
+            ja: `${cities} — 入稿待ち。`,
+            pt: `Em transmissão de ${cities}.`,
+            es: `En transmisión desde ${cities}.`
         });
         return `
             <article class="sdd-disp-item sdd-disp-awaiting sdd-disp-awaiting-collapsed">
@@ -724,11 +724,11 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
             const T = window.SAUDADE_T || ((s) => s.en);
             const msg = T({
-                en: 'Awaiting first dispatch from $city.',
-                ko: '$city 의 첫 디스패치를 기다리는 중.',
-                ja: '$city からの最初の通信を待っている。',
-                pt: 'A aguardar o primeiro despacho de $city.',
-                es: 'Esperando el primer despacho de $city.'
+                en: 'On the wire from $city.',
+                ko: '$city — 송고 대기.',
+                ja: '$city — 入稿待ち。',
+                pt: 'Em transmissão de $city.',
+                es: 'En transmisión desde $city.'
             }).replace('$city', it._city || '');
             return `
                 <article class="sdd-disp-item sdd-disp-awaiting">
