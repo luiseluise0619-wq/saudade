@@ -47,10 +47,29 @@ const RL = {
     '/cafe/submit':         { max: 5,  win: 60000 },
     '/auth/request':   { max: 5,  win: 60000 },
     '/auth/verify':    { max: 10, win: 60000 },
+    '/auth/sessions':  { max: 30, win: 60000 },
+    '/auth/signout':   { max: 30, win: 60000 },
+    '/auth/signout-all': { max: 10, win: 60000 },
+    '/auth/export':    { max: 5,  win: 60000 },
+    '/auth/delete':    { max: 3,  win: 60000 },
+    '/auth/consent':   { max: 30, win: 60000 },
+    '/letters/submit': { max: 5,  win: 60000 },
+    '/letters/list':   { max: 60, win: 60000 },
+    '/letters/queue':  { max: 30, win: 60000 },
+    '/desks/apply':    { max: 3,  win: 60000 },
+    '/desks/list':     { max: 60, win: 60000 },
+    '/desks/posts':    { max: 60, win: 60000 },
+    '/desks/submit':   { max: 5,  win: 60000 },
+    '/desks/queue':    { max: 30, win: 60000 },
+    '/admin/pipeline-status':  { max: 30, win: 60000 },
+    '/admin/pipeline-trigger': { max: 6,  win: 60000 },
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
     '/dispatches/retracted': { max: 60, win: 60000 },
+    '/feed':       { max: 60, win: 60000 },
+    '/feed.xml':   { max: 60, win: 60000 },
+    '/feed.atom':  { max: 60, win: 60000 },
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
@@ -319,17 +338,30 @@ async function pipelineStub(phase) { return { ok: true, phase, todo: 'next PR' }
 
 export default {
     async scheduled(event, env, ctx) {
+        // v649 — wire the real pipeline functions to cron, not pipelineStub.
+        // Free-tier Cloudflare allows max 5 cron triggers, so Sort runs
+        // inside Score (consolidation) and Stage runs inside File. Result is
+        // tucked into AURA_KV for /admin debugging.
         const llm = pipelineLLM(env);
         let result;
-        switch (event.cron) {
-            case '0 15 * * *':  result = await pipelineGather(env); break;
-            case '30 15 * * *': result = await pipelineSort(env, llm); break;
-            case '0 17 * * *':  result = await pipelineScore(env, llm); break;
-            case '0 19 * * *':  result = await pipelineStub('write'); break;
-            case '0 20 * * *':  result = await pipelineStub('translate'); break;
-            case '30 20 * * *': result = await pipelineStub('stage'); break;
-            case '0 21 * * *':  result = await pipelineStub('file'); break;
-            default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+        try {
+            switch (event.cron) {
+                case '0 15 * * *':  result = await pipelineGather(env); break;
+                case '0 17 * * *':
+                    // Sort + Score together — Score depends on Sort output.
+                    await pipelineSort(env, llm).catch(() => null);
+                    result = await pipelineScore(env, llm);
+                    break;
+                case '0 19 * * *':  result = await pipelineWrite(env); break;
+                case '0 20 * * *':  result = await pipelineTranslate(env); break;
+                case '0 21 * * *':  result = await pipelineFile(env); break;
+                // Legacy slots kept for paid-tier cron upgrade path:
+                case '30 15 * * *': result = await pipelineSort(env, llm); break;
+                case '30 20 * * *': result = await pipelineStub('stage'); break;
+                default: result = { ok: false, reason: 'unknown_cron', cron: event.cron };
+            }
+        } catch (e) {
+            result = { ok: false, error: String(e && e.message || e), cron: event.cron };
         }
         if (env.AURA_KV) {
             try { await env.AURA_KV.put('pipeline:last:' + (event.cron || 'manual'), JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
@@ -379,12 +411,31 @@ export default {
                 case '/cafe/submit':         return cafeSubmit(req, env, ctx);
                 case '/auth/request':      return authRequest(req, env, ctx);
                 case '/auth/verify':       return authVerify(req, env, ctx);
+                case '/auth/sessions':     return authSessions(req, env, ctx);
+                case '/auth/signout':      return authSignOut(req, env, ctx);
+                case '/auth/signout-all':  return authSignOutAll(req, env, ctx);
+                case '/auth/export':       return authExport(req, env, ctx);
+                case '/auth/delete':       return authDelete(req, env, ctx);
+                case '/auth/consent':      return authConsent(req, env, ctx);
+                case '/letters/submit':    return lettersSubmit(req, env, ctx);
+                case '/letters/list':      return lettersList(req, env, ctx);
+                case '/letters/queue':     return lettersQueue(req, env, ctx);
+                case '/desks/apply':       return desksApply(req, env, ctx);
+                case '/desks/list':        return desksList(req, env, ctx);
+                case '/desks/posts':       return desksPosts(req, env, ctx);
+                case '/desks/submit':      return desksSubmit(req, env, ctx);
+                case '/desks/queue':       return desksQueue(req, env, ctx);
                 case '/city/request':      return cityRequest(req, env, ctx);
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
+                case '/feed':
+                case '/feed.xml':
+                case '/feed.atom':         return feedAtom(req, env, ctx);
                 case '/admin/rss-sources':    return adminRssSources(req, env, ctx);
                 case '/admin/rss-forbidden':  return adminRssForbidden(req, env, ctx);
+                case '/admin/pipeline-status':  return adminPipelineStatus(req, env, ctx);
+                case '/admin/pipeline-trigger': return adminPipelineTrigger(req, env, ctx);
                 case '/following':            return followingHandler(req, env, ctx);
                 case '/listening/log':        return listeningLog(req, env, ctx);
                 case '/stats/weekly':         return statsWeekly(req, env, ctx);
@@ -1380,10 +1431,276 @@ async function authVerify(req, env, ctx) {
             ).bind(now, user.id).run();
         }
 
-        return J(req, { ok: true, user });
+        // Issue a server-side session so the user can revoke it later.
+        const session = await issueSession(env, req, user.id);
+        return J(req, { ok: true, user, session });
     } catch (e) {
         return E(req, 'DB_ERROR', 'Verify failed', 500);
     }
+}
+
+// ─── permission revocation — sessions, export, delete, consent ────────────
+const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;   // 30 days
+
+function genSessionToken() {
+    const buf = new Uint8Array(32);
+    crypto.getRandomValues(buf);
+    return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function shortLabelFromUA(ua) {
+    if (!ua) return null;
+    const u = String(ua).slice(0, 400);
+    let browser = 'Browser';
+    if (/Edg\//.test(u))           browser = 'Edge';
+    else if (/Chrome\//.test(u))   browser = 'Chrome';
+    else if (/Firefox\//.test(u))  browser = 'Firefox';
+    else if (/Safari\//.test(u))   browser = 'Safari';
+    let os = 'Device';
+    if (/Windows/.test(u))         os = 'Windows';
+    else if (/Mac OS/.test(u))     os = 'macOS';
+    else if (/iPhone|iPad/.test(u))os = 'iOS';
+    else if (/Android/.test(u))    os = 'Android';
+    else if (/Linux/.test(u))      os = 'Linux';
+    return browser + ' · ' + os;
+}
+
+async function issueSession(env, req, userId) {
+    const token = genSessionToken();
+    const id = await sha(token);
+    const now = Date.now();
+    const ua = req.headers.get('User-Agent') || '';
+    const ip = req.headers.get('CF-Connecting-IP') || req.headers.get('X-Forwarded-For') || '';
+    const uaHash = ua ? await sha(ua) : null;
+    const ipHash = ip ? await sha(ip + ':' + new Date().toISOString().slice(0, 10)) : null;
+    const label  = shortLabelFromUA(ua);
+
+    await env.SAUDADE_DB.prepare(
+        'INSERT INTO sessions (id, user_id, created_at, last_used_at, expires_at, ua_hash, ip_hash, label) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+    ).bind(id, userId, now, now, now + SESSION_TTL_MS, uaHash, ipHash, label).run();
+
+    return { token, expires_at: now + SESSION_TTL_MS, label };
+}
+
+async function readSession(env, sessionToken) {
+    if (!sessionToken || typeof sessionToken !== 'string' || sessionToken.length !== 64) return null;
+    const id = await sha(sessionToken);
+    const row = await env.SAUDADE_DB.prepare(
+        'SELECT id, user_id, created_at, last_used_at, expires_at, label, revoked_at FROM sessions WHERE id = ?'
+    ).bind(id).first();
+    if (!row) return null;
+    if (row.revoked_at) return null;
+    if (row.expires_at && row.expires_at < Date.now()) return null;
+    return row;
+}
+
+async function authedUser(req, env) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : null;
+    const session = await readSession(env, token);
+    if (!session) return null;
+    // touch last_used_at (best-effort, no await on response)
+    try {
+        await env.SAUDADE_DB.prepare(
+            'UPDATE sessions SET last_used_at = ? WHERE id = ?'
+        ).bind(Date.now(), session.id).run();
+    } catch (e) {}
+    const user = await env.SAUDADE_DB.prepare(
+        'SELECT id, email, edition, tier, created_at FROM users WHERE id = ?'
+    ).bind(session.user_id).first();
+    if (!user) return null;
+    return { user, session };
+}
+
+// GET /auth/sessions — list active sessions for current user
+async function authSessions(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const rows = await env.SAUDADE_DB.prepare(
+        'SELECT id, label, created_at, last_used_at, expires_at FROM sessions WHERE user_id = ? AND revoked_at IS NULL AND expires_at > ? ORDER BY last_used_at DESC'
+    ).bind(ctxAuth.user.id, Date.now()).all();
+
+    const list = (rows.results || []).map(r => ({
+        id_short:    r.id.slice(0, 8),
+        is_current:  r.id === ctxAuth.session.id,
+        label:       r.label || 'Unknown device',
+        created_at:  r.created_at,
+        last_used_at: r.last_used_at,
+        expires_at:  r.expires_at
+    }));
+    return J(req, { ok: true, sessions: list });
+}
+
+// POST /auth/signout — revoke current session only
+async function authSignOut(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return J(req, { ok: true, already: true });   // idempotent
+
+    await env.SAUDADE_DB.prepare(
+        'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE id = ? AND revoked_at IS NULL'
+    ).bind(Date.now(), 'user', ctxAuth.session.id).run();
+
+    return J(req, { ok: true });
+}
+
+// POST /auth/signout-all — revoke every session and pending magic link for this user
+async function authSignOutAll(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const now = Date.now();
+    await env.SAUDADE_DB.prepare(
+        'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE user_id = ? AND revoked_at IS NULL'
+    ).bind(now, 'user_all', ctxAuth.user.id).run();
+
+    // Also burn every unused magic link for this email (in case attacker has it).
+    try {
+        await env.SAUDADE_DB.prepare(
+            'UPDATE magic_tokens SET used_at = ? WHERE email = ? AND used_at IS NULL'
+        ).bind(now, ctxAuth.user.email).run();
+    } catch (e) {}
+
+    return J(req, { ok: true, revoked_at: now });
+}
+
+// GET /auth/export — JSON dump of everything we hold for this user (GDPR Art.20)
+async function authExport(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    const uid   = ctxAuth.user.id;
+    const email = ctxAuth.user.email;
+
+    async function safeAll(sql, ...params) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(sql).bind(...params).all();
+            return r.results || [];
+        } catch (e) { return []; }
+    }
+
+    const out = {
+        format: 'saudade.user-export.v1',
+        generated_at: new Date().toISOString(),
+        notice: 'This file contains every record Saudade currently holds linked to your account. ' +
+                'It is shared under GDPR Art.20 and PIPA §35.',
+        user: ctxAuth.user,
+        sessions: await safeAll(
+            'SELECT id, label, created_at, last_used_at, expires_at, revoked_at, revoked_by FROM sessions WHERE user_id = ?', uid
+        ),
+        magic_tokens: (await safeAll(
+            'SELECT created_at, expires_at, used_at FROM magic_tokens WHERE email = ?', email
+        )),
+        consent_log: await safeAll(
+            'SELECT category, granted, at, edition, policy_ver FROM consent_log WHERE user_id = ?', uid
+        ),
+        cafe_submissions: await safeAll(
+            'SELECT * FROM cafe_submissions WHERE user_email = ?', email
+        ),
+        city_requests: await safeAll(
+            'SELECT * FROM city_requests WHERE user_email = ?', email
+        ),
+        listening_log: await safeAll(
+            'SELECT * FROM listening_log WHERE user_id = ?', uid
+        ),
+        following: await safeAll(
+            'SELECT * FROM user_following_cities WHERE user_id = ?', uid
+        )
+    };
+    return J(req, out, 200, {
+        'Content-Disposition': 'attachment; filename="saudade-export.json"'
+    });
+}
+
+// POST /auth/delete  body: { confirm: 'DELETE', reason?: string }
+//   Hard-deletes the user row, every session, every magic token, and every UGC row tied to email.
+//   Writes a hashed-only tombstone to deletion_log for audit.
+async function authDelete(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    if ((body.confirm || '').toString() !== 'DELETE') {
+        return E(req, 'BAD_CONFIRM', 'Type DELETE to confirm', 400);
+    }
+
+    const uid    = ctxAuth.user.id;
+    const email  = ctxAuth.user.email;
+    const now    = Date.now();
+    const reason = clean(body.reason, 500) || null;
+    const uidHash   = await sha(uid);
+    const emailHash = await sha(email);
+
+    // Best-effort cascade. SQLite/D1 lacks cross-table FKs guarantees here.
+    const deletes = [
+        ['DELETE FROM sessions      WHERE user_id = ?', uid],
+        ['DELETE FROM magic_tokens  WHERE email   = ?', email],
+        ['DELETE FROM consent_log   WHERE user_id = ?', uid],
+        ['DELETE FROM cafe_submissions   WHERE user_email = ?', email],
+        ['DELETE FROM city_requests      WHERE user_email = ?', email],
+        ['DELETE FROM listening_log      WHERE user_id    = ?', uid],
+        ['DELETE FROM user_following_cities WHERE user_id = ?', uid],
+        ['DELETE FROM users           WHERE id = ?', uid]
+    ];
+    for (const [sql, p] of deletes) {
+        try { await env.SAUDADE_DB.prepare(sql).bind(p).run(); }
+        catch (e) { /* table may not exist in early deployments */ }
+    }
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO deletion_log (user_id_hash, email_hash, requested_at, deleted_at, reason) VALUES (?, ?, ?, ?, ?)'
+        ).bind(uidHash, emailHash, now, now, reason).run();
+    } catch (e) {}
+
+    return J(req, { ok: true, deleted_at: now });
+}
+
+// POST /auth/consent  body: { category, granted, anon_id?, policy_ver? }
+//   Writes a row regardless of whether the user is signed in (anon_id for guests).
+async function authConsent(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, stored: false });   // graceful no-op
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const allowed = ['analytics', 'marketing', 'functional', 'ai'];
+    const category = clean(body.category, 32);
+    if (!allowed.includes(category)) return E(req, 'BAD_CATEGORY', 'Unknown consent category', 400);
+    const granted    = body.granted ? 1 : 0;
+    const anonId     = clean(body.anon_id, 64) || null;
+    const policyVer  = clean(body.policy_ver, 16) || null;
+    const edition    = clean(body.edition, 8) || null;
+    const ua         = req.headers.get('User-Agent') || '';
+    const uaHash     = ua ? await sha(ua) : null;
+
+    let userId = null;
+    const ctxAuth = await authedUser(req, env);
+    if (ctxAuth) userId = ctxAuth.user.id;
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            'INSERT INTO consent_log (user_id, anon_id, category, granted, at, edition, ua_hash, policy_ver) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+        ).bind(userId, anonId, category, granted, Date.now(), edition, uaHash, policyVer).run();
+    } catch (e) {
+        return J(req, { ok: true, stored: false });
+    }
+    return J(req, { ok: true });
 }
 // ─── v7 §5.5 — City requests ─────────────────────────────────────────────
 // "100 readers ask for a city, we open the desk." 사용자가 정의 안 된 도시 요청.
@@ -1931,6 +2248,648 @@ async function listeningLog(req, env, ctx) {
     } catch (e) {
         return J(req, { ok: true, logged: false });   // graceful — 클라이언트 fire-and-forget
     }
+}
+
+// ─── Letters to the editor — submit / list (public) / queue (editor) ──
+//
+// The shape of UGC saudade allows. Every letter is reviewed before any
+// public visibility. No comment threads, no reply chains, no anonymous
+// pile-on. The endpoint is rate-limited to 5/min/IP at the edge.
+
+const LETTER_MAX_BODY = 800;
+
+async function lettersSubmit(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Letters not yet open.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const text = clean(body.body, LETTER_MAX_BODY);
+    if (!text || text.length < 30) return E(req, 'BAD_BODY', 'Letter too short (min 30 chars)', 400);
+
+    const edition      = clean(body.edition, 8) || 'en';
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
+
+    const dispatchRef  = clean(body.dispatch_ref, 64) || null;
+    const cityTag      = (clean(body.city_tag, 32) || '').toLowerCase() || null;
+    const displayName  = clean(body.display_name, 80) || null;
+
+    // Soft-bind to a user if a session is supplied — but anonymous submissions
+    // are also allowed (an editor will read every letter regardless).
+    const ctxAuth = await authedUser(req, env);
+    const userId  = ctxAuth ? ctxAuth.user.id    : null;
+    const email   = ctxAuth ? ctxAuth.user.email : (clean(body.email, 200) || null);
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            `INSERT INTO letters
+             (submitted_at, user_id, user_email, display_name, edition,
+              dispatch_ref, city_tag, body, status)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'submitted')`
+        ).bind(Date.now(), userId, email, displayName, edition,
+               dispatchRef, cityTag, text).run();
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Could not file the letter', 500);
+    }
+
+    return J(req, { ok: true, mode: 'queued' });
+}
+
+// GET /letters/list?edition=en&dispatch_ref=...&limit=12
+//   Public — only returns letters with status='published'.
+async function lettersList(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, letters: [] });
+    const url = new URL(req.url);
+    const edition     = (url.searchParams.get('edition') || 'en').toLowerCase();
+    const dispatchRef = (url.searchParams.get('dispatch_ref') || '').trim() || null;
+    const limit       = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '12', 10) || 12, 1), 50);
+
+    let query = `SELECT id, edited_body, body, display_name, city_tag,
+                        published_at, dispatch_ref
+                 FROM letters
+                 WHERE status = 'published' AND edition = ?`;
+    const params = [edition];
+    if (dispatchRef) { query += ' AND dispatch_ref = ?'; params.push(dispatchRef); }
+    query += ' ORDER BY published_at DESC LIMIT ?';
+    params.push(limit);
+
+    try {
+        const r = await env.SAUDADE_DB.prepare(query).bind(...params).all();
+        const letters = ((r && r.results) || []).map(row => ({
+            id: row.id,
+            body: row.edited_body || row.body,
+            display_name: row.display_name || 'Anonymous',
+            city: row.city_tag || null,
+            published_at: row.published_at,
+            dispatch_ref: row.dispatch_ref
+        }));
+        return J(req, { ok: true, letters });
+    } catch (e) {
+        return J(req, { ok: true, letters: [] });
+    }
+}
+
+// GET  /letters/queue          → list submitted/reviewed letters (editor only)
+// POST /letters/queue { id, action, edited_body?, rejection_reason?, issue_ref? }
+//   Editor-only. Bearer EDITOR_TOKEN.
+async function lettersQueue(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Letters not yet open.', 503);
+
+    if (req.method === 'GET') {
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                `SELECT id, submitted_at, edition, dispatch_ref, city_tag,
+                        display_name, user_email, body, status
+                 FROM letters
+                 WHERE status IN ('submitted', 'reviewed', 'edited')
+                 ORDER BY submitted_at ASC LIMIT 200`
+            ).all();
+            return J(req, { ok: true, letters: (r && r.results) || [] });
+        } catch (e) { return J(req, { ok: true, letters: [] }); }
+    }
+
+    if (req.method !== 'POST') return E(req, 'METHOD', 'GET or POST', 405);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const id     = parseInt(body.id, 10);
+    const action = clean(body.action, 16);
+    if (!id || !['publish', 'reject', 'edit', 'retract'].includes(action)) {
+        return E(req, 'BAD_ACTION', 'action must be publish|reject|edit|retract', 400);
+    }
+
+    try {
+        if (action === 'edit') {
+            const edited = clean(body.edited_body, LETTER_MAX_BODY);
+            if (!edited) return E(req, 'BAD_EDIT', 'edited_body required', 400);
+            await env.SAUDADE_DB.prepare(
+                'UPDATE letters SET edited_body = ?, status = ?, editor_note = ? WHERE id = ?'
+            ).bind(edited, 'edited', clean(body.editor_note, 400) || null, id).run();
+        } else if (action === 'publish') {
+            const issueRef = clean(body.issue_ref, 32) || null;
+            await env.SAUDADE_DB.prepare(
+                "UPDATE letters SET status = 'published', published_at = ?, issue_ref = ? WHERE id = ?"
+            ).bind(Date.now(), issueRef, id).run();
+        } else if (action === 'reject') {
+            await env.SAUDADE_DB.prepare(
+                "UPDATE letters SET status = 'rejected', rejection_reason = ? WHERE id = ?"
+            ).bind(clean(body.rejection_reason, 400) || null, id).run();
+        } else if (action === 'retract') {
+            await env.SAUDADE_DB.prepare(
+                "UPDATE letters SET status = 'retracted' WHERE id = ?"
+            ).bind(id).run();
+        }
+    } catch (e) {
+        return E(req, 'DB_UPDATE', 'queue update failed', 500);
+    }
+    return J(req, { ok: true });
+}
+
+// ─── Stringer desks — apply / list / posts / submit / queue ─────────
+//
+// Each desk is an invited correspondent with a permanent column under
+// the saudade masthead. Submissions go through the editor before any
+// public visibility — same contract as letters, but for ongoing
+// magazine-style serialisation rather than reactive short notes.
+
+const DESK_TITLE_MAX = 120;
+const DESK_LEDE_MAX  = 220;
+const DESK_BODY_MAX  = 6000;
+const DESK_BIO_MAX   = 400;
+
+function deskSlugify(s) {
+    return String(s || '').toLowerCase()
+        .replace(/[^a-z0-9가-힣ぁ-んァ-ヶー一-龯]+/g, '-')
+        .replace(/^-+|-+$/g, '').slice(0, 40);
+}
+
+// POST /desks/apply  body: { display_name, city, edition?, bio?, application, cadence? }
+//   Anyone can apply. Status starts at 'applied'. Editor reviews via /desks/queue.
+async function desksApply(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Desks not yet open.', 503);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const name = clean(body.display_name, 80);
+    const city = (clean(body.city, 32) || '').toLowerCase();
+    const edition = clean(body.edition, 8) || 'en';
+    if (!name || name.length < 2) return E(req, 'BAD_NAME', 'display_name required', 400);
+    if (!city) return E(req, 'BAD_CITY', 'city required', 400);
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'edition invalid', 400);
+
+    const application = clean(body.application, 1500);
+    if (!application || application.length < 80) return E(req, 'BAD_APP', 'pitch too short (80 chars min)', 400);
+
+    const bio     = clean(body.bio, DESK_BIO_MAX) || null;
+    const cadence = clean(body.cadence, 16) || null;
+
+    // Email — bind to the signed-in user if a session exists, else require it in body.
+    const ctxAuth = await authedUser(req, env);
+    const email   = ctxAuth ? ctxAuth.user.email : (clean(body.email, 200) || null);
+    const userId  = ctxAuth ? ctxAuth.user.id    : null;
+    if (!email || !isValidEmail(email)) return E(req, 'BAD_EMAIL', 'email required', 400);
+
+    // Slug = city-name, dedup by suffix.
+    let baseSlug = deskSlugify(city + '-' + name);
+    let slug = baseSlug;
+    let n = 2;
+    try {
+        while (true) {
+            const exists = await env.SAUDADE_DB.prepare('SELECT slug FROM desks WHERE slug = ?').bind(slug).first();
+            if (!exists) break;
+            slug = baseSlug + '-' + n;
+            n++;
+            if (n > 12) return E(req, 'SLUG_BUSY', 'Could not allocate a slug', 500);
+        }
+    } catch (e) {}
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            `INSERT INTO desks (slug, user_id, user_email, display_name, city, edition,
+                                bio, application, status, cadence, created_at)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'applied', ?, ?)`
+        ).bind(slug, userId, email, name, city, edition, bio, application, cadence, Date.now()).run();
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'Could not file the application', 500);
+    }
+    return J(req, { ok: true, slug });
+}
+
+// GET /desks/list?edition=en
+//   Public — only desks with status 'invited' or 'active' are returned.
+async function desksList(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, desks: [] });
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    try {
+        const r = await env.SAUDADE_DB.prepare(
+            `SELECT slug, display_name, city, bio, cadence, first_post_at, last_post_at
+             FROM desks
+             WHERE status IN ('invited','active') AND edition = ?
+             ORDER BY last_post_at DESC NULLS LAST, created_at DESC`
+        ).bind(edition).all();
+        return J(req, { ok: true, desks: (r && r.results) || [] });
+    } catch (e) { return J(req, { ok: true, desks: [] }); }
+}
+
+// GET /desks/posts?slug=<slug>&limit=12
+//   Public — only published posts.
+async function desksPosts(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    if (!env.SAUDADE_DB) return J(req, { ok: true, posts: [] });
+    const url = new URL(req.url);
+    const slug = (url.searchParams.get('slug') || '').trim();
+    const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '12', 10) || 12, 1), 50);
+    if (!slug) return E(req, 'BAD_SLUG', 'slug required', 400);
+    try {
+        const desk = await env.SAUDADE_DB.prepare(
+            'SELECT slug, display_name, city, bio, cadence FROM desks WHERE slug = ? AND status IN (?, ?)'
+        ).bind(slug, 'invited', 'active').first();
+        if (!desk) return E(req, 'NOT_FOUND', 'desk not found or not active', 404);
+
+        const r = await env.SAUDADE_DB.prepare(
+            `SELECT id, title, lede, body, edited_body, edited_lede, city, edition,
+                    quote, quote_source, source_url, published_at, ai_assisted
+             FROM desk_posts
+             WHERE desk_slug = ? AND status = 'published'
+             ORDER BY published_at DESC LIMIT ?`
+        ).bind(slug, limit).all();
+        const posts = ((r && r.results) || []).map(p => ({
+            id: p.id, title: p.title,
+            lede: p.edited_lede || p.lede || '',
+            body: p.edited_body || p.body || '',
+            city: p.city, edition: p.edition,
+            quote: p.quote, quote_source: p.quote_source,
+            source_url: p.source_url, published_at: p.published_at,
+            ai_assisted: !!p.ai_assisted
+        }));
+        return J(req, { ok: true, desk, posts });
+    } catch (e) { return E(req, 'DB_ERROR', 'desk fetch failed', 500); }
+}
+
+// POST /desks/submit  body: { slug, title, lede?, body, quote?, quote_source?, source_url?, ai_assisted? }
+//   Bound to the signed-in user; the user's email must match desk.user_email
+//   and the desk must be 'invited' or 'active'.
+async function desksSubmit(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Desks not yet open.', 503);
+
+    const ctxAuth = await authedUser(req, env);
+    if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const slug = (clean(body.slug, 40) || '').toLowerCase();
+    if (!slug) return E(req, 'BAD_SLUG', 'slug required', 400);
+
+    const desk = await env.SAUDADE_DB.prepare(
+        'SELECT slug, user_email, status, edition FROM desks WHERE slug = ?'
+    ).bind(slug).first();
+    if (!desk) return E(req, 'NOT_FOUND', 'desk not found', 404);
+    if (desk.user_email !== ctxAuth.user.email) return E(req, 'FORBIDDEN', 'not your desk', 403);
+    if (!['invited', 'active'].includes(desk.status)) return E(req, 'NOT_ACTIVE', 'desk not active', 403);
+
+    const title = clean(body.title, DESK_TITLE_MAX);
+    if (!title || title.length < 4) return E(req, 'BAD_TITLE', 'title too short', 400);
+    const lede  = clean(body.lede, DESK_LEDE_MAX) || null;
+    const text  = clean(body.body, DESK_BODY_MAX);
+    if (!text || text.length < 200) return E(req, 'BAD_BODY', 'body too short (min 200 chars)', 400);
+
+    const quote        = clean(body.quote, 220) || null;
+    const quoteSource  = clean(body.quote_source, 120) || null;
+    const sourceUrl    = clean(body.source_url, 400) || null;
+    const aiAssisted   = body.ai_assisted ? 1 : 0;
+    const id           = genUserId();
+
+    try {
+        await env.SAUDADE_DB.prepare(
+            `INSERT INTO desk_posts
+             (id, desk_slug, submitted_at, title, lede, body,
+              quote, quote_source, source_url, edition, ai_assisted, status)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'submitted')`
+        ).bind(id, slug, Date.now(), title, lede, text,
+               quote, quoteSource, sourceUrl, desk.edition, aiAssisted).run();
+    } catch (e) {
+        return E(req, 'DB_INSERT', 'submit failed', 500);
+    }
+    return J(req, { ok: true, id, mode: 'queued' });
+}
+
+// GET  /desks/queue           → pending applications + post submissions (editor)
+// POST /desks/queue           → editor actions on either
+//   Editor-only. Bearer EDITOR_TOKEN.
+async function desksQueue(req, env, ctx) {
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Desks not yet open.', 503);
+
+    if (req.method === 'GET') {
+        try {
+            const apps = await env.SAUDADE_DB.prepare(
+                `SELECT slug, user_email, display_name, city, edition, bio, application,
+                        status, cadence, created_at
+                 FROM desks WHERE status IN ('applied','reviewing') ORDER BY created_at ASC LIMIT 100`
+            ).all();
+            const posts = await env.SAUDADE_DB.prepare(
+                `SELECT id, desk_slug, submitted_at, title, lede, body,
+                        edition, status
+                 FROM desk_posts WHERE status IN ('submitted','reviewing','edited')
+                 ORDER BY submitted_at ASC LIMIT 100`
+            ).all();
+            return J(req, {
+                ok: true,
+                applications: (apps && apps.results) || [],
+                posts:        (posts && posts.results) || []
+            });
+        } catch (e) { return J(req, { ok: true, applications: [], posts: [] }); }
+    }
+
+    if (req.method !== 'POST') return E(req, 'METHOD', 'GET or POST', 405);
+
+    let body;
+    try { body = await req.json(); }
+    catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+
+    const target = clean(body.target, 16);
+    const action = clean(body.action, 16);
+    if (!['desk', 'post'].includes(target)) return E(req, 'BAD_TARGET', 'target must be desk|post', 400);
+
+    try {
+        if (target === 'desk') {
+            const slug = clean(body.slug, 40);
+            if (!slug) return E(req, 'BAD_SLUG', 'slug required', 400);
+            if (action === 'invite') {
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE desks SET status = 'invited', invited_at = ? WHERE slug = ?"
+                ).bind(Date.now(), slug).run();
+            } else if (action === 'activate') {
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE desks SET status = 'active' WHERE slug = ?"
+                ).bind(slug).run();
+            } else if (action === 'pause') {
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE desks SET status = 'paused' WHERE slug = ?"
+                ).bind(slug).run();
+            } else if (action === 'retire') {
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE desks SET status = 'retired' WHERE slug = ?"
+                ).bind(slug).run();
+            } else if (action === 'reject') {
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE desks SET status = 'rejected', rejection_reason = ? WHERE slug = ?"
+                ).bind(clean(body.rejection_reason, 400) || null, slug).run();
+            } else {
+                return E(req, 'BAD_ACTION', 'desk action invalid', 400);
+            }
+        } else {
+            const id = clean(body.id, 32);
+            if (!id) return E(req, 'BAD_ID', 'id required', 400);
+            if (action === 'edit') {
+                const editedTitle = clean(body.edited_title, DESK_TITLE_MAX) || null;
+                const editedLede  = clean(body.edited_lede, DESK_LEDE_MAX) || null;
+                const editedBody  = clean(body.edited_body, DESK_BODY_MAX);
+                if (!editedBody) return E(req, 'BAD_EDIT', 'edited_body required', 400);
+                await env.SAUDADE_DB.prepare(
+                    `UPDATE desk_posts
+                     SET title = COALESCE(?, title),
+                         edited_lede = ?, edited_body = ?,
+                         status = 'edited',
+                         editor_note = ?
+                     WHERE id = ?`
+                ).bind(editedTitle, editedLede, editedBody,
+                       clean(body.editor_note, 400) || null, id).run();
+            } else if (action === 'publish') {
+                const issueRef = clean(body.issue_ref, 32) || null;
+                await env.SAUDADE_DB.prepare(
+                    `UPDATE desk_posts SET status = 'published', published_at = ?, issue_ref = ? WHERE id = ?`
+                ).bind(Date.now(), issueRef, id).run();
+                // Also bump desk.last_post_at + first_post_at if first time.
+                const post = await env.SAUDADE_DB.prepare(
+                    'SELECT desk_slug FROM desk_posts WHERE id = ?'
+                ).bind(id).first();
+                if (post) {
+                    await env.SAUDADE_DB.prepare(
+                        `UPDATE desks
+                         SET last_post_at = ?,
+                             first_post_at = COALESCE(first_post_at, ?)
+                         WHERE slug = ?`
+                    ).bind(Date.now(), Date.now(), post.desk_slug).run();
+                }
+            } else if (action === 'reject') {
+                await env.SAUDADE_DB.prepare(
+                    `UPDATE desk_posts SET status = 'rejected', rejection_reason = ? WHERE id = ?`
+                ).bind(clean(body.rejection_reason, 400) || null, id).run();
+            } else if (action === 'retract') {
+                await env.SAUDADE_DB.prepare(
+                    `UPDATE desk_posts SET status = 'retracted' WHERE id = ?`
+                ).bind(id).run();
+            } else {
+                return E(req, 'BAD_ACTION', 'post action invalid', 400);
+            }
+        }
+    } catch (e) {
+        return E(req, 'DB_UPDATE', 'queue update failed', 500);
+    }
+    return J(req, { ok: true });
+}
+
+// ─── v649 — Admin: pipeline status + manual trigger ────────────────────
+//
+// /admin/pipeline-status   GET   Bearer EDITOR_TOKEN
+//   → last 7-day cron results stored in AURA_KV by scheduled(),
+//     plus a quick env-config probe (GEMINI_KEY present, D1 bound, etc.)
+//
+// /admin/pipeline-trigger  POST  Bearer EDITOR_TOKEN
+//     body: { phase: 'gather'|'sort'|'score'|'write'|'translate'|'file' }
+//   → manually run any phase right now. Useful for verifying the AI pipeline
+//     before / after a domain swap, without waiting for the next cron tick.
+
+async function adminPipelineStatus(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const tok = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || tok !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+
+    // Config probe — what's wired up.
+    const config = {
+        d1_bound:        !!env.SAUDADE_DB,
+        kv_bound:        !!env.AURA_KV,
+        gemini_key:      !!env.GEMINI_KEY,
+        gemini_model:    env.GEMINI_MODEL || 'gemini-flash-latest',
+        editor_token:    !!env.EDITOR_TOKEN,
+        resend_key:      !!env.RESEND_KEY,
+        resend_from:     env.RESEND_FROM || null,
+        license_signing: !!env.LICENSE_SIGNING_KEY
+    };
+
+    // Last cron results from KV.
+    const phases = [
+        { name: 'gather',    cron: '0 15 * * *', kst: '00:00 KST' },
+        { name: 'sort+score', cron: '0 17 * * *', kst: '02:00 KST' },
+        { name: 'write',     cron: '0 19 * * *', kst: '04:00 KST' },
+        { name: 'translate', cron: '0 20 * * *', kst: '05:00 KST' },
+        { name: 'file',      cron: '0 21 * * *', kst: '06:00 KST' }
+    ];
+    const last = [];
+    if (env.AURA_KV) {
+        for (const p of phases) {
+            const raw = await env.AURA_KV.get('pipeline:last:' + p.cron).catch(() => null);
+            const parsed = raw ? safeJsonParse(raw) : null;
+            last.push({ ...p, last_run: parsed });
+        }
+    }
+
+    // Recent staged dispatches count.
+    let stagedCount = null;
+    if (env.SAUDADE_DB) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                "SELECT status, count(*) as n FROM dispatches_staged GROUP BY status"
+            ).all();
+            stagedCount = (r && r.results) || [];
+        } catch (e) {}
+    }
+
+    return J(req, { ok: true, config, phases: last, dispatches_staged: stagedCount });
+}
+
+async function adminPipelineTrigger(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    const auth = req.headers.get('Authorization') || '';
+    const tok = auth.startsWith('Bearer ') ? auth.slice(7) : null;
+    if (!env.EDITOR_TOKEN || tok !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'Editor token required', 401);
+    }
+    let body; try { body = await req.json(); } catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
+    const phase = clean(body.phase, 16);
+    const llm = pipelineLLM(env);
+    let result;
+    try {
+        switch (phase) {
+            case 'gather':    result = await pipelineGather(env); break;
+            case 'sort':      result = await pipelineSort(env, llm); break;
+            case 'score':     result = await pipelineScore(env, llm); break;
+            case 'write':     result = await pipelineWrite(env); break;
+            case 'translate': result = await pipelineTranslate(env); break;
+            case 'file':      result = await pipelineFile(env); break;
+            default: return E(req, 'BAD_PHASE', 'phase must be gather|sort|score|write|translate|file', 400);
+        }
+    } catch (e) {
+        return E(req, 'PIPELINE_ERROR', String(e && e.message || e), 500);
+    }
+    if (env.AURA_KV) {
+        try { await env.AURA_KV.put('pipeline:last:manual:' + phase,
+            JSON.stringify({ at: Date.now(), result }), { expirationTtl: 86400 * 7 }); } catch (e) {}
+    }
+    return J(req, { ok: true, phase, result });
+}
+
+function safeJsonParse(s) { try { return JSON.parse(s); } catch (e) { return null; } }
+
+// ─── /feed.atom — published dispatches as Atom 1.0 (per-edition) ──────
+// Lets readers subscribe in Feedly / NetNewsWire. Standards:
+//   • Atom 1.0 (RFC 4287)
+//   • UTF-8
+//   • <category term="ai-assisted"> when AI was used
+function escXml(s) {
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+async function feedAtom(req, env, ctx) {
+    if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
+    const url = new URL(req.url);
+    const edition = (url.searchParams.get('edition') || 'en').toLowerCase();
+    if (!['en','ko','ja','pt','es'].includes(edition)) return E(req, 'BAD_EDITION', 'Edition invalid', 400);
+    const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '30', 10) || 30, 1), 100);
+
+    const cacheKey = `feed:atom:${edition}:${limit}`;
+    const cached = await cGet(cacheKey, env);
+    if (cached) return new Response(cached, {
+        status: 200,
+        headers: hdrs(req, { 'Content-Type': 'application/atom+xml; charset=utf-8', 'X-Cache': 'HIT' })
+    });
+
+    let items = [];
+    if (env.SAUDADE_DB) {
+        try {
+            const r = await env.SAUDADE_DB.prepare(
+                `SELECT s.headline, s.lede, s.body, s.source_url, s.published_at, r.city, s.id
+                 FROM dispatches_staged s
+                 JOIN raw_feeds r ON s.raw_feed_id = r.id
+                 WHERE s.edition = ? AND s.status = 'published'
+                 ORDER BY s.published_at DESC
+                 LIMIT ?`
+            ).bind(edition, limit).all();
+            items = (r && r.results) || [];
+        } catch (e) {}
+    }
+
+    const self = url.origin + '/feed.atom?edition=' + edition;
+    const homeMap = { en: 'https://saudade.app/', ko: 'https://saudade.app/?edition=ko',
+                      ja: 'https://saudade.app/?edition=ja', pt: 'https://saudade.app/?edition=pt',
+                      es: 'https://saudade.app/?edition=es' };
+    const titleMap = {
+        en: 'saudade — dispatches', ko: 'saudade — 디스패치',
+        ja: 'saudade — ディスパッチ', pt: 'saudade — despachos',
+        es: 'saudade — despachos'
+    };
+    const subMap = {
+        en: 'Three cities, no schedule. Edited from Lisbon.',
+        ko: '세 도시, 정해진 시간 없음. 리스본에서 편집.',
+        ja: '三つの都市、時刻表なし。リスボン編集。',
+        pt: 'Três cidades, sem horário. Editado em Lisboa.',
+        es: 'Tres ciudades, sin horario. Editado desde Lisboa.'
+    };
+
+    const updated = items[0] && items[0].published_at
+        ? new Date(items[0].published_at).toISOString()
+        : new Date().toISOString();
+
+    const entries = items.map(it => {
+        const link = it.source_url || (homeMap[edition] || homeMap.en);
+        const id   = self + '#' + (it.id || link);
+        const upd  = it.published_at ? new Date(it.published_at).toISOString() : updated;
+        const summary = (it.lede || '').slice(0, 200);
+        const content = (it.body || it.lede || '').slice(0, 800);
+        return `  <entry>
+    <title>${escXml(it.headline || '')}</title>
+    <id>${escXml(id)}</id>
+    <updated>${upd}</updated>
+    <link rel="alternate" href="${escXml(link)}"/>
+    ${it.city ? `<category term="${escXml(String(it.city).toLowerCase())}"/>` : ''}
+    <category term="ai-assisted"/>
+    <summary>${escXml(summary)}</summary>
+    <content type="text">${escXml(content)}</content>
+    <author><name>saudade</name></author>
+    <rights>© saudade. ≤200-char quote per CONTENT-LICENSE.md.</rights>
+  </entry>`;
+    }).join('\n');
+
+    const xml =
+`<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="${edition}">
+  <title>${escXml(titleMap[edition] || titleMap.en)}</title>
+  <subtitle>${escXml(subMap[edition] || subMap.en)}</subtitle>
+  <id>${escXml(self)}</id>
+  <link rel="self" href="${escXml(self)}"/>
+  <link rel="alternate" href="${escXml(homeMap[edition] || homeMap.en)}"/>
+  <updated>${updated}</updated>
+  <generator uri="https://saudade.app/" version="1">saudade-worker</generator>
+  <rights>© saudade. AI-assisted editions disclosed per item.</rights>
+${entries}
+</feed>
+`;
+
+    if (ctx && ctx.waitUntil) {
+        // 30 minute cache
+        await cPut(cacheKey, xml, 1800, env, ctx);
+    }
+    return new Response(xml, {
+        status: 200,
+        headers: hdrs(req, { 'Content-Type': 'application/atom+xml; charset=utf-8', 'X-Cache': 'MISS' })
+    });
 }
 
 // ─── v8 §13 — /stats/weekly ──────────────────────────────────────────

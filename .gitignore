@@ -1,0 +1,30 @@
+# build artefacts
+dist/
+node_modules/
+*.log
+
+# editor-supplied photo binaries — see photos/README.md
+# (we commit the directory, the README, the .gitkeep, and any *.txt licence
+# sidecars; the actual image binaries stay off-repo until licensing is
+# settled per CONTENT-LICENSE.md §2)
+photos/**/*.webp
+photos/**/*.jpg
+photos/**/*.jpeg
+photos/**/*.png
+audio/**/*.mp3
+audio/**/*.wav
+audio/**/*.flac
+
+# secrets
+aura-secrets.js
+.dev.vars
+.wrangler/
+
+# editor
+.DS_Store
+.vscode/
+.idea/
+
+# coverage / temp
+coverage/
+.cache/

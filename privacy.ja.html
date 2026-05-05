@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="alternate" hreflang="ko" href="/privacy.html">
+    <link rel="alternate" hreflang="en" href="/privacy.en.html">
+    <link rel="alternate" hreflang="ja" href="/privacy.ja.html">
+    <link rel="alternate" hreflang="pt" href="/privacy.pt.html">
+    <link rel="alternate" hreflang="es" href="/privacy.es.html">
+    <link rel="alternate" hreflang="x-default" href="/privacy.en.html">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — プライバシーポリシー</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<style>
+  body { font-family: 'Fraunces', Georgia, serif; font-weight: 300; background: var(--paper); color: var(--ink); max-width: 720px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px); line-height: 1.75; }
+  h1 { font-style: italic; font-size: clamp(36px, 5vw, 54px); line-height: 0.95; margin: 0 0 8px; }
+  h2 { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); margin: clamp(28px, 4vw, 40px) 0 12px; padding-top: clamp(12px, 2vw, 18px); border-top: 0.5px solid var(--rule); }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.32em; color: var(--bone-d); margin: 0 0 28px; }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--paper-d); padding: 1px 6px; border: 0.5px solid var(--rule); }
+  a { color: var(--ink); border-bottom: 0.5px solid var(--rule); text-decoration: none; }
+  ul { padding-left: 1.4em; }
+  .lang-bar { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; padding-bottom: 18px; border-bottom: 0.5px solid var(--rule); margin-bottom: 28px; }
+  .lang-bar a { margin-right: 14px; }
+  .lang-bar a.active { color: var(--rust); border-bottom-color: var(--rust); }
+</style>
+</head>
+<body>
+<nav class="lang-bar">
+  <a href="privacy.html">한국어</a>
+  <a href="privacy.en.html">English</a>
+  <a class="active" href="privacy.ja.html">日本語</a>
+  <a href="privacy.pt.html">Português</a>
+  <a href="privacy.es.html">Español</a>
+</nav>
+
+<h1>saudade — プライバシーポリシー</h1>
+<div class="meta">施行 2026-04-30 · 運営者 LEEJAEJIN · privacy@saudade.app</div>
+
+<p>本ポリシーは、個人情報保護法(APPI)、GDPR、PIPA、CCPA/CPRA、LGPD のもとで saudade が個人情報をどのように扱うかを説明します。韓国語版が原本であり、解釈の差異が生じた場合は韓国語版が優先します。</p>
+
+<h2>1. 取得する情報</h2>
+<ul>
+  <li>アカウント — メールアドレス、版(edition)、ティア</li>
+  <li>セッション — オパークなセッションID、端末ラベル、ハッシュ化したIP/UA</li>
+  <li>利用統計 — 同意時のみ(Google Analytics 4)</li>
+  <li>ユーザー投稿 — カフェ投稿、都市リクエスト</li>
+  <li>同意ログ — カテゴリー、付与/取消、時刻</li>
+</ul>
+
+<h2>2. 取得目的</h2>
+<p>サービスの提供・運営、認証、不正利用防止、品質改善(集計のみ)、決済の履行、法令上の義務の履行。</p>
+
+<h2>3. 第三者提供と国外移転</h2>
+<p>処理委託先(=APPI における第三者提供): Cloudflare(米国・CDN)、Google(米国・分析、同意時)、Resend(米国・サインインメール)、Stripe(米国)/ Toss(韓国)。米国は EU 十分性認定の対象外であるため、適切な保護措置(Cloudflare/Google の SCC 等)を確認のうえ移転しています。</p>
+
+<h2>4. 利用者の権利</h2>
+<p>APPI §28–30、GDPR Arts.15–22、CCPA、LGPD、PIPA に基づき、開示・訂正・利用停止・消去・データポータビリティ・同意撤回を行使できます。</p>
+<p><strong>アプリ内で即時行使可能:</strong> ログイン後 <code>#account</code> パネルでセッション一覧、サインアウト(本端末)、全端末サインアウト(未使用リンクの一括失効を含む)、データJSONエクスポート、アカウント完全削除、同意カテゴリーごとのトグル。</p>
+<p>メール: <code>luiseluise0619@gmail.com</code>。APPI「遅滞なく」、GDPR 1 か月以内に対応します。</p>
+
+<h2>5. 生成AIの使用に関する開示(EU AI Act §50)</h2>
+<p>Dispatches の項目は Cloudflare Workers AI(Llama 3.1 8B)で分類・採点し、Google Gemini 2.0 Flash で書き直し・翻訳しています。各項目には <code>AI DRAFT</code> または <code>REWRITTEN</code> ラベルが付与されます。版ごとの JSON には <code>ai_assisted: true</code> と <code>ai_models</code> がフィールドとして格納され、外部のリーダーやアグリゲーターから機械可読です。AI 同意は <code>#account</code> から取消できます。</p>
+
+<h2>6. 子供</h2>
+<p>本サービスは 14 歳未満(韓国)・16 歳未満(EU)・13 歳未満(米国 COPPA / ブラジル LGPD)を対象としません。</p>
+
+<h2>7. 保管期間</h2>
+<ul>
+  <li>セッション — 最終利用から 30 日、又は取消まで</li>
+  <li>マジックリンク — 15 分・一回限り</li>
+  <li>分析 — 最大 14 か月(GA4 既定)</li>
+  <li>決済 — 5 年(韓国 電子商取引法)</li>
+  <li>削除ログ — ハッシュ化したユーザID/メールのみ監査用に保持</li>
+</ul>
+
+<h2>8. 監督機関</h2>
+<ul>
+  <li>🇯🇵 個人情報保護委員会 (PPC) — ppc.go.jp</li>
+  <li>🇰🇷 개인정보보호위원회 — privacy.go.kr</li>
+  <li>🇪🇺 居住国の DPA</li>
+  <li>🇺🇸 California Attorney General — oag.ca.gov/privacy</li>
+  <li>🇧🇷 ANPD — gov.br/anpd</li>
+</ul>
+
+</body></html>

@@ -48,7 +48,7 @@
         const el = document.createElement('div');
         el.id = 'sddEditionFlash';
         el.style.cssText = [
-            'position:fixed', 'inset:0', 'z-index:99999',
+            'position:fixed', 'inset:0', 'z-index:var(--z-system)',
             'background:var(--paper)', 'color:var(--ink)',
             'display:flex', 'align-items:center', 'justify-content:center',
             'font-family:var(--serif)', 'font-weight:300', 'font-style:italic',

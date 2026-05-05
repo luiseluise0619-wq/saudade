@@ -112,7 +112,7 @@ bash scripts/compute-sri.sh
 bash scripts/cleanup-git-history.sh
 ```
 
-배포: [`DEPLOY-FREE.md`](./DEPLOY-FREE.md) 의 Cloudflare Pages 또는 GitHub Pages — **0원/월** 운영.
+배포: [`DEPLOY.md`](./DEPLOY.md) 의 Cloudflare Pages 또는 GitHub Pages — **0원/월** 운영.
 
 상표 사전조사: [`TRADEMARK-NOTES.md`](./TRADEMARK-NOTES.md) — KIPRIS / USPTO / EUIPO **무료 검색**.
 

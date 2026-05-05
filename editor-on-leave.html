@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — editor on leave</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<link rel="stylesheet" href="saudade-microtype.css" />
+<style>
+:root { --paper: #F2EEE3; --ink: #16151A; --rust: #9A3324; --bone-d: #4A4540; --rule: rgba(11,11,15,.16); }
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    margin: 0; padding: 0;
+}
+.page {
+    max-width: 640px; margin: 0 auto;
+    padding: clamp(48px, 10vw, 120px) clamp(24px, 6vw, 48px);
+    line-height: 1.7;
+    text-align: left;
+}
+.crumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0 0 clamp(48px, 8vw, 96px);
+    padding-bottom: clamp(12px, 2vw, 18px);
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 8px; flex-wrap: wrap;
+}
+.crumb a { color: inherit; text-decoration: none; border-bottom: 0.5px solid var(--rule); }
+.crumb a:hover { color: var(--rust); border-bottom-color: var(--rust); }
+
+.dateline {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 clamp(20px, 3vw, 28px);
+}
+h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(48px, 7vw, 96px); line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 0 0 clamp(32px, 5vw, 56px);
+    text-wrap: balance;
+}
+h1 .punct { font-style: normal; }
+
+.body {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 48ch;
+    text-wrap: pretty;
+}
+.body p { margin: 0 0 1.2em; }
+.body p:first-of-type::first-letter {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: 4.6em; line-height: 0.85;
+    float: left; padding: 0.06em 0.12em 0 0;
+    color: var(--rust);
+    font-variation-settings: "opsz" 144;
+}
+.body em { font-style: italic; color: var(--rust); }
+
+.signoff {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--bone-d);
+    margin: clamp(40px, 6vw, 80px) 0 0;
+    padding-top: clamp(20px, 3vw, 28px);
+    border-top: 0.5px solid var(--rule);
+}
+.signoff .name {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink);
+    display: block; margin-bottom: 4px;
+}
+.signoff .role {
+    color: var(--bone-d);
+}
+
+.colophon {
+    margin-top: clamp(56px, 8vw, 96px);
+    padding-top: clamp(20px, 3vw, 28px);
+    border-top: 0.5px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    line-height: 1.6;
+}
+.colophon a { color: inherit; border-bottom: 0.5px solid var(--rule); text-decoration: none; }
+
+@media print {
+    .crumb, .colophon { display: none; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+<nav class="crumb">
+    <a href="/">SAUDADE / COVER</a>
+    <span>·</span>
+    <span>EDITOR ON LEAVE</span>
+</nav>
+
+<p class="dateline">A NOTE FROM THE DESK · LISBON</p>
+<h1>The desk is dark<span class="punct">.</span></h1>
+
+<div class="body">
+    <p>Saudade does not file a dispatch every day. The pipeline gathers, sorts, scores, writes, translates, stages and files at six hours past midnight Korean time, six days a week. On the seventh day it is silent — by design.</p>
+    <p>And sometimes the desk is dark for longer. The editor is on a train, in a country whose Wi-Fi will not behave, or on the kind of weekend that does not deserve a feed of policy news. The Atlas does not stop testing cafés because the desk is shut. The Ledger keeps counting.</p>
+    <p><em>This is the page you land on when the desk is dark.</em> It is not a 404. It is not a server error. It is an editorial decision. The next dispatch is being thought about, not avoided.</p>
+    <p>If something is broken — really broken, not merely quiet — write to <code>luiseluise0619@gmail.com</code>. I read every message before the next filing.</p>
+</div>
+
+<p class="signoff">
+    <span class="name">LEEJAEJIN · LISBON DESK</span>
+    <span class="role">editor &amp; everything else, for now</span>
+</p>
+
+<footer class="colophon">
+    <p>NEXT FILING: <em>06:00 KST, six days a week</em> · <a href="/">return to today's edition</a></p>
+</footer>
+
+</main>
+</body>
+</html>

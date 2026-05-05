@@ -53,14 +53,32 @@
 
     function loadStatic(ed) {
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
+        // v647 — also load dispatches.week.json (when present) and attach
+        // the days array so the Past Week archive can render real per-day
+        // content rather than reusing today's items rotated by weekday.
+        const weekP = fetch('./data/dispatches.week.json', { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .catch(() => null);
+
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
             .then(d => {
-                if (d) { _cache[ed] = d; return d; }
-                // fallback to EN
+                if (d) {
+                    _cache[ed] = d;
+                    return weekP.then(w => {
+                        if (w && Array.isArray(w.days)) d._weekDays = w.days;
+                        return d;
+                    });
+                }
                 return fetch('./data/dispatches.json', { cache: 'force-cache' })
                     .then(r => r.ok ? r.json() : null)
-                    .then(d2 => { _cache[ed] = d2 || { cities: [] }; return _cache[ed]; });
+                    .then(d2 => {
+                        _cache[ed] = d2 || { cities: [] };
+                        return weekP.then(w => {
+                            if (w && Array.isArray(w.days)) _cache[ed]._weekDays = w.days;
+                            return _cache[ed];
+                        });
+                    });
             })
             .catch(() => { _cache[ed] = { cities: [] }; return _cache[ed]; });
     }
@@ -309,6 +327,61 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     padding: 0 0 clamp(12px, 1.5vw, 18px);
     margin: 0 0 clamp(16px, 2vw, 24px);
     border-bottom: 0.5px solid var(--rule);
+}
+
+/* v651 — inline city-picker chips above today's items. */
+.sdd-disp-cities-bar {
+    margin: 0 0 clamp(20px, 3vw, 32px);
+    padding: 0 0 clamp(14px, 2vw, 20px);
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-disp-cities-eyebrow {
+    font-family: var(--mono); font-weight: 500;
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--rust);
+    margin: 0 0 12px;
+}
+.sdd-disp-cities-row {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    align-items: center;
+}
+.sdd-disp-city-chip {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    background: transparent;
+    border: 0.5px solid var(--rule);
+    padding: 8px 12px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    transition: color .15s, border-color .15s;
+}
+.sdd-disp-city-chip:hover { color: var(--rust); border-color: var(--rust); }
+.sdd-disp-city-chip .n { color: var(--bone-d); font-weight: 500; }
+.sdd-disp-city-chip .name {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 14px; letter-spacing: 0; text-transform: none;
+}
+.sdd-disp-city-chip .x { color: var(--bone-d); font-size: 14px; }
+.sdd-disp-city-chip:hover .x { color: var(--rust); }
+.sdd-disp-cities-cta {
+    background: transparent; border: 0;
+    border-bottom: 0.5px solid var(--rust);
+    color: var(--rust);
+    font-family: var(--mono); font-weight: 500;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    padding: 6px 4px; cursor: pointer;
+    margin-left: auto;
+    transition: color .15s, border-color .15s;
+}
+.sdd-disp-cities-cta:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.sdd-disp-cities-empty {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 14px; color: var(--bone-d);
+    flex: 1;
+}
+@media (max-width: 540px) {
+    .sdd-disp-cities-cta { margin-left: 0; width: 100%; text-align: left; }
 }
 .sdd-disp-day-eyebrow {
     font-family: var(--mono);
@@ -616,17 +689,46 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     };
 
 
+    // v647 — collapse multiple "Awaiting from X" in a row into a single
+    // pretty statement. If every item in a day is awaiting, render one
+    // italic line listing the cities; otherwise render each item individually.
+    function renderItemsBlock(items) {
+        if (!Array.isArray(items) || !items.length) return '';
+        const allAwaiting = items.every(it => it && it._awaiting);
+        if (!allAwaiting) return items.map(renderItem).join('');
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const cityList = items.map(it => it._city || '').filter(Boolean);
+        const cities = cityList.length === 1
+            ? cityList[0]
+            : cityList.length === 2
+                ? cityList.join(' & ')
+                : cityList.slice(0, -1).join(', ') + ' & ' + cityList[cityList.length - 1];
+        const msg = T({
+            en: `On the wire from ${cities}.`,
+            ko: `${cities} — 송고 대기.`,
+            ja: `${cities} — 入稿待ち。`,
+            pt: `Em transmissão de ${cities}.`,
+            es: `En transmisión desde ${cities}.`
+        });
+        return `
+            <article class="sdd-disp-item sdd-disp-awaiting sdd-disp-awaiting-collapsed">
+                <p class="sdd-disp-lede" style="font-style:italic; margin: 0;">${escapeHtml(msg)}</p>
+            </article>
+        `;
+    }
+
     function renderItem(it) {
         // v8 §02 — Awaiting placeholder (Following 도시이지만 dispatches.json 에 없을 때)
         if (it && it._awaiting) {
             const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
             const T = window.SAUDADE_T || ((s) => s.en);
             const msg = T({
-                en: 'Awaiting first dispatch from $city.',
-                ko: '$city 의 첫 디스패치를 기다리는 중.',
-                ja: '$city からの最初の通信を待っている。',
-                pt: 'A aguardar o primeiro despacho de $city.',
-                es: 'Esperando el primer despacho de $city.'
+                en: 'On the wire from $city.',
+                ko: '$city — 송고 대기.',
+                ja: '$city — 入稿待ち。',
+                pt: 'Em transmissão de $city.',
+                es: 'En transmisión desde $city.'
             }).replace('$city', it._city || '');
             return `
                 <article class="sdd-disp-item sdd-disp-awaiting">
@@ -684,10 +786,17 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     // v8 §02 — 사용자 도시 선택 모델. 정착 + 주변 자동 매핑 폐기.
     // 사용자의 SAUDADE_FOLLOWING.list() 3 도시 각각에서 1개씩 추출.
     // dispatches.json 에 해당 도시 없으면 "Awaiting first dispatch" 플레이스홀더.
+    // v649 — when the user has not picked following cities (fresh visitor),
+    // fall back to whatever cities exist in the data for that day instead
+    // of returning []. Was causing the entire Past Week archive to read
+    // empty for any reader who hadn't gone through the city-picker.
     function flattenForDay(data, weekdayIdx /* 1..6 */) {
         const cities = (data && data.cities) || [];
-        const following = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
-        if (!following.length) return [];     // 사용자가 도시 안 골랐으면 빈 배열 → 안내 노출
+        const followingRaw = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        const following = followingRaw.length
+            ? followingRaw
+            : cities.slice(0, 3).map(c => String(c.city || '').toLowerCase());
+        if (!following.length) return [];
 
         // 도시명 매칭 (case-insensitive · slug ↔ display name)
         const findCityData = (slug) => {
@@ -703,7 +812,12 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const cityData = findCityData(slug);
             const slot = String(slotIdx + 1).padStart(2, '0');
             const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
-            const displayName = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+            // v649 — when following is the fallback (no user picks), the
+            // "slug" is actually the city name from the data. Use city.city
+            // directly so display matches what we showed.
+            const displayName = (cityData && cityData.city)
+                || window.SAUDADE_FOLLOWING?.cityName?.(slug, ed)
+                || slug;
             if (!cityData || !cityData.items || !cityData.items.length) {
                 // Placeholder — operator 가 AI 파이프라인 active=1 후 채워짐
                 out.push({
@@ -723,22 +837,40 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
     }
 
     // 지난 6일치 (월~토 중 오늘 제외) — archive stack
+    // v647 — earlier this iterated flattenForDay(data, weekday) which always
+    // used today's dispatches.json content with a different weekday rotation.
+    // That meant every past-week row showed today's items dressed up in a new
+    // weekday tag — confusing. Now we honour data._weekDays (loaded from
+    // data/dispatches.week.json) when available, looking up each past date
+    // and using its actual cities. Falls back to the old behaviour if no
+    // week data is loaded yet.
     function flattenPastWeek(data, todayIdx) {
         const result = [];
-        // 어제부터 6일 거슬러 (같은 요일 다시 안 보이게 max 6)
-        for (let back = 1; back <= 6; back++) {
+        const weekDays = (data && data._weekDays) || [];
+        const byDate = {};
+        for (const d of weekDays) {
+            const key = (d.filed_at || '').slice(0, 10);
+            if (key) byDate[key] = d;
+        }
+
+        for (let back = 1; back <= 7; back++) {
             const d = new Date();
             d.setDate(d.getDate() - back);
             const wd = d.getDay();
             if (wd === 0) continue;   // 일요일 skip
-            const items = flattenForDay(data, wd);
+            const dateKey = d.toISOString().slice(0, 10);
+            const dayData = byDate[dateKey];
+
+            // Use the simulated week's per-day cities when present.
+            let items;
+            if (dayData && Array.isArray(dayData.cities)) {
+                items = flattenForDay({ cities: dayData.cities }, wd);
+            } else {
+                items = flattenForDay(data, wd);
+            }
             if (!items.length) continue;
-            result.push({
-                date: d.toISOString().slice(0, 10),
-                weekdayIdx: wd,
-                items
-            });
-            if (result.length >= 3) break;   // 표시 max 3 days
+            result.push({ date: dateKey, weekdayIdx: wd, items });
+            if (result.length >= 6) break;
         }
         return result;
     }
@@ -868,22 +1000,38 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 </section>
             `;
         } else if (!todayItems.length) {
-            todayHtml = `<p class="sdd-disp-empty">${escapeHtml(W.empty)}</p>`;
+            // v636 — unified empty-state when nothing has been filed yet today.
+            todayHtml = `<div id="sddDispEmpty"></div><p class="sdd-disp-empty" style="display:none">${escapeHtml(W.empty)}</p>`;
+            // Render after this method returns (root.innerHTML is set below).
+            setTimeout(() => {
+                if (!window.SAUDADE_EMPTY) return;
+                const t = window.SAUDADE_EMPTY.text('dispatches');
+                // v644 — Dispatches header above already shows the eyebrow.
+                window.SAUDADE_EMPTY.render('#sddDispEmpty', {
+                    eyebrow: '', headline: W.empty || t.headline, lede: t.lede, note: t.note
+                });
+            }, 0);
         } else {
-            todayHtml = todayItems.map(renderItem).join('');
+            todayHtml = renderItemsBlock(todayItems);
         }
 
         // 지난 6일 archive stack
         const past = flattenPastWeek(data, wdIdx);
-        const pastHtml = past.map(d => `
+        const pastHtml = past.map(d => {
+            // v647 — only show the weekday section tag (e.g. "QUIET NEWS")
+            // when there is actual content. When the whole day is awaiting,
+            // the label is misleading — drop it.
+            const allAwaiting = d.items && d.items.every(it => it && it._awaiting);
+            return `
             <section class="sdd-disp-archive-day">
                 <header class="sdd-disp-archive-head">
                     <span class="sdd-disp-archive-date">${escapeHtml(d.date)}</span>
-                    <span class="sdd-disp-archive-section">${escapeHtml(W[d.weekdayIdx] || '')}</span>
+                    ${allAwaiting ? '' : `<span class="sdd-disp-archive-section">${escapeHtml(W[d.weekdayIdx] || '')}</span>`}
                 </header>
-                ${d.items.map(renderItem).join('')}
+                ${renderItemsBlock(d.items)}
             </section>
-        `).join('');
+        `;
+        }).join('');
 
         const subFilled = subTpl.replace('$section', todaySection);
         const headHtml = `
@@ -897,7 +1045,48 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             </header>
         `;
 
+        // v651 — quick city-picker chips on the dispatches view itself.
+        // Earlier the only way to set following cities was through §04 The
+        // Desk → Following pool — too far. This puts the picker right above
+        // today's items.
+        const followNow = (window.SAUDADE_FOLLOWING?.list?.() || []).slice(0, 3);
+        const followLabel = T({
+            en: 'YOUR THREE CITIES', ko: '내 세 도시', ja: 'あなたの三都市',
+            pt: 'AS SUAS TRÊS CIDADES', es: 'SUS TRES CIUDADES'
+        });
+        const followHelp = T({
+            en: 'Pick up to three. Today\'s dispatch picks one item from each.',
+            ko: '최대 셋. 오늘의 디스패치는 각 도시에서 한 항목씩 가져온다.',
+            ja: '最大三つ。本日の通信は各都市から一本ずつ。',
+            pt: 'Até três. O despacho de hoje pega um item de cada.',
+            es: 'Hasta tres. El despacho de hoy toma un elemento de cada.'
+        });
+        const followCta = T({
+            en: 'CHANGE →', ko: '변경 →', ja: '変更 →', pt: 'ALTERAR →', es: 'CAMBIAR →'
+        });
+        const chipsHtml = followNow.length
+            ? followNow.map((slug, i) => {
+                const name = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
+                return `<button type="button" class="sdd-disp-city-chip" data-city-slug="${escapeHtml(slug)}" title="Remove">
+                    <span class="n">${String(i + 1).padStart(2, '0')}</span>
+                    <span class="name">${escapeHtml(name)}</span>
+                    <span class="x">×</span>
+                </button>`;
+              }).join('')
+            : `<span class="sdd-disp-cities-empty">${escapeHtml(followHelp)}</span>`;
+
+        const cityBar = `
+            <section class="sdd-disp-cities-bar">
+                <p class="sdd-disp-cities-eyebrow">${escapeHtml(followLabel)}</p>
+                <div class="sdd-disp-cities-row">
+                    ${chipsHtml}
+                    <button type="button" class="sdd-disp-cities-cta" data-open-city-picker>${escapeHtml(followCta)}</button>
+                </div>
+            </section>
+        `;
+
         const todayBlock = `
+            ${cityBar}
             <section class="sdd-disp-today">
                 <header class="sdd-disp-day-head">
                     <span class="sdd-disp-day-eyebrow">${escapeHtml(W.todayLabel)}</span>
@@ -935,6 +1124,35 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 load().then(render);
             });
         });
+
+        // v651 — city chip click → remove from following.
+        root.querySelectorAll('[data-city-slug]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const slug = btn.getAttribute('data-city-slug');
+                if (slug) window.SAUDADE_FOLLOWING?.remove?.(slug);
+                load().then(render);
+            });
+        });
+
+        // v651 — "CHANGE →" CTA opens the desk's city picker by routing to
+        // §04 The Desk where saudade-desk.js renders the full pool with
+        // pairings. Falls back to a simple prompt() if desk not available.
+        const cta = root.querySelector('[data-open-city-picker]');
+        if (cta) {
+            cta.addEventListener('click', () => {
+                const dock = document.querySelector('.dock-btn[data-cat="trip"]');
+                if (dock) {
+                    dock.click();
+                    document.body.classList.add('section-active');
+                    setTimeout(() => {
+                        const pool = document.querySelector('.sdd-following-pool');
+                        if (pool && pool.scrollIntoView) {
+                            pool.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 250);
+                }
+            });
+        }
     }
 
     function init() {

@@ -33,6 +33,30 @@
 }
 body.cafe-mode .sdd-footer-rule { display: none; }
 
+.sdd-footer-r .sdd-footer-copy,
+.sdd-footer-r .sdd-footer-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0.5px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+.sdd-footer-r .sdd-footer-copy:hover,
+.sdd-footer-r .sdd-footer-link:hover {
+    color: var(--rust);
+    border-bottom-color: var(--rust);
+}
+.sdd-footer-r .sdd-footer-link {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin-right: 16px;
+}
+@media (max-width: 540px) {
+    .sdd-footer-r .sdd-footer-link { display: none; }
+}
 .sdd-footer-l, .sdd-footer-r {
     display: flex; gap: clamp(8px, 1.5vw, 24px); align-items: center;
 }
@@ -64,7 +88,11 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
-                <span class="sdd-footer-copy">saudade · a longing for what cannot return</span>
+                <a class="sdd-footer-link" href="/issues/" title="every issue we have filed">ARCHIVE</a>
+                <a class="sdd-footer-link" href="desks.html" title="stringers writing under the saudade masthead">DESKS</a>
+                <a class="sdd-footer-link" href="#letter" title="write a letter to the editor">LETTER</a>
+                <a class="sdd-footer-copy" href="etymology.html"
+                   title="saudade /sɐwˈðaðɨ/ — read the etymology">saudade · a longing for what cannot return</a>
                 <span class="sdd-footer-issue">© 2026</span>
             </div>
         `;

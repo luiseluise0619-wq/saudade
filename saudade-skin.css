@@ -609,8 +609,13 @@ body:not(.cafe-mode)::after {
     }
 }
 
-/* ─── 26. 메인 표지 (§ 00 ISSUE COVER) — paper 위 큰 SAUDADE 워드마크 ──── */
-body:not(.cafe-mode) #shell::before,
+/* ─── 26. 메인 표지 (§ 00 ISSUE COVER) — paper 위 큰 SAUDADE 워드마크 ────
+   v644 — was rendering on BOTH #shell::before AND .stage::before
+   (selector grouping). When both elements exist on the page (which is
+   the legacy Aura layout — they do) the user sees TWO saudade watermarks
+   stacked at center. Pick .stage only — #shell wraps it but .stage is
+   the actual viewport-sized container. Keep #shell::before suppressed. */
+body:not(.cafe-mode) #shell::before { content: none !important; }
 body:not(.cafe-mode) .stage::before {
     content: 'saudade.';
     position: fixed;
@@ -626,7 +631,8 @@ body:not(.cafe-mode) .stage::before {
     pointer-events: none;
     z-index: 5;
 }
-body:not(.cafe-mode) #shell::after,
+/* v644 — same pair-selector duplicate as above. Pick .stage only. */
+body:not(.cafe-mode) #shell::after { content: none !important; }
 body:not(.cafe-mode) .stage::after {
     content: 'a longing for what cannot return.';
     position: fixed;
@@ -960,9 +966,12 @@ body:not(.cafe-mode) .stage::before {
     color: var(--ink) !important;
 }
 
-/* body 자체에 마스트헤드 추가 — top:24 paper에 mono 11px UPPERCASE */
+/* body 자체에 마스트헤드 추가 — top:24 paper에 mono 11px UPPERCASE.
+   v644 — fixed-position element with translateX(-50%) used to clip on
+   narrow viewports because of white-space:nowrap. Now uses max-width with
+   ellipsis on small screens, and a shorter default string. */
 body:not(.cafe-mode):not(.section-active)::before {
-    content: var(--sdd-cover-mast, 'ISSUE 03  ·  § 00 ISSUE COVER  ·  MAR–MAY 2026  ·  P. 01');
+    content: var(--sdd-cover-mast, '§ 00 ISSUE COVER · MAR–MAY 2026 · P. 01');
     position: fixed;
     top: calc(80px + env(safe-area-inset-top, 0px));
     left: 50%;
@@ -976,11 +985,25 @@ body:not(.cafe-mode):not(.section-active)::before {
     z-index: 10;
     pointer-events: none;
     white-space: nowrap;
-    /* v596 별 sparkle 의 body::before 와 충돌 방지 — saudade-skin §1 에서 이미 hide */
+    max-width: calc(100vw - 32px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* v596 별 sparkle 의 body::before 와 충돌 방지 — saudade-skin §1 에서 이미 hide.
+       v644 — was using `inset: auto !important` which nuked `left: 50%` and
+       parked the masthead at top-left (only the trailing "ER · MAR-MAY 2026
+       · P. 01" was visible to the user). Switch to right/bottom auto only so
+       the centering still works.
+       v647 — repeat transform: translateX(-50%) !important here for cascade
+       safety. The original rule above sets transform unprefixed which can be
+       lost if any other selector (rare) hits the same pseudo-element with
+       higher specificity. */
     display: block !important;
     background: transparent !important;
-    inset: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 50% !important;
     top: calc(80px + env(safe-area-inset-top, 0px)) !important;
+    transform: translateX(-50%) !important;
     width: auto !important;
     height: auto !important;
     animation: none !important;
@@ -1047,7 +1070,8 @@ body:not(.cafe-mode) .topbar {
 
 /* ─── 33. 푸터 룰 — 메인에서 dock 위에 mono 카피라인 ─────────────────── */
 
-body:not(.cafe-mode):not(.section-active) #bottomDock::before,
+/* v644 — pair-selector dedupe; pick .bottom-dock only. */
+body:not(.cafe-mode):not(.section-active) #bottomDock::before { content: none !important; }
 body:not(.cafe-mode):not(.section-active) .bottom-dock::before {
     content: 'saudade  ·  a longing for what cannot return  ·  ⓒ 2026';
     position: absolute;

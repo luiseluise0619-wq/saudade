@@ -43,7 +43,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const SAUDADE_RELEASE = 'v635';
+const SAUDADE_RELEASE = 'v656';
 
 // v557 — v1 출시 정리: 삭제된 모듈 (dancing-cat, movies, games, music-charts,
 // tmdb-auto, sports-sidebar) 의 localStorage 키 청소. 남아있어 봤자 의미 없음.
@@ -116,12 +116,8 @@ const SAUDADE_RELEASE = 'v635';
 window.__CDN_READY = true;
 window.AURA_USE_2D_MAP = true;
 
-// ─── 5) 로딩 안전장치: 12초 후에도 로딩 중이면 강제 표시 ────────────────────
-setTimeout(function() {
-    const ov = document.getElementById('loadingOverlay');
-    if (ov && !ov.classList.contains('fade-out')) {
-        console.warn('[AURA] Loading timeout - forcing UI');
-        ov.classList.add('fade-out');
-        setTimeout(() => { if (ov) ov.style.display = 'none'; }, 600);
-    }
-}, 12000);
+// ─── 5) 로딩 오버레이 fade — saudade-boot.js 가 처리.
+//        v650 — moved the cover-rendered listener + backstop timers into
+//        saudade-boot.js so any consumer can await window.SAUDADE_BOOT.ready
+//        for "the overlay is gone, the page is paintable" semantics.
+//        bootstrap.js stays minimal — only legacy SW unregister + secrets.

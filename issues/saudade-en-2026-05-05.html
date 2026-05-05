@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>saudade — dispatches · 2026-05-05</title>
+<meta name="generator" content="saudade build-issue.js" />
+<meta name="ai-assisted" content="true" />
+<style>
+:root { --paper:#f5efe6; --ink:#1d1a16; --rust:#b35028; --rule:#5e554a; --bone-d:#8a7e6e; }
+@page { size: A4 portrait; margin: 18mm 16mm 22mm 16mm; }
+@page :first { @top-right { content: ""; } }
+@page { @bottom-center { content: "saudade · " counter(page) " / " counter(pages); font-family: "JetBrains Mono", monospace; font-size: 9pt; letter-spacing: 0.18em; color: #5e554a; } }
+/* v644 — screen-only top bar with Download / Back buttons. Hidden from print. */
+.actionbar {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--paper);
+    padding: 14px 24px;
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 16px; align-items: center; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+}
+.actionbar a, .actionbar button {
+    background: transparent; border: 0;
+    color: var(--ink); cursor: pointer;
+    text-decoration: none; padding: 4px 8px;
+    border-bottom: 0.5px solid transparent;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    transition: color .15s, border-color .15s;
+}
+.actionbar a:hover, .actionbar button:hover {
+    color: var(--rust); border-bottom-color: var(--rust);
+}
+.actionbar .pdf-btn { color: var(--rust); border: 0.5px solid var(--rust); padding: 8px 14px; }
+.actionbar .pdf-btn:hover { background: var(--rust); color: var(--paper); }
+.actionbar .meta { color: var(--bone-d); flex: 1; text-align: center; }
+@media print { .actionbar { display: none; } }
+@media (max-width: 540px) {
+    .actionbar { padding: 10px 14px; gap: 8px; font-size: 9px; }
+    .actionbar .meta { display: none; }
+}
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 300; font-size: 11pt; line-height: 1.5;
+    margin: 0; padding: 0;
+}
+.cover {
+    text-align: center;
+    padding: 28mm 0 18mm;
+    border-bottom: 0.5pt solid var(--rule);
+    page-break-after: always;
+}
+.cover h1 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 64pt;
+    line-height: 0.95;
+    margin: 0;
+}
+.cover .sub {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: var(--ink);
+    margin: 12pt 0 0;
+}
+.cover .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 22pt 0 0;
+}
+.toc {
+    margin: 14pt 0;
+    page-break-after: always;
+}
+.toc h2 { font-family: "JetBrains Mono", monospace; font-size: 10pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); }
+.toc ol { padding-left: 16pt; }
+.toc li { margin: 4pt 0; }
+.section {
+    page-break-before: always;
+}
+.section .city {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 4pt;
+}
+.section h2 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 28pt;
+    line-height: 1.05;
+    margin: 0 0 10pt;
+}
+.item {
+    page-break-inside: avoid;
+    margin: 12pt 0;
+    padding: 8pt 0;
+    border-top: 0.5pt solid var(--rule);
+}
+.item .num { font-family: "JetBrains Mono", monospace; font-size: 9pt; letter-spacing: 0.32em; color: var(--bone-d); display: inline-block; min-width: 26pt; }
+.item .ai-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-left: 8pt;
+}
+.item h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 14pt;
+    line-height: 1.25;
+    margin: 4pt 0;
+}
+.item .lede {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 11pt;
+    margin: 0 0 4pt;
+    color: var(--ink);
+}
+.item .body {
+    font-size: 10.5pt;
+}
+.item blockquote {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    border-left: 1pt solid var(--rust);
+    padding-left: 10pt;
+    margin: 6pt 0;
+}
+.item .src {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8pt;
+    color: var(--bone-d);
+    letter-spacing: 0.04em;
+}
+.item .src a { color: inherit; }
+.item .src a::after {
+    content: " " attr(href);
+    font-size: 7pt;
+    color: var(--bone-d);
+}
+.colophon {
+    page-break-before: always;
+    padding: 14pt 0;
+    border-top: 0.5pt solid var(--rule);
+}
+.colophon p { font-family: "JetBrains Mono", monospace; font-size: 8pt; letter-spacing: 0.06em; color: var(--bone-d); }
+</style>
+</head>
+<body>
+    <nav class="actionbar" aria-label="issue actions">
+        <a href="/issues/">← ARCHIVE</a>
+        <span class="meta">2026-05-05 · EN EDITION</span>
+        <button type="button" class="pdf-btn" onclick="window.print()" title="Print or save as PDF">
+            DOWNLOAD PDF
+        </button>
+    </nav>
+    <header class="cover">
+        <h1>saudade<br/>dispatches</h1>
+        <p class="sub">Three cities, no schedule. Edited from Lisbon.</p>
+        <p class="meta">FILED 2026-05-05 · NEXT 2026-05-06 · EDITION EN</p>
+    </header>
+    <nav class="toc">
+        <h2>Contents</h2>
+        <ol><li><a href="#sec-1">SEOUL</a></li>
+<li><a href="#sec-2">TOKYO</a></li>
+<li><a href="#sec-3">LISBON</a></li></ol>
+    </nav>
+    
+        <section class="section" id="sec-1">
+            <p class="city">SEOUL · Late spring</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>Children&#39;s Day shutters most desks.</h3>
+                <p class="lede">Public holiday — banks, government offices, post offices closed.</p>
+                <p class="body">May 5 is Children&#39;s Day (어린이날) in Korea — a national public holiday. Immigration windows at HiKorea offices are closed; ARC pickups, F-visa interviews, and tax-office filings push to May 6. Cafés in Hannam, Yeonnam, and Seongsu stay open; most chain coffee shops run holiday hours.</p>
+                
+                <p class="src">Public Holidays of Korea Act · 2026-05-05</p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>F-2-R nomad visa: one full year, no recent rule changes.</h3>
+                <p class="lede">The 200/month issuance ceiling holds.</p>
+                <p class="body">The F-2-R &quot;workation&quot; visa, introduced 2024 for foreigners working remotely for non-Korean employers, continues at its publicly announced ceiling. Renewals require proof of continuing remote employment + KRW 84.96M annual income (≈ 2× per-capita GNI). No public statement of change in 2026 Q2.</p>
+                
+                <p class="src"><a href="https://www.hikorea.go.kr">Korea Immigration Service · public guidance · 2026-05-05</a></p>
+            </article>
+        </section>
+
+        <section class="section" id="sec-2">
+            <p class="city">TOKYO · Post Golden Week</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>Golden Week wraps; trains thin out by Wednesday.</h3>
+                <p class="lede">May 6 was the holiday&#39;s official last day; offices return today.</p>
+                <p class="body">Golden Week (a cluster of four national holidays from late April to early May) closed yesterday. Shinkansen reservations from Tokyo to Osaka, Kanazawa, and Hakata return to standard utilisation by mid-week. Coworking spaces in Shibuya, Nakameguro, and Shimokitazawa report normal weekday occupancy from this morning.</p>
+                
+                <p class="src">JR East · published holiday schedule · 2026-05-05</p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>Designated Activities visa: one-year default unchanged.</h3>
+                <p class="lede">Six-month tier still available; income threshold steady.</p>
+                <p class="body">Japan&#39;s Designated Activities (特定活動) digital nomad visa retains its six-month default with one-year extension by application. Annual income floor remains JPY 10M; comprehensive private health insurance still required at application. No public announcement of rule change in fiscal 2026.</p>
+                
+                <p class="src"><a href="https://www.mofa.go.jp">MOFA · official visa schedule · 2026-05-05</a></p>
+            </article>
+        </section>
+
+        <section class="section" id="sec-3">
+            <p class="city">LISBON · Late spring</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">REWRITTEN</span></p>
+                <h3>Jacaranda peak is days away.</h3>
+                <p class="lede">Avenida Dom Carlos I + Largo do Carmo turn purple by mid-May.</p>
+                <p class="body">Lisbon&#39;s jacaranda bloom typically peaks in the second and third weeks of May. The strongest concentrations: Avenida Dom Carlos I (just south of Príncipe Real), Largo do Carmo, and the slope below São Pedro de Alcântara. The bloom holds three to four weeks before petals begin to drop.</p>
+                
+                <p class="src">editorial observation — Lisbon municipal records · 2026-05-05</p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">REWRITTEN</span></p>
+                <h3>AIMA replaces SEF: D7 / D8 visa pipeline unchanged on paper.</h3>
+                <p class="lede">Backlog is the actual issue, not the rules.</p>
+                <p class="body">AIMA (Agência para a Integração, Migrações e Asilo), which absorbed SEF&#39;s residency functions in 2024, continues to handle D7 (passive income) and D8 (digital nomad) renewals. Public guidance documents have not changed in 2026; reported delays are operational, not regulatory. Lisbon area applicants commonly bridge gaps with the temporary residence proof issued on application receipt.</p>
+                
+                <p class="src"><a href="https://aima.gov.pt">AIMA · public guidance · 2026-05-05</a></p>
+            </article>
+        </section>
+    <footer class="colophon">
+        <p>Items in this edition were drafted with AI assistance from observable, public-record facts (calendar, weather, published visa rules). Specific figures are sourced or omitted; observational notes are flagged as such.</p>
+        
+        <p>© saudade · CONTENT-LICENSE.md</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+name: Fetch listening-room content
+
+# Manually triggered. Pulls Pexels photos and/or Freesound audio using
+# repo secrets, commits the results to a fresh branch, and opens a PR
+# back into main. Keys never leave the runner.
+#
+# Setup once:
+#   Settings → Secrets and variables → Actions → New repository secret
+#     PEXELS_KEY        (https://www.pexels.com/api/)
+#     FREESOUND_TOKEN   (https://freesound.org/apiv2/apply/)
+#
+# Run:
+#   Actions tab → "Fetch listening-room content" → Run workflow
+#   pick which fetcher (pexels / freesound / both) and per-query count.
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Which fetcher to run"
+        required: true
+        default: both
+        type: choice
+        options: [pexels, freesound, both]
+      per:
+        description: "Results per query"
+        required: false
+        default: "3"
+      queries:
+        description: "Custom queries (comma-separated, optional)"
+        required: false
+        default: ""
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+
+      - name: Fetch Pexels photos
+        if: ${{ inputs.target == 'pexels' || inputs.target == 'both' }}
+        env:
+          PEXELS_KEY: ${{ secrets.PEXELS_KEY }}
+        run: |
+          if [ -z "$PEXELS_KEY" ]; then
+            echo "::error::PEXELS_KEY secret not set."
+            echo "Add it: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+          ARGS="--per ${{ inputs.per }}"
+          if [ -n "${{ inputs.queries }}" ]; then ARGS="$ARGS --queries '${{ inputs.queries }}'"; fi
+          eval node scripts/fetch-pexels-photos.js $ARGS
+
+      - name: Fetch Freesound audio
+        if: ${{ inputs.target == 'freesound' || inputs.target == 'both' }}
+        env:
+          FREESOUND_TOKEN: ${{ secrets.FREESOUND_TOKEN }}
+        run: |
+          if [ -z "$FREESOUND_TOKEN" ]; then
+            echo "::error::FREESOUND_TOKEN secret not set."
+            exit 1
+          fi
+          ARGS="--per ${{ inputs.per }}"
+          if [ -n "${{ inputs.queries }}" ]; then ARGS="$ARGS --queries '${{ inputs.queries }}'"; fi
+          eval node scripts/fetch-freesound.js $ARGS
+
+      - name: Validate licenses
+        run: node scripts/validate-content.js
+        continue-on-error: true
+
+      - name: Summarise
+        run: |
+          echo "## Fetched"        >> $GITHUB_STEP_SUMMARY
+          echo                     >> $GITHUB_STEP_SUMMARY
+          if [ -f data/listening-photos.json ]; then
+            COUNT=$(node -e "console.log(require('./data/listening-photos.json').photos.length)")
+            echo "- $COUNT Pexels photo(s)" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ -f data/listening-tracks.json ]; then
+            COUNT=$(node -e "console.log(require('./data/listening-tracks.json').tracks.length)")
+            echo "- $COUNT Freesound track(s)" >> $GITHUB_STEP_SUMMARY
+          fi
+          MP3=$(find audio/asmr -name '*.mp3' 2>/dev/null | wc -l)
+          [ "$MP3" -gt 0 ] && echo "- $MP3 mp3 file(s)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "content: fetched listening-room batch (${{ inputs.target }})"
+          title: "content: listening-room batch — ${{ inputs.target }}"
+          branch: content/listening-${{ github.run_id }}
+          delete-branch: true
+          add-paths: |
+            data/listening-photos.json
+            data/listening-tracks.json
+            data/licenses/*.json
+            audio/asmr/*.mp3
+          body: |
+            Automated fetch via `.github/workflows/fetch-content.yml`.
+
+            **Run:** target=`${{ inputs.target }}` per=`${{ inputs.per }}`
+            **Queries:** `${{ inputs.queries || '(default set)' }}`
+
+            ### Reviewer checklist
+            - [ ] Eyeball each photo (Pexels URL in `data/licenses/pexels-*.json`)
+            - [ ] Listen to each mp3 in `audio/asmr/`
+            - [ ] Delete bad picks: the .json sidecar + the .mp3 + the entry in `listening-tracks.json` / `listening-photos.json`
+            - [ ] Merge survivors into `data/listening.json` "tracks" array
+            - [ ] Run `node scripts/validate-content.js` locally
+            - [ ] Squash-merge
+
+            Keys: `PEXELS_KEY` / `FREESOUND_TOKEN` from repo secrets — never leave the runner.

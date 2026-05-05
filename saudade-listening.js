@@ -19,6 +19,20 @@
     let _mode = (() => { try { return localStorage.getItem(KEY_MODE) || 'city'; } catch (e) { return 'city'; } })();
     let _activeCity = (() => { try { return localStorage.getItem(KEY_CITY); } catch (e) { return null; } })();
     // v7 검토 정정 — R2 셋업 전 404 트랙을 "AWAITING UPLOAD" 로 표시
+    // v647 — track meta was repeating "OWNED RECORDING · SAUDADE · RECORDED
+    // IN LISBON, AUGUST 2025." across all 38 tracks. That's visual noise.
+    // Reduce common phrases to short tokens so each row reads at a glance.
+    function shortenCredit(licenseHtml, credits) {
+        if (!credits) return licenseHtml;
+        let c = String(credits);
+        c = c.replace(/Owned recording\s*·\s*Saudade/gi, 'OWN');
+        c = c.replace(/Saudade\s*·\s*Field recording/gi, 'OWN-FIELD');
+        c = c.replace(/Recorded in\s+([A-Za-zÀ-ÿ' -]+),\s*([A-Za-z]+)\s+(\d{4})/i,
+                      (_, city, mon, yr) => `${city.trim()} ${yr}`);
+        c = c.replace(/\s*\.\s*$/, '');                  // trailing period
+        return licenseHtml + ' · ' + c.toUpperCase();
+    }
+
     const _unavailable = new Set();
     function markTrackUnavailable(idx) {
         _unavailable.add(idx);
@@ -29,7 +43,19 @@
         row.classList.add('sdd-listen-track-unavail');
         row.setAttribute('aria-disabled', 'true');
         const durEl = row.querySelector('.sdd-listen-duration');
-        if (durEl) durEl.textContent = 'AWAITING UPLOAD';
+        // v640 — i18n the unavailable label so non-English readers see
+        // a real explanation instead of the English fallback.
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        // v656 — softer than ALL-CAPS "AWAITING" — same row already has the
+        // unavailable class, the duration column just whispers "no tape yet".
+        const label = {
+            en: 'no tape yet',
+            ko: '테이프 없음',
+            ja: 'テープなし',
+            pt: 'sem registo',
+            es: 'sin grabación'
+        }[ed] || 'no tape yet';
+        if (durEl) durEl.textContent = label;
     }
     // v6 §11.2 — Work session timer (50 min work + 10 min rest)
     let _sessionStart = null;   // ms timestamp 세션 시작
@@ -392,6 +418,11 @@ body.listening-active .sdd-listen { display: block; }
     background: var(--paper);
     border: 0.5px solid var(--rule);
     aspect-ratio: 16 / 10;
+    /* v644/647 — full-width 16:10 was filling the whole viewport (>900px tall
+       on a desktop). v644 went to 56vh which felt too cramped per user
+       feedback. v647 settles at 70vh / 620px which is generous but leaves
+       room for the track list below the placeholder. */
+    max-height: min(70vh, 620px);
     overflow: hidden;
     position: relative;
 }
@@ -401,7 +432,15 @@ body.listening-active .sdd-listen { display: block; }
     height: 100%;
     object-fit: cover;
     background: var(--paper-d);
+    /* v636 — placeholder lives BEHIND the img by default; img only fades
+       in when its onload fires. If the image 404s (or returns a 200 fallback
+       page that fails to decode), the placeholder stays visible. */
+    opacity: 0;
+    transition: opacity .45s ease;
+    position: relative;
+    z-index: 1;
 }
+.sdd-listen-city-photo-img.is-loaded { opacity: 1; }
 .sdd-listen-city-photo-placeholder {
     position: absolute;
     inset: 4px;
@@ -910,7 +949,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         if (idx < 0 || idx >= tracks.length) return;
         if (_unavailable.has(idx)) return;   // 비가용 트랙은 재생 시도 X
         const t = tracks[idx];
-        if (!t.audio_url) return;
+        if (!t.audio_url) { markTrackUnavailable(idx); return; }
         const a = ensureAudio();
         _activeIdx = idx;
         a.src = t.audio_url;
@@ -1023,6 +1062,16 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         const tracks = (data && data.tracks) || [];
         const cities = (data && data.cities) || [];
+
+        // v637 — full-room empty state (no library at all)
+        if (!tracks.length && window.SAUDADE_EMPTY) {
+            const t = window.SAUDADE_EMPTY.text('listening');
+            window.SAUDADE_EMPTY.render(root, {
+                eyebrow: t.eyebrow, headline: t.headline, lede: t.lede, note: t.note
+            });
+            return;
+        }
+
         // 도시 모드 가능 여부 (cities 0 이면 category 강제)
         const cityModeAvailable = cities.length > 0 && tracks.some(t => t.city);
         const effectiveMode = (cityModeAvailable && _mode === 'city') ? 'city' : 'category';
@@ -1059,7 +1108,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 lastCat = cat;
             }
             const isUnavail = _unavailable.has(i);
-            const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
+            const durDisplay = isUnavail ? '—' : dur;
             return prefix + `
                 <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
                          data-track-idx="${i}"
@@ -1069,7 +1118,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     <span class="sdd-listen-num"><span class="marker">  </span>${String(i + 1).padStart(2, '0')}</span>
                     <div class="sdd-listen-body">
                         <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
-                        <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
+                        <p class="sdd-listen-license">${shortenCredit(licenseLine, t.credits)}</p>
                     </div>
                     <span class="sdd-listen-duration">${durDisplay}</span>
                 </article>
@@ -1119,7 +1168,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
 
         // v7 검토 정정 — 11 카테고리 anchor nav (가로 스크롤) — category 모드에서만
         const catNavHtml = (effectiveMode === 'category' && categoriesInOrder.length > 1) ? `
-            <nav class="sdd-listen-catnav" aria-label="Jump to category">
+            <nav class="sdd-listen-catnav" aria-label="${escapeHtml(T({ en: 'Jump to category', ko: '카테고리로 이동', ja: 'カテゴリーへ移動', pt: 'Saltar para a categoria', es: 'Saltar a la categoría' }))}">
                 ${categoriesInOrder.map((cat, idx) => `
                     <button type="button" class="sdd-listen-catnav-link"
                             data-jump-cat="${catSlug(cat)}"
@@ -1139,7 +1188,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             es: 'Todas las pistas'
         });
         const modeToggleHtml = cityModeAvailable ? `
-            <div class="sdd-listen-mode" role="tablist" aria-label="Listening mode">
+            <div class="sdd-listen-mode" role="tablist" aria-label="${escapeHtml(T({ en: 'Listening mode', ko: '청취 모드', ja: 'リスニングモード', pt: 'Modo de escuta', es: 'Modo de escucha' }))}">
                 <button type="button" class="sdd-listen-mode-btn"
                         data-set-mode="city" role="tab"
                         aria-current="${effectiveMode === 'city'}">${escapeHtml(labelByCity)}</button>
@@ -1186,14 +1235,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             });
             const photoHtml = photoUrl ? `
                 <figure class="sdd-listen-city-photo">
-                    <img class="sdd-listen-city-photo-img"
-                         src="${escapeHtml(photoUrl)}"
-                         alt="${escapeHtml(activeName)}"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                    <div class="sdd-listen-city-photo-placeholder" style="display:none">
+                    <div class="sdd-listen-city-photo-placeholder">
                         <p class="city">${escapeHtml(activeName)}</p>
                         <p class="note">${escapeHtml(placeholderText)}</p>
                     </div>
+                    <img class="sdd-listen-city-photo-img"
+                         src="${escapeHtml(photoUrl)}"
+                         alt="${escapeHtml(activeName)}"
+                         loading="lazy"
+                         decoding="async"
+                         onload="this.classList.add('is-loaded')"
+                         onerror="this.remove()" />
                 </figure>
             ` : `
                 <figure class="sdd-listen-city-photo">
@@ -1220,7 +1272,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                         ? `<a href="${licenseUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.license || '')}</a>`
                         : escapeHtml(t.license || '');
                     const isUnavail = _unavailable.has(idx);
-                    const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
+                    const durDisplay = isUnavail ? '—' : dur;
                     return `
                         <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
                                  data-track-idx="${idx}"
@@ -1230,7 +1282,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                             <span class="sdd-listen-num"><span class="marker">  </span>${String(idx + 1).padStart(2, '0')}</span>
                             <div class="sdd-listen-body">
                                 <p class="sdd-listen-title">${escapeHtml(t.title)}</p>
-                                <p class="sdd-listen-license">${licenseLine}${t.credits ? ' · ' + escapeHtml(t.credits) : ''}</p>
+                                <p class="sdd-listen-license">${shortenCredit(licenseLine, t.credits)}</p>
                             </div>
                             <span class="sdd-listen-duration">${durDisplay}</span>
                         </article>
@@ -1292,7 +1344,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 <label class="sdd-listen-vol-label" for="sddListenVol">VOL</label>
                 <input type="range" id="sddListenVol" class="sdd-listen-vol"
                        min="0" max="1" step="0.05" value="${initialVolume}"
-                       aria-label="Volume" />
+                       aria-label="${escapeHtml(T({ en: 'Volume', ko: '볼륨', ja: '音量', pt: 'Volume', es: 'Volumen' }))}" />
                 <span class="sdd-listen-vol-num" data-vol-num>${Math.round(initialVolume * 100)}</span>
                 <span class="sdd-listen-ctl-sep">·</span>
                 <span class="sdd-listen-session-state" data-session-state></span>

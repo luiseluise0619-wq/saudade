@@ -14,8 +14,9 @@
 (function() {
     if (window.SAUDADE_AUTH) return;
 
-    const KEY_USER = 'saudade.auth.user';
-    const KEY_TOUR = 'saudade.auth.tour';
+    const KEY_USER    = 'saudade.auth.user';
+    const KEY_TOUR    = 'saudade.auth.tour';
+    const KEY_SESSION = 'saudade.auth.session';   // opaque server session token (revocable)
 
     let _modalEl = null;
 
@@ -43,10 +44,10 @@
             btnCancel:L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }),
             sentMsg:  L({
                 en: 'Link sent. Check your inbox in a minute.',
-                ko: '링크를 보냈다. 1분 안에 받은편지함 확인.',
-                ja: 'リンクを送った。1分以内に受信箱を確認。',
-                pt: 'Link enviado. Verifique a caixa em um minuto.',
-                es: 'Enlace enviado. Revisa tu bandeja en un minuto.'
+                ko: '링크를 보냈다. 1분 안에 받은편지함을 확인하라.',
+                ja: 'リンクを送った。一分以内に受信箱を確認。',
+                pt: 'Link enviado. Verifique a sua caixa de entrada dentro de um minuto.',
+                es: 'Enlace enviado. Revise su bandeja de entrada en un minuto.'
             }),
             sentInline: L({
                 en: 'Link ready (inline mode):',
@@ -57,17 +58,17 @@
             }),
             failGeneric: L({
                 en: 'Could not send. Please try again.',
-                ko: '전송 실패. 다시 시도 바람.',
-                ja: '送信できなかった。再度お試しを。',
+                ko: '전송에 실패했다. 잠시 후 다시 시도하라.',
+                ja: '送信できなかった。少し時間を置いて再試行。',
                 pt: 'Não foi possível enviar. Tente novamente.',
-                es: 'No se pudo enviar. Inténtalo de nuevo.'
+                es: 'No se pudo enviar. Inténtelo de nuevo.'
             }),
             failClosed: L({
-                en: 'Auth not yet open. Try again later.',
-                ko: '아직 가입 창구가 열리지 않았다.',
-                ja: '認証窓口はまだ開いていない。',
-                pt: 'O registo ainda não está aberto.',
-                es: 'El registro aún no está abierto.'
+                en: 'Sign-in is not yet open. Try again later.',
+                ko: '아직 로그인 창구가 열려 있지 않다. 잠시 후 다시 시도하라.',
+                ja: 'サインインはまだ開いていない。後ほど再試行。',
+                pt: 'O início de sessão ainda não está disponível. Tente mais tarde.',
+                es: 'El inicio de sesión aún no está disponible. Inténtelo más tarde.'
             }),
             verifying: L({
                 en: 'Verifying…', ko: '확인 중…', ja: '確認中…',
@@ -96,6 +97,21 @@
             else localStorage.removeItem(KEY_USER);
         } catch (e) {}
     }
+    function getSessionToken() {
+        try { return localStorage.getItem(KEY_SESSION) || null; } catch (e) { return null; }
+    }
+    function setSessionToken(t) {
+        try {
+            if (t) localStorage.setItem(KEY_SESSION, t);
+            else localStorage.removeItem(KEY_SESSION);
+        } catch (e) {}
+    }
+    function authHeaders(extra) {
+        const h = Object.assign({}, extra || {});
+        const t = getSessionToken();
+        if (t) h['Authorization'] = 'Bearer ' + t;
+        return h;
+    }
     function isSignedIn() { return !!getUser(); }
     function isTour() { try { return localStorage.getItem(KEY_TOUR) === '1'; } catch (e) { return false; } }
     function startTour() {
@@ -115,7 +131,9 @@
         s.textContent = `
 .sdd-auth-modal {
     position: fixed; inset: 0;
-    z-index: 100;
+    /* z-9000 ladder: auth(9980) < account(9990) < welcome(9999).
+       Sits above any in-page chrome (which lives ≤2000) and below toasts. */
+    z-index: var(--z-modal-auth);
     background: var(--paper);
     color: var(--ink);
     display: none;
@@ -363,6 +381,7 @@ body[data-tour="1"] .sdd-cover::before {
             const j = await r.json().catch(() => null);
             if (r.ok && j && j.ok && j.user) {
                 setUser(j.user);
+                if (j.session && j.session.token) setSessionToken(j.session.token);
                 endTour();   // 가입 완료 → tour 모드 해제
             }
         } catch (e) {}
@@ -373,9 +392,86 @@ body[data-tour="1"] .sdd-cover::before {
         } catch (e) {}
     }
 
-    function signOut() {
+    async function signOut(opts) {
+        const all = !!(opts && opts.everywhere);
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const token = getSessionToken();
+        // Best-effort server revoke. Ignore network errors so the user always gets logged out locally.
+        if (base && token) {
+            try {
+                await fetch(base + (all ? '/auth/signout-all' : '/auth/signout'), {
+                    method: 'POST',
+                    headers: authHeaders({ 'Content-Type': 'application/json' }),
+                    body: '{}',
+                    credentials: 'omit'
+                });
+            } catch (e) {}
+        }
         setUser(null);
+        setSessionToken(null);
         endTour();
+    }
+
+    async function exportData() {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const token = getSessionToken();
+        if (!base || !token) throw new Error('not_signed_in');
+        const r = await fetch(base + '/auth/export', {
+            method: 'GET',
+            headers: authHeaders(),
+            credentials: 'omit'
+        });
+        if (!r.ok) throw new Error('export_failed_' + r.status);
+        return await r.json();
+    }
+
+    async function deleteAccount(opts) {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const token = getSessionToken();
+        if (!base || !token) throw new Error('not_signed_in');
+        const r = await fetch(base + '/auth/delete', {
+            method: 'POST',
+            headers: authHeaders({ 'Content-Type': 'application/json' }),
+            body: JSON.stringify({ confirm: 'DELETE', reason: (opts && opts.reason) || null }),
+            credentials: 'omit'
+        });
+        const j = await r.json().catch(() => null);
+        if (!r.ok || !j || !j.ok) throw new Error('delete_failed_' + r.status);
+        setUser(null);
+        setSessionToken(null);
+        endTour();
+        return j;
+    }
+
+    async function listSessions() {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const token = getSessionToken();
+        if (!base || !token) return { ok: false, sessions: [] };
+        try {
+            const r = await fetch(base + '/auth/sessions', {
+                method: 'GET',
+                headers: authHeaders(),
+                credentials: 'omit'
+            });
+            const j = await r.json().catch(() => null);
+            if (!r.ok || !j) return { ok: false, sessions: [] };
+            return j;
+        } catch (e) { return { ok: false, sessions: [] }; }
+    }
+
+    async function logConsent(category, granted) {
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        if (!base) return false;
+        try {
+            await fetch(base + '/auth/consent', {
+                method: 'POST',
+                headers: authHeaders({ 'Content-Type': 'application/json' }),
+                body: JSON.stringify({ category, granted: !!granted, edition: ed, policy_ver: '2026-04-30' }),
+                credentials: 'omit'
+            });
+            return true;
+        } catch (e) { return false; }
     }
 
     function watchEdition() {
@@ -412,9 +508,15 @@ body[data-tour="1"] .sdd-cover::before {
         closeModal,
         signOut,
         getUser,
+        getSessionToken,
+        authHeaders,
         isSignedIn,
         isTour,
         startTour,
-        endTour
+        endTour,
+        exportData,
+        deleteAccount,
+        listSessions,
+        logConsent
     };
 })();

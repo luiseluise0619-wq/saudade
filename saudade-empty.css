@@ -1,0 +1,157 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   SAUDADE · EMPTY STATE
+   One component, used everywhere the user finds nothing yet.
+   Newsroom-flavoured, not modern-product-flavoured: an editor's note, a
+   handful of suggested actions, an italic headline.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.sdd-empty {
+    /* Negative gravity in the layout — paper feels pulled upward. */
+    margin: clamp(48px, 10vw, 120px) auto;
+    max-width: 56ch;
+    padding: clamp(28px, 5vw, 48px) clamp(20px, 4vw, 36px);
+    border-top: 0.5px solid var(--rule);
+    border-bottom: 0.5px solid var(--rule);
+    text-align: left;
+    position: relative;
+}
+.sdd-empty::before {
+    /* Pull-quote ornament — old typewriter dash. */
+    content: "—";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--rust);
+    letter-spacing: 0;
+    transform: translateY(-50%);
+    background: var(--paper);
+    padding: 0 8px 0 0;
+}
+.sdd-empty__eyebrow {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 clamp(12px, 2vw, 18px);
+}
+.sdd-empty__h {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 clamp(14px, 2vw, 20px);
+    text-wrap: balance;
+}
+.sdd-empty__lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 clamp(20px, 3vw, 28px);
+    max-width: 48ch;
+}
+.sdd-empty__lede em { font-style: italic; }
+.sdd-empty__lede strong { font-weight: 400; color: var(--rust); }
+
+.sdd-empty__actions {
+    list-style: none;
+    margin: 0 0 clamp(16px, 3vw, 24px);
+    padding: 0;
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-empty__action {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 0.5px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    width: 100%;
+    text-align: left;
+    transition: color .15s, padding .15s;
+}
+.sdd-empty__action:hover {
+    color: var(--rust);
+    padding-left: 4px;
+}
+.sdd-empty__action::before {
+    content: "+";
+    color: var(--rust);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    flex-shrink: 0;
+    width: 14px;
+}
+.sdd-empty__action.is-primary { background: linear-gradient(to right, transparent, transparent); }
+.sdd-empty__action.is-primary::before { content: "→"; }
+.sdd-empty__action small {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--bone-d);
+    margin-left: auto;
+    text-align: right;
+}
+.sdd-empty__note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--bone-d);
+    margin: clamp(20px, 3vw, 28px) 0 0;
+    padding-top: clamp(12px, 2vw, 16px);
+    border-top: 0.5px solid var(--rule);
+}
+.sdd-empty__note::before {
+    content: "Editor's note. ";
+    font-style: normal;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-right: 6px;
+}
+
+/* The editor's note label is i18n'd via [data-editor-note-label] attr. */
+.sdd-empty[data-editor-note-label] .sdd-empty__note::before {
+    content: attr(data-editor-note-label) ". ";
+}
+
+/* Compact variant — for inline-empty rows. */
+.sdd-empty.is-compact {
+    margin: 24px 0;
+    padding: 16px 0;
+}
+.sdd-empty.is-compact .sdd-empty__h { font-size: clamp(18px, 2vw, 22px); }
+.sdd-empty.is-compact .sdd-empty__lede { font-size: 14px; }
+
+/* Reduce motion — strip the hover sliding. */
+@media (prefers-reduced-motion: reduce) {
+    .sdd-empty__action:hover { padding-left: 0; }
+}

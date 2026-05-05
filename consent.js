@@ -81,7 +81,7 @@
         wrap.setAttribute('aria-label', 'Privacy preferences');
         wrap.style.cssText = [
             'position:fixed','left:16px','right:16px','bottom:16px',
-            'max-width:560px','margin-left:auto','z-index:99999',
+            'max-width:560px','margin-left:auto','z-index:var(--z-system)',
             'background:#0a0d12','color:#e8eef5',
             'border:1px solid rgba(255,93,80,.45)','border-radius:10px',
             'padding:16px 18px','font:13px/1.55 system-ui,-apple-system,Segoe UI,sans-serif',

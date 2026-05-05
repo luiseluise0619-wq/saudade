@@ -204,6 +204,11 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 .sdd-atlas-item {
     display: grid;
+    /* v640 — photo slot is opt-in via data-has-photo="1". Cards without a
+       photo collapse back to the original 3-col layout so we don't ship 110
+       orphan placeholders next to the dataset (which currently has no
+       cafe.photo field). When a photo is committed alongside its sidecar
+       under photos/cafes/<file>, the rule below kicks in.                  */
     grid-template-columns: 32px 1fr auto;
     grid-template-areas:
         'badge head meta'
@@ -217,8 +222,54 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     cursor: pointer;
     transition: background .12s;
 }
+.sdd-atlas-item[data-has-photo="1"] {
+    grid-template-columns: 32px 1fr auto 96px;
+    grid-template-areas:
+        'badge head meta photo'
+        '.     body body photo'
+        '.     amen amen photo';
+    min-height: 96px;
+}
 .sdd-atlas-item:last-child { border-bottom: 0.5px solid var(--rule); }
 .sdd-atlas-item:hover { background: var(--paper-d); }
+
+.sdd-atlas-photo {
+    grid-area: photo;
+    align-self: stretch;
+    position: relative;
+    background: var(--paper-d);
+    border: 0.5px solid var(--rule);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    width: 96px;
+}
+.sdd-atlas-photo__ph {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-weight: 500;
+    font-size: 9px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--bone-d);
+    text-align: center;
+    padding: 6px;
+}
+.sdd-atlas-photo__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.sdd-atlas-photo__img.is-loaded { opacity: 1; }
+@media (max-width: 600px) {
+    .sdd-atlas-item {
+        grid-template-columns: 32px 1fr auto;
+        grid-template-areas:
+            'badge head meta'
+            'photo body body'
+            'photo amen amen';
+    }
+    .sdd-atlas-photo { width: auto; aspect-ratio: 4 / 3; }
+}
 
 .sdd-atlas-badge {
     grid-area: badge;
@@ -281,14 +332,52 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
 
 .sdd-atlas-amen {
     grid-area: amen;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 0.5px dotted var(--rule);
+}
+.sdd-atlas-status {
     font-family: var(--mono);
-    font-weight: 400;
-    font-size: 9.5px;
-    line-height: 1.4;
-    letter-spacing: var(--tr-mono-meta);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--bone-d);
-    margin-top: 6px;
+    /* v647 — was a 0.5px hairline that was too thin to read as a divider
+       on a busy chip row. Switch to a longer rust-2 1px rule with extra
+       padding so BONE/JADE reads as a status word distinct from chips. */
+    padding: 4px 10px 4px 0;
+    border-right: 1px solid var(--rule-2, var(--rule));
+    margin-right: 8px;
+}
+.sdd-atlas-status.is-jade { color: var(--jade); }
+.sdd-atlas-chip {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding: 3px 6px;
+    border: 0.5px solid var(--rule);
+    background: var(--paper);
+}
+.sdd-atlas-chip.is-negative {
+    color: var(--rust);
+    border-color: var(--rust);
+    background: transparent;
+    text-decoration: line-through;
+    text-decoration-color: var(--rust);
+    text-decoration-thickness: 0.5px;
+}
+.sdd-atlas-chip.is-note {
+    color: var(--ink);
+    border-color: var(--ink);
 }
 
 .sdd-atlas-foot {
@@ -553,7 +642,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 </h2>
                 <div class="sdd-atlas-count">
                     ${escapeHtml(visitedLabel)}
-                    <span class="sdd-atlas-view-pair" role="tablist" aria-label="View mode">
+                    <span class="sdd-atlas-view-pair" role="tablist" aria-label="${escapeHtml(T({ en: 'View mode', ko: '보기 모드', ja: '表示モード', pt: 'Modo de visualização', es: 'Modo de visualización' }))}">
                         <button type="button" class="sdd-atlas-view-btn"
                                 data-view-set="list" role="tab"
                                 aria-selected="${_curView === 'list'}">${escapeHtml(labelList)}</button>
@@ -579,8 +668,38 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 : '';
             const lines = Array.isArray(c.two_lines) ? c.two_lines : [];
             const lineNum = String(i + 1).padStart(2, '0');
+            // v637 — typed amenity chips. The string form ("OUTLET · WIFI ·
+            // QUIET") splits into individual chips with negative-state styling
+            // for NO_OUTLET / NO_CALLS / 24H, etc.
+            const amenityChips = (c.amenities || '').split(/[·,\s]+/)
+                .map(a => a.trim().toUpperCase()).filter(Boolean)
+                .map(a => {
+                    const negative = /^NO_/.test(a);
+                    const note     = /^(24H|CALLS_OK)$/.test(a);
+                    const cls      = negative ? 'is-negative' : (note ? 'is-note' : '');
+                    return `<span class="sdd-atlas-chip ${cls}">${escapeHtml(a.replace(/_/g, ' '))}</span>`;
+                }).join('');
+            // v640 — photo slot only renders when c.photo exists. Earlier
+            // attempts left a 96px placeholder on every card even though no
+            // café in the dataset carries a photo field — 110 orphan
+            // placeholders. Now the row collapses back to its 32+1fr+auto
+            // grid when there is no photo, via the data-has-photo attr.
+            const photoSrc = c.photo ? `/photos/cafes/${c.photo}` : null;
+            const photoAlt = `${c.name} · ${c.neighborhood || ''}`.trim();
+            const photoHtml = photoSrc ? `
+                <figure class="sdd-atlas-photo" aria-hidden="true">
+                    <div class="sdd-atlas-photo__ph">${escapeHtml(c.name.split(' ').slice(0, 2).join(' '))}</div>
+                    <img class="sdd-atlas-photo__img"
+                         src="${escapeHtml(photoSrc)}"
+                         alt="${escapeHtml(photoAlt)}"
+                         loading="lazy" decoding="async"
+                         onload="this.classList.add('is-loaded')"
+                         onerror="this.remove()" />
+                </figure>
+            ` : '';
             return `
                 <article class="sdd-atlas-item" data-cafe-id="${c.id}" tabindex="0" role="button"
+                         data-has-photo="${photoSrc ? '1' : '0'}"
                          aria-label="${c.name}, ${c.neighborhood || ''}, ${distKm}">
                     <span class="sdd-atlas-badge ${status === 'JADE' ? 'jade' : 'bone'}" aria-hidden="true"></span>
                     <div class="sdd-atlas-head-line">
@@ -591,7 +710,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     <div class="sdd-atlas-body">
                         ${lines.map(l => `<p>${escapeHtml(l)}</p>`).join('')}
                     </div>
-                    <div class="sdd-atlas-amen">${status} · ${c.amenities || ''}</div>
+                    <div class="sdd-atlas-amen">
+                        <span class="sdd-atlas-status ${status === 'JADE' ? 'is-jade' : ''}">${escapeHtml(status)}</span>
+                        ${amenityChips}
+                    </div>
+                    ${photoHtml}
                 </article>
             `;
         }).join('');
@@ -672,23 +795,39 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: '+ Sugerir un café que deberíamos visitar'
         });
         const isAtlasEmpty = total === 0;
-        const atlasEmptyHtml = isAtlasEmpty ? `
-            <section class="sdd-atlas-empty-state">
-                <h3 class="sdd-atlas-empty-h3">${escapeHtml(emptyAtlasH3)}</h3>
-                <p class="sdd-atlas-empty-body">${escapeHtml(emptyAtlasBody)}</p>
-                <ul class="sdd-atlas-empty-actions">
-                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="switch">${escapeHtml(emptyAtlasSwitch)}</button></li>
-                    <li><button type="button" class="sdd-atlas-empty-btn" data-empty-action="submit">${escapeHtml(emptyAtlasSubmit)}</button></li>
-                </ul>
-            </section>
-        ` : '';
 
         root.innerHTML = headHtml +
-            atlasEmptyHtml +
+            `<div id="sddAtlasEmpty"></div>` +
             (isAtlasEmpty ? '' : `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>`) +
             `<div class="sdd-atlas-map" id="sddAtlasMap"></div>` +
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
+
+        // v636 — unified empty-state component (saudade-empty.js)
+        if (isAtlasEmpty && window.SAUDADE_EMPTY) {
+            // v644 — eyebrow suppressed; Atlas already shows 'CAFÉS, VERIFIED.'
+            // as its big italic page header just above this block.
+            window.SAUDADE_EMPTY.render('#sddAtlasEmpty', {
+                eyebrow: '',
+                headline: emptyAtlasH3,
+                lede: escapeHtml(emptyAtlasBody),
+                actions: [
+                    { label: emptyAtlasSwitch.replace(/^\+\s*/, ''), kind: 'primary',
+                      onClick: () => root.querySelector('[data-empty-action="switch"]')?.click()
+                                  || (window.SAUDADE_FOLLOWING && window.SAUDADE_FOLLOWING.openSwitcher && window.SAUDADE_FOLLOWING.openSwitcher()) },
+                    { label: emptyAtlasSubmit.replace(/^\+\s*/, ''),
+                      onClick: () => root.querySelector('[data-empty-action="submit"]')?.click()
+                                  || (window.SAUDADE_ATLAS_SUBMIT && window.SAUDADE_ATLAS_SUBMIT.openModal && window.SAUDADE_ATLAS_SUBMIT.openModal()) }
+                ],
+                note: T({
+                    en: "We test outlets, noise, and Wi-Fi ourselves. We do not list a café we have not sat in.",
+                    ko: '콘센트·소음·와이파이는 우리가 직접 시험한다. 앉아보지 않은 카페는 등록하지 않는다.',
+                    ja: 'コンセント・騒音・Wi-Fi は自分たちで試す。座ったことのないカフェは載せない。',
+                    pt: 'Testamos as tomadas, o ruído e o Wi-Fi. Não listamos um café onde não nos sentámos.',
+                    es: 'Probamos enchufes, ruido y Wi-Fi. No incluimos un café donde no nos hayamos sentado.'
+                })
+            });
+        }
 
         // v7 §8.7 PR1 — LIST/MAP 토글 핸들러 (페어 버튼). MAP 첫 진입 시 lazy load.
         root.querySelectorAll('[data-view-set]').forEach(btn => {

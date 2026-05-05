@@ -38,7 +38,8 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
 .sdd-desk-head {
     margin: 0 0 clamp(24px, 4vw, 48px);
     padding-bottom: clamp(12px, 2vw, 20px);
-    border-bottom: 0.5px solid var(--rule);
+    /* v647 — was border-bottom + section border-top below = double rule.
+       Drop the head's bottom border; the next section's top border carries it. */
 }
 .sdd-desk-h2 {
     font-family: var(--serif);
@@ -96,8 +97,10 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     font-family: var(--serif);
     font-weight: 300;
     font-style: italic;
-    font-size: clamp(18px, 2vw, 22px);
-    line-height: 1;
+    /* v647 — was clamp(18, 2vw, 22) which read like an H3 stacked three
+       times. Reduce to a calmer list weight. */
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.2;
     color: var(--ink);
     flex: 1;
 }

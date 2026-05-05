@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — test suite</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<link rel="stylesheet" href="saudade-microtype.css" />
+<style>
+:root { --paper: #F2EEE3; --ink: #16151A; --rust: #9A3324; --bone-d: #4A4540; --rule: rgba(11,11,15,.16); --jade: #5BA890; }
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    margin: 0; padding: 0;
+}
+.page {
+    max-width: 980px; margin: 0 auto;
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 4vw, 40px);
+    line-height: 1.55;
+}
+.crumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--bone-d);
+    padding-bottom: 16px; border-bottom: 0.5px solid var(--rule);
+    margin: 0 0 32px;
+}
+.crumb a { color: inherit; text-decoration: none; border-bottom: 0.5px solid var(--rule); }
+h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(40px, 6vw, 72px); line-height: 0.95;
+    margin: 0 0 12px;
+}
+.lede {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(15px, 1.4vw, 17px); color: var(--bone-d);
+    margin: 0 0 40px; max-width: 56ch;
+}
+.section {
+    border-top: 0.5px solid var(--rule);
+    padding: 24px 0;
+}
+.section h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rust); margin: 0 0 16px;
+    display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+}
+.section h2 .pass { color: var(--jade); }
+.section h2 .fail { color: var(--rust); }
+table.cases {
+    width: 100%; border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    margin: 0 0 16px;
+}
+table.cases th, table.cases td {
+    text-align: left; padding: 6px 8px;
+    border-bottom: 0.5px solid var(--rule);
+    vertical-align: top;
+}
+table.cases th { color: var(--bone-d); font-weight: 500; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; }
+table.cases tr.pass td.r { color: var(--jade); }
+table.cases tr.fail td.r { color: var(--rust); }
+table.cases td.r { font-weight: 500; }
+.live {
+    background: var(--paper-d, #E5DFD0);
+    border: 0.5px solid var(--rule);
+    padding: 16px;
+    margin: 12px 0;
+}
+.live .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d); margin-bottom: 8px;
+}
+.summary {
+    margin-top: 56px;
+    padding: 24px;
+    border: 0.5px solid var(--rule);
+    background: var(--paper-d, #E5DFD0);
+}
+.summary p {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase; margin: 4px 0;
+}
+.summary .ok   { color: var(--jade); }
+.summary .bad  { color: var(--rust); }
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="crumb"><a href="/">SAUDADE / COVER</a> · TEST SUITE</nav>
+
+<h1>Calculators on a contact sheet.</h1>
+<p class="lede">All four nomad calculators run here against fixed scenarios. Use this page to verify a release before committing. Numbers come from the same modules the live app loads — no mocks, no doubles.</p>
+
+<section class="section" id="schSection">
+    <h2>SCHENGEN 90/180 <span data-result></span></h2>
+    <table class="cases" data-cases></table>
+    <div class="live"><p class="label">LIVE PANEL · 60 + 35 days</p><div id="schLive"></div></div>
+</section>
+
+<section class="section" id="taxSection">
+    <h2>TAX 183 <span data-result></span></h2>
+    <table class="cases" data-cases></table>
+    <div class="live"><p class="label">LIVE PANEL · PT 227d + KR 15d</p><div id="taxLive"></div></div>
+</section>
+
+<section class="section" id="insSection">
+    <h2>INSURANCE GAP <span data-result></span></h2>
+    <table class="cases" data-cases></table>
+    <div class="live"><p class="label">LIVE PANEL · Q1 + Q3 covered, Q2 gap</p><div id="insLive"></div></div>
+</section>
+
+<section class="section" id="penSection">
+    <h2>PENSION MONTHS <span data-result></span></h2>
+    <table class="cases" data-cases></table>
+    <div class="live"><p class="label">LIVE PANEL · KR-NPS 18 months</p><div id="penLive"></div></div>
+</section>
+
+<div class="summary"><p><span data-summary>RUNNING…</span></p></div>
+
+</main>
+
+<!-- Calculators only — no auth/account/welcome needed for tests. -->
+<script src="saudade-schengen.js"></script>
+<script src="saudade-tax.js"></script>
+<script src="saudade-coverage.js"></script>
+
+<script>
+(function() {
+    'use strict';
+
+    let totalPass = 0, totalFail = 0;
+
+    function renderCases(sel, rows, calcFn) {
+        const sec = document.querySelector(sel);
+        const tbl = sec.querySelector('[data-cases]');
+        const head = '<tr><th>case</th><th>field</th><th>expect</th><th>got</th><th class="r">result</th></tr>';
+        let body = '';
+        let pass = 0, fail = 0;
+        for (const row of rows) {
+            const got = calcFn(row.input);
+            const expects = row.expect;
+            for (const k of Object.keys(expects)) {
+                const exp = expects[k];
+                const actual = got[k];
+                const okEq = (typeof exp === 'object' && exp !== null && 'len' in exp)
+                    ? Array.isArray(actual) && actual.length === exp.len
+                    : actual === exp;
+                if (okEq) pass++; else fail++;
+                body += `<tr class="${okEq ? 'pass' : 'fail'}">
+                    <td>${row.name}</td><td>${k}</td>
+                    <td>${(typeof exp === 'object' ? JSON.stringify(exp) : exp)}</td>
+                    <td>${(Array.isArray(actual) ? `[${actual.length}]` : actual)}</td>
+                    <td class="r">${okEq ? 'PASS' : 'FAIL'}</td>
+                </tr>`;
+            }
+        }
+        tbl.innerHTML = head + body;
+        const tag = sec.querySelector('[data-result]');
+        tag.className = fail === 0 ? 'pass' : 'fail';
+        tag.textContent = `${pass}/${pass + fail}`;
+        totalPass += pass; totalFail += fail;
+    }
+
+    // ─── Schengen ───────────────────────────────────────────────────────
+    if (window.SAUDADE_SCHENGEN) {
+        renderCases('#schSection', [
+            {
+                name: '45 of 90 used, ref 2026-04-01',
+                input: { stays: [
+                    { in: '2026-01-01', out: '2026-01-30' },
+                    { in: '2026-03-01', out: '2026-03-15' }
+                ], ref: '2026-04-01' },
+                expect: { used_in_window: 45, remaining: 45, currently_inside: false }
+            },
+            {
+                name: '90/90 maxed, ref 2026-04-01',
+                input: { stays: [{ in: '2026-01-01', out: '2026-03-31' }], ref: '2026-04-01' },
+                expect: { used_in_window: 90, remaining: 0 }
+            },
+            {
+                name: 'open stay (no out), ref 2026-05-03',
+                input: { stays: [{ in: '2026-04-15' }], ref: '2026-05-03' },
+                expect: { used_in_window: 19, currently_inside: true }
+            }
+        ], (i) => SAUDADE_SCHENGEN.calc(i));
+
+        SAUDADE_SCHENGEN.render(document.getElementById('schLive'), {
+            stays: [
+                { in: '2026-01-01', out: '2026-03-01' },
+                { in: '2026-04-15', out: '2026-05-19' }
+            ],
+            ref: '2026-05-19'
+        });
+    }
+
+    // ─── Tax ────────────────────────────────────────────────────────────
+    if (window.SAUDADE_TAX) {
+        renderCases('#taxSection', [
+            {
+                name: 'PT 227 days in 2026',
+                input: { stays: [
+                    { country: 'PT', in: '2026-01-01', out: '2026-04-30' },
+                    { country: 'KR', in: '2026-05-01', out: '2026-05-15' },
+                    { country: 'PT', in: '2026-06-01', out: '2026-09-15' }
+                ], ref: '2026-10-01' },
+                expect: { ref: '2026-10-01', year: 2026 }
+            },
+            {
+                name: 'GB 270d under UK tax window',
+                input: { stays: [{ country: 'GB', in: '2026-04-06', out: '2026-12-31' }],
+                         ref: '2026-12-31', year: 2026 },
+                expect: { year: 2026 }
+            }
+        ], (i) => SAUDADE_TAX.calc(i));
+
+        SAUDADE_TAX.render(document.getElementById('taxLive'), {
+            stays: [
+                { country: 'PT', in: '2026-01-01', out: '2026-04-30' },
+                { country: 'KR', in: '2026-05-01', out: '2026-05-15' },
+                { country: 'PT', in: '2026-06-01', out: '2026-09-15' }
+            ],
+            ref: '2026-10-01'
+        });
+    }
+
+    // ─── Insurance ──────────────────────────────────────────────────────
+    if (window.SAUDADE_COVERAGE) {
+        renderCases('#insSection', [
+            {
+                name: 'Q1 + Q3 covered, Q2 gap, ref 2026-09-30',
+                input: { policies: [
+                    { provider: 'A', in: '2026-01-01', out: '2026-03-31' },
+                    { provider: 'B', in: '2026-07-01', out: '2026-09-30' }
+                ], ref: '2026-09-30', year: 2026 },
+                expect: { covered_days: 182, gap_days: 91, longest_gap_days: 91 }
+            },
+            {
+                name: 'overlapping policies dedupe',
+                input: { policies: [
+                    { provider: 'A', in: '2026-01-01', out: '2026-02-15' },
+                    { provider: 'B', in: '2026-02-01', out: '2026-03-15' }
+                ], ref: '2026-03-15', year: 2026 },
+                expect: { covered_days: 74 }
+            }
+        ], (i) => SAUDADE_COVERAGE.insurance(i));
+
+        SAUDADE_COVERAGE.renderInsurance(document.getElementById('insLive'), {
+            policies: [
+                { provider: 'SafetyWing', in: '2026-01-01', out: '2026-03-31' },
+                { provider: 'IMG',        in: '2026-07-01', out: '2026-09-30' }
+            ],
+            ref: '2026-09-30', year: 2026
+        });
+
+        // ─── Pension ────────────────────────────────────────────────────
+        renderCases('#penSection', [
+            {
+                name: 'KR-NPS 12+6 months',
+                input: { filings: [
+                    { scheme: 'KR-NPS', country: 'KR', in: '2024-01-01', out: '2024-12-31' },
+                    { scheme: 'KR-NPS', country: 'KR', in: '2026-01-01', out: '2026-06-30' }
+                ], ref: '2026-06-30' },
+                expect: { ref: '2026-06-30' }
+            }
+        ], (i) => SAUDADE_COVERAGE.pension(i));
+
+        SAUDADE_COVERAGE.renderPension(document.getElementById('penLive'), {
+            filings: [
+                { scheme: 'KR-NPS', country: 'KR', in: '2024-01-01', out: '2024-12-31' },
+                { scheme: 'KR-NPS', country: 'KR', in: '2026-01-01', out: '2026-06-30' }
+            ],
+            ref: '2026-06-30'
+        });
+    }
+
+    // ─── Summary ────────────────────────────────────────────────────────
+    const sum = document.querySelector('[data-summary]');
+    if (sum) {
+        const cls = totalFail === 0 ? 'ok' : 'bad';
+        sum.parentNode.parentNode.querySelector('p').innerHTML =
+            `<span class="${cls}">${totalFail === 0 ? '✓ ALL GREEN' : '✗ ' + totalFail + ' FAIL'}</span> · ${totalPass} PASS / ${totalPass + totalFail} TOTAL`;
+    }
+})();
+</script>
+</body>
+</html>

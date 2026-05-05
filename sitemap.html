@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'" />
+<title>saudade — sitemap</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<link rel="stylesheet" href="saudade-microtype.css" />
+<style>
+:root { --paper: #F2EEE3; --ink: #16151A; --rust: #9A3324; --bone-d: #4A4540; --rule: rgba(11,11,15,.16); }
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif; font-weight: 300;
+    margin: 0; padding: 0;
+}
+.page {
+    max-width: 760px; margin: 0 auto;
+    padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 48px);
+    line-height: 1.65;
+}
+.crumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0 0 clamp(40px, 6vw, 64px);
+    padding-bottom: clamp(12px, 2vw, 18px);
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 8px; flex-wrap: wrap;
+}
+.crumb a { color: inherit; text-decoration: none; border-bottom: 0.5px solid var(--rule); }
+.crumb a:hover { color: var(--rust); border-bottom-color: var(--rust); }
+
+h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(48px, 7vw, 96px); line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 0 0 clamp(28px, 4vw, 40px);
+}
+.lede {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.5;
+    color: var(--bone-d);
+    margin: 0 0 clamp(40px, 5vw, 64px);
+    max-width: 52ch;
+}
+
+section.col {
+    border-top: 0.5px solid var(--rule);
+    padding: clamp(24px, 3vw, 32px) 0;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    align-items: baseline;
+}
+.col h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500; font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rust); margin: 0;
+}
+.col-body {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.55;
+}
+.col-body ul { padding: 0; margin: 0 0 8px; list-style: none; }
+.col-body li { padding: 8px 0; border-bottom: 0.5px dotted var(--rule); }
+.col-body li:last-child { border-bottom: 0; }
+.col-body a {
+    color: var(--ink); text-decoration: none;
+    border-bottom: 0.5px solid var(--rule);
+    transition: color .12s, border-color .12s;
+}
+.col-body a:hover { color: var(--rust); border-bottom-color: var(--rust); }
+.col-body em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--bone-d);
+    font-size: 0.92em;
+    margin-left: 8px;
+}
+.col-body code {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    background: rgba(11,11,15,.04);
+    padding: 1px 5px; border: 0.5px solid var(--rule);
+}
+
+.colophon {
+    margin-top: clamp(48px, 6vw, 80px);
+    padding-top: clamp(20px, 3vw, 28px);
+    border-top: 0.5px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    section.col { grid-template-columns: 1fr; gap: 12px; }
+}
+@media print {
+    .crumb, .colophon { display: none; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+<nav class="crumb">
+    <a href="/">SAUDADE / COVER</a>
+    <span>·</span>
+    <span>SITEMAP</span>
+</nav>
+
+<h1>The map of the paper.</h1>
+<p class="lede">A list of every page, every endpoint, and every JSON file that makes saudade saudade. Read top to bottom; everything links back home.</p>
+
+<section class="col">
+    <h2>§ READING</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/">Cover</a> <em>— today's edition</em></li>
+            <li><a href="/?section=01">§01 Ledger</a> <em>— visa, tax, insurance, pension</em></li>
+            <li><a href="/?section=02">§02 Atlas</a> <em>— verified work cafés</em></li>
+            <li><a href="/?section=03">§03 Dispatches</a> <em>— policy news, three city items</em></li>
+            <li><a href="/?section=04">§04 The Desk</a> <em>— daily filing pipeline</em></li>
+            <li><a href="/?section=listening">Listening Room</a> <em>— field-recorded ambience</em></li>
+            <li><a href="/issues/">Issue archive</a> <em>— every issue we have filed, with PDF download</em></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ ACCOUNT</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/#account">Account &amp; permissions</a> <em>— sessions, export, delete, consent</em></li>
+            <li><a href="/#welcome">Welcome tour</a> <em>— what saudade is, in three cards</em></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ TOOLS</h2>
+    <div class="col-body">
+        <ul>
+            <li>Schengen 90/180 calculator <em>— in §01 Ledger when any Schengen entry exists</em></li>
+            <li>Tax-residency 183-day counter <em>— in §01 Ledger</em></li>
+            <li>Health-insurance gap counter <em>— in §01 Ledger</em></li>
+            <li>Pension contribution counter <em>— in §01 Ledger</em></li>
+            <li><a href="/#demo">Demo data</a> <em>— populate the four calculators with example traveller</em></li>
+            <li><a href="/#demo-clear">Clear demo data</a></li>
+            <li><a href="/#import">Import / export stays</a> <em>— CSV or JSON</em></li>
+            <li><a href="/test-suite.html">Test suite</a> <em>— calculator math, on a contact sheet</em></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ FEEDS</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/feed.atom?edition=en"><code>/feed.atom?edition=en</code></a> <em>— English dispatches</em></li>
+            <li><a href="/feed.atom?edition=ko"><code>?edition=ko</code></a></li>
+            <li><a href="/feed.atom?edition=ja"><code>?edition=ja</code></a></li>
+            <li><a href="/feed.atom?edition=pt"><code>?edition=pt</code></a></li>
+            <li><a href="/feed.atom?edition=es"><code>?edition=es</code></a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ LEGAL</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/privacy.html">Privacy policy</a> <em>— Korean (authoritative)</em></li>
+            <li><a href="/privacy.en.html">Privacy — English</a></li>
+            <li><a href="/privacy.ja.html">Privacy — 日本語</a></li>
+            <li><a href="/privacy.pt.html">Privacy — Português</a></li>
+            <li><a href="/privacy.es.html">Privacy — Español</a></li>
+            <li><a href="/terms.html">Terms</a></li>
+            <li><a href="/CONTENT-LICENSE.md">Content licence</a> <em>— what we can and can't import</em></li>
+            <li><a href="/THIRD_PARTY_NOTICES.md">Third-party notices</a></li>
+            <li><a href="/SECURITY.md">Security disclosure</a></li>
+            <li><a href="/TRADEMARK-NOTES.md">Trademark notes</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ EDITORIAL</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/etymology.html">Etymology</a> <em>— the word saudade, in five paragraphs</em></li>
+            <li><a href="/credits.html">Credits</a></li>
+            <li><a href="/editor-on-leave.html">Editor on leave</a> <em>— when the desk is dark</em></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ CONTRIBUTE</h2>
+    <div class="col-body">
+        <ul>
+            <li><a href="/desks.html">The desks</a> <em>— stringers writing under the masthead</em></li>
+            <li><a href="/#desk-apply">Become a stringer</a> <em>— pitch yourself as a correspondent</em></li>
+            <li><a href="/#desk-submit">File a dispatch</a> <em>— for invited stringers</em></li>
+            <li><a href="/#letter">Write a letter to the editor</a> <em>— short, signed, edited</em></li>
+        </ul>
+    </div>
+</section>
+
+<section class="col">
+    <h2>§ AUTH API</h2>
+    <div class="col-body">
+        <ul>
+            <li><code>POST /auth/request</code> <em>— send magic link</em></li>
+            <li><code>GET  /auth/verify?token=…</code> <em>— consume magic link</em></li>
+            <li><code>GET  /auth/sessions</code> <em>— list active sessions</em></li>
+            <li><code>POST /auth/signout</code> <em>— this device</em></li>
+            <li><code>POST /auth/signout-all</code> <em>— every device + burn pending links</em></li>
+            <li><code>GET  /auth/export</code> <em>— GDPR Art.20 / PIPA §35</em></li>
+            <li><code>POST /auth/delete</code> <em>— GDPR Art.17 / PIPA §36</em></li>
+            <li><code>POST /auth/consent</code> <em>— log consent grant/revoke</em></li>
+        </ul>
+    </div>
+</section>
+
+<footer class="colophon">
+    <p>SAUDADE · COVER → <a href="/">read today's edition</a></p>
+</footer>
+
+</main>
+</body>
+</html>

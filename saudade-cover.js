@@ -220,6 +220,27 @@
 body.cafe-mode .sdd-cover { display: none !important; }
 body.section-active .sdd-cover { display: none !important; }
 
+/* v644 — Archive entry under the cover nav. Mono uppercase row that
+   sends curious readers to /issues/, where every past issue carries a
+   DOWNLOAD PDF button at the top. */
+.sdd-cover-archive {
+    margin: clamp(28px, 4vw, 48px) 0 0;
+    text-align: center;
+}
+.sdd-cover-archive-link {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--rust);
+    padding-bottom: 4px;
+    transition: color .15s, border-color .15s, padding .15s;
+}
+.sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
+
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
     text-align: center;
@@ -581,6 +602,13 @@ body.section-active .sdd-cover { display: none !important; }
                 <p class="sdd-cover-issue-lede">${escapeHtml(issueLede)}</p>
             </section>
 
+            <!-- v641 — personal block. Empathy layer that turns the user's
+                 four-calculator data into italic sentences in the saudade
+                 voice ("184 days since you last sat in a Seoul café"). When
+                 there is no data, the block becomes the empty-state empathy
+                 hook with shortcuts to set home cities or load demo data. -->
+            <div id="sddCoverPersonal"></div>
+
             <section class="sdd-cover-today">
                 <p class="sdd-cover-today-eyebrow">${escapeHtml(TODAY_LABEL[ed] || 'TODAY')}</p>
                 <ul class="sdd-cover-today-list">${todayHtml}</ul>
@@ -592,6 +620,14 @@ body.section-active .sdd-cover { display: none !important; }
                 <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
                 <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
             </nav>
+
+            <!-- v644 — direct path to the issue archive + per-issue PDF download.
+                 Earlier the only entry was via the footer rule, which is too quiet. -->
+            <p class="sdd-cover-archive">
+                <a href="/issues/" class="sdd-cover-archive-link">
+                    READ THE WEEK · DOWNLOAD AS PDF →
+                </a>
+            </p>
         `;
 
         // nav 클릭 시 기존 dock 버튼으로 위임
@@ -606,6 +642,20 @@ body.section-active .sdd-cover { display: none !important; }
                 }
             });
         });
+
+        // v641 — paint the personal block. SAUDADE_PERSONAL falls back to
+        // the empty-state empathy hook when there is no data.
+        try {
+            if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
+                window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
+            }
+        } catch (e) {}
+
+        // v649 — let bootstrap.js know we're rendered so it can fade the
+        // loading overlay immediately. Without app.js around, this used to
+        // wait for a 12-second backstop.
+        try { window.dispatchEvent(new CustomEvent('sdd-cover-rendered')); }
+        catch (e) {}
     }
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는
@@ -637,8 +687,14 @@ body.section-active .sdd-cover { display: none !important; }
         window.addEventListener('storage', (e) => {
             if (e.key && /lang|state/i.test(e.key)) render();
         });
-        // 1분마다 D-day 갱신 (날짜 변경 대응)
-        setInterval(render, 60000);
+        // 1분마다 D-day 갱신 (날짜 변경 대응).
+        // v651 — wrap in pausableInterval so it auto-stops when the tab is
+        // hidden. Reduces battery drain + phone heat on mobile.
+        if (window.SAUDADE_BOOT && window.SAUDADE_BOOT.pausableInterval) {
+            window.SAUDADE_BOOT.pausableInterval(render, 60000);
+        } else {
+            setInterval(render, 60000);
+        }
     }
 
     if (document.readyState === 'loading') {

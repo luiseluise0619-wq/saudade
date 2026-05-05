@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>saudade — dispatches · 2026-05-01</title>
+<meta name="generator" content="saudade build-issue.js" />
+<meta name="ai-assisted" content="false" />
+<style>
+:root { --paper:#f5efe6; --ink:#1d1a16; --rust:#b35028; --rule:#5e554a; --bone-d:#8a7e6e; }
+@page { size: A4 portrait; margin: 18mm 16mm 22mm 16mm; }
+@page :first { @top-right { content: ""; } }
+@page { @bottom-center { content: "saudade · " counter(page) " / " counter(pages); font-family: "JetBrains Mono", monospace; font-size: 9pt; letter-spacing: 0.18em; color: #5e554a; } }
+/* v644 — screen-only top bar with Download / Back buttons. Hidden from print. */
+.actionbar {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--paper);
+    padding: 14px 24px;
+    border-bottom: 0.5px solid var(--rule);
+    display: flex; gap: 16px; align-items: center; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+}
+.actionbar a, .actionbar button {
+    background: transparent; border: 0;
+    color: var(--ink); cursor: pointer;
+    text-decoration: none; padding: 4px 8px;
+    border-bottom: 0.5px solid transparent;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    transition: color .15s, border-color .15s;
+}
+.actionbar a:hover, .actionbar button:hover {
+    color: var(--rust); border-bottom-color: var(--rust);
+}
+.actionbar .pdf-btn { color: var(--rust); border: 0.5px solid var(--rust); padding: 8px 14px; }
+.actionbar .pdf-btn:hover { background: var(--rust); color: var(--paper); }
+.actionbar .meta { color: var(--bone-d); flex: 1; text-align: center; }
+@media print { .actionbar { display: none; } }
+@media (max-width: 540px) {
+    .actionbar { padding: 10px 14px; gap: 8px; font-size: 9px; }
+    .actionbar .meta { display: none; }
+}
+html, body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 300; font-size: 11pt; line-height: 1.5;
+    margin: 0; padding: 0;
+}
+.cover {
+    text-align: center;
+    padding: 28mm 0 18mm;
+    border-bottom: 0.5pt solid var(--rule);
+    page-break-after: always;
+}
+.cover h1 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 64pt;
+    line-height: 0.95;
+    margin: 0;
+}
+.cover .sub {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: var(--ink);
+    margin: 12pt 0 0;
+}
+.cover .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 22pt 0 0;
+}
+.toc {
+    margin: 14pt 0;
+    page-break-after: always;
+}
+.toc h2 { font-family: "JetBrains Mono", monospace; font-size: 10pt; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust); }
+.toc ol { padding-left: 16pt; }
+.toc li { margin: 4pt 0; }
+.section {
+    page-break-before: always;
+}
+.section .city {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 4pt;
+}
+.section h2 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 28pt;
+    line-height: 1.05;
+    margin: 0 0 10pt;
+}
+.item {
+    page-break-inside: avoid;
+    margin: 12pt 0;
+    padding: 8pt 0;
+    border-top: 0.5pt solid var(--rule);
+}
+.item .num { font-family: "JetBrains Mono", monospace; font-size: 9pt; letter-spacing: 0.32em; color: var(--bone-d); display: inline-block; min-width: 26pt; }
+.item .ai-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-left: 8pt;
+}
+.item h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 14pt;
+    line-height: 1.25;
+    margin: 4pt 0;
+}
+.item .lede {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 11pt;
+    margin: 0 0 4pt;
+    color: var(--ink);
+}
+.item .body {
+    font-size: 10.5pt;
+}
+.item blockquote {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    border-left: 1pt solid var(--rust);
+    padding-left: 10pt;
+    margin: 6pt 0;
+}
+.item .src {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8pt;
+    color: var(--bone-d);
+    letter-spacing: 0.04em;
+}
+.item .src a { color: inherit; }
+.item .src a::after {
+    content: " " attr(href);
+    font-size: 7pt;
+    color: var(--bone-d);
+}
+.colophon {
+    page-break-before: always;
+    padding: 14pt 0;
+    border-top: 0.5pt solid var(--rule);
+}
+.colophon p { font-family: "JetBrains Mono", monospace; font-size: 8pt; letter-spacing: 0.06em; color: var(--bone-d); }
+</style>
+</head>
+<body>
+    <nav class="actionbar" aria-label="issue actions">
+        <a href="/issues/">← ARCHIVE</a>
+        <span class="meta">2026-05-01 · EN EDITION</span>
+        <button type="button" class="pdf-btn" onclick="window.print()" title="Print or save as PDF">
+            DOWNLOAD PDF
+        </button>
+    </nav>
+    <header class="cover">
+        <h1>saudade<br/>dispatches</h1>
+        <p class="sub">Three cities, no schedule. Edited from Lisbon.</p>
+        <p class="meta">FILED 2026-05-01 · NEXT 2026-05-02 · EDITION EN</p>
+    </header>
+    <nav class="toc">
+        <h2>Contents</h2>
+        <ol><li><a href="#sec-1">MEDELLÍN</a></li>
+<li><a href="#sec-2">LISBON</a></li>
+<li><a href="#sec-3">SEOUL</a></li></ol>
+    </nav>
+    
+        <section class="section" id="sec-1">
+            <p class="city">MEDELLÍN · Eternal spring</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">REWRITTEN</span></p>
+                <h3>El Poblado tightens short-let registration.</h3>
+                <p class="lede">Owners must register by July or face fines.</p>
+                <p class="body">The Medellín municipality&#39;s tourism office requires all short-stay rental operators in El Poblado to register on the city&#39;s short-let portal by July 1. Registration is free; non-registration carries a COP 2M fine.</p>
+                
+                <p class="src"><a href="https://saudade.app/dispatches/med/4">Alcaldía de Medellín · Secretaría de Turismo · 2026-04-30</a></p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>Migración Colombia maintains 90-day visa-on-arrival.</h3>
+                <p class="lede">Extension to 180 still costs COP 200 000.</p>
+                <p class="body">No change to the 90-day visa-on-arrival or the 90-day extension fee was announced in the Q2 review. The Migrante Digital permit (visa V) processing time stays at 30–45 days through Bogotá.</p>
+                
+                <p class="src"><a href="https://saudade.app/dispatches/med/4">Migración Colombia · 2026-04-30</a></p>
+            </article>
+        </section>
+
+        <section class="section" id="sec-2">
+            <p class="city">LISBON · Spring</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">REWRITTEN</span></p>
+                <h3>Bairro Alto noise ordinance widens to weeknights.</h3>
+                <p class="lede">Outdoor music ends at 23h00 Mon–Thu starting June.</p>
+                <p class="body">A new municipal noise ordinance extends the existing weekend cap to weeknights. Tasca-style outdoor patios in Bairro Alto and Bica must end amplified music by 23h00 from Monday to Thursday from June 1.</p>
+                
+                <p class="src"><a href="https://saudade.app/dispatches/lis/4">Câmara Municipal · Diário da República · 2026-04-30</a></p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>D7 visa renewals slow at the SEF in May.</h3>
+                <p class="lede">Two-month wait for the in-person interview, by appointment only.</p>
+                <p class="body">Service desks at the Serviço de Estrangeiros e Fronteiras have been booked through July for D7 renewals. Online pre-interviews are accepted only for second-time renewals. New applicants should expect three desk visits over four months.</p>
+                <blockquote>&ldquo;Three desk visits, four months. Be early.&rdquo; — Editor</blockquote>
+                <p class="src"><a href="https://saudade.app/dispatches/lis/4">SEF · Lisboa · 2026-04-30</a></p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">03</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>NHR 2.0 frozen at the same rate through 2027.</h3>
+                <p class="lede">The 20 % flat for new highly-qualified arrivals stays.</p>
+                <p class="body">AT (Autoridade Tributária) confirmed in writing that NHR 2.0, the post-2024 successor to NHR, will keep its 20 % flat band for IFICI-classified arrivals through fiscal year 2027.</p>
+                <blockquote>&ldquo;No further reform announced this term.&rdquo; — Editor</blockquote>
+                <p class="src"><a href="https://saudade.app/dispatches/lis/4">AT · Diário da República · 2026-04-30</a></p>
+            </article>
+        </section>
+
+        <section class="section" id="sec-3">
+            <p class="city">SEOUL · Spring</p>
+            <h2>saudade — dispatches</h2>
+            
+            <article class="item">
+                <p><span class="num">01</span><span class="ai-tag">REWRITTEN</span></p>
+                <h3>AREX express drops to ₩9 000 with new card.</h3>
+                <p class="lede">A bargain even at the new fare.</p>
+                <p class="body">The Airport Express commuter rail introduces a contactless tap-card valid for one year that prices the express service at ₩9 000 — down from ₩11 000 for one-off tickets. Tax-residency reminder: AREX days do not count toward your 183.</p>
+                
+                <p class="src"><a href="https://saudade.app/dispatches/sel/4">AREX · Korail · 2026-04-30</a></p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">02</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>F-2-R digital nomad visa issuance steady at 200/month.</h3>
+                <p class="lede">No backlog reported at HiKorea.</p>
+                <p class="body">The Ministry of Justice continues issuing the F-2-R digital nomad visa at the post-launch monthly cap. Applicants reporting 7–10 working days from submission to approval. The HiKorea online portal accepts the entire flow without an in-person visit.</p>
+                <blockquote>&ldquo;Seven to ten working days.&rdquo; — Editor</blockquote>
+                <p class="src"><a href="https://saudade.app/dispatches/sel/4">Ministry of Justice · HiKorea · 2026-04-30</a></p>
+            </article>
+
+            <article class="item">
+                <p><span class="num">03</span><span class="ai-tag">AI DRAFT</span></p>
+                <h3>NTS confirms 183-day rule on calendar year basis.</h3>
+                <p class="lede">No proration for partial-year arrivals in 2026.</p>
+                <p class="body">A reader-submitted query to the National Tax Service was answered in writing this week: residency for 2026 is established by aggregate days inside Korea between January 1 and December 31, with no proration for arrival mid-year.</p>
+                
+                <p class="src"><a href="https://saudade.app/dispatches/sel/4">NTS reply · 한국세무서 · 2026-04-30</a></p>
+            </article>
+        </section>
+    <footer class="colophon">
+        <p>Hand-written editorial templates for pipeline testing — no AI rewriting was applied.</p>
+        
+        <p>© saudade · CONTENT-LICENSE.md</p>
+    </footer>
+</body>
+</html>

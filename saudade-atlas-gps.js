@@ -369,6 +369,10 @@
 .sdd-gps-locate[data-state="pin"]::before     { background: var(--ink); }
 .sdd-gps-locate[data-state="locating"] { color: var(--bone-d) !important; }
 .sdd-atlas[data-view="list"] .sdd-gps-locate { display: none; }
+/* v644 — user finds the floating "tap to locate" pill confusing on the map.
+   Hide it everywhere; the underlying GPS module still works for any caller
+   that invokes requestLocationFromGesture() programmatically. */
+.sdd-gps-locate { display: none !important; }
 .sdd-gps-status::before {
     content: '';
     width: 6px; height: 6px;

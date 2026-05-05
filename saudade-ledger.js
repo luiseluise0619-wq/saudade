@@ -671,7 +671,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                         <div class="sdd-ld-record-meta">
                             <span class="iso">${escapeHtml(r.iso || '—')}</span>
                             <span class="label">${escapeHtml(r.label || cat.label.toLowerCase())}</span>
-                            <button class="rm" data-rm="${r._idx}" aria-label="Remove">×</button>
+                            <button class="rm" data-rm="${r._idx}" aria-label="${escapeHtml(T({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }))}">×</button>
                         </div>
                         <p class="sdd-ld-record-line">
                             You entered <strong>${escapeHtml(r.iso || '—')}</strong> on
@@ -692,7 +692,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                     <div class="sdd-ld-record-meta">
                         <span class="iso">${escapeHtml(r.iso || '—')}</span>
                         <span class="label">${escapeHtml(r.type || r.label || '')}</span>
-                        <button class="rm" data-rm="${r._idx}" aria-label="Remove">×</button>
+                        <button class="rm" data-rm="${r._idx}" aria-label="${escapeHtml(T({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }))}">×</button>
                     </div>
                     <div class="sdd-ld-record-dday">
                         <p class="sdd-ld-record-num ${cls}">${dleft != null ? Math.max(0, dleft) : '—'}</p>
@@ -843,10 +843,105 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                 </h2>
             </header>
             ${articleIntro}
-            ${emptyStateHtml}
+            <div id="sddLedgerEmpty"></div>
+            ${isLedgerEmpty ? '' : emptyStateHtml}
+            <!-- v644 — one stays form drives both Schengen + Tax panels.
+                 Replaces the previous duplicate schengen-form + tax-form. -->
+            <div id="sddStaysForm"></div>
+            <div id="sddSchPanel"></div>
+            <div id="sddTaxPanel"></div>
+            <div id="sddInsPanel"></div>
+            <div id="sddPenPanel"></div>
+            <div id="sddCoverageForm"></div>
             ${categoriesHtml}
             ${formHtml}
         `;
+
+        // Unified empty-state — replaces the old per-section markup when the user
+        // has not yet added a single record.
+        if (isLedgerEmpty && window.SAUDADE_EMPTY) {
+            const t = window.SAUDADE_EMPTY.text('ledger');
+            const demoLabel = T({
+                en: 'Show me with example data',
+                ko: '예시 데이터로 미리 보기',
+                ja: 'サンプルデータで見る',
+                pt: 'Mostrar com dados de exemplo',
+                es: 'Mostrar con datos de ejemplo'
+            });
+            // v644 — the article intro above already shows the eyebrow in
+            // big rust caps. Suppress the duplicate inside the empty-state.
+            window.SAUDADE_EMPTY.render('#sddLedgerEmpty', {
+                eyebrow: '',
+                headline: t.headline,
+                lede: t.lede,
+                actions: [
+                    // v640 — primary action is now "show me populated", because
+                    // a fresh user staring at four empty calculators learns
+                    // nothing. The demo persona populates all four panels in
+                    // one click; the legacy add-record entries follow.
+                    { label: demoLabel, kind: 'primary',
+                      hint: '#demo',
+                      onClick: () => { if (window.SAUDADE_DEMO) { window.SAUDADE_DEMO.load(); render(); } } },
+                    { label: addLabel.visa,      onClick: () => jumpToCat('visa') },
+                    { label: addLabel.tax,       onClick: () => jumpToCat('tax') },
+                    { label: addLabel.insurance, onClick: () => jumpToCat('insurance') },
+                    { label: addLabel.pension,   onClick: () => jumpToCat('pension') }
+                ],
+                note: t.note
+            });
+        }
+
+        function jumpToCat(cat) {
+            const el = root.querySelector(`[data-jump-cat="${cat}"]`)
+                || root.querySelector(`[data-cat="${cat}"]`)
+                || root.querySelector(`[data-form-cat="${cat}"]`);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.click && el.click();
+            }
+        }
+
+        // Schengen 90/180 panel + entry form — both always mount when the
+        // user has any Schengen-flagged record OR has stored stays in the
+        // standalone form's localStorage. Otherwise we silently skip.
+        try {
+            // Auto-import Schengen-flagged ledger entries into the calc.
+            // v644 — single unified stays form. mount() also runs the
+            // Schengen + Tax panels internally on every keystroke, so we no
+            // longer need to wire them separately here.
+            if (window.SAUDADE_STAYS_FORM) {
+                window.SAUDADE_STAYS_FORM.mount(document.getElementById('sddStaysForm'));
+            }
+
+            // Records added via the legacy Ledger record system (visa rows
+            // with ISO codes) still feed the panels alongside form data.
+            const legacySchStays = records
+                .filter(r => (r.iso === 'EU') || (r.type === 'shengen') || (r.type === 'd7-pt'))
+                .map(r => ({ in: r.entered, out: r.expiry, country: r.iso }));
+            const legacyTaxStays = records
+                .filter(r => (r.typeCategory === 'tax') || (r.iso && r.entered))
+                .map(r => ({ country: (r.iso || '').replace(/^EU$/, 'PT'), in: r.entered, out: r.expiry }));
+            const formStays = (window.SAUDADE_STAYS_FORM && window.SAUDADE_STAYS_FORM.getStays && window.SAUDADE_STAYS_FORM.getStays()) || [];
+            if (window.SAUDADE_SCHENGEN) {
+                const all = legacySchStays.concat(formStays.filter(s => s.country && s.in));
+                if (all.length) window.SAUDADE_SCHENGEN.render(document.getElementById('sddSchPanel'), { stays: all });
+            }
+            if (window.SAUDADE_TAX) {
+                const all = legacyTaxStays.concat(formStays.filter(s => s.country && s.in));
+                if (all.length) window.SAUDADE_TAX.render(document.getElementById('sddTaxPanel'), { stays: all });
+            }
+
+            // v640 — direct input forms for tax + coverage. The forms feed
+            // their respective panels live via localStorage, so the user can
+            // type a row and see the calculation update without round-tripping
+            // through the legacy Ledger record system.
+            if (window.SAUDADE_TAX_FORM) {
+                window.SAUDADE_TAX_FORM.mount(document.getElementById('sddTaxForm'));
+            }
+            if (window.SAUDADE_COVERAGE_FORM) {
+                window.SAUDADE_COVERAGE_FORM.mount(document.getElementById('sddCoverageForm'));
+            }
+        } catch (e) {}
 
         // 폼 핸들러 — type 변경 시 expiry 자동 계산
         const form = root.querySelector('[data-add-entry]');
