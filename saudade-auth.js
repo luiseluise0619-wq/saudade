@@ -133,7 +133,7 @@
     position: fixed; inset: 0;
     /* z-9000 ladder: auth(9980) < account(9990) < welcome(9999).
        Sits above any in-page chrome (which lives ≤2000) and below toasts. */
-    z-index: 9980;
+    z-index: var(--z-modal-auth);
     background: var(--paper);
     color: var(--ink);
     display: none;

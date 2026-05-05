@@ -44,7 +44,7 @@
         s.id = 'sddDesksStyles';
         s.textContent = `
 .sdd-desk-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);

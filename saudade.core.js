@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-05T08:24:08.102Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-05-05T08:28:41.115Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -136,7 +136,7 @@
     position: fixed; inset: 0;
     /* z-9000 ladder: auth(9980) < account(9990) < welcome(9999).
        Sits above any in-page chrome (which lives ≤2000) and below toasts. */
-    z-index: 9980;
+    z-index: var(--z-modal-auth);
     background: var(--paper);
     color: var(--ink);
     display: none;
@@ -623,7 +623,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddAcctStyles';
         s.textContent = `
 .sdd-acct-modal {
-    position: fixed; inset: 0; z-index: 9990;
+    position: fixed; inset: 0; z-index: var(--z-modal-account);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
@@ -2663,7 +2663,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddWelcomeStyles';
         s.textContent = `
 .sdd-welcome {
-    position: fixed; inset: 0; z-index: 9999;
+    position: fixed; inset: 0; z-index: var(--z-modal-welcome);
     background: var(--paper);
     color: var(--ink);
     display: none;
@@ -3143,7 +3143,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddImportStyles';
         s.textContent = `
 .sdd-imp-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
@@ -3734,7 +3734,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddHomesStyles';
         s.textContent = `
 .sdd-homes-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
@@ -3973,7 +3973,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddLettersStyles';
         s.textContent = `
 .sdd-let-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
@@ -4343,7 +4343,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddDesksStyles';
         s.textContent = `
 .sdd-desk-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);
@@ -4912,7 +4912,7 @@ body[data-tour="1"] .sdd-cover::before {
         s.id = 'sddContribStyles';
         s.textContent = `
 .sdd-cb-modal {
-    position: fixed; inset: 0; z-index: 9985;
+    position: fixed; inset: 0; z-index: var(--z-modal-ugc);
     background: var(--paper); color: var(--ink);
     display: none; align-items: flex-start; justify-content: center;
     padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 80px);

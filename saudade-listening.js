@@ -46,13 +46,15 @@
         // v640 — i18n the unavailable label so non-English readers see
         // a real explanation instead of the English fallback.
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        // v656 — softer than ALL-CAPS "AWAITING" — same row already has the
+        // unavailable class, the duration column just whispers "no tape yet".
         const label = {
-            en: 'AWAITING RECORDING',
-            ko: '녹음 준비 중',
-            ja: '録音準備中',
-            pt: 'A AGUARDAR GRAVAÇÃO',
-            es: 'PENDIENTE DE GRABACIÓN'
-        }[ed] || 'AWAITING RECORDING';
+            en: 'no tape yet',
+            ko: '테이프 없음',
+            ja: 'テープなし',
+            pt: 'sem registo',
+            es: 'sin grabación'
+        }[ed] || 'no tape yet';
         if (durEl) durEl.textContent = label;
     }
     // v6 §11.2 — Work session timer (50 min work + 10 min rest)
@@ -1106,7 +1108,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 lastCat = cat;
             }
             const isUnavail = _unavailable.has(i);
-            const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
+            const durDisplay = isUnavail ? '—' : dur;
             return prefix + `
                 <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
                          data-track-idx="${i}"
@@ -1270,7 +1272,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                         ? `<a href="${licenseUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.license || '')}</a>`
                         : escapeHtml(t.license || '');
                     const isUnavail = _unavailable.has(idx);
-                    const durDisplay = isUnavail ? 'AWAITING UPLOAD' : dur;
+                    const durDisplay = isUnavail ? '—' : dur;
                     return `
                         <article class="sdd-listen-track${isUnavail ? ' sdd-listen-track-unavail' : ''}"
                                  data-track-idx="${idx}"

@@ -108,6 +108,19 @@
     --radius-md: 4px;
     --radius-lg: 4px;
     --radius-pill: 0;
+
+    /* ─── z-index ladder (v656 — was hardcoded across 8 modules) ─────────
+       In-page chrome lives ≤2000. Modals stack:
+         AUTH (9980)         sign-in
+         UGC  (9985)         contribute / desks / homes / import / letters
+         ACCOUNT (9990)      account panel (post-sign-in)
+         WELCOME (9999)      first-run (must beat everything user-facing)
+         SYSTEM  (99999)     consent bar, edition switcher (always-on top) */
+    --z-modal-auth:     9980;
+    --z-modal-ugc:      9985;
+    --z-modal-account:  9990;
+    --z-modal-welcome:  9999;
+    --z-system:        99999;
 }
 
 /* 다크 모드 (Reading Room 등 풀스크린 영상 모드만 자동 반전) — 일반 페이지는 light paper 유지 */

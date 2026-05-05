@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-05T08:24:08.102Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-05T08:28:41.115Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -1040,7 +1040,7 @@ body.section-active::before { content: none !important; }
         const el = document.createElement('div');
         el.id = 'sddEditionFlash';
         el.style.cssText = [
-            'position:fixed', 'inset:0', 'z-index:99999',
+            'position:fixed', 'inset:0', 'z-index:var(--z-system)',
             'background:var(--paper)', 'color:var(--ink)',
             'display:flex', 'align-items:center', 'justify-content:center',
             'font-family:var(--serif)', 'font-weight:300', 'font-style:italic',

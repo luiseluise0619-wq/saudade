@@ -129,37 +129,12 @@
          haptic. Replaces ~239 KB of legacy modules in ~5 KB. -->
     <script defer src="saudade-boot.js?v=v656"></script>
 
-    <!-- v649 — DEAD CODE PURGE.
-         Removed ~417 KB of legacy AURA: WORLD PULSE modules that no
-         saudade-*.js depends on. Each saudade-* file checks its own
-         globals; aura-secrets is the only AURA_* config still required.
-         Removed scripts (commented to leave a paper trail; safe to delete):
-
-         aura-common.js          18 KB  — only used by app.js
-         city-videos.js          24 KB  — Pexels city video catalogue (legacy)
-         w.soundcloud iframe API external — saudade has its own audio player
-         ambient-mode.js        101 KB  — auto-played city video + lo-fi
-         cafe-mode.js            34 KB  — fullscreen ambient (newspaper UX kills it)
-         security-patch.js       21 KB  — patches for app.js bugs only
-         app.js                 213 KB  — globe.gl 3D + RSS news (Aura core)
-         haptic.js                2 KB  — only useful in cafe-mode
-         perf-throttle.js         6 KB  — was throttling cafe-mode videos
-
-         Net saving on every page load: ~419 KB JS parsing + ~5–10 fewer
-         setInterval / requestAnimationFrame loops + 0 video autoplay
-         attempts. The phone heating reported on mobile traces directly
-         to ambient-mode + app.js running in the background.
-    -->
-    <!-- <script defer src="aura-common.js"></script>      removed v649 -->
-    <!-- <script defer src="city-videos.js"></script>      removed v649 -->
-    <!-- <script defer src="https://w.soundcloud.com/player/api.js"></script>  removed v649 -->
-    <!-- <script defer src="ambient-mode.js"></script>     removed v649 -->
-    <!-- <script defer src="cafe-mode.js"></script>        removed v649 -->
-    <!-- <script defer src="security-patch.js"></script>   removed v649 -->
-    <!-- <script defer src="app.js"></script>              removed v649 -->
-    <!-- <script defer src="haptic.js"></script>           removed v649 -->
-    <!-- <script defer src="perf-throttle.js"></script>    removed v649 -->
-    <!-- v560 — 다음 도시 추천 + 노마드 카페 큐레이션 -->
+    <!-- v649 dead-code purge: ~417 KB of legacy AURA modules removed
+         (app.js / ambient-mode.js / cafe-mode.js / city-videos.js /
+         aura-common.js / haptic.js / perf-throttle.js / security-patch.js
+         + soundcloud iframe API). Phone-heating on mobile was traced to
+         ambient-mode + app.js running in the background. v656: physical
+         files deleted from disk — git history is the paper trail. -->
     <!-- v601 SAUDADE PR#2 — 동심원 + § 00 ISSUE COVER (신규 컴포넌트, 기존 JS 손 안 댐) -->
     <!-- v656 — saudade.editorial.js bundles edition + cover + cover-edition + masthead
          into one HTTP request (was 4 separate loads). Built by `npm run bundle`,

@@ -66,7 +66,7 @@
         s.id = 'sddWelcomeStyles';
         s.textContent = `
 .sdd-welcome {
-    position: fixed; inset: 0; z-index: 9999;
+    position: fixed; inset: 0; z-index: var(--z-modal-welcome);
     background: var(--paper);
     color: var(--ink);
     display: none;
