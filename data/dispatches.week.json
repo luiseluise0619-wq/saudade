@@ -1,6 +1,6 @@
 {
   "edition": "en",
-  "week_of": "2026-04-27",
+  "week_of": "2026-04-28",
   "ai_assisted": false,
   "ai_disclosure": "Items in this week were drafted from hand-written editorial templates for end-to-end pipeline testing. No AI rewriting was applied at generation time.",
   "cities_covered": [
@@ -17,8 +17,8 @@
   ],
   "days": [
     {
-      "filed_at": "2026-04-27T06:00:00+09:00",
-      "next_filing": "2026-04-28T06:00:00+09:00",
+      "filed_at": "2026-04-28T06:00:00+09:00",
+      "next_filing": "2026-04-29T06:00:00+09:00",
       "cities": [
         {
           "city": "LISBON",
@@ -152,8 +152,8 @@
       ]
     },
     {
-      "filed_at": "2026-04-28T06:00:00+09:00",
-      "next_filing": "2026-04-29T06:00:00+09:00",
+      "filed_at": "2026-04-29T06:00:00+09:00",
+      "next_filing": "2026-04-30T06:00:00+09:00",
       "cities": [
         {
           "city": "BERLIN",
@@ -251,8 +251,8 @@
       ]
     },
     {
-      "filed_at": "2026-04-29T06:00:00+09:00",
-      "next_filing": "2026-04-30T06:00:00+09:00",
+      "filed_at": "2026-04-30T06:00:00+09:00",
+      "next_filing": "2026-05-01T06:00:00+09:00",
       "cities": [
         {
           "city": "BALI",
@@ -350,8 +350,8 @@
       ]
     },
     {
-      "filed_at": "2026-04-30T06:00:00+09:00",
-      "next_filing": "2026-05-01T06:00:00+09:00",
+      "filed_at": "2026-05-01T06:00:00+09:00",
+      "next_filing": "2026-05-02T06:00:00+09:00",
       "cities": [
         {
           "city": "MEDELLÍN",
@@ -473,8 +473,8 @@
       ]
     },
     {
-      "filed_at": "2026-05-01T06:00:00+09:00",
-      "next_filing": "2026-05-02T06:00:00+09:00",
+      "filed_at": "2026-05-02T06:00:00+09:00",
+      "next_filing": "2026-05-03T06:00:00+09:00",
       "cities": [
         {
           "city": "TOKYO",
@@ -584,108 +584,120 @@
       ]
     },
     {
-      "filed_at": "2026-05-02T06:00:00+09:00",
-      "next_filing": "2026-05-03T06:00:00+09:00",
+      "filed_at": "2026-05-03T06:00:00+09:00",
+      "rest_day": true,
+      "cities": []
+    },
+    {
+      "filed_at": "2026-05-04T06:00:00+09:00",
+      "next_filing": "2026-05-05T06:00:00+09:00",
       "cities": [
         {
-          "city": "MEXICO CITY",
-          "country": "MX",
-          "season": "Dry season",
+          "city": "BUENOS AIRES",
+          "country": "AR",
+          "season": "Autumn",
           "items": [
             {
               "n": "01",
-              "headline": "Roma Norte rents soften 4 % year-on-year.",
-              "lede": "Coliving operators cite oversupply.",
-              "body": "Quarterly figures from one of the larger CDMX coliving operators show a 4 % drop in average monthly rent in Roma Norte and Condesa, attributed to a wave of post-2024 building completions.",
+              "headline": "AFIP confirms peso-blue ambiguity in nomad reporting.",
+              "lede": "Foreign income converted at official rate, not blue.",
+              "body": "The Argentine tax agency clarified in a public Q&A that foreign-source income earned by tax-resident nomads must be reported at the official ARS rate, regardless of the parallel-market premium. The blue-dollar gap is not honoured.",
               "quote": null,
               "quote_source": null,
-              "source": "editor calls · 2026-04-30",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/mex/6",
+              "source": "AFIP · Q&A 2026-04",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/bue/7",
               "human_rewritten": true
             },
             {
               "n": "02",
-              "headline": "Temporary Resident visa hits 180-day clearance time.",
-              "lede": "INM workload in DF (CDMX) spiked in March.",
-              "body": "Applicants for the residente temporal visa via the CDMX INM office report processing times of 90–180 days, up from 30–60 in 2024. Applicants outside CDMX (Querétaro, Mérida) report normal turnaround.",
+              "headline": "Palermo Soho extends street-pedestrianisation through August.",
+              "lede": "Friday–Sunday only. Extended through Q3.",
+              "body": "Buenos Aires city government extended weekend pedestrianisation of three Palermo Soho streets through the end of August. Co-working operators in the area report a 12 % weekend foot-traffic increase.",
               "quote": null,
               "quote_source": null,
-              "source": "INM · Instituto Nacional de Migración",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/mex/6",
+              "source": "GCBA · Gobierno de la Ciudad",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/bue/7",
               "human_rewritten": false
             }
           ]
         },
         {
-          "city": "BALI",
-          "country": "ID",
-          "season": "Dry season",
+          "city": "MEDELLÍN",
+          "country": "CO",
+          "season": "Eternal spring",
           "items": [
             {
               "n": "01",
-              "headline": "Canggu council caps new villa permits.",
-              "lede": "No new tourism-zoned licences through Q4.",
-              "body": "The Canggu sub-district council passed a temporary cap on new tourism-zoned villa permits, citing road-traffic and water-supply pressure. Existing rentals continue.",
+              "headline": "Migración Colombia maintains 90-day visa-on-arrival.",
+              "lede": "Extension to 180 still costs COP 200 000.",
+              "body": "No change to the 90-day visa-on-arrival or the 90-day extension fee was announced in the Q2 review. The Migrante Digital permit (visa V) processing time stays at 30–45 days through Bogotá.",
               "quote": null,
               "quote_source": null,
-              "source": "Pemerintah Kabupaten Badung",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/dps/6",
+              "source": "Migración Colombia",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/med/7",
               "human_rewritten": true
             },
             {
               "n": "02",
-              "headline": "Indonesia E33G remote-worker visa fee unchanged.",
-              "lede": "IDR 8.5M for the year. No bump in 2026.",
-              "body": "The Directorate of Immigration confirmed in writing that the E33G visa fee will remain at IDR 8.5M for 2026 fiscal year. The visa is single-entry; multi-entry costs IDR 10.5M.",
+              "headline": "El Poblado tightens short-let registration.",
+              "lede": "Owners must register by July or face fines.",
+              "body": "The Medellín municipality's tourism office requires all short-stay rental operators in El Poblado to register on the city's short-let portal by July 1. Registration is free; non-registration carries a COP 2M fine.",
               "quote": null,
               "quote_source": null,
-              "source": "Direktorat Jenderal Imigrasi",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/dps/6",
+              "source": "Alcaldía de Medellín · Secretaría de Turismo",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/med/7",
               "human_rewritten": false
             }
           ]
         },
         {
-          "city": "TBILISI",
-          "country": "GE",
+          "city": "LISBON",
+          "country": "PT",
           "season": "Spring",
           "items": [
             {
               "n": "01",
-              "headline": "Vake apartment rents tilt 6 % higher year-on-year.",
-              "lede": "Demand from Russian and Iranian arrivals.",
-              "body": "Rental data from a major Tbilisi listings site shows Vake one-bedroom averages up 6 % year-on-year, attributed to a continued inflow of long-stay residents from Russia and Iran. Old town rents are flat.",
+              "headline": "Câmara closes Praça do Comércio fountain through August.",
+              "lede": "Restoration. Pigeons unaffected.",
+              "body": "The fountain at the south end of Praça do Comércio will be drained and resealed during the summer. Pedestrian access to the square is unchanged. Editor expects the seagulls to redistribute to Cais do Sodré.",
               "quote": null,
               "quote_source": null,
-              "source": "myhome.ge analysis",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/tbs/6",
+              "source": "Câmara Municipal de Lisboa",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/lis/7",
               "human_rewritten": true
             },
             {
               "n": "02",
-              "headline": "Visa-free 365 days unchanged for most passports.",
-              "lede": "Reciprocity with KR, JP, EU steady.",
-              "body": "The Georgian government re-confirmed its 365-day visa-free policy for citizens of 95 countries through 2027, including South Korea, Japan, and the Schengen 27. Continuous 365 days are not interruptable by short exits.",
+              "headline": "Bairro Alto noise ordinance widens to weeknights.",
+              "lede": "Outdoor music ends at 23h00 Mon–Thu starting June.",
+              "body": "A new municipal noise ordinance extends the existing weekend cap to weeknights. Tasca-style outdoor patios in Bairro Alto and Bica must end amplified music by 23h00 from Monday to Thursday from June 1.",
               "quote": null,
               "quote_source": null,
-              "source": "მთავრობა · Government of Georgia",
-              "source_date": "2026-05-02",
-              "source_url": "https://saudade.app/dispatches/tbs/6",
+              "source": "Câmara Municipal · Diário da República",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/lis/7",
+              "human_rewritten": false
+            },
+            {
+              "n": "03",
+              "headline": "D7 visa renewals slow at the SEF in May.",
+              "lede": "Two-month wait for the in-person interview, by appointment only.",
+              "body": "Service desks at the Serviço de Estrangeiros e Fronteiras have been booked through July for D7 renewals. Online pre-interviews are accepted only for second-time renewals. New applicants should expect three desk visits over four months.",
+              "quote": "Three desk visits, four months. Be early.",
+              "quote_source": "Editor",
+              "source": "SEF · Lisboa",
+              "source_date": "2026-05-03",
+              "source_url": "https://saudade.app/dispatches/lis/7",
               "human_rewritten": false
             }
           ]
         }
       ]
-    },
-    {
-      "filed_at": "2026-05-03T06:00:00+09:00",
-      "rest_day": true,
-      "cities": []
     }
   ]
 }

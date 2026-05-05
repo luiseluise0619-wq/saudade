@@ -249,7 +249,11 @@ function buildArchiveIndex(weekStart) {
         }
         return list;
     };
-    const issueFiles = findFiles(issuesRoot, []).sort().reverse();
+    // Sort by the date in the filename, not the full path — otherwise a
+    // top-level /issues/foo-2026-05-05.html sorts adjacent to "s" instead of
+    // ahead of /issues/week-of-…/foo-2026-05-04.html which starts with "w".
+    const dateOf = p => (path.basename(p).match(/(\d{4}-\d{2}-\d{2})/) || ['',''])[1];
+    const issueFiles = findFiles(issuesRoot, []).sort((a, b) => dateOf(b).localeCompare(dateOf(a)));
 
     const items = issueFiles.map(p => {
         const name = path.basename(p);
