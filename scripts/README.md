@@ -16,6 +16,33 @@ bash scripts/check.sh
 
 미달 시 exit 1 (CI fail). 통과 시 exit 0.
 
+## ⚙️ GitHub Actions로 실행 (키 노출 없음)
+
+수동 실행, 결과는 PR로 들어옴. 키는 GitHub Secrets에만 있고 워크플로우 러너 밖으로 안 나감.
+
+### 1회 셋업
+
+GitHub 리포 → Settings → Secrets and variables → Actions → New repository secret
+
+| 이름 | 값 |
+|---|---|
+| `PEXELS_KEY` | https://www.pexels.com/api/ 에서 발급 |
+| `FREESOUND_TOKEN` | https://freesound.org/apiv2/apply/ 에서 발급 |
+
+### 실행
+
+Actions 탭 → "Fetch listening-room content" → Run workflow → 옵션 선택:
+
+- `target` — pexels / freesound / both
+- `per` — 쿼리당 결과 수 (기본 3)
+- `queries` — 커스텀 쿼리 (콤마 구분, 선택)
+
+완료 후 자동으로 `content/listening-<run_id>` 브랜치 + PR 생성. 리뷰어가 결과물 보고 (사진은 Pexels URL 클릭, mp3는 다운받아 듣기) 안 좋은 거 삭제 후 merge.
+
+`.github/workflows/fetch-content.yml` 참고.
+
+---
+
 ## fetch-pexels-photos.js
 
 Listening Room 사진 수집. Pexels CDN 직링 + 라이선스 sidecar 자동 생성.
