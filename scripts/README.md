@@ -16,7 +16,54 @@ bash scripts/check.sh
 
 미달 시 exit 1 (CI fail). 통과 시 exit 0.
 
+## fetch-pexels-photos.js
+
+Listening Room 사진 수집. Pexels CDN 직링 + 라이선스 sidecar 자동 생성.
+
+```bash
+# 1. 키 발급 — https://www.pexels.com/api/ (무료, 200/hr)
+# 2. 시크릿 export
+export PEXELS_KEY=YOUR_KEY
+# 3. 기본 8쿼리 × 3장 = 24장 가져오기
+node scripts/fetch-pexels-photos.js
+# 4. 또는 커스텀 쿼리
+node scripts/fetch-pexels-photos.js --queries "porto port wine cellar,seoul cafe ceramic"
+# 5. dry-run (미리보기)
+node scripts/fetch-pexels-photos.js --dry
+```
+
+출력:
+- `data/listening-photos.json` — id, src, photographer, alt
+- `data/licenses/pexels-<id>.json` — sidecar (validate-content.js 통과용)
+
+사진은 다운로드 X — Pexels CDN URL 직링. 운영자가 결과 보고 listening-photos.json 에서 안 좋은 거 삭제 → 커밋.
+
+## fetch-freesound.js
+
+Listening Room 사운드 수집. CC0 / CC-BY 만, 60초+, 44.1kHz+, 다운로드 100+, 평점 3.5+.
+
+```bash
+# 1. 토큰 발급 — https://freesound.org/apiv2/apply/ (무료 가입 + 신청)
+export FREESOUND_TOKEN=YOUR_TOKEN
+# 2. 기본 9쿼리 × 3트랙 = 27 후보 (필터 후 더 적음)
+node scripts/fetch-freesound.js
+# 3. 메타만, 다운로드 X
+node scripts/fetch-freesound.js --no-download
+# 4. 커스텀
+node scripts/fetch-freesound.js --queries "lisbon tram,kissaten kettle"
+```
+
+출력:
+- `audio/asmr/<slug>-<id>.mp3` — preview HQ mp3 (스트리밍 OK)
+- `data/listening-tracks.json` — listening.json 에 머지할 트랙 목록
+- `data/licenses/freesound-<id>.json` — 작자, 라이선스, 출처 sidecar
+
+운영자가 mp3 들어보고 좋은 거만 골라서 `data/listening.json` "tracks" 배열에 머지. 나머지는 mp3 + sidecar 같이 삭제.
+
+전제: NC 라이선스는 자동 배제 (상업 사이트 안전). 검색 후 ≥3.5 평점 또는 ≥5 평가 받은 것만 통과.
+
 ## check-contrast.js
+
 
 WCAG contrast 계산. 5 에디션 + base 폴백 모두 검증.
 
