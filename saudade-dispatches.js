@@ -725,8 +725,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const T = window.SAUDADE_T || ((s) => s.en);
             const msg = T({
                 en: 'On the wire from $city.',
-                ko: '$city — 송고 대기.',
-                ja: '$city — 入稿待ち。',
+                ko: '$city 에서 오는 중.',
+                ja: '$city より入電中。',
                 pt: 'Em transmissão de $city.',
                 es: 'En transmisión desde $city.'
             }).replace('$city', it._city || '');

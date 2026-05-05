@@ -51,17 +51,9 @@ self.addEventListener('install', (e) => {
 
 self.addEventListener('activate', (e) => {
     e.waitUntil((async () => {
-        // 옛 캐시 전부 삭제 (v515 등 잔재 정리)
         const keys = await caches.keys();
         await Promise.all(keys.filter(k => !k.startsWith(CACHE_VERSION)).map(k => caches.delete(k)));
-        // 즉시 모든 클라이언트 제어 + 새 코드로 자동 reload
         await self.clients.claim();
-        const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
-        clients.forEach(c => {
-            try { c.navigate(c.url); } catch (e) {
-                try { c.postMessage({ type: 'SW_UPDATED', version: CACHE_VERSION }); } catch (_) {}
-            }
-        });
     })());
 });
 
