@@ -1,0 +1,10 @@
+{
+  "generated": "2026-05-06",
+  "source": "Kakao",
+  "license": "Kakao-Maps-API",
+  "license_url": "https://apis.map.kakao.com/web/guide/",
+  "attribution_required": true,
+  "attribution_text": "카카오맵 제공",
+  "note": "Seed candidates only — magazine ships only after editor visits and curates into cafes-seoul.json.",
+  "cafes": []
+}
