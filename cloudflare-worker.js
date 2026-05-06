@@ -357,7 +357,13 @@ export default {
                     result = await pipelineScore(env, llm);
                     break;
                 case '0 19 * * *':  result = await pipelineWrite(env); break;
-                case '0 20 * * *':  result = await pipelineTranslate(env); break;
+                // 0 20 UTC — was pipelineTranslate, now decommissioned.
+                // Each edition (ko/ja/pt/es) is independently authored against
+                // its own city pool — see .github/workflows/refresh-dispatches.yml.
+                // Translation pretended dispatches.{ed}.json mirrored EN, which
+                // they don't (and shouldn't — KO speaks to Seoul/Busan/Jeju
+                // readers about their cities, not transliterated EN copy).
+                case '0 20 * * *':  result = { ok: true, phase: 'translate', skipped: 'decommissioned_v659' }; break;
                 case '0 21 * * *':  result = await pipelineFile(env); break;
                 // Legacy slots kept for paid-tier cron upgrade path:
                 case '30 15 * * *': result = await pipelineSort(env, llm); break;
@@ -2779,9 +2785,9 @@ async function adminPipelineTrigger(req, env, ctx) {
             case 'sort':      result = await pipelineSort(env, llm); break;
             case 'score':     result = await pipelineScore(env, llm); break;
             case 'write':     result = await pipelineWrite(env); break;
-            case 'translate': result = await pipelineTranslate(env); break;
+            case 'translate': return E(req, 'GONE_TRANSLATE', 'Translate pipeline decommissioned in v659. Each edition is independently authored — see refresh-dispatches workflow.', 410);
             case 'file':      result = await pipelineFile(env); break;
-            default: return E(req, 'BAD_PHASE', 'phase must be gather|sort|score|write|translate|file', 400);
+            default: return E(req, 'BAD_PHASE', 'phase must be gather|sort|score|write|file', 400);
         }
     } catch (e) {
         return E(req, 'PIPELINE_ERROR', String(e && e.message || e), 500);

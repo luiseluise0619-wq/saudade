@@ -1,0 +1,98 @@
+name: Refresh per-edition dispatches
+
+# Replaces the broken translate cron. Each edition (ko/ja/pt/es) gets its
+# own Gemini-drafted dispatches in native voice — KO speaks to Seoul/Busan/
+# Jeju readers, JA to Tokyo/Osaka/Kyoto, PT to Lisboa/Porto/Sintra, ES to
+# Madrid/Barcelona/Buenos Aires. EN keeps its existing Worker D1 pipeline.
+#
+# Setup:
+#   Settings → Secrets → New repository secret
+#     GEMINI_KEY   (https://aistudio.google.com/apikey)
+#
+# Manual run:
+#   Actions → "Refresh per-edition dispatches" → Run workflow
+#   pick editions or leave blank for all four.
+#
+# Schedule (default):
+#   21:00 UTC daily = 06:00 KST next morning (matches existing dispatch
+#   filing time). Disabled by default until secret is set + first run is
+#   verified — uncomment the schedule block to enable.
+
+on:
+  workflow_dispatch:
+    inputs:
+      editions:
+        description: "Editions (comma-separated). Leave blank for all four."
+        required: false
+        default: ""
+  # Uncomment after first successful manual run:
+  # schedule:
+  #   - cron: '0 21 * * *'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "20" }
+
+      - name: Refresh dispatches via Gemini
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+        run: |
+          if [ -z "$GEMINI_KEY" ]; then
+            echo "::error::GEMINI_KEY secret not set."
+            echo "Add it: Settings → Secrets → New repository secret"
+            exit 1
+          fi
+          ARGS=""
+          if [ -n "${{ inputs.editions }}" ]; then
+            ARGS="--editions ${{ inputs.editions }}"
+          fi
+          eval node scripts/refresh-dispatches.js $ARGS
+
+      - name: Validate
+        run: node scripts/validate-content.js
+        continue-on-error: true
+
+      - name: Open pull request
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="content/dispatches-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          shopt -s nullglob
+          git add data/dispatches.ko.json data/dispatches.ja.json \
+                  data/dispatches.pt.json data/dispatches.es.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No dispatch changes to commit — skipping PR."
+            exit 0
+          fi
+          git commit -m "content: refresh per-edition dispatches"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "content: per-edition dispatches refresh" \
+            --body "Automated daily refresh via \`.github/workflows/refresh-dispatches.yml\`.
+
+          Each edition (ko/ja/pt/es) is independently authored in native voice for that audience's cities. **Not translations.**
+
+          Editions covered: \`${{ inputs.editions || 'ko,ja,pt,es (all)' }}\`
+
+          ### Reviewer checklist
+          - [ ] Tone check — declarative voice, magazine cadence, not news
+          - [ ] No politics / war / scandals / violence
+          - [ ] Each city has 3 items
+          - [ ] City names match the edition's audience (KO=서울/부산/제주, JA=東京/大阪/京都, PT=Lisboa/Porto/Sintra, ES=Madrid/Barcelona/BA)
+          - [ ] \`node scripts/validate-content.js\` passes (CI)
+
+          Squash-merge."
