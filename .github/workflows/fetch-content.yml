@@ -96,29 +96,42 @@ jobs:
           exit 0
 
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: "content: fetched listening-room batch (${{ inputs.target }})"
-          title: "content: listening-room batch — ${{ inputs.target }}"
-          branch: content/listening-${{ github.run_id }}
-          delete-branch: true
-          add-paths: |
-            data/listening-photos.json
-            data/listening-tracks.json
-            data/licenses/*.json
-            audio/asmr/*.mp3
-          body: |
-            Automated fetch via `.github/workflows/fetch-content.yml`.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="content/listening-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          # Stage only the fetched paths (deliberately narrow — keeps the PR focused)
+          shopt -s nullglob
+          git add \
+            data/listening-photos.json \
+            data/listening-tracks.json \
+            data/licenses/*.json \
+            audio/asmr/*.mp3 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No fetched content to commit — skipping PR."
+            exit 0
+          fi
+          git commit -m "content: fetched listening-room batch (${{ inputs.target }})"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "content: listening-room batch — ${{ inputs.target }}" \
+            --body "Automated fetch via \`.github/workflows/fetch-content.yml\`.
 
-            **Run:** target=`${{ inputs.target }}` per=`${{ inputs.per }}`
-            **Queries:** `${{ inputs.queries || '(default set)' }}`
+          **Run:** target=\`${{ inputs.target }}\` per=\`${{ inputs.per }}\`
+          **Queries:** \`${{ inputs.queries || '(default set)' }}\`
 
-            ### Reviewer checklist
-            - [ ] Eyeball each photo (Pexels URL in `data/licenses/pexels-*.json`)
-            - [ ] Listen to each mp3 in `audio/asmr/`
-            - [ ] Delete bad picks: the .json sidecar + the .mp3 + the entry in `listening-tracks.json` / `listening-photos.json`
-            - [ ] Merge survivors into `data/listening.json` "tracks" array
-            - [ ] Run `node scripts/validate-content.js` locally
-            - [ ] Squash-merge
+          ### Reviewer checklist
+          - [ ] Eyeball each photo (Pexels URL in \`data/licenses/pexels-*.json\`)
+          - [ ] Listen to each mp3 in \`audio/asmr/\`
+          - [ ] Delete bad picks: the .json sidecar + the .mp3 + the entry in \`listening-tracks.json\` / \`listening-photos.json\`
+          - [ ] Merge survivors into \`data/listening.json\` \"tracks\" array
+          - [ ] Run \`node scripts/validate-content.js\` locally
+          - [ ] Squash-merge
 
-            Keys: `PEXELS_KEY` / `FREESOUND_TOKEN` from repo secrets — never leave the runner.
+          Keys: \`PEXELS_KEY\` / \`FREESOUND_TOKEN\` from repo secrets — never leave the runner."
