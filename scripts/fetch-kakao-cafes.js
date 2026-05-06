@@ -125,7 +125,8 @@ function sidecarFor(p, neighborhood) {
 }
 
 async function main() {
-    const key = process.env.KAKAO_KEY;
+    // .trim() — defensive against pasted-in whitespace in repo secrets.
+    const key = (process.env.KAKAO_KEY || '').trim();
     if (!key) {
         console.error('Set KAKAO_KEY=<your Kakao REST API key>');
         console.error('Get one free at https://developers.kakao.com');

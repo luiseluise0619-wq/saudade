@@ -89,7 +89,8 @@ function sidecarFor(p, query, city) {
 }
 
 async function main() {
-    const key = process.env.PEXELS_KEY;
+    // .trim() — defensive against pasted-in whitespace in repo secrets.
+    const key = (process.env.PEXELS_KEY || '').trim();
     if (!key) {
         console.error('Set PEXELS_KEY=<your Pexels API key>');
         console.error('Get one free at https://www.pexels.com/api/');

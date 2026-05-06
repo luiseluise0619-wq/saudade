@@ -125,7 +125,9 @@ function downloadFile(url, dest) {
 }
 
 async function main() {
-    const token = process.env.FREESOUND_TOKEN;
+    // .trim() — repo secrets occasionally carry a leading whitespace/tab from
+    // a careless paste; Freesound rejects with 401 Invalid token without it.
+    const token = (process.env.FREESOUND_TOKEN || '').trim();
     if (!token) {
         console.error('Set FREESOUND_TOKEN=<your Freesound API token>');
         console.error('Get one free at https://freesound.org/apiv2/apply/');

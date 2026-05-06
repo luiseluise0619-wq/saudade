@@ -75,19 +75,25 @@ jobs:
         continue-on-error: true
 
       - name: Summarise
+        if: always()
         run: |
           echo "## Fetched"        >> $GITHUB_STEP_SUMMARY
           echo                     >> $GITHUB_STEP_SUMMARY
           if [ -f data/listening-photos.json ]; then
-            COUNT=$(node -e "console.log(require('./data/listening-photos.json').photos.length)")
+            COUNT=$(node -e "console.log(require('./data/listening-photos.json').photos.length)" || echo 0)
             echo "- $COUNT Pexels photo(s)" >> $GITHUB_STEP_SUMMARY
           fi
           if [ -f data/listening-tracks.json ]; then
-            COUNT=$(node -e "console.log(require('./data/listening-tracks.json').tracks.length)")
+            COUNT=$(node -e "console.log(require('./data/listening-tracks.json').tracks.length)" || echo 0)
             echo "- $COUNT Freesound track(s)" >> $GITHUB_STEP_SUMMARY
           fi
-          MP3=$(find audio/asmr -name '*.mp3' 2>/dev/null | wc -l)
-          [ "$MP3" -gt 0 ] && echo "- $MP3 mp3 file(s)" >> $GITHUB_STEP_SUMMARY
+          MP3=$(find audio/asmr -name '*.mp3' 2>/dev/null | wc -l || echo 0)
+          if [ "$MP3" -gt 0 ]; then
+            echo "- $MP3 mp3 file(s)" >> $GITHUB_STEP_SUMMARY
+          fi
+          # Always exit 0 — partial fetches (e.g. only Pexels worked) should still
+          # open the PR with whatever was retrieved.
+          exit 0
 
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
