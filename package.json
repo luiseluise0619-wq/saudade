@@ -1,88 +1,33 @@
 {
-  "name": "saudade",
-  "version": "1.1.0",
-  "description": "saudade — a slow newspaper for digital nomads. Three cities, no schedule.",
-  "main": "main.js",
-  "author": {
-    "name": "LEEJAEJIN (JADDY)",
-    "url": "https://instagram.com/jaddy_102"
-  },
-  "license": "SEE LICENSE IN LICENSE",
-  "private": true,
-  "scripts": {
-    "start": "electron .",
-    "dev": "electron . --dev",
-    "serve": "node scripts/run-serve.cjs",
-    "build": "electron-builder",
-    "build:win": "electron-builder --win",
-    "build:mac": "electron-builder --mac",
-    "build:linux": "electron-builder --linux",
-    "bundle": "node scripts/build-bundle.js",
-    "bundle:esbuild": "esbuild --bundle --minify --sourcemap --outdir=dist/bundle --format=iife --target=es2019 saudade-auth.js saudade-account.js saudade-schengen.js saudade-schengen-form.js saudade-empty.js saudade-welcome.js",
-    "build:issue": "node scripts/build-issue.js",
-    "build:bundle": "node scripts/build-bundle.js",
-    "build:issue:all": "node scripts/build-issue.js",
-    "validate": "node scripts/validate-content.js",
-    "i18n:scan": "bash scripts/check-i18n.sh",
-    "test": "node --test test/calculators.test.js",
-    "test:smoke": "node test/smoke.js",
-    "test:all": "node --test test/ && node test/smoke.js",
-    "typecheck": "tsc --noEmit -p .",
-    "clean": "node -e \"const fs=require('node:fs'); fs.rmSync('dist',{recursive:true,force:true}); fs.rmSync('node_modules/.cache',{recursive:true,force:true});\"",
-    "deploy": "wrangler deploy",
-    "preview": "wrangler dev",
-    "version": "node -e \"console.log(require('./package.json').version)\""
-  },
-  "devDependencies": {
-    "electron": "^30.0.0",
-    "electron-builder": "^24.13.3",
-    "esbuild": "^0.24.0",
-    "typescript": "^5.4.0"
-  },
-  "build": {
-    "appId": "com.jaddy.aura",
-    "productName": "AURA World Pulse",
-    "copyright": "© 2026 LEEJAEJIN (JADDY)",
-    "directories": {
-      "output": "dist"
+    "name": "saudade",
+    "version": "1.2.0",
+    "description": "saudade — a slow newspaper for digital nomads. Three cities, no schedule.",
+    "private": true,
+    "license": "SEE LICENSE IN LICENSE",
+    "author": {
+        "name": "LEEJAEJIN (JADDY)",
+        "url": "https://instagram.com/jaddy_102"
     },
-    "files": [
-      "**/*",
-      "!dist/**/*",
-      "!node_modules/**/*",
-      "node_modules/**/*"
-    ],
-    "extraResources": [
-      { "from": "LICENSE",                "to": "LICENSE" },
-      { "from": "THIRD_PARTY_NOTICES.md", "to": "THIRD_PARTY_NOTICES.md" },
-      { "from": "privacy.html",           "to": "privacy.html" },
-      { "from": "terms.html",             "to": "terms.html" },
-      { "from": "credits.html",           "to": "credits.html" }
-    ],
-    "win": {
-      "target": [
-        { "target": "nsis", "arch": ["x64"] }
-      ]
+    "scripts": {
+        "serve": "node scripts/run-serve.cjs",
+        "bundle": "node scripts/build-bundle.js",
+        "bundle:esbuild": "esbuild --bundle --minify --sourcemap --outdir=dist/bundle --format=iife --target=es2019 saudade-auth.js saudade-account.js saudade-schengen.js saudade-schengen-form.js saudade-empty.js saudade-welcome.js",
+        "build:issue": "node scripts/build-issue.js",
+        "validate": "node scripts/validate-content.js",
+        "i18n:scan": "bash scripts/check-i18n.sh",
+        "test": "node --test test/calculators.test.js",
+        "test:smoke": "node test/smoke.js",
+        "test:all": "node --test test/ && node test/smoke.js",
+        "lint": "eslint . --ext .js --max-warnings 0",
+        "typecheck": "tsc --noEmit -p .",
+        "deploy": "wrangler deploy",
+        "preview": "wrangler dev",
+        "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+        "version": "node -e \"console.log(require('./package.json').version)\""
     },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "AURA World Pulse",
-      "license": "LICENSE"
-    },
-    "mac": {
-      "target": [
-        { "target": "dmg", "arch": ["x64", "arm64"] }
-      ],
-      "category": "public.app-category.productivity",
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false
-    },
-    "linux": {
-      "target": ["AppImage", "deb"],
-      "category": "News"
+    "devDependencies": {
+        "esbuild": "^0.24.0",
+        "eslint": "^9.0.0",
+        "typescript": "^5.4.0"
     }
-  }
 }
