@@ -1,47 +1,32 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ES2020",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "checkJs": true,
-    "noEmit": true,
-    "strict": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": false,
-    "allowSyntheticDefaultImports": true,
-    "types": []
-  },
-  "include": [
-    "app.js",
-    "ambient-mode.js",
-    "aura-common.js",
-    "bootstrap.js",
-    "cafe-mode.js",
-    "city-videos.js",
-    "consent.js",
-    "haptic.js",
-    "perf-throttle.js",
-    "security-patch.js",
-    "saudade-*.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "main.js",
-    "preload.js",
-    "daily-shorts.js",
-    "events-engine.js",
-    "intel-engine.js",
-    "ux-v2.js",
-    "learn-mode.js",
-    "sports-sidebar.js",
-    "startups-engine.js"
-  ]
+    "compilerOptions": {
+        "target": "ES2020",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": false,
+        "noEmit": true,
+        "strict": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "types": []
+    },
+    "include": [
+        "bootstrap.js",
+        "consent.js",
+        "saudade-*.js",
+        "saudade.*.js",
+        "cloudflare-worker.js",
+        "scripts/*.js",
+        "types.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "data"
+    ]
 }

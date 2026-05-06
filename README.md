@@ -14,24 +14,27 @@
 
 ## What this is
 
-A multi-edition online newspaper, automatically filed every six hours. Five editions: `en`, `ko`, `ja`, `pt`, `es`.
+A multi-edition online newspaper, filed daily. Five **independently authored** editions: `en`, `ko`, `ja`, `pt`, `es`. Each edition speaks to its own audience's cities — KO for Seoul/Busan/Jeju, JA for Tokyo/Osaka/Kyoto, PT for Lisboa/Porto/Sintra, ES for Madrid/Barcelona/Buenos Aires, EN for Seoul/Tokyo/Lisbon. **Not translations.**
 
 | § | Section | What it does |
 |---|---|---|
 | **01** | **Ledger** | Schengen 90/180, tax-residency days, health-insurance gaps, pension filings — counted, not advised. |
-| **02** | **Atlas** | Verified work cafés. Outlets, noise level, Wi-Fi, hours. Today: 110 in Seoul. |
+| **02** | **Atlas** | Cafés the editor has visited. Outlets, noise level, Wi-Fi, hours. |
 | **03** | **Dispatches** | Three city items, six days a week. Visa & policy notes, sourced and dated. |
-| **04** | **The Desk** | Daily filing pipeline — Gather → Sort → Score → Write → Translate → Stage → File. |
-| (sub) | **Listening Room** | One field-recorded ambient track per city. |
+| **04** | **The Desk** | Filing pipeline (EN: Worker D1 cron · KO/JA/PT/ES: GitHub Actions cron). |
+| (sub) | **Listening Room** | Field-recorded ambient tracks per city + photo. |
+
+For the module map, data flow, and the "adding a feature" checklist, see [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 ---
 
 ## Stack
 
-- **Frontend** — vanilla JS, no bundler (yet). PWA-installable, prefers-reduced-motion respected.
-- **Backend** — single Cloudflare Worker (`cloudflare-worker.js`) + D1 (`schema/`) + KV cache + R2 (planned, audio).
-- **AI pipeline** — Workers AI (Llama 3.1 8B) for sort/score, Gemini 2.0 Flash for write/translate. Disclosed per dispatch.
-- **Auth** — passwordless magic-link (Resend), opaque server sessions, full revocation flow (see below).
+- **Frontend** — vanilla JS IIFE modules, no bundler. PWA-installable, prefers-reduced-motion respected.
+- **Backend** — single Cloudflare Worker (`cloudflare-worker.js`) + D1 (`schema/`) + KV cache.
+- **AI pipeline** — Workers AI (Llama 3.1 8B) for sort/score, Gemini 2.0 Flash for write. Disclosed per dispatch.
+- **Per-edition refresh** — GitHub Actions cron + `scripts/refresh-dispatches.js` writes KO/JA/PT/ES native-voice content daily.
+- **Auth** — passwordless magic-link (Resend), opaque server sessions, full revocation flow.
 
 ---
 

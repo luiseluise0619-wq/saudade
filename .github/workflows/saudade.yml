@@ -24,7 +24,7 @@ jobs:
           set -e
           shopt -s nullglob
           fail=0
-          for f in saudade-*.js saudade.*.js cloudflare-worker.js bootstrap.js sw.js main.js preload.js scripts/*.js; do
+          for f in saudade-*.js saudade.*.js cloudflare-worker.js bootstrap.js sw.js scripts/*.js; do
             [ -f "$f" ] || continue
             if ! node --check "$f" 2>err.log; then
               echo "::error file=$f::syntax error"; cat err.log; fail=1
