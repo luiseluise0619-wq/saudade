@@ -67,7 +67,13 @@
 
     function load() {
         if (_data) return Promise.resolve(_data);
-        return fetch('./data/listening.json', { cache: 'force-cache' })
+        // Use default cache mode + a release-stamped query string so a
+        // fresh listening.json (e.g. after a fetch-content PR) reaches the
+        // user without a hard reload. force-cache used to be here but it
+        // pinned old content past SW updates — see SAUDADE_RELEASE bump
+        // history.
+        const v = (window.SAUDADE_RELEASE || 'v0');
+        return fetch('./data/listening.json?v=' + encodeURIComponent(v))
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
