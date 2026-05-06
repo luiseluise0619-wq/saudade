@@ -75,29 +75,36 @@ const SAUDADE_RELEASE = 'v656';
     }
     const prev = safeStorageGet(localStorage, 'saudade_release');
 
-    if (prev !== SAUDADE_RELEASE) {
-        // 새 release — 모든 SW + cache 한 번 nuke 후 reload
+    // 첫 방문 (prev === null) 은 nuke 할 캐시도 SW 도 없음 — marker 만 세팅 후 정상 등록.
+    // 옛 release 에서 업그레이드 (prev 가 다른 값) 일 때만 unregister + reload.
+    if (prev !== SAUDADE_RELEASE && prev !== null) {
         Promise.all([
             navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister()))).catch(() => {}),
             (typeof caches !== 'undefined' && caches.keys ? caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))) : Promise.resolve()).catch(() => {})
         ]).then(() => {
             safeStorageSet(localStorage, 'saudade_release', SAUDADE_RELEASE);
-            // 이미 reload 한 번 했는지 체크 (무한 루프 방지)
             const reloadedFlag = safeStorageGet(sessionStorage, 'saudade_release_reloaded') === SAUDADE_RELEASE;
             if (!reloadedFlag) {
                 safeStorageSet(sessionStorage, 'saudade_release_reloaded', SAUDADE_RELEASE);
-                // 잠깐 기다린 후 reload (브라우저가 unregister 처리 시간 확보)
                 setTimeout(() => location.reload(), 300);
             }
         });
         return;
     }
 
-    // 같은 release — 정상 SW 등록 흐름
+    // 첫 방문이면 marker 만 세팅
+    if (prev === null) {
+        safeStorageSet(localStorage, 'saudade_release', SAUDADE_RELEASE);
+    }
+
+    // 같은 release (또는 첫 방문) — 정상 SW 등록 흐름
     window.addEventListener('load', () => {
+        // 첫 install 시 controllerchange 가 reload 트리거하지 않도록 사전 컨트롤러 유무 캡처
+        const hadController = !!navigator.serviceWorker.controller;
         navigator.serviceWorker.register('./sw.js?v=' + SAUDADE_RELEASE).then(reg => {
             let _reloaded = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (!hadController) return;  // 첫 install — reload 불필요
                 if (_reloaded) return;
                 _reloaded = true;
                 location.reload();

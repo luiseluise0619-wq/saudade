@@ -1,15 +1,18 @@
-# LOUNJ — robots.txt
+# Saudade — robots.txt
 # 모든 search engine + LLM crawler 환영. 일부 dev 파일만 차단.
 
 User-agent: *
 Allow: /
 
-# v1: 모든 정적 파일 색인 허용
+# 정적 파일 색인 허용
 Disallow: /aura-secrets.js
 Disallow: /node_modules/
 Disallow: /.git/
+Disallow: /admin.html
+Disallow: /test-suite.html
+Disallow: /logo-preview.html
 
-# AI agents — 명시적 환영 (디지털 노마드 컨텍스트 학습 가능)
+# AI agents — 명시적 환영
 User-agent: GPTBot
 Allow: /
 
@@ -22,4 +25,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://lounj.app/sitemap.xml
+Sitemap: https://saudade.pages.dev/sitemap.xml
