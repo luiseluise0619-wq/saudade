@@ -74,32 +74,44 @@ jobs:
           fi
 
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: "content: fetched Seoul café seed (Kakao)"
-          title: "content: Seoul café seed — Kakao"
-          branch: content/cafes-${{ github.run_id }}
-          delete-branch: true
-          add-paths: |
-            data/cafes-seoul.fetched.json
-            data/licenses/kakao-*.json
-          body: |
-            Automated fetch via `.github/workflows/fetch-cafes.yml`.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="content/cafes-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          shopt -s nullglob
+          git add \
+            data/cafes-seoul.fetched.json \
+            data/licenses/kakao-*.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No fetched content to commit — skipping PR."
+            exit 0
+          fi
+          git commit -m "content: fetched Seoul café seed (Kakao)"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "content: Seoul café seed — Kakao" \
+            --body "Automated fetch via \`.github/workflows/fetch-cafes.yml\`.
 
-            **Run:** per=`${{ inputs.per }}` radius=`${{ inputs.radius }}m`
-            **Neighborhoods:** `${{ inputs.neighborhoods || '(default 14)' }}`
+          **Run:** per=\`${{ inputs.per }}\` radius=\`${{ inputs.radius }}m\`
+          **Neighborhoods:** \`${{ inputs.neighborhoods || '(default 14)' }}\`
 
-            ### Reviewer checklist (헌법: "we list only what we have visited")
-            - [ ] These are seed candidates — NOT yet on the magazine.
-            - [ ] For each café you actually want to feature:
-              - Visit it.
-              - Write two_lines (mono · 2 short observations).
-              - Decide amenities (`OUTLET · WIFI · QUIET · NO_CALLS · 24H · CALLS_OK`).
-              - Set visited_at.
-              - Move the entry into `data/cafes-seoul.json`.
-            - [ ] Drop the rest (or keep the file as a working set).
-            - [ ] Run `node scripts/validate-content.js` locally.
-            - [ ] Squash-merge.
+          ### Reviewer checklist (헌법: \"we list only what we have visited\")
+          - [ ] These are seed candidates — NOT yet on the magazine.
+          - [ ] For each café you actually want to feature:
+            - Visit it.
+            - Write two_lines (mono · 2 short observations).
+            - Decide amenities (\`OUTLET · WIFI · QUIET · NO_CALLS · 24H · CALLS_OK\`).
+            - Set visited_at.
+            - Move the entry into \`data/cafes-seoul.json\`.
+          - [ ] Drop the rest (or keep the file as a working set).
+          - [ ] Run \`node scripts/validate-content.js\` locally.
+          - [ ] Squash-merge.
 
-            Key: `KAKAO_KEY` from repo secrets — never leaves the runner.
-            Attribution: Kakao requires "카카오맵 제공" credit; sidecars carry it.
+          Key: \`KAKAO_KEY\` from repo secrets — never leaves the runner.
+          Attribution: Kakao requires \"카카오맵 제공\" credit; sidecars carry it."
