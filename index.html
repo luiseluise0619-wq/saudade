@@ -57,7 +57,11 @@
         "applicationCategory": "TravelApplication",
         "operatingSystem": "Web",
         "browserRequirements": "JavaScript enabled",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "offers": [
+            { "@type": "Offer", "name": "Reader (free)",     "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Patron",            "price": "3", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } },
+            { "@type": "Offer", "name": "Subscriber",        "price": "5", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } }
+        ],
         "author": { "@type": "Person", "name": "LEEJAEJIN" },
         "featureList": [
             "Schengen 90/180 visa counter",
@@ -191,6 +195,8 @@
     <script defer src="saudade-listening.js?v=v656"></script>
     <!-- v624 — v6 §9.10 Editor-on-Leave Auto-Pause (worker /editor/leave-status 어댑터) -->
     <script defer src="saudade-editor-leave.js?v=v656"></script>
+    <!-- billing — Stripe Checkout + Customer Portal (free / patron / subscriber) -->
+    <script defer src="saudade-billing.js?v=v656"></script>
     <!--
       v637 — auth / account / schengen / schengen-form / empty / welcome /
       footer-rule are bundled into saudade.core.js (loaded at line 167).
@@ -984,7 +990,9 @@
                 <span style="opacity:.4;margin:0 6px">·</span>
                 <a href="credits.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">CREDITS</a>
                 <span style="opacity:.4;margin:0 6px">·</span>
-                <a href="#" id="auraAddCityLink" style="color:#ff5d50;text-decoration:none;border-bottom:1px dotted rgba(255,93,80,.5);padding-bottom:1px">+ MY CITY</a>
+                <a href="support.html" target="_blank" rel="noopener" style="color:#ff5d50;text-decoration:none;border-bottom:1px dotted rgba(255,93,80,.5);padding-bottom:1px">SUPPORT</a>
+                <span style="opacity:.4;margin:0 6px">·</span>
+                <a href="#" id="auraAddCityLink" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">+ MY CITY</a>
                 <span style="opacity:.4;margin:0 6px">·</span>
                 <a href="#" id="auraConsentLink" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.3);padding-bottom:1px">PRIVACY CHOICES</a>
             </span>

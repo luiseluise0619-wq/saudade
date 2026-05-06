@@ -255,6 +255,25 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     padding-top: clamp(16px, 2vw, 24px);
     border-top: 0.5px solid var(--rule);
 }
+.sdd-disp-deeper {
+    margin: clamp(32px, 5vw, 56px) 0 0;
+    padding-top: clamp(20px, 3vw, 28px);
+    border-top: 0.5px solid var(--rule);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-disp-deeper-link {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--ink);
+    padding-bottom: 1px;
+}
+.sdd-disp-deeper-link:hover { color: var(--rust, #b2351a); border-bottom-color: var(--rust, #b2351a); }
+.sdd-disp-deeper-soon { font-style: italic; font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: 13px; }
 /* v7 검토 정정 — 면책 토글 (기본 접힘, 클릭 시 펼침). 콘텐츠가 압도되지 않게. */
 .sdd-disp-disclaimer-toggle {
     list-style: none;
@@ -1114,7 +1133,32 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             </details>
         `;
 
-        root.innerHTML = headHtml + todayBlock + archiveBlock + disclaimer;
+        // Deeper-than-seven-days CTA — free tier sees a quiet link to the
+        // support page; subscriber tier sees a "coming soon" note. The full
+        // archive backend is forthcoming; this gives the tier value-prop
+        // visible from launch day. Uses body[data-tier] set by saudade-billing.js.
+        const deeperLabel = T({
+            en: 'Deeper than seven days — read the full archive →',
+            ko: '일주일 너머 — 전체 아카이브 읽기 →',
+            ja: '七日より先へ — 全アーカイブを読む →',
+            pt: 'Mais fundo que sete dias — ler o arquivo inteiro →',
+            es: 'Más allá de siete días — leer el archivo completo →'
+        });
+        const deeperSoon = T({
+            en: 'Full archive search — coming soon, by city.',
+            ko: '전체 아카이브 검색 — 도시별로 곧.',
+            ja: '全アーカイブ検索 — 街ごと、まもなく。',
+            pt: 'Busca no arquivo — em breve, por cidade.',
+            es: 'Búsqueda en el archivo — pronto, por ciudad.'
+        });
+        const deeperBlock = `
+            <p class="sdd-disp-deeper">
+                <a href="support.html" class="sdd-disp-deeper-link" data-tier-show="free">${escapeHtml(deeperLabel)}</a>
+                <span class="sdd-disp-deeper-soon" data-tier-show="subscriber patron">${escapeHtml(deeperSoon)}</span>
+            </p>
+        `;
+
+        root.innerHTML = headHtml + todayBlock + archiveBlock + deeperBlock + disclaimer;
 
         // v8 §02 — onboarding pairing 카드 클릭 → Following 적용 + 즉시 재렌더
         root.querySelectorAll('[data-disp-pairing]').forEach(btn => {

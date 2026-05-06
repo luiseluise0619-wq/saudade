@@ -57,6 +57,10 @@ const RL = {
     '/letters/list':   { max: 60, win: 60000 },
     '/letters/queue':  { max: 30, win: 60000 },
     '/desks/apply':    { max: 3,  win: 60000 },
+    '/billing/checkout': { max: 5,  win: 60000 },
+    '/billing/portal':   { max: 5,  win: 60000 },
+    '/billing/webhook':  { max: 60, win: 60000 },
+    '/billing/me':       { max: 30, win: 60000 },
     '/desks/list':     { max: 60, win: 60000 },
     '/desks/posts':    { max: 60, win: 60000 },
     '/desks/submit':   { max: 5,  win: 60000 },
@@ -429,6 +433,10 @@ export default {
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
+                case '/billing/checkout':  return billingCheckout(req, env, ctx);
+                case '/billing/portal':    return billingPortal(req, env, ctx);
+                case '/billing/webhook':   return billingWebhook(req, env, ctx);
+                case '/billing/me':        return billingMe(req, env, ctx);
                 case '/feed':
                 case '/feed.xml':
                 case '/feed.atom':         return feedAtom(req, env, ctx);
@@ -2918,4 +2926,241 @@ async function statsWeekly(req, env, ctx) {
     } catch (e) {
         return J(req, { ok: true, stats: {} });
     }
+}
+
+// ─── Billing (Stripe Checkout + Customer Portal + Webhook) ──────────────
+// Free + Patron + Subscriber tier model. Free is default. Patron ($3+/mo)
+// and Subscriber ($5/mo or $50/yr) are fulfilled via Stripe.
+//
+// Required secrets (worker):
+//   STRIPE_KEY              sk_live_xxx (or sk_test for staging)
+//   STRIPE_PRICE_SUBSCRIBER price_xxx   (the $5/mo subscriber price)
+//   STRIPE_PRICE_PATRON     price_xxx   (the $3/mo patron price; pay-what-you-want)
+//   STRIPE_WEBHOOK_SECRET   whsec_xxx
+//
+// Without secrets all endpoints return 503 BILLING_NOT_CONFIGURED so the
+// magazine still ships in free-only mode.
+
+function billingNotConfigured(req) {
+    return E(req, 'BILLING_NOT_CONFIGURED',
+        'Subscriptions are not yet enabled — patron contributions accepted via the link on the support page.', 503);
+}
+
+async function readUserFromAuth(req, env) {
+    // Magic Link auth pattern: client carries user id in localStorage and
+    // sends it in Authorization: Bearer <user_id>. Simple. Sessions table
+    // is a v2 backlog (see schema/auth.sql comment).
+    const auth = req.headers.get('authorization') || '';
+    const m = /^Bearer\s+(.+)$/i.exec(auth);
+    if (!m) return null;
+    const id = m[1].trim();
+    if (!env.SAUDADE_DB) return null;
+    try {
+        const row = await env.SAUDADE_DB.prepare(
+            'SELECT id, email, edition, tier FROM users WHERE id = ?'
+        ).bind(id).first();
+        return row || null;
+    } catch (e) { return null; }
+}
+
+async function billingCheckout(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
+    if (!env.STRIPE_KEY) return billingNotConfigured(req);
+
+    const user = await readUserFromAuth(req, env);
+    if (!user) return E(req, 'AUTH_REQUIRED', 'Sign in first.', 401);
+
+    let body = {};
+    try { body = await req.json(); } catch (e) {}
+    const plan = (body.plan || 'subscriber').toLowerCase();
+    const priceId = plan === 'patron' ? env.STRIPE_PRICE_PATRON : env.STRIPE_PRICE_SUBSCRIBER;
+    if (!priceId) return billingNotConfigured(req);
+
+    const origin = new URL(req.url).origin;
+    const params = new URLSearchParams({
+        mode: 'subscription',
+        'line_items[0][price]': priceId,
+        'line_items[0][quantity]': '1',
+        success_url: `${origin}/?subscribed=1`,
+        cancel_url:  `${origin}/support.html?canceled=1`,
+        customer_email: user.email,
+        client_reference_id: user.id,
+        'subscription_data[metadata][user_id]': user.id,
+        'subscription_data[metadata][plan]':    plan,
+        allow_promotion_codes: 'true'
+    });
+
+    try {
+        const res = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${env.STRIPE_KEY}`,
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: params.toString()
+        });
+        const j = await res.json();
+        if (!res.ok) return E(req, 'STRIPE_ERROR', j.error?.message || 'Checkout failed', 502);
+        return J(req, { ok: true, url: j.url });
+    } catch (e) {
+        return E(req, 'STRIPE_FETCH_FAILED', 'Could not reach Stripe.', 502);
+    }
+}
+
+async function billingPortal(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
+    if (!env.STRIPE_KEY) return billingNotConfigured(req);
+
+    const user = await readUserFromAuth(req, env);
+    if (!user) return E(req, 'AUTH_REQUIRED', 'Sign in first.', 401);
+    if (!env.SAUDADE_DB) return billingNotConfigured(req);
+
+    const sub = await env.SAUDADE_DB.prepare(
+        'SELECT stripe_customer_id FROM subscriptions WHERE user_id = ? ORDER BY created_at DESC LIMIT 1'
+    ).bind(user.id).first();
+    if (!sub) return E(req, 'NO_SUBSCRIPTION', 'No active subscription on file.', 404);
+
+    const origin = new URL(req.url).origin;
+    const params = new URLSearchParams({
+        customer: sub.stripe_customer_id,
+        return_url: `${origin}/support.html`
+    });
+
+    try {
+        const res = await fetch('https://api.stripe.com/v1/billing_portal/sessions', {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${env.STRIPE_KEY}`,
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: params.toString()
+        });
+        const j = await res.json();
+        if (!res.ok) return E(req, 'STRIPE_ERROR', j.error?.message || 'Portal failed', 502);
+        return J(req, { ok: true, url: j.url });
+    } catch (e) {
+        return E(req, 'STRIPE_FETCH_FAILED', 'Could not reach Stripe.', 502);
+    }
+}
+
+async function billingMe(req, env, ctx) {
+    // Returns the caller's tier + subscription status. Used by the client to
+    // gate UI without an extra round-trip. Unauthed callers get tier=free.
+    const user = await readUserFromAuth(req, env);
+    if (!user) return J(req, { ok: true, tier: 'free', signed_in: false });
+    if (!env.SAUDADE_DB) return J(req, { ok: true, tier: user.tier, signed_in: true });
+
+    const sub = await env.SAUDADE_DB.prepare(
+        'SELECT status, plan, current_period_end, cancel_at_period_end FROM subscriptions WHERE user_id = ? ORDER BY created_at DESC LIMIT 1'
+    ).bind(user.id).first();
+    return J(req, { ok: true, tier: user.tier, signed_in: true, subscription: sub || null });
+}
+
+async function billingWebhook(req, env, ctx) {
+    // Stripe webhook receiver. Verifies signature, then updates users.tier
+    // and the subscriptions table on lifecycle events.
+    if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
+    if (!env.STRIPE_WEBHOOK_SECRET || !env.SAUDADE_DB) return billingNotConfigured(req);
+
+    const sig = req.headers.get('stripe-signature') || '';
+    const raw = await req.text();
+    const verified = await verifyStripeSignature(raw, sig, env.STRIPE_WEBHOOK_SECRET);
+    if (!verified) return E(req, 'BAD_SIGNATURE', 'Stripe signature invalid.', 400);
+
+    let event;
+    try { event = JSON.parse(raw); } catch (e) {
+        return E(req, 'BAD_JSON', 'Webhook body not JSON.', 400);
+    }
+
+    try {
+        switch (event.type) {
+            case 'checkout.session.completed': {
+                const s = event.data.object;
+                const userId = s.client_reference_id || s.metadata?.user_id;
+                const customerId = s.customer;
+                const subId = s.subscription;
+                if (userId && customerId && subId) {
+                    // Subscription details follow in customer.subscription.created;
+                    // we just stamp tier early so the user gets immediate access.
+                    await env.SAUDADE_DB.prepare(
+                        "UPDATE users SET tier = 'subscriber' WHERE id = ?"
+                    ).bind(userId).run();
+                }
+                break;
+            }
+            case 'customer.subscription.created':
+            case 'customer.subscription.updated': {
+                const s = event.data.object;
+                const userId = s.metadata?.user_id;
+                const plan = s.metadata?.plan || 'subscriber';
+                if (!userId) break;
+                const status = s.status;
+                const newTier = (status === 'active' || status === 'trialing')
+                    ? plan
+                    : 'free';
+                await env.SAUDADE_DB.prepare(
+                    'INSERT INTO subscriptions (id, user_id, stripe_customer_id, status, plan, current_period_start, current_period_end, cancel_at_period_end, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET status = excluded.status, current_period_end = excluded.current_period_end, cancel_at_period_end = excluded.cancel_at_period_end, updated_at = excluded.updated_at'
+                ).bind(
+                    s.id, userId, s.customer, status, plan,
+                    (s.current_period_start || 0) * 1000,
+                    (s.current_period_end || 0) * 1000,
+                    s.cancel_at_period_end ? 1 : 0,
+                    Date.now(), Date.now()
+                ).run();
+                await env.SAUDADE_DB.prepare(
+                    'UPDATE users SET tier = ? WHERE id = ?'
+                ).bind(newTier, userId).run();
+                break;
+            }
+            case 'customer.subscription.deleted': {
+                const s = event.data.object;
+                const userId = s.metadata?.user_id;
+                if (!userId) break;
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE subscriptions SET status = 'canceled', updated_at = ? WHERE id = ?"
+                ).bind(Date.now(), s.id).run();
+                await env.SAUDADE_DB.prepare(
+                    "UPDATE users SET tier = 'free' WHERE id = ?"
+                ).bind(userId).run();
+                break;
+            }
+        }
+    } catch (e) {
+        // Webhook should never 500 — Stripe will hammer retries. Log + 200.
+        console.warn('[billing] webhook handler caught', e?.message || e);
+    }
+    return J(req, { received: true });
+}
+
+async function verifyStripeSignature(rawBody, header, secret) {
+    // Stripe signs as: t=ts,v1=hex(hmacsha256(ts.body, secret))
+    if (!header) return false;
+    const parts = header.split(',').reduce((m, p) => {
+        const [k, v] = p.split('=');
+        if (!m[k]) m[k] = v;
+        return m;
+    }, {});
+    const ts = parts.t;
+    const v1 = parts.v1;
+    if (!ts || !v1) return false;
+    const data = `${ts}.${rawBody}`;
+    try {
+        const enc = new TextEncoder();
+        const key = await crypto.subtle.importKey(
+            'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+        );
+        const sig = await crypto.subtle.sign('HMAC', key, enc.encode(data));
+        const hex = [...new Uint8Array(sig)].map(b => b.toString(16).padStart(2, '0')).join('');
+        // Reject events older than 5 minutes (replay protection)
+        const drift = Math.abs(Math.floor(Date.now() / 1000) - parseInt(ts, 10));
+        if (drift > 300) return false;
+        return timingSafeEqual(hex, v1);
+    } catch (e) { return false; }
+}
+
+function timingSafeEqual(a, b) {
+    if (a.length !== b.length) return false;
+    let r = 0;
+    for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i);
+    return r === 0;
 }

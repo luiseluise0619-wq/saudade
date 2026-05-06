@@ -6,6 +6,43 @@
 
 ---
 
+## 🚀 런칭 체크리스트 (순서대로 한 번씩)
+
+### Step 0 · GitHub 인프라 (10분)
+- [ ] Settings → General → Danger Zone → **Make repository public** (Actions 한도 무제한, 시크릿은 안전)
+- [ ] 실패한 Actions run 들 → "Re-run all jobs"
+- [ ] Settings → Secrets and variables → Actions → New repository secret:
+    - [ ] `PEXELS_KEY` (https://www.pexels.com/api/) — 리스닝룸 도시 사진
+    - [ ] `FREESOUND_TOKEN` (https://freesound.org/apiv2/apply/) — ASMR mp3
+    - [ ] `KAKAO_KEY` (https://developers.kakao.com → REST API key) — 서울 카페 시드
+- [ ] Actions 탭에서 워크플로우 1회씩 실행:
+    - [ ] "Fetch listening-room content" (target=both) → PR 머지
+    - [ ] "Fetch Seoul cafes (Kakao)" (디폴트 14동네) → PR (시드만, 큐레이션은 나중)
+
+### Step 1 · D1 + Worker 시크릿 + 배포
+- [ ] [§1 D1 스키마 적용](#1-d1-15분) — 9 schemas (subscriptions.sql 신규 포함)
+- [ ] [§2 Worker 시크릿](#2-worker-시크릿-5분) — EDITOR_TOKEN, GEMINI_KEY, RESEND_KEY (옵션) + Stripe 4개 (옵션)
+- [ ] [§3 Worker 배포](#3-worker-배포-1분)
+- [ ] [§4 RSS 출처 검증](#4-rss-출처-검증-34시간--가장-시간-소요) (3~4시간)
+
+### Step 2 · 콘텐츠 큐레이션
+- [ ] Kakao fetched 카페 PR 검토 → 실제 가본 곳만 두 줄 + visited_at 채워서 `cafes-seoul.json` 으로 이전
+- [ ] Listening 사진 큐레이션 (옵션) — Pexels 자동 fetch PR 머지면 자동 채워짐
+- [ ] 디스패치 cadence 결정 — 매일 vs 화/목/토 (1인 운영 기준 권장: 주 4회)
+
+### Step 3 · 결제 활성화 (수익화 시작 시점)
+- [ ] [Stripe Setup](#stripe-setup-결제-활성화) — 4개 시크릿 + 2 가격 생성
+- [ ] support.html 의 BMaC 링크 (`buymeacoffee.com/saudade`) 본인 계정으로 교체
+- [ ] 첫 결제 테스트 (test mode)
+- [ ] 첫 결제 실거래 (live mode)
+
+### Step 4 · 런칭
+- [ ] [§5 Pages 배포 확인](#5-pages-자동-배포-확인-5분)
+- [ ] PH/Reddit/Twitter 푸시 (commit c160137 마케팅 패키지 참고)
+- [ ] Day 30 paywall 활성화 시점 푸터 명시
+
+---
+
 ## 0. 사전 준비 (한 번)
 
 ```powershell
@@ -27,7 +64,7 @@ wrangler d1 create saudade_db
 # 출력의 database_id 를 wrangler.toml [[d1_databases]] 에 적용
 # 현재 wrangler.toml 에 0eaf0d89-ec73-4d00-aace-34f385e89c03 이미 적힘 — 확인만
 
-# 스키마 8개 적용 (순서 무관)
+# 스키마 9개 적용 (순서 무관)
 wrangler d1 execute saudade_db --remote --file=schema/editor_log.sql
 wrangler d1 execute saudade_db --remote --file=schema/cafe_submissions.sql
 wrangler d1 execute saudade_db --remote --file=schema/auth.sql
@@ -36,6 +73,7 @@ wrangler d1 execute saudade_db --remote --file=schema/dispatch_retracts.sql
 wrangler d1 execute saudade_db --remote --file=schema/ai_pipeline.sql
 wrangler d1 execute saudade_db --remote --file=schema/rss_sources.sql
 wrangler d1 execute saudade_db --remote --file=schema/v8_following_sessions.sql
+wrangler d1 execute saudade_db --remote --file=schema/subscriptions.sql   # 신규 — Stripe 결제 추적
 
 # RSS 출처 시드 (검증 대기 상태로 25 entry)
 wrangler d1 execute saudade_db --remote --file=data/rss-sources-seed.sql
@@ -61,6 +99,10 @@ Cloudflare Dashboard → Workers & Pages → `saudade` → Settings → Variable
 | `COVERR_KEY` | Cover videos | 옵션 |
 | `RESEND_KEY` | Magic Link 이메일 | 옵션 (없으면 inline 모드 폴백) |
 | `RESEND_FROM` | 발신자 (e.g. `Saudade <noreply@your-domain>`) | RESEND_KEY 있을 때 |
+| `STRIPE_KEY` | 결제 (Subscriber/Patron) | 옵션 — 없으면 503 BILLING_NOT_CONFIGURED |
+| `STRIPE_PRICE_SUBSCRIBER` | $5/mo 구독 가격 ID | STRIPE_KEY 있을 때 |
+| `STRIPE_PRICE_PATRON` | $3/mo 후원 가격 ID | STRIPE_KEY 있을 때 |
+| `STRIPE_WEBHOOK_SECRET` | Webhook 서명 검증 | STRIPE_KEY 있을 때 |
 
 또는 CLI:
 ```powershell
@@ -225,3 +267,60 @@ git push origin main
 # 6. Worker 재배포 (worker 코드 변경했을 때만)
 wrangler deploy
 ```
+
+---
+
+## Stripe Setup (결제 활성화)
+
+런칭 후 수익화 시점에. 그 전까지는 시크릿 미등록 → 모든 결제 엔드포인트 503 BILLING_NOT_CONFIGURED 반환 (앱은 free-only 모드로 정상 동작).
+
+### 1) Stripe 계정 + 두 가격 생성
+- https://stripe.com 가입 → 활성화
+- Dashboard → Products → Add product 두 번:
+  - **Subscriber** — $5/mo recurring · price ID 복사 (`price_xxx`)
+  - **Patron** — $3/mo recurring · pay-what-you-want (옵션) · price ID 복사
+- Dashboard → Developers → API keys → Secret key 복사 (`sk_live_xxx`)
+
+### 2) Webhook 등록
+- Dashboard → Developers → Webhooks → Add endpoint
+  - URL: `https://saudade.<your-account>.workers.dev/billing/webhook`
+  - Events:
+    - `checkout.session.completed`
+    - `customer.subscription.created`
+    - `customer.subscription.updated`
+    - `customer.subscription.deleted`
+- Signing secret 복사 (`whsec_xxx`)
+
+### 3) Worker 시크릿 4개 등록
+```powershell
+wrangler secret put STRIPE_KEY
+wrangler secret put STRIPE_PRICE_SUBSCRIBER
+wrangler secret put STRIPE_PRICE_PATRON
+wrangler secret put STRIPE_WEBHOOK_SECRET
+wrangler deploy
+```
+
+### 4) 검증
+```powershell
+# 인증된 사용자로 checkout 호출 (Bearer = user.id from localStorage)
+curl -X POST https://saudade.<your-account>.workers.dev/billing/checkout `
+  -H "Authorization: Bearer <user_id>" `
+  -H "Content-Type: application/json" `
+  -d '{"plan":"subscriber"}'
+# → { ok: true, url: "https://checkout.stripe.com/..." }
+```
+
+브라우저로 `support.html` → SUBSCRIBE → Stripe Checkout 도착 → 테스트 카드 (`4242 4242 4242 4242` / any future date / any CVC / any zip) 결제 → success page → tier 자동 'subscriber' 로 갱신.
+
+### 5) BMaC 후원 링크 교체
+`support.html` 의 `https://buymeacoffee.com/saudade` 를 본인 BMaC 슬러그로 교체 (또는 Patreon 등 다른 후원 서비스).
+
+---
+
+## 헌법 §17.9 — 매월 자체 검수
+
+```powershell
+bash scripts/check.sh
+```
+
+통과해야 push. CI 도 같이 검사하지만 로컬에서 먼저 잡는 게 빠름.

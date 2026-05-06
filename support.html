@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.workers.dev; object-src 'none'; base-uri 'self'" />
+<title>Saudade — Support</title>
+<link rel="stylesheet" href="saudade-tokens.css" />
+<script defer src="saudade-billing.js"></script>
+<style>
+  body {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    background: var(--paper);
+    color: var(--ink);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px);
+    line-height: 1.55;
+  }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(28px, 5vw, 44px);
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin: 40px 0 12px;
+    border-top: 0.5px solid var(--rule);
+    padding-top: 16px;
+  }
+  p { margin: 0 0 16px; }
+  ul { padding-left: 18px; margin: 0 0 16px; }
+  li { margin: 0 0 6px; }
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--ink);
+  }
+  a:hover { color: var(--rust, #b2351a); border-bottom-color: var(--rust, #b2351a); }
+  .tier-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 24px 0;
+    border-top: 0.5px solid var(--rule);
+  }
+  .tier {
+    padding: 24px 0;
+    border-bottom: 0.5px solid var(--rule);
+  }
+  .tier-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin: 0 0 4px;
+  }
+  .tier-price {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+    margin: 0 0 12px;
+  }
+  .tier-benefits {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .tier-cta {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 0.5px solid var(--ink);
+    padding: 10px 16px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .tier-cta:hover { background: var(--ink); color: var(--paper); border-bottom-color: var(--ink); }
+  .back {
+    display: inline-block;
+    margin-top: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    border-bottom: none;
+  }
+</style>
+</head>
+<body>
+  <p class="meta">§ 99 · Support · The funding model</p>
+  <h1>How Saudade is funded.</h1>
+
+  <p>Saudade is a magazine. It is small and it intends to stay small. The newspaper economy of clicks and outrage is not the economy we want to live in.</p>
+
+  <p>Three ways to keep this paper going. The first costs nothing. The other two are how the lights stay on.</p>
+
+  <div class="tier-grid">
+    <div class="tier">
+      <p class="tier-name">Reader</p>
+      <p class="tier-price">Free.</p>
+      <p class="tier-benefits">Today's dispatches. Yesterday's. The full atlas. The listening room. The personal counters. Forever.</p>
+      <p class="tier-benefits">No newsletter walls. No pop-ups. No tracking pixels. No ads.</p>
+    </div>
+
+    <div class="tier">
+      <p class="tier-name">Patron</p>
+      <p class="tier-price">$3 +<span style="font-size:14px;color:var(--bone-d)"> / month, your choice</span></p>
+      <p class="tier-benefits">For people who like the paper and want it to keep going. No paywall, no special access — just sustenance for a small operation.</p>
+      <p class="tier-benefits">Your name appears in the colophon if you want it to.</p>
+      <a class="tier-cta" href="https://buymeacoffee.com/saudade" target="_blank" rel="noopener">Become a patron →</a>
+    </div>
+
+    <div class="tier">
+      <p class="tier-name">Subscriber</p>
+      <p class="tier-price">$5<span style="font-size:14px;color:var(--bone-d)"> / month, or $50 / year</span></p>
+      <p class="tier-benefits">The full archive — every dispatch we have ever filed, indexed by city, searchable, kept open forever. Free readers see the most recent week; subscribers see all of it.</p>
+      <p class="tier-benefits">A printable PDF of the quarterly issue, mailed to your inbox four times a year.</p>
+      <p class="tier-benefits">Vote on the next city we open a desk in.</p>
+      <a class="tier-cta" href="#" data-saudade-checkout="subscriber" id="subscribeBtn">Subscribe →</a>
+    </div>
+  </div>
+
+  <h2>Why not advertising</h2>
+  <p>The constitution of this magazine forbids it. We do not list a café in the atlas in exchange for money. We do not run banner ads, native ads, sponsored dispatches, affiliate links, or recommendation widgets. The reader's attention is not for sale.</p>
+
+  <h2>Why not free forever</h2>
+  <p>Because writing a city's news every weekday, three editions in five languages, takes work. Because the listening room and the atlas need maintenance. Because at some point a single person cannot do it alone, and another writer needs paying.</p>
+  <p>If 1,000 readers send $5 a month, this paper is sustainable. That is the goal. There is no funding round, no investors, no pivot lurking.</p>
+
+  <h2>What you get for free, in detail</h2>
+  <ul>
+    <li>Every dispatch from the last 7 days, in your edition's language.</li>
+    <li>The atlas of cafés. Every entry. Forever.</li>
+    <li>The listening room. Photographs, ambient stems, work timer.</li>
+    <li>All counters — Schengen, tax, pension, insurance, stays.</li>
+    <li>The quarterly dispatch supplement.</li>
+    <li>Tour mode. Browse without an account.</li>
+  </ul>
+
+  <h2>What subscribers see additionally</h2>
+  <ul>
+    <li>The full dispatch archive, beyond seven days.</li>
+    <li>City-by-city search across every dispatch we have filed.</li>
+    <li>Quarterly PDF, A4 portrait, print-ready.</li>
+    <li>A vote on the next desk city.</li>
+  </ul>
+
+  <h2>Cancel anytime</h2>
+  <p>One click in your account page. No phone calls. No retention emails. We will not chase you.</p>
+
+  <h2>If money is the obstacle</h2>
+  <p>Write to us at <a href="mailto:luiseluise0619@gmail.com">luiseluise0619@gmail.com</a>. We give comp subscriptions to readers who ask, no questions, no proof of anything. The magazine is for people who want it.</p>
+
+  <a class="back" href="./">← Back to the issue</a>
+</body>
+</html>
