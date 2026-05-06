@@ -360,7 +360,7 @@
                 "pt": "Lisboa",
                 "es": "Lisboa"
             },
-            "default_photo_url": "/photos/cities/lisbon-alfama.webp",
+            "default_photo_url": "https://images.pexels.com/photos/31595229/pexels-photo-31595229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "photo_caption": {
                 "en": "Lisbon — Alfama hill, August. Photograph by the editor.",
                 "ko": "리스본 — 알파마 언덕, 8월. 편집장 촬영.",
@@ -369,8 +369,11 @@
                 "es": "Lisboa — colina de Alfama, agosto. Fotografía del editor."
             },
             "photographer": "Saudade Editor",
-            "photo_source": "own",
-            "license_url": null
+            "photo_source": "Pexels",
+            "license_url": null,
+            "photo_credit": "Photo by Egor Kunovsky on Pexels",
+            "photo_credit_url": "https://www.pexels.com/@egor-kunovsky-1199972",
+            "photo_source_url": "https://www.pexels.com/photo/traditional-portuguese-azulejo-tile-with-ship-design-31595229/"
         },
         {
             "slug": "porto",
@@ -444,7 +447,7 @@
                 "pt": "Berlim",
                 "es": "Berlín"
             },
-            "default_photo_url": "/photos/cities/berlin-quiet.webp",
+            "default_photo_url": "https://images.pexels.com/photos/33418076/pexels-photo-33418076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "photo_caption": {
                 "en": "Berlin — pending. Photograph by [name].",
                 "ko": "베를린 — 사진 대기 중. 촬영 [이름].",
@@ -453,8 +456,11 @@
                 "es": "Berlín — fotografía pendiente. Por [nombre]."
             },
             "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
+            "photo_source": "Pexels",
+            "license_url": null,
+            "photo_credit": "Photo by Manish Jain on Pexels",
+            "photo_credit_url": "https://www.pexels.com/@manish-jain-1176829519",
+            "photo_source_url": "https://www.pexels.com/photo/outdoor-cafe-by-berliner-dome-berlin-view-33418076/"
         },
         {
             "slug": "tokyo",
@@ -465,7 +471,7 @@
                 "pt": "Tóquio",
                 "es": "Tokio"
             },
-            "default_photo_url": "/photos/cities/tokyo-quiet.webp",
+            "default_photo_url": "https://images.pexels.com/photos/8525275/pexels-photo-8525275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "photo_caption": {
                 "en": "Tokyo — pending. Photograph by [name].",
                 "ko": "도쿄 — 사진 대기 중. 촬영 [이름].",
@@ -474,8 +480,11 @@
                 "es": "Tokio — fotografía pendiente. Por [nombre]."
             },
             "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
+            "photo_source": "Pexels",
+            "license_url": null,
+            "photo_credit": "Photo by Prem Singh Tanwar on Pexels",
+            "photo_credit_url": "https://www.pexels.com/@premsinghtanwar",
+            "photo_source_url": "https://www.pexels.com/photo/golden-teapot-on-brown-surface-8525275/"
         },
         {
             "slug": "seoul",
@@ -486,7 +495,7 @@
                 "pt": "Seul",
                 "es": "Seúl"
             },
-            "default_photo_url": "/photos/cities/seoul-quiet.webp",
+            "default_photo_url": "https://images.pexels.com/photos/35491993/pexels-photo-35491993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "photo_caption": {
                 "en": "Seoul — pending. Photograph by [name].",
                 "ko": "서울 — 사진 대기 중. 촬영 [이름].",
@@ -495,8 +504,11 @@
                 "es": "Seúl — fotografía pendiente. Por [nombre]."
             },
             "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
+            "photo_source": "Pexels",
+            "license_url": null,
+            "photo_credit": "Photo by Luiz M on Pexels",
+            "photo_credit_url": "https://www.pexels.com/@luiz-m-2149495517",
+            "photo_source_url": "https://www.pexels.com/photo/traditional-bukchon-hanok-village-in-seoul-35491993/"
         },
         {
             "slug": "chiang-mai",
@@ -633,7 +645,7 @@
                 "pt": "Tiblíssi",
                 "es": "Tiflis"
             },
-            "default_photo_url": "/photos/cities/tbilisi-quiet.webp",
+            "default_photo_url": "https://images.pexels.com/photos/20252646/pexels-photo-20252646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             "photo_caption": {
                 "en": "Tbilisi — pending. Photograph by [name].",
                 "ko": "트빌리시 — 사진 대기 중. 촬영 [이름].",
@@ -642,8 +654,11 @@
                 "es": "Tiflis — fotografía pendiente. Por [nombre]."
             },
             "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
+            "photo_source": "Pexels",
+            "license_url": null,
+            "photo_credit": "Photo by Виктор Соломоник on Pexels",
+            "photo_credit_url": "https://www.pexels.com/@solomonikvik",
+            "photo_source_url": "https://www.pexels.com/photo/damaged-vintage-residential-building-20252646/"
         }
     ]
 }
