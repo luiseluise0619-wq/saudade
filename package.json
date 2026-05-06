@@ -14,6 +14,7 @@
         "bundle:esbuild": "esbuild --bundle --minify --sourcemap --outdir=dist/bundle --format=iife --target=es2019 saudade-auth.js saudade-account.js saudade-schengen.js saudade-schengen-form.js saudade-empty.js saudade-welcome.js",
         "build:issue": "node scripts/build-issue.js",
         "validate": "node scripts/validate-content.js",
+        "bump-cache": "node scripts/bump-cache.js",
         "i18n:scan": "bash scripts/check-i18n.sh",
         "test": "node --test test/calculators.test.js",
         "test:smoke": "node test/smoke.js",
