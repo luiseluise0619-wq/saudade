@@ -1083,10 +1083,13 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const followCta = T({
             en: 'CHANGE →', ko: '변경 →', ja: '変更 →', pt: 'ALTERAR →', es: 'CAMBIAR →'
         });
+        const removeLabel = T({
+            en: 'Remove', ko: '제거', ja: '削除', pt: 'Remover', es: 'Quitar'
+        });
         const chipsHtml = followNow.length
             ? followNow.map((slug, i) => {
                 const name = window.SAUDADE_FOLLOWING?.cityName?.(slug, ed) || slug;
-                return `<button type="button" class="sdd-disp-city-chip" data-city-slug="${escapeHtml(slug)}" title="Remove">
+                return `<button type="button" class="sdd-disp-city-chip" data-city-slug="${escapeHtml(slug)}" title="${escapeHtml(removeLabel)}">
                     <span class="n">${String(i + 1).padStart(2, '0')}</span>
                     <span class="name">${escapeHtml(name)}</span>
                     <span class="x">×</span>
