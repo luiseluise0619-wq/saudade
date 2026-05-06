@@ -40,16 +40,57 @@ const DATA = path.join(ROOT, 'data');
 const LIC  = path.join(DATA, 'licenses');
 const AUDIO_DIR = path.join(ROOT, 'audio', 'asmr');
 
+// Three queries per city = ~9 candidates after per=3, gives editor variety to
+// pick from while still hitting Freesound's free tier comfortably (60/min).
+// The wire script picks the first N per city when merging into listening.json.
 const DEFAULT_QUERIES = [
-    { category: 'CAFE',  city: 'Lisbon',  q: 'cafe ambience stereo' },
-    { category: 'CAFE',  city: 'Tokyo',   q: 'tokyo cafe rain' },
-    { category: 'CAFE',  city: 'Tokyo',   q: 'kissaten' },
-    { category: 'CAFE',  city: 'Seoul',   q: 'quiet cafe morning' },
-    { category: 'RAIN',  city: null,      q: 'rain on window indoor' },
-    { category: 'RAIN',  city: null,      q: 'soft rain interior loop' },
-    { category: 'CITY',  city: 'Lisbon',  q: 'lisbon tram street' },
-    { category: 'CITY',  city: 'Tokyo',   q: 'tokyo rainy street' },
-    { category: 'NIGHT', city: null,      q: 'night ambience indoor' }
+    // Iberia
+    { category: 'CAFE',  city: 'Lisbon',       q: 'cafe ambience stereo' },
+    { category: 'CITY',  city: 'Lisbon',       q: 'lisbon tram street' },
+    { category: 'NIGHT', city: 'Lisbon',       q: 'lisbon night quiet' },
+    { category: 'CAFE',  city: 'Porto',        q: 'porto cafe morning' },
+    { category: 'CITY',  city: 'Porto',        q: 'porto street tram' },
+    { category: 'RAIN',  city: 'Porto',        q: 'porto rain on tile roof' },
+    { category: 'CAFE',  city: 'Madrid',       q: 'madrid cafe interior' },
+    { category: 'CITY',  city: 'Madrid',       q: 'madrid plaza ambience' },
+    { category: 'NIGHT', city: 'Madrid',       q: 'madrid night cafe' },
+    { category: 'CAFE',  city: 'Barcelona',    q: 'barcelona cafe street' },
+    { category: 'CITY',  city: 'Barcelona',    q: 'barcelona market ambience' },
+    { category: 'NIGHT', city: 'Barcelona',    q: 'barcelona night quiet' },
+    // East Asia
+    { category: 'CAFE',  city: 'Tokyo',        q: 'tokyo cafe rain' },
+    { category: 'CAFE',  city: 'Tokyo',        q: 'kissaten' },
+    { category: 'CITY',  city: 'Tokyo',        q: 'tokyo rainy street' },
+    { category: 'CAFE',  city: 'Seoul',        q: 'quiet cafe morning' },
+    { category: 'CITY',  city: 'Seoul',        q: 'seoul subway distant' },
+    { category: 'RAIN',  city: 'Seoul',        q: 'seoul rain window' },
+    // Southeast Asia
+    { category: 'CAFE',  city: 'Chiang Mai',   q: 'chiang mai temple bells' },
+    { category: 'CITY',  city: 'Chiang Mai',   q: 'chiang mai market street' },
+    { category: 'NIGHT', city: 'Chiang Mai',   q: 'thailand night insects' },
+    { category: 'CAFE',  city: 'Bali',         q: 'bali rice paddy morning' },
+    { category: 'NIGHT', city: 'Bali',         q: 'bali frog cricket night' },
+    { category: 'RAIN',  city: 'Bali',         q: 'bali tropical rain palm' },
+    { category: 'CAFE',  city: 'Da Nang',      q: 'vietnam cafe ambience' },
+    { category: 'CITY',  city: 'Da Nang',      q: 'da nang beach distant' },
+    { category: 'NIGHT', city: 'Da Nang',      q: 'vietnam night cicada' },
+    // Latin America
+    { category: 'CAFE',  city: 'Mexico City',  q: 'mexico city cafe morning' },
+    { category: 'CITY',  city: 'Mexico City',  q: 'mexico city plaza ambience' },
+    { category: 'RAIN',  city: 'Mexico City',  q: 'mexico city afternoon rain' },
+    { category: 'CAFE',  city: 'Medellin',     q: 'medellin cafe balcony' },
+    { category: 'CITY',  city: 'Medellin',     q: 'medellin street ambience' },
+    { category: 'NIGHT', city: 'Medellin',     q: 'colombia tropical night' },
+    { category: 'CAFE',  city: 'Buenos Aires', q: 'buenos aires cafe interior' },
+    { category: 'CITY',  city: 'Buenos Aires', q: 'buenos aires street ambience' },
+    { category: 'NIGHT', city: 'Buenos Aires', q: 'buenos aires night quiet' },
+    // Caucasus + Europe
+    { category: 'CAFE',  city: 'Tbilisi',      q: 'tbilisi cafe morning' },
+    { category: 'CITY',  city: 'Tbilisi',      q: 'tbilisi old town ambience' },
+    { category: 'RAIN',  city: 'Tbilisi',      q: 'georgia rain on roof' },
+    { category: 'CAFE',  city: 'Berlin',       q: 'berlin cafe interior' },
+    { category: 'CITY',  city: 'Berlin',       q: 'berlin u-bahn distant' },
+    { category: 'RAIN',  city: 'Berlin',       q: 'berlin rain altbau window' }
 ];
 
 function parseArgs(argv) {
