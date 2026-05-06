@@ -1,664 +1,315 @@
 {
-    "library": "ASMR",
-    "tracks": [
-        {
-            "category": "RAIN",
-            "title": "Heavy rain on a wooden roof",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/rain-roof.mp3"
-        },
-        {
-            "category": "RAIN",
-            "title": "Rain on a window, distant traffic",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/rain-window.mp3"
-        },
-        {
-            "category": "RAIN",
-            "title": "Monsoon on a tin roof",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "Recorded in Chiang Mai. CC-BY 4.0.",
-            "audio_url": "/audio/asmr/rain-monsoon.mp3"
-        },
-        {
-            "category": "RAIN",
-            "title": "Light drizzle in a forest",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/rain-drizzle.mp3"
-        },
-        {
-            "category": "THUNDER",
-            "title": "Distant thunder, no rain",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/thunder-distant.mp3"
-        },
-        {
-            "category": "THUNDER",
-            "title": "Storm at night, heavy rain",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/thunder-storm.mp3"
-        },
-        {
-            "category": "THUNDER",
-            "title": "Rolling thunder, summer rain",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "Stems by atmospheric_collective. CC-BY 4.0.",
-            "audio_url": "/audio/asmr/thunder-rolling.mp3"
-        },
-        {
-            "category": "FIRE",
-            "title": "Campfire, slow burn",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/fire-campfire.mp3"
-        },
-        {
-            "category": "FIRE",
-            "title": "Fireplace, occasional pop",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/fire-fireplace.mp3"
-        },
-        {
-            "category": "FIRE",
-            "title": "Candles, soft hiss",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/asmr/fire-candles.mp3"
-        },
-        {
-            "category": "WATER",
-            "title": "Ocean waves on a pebble beach",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/water-ocean.mp3"
-        },
-        {
-            "category": "WATER",
-            "title": "River stream, midsummer",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/water-river.mp3"
-        },
-        {
-            "category": "WATER",
-            "title": "Mountain creek, light wind",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/water-creek.mp3"
-        },
-        {
-            "category": "WATER",
-            "title": "Stone fountain, evening",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Lisbon.",
-            "audio_url": "/audio/asmr/water-fountain.mp3"
-        },
-        {
-            "category": "FOREST",
-            "title": "Forest at dawn, soft birds",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/forest-dawn.mp3"
-        },
-        {
-            "category": "FOREST",
-            "title": "Deep woods, hidden water",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/forest-deep.mp3"
-        },
-        {
-            "category": "FOREST",
-            "title": "Rustling leaves, dry forest",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/forest-leaves.mp3"
-        },
-        {
-            "category": "WIND",
-            "title": "Wind through pine trees",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/wind-pine.mp3"
-        },
-        {
-            "category": "WIND",
-            "title": "Prairie wind, low and steady",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/wind-prairie.mp3"
-        },
-        {
-            "category": "WIND",
-            "title": "Soft breeze, open window",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/asmr/wind-window.mp3"
-        },
-        {
-            "category": "COFFEE SHOP",
-            "title": "Cafe ambience, mid-morning",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/cafe-ambience.mp3"
-        },
-        {
-            "category": "COFFEE SHOP",
-            "title": "Espresso machine, distant",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Seoul.",
-            "audio_url": "/audio/asmr/cafe-espresso.mp3"
-        },
-        {
-            "category": "COFFEE SHOP",
-            "title": "Coffee shop chatter, soft",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/cafe-chatter.mp3"
-        },
-        {
-            "category": "LIBRARY",
-            "title": "Page turning, slow",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/asmr/library-pages.mp3"
-        },
-        {
-            "category": "LIBRARY",
-            "title": "Pencil on paper, writing",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/asmr/library-pencil.mp3"
-        },
-        {
-            "category": "LIBRARY",
-            "title": "Library quiet, distant footsteps",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/library-quiet.mp3"
-        },
-        {
-            "category": "NIGHT",
-            "title": "Crickets, summer porch",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/night-crickets.mp3"
-        },
-        {
-            "category": "NIGHT",
-            "title": "Owls, midnight forest",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/night-owls.mp3"
-        },
-        {
-            "category": "NIGHT",
-            "title": "Summer night, far cars",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded by the editor.",
-            "audio_url": "/audio/asmr/night-summer.mp3"
-        },
-        {
-            "category": "CITY",
-            "title": "Distant traffic, rooftop",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Tokyo.",
-            "audio_url": "/audio/asmr/city-rooftop.mp3"
-        },
-        {
-            "category": "CITY",
-            "title": "Rain on a city street, evening",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Freesound CC0 stem.",
-            "audio_url": "/audio/asmr/city-rain-street.mp3"
-        },
-        {
-            "category": "CITY",
-            "title": "Train passing, viaduct",
-            "duration_minutes": 60,
-            "license": "CC-BY",
-            "license_url": "https://creativecommons.org/licenses/by/4.0/",
-            "credits": "CC-BY 4.0.",
-            "audio_url": "/audio/asmr/city-train.mp3"
-        },
-        {
-            "category": "WHITE NOISE",
-            "title": "Brown noise, deep",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Generated, CC0.",
-            "audio_url": "/audio/asmr/noise-brown.mp3"
-        },
-        {
-            "category": "WHITE NOISE",
-            "title": "Pink noise, soft",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Generated, CC0.",
-            "audio_url": "/audio/asmr/noise-pink.mp3"
-        },
-        {
-            "category": "WHITE NOISE",
-            "title": "White noise, even",
-            "duration_minutes": 60,
-            "license": "CC0",
-            "license_url": "https://freesound.org/help/faq/#what-licenses",
-            "credits": "Generated, CC0.",
-            "audio_url": "/audio/asmr/noise-white.mp3"
-        },
-        {
-            "city": "lisbon",
-            "category": "CITY",
-            "title": "Tram bells and gulls, Alfama hill",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Lisbon, August 2025.",
-            "audio_url": "/audio/asmr/lisbon-tram-bells.mp3",
-            "photo_url": "/photos/cities/lisbon-alfama.webp"
-        },
-        {
-            "city": "lisbon",
-            "category": "WATER",
-            "title": "The Tagus at dusk",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Lisbon, August 2025.",
-            "audio_url": "/audio/asmr/lisbon-tagus-dusk.mp3",
-            "photo_url": "/photos/cities/lisbon-tagus.webp"
-        },
-        {
-            "city": "lisbon",
-            "category": "RAIN",
-            "title": "Rain on tile rooftops, Bairro Alto",
-            "duration_minutes": 60,
-            "license": "Owned recording · Saudade",
-            "license_url": null,
-            "credits": "Recorded in Lisbon, August 2025.",
-            "audio_url": "/audio/asmr/lisbon-rain-tiles.mp3",
-            "photo_url": "/photos/cities/lisbon-bairro.webp"
-        }
-    ],
-    "cities": [
-        {
-            "slug": "lisbon",
-            "names": {
-                "en": "Lisbon",
-                "ko": "리스본",
-                "ja": "リスボン",
-                "pt": "Lisboa",
-                "es": "Lisboa"
-            },
-            "default_photo_url": "https://images.pexels.com/photos/31595229/pexels-photo-31595229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "photo_caption": {
-                "en": "Lisbon — Alfama hill, August. Photograph by the editor.",
-                "ko": "리스본 — 알파마 언덕, 8월. 편집장 촬영.",
-                "ja": "リスボン — アルファマの丘、八月。編集長撮影。",
-                "pt": "Lisboa — Alfama, em agosto. Fotografia do editor.",
-                "es": "Lisboa — colina de Alfama, agosto. Fotografía del editor."
-            },
-            "photographer": "Saudade Editor",
-            "photo_source": "Pexels",
-            "license_url": null,
-            "photo_credit": "Photo by Egor Kunovsky on Pexels",
-            "photo_credit_url": "https://www.pexels.com/@egor-kunovsky-1199972",
-            "photo_source_url": "https://www.pexels.com/photo/traditional-portuguese-azulejo-tile-with-ship-design-31595229/"
-        },
-        {
-            "slug": "porto",
-            "names": {
-                "en": "Porto",
-                "ko": "포르투",
-                "ja": "ポルト",
-                "pt": "Porto",
-                "es": "Oporto"
-            },
-            "default_photo_url": "/photos/cities/porto-quiet.webp",
-            "photo_caption": {
-                "en": "Porto — pending. Photograph by [name].",
-                "ko": "포르투 — 사진 대기 중. 촬영 [이름].",
-                "ja": "ポルト — 写真準備中。撮影 [氏名]。",
-                "pt": "Porto — fotografia pendente. Por [nome].",
-                "es": "Oporto — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "madrid",
-            "names": {
-                "en": "Madrid",
-                "ko": "마드리드",
-                "ja": "マドリード",
-                "pt": "Madrid",
-                "es": "Madrid"
-            },
-            "default_photo_url": "/photos/cities/madrid-quiet.webp",
-            "photo_caption": {
-                "en": "Madrid — pending. Photograph by [name].",
-                "ko": "마드리드 — 사진 대기 중. 촬영 [이름].",
-                "ja": "マドリード — 写真準備中。撮影 [氏名]。",
-                "pt": "Madrid — fotografia pendente. Por [nome].",
-                "es": "Madrid — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "barcelona",
-            "names": {
-                "en": "Barcelona",
-                "ko": "바르셀로나",
-                "ja": "バルセロナ",
-                "pt": "Barcelona",
-                "es": "Barcelona"
-            },
-            "default_photo_url": "/photos/cities/barcelona-quiet.webp",
-            "photo_caption": {
-                "en": "Barcelona — pending. Photograph by [name].",
-                "ko": "바르셀로나 — 사진 대기 중. 촬영 [이름].",
-                "ja": "バルセロナ — 写真準備中。撮影 [氏名]。",
-                "pt": "Barcelona — fotografia pendente. Por [nome].",
-                "es": "Barcelona — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "berlin",
-            "names": {
-                "en": "Berlin",
-                "ko": "베를린",
-                "ja": "ベルリン",
-                "pt": "Berlim",
-                "es": "Berlín"
-            },
-            "default_photo_url": "https://images.pexels.com/photos/33418076/pexels-photo-33418076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "photo_caption": {
-                "en": "Berlin — pending. Photograph by [name].",
-                "ko": "베를린 — 사진 대기 중. 촬영 [이름].",
-                "ja": "ベルリン — 写真準備中。撮影 [氏名]。",
-                "pt": "Berlim — fotografia pendente. Por [nome].",
-                "es": "Berlín — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "Pexels",
-            "license_url": null,
-            "photo_credit": "Photo by Manish Jain on Pexels",
-            "photo_credit_url": "https://www.pexels.com/@manish-jain-1176829519",
-            "photo_source_url": "https://www.pexels.com/photo/outdoor-cafe-by-berliner-dome-berlin-view-33418076/"
-        },
-        {
-            "slug": "tokyo",
-            "names": {
-                "en": "Tokyo",
-                "ko": "도쿄",
-                "ja": "東京",
-                "pt": "Tóquio",
-                "es": "Tokio"
-            },
-            "default_photo_url": "https://images.pexels.com/photos/8525275/pexels-photo-8525275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "photo_caption": {
-                "en": "Tokyo — pending. Photograph by [name].",
-                "ko": "도쿄 — 사진 대기 중. 촬영 [이름].",
-                "ja": "東京 — 写真準備中。撮影 [氏名]。",
-                "pt": "Tóquio — fotografia pendente. Por [nome].",
-                "es": "Tokio — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "Pexels",
-            "license_url": null,
-            "photo_credit": "Photo by Prem Singh Tanwar on Pexels",
-            "photo_credit_url": "https://www.pexels.com/@premsinghtanwar",
-            "photo_source_url": "https://www.pexels.com/photo/golden-teapot-on-brown-surface-8525275/"
-        },
-        {
-            "slug": "seoul",
-            "names": {
-                "en": "Seoul",
-                "ko": "서울",
-                "ja": "ソウル",
-                "pt": "Seul",
-                "es": "Seúl"
-            },
-            "default_photo_url": "https://images.pexels.com/photos/35491993/pexels-photo-35491993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "photo_caption": {
-                "en": "Seoul — pending. Photograph by [name].",
-                "ko": "서울 — 사진 대기 중. 촬영 [이름].",
-                "ja": "ソウル — 写真準備中。撮影 [氏名]。",
-                "pt": "Seul — fotografia pendente. Por [nome].",
-                "es": "Seúl — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "Pexels",
-            "license_url": null,
-            "photo_credit": "Photo by Luiz M on Pexels",
-            "photo_credit_url": "https://www.pexels.com/@luiz-m-2149495517",
-            "photo_source_url": "https://www.pexels.com/photo/traditional-bukchon-hanok-village-in-seoul-35491993/"
-        },
-        {
-            "slug": "chiang-mai",
-            "names": {
-                "en": "Chiang Mai",
-                "ko": "치앙마이",
-                "ja": "チェンマイ",
-                "pt": "Chiang Mai",
-                "es": "Chiang Mai"
-            },
-            "default_photo_url": "/photos/cities/chiang-mai-quiet.webp",
-            "photo_caption": {
-                "en": "Chiang Mai — pending. Photograph by [name].",
-                "ko": "치앙마이 — 사진 대기 중. 촬영 [이름].",
-                "ja": "チェンマイ — 写真準備中。撮影 [氏名]。",
-                "pt": "Chiang Mai — fotografia pendente. Por [nome].",
-                "es": "Chiang Mai — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "bali",
-            "names": {
-                "en": "Bali",
-                "ko": "발리",
-                "ja": "バリ",
-                "pt": "Bali",
-                "es": "Bali"
-            },
-            "default_photo_url": "/photos/cities/bali-quiet.webp",
-            "photo_caption": {
-                "en": "Bali — pending. Photograph by [name].",
-                "ko": "발리 — 사진 대기 중. 촬영 [이름].",
-                "ja": "バリ — 写真準備中。撮影 [氏名]。",
-                "pt": "Bali — fotografia pendente. Por [nome].",
-                "es": "Bali — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "da-nang",
-            "names": {
-                "en": "Da Nang",
-                "ko": "다낭",
-                "ja": "ダナン",
-                "pt": "Da Nang",
-                "es": "Da Nang"
-            },
-            "default_photo_url": "/photos/cities/da-nang-quiet.webp",
-            "photo_caption": {
-                "en": "Da Nang — pending. Photograph by [name].",
-                "ko": "다낭 — 사진 대기 중. 촬영 [이름].",
-                "ja": "ダナン — 写真準備中。撮影 [氏名]。",
-                "pt": "Da Nang — fotografia pendente. Por [nome].",
-                "es": "Da Nang — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "mexico-city",
-            "names": {
-                "en": "Mexico City",
-                "ko": "멕시코시티",
-                "ja": "メキシコシティ",
-                "pt": "Cidade do México",
-                "es": "Ciudad de México"
-            },
-            "default_photo_url": "/photos/cities/mexico-city-quiet.webp",
-            "photo_caption": {
-                "en": "Mexico City — pending. Photograph by [name].",
-                "ko": "멕시코시티 — 사진 대기 중. 촬영 [이름].",
-                "ja": "メキシコシティ — 写真準備中。撮影 [氏名]。",
-                "pt": "Cidade do México — fotografia pendente. Por [nome].",
-                "es": "Ciudad de México — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "medellin",
-            "names": {
-                "en": "Medellín",
-                "ko": "메데인",
-                "ja": "メデジン",
-                "pt": "Medellín",
-                "es": "Medellín"
-            },
-            "default_photo_url": "/photos/cities/medellin-quiet.webp",
-            "photo_caption": {
-                "en": "Medellín — pending. Photograph by [name].",
-                "ko": "메데인 — 사진 대기 중. 촬영 [이름].",
-                "ja": "メデジン — 写真準備中。撮影 [氏名]。",
-                "pt": "Medellín — fotografia pendente. Por [nome].",
-                "es": "Medellín — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "buenos-aires",
-            "names": {
-                "en": "Buenos Aires",
-                "ko": "부에노스아이레스",
-                "ja": "ブエノスアイレス",
-                "pt": "Buenos Aires",
-                "es": "Buenos Aires"
-            },
-            "default_photo_url": "/photos/cities/buenos-aires-quiet.webp",
-            "photo_caption": {
-                "en": "Buenos Aires — pending. Photograph by [name].",
-                "ko": "부에노스아이레스 — 사진 대기 중. 촬영 [이름].",
-                "ja": "ブエノスアイレス — 写真準備中。撮影 [氏名]。",
-                "pt": "Buenos Aires — fotografia pendente. Por [nome].",
-                "es": "Buenos Aires — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "pending",
-            "license_url": null
-        },
-        {
-            "slug": "tbilisi",
-            "names": {
-                "en": "Tbilisi",
-                "ko": "트빌리시",
-                "ja": "トビリシ",
-                "pt": "Tiblíssi",
-                "es": "Tiflis"
-            },
-            "default_photo_url": "https://images.pexels.com/photos/20252646/pexels-photo-20252646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-            "photo_caption": {
-                "en": "Tbilisi — pending. Photograph by [name].",
-                "ko": "트빌리시 — 사진 대기 중. 촬영 [이름].",
-                "ja": "トビリシ — 写真準備中。撮影 [氏名]。",
-                "pt": "Tiblíssi — fotografia pendente. Por [nome].",
-                "es": "Tiflis — fotografía pendiente. Por [nombre]."
-            },
-            "photographer": "[pending]",
-            "photo_source": "Pexels",
-            "license_url": null,
-            "photo_credit": "Photo by Виктор Соломоник on Pexels",
-            "photo_credit_url": "https://www.pexels.com/@solomonikvik",
-            "photo_source_url": "https://www.pexels.com/photo/damaged-vintage-residential-building-20252646/"
-        }
-    ]
+  "library": "ASMR",
+  "tracks": [],
+  "cities": [
+    {
+      "slug": "lisbon",
+      "names": {
+        "en": "Lisbon",
+        "ko": "리스본",
+        "ja": "リスボン",
+        "pt": "Lisboa",
+        "es": "Lisboa"
+      },
+      "default_photo_url": "https://images.pexels.com/photos/31595229/pexels-photo-31595229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "photo_caption": {
+        "en": "Lisbon — Alfama hill, August. Photograph by the editor.",
+        "ko": "리스본 — 알파마 언덕, 8월. 편집장 촬영.",
+        "ja": "リスボン — アルファマの丘、八月。編集長撮影。",
+        "pt": "Lisboa — Alfama, em agosto. Fotografia do editor.",
+        "es": "Lisboa — colina de Alfama, agosto. Fotografía del editor."
+      },
+      "photographer": "Saudade Editor",
+      "photo_source": "Pexels",
+      "license_url": null,
+      "photo_credit": "Photo by Egor Kunovsky on Pexels",
+      "photo_credit_url": "https://www.pexels.com/@egor-kunovsky-1199972",
+      "photo_source_url": "https://www.pexels.com/photo/traditional-portuguese-azulejo-tile-with-ship-design-31595229/"
+    },
+    {
+      "slug": "porto",
+      "names": {
+        "en": "Porto",
+        "ko": "포르투",
+        "ja": "ポルト",
+        "pt": "Porto",
+        "es": "Oporto"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Porto — pending. Photograph by [name].",
+        "ko": "포르투 — 사진 대기 중. 촬영 [이름].",
+        "ja": "ポルト — 写真準備中。撮影 [氏名]。",
+        "pt": "Porto — fotografia pendente. Por [nome].",
+        "es": "Oporto — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "madrid",
+      "names": {
+        "en": "Madrid",
+        "ko": "마드리드",
+        "ja": "マドリード",
+        "pt": "Madrid",
+        "es": "Madrid"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Madrid — pending. Photograph by [name].",
+        "ko": "마드리드 — 사진 대기 중. 촬영 [이름].",
+        "ja": "マドリード — 写真準備中。撮影 [氏名]。",
+        "pt": "Madrid — fotografia pendente. Por [nome].",
+        "es": "Madrid — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "barcelona",
+      "names": {
+        "en": "Barcelona",
+        "ko": "바르셀로나",
+        "ja": "バルセロナ",
+        "pt": "Barcelona",
+        "es": "Barcelona"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Barcelona — pending. Photograph by [name].",
+        "ko": "바르셀로나 — 사진 대기 중. 촬영 [이름].",
+        "ja": "バルセロナ — 写真準備中。撮影 [氏名]。",
+        "pt": "Barcelona — fotografia pendente. Por [nome].",
+        "es": "Barcelona — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "berlin",
+      "names": {
+        "en": "Berlin",
+        "ko": "베를린",
+        "ja": "ベルリン",
+        "pt": "Berlim",
+        "es": "Berlín"
+      },
+      "default_photo_url": "https://images.pexels.com/photos/33418076/pexels-photo-33418076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "photo_caption": {
+        "en": "Berlin — pending. Photograph by [name].",
+        "ko": "베를린 — 사진 대기 중. 촬영 [이름].",
+        "ja": "ベルリン — 写真準備中。撮影 [氏名]。",
+        "pt": "Berlim — fotografia pendente. Por [nome].",
+        "es": "Berlín — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "Pexels",
+      "license_url": null,
+      "photo_credit": "Photo by Manish Jain on Pexels",
+      "photo_credit_url": "https://www.pexels.com/@manish-jain-1176829519",
+      "photo_source_url": "https://www.pexels.com/photo/outdoor-cafe-by-berliner-dome-berlin-view-33418076/"
+    },
+    {
+      "slug": "tokyo",
+      "names": {
+        "en": "Tokyo",
+        "ko": "도쿄",
+        "ja": "東京",
+        "pt": "Tóquio",
+        "es": "Tokio"
+      },
+      "default_photo_url": "https://images.pexels.com/photos/8525275/pexels-photo-8525275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "photo_caption": {
+        "en": "Tokyo — pending. Photograph by [name].",
+        "ko": "도쿄 — 사진 대기 중. 촬영 [이름].",
+        "ja": "東京 — 写真準備中。撮影 [氏名]。",
+        "pt": "Tóquio — fotografia pendente. Por [nome].",
+        "es": "Tokio — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "Pexels",
+      "license_url": null,
+      "photo_credit": "Photo by Prem Singh Tanwar on Pexels",
+      "photo_credit_url": "https://www.pexels.com/@premsinghtanwar",
+      "photo_source_url": "https://www.pexels.com/photo/golden-teapot-on-brown-surface-8525275/"
+    },
+    {
+      "slug": "seoul",
+      "names": {
+        "en": "Seoul",
+        "ko": "서울",
+        "ja": "ソウル",
+        "pt": "Seul",
+        "es": "Seúl"
+      },
+      "default_photo_url": "https://images.pexels.com/photos/35491993/pexels-photo-35491993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "photo_caption": {
+        "en": "Seoul — pending. Photograph by [name].",
+        "ko": "서울 — 사진 대기 중. 촬영 [이름].",
+        "ja": "ソウル — 写真準備中。撮影 [氏名]。",
+        "pt": "Seul — fotografia pendente. Por [nome].",
+        "es": "Seúl — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "Pexels",
+      "license_url": null,
+      "photo_credit": "Photo by Luiz M on Pexels",
+      "photo_credit_url": "https://www.pexels.com/@luiz-m-2149495517",
+      "photo_source_url": "https://www.pexels.com/photo/traditional-bukchon-hanok-village-in-seoul-35491993/"
+    },
+    {
+      "slug": "chiang-mai",
+      "names": {
+        "en": "Chiang Mai",
+        "ko": "치앙마이",
+        "ja": "チェンマイ",
+        "pt": "Chiang Mai",
+        "es": "Chiang Mai"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Chiang Mai — pending. Photograph by [name].",
+        "ko": "치앙마이 — 사진 대기 중. 촬영 [이름].",
+        "ja": "チェンマイ — 写真準備中。撮影 [氏名]。",
+        "pt": "Chiang Mai — fotografia pendente. Por [nome].",
+        "es": "Chiang Mai — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "bali",
+      "names": {
+        "en": "Bali",
+        "ko": "발리",
+        "ja": "バリ",
+        "pt": "Bali",
+        "es": "Bali"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Bali — pending. Photograph by [name].",
+        "ko": "발리 — 사진 대기 중. 촬영 [이름].",
+        "ja": "バリ — 写真準備中。撮影 [氏名]。",
+        "pt": "Bali — fotografia pendente. Por [nome].",
+        "es": "Bali — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "da-nang",
+      "names": {
+        "en": "Da Nang",
+        "ko": "다낭",
+        "ja": "ダナン",
+        "pt": "Da Nang",
+        "es": "Da Nang"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Da Nang — pending. Photograph by [name].",
+        "ko": "다낭 — 사진 대기 중. 촬영 [이름].",
+        "ja": "ダナン — 写真準備中。撮影 [氏名]。",
+        "pt": "Da Nang — fotografia pendente. Por [nome].",
+        "es": "Da Nang — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "mexico-city",
+      "names": {
+        "en": "Mexico City",
+        "ko": "멕시코시티",
+        "ja": "メキシコシティ",
+        "pt": "Cidade do México",
+        "es": "Ciudad de México"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Mexico City — pending. Photograph by [name].",
+        "ko": "멕시코시티 — 사진 대기 중. 촬영 [이름].",
+        "ja": "メキシコシティ — 写真準備中。撮影 [氏名]。",
+        "pt": "Cidade do México — fotografia pendente. Por [nome].",
+        "es": "Ciudad de México — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "medellin",
+      "names": {
+        "en": "Medellín",
+        "ko": "메데인",
+        "ja": "メデジン",
+        "pt": "Medellín",
+        "es": "Medellín"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Medellín — pending. Photograph by [name].",
+        "ko": "메데인 — 사진 대기 중. 촬영 [이름].",
+        "ja": "メデジン — 写真準備中。撮影 [氏名]。",
+        "pt": "Medellín — fotografia pendente. Por [nome].",
+        "es": "Medellín — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "buenos-aires",
+      "names": {
+        "en": "Buenos Aires",
+        "ko": "부에노스아이레스",
+        "ja": "ブエノスアイレス",
+        "pt": "Buenos Aires",
+        "es": "Buenos Aires"
+      },
+      "default_photo_url": null,
+      "photo_caption": {
+        "en": "Buenos Aires — pending. Photograph by [name].",
+        "ko": "부에노스아이레스 — 사진 대기 중. 촬영 [이름].",
+        "ja": "ブエノスアイレス — 写真準備中。撮影 [氏名]。",
+        "pt": "Buenos Aires — fotografia pendente. Por [nome].",
+        "es": "Buenos Aires — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "pending",
+      "license_url": null
+    },
+    {
+      "slug": "tbilisi",
+      "names": {
+        "en": "Tbilisi",
+        "ko": "트빌리시",
+        "ja": "トビリシ",
+        "pt": "Tiblíssi",
+        "es": "Tiflis"
+      },
+      "default_photo_url": "https://images.pexels.com/photos/20252646/pexels-photo-20252646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "photo_caption": {
+        "en": "Tbilisi — pending. Photograph by [name].",
+        "ko": "트빌리시 — 사진 대기 중. 촬영 [이름].",
+        "ja": "トビリシ — 写真準備中。撮影 [氏名]。",
+        "pt": "Tiblíssi — fotografia pendente. Por [nome].",
+        "es": "Tiflis — fotografía pendiente. Por [nombre]."
+      },
+      "photographer": "[pending]",
+      "photo_source": "Pexels",
+      "license_url": null,
+      "photo_credit": "Photo by Виктор Соломоник on Pexels",
+      "photo_credit_url": "https://www.pexels.com/@solomonikvik",
+      "photo_source_url": "https://www.pexels.com/photo/damaged-vintage-residential-building-20252646/"
+    }
+  ]
 }

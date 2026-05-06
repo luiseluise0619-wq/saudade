@@ -112,21 +112,9 @@ button, input, select, .os-search, .data-pill, .data-chip,
 /* ─── 4. 로고 영역 — 동심원 모티프 SAUDADE 워드마크 (텍스트만) ─────────────── */
 
 .brand-stack .aura-logo-mark { display: none !important; }
-.brand-stack::after {
-    content: 'saudade';
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: 28px;
-    letter-spacing: var(--tr-fraunces-h3);
-    color: var(--ink);
-    line-height: 1;
-    display: inline-block;
-    padding: 4px 0;
-}
-@media (max-width: 768px) {
-    .brand-stack::after { font-size: 22px; }
-}
+/* SVG wordmark from saudade-wordmark.js is canonical.
+   The legacy ::after { content: 'saudade' } pseudo-element
+   used to duplicate the wordmark, causing visible overlap. */
 
 /* ─── 5. 본문 헤딩 (h1, h2, h3) — Fraunces 자동 적용 ─────────────────────── */
 

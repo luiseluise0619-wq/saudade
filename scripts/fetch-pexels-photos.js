@@ -33,14 +33,39 @@ const LIC  = path.join(DATA, 'licenses');
 // Default queries cover the cities saudade actively serves. Each query ~3 pix.
 // Edit freely — these are seed tones, not exhaustive.
 const DEFAULT_QUERIES = [
-    { city: 'Lisbon',  q: 'azulejo tile yellow window' },
-    { city: 'Lisbon',  q: 'lisbon tram morning' },
-    { city: 'Seoul',   q: 'hanok wooden door morning' },
-    { city: 'Seoul',   q: 'seoul cafe ceramic teacup' },
-    { city: 'Tokyo',   q: 'kissaten brass kettle wood' },
-    { city: 'Tokyo',   q: 'tokyo rain street umbrella' },
-    { city: 'Tbilisi', q: 'tbilisi balcony old town' },
-    { city: 'Berlin',  q: 'berlin tile cafe morning' }
+    // Iberia
+    { city: 'Lisbon',       q: 'azulejo tile yellow window' },
+    { city: 'Lisbon',       q: 'lisbon tram morning' },
+    { city: 'Porto',        q: 'porto azulejo blue church' },
+    { city: 'Porto',        q: 'porto rooftop douro morning' },
+    { city: 'Madrid',       q: 'madrid plaza cafe quiet' },
+    { city: 'Madrid',       q: 'madrid courtyard balcony' },
+    { city: 'Barcelona',    q: 'barcelona alley gothic morning' },
+    { city: 'Barcelona',    q: 'barcelona modernist tile' },
+    // East Asia
+    { city: 'Tokyo',        q: 'kissaten brass kettle wood' },
+    { city: 'Tokyo',        q: 'tokyo rain street umbrella' },
+    { city: 'Seoul',        q: 'hanok wooden door morning' },
+    { city: 'Seoul',        q: 'seoul cafe ceramic teacup' },
+    // Southeast Asia
+    { city: 'Chiang Mai',   q: 'chiang mai temple courtyard' },
+    { city: 'Chiang Mai',   q: 'chiang mai wooden teak window' },
+    { city: 'Bali',         q: 'bali rice terrace mist' },
+    { city: 'Bali',         q: 'bali bamboo cafe quiet' },
+    { city: 'Da Nang',      q: 'da nang quiet beach morning' },
+    { city: 'Da Nang',      q: 'da nang lantern street old town' },
+    // Latin America
+    { city: 'Mexico City',  q: 'mexico city colonial cafe' },
+    { city: 'Mexico City',  q: 'mexico city courtyard plant' },
+    { city: 'Medellin',     q: 'medellin cafe balcony green' },
+    { city: 'Medellin',     q: 'medellin colonial street quiet' },
+    { city: 'Buenos Aires', q: 'buenos aires bookstore old' },
+    { city: 'Buenos Aires', q: 'buenos aires cafe wooden interior' },
+    // Caucasus + Europe
+    { city: 'Tbilisi',      q: 'tbilisi balcony old town' },
+    { city: 'Tbilisi',      q: 'tbilisi wooden carved facade' },
+    { city: 'Berlin',       q: 'berlin tile cafe morning' },
+    { city: 'Berlin',       q: 'berlin altbau window quiet' }
 ];
 
 function parseArgs(argv) {

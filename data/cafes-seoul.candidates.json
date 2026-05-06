@@ -1,0 +1,1801 @@
+{
+  "generated": "2026-05-06",
+  "source": "editor-research",
+  "note": "Candidate seed list. Names compiled from editor research of well-known Seoul cafés — NOT verified, NOT visited. Some may have closed or moved. Editor clicks each kakao_search_url, confirms it exists with rating ≥ 4.3, then moves chosen entries into data/cafes-seoul.json with lat/lng/two_lines/amenities/visited_at filled in.",
+  "workflow": "click → verify rating + existence → if good, move to cafes-seoul.json with full fields → drop from this file",
+  "total": 133,
+  "cafes": [
+    {
+      "id": "manufact-coffee-roasters-yeonnam-dong",
+      "name": "Manufact Coffee Roasters",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Roasters%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Roasters%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "coffee-libre-yeonnam-yeonnam-dong",
+      "name": "Coffee Libre Yeonnam",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "lowkey-yeonnam-dong",
+      "name": "Lowkey",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "specialty",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Lowkey%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Lowkey%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "aboutee-yeonnam-dong",
+      "name": "Aboutee",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Aboutee%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Aboutee%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-yeonnam-yeonnam-dong",
+      "name": "Café Onion Yeonnam",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "design",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "layered-yeonnam-yeonnam-dong",
+      "name": "Layered Yeonnam",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "design",
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Layered%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "pomerolo-yeonnam-dong",
+      "name": "Pomerolo",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Pomerolo%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Pomerolo%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "yeonnam-bangagan-yeonnam-dong",
+      "name": "Yeonnam Bangagan",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "hanok",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Yeonnam%20Bangagan%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Yeonnam%20Bangagan%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cobalt-box-yeonnam-dong",
+      "name": "Cobalt Box",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cobalt%20Box%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Cobalt%20Box%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "magpie-tiger-yeonnam-yeonnam-dong",
+      "name": "Magpie & Tiger Yeonnam",
+      "neighborhood": "Yeonnam-dong",
+      "tags": [
+        "tea"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Magpie%20%26%20Tiger%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Magpie%20%26%20Tiger%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-seongsu-seongsu-dong",
+      "name": "Café Onion Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "design",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "daelim-changgo-seongsu-dong",
+      "name": "Daelim Changgo",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "design",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Daelim%20Changgo%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Daelim%20Changgo%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mesh-coffee-seongsu-dong",
+      "name": "Mesh Coffee",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mesh%20Coffee%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mesh%20Coffee%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "center-coffee-seongsu-seongsu-dong",
+      "name": "Center Coffee Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Center%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Center%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "blue-bottle-seongsu-seongsu-dong",
+      "name": "Blue Bottle Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "specialty",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "manufact-coffee-seongsu-seongsu-dong",
+      "name": "Manufact Coffee Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "lcdc-seoul-seongsu-dong",
+      "name": "LCDC Seoul",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "design",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=LCDC%20Seoul%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/LCDC%20Seoul%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-sukkara-seongsu-dong",
+      "name": "Café Sukkara",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sukkara%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sukkara%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-halfmile-seongsu-dong",
+      "name": "Café Halfmile",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "indie",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Halfmile%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Halfmile%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "bloomster-seongsu-dong",
+      "name": "Bloomster",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Bloomster%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Bloomster%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "felt-coffee-seongsu-seongsu-dong",
+      "name": "Felt Coffee Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "pierre-herme-seongsu-seongsu-dong",
+      "name": "Pierre Hermé Seongsu",
+      "neighborhood": "Seongsu-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Pierre%20Herm%C3%A9%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Pierre%20Herm%C3%A9%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-anguk-anguk-dong",
+      "name": "Café Onion Anguk",
+      "neighborhood": "Anguk-dong",
+      "tags": [
+        "design",
+        "landmark",
+        "hanok"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Anguk%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Anguk%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "blue-bottle-samcheong-samcheong-dong",
+      "name": "Blue Bottle Samcheong",
+      "neighborhood": "Samcheong-dong",
+      "tags": [
+        "specialty",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mil-toast-samcheong-samcheong-dong",
+      "name": "Mil Toast Samcheong",
+      "neighborhood": "Samcheong-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "layered-bukchon-bukchon",
+      "name": "Layered Bukchon",
+      "neighborhood": "Bukchon",
+      "tags": [
+        "bakery",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Layered%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tea-therapy-bukchon-bukchon",
+      "name": "Tea Therapy Bukchon",
+      "neighborhood": "Bukchon",
+      "tags": [
+        "tea",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tea%20Therapy%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Tea%20Therapy%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cha-masineun-tteul-bukchon",
+      "name": "Cha Masineun Tteul",
+      "neighborhood": "Bukchon",
+      "tags": [
+        "hanok",
+        "tea",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cha%20Masineun%20Tteul%20%EB%B6%81%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Cha%20Masineun%20Tteul%20%EB%B6%81%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "ssamzie-gil-cafe-insa-dong",
+      "name": "Ssamzie-gil Café",
+      "neighborhood": "Insa-dong",
+      "tags": [
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Ssamzie-gil%20Caf%C3%A9%20%EC%9D%B8%EC%82%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Ssamzie-gil%20Caf%C3%A9%20%EC%9D%B8%EC%82%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "coffee-hanyakbang-bukchon-bukchon",
+      "name": "Coffee Hanyakbang Bukchon",
+      "neighborhood": "Bukchon",
+      "tags": [
+        "specialty",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Hanyakbang%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Hanyakbang%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "onion-anguk-garden-anguk-dong",
+      "name": "Onion Anguk Garden",
+      "neighborhood": "Anguk-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Onion%20Anguk%20Garden%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Onion%20Anguk%20Garden%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "deep-blue-lake-anguk-dong",
+      "name": "Deep Blue Lake",
+      "neighborhood": "Anguk-dong",
+      "tags": [
+        "quiet",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Deep%20Blue%20Lake%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Deep%20Blue%20Lake%20%EC%95%88%EA%B5%AD%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "queens-bukchon-bukchon",
+      "name": "Queens Bukchon",
+      "neighborhood": "Bukchon",
+      "tags": [
+        "hanok"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Queens%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Queens%20Bukchon%20%EB%B6%81%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "anthracite-hannam-hannam-dong",
+      "name": "Anthracite Hannam",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "felt-coffee-hannam-hannam-dong",
+      "name": "Felt Coffee Hannam",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mitte-hannam-hannam-dong",
+      "name": "Mitte Hannam",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "bookshop",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mitte%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mitte%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-bora-hannam-hannam-dong",
+      "name": "Café Bora Hannam",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "quiet",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Bora%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Bora%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "camel-coffee-hannam-hannam-dong",
+      "name": "Camel Coffee Hannam",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "indie",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Camel%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Camel%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "pancake-epidemic-hannam-dong",
+      "name": "Pancake Epidemic",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "brunch"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Pancake%20Epidemic%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Pancake%20Epidemic%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mokyeonri-hannam-dong",
+      "name": "Mokyeonri",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mokyeonri%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mokyeonri%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "boontheshop-cafe-hannam-dong",
+      "name": "Boontheshop Café",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Boontheshop%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Boontheshop%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "comfort-hannam-dong",
+      "name": "Comfort",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Comfort%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Comfort%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "d-museum-cafe-hannam-dong",
+      "name": "D Museum Café",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "museum"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=D%20Museum%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/D%20Museum%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "felt-coffee-yongsan-yongsan-gu",
+      "name": "Felt Coffee Yongsan",
+      "neighborhood": "Yongsan-gu",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
+      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "center-coffee-yongsan-yongsan-gu",
+      "name": "Center Coffee Yongsan",
+      "neighborhood": "Yongsan-gu",
+      "tags": [
+        "specialty",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Center%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
+      "naver_search_url": "https://map.naver.com/p/search/Center%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "orot-coffee-yongsan-gu",
+      "name": "Orot Coffee",
+      "neighborhood": "Yongsan-gu",
+      "tags": [
+        "specialty",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Orot%20Coffee%20%EC%9A%A9%EC%82%B0",
+      "naver_search_url": "https://map.naver.com/p/search/Orot%20Coffee%20%EC%9A%A9%EC%82%B0",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "ireaby-coffee-hbc-haebangchon",
+      "name": "Ireaby Coffee HBC",
+      "neighborhood": "Haebangchon",
+      "tags": [
+        "indie",
+        "view"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Ireaby%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Ireaby%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "anthracite-itaewon-itaewon",
+      "name": "Anthracite Itaewon",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "lichen-coffee-hbc-haebangchon",
+      "name": "Lichen Coffee HBC",
+      "neighborhood": "Haebangchon",
+      "tags": [
+        "indie",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Lichen%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Lichen%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-saison-haebangchon",
+      "name": "Café Saison",
+      "neighborhood": "Haebangchon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Saison%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Saison%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "standa-coffee-itaewon",
+      "name": "Standa Coffee",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Standa%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Standa%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "5-brewing-co-yongsan-gu",
+      "name": "5 Brewing Co",
+      "neighborhood": "Yongsan-gu",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=5%20Brewing%20Co%20%EC%9A%A9%EC%82%B0",
+      "naver_search_url": "https://map.naver.com/p/search/5%20Brewing%20Co%20%EC%9A%A9%EC%82%B0",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "phillocoffee-itaewon",
+      "name": "Phillocoffee",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "specialty",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Phillocoffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Phillocoffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-aalia-hongdae",
+      "name": "Café Aalia",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Aalia%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Aalia%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "anthracite-hapjeong-hapjeong-dong",
+      "name": "Anthracite Hapjeong",
+      "neighborhood": "Hapjeong-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-sukkara-hongdae-hongdae",
+      "name": "Cafe Sukkara Hongdae",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Sukkara%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Sukkara%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "coffee-libre-hongdae-hongdae",
+      "name": "Coffee Libre Hongdae",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "magnetic-cafe-hongdae",
+      "name": "Magnetic Café",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "indie",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Magnetic%20Caf%C3%A9%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Magnetic%20Caf%C3%A9%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-aboutee-hongdae-hongdae",
+      "name": "Cafe Aboutee Hongdae",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "indie",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Aboutee%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Aboutee%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "buveca-hongdae",
+      "name": "Buveca",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Buveca%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Buveca%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-comma-hongdae-hongdae",
+      "name": "Café Comma Hongdae",
+      "neighborhood": "Hongdae",
+      "tags": [
+        "bookshop"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Comma%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Comma%20Hongdae%20%ED%99%8D%EB%8C%80",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "aida-hapjeong-hapjeong-dong",
+      "name": "Aida Hapjeong",
+      "neighborhood": "Hapjeong-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Aida%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Aida%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "anthracite-seogyo-seogyo-dong",
+      "name": "Anthracite Seogyo",
+      "neighborhood": "Seogyo-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Seogyo%20%EC%84%9C%EA%B5%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Seogyo%20%EC%84%9C%EA%B5%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-knotted-apgujeong-apgujeong",
+      "name": "Café Knotted Apgujeong",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "bakery",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "blue-bottle-apgujeong-apgujeong",
+      "name": "Blue Bottle Apgujeong",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "maison-hermes-cafe-madang-cheongdam",
+      "name": "Maison Hermès Café Madang",
+      "neighborhood": "Cheongdam",
+      "tags": [
+        "design",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Maison%20Herm%C3%A8s%20Caf%C3%A9%20Madang%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Maison%20Herm%C3%A8s%20Caf%C3%A9%20Madang%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-10-corso-como-cheongdam",
+      "name": "Café 10 Corso Como",
+      "neighborhood": "Cheongdam",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%2010%20Corso%20Como%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%2010%20Corso%20Como%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tongsangmyeong-apgujeong",
+      "name": "Tongsangmyeong",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tongsangmyeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Tongsangmyeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "ddorang-apgujeong",
+      "name": "Ddorang",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Ddorang%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Ddorang%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "layered-apgujeong-apgujeong",
+      "name": "Layered Apgujeong",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Layered%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mecenatpolis-cafe-cheongdam",
+      "name": "Mecenatpolis Café",
+      "neighborhood": "Cheongdam",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mecenatpolis%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mecenatpolis%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-sannolae-apgujeong",
+      "name": "Café Sannolae",
+      "neighborhood": "Apgujeong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sannolae%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sannolae%20%EC%95%95%EA%B5%AC%EC%A0%95",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "hyundai-card-music-library-cafe-cheongdam",
+      "name": "Hyundai Card Music Library Café",
+      "neighborhood": "Cheongdam",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Hyundai%20Card%20Music%20Library%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Hyundai%20Card%20Music%20Library%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-knotted-mangwon-mangwon-dong",
+      "name": "Café Knotted Mangwon",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "yard-coffee-mangwon-mangwon-dong",
+      "name": "Yard Coffee Mangwon",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "quiet",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Yard%20Coffee%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Yard%20Coffee%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-halmoni-mangwon-dong",
+      "name": "Cafe Halmoni",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Halmoni%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Halmoni%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mangwon-sound-mangwon-dong",
+      "name": "Mangwon Sound",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "music",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mangwon%20Sound%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Mangwon%20Sound%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-mangwon-mangwon-dong",
+      "name": "Café Onion Mangwon",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sungtan-coffee-mangwon-dong",
+      "name": "Sungtan Coffee",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sungtan%20Coffee%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Sungtan%20Coffee%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-mongmonghan-pago-mangwon-dong",
+      "name": "Café Mongmonghan Pago",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Mongmonghan%20Pago%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Mongmonghan%20Pago%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "modern-time-mangwon-dong",
+      "name": "Modern Time",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "indie",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Modern%20Time%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Modern%20Time%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "patoer-mangwon-dong",
+      "name": "Patoer",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Patoer%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Patoer%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-yeolmae-mangwon-dong",
+      "name": "Café Yeolmae",
+      "neighborhood": "Mangwon-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Yeolmae%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Yeolmae%20%EB%A7%9D%EC%9B%90%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "coffee-libre-yeonhui-yeonhui-dong",
+      "name": "Coffee Libre Yeonhui",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "specialty",
+        "roastery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-knotted-yeonhui-yeonhui-dong",
+      "name": "Café Knotted Yeonhui",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "manufact-coffee-yeonhui-yeonhui-dong",
+      "name": "Manufact Coffee Yeonhui",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sajik-cafe-yeonhui-dong",
+      "name": "Sajik Café",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "quiet",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sajik%20Caf%C3%A9%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Sajik%20Caf%C3%A9%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-nopyeon-yeonhui-dong",
+      "name": "Café Nopyeon",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Nopyeon%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Nopyeon%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "polin-coffee-yeonhui-dong",
+      "name": "Polin Coffee",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "specialty",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Polin%20Coffee%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Polin%20Coffee%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "bloomster-yeonhui-yeonhui-dong",
+      "name": "Bloomster Yeonhui",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Bloomster%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Bloomster%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "hak-rim-dabang-yeonhui-yeonhui-dong",
+      "name": "Hak-rim Dabang Yeonhui",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Hak-rim%20Dabang%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Hak-rim%20Dabang%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-sunny-yeonhui-dong",
+      "name": "Cafe Sunny",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Sunny%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Sunny%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "atelier-hermitage-yeonhui-dong",
+      "name": "Atelier Hermitage",
+      "neighborhood": "Yeonhui-dong",
+      "tags": [
+        "quiet",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Atelier%20Hermitage%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Atelier%20Hermitage%20%EC%97%B0%ED%9D%AC%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mk2-cafe-seochon",
+      "name": "Mk2 Café",
+      "neighborhood": "Seochon",
+      "tags": [
+        "design",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mk2%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Mk2%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tongin-cafe-seochon",
+      "name": "Tongin Café",
+      "neighborhood": "Seochon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tongin%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Tongin%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "layered-seochon-seochon",
+      "name": "Layered Seochon",
+      "neighborhood": "Seochon",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Layered%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sajikdong-cafe-seochon",
+      "name": "Sajikdong Café",
+      "neighborhood": "Seochon",
+      "tags": [
+        "indie",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sajikdong%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Sajikdong%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-seochon-seochon",
+      "name": "Café Onion Seochon",
+      "neighborhood": "Seochon",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mok-keun-da-cafe-seochon",
+      "name": "Mok-keun-da Café",
+      "neighborhood": "Seochon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mok-keun-da%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Mok-keun-da%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "seochon-sarang-cafe-seochon",
+      "name": "Seochon Sarang Café",
+      "neighborhood": "Seochon",
+      "tags": [
+        "hanok",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Seochon%20Sarang%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Seochon%20Sarang%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mil-toast-seochon-seochon",
+      "name": "Mil Toast Seochon",
+      "neighborhood": "Seochon",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "boan-yeogwan-seochon",
+      "name": "Boan Yeogwan",
+      "neighborhood": "Seochon",
+      "tags": [
+        "art",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Boan%20Yeogwan%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Boan%20Yeogwan%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-magpie-seochon-seochon",
+      "name": "Café Magpie Seochon",
+      "neighborhood": "Seochon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Magpie%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Magpie%20Seochon%20%EC%84%9C%EC%B4%8C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "coffee-hanyakbang-euljiro-3-ga",
+      "name": "Coffee Hanyakbang",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "specialty",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Hanyakbang%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Hanyakbang%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sewoon-coffee-euljiro-3-ga",
+      "name": "Sewoon Coffee",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "indie",
+        "specialty"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sewoon%20Coffee%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Sewoon%20Coffee%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-horangi-euljiro-3-ga",
+      "name": "Cafe Horangi",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Horangi%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Horangi%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "mil-toast-euljiro-euljiro-3-ga",
+      "name": "Mil Toast Euljiro",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cheonghak-dong-cafe-euljiro-3-ga",
+      "name": "Cheonghak-dong Café",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "hanok"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cheonghak-dong%20Caf%C3%A9%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Cheonghak-dong%20Caf%C3%A9%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-sik-mul-euljiro-3-ga",
+      "name": "Café Sik-mul",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "indie",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sik-mul%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sik-mul%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "layered-euljiro-euljiro-3-ga",
+      "name": "Layered Euljiro",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Layered%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "hosu-euljiro-3-ga",
+      "name": "Hosu",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Hosu%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Hosu%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sentimental-euljiro-3-ga",
+      "name": "Sentimental",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "indie",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sentimental%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Sentimental%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-onion-euljiro-euljiro-3-ga",
+      "name": "Café Onion Euljiro",
+      "neighborhood": "Euljiro 3-ga",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "madang-flower-cafe-ikseon-dong",
+      "name": "Madang Flower Café",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Madang%20Flower%20Caf%C3%A9%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Madang%20Flower%20Caf%C3%A9%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cheong-su-dang-ikseon-dong",
+      "name": "Cheong Su Dang",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "tea"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Cheong%20Su%20Dang%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Cheong%20Su%20Dang%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sik-mul-ikseon-dong",
+      "name": "Sik Mul",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sik%20Mul%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Sik%20Mul%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tteul-cafe-ikseon-dong",
+      "name": "Tteul Café",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tteul%20Caf%C3%A9%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Tteul%20Caf%C3%A9%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "ikseon-mil-toast-ikseon-dong",
+      "name": "Ikseon Mil Toast",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Ikseon%20Mil%20Toast%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Ikseon%20Mil%20Toast%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "onion-ikseon-ikseon-dong",
+      "name": "Onion Ikseon",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "design"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Onion%20Ikseon%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Onion%20Ikseon%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-layla-ikseon-dong",
+      "name": "Café Layla",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Layla%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Layla%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tteok-cafe-joseon-sigdang-ikseon-dong",
+      "name": "Tteok Café Joseon Sigdang",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "tea"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tteok%20Caf%C3%A9%20Joseon%20Sigdang%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Tteok%20Caf%C3%A9%20Joseon%20Sigdang%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "pavilion-1939-ikseon-dong",
+      "name": "Pavilion 1939",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "hanok",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Pavilion%201939%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Pavilion%201939%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "cafe-wesley-ikseon-dong",
+      "name": "Café Wesley",
+      "neighborhood": "Ikseon-dong",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Wesley%20Ikseon-dong",
+      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Wesley%20Ikseon-dong",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "5-extracts-itaewon-itaewon",
+      "name": "5 Extracts Itaewon",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "specialty",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=5%20Extracts%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/5%20Extracts%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "maman-gateaux-itaewon",
+      "name": "Maman Gateaux",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Maman%20Gateaux%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Maman%20Gateaux%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "tartine-bakery-itaewon-itaewon",
+      "name": "Tartine Bakery Itaewon",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Tartine%20Bakery%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Tartine%20Bakery%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "passion-5-hannam-dong",
+      "name": "Passion 5",
+      "neighborhood": "Hannam-dong",
+      "tags": [
+        "bakery",
+        "landmark"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Passion%205%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "naver_search_url": "https://map.naver.com/p/search/Passion%205%20%ED%95%9C%EB%82%A8%EB%8F%99",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sandsoul-itaewon",
+      "name": "Sandsoul",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "specialty",
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sandsoul%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Sandsoul%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "aside-itaewon",
+      "name": "Aside",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Aside%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Aside%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "sweetbird-itaewon",
+      "name": "Sweetbird",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "bakery"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Sweetbird%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Sweetbird%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "anchor-coffee-itaewon",
+      "name": "Anchor Coffee",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "specialty",
+        "quiet"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Anchor%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Anchor%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "hooga-itaewon",
+      "name": "Hooga",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "indie"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Hooga%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Hooga%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    },
+    {
+      "id": "wave-on-coffee-itaewon-itaewon",
+      "name": "Wave on Coffee Itaewon",
+      "neighborhood": "Itaewon",
+      "tags": [
+        "view"
+      ],
+      "kakao_search_url": "https://map.kakao.com/?q=Wave%20on%20Coffee%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "naver_search_url": "https://map.naver.com/p/search/Wave%20on%20Coffee%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
+      "status": "candidate",
+      "verified": false,
+      "visited_at": null
+    }
+  ]
+}

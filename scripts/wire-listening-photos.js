@@ -41,13 +41,12 @@ for (const p of (photos.photos || [])) {
 
 let updated = 0;
 let skipped = 0;
+// Normalise NFD + strip diacritics so 'Medellín' (listening.json) matches
+// 'Medellin' (Pexels query / response).
+const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 for (const c of (listen.cities || [])) {
-    // listening.json city slugs are lowercase-hyphenated; photos.json city is
-    // the English name as Pexels saw it. Normalise on lowercase for the match.
     const enName = c.names?.en || c.slug || '';
-    const match = Object.values(firstByCity).find(p =>
-        p.city.toLowerCase() === enName.toLowerCase()
-    );
+    const match = Object.values(firstByCity).find(p => norm(p.city) === norm(enName));
     if (!match) { skipped++; continue; }
     c.default_photo_url   = match.src;          // Pexels CDN URL (durable)
     c.photo_credit        = `Photo by ${match.photographer} on Pexels`;
