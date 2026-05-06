@@ -38,9 +38,9 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with: { node-version: "20" }
 
       - name: Fetch Pexels photos
@@ -96,7 +96,7 @@ jobs:
           exit 0
 
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "content: fetched listening-room batch (${{ inputs.target }})"
           title: "content: listening-room batch — ${{ inputs.target }}"
