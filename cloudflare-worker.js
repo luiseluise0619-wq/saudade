@@ -250,71 +250,111 @@ async function sha(s) {
 //
 // When a feed dies, leave it commented out for a quarter so we
 // remember it tried; then prune.
+// RSS sources — quiet, magazine-tone. Curated for the "small-local
+// pulse" the magazine wants:
+//   1. Government / city-hall press (clearly public-domain in KR/JP/PT)
+//   2. District-level (구청 / 区 / freguesia / distrito) — neighborhood
+//      news that doesn't appear in mainstream press. The magazine's
+//      특색.
+//   3. Public museums + libraries (issue press releases as RSS)
+//   4. Cultural foundations + arts councils
+//   5. Syndication-friendly: BBC, Guardian, ArchDaily, Dezeen,
+//      Atlas Obscura, Sprudge, Standart, ArtNews
+//   6. Indie Substack-type feeds focused on each audience's cities
+//
+// Excluded on purpose (commercial press, EU Press Publishers Right
+// concerns, "republish forbidden" terms):
+//   El País, La Nación, Clarín, Tagesspiegel, NHK, Público, Time Out
+//
+// fetchT timeouts at 12s + per-feed try/catch in pipelineGather.
+// A 404 / DNS-changed feed just contributes zero items that day.
+// After the first week of cron runs, prune whatever D1 raw_feeds
+// shows zero entries from.
 const RSS_PIPELINE_FEEDS = [
-    // ─── EN · international quiet ────────────────────────────────
-    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml',           city: null,           section: 'world' },
-    { url: 'https://www.theguardian.com/cities/rss',                       city: null,           section: 'urbanism' },
-    { url: 'https://www.theguardian.com/artanddesign/architecture/rss',    city: null,           section: 'architecture' },
-    { url: 'https://feeds.npr.org/1002/rss.xml',                           city: null,           section: 'world' },
-    { url: 'https://www.archdaily.com/feed',                               city: null,           section: 'architecture' },
-    { url: 'https://www.dezeen.com/feed/',                                 city: null,           section: 'design' },
-    { url: 'https://www.atlasobscura.com/feeds/latest',                    city: null,           section: 'travel' },
+    // ─── KO · 서울 시청 + 자치구 (보도자료, 공공저작물) ─────────
+    { url: 'https://news.seoul.go.kr/rss/news_all.xml',                       city: 'Seoul',  section: 'cityhall' },
+    { url: 'https://www.jongno.go.kr/portal/main/rss.do',                     city: 'Seoul',  section: 'district',     hint: '종로구' },
+    { url: 'https://www.mapo.go.kr/site/main/rss/news',                       city: 'Seoul',  section: 'district',     hint: '마포구' },
+    { url: 'https://www.yongsan.go.kr/portal/main/rss.do',                    city: 'Seoul',  section: 'district',     hint: '용산구' },
+    { url: 'https://www.gangnam.go.kr/site/portal/rss.do',                    city: 'Seoul',  section: 'district',     hint: '강남구' },
+    { url: 'https://www.seongdong.go.kr/site/main/rss/news',                  city: 'Seoul',  section: 'district',     hint: '성동구' },
 
-    // ─── EN · Lisbon / Porto international press ─────────────────
-    { url: 'https://www.theportugalnews.com/rss',                          city: 'Lisbon',       section: 'cityhall' },
-    { url: 'https://www.theportugalnews.com/rss',                          city: 'Porto',        section: 'cityhall' },
+    // ─── KO · 부산 / 제주 + 한국 정부 ────────────────────────────
+    { url: 'https://www.busan.go.kr/RssService.do?menuCd=DOM_000000000000',   city: 'Busan',  section: 'cityhall' },
+    { url: 'https://www.jeju.go.kr/rss/news.xml',                             city: 'Jeju',   section: 'cityhall' },
+    { url: 'https://www.korea.kr/rss/policy.xml',                             city: null,     section: 'policy' },
 
-    // ─── PT · Lisboa / Porto / Sintra ────────────────────────────
-    { url: 'https://www.cidadedelisboa.pt/rss',                            city: 'Lisbon',       section: 'cityhall' },
-    { url: 'https://www.publico.pt/rss',                                   city: null,           section: 'world' },
-    { url: 'https://www.publico.pt/rss/cultura',                           city: 'Lisbon',       section: 'culture' },
-    { url: 'https://www.publico.pt/rss/local',                             city: 'Lisbon',       section: 'cityhall' },
-    { url: 'https://www.timeout.pt/lisboa/pt/rss',                         city: 'Lisbon',       section: 'culture' },
-    { url: 'https://www.timeout.pt/porto/pt/rss',                          city: 'Porto',        section: 'culture' },
-    { url: 'https://www.cm-porto.pt/noticias/rss',                         city: 'Porto',        section: 'cityhall' },
+    // ─── KO · 한국 박물관·문화재단 (공공) ───────────────────────
+    { url: 'https://www.cha.go.kr/rss/news.xml',                              city: 'Seoul',  section: 'heritage',     hint: '문화재청' },
+    { url: 'https://www.museum.go.kr/site/main/rss/N0006',                    city: 'Seoul',  section: 'museum',       hint: '국립중앙박물관' },
+    { url: 'https://www.hangeul.go.kr/rss/news.xml',                          city: 'Seoul',  section: 'museum',       hint: '국립한글박물관' },
+    { url: 'https://sema.seoul.go.kr/rss/news.xml',                           city: 'Seoul',  section: 'museum',       hint: '서울시립미술관 SeMA' },
+    { url: 'https://www.sfac.or.kr/rss/news_all.xml',                         city: 'Seoul',  section: 'culture',      hint: '서울문화재단' },
+    { url: 'https://lib.seoul.go.kr/rss/news.xml',                            city: 'Seoul',  section: 'library',      hint: '서울도서관' },
 
-    // ─── ES · Madrid / Barcelona / Buenos Aires ──────────────────
-    { url: 'https://www.elpais.com/rss/cultura/portada.xml',               city: null,           section: 'culture' },
-    { url: 'https://www.elpais.com/rss/ccaa/madrid_portada.xml',           city: 'Madrid',       section: 'cityhall' },
-    { url: 'https://www.elpais.com/rss/ccaa/catalunya_portada.xml',        city: 'Barcelona',    section: 'cityhall' },
-    { url: 'https://www.timeout.es/madrid/es/rss',                         city: 'Madrid',       section: 'culture' },
-    { url: 'https://www.timeout.es/barcelona/es/rss',                      city: 'Barcelona',    section: 'culture' },
-    { url: 'https://www.lanacion.com.ar/cultura/rss',                      city: 'Buenos Aires', section: 'culture' },
-    { url: 'https://www.clarin.com/rss/cultura/',                          city: 'Buenos Aires', section: 'culture' },
+    // ─── JA · 東京 + 区 (区 = 자치구, 작은 로컬) ─────────────────
+    { url: 'https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/rss.xml',    city: 'Tokyo',  section: 'cityhall' },
+    { url: 'https://www.city.bunkyo.lg.jp/rss/news.xml',                      city: 'Tokyo',  section: 'district',     hint: '文京区' },
+    { url: 'https://www.city.taito.lg.jp/rss/oshirase.xml',                   city: 'Tokyo',  section: 'district',     hint: '台東区 (蔵前 포함)' },
+    { url: 'https://www.city.shibuya.tokyo.jp/rss/news.xml',                  city: 'Tokyo',  section: 'district',     hint: '渋谷区' },
+    { url: 'https://www.city.minato.tokyo.jp/rss/news.xml',                   city: 'Tokyo',  section: 'district',     hint: '港区' },
 
-    // ─── KO · 서울 / 부산 / 제주 (한국 보도자료) ─────────────────
-    { url: 'https://www.korea.kr/rss/policy.xml',                          city: null,           section: 'cityhall' },
-    { url: 'https://news.seoul.go.kr/rss/news_all.xml',                    city: 'Seoul',        section: 'cityhall' },
-    { url: 'https://www.busan.go.kr/RssService.do?menuCd=DOM_000000000000', city: 'Busan',       section: 'cityhall' },
-    { url: 'https://www.cha.go.kr/rss/news.xml',                           city: 'Seoul',        section: 'heritage' },
-    { url: 'https://www.museum.go.kr/site/main/rss/N0006',                 city: 'Seoul',        section: 'museum' },
-    { url: 'https://www.sfac.or.kr/rss/news_all.xml',                      city: 'Seoul',        section: 'culture' },
-    { url: 'https://www.jeju.go.kr/rss/news.xml',                          city: 'Jeju',         section: 'cityhall' },
+    // ─── JA · 大阪 / 京都 ──────────────────────────────────────
+    { url: 'https://www.city.osaka.lg.jp/rss/news.xml',                       city: 'Osaka',  section: 'cityhall' },
+    { url: 'https://www.city.kyoto.lg.jp/rss/news.xml',                       city: 'Kyoto',  section: 'cityhall' },
 
-    // ─── JA · 東京 / 大阪 / 京都 ─────────────────────────────────
-    { url: 'https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/rss.xml', city: 'Tokyo',        section: 'cityhall' },
-    { url: 'https://www.tokyoartbeat.com/feed/',                           city: 'Tokyo',        section: 'art' },
-    { url: 'https://www.nact.jp/rss/index.xml',                            city: 'Tokyo',        section: 'museum' },
-    { url: 'https://www.city.osaka.lg.jp/rss/news.xml',                    city: 'Osaka',        section: 'cityhall' },
-    { url: 'https://www.city.kyoto.lg.jp/rss/news.xml',                    city: 'Kyoto',        section: 'cityhall' },
-    { url: 'https://www3.nhk.or.jp/rss/news/cat0.xml',                     city: null,           section: 'world' },
+    // ─── JA · 美術館 + 文化財 (공공) ─────────────────────────────
+    { url: 'https://www.tokyoartbeat.com/feed/',                              city: 'Tokyo',  section: 'art' },
+    { url: 'https://www.nact.jp/rss/index.xml',                               city: 'Tokyo',  section: 'museum',       hint: '国立新美術館' },
+    { url: 'https://www.bunka.go.jp/rss/news.xml',                            city: null,     section: 'culture',      hint: '文化庁' },
+    { url: 'https://www.tnm.jp/rss/news.xml',                                 city: 'Tokyo',  section: 'museum',       hint: '東京国立博物館' },
 
-    // ─── DE · Berlin ─────────────────────────────────────────────
-    { url: 'https://www.berlin.de/rss/aktuelles.xml',                      city: 'Berlin',       section: 'cityhall' },
-    { url: 'https://www.tagesspiegel.de/contentexport/feed/kultur',        city: 'Berlin',       section: 'culture' },
+    // ─── PT · Câmaras + Juntas de Freguesia (작은 로컬) ─────────
+    { url: 'https://www.cidadedelisboa.pt/rss',                               city: 'Lisbon', section: 'cityhall' },
+    { url: 'https://www.cm-porto.pt/noticias/rss',                            city: 'Porto',  section: 'cityhall' },
+    { url: 'https://www.cm-sintra.pt/rss',                                    city: 'Sintra', section: 'cityhall' },
+    { url: 'https://www.jf-smariamaior.pt/rss',                               city: 'Lisbon', section: 'parish',       hint: 'JF Santa Maria Maior (Alfama·Mouraria)' },
+    { url: 'https://www.jf-misericordia.pt/rss',                              city: 'Lisbon', section: 'parish',       hint: 'JF Misericórdia (Bairro Alto)' },
+    // PT 공공 박물관·재단
+    { url: 'https://www.maat.pt/pt/rss',                                      city: 'Lisbon', section: 'museum',       hint: 'MAAT' },
+    { url: 'https://gulbenkian.pt/rss',                                       city: 'Lisbon', section: 'culture',      hint: 'Calouste Gulbenkian' },
+    { url: 'https://www.museudooriente.pt/rss',                               city: 'Lisbon', section: 'museum',       hint: 'Museu do Oriente' },
 
-    // ─── International museums ── add weight to "quiet" pool ─────
-    { url: 'https://www.tate.org.uk/rss/whats-on',                         city: 'London',       section: 'museum' },
-    { url: 'https://www.moma.org/rss/news/',                               city: null,           section: 'museum' },
-    { url: 'https://www.metmuseum.org/rss',                                city: null,           section: 'museum' },
+    // ─── ES · Ayuntamientos + barrios + culturas (공공) ─────────
+    { url: 'https://www.madrid.es/rss/Satellite?c=Page&pagename=Ayuntamiento%2FPage%2FAYUN_pubRss&cid=1142647977859',
+                                                                              city: 'Madrid', section: 'cityhall' },
+    { url: 'https://www.barcelona.cat/rss/noticies-mes-recents',              city: 'Barcelona', section: 'cityhall' },
+    { url: 'https://www.museothyssen.org/rss/news',                           city: 'Madrid', section: 'museum',       hint: 'Museo Thyssen' },
+    { url: 'https://www.museoreinasofia.es/rss/news',                         city: 'Madrid', section: 'museum',       hint: 'Reina Sofía' },
+    { url: 'https://www.macba.cat/rss/noticies',                              city: 'Barcelona', section: 'museum',     hint: 'MACBA' },
+    { url: 'https://www.buenosaires.gob.ar/rss/noticias',                     city: 'Buenos Aires', section: 'cityhall' },
+    { url: 'https://www.malba.org.ar/rss/news',                               city: 'Buenos Aires', section: 'museum',  hint: 'MALBA' },
 
-    // ─── Slow food / coffee culture ──────────────────────────────
-    { url: 'https://sprudge.com/feed',                                     city: null,           section: 'coffee' },
-    { url: 'https://www.standartmag.com/feed',                             city: null,           section: 'coffee' },
+    // ─── DE · Berlin (시청 + 작은 박물관) ────────────────────────
+    { url: 'https://www.berlin.de/rss/aktuelles.xml',                         city: 'Berlin', section: 'cityhall' },
+    { url: 'https://www.smb.museum/rss/news.xml',                             city: 'Berlin', section: 'museum',       hint: 'Staatliche Museen zu Berlin' },
+    { url: 'https://www.hkw.de/rss/news_de.xml',                              city: 'Berlin', section: 'culture',      hint: 'Haus der Kulturen der Welt' },
 
-    // ─── SE Asia (Chiang Mai / Bali / Da Nang) ── thinner; OK ────
-    { url: 'https://www.bangkokpost.com/rss/data/topstories.xml',          city: null,           section: 'world' },
-    { url: 'https://www.thaipbs.or.th/rss/news.xml',                       city: 'Chiang Mai',   section: 'cityhall' }
+    // ─── EN · syndication-friendly (큰 거지만 RSS 약관 OK) ──────
+    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml',              city: null,     section: 'world' },
+    { url: 'https://www.theguardian.com/cities/rss',                          city: null,     section: 'urbanism' },
+    { url: 'https://www.theguardian.com/artanddesign/architecture/rss',      city: null,     section: 'architecture' },
+    { url: 'https://feeds.npr.org/1002/rss.xml',                              city: null,     section: 'world' },
+    { url: 'https://www.archdaily.com/feed',                                  city: null,     section: 'architecture' },
+    { url: 'https://www.dezeen.com/feed/',                                    city: null,     section: 'design' },
+    { url: 'https://www.atlasobscura.com/feeds/latest',                       city: null,     section: 'travel' },
+
+    // ─── EN · 영문 박물관 (보도용 RSS) ──────────────────────────
+    { url: 'https://www.tate.org.uk/rss/whats-on',                            city: 'London', section: 'museum' },
+    { url: 'https://www.moma.org/rss/news/',                                  city: null,     section: 'museum' },
+    { url: 'https://www.metmuseum.org/rss',                                   city: null,     section: 'museum' },
+    { url: 'https://www.vam.ac.uk/blog/feed',                                 city: 'London', section: 'museum',       hint: 'V&A Blog' },
+    { url: 'https://www.brooklynmuseum.org/rss',                              city: null,     section: 'museum' },
+
+    // ─── Slow food / coffee culture (indie magazines) ───────────
+    { url: 'https://sprudge.com/feed',                                        city: null,     section: 'coffee' },
+    { url: 'https://www.standartmag.com/feed',                                city: null,     section: 'coffee' },
+    { url: 'https://perfectdailygrind.com/feed/',                             city: null,     section: 'coffee' }
 ];
 const PIPELINE_CITIES = [
     // EN
