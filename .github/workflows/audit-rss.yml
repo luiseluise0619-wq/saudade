@@ -1,0 +1,35 @@
+name: Audit RSS feed liveness
+
+# Run from a GitHub-hosted runner so outbound fetches aren't sandbox-blocked.
+# Pulls the URL list straight from cloudflare-worker.js, hits each one, and
+# writes a per-feed alive/dead table to the workflow run summary.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Once a week, Sunday 03:00 UTC. Output stays in the run summary —
+    # no PR is opened. Editor checks the summary and prunes manually.
+    - cron: '0 3 * * 0'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "20" }
+
+      - name: Audit feeds
+        run: |
+          node scripts/audit-rss.js --markdown >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save JSON artifact
+        run: node scripts/audit-rss.js --json > rss-audit.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rss-audit
+          path: rss-audit.json
+          retention-days: 30
