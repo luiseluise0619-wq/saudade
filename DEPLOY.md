@@ -94,7 +94,7 @@ Cloudflare Dashboard → Workers & Pages → `saudade` → Settings → Variable
 | 이름 | 용도 | 필수 |
 |---|---|---|
 | `EDITOR_TOKEN` | `/admin/*` 인증 | 필수 |
-| `GEMINI_KEY` | AI rewrite/translate | 필수 (cron Write 단계) |
+| `GEMINI_KEY` | AI rewrite (EN cron Write + KO/JA/PT/ES via GitHub Actions) | 필수 |
 | `PEXELS_KEY` | Cover videos | 옵션 (이미 있으면 OK) |
 | `COVERR_KEY` | Cover videos | 옵션 |
 | `RESEND_KEY` | Magic Link 이메일 | 옵션 (없으면 inline 모드 폴백) |
@@ -119,12 +119,14 @@ wrangler secret put GEMINI_KEY
 wrangler deploy
 ```
 
-→ `wrangler.toml` 의 D1 binding + 5 cron triggers 활성화. 현재 cron:
+→ `wrangler.toml` 의 D1 binding + 5 cron triggers 활성화. 현재 cron (모두 EN 에디션 전용):
 - `0 15 * * *` — 00:00 KST Gather (RSS 수집)
 - `0 17 * * *` — 02:00 KST Sort + Score (도시 분류 + quietness 1-10)
 - `0 19 * * *` — 04:00 KST Write (도시 단위 Gemini 재작성)
-- `0 20 * * *` — 05:00 KST Translate (4 별쇄)
+- `0 20 * * *` — 05:00 KST **(decommissioned in v659 — was Translate)** 빈 슬롯, `{skipped:'decommissioned_v659'}` 반환
 - `0 21 * * *` — 06:00 KST File (published) + 월요일이면 weeklyStats 자동
+
+KO/JA/PT/ES 는 GitHub Actions `.github/workflows/refresh-dispatches.yml` 가 매일 06:00 KST 별도로 채움. 워크플로우 첫 활성화는 issue #33 참조.
 
 확인:
 ```powershell
