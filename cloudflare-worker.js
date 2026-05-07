@@ -354,7 +354,84 @@ const RSS_PIPELINE_FEEDS = [
     // ─── Slow food / coffee culture (indie magazines) ───────────
     { url: 'https://sprudge.com/feed',                                        city: null,     section: 'coffee' },
     { url: 'https://www.standartmag.com/feed',                                city: null,     section: 'coffee' },
-    { url: 'https://perfectdailygrind.com/feed/',                             city: null,     section: 'coffee' }
+    { url: 'https://perfectdailygrind.com/feed/',                             city: null,     section: 'coffee' },
+
+    // ═══ small-local · expansion (non-KO) ════════════════════════
+    // 한국 자치구만 작은 로컬 가져오면 KO 에디션만 짙어지니까,
+    // 다른 4개 audience 의 동급 단위 (区/freguesia/distrito/Bezirk/
+    // comuna)에서도 같은 결의 작은 보도자료를 끌어온다.
+
+    // ─── JP · 더 많은 区 (Tokyo / Osaka / Kyoto) ─────────────────
+    { url: 'https://www.city.chiyoda.lg.jp/rss/news.xml',                     city: 'Tokyo',  section: 'district',     hint: '千代田区' },
+    { url: 'https://www.city.shinjuku.lg.jp/rss/news.xml',                    city: 'Tokyo',  section: 'district',     hint: '新宿区' },
+    { url: 'https://www.city.chuo.lg.jp/rss/news.xml',                        city: 'Tokyo',  section: 'district',     hint: '中央区' },
+    { url: 'https://www.city.koto.lg.jp/rss/news.xml',                        city: 'Tokyo',  section: 'district',     hint: '江東区 (清澄白河)' },
+    { url: 'https://www.city.setagaya.lg.jp/rss/news.xml',                    city: 'Tokyo',  section: 'district',     hint: '世田谷区' },
+    { url: 'https://www.city.suginami.tokyo.jp/rss/news.xml',                 city: 'Tokyo',  section: 'district',     hint: '杉並区' },
+    { url: 'https://www.city.osaka-chuo.lg.jp/rss/news.xml',                  city: 'Osaka',  section: 'district',     hint: '中央区 (心斎橋)' },
+    { url: 'https://www.city.osaka-kita.lg.jp/rss/news.xml',                  city: 'Osaka',  section: 'district',     hint: '北区 (梅田)' },
+    { url: 'https://www.city.kyoto.lg.jp/nakagyo/rss/news.xml',               city: 'Kyoto',  section: 'district',     hint: '中京区' },
+    { url: 'https://www.city.kyoto.lg.jp/sakyo/rss/news.xml',                 city: 'Kyoto',  section: 'district',     hint: '左京区 (銀閣寺·哲学の道)' },
+
+    // ─── JP · 작은 미술관·디자인 센터 ────────────────────────────
+    { url: 'https://www.2121designsight.jp/feed/',                            city: 'Tokyo',  section: 'design',       hint: '21_21 DESIGN SIGHT' },
+    { url: 'https://www.mori.art.museum/jp/rss.xml',                          city: 'Tokyo',  section: 'museum',       hint: 'Mori Art Museum' },
+    { url: 'https://www.ntticc.or.jp/rss/news_ja.xml',                        city: 'Tokyo',  section: 'museum',       hint: 'ICC (NTT InterCommunication Center)' },
+
+    // ─── PT · Lisboa freguesias 추가 + Porto freguesias ─────────
+    { url: 'https://www.jf-belem.pt/rss',                                     city: 'Lisbon', section: 'parish',       hint: 'JF Belém' },
+    { url: 'https://www.jf-saovicente.pt/rss',                                city: 'Lisbon', section: 'parish',       hint: 'JF São Vicente' },
+    { url: 'https://www.jf-estrela.pt/rss',                                   city: 'Lisbon', section: 'parish',       hint: 'JF Estrela' },
+    { url: 'https://www.jf-areeiro.pt/rss',                                   city: 'Lisbon', section: 'parish',       hint: 'JF Areeiro' },
+    { url: 'https://www.jf-cedofeita.pt/rss',                                 city: 'Porto',  section: 'parish',       hint: 'JF Cedofeita (Porto)' },
+    { url: 'https://www.jf-bonfim.pt/rss',                                    city: 'Porto',  section: 'parish',       hint: 'JF Bonfim (Porto)' },
+
+    // ─── PT · 작은 박물관·문화 ──────────────────────────────────
+    { url: 'https://www.cinemateca.pt/rss',                                   city: 'Lisbon', section: 'culture',      hint: 'Cinemateca Portuguesa' },
+    { url: 'https://www.museudearteantiga.pt/rss',                            city: 'Lisbon', section: 'museum',       hint: 'Museu Nacional de Arte Antiga' },
+    { url: 'https://serralves.pt/rss',                                        city: 'Porto',  section: 'museum',       hint: 'Serralves' },
+
+    // ─── ES · Madrid distritos + barrios ────────────────────────
+    { url: 'https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Distritos/Centro/?vgnextfmt=rss',
+                                                                              city: 'Madrid', section: 'district',     hint: 'Distrito Centro (Malasaña·La Latina)' },
+    { url: 'https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Distritos/Salamanca/?vgnextfmt=rss',
+                                                                              city: 'Madrid', section: 'district',     hint: 'Distrito Salamanca' },
+    { url: 'https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Distritos/Chamberi/?vgnextfmt=rss',
+                                                                              city: 'Madrid', section: 'district',     hint: 'Distrito Chamberí' },
+    { url: 'https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Distritos/Retiro/?vgnextfmt=rss',
+                                                                              city: 'Madrid', section: 'district',     hint: 'Distrito Retiro' },
+
+    // ─── ES · Barcelona barris ──────────────────────────────────
+    { url: 'https://ajuntament.barcelona.cat/ciutatvella/rss',                city: 'Barcelona', section: 'district', hint: 'Ciutat Vella (Gòtic·Born·Raval)' },
+    { url: 'https://ajuntament.barcelona.cat/eixample/rss',                   city: 'Barcelona', section: 'district', hint: 'Eixample' },
+    { url: 'https://ajuntament.barcelona.cat/gracia/rss',                     city: 'Barcelona', section: 'district', hint: 'Gràcia' },
+    { url: 'https://ajuntament.barcelona.cat/santmarti/rss',                  city: 'Barcelona', section: 'district', hint: 'Sant Martí (Poblenou)' },
+
+    // ─── ES · 작은 박물관 + cultura ─────────────────────────────
+    { url: 'https://www.casamerica.es/rss',                                   city: 'Madrid', section: 'culture',      hint: 'Casa de América' },
+    { url: 'https://caixaforum.org/rss',                                      city: null,     section: 'culture',      hint: 'CaixaForum (multi-city)' },
+    { url: 'https://www.cccb.org/rss/agenda',                                 city: 'Barcelona', section: 'culture', hint: 'CCCB (Centre Cultura Contemporània)' },
+
+    // ─── AR · Buenos Aires comunas + barrios ────────────────────
+    { url: 'https://www.buenosaires.gob.ar/rss/comuna1',                      city: 'Buenos Aires', section: 'district', hint: 'Comuna 1 (San Telmo·Retiro)' },
+    { url: 'https://www.buenosaires.gob.ar/rss/comuna14',                     city: 'Buenos Aires', section: 'district', hint: 'Comuna 14 (Palermo)' },
+    { url: 'https://www.buenosaires.gob.ar/rss/comuna13',                     city: 'Buenos Aires', section: 'district', hint: 'Comuna 13 (Belgrano)' },
+    { url: 'https://www.centroculturalrecoleta.org/rss',                      city: 'Buenos Aires', section: 'culture', hint: 'Centro Cultural Recoleta' },
+
+    // ─── DE · Berlin Bezirke (자치구) ───────────────────────────
+    { url: 'https://www.berlin.de/ba-mitte/rss/news.xml',                     city: 'Berlin', section: 'district',     hint: 'Bezirk Mitte' },
+    { url: 'https://www.berlin.de/ba-friedrichshain-kreuzberg/rss/news.xml', city: 'Berlin', section: 'district',     hint: 'Friedrichshain-Kreuzberg' },
+    { url: 'https://www.berlin.de/ba-pankow/rss/news.xml',                    city: 'Berlin', section: 'district',     hint: 'Pankow (Prenzlauer Berg)' },
+    { url: 'https://www.berlin.de/ba-neukoelln/rss/news.xml',                 city: 'Berlin', section: 'district',     hint: 'Neukölln' },
+    { url: 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/rss/news.xml', city: 'Berlin', section: 'district', hint: 'Charlottenburg-Wilmersdorf' },
+
+    // ─── DE · 작은 미술관 ───────────────────────────────────────
+    { url: 'https://www.smb.museum/en/news/rss.xml',                          city: 'Berlin', section: 'museum',       hint: 'Hamburger Bahnhof + Neue Nationalgalerie' },
+    { url: 'https://www.berlinischegalerie.de/rss',                           city: 'Berlin', section: 'museum',       hint: 'Berlinische Galerie' },
+
+    // ─── EN · indie urbanism / slow journals ────────────────────
+    { url: 'https://failedarchitecture.com/feed/',                            city: null,     section: 'urbanism' },
+    { url: 'https://www.architectural-review.com/feed',                       city: null,     section: 'architecture' }
 ];
 const PIPELINE_CITIES = [
     // EN
