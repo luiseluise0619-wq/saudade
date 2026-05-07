@@ -233,12 +233,103 @@ async function sha(s) {
 //   binding = "AI"
 //
 // D1 schema: schema/ai_pipeline.sql (raw_feeds + dispatches_staged).
+// RSS sources — quiet, magazine-tone. Cultural institutions, city
+// hall public-works news, architecture / urbanism, slow food + coffee
+// culture, heritage / preservation. Politics / breaking / scandals
+// are filtered out by PIPELINE_FORBIDDEN at write time.
+//
+// Each feed is best-effort: fetchT timeouts at 12s and pipelineGather
+// catches per-feed errors, so a 404 / DNS-changed URL just gets
+// skipped that day. Editing this list does not require a redeploy
+// chain — it's just a JS array.
+//
+// Diversity goals:
+//   · 5 editions (en/ko/ja/pt/es) each have ≥ 5 feeds in their lang
+//   · ≥ 2 feeds per magazine city (Lisbon, Porto, Seoul, Tokyo, …)
+//   · ≥ 8 city: null "quiet international" feeds for cross-edition
+//
+// When a feed dies, leave it commented out for a quarter so we
+// remember it tried; then prune.
 const RSS_PIPELINE_FEEDS = [
-    { url: 'https://www.cidadedelisboa.pt/rss',     city: 'Lisbon', section: 'cityhall' },
-    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml', city: null, section: 'quiet' },
-    { url: 'https://www.tate.org.uk/rss/whats-on',  city: 'London', section: 'museum' }
+    // ─── EN · international quiet ────────────────────────────────
+    { url: 'https://feeds.bbci.co.uk/news/world/europe/rss.xml',           city: null,           section: 'world' },
+    { url: 'https://www.theguardian.com/cities/rss',                       city: null,           section: 'urbanism' },
+    { url: 'https://www.theguardian.com/artanddesign/architecture/rss',    city: null,           section: 'architecture' },
+    { url: 'https://feeds.npr.org/1002/rss.xml',                           city: null,           section: 'world' },
+    { url: 'https://www.archdaily.com/feed',                               city: null,           section: 'architecture' },
+    { url: 'https://www.dezeen.com/feed/',                                 city: null,           section: 'design' },
+    { url: 'https://www.atlasobscura.com/feeds/latest',                    city: null,           section: 'travel' },
+
+    // ─── EN · Lisbon / Porto international press ─────────────────
+    { url: 'https://www.theportugalnews.com/rss',                          city: 'Lisbon',       section: 'cityhall' },
+    { url: 'https://www.theportugalnews.com/rss',                          city: 'Porto',        section: 'cityhall' },
+
+    // ─── PT · Lisboa / Porto / Sintra ────────────────────────────
+    { url: 'https://www.cidadedelisboa.pt/rss',                            city: 'Lisbon',       section: 'cityhall' },
+    { url: 'https://www.publico.pt/rss',                                   city: null,           section: 'world' },
+    { url: 'https://www.publico.pt/rss/cultura',                           city: 'Lisbon',       section: 'culture' },
+    { url: 'https://www.publico.pt/rss/local',                             city: 'Lisbon',       section: 'cityhall' },
+    { url: 'https://www.timeout.pt/lisboa/pt/rss',                         city: 'Lisbon',       section: 'culture' },
+    { url: 'https://www.timeout.pt/porto/pt/rss',                          city: 'Porto',        section: 'culture' },
+    { url: 'https://www.cm-porto.pt/noticias/rss',                         city: 'Porto',        section: 'cityhall' },
+
+    // ─── ES · Madrid / Barcelona / Buenos Aires ──────────────────
+    { url: 'https://www.elpais.com/rss/cultura/portada.xml',               city: null,           section: 'culture' },
+    { url: 'https://www.elpais.com/rss/ccaa/madrid_portada.xml',           city: 'Madrid',       section: 'cityhall' },
+    { url: 'https://www.elpais.com/rss/ccaa/catalunya_portada.xml',        city: 'Barcelona',    section: 'cityhall' },
+    { url: 'https://www.timeout.es/madrid/es/rss',                         city: 'Madrid',       section: 'culture' },
+    { url: 'https://www.timeout.es/barcelona/es/rss',                      city: 'Barcelona',    section: 'culture' },
+    { url: 'https://www.lanacion.com.ar/cultura/rss',                      city: 'Buenos Aires', section: 'culture' },
+    { url: 'https://www.clarin.com/rss/cultura/',                          city: 'Buenos Aires', section: 'culture' },
+
+    // ─── KO · 서울 / 부산 / 제주 (한국 보도자료) ─────────────────
+    { url: 'https://www.korea.kr/rss/policy.xml',                          city: null,           section: 'cityhall' },
+    { url: 'https://news.seoul.go.kr/rss/news_all.xml',                    city: 'Seoul',        section: 'cityhall' },
+    { url: 'https://www.busan.go.kr/RssService.do?menuCd=DOM_000000000000', city: 'Busan',       section: 'cityhall' },
+    { url: 'https://www.cha.go.kr/rss/news.xml',                           city: 'Seoul',        section: 'heritage' },
+    { url: 'https://www.museum.go.kr/site/main/rss/N0006',                 city: 'Seoul',        section: 'museum' },
+    { url: 'https://www.sfac.or.kr/rss/news_all.xml',                      city: 'Seoul',        section: 'culture' },
+    { url: 'https://www.jeju.go.kr/rss/news.xml',                          city: 'Jeju',         section: 'cityhall' },
+
+    // ─── JA · 東京 / 大阪 / 京都 ─────────────────────────────────
+    { url: 'https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/rss.xml', city: 'Tokyo',        section: 'cityhall' },
+    { url: 'https://www.tokyoartbeat.com/feed/',                           city: 'Tokyo',        section: 'art' },
+    { url: 'https://www.nact.jp/rss/index.xml',                            city: 'Tokyo',        section: 'museum' },
+    { url: 'https://www.city.osaka.lg.jp/rss/news.xml',                    city: 'Osaka',        section: 'cityhall' },
+    { url: 'https://www.city.kyoto.lg.jp/rss/news.xml',                    city: 'Kyoto',        section: 'cityhall' },
+    { url: 'https://www3.nhk.or.jp/rss/news/cat0.xml',                     city: null,           section: 'world' },
+
+    // ─── DE · Berlin ─────────────────────────────────────────────
+    { url: 'https://www.berlin.de/rss/aktuelles.xml',                      city: 'Berlin',       section: 'cityhall' },
+    { url: 'https://www.tagesspiegel.de/contentexport/feed/kultur',        city: 'Berlin',       section: 'culture' },
+
+    // ─── International museums ── add weight to "quiet" pool ─────
+    { url: 'https://www.tate.org.uk/rss/whats-on',                         city: 'London',       section: 'museum' },
+    { url: 'https://www.moma.org/rss/news/',                               city: null,           section: 'museum' },
+    { url: 'https://www.metmuseum.org/rss',                                city: null,           section: 'museum' },
+
+    // ─── Slow food / coffee culture ──────────────────────────────
+    { url: 'https://sprudge.com/feed',                                     city: null,           section: 'coffee' },
+    { url: 'https://www.standartmag.com/feed',                             city: null,           section: 'coffee' },
+
+    // ─── SE Asia (Chiang Mai / Bali / Da Nang) ── thinner; OK ────
+    { url: 'https://www.bangkokpost.com/rss/data/topstories.xml',          city: null,           section: 'world' },
+    { url: 'https://www.thaipbs.or.th/rss/news.xml',                       city: 'Chiang Mai',   section: 'cityhall' }
 ];
-const PIPELINE_CITIES = ['Lisbon','Seoul','Tokyo','Osaka','Tbilisi','Berlin','Bangkok','Mexico City','Bali','Buenos Aires','Chiang Mai'];
+const PIPELINE_CITIES = [
+    // EN
+    'Lisbon', 'Berlin', 'Mexico City', 'Bali', 'Chiang Mai', 'Tbilisi',
+    // KO (korean editions cities)
+    'Seoul', 'Busan', 'Jeju',
+    // JA
+    'Tokyo', 'Osaka', 'Kyoto',
+    // PT
+    'Porto', 'Sintra',
+    // ES
+    'Madrid', 'Barcelona', 'Buenos Aires', 'Medellin',
+    // misc that show up in feeds
+    'London', 'Bangkok'
+];
 const PIPELINE_FORBIDDEN = ['breaking','urgent','alert','crisis','shocking','tragic','outrage','scandal','controversy'];
 
 function pipelineHasForbidden(text) {
