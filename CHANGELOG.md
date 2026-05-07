@@ -8,6 +8,14 @@ Cache version (`saudade-vNNN`) bumps independently of semver — every JS/data c
 
 ### Added
 - `scripts/bump-cache.js` + `npm run bump-cache` — automates the cache-version sync across `sw.js`, `index.html` (50 cache-busters), and `saudade-listening.js`. Replaces the manual `sed` ritual that broke once already and motivated the smoke-test invariant.
+- `RUNBOOK.md` — daily / weekly / monthly / quarterly operational checklist + incident response procedures. The runtime equivalent of `ARCHITECTURE.md`.
+- GitHub issues #32-#38 (master + 6 sub-issues) — operational launch checklist tracking activation of GEMINI_KEY, listening-room fetch, domain decision, café curation, marketing, and Stripe.
+
+### Fixed
+- `saudade-dispatches.js`: hardcoded English `title="Remove"` on Following-cities chip routed through the `T()` i18n helper (en/ko/ja/pt/es). Caught by `scripts/check-i18n.sh`.
+
+### Changed
+- `DEPLOY.md`: `0 20 UTC` cron documented as decommissioned in v659; KO/JA/PT/ES refresh now points to `.github/workflows/refresh-dispatches.yml`. `GEMINI_KEY` description clarifies it serves EN write + the GH Actions writer.
 
 ## [1.2.0] · 2026-05-06
 
