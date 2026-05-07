@@ -1,149 +1,262 @@
 /* ════════════════════════════════════════════════════════════════════════════
-   SAUDADE · EDITION DNA TOKENS (Handoff v2 §2)
-   5 별쇄. 사용자가 에디션을 바꾸면 다른 잡지가 펼쳐진다.
-   각 에디션은 paper × ink × accent 명시 선언 (자동 계산 X).
-   대비비 락: ink × paper ≥ 11:1, bone-d × paper ≥ 7:1, accent × paper ≥ 5:1
+   SAUDADE · EDITION DNA TOKENS
+   5 별쇄 — 각각 자기 도시·자기 액센트·자기 모티프.
+   사용자가 에디션 바꾸면 다른 잡지가 펼쳐진다.
+   ════════════════════════════════════════════════════════════════════════════
+
+   constraints (헌법 §1):
+     · paper × ink × ONE accent per edition. No gradients, no shadows.
+     · radius ≤ 4 px. Concentric rings = only allowed decoration.
+     · Numerals ALWAYS Latin digits (47, 06, 1.2 km).
+     · 4-space indent. 60 fps. prefers-reduced-motion respected.
    ════════════════════════════════════════════════════════════════════════════ */
 
-/* English Edition (베이스, Y1) ────────────────────────────────────────── */
-/* WCAG AAA 검증 통과:
-   ink #16151A × paper #F2EEE3 = 15.67:1 (≥11:1 ✓)
-   bone-d #4A4540 × paper        = 7.45:1 (≥7:1 ✓)
-   bone #757067 × paper          = 4.62:1 (≥4.5:1 ✓)
-   accent #9A3324 × paper        = 6.31:1 (≥5:1 ✓) */
+/* ═══ en · LISBON · terracotta on bone · Fraunces italic ═══════════════ */
 body.edition-en, body[data-edition="en"] {
-    --paper:    #F2EEE3;
-    --paper-d:  #E5DFD0;
-    --ink:      #16151A;
-    --ink-soft: #0F0E12;
-    --accent:   #9A3324;
-    --rust:     #9A3324;
-    --jade:     #5BA890;
-    --bone:     #6F6A60;
-    --bone-d:   #4A4540;
-    --rule:     rgba(11,11,15,.16);
-    --rule-2:   rgba(11,11,15,.42);
-    --serif:    "Fraunces", Georgia, serif;
-    --sans:     "JetBrains Mono", monospace;
-    --mono:     "JetBrains Mono", monospace;
+    --paper:        #EFE7D6;
+    --paper-d:      #E2D9C4;
+    --ink:          #1B1812;
+    --ink-soft:     #110F0A;
+    --accent:       #B8442D;
+    --rust:         #B8442D;
+    --jade:         #B8442D;
+    --bone:         #6E665A;
+    --bone-d:       #443D34;
+    --rule:         rgba(27,24,18,.16);
+    --rule-2:       rgba(27,24,18,.42);
+    --serif:        "Fraunces", Georgia, serif;
+    --sans:         "Inter", system-ui, sans-serif;
+    --mono:         "JetBrains Mono", "IBM Plex Mono", monospace;
+    --motif:        none;
     quotes: '"' '"' "'" "'";
 }
 
-/* 한국어판 (Y2) — celadon 청자색. WCAG AAA accent 충족 위해 채도 낮춤. */
+/* ═══ ko · 서울 · 단청 주홍 on 한지 · Noto Serif KR + 한지 텍스쳐 ════ */
 body.edition-ko, body[data-edition="ko"] {
-    --paper:    #F0EBE0;
-    --paper-d:  #E2DCCC;
-    --ink:      #1A1815;
-    --ink-soft: #100E0B;
-    --accent:   #3E6147;
-    --rust:     #3E6147;
-    --jade:     #3E6147;
-    --bone:     #6E6960;
-    --bone-d:   #45413B;
-    --rule:     rgba(26,24,21,.16);
-    --rule-2:   rgba(26,24,21,.42);
-    --serif:    "Noto Serif KR", "Source Han Serif KR", Georgia, serif;
-    --sans:     "Pretendard Variable", "Noto Sans KR", system-ui;
-    --mono:     "JetBrains Mono", monospace;
+    --paper:        #EAE2D0;
+    --paper-d:      #DCD3BD;
+    --ink:          #1A1815;
+    --ink-soft:     #100E0B;
+    --accent:       #A8341E;
+    --rust:         #A8341E;
+    --jade:         #A8341E;
+    --bone:         #6E6960;
+    --bone-d:       #45413B;
+    --rule:         rgba(26,24,21,.16);
+    --rule-2:       rgba(26,24,21,.42);
+    --serif:        "Noto Serif KR", "Source Han Serif KR", Georgia, serif;
+    --sans:         "Pretendard Variable", "Noto Sans KR", system-ui;
+    --mono:         "JetBrains Mono", monospace;
+    --motif:        hanji-dots;
     quotes: '\201C' '\201D' '\2018' '\2019';
 }
-body.edition-ko .sdd-cover-h1,
+body.edition-ko .sdd-cover-wordmark,
 body.edition-ko .sdd-disp-headline,
 body.edition-ko h1, body.edition-ko h2 {
-    /* 한글 자간 — 라틴보다 살짝 더 좁힘 */
-    letter-spacing: -0.02em !important;
+    letter-spacing: -0.02em;
+}
+/* 한지 텍스쳐 — radial-gradient noise dots, 헌법 §1: no gradients ON CONTENT.
+   여기서는 paper 표면 자체에만 적용 (배경 텍스쳐), 콘텐츠 그라디언트 X. */
+body.edition-ko::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(circle at 17% 23%, rgba(26,24,21,.045) 1px, transparent 1.4px),
+        radial-gradient(circle at 73% 67%, rgba(26,24,21,.035) 1px, transparent 1.4px),
+        radial-gradient(circle at 41% 89%, rgba(26,24,21,.030) 1px, transparent 1.4px);
+    background-size: 7px 7px, 11px 11px, 13px 13px;
+    background-position: 0 0, 3px 5px, 5px 1px;
+    opacity: .9;
+    mix-blend-mode: multiply;
+}
+@media (prefers-reduced-motion: reduce) {
+    body.edition-ko::before { opacity: .5; }
 }
 
-/* 日本語版 (Y3) — indigo 남색 ───────────────────────────────────────── */
+/* ═══ ja · 東京 · 朱 on kinari · Shippori Mincho B1, 横組み ═════════════ */
 body.edition-ja, body[data-edition="ja"] {
-    --paper:    #F4F0E6;
-    --paper-d:  #E6E1D2;
-    --ink:      #1B1A1F;
-    --ink-soft: #100F14;
-    --accent:   #2B3A55;
-    --rust:     #2B3A55;
-    --jade:     #2B3A55;
-    --bone:     #6F6A60;
-    --bone-d:   #45413A;
-    --rule:     rgba(27,26,31,.16);
-    --rule-2:   rgba(27,26,31,.42);
-    --serif:    "Shippori Mincho B1", "Noto Serif JP", serif;
-    --sans:     "Noto Sans JP", system-ui;
-    --mono:     "JetBrains Mono", monospace;
+    --paper:        #F3EDDE;
+    --paper-d:      #E5DEC9;
+    --ink:          #1B1A1F;
+    --ink-soft:     #100F14;
+    --accent:       #9C2A1A;
+    --rust:         #9C2A1A;
+    --jade:         #9C2A1A;
+    --bone:         #6F6A60;
+    --bone-d:       #45413A;
+    --rule:         rgba(27,26,31,.16);
+    --rule-2:       rgba(27,26,31,.42);
+    --serif:        "Shippori Mincho B1", "Noto Serif JP", "Source Han Serif JP", serif;
+    --sans:         "Noto Sans JP", system-ui;
+    --mono:         "JetBrains Mono", monospace;
+    --motif:        boten;
 }
-body.edition-ja .sdd-cover-h1,
+body.edition-ja .sdd-cover-wordmark,
 body.edition-ja .sdd-disp-headline {
-    /* 일본어 본문 자간 살짝 벌림 */
-    letter-spacing: 0.02em !important;
+    letter-spacing: 0.02em;
 }
-/* 점·괄호 강조 (傍点) */
+/* 横組み (yokogumi) — explicitly horizontal. User rejected 縦書き.
+   No vertical writing modes anywhere in this edition. */
+body.edition-ja * {
+    writing-mode: horizontal-tb !important;
+}
+/* 傍点 — em becomes side-dot emphasis (Japanese typography convention) */
 body.edition-ja em {
     font-style: normal;
-    text-emphasis: dot;
+    text-emphasis: filled circle;
     text-emphasis-color: var(--accent);
+    text-emphasis-position: over;
 }
-body.edition-ja .sdd-disp::before {
-    /* 보일 듯 말 듯한 noise overlay (헌법 §2.3) — 단순 dotted */
+
+/* ═══ pt · LISBOA · azulejo navy on cal · Cormorant Garamond ════════════ */
+body.edition-pt, body[data-edition="pt"] {
+    --paper:        #F0EBDA;
+    --paper-d:      #E2DCC4;
+    --ink:          #2A1D14;
+    --ink-soft:     #1B120B;
+    --accent:       #2D5A8C;
+    --rust:         #2D5A8C;
+    --jade:         #2D5A8C;
+    --bone:         #6E6055;
+    --bone-d:       #423831;
+    --rule:         rgba(42,29,20,.16);
+    --rule-2:       rgba(42,29,20,.42);
+    --serif:        "Cormorant Garamond", "Cormorant", Georgia, serif;
+    --sans:         "Fraunces", Georgia, serif;
+    --mono:         "JetBrains Mono", monospace;
+    --motif:        azulejo;
+    quotes: '\AB' '\BB' '\2039' '\203A';
+}
+/* 4×4 azulejo SVG motif — applied as a section divider, not background */
+body.edition-pt .sdd-cover-mast-rule {
+    height: 32px;
+    border: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 16' fill='none' stroke='%232D5A8C' stroke-width='.5'><rect x='.5' y='.5' width='15' height='15'/><rect x='16.5' y='.5' width='15' height='15'/><rect x='32.5' y='.5' width='15' height='15'/><rect x='48.5' y='.5' width='15' height='15'/><circle cx='8' cy='8' r='3'/><circle cx='24' cy='8' r='3'/><circle cx='40' cy='8' r='3'/><circle cx='56' cy='8' r='3'/></svg>");
+    background-repeat: repeat-x;
+    background-size: auto 16px;
+    background-position: center;
+    width: clamp(160px, 24vw, 280px);
+    margin: clamp(8px, 1.2vw, 14px) auto;
+}
+
+/* ═══ es · MADRID · sangre on cal · Crimson Pro uppercase, ribbon ═════ */
+body.edition-es, body[data-edition="es"] {
+    --paper:        #ECE3CD;
+    --paper-d:      #DED5BB;
+    --ink:          #1F1A12;
+    --ink-soft:     #100D08;
+    --accent:       #8B1A1A;
+    --rust:         #8B1A1A;
+    --jade:         #8B1A1A;
+    --bone:         #706A5D;
+    --bone-d:       #443D33;
+    --rule:         rgba(31,26,18,.16);
+    --rule-2:       rgba(31,26,18,.42);
+    --serif:        "Crimson Pro", "Crimson Text", Georgia, serif;
+    --sans:         "JetBrains Mono", monospace;
+    --mono:         "JetBrains Mono", monospace;
+    --motif:        ribbon;
+    quotes: '\AB' '\BB' '\2039' '\203A';
+}
+body.edition-es .sdd-cover-wordmark,
+body.edition-es h1, body.edition-es h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+/* Ribbon ornament — appears under the masthead rule */
+body.edition-es .sdd-cover-mast-rule {
+    position: relative;
+    border: none;
+    height: 1px;
+    background: var(--accent);
+    width: clamp(120px, 20vw, 240px);
+}
+body.edition-es .sdd-cover-mast-rule::before,
+body.edition-es .sdd-cover-mast-rule::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(circle at 25% 25%, rgba(27,26,31,.04) 1px, transparent 1px),
-        radial-gradient(circle at 75% 75%, rgba(27,26,31,.04) 1px, transparent 1px);
-    background-size: 4px 4px;
-    pointer-events: none;
-    opacity: .55;
+    top: -3px;
+    width: 14px; height: 7px;
+    background: var(--accent);
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
 }
+body.edition-es .sdd-cover-mast-rule::before { left: -16px; }
+body.edition-es .sdd-cover-mast-rule::after  { right: -16px; }
 
-/* Português Edition (Y3+) — saudade의 모국어. azulejo 타일 블루 ───── */
-body.edition-pt, body[data-edition="pt"] {
-    --paper:    #EDE6D3;
-    --paper-d:  #DFD6BD;
-    --ink:      #2A1D14;
-    --ink-soft: #1B120B;
-    --accent:   #3E5C76;
-    --rust:     #3E5C76;
-    --jade:     #3E5C76;
-    --bone:     #6E6055;
-    --bone-d:   #423831;
-    --rule:     rgba(42,29,20,.16);
-    --rule-2:   rgba(42,29,20,.42);
-    --serif:    "Cormorant Infant", "Cormorant", Georgia, serif;
-    --sans:     "Fraunces", Georgia, serif;
-    --mono:     "JetBrains Mono", monospace;
-    quotes: '\AB' '\BB' '\2039' '\203A';
-}
-
-/* Español Edition (Y3+) — sangre 진한 적색 ──────────────────────────── */
-body.edition-es, body[data-edition="es"] {
-    --paper:    #F1ECDB;
-    --paper-d:  #E3DEC9;
-    --ink:      #1F1A12;
-    --ink-soft: #100D08;
-    --accent:   #8B2E1F;
-    --rust:     #8B2E1F;
-    --jade:     #8B2E1F;
-    --bone:     #706A5D;
-    --bone-d:   #443D33;
-    --rule:     rgba(31,26,18,.16);
-    --rule-2:   rgba(31,26,18,.42);
-    --serif:    "Crimson Pro", "Crimson Text", Georgia, serif;
-    --sans:     "JetBrains Mono", monospace;
-    --mono:     "JetBrains Mono", monospace;
-    quotes: '\AB' '\BB' '\2039' '\203A';
-}
-
-/* 모든 에디션 공통 — mono 숫자는 tabular-nums + lining-nums */
+/* ═══ Latin digit enforcement (헌법) ═══════════════════════════════════
+   Numerals stay numerals in every edition — surrounding language changes.
+   font-variant-numeric: tabular-nums + lining-nums for stable widths. */
 body[data-edition] [class*="-mono"],
 body[data-edition] [class*="data-"],
+body[data-edition] [data-mono],
 body[data-edition] .sdd-disp-num,
 body[data-edition] .sdd-atlas-meta,
 body[data-edition] .sdd-ld-tax-num,
 body[data-edition] .sdd-ld-dday-info dd,
-body[data-edition] [data-mono] {
+body[data-edition] .sdd-cover-mast-date,
+body[data-edition] time {
     font-feature-settings: "tnum", "lnum";
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-family: var(--mono);
 }
 
-/* 액센트 가드 — 한 화면 max 2회 (Steve Rule, 헌법 §1.5).
-   ESLint 룰 또는 컴포넌트 테스트로 검증. CSS 자체는 색만 정의. */
+/* ═══ Skin rotations (per-issue, not per-user) ═══════════════════════
+   Three rotations per edition: paper (default), saturated (cover takes
+   accent as background, ink inverts), dark (reading-room / late edition).
+   The active skin is set on <html data-skin="..."> by saudade-edition.js
+   based on the current ISO week. */
+
+/* Saturated — cover only inverts; section bodies stay paper. */
+html[data-skin="saturated"] .sdd-cover {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-wordmark,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-mast-date,
+html[data-skin="saturated"] .sdd-cover h1,
+html[data-skin="saturated"] .sdd-cover h2 {
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-mast-rule {
+    border-color: var(--paper-d) !important;
+    background: var(--paper-d) !important;
+}
+
+/* Dark — reading-room mode. Whole magazine inverts. */
+html[data-skin="dark"] body {
+    --paper:    #15130E;
+    --paper-d:  #1F1B14;
+    --ink:      #EFE7D6;
+    --ink-soft: #FFFFFF;
+    --bone:     #8E867A;
+    --bone-d:   #C5BDB0;
+    --rule:     rgba(239,231,214,.18);
+    --rule-2:   rgba(239,231,214,.40);
+}
+html[data-skin="dark"] body.edition-ko::before {
+    /* Dim the hanji texture in dark mode */
+    opacity: .35;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-skin]) body {
+        /* Auto-respect OS dark unless an explicit skin is set */
+        --paper:    #15130E;
+        --paper-d:  #1F1B14;
+        --ink:      #EFE7D6;
+        --ink-soft: #FFFFFF;
+        --bone:     #8E867A;
+        --bone-d:   #C5BDB0;
+        --rule:     rgba(239,231,214,.18);
+        --rule-2:   rgba(239,231,214,.40);
+    }
+}
+
+/* ═══ Page-by-page (NEVER scroll feed) ════════════════════════════════
+   Already enforced by section CSS in saudade-cover/dispatches/atlas/desk
+   — each section is a fixed-position page that occupies the viewport.
+   This selector exists purely as a CSS lint hook: search for
+   `overflow-y: auto` outside of .sdd-disp / .sdd-atlas-list / .sdd-ld
+   should fail the design review. */

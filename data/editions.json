@@ -1,0 +1,106 @@
+{
+    "$schema": "https://saudade.pages.dev/schema/editions.json",
+    "_note": "Per-edition config. Each edition speaks to its own audience's cities — never share dispatches across editions. Update saudade-edition.js when adding/removing entries here.",
+
+    "en": {
+        "label": "English",
+        "loading": "Opening English edition…",
+        "lang": "en",
+        "desk_city": "LISBON",
+        "user_pin_label": "ALFAMA",
+        "cities": ["Lisbon", "Porto", "Berlin", "Tbilisi", "Mexico City", "Bali", "Chiang Mai"],
+        "feature_cities": ["Lisbon", "Porto", "Berlin"],
+        "accent_hex": "#B8442D",
+        "paper_hex": "#EFE7D6",
+        "motif": "none",
+        "type_family": "Fraunces",
+        "voice_note": "Cosmopolitan declarative. Sentences end. Short observation, no opinion.",
+        "voice_examples": [
+            "The 28, in pieces, returns.",
+            "Jacaranda peak is days away.",
+            "AIMA replaces SEF: D7 / D8 visa pipeline unchanged on paper."
+        ]
+    },
+
+    "ko": {
+        "label": "한국어",
+        "loading": "한국어판을 펼치는 중…",
+        "lang": "ko",
+        "desk_city": "서울",
+        "user_pin_label": "북촌",
+        "cities": ["서울", "부산", "제주", "강릉", "전주"],
+        "feature_cities": ["서울", "부산", "제주"],
+        "accent_hex": "#A8341E",
+        "paper_hex": "#EAE2D0",
+        "motif": "hanji-dots",
+        "type_family": "Noto Serif KR",
+        "voice_note": "평어체. 짧은 관찰. 명령형·권유형 X. 절제와 여백.",
+        "voice_examples": [
+            "북촌의 한옥 지붕에서, 빗방울이 늦게 떨어진다.",
+            "광안리 모래사장이, 하루 동안 비어 있었다.",
+            "한라산의 철쭉이, 이주째 전성기에 머물러 있다."
+        ]
+    },
+
+    "ja": {
+        "label": "日本語",
+        "loading": "日本語版をひらいている…",
+        "lang": "ja",
+        "desk_city": "東京",
+        "user_pin_label": "蔵前",
+        "cities": ["東京", "大阪", "京都", "鎌倉", "金沢"],
+        "feature_cities": ["東京", "大阪", "京都"],
+        "accent_hex": "#9C2A1A",
+        "paper_hex": "#F3EDDE",
+        "motif": "boten",
+        "type_family": "Shippori Mincho B1",
+        "writing_mode": "horizontal-tb",
+        "voice_note": "平叙体。短文。観察のみ。命令形・勧誘形なし。",
+        "voice_examples": [
+            "上野公園の遅咲きが、今年は十日ほど続く。",
+            "淀川の水位が、今春一番低い。",
+            "鴨川の床営業が、今年は四月二十九日から始まった。"
+        ]
+    },
+
+    "pt": {
+        "label": "Português",
+        "loading": "A abrir a edição portuguesa…",
+        "lang": "pt",
+        "desk_city": "LISBOA",
+        "user_pin_label": "ALFAMA",
+        "cities": ["Lisboa", "Porto", "Sintra", "Coimbra", "Aveiro"],
+        "feature_cities": ["Lisboa", "Porto", "Sintra"],
+        "accent_hex": "#2D5A8C",
+        "paper_hex": "#F0EBDA",
+        "motif": "azulejo",
+        "type_family": "Cormorant Garamond",
+        "voice_note": "Declarativo. Frases curtas. Observação, contenção. Sem polémica.",
+        "voice_examples": [
+            "O 28, em pedaços, regressa.",
+            "A ponte Luís I fecha ao trânsito durante uma noite.",
+            "O Palácio da Pena reabre a sala oriental depois de restauro."
+        ]
+    },
+
+    "es": {
+        "label": "Español",
+        "loading": "Abriendo la edición en español…",
+        "lang": "es",
+        "desk_city": "MADRID",
+        "user_pin_label": "MALASAÑA",
+        "cities": ["Madrid", "Barcelona", "Buenos Aires", "Mexico City", "Medellín"],
+        "feature_cities": ["Madrid", "Barcelona", "Buenos Aires"],
+        "accent_hex": "#8B1A1A",
+        "paper_hex": "#ECE3CD",
+        "motif": "ribbon",
+        "type_family": "Crimson Pro",
+        "type_transform": "uppercase",
+        "voice_note": "Declarativo. Mayúsculas selectivas. Frases breves. Observación.",
+        "voice_examples": [
+            "EL RETIRO ABRE POR LA NOCHE LOS VIERNES DE MAYO.",
+            "El metro L9 Sur amplía su servicio nocturno los sábados.",
+            "El Teatro Colón estrena temporada con butacas reformadas."
+        ]
+    }
+}
