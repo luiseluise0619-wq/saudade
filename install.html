@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>saudade · 설치하기 / Install</title>
+<meta name="description" content="Add saudade to your home screen — no app store, no download. PWA install in 10 seconds." />
+<link rel="alternate" hreflang="ko" href="/install.html" />
+<link rel="alternate" hreflang="en" href="/install.html#en" />
+<link rel="alternate" hreflang="ja" href="/install.html#ja" />
+<link rel="stylesheet" href="saudade-tokens.css?v=v661" />
+<link rel="stylesheet" href="saudade-edition-tokens.css?v=v661" />
+<link rel="stylesheet" href="saudade-typography.css?v=v661" />
+<script defer src="saudade-edition.js?v=v661"></script>
+<style>
+    body {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: clamp(40px, 8vw, 80px) clamp(24px, 6vw, 48px);
+        font-family: var(--sans, var(--mono, monospace));
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.55;
+    }
+    h1 {
+        font-family: var(--serif);
+        font-weight: 300;
+        font-style: italic;
+        font-size: clamp(36px, 6vw, 56px);
+        line-height: 1.05;
+        margin: 0 0 16px;
+        letter-spacing: -0.01em;
+    }
+    .lede {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: .28em;
+        text-transform: uppercase;
+        color: var(--bone-d);
+        margin: 0 0 48px;
+    }
+    h2 {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: .32em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 48px 0 16px;
+        padding-bottom: 8px;
+        border-bottom: 0.5px solid var(--rule);
+    }
+    ol {
+        padding-left: 24px;
+        margin: 0;
+    }
+    ol li {
+        margin: 0 0 12px;
+        font-family: var(--serif);
+        font-size: 17px;
+    }
+    code {
+        font-family: var(--mono);
+        font-size: 13px;
+        background: var(--paper-d);
+        padding: 1px 6px;
+        border-radius: 3px;
+    }
+    .pill {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: .24em;
+        text-transform: uppercase;
+        color: var(--bone-d);
+        border: 0.5px solid var(--rule);
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin-right: 8px;
+    }
+    .note {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 14px;
+        color: var(--bone-d);
+        margin: 12px 0 0;
+        padding-left: 12px;
+        border-left: 2px solid var(--accent);
+    }
+    .home {
+        display: inline-block;
+        margin-top: 64px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: .32em;
+        text-transform: uppercase;
+        color: var(--bone-d);
+        text-decoration: none;
+        border-bottom: 0.5px solid var(--rule);
+        padding-bottom: 4px;
+    }
+    .home:hover { color: var(--accent); border-color: var(--accent); }
+    .lang-switch {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: .24em;
+        color: var(--bone-d);
+    }
+    .lang-switch button {
+        background: transparent;
+        border: 0;
+        color: inherit;
+        font: inherit;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+    .lang-switch button[aria-current="true"] { color: var(--accent); font-weight: 600; }
+    section[data-lang] { display: none; }
+    section[data-lang][data-active="true"] { display: block; }
+</style>
+</head>
+<body>
+
+<nav class="lang-switch">
+    <button data-set-lang="ko" aria-current="true">KO</button>
+    <button data-set-lang="en">EN</button>
+    <button data-set-lang="ja">JA</button>
+    <button data-set-lang="pt">PT</button>
+    <button data-set-lang="es">ES</button>
+</nav>
+
+<!-- ═══ KO ═════════════════════════════════════════════════════ -->
+<section data-lang="ko" data-active="true" lang="ko">
+<h1>홈 화면에 saudade 를 추가하세요.</h1>
+<p class="lede">앱스토어 거치지 않음 · 자동 업데이트 · 오프라인 작동</p>
+
+<h2>iOS — Safari</h2>
+<ol>
+    <li>Safari 로 <code>saudade.pages.dev</code> 접속</li>
+    <li>하단 가운데 <strong>공유 버튼</strong> (위로 화살표 사각형)</li>
+    <li>아래로 스크롤 → <strong>"홈 화면에 추가"</strong></li>
+    <li>이름 확인 후 우측 상단 <strong>"추가"</strong></li>
+</ol>
+<p class="note">iOS 16.4 이상이면 푸시 알림도 받을 수 있습니다 (앱 안에서 동의).</p>
+
+<h2>Android — Chrome</h2>
+<ol>
+    <li>Chrome 으로 <code>saudade.pages.dev</code> 접속</li>
+    <li>주소창 우측 점 세 개 메뉴</li>
+    <li><strong>"앱 설치"</strong> 또는 <strong>"홈 화면에 추가"</strong></li>
+    <li>확인 → 앱 아이콘 생성</li>
+</ol>
+
+<h2>Desktop — Chrome / Edge</h2>
+<ol>
+    <li><code>saudade.pages.dev</code> 접속</li>
+    <li>주소창 우측에 작은 <strong>설치 아이콘</strong> (모니터 + 화살표)</li>
+    <li>클릭 → 독립 창으로 실행</li>
+</ol>
+
+<p class="note">PWA 라 앱스토어 검색 결과엔 안 나옵니다. 친구에게 공유할 땐 saudade.pages.dev 링크를 그대로 보내면 됩니다.</p>
+
+<a class="home" href="/">← 표지로 돌아가기</a>
+</section>
+
+<!-- ═══ EN ═════════════════════════════════════════════════════ -->
+<section data-lang="en" lang="en">
+<h1>Add saudade to your home screen.</h1>
+<p class="lede">No app store · auto-updates · works offline</p>
+
+<h2>iOS — Safari</h2>
+<ol>
+    <li>Open <code>saudade.pages.dev</code> in Safari</li>
+    <li>Tap the <strong>Share button</strong> (square + up arrow) at the bottom</li>
+    <li>Scroll down → <strong>"Add to Home Screen"</strong></li>
+    <li>Confirm name → <strong>"Add"</strong> in the top right</li>
+</ol>
+<p class="note">iOS 16.4+ supports push notifications (opt in inside the app).</p>
+
+<h2>Android — Chrome</h2>
+<ol>
+    <li>Open <code>saudade.pages.dev</code> in Chrome</li>
+    <li>Three-dot menu, top right of the address bar</li>
+    <li><strong>"Install app"</strong> or <strong>"Add to Home Screen"</strong></li>
+    <li>Confirm → app icon appears</li>
+</ol>
+
+<h2>Desktop — Chrome / Edge</h2>
+<ol>
+    <li>Open <code>saudade.pages.dev</code></li>
+    <li>Look for a small <strong>install icon</strong> on the right side of the address bar</li>
+    <li>Click → opens in its own window</li>
+</ol>
+
+<p class="note">It's a PWA, not an app-store listing. To share, just send the saudade.pages.dev URL.</p>
+
+<a class="home" href="/">← Back to cover</a>
+</section>
+
+<!-- ═══ JA ═════════════════════════════════════════════════════ -->
+<section data-lang="ja" lang="ja">
+<h1>saudade をホーム画面へ。</h1>
+<p class="lede">App Store 不要 · 自動更新 · オフライン対応</p>
+
+<h2>iOS — Safari</h2>
+<ol>
+    <li>Safari で <code>saudade.pages.dev</code> を開く</li>
+    <li>画面下中央の<strong>共有ボタン</strong></li>
+    <li>下にスクロール → <strong>「ホーム画面に追加」</strong></li>
+    <li>名前を確認して右上<strong>「追加」</strong></li>
+</ol>
+<p class="note">iOS 16.4 以上ならプッシュ通知も受信可（アプリ内で許可）。</p>
+
+<h2>Android — Chrome</h2>
+<ol>
+    <li>Chrome で <code>saudade.pages.dev</code></li>
+    <li>アドレスバー右の三点メニュー</li>
+    <li><strong>「アプリをインストール」</strong></li>
+</ol>
+
+<a class="home" href="/">← 表紙に戻る</a>
+</section>
+
+<!-- ═══ PT ═════════════════════════════════════════════════════ -->
+<section data-lang="pt" lang="pt">
+<h1>Adicionar saudade ao ecrã inicial.</h1>
+<p class="lede">Sem App Store · atualizações automáticas · offline</p>
+
+<h2>iOS — Safari</h2>
+<ol>
+    <li>Abrir <code>saudade.pages.dev</code> no Safari</li>
+    <li>Botão <strong>partilhar</strong> em baixo</li>
+    <li><strong>"Adicionar ao Ecrã Inicial"</strong></li>
+    <li>Confirmar → <strong>"Adicionar"</strong></li>
+</ol>
+
+<h2>Android — Chrome</h2>
+<ol>
+    <li>Abrir em Chrome</li>
+    <li>Menu três pontos</li>
+    <li><strong>"Instalar aplicação"</strong></li>
+</ol>
+
+<a class="home" href="/">← Voltar à capa</a>
+</section>
+
+<!-- ═══ ES ═════════════════════════════════════════════════════ -->
+<section data-lang="es" lang="es">
+<h1>Añade saudade a tu pantalla de inicio.</h1>
+<p class="lede">Sin App Store · actualizaciones automáticas · sin conexión</p>
+
+<h2>iOS — Safari</h2>
+<ol>
+    <li>Abre <code>saudade.pages.dev</code> en Safari</li>
+    <li>Botón <strong>Compartir</strong> abajo</li>
+    <li><strong>"Añadir a pantalla de inicio"</strong></li>
+    <li>Confirma → <strong>"Añadir"</strong></li>
+</ol>
+
+<h2>Android — Chrome</h2>
+<ol>
+    <li>Abre en Chrome</li>
+    <li>Menú tres puntos</li>
+    <li><strong>"Instalar aplicación"</strong></li>
+</ol>
+
+<a class="home" href="/">← Volver a la portada</a>
+</section>
+
+<script>
+(function(){
+    const buttons = document.querySelectorAll('[data-set-lang]');
+    const sections = document.querySelectorAll('section[data-lang]');
+    function show(lang) {
+        buttons.forEach(b => b.setAttribute('aria-current', b.dataset.setLang === lang ? 'true' : 'false'));
+        sections.forEach(s => s.setAttribute('data-active', s.dataset.lang === lang ? 'true' : 'false'));
+        document.documentElement.setAttribute('lang', lang);
+        try { localStorage.setItem('saudade.edition', lang); } catch(e) {}
+    }
+    buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.setLang)));
+    // Pick from existing edition preference, then URL hash, then default ko
+    let initial = 'ko';
+    try {
+        const stored = localStorage.getItem('saudade.edition');
+        if (['en','ko','ja','pt','es'].includes(stored)) initial = stored;
+    } catch(e) {}
+    const hash = (location.hash || '').replace('#','');
+    if (['en','ko','ja','pt','es'].includes(hash)) initial = hash;
+    show(initial);
+})();
+</script>
+
+</body>
+</html>

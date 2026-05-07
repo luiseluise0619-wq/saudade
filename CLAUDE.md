@@ -17,7 +17,7 @@ If you're an AI agent reading this, this is the orientation. Read once, then sta
 
 These come from the magazine's editorial constitution and predate any code:
 
-- **§3 — list only what we have visited.** Cafés must have `visited_at` + lat/lng + two_lines + amenities filled in `data/cafes-seoul.json`. Candidates without verification go to `data/cafes-seoul.candidates.json`.
+- **§3 — list only what the editor has read carefully.** Cafés in `data/cafes-seoul.json` must have `lat`/`lng`/`two_lines`/`amenities` filled, plus EITHER `visited_at` (real visit date) OR `vetted_at` (date the editor read reviews + photos). Visited preferred, vetted accepted. Candidates without either go to `data/cafes-seoul.candidates.json`.
 - **§4 — no chains, no popular pairings as primary content.** Chains can appear in candidates but should not be promoted to the curated file.
 - **§9.5 — daily 06:00 KST filing.** Dispatches refresh once a day per edition. The cron schedule is in `cloudflare-worker.js` (EN) and `.github/workflows/refresh-dispatches.yml` (KO/JA/PT/ES).
 - **AI disclosure required.** Every `dispatches.{ed}.json` must have `ai_assisted: true` + an `ai_disclosure` string.

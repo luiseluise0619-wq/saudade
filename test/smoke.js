@@ -69,17 +69,19 @@ for (const f of REQUIRED_DATA) {
     catch (e) { assert(false, `valid JSON: ${f} — ${e.message.slice(0, 60)}`); }
 }
 
-// ─── 6. constitution: cafes-seoul.json entries must have visited_at ──
-//    (or it's empty — a wiped state, also acceptable). What's NOT acceptable
-//    is fabricated entries with visited_at:null + lat/lng filled. See PR #26.
+// ─── 6. constitution §3: cafés must have visited_at OR vetted_at when
+//    they carry the rendering fields (lat / two_lines). Empty file is fine.
+//    Catches the failure mode that motivated PR #26: 110 entries with
+//    visited_at:null + fabricated lat/two_lines/amenities.
 try {
     const cafes = JSON.parse(read('data/cafes-seoul.json'));
     if (Array.isArray(cafes) && cafes.length > 0) {
         const fab = cafes.filter(c =>
-            c.visited_at == null && (typeof c.lat === 'number' || c.two_lines)
+            (c.visited_at == null && c.vetted_at == null) &&
+            (typeof c.lat === 'number' || c.two_lines)
         );
         assert(fab.length === 0,
-            `no fabricated cafés (visited_at:null + lat/two_lines filled): ${fab.length} found`);
+            `no fabricated cafés (need visited_at OR vetted_at when lat/two_lines set): ${fab.length} found`);
     } else {
         assert(true, 'no fabricated cafés (file empty or [])');
     }
