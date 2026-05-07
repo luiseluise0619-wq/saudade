@@ -56,6 +56,14 @@
         'Dubai':        { noun: 'Glass.',    ko: '유리의 도시.' }
     };
 
+    // Per-edition default editor city. KO opens in Seoul, JA in Tokyo, etc.
+    // Used only when the reader has no explicit pick (no Switch-the-Desk +
+    // no GeoIP). The English city name is the canonical key — cityIn(city, ed)
+    // translates to the localised form before render.
+    const EDITION_DEFAULT_CITY = {
+        en: 'Lisbon', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
+    };
+
     function detectCity() {
         // v6 §5 — 사용자 명시 home city + Switch the Desk 활성 시 임시 city
         // saudade-city.js 의 activeDeskCity() 가 우선 (사용자가 desk 에서 골랐을 것)
@@ -72,7 +80,10 @@
             const geo = JSON.parse(localStorage.getItem('aura_geoip_v1') || '{}');
             if (geo.city && COVER_COPY[geo.city]) return geo.city;
         } catch (e) {}
-        return 'Lisbon';   // v1 첫 호 권장
+        // Edition-default — KO 가 리스본을 첫 화면으로 보면 안 된다.
+        const ed = (window.SAUDADE_EDITION?.get?.()) ||
+                   (window.state && window.state.lang) || 'en';
+        return EDITION_DEFAULT_CITY[ed] || 'Lisbon';
     }
 
     function isKo() {
