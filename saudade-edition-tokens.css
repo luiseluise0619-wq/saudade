@@ -56,23 +56,24 @@ body.edition-ko h1, body.edition-ko h2 {
     letter-spacing: -0.02em;
 }
 /* 한지 텍스쳐 — radial-gradient noise dots, 헌법 §1: no gradients ON CONTENT.
-   여기서는 paper 표면 자체에만 적용 (배경 텍스쳐), 콘텐츠 그라디언트 X. */
+   여기서는 paper 표면 자체에만 적용 (배경 텍스쳐), 콘텐츠 그라디언트 X.
+   z-index: -1 + pointer-events: none → 클릭·인터랙션에 영향 X. */
 body.edition-ko::before {
     content: '';
     position: fixed; inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
+    background-color: transparent;
     background-image:
-        radial-gradient(circle at 17% 23%, rgba(26,24,21,.045) 1px, transparent 1.4px),
-        radial-gradient(circle at 73% 67%, rgba(26,24,21,.035) 1px, transparent 1.4px),
-        radial-gradient(circle at 41% 89%, rgba(26,24,21,.030) 1px, transparent 1.4px);
+        radial-gradient(circle at 17% 23%, rgba(26,24,21,.040) 1px, transparent 1.4px),
+        radial-gradient(circle at 73% 67%, rgba(26,24,21,.030) 1px, transparent 1.4px),
+        radial-gradient(circle at 41% 89%, rgba(26,24,21,.026) 1px, transparent 1.4px);
     background-size: 7px 7px, 11px 11px, 13px 13px;
     background-position: 0 0, 3px 5px, 5px 1px;
-    opacity: .9;
-    mix-blend-mode: multiply;
+    opacity: .85;
 }
 @media (prefers-reduced-motion: reduce) {
-    body.edition-ko::before { opacity: .5; }
+    body.edition-ko::before { opacity: .45; }
 }
 
 /* ═══ ja · 東京 · 朱 on kinari · Shippori Mincho B1, 横組み ═════════════ */
