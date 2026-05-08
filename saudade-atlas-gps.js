@@ -715,7 +715,11 @@
         // status badge + locate button 미리 마운트 (MAP 토글 안 해도 DOM 에 존재).
         // 사용자가 MAP 보면 바로 우측 하단 버튼 노출 → MO/setTimeout 의존 X.
         let observed = false;
+        let attempts = 0;
         const startObs = setInterval(() => {
+            // Bail after 60s (300 × 200ms) if the atlas DOM never appears,
+            // so this poll can't run forever in a degraded page state.
+            if (++attempts > 300) { clearInterval(startObs); return; }
             const atlas = document.getElementById('sddAtlas');
             const mapEl = document.getElementById('sddAtlasMap');
             if (!atlas) return;

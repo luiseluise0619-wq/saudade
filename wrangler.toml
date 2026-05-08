@@ -32,10 +32,12 @@ database_id = "0eaf0d89-ec73-4d00-aace-34f385e89c03"
 [triggers]
 crons = [
   "0 15 * * *",     # 00:00 KST  Gather    (RSS → raw_feeds)
-  "0 17 * * *",     # 02:00 KST  Score     (quietness/dignity 1-10)
-  "0 19 * * *",     # 04:00 KST  Write     (Gemini 재작성)
-  "0 20 * * *",     # 05:00 KST  Translate (별쇄 번역)
-  "0 21 * * *"      # 06:00 KST  File      (Top 3 publish)
+  "0 17 * * *",     # 02:00 KST  Sort+Score (city classification + quietness)
+  "0 19 * * *",     # 04:00 KST  Write     (Gemini, EN edition only)
+  "0 20 * * *",     # 05:00 KST  (decommissioned in v659 — was Translate.
+                    #             KO/JA/PT/ES now refreshed by GitHub Actions
+                    #             .github/workflows/refresh-dispatches.yml)
+  "0 21 * * *"      # 06:00 KST  File      (Top 3 EN publish)
 ]
 
 # v6 §9.10 — 편집자 액션 로그 시크릿. Dashboard 또는 wrangler secret put EDITOR_TOKEN.
