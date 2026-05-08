@@ -1167,7 +1167,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         const libraryLabel = T({
             en: 'ASMR LIBRARY',
             ko: 'ASMR 라이브러리',
-            ja: 'ASMR ライブラリ',
+            ja: '音の書架',
             pt: 'BIBLIOTECA ASMR',
             es: 'BIBLIOTECA ASMR'
         });

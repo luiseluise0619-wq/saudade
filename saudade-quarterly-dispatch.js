@@ -608,15 +608,15 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
             },
             aboveThreshold: L({
                 en: 'ABOVE 30% THRESHOLD',
-                ko: '30% 트레숄드 통과',
-                ja: '三割しきい値クリア',
+                ko: '30% 기준선 통과',
+                ja: '30%しきい値クリア',
                 pt: 'ACIMA DO LIMITE DE 30%',
                 es: 'POR ENCIMA DEL UMBRAL DEL 30%'
             }),
             belowThreshold: L({
                 en: 'BELOW 30% THRESHOLD',
-                ko: '30% 트레숄드 미달',
-                ja: '三割しきい値未達',
+                ko: '30% 기준선 미달',
+                ja: '30%しきい値未達',
                 pt: 'ABAIXO DO LIMITE DE 30%',
                 es: 'POR DEBAJO DEL UMBRAL DEL 30%'
             }),

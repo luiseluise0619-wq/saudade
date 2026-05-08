@@ -142,7 +142,13 @@ function buildPrompt(edition) {
         `}`,
         ``,
         `Each city gets exactly 3 items numbered "01", "02", "03".`,
-        `Total 9 items. Every string is ${cfg.label}, no other languages.`
+        `Total 9 items. Every string is ${cfg.label}, no other languages.`,
+        ``,
+        `CRITICAL — numerals: ALWAYS Latin digits (10日, 4月29日, 21:00, 30分,`,
+        `42%). NEVER spelled out — not 十日, not 四月二十九日, not 사십칠,`,
+        `not "thirty". Idioms with Sino-Korean readings (사흘, 이틀, 하루)`,
+        `MAY remain — those aren't numerals, they're words. But everything`,
+        `that means an actual count or date or duration must be a Latin digit.`
     ];
     return lines.join('\n');
 }
