@@ -19,16 +19,12 @@
                 if (open) {
                     menu.setAttribute('hidden', '');
                     toggle.setAttribute('aria-expanded', 'false');
-                    toggle.style.background  = 'rgba(15,18,22,.85)';
-                    toggle.style.borderColor = 'rgba(255,255,255,.18)';
-                    toggle.style.color       = 'rgba(255,255,255,.9)';
                 } else {
                     menu.removeAttribute('hidden');
                     toggle.setAttribute('aria-expanded', 'true');
-                    toggle.style.background  = 'rgba(255,93,80,.22)';
-                    toggle.style.borderColor = 'rgba(255,93,80,.6)';
-                    toggle.style.color       = '#ff5d50';
                 }
+                // Visual state handled by .sdd-legal-toggle CSS via the
+                // aria-expanded selector. No inline style mutation needed.
             });
         }
         var consent = document.getElementById('auraConsentLink');

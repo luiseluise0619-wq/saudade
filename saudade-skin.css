@@ -1902,3 +1902,104 @@ body.listening-active .sdd-cover-edition { display: none !important; }
 }
 .sdd-cover-edition-list button.sdd-cover-edition-opt:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
 .sdd-cover-edition-list button.sdd-cover-edition-opt[aria-current="true"] { color: var(--rust) !important; }
+
+/* ─── 6. legal strip — bottom-left MENU pill (saudade tone) ───────────
+   Replaces the AURA dark-glass + #ff5d50 styling that was ported in
+   from the World Pulse era. Uses paper × ink × accent so the strip
+   blends with whichever edition skin is active. */
+
+.sdd-legal-strip {
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.sdd-legal-toggle {
+    all: unset;
+    cursor: pointer;
+    height: 30px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--paper);
+    border: 0.5px solid var(--rule-2);
+    border-radius: 4px;
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: var(--tr-mono-mast, .28em);
+    text-transform: uppercase;
+    transition: color .15s, border-color .15s, background .15s;
+    min-height: 30px;
+}
+.sdd-legal-toggle-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--accent);
+}
+.sdd-legal-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+}
+.sdd-legal-toggle[aria-expanded="true"] {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--paper-d);
+}
+
+.sdd-legal-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    padding: 4px 12px;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    border-radius: 4px;
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: var(--tr-mono-meta, .12em);
+    text-transform: uppercase;
+}
+.sdd-legal-link {
+    color: inherit;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-bottom: 0.5px solid transparent;
+    transition: color .12s, border-color .12s;
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+.sdd-legal-link:hover {
+    color: var(--ink);
+    border-bottom-color: var(--rule-2);
+}
+.sdd-legal-link-accent { color: var(--accent); }
+.sdd-legal-link-accent:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.sdd-legal-sep {
+    color: var(--rule-2);
+    margin: 0 2px;
+    user-select: none;
+}
+
+/* hide on listening-active so the legal strip doesn't sit over the
+   listening room photo. Already hidden in section pages via z-index
+   ordering, but listening uses its own skin so be explicit. */
+body.listening-active .sdd-legal-strip { display: none; }
+
+@media (max-width: 640px) {
+    .sdd-legal-strip { left: 8px; bottom: 8px; gap: 6px; }
+    .sdd-legal-toggle { padding: 0 10px; font-size: 10px; }
+    .sdd-legal-menu { font-size: 9px; padding: 2px 8px; }
+    .sdd-legal-link { padding: 4px 6px; }
+}
