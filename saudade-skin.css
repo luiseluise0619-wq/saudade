@@ -1863,16 +1863,27 @@ body.listening-active .sdd-cover-edition { display: none !important; }
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
     color: var(--bone-d);
-    padding: 6px 8px;
+    /* v667 audit — was 6px 8px (≈22px tall), below WCAG 2.5.5.
+       Padding bumped + min-height 44 = legible on touch + keyboard. */
+    padding: 12px 10px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     user-select: none;
     background: transparent;
     border: 0.5px solid transparent;
     border-radius: 0;
 }
-.sdd-cover-edition > summary:hover { color: var(--ink); border-color: var(--rule); }
+/* v667 audit — hover/open used --ink which doesn't carry edition identity.
+   Use --accent so the active edition's color (terracotta/sangre/navy/…) shows. */
+.sdd-cover-edition > summary:hover { color: var(--accent); border-color: var(--rule); }
+.sdd-cover-edition > summary:focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 2px;
+}
 .sdd-cover-edition > summary::-webkit-details-marker { display: none; }
 .sdd-cover-edition > summary::after { content: ' \25BE'; opacity: .6; }
-.sdd-cover-edition[open] > summary { color: var(--ink); border-color: var(--rule); }
+.sdd-cover-edition[open] > summary { color: var(--accent); border-color: var(--rule); }
 .sdd-cover-edition[open] > summary::after { content: ' \25B4'; opacity: 1; }
 .sdd-cover-edition-list {
     list-style: none;
@@ -1922,7 +1933,9 @@ body.listening-active .sdd-cover-edition { display: none !important; }
 .sdd-legal-toggle {
     all: unset;
     cursor: pointer;
-    height: 30px;
+    /* v667 audit — click target was 30px (below WCAG 2.5.5 44x44 target).
+       Bumped to 44px and added focus-visible affordance below. */
+    height: 44px;
     padding: 0 14px;
     display: inline-flex;
     align-items: center;
@@ -1937,7 +1950,11 @@ body.listening-active .sdd-cover-edition { display: none !important; }
     letter-spacing: var(--tr-mono-mast, .28em);
     text-transform: uppercase;
     transition: color .15s, border-color .15s, background .15s;
-    min-height: 30px;
+    min-height: 44px;
+}
+.sdd-legal-toggle:focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 2px;
 }
 .sdd-legal-toggle-mark {
     font-family: var(--serif);
@@ -1973,12 +1990,18 @@ body.listening-active .sdd-cover-edition { display: none !important; }
 .sdd-legal-link {
     color: inherit;
     text-decoration: none;
-    padding: 6px 8px;
+    /* v667 audit — 30px tap target → 44px (WCAG 2.5.5). */
+    padding: 10px 8px;
     border-bottom: 0.5px solid transparent;
     transition: color .12s, border-color .12s;
-    min-height: 30px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
+}
+.sdd-legal-link:focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 2px;
+    border-bottom-color: transparent;
 }
 .sdd-legal-link:hover {
     color: var(--ink);

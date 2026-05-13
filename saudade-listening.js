@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v667')
+        return fetch('./data/listening.json?v=v668')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -121,7 +121,7 @@ body.listening-active .sdd-listen { display: block; }
     line-height: 1.6;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
     margin: 12px 0 0;
 }
 
@@ -153,14 +153,14 @@ body.listening-active .sdd-listen { display: block; }
     grid-template-columns: 80px 1fr 100px;
     gap: clamp(12px, 2vw, 24px);
     padding: clamp(20px, 3vw, 32px) 0;
-    border-top: 0.5px solid rgba(15,14,18,.18);
+    border-top: 0.5px solid var(--rule);
     align-items: baseline;
     cursor: pointer;
     transition: background .12s;
 }
-.sdd-listen-track:last-child { border-bottom: 0.5px solid rgba(15,14,18,.18); }
-.sdd-listen-track:hover { background: rgba(15,14,18,.04); }
-.sdd-listen-track[aria-current="true"] { background: rgba(15,14,18,.06); }
+.sdd-listen-track:last-child { border-bottom: 0.5px solid var(--rule); }
+.sdd-listen-track:hover { background: var(--paper-d); }
+.sdd-listen-track[aria-current="true"] { background: var(--paper-d); }
 
 .sdd-listen-num {
     font-family: var(--mono);
@@ -168,12 +168,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
 }
 .sdd-listen-num .marker {
     display: inline-block;
     margin-right: 6px;
-    color: rgba(15,14,18,.4);
+    color: var(--bone);
 }
 .sdd-listen-track[aria-current="true"] .sdd-listen-num .marker { color: var(--ink); }
 .sdd-listen-track[aria-current="true"] .sdd-listen-num .marker::before { content: '\\25B6 '; }
@@ -184,7 +184,7 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-cat-head {
     margin: clamp(40px, 6vw, 72px) 0 clamp(8px, 1.5vw, 12px);
     padding-bottom: clamp(8px, 1vw, 12px);
-    border-bottom: 0.5px solid rgba(15,14,18,.32);
+    border-bottom: 0.5px solid var(--rule-2);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -200,7 +200,7 @@ body.listening-active .sdd-listen { display: block; }
     margin: 0 calc(clamp(24px, 6vw, 80px) * -1) clamp(20px, 3vw, 32px);
     padding: 12px clamp(24px, 6vw, 80px);
     background: var(--paper);
-    border-bottom: 0.5px solid rgba(15,14,18,.18);
+    border-bottom: 0.5px solid var(--rule);
     display: flex;
     gap: 18px;
     overflow-x: auto;
@@ -213,7 +213,7 @@ body.listening-active .sdd-listen { display: block; }
     flex: 0 0 auto;
     background: transparent;
     border: 0;
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
     font-family: var(--mono);
     font-weight: 500;
     font-size: 10px;
@@ -229,7 +229,8 @@ body.listening-active .sdd-listen { display: block; }
     transition: color .12s, border-color .12s;
 }
 .sdd-listen-catnav-link:hover { color: var(--ink); }
-.sdd-listen-catnav-link:focus { outline: 0.5px solid rgba(15,14,18,.55); outline-offset: 2px; }
+.sdd-listen-catnav-link:focus { outline: none; }
+.sdd-listen-catnav-link:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 2px; }
 .sdd-listen-catnav-link[aria-current="true"] {
     color: var(--ink);
     border-bottom-color: var(--rust);
@@ -255,7 +256,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
 }
 
 .sdd-listen-title {
@@ -264,7 +265,7 @@ body.listening-active .sdd-listen { display: block; }
     font-style: italic;
     font-size: clamp(15px, 1.4vw, 18px);
     line-height: 1.45;
-    color: rgba(15,14,18,.85);
+    color: var(--ink);
 }
 .sdd-listen-license {
     font-family: var(--mono);
@@ -272,12 +273,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(15,14,18,.45);
+    color: var(--bone);
     margin-top: 4px;
 }
 .sdd-listen-license a {
-    color: rgba(15,14,18,.65);
-    border-bottom: 0.5px solid rgba(15,14,18,.18);
+    color: var(--bone-d);
+    border-bottom: 0.5px solid var(--rule);
     text-decoration: none;
 }
 .sdd-listen-license a:hover { color: var(--ink); }
@@ -287,7 +288,7 @@ body.listening-active .sdd-listen { display: block; }
     font-weight: 400;
     font-size: 11px;
     letter-spacing: var(--tr-mono-data);
-    color: rgba(15,14,18,.65);
+    color: var(--bone-d);
     text-align: right;
     white-space: nowrap;
 }
@@ -308,7 +309,7 @@ body.listening-active .sdd-listen { display: block; }
 .sdd-listen-foot {
     margin-top: clamp(40px, 6vw, 80px);
     padding-top: clamp(16px, 2vw, 24px);
-    border-top: 0.5px solid rgba(15,14,18,.18);
+    border-top: 0.5px solid var(--rule);
 }
 .sdd-listen-foot p {
     font-family: var(--mono);
@@ -317,7 +318,7 @@ body.listening-active .sdd-listen { display: block; }
     line-height: 1.7;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
     max-width: 60ch;
     margin: 0;
 }
@@ -345,7 +346,7 @@ body.listening-active .sdd-listen { display: block; }
     background: transparent !important;
     border: 0 !important;
     border-bottom: 1px solid transparent !important;
-    color: rgba(15,14,18,.55) !important;
+    color: var(--bone-d) !important;
     font: inherit !important;
     text-transform: inherit !important;
     letter-spacing: inherit !important;
@@ -416,7 +417,7 @@ body.listening-active .sdd-listen { display: block; }
     border-radius: 0 !important;
     min-height: 44px !important;
 }
-.sdd-listen-city-switcher-list button:hover { color: var(--rust) !important; background: rgba(15,14,18,.04) !important; }
+.sdd-listen-city-switcher-list button:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
 .sdd-listen-city-switcher-list button[aria-current="true"] { color: var(--rust) !important; }
 
 /* 사진 헤더 — 화면 상단, 4px paper frame, 14px 여백 (풀블리드 X) */
@@ -518,7 +519,7 @@ body.listening-active .sdd-listen { display: block; }
     gap: 14px;
     padding: 10px 18px;
     background: rgba(242,238,227,.92);
-    border: 0.5px solid rgba(15,14,18,.32);
+    border: 0.5px solid var(--rule-2);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
     z-index: calc(var(--z-section-page, 8) + 1);
@@ -528,12 +529,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 11px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(15,14,18,.85);
+    color: var(--ink);
 }
 .sdd-listen-ctl {
     background: transparent;
     border: 0;
-    color: rgba(15,14,18,.85);
+    color: var(--ink);
     font-family: var(--mono);
     font-weight: 500;
     font-size: 11px;
@@ -547,13 +548,13 @@ body.listening-active .sdd-listen { display: block; }
 }
 .sdd-listen-ctl:hover { color: var(--ink); }
 .sdd-listen-ctl[aria-pressed="true"] { color: var(--ink); }
-.sdd-listen-ctl-sep { color: rgba(15,14,18,.35); }
+.sdd-listen-ctl-sep { color: var(--rule-2); }
 .sdd-listen-vol-label {
     font-family: var(--mono);
     font-weight: 400;
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
-    color: rgba(15,14,18,.55);
+    color: var(--bone-d);
 }
 /* v7 §11.5 — 1px hairline 슬라이더. 브라우저 기본 fill·accent 강제 제거. */
 .sdd-listen-vol {
@@ -571,13 +572,14 @@ body.listening-active .sdd-listen { display: block; }
     padding: 0;
     margin: 0 4px;
     box-sizing: border-box;
-    /* 가운데 1px hairline 만 보이도록 inline gradient (브라우저 progress fill 무력화) */
+    /* 가운데 1px hairline 만 보이도록 inline gradient (브라우저 progress fill 무력화).
+       color-mix → 다크 스킨 + 5 에디션 ink 색을 따라간다. */
     background-image: linear-gradient(
         to bottom,
         transparent 0,
         transparent 7.5px,
-        rgba(15,14,18,.3) 7.5px,
-        rgba(15,14,18,.3) 8.5px,
+        color-mix(in srgb, var(--ink) 30%, transparent) 7.5px,
+        color-mix(in srgb, var(--ink) 30%, transparent) 8.5px,
         transparent 8.5px,
         transparent 16px
     ) !important;
@@ -592,12 +594,12 @@ body.listening-active .sdd-listen { display: block; }
 }
 .sdd-listen-vol::-moz-range-track {
     height: 1px;
-    background: rgba(15,14,18,.3) !important;
+    background: color-mix(in srgb, var(--ink) 30%, transparent) !important;
     border: 0;
     border-radius: 0;
 }
 .sdd-listen-vol::-moz-range-progress {
-    background: rgba(15,14,18,.3) !important;
+    background: color-mix(in srgb, var(--ink) 30%, transparent) !important;
     height: 1px;
 }
 .sdd-listen-vol::-webkit-slider-thumb {
@@ -626,7 +628,7 @@ body.listening-active .sdd-listen { display: block; }
     font-weight: 400;
     font-size: 10px;
     letter-spacing: var(--tr-mono-data);
-    color: rgba(15,14,18,.65);
+    color: var(--bone-d);
     min-width: 24px;
     text-align: right;
 }
@@ -638,12 +640,12 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 10px;
     letter-spacing: var(--tr-mono-mast);
     text-transform: uppercase;
-    color: rgba(15,14,18,.85);
+    color: var(--ink);
     min-width: 80px;
     text-align: right;
 }
 .sdd-listen-session-state.work { color: var(--ink); }
-.sdd-listen-session-state.rest { color: rgba(15,14,18,.55); }
+.sdd-listen-session-state.rest { color: var(--bone-d); }
 
 .sdd-listen-session-counter {
     position: fixed;
@@ -656,7 +658,7 @@ body.listening-active .sdd-listen { display: block; }
     font-size: 9.5px;
     letter-spacing: var(--tr-mono-meta);
     text-transform: uppercase;
-    color: rgba(15,14,18,.4);
+    color: var(--bone);
     margin: 0;
     pointer-events: none;
     text-align: center;

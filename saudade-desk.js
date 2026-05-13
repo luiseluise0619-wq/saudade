@@ -168,7 +168,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     border-radius: 0 !important;
     min-height: 44px !important;
 }
-.sdd-following-opt:hover { color: var(--rust) !important; background: rgba(15,14,18,.04) !important; }
+.sdd-following-opt:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
 .sdd-following-pairings {
     list-style: none;
     margin: 0;
