@@ -77,6 +77,25 @@ function main() {
         }
     }
 
+    // 4. bootstrap.js — SAUDADE_RELEASE constant. Stamps the SW registration URL
+    // (./sw.js?v=SAUDADE_RELEASE), so if this drifts the browser keeps the old
+    // SW forever and never picks up new caches. Found stuck at v657 while sw.js
+    // had moved to v668 — that's the bug this section guards against.
+    const BOOT = path.join(ROOT, 'bootstrap.js');
+    if (fs.existsSync(BOOT)) {
+        const bs = fs.readFileSync(BOOT, 'utf8');
+        let bsChanges = 0;
+        const newBs = bs.replace(/const SAUDADE_RELEASE\s*=\s*'v\d+'/, () => {
+            bsChanges++;
+            return `const SAUDADE_RELEASE = '${next}'`;
+        });
+        if (bsChanges > 0) {
+            if (!dry) fs.writeFileSync(BOOT, newBs);
+            totalChanges += bsChanges;
+            console.log(`  bootstrap.js             ${bsChanges} changes`);
+        }
+    }
+
     console.log(`\n[ok] ${totalChanges} ${dry ? 'would change' : 'changed'} · ${current} → ${next}`);
 
     if (!dry) {
