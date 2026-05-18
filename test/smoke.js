@@ -48,6 +48,18 @@ for (const v of htmlVersions) {
         `cache version sync (sw=${swVersion}, html=${v})`);
 }
 
+// 3b. bootstrap.js SAUDADE_RELEASE must equal sw.js CACHE_VERSION too.
+//     If this drifts, the browser keeps re-using the old service worker
+//     (registered at ./sw.js?v=SAUDADE_RELEASE) and never picks up new
+//     cache versions — i.e. every bump above bootstrap's literal silently
+//     no-ops in production. Found stuck at v657 while sw.js was v668.
+const boot = read('bootstrap.js');
+const bootMatch = boot.match(/const SAUDADE_RELEASE\s*=\s*'(v\d+)'/);
+assert(bootMatch, 'bootstrap.js SAUDADE_RELEASE constant found');
+const bootVersion = bootMatch ? bootMatch[1] : null;
+assert(bootVersion === swVersion,
+    `bootstrap.js SAUDADE_RELEASE (${bootVersion}) === sw.js CACHE_VERSION (${swVersion})`);
+
 // ─── 4. data files referenced by the frontend exist ──────────────────
 const REQUIRED_DATA = [
     'data/cafes-seoul.json',
