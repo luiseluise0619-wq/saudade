@@ -431,7 +431,64 @@ const RSS_PIPELINE_FEEDS = [
 
     // ─── EN · indie urbanism / slow journals ────────────────────
     { url: 'https://failedarchitecture.com/feed/',                            city: null,     section: 'urbanism' },
-    { url: 'https://www.architectural-review.com/feed',                       city: null,     section: 'architecture' }
+    { url: 'https://www.architectural-review.com/feed',                       city: null,     section: 'architecture' },
+
+    // ═══ small-local · second expansion (per user request) ═════
+    // 도시별로 신문 매체 X · 미술관 / 도서관 / 공방 / 시민문화 / 예술
+    // 재단 등 진짜 작은 곳들. 안 살아있어도 무방 — fetchT 가 catch.
+
+    // ─── KR Seoul (덜 알려진 구 + 작은 문화기관) ─────────────────
+    { url: 'https://www.gwangjin.go.kr/portal/main/rss.do',                   city: 'Seoul',  section: 'district',     hint: '광진구' },
+    { url: 'https://www.ddm.go.kr/portal/main/rss.do',                        city: 'Seoul',  section: 'district',     hint: '동대문구' },
+    { url: 'https://www.junggu.seoul.kr/rss/news.xml',                        city: 'Seoul',  section: 'district',     hint: '중구청' },
+    { url: 'https://www.seocho.go.kr/site/portal/rss.do',                     city: 'Seoul',  section: 'district',     hint: '서초구' },
+    { url: 'https://arko.or.kr/rss/news.xml',                                 city: 'Seoul',  section: 'culture',      hint: '한국문화예술위원회 ARKO' },
+    { url: 'https://www.daelim-museum.org/rss/news.xml',                      city: 'Seoul',  section: 'museum',       hint: '대림미술관 (D-Museum)' },
+    { url: 'https://www.amorepacific.museum/rss',                             city: 'Seoul',  section: 'museum',       hint: 'Amorepacific Museum of Art' },
+    { url: 'https://www.kcdf.or.kr/rss/news.xml',                             city: 'Seoul',  section: 'craft',        hint: '한국공예디자인문화진흥원' },
+    { url: 'https://piknic.kr/rss',                                           city: 'Seoul',  section: 'culture',      hint: 'piknic 회현동' },
+    { url: 'https://mmca.go.kr/rss/news.xml',                                 city: 'Seoul',  section: 'museum',       hint: '국립현대미술관 MMCA' },
+
+    // ─── JP Tokyo·Kanto (더 작은 区·작은 미술관) ─────────────────
+    { url: 'https://www.city.kita.tokyo.jp/rss/news.xml',                     city: 'Tokyo',  section: 'district',     hint: '北区' },
+    { url: 'https://www.city.toshima.lg.jp/rss/news.xml',                     city: 'Tokyo',  section: 'district',     hint: '豊島区' },
+    { url: 'https://www.city.sumida.lg.jp/rss/news.xml',                      city: 'Tokyo',  section: 'district',     hint: '墨田区' },
+    { url: 'https://www.3331.jp/rss/news.xml',                                city: 'Tokyo',  section: 'art',          hint: '3331 Arts Chiyoda' },
+    { url: 'https://www.shibaurahouse.jp/rss',                                city: 'Tokyo',  section: 'culture',      hint: 'Shibaura House' },
+    { url: 'https://www.spiral.co.jp/rss',                                    city: 'Tokyo',  section: 'art',          hint: 'Spiral Aoyama' },
+    { url: 'https://hanapress.com/feed',                                      city: 'Kyoto',  section: 'culture',      hint: 'Hana Press (Kyoto guide)' },
+
+    // ─── PT Lisboa·Porto (더 많은 freguesia + 작은 박물관) ──────
+    { url: 'https://www.jf-alcantara.pt/rss',                                 city: 'Lisbon', section: 'parish',       hint: 'JF Alcântara (LX Factory area)' },
+    { url: 'https://www.jf-marvila.pt/rss',                                   city: 'Lisbon', section: 'parish',       hint: 'JF Marvila' },
+    { url: 'https://www.jf-penhafranca.pt/rss',                               city: 'Lisbon', section: 'parish',       hint: 'JF Penha de França' },
+    { url: 'https://www.museudoazulejo.gov.pt/rss',                           city: 'Lisbon', section: 'museum',       hint: 'Museu Nacional do Azulejo' },
+    { url: 'https://www.casadamusica.com/rss',                                city: 'Porto',  section: 'culture',      hint: 'Casa da Música (Porto)' },
+    { url: 'https://www.fundacaodesaramago.pt/rss',                           city: 'Lisbon', section: 'culture',      hint: 'Fundação José Saramago' },
+    { url: 'https://www.fbaul.ulisboa.pt/rss',                                city: 'Lisbon', section: 'art',          hint: 'Faculdade de Belas-Artes' },
+
+    // ─── ES Madrid·Barcelona·BA (더 많은 distrito·작은 문화) ────
+    { url: 'https://www.condeduquemadrid.es/rss',                             city: 'Madrid', section: 'culture',      hint: 'Centro Cultural Conde Duque' },
+    { url: 'https://www.matadero.es/rss',                                     city: 'Madrid', section: 'culture',      hint: 'Matadero Madrid' },
+    { url: 'https://www.tabakalera.eus/rss',                                  city: null,     section: 'culture',      hint: 'Tabakalera (San Sebastián)' },
+    { url: 'https://www.fundaciotapies.org/rss',                              city: 'Barcelona', section: 'museum',  hint: 'Fundació Antoni Tàpies' },
+    { url: 'https://www.usinabuenosaires.gob.ar/rss',                         city: 'Buenos Aires', section: 'culture', hint: 'Usina del Arte' },
+    { url: 'https://www.cck.gob.ar/rss',                                      city: 'Buenos Aires', section: 'culture', hint: 'CCK Centro Cultural Kirchner' },
+
+    // ─── DE Berlin (더 많은 Bezirke + 작은 갤러리) ──────────────
+    { url: 'https://www.berlin.de/ba-tempelhof-schoeneberg/rss/news.xml',     city: 'Berlin', section: 'district',     hint: 'Tempelhof-Schöneberg' },
+    { url: 'https://www.berlin.de/ba-steglitz-zehlendorf/rss/news.xml',       city: 'Berlin', section: 'district',     hint: 'Steglitz-Zehlendorf' },
+    { url: 'https://www.gropiusbau.de/rss',                                   city: 'Berlin', section: 'museum',       hint: 'Martin-Gropius-Bau' },
+    { url: 'https://www.berlinale.de/rss',                                    city: 'Berlin', section: 'culture',      hint: 'Berlinale' },
+
+    // ─── SE Asia (Bali·Chiang Mai·Da Nang — 작은 로컬 문화) ─────
+    { url: 'https://www.thejakartapost.com/rss',                              city: null,     section: 'culture',      hint: 'Jakarta Post (Bali coverage)' },
+    { url: 'https://www.bangkokpost.com/rss/data/bangkok.xml',                city: null,     section: 'culture',      hint: 'Bangkok Post local' },
+
+    // ─── Indie magazine RSS (slow / quiet tone, no chains) ─────
+    { url: 'https://www.craft-magazine.com/feed',                             city: null,     section: 'craft' },
+    { url: 'https://www.cabinetmagazine.org/rss',                             city: null,     section: 'culture' },
+    { url: 'https://thecaravanmagazine.in/feed',                              city: null,     section: 'culture',      hint: 'The Caravan (India slow journalism)' }
 ];
 const PIPELINE_CITIES = [
     // EN

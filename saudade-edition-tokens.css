@@ -261,3 +261,66 @@ html[data-skin="dark"] body.edition-ko::before {
    This selector exists purely as a CSS lint hook: search for
    `overflow-y: auto` outside of .sdd-disp / .sdd-atlas-list / .sdd-ld
    should fail the design review. */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CJK safety — overflow-wrap + word-break on text-heavy elements.
+   Prevents long Korean/Japanese strings from breaking layout. CJK has
+   no natural break points (no spaces between words), so line-break:
+   strict can leave whole words hanging off the edge of containers.
+   ═══════════════════════════════════════════════════════════════════════ */
+body.edition-ko, body.edition-ja {
+    /* Allow CJK text to break at any character boundary as last resort */
+    overflow-wrap: anywhere;
+    word-break: keep-all;   /* prefer breaking between, not inside, words */
+}
+body.edition-ko h1, body.edition-ko h2, body.edition-ko h3,
+body.edition-ja h1, body.edition-ja h2, body.edition-ja h3,
+body.edition-ko .sdd-disp-headline,
+body.edition-ja .sdd-disp-headline,
+body.edition-ko .sdd-cover-wordmark,
+body.edition-ja .sdd-cover-wordmark {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Per-edition section-mark variation (§ 01 / § 02 …) — small visual
+   differentiator that doesn't violate "ONE accent" rule.
+   ═══════════════════════════════════════════════════════════════════════ */
+body.edition-en .sdd-mark,
+body.edition-en .sdd-cover-issue-eyebrow {
+    letter-spacing: 0.28em;    /* tight Latin */
+}
+body.edition-ko .sdd-mark,
+body.edition-ko .sdd-cover-issue-eyebrow {
+    letter-spacing: 0.18em;    /* 한글 자간 살짝 좁힘 */
+}
+body.edition-ja .sdd-mark,
+body.edition-ja .sdd-cover-issue-eyebrow {
+    letter-spacing: 0.32em;    /* 日本語 字間 余裕 */
+}
+body.edition-pt .sdd-mark { letter-spacing: 0.24em; }
+body.edition-es .sdd-mark {
+    letter-spacing: 0.36em;    /* sangre + uppercase ribbon — extra air */
+    font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Per-edition rule weight — magazine rules thicker/thinner per edition.
+   en/pt = 0.5px hairline. ko = 1px (한지 어울림). ja = 0.5px + 점선.
+   ═══════════════════════════════════════════════════════════════════════ */
+body.edition-ko hr,
+body.edition-ko .sdd-rule { border-top-width: 1px; }
+body.edition-ja hr,
+body.edition-ja .sdd-rule { border-top-style: dashed; }
+body.edition-es .sdd-rule { border-top-width: 1.5px; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Per-edition dispatch number style (numerals next to each item).
+   ═══════════════════════════════════════════════════════════════════════ */
+body.edition-en .sdd-disp-num { font-weight: 500; }
+body.edition-ko .sdd-disp-num { font-weight: 400; font-feature-settings: "tnum"; }
+body.edition-ja .sdd-disp-num { font-weight: 400; letter-spacing: 0.04em; }
+body.edition-pt .sdd-disp-num { font-style: italic; }
+body.edition-es .sdd-disp-num { font-weight: 600; letter-spacing: 0.04em; }
