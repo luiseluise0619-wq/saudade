@@ -190,6 +190,25 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "wise-man-coffee-tokyo",
+    "name": "WISE MAN COFFEE",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-11-8 Koganei",
+    "address": "東京都小金井市前原町1-14-3",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=WISE+MAN+COFFEE+小金井市前原町1-14-3+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Wise%20Man%20Coffee%20Tokyo%20Maeharacho%201-chome-11-8%20Koganei",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "서부 외곽의 로컬 보석 같은 공간으로 인구 밀도가",
+      "적어 정숙함 최고"
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "서부 외곽의 로컬 보석 같은 공간으로 인구 밀도가 적어 정숙함 최고",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "lattest-omotesando-espresso-tokyo",
     "name": "LATTEST Omotesando Espresso BAR",
     "city": "Tokyo",
@@ -513,6 +532,82 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "amameria-espresso-tokyo",
+    "name": "AMAMERIA ESPRESSO",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-6-15 Shinagawa",
+    "address": "Japan, 〒142-0062 Tokyo, Shinagawa City, Koyama, 3 Chome−6−15 1階",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Japan%2C%20%E3%80%92142-0062%20Tokyo%2C%20Shinagawa%20City%2C%20Koyama%2C%203%20Chome%E2%88%926%E2%88%9215%201%E9%9A%8E",
+    "google_maps_search_url": "https://www.google.com/maps/search/Amameria%20Espresso%20Tokyo%20Koyama%203-chome-6-15%20Shinagawa",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "무사시코야마 로컬 거리에 어울리는 아늑하고 소란스럽지 않은 집중력",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "무사시코야마 로컬 거리에 어울리는 아늑하고 소란스럽지 않은 집중력",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "44-seasons-coffee-tokyo",
+    "name": "All Seasons Coffee",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-7-7 Shinjuku",
+    "address": "1F, 2 Chome-7-7 Shinjuku, Shinjuku City, Tokyo 160-0022, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=1F%2C%202%20Chome-7-7%20Shinjuku%2C%20Shinjuku%20City%2C%20Tokyo%20160-0022%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/4%2F4%20Seasons%20Coffee%20Tokyo%20Shinjuku%202-chome-7-7%20Shinjuku",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "신주쿠 가든 근처의 깔끔한 홀 분위기 속 고속 인터넷 활용",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "신주쿠 가든 근처의 깔끔한 홀 분위기 속 고속 인터넷 활용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "counterpart-coffee-gallery-tokyo",
+    "name": "COUNTERPART COFFEE GALLERY",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-12-16 Nakano",
+    "address": "3 Chome-12-16 Honmachi, Shibuya, Tokyo 151-0071, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=3%20Chome-12-16%20Honmachi%2C%20Shibuya%2C%20Tokyo%20151-0071%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Counterpart%20Coffee%20Gallery%20Tokyo%20Honcho%203-chome-12-16%20Nakano",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "다층 구조로 위층은 눈치 보지 않고 노트북 작업하기",
+      "완벽하게 최적화"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "다층 구조로 위층은 눈치 보지 않고 노트북 작업하기 완벽하게 최적화",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "yanaka-coffee-nezu-tokyo",
+    "name": "Yanaka Coffee Nezu Store",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-26-5 Taito",
+    "address": "1-5-11, Nezu, Bunkyo-ku, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Yanaka+Coffee+Nezu+Store+1-5-11+Nezu+Bunkyo-ku+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Yanaka%20Coffee%20Nezu%20Tokyo%20Nezu%201-chome-26-5%20Taito",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "원두 향이 진하게 감도는 목조 내부에서 무소음 타이핑 진행",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "원두 향이 진하게 감도는 목조 내부에서 무소음 타이핑 진행",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "koffee-mameya-tokyo",
     "name": "KOFFEE MAMEYA",
     "city": "Tokyo",
@@ -529,6 +624,25 @@
     ],
     "amenities": "WIFI",
     "notes_kr": "세계 최고 수준의 바리스타 가이드를 받으며 숏미팅 및 브레인스토밍",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "iron-coffee-tokyo",
+    "name": "IRON COFFEE",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-18-9 Setagaya",
+    "address": "1 Chome-18-9 Gotokuji, Setagaya City, Tokyo 154-0021, Japan",
+    "rating": 4.6,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=1%20Chome-18-9%20Gotokuji%2C%20Setagaya%20City%2C%20Tokyo%20154-0021%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Iron%20Coffee%20Tokyo%20Gotokuji%201-chome-18-9%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "고토쿠지 고양이 사원 길목에서 조용히 오전 업무",
+      "및 메일 정리에 적합"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "고토쿠지 고양이 사원 길목에서 조용히 오전 업무 및 메일 정리에 적합",
     "source": "gemini-2.5-flash-grounded"
   },
   {
@@ -567,6 +681,25 @@
     ],
     "amenities": "WIFI · OUTLET",
     "notes_kr": "쿠라마에 지역의 고풍스러운 공장식 로스터리로 주말보다는 평일 오전 스퍼트 권장",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "passage-coffee-tokyo",
+    "name": "PASSAGE COFFEE",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-14-16 Minato",
+    "address": "大正堂ビル １Ｆ, 5 Chome-14-16 Shiba, Minato City, Tokyo 108-0014, Japan",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%AD%A3%E5%A0%82%E3%83%93%E3%83%AB%20%EF%BC%91%EF%BC%A6%2C%205%20Chome-14-16%20Shiba%2C%20Minato%20City%2C%20Tokyo%20108-0014%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Passage%20Coffee%20Tokyo%20Shiba%205-chome-14-16%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "게이오 대학교 인근 위치로 학구적이고 한적하여 장시간 타건 가능",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "게이오 대학교 인근 위치로 학구적이고 한적하여 장시간 타건 가능",
     "source": "gemini-2.5-flash-grounded"
   },
   {
