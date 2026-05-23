@@ -1,1 +1,59 @@
-[]
+[
+  {
+    "id": "sorama-coffee-tokyo",
+    "name": "sorama coffee",
+    "city": "Tokyo",
+    "neighborhood": "Jingūmae Shibuya",
+    "address": "1 Chome-12-6 Jingumae, Shibuya City, Tokyo 150-0001, Japan",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/sorama+coffee+1-chōme-12-6+Jingūmae+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/sorama%20coffee%20Tokyo%201-ch%C5%8Dme-12-6%20Jing%C5%ABmae%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "하라주쿠 뒤편의 미니멀한 공간으로 가벼운 패드",
+      "작업이나 기획서 읽기에 최고"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "하라주쿠 뒤편의 미니멀한 공간으로 가벼운 패드 작업이나 기획서 읽기에 최고",
+    "source": "gemini-grounded"
+  },
+  {
+    "id": "lattest-omotesando-espresso-tokyo",
+    "name": "LATTEST Omotesando Espresso BAR",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-5-2 Shibuya",
+    "address": "3 Chome-5-2 Jingumae, Shibuya City, Tokyo 150-0001, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Lattest+Omotesando+Espresso+Jingumae+3-chome-5-2+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Lattest%20Omotesando%20Espresso%20Tokyo%20Jingumae%203-chome-5-2%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "오모테산도 뒤편의 웅장한 아지트 같은 매장으로",
+      "콘센트 접근성 뛰어남"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "오모테산도 뒤편의 웅장한 아지트 같은 매장으로 콘센트 접근성 뛰어남",
+    "source": "gemini-grounded"
+  },
+  {
+    "id": "tokyo-little-house-tokyo",
+    "name": "TOKYO LITTLE HOUSE",
+    "city": "Tokyo",
+    "neighborhood": "Akasaka Minato",
+    "address": "3-chōme-6-12 Akasaka, Minato City, Tokyo 107-0052, Japan",
+    "rating": 4,
+    "google_url": "https://www.google.com/maps/search/TOKYO+LITTLE+HOUSE+3-chōme-6-12+Akasaka+Minato+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Tokyo%20Little%20House%20Tokyo%203-ch%C5%8Dme-6-12%20Akasaka%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "역사적인 옛 목조 가옥을 개조하여 아날로그적이면서",
+      "완벽한 정숙 환경 제공"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "역사적인 옛 목조 가옥을 개조하여 아날로그적이면서 완벽한 정숙 환경 제공",
+    "source": "gemini-grounded"
+  }
+]
