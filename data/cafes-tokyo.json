@@ -836,6 +836,44 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "nicolai-bergmann-nomu-tokyo",
+    "name": "Nicolai Bergmann NOMU aoyama",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-7-2 Minato",
+    "address": "5 Chome-7-2 Minamiaoyama, Minato City, Tokyo 107-0062, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Nicolai+Bergmann+Nomu+Minamiaoyama+5-chome-7-2+Minato+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Nicolai%20Bergmann%20Nomu%20Tokyo%20Minamiaoyama%205-chome-7-2%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "플라워 아트 감각이 극대화된 공간에서 디자인",
+      "및 마케팅 기획서 작업"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "플라워 아트 감각이 극대화된 공간에서 디자인 및 마케팅 기획서 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "deus-ex-machina-asakusa-tokyo",
+    "name": "Deus Ex Machina Asakusa",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-2-8 Sumida",
+    "address": "1 Chome-2-8 Mukojima, Sumida City, Tokyo 131-0033, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Deus+Ex+Machina+Asakusa+Mukojima+1-chome-2-8+Sumida+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Deus%20Ex%20Machina%20Asakusa%20Tokyo%20Mukojima%201-chome-2-8%20Sumida",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "강변 미즈마치에 위치해 뷰가 시원하고 노트북 작업하는 이들 다수",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "강변 미즈마치에 위치해 뷰가 시원하고 노트북 작업하는 이들 다수",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "koffee-mameya-tokyo",
     "name": "KOFFEE MAMEYA",
     "city": "Tokyo",
@@ -969,6 +1007,25 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "nem-coffee-&-espresso-tokyo",
+    "name": "Nem Coffee & Espresso",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-11-13 Shibuya",
+    "address": "4 Chome-5-6 Minamiazabu, Minato City, Tokyo 106-0047, Japan",
+    "rating": 4.2,
+    "google_url": "https://www.google.com/maps/search/Nem+Coffee+%26+Espresso+Hiroo+5-chome-11-13+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Nem%20Coffee%20%26%20Espresso%20Tokyo%20Hiroo%205-chome-11-13%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "정갈하고 미니멀한 공간으로 현지 주민 노마드들이",
+      "한 줄씩 코드 짜는 곳"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "정갈하고 미니멀한 공간으로 현지 주민 노마드들이 한 줄씩 코드 짜는 곳",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "fabcafe-tokyo-tokyo",
     "name": "FabCafe Tokyo",
     "city": "Tokyo",
@@ -1042,6 +1099,25 @@
     ],
     "amenities": "WIFI · OUTLET",
     "notes_kr": "시모키타자와 개성 강한 공간에서 짧은 생각 정리 및 크리에이티브 구상",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "canvas-tokyo-tokyo",
+    "name": "CANVASTOKYO",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-19-6 Shibuya",
+    "address": "5-19-6 Hiroo, Shibuya City, Tokyo 150-0012, Japan",
+    "rating": 4,
+    "google_url": "https://www.google.com/maps/search/Canvas+Tokyo+Hiroo+5-chome-19-6+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Canvas%20Tokyo%20Tokyo%20Hiroo%205-chome-19-6%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "히로오 조용한 부촌 거리에서 간단히 이메일 회신 및 메모 정돈",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "히로오 조용한 부촌 거리에서 간단히 이메일 회신 및 메모 정돈",
     "source": "gemini-2.5-flash-grounded"
   },
   {
