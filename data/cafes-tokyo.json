@@ -152,6 +152,44 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "ballon-tokyo-tokyo",
+    "name": "Ballon Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-2-19 Meguro",
+    "address": "3-2-19 Nakameguro, Meguro-ku, Tokyo, Japan",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/Ballon+Tokyo+3-2-19+Nakameguro,+Meguro-ku,+Tokyo,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Ballon%20Tokyo%20Tokyo%20Nakameguro%203-chome-2-19%20Meguro",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "비건 소프크 아이스크림과 쾌적한 화이트 톤 공간",
+      "속 깔끔한 일 처리"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "비건 소프크 아이스크림과 쾌적한 화이트 톤 공간 속 깔끔한 일 처리",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "bongen-coffee-tokyo",
+    "name": "BONGEN COFFEE Tokyo Ginza",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-16-3 Chuo",
+    "address": "2 Chome-16-3 Ginza, Chuo City, Tokyo 104-0061, Japan",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/BONGEN+COFFEE+Tokyo+Ginza+2+Chome-16-3+Ginza,+Chuo+City,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Bongen%20Coffee%20Tokyo%20Ginza%202-chome-16-3%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "긴자 한복판 고요하고 묵직한 분재 인테리어 아래 숏 타스크 처리용",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "긴자 한복판 고요하고 묵직한 분재 인테리어 아래 숏 타스크 처리용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "lattest-omotesando-espresso-tokyo",
     "name": "LATTEST Omotesando Espresso BAR",
     "city": "Tokyo",
@@ -361,6 +399,120 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "streamer-coffee-gohongi-tokyo",
+    "name": "STREAMER COFFEE COMPANY 五本木店",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-36-1 Meguro",
+    "address": "東京都目黒区中央町2-36",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/STREAMER+COFFEE+COMPANY+五本木店+東京都目黒区中央町2-36",
+    "google_maps_search_url": "https://www.google.com/maps/search/Streamer%20Coffee%20Gohongi%20Tokyo%20Chuo%202-chome-36-1%20Meguro",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "지하철 고가 하부의 웅장한 내부 인테리어 속",
+      "차분한 백그라운드 사운드"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "지하철 고가 하부의 웅장한 내부 인테리어 속 차분한 백그라운드 사운드",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "allpress-espresso-tokyo-tokyo",
+    "name": "Allpress Espresso Tokyo Roastery & Cafe",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-7-2 Koto",
+    "address": "3 Chome-7-2 Hirano, Koto City, Tokyo 135-0023, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Allpress%20Espresso%20Tokyo%20Roastery%20%26%20Cafe,3%20Chome-7-2%20Hirano,%20Koto%20City,%20Tokyo%20135-0023,%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Allpress%20Espresso%20Tokyo%20Tokyo%20Hirano%203-chome-7-2%20Koto",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "높은 천장에서 오는 웅장함과 목재의 정취 속 장시간 업무 유용",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "높은 천장에서 오는 웅장함과 목재의 정취 속 장시간 업무 유용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "monz-cafe-tokyo",
+    "name": "MONZ CAFE",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-14-5 Koto",
+    "address": "1-14-5 Tomioka, Koto, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=MONZ%20CAFE,1-14-5%20Tomioka,%20Koto,%20Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Monz%20Cafe%20Tokyo%20Tomioka%201-chome-14-5%20Koto",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "신사 앞 골목의 오랜 가옥을 개조하여 쾌적하고",
+      "차분하게 할 일 마무리"
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "신사 앞 골목의 오랜 가옥을 개조하여 쾌적하고 차분하게 할 일 마무리",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "double-tall-coffee-bar-tokyo",
+    "name": "Double Tall Coffee Bar Shibuya cocoti ten",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-12-24 Shibuya",
+    "address": "Shibuya 3-chome-12-24 Shibuya · Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Double%20Tall%20Coffee%20Bar%20Shibuya%20cocoti%20ten,Shibuya%203-chome-12-24%20Shibuya%20Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Double%20Tall%20Coffee%20Bar%20Tokyo%20Shibuya%203-chome-12-24%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시부야역 동측 한적한 구역에 있어 오랜 시간 몰입 업무 가능",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "시부야역 동측 한적한 구역에 있어 오랜 시간 몰입 업무 가능",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "obscura-coffee-roasters-tokyo",
+    "name": "OBSCURA COFFEE ROASTERS",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-9-16 Setagaya",
+    "address": "1 Chome-36-10 Sangenjaya, Setagaya City, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/OBSCURA+COFFEE+ROASTERS+1+Chome-36-10+Sangenjaya,+Setagaya+City,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Obscura%20Coffee%20Roasters%20Tokyo%20Sangenjaya%201-chome-9-16%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "로스팅 퀄리티가 우수하여 커피 마니아 및 프리랜서들의",
+      "편안한 안식처"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "로스팅 퀄리티가 우수하여 커피 마니아 및 프리랜서들의 편안한 안식처",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "tenement-tokyo",
+    "name": "Tenement",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-39-4 Shibuya",
+    "address": "2 Chome-39-4 Ebisu, Shibuya City, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Tenement+2+Chome-39-4+Ebisu,+Shibuya+City,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Tenement%20Tokyo%20Ebisu%202-chome-39-4%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "에비스 조용한 주택가의 주택 개조형으로 앤틱한",
+      "우드 인테리어 속 조용함"
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "에비스 조용한 주택가의 주택 개조형으로 앤틱한 우드 인테리어 속 조용함",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "koffee-mameya-tokyo",
     "name": "KOFFEE MAMEYA",
     "city": "Tokyo",
@@ -491,6 +643,82 @@
     ],
     "amenities": "WIFI",
     "notes_kr": "넓고 인더스트리얼한 가구가 갖춰져 있어 시부야에서 일하는 노마드 성지",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "bear-pond-espresso-tokyo",
+    "name": "Bear Pond Espresso",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-21-3 Setagaya",
+    "address": "2 Chome-36-12 Kitazawa, Setagaya City, Tokyo 155-0031, Japan",
+    "rating": 4,
+    "google_url": "https://www.google.com/maps/search/Bear+Pond+Espresso+2+Chome-36-12+Kitazawa,+Setagaya+City,+Tokyo+155-0031,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Bear%20Pond%20Espresso%20Tokyo%20Kitazawa%202-chome-21-3%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시모키타자와 개성 강한 공간에서 짧은 생각 정리",
+      "및 크리에이티브 구상"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "시모키타자와 개성 강한 공간에서 짧은 생각 정리 및 크리에이티브 구상",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "paul-bassett-shinjuku-tokyo",
+    "name": "Paul Bassett Shinjuku",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-26-2 Shinjuku",
+    "address": "Shinjuku Nomura Building B1F, 1-26-2 Nishi-Shinjuku, Shinjuku-ku, Tokyo",
+    "rating": 3.9,
+    "google_url": "https://www.google.com/maps/search/Paul+Bassett+Shinjuku+Shinjuku+Nomura+Building+B1F,+1-26-2+Nishi-Shinjuku,+Shinjuku-ku,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Paul%20Bassett%20Shinjuku%20Tokyo%20Nishishinjuku%201-chome-26-2%20Shinjuku",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "신주쿠 노무라 빌딩 지하의 프로페셔널한 노마드용 대형 작업실",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "신주쿠 노무라 빌딩 지하의 프로페셔널한 노마드용 대형 작업실",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "byron-bay-coffee-daimon-tokyo",
+    "name": "Byron Bay Coffee Daimon Ten",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-3-10 Minato",
+    "address": "東京都港区浜松町1-23-9 セゾンビル浜松町1F",
+    "rating": 3.59,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Byron%20Bay%20Coffee%20Daimon%20Ten,%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%B5%9C%E6%9D%BE%E7%94%BA1-23-9%20%E3%82%BB%E3%82%BE%E3%83%B3%E3%83%93%E3%83%AB%E6%B5%9C%E6%9D%BE%E7%94%BA1F",
+    "google_maps_search_url": "https://www.google.com/maps/search/Byron%20Bay%20Coffee%20Daimon%20Tokyo%20Shibakoen%201-chome-3-10%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "도쿄타워 근처 직장인들이 주로 사용하여 평일 정속 업무 보장",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "도쿄타워 근처 직장인들이 주로 사용하여 평일 정속 업무 보장",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "byron-bay-coffee-nihonbashi-tokyo",
+    "name": "Byronbay Coffee Nihonbashi ten",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-5-2 Chuo",
+    "address": "東京都中央区日本橋本町1-5-2 日本橋本町152ビル1~2F",
+    "rating": 3.57,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Byronbay%20Coffee%20Nihonbashi%20ten,%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B%E6%9C%AC%E7%94%BA1-5-2%20%E6%97%A5%E6%9C%AC%E6%A9%8B%E6%9C%AC%E7%94%BA152%E3%83%93%E3%83%AB1~2F",
+    "google_maps_search_url": "https://www.google.com/maps/search/Byron%20Bay%20Coffee%20Nihonbashi%20Tokyo%20Nihonbashihoncho%201-chome-5-2%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "정돈되고 오피스에 걸맞은 무소음 속 고속 타이핑 가속화",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "정돈되고 오피스에 걸맞은 무소음 속 고속 타이핑 가속화",
     "source": "gemini-2.5-flash-grounded"
   }
 ]
