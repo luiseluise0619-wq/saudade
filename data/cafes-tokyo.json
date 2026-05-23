@@ -1,5 +1,62 @@
 [
   {
+    "id": "yadorigi-cafe-tokyo",
+    "name": "Yadorigi Cafe",
+    "city": "Tokyo",
+    "neighborhood": "Yanaka Taito",
+    "address": "3 Chome-15-1 Yanaka, Taito City, Tokyo 110-0001, Japan",
+    "rating": 4.9,
+    "google_url": "https://maps.app.goo.gl/B9wxJQdE2wnJNZ6H6",
+    "google_maps_search_url": "https://www.google.com/maps/search/Yadorigi%20Cafe%20Tokyo%203-ch%C5%8Dme-15-1%20Yanaka%20Taito",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "귀여운 유기묘들이 머무는 아늑하고 정겨운 감성",
+      "속에 편안하게 업무 가능"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "귀여운 유기묘들이 머무는 아늑하고 정겨운 감성 속에 편안하게 업무 가능",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "the-coffee-counter-tokyo-tokyo",
+    "name": "The Coffee Counter Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "Higashikanda Chiyoda",
+    "address": "東京都千代田区東神田1-17-5 東神田イチオクビル1階",
+    "rating": 4.9,
+    "google_url": null,
+    "google_maps_search_url": "https://www.google.com/maps/search/The%20Coffee%20Counter%20Tokyo%20Tokyo%201-ch%C5%8Dme-17-5%20Higashikanda%20Chiyoda",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "도심 속 차분하고 세련된 인테리어로 집중력 있는 오전 몰입 최적화",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "도심 속 차분하고 세련된 인테리어로 집중력 있는 오전 몰입 최적화",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "coffee-punkto-tokyo",
+    "name": "Coffee PUNKTO",
+    "city": "Tokyo",
+    "neighborhood": "1F Shibuya",
+    "address": "Japan, 〒151-0053 Tokyo,Shibuya, Yoyogi, 2-chōme−12−３ １階",
+    "rating": 4.9,
+    "google_url": null,
+    "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20PUNKTO%20Tokyo%20Yoyogi%202-ch%C5%8Dme-12-3%201F%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "신주쿠역 뒤편의 한적하고 깔끔한 에스프레소 바로",
+      "전원이 빵빵하여 충전 걱정 없음"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "신주쿠역 뒤편의 한적하고 깔끔한 에스프레소 바로 전원이 빵빵하여 충전 걱정 없음",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "sorama-coffee-tokyo",
     "name": "sorama coffee",
     "city": "Tokyo",
@@ -17,6 +74,82 @@
     "amenities": "WIFI",
     "notes_kr": "하라주쿠 뒤편의 미니멀한 공간으로 가벼운 패드 작업이나 기획서 읽기에 최고",
     "source": "gemini-grounded"
+  },
+  {
+    "id": "awakening-cafe-tokyo",
+    "name": "Awakening Cafe",
+    "city": "Tokyo",
+    "neighborhood": "4F Taito",
+    "address": "Japan, 〒110-0014 Tokyo, Taito City, Kitaueno, 2 Chome−23−9 イチロービル 4階",
+    "rating": 4.8,
+    "google_url": "https://maps.app.goo.gl/eR1XFuRdbSU3Ua8m6",
+    "google_maps_search_url": "https://www.google.com/maps/search/Awakening%20Cafe%20Tokyo%20Kitaueno%202-ch%C5%8Dme-23-9%20Ichiro%20Building%204F%20Taito",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "고층에 위치하여 통창으로 들어오는 조도가 좋으며",
+      "조용한 독서와 작업에 유용"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "고층에 위치하여 통창으로 들어오는 조도가 좋으며 조용한 독서와 작업에 유용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "woodberry-coffee-daikanyama-tokyo",
+    "name": "WOODBERRY COFFEE Daikanyama",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-21-16 Shibuya",
+    "address": "1F Daikanyama Shimada Building, 3-7-1 Ebisu-Minami, Shibuya-ku, Tokyo",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/Woodberry+Coffee+Daikanyama+Ebisunishi+1-chome-21-16+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Woodberry%20Coffee%20Daikanyama%20Tokyo%20Ebisunishi%201-chome-21-16%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "글루텐 프리 디저트와 유기농 브런치가 있고",
+      "평일 업무용 좌석 여유로움"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "글루텐 프리 디저트와 유기농 브런치가 있고, 평일 업무용 좌석 여유로움",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "shozo-coffee-store-aoyama-tokyo",
+    "name": "Shozo Coffee Store Aoyama",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-13 Shibuya",
+    "address": "3-13 Minamiaoyama, Minato-ku, Tokyo",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/Shozo+Coffee+Store+Aoyama+Minamiaoyama+3-chome-13+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Shozo%20Coffee%20Store%20Aoyama%20Tokyo%20Minamiaoyama%203-chome-13%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "아기자기하고 푸른 정원 속에서 시원하게 아웃풋 내기 좋은 공간",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "아기자기하고 푸른 정원 속에서 시원하게 아웃풋 내기 좋은 공간",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "chop-coffee-omotesando-tokyo",
+    "name": "CHOP COFFEE OMOTESANDO",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-44 Shibuya",
+    "address": "Jingumae 5-44-12, Shibuya-ku, Tokyo 150-0001, Japan",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=CHOP+COFFEE+OMOTESANDO,Jingumae+5-44-12,+Shibuya-ku,+Tokyo+150-0001,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Chop%20Coffee%20Omotesando%20Tokyo%20Jingumae%205-chome-44%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "오모테산도 쇼핑가 뒤편 한적한 곳으로 깔끔한 인테리어 속 타이핑",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "오모테산도 쇼핑가 뒤편 한적한 곳으로 깔끔한 인테리어 속 타이핑",
+    "source": "gemini-2.5-flash-grounded"
   },
   {
     "id": "lattest-omotesando-espresso-tokyo",
@@ -38,6 +171,291 @@
     "source": "gemini-grounded"
   },
   {
+    "id": "matcha-passport-tokyo",
+    "name": "Matcha Passport",
+    "city": "Tokyo",
+    "neighborhood": "2F Setagaya",
+    "address": "Floor, Veil Shimokitazawa 2nd, 2 Chome-31-14 Kitazawa, Setagaya City, Tokyo 155-0031, Japan",
+    "rating": 4.7,
+    "google_url": null,
+    "google_maps_search_url": "https://www.google.com/maps/search/Matcha%20Passport%20Tokyo%20Kitazawa%202-ch%C5%8Dme-31-14%20Veil%20Shimokitazawa%202F%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "프리미엄 말차 음료와 함께 깔끔한 현대식 공간에서",
+      "눈치 안 보고 장시간 작업"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "프리미엄 말차 음료와 함께 깔끔한 현대식 공간에서 눈치 안 보고 장시간 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "felice-domani-shimokitazawa-tokyo",
+    "name": "felice domani Shimokitazawa",
+    "city": "Tokyo",
+    "neighborhood": "1F Setagaya",
+    "address": "下北沢Coo 1階B区画, 2 Chome-26-14 Kitazawa, Setagaya City, Tokyo 155-0031, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/felice+domani+Shimokitazawa+Kitazawa+2-ch%C5%8Dme-26-14+1F+Setagaya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/felice%20domani%20Shimokitazawa%20Tokyo%20Kitazawa%202-ch%C5%8Dme-26-14%201F%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시원한 테라스와 넓고 깔끔한 홀 덕에 외국인 노마드 비율이 높음",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "시원한 테라스와 넓고 깔끔한 홀 덕에 외국인 노마드 비율이 높음",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "onibus-coffee-nakameguro-tokyo",
+    "name": "Onibus Coffee Nakameguro",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-14-1 Meguro",
+    "address": "2-14-1 Kamimeguro, Meguro-ku, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Onibus+Coffee+Nakameguro+Kamimeguro+2-chome-14-1+Meguro+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Onibus%20Coffee%20Nakameguro%20Tokyo%20Kamimeguro%202-chome-14-1%20Meguro",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "기찻길 옆 고즈넉한 주택 개조형으로 쾌적한 아침 스퍼트 작업 추천",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "기찻길 옆 고즈넉한 주택 개조형으로 쾌적한 아침 스퍼트 작업 추천",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "coffee-supreme-kamiyamacho-tokyo",
+    "name": "Coffee Supreme Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "42-3 Shibuya",
+    "address": "1F, 42-3 Kamiyamacho, Shibuya, Tokyo 150-0047, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Coffee+Supreme+Tokyo,1F,+42-3+Kamiyamacho,+Shibuya,+Tokyo+150-0047,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20Supreme%20Kamiyamacho%20Tokyo%20Kamiyamacho%2042-3%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시부야 요요기공원 근처 힙한 무드로 오전 한적한 시간에 원고 작업",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "시부야 요요기공원 근처 힙한 무드로 오전 한적한 시간에 원고 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "sidewalk-stand-inokashira-tokyo",
+    "name": "SIDEWALK STAND (Inokashira)",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-31-15 Mitaka",
+    "address": "3 Chome-31-15 Inokashira, Mitaka, Tokyo 181-0001, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=SIDEWALK%20STAND%20Inokashira%203%20Chome-31-15%20Mitaka%20Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Sidewalk%20Stand%20Inokashira%20Tokyo%20Inokashira%203-chome-31-15%20Mitaka",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "공원의 조용한 호수 뷰와 산들바람 속에서 기분 좋은 원격 업무",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "공원의 조용한 호수 뷰와 산들바람 속에서 기분 좋은 원격 업무",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "unlimited-coffee-bar-tokyo",
+    "name": "Unlimited Coffee Bar",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-18-2 Sumida",
+    "address": "1 Chome-18-2 Narihira, Sumida City, Tokyo 130-0002, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Unlimited%20Coffee%20Bar%201%20Chome-18-2%20Narihira%20Sumida%20Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Unlimited%20Coffee%20Bar%20Tokyo%20Narihira%201-chome-18-2%20Sumida",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "스카이트리 인근 위치로 쾌적하며 전문 장비 테크",
+      "노마드에 어울리는 분위기"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "스카이트리 인근 위치로 쾌적하며 전문 장비 테크 노마드에 어울리는 분위기",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "verve-coffee-roasters-shinjuku-tokyo",
+    "name": "Verve Coffee Roasters NEWoMan Shinjuku",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-24-55 Shinjuku",
+    "address": "NEWoMan Shinjuku 2F, 5-24-55 Sendagaya, Shibuya City, Tokyo, 151-0051, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Verve+Coffee+Roasters+NEWoMan+Shinjuku+2F,+5-24-55+Sendagaya,+Shibuya+City,+Tokyo,+151-0051,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Verve%20Coffee%20Roasters%20Shinjuku%20Tokyo%20Sendagaya%205-chome-24-55%20Shinjuku",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "신주쿠 뉴먼 내 위치하여 접근성이 극대화되어 미팅 시 유리",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "신주쿠 뉴먼 내 위치하여 접근성이 극대화되어 미팅 시 유리",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "sarutahiko-coffee-ebisu-tokyo",
+    "name": "Sarutahiko Coffee Ebisu honten",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-6-6 Shibuya",
+    "address": "1-6-6 Ebisu, Shibuya-ku, Tokyo 150-0013, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Sarutahiko+Coffee+Ebisu+honten+1-6-6+Ebisu,+Shibuya-ku,+Tokyo+150-0013,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Sarutahiko%20Coffee%20Ebisu%20Tokyo%20Ebisu%201-chome-6-6%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "커피 명가의 에비스 본점으로 평일 이른 시간",
+      "고독하게 글 쓰기 좋음"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "커피 명가의 에비스 본점으로 평일 이른 시간 고독하게 글 쓰기 좋음",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "about-life-coffee-brewers-tokyo",
+    "name": "About Life Coffee Brewers",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-19-8 Shibuya",
+    "address": "1 Chome-19-8 Dogenzaka, Shibuya City, Tokyo 150-0043, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/About+Life+Coffee+Brewers+1+Chome-19-8+Dogenzaka,+Shibuya+City,+Tokyo+150-0043,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/About%20Life%20Coffee%20Brewers%20Tokyo%20Dogenzaka%201-chome-19-8%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시부야 번화가 초입 이동 동선상에서 급한 모바일 업무 처리에 최적",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "시부야 번화가 초입 이동 동선상에서 급한 모바일 업무 처리에 최적",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "little-nap-coffee-roasters-tokyo",
+    "name": "Little Nap Coffee Stand",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-65-4 Shibuya",
+    "address": "5 Chome-65-4 Yoyogi, Shibuya City, Tokyo 151-0053, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Little+Nap+Coffee+Stand+5+Chome-65-4+Yoyogi,+Shibuya+City,+Tokyo+151-0053,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Little%20Nap%20Coffee%20Roasters%20Tokyo%20Yoyogi%205-chome-65-4%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "요요기공원 옆 산책로에 자리하여 평온하고 안정된 Wi-Fi 속도",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "요요기공원 옆 산책로에 자리하여 평온하고 안정된 Wi-Fi 속도",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "koffee-mameya-tokyo",
+    "name": "KOFFEE MAMEYA",
+    "city": "Tokyo",
+    "neighborhood": "4-chome-15-3 Shibuya",
+    "address": "4 Chome-15-3 Jingumae, Shibuya, Tokyo 150-0001, Japan",
+    "rating": 4.6,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=KOFFEE+MAMEYA,4+Chome-15-3+Jingumae,+Shibuya,+Tokyo+150-0001,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Koffee%20Mameya%20Tokyo%20Jingumae%204-chome-15-3%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "세계 최고 수준의 바리스타 가이드를 받으며 숏미팅 및 브레인스토밍",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "세계 최고 수준의 바리스타 가이드를 받으며 숏미팅 및 브레인스토밍",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "single-o-hamacho-tokyo",
+    "name": "Single O Hamacho",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-16-7 Chuo",
+    "address": "3-16-7 Nihonbashihamacho, Chuo City, Tokyo 103-0007, Japan",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Single+O+Hamacho,3-16-7+Nihonbashihamacho,+Chuo+City,+Tokyo+103-0007,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Single%20O%20Hamacho%20Tokyo%20Nihonbashihamacho%203-chome-16-7%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시원하게 탭으로 내려 마시는 커피와 함께 신속한 타이핑 업무 수월",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "시원하게 탭으로 내려 마시는 커피와 함께 신속한 타이핑 업무 수월",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "leaves-coffee-roasters-tokyo",
+    "name": "Leaves Coffee Roasters",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-9-8 Sumida",
+    "address": "1-8-8 Honjo, Sumida-ku, Tokyo 130-0004, Japan",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Leaves+Coffee+Roasters,1-8-8+Honjo,+Sumida-ku,+Tokyo+130-0004,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Leaves%20Coffee%20Roasters%20Tokyo%20Honjo%201-chome-9-8%20Sumida",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "쿠라마에 지역의 고풍스러운 공장식 로스터리로",
+      "주말보다는 평일 오전 스퍼트 권장"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "쿠라마에 지역의 고풍스러운 공장식 로스터리로 주말보다는 평일 오전 스퍼트 권장",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "verve-coffee-roasters-roppongi-tokyo",
+    "name": "Verve Coffee Roasters Roppongi",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-16-7 Minato",
+    "address": "5 Chome-16-7 Roppongi, Minato City, Tokyo 106-0032, Japan",
+    "rating": 4.3,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Verve%20Coffee%20Roasters%20Roppongi%205%20Chome-16-7%20Minato%20Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Verve%20Coffee%20Roasters%20Roppongi%20Tokyo%20Roppongi%205-chome-16-7%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "롯폰기 한복판에서 세련된 인테리어 조명 아래 고성능 업무 가능",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "롯폰기 한복판에서 세련된 인테리어 조명 아래 고성능 업무 가능",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "fuglen-asakusa-tokyo",
+    "name": "Fuglen Asakusa",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-6-15 Taito",
+    "address": "2 Chome-6-15 Asakusa, Taito City, Tokyo 111-0032, Japan",
+    "rating": 4.2,
+    "google_url": "https://www.google.com/maps/search/Fuglen+Asakusa+Asakusa+2-chome-6-15+Taito+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Fuglen%20Asakusa%20Tokyo%20Asakusa%202-chome-6-15%20Taito",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "북유럽 빈티지 스타일의 대형 매장으로 평일 장시간",
+      "이용 노마드 상주"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "북유럽 빈티지 스타일의 대형 매장으로 평일 장시간 이용 노마드 상주",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "tokyo-little-house-tokyo",
     "name": "TOKYO LITTLE HOUSE",
     "city": "Tokyo",
@@ -55,5 +473,24 @@
     "amenities": "WIFI · OUTLET · QUIET",
     "notes_kr": "역사적인 옛 목조 가옥을 개조하여 아날로그적이면서 완벽한 정숙 환경 제공",
     "source": "gemini-grounded"
+  },
+  {
+    "id": "streamer-coffee-shibuya-tokyo",
+    "name": "Streamer Coffee Shibuya",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-20-28 Shibuya",
+    "address": "1 Chome-20-28 Shibuya, Shibuya City, Tokyo 150-0002, Japan",
+    "rating": 4,
+    "google_url": "https://www.google.com/maps/search/Streamer+Coffee+Shibuya+1+Chome-20-28+Shibuya,+Shibuya+City,+Tokyo+150-0002,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Streamer%20Coffee%20Shibuya%20Tokyo%20Shibuya%201-chome-20-28%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "넓고 인더스트리얼한 가구가 갖춰져 있어 시부야에서",
+      "일하는 노마드 성지"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "넓고 인더스트리얼한 가구가 갖춰져 있어 시부야에서 일하는 노마드 성지",
+    "source": "gemini-2.5-flash-grounded"
   }
 ]
