@@ -169,6 +169,40 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     min-height: 44px !important;
 }
 .sdd-following-opt:hover { color: var(--rust) !important; background: var(--paper-d) !important; }
+.sdd-desk-theme-opts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+.sdd-desk-theme-opt {
+    background: transparent;
+    border: 0.5px solid var(--rule);
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    padding: 12px 16px;
+    min-height: 44px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color .15s, border-color .15s, background .15s;
+}
+.sdd-desk-theme-opt:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.sdd-desk-theme-opt[aria-checked="true"] {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--paper-d);
+}
+.sdd-desk-theme-opt:focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 2px;
+}
 .sdd-following-pairings {
     list-style: none;
     margin: 0;
@@ -401,6 +435,43 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
     }
 
     // v7 §13 — Account section (sign-in / tour / sign-out). 헌법 §13 매직 링크.
+    function renderThemeSection() {
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const cur = window.SAUDADE_EDITION?.skinPref?.() || 'auto';
+        const head = T({
+            en: 'THEME', ko: '테마', ja: 'テーマ', pt: 'TEMA', es: 'TEMA'
+        });
+        const note = T({
+            en: 'Auto = ISO-week rotation + system dark mode.',
+            ko: '자동 = 발행 주차 회전 + 시스템 다크 모드 따름.',
+            ja: '自動 = 発行週ローテーション + システム設定。',
+            pt: 'Auto = rotação semanal + tema do sistema.',
+            es: 'Auto = rotación semanal + tema del sistema.'
+        });
+        const opts = [
+            { v: 'auto',      label: T({ en: 'AUTO',  ko: '자동', ja: '自動', pt: 'AUTO',  es: 'AUTO' }) },
+            { v: 'paper',     label: T({ en: 'PAPER', ko: '종이', ja: '紙',    pt: 'PAPEL', es: 'PAPEL' }) },
+            { v: 'saturated', label: T({ en: 'COVER', ko: '표지', ja: '表紙',  pt: 'CAPA',  es: 'TAPA' }) },
+            { v: 'dark',      label: T({ en: 'NIGHT', ko: '밤',   ja: '夜',    pt: 'NOITE', es: 'NOCHE' }) }
+        ];
+        return `
+            <section class="sdd-desk-section sdd-desk-theme">
+                <h3 class="sdd-desk-head">${escapeHtml(head)}</h3>
+                <p class="sdd-desk-note">${escapeHtml(note)}</p>
+                <div class="sdd-desk-theme-opts" role="radiogroup">
+                    ${opts.map(o => `
+                        <button type="button" class="sdd-desk-theme-opt"
+                                role="radio"
+                                aria-checked="${o.v === cur}"
+                                data-skin="${escapeHtml(o.v)}">
+                            ${escapeHtml(o.label)}
+                        </button>
+                    `).join('')}
+                </div>
+            </section>
+        `;
+    }
+
     function renderAccountSection() {
         const T = window.SAUDADE_T || ((s) => s.en);
         const user   = window.SAUDADE_AUTH?.getUser?.() || null;
@@ -656,6 +727,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
 
             ${renderFollowingSection()}
             ${renderHomeDeskSection()}
+            ${renderThemeSection()}
             ${renderAccountSection()}
 
             <section class="sdd-desk-section">
@@ -691,6 +763,15 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 Saudade · Issue 03 · Spring 2026 · Daily filing · Operating cost zero
             </footer>
         `;
+
+        root.querySelectorAll('[data-skin]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const skin = btn.getAttribute('data-skin');
+                if (window.SAUDADE_EDITION?.setSkin) window.SAUDADE_EDITION.setSkin(skin);
+                // Re-render desk so the aria-checked state updates
+                render();
+            });
+        });
 
         root.querySelectorAll('[data-edition]').forEach(btn => {
             btn.addEventListener('click', () => {
