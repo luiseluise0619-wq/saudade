@@ -1,1 +1,78 @@
-[]
+[
+  {
+    "id": "brick-cafe-lisboa-lisbon",
+    "name": "Brick Cafe Lisboa",
+    "city": "Lisbon",
+    "neighborhood": "2 1170-244",
+    "address": "Rua de Moçambique 2, 1170-245 Lisboa, Portugal",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Brick+Cafe+Lisboa+Rua+de+Moçambique+2+1170-245+Lisboa+Portugal",
+    "google_maps_search_url": "https://www.google.com/maps/search/Brick%20Cafe%20Lisboa%20Lisbon%20Rua%20de%20Mo%C3%A7ambique%202%201170-244",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "현지인들의 브런치 아지트로 친절하고 평화로움",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "현지인들의 브런치 아지트로 친절하고 평화로움",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-janis-lisbon",
+    "name": "Café Janis",
+    "city": "Lisbon",
+    "neighborhood": "1 1200-014",
+    "address": "R. da Moeda 1A, 1200-109 Lisboa, Portugal",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/Cafe+Janis+R.+da+Moeda+1A+1200-109+Lisboa+Portugal",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Janis%20Lisbon%20R.%20do%20Alecrim%201%201200-014",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "파리 감성의 분위기로 아침에 집중하여 기획서 쓰기 좋은 환경",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "파리 감성의 분위기로 아침에 집중하여 기획서 쓰기 좋은 환경",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "basilio-lisbon",
+    "name": "Basílio Lisboa Café",
+    "city": "Lisbon",
+    "neighborhood": "111 1100-068",
+    "address": "Rua dos Bacalhoeiros 111, 1100-068 Lisboa, Portugal",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/Basilio+Rua+dos+Bacalhoeiros+111+1100-068+Lisboa+Portugal",
+    "google_maps_search_url": "https://www.google.com/maps/search/Basilio%20Lisbon%20R.%20dos%20Bacalhoeiros%20111%201100-068",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "니콜라우 계열의 쾌적한 캐주얼 카페로 넓은 좌석 보장",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "니콜라우 계열의 쾌적한 캐주얼 카페로 넓은 좌석 보장",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-da-garagem-lisbon",
+    "name": "Café da Garagem",
+    "city": "Lisbon",
+    "neighborhood": "75 1100-178",
+    "address": "Costa do Castelo 75, 1100-178 Lisboa, Portugal",
+    "rating": 4.2,
+    "google_url": "https://www.google.com/maps/search/Cafe+da+Garagem+Costa+do+Castelo+75+1100-178+Lisboa+Portugal",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20da%20Garagem%20Lisbon%20Costa%20do%20Castelo%2075%201100-178",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "전망이 아주 뛰어난 연극 극장 내부 카페로 창의적 영감 유용",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "전망이 아주 뛰어난 연극 극장 내부 카페로 창의적 영감 유용",
+    "source": "gemini-2.5-flash-grounded"
+  }
+]
