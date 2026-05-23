@@ -3,7 +3,7 @@
   "source": "user-csv",
   "city": "Tokyo",
   "note": "Imported 90 candidates from user CSV. NOT yet verified against Google Places. Run scripts/verify-cafes.js with GOOGLE_PLACES_KEY to confirm existence + add lat/lng + promote to data/cafes-tokyo.json.",
-  "total": 90,
+  "total": 87,
   "cafes": [
     {
       "id": "awakening-cafe-tokyo",
@@ -141,75 +141,6 @@
       "toilet_csv": "내부 화장실",
       "source": "user-csv",
       "google_maps_search_url": "https://www.google.com/maps/search/felice%20domani%20Shimokitazawa%20Tokyo%20Kitazawa%202-ch%C5%8Dme-26-14%201F%20Setagaya",
-      "address_district_match": true
-    },
-    {
-      "id": "tokyo-little-house-tokyo",
-      "name": "Tokyo Little House",
-      "city": "Tokyo",
-      "neighborhood": "Akasaka Minato",
-      "address": "3-chōme-6-12 Akasaka Minato",
-      "rating": 4.7,
-      "verified": false,
-      "visited_at": null,
-      "vetted_at": null,
-      "two_lines": [
-        "역사적인 옛 목조 가옥을 개조하여 아날로그적이면서",
-        "완벽한 정숙 환경 제공"
-      ],
-      "amenities": "WIFI · OUTLET · QUIET",
-      "notes_kr": "역사적인 옛 목조 가옥을 개조하여 아날로그적이면서 완벽한 정숙 환경 제공",
-      "wifi_csv": "제공",
-      "outlet_csv": "전 테이블 콘센트 완비",
-      "toilet_csv": "내부 화장실",
-      "source": "user-csv",
-      "google_maps_search_url": "https://www.google.com/maps/search/Tokyo%20Little%20House%20Tokyo%203-ch%C5%8Dme-6-12%20Akasaka%20Minato",
-      "address_district_match": true
-    },
-    {
-      "id": "sorama-coffee-tokyo",
-      "name": "sorama coffee",
-      "city": "Tokyo",
-      "neighborhood": "Jingūmae Shibuya",
-      "address": "1-chōme-12-6 Jingūmae Shibuya",
-      "rating": 4.8,
-      "verified": false,
-      "visited_at": null,
-      "vetted_at": null,
-      "two_lines": [
-        "하라주쿠 뒤편의 미니멀한 공간으로 가벼운 패드",
-        "작업이나 기획서 읽기에 최고"
-      ],
-      "amenities": "WIFI",
-      "notes_kr": "하라주쿠 뒤편의 미니멀한 공간으로 가벼운 패드 작업이나 기획서 읽기에 최고",
-      "wifi_csv": "제공",
-      "outlet_csv": "일부 벽측",
-      "toilet_csv": "내부 화장실",
-      "source": "user-csv",
-      "google_maps_search_url": "https://www.google.com/maps/search/sorama%20coffee%20Tokyo%201-ch%C5%8Dme-12-6%20Jing%C5%ABmae%20Shibuya",
-      "address_district_match": true
-    },
-    {
-      "id": "lattest-omotesando-espresso-tokyo",
-      "name": "Lattest Omotesando Espresso",
-      "city": "Tokyo",
-      "neighborhood": "3-chome-5-2 Shibuya",
-      "address": "Jingumae 3-chome-5-2 Shibuya",
-      "rating": 4.7,
-      "verified": false,
-      "visited_at": null,
-      "vetted_at": null,
-      "two_lines": [
-        "오모테산도 뒤편의 웅장한 아지트 같은 매장으로",
-        "콘센트 접근성 뛰어남"
-      ],
-      "amenities": "WIFI · OUTLET · QUIET",
-      "notes_kr": "오모테산도 뒤편의 웅장한 아지트 같은 매장으로 콘센트 접근성 뛰어남",
-      "wifi_csv": "제공",
-      "outlet_csv": "대형 콘크리트 테이블 빌트인",
-      "toilet_csv": "내부 남녀구분",
-      "source": "user-csv",
-      "google_maps_search_url": "https://www.google.com/maps/search/Lattest%20Omotesando%20Espresso%20Tokyo%20Jingumae%203-chome-5-2%20Shibuya",
       "address_district_match": true
     },
     {
@@ -2075,5 +2006,6 @@
       "google_maps_search_url": "https://www.google.com/maps/search/Pompette%20Tokyo%20Asakusa%201-chome-33-8%20Taito",
       "address_district_match": true
     }
-  ]
+  ],
+  "last_verified": "2026-05-23"
 }
