@@ -56,10 +56,16 @@ async function findPlace(query, key) {
 }
 
 async function placeDetails(placeId, key) {
-    // Step 2: Details — get rating + user_ratings_total + place URL
+    // Step 2: Details — rating + user_ratings_total + place URL + REVIEWS.
+    // `reviews` field returns up to 5 top reviews (Google selects). Each has
+    // rating, text, time, author_name, language. We keep top 3 for the
+    // editor + readers — small enough to ship in JSON, big enough to show
+    // why the cafe earned its rating.
     const url = new URL('https://maps.googleapis.com/maps/api/place/details/json');
     url.searchParams.set('place_id', placeId);
-    url.searchParams.set('fields', 'name,rating,user_ratings_total,formatted_address,geometry,url,business_status');
+    url.searchParams.set('fields', 'name,rating,user_ratings_total,formatted_address,geometry,url,business_status,reviews,opening_hours,price_level,website');
+    url.searchParams.set('reviews_sort', 'most_relevant');
+    url.searchParams.set('language', 'en');
     url.searchParams.set('key', key);
     const r = await fetch(url.toString());
     if (!r.ok) throw new Error(`details ${r.status}`);
@@ -108,6 +114,19 @@ async function verifyCity(citySlug, key, opts = {}) {
                 dropped++;
                 continue;
             }
+            // Keep top 3 reviews (Google sorted by relevance). Trim body to
+            // 280 chars + flatten to a small object the frontend can render
+            // without further processing.
+            const reviews = Array.isArray(details.reviews)
+                ? details.reviews.slice(0, 3).map(rv => ({
+                    rating: rv.rating || null,
+                    text: String(rv.text || '').replace(/\s+/g, ' ').trim().slice(0, 280),
+                    author: rv.author_name || null,
+                    when: rv.relative_time_description || null,
+                    language: rv.language || null
+                }))
+                : [];
+            const hours = details.opening_hours?.weekday_text || null;
             // Build a clean entry for the live file
             const entry = {
                 id: c.id,
@@ -119,8 +138,12 @@ async function verifyCity(citySlug, key, opts = {}) {
                 lng: details.geometry?.location?.lng || null,
                 rating,
                 user_ratings_total: details.user_ratings_total || 0,
+                price_level: details.price_level ?? null,
                 google_place_id: found.place_id,
                 google_url: details.url || null,
+                website: details.website || null,
+                hours,
+                reviews,
                 vetted_at: TODAY,
                 visited_at: null,
                 two_lines: c.two_lines,

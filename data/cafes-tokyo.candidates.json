@@ -24,7 +24,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Awakening%20Cafe%20Tokyo%20Kitaueno%202-ch%C5%8Dme-23-9%20Ichiro%20Building%204F%20Taito",
+      "address_district_match": true
     },
     {
       "id": "yadorigi-cafe-tokyo",
@@ -45,7 +47,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 하단 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Yadorigi%20Cafe%20Tokyo%203-ch%C5%8Dme-15-1%20Yanaka%20Taito",
+      "address_district_match": true
     },
     {
       "id": "matcha-passport-tokyo",
@@ -66,7 +70,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 롱테이블 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Matcha%20Passport%20Tokyo%20Kitazawa%202-ch%C5%8Dme-31-14%20Veil%20Shimokitazawa%202F%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "the-coffee-counter-tokyo-tokyo",
@@ -87,7 +93,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Coffee%20Counter%20Tokyo%20Tokyo%201-ch%C5%8Dme-17-5%20Higashikanda%20Chiyoda",
+      "address_district_match": true
     },
     {
       "id": "coffee-punkto-tokyo",
@@ -108,7 +116,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20PUNKTO%20Tokyo%20Yoyogi%202-ch%C5%8Dme-12-3%201F%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "felice-domani-shimokitazawa-tokyo",
@@ -129,7 +139,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 주변 고루 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/felice%20domani%20Shimokitazawa%20Tokyo%20Kitazawa%202-ch%C5%8Dme-26-14%201F%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "tokyo-little-house-tokyo",
@@ -150,7 +162,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 테이블 콘센트 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tokyo%20Little%20House%20Tokyo%203-ch%C5%8Dme-6-12%20Akasaka%20Minato",
+      "address_district_match": true
     },
     {
       "id": "sorama-coffee-tokyo",
@@ -171,7 +185,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/sorama%20coffee%20Tokyo%201-ch%C5%8Dme-12-6%20Jing%C5%ABmae%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "lattest-omotesando-espresso-tokyo",
@@ -192,7 +208,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 콘크리트 테이블 빌트인",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Lattest%20Omotesando%20Espresso%20Tokyo%20Jingumae%203-chome-5-2%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "woodberry-coffee-daikanyama-tokyo",
@@ -213,7 +231,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 고루 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Woodberry%20Coffee%20Daikanyama%20Tokyo%20Ebisunishi%201-chome-21-16%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "onibus-coffee-nakameguro-tokyo",
@@ -234,7 +254,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 야외 스탠딩",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Onibus%20Coffee%20Nakameguro%20Tokyo%20Kamimeguro%202-chome-14-1%20Meguro",
+      "address_district_match": true
     },
     {
       "id": "shozo-coffee-store-aoyama-tokyo",
@@ -255,7 +277,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 미니 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Shozo%20Coffee%20Store%20Aoyama%20Tokyo%20Minamiaoyama%203-chome-13%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "fuglen-asakusa-tokyo",
@@ -276,7 +300,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 원목 테이블 콘센트",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fuglen%20Asakusa%20Tokyo%20Asakusa%202-chome-6-15%20Taito",
+      "address_district_match": true
     },
     {
       "id": "single-o-hamacho-tokyo",
@@ -297,7 +323,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 테이블 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Single%20O%20Hamacho%20Tokyo%20Nihonbashihamacho%203-chome-16-7%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "leaves-coffee-roasters-tokyo",
@@ -318,7 +346,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소량 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Leaves%20Coffee%20Roasters%20Tokyo%20Honjo%201-chome-9-8%20Sumida",
+      "address_district_match": true
     },
     {
       "id": "koffee-mameya-tokyo",
@@ -339,7 +369,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 전용",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Koffee%20Mameya%20Tokyo%20Jingumae%204-chome-15-3%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "coffee-supreme-kamiyamacho-tokyo",
@@ -360,7 +392,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테라스 좌석 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20Supreme%20Kamiyamacho%20Tokyo%20Kamiyamacho%2042-3%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "chop-coffee-omotesando-tokyo",
@@ -381,7 +415,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 포트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Chop%20Coffee%20Omotesando%20Tokyo%20Jingumae%205-chome-44%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "nozy-coffee-setagaya-tokyo",
@@ -402,7 +438,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "지하 및 지상 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Nozy%20Coffee%20Setagaya%20Tokyo%20Mishuku%202-chome-32-10%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "sidewalk-stand-inokashira-tokyo",
@@ -423,7 +461,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 콘센트 탑재",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Sidewalk%20Stand%20Inokashira%20Tokyo%20Inokashira%203-chome-31-15%20Mitaka",
+      "address_district_match": true
     },
     {
       "id": "unlimited-coffee-bar-tokyo",
@@ -444,7 +484,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 테이블 주변 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Unlimited%20Coffee%20Bar%20Tokyo%20Narihira%201-chome-18-2%20Sumida",
+      "address_district_match": true
     },
     {
       "id": "steam-food-&-coffee-tokyo",
@@ -465,7 +507,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 오피스형 매장 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Steam%20Food%20%26%20Coffee%20Tokyo%20Nishishinjuku%207-chome-21-9%20Shinjuku",
+      "address_district_match": true
     },
     {
       "id": "verve-coffee-roasters-roppongi-tokyo",
@@ -486,7 +530,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치 수월",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Verve%20Coffee%20Roasters%20Roppongi%20Tokyo%20Roppongi%205-chome-16-7%20Minato",
+      "address_district_match": true
     },
     {
       "id": "verve-coffee-roasters-shinjuku-tokyo",
@@ -507,7 +553,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 롱테이블 빌트인",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Verve%20Coffee%20Roasters%20Shinjuku%20Tokyo%20Sendagaya%205-chome-24-55%20Shinjuku",
+      "address_district_match": true
     },
     {
       "id": "sarutahiko-coffee-ebisu-tokyo",
@@ -528,7 +576,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니 테이블 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Sarutahiko%20Coffee%20Ebisu%20Tokyo%20Ebisu%201-chome-6-6%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "about-life-coffee-brewers-tokyo",
@@ -549,7 +599,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 바 미니 포트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/About%20Life%20Coffee%20Brewers%20Tokyo%20Dogenzaka%201-chome-19-8%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "little-nap-coffee-roasters-tokyo",
@@ -570,7 +622,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Little%20Nap%20Coffee%20Roasters%20Tokyo%20Yoyogi%205-chome-65-4%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "streamer-coffee-shibuya-tokyo",
@@ -591,7 +645,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 대형 테이블 다량",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Streamer%20Coffee%20Shibuya%20Tokyo%20Shibuya%201-chome-20-28%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "streamer-coffee-gohongi-tokyo",
@@ -612,7 +668,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 테이블 아래 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Streamer%20Coffee%20Gohongi%20Tokyo%20Chuo%202-chome-36-1%20Meguro",
+      "address_district_match": true
     },
     {
       "id": "bear-pond-espresso-tokyo",
@@ -633,7 +691,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소량 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bear%20Pond%20Espresso%20Tokyo%20Kitazawa%202-chome-21-3%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "frankie-melbourne-espresso-tokyo",
@@ -654,7 +714,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Frankie%20Melbourne%20Espresso%20Tokyo%20Kitazawa%202-chome-12-15%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "ballon-tokyo-tokyo",
@@ -675,7 +737,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ballon%20Tokyo%20Tokyo%20Nakameguro%203-chome-2-19%20Meguro",
+      "address_district_match": true
     },
     {
       "id": "arise-coffee-entangle-tokyo",
@@ -696,7 +760,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 주변 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Arise%20Coffee%20Entangle%20Tokyo%20Hirano%201-chome-13-8%20Koto",
+      "address_district_match": true
     },
     {
       "id": "allpress-espresso-tokyo-tokyo",
@@ -717,7 +783,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공장형 대형 원목 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Allpress%20Espresso%20Tokyo%20Tokyo%20Hirano%203-chome-7-2%20Koto",
+      "address_district_match": true
     },
     {
       "id": "monz-cafe-tokyo",
@@ -738,7 +806,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Monz%20Cafe%20Tokyo%20Tomioka%201-chome-14-5%20Koto",
+      "address_district_match": true
     },
     {
       "id": "byron-bay-coffee-daimon-tokyo",
@@ -759,7 +829,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치 원활",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Byron%20Bay%20Coffee%20Daimon%20Tokyo%20Shibakoen%201-chome-3-10%20Minato",
+      "address_district_match": true
     },
     {
       "id": "byron-bay-coffee-nihonbashi-tokyo",
@@ -780,7 +852,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 충전용 포트 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Byron%20Bay%20Coffee%20Nihonbashi%20Tokyo%20Nihonbashihoncho%201-chome-5-2%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "double-tall-coffee-bar-tokyo",
@@ -801,7 +875,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 및 바 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Double%20Tall%20Coffee%20Bar%20Tokyo%20Shibuya%203-chome-12-24%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "paul-bassett-shinjuku-tokyo",
@@ -822,7 +898,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 오피스용 롱테이블",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Paul%20Bassett%20Shinjuku%20Tokyo%20Nishishinjuku%201-chome-26-2%20Shinjuku",
+      "address_district_match": true
     },
     {
       "id": "obscura-coffee-roasters-tokyo",
@@ -843,7 +921,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Obscura%20Coffee%20Roasters%20Tokyo%20Sangenjaya%201-chome-9-16%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "tenement-tokyo",
@@ -864,7 +944,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tenement%20Tokyo%20Ebisu%202-chome-39-4%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "ratio-&c-tokyo",
@@ -885,7 +967,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석마다 벽면 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ratio%20%26C%20Tokyo%20Jingumae%203-chome-1-26%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "bongen-coffee-tokyo",
@@ -906,7 +990,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니 벤치 소량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bongen%20Coffee%20Tokyo%20Ginza%202-chome-16-3%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "passage-coffee-tokyo",
@@ -927,7 +1013,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 콘센트 다량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Passage%20Coffee%20Tokyo%20Shiba%205-chome-14-16%20Minato",
+      "address_district_match": true
     },
     {
       "id": "amameria-espresso-tokyo",
@@ -948,7 +1036,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 테이블 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Amameria%20Espresso%20Tokyo%20Koyama%203-chome-6-15%20Shinagawa",
+      "address_district_match": true
     },
     {
       "id": "44-seasons-coffee-tokyo",
@@ -969,7 +1059,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/4%2F4%20Seasons%20Coffee%20Tokyo%20Shinjuku%202-chome-7-7%20Shinjuku",
+      "address_district_match": true
     },
     {
       "id": "counterpart-coffee-gallery-tokyo",
@@ -990,7 +1082,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "3층 단독 테이블 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Counterpart%20Coffee%20Gallery%20Tokyo%20Honcho%203-chome-12-16%20Nakano",
+      "address_district_match": true
     },
     {
       "id": "iron-coffee-tokyo",
@@ -1011,7 +1105,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소량 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Iron%20Coffee%20Tokyo%20Gotokuji%201-chome-18-9%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "miya-coffee-tokyo",
@@ -1032,7 +1128,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Miya%20Coffee%20Tokyo%20Yanaka%205-chome-1-10%20Taito",
+      "address_district_match": true
     },
     {
       "id": "yanaka-coffee-nezu-tokyo",
@@ -1053,7 +1151,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Yanaka%20Coffee%20Nezu%20Tokyo%20Nezu%201-chome-26-5%20Taito",
+      "address_district_match": true
     },
     {
       "id": "coffee-elementary-school-tokyo",
@@ -1074,7 +1174,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 가능",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20Elementary%20School%20Tokyo%20Uguisudanicho%2012-6%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "mighty-steps-coffee-stop-tokyo",
@@ -1095,7 +1197,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소파 좌석 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Mighty%20Steps%20Coffee%20Stop%20Tokyo%20Nihonbashimuromachi%204-chome-3-14%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "wise-man-coffee-tokyo",
@@ -1116,7 +1220,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 우드 롱테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Wise%20Man%20Coffee%20Tokyo%20Maeharacho%201-chome-11-8%20Koganei",
+      "address_district_match": true
     },
     {
       "id": "shiro-hige-cream-puff-tokyo",
@@ -1137,7 +1243,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테라스 구석 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Shiro-Hige%20Cream%20Puff%20Tokyo%20Daita%205-chome-3-1%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "cafe-de-l'ambre-tokyo",
@@ -1158,7 +1266,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "콘센트 없음(충전 권장)",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20L'Ambre%20Tokyo%20Ginza%208-chome-10-15%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "chatei-hatou-tokyo",
@@ -1179,7 +1289,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 바 주변 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Chatei%20Hatou%20Tokyo%20Shibuya%201-chome-15-19%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "cafe-les-jeux-au-grenier-tokyo",
@@ -1200,7 +1312,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "다량 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Les%20Jeux%20au%20Grenier%20Tokyo%20Minamiaoyama%205-chome-9-5%20Minato",
+      "address_district_match": true
     },
     {
       "id": "cafe-de-la-presqu'ile-tokyo",
@@ -1221,7 +1335,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 테이블 주변 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20la%20Presqu'ile%20Tokyo%20Shiba%201-chome-11-2%20Minato",
+      "address_district_match": true
     },
     {
       "id": "cibi-tokyo-tokyo",
@@ -1242,7 +1358,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 공유석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cibi%20Tokyo%20Tokyo%20Sendagi%203-chome-37-11%20Taito",
+      "address_district_match": true
     },
     {
       "id": "blue-bottle-coffee-aoyama-tokyo",
@@ -1263,7 +1381,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "실내 롱테이블 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Blue%20Bottle%20Coffee%20Aoyama%20Tokyo%20Minamiaoyama%203-chome-13-14%20Minato",
+      "address_district_match": true
     },
     {
       "id": "ralph's-coffee-omotesando-tokyo",
@@ -1284,7 +1404,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 다수",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ralph's%20Coffee%20Omotesando%20Tokyo%20Jingumae%204-chome-25-15%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "blue-bottle-coffee-roppongi-tokyo",
@@ -1305,7 +1427,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 하단 멀티탭 빌트인",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Blue%20Bottle%20Coffee%20Roppongi%20Tokyo%20Roppongi%207-chome-7-7%20Minato",
+      "address_district_match": true
     },
     {
       "id": "fabcafe-tokyo-tokyo",
@@ -1326,7 +1450,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 주변 완벽 빌트인",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/FabCafe%20Tokyo%20Tokyo%20Dogenzaka%201-chome-22-7%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "wired-tokyo-1999-tokyo",
@@ -1347,7 +1473,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 공유석 전용 탑재",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Wired%20Tokyo%201999%20Tokyo%20Udagawacho%2021-6%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "book-and-bed-tokyo-tokyo",
@@ -1368,7 +1496,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "침대 칸 및 로비 테이블 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Book%20and%20Bed%20Tokyo%20Tokyo%20Kabukicho%201-chome-27-5%20Shinjuku",
+      "address_district_match": true
     },
     {
       "id": "ginza-cozy-corner-tokyo",
@@ -1389,7 +1519,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "상가 테이블 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ginza%20Cozy%20Corner%20Tokyo%20Ginza%201-chome-8-1%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "laduree-ginza-tokyo",
@@ -1410,7 +1542,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 조명석",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Laduree%20Ginza%20Tokyo%20Ginza%204-chome-6-16%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "cafe-de-ginza-miyuki-kan-tokyo",
@@ -1431,7 +1565,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 멀티탭 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20Ginza%20Miyuki-kan%20Tokyo%20Ginza%206-chome-5-17%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "toraya-an-stand-kita-aoyama-tokyo",
@@ -1452,7 +1588,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 바 좌석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Toraya%20An%20Stand%20Kita-Aoyama%20Tokyo%20Kitaaoyama%203-chome-12-16%20Minato",
+      "address_district_match": true
     },
     {
       "id": "nezu-cafe-tokyo",
@@ -1473,7 +1611,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 일부",
       "toilet_csv": "박물관 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Nezu%20Cafe%20Tokyo%20Minamiaoyama%206-chome-5-1%20Nezu%20Museum%20Minato",
+      "address_district_match": true
     },
     {
       "id": "cafe-1894-tokyo",
@@ -1494,7 +1634,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 다수",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%201894%20Tokyo%20Marunouchi%202-chome-6-2%20Chuo",
+      "address_district_match": true
     },
     {
       "id": "cafe-de-l'epice-tokyo",
@@ -1515,7 +1657,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 고루 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20l'Epice%20Tokyo%20Kamimeguro%201-chome-11-2%20Meguro",
+      "address_district_match": true
     },
     {
       "id": "aoyama-flower-market-tea-house-tokyo",
@@ -1536,7 +1680,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 중앙 꽃병 아래 매립",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Aoyama%20Flower%20Market%20Tea%20House%20Tokyo%20Minamiaoyama%205-chome-1-2%20Minato",
+      "address_district_match": true
     },
     {
       "id": "nicolai-bergmann-nomu-tokyo",
@@ -1557,7 +1703,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 좌석만 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Nicolai%20Bergmann%20Nomu%20Tokyo%20Minamiaoyama%205-chome-7-2%20Minato",
+      "address_district_match": true
     },
     {
       "id": "cafe-de-rope-tokyo",
@@ -1578,7 +1726,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "안뜰 일부 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20Rope%20Tokyo%20Jingumae%201-chome-11-6%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "deus-ex-machina-asakusa-tokyo",
@@ -1599,7 +1749,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 오토바이 가죽 가구 하단",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Deus%20Ex%20Machina%20Asakusa%20Tokyo%20Mukojima%201-chome-2-8%20Sumida",
+      "address_district_match": true
     },
     {
       "id": "canvas-tokyo-tokyo",
@@ -1620,7 +1772,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 콤팩트 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Canvas%20Tokyo%20Tokyo%20Hiroo%205-chome-19-6%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "nem-coffee-&-espresso-tokyo",
@@ -1641,7 +1795,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 대형 테이블 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Nem%20Coffee%20%26%20Espresso%20Tokyo%20Hiroo%205-chome-11-13%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "mel-coffee-roasters-tokyo-tokyo",
@@ -1662,7 +1818,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 주변 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Mel%20Coffee%20Roasters%20Tokyo%20Tokyo%20Jingumae%203-chome-21-2%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "trunk-lounge-tokyo",
@@ -1683,7 +1841,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "로비 롱테이블 충전 다수",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Trunk%20Lounge%20Tokyo%20Jingumae%205-chome-31%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "koffee-mameya-kakeru-tokyo",
@@ -1704,7 +1864,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 석 전용 지정",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Koffee%20Mameya%20Kakeru%20Tokyo%20Shirakawa%202-chome-16-14%20Koto",
+      "address_district_match": true
     },
     {
       "id": "raw-sugar-project-tokyo",
@@ -1725,7 +1887,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 원활",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Raw%20Sugar%20Project%20Tokyo%20Kyodo%201-chome-11-2%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "midoriso-cafe-tokyo",
@@ -1746,7 +1910,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 테이블 빌트인 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Midori.so%20Cafe%20Tokyo%20Aobadai%203-chome-3-11%20Meguro",
+      "address_district_match": true
     },
     {
       "id": "and-coffee-tokyo",
@@ -1767,7 +1933,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 아래 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/.and%20coffee%20Tokyo%20Roppongi%204-chome-11-11%20Minato",
+      "address_district_match": true
     },
     {
       "id": "coffee-supreme-japan-tokyo",
@@ -1788,7 +1956,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "창측 바 좌석 전원",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20Supreme%20Japan%20Tokyo%20Kamiyamacho%2042-3%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "ogawa-coffee-laboratory-tokyo",
@@ -1809,7 +1979,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 및 바 구역 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ogawa%20Coffee%20Laboratory%20Tokyo%20Kitazawa%203-chome-19-20%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "no-room-tokyo",
@@ -1830,7 +2002,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공동 테이블 하단",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/No.%20Room%20Tokyo%20Dogenzaka%202-chome-29-1%20Shibuya",
+      "address_district_match": true
     },
     {
       "id": "little-toy-box-tokyo",
@@ -1851,7 +2025,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 테이블 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Little%20Toy%20Box%20Tokyo%20Komazawa%202-chome-18-1%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "coffee-&-toast-tokyo",
@@ -1872,7 +2048,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 소량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20%26%20Toast%20Tokyo%20Sangenjaya%201-chome-36-2%20Setagaya",
+      "address_district_match": true
     },
     {
       "id": "pompette-tokyo",
@@ -1893,7 +2071,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 고루 구비 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Pompette%20Tokyo%20Asakusa%201-chome-33-8%20Taito",
+      "address_district_match": true
     }
   ]
 }

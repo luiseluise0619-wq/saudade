@@ -24,7 +24,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Liberty%3A%20brunch%20coffee%20%26%20books%20Lisbon%20Rua%20da%20Esperan%C3%A7a%2021%201200-815",
+      "address_district_match": true
     },
     {
       "id": "hygge-kaffe-lisbon",
@@ -45,7 +47,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공동 테이블 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Hygge%20Kaffe%20Lisbon%20R.%20Tom%C3%A1s%20Ribeiro%2095B%201050-227",
+      "address_district_match": true
     },
     {
       "id": "the-folks-blue-street-lisbon",
@@ -66,7 +70,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Folks%20Blue%20Street%20Lisbon%20R.%20dos%20Bacalhoeiros%20113%201100-389",
+      "address_district_match": true
     },
     {
       "id": "the-folks-se-lisbon",
@@ -87,7 +93,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 테이블 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Folks%20S%C3%A9%20Lisbon%20R.%20das%20Pedras%20Negras%207%201100-534",
+      "address_district_match": true
     },
     {
       "id": "the-folks-santos-lisbon",
@@ -108,7 +116,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Folks%20Santos%20Lisbon%20R%20de%20S.%20Bento%2051%201200-661",
+      "address_district_match": true
     },
     {
       "id": "baoba-cafe-bica-lisbon",
@@ -129,7 +139,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 허브",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Baob%C3%A1%20Caf%C3%A9%20Bica%20Lisbon%20Rua%20de%20S.%20Paulo%20256%201200-430",
+      "address_district_match": true
     },
     {
       "id": "quase-cafe-lisbon",
@@ -150,7 +162,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Quase%20Caf%C3%A9%20Lisbon%20Rua%20do%20Salvador%2032%201100-465",
+      "address_district_match": true
     },
     {
       "id": "curva-lisbon",
@@ -171,7 +185,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Curva%20Lisbon%20R.%20Damasceno%20Monteiro%20108D%201170-113",
+      "address_district_match": true
     },
     {
       "id": "kossies-cafe-lisbon",
@@ -192,7 +208,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Kossies%20Cafe%20Lisbon%20Largo%20do%20Terreirinho%2021%201100-595",
+      "address_district_match": true
     },
     {
       "id": "how-about-coffee-lisbon",
@@ -213,7 +231,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/How%20about%20Coffee%20Lisbon%20Alameda%20Dom%20Afonso%20Henriques%2041B",
+      "address_district_match": false
     },
     {
       "id": "sage-brunch-lisbon",
@@ -234,7 +254,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽면",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Sage%20Brunch%20Lisbon%20Tv.%20da%20Portuguesa%2060%201200-353",
+      "address_district_match": true
     },
     {
       "id": "the-coffee-alfama-lisbon",
@@ -255,7 +277,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 미니 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Coffee%20(Alfama)%20Lisbon%20R.%20de%20S%C3%A3o%20Miguel%2087%201100-219",
+      "address_district_match": true
     },
     {
       "id": "outsite-lisbon-cowork-cafe-lisbon",
@@ -276,7 +300,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 완벽 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Outsite%20Lisbon%20Cowork%20Cafe%20Lisbon%20R.%20de%20S.%20Paulo%20109%201200-109",
+      "address_district_match": true
     },
     {
       "id": "selina-lapa-secret-garden-cafe-lisbon",
@@ -297,7 +323,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "정원 및 테라스 콘센트",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Selina%20Lapa%20Secret%20Garden%20Cafe%20Lisbon%20R.%20de%20S%C3%A3o%20Ciro%2070%201200-832",
+      "address_district_match": true
     },
     {
       "id": "heim-cafe-lisbon",
@@ -318,7 +346,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Heim%20Cafe%20Lisbon%20R.%20Santos-O-Velho%202%201200-109",
+      "address_district_match": true
     },
     {
       "id": "dear-breakfast-chiado-lisbon",
@@ -339,7 +369,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Dear%20Breakfast%20(Chiado)%20Lisbon%20R.%20Garrett%20108%201200-205",
+      "address_district_match": true
     },
     {
       "id": "seagull-method-cafe-lisbon",
@@ -360,7 +392,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 공유석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Seagull%20Method%20Cafe%20Lisbon%20R.%20da%20Palmeira%2023%201200-311",
+      "address_district_match": true
     },
     {
       "id": "fabrica-coffee-roasters-lisbon",
@@ -381,7 +415,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 좌석 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fabrica%20Coffee%20Roasters%20Lisbon%20R.%20das%20Portas%20de%20Santo%20Ant%C3%A3o%20136",
+      "address_district_match": false
     },
     {
       "id": "ortea-vegan-collective-lisbon",
@@ -402,7 +438,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Orte%C3%A1%20Vegan%20Collective%20Lisbon%20R.%20de%20Dom%20Lu%C3%ADs%20I%2019%201200-109",
+      "address_district_match": true
     },
     {
       "id": "my-mother's-daughters-lisbon",
@@ -423,7 +461,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/My%20Mother's%20Daughters%20Lisbon%20Pra%C3%A7a%20das%20Flores%201%201200-192",
+      "address_district_match": true
     },
     {
       "id": "tease-lisbon",
@@ -444,7 +484,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tease%20Lisbon%20R.%20de%20Jo%C3%A3o%20Penha%2023A%201250-131",
+      "address_district_match": true
     },
     {
       "id": "malabarista-lisbon",
@@ -465,7 +507,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 가능",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Malabarista%20Lisbon%20R.%20Maria%2062%201170-209",
+      "address_district_match": true
     },
     {
       "id": "cocof-lisbon",
@@ -486,7 +530,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/COCOF%20Lisbon%20Av.%20Elias%20Garcia%20121B%201050-098",
+      "address_district_match": true
     },
     {
       "id": "copenhagen-coffee-lab-lisbon",
@@ -507,7 +553,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Copenhagen%20Coffee%20Lab%20Lisbon%20R.%20Nova%20da%20Piedade%2010%201200-298",
+      "address_district_match": true
     },
     {
       "id": "hello-kristof-lisbon",
@@ -528,7 +576,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Hello%20Kristof%20Lisbon%20R.%20do%20Po%C3%A7o%20dos%20Negros%20103",
+      "address_district_match": false
     },
     {
       "id": "mill-lisbon",
@@ -549,7 +599,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Mill%20Lisbon%20R.%20do%20Po%C3%A7o%20dos%20Negros%20128",
+      "address_district_match": false
     },
     {
       "id": "brick-cafe-lisboa-lisbon",
@@ -570,7 +622,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Brick%20Cafe%20Lisboa%20Lisbon%20Rua%20de%20Mo%C3%A7ambique%202%201170-244",
+      "address_district_match": true
     },
     {
       "id": "cafe-da-garagem-lisbon",
@@ -591,7 +645,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "콘센트 소량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20da%20Garagem%20Lisbon%20Costa%20do%20Castelo%2075%201100-178",
+      "address_district_match": true
     },
     {
       "id": "cafe-janis-lisbon",
@@ -612,7 +668,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 주변 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Janis%20Lisbon%20R.%20do%20Alecrim%201%201200-014",
+      "address_district_match": true
     },
     {
       "id": "basilio-lisbon",
@@ -633,7 +691,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 충전용",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Basilio%20Lisbon%20R.%20dos%20Bacalhoeiros%20111%201100-068",
+      "address_district_match": true
     },
     {
       "id": "nicolau-lisboa-lisbon",
@@ -654,7 +714,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Nicolau%20Lisboa%20Lisbon%20R.%20de%20S%C3%A3o%20Nicolau%2017%201100-547",
+      "address_district_match": true
     },
     {
       "id": "amelia-lisboa-lisbon",
@@ -675,7 +737,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Amelia%20Lisboa%20Lisbon%20R.%20de%20Ferreira%20Borges%20101",
+      "address_district_match": false
     },
     {
       "id": "olivia-lisbon",
@@ -696,7 +760,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Olivia%20Lisbon%20R.%20do%20Forno%20do%20Tijolo%20112",
+      "address_district_match": false
     },
     {
       "id": "seventh-brunch-chiado-lisbon",
@@ -717,7 +783,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 매립형",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Seventh%20Brunch%20Chiado%20Lisbon%20Cal%C3%A7ada%20do%20Sacramento%2036",
+      "address_district_match": false
     },
     {
       "id": "break-alvalade-lisbon",
@@ -738,7 +806,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 자리 다량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Break%20Alvalade%20Lisbon%20Av.%20da%20Igreja%2021D%201700-231",
+      "address_district_match": true
     },
     {
       "id": "break-alfama-lisbon",
@@ -759,7 +829,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽측 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Break%20Alfama%20Lisbon%20Rua%20de%20S%C3%A3o%20Tom%C3%A9%2047",
+      "address_district_match": false
     },
     {
       "id": "zenith-brunch-&-cocktails-lisbon",
@@ -780,7 +852,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 바 구역",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Zenith%20Brunch%20%26%20Cocktails%20Lisbon%20R.%20do%20Telhal%204B%201150-346",
+      "address_district_match": true
     },
     {
       "id": "fauna-&-flora-santos-lisbon",
@@ -801,7 +875,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 원목 데스크",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fauna%20%26%20Flora%20Santos%20Lisbon%20R.%20da%20Esperan%C3%A7a%2033%201200-655",
+      "address_district_match": true
     },
     {
       "id": "fauna-&-flora-anjos-lisbon",
@@ -822,7 +898,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fauna%20%26%20Flora%20Anjos%20Lisbon%20R.%20de%20Febo%20Moniz%2027%201150-152",
+      "address_district_match": true
     },
     {
       "id": "fabricio-coffee-lisbon",
@@ -843,7 +921,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "곳곳에 비치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fabricio%20Coffee%20Lisbon%20R.%20de%20Santa%20Marta%2037%201150-291",
+      "address_district_match": true
     },
     {
       "id": "bettina-&-niccolo-corallo-lisbon",
@@ -864,7 +944,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니 좌석 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bettina%20%26%20Niccol%C3%B2%20Corallo%20Lisbon%20R.%20da%20Escola%20Polit%C3%A9cnica%204",
+      "address_district_match": false
     },
     {
       "id": "coffee-inn-lisbon",
@@ -885,7 +967,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 위주",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/COFFEE%20INN%20Lisbon%20R.%20de%20Santa%20Justa%2045%201100-483",
+      "address_district_match": true
     },
     {
       "id": "lisbon-coffee-roasters-lisbon",
@@ -906,7 +990,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Lisbon%20Coffee%20Roasters%20Lisbon%20R.%20da%20Prata%20138%201100-415",
+      "address_district_match": true
     },
     {
       "id": "wish-slow-coffee-house-lisbon",
@@ -927,7 +1013,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 공유석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Wish%20Slow%20Coffee%20House%20Lisbon%20LX%20Factory%20R.%20Rodrigues%20de%20Faria%20103",
+      "address_district_match": false
     },
     {
       "id": "simpli-coffee-rua-braamcamp-lisbon",
@@ -948,7 +1036,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 벽면 내장",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Simpli%20Coffee%20(Rua%20Braamcamp)%20Lisbon%20R.%20Braamcamp%2072%201250-096",
+      "address_district_match": true
     },
     {
       "id": "simpli-coffee-av-liberdade-lisbon",
@@ -969,7 +1059,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 우드 멀티탭",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Simpli%20Coffee%20(Av.%20Liberdade)%20Lisbon%20Av.%20da%20Liberdade%20108%201250-144",
+      "address_district_match": true
     },
     {
       "id": "manifest-lisbon-lisbon",
@@ -990,7 +1082,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "다량 탑재",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Manifest%20Lisbon%20Lisbon%20R.%20da%20Sociedade%20Farmac%C3%AAutica%2056",
+      "address_district_match": false
     },
     {
       "id": "benjamin-lisbon",
@@ -1011,7 +1105,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 및 벽면 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Benjamin%20Lisbon%20Rua%20da%20Madalena%20115%201100-319",
+      "address_district_match": true
     },
     {
       "id": "bloomco-lisbon",
@@ -1032,7 +1128,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 주변 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bloomco%20Lisbon%20R.%20de%20S%C3%A3o%20Paulo%2012%201200-428",
+      "address_district_match": true
     },
     {
       "id": "montana-lisbon-lisbon",
@@ -1053,7 +1151,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "야외 테이블 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Montana%20Lisbon%20Lisbon%20Rua%20da%20Cintura%20do%20Porto%20de%20Lisboa",
+      "address_district_match": false
     },
     {
       "id": "gosta-do-castelo-lisbon",
@@ -1074,7 +1174,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 좌석 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Gosta%20do%20Castelo%20Lisbon%20R.%20de%20Loureiro%2012%201100-312",
+      "address_district_match": true
     },
     {
       "id": "the-mill-lapa-lisbon",
@@ -1095,7 +1197,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 기둥",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/The%20Mill%20(Lapa)%20Lisbon%20R.%20de%20S%C3%A3o%20Bento%20130%201200-109",
+      "address_district_match": true
     },
     {
       "id": "fable-lisbon-lisbon",
@@ -1116,7 +1220,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석마다 벽면 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fable%20Lisbon%20Lisbon%20R.%20das%20Flores%2041%201200-192",
+      "address_district_match": true
     },
     {
       "id": "comoba-lisbon",
@@ -1137,7 +1243,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 테이블 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Comoba%20Lisbon%20R.%20de%20S.%20Paulo%2099%201200-109",
+      "address_district_match": true
     },
     {
       "id": "augusto-lisboa-lisbon",
@@ -1158,7 +1266,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Augusto%20Lisboa%20Lisbon%20R.%20de%20Santa%20Marinha%2026%201100-491",
+      "address_district_match": true
     },
     {
       "id": "royal-rawness-lisbon",
@@ -1179,7 +1289,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공유 롱테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Royal%20Rawness%20Lisbon%20Pra%C3%A7a%20do%20Pr%C3%ADncipe%20Real%2021",
+      "address_district_match": true
     },
     {
       "id": "dramatico-lisbon",
@@ -1200,7 +1312,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소량 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Dramatico%20Lisbon%20R.%20da%20Imprensa%20Nacional%20114C",
+      "address_district_match": false
     },
     {
       "id": "olisipo-lisbon",
@@ -1221,7 +1335,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Olisipo%20Lisbon%20R.%20do%20S%C3%ADtio%20ao%20Casalinho%203%201170-011",
+      "address_district_match": true
     },
     {
       "id": "lully-161-lisbon",
@@ -1242,7 +1358,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 고루 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Lully%20161%20Lisbon%20R.%20do%20Embaixador%20161%201300-217",
+      "address_district_match": true
     },
     {
       "id": "shakar-lisbon",
@@ -1263,7 +1381,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 고루 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Shakar%20Lisbon%20R.%20de%20Pedras%20Negras%2015%201100-403",
+      "address_district_match": true
     },
     {
       "id": "milkees-lisbon",
@@ -1284,7 +1404,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Milkees%20Lisbon%20R.%20de%20S%C3%A3o%20Nicolau%2013%201100-547",
+      "address_district_match": true
     },
     {
       "id": "so-coffee-roasters-lisbon",
@@ -1305,7 +1427,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "곳곳에 다량 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/SO%20Coffee%20Roasters%20Lisbon%20R.%20de%20S%C3%A3o%20Bernardo%205%201200-827",
+      "address_district_match": true
     },
     {
       "id": "bloom-coffee-lisbon",
@@ -1326,7 +1450,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽측 및 바 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bloom%20Coffee%20Lisbon%20R.%20de%20Campolide%20100%201070-028",
+      "address_district_match": true
     },
     {
       "id": "gato-pardo-lisbon",
@@ -1347,7 +1473,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 자리 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Gato%20Pardo%20Lisbon%20Rua%20de%20S%C3%A3o%20Jos%C3%A9%2010%201150-323",
+      "address_district_match": true
     },
     {
       "id": "cafe-tati-lisbon",
@@ -1368,7 +1496,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 지원",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Tati%20Lisbon%20R.%20do%20Regedor%2011%201100-428",
+      "address_district_match": true
     },
     {
       "id": "landeau-chocolate-lisbon",
@@ -1389,7 +1519,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽면",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Landeau%20Chocolate%20Lisbon%20LX%20Factory%20R.%20Rodrigues%20de%20Faria",
+      "address_district_match": false
     },
     {
       "id": "choupana-caffe-lisbon",
@@ -1410,7 +1542,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 오피스형 배치",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Choupana%20Caffe%20Lisbon%20Av.%20da%20Rep%C3%BAblica%2025A%201050-186",
+      "address_district_match": true
     },
     {
       "id": "tartine-lisbon",
@@ -1431,7 +1565,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tartine%20Lisbon%20R.%20Garrett%2047%201200-203",
+      "address_district_match": true
     },
     {
       "id": "tequela-lisbon",
@@ -1452,7 +1588,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tequela%20Lisbon%20R.%20da%20Prata%20150%201100-415",
+      "address_district_match": true
     },
     {
       "id": "monks-coffee-lisbon",
@@ -1473,7 +1611,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 콘센트 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Monks%20Coffee%20Lisbon%20R.%20do%20Cardal%20de%20S%C3%A3o%20Jos%C3%A9%2013",
+      "address_district_match": false
     },
     {
       "id": "oitava-colina-cafe-lisbon",
@@ -1494,7 +1634,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Oitava%20Colina%20Cafe%20Lisbon%20Tv.%20do%20Monte%2010%201170-252",
+      "address_district_match": true
     },
     {
       "id": "roastberry-lisbon",
@@ -1515,7 +1657,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 공유석 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Roastberry%20Lisbon%20Av.%205%20de%20Outubro%20114%201050-060",
+      "address_district_match": true
     },
     {
       "id": "kaffeehaus-lisbon",
@@ -1536,7 +1680,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공동 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Kaffeehaus%20Lisbon%20R.%20Anchieta%203%201200-087",
+      "address_district_match": true
     },
     {
       "id": "a-brasileira-lisbon",
@@ -1557,7 +1703,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 소량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/A%20Brasileira%20Lisbon%20R.%20Garrett%20120%201200-205",
+      "address_district_match": true
     },
     {
       "id": "confeitaria-nacional-lisbon",
@@ -1578,7 +1726,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 2층 구석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Confeitaria%20Nacional%20Lisbon%20Pra%C3%A7a%20da%20Figueira%2018B%201100-241",
+      "address_district_match": true
     },
     {
       "id": "pastelaria-santo-antonio-lisbon",
@@ -1599,7 +1749,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "소량 보유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Pastelaria%20Santo%20Antonio%20Lisbon%20R.%20do%20Milagre%20de%20Santo%20Ant%C3%B3nio%2010",
+      "address_district_match": false
     },
     {
       "id": "pastis-de-belem-lisbon",
@@ -1620,7 +1772,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석 안쪽",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Pastis%20de%20Belem%20Lisbon%20R.%20de%20Bel%C3%A9m%2084-92%201300-085",
+      "address_district_match": true
     },
     {
       "id": "manteigaria-chiado-lisbon",
@@ -1641,7 +1795,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 테이블 소량",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Manteigaria%20(Chiado)%20Lisbon%20R.%20do%20Loreto%202%201200-242",
+      "address_district_match": true
     },
     {
       "id": "fabrica-da-nata-lisbon",
@@ -1662,7 +1818,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Fabrica%20da%20Nata%20Lisbon%20Pra%C3%A7a%20dos%20Restauradores%2062",
+      "address_district_match": false
     },
     {
       "id": "castela-lisbon",
@@ -1683,7 +1841,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 배치 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Castela%20Lisbon%20Av.%20de%20Berna%2033%201050-038",
+      "address_district_match": true
     },
     {
       "id": "buna-specialty-coffee-lisbon",
@@ -1704,7 +1864,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Buna%20Specialty%20Coffee%20Lisbon%20Rua%20de%20S.%20Bernardo%2070%201200-827",
+      "address_district_match": true
     },
     {
       "id": "thank-you-mama-lisbon",
@@ -1725,7 +1887,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석 벽면",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Thank%20You%20Mama%20Lisbon%20R.%20de%20Mo%C3%A7ambique%202B%201170-244",
+      "address_district_match": true
     },
     {
       "id": "spleen-lisbon",
@@ -1746,7 +1910,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 테이블 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Spleen%20Lisbon%20Rua%20do%20Alecrim%2071%201200-014",
+      "address_district_match": true
     },
     {
       "id": "gato-negro-lisbon",
@@ -1767,7 +1933,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 충전 가능",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Gato%20Negro%20Lisbon%20Rua%20de%20S%C3%A3o%20Jos%C3%A9%20132%201150-326",
+      "address_district_match": true
     },
     {
       "id": "tease-cais-do-sodre-lisbon",
@@ -1788,7 +1956,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Tease%20Cais%20do%20Sodre%20Lisbon%20Pra%C3%A7a%20de%20Dom%20Lu%C3%ADs%20I%2030%201200-109",
+      "address_district_match": true
     },
     {
       "id": "lx-factory-cafe-lisbon",
@@ -1809,7 +1979,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 우드 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/LX%20Factory%20Cafe%20Lisbon%20R.%20Rodrigues%20de%20Faria%20103",
+      "address_district_match": false
     },
     {
       "id": "therapist-lx-factory-lisbon",
@@ -1830,7 +2002,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Therapist%20(LX%20Factory)%20Lisbon%20LX%20Factory%20R.%20Rodrigues%20de%20Faria",
+      "address_district_match": false
     },
     {
       "id": "ler-devagar-cafe-lisbon",
@@ -1851,7 +2025,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 계단 및 바",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Ler%20Devagar%20Cafe%20Lisbon%20LX%20Factory%201200-109%20Lisboa",
+      "address_district_match": true
     },
     {
       "id": "village-underground-cafe-lisbon",
@@ -1872,7 +2048,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Village%20Underground%20Cafe%20Lisbon%20R.%201%20de%20Maio%20103%201300-472",
+      "address_district_match": true
     },
     {
       "id": "crafty-corner-lisbon",
@@ -1893,7 +2071,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 기둥",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Crafty%20Corner%20Lisbon%20R.%20de%20S.%20Jo%C3%A3o%20da%20Pra%C3%A7a%2095%201100-521",
+      "address_district_match": true
     },
     {
       "id": "bananas-lisbon",
@@ -1914,7 +2094,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "하단 고루 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Bananas%20Lisbon%20Rua%20de%20S%C3%A3o%20Paulo%2012A%201200-428",
+      "address_district_match": true
     },
     {
       "id": "coffee-&-tea-lisbon-lisbon",
@@ -1935,7 +2117,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 주변 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20%26%20Tea%20Lisbon%20Lisbon%20R.%20de%20Santa%20Justa%2021%201100-483",
+      "address_district_match": true
     },
     {
       "id": "o-mocho-lisbon",
@@ -1956,7 +2140,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/O%20Mocho%20Lisbon%20Rua%20do%20Salvador%2011A%201100-465",
+      "address_district_match": true
     },
     {
       "id": "coffee-and-cake-lisbon",
@@ -1977,7 +2163,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 구석석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20and%20Cake%20Lisbon%20R.%20de%20S%C3%A3o%20Nicolau%2012%201100-547",
+      "address_district_match": true
     },
     {
       "id": "daily-roast-lisbon",
@@ -1998,7 +2186,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Daily%20Roast%20Lisbon%20R.%20de%20S%C3%A3o%20Bento%20101%201200-109",
+      "address_district_match": true
     },
     {
       "id": "specialty-lisbon-lisbon",
@@ -2019,7 +2209,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Specialty%20Lisbon%20Lisbon%20R.%20da%20Prata%20145%201100-415",
+      "address_district_match": true
     },
     {
       "id": "portela-cafes-lisbon",
@@ -2040,7 +2232,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "공용 테이블 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Portela%20Cafes%20Lisbon%20Pra%C3%A7a%20da%20Figueira%203%201100-240",
+      "address_district_match": true
     },
     {
       "id": "jeronymo-lisbon",
@@ -2061,7 +2255,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 구비",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Jeronymo%20Lisbon%20Av.%20de%20Berna%2011D%201050-036",
+      "address_district_match": true
     },
     {
       "id": "delta-the-coffee-house-lisbon",
@@ -2082,7 +2278,9 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 전원 탑재",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Delta%20The%20Coffee%20House%20Lisbon%20Av.%20da%20Liberdade%20144E%201250-143",
+      "address_district_match": true
     }
   ]
 }
