@@ -279,10 +279,24 @@
     }
 
     // ─── 데이터 로드 + 마커 트리거 ────────────────────────────
+    // Loads cafés from all five city files in parallel. Each file holds
+    // only the cafés that have been verified against Google Places (lat/
+    // lng, real rating). Unverified candidates live in cafes-{city}.
+    // candidates.json and are NOT loaded here.
+    const CAFE_CITY_FILES = [
+        'cafes-seoul.json',
+        'cafes-da-nang.json',
+        'cafes-bali.json',
+        'cafes-tokyo.json',
+        'cafes-lisbon.json'
+    ];
     function loadCafes() {
-        return fetch('./data/cafes-seoul.json', { cache: 'force-cache' })
-            .then(r => r.ok ? r.json() : [])
-            .then(d => Array.isArray(d) ? d : []);
+        return Promise.all(CAFE_CITY_FILES.map(f =>
+            fetch(`./data/${f}`, { cache: 'force-cache' })
+                .then(r => r.ok ? r.json() : [])
+                .then(d => Array.isArray(d) ? d : [])
+                .catch(() => [])
+        )).then(arrs => arrs.flat());
     }
 
     function applyMarkers() {
