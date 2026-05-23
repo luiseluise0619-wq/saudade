@@ -1,1801 +1,2109 @@
 {
-  "generated": "2026-05-06",
-  "source": "editor-research",
-  "note": "Candidate seed list. Names compiled from editor research of well-known Seoul cafés — NOT verified, NOT visited. Some may have closed or moved. Editor clicks each kakao_search_url, confirms it exists with rating ≥ 4.3, then moves chosen entries into data/cafes-seoul.json with lat/lng/two_lines/amenities/visited_at filled in.",
-  "workflow": "click → verify rating + existence → if good, move to cafes-seoul.json with full fields → drop from this file",
-  "total": 133,
+  "generated": "2026-05-23",
+  "source": "user-csv",
+  "city": "Seoul",
+  "note": "Imported 100 candidates from user CSV. NOT yet verified against Google Places. Run scripts/verify-cafes.js with GOOGLE_PLACES_KEY to confirm existence + add lat/lng + promote to data/cafes-seoul.json.",
+  "total": 100,
   "cafes": [
     {
-      "id": "manufact-coffee-roasters-yeonnam-dong",
-      "name": "Manufact Coffee Roasters",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Roasters%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Roasters%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "coffee-libre-yeonnam-yeonnam-dong",
-      "name": "Coffee Libre Yeonnam",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "lowkey-yeonnam-dong",
-      "name": "Lowkey",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "specialty",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Lowkey%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Lowkey%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "aboutee-yeonnam-dong",
-      "name": "Aboutee",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Aboutee%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Aboutee%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-yeonnam-yeonnam-dong",
-      "name": "Café Onion Yeonnam",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "design",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "layered-yeonnam-yeonnam-dong",
-      "name": "Layered Yeonnam",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "design",
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Layered%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "pomerolo-yeonnam-dong",
-      "name": "Pomerolo",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Pomerolo%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Pomerolo%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "yeonnam-bangagan-yeonnam-dong",
-      "name": "Yeonnam Bangagan",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "hanok",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Yeonnam%20Bangagan%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Yeonnam%20Bangagan%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cobalt-box-yeonnam-dong",
-      "name": "Cobalt Box",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cobalt%20Box%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Cobalt%20Box%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "magpie-tiger-yeonnam-yeonnam-dong",
-      "name": "Magpie & Tiger Yeonnam",
-      "neighborhood": "Yeonnam-dong",
-      "tags": [
-        "tea"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Magpie%20%26%20Tiger%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Magpie%20%26%20Tiger%20Yeonnam%20%EC%97%B0%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-seongsu-seongsu-dong",
-      "name": "Café Onion Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "design",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "daelim-changgo-seongsu-dong",
-      "name": "Daelim Changgo",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "design",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Daelim%20Changgo%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Daelim%20Changgo%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mesh-coffee-seongsu-dong",
-      "name": "Mesh Coffee",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mesh%20Coffee%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mesh%20Coffee%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "center-coffee-seongsu-seongsu-dong",
-      "name": "Center Coffee Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Center%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Center%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "blue-bottle-seongsu-seongsu-dong",
-      "name": "Blue Bottle Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "specialty",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "manufact-coffee-seongsu-seongsu-dong",
-      "name": "Manufact Coffee Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "lcdc-seoul-seongsu-dong",
-      "name": "LCDC Seoul",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "design",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=LCDC%20Seoul%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/LCDC%20Seoul%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-sukkara-seongsu-dong",
-      "name": "Café Sukkara",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sukkara%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sukkara%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-halfmile-seongsu-dong",
-      "name": "Café Halfmile",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "indie",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Halfmile%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Halfmile%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "bloomster-seongsu-dong",
-      "name": "Bloomster",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Bloomster%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Bloomster%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "felt-coffee-seongsu-seongsu-dong",
-      "name": "Felt Coffee Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "pierre-herme-seongsu-seongsu-dong",
-      "name": "Pierre Hermé Seongsu",
-      "neighborhood": "Seongsu-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Pierre%20Herm%C3%A9%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Pierre%20Herm%C3%A9%20Seongsu%20%EC%84%B1%EC%88%98%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-anguk-anguk-dong",
-      "name": "Café Onion Anguk",
-      "neighborhood": "Anguk-dong",
-      "tags": [
-        "design",
-        "landmark",
-        "hanok"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Anguk%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Anguk%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "blue-bottle-samcheong-samcheong-dong",
-      "name": "Blue Bottle Samcheong",
-      "neighborhood": "Samcheong-dong",
-      "tags": [
-        "specialty",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mil-toast-samcheong-samcheong-dong",
-      "name": "Mil Toast Samcheong",
-      "neighborhood": "Samcheong-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Samcheong%20%EC%82%BC%EC%B2%AD%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "layered-bukchon-bukchon",
-      "name": "Layered Bukchon",
-      "neighborhood": "Bukchon",
-      "tags": [
-        "bakery",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Layered%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tea-therapy-bukchon-bukchon",
-      "name": "Tea Therapy Bukchon",
-      "neighborhood": "Bukchon",
-      "tags": [
-        "tea",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tea%20Therapy%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Tea%20Therapy%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cha-masineun-tteul-bukchon",
-      "name": "Cha Masineun Tteul",
-      "neighborhood": "Bukchon",
-      "tags": [
-        "hanok",
-        "tea",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cha%20Masineun%20Tteul%20%EB%B6%81%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Cha%20Masineun%20Tteul%20%EB%B6%81%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "ssamzie-gil-cafe-insa-dong",
-      "name": "Ssamzie-gil Café",
-      "neighborhood": "Insa-dong",
-      "tags": [
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Ssamzie-gil%20Caf%C3%A9%20%EC%9D%B8%EC%82%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Ssamzie-gil%20Caf%C3%A9%20%EC%9D%B8%EC%82%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "coffee-hanyakbang-bukchon-bukchon",
-      "name": "Coffee Hanyakbang Bukchon",
-      "neighborhood": "Bukchon",
-      "tags": [
-        "specialty",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Hanyakbang%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Hanyakbang%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "onion-anguk-garden-anguk-dong",
-      "name": "Onion Anguk Garden",
-      "neighborhood": "Anguk-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Onion%20Anguk%20Garden%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Onion%20Anguk%20Garden%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "deep-blue-lake-anguk-dong",
-      "name": "Deep Blue Lake",
-      "neighborhood": "Anguk-dong",
-      "tags": [
-        "quiet",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Deep%20Blue%20Lake%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Deep%20Blue%20Lake%20%EC%95%88%EA%B5%AD%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "queens-bukchon-bukchon",
-      "name": "Queens Bukchon",
-      "neighborhood": "Bukchon",
-      "tags": [
-        "hanok"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Queens%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Queens%20Bukchon%20%EB%B6%81%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "anthracite-hannam-hannam-dong",
-      "name": "Anthracite Hannam",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "felt-coffee-hannam-hannam-dong",
-      "name": "Felt Coffee Hannam",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mitte-hannam-hannam-dong",
-      "name": "Mitte Hannam",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "bookshop",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mitte%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mitte%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-bora-hannam-hannam-dong",
-      "name": "Café Bora Hannam",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "quiet",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Bora%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Bora%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "camel-coffee-hannam-hannam-dong",
-      "name": "Camel Coffee Hannam",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "indie",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Camel%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Camel%20Coffee%20Hannam%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "pancake-epidemic-hannam-dong",
-      "name": "Pancake Epidemic",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "brunch"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Pancake%20Epidemic%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Pancake%20Epidemic%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mokyeonri-hannam-dong",
-      "name": "Mokyeonri",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mokyeonri%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mokyeonri%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "boontheshop-cafe-hannam-dong",
-      "name": "Boontheshop Café",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Boontheshop%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Boontheshop%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "comfort-hannam-dong",
-      "name": "Comfort",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Comfort%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Comfort%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "d-museum-cafe-hannam-dong",
-      "name": "D Museum Café",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "museum"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=D%20Museum%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/D%20Museum%20Caf%C3%A9%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "felt-coffee-yongsan-yongsan-gu",
-      "name": "Felt Coffee Yongsan",
-      "neighborhood": "Yongsan-gu",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Felt%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
-      "naver_search_url": "https://map.naver.com/p/search/Felt%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "center-coffee-yongsan-yongsan-gu",
-      "name": "Center Coffee Yongsan",
-      "neighborhood": "Yongsan-gu",
-      "tags": [
-        "specialty",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Center%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
-      "naver_search_url": "https://map.naver.com/p/search/Center%20Coffee%20Yongsan%20%EC%9A%A9%EC%82%B0",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "orot-coffee-yongsan-gu",
-      "name": "Orot Coffee",
-      "neighborhood": "Yongsan-gu",
-      "tags": [
-        "specialty",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Orot%20Coffee%20%EC%9A%A9%EC%82%B0",
-      "naver_search_url": "https://map.naver.com/p/search/Orot%20Coffee%20%EC%9A%A9%EC%82%B0",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "ireaby-coffee-hbc-haebangchon",
-      "name": "Ireaby Coffee HBC",
-      "neighborhood": "Haebangchon",
-      "tags": [
-        "indie",
-        "view"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Ireaby%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Ireaby%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "anthracite-itaewon-itaewon",
-      "name": "Anthracite Itaewon",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "lichen-coffee-hbc-haebangchon",
-      "name": "Lichen Coffee HBC",
-      "neighborhood": "Haebangchon",
-      "tags": [
-        "indie",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Lichen%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Lichen%20Coffee%20HBC%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-saison-haebangchon",
-      "name": "Café Saison",
-      "neighborhood": "Haebangchon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Saison%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Saison%20%ED%95%B4%EB%B0%A9%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "standa-coffee-itaewon",
-      "name": "Standa Coffee",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Standa%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Standa%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "5-brewing-co-yongsan-gu",
-      "name": "5 Brewing Co",
-      "neighborhood": "Yongsan-gu",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=5%20Brewing%20Co%20%EC%9A%A9%EC%82%B0",
-      "naver_search_url": "https://map.naver.com/p/search/5%20Brewing%20Co%20%EC%9A%A9%EC%82%B0",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "phillocoffee-itaewon",
-      "name": "Phillocoffee",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "specialty",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Phillocoffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Phillocoffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-aalia-hongdae",
-      "name": "Café Aalia",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Aalia%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Aalia%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "anthracite-hapjeong-hapjeong-dong",
-      "name": "Anthracite Hapjeong",
-      "neighborhood": "Hapjeong-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-sukkara-hongdae-hongdae",
-      "name": "Cafe Sukkara Hongdae",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Sukkara%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Sukkara%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "coffee-libre-hongdae-hongdae",
-      "name": "Coffee Libre Hongdae",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "magnetic-cafe-hongdae",
-      "name": "Magnetic Café",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "indie",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Magnetic%20Caf%C3%A9%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Magnetic%20Caf%C3%A9%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-aboutee-hongdae-hongdae",
-      "name": "Cafe Aboutee Hongdae",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "indie",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Aboutee%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Aboutee%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "buveca-hongdae",
-      "name": "Buveca",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Buveca%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Buveca%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-comma-hongdae-hongdae",
-      "name": "Café Comma Hongdae",
-      "neighborhood": "Hongdae",
-      "tags": [
-        "bookshop"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Comma%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Comma%20Hongdae%20%ED%99%8D%EB%8C%80",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "aida-hapjeong-hapjeong-dong",
-      "name": "Aida Hapjeong",
-      "neighborhood": "Hapjeong-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Aida%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Aida%20Hapjeong%20%ED%95%A9%EC%A0%95%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "anthracite-seogyo-seogyo-dong",
-      "name": "Anthracite Seogyo",
-      "neighborhood": "Seogyo-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Anthracite%20Seogyo%20%EC%84%9C%EA%B5%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Anthracite%20Seogyo%20%EC%84%9C%EA%B5%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-knotted-apgujeong-apgujeong",
-      "name": "Café Knotted Apgujeong",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "bakery",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "blue-bottle-apgujeong-apgujeong",
-      "name": "Blue Bottle Apgujeong",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Blue%20Bottle%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Blue%20Bottle%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "maison-hermes-cafe-madang-cheongdam",
-      "name": "Maison Hermès Café Madang",
-      "neighborhood": "Cheongdam",
-      "tags": [
-        "design",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Maison%20Herm%C3%A8s%20Caf%C3%A9%20Madang%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Maison%20Herm%C3%A8s%20Caf%C3%A9%20Madang%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-10-corso-como-cheongdam",
-      "name": "Café 10 Corso Como",
-      "neighborhood": "Cheongdam",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%2010%20Corso%20Como%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%2010%20Corso%20Como%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tongsangmyeong-apgujeong",
-      "name": "Tongsangmyeong",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tongsangmyeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Tongsangmyeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "ddorang-apgujeong",
-      "name": "Ddorang",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Ddorang%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Ddorang%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "layered-apgujeong-apgujeong",
-      "name": "Layered Apgujeong",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Layered%20Apgujeong%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mecenatpolis-cafe-cheongdam",
-      "name": "Mecenatpolis Café",
-      "neighborhood": "Cheongdam",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mecenatpolis%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mecenatpolis%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-sannolae-apgujeong",
-      "name": "Café Sannolae",
-      "neighborhood": "Apgujeong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sannolae%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sannolae%20%EC%95%95%EA%B5%AC%EC%A0%95",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "hyundai-card-music-library-cafe-cheongdam",
-      "name": "Hyundai Card Music Library Café",
-      "neighborhood": "Cheongdam",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Hyundai%20Card%20Music%20Library%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Hyundai%20Card%20Music%20Library%20Caf%C3%A9%20%EC%B2%AD%EB%8B%B4%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-knotted-mangwon-mangwon-dong",
-      "name": "Café Knotted Mangwon",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "yard-coffee-mangwon-mangwon-dong",
-      "name": "Yard Coffee Mangwon",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "quiet",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Yard%20Coffee%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Yard%20Coffee%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-halmoni-mangwon-dong",
-      "name": "Cafe Halmoni",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Halmoni%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Halmoni%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mangwon-sound-mangwon-dong",
-      "name": "Mangwon Sound",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "music",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mangwon%20Sound%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Mangwon%20Sound%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-mangwon-mangwon-dong",
-      "name": "Café Onion Mangwon",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Mangwon%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sungtan-coffee-mangwon-dong",
-      "name": "Sungtan Coffee",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sungtan%20Coffee%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Sungtan%20Coffee%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-mongmonghan-pago-mangwon-dong",
-      "name": "Café Mongmonghan Pago",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Mongmonghan%20Pago%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Mongmonghan%20Pago%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "modern-time-mangwon-dong",
-      "name": "Modern Time",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "indie",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Modern%20Time%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Modern%20Time%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "patoer-mangwon-dong",
-      "name": "Patoer",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Patoer%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Patoer%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-yeolmae-mangwon-dong",
-      "name": "Café Yeolmae",
-      "neighborhood": "Mangwon-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Yeolmae%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Yeolmae%20%EB%A7%9D%EC%9B%90%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "coffee-libre-yeonhui-yeonhui-dong",
-      "name": "Coffee Libre Yeonhui",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "specialty",
-        "roastery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Libre%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Libre%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-knotted-yeonhui-yeonhui-dong",
-      "name": "Café Knotted Yeonhui",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Knotted%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Knotted%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "manufact-coffee-yeonhui-yeonhui-dong",
-      "name": "Manufact Coffee Yeonhui",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Manufact%20Coffee%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Manufact%20Coffee%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sajik-cafe-yeonhui-dong",
-      "name": "Sajik Café",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "quiet",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sajik%20Caf%C3%A9%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Sajik%20Caf%C3%A9%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-nopyeon-yeonhui-dong",
-      "name": "Café Nopyeon",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Nopyeon%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Nopyeon%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "polin-coffee-yeonhui-dong",
-      "name": "Polin Coffee",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "specialty",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Polin%20Coffee%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Polin%20Coffee%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "bloomster-yeonhui-yeonhui-dong",
-      "name": "Bloomster Yeonhui",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Bloomster%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Bloomster%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "hak-rim-dabang-yeonhui-yeonhui-dong",
-      "name": "Hak-rim Dabang Yeonhui",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Hak-rim%20Dabang%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Hak-rim%20Dabang%20Yeonhui%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-sunny-yeonhui-dong",
-      "name": "Cafe Sunny",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Sunny%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Sunny%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "atelier-hermitage-yeonhui-dong",
-      "name": "Atelier Hermitage",
-      "neighborhood": "Yeonhui-dong",
-      "tags": [
-        "quiet",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Atelier%20Hermitage%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Atelier%20Hermitage%20%EC%97%B0%ED%9D%AC%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mk2-cafe-seochon",
-      "name": "Mk2 Café",
-      "neighborhood": "Seochon",
-      "tags": [
-        "design",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mk2%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Mk2%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tongin-cafe-seochon",
-      "name": "Tongin Café",
-      "neighborhood": "Seochon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tongin%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Tongin%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "layered-seochon-seochon",
-      "name": "Layered Seochon",
-      "neighborhood": "Seochon",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Layered%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sajikdong-cafe-seochon",
-      "name": "Sajikdong Café",
-      "neighborhood": "Seochon",
-      "tags": [
-        "indie",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sajikdong%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Sajikdong%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-seochon-seochon",
-      "name": "Café Onion Seochon",
-      "neighborhood": "Seochon",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mok-keun-da-cafe-seochon",
-      "name": "Mok-keun-da Café",
-      "neighborhood": "Seochon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mok-keun-da%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Mok-keun-da%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "seochon-sarang-cafe-seochon",
-      "name": "Seochon Sarang Café",
-      "neighborhood": "Seochon",
-      "tags": [
-        "hanok",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Seochon%20Sarang%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Seochon%20Sarang%20Caf%C3%A9%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mil-toast-seochon-seochon",
-      "name": "Mil Toast Seochon",
-      "neighborhood": "Seochon",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "boan-yeogwan-seochon",
-      "name": "Boan Yeogwan",
-      "neighborhood": "Seochon",
-      "tags": [
-        "art",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Boan%20Yeogwan%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Boan%20Yeogwan%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-magpie-seochon-seochon",
-      "name": "Café Magpie Seochon",
-      "neighborhood": "Seochon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Magpie%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Magpie%20Seochon%20%EC%84%9C%EC%B4%8C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "coffee-hanyakbang-euljiro-3-ga",
-      "name": "Coffee Hanyakbang",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "specialty",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Coffee%20Hanyakbang%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Coffee%20Hanyakbang%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sewoon-coffee-euljiro-3-ga",
-      "name": "Sewoon Coffee",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "indie",
-        "specialty"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sewoon%20Coffee%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Sewoon%20Coffee%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-horangi-euljiro-3-ga",
-      "name": "Cafe Horangi",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Horangi%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Horangi%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "mil-toast-euljiro-euljiro-3-ga",
-      "name": "Mil Toast Euljiro",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Mil%20Toast%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Mil%20Toast%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cheonghak-dong-cafe-euljiro-3-ga",
-      "name": "Cheonghak-dong Café",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "hanok"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cheonghak-dong%20Caf%C3%A9%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Cheonghak-dong%20Caf%C3%A9%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-sik-mul-euljiro-3-ga",
-      "name": "Café Sik-mul",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "indie",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Sik-mul%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Sik-mul%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "layered-euljiro-euljiro-3-ga",
-      "name": "Layered Euljiro",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Layered%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Layered%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "hosu-euljiro-3-ga",
-      "name": "Hosu",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Hosu%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Hosu%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sentimental-euljiro-3-ga",
-      "name": "Sentimental",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "indie",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sentimental%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Sentimental%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-onion-euljiro-euljiro-3-ga",
-      "name": "Café Onion Euljiro",
-      "neighborhood": "Euljiro 3-ga",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Onion%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Onion%20Euljiro%20%EC%9D%84%EC%A7%80%EB%A1%9C",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "madang-flower-cafe-ikseon-dong",
-      "name": "Madang Flower Café",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Madang%20Flower%20Caf%C3%A9%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Madang%20Flower%20Caf%C3%A9%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cheong-su-dang-ikseon-dong",
-      "name": "Cheong Su Dang",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "tea"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Cheong%20Su%20Dang%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Cheong%20Su%20Dang%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sik-mul-ikseon-dong",
-      "name": "Sik Mul",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sik%20Mul%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Sik%20Mul%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tteul-cafe-ikseon-dong",
-      "name": "Tteul Café",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tteul%20Caf%C3%A9%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Tteul%20Caf%C3%A9%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "ikseon-mil-toast-ikseon-dong",
-      "name": "Ikseon Mil Toast",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Ikseon%20Mil%20Toast%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Ikseon%20Mil%20Toast%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "onion-ikseon-ikseon-dong",
-      "name": "Onion Ikseon",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "design"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Onion%20Ikseon%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Onion%20Ikseon%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-layla-ikseon-dong",
-      "name": "Café Layla",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Layla%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Layla%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tteok-cafe-joseon-sigdang-ikseon-dong",
-      "name": "Tteok Café Joseon Sigdang",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "tea"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tteok%20Caf%C3%A9%20Joseon%20Sigdang%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Tteok%20Caf%C3%A9%20Joseon%20Sigdang%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "pavilion-1939-ikseon-dong",
-      "name": "Pavilion 1939",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "hanok",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Pavilion%201939%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Pavilion%201939%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "cafe-wesley-ikseon-dong",
-      "name": "Café Wesley",
-      "neighborhood": "Ikseon-dong",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Caf%C3%A9%20Wesley%20Ikseon-dong",
-      "naver_search_url": "https://map.naver.com/p/search/Caf%C3%A9%20Wesley%20Ikseon-dong",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "5-extracts-itaewon-itaewon",
-      "name": "5 Extracts Itaewon",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "specialty",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=5%20Extracts%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/5%20Extracts%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "maman-gateaux-itaewon",
-      "name": "Maman Gateaux",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Maman%20Gateaux%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Maman%20Gateaux%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "tartine-bakery-itaewon-itaewon",
-      "name": "Tartine Bakery Itaewon",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Tartine%20Bakery%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Tartine%20Bakery%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "passion-5-hannam-dong",
-      "name": "Passion 5",
-      "neighborhood": "Hannam-dong",
-      "tags": [
-        "bakery",
-        "landmark"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Passion%205%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "naver_search_url": "https://map.naver.com/p/search/Passion%205%20%ED%95%9C%EB%82%A8%EB%8F%99",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sandsoul-itaewon",
-      "name": "Sandsoul",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "specialty",
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sandsoul%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Sandsoul%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "aside-itaewon",
-      "name": "Aside",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Aside%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Aside%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "sweetbird-itaewon",
-      "name": "Sweetbird",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "bakery"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Sweetbird%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Sweetbird%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "anchor-coffee-itaewon",
-      "name": "Anchor Coffee",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "specialty",
-        "quiet"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Anchor%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Anchor%20Coffee%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "hooga-itaewon",
-      "name": "Hooga",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "indie"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Hooga%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Hooga%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
-    },
-    {
-      "id": "wave-on-coffee-itaewon-itaewon",
-      "name": "Wave on Coffee Itaewon",
-      "neighborhood": "Itaewon",
-      "tags": [
-        "view"
-      ],
-      "kakao_search_url": "https://map.kakao.com/?q=Wave%20on%20Coffee%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "naver_search_url": "https://map.naver.com/p/search/Wave%20on%20Coffee%20Itaewon%20%EC%9D%B4%ED%83%9C%EC%9B%90",
-      "status": "candidate",
-      "verified": false,
-      "visited_at": null
+      "id": "rewire-coffee-seoul",
+      "name": "리와이어 커피 (Rewire Coffee)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 수표로6길 24-1",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "업무에 집중하기 좋은 조용한 음악이 흐르며 친절함",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "업무에 집중하기 좋은 조용한 음악이 흐르며 친절함",
+      "wifi_csv": "제공",
+      "outlet_csv": "좌석 하단 멀티탭",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "leedorim-coffee-&-vegan-seoul",
+      "name": "리도림 (LEEDORIM Coffee & Vegan)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 자하문로 43",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "경복궁 인근의 넓은 비건 베이커리 카페로 공간이 쾌적함",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "경복궁 인근의 넓은 비건 베이커리 카페로 공간이 쾌적함",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 벽 좌석 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "fjord-coffee-seoul",
+      "name": "피오르드 커피 을지로점 (Fjord Coffee)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 충무로 23-1",
+      "rating": 5,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "호텔 1층 로비 근처에 있어 조용하며 외국인 노마드 방문율 높음",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "호텔 1층 로비 근처에 있어 조용하며 외국인 노마드 방문율 높음",
+      "wifi_csv": "제공",
+      "outlet_csv": "대형 테이블 및 창가 구비",
+      "toilet_csv": "호텔 화장실 이용",
+      "source": "user-csv"
+    },
+    {
+      "id": "giveon-seoul",
+      "name": "기브온 카페인 바 (Giveon)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로42길 35",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "낮엔 잔잔한 카페 밤엔 바로 운영되어 1인 작업에 어울리는 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "낮엔 잔잔한 카페 밤엔 바로 운영되어 1인 작업에 어울리는 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽측 콘센트 다수",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "cafe-gio-seoul",
+      "name": "카페지오 (CAFE GIO)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 청파로85가길 2",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서울역 근처 조용한 골목에 위치하여 평일 낮 집중하기 좋음",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "서울역 근처 조용한 골목에 위치하여 평일 낮 집중하기 좋음",
+      "wifi_csv": "제공",
+      "outlet_csv": "좌석별 여유 있음",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "cafe-mio&nana-&-seoul",
+      "name": "Cafe Mio&Nana (미오&나나)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로28길 8-5",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "남산 아래 조용한 골목의 개인 카페로 한적하게 작업하기 적당함",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "남산 아래 조용한 골목의 개인 카페로 한적하게 작업하기 적당함",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 콘센트 지원",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul",
+      "name": "에브리띵 온 어 와플",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로20길 9",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "명동 인근에 위치하며 매장이 다소 좁으나 한적한",
+        "시간대에는 조용한 작업 가능"
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "명동 인근에 위치하며 매장이 다소 좁으나 한적한 시간대에는 조용한 작업 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 좌석",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "downt-espresso-seoul",
+      "name": "Downt Espresso (다운트 에스프레소)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로18길 34",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "깔끔하고 조용한 인테리어와 높은 가성비의 에스프레소 맛집",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "깔끔하고 조용한 인테리어와 높은 가성비의 에스프레소 맛집",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 일부 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "catch-cafe-seoul",
+      "name": "Catch Cafe (캐치카페 서울대)",
+      "city": "Seoul",
+      "neighborhood": "관악구",
+      "address": "서울 관악구 관악로 165 9층",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "대학생 및 취업준비생을 위한 조용하고 쾌적한 전용 학습 공간",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "대학생 및 취업준비생을 위한 조용하고 쾌적한 전용 학습 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "전 좌석 콘센트 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "meyou-coffee-seoul",
+      "name": "Meyou Coffee (미유커피)",
+      "city": "Seoul",
+      "neighborhood": "관악구",
+      "address": "서울 관악구 남부순환로216길 41",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "샤로수길 근처의 조용하고 집중하기 좋은 아담한 작업 공간",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "샤로수길 근처의 조용하고 집중하기 좋은 아담한 작업 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 좌석 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-10",
+      "name": "카페더띤뚜",
+      "city": "Seoul",
+      "neighborhood": "관악구",
+      "address": "서울 관악구 관악로16길 41",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "친절한 서비스와 한적하고 아기자기한 동네 개인 카페 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "친절한 서비스와 한적하고 아기자기한 동네 개인 카페 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 다수 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-11",
+      "name": "신림다락",
+      "city": "Seoul",
+      "neighborhood": "관악구",
+      "address": "서울 관악구 신림로 125",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "조용한 음악이 흐르며 공부나 개인 작업에 몰두하기 편안한 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "조용한 음악이 흐르며 공부나 개인 작업에 몰두하기 편안한 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "좌석 근처 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-12",
+      "name": "까페 레빠리지엥 명동점",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 명동6길 6-1",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "명동 중심가에서 드물게 한적하고 편안하게 커피를",
+        "즐길 수 있는 공간"
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "명동 중심가에서 드물게 한적하고 편안하게 커피를 즐길 수 있는 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 인근 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "potaca-seoul",
+      "name": "Potaca (포타카)",
+      "city": "Seoul",
+      "neighborhood": "관악구",
+      "address": "서울 관악구 신림동 120-16",
+      "rating": 5,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "대학동 주민센터 인근 조용한 골목에 위치하여 집중도 매우 우수",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "대학동 주민센터 인근 조용한 골목에 위치하여 집중도 매우 우수",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 콘센트 여유",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-14",
+      "name": "플랜트 베이커리 해방촌",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 신흥로3가길 2 2층",
+      "rating": 5,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "비건 디저트와 함께 밝고 쾌적한 인테리어 속에서 가벼운 작업 추천",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "비건 디저트와 함께 밝고 쾌적한 인테리어 속에서 가벼운 작업 추천",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 벽측 좌석",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-15",
+      "name": "빈브라더스 커피하우스 서울",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 토정로9길 2",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "커피 전문성이 매우 높으며 작업 인프라가 훌륭함",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "커피 전문성이 매우 높으며 작업 인프라가 훌륭함",
+      "wifi_csv": "제공",
+      "outlet_csv": "작업용 대형 테이블 완비",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "kottonseoul-seoul",
+      "name": "코튼서울 (KOTTON.SEOUL)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 인사동12길 17",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "인사동 고풍스러운 한옥 개조 카페로 평일 한적함",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "인사동 고풍스러운 한옥 개조 카페로 평일 한적함",
+      "wifi_csv": "제공",
+      "outlet_csv": "한옥 구조 일부 좌석 제공",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "sim-coffee-house-seoul",
+      "name": "심커피하우스 (Sim Coffee House)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로20나길 15",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "명동 남산 근처 조용하고 작업하기 부담 없는 소형 카페",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "명동 남산 근처 조용하고 작업하기 부담 없는 소형 카페",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 콘센트 있음",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "upstanding-coffee-seoul",
+      "name": "Upstanding Coffee (업스탠딩 커피)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 신흥로 99-11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "해방촌 특유의 이국적인 뷰를 즐기며 가벼운 패드 작업 권장",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "해방촌 특유의 이국적인 뷰를 즐기며 가벼운 패드 작업 권장",
+      "wifi_csv": "제공",
+      "outlet_csv": "콘센트 다소 부족",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "tertre-seoul",
+      "name": "테르트르 (Tertre)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 낙산5길 46",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서울 전경이 한눈에 보이는 멋진 전망으로 크리에이티브한",
+        "업무에 좋음"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "서울 전경이 한눈에 보이는 멋진 전망으로 크리에이티브한 업무에 좋음",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 하단 일부 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "protocol-seoul",
+      "name": "프로토콜 (Protocol)",
+      "city": "Seoul",
+      "neighborhood": "서대문구",
+      "address": "서울 서대문구 연희로11가길 36",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "독서와 노트북 작업만을 위해 설계된 최고의 노마드 전용 공간",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "독서와 노트북 작업만을 위해 설계된 최고의 노마드 전용 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "전 좌석 조명 및 콘센트",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "brownhaus-seoul",
+      "name": "브라운하우스 연남 (Brownhaus)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 동교로50길 11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "세련된 디자인 가구가 배치되어 크리에이터들이 일하기 좋은 매장",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "세련된 디자인 가구가 배치되어 크리에이터들이 일하기 좋은 매장",
+      "wifi_csv": "제공",
+      "outlet_csv": "넓은 공용 테이블 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "urban-plant-seoul",
+      "name": "어반플랜트 합정 (Urban Plant)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 독막로4길 3",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "도심 속 정원 컨셉으로 초록 가득한 힐링 무드 속 업무 가능",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "도심 속 정원 컨셉으로 초록 가득한 힐링 무드 속 업무 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "중앙 테이블 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-23",
+      "name": "빌리프커피로스터스",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 양화로11길 50",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "합정역 인근 대형 카페로 충전 및 단체 작업에 유리함",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "합정역 인근 대형 카페로 충전 및 단체 작업에 유리함",
+      "wifi_csv": "제공",
+      "outlet_csv": "지하 광장형 대형 테이블",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "felt-coffee-seoul",
+      "name": "펠트커피 광화문 (Felt Coffee)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 종로3길 17 지하1층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "광화문 디타워 지하 위치로 이동이 잦은 숏워크 노마드 전용",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "광화문 디타워 지하 위치로 이동이 잦은 숏워크 노마드 전용",
+      "wifi_csv": "제공",
+      "outlet_csv": "스탠딩 및 미니 테이블",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "coffee-temple-seoul",
+      "name": "커피템플 (Coffee Temple)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 월드컵북로54길 25",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "상암동 디지털미디어시티 내 위치하여 평일 작업에 적합함",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "상암동 디지털미디어시티 내 위치하여 평일 작업에 적합함",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 일부 콘센트",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "anthracite-seoul",
+      "name": "앤트러사이트 서교 (Anthracite)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 월드컵로12길 11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "음악과 대화가 금지된 고요한 정원 뷰로 아날로그 집중 최적화",
+        ""
+      ],
+      "amenities": "OUTLET · QUIET",
+      "notes_kr": "음악과 대화가 금지된 고요한 정원 뷰로 아날로그 집중 최적화",
+      "wifi_csv": "없음",
+      "outlet_csv": "콘센트 없음",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "terarosa-seoul",
+      "name": "테라로사 광화문점 (Terarosa)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 종로1길 50",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "넓고 시원한 개방감과 풍부한 콘센트로 전통적인 작업 공간",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "넓고 시원한 개방감과 풍부한 콘센트로 전통적인 작업 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "대형 우드 테이블 완비",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "fourb-seoul",
+      "name": "포비 광화문 (FOURB)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 종로3길 17 1층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "아침 일찍 오픈하여 오전 얼리버드 작업 노마드에게 최적화",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "아침 일찍 오픈하여 오전 얼리버드 작업 노마드에게 최적화",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 좌석 위주 배치",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "namusairo-seoul",
+      "name": "나무사이로 (Namusairo)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 사직로8길 21",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "경복궁 서촌 한옥 안마당에서 차분하게 업무 집중 가능",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "경복궁 서촌 한옥 안마당에서 차분하게 업무 집중 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 안채 좌석 제공",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "fritz-coffee-seoul",
+      "name": "프릳츠 도화점 (Fritz Coffee)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 새창로2길 17",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "레트로한 주택 개조 공간에서 맛있는 베이커리와 활력 넘치는 작업",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "레트로한 주택 개조 공간에서 맛있는 베이커리와 활력 넘치는 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 및 대형 테이블",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "daechoong-seoul",
+      "name": "대충유원지 인왕산 (Daechoong)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 필운대로 46",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서촌 한옥 기와 뷰를 감상하며 평화롭게 아웃풋 내기 좋은 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "서촌 한옥 기와 뷰를 감상하며 평화롭게 아웃풋 내기 좋은 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 하단 일부 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "camel-coffee-seoul",
+      "name": "카멜커피 성수 (Camel Coffee)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 성덕정19길 6",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "빈티지하고 힙한 성수동 감성 속에서 기획이나",
+        "간단한 서류 작업에 적절"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "빈티지하고 힙한 성수동 감성 속에서 기획이나 간단한 서류 작업에 적절",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 벽면 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "lowkey-seoul",
+      "name": "로우키 성수 (Lowkey)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 연무장3길 6",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "스페셜티 커피의 진수를 느끼며 성수동 골목에서",
+        "일하는 감각적인 공간"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "스페셜티 커피의 진수를 느끼며 성수동 골목에서 일하는 감각적인 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "지하 및 지상 일부 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "mesh-coffee-seoul",
+      "name": "메쉬커피 (Mesh Coffee)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 서울숲길 43",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서울숲 근처의 강자. 오랜 시간 체류하기보다 모닝워크에 권장",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "서울숲 근처의 강자. 오랜 시간 체류하기보다 모닝워크에 권장",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 좌석 미니 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "center-coffee-seoul",
+      "name": "센터커피 서울숲 (Center Coffee)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 서울숲2길 28-11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서울숲 푸른 정원이 창밖으로 펼쳐져 시각적 피로도가 낮음",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "서울숲 푸른 정원이 창밖으로 펼쳐져 시각적 피로도가 낮음",
+      "wifi_csv": "제공",
+      "outlet_csv": "2층 창가 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "momento-seoul",
+      "name": "모멘토 브루어스 (Momento)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 연무장길 28-12",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "스탠딩 테이블과 개방감 넘치는 인테리어로 트렌디한 노마드용",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "스탠딩 테이블과 개방감 넘치는 인테리어로 트렌디한 노마드용",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 벽측 스탠드",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "happening-seoul",
+      "name": "해프닝 (Happening)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 압구정로4길 13-4",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "신사 가로수길 뒤편 아늑하고 여유로운 작업에 최적화된 은신처",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "신사 가로수길 뒤편 아늑하고 여유로운 작업에 최적화된 은신처",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 좌석 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "peer-coffee-seoul",
+      "name": "피어커피 광희동 (Peer Coffee)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 장충단로8길 15",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "동대문 인근 조용하게 생각 정리하고 원고 쓰기 좋은 공간",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "동대문 인근 조용하게 생각 정리하고 원고 쓰기 좋은 공간",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 일부 및 중앙 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "leesar-seoul",
+      "name": "리사르커피 명동 (Leesar)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 명동8가길 58",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "에스프레소 수혈과 함께 퀵 브레인스토밍 및 이메일 회신용",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "에스프레소 수혈과 함께 퀵 브레인스토밍 및 이메일 회신용",
+      "wifi_csv": "제공",
+      "outlet_csv": "스탠딩 테이블 위주",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "koffee-sniffer-seoul",
+      "name": "커피스니퍼 (Koffee Sniffer)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 세종대로16길 27",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "시청역 인근 비즈니스 타운 내 직장인 및 작업자들의",
+        "아늑한 참새방앗간"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "시청역 인근 비즈니스 타운 내 직장인 및 작업자들의 아늑한 참새방앗간",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 좌석 하단 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-41",
+      "name": "커피앤시가렛",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 서소문로 116 17층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "17층 고층 빌딩 뷰가 압권이며 세련된 사무실",
+        "같은 독특한 몰입감 제공"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "17층 고층 빌딩 뷰가 압권이며 세련된 사무실 같은 독특한 몰입감 제공",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 및 벽측 테이블",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "alegria-seoul",
+      "name": "알레그리아 덕수궁 (Alegria)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 정동길 17",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "정동길 정취 속에서 맛있는 라떼와 함께 안정적인",
+        "Wi-Fi 환경 누림"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "정동길 정취 속에서 맛있는 라떼와 함께 안정적인 Wi-Fi 환경 누림",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 매립형 멀티탭",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "roundnd-seoul",
+      "name": "라운드앤드 (Roundnd)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 정동길 35",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "정동길 대형 베이커리 카페로 쾌적하고 조도 관리가",
+        "잘 되어 눈이 편안함"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "정동길 대형 베이커리 카페로 쾌적하고 조도 관리가 잘 되어 눈이 편안함",
+      "wifi_csv": "제공",
+      "outlet_csv": "지하 대형 좌석 여유",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "relieve-seoul",
+      "name": "릴리브 (Relieve)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로20길 24",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "남산 아래 한적하고 밝은 화이트 톤 공간으로",
+        "단조롭고 차분한 업무용"
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "남산 아래 한적하고 밝은 화이트 톤 공간으로 단조롭고 차분한 업무용",
+      "wifi_csv": "제공",
+      "outlet_csv": "미니멀한 사각 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "milestone-seoul",
+      "name": "마일스톤 커피 신사 (Milestone)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 논현로159길 49",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "호주식 커피 명가로 가로수길 평일 한가한 오전에 작업 효율 극대화",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "호주식 커피 명가로 가로수길 평일 한가한 오전에 작업 효율 극대화",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 및 바 좌석 일부",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "deux-amis-seoul",
+      "name": "듀자미 (Deux Amis)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 도산대로11길 28",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "고급 디저트와 함께 넓은 2층 좌석에서 당 충전하며 일하기 적절함",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "고급 디저트와 함께 넓은 2층 좌석에서 당 충전하며 일하기 적절함",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 및 대형 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "ph-sikmulgwan-ph-seoul",
+      "name": "식물관PH (Sikmulgwan PH)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 광평로34길 24",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "수서역 인근 유리 온실 컨셉으로 입장료 결제",
+        "후 하루 몰입 독점 가능"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "수서역 인근 유리 온실 컨셉으로 입장료 결제 후 하루 몰입 독점 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "전시관 형태의 여유 공간",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "susu-coffee-seoul",
+      "name": "수수커피 강남 (Susu Coffee)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 강남대로 382",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "강남역 초역세권 대형 오피스 빌딩 내 위치하여",
+        "미팅 및 긴급 작업에 좋음"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "강남역 초역세권 대형 오피스 빌딩 내 위치하여 미팅 및 긴급 작업에 좋음",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 일체형 구비",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "gabaedo-seoul",
+      "name": "가배도 강남 (Gabaedo)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 강남대로110길 13",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "일본 교토풍 정취 속 차분한 우드톤에서 집중하는 이색 분위기",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "일본 교토풍 정취 속 차분한 우드톤에서 집중하는 이색 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "앤틱 원목 테이블 하단",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "frame-in-seoul",
+      "name": "프레임인 (Frame In)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 역삼로 142",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "스터디와 재택근무자를 환영하는 따뜻하고 쾌적한 오피스형 매장",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "스터디와 재택근무자를 환영하는 따뜻하고 쾌적한 오피스형 매장",
+      "wifi_csv": "제공",
+      "outlet_csv": "좌석별 멀티탭 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "celery-town-seoul",
+      "name": "셀러리타운 (Celery Town)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 동교로51길 26",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "아기자기한 캐릭터 소품샵 겸 카페로 유쾌하고",
+        "가벼운 기획 작업에 추천"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "아기자기한 캐릭터 소품샵 겸 카페로 유쾌하고 가벼운 기획 작업에 추천",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 주변 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "luft-coffee-seoul",
+      "name": "루프트 커피 명동 (Luft Coffee)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 삼일대로 308",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "하얀 인테리어와 압도적으로 높은 천장으로 시원하게 대형 작업 가능",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "하얀 인테리어와 압도적으로 높은 천장으로 시원하게 대형 작업 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "공용 롱테이블 다수",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "bean-brothers-seoul",
+      "name": "빈브라더스 신도림 (Bean Brothers)",
+      "city": "Seoul",
+      "neighborhood": "구로구",
+      "address": "서울 구로구 경인로 662 디큐브시티 현대백화점 별관 3층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "백화점 연결로 접근성 높고 테크 허브 분위기에서",
+        "막힘없는 생산성 발휘"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "백화점 연결로 접근성 높고 테크 허브 분위기에서 막힘없는 생산성 발휘",
+      "wifi_csv": "제공",
+      "outlet_csv": "중앙 업무 테이블 충전기 탑재",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "hell-cafe-seoul",
+      "name": "헬카페 스피리터스 (Hell Cafe)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 이촌로 224",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "동부이촌동 차분한 음악과 고풍스러운 위스키바 분위기 속 딥워크",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "동부이촌동 차분한 음악과 고풍스러운 위스키바 분위기 속 딥워크",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 테이블 일부 제공",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "deus-cafe-seoul",
+      "name": "데우스 카페 삼청 (Deus Cafe)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 삼청로 134",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "브랜드 감성을 느끼며 삼청동 돌담길 정취에서 창의적인 문서작업",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "브랜드 감성을 느끼며 삼청동 돌담길 정취에서 창의적인 문서작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "한옥 마당 및 내실 좌석",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "tonti-coffee-seoul",
+      "name": "톤티커피 (Tonti Coffee)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 북촌로 21-11",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "안국역 숨겨진 좁은 골목 속 비밀기지 같은 차분하고",
+        "이국적인 인프라"
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "안국역 숨겨진 좁은 골목 속 비밀기지 같은 차분하고 이국적인 인프라",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 및 바 좌석 일부",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "texture-seoul",
+      "name": "텍스쳐 성수 (Texture)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 서울숲2길 38-1",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "감도 높은 가구 배치로 디자이너와 프리랜서 영감 자극",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "감도 높은 가구 배치로 디자이너와 프리랜서 영감 자극",
+      "wifi_csv": "제공",
+      "outlet_csv": "가구 쇼룸 겸용 멀티탭 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "moka-hara-seoul",
+      "name": "모카하라 (Moka Hara)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 퇴계로28길 10",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "명동 필동 골목의 터줏대감 같은 잔잔하고 따뜻하며 조용한 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "명동 필동 골목의 터줏대감 같은 잔잔하고 따뜻하며 조용한 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 하단 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "wonhyeongdeul-seoul",
+      "name": "원형들 (Wonhyeongdeul)",
+      "city": "Seoul",
+      "neighborhood": "중구",
+      "address": "서울 중구 충무로4길 21 4층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "충무로 힙한 을지로 감성 가득한 이색 케이크",
+        "카페로 트렌드 서칭용 작업"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "충무로 힙한 을지로 감성 가득한 이색 케이크 카페로 트렌드 서칭용 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 주변 일부",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "cafe-allure-seoul",
+      "name": "카페 얼루어 (Cafe Allure)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 월드컵북로54길 11",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "상암동 직장인들이 한 차례 지나간 뒤 아늑한 오피스 대용 활용",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "상암동 직장인들이 한 차례 지나간 뒤 아늑한 오피스 대용 활용",
+      "wifi_csv": "제공",
+      "outlet_csv": "공부 전용석 형태 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "nudake-seoul",
+      "name": "누데이크 하우스 도산 (Nudake)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 압구정로46길 50",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "예술적 오브제들이 가득한 하우스 도산 젠틀몬스터",
+        "빌딩 내 감각적 작업"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "예술적 오브제들이 가득한 하우스 도산 젠틀몬스터 빌딩 내 감각적 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "중앙 원형 미디어 테이블",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "our-bakery-seoul",
+      "name": "아우어베이커리 도산 (Our Bakery)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 도산대로45길 10-5",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "시그니처 빵과 넓은 대형 좌석으로 트렌디한 기획 회의에 안성맞춤",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "시그니처 빵과 넓은 대형 좌석으로 트렌디한 기획 회의에 안성맞춤",
+      "wifi_csv": "제공",
+      "outlet_csv": "2층 테이블 멀티탭",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "tartine-seoul",
+      "name": "타르틴 베이커리 도산 (Tartine)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 언주로168길 24",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "킨포크 감성 속에서 맛있는 브런치와 함께하는",
+        "글로벌 노마드 업무 스타일"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "킨포크 감성 속에서 맛있는 브런치와 함께하는 글로벌 노마드 업무 스타일",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 및 대형 원형 좌석",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "-seoul-64",
+      "name": "도산 콜렉터스 키친",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 도산대로49길 11",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "유럽풍 고급 라이브러리 컨셉으로 장시간 깊은 서적 리서치 추천",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "유럽풍 고급 라이브러리 컨셉으로 장시간 깊은 서적 리서치 추천",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블별 하단 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "dissent-seoul",
+      "name": "디센트 (Dissent)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 도산대로 215",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "미니멀한 화이트톤 조명 덕분에 촬영과 디지털",
+        "포트폴리오 작업에 유용"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "미니멀한 화이트톤 조명 덕분에 촬영과 디지털 포트폴리오 작업에 유용",
+      "wifi_csv": "제공",
+      "outlet_csv": "대형 대리석 테이블 콘센트",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "h-square-seoul",
+      "name": "에이치스퀘어 (H Square)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 월드컵로14길 14",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "망원동 합정 사이 프리랜서 전용 코워킹 지향적 잔잔한 분위기",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "망원동 합정 사이 프리랜서 전용 코워킹 지향적 잔잔한 분위기",
+      "wifi_csv": "제공",
+      "outlet_csv": "개인 데스크형 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "coffee-mill-seoul",
+      "name": "커피방앗간 (Coffee Mill)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 북촌로5길 8-11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "삼청동 골목 오랜 역사의 전통 찻집 풍경과 조용한 아날로그 드로잉",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "삼청동 골목 오랜 역사의 전통 찻집 풍경과 조용한 아날로그 드로잉",
+      "wifi_csv": "제공",
+      "outlet_csv": "안뜰 일부 좌석 제공",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "gabaedo-seoul-68",
+      "name": "가배도 삼청 (Gabaedo)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 북촌로5길 56-8",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "북촌 한옥들 사이에 넓고 잔잔한 정원을 바라보며 편안히 맥북 작업",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "북촌 한옥들 사이에 넓고 잔잔한 정원을 바라보며 편안히 맥북 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "2층 넓은 목조 테이블",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "tea-collective-seoul",
+      "name": "티컬렉티브 (Tea Collective)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 도산대로55길 37",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "청담동 도심 한복판에서 마음을 가라앉히고 기획서",
+        "초안 쓰기 좋은 장소"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "청담동 도심 한복판에서 마음을 가라앉히고 기획서 초안 쓰기 좋은 장소",
+      "wifi_csv": "제공",
+      "outlet_csv": "다도 테이블 일부 충전",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "mccoy's-coffee-seoul",
+      "name": "맥코이 커피 (McCoy's Coffee)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 성미산로 147",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "오두막 같은 포근하고 어둑한 우드 조명 속 집중도 향상",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "오두막 같은 포근하고 어둑한 우드 조명 속 집중도 향상",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 일부 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "savour-seoul",
+      "name": "세이버 (Savour)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 필운대로 26",
+      "rating": 4.9,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서촌 조용한 안쪽 골목의 정갈하고 깊은 차 전문",
+        "공간 겸 미팅 장소"
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "서촌 조용한 안쪽 골목의 정갈하고 깊은 차 전문 공간 겸 미팅 장소",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 테이블 아래 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "identity-seoul",
+      "name": "아이덴티티 커피랩 (Identity)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 망원로 70",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "화이트 인테리어와 정밀하게 디자인된 고퀄리티 음료를 마시며 작업",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "화이트 인테리어와 정밀하게 디자인된 고퀄리티 음료를 마시며 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 및 공유 바 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "halff-coffee-seoul",
+      "name": "하프커피 안국 (Halff Coffee)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 계동길 41",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "크림라떼의 달달함과 안국 한옥의 고즈넉함 속 가벼운 타이핑 작업",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "크림라떼의 달달함과 안국 한옥의 고즈넉함 속 가벼운 타이핑 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "한옥 벽면 콘센트 빌트인",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "fritz-coffee-seoul-74",
+      "name": "프릳츠 양재점 (Fritz Coffee)",
+      "city": "Seoul",
+      "neighborhood": "서초구",
+      "address": "서울 서초구 강남대로37길 24-11",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "양재역 인근 3층 단독 건물로 넓고 활기찬 작업이 필요한 날 적격",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "양재역 인근 3층 단독 건물로 넓고 활기찬 작업이 필요한 날 적격",
+      "wifi_csv": "제공",
+      "outlet_csv": "지하 및 2/3층 벽면 멀티탭",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "ador-seoul",
+      "name": "아도르 (Ador)",
+      "city": "Seoul",
+      "neighborhood": "강남구",
+      "address": "서울 강남구 선릉로116길 24",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "선릉 강남구청 사이 고요한 명상 무드로 긴장 풀고 문서작업 가능",
+        ""
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "선릉 강남구청 사이 고요한 명상 무드로 긴장 풀고 문서작업 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "안락한 소파석 하단",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "independent-seoul",
+      "name": "인디펜던트커피 (Independent)",
+      "city": "Seoul",
+      "neighborhood": "종로구",
+      "address": "서울 종로구 세종대로 149",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "광화문 광장 바로 옆 대형 통창으로 사람 구경하며 기획하기 좋음",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "광화문 광장 바로 옆 대형 통창으로 사람 구경하며 기획하기 좋음",
+      "wifi_csv": "제공",
+      "outlet_csv": "비즈니스 롱테이블 충전 포트",
+      "toilet_csv": "상가 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "dongrijang-seoul",
+      "name": "동리장 카페 (Dongrijang)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 토정로 310",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "마포 용강동 주택가 근처 친절하고 정다운 동네 노마드 성지",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "마포 용강동 주택가 근처 친절하고 정다운 동네 노마드 성지",
+      "wifi_csv": "제공",
+      "outlet_csv": "좌석별 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "oats-coffee-seoul",
+      "name": "오츠커피 마포 (Oats Coffee)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 독막로14길 32",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "아인슈페너 성지로 불리며 상수 합정 사이 잔잔한",
+        "비트로 작업 능률 상승"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "아인슈페너 성지로 불리며 상수 합정 사이 잔잔한 비트로 작업 능률 상승",
+      "wifi_csv": "제공",
+      "outlet_csv": "창측 및 벽면 하단",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "noah's-seoul",
+      "name": "노아스 로스팅 연희 (Noah's)",
+      "city": "Seoul",
+      "neighborhood": "서대문구",
+      "address": "서울 서대문구 연희로25길 5",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "연희동 주택가 중심 대형 베이커리 카페로 회의와 노트북 동시 가능",
+        ""
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "연희동 주택가 중심 대형 베이커리 카페로 회의와 노트북 동시 가능",
+      "wifi_csv": "제공",
+      "outlet_csv": "대형 원목 테이블",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "default-value-seoul",
+      "name": "디폴트밸류 (Default Value)",
+      "city": "Seoul",
+      "neighborhood": "서대문구",
+      "address": "서울 서대문구 성산로 333",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "화이트&미니멀 디자인 끝판왕. 조용한 평일 창 밖을 보며 작업",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "화이트&미니멀 디자인 끝판왕. 조용한 평일 창 밖을 보며 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 바 좌석 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "yeonnam-bangagan-seoul",
+      "name": "연남방앗간 (Yeonnam Bangagan)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 동교로29길 34",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "주택 개조 로컬 크리에이터 라운지 분위기로 자연스러운 네트워킹",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "주택 개조 로컬 크리에이터 라운지 분위기로 자연스러운 네트워킹",
+      "wifi_csv": "제공",
+      "outlet_csv": "룸 형태로 개조된 좌석 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "inspiration-seoul",
+      "name": "신촌 인스피레이션디 (Inspiration)",
+      "city": "Seoul",
+      "neighborhood": "서대문구",
+      "address": "서울 서대문구 연세로 1",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "신촌 대학가 맞춤형 대형 멀티레벨 카페로 장시간 전원 걱정 없음",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "신촌 대학가 맞춤형 대형 멀티레벨 카페로 장시간 전원 걱정 없음",
+      "wifi_csv": "제공",
+      "outlet_csv": "스터디룸 수준의 충전",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "doksuri-dabang-seoul",
+      "name": "독수리다방 (Doksuri Dabang)",
+      "city": "Seoul",
+      "neighborhood": "서대문구",
+      "address": "서울 서대문구 연세로 36 8층",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "연세대 앞 역사 깊은 레트로 문학 다방 분위기로",
+        "완전 무소음 몰입용"
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "연세대 앞 역사 깊은 레트로 문학 다방 분위기로 완전 무소음 몰입용",
+      "wifi_csv": "제공",
+      "outlet_csv": "서재형 독서 테이블 전원 설치",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "felicita-seoul",
+      "name": "신촌 펠리치타 (Felicita)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 백범로 12 2층",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "경의선 숲길 인근의 쾌적하고 차분하여 시험 준비나 업무에 특화됨",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "경의선 숲길 인근의 쾌적하고 차분하여 시험 준비나 업무에 특화됨",
+      "wifi_csv": "제공",
+      "outlet_csv": "개인 독서실형 콘센트",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "clasig-seoul",
+      "name": "대흥동 클래직 (Clasig)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 백범로10길 25",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "서강대 앞 조용하고 세련된 빈티지 가구 속 집중력 향상",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "서강대 앞 조용하고 세련된 빈티지 가구 속 집중력 향상",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 콘센트 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "young-&-daughters-seoul",
+      "name": "공덕 영앤도터스 (Young & Daughters)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 마포대로11길 22",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "공덕역 뒤편 정겹고 콤팩트한 매장으로 간단한",
+        "패드 체크와 에스프레소"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "공덕역 뒤편 정겹고 콤팩트한 매장으로 간단한 패드 체크와 에스프레소",
+      "wifi_csv": "제공",
+      "outlet_csv": "스탠딩 및 매장 외곽 좌석",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "coffee-lek-seoul",
+      "name": "염리동 커피렉 (Coffee Lek)",
+      "city": "Seoul",
+      "neighborhood": "마포구",
+      "address": "서울 마포구 숭문길 12",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "한적한 염리동 주택가 골목길에서 친절한 사장님과 따뜻한 집중 타임",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "한적한 염리동 주택가 골목길에서 친절한 사장님과 따뜻한 집중 타임",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 하단 충전 원활",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "anthracite-seoul-88",
+      "name": "앤트러사이트 한남 (Anthracite)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 이태원로 240",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "이태원 한복판 빈티지 인더스트리얼 공간 속 묵직한 몰입 제공",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "이태원 한복판 빈티지 인더스트리얼 공간 속 묵직한 몰입 제공",
+      "wifi_csv": "제공",
+      "outlet_csv": "공장형 대형 철제 테이블 콘센트",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "2-champ-coffee-seoul",
+      "name": "챔프커피 제2작업실 (Champ Coffee)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 녹사평대로26가길 24",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "이태원 앤틱가구거리 속 챔프쿠키와 함께 힙한",
+        "한 줄 아이디어 메모용"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "이태원 앤틱가구거리 속 챔프쿠키와 함께 힙한 한 줄 아이디어 메모용",
+      "wifi_csv": "제공",
+      "outlet_csv": "미니 벤치형 일부 지원",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "hell-cafe-seoul-90",
+      "name": "헬카페 로스터즈 (Hell Cafe)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 보광로 76",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "정통 융드립 커피 전문으로 극도의 묵직한 LP",
+        "음악과 함께하는 초집중 딥워크"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "정통 융드립 커피 전문으로 극도의 묵직한 LP 음악과 함께하는 초집중 딥워크",
+      "wifi_csv": "제공",
+      "outlet_csv": "바 좌석 일부 제공",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "invited-seoul",
+      "name": "용산 인바이티드 (Invited)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 한강대로52길 41",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "삼각지 용리단길 주택 개조형 카페로 층별 다양한",
+        "공간 구성 및 평일 무소음"
+      ],
+      "amenities": "WIFI · QUIET",
+      "notes_kr": "삼각지 용리단길 주택 개조형 카페로 층별 다양한 공간 구성 및 평일 무소음",
+      "wifi_csv": "제공",
+      "outlet_csv": "주택 각 방 개조석 멀티탭",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "quartz-coffee-seoul",
+      "name": "신용산 쿼츠 (Quartz Coffee)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 한강대로 158",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "바리스타 챔피언의 차가운 파란색 미니멀 공간에서",
+        "날카로운 업무 집중력 발휘"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "바리스타 챔피언의 차가운 파란색 미니멀 공간에서 날카로운 업무 집중력 발휘",
+      "wifi_csv": "제공",
+      "outlet_csv": "미니멀 사각 철제 테이블",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "dotori-seoul",
+      "name": "삼각지 도토리 (Dotori)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 한강대로52길 25-6",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "미브 애니메이션에 나올 법한 신비로운 우드 분위기",
+        "속 힐링과 마일드한 작업"
+      ],
+      "amenities": "WIFI",
+      "notes_kr": "미브 애니메이션에 나올 법한 신비로운 우드 분위기 속 힐링과 마일드한 작업",
+      "wifi_csv": "제공",
+      "outlet_csv": "일부 벽면 우드 좌석",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "onion-seongsu-seoul",
+      "name": "성수동 어니언 성수 (Onion Seongsu)",
+      "city": "Seoul",
+      "neighborhood": "성동구",
+      "address": "서울 성동구 아차산로9길 8",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "성수동 폐공장 개조의 웅장한 공간에서 쾌적하고",
+        "창의적인 노마드 프로젝트 진행"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "성수동 폐공장 개조의 웅장한 공간에서 쾌적하고 창의적인 노마드 프로젝트 진행",
+      "wifi_csv": "제공",
+      "outlet_csv": "대형 테이블 하단 충전기",
+      "toilet_csv": "내부 남녀구분",
+      "source": "user-csv"
+    },
+    {
+      "id": "coffee-stand-seoul",
+      "name": "자양동 커피스탠드 (Coffee Stand)",
+      "city": "Seoul",
+      "neighborhood": "광진구",
+      "address": "서울 광진구 자양번영로 6",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "자양동 한강공원 가는 길 조용하고 한적한 로컬",
+        "주민 선호 랩탑용 숨은 명소"
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "자양동 한강공원 가는 길 조용하고 한적한 로컬 주민 선호 랩탑용 숨은 명소",
+      "wifi_csv": "제공",
+      "outlet_csv": "벽면 하단 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "choiga-coffee-seoul",
+      "name": "화양동 최가커피 (Choiga Coffee)",
+      "city": "Seoul",
+      "neighborhood": "광진구",
+      "address": "서울 광진구 군자로 4",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "건대 대학가의 조용하고 정겨운 나무 인테리어",
+        "다락방 감성 속 완전한 몰입"
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "건대 대학가의 조용하고 정겨운 나무 인테리어 다락방 감성 속 완전한 몰입",
+      "wifi_csv": "제공",
+      "outlet_csv": "구석 안락 좌석 콘센트 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "palisate-seoul",
+      "name": "구의동 팰리세이트 (Palisate)",
+      "city": "Seoul",
+      "neighborhood": "광진구",
+      "address": "서울 광진구 아차산로 453",
+      "rating": 4.8,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "화이트&그레이 톤의 지적이면서도 시원한 개방감 속 업무 처리 수월",
+        ""
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "화이트&그레이 톤의 지적이면서도 시원한 개방감 속 업무 처리 수월",
+      "wifi_csv": "제공",
+      "outlet_csv": "테이블 하단 배치 완비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "piero-coffee-seoul",
+      "name": "성내동 피에로커피 (Piero Coffee)",
+      "city": "Seoul",
+      "neighborhood": "강동구",
+      "address": "서울 강동구 성안로 14",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "올림픽공원 북문 인근의 차분하고 원숙한 커피",
+        "로스팅 풍미 속 평일 작업 최적지"
+      ],
+      "amenities": "WIFI · OUTLET · QUIET",
+      "notes_kr": "올림픽공원 북문 인근의 차분하고 원숙한 커피 로스팅 풍미 속 평일 작업 최적지",
+      "wifi_csv": "제공",
+      "outlet_csv": "우드 벽면 좌석 하단 배치",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
+    },
+    {
+      "id": "minimalz-seoul",
+      "name": "한남동 미니말즈 (Minimalz)",
+      "city": "Seoul",
+      "neighborhood": "용산구",
+      "address": "서울 용산구 독서당로 39",
+      "rating": 4.7,
+      "verified": false,
+      "visited_at": null,
+      "vetted_at": null,
+      "two_lines": [
+        "한남동 유엔빌리지 인근 미니멀하고 깨끗한 분위기",
+        "속 고독하게 글 쓰기 좋은 곳"
+      ],
+      "amenities": "WIFI · OUTLET",
+      "notes_kr": "한남동 유엔빌리지 인근 미니멀하고 깨끗한 분위기 속 고독하게 글 쓰기 좋은 곳",
+      "wifi_csv": "제공",
+      "outlet_csv": "창가 바 좌석 구비",
+      "toilet_csv": "내부 화장실",
+      "source": "user-csv"
     }
   ]
 }

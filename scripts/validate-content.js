@@ -90,20 +90,30 @@ function checkDispatches() {
 }
 
 function checkCafes() {
-    const f = path.join(ROOT, 'data', 'cafes-seoul.json');
-    if (!fs.existsSync(f)) return;
-    const j = JSON.parse(fs.readFileSync(f, 'utf8'));
-    const cafes = Array.isArray(j.cafes) ? j.cafes : Array.isArray(j) ? j : [];
-    let bad = 0;
-    for (const c of cafes) {
-        if (!c.name) { fail(f, 'café missing name'); bad++; }
-        // Photos, when present, must declare provenance.
-        if (c.photo && !c.photo_credit) {
-            fail(f, `café "${c.name}" has photo but no photo_credit (CONTENT-LICENSE.md §2)`);
-            bad++;
+    const cityFiles = ['cafes-seoul.json', 'cafes-da-nang.json', 'cafes-bali.json',
+                       'cafes-tokyo.json', 'cafes-lisbon.json'];
+    for (const file of cityFiles) {
+        const f = path.join(ROOT, 'data', file);
+        if (!fs.existsSync(f)) continue;
+        const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+        const cafes = Array.isArray(j.cafes) ? j.cafes : Array.isArray(j) ? j : [];
+        let bad = 0;
+        for (const c of cafes) {
+            if (!c.name) { fail(f, 'café missing name'); bad++; }
+            if (c.photo && !c.photo_credit) {
+                fail(f, `café "${c.name}" has photo but no photo_credit (CONTENT-LICENSE.md §2)`);
+                bad++;
+            }
+            // Constitution §3: every shipped café needs visited_at OR vetted_at
+            // when it carries rendering data (lat / two_lines).
+            if ((c.visited_at == null && c.vetted_at == null) &&
+                (typeof c.lat === 'number' || c.two_lines)) {
+                fail(f, `café "${c.name}" has lat/two_lines but no visited_at or vetted_at (constitution §3)`);
+                bad++;
+            }
         }
+        if (bad === 0) ok(`${file} — ${cafes.length} cafés all sourced`);
     }
-    if (bad === 0) ok(`cafes-seoul.json — ${cafes.length} cafés all sourced`);
 }
 
 (function main() {
