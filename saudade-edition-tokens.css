@@ -349,3 +349,63 @@ body.edition-en em, body.edition-pt em, body.edition-es em { font-style: italic;
    rhythm; PT/ES prefer more generous margins for shorter Latin lines. */
 body.edition-ko, body.edition-ja { --section-pad-y: clamp(28px, 4vw, 56px); }
 body.edition-en, body.edition-pt, body.edition-es { --section-pad-y: clamp(36px, 5vw, 72px); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   3rd design pass — per-edition cover wordmark italic weight + ring
+   visibility + dispatch separator style. Adds the personality dial.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Per-edition cover wordmark — italic weight / slant differs. The shared
+   .sdd-cover-wordmark already sets font-style:italic + size; here we
+   tune weight + tracking to match each edition's typographic temperament. */
+body.edition-en .sdd-cover-wordmark { font-weight: 300; letter-spacing: -0.02em; }
+body.edition-ko .sdd-cover-wordmark { font-weight: 400; letter-spacing: -0.03em; }
+body.edition-ja .sdd-cover-wordmark { font-weight: 400; letter-spacing: 0; }
+body.edition-pt .sdd-cover-wordmark { font-weight: 400; letter-spacing: -0.015em; font-style: italic; }
+body.edition-es .sdd-cover-wordmark { font-weight: 500; letter-spacing: 0.02em; }   /* sangre + bolder */
+
+/* Per-edition rings opacity bump for editions that want denser cover */
+body.edition-en [data-sdd-rings] { opacity: 0.85; }
+body.edition-ko [data-sdd-rings] { opacity: 0.55; }   /* 한지 위 부드럽게 */
+body.edition-ja [data-sdd-rings] { opacity: 0.50; }   /* kinari + 朱 cleaner */
+body.edition-pt [data-sdd-rings] { opacity: 0.75; }
+body.edition-es [data-sdd-rings] { opacity: 0.95; }   /* sangre dramatic */
+
+/* Per-edition dispatch separator (the rule between items) */
+body.edition-en .sdd-disp-item { border-bottom: 0.5px solid var(--rule); }
+body.edition-ko .sdd-disp-item { border-bottom: 0.75px solid var(--rule); }
+body.edition-ja .sdd-disp-item { border-bottom: 0.5px dashed var(--rule); }
+body.edition-pt .sdd-disp-item { border-bottom: 0.5px solid var(--accent); border-bottom-style: dotted; }
+body.edition-es .sdd-disp-item { border-bottom: 1px solid var(--rule); }
+
+/* Per-edition atlas cafe row density */
+body.edition-en .sdd-atlas-row, body.edition-pt .sdd-atlas-row, body.edition-es .sdd-atlas-row {
+    padding-block: clamp(16px, 2.2vw, 28px);
+}
+body.edition-ko .sdd-atlas-row, body.edition-ja .sdd-atlas-row {
+    padding-block: clamp(20px, 2.5vw, 32px);   /* CJK roomier */
+}
+
+/* Per-edition footer rule decoration */
+body.edition-en .sdd-footer-rule { border-top: 0.5px solid var(--rule); }
+body.edition-ko .sdd-footer-rule { border-top: 0.5px solid var(--rule); position: relative; }
+body.edition-ko .sdd-footer-rule::before {
+    content: '·'; position: absolute; left: 50%; top: -8px; transform: translateX(-50%);
+    color: var(--accent); font-size: 14px;
+}
+body.edition-ja .sdd-footer-rule { border-top: 0.5px solid var(--rule); border-bottom: 0.25px solid var(--rule); height: 3px; }
+body.edition-pt .sdd-footer-rule {
+    height: 8px; border: 0;
+    background-image: linear-gradient(90deg, var(--accent) 2px, transparent 2px);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+body.edition-es .sdd-footer-rule { border-top: 1px solid var(--accent); }
+
+/* Per-edition dock button labels */
+body.edition-en .dock-btn-label, body.edition-pt .dock-btn-label, body.edition-es .dock-btn-label {
+    letter-spacing: 0.32em;
+}
+body.edition-ko .dock-btn-label { letter-spacing: 0.16em; }
+body.edition-ja .dock-btn-label { letter-spacing: 0.28em; }
