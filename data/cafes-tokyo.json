@@ -209,6 +209,25 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "ogawa-coffee-laboratory-tokyo",
+    "name": "OGAWA COFFEE LABORATORY Shimokitazawa",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-19-20 Setagaya",
+    "address": "3-19-20 Kitazawa, Setagaya-ku, Tokyo",
+    "rating": 4.8,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+LABORATORY+Shimokitazawa+3-19-20+Kitazawa,+Setagaya-ku,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Ogawa%20Coffee%20Laboratory%20Tokyo%20Kitazawa%203-chome-19-20%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "시모키타자와 리로드 내 최상급 스페셜티와 완벽 가전 인프라 제공",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "시모키타자와 리로드 내 최상급 스페셜티와 완벽 가전 인프라 제공",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "lattest-omotesando-espresso-tokyo",
     "name": "LATTEST Omotesando Espresso BAR",
     "city": "Tokyo",
@@ -874,6 +893,63 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "trunk-lounge-tokyo",
+    "name": "TRUNK (LOUNGE)",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-31 Shibuya",
+    "address": "5-31 Jingumae, Shibuya, Tokyo 150-0001",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=TRUNK+Lounge+5-31+Jingumae+Shibuya+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Trunk%20Lounge%20Tokyo%20Jingumae%205-chome-31%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "트렁크 호텔 로비의 최고급 라운지로 글로벌 테크",
+      "노마드들과의 네트워킹 및 밤샘"
+    ],
+    "amenities": "WIFI · OUTLET · 24H",
+    "notes_kr": "트렁크 호텔 로비의 최고급 라운지로 글로벌 테크 노마드들과의 네트워킹 및 밤샘",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "midoriso-cafe-tokyo",
+    "name": "MIDORI.so Nakameguro",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-3-11 Meguro",
+    "address": "3–3–11, Aobadai, Meguro, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=MIDORI.so+Nakameguro+3-3-11+Aobadai+Meguro+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Midori.so%20Cafe%20Tokyo%20Aobadai%203-chome-3-11%20Meguro",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "공유 오피스 겸용으로 네트워킹 이벤트가 잦고",
+      "디지털 노마드 친화도 최상"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "공유 오피스 겸용으로 네트워킹 이벤트가 잦고 디지털 노마드 친화도 최상",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "coffee-supreme-japan-tokyo",
+    "name": "Coffee Supreme Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "42-3 Shibuya",
+    "address": "1F, 42-3 Kamiyamacho, Shibuya, Tokyo 150-0047, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Coffee+Supreme+Tokyo+1F,+42-3+Kamiyamacho,+Shibuya,+Tokyo+150-0047,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20Supreme%20Japan%20Tokyo%20Kamiyamacho%2042-3%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "뉴질랜드 힙스터 커피 브랜드의 도쿄 브랜치로",
+      "밝고 활기찬 오전 오피스 대안"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "뉴질랜드 힙스터 커피 브랜드의 도쿄 브랜치로 밝고 활기찬 오전 오피스 대안",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "koffee-mameya-tokyo",
     "name": "KOFFEE MAMEYA",
     "city": "Tokyo",
@@ -966,6 +1042,25 @@
     ],
     "amenities": "WIFI · OUTLET · QUIET",
     "notes_kr": "게이오 대학교 인근 위치로 학구적이고 한적하여 장시간 타건 가능",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "koffee-mameya-kakeru-tokyo",
+    "name": "KOFFEE MAMEYA Kakeru",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-16-14 Koto",
+    "address": "2 Chome-16-14 Hirano, Koto City, Tokyo 135-0023, Japan",
+    "rating": 4.5,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=KOFFEE+MAMEYA+Kakeru+2+Chome-16-14+Hirano+Koto+City+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Koffee%20Mameya%20Kakeru%20Tokyo%20Shirakawa%202-chome-16-14%20Koto",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "예약제 커피 코스를 즐기며 귀빈과의 소형 비즈니스 회의 극대화",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "예약제 커피 코스를 즐기며 귀빈과의 소형 비즈니스 회의 극대화",
     "source": "gemini-2.5-flash-grounded"
   },
   {
@@ -1232,6 +1327,25 @@
     ],
     "amenities": "WIFI · QUIET",
     "notes_kr": "고급스럽고 한적한 평일 오전 기품 있는 업무 진행에 추천",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "coffee-&-toast-tokyo",
+    "name": "Coffee & Toast",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-36-2 Setagaya",
+    "address": "1 Chome-5-16 Sangenjaya, Setagaya City, Tokyo 154-0024, Japan",
+    "rating": 3.52,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Coffee+%26+Toast+1+Chome-5-16+Sangenjaya%2C+Setagaya+City%2C+Tokyo+154-0024%2C+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Coffee%20%26%20Toast%20Tokyo%20Sangenjaya%201-chome-36-2%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "이색 토스트 메뉴와 함께 가볍게 오전에 모바일 업무 체크인",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "이색 토스트 메뉴와 함께 가볍게 오전에 모바일 업무 체크인",
     "source": "gemini-2.5-flash-grounded"
   }
 ]
