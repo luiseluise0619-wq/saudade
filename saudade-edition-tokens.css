@@ -324,3 +324,28 @@ body.edition-ko .sdd-disp-num { font-weight: 400; font-feature-settings: "tnum";
 body.edition-ja .sdd-disp-num { font-weight: 400; letter-spacing: 0.04em; }
 body.edition-pt .sdd-disp-num { font-style: italic; }
 body.edition-es .sdd-disp-num { font-weight: 600; letter-spacing: 0.04em; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Per-language line-height — CJK needs more vertical breathing room
+   than Latin scripts at the same point size.
+   ═══════════════════════════════════════════════════════════════════════ */
+body.edition-ko { line-height: 1.6; }
+body.edition-ja { line-height: 1.65; }
+body.edition-en, body.edition-pt, body.edition-es { line-height: 1.55; }
+
+/* Body font fallback chain per edition — script-specific UI fonts */
+body.edition-ko { --sans: "Pretendard Variable", "Pretendard", "Noto Sans KR", system-ui, sans-serif; }
+body.edition-ja { --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif; }
+body.edition-pt { --sans: "Inter", "Helvetica Neue", system-ui, sans-serif; }
+body.edition-es { --sans: "Inter", "Helvetica Neue", system-ui, sans-serif; }
+
+/* Per-edition italic culture — Korean/Japanese don't have a native italic
+   tradition, so they use slant + weight rather than oblique forms. */
+body.edition-ko em, body.edition-ko i { font-style: normal; font-weight: 500; }
+/* ja em is already 傍点 above */
+body.edition-en em, body.edition-pt em, body.edition-es em { font-style: italic; }
+
+/* Per-edition padding rhythm — KO/JA prefer slightly tighter vertical
+   rhythm; PT/ES prefer more generous margins for shorter Latin lines. */
+body.edition-ko, body.edition-ja { --section-pad-y: clamp(28px, 4vw, 56px); }
+body.edition-en, body.edition-pt, body.edition-es { --section-pad-y: clamp(36px, 5vw, 72px); }
