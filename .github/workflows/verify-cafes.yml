@@ -1,0 +1,97 @@
+name: Verify cafes against Google Places
+
+# Manual trigger. Reads data/cafes-{city}.candidates.json, calls Google
+# Places API for each entry (Find Place + Details + reviews + geometry),
+# promotes the ones that pass into data/cafes-{city}.json, and opens a
+# PR with the result.
+#
+# Setup once:
+#   Settings → Secrets and variables → Actions → New repository secret
+#     GOOGLE_PLACES_KEY   (https://console.cloud.google.com →
+#                          enable "Places API (New)" → Credentials)
+#
+# Cost: ~$0.034 per cafe (Find Place + Details = 2 calls). 484 candidates
+# ≈ $16.50, well within Google's free $200/month tier.
+
+on:
+  workflow_dispatch:
+    inputs:
+      cities:
+        description: "Cities (comma-separated, or 'all')"
+        required: false
+        default: "all"
+      dry:
+        description: "Dry run? (no writes, just report)"
+        required: false
+        default: "false"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "20" }
+
+      - name: Verify cafes via Google Places
+        env:
+          GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
+        run: |
+          if [ -z "$GOOGLE_PLACES_KEY" ]; then
+            echo "::error::GOOGLE_PLACES_KEY secret not set."
+            echo "Add it: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+
+          ARGS=""
+          if [ "${{ inputs.cities }}" = "all" ]; then
+            ARGS="--all"
+          else
+            # Convert "seoul,tokyo" → "seoul tokyo"
+            ARGS=$(echo "${{ inputs.cities }}" | tr ',' ' ')
+          fi
+          if [ "${{ inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry"; fi
+
+          node scripts/verify-cafes.js $ARGS
+
+      - name: Validate
+        run: node scripts/validate-content.js
+        continue-on-error: true
+
+      - name: Open pull request
+        if: ${{ inputs.dry != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="content/cafes-verified-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/cafes-*.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit — no candidates passed verification."
+            exit 0
+          fi
+          git commit -m "content: Google-verified cafes batch (${{ inputs.cities }})"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "content: Google-verified cafes — ${{ inputs.cities }}" \
+            --body "Automated batch via \`.github/workflows/verify-cafes.yml\`.
+
+          **Run:** cities=\`${{ inputs.cities }}\`
+          **Source:** \`data/cafes-{city}.candidates.json\`
+          **Gate:** Google Place Details, OPERATIONAL + rating ≥ 4.2
+          **Captured:** name, rating, lat/lng, user_ratings_total, top 3 reviews, hours, website, google_place_id
+
+          ### Reviewer checklist
+          - [ ] Spot-check 5 random entries — click \`google_url\` to confirm
+          - [ ] Look at the \`reviews\` array — does the tone match the magazine?
+          - [ ] \`node scripts/validate-content.js\` passes (CI)
+          - [ ] Squash-merge."
