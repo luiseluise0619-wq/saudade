@@ -24,7 +24,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석 하단 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A6%AC%EC%99%80%EC%9D%B4%EC%96%B4%20%EC%BB%A4%ED%94%BC%20(Rewire%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%88%98%ED%91%9C%EB%A1%9C6%EA%B8%B8%2024-1",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A6%AC%EC%99%80%EC%9D%B4%EC%96%B4%20%EC%BB%A4%ED%94%BC%20(Rewire%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%88%98%ED%91%9C%EB%A1%9C6%EA%B8%B8%2024-1",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A6%AC%EC%99%80%EC%9D%B4%EC%96%B4%20%EC%BB%A4%ED%94%BC%20(Rewire%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%88%98%ED%91%9C%EB%A1%9C6%EA%B8%B8%2024-1",
+      "address_district_match": true
     },
     {
       "id": "leedorim-coffee-&-vegan-seoul",
@@ -45,7 +49,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽 좌석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A6%AC%EB%8F%84%EB%A6%BC%20(LEEDORIM%20Coffee%20%26%20Vegan)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9E%90%ED%95%98%EB%AC%B8%EB%A1%9C%2043",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A6%AC%EB%8F%84%EB%A6%BC%20(LEEDORIM%20Coffee%20%26%20Vegan)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9E%90%ED%95%98%EB%AC%B8%EB%A1%9C%2043",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A6%AC%EB%8F%84%EB%A6%BC%20(LEEDORIM%20Coffee%20%26%20Vegan)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9E%90%ED%95%98%EB%AC%B8%EB%A1%9C%2043",
+      "address_district_match": true
     },
     {
       "id": "fjord-coffee-seoul",
@@ -66,7 +74,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 테이블 및 창가 구비",
       "toilet_csv": "호텔 화장실 이용",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%BC%EC%98%A4%EB%A5%B4%EB%93%9C%20%EC%BB%A4%ED%94%BC%20%EC%9D%84%EC%A7%80%EB%A1%9C%EC%A0%90%20(Fjord%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C%2023-1",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%BC%EC%98%A4%EB%A5%B4%EB%93%9C%20%EC%BB%A4%ED%94%BC%20%EC%9D%84%EC%A7%80%EB%A1%9C%EC%A0%90%20(Fjord%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C%2023-1",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%BC%EC%98%A4%EB%A5%B4%EB%93%9C%20%EC%BB%A4%ED%94%BC%20%EC%9D%84%EC%A7%80%EB%A1%9C%EC%A0%90%20(Fjord%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C%2023-1",
+      "address_district_match": true
     },
     {
       "id": "giveon-seoul",
@@ -87,7 +99,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽측 콘센트 다수",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B8%B0%EB%B8%8C%EC%98%A8%20%EC%B9%B4%ED%8E%98%EC%9D%B8%20%EB%B0%94%20(Giveon)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C42%EA%B8%B8%2035",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B8%B0%EB%B8%8C%EC%98%A8%20%EC%B9%B4%ED%8E%98%EC%9D%B8%20%EB%B0%94%20(Giveon)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C42%EA%B8%B8%2035",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B8%B0%EB%B8%8C%EC%98%A8%20%EC%B9%B4%ED%8E%98%EC%9D%B8%20%EB%B0%94%20(Giveon)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C42%EA%B8%B8%2035",
+      "address_district_match": true
     },
     {
       "id": "cafe-gio-seoul",
@@ -108,7 +124,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 여유 있음",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%B9%B4%ED%8E%98%EC%A7%80%EC%98%A4%20(CAFE%20GIO)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%B2%AD%ED%8C%8C%EB%A1%9C85%EA%B0%80%EA%B8%B8%202",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%B9%B4%ED%8E%98%EC%A7%80%EC%98%A4%20(CAFE%20GIO)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%B2%AD%ED%8C%8C%EB%A1%9C85%EA%B0%80%EA%B8%B8%202",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EC%A7%80%EC%98%A4%20(CAFE%20GIO)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%B2%AD%ED%8C%8C%EB%A1%9C85%EA%B0%80%EA%B8%B8%202",
+      "address_district_match": true
     },
     {
       "id": "cafe-mio&nana-&-seoul",
@@ -129,7 +149,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 지원",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Mio%26Nana%20(%EB%AF%B8%EC%98%A4%26%EB%82%98%EB%82%98)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%208-5",
+      "kakao_search_url": "https://map.kakao.com/?q=Cafe%20Mio%26Nana%20(%EB%AF%B8%EC%98%A4%26%EB%82%98%EB%82%98)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%208-5",
+      "naver_search_url": "https://map.naver.com/p/search/Cafe%20Mio%26Nana%20(%EB%AF%B8%EC%98%A4%26%EB%82%98%EB%82%98)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%208-5",
+      "address_district_match": true
     },
     {
       "id": "-seoul",
@@ -150,7 +174,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%97%90%EB%B8%8C%EB%A6%AC%EB%9D%B5%20%EC%98%A8%20%EC%96%B4%20%EC%99%80%ED%94%8C%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%209",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%97%90%EB%B8%8C%EB%A6%AC%EB%9D%B5%20%EC%98%A8%20%EC%96%B4%20%EC%99%80%ED%94%8C%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%209",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%97%90%EB%B8%8C%EB%A6%AC%EB%9D%B5%20%EC%98%A8%20%EC%96%B4%20%EC%99%80%ED%94%8C%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%209",
+      "address_district_match": true
     },
     {
       "id": "downt-espresso-seoul",
@@ -171,7 +199,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Downt%20Espresso%20(%EB%8B%A4%EC%9A%B4%ED%8A%B8%20%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C18%EA%B8%B8%2034",
+      "kakao_search_url": "https://map.kakao.com/?q=Downt%20Espresso%20(%EB%8B%A4%EC%9A%B4%ED%8A%B8%20%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C18%EA%B8%B8%2034",
+      "naver_search_url": "https://map.naver.com/p/search/Downt%20Espresso%20(%EB%8B%A4%EC%9A%B4%ED%8A%B8%20%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C18%EA%B8%B8%2034",
+      "address_district_match": true
     },
     {
       "id": "catch-cafe-seoul",
@@ -192,7 +224,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 콘센트 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Catch%20Cafe%20(%EC%BA%90%EC%B9%98%EC%B9%B4%ED%8E%98%20%EC%84%9C%EC%9A%B8%EB%8C%80)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C%20165%209%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=Catch%20Cafe%20(%EC%BA%90%EC%B9%98%EC%B9%B4%ED%8E%98%20%EC%84%9C%EC%9A%B8%EB%8C%80)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C%20165%209%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/Catch%20Cafe%20(%EC%BA%90%EC%B9%98%EC%B9%B4%ED%8E%98%20%EC%84%9C%EC%9A%B8%EB%8C%80)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C%20165%209%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "meyou-coffee-seoul",
@@ -213,7 +249,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 좌석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Meyou%20Coffee%20(%EB%AF%B8%EC%9C%A0%EC%BB%A4%ED%94%BC)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C216%EA%B8%B8%2041",
+      "kakao_search_url": "https://map.kakao.com/?q=Meyou%20Coffee%20(%EB%AF%B8%EC%9C%A0%EC%BB%A4%ED%94%BC)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C216%EA%B8%B8%2041",
+      "naver_search_url": "https://map.naver.com/p/search/Meyou%20Coffee%20(%EB%AF%B8%EC%9C%A0%EC%BB%A4%ED%94%BC)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EB%82%A8%EB%B6%80%EC%88%9C%ED%99%98%EB%A1%9C216%EA%B8%B8%2041",
+      "address_district_match": true
     },
     {
       "id": "-seoul-10",
@@ -234,7 +274,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 다수 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%B9%B4%ED%8E%98%EB%8D%94%EB%9D%A4%EB%9A%9C%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C16%EA%B8%B8%2041",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%B9%B4%ED%8E%98%EB%8D%94%EB%9D%A4%EB%9A%9C%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C16%EA%B8%B8%2041",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%8D%94%EB%9D%A4%EB%9A%9C%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EA%B4%80%EC%95%85%EB%A1%9C16%EA%B8%B8%2041",
+      "address_district_match": true
     },
     {
       "id": "-seoul-11",
@@ -255,7 +299,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석 근처 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%A0%EB%A6%BC%EB%8B%A4%EB%9D%BD%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%A1%9C%20125",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%A0%EB%A6%BC%EB%8B%A4%EB%9D%BD%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%A1%9C%20125",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%A0%EB%A6%BC%EB%8B%A4%EB%9D%BD%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%A1%9C%20125",
+      "address_district_match": true
     },
     {
       "id": "-seoul-12",
@@ -276,7 +324,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 인근 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B9%8C%ED%8E%98%20%EB%A0%88%EB%B9%A0%EB%A6%AC%EC%A7%80%EC%97%A5%20%EB%AA%85%EB%8F%99%EC%A0%90%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%996%EA%B8%B8%206-1",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B9%8C%ED%8E%98%20%EB%A0%88%EB%B9%A0%EB%A6%AC%EC%A7%80%EC%97%A5%20%EB%AA%85%EB%8F%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%996%EA%B8%B8%206-1",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B9%8C%ED%8E%98%20%EB%A0%88%EB%B9%A0%EB%A6%AC%EC%A7%80%EC%97%A5%20%EB%AA%85%EB%8F%99%EC%A0%90%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%996%EA%B8%B8%206-1",
+      "address_district_match": true
     },
     {
       "id": "potaca-seoul",
@@ -297,7 +349,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 여유",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Potaca%20(%ED%8F%AC%ED%83%80%EC%B9%B4)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%8F%99%20120-16",
+      "kakao_search_url": "https://map.kakao.com/?q=Potaca%20(%ED%8F%AC%ED%83%80%EC%B9%B4)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%8F%99%20120-16",
+      "naver_search_url": "https://map.naver.com/p/search/Potaca%20(%ED%8F%AC%ED%83%80%EC%B9%B4)%20%EC%84%9C%EC%9A%B8%20%EA%B4%80%EC%95%85%EA%B5%AC%20%EC%8B%A0%EB%A6%BC%EB%8F%99%20120-16",
+      "address_district_match": true
     },
     {
       "id": "-seoul-14",
@@ -318,7 +374,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%ED%95%B4%EB%B0%A9%EC%B4%8C%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C3%EA%B0%80%EA%B8%B8%202%202%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%8C%EB%9E%9C%ED%8A%B8%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%ED%95%B4%EB%B0%A9%EC%B4%8C%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C3%EA%B0%80%EA%B8%B8%202%202%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%ED%95%B4%EB%B0%A9%EC%B4%8C%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C3%EA%B0%80%EA%B8%B8%202%202%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "-seoul-15",
@@ -339,7 +399,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "작업용 대형 테이블 완비",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C9%EA%B8%B8%202",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C9%EA%B8%B8%202",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C9%EA%B8%B8%202",
+      "address_district_match": true
     },
     {
       "id": "kottonseoul-seoul",
@@ -360,7 +424,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "한옥 구조 일부 좌석 제공",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BD%94%ED%8A%BC%EC%84%9C%EC%9A%B8%20(KOTTON.SEOUL)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9D%B8%EC%82%AC%EB%8F%9912%EA%B8%B8%2017",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%BD%94%ED%8A%BC%EC%84%9C%EC%9A%B8%20(KOTTON.SEOUL)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9D%B8%EC%82%AC%EB%8F%9912%EA%B8%B8%2017",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%BD%94%ED%8A%BC%EC%84%9C%EC%9A%B8%20(KOTTON.SEOUL)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%9D%B8%EC%82%AC%EB%8F%9912%EA%B8%B8%2017",
+      "address_district_match": true
     },
     {
       "id": "sim-coffee-house-seoul",
@@ -381,7 +449,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 있음",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%AC%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20(Sim%20Coffee%20House)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EB%82%98%EA%B8%B8%2015",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%AC%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20(Sim%20Coffee%20House)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EB%82%98%EA%B8%B8%2015",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%AC%EC%BB%A4%ED%94%BC%ED%95%98%EC%9A%B0%EC%8A%A4%20(Sim%20Coffee%20House)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EB%82%98%EA%B8%B8%2015",
+      "address_district_match": true
     },
     {
       "id": "upstanding-coffee-seoul",
@@ -402,7 +474,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "콘센트 다소 부족",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/Upstanding%20Coffee%20(%EC%97%85%EC%8A%A4%ED%83%A0%EB%94%A9%20%EC%BB%A4%ED%94%BC)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C%2099-11",
+      "kakao_search_url": "https://map.kakao.com/?q=Upstanding%20Coffee%20(%EC%97%85%EC%8A%A4%ED%83%A0%EB%94%A9%20%EC%BB%A4%ED%94%BC)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C%2099-11",
+      "naver_search_url": "https://map.naver.com/p/search/Upstanding%20Coffee%20(%EC%97%85%EC%8A%A4%ED%83%A0%EB%94%A9%20%EC%BB%A4%ED%94%BC)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%8B%A0%ED%9D%A5%EB%A1%9C%2099-11",
+      "address_district_match": true
     },
     {
       "id": "tertre-seoul",
@@ -423,7 +499,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 하단 일부 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%85%8C%EB%A5%B4%ED%8A%B8%EB%A5%B4%20(Tertre)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%82%99%EC%82%B05%EA%B8%B8%2046",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%85%8C%EB%A5%B4%ED%8A%B8%EB%A5%B4%20(Tertre)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%82%99%EC%82%B05%EA%B8%B8%2046",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%85%8C%EB%A5%B4%ED%8A%B8%EB%A5%B4%20(Tertre)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%82%99%EC%82%B05%EA%B8%B8%2046",
+      "address_district_match": true
     },
     {
       "id": "protocol-seoul",
@@ -444,7 +524,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "전 좌석 조명 및 콘센트",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%20(Protocol)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C11%EA%B0%80%EA%B8%B8%2036",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%20(Protocol)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C11%EA%B0%80%EA%B8%B8%2036",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%20(Protocol)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C11%EA%B0%80%EA%B8%B8%2036",
+      "address_district_match": true
     },
     {
       "id": "brownhaus-seoul",
@@ -465,7 +549,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "넓은 공용 테이블 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%B8%8C%EB%9D%BC%EC%9A%B4%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%97%B0%EB%82%A8%20(Brownhaus)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C50%EA%B8%B8%2011",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%B8%8C%EB%9D%BC%EC%9A%B4%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%97%B0%EB%82%A8%20(Brownhaus)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C50%EA%B8%B8%2011",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%B8%8C%EB%9D%BC%EC%9A%B4%ED%95%98%EC%9A%B0%EC%8A%A4%20%EC%97%B0%EB%82%A8%20(Brownhaus)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C50%EA%B8%B8%2011",
+      "address_district_match": true
     },
     {
       "id": "urban-plant-seoul",
@@ -486,7 +574,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 테이블 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%96%B4%EB%B0%98%ED%94%8C%EB%9E%9C%ED%8A%B8%20%ED%95%A9%EC%A0%95%20(Urban%20Plant)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C4%EA%B8%B8%203",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%96%B4%EB%B0%98%ED%94%8C%EB%9E%9C%ED%8A%B8%20%ED%95%A9%EC%A0%95%20(Urban%20Plant)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C4%EA%B8%B8%203",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%96%B4%EB%B0%98%ED%94%8C%EB%9E%9C%ED%8A%B8%20%ED%95%A9%EC%A0%95%20(Urban%20Plant)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C4%EA%B8%B8%203",
+      "address_district_match": true
     },
     {
       "id": "-seoul-23",
@@ -507,7 +599,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "지하 광장형 대형 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%B9%8C%EB%A6%AC%ED%94%84%EC%BB%A4%ED%94%BC%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%8A%A4%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%96%91%ED%99%94%EB%A1%9C11%EA%B8%B8%2050",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%B9%8C%EB%A6%AC%ED%94%84%EC%BB%A4%ED%94%BC%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%96%91%ED%99%94%EB%A1%9C11%EA%B8%B8%2050",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%B9%8C%EB%A6%AC%ED%94%84%EC%BB%A4%ED%94%BC%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%8A%A4%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%96%91%ED%99%94%EB%A1%9C11%EA%B8%B8%2050",
+      "address_district_match": true
     },
     {
       "id": "felt-coffee-seoul",
@@ -528,7 +624,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 및 미니 테이블",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%8E%A0%ED%8A%B8%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%99%94%EB%AC%B8%20(Felt%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%20%EC%A7%80%ED%95%981%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%8E%A0%ED%8A%B8%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%99%94%EB%AC%B8%20(Felt%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%20%EC%A7%80%ED%95%981%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%8E%A0%ED%8A%B8%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%99%94%EB%AC%B8%20(Felt%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%20%EC%A7%80%ED%95%981%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "coffee-temple-seoul",
@@ -549,7 +649,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 일부 콘센트",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
+      "address_district_match": true
     },
     {
       "id": "anthracite-seoul",
@@ -570,7 +674,11 @@
       "wifi_csv": "없음",
       "outlet_csv": "콘센트 없음",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%84%9C%EA%B5%90%20(Anthracite)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C12%EA%B8%B8%2011",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%84%9C%EA%B5%90%20(Anthracite)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C12%EA%B8%B8%2011",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%84%9C%EA%B5%90%20(Anthracite)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C12%EA%B8%B8%2011",
+      "address_district_match": true
     },
     {
       "id": "terarosa-seoul",
@@ -591,7 +699,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 우드 테이블 완비",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EA%B4%91%ED%99%94%EB%AC%B8%EC%A0%90%20(Terarosa)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C1%EA%B8%B8%2050",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EA%B4%91%ED%99%94%EB%AC%B8%EC%A0%90%20(Terarosa)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C1%EA%B8%B8%2050",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EA%B4%91%ED%99%94%EB%AC%B8%EC%A0%90%20(Terarosa)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C1%EA%B8%B8%2050",
+      "address_district_match": true
     },
     {
       "id": "fourb-seoul",
@@ -612,7 +724,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 위주 배치",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%8F%AC%EB%B9%84%20%EA%B4%91%ED%99%94%EB%AC%B8%20(FOURB)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%201%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%8F%AC%EB%B9%84%20%EA%B4%91%ED%99%94%EB%AC%B8%20(FOURB)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%201%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%8F%AC%EB%B9%84%20%EA%B4%91%ED%99%94%EB%AC%B8%20(FOURB)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%A2%85%EB%A1%9C3%EA%B8%B8%2017%201%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "namusairo-seoul",
@@ -633,7 +749,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 안채 좌석 제공",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%82%98%EB%AC%B4%EC%82%AC%EC%9D%B4%EB%A1%9C%20(Namusairo)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%AC%EC%A7%81%EB%A1%9C8%EA%B8%B8%2021",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%82%98%EB%AC%B4%EC%82%AC%EC%9D%B4%EB%A1%9C%20(Namusairo)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%AC%EC%A7%81%EB%A1%9C8%EA%B8%B8%2021",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%82%98%EB%AC%B4%EC%82%AC%EC%9D%B4%EB%A1%9C%20(Namusairo)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%AC%EC%A7%81%EB%A1%9C8%EA%B8%B8%2021",
+      "address_district_match": true
     },
     {
       "id": "fritz-coffee-seoul",
@@ -654,7 +774,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 및 대형 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%84%EB%A6%B3%EC%B8%A0%20%EB%8F%84%ED%99%94%EC%A0%90%20(Fritz%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%83%88%EC%B0%BD%EB%A1%9C2%EA%B8%B8%2017",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%84%EB%A6%B3%EC%B8%A0%20%EB%8F%84%ED%99%94%EC%A0%90%20(Fritz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%83%88%EC%B0%BD%EB%A1%9C2%EA%B8%B8%2017",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%84%EB%A6%B3%EC%B8%A0%20%EB%8F%84%ED%99%94%EC%A0%90%20(Fritz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%83%88%EC%B0%BD%EB%A1%9C2%EA%B8%B8%2017",
+      "address_district_match": true
     },
     {
       "id": "daechoong-seoul",
@@ -675,7 +799,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 일부 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8C%80%EC%B6%A9%EC%9C%A0%EC%9B%90%EC%A7%80%20%EC%9D%B8%EC%99%95%EC%82%B0%20(Daechoong)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2046",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8C%80%EC%B6%A9%EC%9C%A0%EC%9B%90%EC%A7%80%20%EC%9D%B8%EC%99%95%EC%82%B0%20(Daechoong)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2046",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8C%80%EC%B6%A9%EC%9C%A0%EC%9B%90%EC%A7%80%20%EC%9D%B8%EC%99%95%EC%82%B0%20(Daechoong)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2046",
+      "address_district_match": true
     },
     {
       "id": "camel-coffee-seoul",
@@ -696,7 +824,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽면 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%B9%B4%EB%A9%9C%EC%BB%A4%ED%94%BC%20%EC%84%B1%EC%88%98%20(Camel%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9519%EA%B8%B8%206",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%B9%B4%EB%A9%9C%EC%BB%A4%ED%94%BC%20%EC%84%B1%EC%88%98%20(Camel%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9519%EA%B8%B8%206",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%B9%B4%EB%A9%9C%EC%BB%A4%ED%94%BC%20%EC%84%B1%EC%88%98%20(Camel%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%B1%EB%8D%95%EC%A0%9519%EA%B8%B8%206",
+      "address_district_match": true
     },
     {
       "id": "lowkey-seoul",
@@ -717,7 +849,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "지하 및 지상 일부 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A1%9C%EC%9A%B0%ED%82%A4%20%EC%84%B1%EC%88%98%20(Lowkey)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A53%EA%B8%B8%206",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A1%9C%EC%9A%B0%ED%82%A4%20%EC%84%B1%EC%88%98%20(Lowkey)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A53%EA%B8%B8%206",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A1%9C%EC%9A%B0%ED%82%A4%20%EC%84%B1%EC%88%98%20(Lowkey)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A53%EA%B8%B8%206",
+      "address_district_match": true
     },
     {
       "id": "mesh-coffee-seoul",
@@ -738,7 +874,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 미니 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A9%94%EC%89%AC%EC%BB%A4%ED%94%BC%20(Mesh%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%EA%B8%B8%2043",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A9%94%EC%89%AC%EC%BB%A4%ED%94%BC%20(Mesh%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%EA%B8%B8%2043",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A9%94%EC%89%AC%EC%BB%A4%ED%94%BC%20(Mesh%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%EA%B8%B8%2043",
+      "address_district_match": true
     },
     {
       "id": "center-coffee-seoul",
@@ -759,7 +899,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "2층 창가 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%84%BC%ED%84%B0%EC%BB%A4%ED%94%BC%20%EC%84%9C%EC%9A%B8%EC%88%B2%20(Center%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2028-11",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%84%BC%ED%84%B0%EC%BB%A4%ED%94%BC%20%EC%84%9C%EC%9A%B8%EC%88%B2%20(Center%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2028-11",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%84%BC%ED%84%B0%EC%BB%A4%ED%94%BC%20%EC%84%9C%EC%9A%B8%EC%88%B2%20(Center%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2028-11",
+      "address_district_match": true
     },
     {
       "id": "momento-seoul",
@@ -780,7 +924,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽측 스탠드",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%AA%A8%EB%A9%98%ED%86%A0%20%EB%B8%8C%EB%A3%A8%EC%96%B4%EC%8A%A4%20(Momento)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2028-12",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%AA%A8%EB%A9%98%ED%86%A0%20%EB%B8%8C%EB%A3%A8%EC%96%B4%EC%8A%A4%20(Momento)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2028-12",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%AA%A8%EB%A9%98%ED%86%A0%20%EB%B8%8C%EB%A3%A8%EC%96%B4%EC%8A%A4%20(Momento)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2028-12",
+      "address_district_match": true
     },
     {
       "id": "happening-seoul",
@@ -801,7 +949,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 좌석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%95%B4%ED%94%84%EB%8B%9D%20(Happening)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C4%EA%B8%B8%2013-4",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%95%B4%ED%94%84%EB%8B%9D%20(Happening)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C4%EA%B8%B8%2013-4",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%95%B4%ED%94%84%EB%8B%9D%20(Happening)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C4%EA%B8%B8%2013-4",
+      "address_district_match": true
     },
     {
       "id": "peer-coffee-seoul",
@@ -822,7 +974,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 및 중앙 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%BC%EC%96%B4%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%9D%AC%EB%8F%99%20(Peer%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9E%A5%EC%B6%A9%EB%8B%A8%EB%A1%9C8%EA%B8%B8%2015",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%BC%EC%96%B4%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%9D%AC%EB%8F%99%20(Peer%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9E%A5%EC%B6%A9%EB%8B%A8%EB%A1%9C8%EA%B8%B8%2015",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%BC%EC%96%B4%EC%BB%A4%ED%94%BC%20%EA%B4%91%ED%9D%AC%EB%8F%99%20(Peer%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%9E%A5%EC%B6%A9%EB%8B%A8%EB%A1%9C8%EA%B8%B8%2015",
+      "address_district_match": true
     },
     {
       "id": "leesar-seoul",
@@ -843,7 +999,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 테이블 위주",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A6%AC%EC%82%AC%EB%A5%B4%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Leesar)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%998%EA%B0%80%EA%B8%B8%2058",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A6%AC%EC%82%AC%EB%A5%B4%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Leesar)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%998%EA%B0%80%EA%B8%B8%2058",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A6%AC%EC%82%AC%EB%A5%B4%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Leesar)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%AA%85%EB%8F%998%EA%B0%80%EA%B8%B8%2058",
+      "address_district_match": true
     },
     {
       "id": "koffee-sniffer-seoul",
@@ -864,7 +1024,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%EC%8A%A4%EB%8B%88%ED%8D%BC%20(Koffee%20Sniffer)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C16%EA%B8%B8%2027",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%EC%8A%A4%EB%8B%88%ED%8D%BC%20(Koffee%20Sniffer)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C16%EA%B8%B8%2027",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%EC%8A%A4%EB%8B%88%ED%8D%BC%20(Koffee%20Sniffer)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C16%EA%B8%B8%2027",
+      "address_district_match": true
     },
     {
       "id": "-seoul-41",
@@ -885,7 +1049,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 및 벽측 테이블",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%EC%95%A4%EC%8B%9C%EA%B0%80%EB%A0%9B%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%9C%EC%86%8C%EB%AC%B8%EB%A1%9C%20116%2017%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%EC%95%A4%EC%8B%9C%EA%B0%80%EB%A0%9B%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%9C%EC%86%8C%EB%AC%B8%EB%A1%9C%20116%2017%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%EC%95%A4%EC%8B%9C%EA%B0%80%EB%A0%9B%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%84%9C%EC%86%8C%EB%AC%B8%EB%A1%9C%20116%2017%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "alegria-seoul",
@@ -906,7 +1074,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 매립형 멀티탭",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%8C%EB%A0%88%EA%B7%B8%EB%A6%AC%EC%95%84%20%EB%8D%95%EC%88%98%EA%B6%81%20(Alegria)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2017",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%8C%EB%A0%88%EA%B7%B8%EB%A6%AC%EC%95%84%20%EB%8D%95%EC%88%98%EA%B6%81%20(Alegria)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2017",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%8C%EB%A0%88%EA%B7%B8%EB%A6%AC%EC%95%84%20%EB%8D%95%EC%88%98%EA%B6%81%20(Alegria)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2017",
+      "address_district_match": true
     },
     {
       "id": "roundnd-seoul",
@@ -927,7 +1099,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "지하 대형 좌석 여유",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%95%A4%EB%93%9C%20(Roundnd)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2035",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%95%A4%EB%93%9C%20(Roundnd)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2035",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%95%A4%EB%93%9C%20(Roundnd)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%A0%95%EB%8F%99%EA%B8%B8%2035",
+      "address_district_match": true
     },
     {
       "id": "relieve-seoul",
@@ -948,7 +1124,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니멀한 사각 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A6%B4%EB%A6%AC%EB%B8%8C%20(Relieve)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%2024",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A6%B4%EB%A6%AC%EB%B8%8C%20(Relieve)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%2024",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A6%B4%EB%A6%AC%EB%B8%8C%20(Relieve)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C20%EA%B8%B8%2024",
+      "address_district_match": true
     },
     {
       "id": "milestone-seoul",
@@ -969,7 +1149,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 및 바 좌석 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A7%88%EC%9D%BC%EC%8A%A4%ED%86%A4%20%EC%BB%A4%ED%94%BC%20%EC%8B%A0%EC%82%AC%20(Milestone)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C159%EA%B8%B8%2049",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A7%88%EC%9D%BC%EC%8A%A4%ED%86%A4%20%EC%BB%A4%ED%94%BC%20%EC%8B%A0%EC%82%AC%20(Milestone)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C159%EA%B8%B8%2049",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A7%88%EC%9D%BC%EC%8A%A4%ED%86%A4%20%EC%BB%A4%ED%94%BC%20%EC%8B%A0%EC%82%AC%20(Milestone)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C159%EA%B8%B8%2049",
+      "address_district_match": true
     },
     {
       "id": "deux-amis-seoul",
@@ -990,7 +1174,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 및 대형 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%93%80%EC%9E%90%EB%AF%B8%20(Deux%20Amis)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C11%EA%B8%B8%2028",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%93%80%EC%9E%90%EB%AF%B8%20(Deux%20Amis)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C11%EA%B8%B8%2028",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%93%80%EC%9E%90%EB%AF%B8%20(Deux%20Amis)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C11%EA%B8%B8%2028",
+      "address_district_match": true
     },
     {
       "id": "ph-sikmulgwan-ph-seoul",
@@ -1011,7 +1199,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "전시관 형태의 여유 공간",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%9D%EB%AC%BC%EA%B4%80PH%20(Sikmulgwan%20PH)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B4%91%ED%8F%89%EB%A1%9C34%EA%B8%B8%2024",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%9D%EB%AC%BC%EA%B4%80PH%20(Sikmulgwan%20PH)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B4%91%ED%8F%89%EB%A1%9C34%EA%B8%B8%2024",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%9D%EB%AC%BC%EA%B4%80PH%20(Sikmulgwan%20PH)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B4%91%ED%8F%89%EB%A1%9C34%EA%B8%B8%2024",
+      "address_district_match": true
     },
     {
       "id": "susu-coffee-seoul",
@@ -1032,7 +1224,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일체형 구비",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%88%98%EC%88%98%EC%BB%A4%ED%94%BC%20%EA%B0%95%EB%82%A8%20(Susu%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20382",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%88%98%EC%88%98%EC%BB%A4%ED%94%BC%20%EA%B0%95%EB%82%A8%20(Susu%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20382",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%88%98%EC%88%98%EC%BB%A4%ED%94%BC%20%EA%B0%95%EB%82%A8%20(Susu%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C%20382",
+      "address_district_match": true
     },
     {
       "id": "gabaedo-seoul",
@@ -1053,7 +1249,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "앤틱 원목 테이블 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B0%80%EB%B0%B0%EB%8F%84%20%EA%B0%95%EB%82%A8%20(Gabaedo)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C110%EA%B8%B8%2013",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B0%80%EB%B0%B0%EB%8F%84%20%EA%B0%95%EB%82%A8%20(Gabaedo)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C110%EA%B8%B8%2013",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B0%80%EB%B0%B0%EB%8F%84%20%EA%B0%95%EB%82%A8%20(Gabaedo)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C110%EA%B8%B8%2013",
+      "address_district_match": true
     },
     {
       "id": "frame-in-seoul",
@@ -1074,7 +1274,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 멀티탭 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%B8%20(Frame%20In)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%A1%9C%20142",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%B8%20(Frame%20In)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%A1%9C%20142",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%B8%20(Frame%20In)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%A1%9C%20142",
+      "address_district_match": true
     },
     {
       "id": "celery-town-seoul",
@@ -1095,7 +1299,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 주변 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%85%80%EB%9F%AC%EB%A6%AC%ED%83%80%EC%9A%B4%20(Celery%20Town)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C51%EA%B8%B8%2026",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%85%80%EB%9F%AC%EB%A6%AC%ED%83%80%EC%9A%B4%20(Celery%20Town)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C51%EA%B8%B8%2026",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%85%80%EB%9F%AC%EB%A6%AC%ED%83%80%EC%9A%B4%20(Celery%20Town)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C51%EA%B8%B8%2026",
+      "address_district_match": true
     },
     {
       "id": "luft-coffee-seoul",
@@ -1116,7 +1324,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "공용 롱테이블 다수",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A3%A8%ED%94%84%ED%8A%B8%20%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Luft%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%82%BC%EC%9D%BC%EB%8C%80%EB%A1%9C%20308",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A3%A8%ED%94%84%ED%8A%B8%20%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Luft%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%82%BC%EC%9D%BC%EB%8C%80%EB%A1%9C%20308",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A3%A8%ED%94%84%ED%8A%B8%20%EC%BB%A4%ED%94%BC%20%EB%AA%85%EB%8F%99%20(Luft%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%82%BC%EC%9D%BC%EB%8C%80%EB%A1%9C%20308",
+      "address_district_match": true
     },
     {
       "id": "bean-brothers-seoul",
@@ -1137,7 +1349,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 업무 테이블 충전기 탑재",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%8B%A0%EB%8F%84%EB%A6%BC%20(Bean%20Brothers)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B2%BD%EC%9D%B8%EB%A1%9C%20662%20%EB%94%94%ED%81%90%EB%B8%8C%EC%8B%9C%ED%8B%B0%20%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B3%84%EA%B4%80%203%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%8B%A0%EB%8F%84%EB%A6%BC%20(Bean%20Brothers)%20%EC%84%9C%EC%9A%B8%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B2%BD%EC%9D%B8%EB%A1%9C%20662%20%EB%94%94%ED%81%90%EB%B8%8C%EC%8B%9C%ED%8B%B0%20%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B3%84%EA%B4%80%203%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%B9%88%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4%20%EC%8B%A0%EB%8F%84%EB%A6%BC%20(Bean%20Brothers)%20%EC%84%9C%EC%9A%B8%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B2%BD%EC%9D%B8%EB%A1%9C%20662%20%EB%94%94%ED%81%90%EB%B8%8C%EC%8B%9C%ED%8B%B0%20%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B3%84%EA%B4%80%203%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "hell-cafe-seoul",
@@ -1158,7 +1374,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 테이블 일부 제공",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%97%AC%EC%B9%B4%ED%8E%98%20%EC%8A%A4%ED%94%BC%EB%A6%AC%ED%84%B0%EC%8A%A4%20(Hell%20Cafe)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%EC%B4%8C%EB%A1%9C%20224",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%97%AC%EC%B9%B4%ED%8E%98%20%EC%8A%A4%ED%94%BC%EB%A6%AC%ED%84%B0%EC%8A%A4%20(Hell%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%EC%B4%8C%EB%A1%9C%20224",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%97%AC%EC%B9%B4%ED%8E%98%20%EC%8A%A4%ED%94%BC%EB%A6%AC%ED%84%B0%EC%8A%A4%20(Hell%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%EC%B4%8C%EB%A1%9C%20224",
+      "address_district_match": true
     },
     {
       "id": "deus-cafe-seoul",
@@ -1179,7 +1399,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "한옥 마당 및 내실 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8D%B0%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%ED%8E%98%20%EC%82%BC%EC%B2%AD%20(Deus%20Cafe)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%B2%AD%EB%A1%9C%20134",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8D%B0%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%ED%8E%98%20%EC%82%BC%EC%B2%AD%20(Deus%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%B2%AD%EB%A1%9C%20134",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8D%B0%EC%9A%B0%EC%8A%A4%20%EC%B9%B4%ED%8E%98%20%EC%82%BC%EC%B2%AD%20(Deus%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%82%BC%EC%B2%AD%EB%A1%9C%20134",
+      "address_district_match": true
     },
     {
       "id": "tonti-coffee-seoul",
@@ -1200,7 +1424,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 및 바 좌석 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%86%A4%ED%8B%B0%EC%BB%A4%ED%94%BC%20(Tonti%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C%2021-11",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%86%A4%ED%8B%B0%EC%BB%A4%ED%94%BC%20(Tonti%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C%2021-11",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%86%A4%ED%8B%B0%EC%BB%A4%ED%94%BC%20(Tonti%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C%2021-11",
+      "address_district_match": true
     },
     {
       "id": "texture-seoul",
@@ -1221,7 +1449,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "가구 쇼룸 겸용 멀티탭 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%85%8D%EC%8A%A4%EC%B3%90%20%EC%84%B1%EC%88%98%20(Texture)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2038-1",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%85%8D%EC%8A%A4%EC%B3%90%20%EC%84%B1%EC%88%98%20(Texture)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2038-1",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%85%8D%EC%8A%A4%EC%B3%90%20%EC%84%B1%EC%88%98%20(Texture)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B22%EA%B8%B8%2038-1",
+      "address_district_match": true
     },
     {
       "id": "moka-hara-seoul",
@@ -1242,7 +1474,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%AA%A8%EC%B9%B4%ED%95%98%EB%9D%BC%20(Moka%20Hara)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%2010",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%AA%A8%EC%B9%B4%ED%95%98%EB%9D%BC%20(Moka%20Hara)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%2010",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%AA%A8%EC%B9%B4%ED%95%98%EB%9D%BC%20(Moka%20Hara)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C28%EA%B8%B8%2010",
+      "address_district_match": true
     },
     {
       "id": "wonhyeongdeul-seoul",
@@ -1263,7 +1499,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 주변 일부",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%9B%90%ED%98%95%EB%93%A4%20(Wonhyeongdeul)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C4%EA%B8%B8%2021%204%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%9B%90%ED%98%95%EB%93%A4%20(Wonhyeongdeul)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C4%EA%B8%B8%2021%204%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%9B%90%ED%98%95%EB%93%A4%20(Wonhyeongdeul)%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%B6%A9%EB%AC%B4%EB%A1%9C4%EA%B8%B8%2021%204%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "cafe-allure-seoul",
@@ -1284,7 +1524,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "공부 전용석 형태 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%B9%B4%ED%8E%98%20%EC%96%BC%EB%A3%A8%EC%96%B4%20(Cafe%20Allure)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2011",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%B9%B4%ED%8E%98%20%EC%96%BC%EB%A3%A8%EC%96%B4%20(Cafe%20Allure)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2011",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%20%EC%96%BC%EB%A3%A8%EC%96%B4%20(Cafe%20Allure)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2011",
+      "address_district_match": true
     },
     {
       "id": "nudake-seoul",
@@ -1305,7 +1549,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "중앙 원형 미디어 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%88%84%EB%8D%B0%EC%9D%B4%ED%81%AC%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%8F%84%EC%82%B0%20(Nudake)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C46%EA%B8%B8%2050",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%88%84%EB%8D%B0%EC%9D%B4%ED%81%AC%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%8F%84%EC%82%B0%20(Nudake)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C46%EA%B8%B8%2050",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%88%84%EB%8D%B0%EC%9D%B4%ED%81%AC%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%8F%84%EC%82%B0%20(Nudake)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%95%95%EA%B5%AC%EC%A0%95%EB%A1%9C46%EA%B8%B8%2050",
+      "address_district_match": true
     },
     {
       "id": "our-bakery-seoul",
@@ -1326,7 +1574,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "2층 테이블 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%84%EC%9A%B0%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Our%20Bakery)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C45%EA%B8%B8%2010-5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%84%EC%9A%B0%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Our%20Bakery)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C45%EA%B8%B8%2010-5",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%84%EC%9A%B0%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Our%20Bakery)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C45%EA%B8%B8%2010-5",
+      "address_district_match": true
     },
     {
       "id": "tartine-seoul",
@@ -1347,7 +1599,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 및 대형 원형 좌석",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%83%80%EB%A5%B4%ED%8B%B4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Tartine)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C168%EA%B8%B8%2024",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%83%80%EB%A5%B4%ED%8B%B4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Tartine)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C168%EA%B8%B8%2024",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%83%80%EB%A5%B4%ED%8B%B4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EB%8F%84%EC%82%B0%20(Tartine)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C168%EA%B8%B8%2024",
+      "address_district_match": true
     },
     {
       "id": "-seoul-64",
@@ -1368,7 +1624,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블별 하단 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8F%84%EC%82%B0%20%EC%BD%9C%EB%A0%89%ED%84%B0%EC%8A%A4%20%ED%82%A4%EC%B9%9C%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C49%EA%B8%B8%2011",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8F%84%EC%82%B0%20%EC%BD%9C%EB%A0%89%ED%84%B0%EC%8A%A4%20%ED%82%A4%EC%B9%9C%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C49%EA%B8%B8%2011",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8F%84%EC%82%B0%20%EC%BD%9C%EB%A0%89%ED%84%B0%EC%8A%A4%20%ED%82%A4%EC%B9%9C%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C49%EA%B8%B8%2011",
+      "address_district_match": true
     },
     {
       "id": "dissent-seoul",
@@ -1389,7 +1649,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 대리석 테이블 콘센트",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%94%94%EC%84%BC%ED%8A%B8%20(Dissent)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20215",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%94%94%EC%84%BC%ED%8A%B8%20(Dissent)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20215",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%94%94%EC%84%BC%ED%8A%B8%20(Dissent)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C%20215",
+      "address_district_match": true
     },
     {
       "id": "h-square-seoul",
@@ -1410,7 +1674,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "개인 데스크형 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%20(H%20Square)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C14%EA%B8%B8%2014",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%20(H%20Square)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C14%EA%B8%B8%2014",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%20(H%20Square)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%A1%9C14%EA%B8%B8%2014",
+      "address_district_match": true
     },
     {
       "id": "coffee-mill-seoul",
@@ -1431,7 +1699,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "안뜰 일부 좌석 제공",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%EB%B0%A9%EC%95%97%EA%B0%84%20(Coffee%20Mill)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%208-11",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%EB%B0%A9%EC%95%97%EA%B0%84%20(Coffee%20Mill)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%208-11",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%EB%B0%A9%EC%95%97%EA%B0%84%20(Coffee%20Mill)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%208-11",
+      "address_district_match": true
     },
     {
       "id": "gabaedo-seoul-68",
@@ -1452,7 +1724,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "2층 넓은 목조 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B0%80%EB%B0%B0%EB%8F%84%20%EC%82%BC%EC%B2%AD%20(Gabaedo)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%2056-8",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B0%80%EB%B0%B0%EB%8F%84%20%EC%82%BC%EC%B2%AD%20(Gabaedo)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%2056-8",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B0%80%EB%B0%B0%EB%8F%84%20%EC%82%BC%EC%B2%AD%20(Gabaedo)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%B6%81%EC%B4%8C%EB%A1%9C5%EA%B8%B8%2056-8",
+      "address_district_match": true
     },
     {
       "id": "tea-collective-seoul",
@@ -1473,7 +1749,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "다도 테이블 일부 충전",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%8B%B0%EC%BB%AC%EB%A0%89%ED%8B%B0%EB%B8%8C%20(Tea%20Collective)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C55%EA%B8%B8%2037",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%8B%B0%EC%BB%AC%EB%A0%89%ED%8B%B0%EB%B8%8C%20(Tea%20Collective)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C55%EA%B8%B8%2037",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%8B%B0%EC%BB%AC%EB%A0%89%ED%8B%B0%EB%B8%8C%20(Tea%20Collective)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C55%EA%B8%B8%2037",
+      "address_district_match": true
     },
     {
       "id": "mccoy's-coffee-seoul",
@@ -1494,7 +1774,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 일부 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%A7%A5%EC%BD%94%EC%9D%B4%20%EC%BB%A4%ED%94%BC%20(McCoy's%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C%20147",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%A7%A5%EC%BD%94%EC%9D%B4%20%EC%BB%A4%ED%94%BC%20(McCoy's%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C%20147",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%A7%A5%EC%BD%94%EC%9D%B4%20%EC%BB%A4%ED%94%BC%20(McCoy's%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C%20147",
+      "address_district_match": true
     },
     {
       "id": "savour-seoul",
@@ -1515,7 +1799,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 테이블 아래 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%84%B8%EC%9D%B4%EB%B2%84%20(Savour)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2026",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%84%B8%EC%9D%B4%EB%B2%84%20(Savour)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2026",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%84%B8%EC%9D%B4%EB%B2%84%20(Savour)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%ED%95%84%EC%9A%B4%EB%8C%80%EB%A1%9C%2026",
+      "address_district_match": true
     },
     {
       "id": "identity-seoul",
@@ -1536,7 +1824,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 및 공유 바 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EC%BB%A4%ED%94%BC%EB%9E%A9%20(Identity)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%9D%EC%9B%90%EB%A1%9C%2070",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EC%BB%A4%ED%94%BC%EB%9E%A9%20(Identity)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%9D%EC%9B%90%EB%A1%9C%2070",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EC%BB%A4%ED%94%BC%EB%9E%A9%20(Identity)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%9D%EC%9B%90%EB%A1%9C%2070",
+      "address_district_match": true
     },
     {
       "id": "halff-coffee-seoul",
@@ -1557,7 +1849,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "한옥 벽면 콘센트 빌트인",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%95%98%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%95%88%EA%B5%AD%20(Halff%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EA%B3%84%EB%8F%99%EA%B8%B8%2041",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%95%98%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%95%88%EA%B5%AD%20(Halff%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EA%B3%84%EB%8F%99%EA%B8%B8%2041",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%95%98%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%95%88%EA%B5%AD%20(Halff%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EA%B3%84%EB%8F%99%EA%B8%B8%2041",
+      "address_district_match": true
     },
     {
       "id": "fritz-coffee-seoul-74",
@@ -1578,7 +1874,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "지하 및 2/3층 벽면 멀티탭",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%94%84%EB%A6%B3%EC%B8%A0%20%EC%96%91%EC%9E%AC%EC%A0%90%20(Fritz%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C37%EA%B8%B8%2024-11",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%94%84%EB%A6%B3%EC%B8%A0%20%EC%96%91%EC%9E%AC%EC%A0%90%20(Fritz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C37%EA%B8%B8%2024-11",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%94%84%EB%A6%B3%EC%B8%A0%20%EC%96%91%EC%9E%AC%EC%A0%90%20(Fritz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C37%EA%B8%B8%2024-11",
+      "address_district_match": true
     },
     {
       "id": "ador-seoul",
@@ -1599,7 +1899,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "안락한 소파석 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%84%EB%8F%84%EB%A5%B4%20(Ador)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C116%EA%B8%B8%2024",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%84%EB%8F%84%EB%A5%B4%20(Ador)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C116%EA%B8%B8%2024",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%84%EB%8F%84%EB%A5%B4%20(Ador)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C116%EA%B8%B8%2024",
+      "address_district_match": true
     },
     {
       "id": "independent-seoul",
@@ -1620,7 +1924,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "비즈니스 롱테이블 충전 포트",
       "toilet_csv": "상가 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%9D%B8%EB%94%94%ED%8E%9C%EB%8D%98%ED%8A%B8%EC%BB%A4%ED%94%BC%20(Independent)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C%20149",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%9D%B8%EB%94%94%ED%8E%9C%EB%8D%98%ED%8A%B8%EC%BB%A4%ED%94%BC%20(Independent)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C%20149",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%9D%B8%EB%94%94%ED%8E%9C%EB%8D%98%ED%8A%B8%EC%BB%A4%ED%94%BC%20(Independent)%20%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EC%84%B8%EC%A2%85%EB%8C%80%EB%A1%9C%20149",
+      "address_district_match": true
     },
     {
       "id": "dongrijang-seoul",
@@ -1641,7 +1949,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "좌석별 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8F%99%EB%A6%AC%EC%9E%A5%20%EC%B9%B4%ED%8E%98%20(Dongrijang)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C%20310",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8F%99%EB%A6%AC%EC%9E%A5%20%EC%B9%B4%ED%8E%98%20(Dongrijang)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C%20310",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8F%99%EB%A6%AC%EC%9E%A5%20%EC%B9%B4%ED%8E%98%20(Dongrijang)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%ED%86%A0%EC%A0%95%EB%A1%9C%20310",
+      "address_district_match": true
     },
     {
       "id": "oats-coffee-seoul",
@@ -1662,7 +1974,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창측 및 벽면 하단",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%98%A4%EC%B8%A0%EC%BB%A4%ED%94%BC%20%EB%A7%88%ED%8F%AC%20(Oats%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C14%EA%B8%B8%2032",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%98%A4%EC%B8%A0%EC%BB%A4%ED%94%BC%20%EB%A7%88%ED%8F%AC%20(Oats%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C14%EA%B8%B8%2032",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%98%A4%EC%B8%A0%EC%BB%A4%ED%94%BC%20%EB%A7%88%ED%8F%AC%20(Oats%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%85%EB%A7%89%EB%A1%9C14%EA%B8%B8%2032",
+      "address_district_match": true
     },
     {
       "id": "noah's-seoul",
@@ -1683,7 +1999,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 원목 테이블",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%85%B8%EC%95%84%EC%8A%A4%20%EB%A1%9C%EC%8A%A4%ED%8C%85%20%EC%97%B0%ED%9D%AC%20(Noah's)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C25%EA%B8%B8%205",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%85%B8%EC%95%84%EC%8A%A4%20%EB%A1%9C%EC%8A%A4%ED%8C%85%20%EC%97%B0%ED%9D%AC%20(Noah's)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C25%EA%B8%B8%205",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%85%B8%EC%95%84%EC%8A%A4%20%EB%A1%9C%EC%8A%A4%ED%8C%85%20%EC%97%B0%ED%9D%AC%20(Noah's)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%ED%9D%AC%EB%A1%9C25%EA%B8%B8%205",
+      "address_district_match": true
     },
     {
       "id": "default-value-seoul",
@@ -1704,7 +2024,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 바 좌석 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%94%94%ED%8F%B4%ED%8A%B8%EB%B0%B8%EB%A5%98%20(Default%20Value)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%84%B1%EC%82%B0%EB%A1%9C%20333",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%94%94%ED%8F%B4%ED%8A%B8%EB%B0%B8%EB%A5%98%20(Default%20Value)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%84%B1%EC%82%B0%EB%A1%9C%20333",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%94%94%ED%8F%B4%ED%8A%B8%EB%B0%B8%EB%A5%98%20(Default%20Value)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%84%B1%EC%82%B0%EB%A1%9C%20333",
+      "address_district_match": true
     },
     {
       "id": "yeonnam-bangagan-seoul",
@@ -1725,7 +2049,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "룸 형태로 개조된 좌석 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%97%B0%EB%82%A8%EB%B0%A9%EC%95%97%EA%B0%84%20(Yeonnam%20Bangagan)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C29%EA%B8%B8%2034",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%97%B0%EB%82%A8%EB%B0%A9%EC%95%97%EA%B0%84%20(Yeonnam%20Bangagan)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C29%EA%B8%B8%2034",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%97%B0%EB%82%A8%EB%B0%A9%EC%95%97%EA%B0%84%20(Yeonnam%20Bangagan)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C29%EA%B8%B8%2034",
+      "address_district_match": true
     },
     {
       "id": "inspiration-seoul",
@@ -1746,7 +2074,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "스터디룸 수준의 충전",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%A0%EC%B4%8C%20%EC%9D%B8%EC%8A%A4%ED%94%BC%EB%A0%88%EC%9D%B4%EC%85%98%EB%94%94%20(Inspiration)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%201",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%A0%EC%B4%8C%20%EC%9D%B8%EC%8A%A4%ED%94%BC%EB%A0%88%EC%9D%B4%EC%85%98%EB%94%94%20(Inspiration)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%201",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%A0%EC%B4%8C%20%EC%9D%B8%EC%8A%A4%ED%94%BC%EB%A0%88%EC%9D%B4%EC%85%98%EB%94%94%20(Inspiration)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%201",
+      "address_district_match": true
     },
     {
       "id": "doksuri-dabang-seoul",
@@ -1767,7 +2099,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "서재형 독서 테이블 전원 설치",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8F%85%EC%88%98%EB%A6%AC%EB%8B%A4%EB%B0%A9%20(Doksuri%20Dabang)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%2036%208%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8F%85%EC%88%98%EB%A6%AC%EB%8B%A4%EB%B0%A9%20(Doksuri%20Dabang)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%2036%208%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8F%85%EC%88%98%EB%A6%AC%EB%8B%A4%EB%B0%A9%20(Doksuri%20Dabang)%20%EC%84%9C%EC%9A%B8%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%97%B0%EC%84%B8%EB%A1%9C%2036%208%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "felicita-seoul",
@@ -1788,7 +2124,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "개인 독서실형 콘센트",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%A0%EC%B4%8C%20%ED%8E%A0%EB%A6%AC%EC%B9%98%ED%83%80%20(Felicita)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C%2012%202%EC%B8%B5",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%A0%EC%B4%8C%20%ED%8E%A0%EB%A6%AC%EC%B9%98%ED%83%80%20(Felicita)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C%2012%202%EC%B8%B5",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%A0%EC%B4%8C%20%ED%8E%A0%EB%A6%AC%EC%B9%98%ED%83%80%20(Felicita)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C%2012%202%EC%B8%B5",
+      "address_district_match": true
     },
     {
       "id": "clasig-seoul",
@@ -1809,7 +2149,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 콘센트 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EB%8C%80%ED%9D%A5%EB%8F%99%20%ED%81%B4%EB%9E%98%EC%A7%81%20(Clasig)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C10%EA%B8%B8%2025",
+      "kakao_search_url": "https://map.kakao.com/?q=%EB%8C%80%ED%9D%A5%EB%8F%99%20%ED%81%B4%EB%9E%98%EC%A7%81%20(Clasig)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C10%EA%B8%B8%2025",
+      "naver_search_url": "https://map.naver.com/p/search/%EB%8C%80%ED%9D%A5%EB%8F%99%20%ED%81%B4%EB%9E%98%EC%A7%81%20(Clasig)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%B0%B1%EB%B2%94%EB%A1%9C10%EA%B8%B8%2025",
+      "address_district_match": true
     },
     {
       "id": "young-&-daughters-seoul",
@@ -1830,7 +2174,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "스탠딩 및 매장 외곽 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B3%B5%EB%8D%95%20%EC%98%81%EC%95%A4%EB%8F%84%ED%84%B0%EC%8A%A4%20(Young%20%26%20Daughters)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C11%EA%B8%B8%2022",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B3%B5%EB%8D%95%20%EC%98%81%EC%95%A4%EB%8F%84%ED%84%B0%EC%8A%A4%20(Young%20%26%20Daughters)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C11%EA%B8%B8%2022",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B3%B5%EB%8D%95%20%EC%98%81%EC%95%A4%EB%8F%84%ED%84%B0%EC%8A%A4%20(Young%20%26%20Daughters)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C11%EA%B8%B8%2022",
+      "address_district_match": true
     },
     {
       "id": "coffee-lek-seoul",
@@ -1851,7 +2199,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 충전 원활",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%97%BC%EB%A6%AC%EB%8F%99%20%EC%BB%A4%ED%94%BC%EB%A0%89%20(Coffee%20Lek)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%88%AD%EB%AC%B8%EA%B8%B8%2012",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%97%BC%EB%A6%AC%EB%8F%99%20%EC%BB%A4%ED%94%BC%EB%A0%89%20(Coffee%20Lek)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%88%AD%EB%AC%B8%EA%B8%B8%2012",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%97%BC%EB%A6%AC%EB%8F%99%20%EC%BB%A4%ED%94%BC%EB%A0%89%20(Coffee%20Lek)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%88%AD%EB%AC%B8%EA%B8%B8%2012",
+      "address_district_match": true
     },
     {
       "id": "anthracite-seoul-88",
@@ -1872,7 +2224,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "공장형 대형 철제 테이블 콘센트",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%ED%95%9C%EB%82%A8%20(Anthracite)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C%20240",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%ED%95%9C%EB%82%A8%20(Anthracite)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C%20240",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%95%A4%ED%8A%B8%EB%9F%AC%EC%82%AC%EC%9D%B4%ED%8A%B8%20%ED%95%9C%EB%82%A8%20(Anthracite)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C%20240",
+      "address_district_match": true
     },
     {
       "id": "2-champ-coffee-seoul",
@@ -1893,7 +2249,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니 벤치형 일부 지원",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%B1%94%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%A0%9C2%EC%9E%91%EC%97%85%EC%8B%A4%20(Champ%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%85%B9%EC%82%AC%ED%8F%89%EB%8C%80%EB%A1%9C26%EA%B0%80%EA%B8%B8%2024",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%B1%94%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%A0%9C2%EC%9E%91%EC%97%85%EC%8B%A4%20(Champ%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%85%B9%EC%82%AC%ED%8F%89%EB%8C%80%EB%A1%9C26%EA%B0%80%EA%B8%B8%2024",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%B1%94%ED%94%84%EC%BB%A4%ED%94%BC%20%EC%A0%9C2%EC%9E%91%EC%97%85%EC%8B%A4%20(Champ%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%85%B9%EC%82%AC%ED%8F%89%EB%8C%80%EB%A1%9C26%EA%B0%80%EA%B8%B8%2024",
+      "address_district_match": true
     },
     {
       "id": "hell-cafe-seoul-90",
@@ -1914,7 +2274,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "바 좌석 일부 제공",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%97%AC%EC%B9%B4%ED%8E%98%20%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%A6%88%20(Hell%20Cafe)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%B3%B4%EA%B4%91%EB%A1%9C%2076",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%97%AC%EC%B9%B4%ED%8E%98%20%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%A6%88%20(Hell%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%B3%B4%EA%B4%91%EB%A1%9C%2076",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%97%AC%EC%B9%B4%ED%8E%98%20%EB%A1%9C%EC%8A%A4%ED%84%B0%EC%A6%88%20(Hell%20Cafe)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%B3%B4%EA%B4%91%EB%A1%9C%2076",
+      "address_district_match": true
     },
     {
       "id": "invited-seoul",
@@ -1935,7 +2299,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "주택 각 방 개조석 멀티탭",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%9A%A9%EC%82%B0%20%EC%9D%B8%EB%B0%94%EC%9D%B4%ED%8B%B0%EB%93%9C%20(Invited)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2041",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%9A%A9%EC%82%B0%20%EC%9D%B8%EB%B0%94%EC%9D%B4%ED%8B%B0%EB%93%9C%20(Invited)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2041",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%9A%A9%EC%82%B0%20%EC%9D%B8%EB%B0%94%EC%9D%B4%ED%8B%B0%EB%93%9C%20(Invited)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2041",
+      "address_district_match": true
     },
     {
       "id": "quartz-coffee-seoul",
@@ -1956,7 +2324,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "미니멀 사각 철제 테이블",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%8B%A0%EC%9A%A9%EC%82%B0%20%EC%BF%BC%EC%B8%A0%20(Quartz%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C%20158",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%8B%A0%EC%9A%A9%EC%82%B0%20%EC%BF%BC%EC%B8%A0%20(Quartz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C%20158",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%8B%A0%EC%9A%A9%EC%82%B0%20%EC%BF%BC%EC%B8%A0%20(Quartz%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C%20158",
+      "address_district_match": true
     },
     {
       "id": "dotori-seoul",
@@ -1977,7 +2349,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "일부 벽면 우드 좌석",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%82%BC%EA%B0%81%EC%A7%80%20%EB%8F%84%ED%86%A0%EB%A6%AC%20(Dotori)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2025-6",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%82%BC%EA%B0%81%EC%A7%80%20%EB%8F%84%ED%86%A0%EB%A6%AC%20(Dotori)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2025-6",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%82%BC%EA%B0%81%EC%A7%80%20%EB%8F%84%ED%86%A0%EB%A6%AC%20(Dotori)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%ED%95%9C%EA%B0%95%EB%8C%80%EB%A1%9C52%EA%B8%B8%2025-6",
+      "address_district_match": true
     },
     {
       "id": "onion-seongsu-seoul",
@@ -1998,7 +2374,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "대형 테이블 하단 충전기",
       "toilet_csv": "내부 남녀구분",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%84%B1%EC%88%98%EB%8F%99%20%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%B1%EC%88%98%20(Onion%20Seongsu)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C9%EA%B8%B8%208",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%84%B1%EC%88%98%EB%8F%99%20%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%B1%EC%88%98%20(Onion%20Seongsu)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C9%EA%B8%B8%208",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%EB%8F%99%20%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%B1%EC%88%98%20(Onion%20Seongsu)%20%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C9%EA%B8%B8%208",
+      "address_district_match": true
     },
     {
       "id": "coffee-stand-seoul",
@@ -2019,7 +2399,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "벽면 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%9E%90%EC%96%91%EB%8F%99%20%EC%BB%A4%ED%94%BC%EC%8A%A4%ED%83%A0%EB%93%9C%20(Coffee%20Stand)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%9E%90%EC%96%91%EB%B2%88%EC%98%81%EB%A1%9C%206",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%9E%90%EC%96%91%EB%8F%99%20%EC%BB%A4%ED%94%BC%EC%8A%A4%ED%83%A0%EB%93%9C%20(Coffee%20Stand)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%9E%90%EC%96%91%EB%B2%88%EC%98%81%EB%A1%9C%206",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%9E%90%EC%96%91%EB%8F%99%20%EC%BB%A4%ED%94%BC%EC%8A%A4%ED%83%A0%EB%93%9C%20(Coffee%20Stand)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%9E%90%EC%96%91%EB%B2%88%EC%98%81%EB%A1%9C%206",
+      "address_district_match": true
     },
     {
       "id": "choiga-coffee-seoul",
@@ -2040,7 +2424,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "구석 안락 좌석 콘센트 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%99%94%EC%96%91%EB%8F%99%20%EC%B5%9C%EA%B0%80%EC%BB%A4%ED%94%BC%20(Choiga%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%204",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%99%94%EC%96%91%EB%8F%99%20%EC%B5%9C%EA%B0%80%EC%BB%A4%ED%94%BC%20(Choiga%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%204",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%99%94%EC%96%91%EB%8F%99%20%EC%B5%9C%EA%B0%80%EC%BB%A4%ED%94%BC%20(Choiga%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EA%B5%B0%EC%9E%90%EB%A1%9C%204",
+      "address_district_match": true
     },
     {
       "id": "palisate-seoul",
@@ -2061,7 +2449,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "테이블 하단 배치 완비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EA%B5%AC%EC%9D%98%EB%8F%99%20%ED%8C%B0%EB%A6%AC%EC%84%B8%EC%9D%B4%ED%8A%B8%20(Palisate)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C%20453",
+      "kakao_search_url": "https://map.kakao.com/?q=%EA%B5%AC%EC%9D%98%EB%8F%99%20%ED%8C%B0%EB%A6%AC%EC%84%B8%EC%9D%B4%ED%8A%B8%20(Palisate)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C%20453",
+      "naver_search_url": "https://map.naver.com/p/search/%EA%B5%AC%EC%9D%98%EB%8F%99%20%ED%8C%B0%EB%A6%AC%EC%84%B8%EC%9D%B4%ED%8A%B8%20(Palisate)%20%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EC%95%84%EC%B0%A8%EC%82%B0%EB%A1%9C%20453",
+      "address_district_match": true
     },
     {
       "id": "piero-coffee-seoul",
@@ -2082,7 +2474,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "우드 벽면 좌석 하단 배치",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%EC%84%B1%EB%82%B4%EB%8F%99%20%ED%94%BC%EC%97%90%EB%A1%9C%EC%BB%A4%ED%94%BC%20(Piero%20Coffee)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%95%88%EB%A1%9C%2014",
+      "kakao_search_url": "https://map.kakao.com/?q=%EC%84%B1%EB%82%B4%EB%8F%99%20%ED%94%BC%EC%97%90%EB%A1%9C%EC%BB%A4%ED%94%BC%20(Piero%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%95%88%EB%A1%9C%2014",
+      "naver_search_url": "https://map.naver.com/p/search/%EC%84%B1%EB%82%B4%EB%8F%99%20%ED%94%BC%EC%97%90%EB%A1%9C%EC%BB%A4%ED%94%BC%20(Piero%20Coffee)%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%8F%99%EA%B5%AC%20%EC%84%B1%EC%95%88%EB%A1%9C%2014",
+      "address_district_match": true
     },
     {
       "id": "minimalz-seoul",
@@ -2103,7 +2499,11 @@
       "wifi_csv": "제공",
       "outlet_csv": "창가 바 좌석 구비",
       "toilet_csv": "내부 화장실",
-      "source": "user-csv"
+      "source": "user-csv",
+      "google_maps_search_url": "https://www.google.com/maps/search/%ED%95%9C%EB%82%A8%EB%8F%99%20%EB%AF%B8%EB%8B%88%EB%A7%90%EC%A6%88%20(Minimalz)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%8F%85%EC%84%9C%EB%8B%B9%EB%A1%9C%2039",
+      "kakao_search_url": "https://map.kakao.com/?q=%ED%95%9C%EB%82%A8%EB%8F%99%20%EB%AF%B8%EB%8B%88%EB%A7%90%EC%A6%88%20(Minimalz)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%8F%85%EC%84%9C%EB%8B%B9%EB%A1%9C%2039",
+      "naver_search_url": "https://map.naver.com/p/search/%ED%95%9C%EB%82%A8%EB%8F%99%20%EB%AF%B8%EB%8B%88%EB%A7%90%EC%A6%88%20(Minimalz)%20%EC%84%9C%EC%9A%B8%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EB%8F%85%EC%84%9C%EB%8B%B9%EB%A1%9C%2039",
+      "address_district_match": true
     }
   ]
 }
