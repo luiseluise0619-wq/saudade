@@ -56,13 +56,24 @@
         if (date.getUTCDay() !== 4) date.setUTCMonth(0, 1 + ((4 - date.getUTCDay()) + 7) % 7);
         return 1 + Math.ceil((firstThursday - date) / 604800000);
     }
+    // Theme override key — user picks "auto" / "paper" / "saturated" / "dark".
+    // "auto" defers to the ISO-week rotation below + prefers-color-scheme.
+    const KEY_SKIN = 'saudade.skin';
+    function getSkinPref() {
+        try { const v = localStorage.getItem(KEY_SKIN);
+              return v && (SKINS.includes(v) || v === 'auto') ? v : 'auto'; }
+        catch { return 'auto'; }
+    }
+    function saveSkinPref(v) { try { localStorage.setItem(KEY_SKIN, v); } catch {} }
+
     function pickSkin() {
+        const pref = getSkinPref();
+        if (pref !== 'auto') return pref;
         if (!matchMedia) return 'paper';
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) return 'paper';
+        if (matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
         const week = isoWeekNumber(new Date());
-        // 5-week rotation: paper, paper, paper, saturated, dark — paper is the
-        // default expression; saturated is a "front cover" change-up; dark is
-        // the late-edition / reading-room mood about once a month.
+        // 5-week rotation when auto: paper × 3, saturated, dark.
         const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
         return cycle[week % cycle.length];
     }
@@ -70,6 +81,11 @@
         const s = SKINS.includes(skin) ? skin : 'paper';
         document.documentElement.setAttribute('data-skin', s);
         return s;
+    }
+    function setSkin(v) {
+        if (v !== 'auto' && !SKINS.includes(v)) return;
+        saveSkinPref(v);
+        applySkin(pickSkin());
     }
 
     function applyEdition(ed) {
@@ -187,6 +203,8 @@
         set,
         get: () => getEdition() || DEFAULT,
         skin: () => document.documentElement.getAttribute('data-skin') || 'paper',
+        setSkin,                            // 'auto' | 'paper' | 'saturated' | 'dark'
+        skinPref: getSkinPref,              // returns current pref ('auto' or named)
         config: async (ed) => {
             await loadConfig();
             return _config?.[ed || (getEdition() || DEFAULT)] || null;
