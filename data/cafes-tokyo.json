@@ -608,6 +608,234 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "shiro-hige-cream-puff-tokyo",
+    "name": "Shirohige's Cream Puff Factory",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-3-1 Setagaya",
+    "address": "5-3-1 Daita, Setagaya City, Tokyo 155-0033, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Shirohige%27s%20Cream%20Puff%20Factory%205-3-1%20Daita%2C%20Setagaya%20City%2C%20Tokyo%20155-0033%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Shiro-Hige%20Cream%20Puff%20Tokyo%20Daita%205-chome-3-1%20Setagaya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "토토로 슈크림 테마로 아늑한 숲 속 가옥 같은",
+      "분위기 속 힐링 작업"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "토토로 슈크림 테마로 아늑한 숲 속 가옥 같은 분위기 속 힐링 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-de-l'ambre-tokyo",
+    "name": "Café de L'Ambre",
+    "city": "Tokyo",
+    "neighborhood": "8-chome-10-15 Chuo",
+    "address": "8-10-15 Ginza, Chuo City, Tokyo 104-0061, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20de%20L%27Ambre%208-10-15%20Ginza%2C%20Chuo%20City%2C%20Tokyo%20104-0061%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20L'Ambre%20Tokyo%20Ginza%208-chome-10-15%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "긴자의 전설적인 융드립 매장으로 아이디어 발상",
+      "및 레트로 집중 전용"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "긴자의 전설적인 융드립 매장으로 아이디어 발상 및 레트로 집중 전용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "chatei-hatou-tokyo",
+    "name": "Chatei Hatou",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-15-19 Shibuya",
+    "address": "1 Chome-15-19 Shibuya, Shibuya City, Tokyo 150-0002, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Chatei%20Hatou%201%20Chome-15-19%20Shibuya%2C%20Shibuya%20City%2C%20Tokyo%20150-0002%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Chatei%20Hatou%20Tokyo%20Shibuya%201-chome-15-19%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "핸드드립 거장들의 공간으로 고전 가구 속에서",
+      "한 자 한 자 소중히 글쓰기 좋은 곳"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "핸드드립 거장들의 공간으로 고전 가구 속에서 한 자 한 자 소중히 글쓰기 좋은 곳",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-les-jeux-au-grenier-tokyo",
+    "name": "Cafe Les Jeux Grenier",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-9-5 Minato",
+    "address": "5 Chome-9-5 Minamiaoyama, Minato City, Tokyo 107-0062, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Les%20Jeux%20Grenier%205%20Chome-9-5%20Minamiaoyama%2C%20Minato%20City%2C%20Tokyo%20107-0062%2C%20Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20Les%20Jeux%20au%20Grenier%20Tokyo%20Minamiaoyama%205-chome-9-5%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "오모테산도 지하 골목 속 숨은 보석으로 어둡고",
+      "조용하여 화면 집중에 유용"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "오모테산도 지하 골목 속 숨은 보석으로 어둡고 조용하여 화면 집중에 유용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cibi-tokyo-tokyo",
+    "name": "CIBI Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-37-11 Taito",
+    "address": "3 Chome-37-11 Sendagi, Bunkyo City, Tokyo 113-0022, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=3 Chome-37-11 Sendagi, Bunkyo City, Tokyo 113-0022, Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cibi%20Tokyo%20Tokyo%20Sendagi%203-chome-37-11%20Taito",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "넓은 옛 창고 개조 스타일로 쾌적하며 영감 수집 및 디자인 전용",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "넓은 옛 창고 개조 스타일로 쾌적하며 영감 수집 및 디자인 전용",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "blue-bottle-coffee-aoyama-tokyo",
+    "name": "Blue Bottle Coffee Aoyama",
+    "city": "Tokyo",
+    "neighborhood": "3-chome-13-14 Minato",
+    "address": "3 Chome-13-14 Minamiaoyama, Minato City, Tokyo 107-0062, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=3-13-14 Minami-Aoyama, Minato-ku, Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Blue%20Bottle%20Coffee%20Aoyama%20Tokyo%20Minamiaoyama%203-chome-13-14%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "초록 정원이 한눈에 펼쳐지는 밝고 넓은 공간 속 정속 충전 보장",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "초록 정원이 한눈에 펼쳐지는 밝고 넓은 공간 속 정속 충전 보장",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "ralph's-coffee-omotesando-tokyo",
+    "name": "Ralph's Coffee Omotesando",
+    "city": "Tokyo",
+    "neighborhood": "4-chome-25-15 Shibuya",
+    "address": "4 Chome-25-15 Jingumae, Shibuya, Tokyo 150-0001, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.ralphlauren.co.jp/?utm_source=google&utm_medium=maps&utm_campaign=RC_0250",
+    "google_maps_search_url": "https://www.google.com/maps/search/Ralph's%20Coffee%20Omotesando%20Tokyo%20Jingumae%204-chome-25-15%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "클래식 아메리칸 헤리티지 디자인 속 쾌적하게 비즈니스 미팅",
+      ""
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "클래식 아메리칸 헤리티지 디자인 속 쾌적하게 비즈니스 미팅",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "blue-bottle-coffee-roppongi-tokyo",
+    "name": "Blue Bottle Coffee Roppongi",
+    "city": "Tokyo",
+    "neighborhood": "7-chome-7-7 Minato",
+    "address": "7 Chome-7-7 Roppongi, Minato City, Tokyo 106-0032, Japan",
+    "rating": 4.7,
+    "google_url": "https://store.bluebottlecoffee.jp/pages/roppongi?utm_source=google&utm_medium=my",
+    "google_maps_search_url": "https://www.google.com/maps/search/Blue%20Bottle%20Coffee%20Roppongi%20Tokyo%20Roppongi%207-chome-7-7%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "롯폰기 플라자 뒤 한적한 숲길에 있어 도심 속 편안히 오피스 대체",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "롯폰기 플라자 뒤 한적한 숲길에 있어 도심 속 편안히 오피스 대체",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-de-ginza-miyuki-kan-tokyo",
+    "name": "Cafe de Ginza Miyuki-kan",
+    "city": "Tokyo",
+    "neighborhood": "6-chome-5-17 Chuo",
+    "address": "6-5-17 Ginza, Chuo-ku, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/Cafe+de+Ginza+Miyuki-kan+Ginza+6-chome-5-17+Chuo+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%20de%20Ginza%20Miyuki-kan%20Tokyo%20Ginza%206-chome-5-17%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "일본 특유의 전통 다방풍 정취와 최신 전원 인프라의 깔끔한 조합",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "일본 특유의 전통 다방풍 정취와 최신 전원 인프라의 깔끔한 조합",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "nezu-cafe-tokyo",
+    "name": "NEZUCAFÉ",
+    "city": "Tokyo",
+    "neighborhood": "Museum Minato",
+    "address": "6-5-1 Minami-Aoyama, Minato-ku, Tokyo 107-0062, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=NEZUCAF%C3%89+6-5-1+Minami-Aoyama,+Minato-ku,+Tokyo+107-0062,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Nezu%20Cafe%20Tokyo%20Minamiaoyama%206-chome-5-1%20Nezu%20Museum%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "네즈 미술관 내 숨 막히게 아름다운 정원 통유리",
+      "뷰를 감상하며 크리에이티브"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "네즈 미술관 내 숨 막히게 아름다운 정원 통유리 뷰를 감상하며 크리에이티브",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "cafe-1894-tokyo",
+    "name": "Café 1894",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-6-2 Chuo",
+    "address": "1F, Mitsubishi Ichigokan Museum, 2-6-2 Marunouchi, Chiyoda City, Tokyo 100-0005, Japan",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+1894+2-6-2+Marunouchi,+Chiyoda+City,+Tokyo+100-0005,+Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/Cafe%201894%20Tokyo%20Marunouchi%202-chome-6-2%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "메이지 시대 은행 건물을 그대로 사용해 천장이",
+      "매우 높고 고전적 무드 몰입"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "메이지 시대 은행 건물을 그대로 사용해 천장이 매우 높고 고전적 무드 몰입",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "aoyama-flower-market-tea-house-tokyo",
+    "name": "Aoyama Flower Market Tea House",
+    "city": "Tokyo",
+    "neighborhood": "5-chome-1-2 Minato",
+    "address": "5-1-2 Minami-Aoyama, Minato-ku, Tokyo",
+    "rating": 4.7,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=Aoyama+Flower+Market+Tea+House+5-1-2+Minami-Aoyama,+Minato-ku,+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Aoyama%20Flower%20Market%20Tea%20House%20Tokyo%20Minamiaoyama%205-chome-1-2%20Minato",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "온실 정원 한복판 꽃향기에 싸여 아이디어 다듬기 최적화",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "온실 정원 한복판 꽃향기에 싸여 아이디어 다듬기 최적화",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "koffee-mameya-tokyo",
     "name": "KOFFEE MAMEYA",
     "city": "Tokyo",
@@ -741,6 +969,25 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "fabcafe-tokyo-tokyo",
+    "name": "FabCafe Tokyo",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-22-7 Shibuya",
+    "address": "1 Chome-22-7 Dogenzaka, Shibuya City, Tokyo 150-0043, Japan",
+    "rating": 4.1,
+    "google_url": "https://www.google.com/maps/search/?api=1&query=1 Chome-22-7 Dogenzaka, Shibuya City, Tokyo 150-0043, Japan",
+    "google_maps_search_url": "https://www.google.com/maps/search/FabCafe%20Tokyo%20Tokyo%20Dogenzaka%201-chome-22-7%20Shibuya",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "전 세계 테크 크리에이터 및 개발자 전용 허브로 인프라 최상급",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "전 세계 테크 크리에이터 및 개발자 전용 허브로 인프라 최상급",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "tokyo-little-house-tokyo",
     "name": "TOKYO LITTLE HOUSE",
     "city": "Tokyo",
@@ -817,6 +1064,44 @@
     "source": "gemini-2.5-flash-grounded"
   },
   {
+    "id": "book-and-bed-tokyo-tokyo",
+    "name": "Book And Bed Tokyo Shinjuku",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-27-5 Shinjuku",
+    "address": "1-27-5 Kabukicho, Shinjuku-ku, Tokyo",
+    "rating": 3.9,
+    "google_url": "https://www.google.com/maps/search/Book+and+Bed+Tokyo+Kabukicho+1-chome-27-5+Shinjuku+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Book%20and%20Bed%20Tokyo%20Tokyo%20Kabukicho%201-chome-27-5%20Shinjuku",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "책에 파묻혀 밤새 일하고 쉴 수 있는 완벽한",
+      "프리랜서 맞춤형 라이브러리"
+    ],
+    "amenities": "WIFI · OUTLET",
+    "notes_kr": "책에 파묻혀 밤새 일하고 쉴 수 있는 완벽한 프리랜서 맞춤형 라이브러리",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "ginza-cozy-corner-tokyo",
+    "name": "Ginza Cozy Corner Ginza 1-Chome Honten",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-8-1 Chuo",
+    "address": "1-8-1 Ginza, Chuo-ku, Tokyo",
+    "rating": 3.6,
+    "google_url": "https://www.google.com/maps/search/Ginza+Cozy+Corner+Ginza+1-chome-8-1+Chuo+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Ginza%20Cozy%20Corner%20Tokyo%20Ginza%201-chome-8-1%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "안정되고 넓은 2층 공간 구획으로 차분히 현지 시장 분석 타이핑",
+      ""
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "안정되고 넓은 2층 공간 구획으로 차분히 현지 시장 분석 타이핑",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
     "id": "byron-bay-coffee-daimon-tokyo",
     "name": "Byron Bay Coffee Daimon Ten",
     "city": "Tokyo",
@@ -852,6 +1137,25 @@
     ],
     "amenities": "WIFI · OUTLET · QUIET",
     "notes_kr": "정돈되고 오피스에 걸맞은 무소음 속 고속 타이핑 가속화",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "laduree-ginza-tokyo",
+    "name": "Ladurée Ginza",
+    "city": "Tokyo",
+    "neighborhood": "4-chome-6-16 Chuo",
+    "address": "4-6-16 Ginza, Chuo-ku, Tokyo",
+    "rating": 3.52,
+    "google_url": "https://www.google.com/maps/search/Laduree+Ginza+4-chome-6-16+Chuo+Tokyo",
+    "google_maps_search_url": "https://www.google.com/maps/search/Laduree%20Ginza%20Tokyo%20Ginza%204-chome-6-16%20Chuo",
+    "vetted_at": "2026-05-23",
+    "visited_at": null,
+    "two_lines": [
+      "고급스럽고 한적한 평일 오전 기품 있는 업무 진행에 추천",
+      ""
+    ],
+    "amenities": "WIFI · QUIET",
+    "notes_kr": "고급스럽고 한적한 평일 오전 기품 있는 업무 진행에 추천",
     "source": "gemini-2.5-flash-grounded"
   }
 ]
