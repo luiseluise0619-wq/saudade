@@ -69,6 +69,7 @@ const RL = {
     '/admin/pipeline-trigger': { max: 6,  win: 60000 },
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
+    '/api/ping':         { max: 30, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
     '/dispatches/retracted': { max: 60, win: 60000 },
     '/feed':       { max: 60, win: 60000 },
@@ -746,6 +747,7 @@ export default {
                 case '/desks/submit':      return desksSubmit(req, env, ctx);
                 case '/desks/queue':       return desksQueue(req, env, ctx);
                 case '/city/request':      return cityRequest(req, env, ctx);
+                case '/api/ping':          return apiPing(req, env, ctx);
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
@@ -2260,6 +2262,27 @@ async function pipelineFile(env) {
 
 // ─── /dispatches/today endpoint ────────────────────────────────────────────
 // 프런트에서 D1 published 읽기. 정적 dispatches.json fallback 보존.
+// ─── /api/ping — minimal anonymous counter (KV). One event type per day per
+//                edition. Single line; do not turn this into "analytics".
+// Cost: 1 KV read + 1 KV write per call, free-tier headroom 100k/day.
+// PII: none. We do not log IP, UA, referrer, or any identifier.
+async function apiPing(req, env, ctx) {
+    if (!env.AURA_KV) return new Response('ok', { status: 200, headers: hdrs(req) });
+    const url = new URL(req.url);
+    const e  = (url.searchParams.get('e')  || '').slice(0, 32).replace(/[^a-z0-9_]/gi, '');
+    const ed = (url.searchParams.get('ed') || 'en').slice(0, 4).replace(/[^a-z]/gi, '');
+    if (!e || !['en','ko','ja','pt','es'].includes(ed)) {
+        return new Response('bad', { status: 400, headers: hdrs(req) });
+    }
+    const day = new Date().toISOString().slice(0, 10);
+    const k = `ping:${day}:${e}:${ed}`;
+    try {
+        const cur = parseInt((await env.AURA_KV.get(k)) || '0', 10);
+        ctx.waitUntil(env.AURA_KV.put(k, String(cur + 1), { expirationTtl: 60 * 86400 }));
+    } catch (err) {}
+    return new Response('ok', { status: 200, headers: hdrs(req) });
+}
+
 async function dispatchesToday(req, env, ctx) {
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
     const url = new URL(req.url);

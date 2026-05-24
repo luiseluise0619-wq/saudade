@@ -138,6 +138,22 @@
         applySkin(pickSkin());
     }
 
+    let _pinged = false;
+    function pingOnce(ed) {
+        // One anonymous counter call per session ("did anyone visit").
+        // Worker /api/ping increments a KV counter keyed by date+edition.
+        // No identifier, no UA, no IP logging.
+        if (_pinged) return;
+        _pinged = true;
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return;
+        try {
+            fetch(base + '/api/ping?e=session_start&ed=' + encodeURIComponent(ed),
+                  { method: 'GET', mode: 'cors', credentials: 'omit', keepalive: true })
+                .catch(() => {});
+        } catch (e) {}
+    }
+
     function applyEdition(ed) {
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
         // body 없을 때 (script in <head>) skip — init re-runs after DOMContentLoaded
@@ -152,6 +168,7 @@
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
         syncMetaTags(ed);
+        pingOnce(ed);
     }
 
     function showLoadingFlash(toEd) {
