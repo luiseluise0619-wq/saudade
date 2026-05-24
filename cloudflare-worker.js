@@ -70,6 +70,8 @@ const RL = {
     '/city/request':   { max: 5,  win: 60000 },
     '/dispatches/today': { max: 60, win: 60000 },
     '/api/ping':         { max: 30, win: 60000 },
+    '/digest/subscribe': { max:  5, win: 60000 },
+    '/digest/send':      { max:  2, win: 60000 },
     '/dispatches/retract':   { max: 30, win: 60000 },
     '/dispatches/retracted': { max: 60, win: 60000 },
     '/feed':       { max: 60, win: 60000 },
@@ -748,6 +750,10 @@ export default {
                 case '/desks/queue':       return desksQueue(req, env, ctx);
                 case '/city/request':      return cityRequest(req, env, ctx);
                 case '/api/ping':          return apiPing(req, env, ctx);
+                case '/digest/subscribe':  return digestSubscribe(req, env, ctx);
+                case '/digest/confirm':    return digestConfirm(req, env, ctx);
+                case '/digest/unsubscribe':return digestUnsubscribe(req, env, ctx);
+                case '/digest/send':       return digestSend(req, env, ctx);
                 case '/dispatches/today':  return dispatchesToday(req, env, ctx);
                 case '/dispatches/retract':   return dispatchRetract(req, env, ctx);
                 case '/dispatches/retracted': return dispatchesRetracted(req, env, ctx);
@@ -2281,6 +2287,287 @@ async function apiPing(req, env, ctx) {
         ctx.waitUntil(env.AURA_KV.put(k, String(cur + 1), { expirationTtl: 60 * 86400 }));
     } catch (err) {}
     return new Response('ok', { status: 200, headers: hdrs(req) });
+}
+
+// ─── Sunday digest — opt-in weekly email ────────────────────────────────
+// Constitution-compatible retention: weekly cadence, explicit opt-in,
+// one-click unsubscribe in every email. No push notifications, no daily
+// noise. Powered by Resend (transactional email; CC0 plan up to 3k/mo
+// during early days). Founder setup: wrangler secret put RESEND_API_KEY.
+// Schema: schema/digest_subscribers.sql
+
+const DIGEST_FROM = 'saudade <hello@saudade.app>';   // change in wrangler secret if domain differs
+const DIGEST_EDITIONS = ['en', 'ko', 'ja', 'pt', 'es'];
+
+function digestToken() {
+    // 32-char hex, url-safe. crypto.getRandomValues lives in Workers runtime.
+    const bytes = new Uint8Array(16);
+    crypto.getRandomValues(bytes);
+    return Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+function digestNormalizeEmail(raw) {
+    const v = String(raw || '').trim().toLowerCase();
+    // RFC 5322 simplified — enough to reject typos.
+    return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? v : null;
+}
+function digestSiteBase(env) {
+    return (env.SITE_BASE || 'https://saudade.pages.dev').replace(/\/$/, '');
+}
+
+async function digestSubscribe(req, env, ctx) {
+    if (req.method !== 'POST') return E(req, 'METHOD', 'POST only', 405);
+    if (!env.SAUDADE_DB)       return E(req, 'NO_DB', 'D1 not bound', 503);
+    let body;
+    try { body = await req.json(); } catch (e) { return E(req, 'BAD_JSON', 'invalid body', 400); }
+    const email = digestNormalizeEmail(body && body.email);
+    const ed = String((body && body.edition) || 'en').toLowerCase();
+    if (!email)                     return E(req, 'BAD_EMAIL', 'email invalid', 400);
+    if (!DIGEST_EDITIONS.includes(ed)) return E(req, 'BAD_EDITION', 'edition invalid', 400);
+
+    const now = Date.now();
+    const token = digestToken();
+    try {
+        // INSERT OR REPLACE so re-subscribe resets confirmed/unsubscribed state.
+        await env.SAUDADE_DB.prepare(
+            `INSERT INTO digest_subscribers (email, edition, token, created_at, confirmed_at, unsubscribed_at)
+             VALUES (?, ?, ?, ?, NULL, NULL)
+             ON CONFLICT(email) DO UPDATE SET
+                edition = excluded.edition,
+                token   = excluded.token,
+                created_at = excluded.created_at,
+                confirmed_at = NULL,
+                unsubscribed_at = NULL`
+        ).bind(email, ed, token, now).run();
+    } catch (e) {
+        return E(req, 'DB_WRITE', String(e && e.message || e), 500);
+    }
+
+    // Send the confirmation email (single transactional). If RESEND_API_KEY
+    // is missing we still record the subscription but skip the send — caller
+    // can re-trigger by re-submitting.
+    const base = digestSiteBase(env);
+    const confirmUrl = `${base}/digest/confirm?token=${encodeURIComponent(token)}`;
+    const sent = await digestSendOne(env, {
+        to: email,
+        subject: 'saudade · confirm your weekly digest',
+        html: digestConfirmEmailHtml(ed, confirmUrl),
+        text: digestConfirmEmailText(ed, confirmUrl)
+    });
+
+    return new Response(JSON.stringify({ ok: true, confirmation_sent: sent }), {
+        status: 200, headers: hdrs(req, { 'Content-Type': 'application/json' })
+    });
+}
+
+async function digestConfirm(req, env, ctx) {
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    const url = new URL(req.url);
+    const token = (url.searchParams.get('token') || '').slice(0, 64);
+    if (!token) return E(req, 'BAD_TOKEN', 'token required', 400);
+    try {
+        const res = await env.SAUDADE_DB.prepare(
+            `UPDATE digest_subscribers SET confirmed_at = ? WHERE token = ? AND confirmed_at IS NULL`
+        ).bind(Date.now(), token).run();
+        const ok = (res.meta && res.meta.changes && res.meta.changes > 0);
+        const html = ok
+            ? `<!doctype html><meta charset="utf-8"><title>saudade</title>
+               <body style="font-family:Georgia,serif;max-width:560px;margin:80px auto;padding:0 24px;color:#16151A;background:#F2EEE3">
+               <h1 style="font-weight:300;font-style:italic">Confirmed.</h1>
+               <p>Your Sunday digest is on. We will write to you once a week, and never otherwise. Unsubscribe sits at the bottom of every email.</p>
+               </body>`
+            : `<!doctype html><meta charset="utf-8"><title>saudade</title>
+               <body style="font-family:Georgia,serif;max-width:560px;margin:80px auto;padding:0 24px;color:#16151A;background:#F2EEE3">
+               <h1 style="font-weight:300;font-style:italic">Link expired.</h1>
+               <p>This confirmation link is no longer valid. Re-subscribe from the magazine to receive a fresh one.</p>
+               </body>`;
+        return new Response(html, {
+            status: ok ? 200 : 410,
+            headers: hdrs(req, { 'Content-Type': 'text/html; charset=utf-8' })
+        });
+    } catch (e) {
+        return E(req, 'DB_WRITE', String(e && e.message || e), 500);
+    }
+}
+
+async function digestUnsubscribe(req, env, ctx) {
+    if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'D1 not bound', 503);
+    const url = new URL(req.url);
+    const token = (url.searchParams.get('token') || '').slice(0, 64);
+    if (!token) return E(req, 'BAD_TOKEN', 'token required', 400);
+    try {
+        await env.SAUDADE_DB.prepare(
+            `UPDATE digest_subscribers SET unsubscribed_at = ? WHERE token = ?`
+        ).bind(Date.now(), token).run();
+    } catch (e) {
+        return E(req, 'DB_WRITE', String(e && e.message || e), 500);
+    }
+    const html = `<!doctype html><meta charset="utf-8"><title>saudade</title>
+        <body style="font-family:Georgia,serif;max-width:560px;margin:80px auto;padding:0 24px;color:#16151A;background:#F2EEE3">
+        <h1 style="font-weight:300;font-style:italic">Unsubscribed.</h1>
+        <p>You will not hear from saudade again unless you re-subscribe. No questionnaire. No email asking why.</p>
+        </body>`;
+    return new Response(html, { status: 200, headers: hdrs(req, { 'Content-Type': 'text/html; charset=utf-8' }) });
+}
+
+// digestSend — admin-token-gated trigger. Called weekly by the Sunday
+// digest GitHub Action (or manually with Bearer token). Iterates editions,
+// pulls confirmed + non-unsubscribed subscribers, sends the week's digest
+// via Resend. Returns per-edition counts.
+async function digestSend(req, env, ctx) {
+    if (!env.SAUDADE_DB)        return E(req, 'NO_DB', 'D1 not bound', 503);
+    const auth = req.headers.get('Authorization') || '';
+    const token = auth.replace(/^Bearer\s+/i, '');
+    if (!env.EDITOR_TOKEN || token !== env.EDITOR_TOKEN) {
+        return E(req, 'UNAUTHORIZED', 'EDITOR_TOKEN required', 401);
+    }
+    const url = new URL(req.url);
+    const onlyEd = url.searchParams.get('edition');
+    const dry    = url.searchParams.get('dry') === '1';
+
+    const results = {};
+    for (const ed of DIGEST_EDITIONS) {
+        if (onlyEd && onlyEd !== ed) continue;
+        const subs = await env.SAUDADE_DB.prepare(
+            `SELECT email, token FROM digest_subscribers
+             WHERE edition = ? AND confirmed_at IS NOT NULL AND unsubscribed_at IS NULL`
+        ).bind(ed).all();
+        const list = (subs && subs.results) || [];
+        const dispatchUrl = digestSiteBase(env) + (ed === 'en' ? '/data/dispatches.json' : `/data/dispatches.${ed}.json`);
+        let dispatchData = null;
+        try {
+            const r = await fetch(dispatchUrl, { cf: { cacheTtl: 0 } });
+            if (r.ok) dispatchData = await r.json();
+        } catch (e) {}
+
+        let sent = 0, failed = 0;
+        for (const s of list) {
+            if (dry) { sent++; continue; }
+            const html = digestEmailHtml(ed, dispatchData, s.token, digestSiteBase(env));
+            const text = digestEmailText(ed, dispatchData, s.token, digestSiteBase(env));
+            const ok = await digestSendOne(env, {
+                to: s.email,
+                subject: digestSubject(ed),
+                html, text
+            });
+            if (ok) {
+                sent++;
+                ctx.waitUntil(env.SAUDADE_DB.prepare(
+                    `UPDATE digest_subscribers SET last_sent_at = ? WHERE token = ?`
+                ).bind(Date.now(), s.token).run());
+            } else { failed++; }
+        }
+        results[ed] = { subscribers: list.length, sent, failed, dry };
+    }
+    return new Response(JSON.stringify({ ok: true, results }, null, 2), {
+        status: 200, headers: hdrs(req, { 'Content-Type': 'application/json' })
+    });
+}
+
+// ─── Email composition (plain HTML, plain text). No external CSS. ───
+const DIGEST_SUBJECT = {
+    en: 'saudade · this week',
+    ko: '사우다지 · 이번 주',
+    ja: 'サウダージ · 今週',
+    pt: 'saudade · esta semana',
+    es: 'saudade · esta semana'
+};
+function digestSubject(ed) { return DIGEST_SUBJECT[ed] || DIGEST_SUBJECT.en; }
+
+const DIGEST_CONFIRM_COPY = {
+    en: { h: 'Confirm your Sunday digest.', p: 'Click below to start receiving saudade once a week. No daily noise, ever.', cta: 'Confirm' },
+    ko: { h: '주간 다이제스트를 확인해주세요.', p: '아래를 누르면 사우다지가 주 1회 발송됩니다. 매일 알림은 없습니다.', cta: '확인' },
+    ja: { h: '週刊ダイジェストを承認してください。', p: '下のリンクをクリックすると、サウダージが週に一度届きます。毎日の通知はありません。', cta: '承認' },
+    pt: { h: 'Confirme o seu digest dominical.', p: 'Clique abaixo para receber saudade uma vez por semana. Sem ruído diário, nunca.', cta: 'Confirmar' },
+    es: { h: 'Confirme su digest dominical.', p: 'Pulse abajo para recibir saudade una vez por semana. Sin ruido diario, nunca.', cta: 'Confirmar' }
+};
+function digestConfirmEmailHtml(ed, url) {
+    const c = DIGEST_CONFIRM_COPY[ed] || DIGEST_CONFIRM_COPY.en;
+    return `<!doctype html><html><body style="font-family:Georgia,serif;max-width:560px;margin:40px auto;padding:0 24px;color:#16151A;background:#F2EEE3">
+<h1 style="font-weight:300;font-style:italic;font-size:28px">${escapeHtmlBasic(c.h)}</h1>
+<p style="font-size:15px;line-height:1.55">${escapeHtmlBasic(c.p)}</p>
+<p style="margin:32px 0"><a href="${escapeHtmlBasic(url)}" style="display:inline-block;padding:12px 18px;border:1px solid #16151A;color:#16151A;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:11px;letter-spacing:0.24em;text-transform:uppercase">${escapeHtmlBasic(c.cta)}</a></p>
+<hr style="border:0;border-top:0.5px solid #16151A;opacity:0.2;margin:32px 0"/>
+<p style="font-family:-apple-system,sans-serif;font-size:11px;color:#6B6655">If this was not you, ignore this email. The confirmation link expires after click.</p>
+</body></html>`;
+}
+function digestConfirmEmailText(ed, url) {
+    const c = DIGEST_CONFIRM_COPY[ed] || DIGEST_CONFIRM_COPY.en;
+    return `${c.h}\n\n${c.p}\n\n${c.cta}: ${url}\n\n— saudade`;
+}
+
+const DIGEST_INTRO = {
+    en: 'saudade · this week', ko: '사우다지 · 이번 주의 통신',
+    ja: 'サウダージ · 今週の便り', pt: 'saudade · os despachos da semana',
+    es: 'saudade · los despachos de la semana'
+};
+const DIGEST_UNSUB = {
+    en: 'Unsubscribe', ko: '구독 해지', ja: '配信停止',
+    pt: 'Cancelar subscrição', es: 'Cancelar suscripción'
+};
+function digestEmailHtml(ed, data, token, baseUrl) {
+    const intro = DIGEST_INTRO[ed] || DIGEST_INTRO.en;
+    const unsubLabel = DIGEST_UNSUB[ed] || DIGEST_UNSUB.en;
+    const unsubUrl = `${baseUrl}/digest/unsubscribe?token=${encodeURIComponent(token)}`;
+    const cities = (data && data.cities) || [];
+    const items = cities.flatMap(c => (c.items || []).map(it => ({ city: c.city, ...it }))).slice(0, 9);
+    const itemsHtml = items.length
+        ? items.map(i => `
+            <article style="margin:24px 0;padding:0 0 24px;border-bottom:0.5px solid rgba(22,21,26,0.15)">
+                <p style="font-family:-apple-system,sans-serif;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6B6655;margin:0 0 6px">${escapeHtmlBasic(i.city || '')} · ${escapeHtmlBasic(i.n || '')}</p>
+                <h2 style="font-weight:300;font-style:italic;font-size:20px;line-height:1.25;margin:0 0 8px">${escapeHtmlBasic(i.headline || '')}</h2>
+                <p style="font-size:14px;line-height:1.6;color:#16151A;margin:0 0 8px">${escapeHtmlBasic(i.lede || '')}</p>
+                ${i.body ? `<p style="font-size:14px;line-height:1.6;color:#332F26;margin:0">${escapeHtmlBasic(i.body)}</p>` : ''}
+            </article>
+        `).join('')
+        : `<p style="font-style:italic;color:#6B6655">The desk is resting this week.</p>`;
+
+    return `<!doctype html><html lang="${ed}"><body style="font-family:Georgia,serif;max-width:580px;margin:32px auto;padding:0 24px;color:#16151A;background:#F2EEE3">
+<header style="margin:0 0 32px;padding:0 0 16px;border-bottom:0.5px solid #16151A">
+    <p style="font-family:-apple-system,sans-serif;font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#16151A;margin:0">${escapeHtmlBasic(intro)}</p>
+</header>
+${itemsHtml}
+<footer style="margin:48px 0 0;padding:24px 0 0;border-top:0.5px solid rgba(22,21,26,0.2);font-family:-apple-system,sans-serif;font-size:11px;color:#6B6655;line-height:1.55">
+    <p style="margin:0 0 12px">saudade · a slow newspaper for digital nomads.</p>
+    <p style="margin:0"><a href="${escapeHtmlBasic(unsubUrl)}" style="color:#6B6655">${escapeHtmlBasic(unsubLabel)}</a></p>
+</footer>
+</body></html>`;
+}
+function digestEmailText(ed, data, token, baseUrl) {
+    const intro = DIGEST_INTRO[ed] || DIGEST_INTRO.en;
+    const unsubLabel = DIGEST_UNSUB[ed] || DIGEST_UNSUB.en;
+    const unsubUrl = `${baseUrl}/digest/unsubscribe?token=${encodeURIComponent(token)}`;
+    const cities = (data && data.cities) || [];
+    const items = cities.flatMap(c => (c.items || []).map(it => ({ city: c.city, ...it }))).slice(0, 9);
+    const body = items.map(i =>
+        `${i.city || ''} · ${i.n || ''}\n${i.headline || ''}\n${i.lede || ''}\n${i.body ? i.body + '\n' : ''}`
+    ).join('\n\n');
+    return `${intro}\n\n${body}\n\n— saudade\n${unsubLabel}: ${unsubUrl}\n`;
+}
+
+async function digestSendOne(env, { to, subject, html, text }) {
+    if (!env.RESEND_API_KEY) return false;
+    try {
+        const r = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + env.RESEND_API_KEY,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                from: env.DIGEST_FROM || DIGEST_FROM,
+                to: [to], subject, html, text
+            })
+        });
+        return r.ok;
+    } catch (e) { return false; }
+}
+
+// escapeHtml is exported from elsewhere in this Worker — local rebind
+// to avoid hoisting trouble if those refactors move.
+function escapeHtmlBasic(s) {
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 async function dispatchesToday(req, env, ctx) {

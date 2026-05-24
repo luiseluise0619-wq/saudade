@@ -472,6 +472,49 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         `;
     }
 
+    function renderDigestSection() {
+        const T = window.SAUDADE_T || ((s) => s.en);
+        const head = T({ en: 'SUNDAY DIGEST', ko: '주간 다이제스트', ja: '週刊ダイジェスト', pt: 'DIGEST DOMINICAL', es: 'DIGEST DOMINICAL' });
+        const lede = T({
+            en: 'One email a week. The desk does not write to you on any other day.',
+            ko: '주 1회 이메일. 그 외에는 사우다지가 메일을 보내지 않습니다.',
+            ja: '週に一通だけ。それ以外の日に編集部からメールは届きません。',
+            pt: 'Um email por semana. A redação não escreve em mais nenhum dia.',
+            es: 'Un correo a la semana. La redacción no escribe ningún otro día.'
+        });
+        const placeholder = T({
+            en: 'you@example.com', ko: 'you@example.com', ja: 'you@example.com',
+            pt: 'voce@exemplo.com', es: 'tu@ejemplo.com'
+        });
+        const btn = T({ en: 'SUBSCRIBE', ko: '구독', ja: '購読', pt: 'SUBSCREVER', es: 'SUSCRIBIRSE' });
+        const consent = T({
+            en: 'No tracking. No third-party sharing. Unsubscribe link in every email.',
+            ko: '추적 없음. 외부 공유 없음. 모든 이메일 하단에 구독 해지 링크.',
+            ja: 'トラッキング無し。第三者提供無し。各メールに配信停止リンクあり。',
+            pt: 'Sem rastreio. Sem partilha com terceiros. Link de cancelamento em cada email.',
+            es: 'Sin seguimiento. Sin compartir con terceros. Enlace de cancelación en cada correo.'
+        });
+        return `
+            <section class="sdd-desk-section sdd-desk-digest">
+                <h3 class="sdd-desk-head">${escapeHtml(head)}</h3>
+                <p class="sdd-desk-note" style="max-width:60ch">${escapeHtml(lede)}</p>
+                <form class="sdd-desk-digest-form" data-digest-form
+                      style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;align-items:stretch">
+                    <input type="email" name="email" required
+                           placeholder="${escapeHtml(placeholder)}"
+                           autocomplete="email"
+                           style="flex:1 1 220px;min-width:220px;padding:10px 12px;font-family:var(--mono);font-size:12px;border:0.5px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:0" />
+                    <button type="submit"
+                            style="padding:10px 18px;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:var(--tr-mono-mast);text-transform:uppercase;border:0.5px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;border-radius:0">
+                        ${escapeHtml(btn)}
+                    </button>
+                </form>
+                <p class="sdd-desk-note" style="margin-top:10px;font-size:10px;color:var(--bone-d)">${escapeHtml(consent)}</p>
+                <p data-digest-status style="margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--ink);min-height:1em"></p>
+            </section>
+        `;
+    }
+
     function renderAccountSection() {
         const T = window.SAUDADE_T || ((s) => s.en);
         const user   = window.SAUDADE_AUTH?.getUser?.() || null;
@@ -728,6 +771,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             ${renderFollowingSection()}
             ${renderHomeDeskSection()}
             ${renderThemeSection()}
+            ${renderDigestSection()}
             ${renderAccountSection()}
 
             <section class="sdd-desk-section">
@@ -772,6 +816,48 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 render();
             });
         });
+
+        const digestForm = root.querySelector('[data-digest-form]');
+        if (digestForm) {
+            digestForm.addEventListener('submit', async (ev) => {
+                ev.preventDefault();
+                const T = window.SAUDADE_T || ((s) => s.en);
+                const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+                const email = (digestForm.querySelector('input[name="email"]').value || '').trim();
+                const status = root.querySelector('[data-digest-status]');
+                if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+                    status.textContent = T({ en: 'Enter a valid email.', ko: '올바른 이메일을 입력하세요.', ja: '有効なメールを入力してください。', pt: 'Indique um email válido.', es: 'Indique un correo válido.' });
+                    return;
+                }
+                const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+                if (!base) {
+                    status.textContent = T({ en: 'Server not configured.', ko: '서버 설정 누락.', ja: 'サーバー設定がありません。', pt: 'Servidor não configurado.', es: 'Servidor no configurado.' });
+                    return;
+                }
+                status.textContent = T({ en: 'Sending…', ko: '전송 중…', ja: '送信中…', pt: 'A enviar…', es: 'Enviando…' });
+                try {
+                    const r = await fetch(base + '/digest/subscribe', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, edition: ed })
+                    });
+                    if (r.ok) {
+                        status.textContent = T({
+                            en: 'Check your inbox to confirm.',
+                            ko: '받은 편지함에서 확인 메일을 눌러주세요.',
+                            ja: '受信トレイで承認メールをクリックしてください。',
+                            pt: 'Verifique a sua caixa de entrada para confirmar.',
+                            es: 'Revise su bandeja de entrada para confirmar.'
+                        });
+                        digestForm.reset();
+                    } else {
+                        status.textContent = T({ en: 'Something went wrong. Please try again.', ko: '문제가 발생했습니다. 다시 시도하세요.', ja: 'エラーが発生しました。再度お試しください。', pt: 'Algo correu mal. Tente novamente.', es: 'Algo salió mal. Inténtelo de nuevo.' });
+                    }
+                } catch (e) {
+                    status.textContent = T({ en: 'Network error. Try again.', ko: '네트워크 오류. 다시 시도하세요.', ja: 'ネットワークエラー。再試行してください。', pt: 'Erro de rede. Tente novamente.', es: 'Error de red. Inténtelo de nuevo.' });
+                }
+            });
+        }
 
         root.querySelectorAll('[data-edition]').forEach(btn => {
             btn.addEventListener('click', () => {
