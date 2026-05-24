@@ -87,14 +87,26 @@ test('listening cover CTA + ledger ADD button + footer nav are localized', () =>
     }
 });
 
-test('sw.js CACHE_VERSION matches index.html ?v= cache buster', () => {
+test('all user-facing HTML cache busters match sw.js CACHE_VERSION', () => {
+    // Was missed before: bump-cache.js only walked index.html, so install/
+    // privacy/terms/etc. shipped pinned to ?v=v661 while sw.js had moved
+    // 21 versions ahead. Browsers loading those pages saw broken CSS/JS.
     const sw = read('sw.js');
-    const html = read('index.html');
     const m = sw.match(/CACHE_VERSION\s*=\s*'saudade-(v\d+)'/);
     assert.ok(m, 'sw.js CACHE_VERSION pattern not found');
     const ver = m[1];
-    const found = (html.match(new RegExp(`\\?v=${ver}\\b`, 'g')) || []).length;
-    assert.ok(found > 0, `index.html does not reference ?v=${ver}; bump-cache may not have run`);
+
+    const DEV = new Set(['index.html', 'test-suite.html', 'logo-preview.html']);
+    const userHtml = fs.readdirSync(ROOT)
+        .filter(f => f.endsWith('.html') && !DEV.has(f));
+
+    for (const name of userHtml) {
+        const src = read(name);
+        const versions = [...src.matchAll(/\?v=(v\d+)/g)].map(m => m[1]);
+        const stale = versions.filter(v => v !== ver);
+        assert.strictEqual(stale.length, 0,
+            `${name}: stale cache buster(s) — found ${[...new Set(stale)].join(', ')}, expected ${ver}. Run \`npm run bump-cache\`.`);
+    }
 });
 
 test('SEO meta tags carry English defaults (syncMetaTags rewrites per edition)', () => {

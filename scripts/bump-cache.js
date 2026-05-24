@@ -64,6 +64,26 @@ function main() {
         console.log(`  index.html               ${htmlChanges} changes`);
     }
 
+    // 2b. Every other user-facing HTML in repo root carries `?v=v???`
+    // cache busters too (install, privacy.*, terms, etymology, etc).
+    // Previously bump-cache only touched index.html, so when these were
+    // last edited at v661 they pinned readers to that release forever.
+    // Skip dev-only pages (test-suite, logo-preview).
+    const DEV_HTML = new Set(['index.html', 'test-suite.html', 'logo-preview.html']);
+    fs.readdirSync(ROOT)
+        .filter(f => f.endsWith('.html') && !DEV_HTML.has(f))
+        .forEach(name => {
+            const p = path.join(ROOT, name);
+            const src = fs.readFileSync(p, 'utf8');
+            let ch = 0;
+            const out = src.replace(/\?v=v\d+/g, () => { ch++; return `?v=${next}`; });
+            if (ch > 0) {
+                if (!dry) fs.writeFileSync(p, out);
+                totalChanges += ch;
+                console.log(`  ${name.padEnd(24)} ${ch} changes`);
+            }
+        });
+
     // 3. saudade-listening.js — fetch query
     const LIST = path.join(ROOT, 'saudade-listening.js');
     if (fs.existsSync(LIST)) {
