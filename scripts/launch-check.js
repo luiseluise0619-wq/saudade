@@ -99,6 +99,26 @@ function exists(rel) { return fs.existsSync(path.join(ROOT, rel)); }
     } catch (e) {
         record('BLOCKER', 'tests', 'node --test', false, 'failed');
     }
+    try {
+        execSync('npx tsc --noEmit -p .', { cwd: ROOT, stdio: 'pipe' });
+        record('WARN', 'tests', 'tsc typecheck', true, 'clean');
+    } catch (e) {
+        // checkJs:false makes this loose — but config deprecations would
+        // otherwise fail silently and leak into prod surprises later.
+        record('WARN', 'tests', 'tsc typecheck', false,
+            'failed (see `npm run typecheck`)');
+    }
+    try {
+        const out = execSync('npx eslint .', { cwd: ROOT, stdio: 'pipe' }).toString();
+        const m = out.match(/(\d+)\s+errors?/);
+        const errs = m ? parseInt(m[1], 10) : 0;
+        record('WARN', 'tests', 'eslint (errors only)', errs === 0,
+            errs === 0 ? 'clean' : `${errs} errors`);
+    } catch (e) {
+        // ESLint exits non-zero if errors > 0 (warnings under default are OK).
+        record('WARN', 'tests', 'eslint (errors only)', false,
+            'errors present (see `npm run lint`)');
+    }
 })();
 
 // ─── BLOCKER: content validation passes ────────────────────────────────

@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-05T10:42:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-05-24T09:22:24Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -59,6 +59,14 @@
         'Dubai':        { noun: 'Glass.',    ko: '유리의 도시.' }
     };
 
+    // Per-edition default editor city. KO opens in Seoul, JA in Tokyo, etc.
+    // Used only when the reader has no explicit pick (no Switch-the-Desk +
+    // no GeoIP). The English city name is the canonical key — cityIn(city, ed)
+    // translates to the localised form before render.
+    const EDITION_DEFAULT_CITY = {
+        en: 'Lisbon', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
+    };
+
     function detectCity() {
         // v6 §5 — 사용자 명시 home city + Switch the Desk 활성 시 임시 city
         // saudade-city.js 의 activeDeskCity() 가 우선 (사용자가 desk 에서 골랐을 것)
@@ -75,7 +83,10 @@
             const geo = JSON.parse(localStorage.getItem('aura_geoip_v1') || '{}');
             if (geo.city && COVER_COPY[geo.city]) return geo.city;
         } catch (e) {}
-        return 'Lisbon';   // v1 첫 호 권장
+        // Edition-default — KO 가 리스본을 첫 화면으로 보면 안 된다.
+        const ed = (window.SAUDADE_EDITION?.get?.()) ||
+                   (window.state && window.state.lang) || 'en';
+        return EDITION_DEFAULT_CITY[ed] || 'Lisbon';
     }
 
     function isKo() {
@@ -475,6 +486,21 @@ body.section-active .sdd-cover { display: none !important; }
     const TODAY_LABEL = {
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
+    // Cover nav — Section labels per edition. Each magazine should read
+    // in its own language; English placeholders on non-EN editions were
+    // a real i18n bug, not a design choice.
+    const NAV_LABEL_LEDGER = {
+        en: 'LEDGER',     ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO',  es: 'LIBRO MAYOR'
+    };
+    const NAV_LABEL_ATLAS = {
+        en: 'ATLAS',      ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'
+    };
+    const NAV_LABEL_DISPATCHES = {
+        en: 'DISPATCHES', ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'
+    };
+    const NAV_LABEL_DESK = {
+        en: 'THE DESK',   ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'
+    };
     const ISSUE_LEDE_5 = {
         en: 'Three cities, no schedule. Edited from $editorCity.',
         ko: '세 도시, 일정 없음. $editorCity에서 편집.',
@@ -618,10 +644,10 @@ body.section-active .sdd-cover { display: none !important; }
             </section>
 
             <nav class="sdd-cover-nav">
-                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>LEDGER</a>
-                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>ATLAS</a>
-                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
-                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
+                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>${escapeHtml(NAV_LABEL_LEDGER[ed] || NAV_LABEL_LEDGER.en)}</a>
+                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>${escapeHtml(NAV_LABEL_ATLAS[ed] || NAV_LABEL_ATLAS.en)}</a>
+                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>${escapeHtml(NAV_LABEL_DISPATCHES[ed] || NAV_LABEL_DISPATCHES.en)}</a>
+                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>${escapeHtml(NAV_LABEL_DESK[ed] || NAV_LABEL_DESK.en)}</a>
             </nav>
 
             <!-- v644 — direct path to the issue archive + per-issue PDF download.
@@ -800,11 +826,24 @@ body.section-active .sdd-cover { display: none !important; }
     if (window.SAUDADE_MASTHEAD) return;
 
     // dock data-cat → § 정보 (Handoff v2 §4 — tz/trip 재매핑)
+    // 5 editions — each gets its own section name.
     const SECTIONS = {
-        visa: { num: '01', name: 'THE LEDGER',     ko: '레저',      page: 'P. 04' },
-        cafe: { num: '02', name: 'THE ATLAS',      ko: '아틀라스',   page: 'P. 08' },
-        tz:   { num: '03', name: 'DISPATCHES',     ko: '디스패치',   page: 'P. 13' },
-        trip: { num: '04', name: 'THE DESK',       ko: '데스크',     page: 'P. 18' }
+        visa: {
+            num: '01', page: 'P. 04',
+            name: { en: 'THE LEDGER',  ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO', es: 'LIBRO MAYOR' }
+        },
+        cafe: {
+            num: '02', page: 'P. 08',
+            name: { en: 'THE ATLAS',   ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'       }
+        },
+        tz: {
+            num: '03', page: 'P. 13',
+            name: { en: 'DISPATCHES',  ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'   }
+        },
+        trip: {
+            num: '04', page: 'P. 18',
+            name: { en: 'THE DESK',    ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'     }
+        }
     };
 
     function injectStyles() {
@@ -906,9 +945,9 @@ body.section-active::before { content: none !important; }
         const sec = SECTIONS[cat];
         if (!sec) return;
         const m = ensureMasthead();
-        const ko = window.state && window.state.lang === 'ko';
+        const ed = (window.state && window.state.lang) || 'en';
         m.querySelector('.sdd-mast-num').textContent  = '§ ' + sec.num;
-        m.querySelector('.sdd-mast-name').textContent = ko ? sec.ko : sec.name;
+        m.querySelector('.sdd-mast-name').textContent = sec.name[ed] || sec.name.en;
         m.querySelector('.sdd-mast-page').textContent = sec.page;
     }
 
@@ -990,19 +1029,23 @@ body.section-active::before { content: none !important; }
 })();
 
 /* ── saudade-edition.js ──────────────────────────────────────────────────── */
-// SAUDADE · EDITION SYSTEM (Handoff v2 §2)
+// SAUDADE · EDITION SYSTEM
 // 5 별쇄 — en / ko / ja / pt / es. body[data-edition] 토글로 다른 잡지 입장.
-// 실시간 번역 X — 사용자가 명시적 선택.
+// 실시간 번역 X — 사용자가 명시적 선택. 각 에디션은 자기 도시·자기 voice.
 // localStorage: saudade.edition.
 'use strict';
 
 (function() {
     if (window.SAUDADE_EDITION) return;
 
-    const KEY = 'saudade.edition';
-    const SUPPORTED = ['en', 'ko', 'ja', 'pt', 'es'];
-    const DEFAULT = 'en';
+    const KEY        = 'saudade.edition';
+    const SUPPORTED  = ['en', 'ko', 'ja', 'pt', 'es'];
+    const DEFAULT    = 'en';
+    const SKINS      = ['paper', 'saturated', 'dark'];
 
+    // Static fallback meta. The full editions config lives in
+    // data/editions.json — loaded async. Modules that need cities/voice
+    // data should await SAUDADE_EDITION.config(ed) instead of using META.
     const META = {
         en: { name: 'English',   loading: 'Opening English edition…' },
         ko: { name: '한국어',    loading: '한국어판을 펼치는 중…' },
@@ -1010,6 +1053,68 @@ body.section-active::before { content: none !important; }
         pt: { name: 'Português', loading: 'A abrir a edição portuguesa…' },
         es: { name: 'Español',   loading: 'Abriendo la edición en español…' }
     };
+
+    // SEO + OG meta per edition. index.html ships a static EN/KO mix
+    // (og:locale was hardcoded ko_KR even on EN visits). syncMetaTags()
+    // rewrites the <meta> tags after applyEdition() so each edition's
+    // share card matches what readers actually see.
+    const META_SEO = {
+        en: {
+            locale: 'en_US',
+            title:  'Saudade — a slow newspaper for digital nomads',
+            desc:   'Visa ledger, café atlas, dispatches, listening room. Quiet by design.'
+        },
+        ko: {
+            locale: 'ko_KR',
+            title:  '사우다지 — 디지털 노마드를 위한 느린 신문',
+            desc:   '비자 장부 · 카페 지도 · 통신 · 청취실. 조용히, 천천히.'
+        },
+        ja: {
+            locale: 'ja_JP',
+            title:  'サウダージ — デジタルノマドのための、ゆっくりとした新聞',
+            desc:   'ビザ帳簿・カフェ地図・通信・リスニングルーム。静かに、ゆっくりと。'
+        },
+        pt: {
+            locale: 'pt_PT',
+            title:  'Saudade — um jornal lento para nómadas digitais',
+            desc:   'Livro-razão de vistos, atlas de cafés, despachos, sala de escuta. Calmo por escolha.'
+        },
+        es: {
+            locale: 'es_ES',
+            title:  'Saudade — un periódico lento para nómadas digitales',
+            desc:   'Libro mayor de visas, atlas de cafés, despachos, sala de escucha. Tranquilo por elección.'
+        }
+    };
+
+    function setMeta(selector, attr, value) {
+        const el = document.head.querySelector(selector);
+        if (el) el.setAttribute(attr, value);
+    }
+    function syncMetaTags(ed) {
+        const m = META_SEO[ed] || META_SEO.en;
+        // <title> + description
+        document.title = m.title;
+        setMeta('meta[name="description"]', 'content', m.desc);
+        // OG
+        setMeta('meta[property="og:title"]',       'content', m.title);
+        setMeta('meta[property="og:description"]', 'content', m.desc);
+        setMeta('meta[property="og:locale"]',      'content', m.locale);
+        // Twitter
+        setMeta('meta[name="twitter:title"]',       'content', m.title);
+        setMeta('meta[name="twitter:description"]', 'content', m.desc);
+    }
+
+    let _config = null;     // editions.json once loaded
+    let _configP = null;    // promise
+
+    function loadConfig() {
+        if (_configP) return _configP;
+        _configP = fetch('./data/editions.json', { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .then(d => { _config = d; return d; })
+            .catch(() => null);
+        return _configP;
+    }
 
     function getEdition() {
         try { const v = localStorage.getItem(KEY); return SUPPORTED.includes(v) ? v : null; }
@@ -1019,9 +1124,70 @@ body.section-active::before { content: none !important; }
         try { localStorage.setItem(KEY, v); } catch (e) {}
     }
 
+    // ─── Skin rotation (per-issue, not per-user) ──────────────────────
+    // Three rotations per edition: paper / saturated / dark.
+    // Selected deterministically from ISO week so every reader sees the
+    // same cover this week — that's the whole point of an "issue".
+    function isoWeekNumber(d) {
+        const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        const dayNum = (date.getUTCDay() + 6) % 7;
+        date.setUTCDate(date.getUTCDate() - dayNum + 3);
+        const firstThursday = date.valueOf();
+        date.setUTCMonth(0, 1);
+        if (date.getUTCDay() !== 4) date.setUTCMonth(0, 1 + ((4 - date.getUTCDay()) + 7) % 7);
+        return 1 + Math.ceil((firstThursday - date) / 604800000);
+    }
+    // Theme override key — user picks "auto" / "paper" / "saturated" / "dark".
+    // "auto" defers to the ISO-week rotation below + prefers-color-scheme.
+    const KEY_SKIN = 'saudade.skin';
+    function getSkinPref() {
+        try { const v = localStorage.getItem(KEY_SKIN);
+              return v && (SKINS.includes(v) || v === 'auto') ? v : 'auto'; }
+        catch { return 'auto'; }
+    }
+    function saveSkinPref(v) { try { localStorage.setItem(KEY_SKIN, v); } catch {} }
+
+    function pickSkin() {
+        const pref = getSkinPref();
+        if (pref !== 'auto') return pref;
+        if (!matchMedia) return 'paper';
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return 'paper';
+        if (matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+        const week = isoWeekNumber(new Date());
+        // 5-week rotation when auto: paper × 3, saturated, dark.
+        const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
+        return cycle[week % cycle.length];
+    }
+    function applySkin(skin) {
+        const s = SKINS.includes(skin) ? skin : 'paper';
+        document.documentElement.setAttribute('data-skin', s);
+        return s;
+    }
+    function setSkin(v) {
+        if (v !== 'auto' && !SKINS.includes(v)) return;
+        saveSkinPref(v);
+        applySkin(pickSkin());
+    }
+
+    let _pinged = false;
+    function pingOnce(ed) {
+        // One anonymous counter call per session ("did anyone visit").
+        // Worker /api/ping increments a KV counter keyed by date+edition.
+        // No identifier, no UA, no IP logging.
+        if (_pinged) return;
+        _pinged = true;
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return;
+        try {
+            fetch(base + '/api/ping?e=session_start&ed=' + encodeURIComponent(ed),
+                  { method: 'GET', mode: 'cors', credentials: 'omit', keepalive: true })
+                .catch(() => {});
+        } catch (e) {}
+    }
+
     function applyEdition(ed) {
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
-        // v621 — body 없으면 (script in <head> 일 때) skip. init 이 DOMContentLoaded 후 다시 호출.
+        // body 없을 때 (script in <head>) skip — init re-runs after DOMContentLoaded
         if (!document.body) {
             document.documentElement.setAttribute('lang', ed);
             return;
@@ -1030,9 +1196,10 @@ body.section-active::before { content: none !important; }
         document.body.classList.remove(...SUPPORTED.map(c => 'edition-' + c));
         document.body.classList.add('edition-' + ed);
         document.documentElement.setAttribute('lang', ed);
-        // window.state.lang 도 동기화 (saudade-cover/atlas 등 lang 보는 곳)
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        syncMetaTags(ed);
+        pingOnce(ed);
     }
 
     function showLoadingFlash(toEd) {
@@ -1066,7 +1233,7 @@ body.section-active::before { content: none !important; }
         setTimeout(() => {
             applyEdition(ed);
             saveEdition(ed);
-            // 모든 saudade-* 모듈 reload
+            // Reload all section modules — each rebuilds against the new edition
             try { window.SAUDADE_COVER?.render?.(); } catch (e) {}
             try { window.SAUDADE_ATLAS?.reload?.(); } catch (e) {}
             try { window.SAUDADE_LEDGER?.render?.(); } catch (e) {}
@@ -1083,23 +1250,73 @@ body.section-active::before { content: none !important; }
     function init() {
         const ed = getEdition() || DEFAULT;
         applyEdition(ed);
+        applySkin(pickSkin());
+        loadConfig();
     }
 
-    // v621 — body 가 있을 때 한 번 + DOMContentLoaded 이후 한 번 더 (race 방지).
-    // 이렇게 하면 lang attr 은 가능한 빨리, body class 는 body 있을 때 안전하게.
     init();
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
-        // 이미 로드됨 → init() 한 번 더 (body 있을 것)
         init();
     }
 
-    window.SAUDADE_EDITION = { set, get: () => getEdition() || DEFAULT, SUPPORTED, META };
+    // ─── Latin digit normaliser ──────────────────────────────────────
+    // 헌법: numerals are ALWAYS Latin digits (47, 06, 1.2 km), never
+    // "사십칠" or "四十七". This helper converts any string written with
+    // Korean / Japanese / Arabic-Indic numerals back to Latin so cover/
+    // dispatch headlines that AI-drafted in non-Latin form get fixed
+    // before render.
+    const NUM_MAPS = [
+        // CJK numerals
+        { from: ['零','〇','〇'], to: '0' },
+        { from: ['一','壹'], to: '1' },
+        { from: ['二','貳','弐'], to: '2' },
+        { from: ['三','參','参'], to: '3' },
+        { from: ['四','肆'], to: '4' },
+        { from: ['五','伍'], to: '5' },
+        { from: ['六','陸'], to: '6' },
+        { from: ['七','柒'], to: '7' },
+        { from: ['八','捌'], to: '8' },
+        { from: ['九','玖'], to: '9' }
+    ];
+    // Full-width digits 0-9 → ASCII
+    function toLatinDigits(s) {
+        if (typeof s !== 'string' || !s) return s;
+        // Full-width 0-9 (U+FF10..FF19)
+        s = s.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+        // Arabic-Indic 0-9
+        s = s.replace(/[٠-٩]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x0660 + 48));
+        s = s.replace(/[۰-۹]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x06F0 + 48));
+        // CJK simple numerals — best-effort. Only swap when isolated digit
+        // (avoids breaking compound kanji words like 三日).
+        for (const m of NUM_MAPS) {
+            for (const ch of m.from) {
+                s = s.split(ch).join(m.to);   // best-effort; constitution wants Latin
+            }
+        }
+        return s;
+    }
 
-    // v622 — 글로벌 i18n 헬퍼. 컴포넌트들이 self-내장 COPY 정의할 필요 없이 호출.
-    // 사용: SAUDADE_T({ en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés' })
-    // 누락된 에디션은 en fallback.
+    window.SAUDADE_EDITION = {
+        set,
+        get: () => getEdition() || DEFAULT,
+        skin: () => document.documentElement.getAttribute('data-skin') || 'paper',
+        setSkin,                            // 'auto' | 'paper' | 'saturated' | 'dark'
+        skinPref: getSkinPref,              // returns current pref ('auto' or named)
+        config: async (ed) => {
+            await loadConfig();
+            return _config?.[ed || (getEdition() || DEFAULT)] || null;
+        },
+        configSync: (ed) => _config?.[ed || (getEdition() || DEFAULT)] || null,
+        toLatinDigits,
+        SUPPORTED,
+        SKINS,
+        META
+    };
+
+    // Global i18n helper. Components: SAUDADE_T({ en, ko, ja, pt, es })
+    // Missing edition → en fallback.
     window.SAUDADE_T = function(strings) {
         if (!strings || typeof strings !== 'object') return '';
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
