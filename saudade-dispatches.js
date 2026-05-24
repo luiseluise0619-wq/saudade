@@ -134,6 +134,24 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     color: var(--bone-d);
     margin: 12px 0 0;
 }
+/* Filing age chip — quiet by default, rust when > 2 days stale.
+   §9.5 — daily filing; surface when the cron / pipeline has dropped. */
+.sdd-disp-stale {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 0.5px solid var(--rule);
+    color: var(--bone-d);
+}
+.sdd-disp-stale.is-warn {
+    color: var(--rust);
+    border-color: var(--rust);
+}
 
 .sdd-disp-city {
     margin: clamp(28px, 4vw, 56px) 0 0;
@@ -908,6 +926,11 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const wdIdx = todayWeekday();
         const filed = data && data.filed_at ? fmtDateTime(data.filed_at) : '';
         const next  = data && data.next_filing ? fmtDate(data.next_filing) : '';
+        // Age of last filing, in days. >2 days flips the chip into rust;
+        // §9.5 expects daily filing so anything older is a visible defect.
+        const filedAgeDays = (data && data.filed_at)
+            ? Math.floor((Date.now() - new Date(data.filed_at).getTime()) / 86400000)
+            : null;
 
         // v622 — 5 에디션 자국어 헤더
         const T = window.SAUDADE_T || ((s) => s.en);
@@ -937,6 +960,18 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             en: 'NEXT FILING', ko: '다음 발행', ja: '次回発行',
             pt: 'PRÓXIMA EDIÇÃO', es: 'PRÓXIMA EDICIÓN'
         });
+        let ageChipHtml = '';
+        if (filedAgeDays !== null && filedAgeDays >= 1) {
+            const ageLabel = T({
+                en: `${filedAgeDays} ${filedAgeDays === 1 ? 'DAY' : 'DAYS'} AGO`,
+                ko: `${filedAgeDays}일 전`,
+                ja: `${filedAgeDays}日前`,
+                pt: `HÁ ${filedAgeDays} ${filedAgeDays === 1 ? 'DIA' : 'DIAS'}`,
+                es: `HACE ${filedAgeDays} ${filedAgeDays === 1 ? 'DÍA' : 'DÍAS'}`
+            });
+            const warn = filedAgeDays > 2 ? ' is-warn' : '';
+            ageChipHtml = ` <span class="sdd-disp-stale${warn}">${escapeHtml(ageLabel)}</span>`;
+        }
         const noteTitle = T({
             en: 'A note on sources.', ko: '출처에 대한 메모.',
             ja: '出典についての覚書。', pt: 'Uma nota sobre as fontes.',
@@ -1060,7 +1095,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                     <span class="it">${dropItalicPunct(headEdited)}</span>
                 </h2>
                 <p class="sdd-disp-sub">${escapeHtml(subFilled)}</p>
-                <p class="sdd-disp-meta">${escapeHtml(filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(nextLabel)} ${escapeHtml(next)}</p>
+                <p class="sdd-disp-meta">${escapeHtml(filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(nextLabel)} ${escapeHtml(next)}${ageChipHtml}</p>
             </header>
         `;
 

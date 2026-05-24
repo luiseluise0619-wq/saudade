@@ -25,9 +25,9 @@ on:
         description: "Editions (comma-separated). Leave blank for all four."
         required: false
         default: ""
-  # Uncomment after first successful manual run:
-  # schedule:
-  #   - cron: '0 21 * * *'
+  # 21:00 UTC daily = 06:00 KST next morning (matches §9.5 daily filing).
+  schedule:
+    - cron: '0 21 * * *'
 
 jobs:
   refresh:

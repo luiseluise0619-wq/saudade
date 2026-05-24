@@ -33,7 +33,10 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 
-const GEMINI_MODEL = 'gemini-2.0-flash';
+// gemini-2.0-flash was retired from the free tier (limit:0 as of 2026-05).
+// 2.5-flash-lite is the current cheapest workable model; it accepts the
+// same prompt shape and writes the same dispatch JSON.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const GEMINI_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 // ── Per-edition city pools ──────────────────────────────────────────────
