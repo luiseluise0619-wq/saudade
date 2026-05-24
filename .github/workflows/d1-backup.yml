@@ -1,0 +1,90 @@
+name: D1 backup (daily)
+
+# §11 — solo-founder data safety. D1 free tier has no automatic backups.
+# A user-entered ledger row lost is gone forever; that is the only class
+# of irreversible loss in the system. This workflow runs daily, dumps the
+# whole database with `wrangler d1 export`, commits the resulting SQL to
+# a private branch named `backup/d1/YYYY-MM-DD`, and keeps the last 30 by
+# date (older branches auto-pruned by GitHub when nothing references them).
+#
+# Restore: `wrangler d1 execute saudade_db --file backup/<date>.sql`
+#
+# Setup once:
+#   Settings → Secrets and variables → Actions → New repository secret
+#     CLOUDFLARE_API_TOKEN  (Account > API Tokens > Create > template "Edit Cloudflare Workers")
+#     CLOUDFLARE_ACCOUNT_ID (Workers dashboard, right sidebar)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 19 * * *'   # 04:00 KST — well after the daily file step
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "20" }
+
+      - name: Install wrangler
+        run: npm install -g wrangler@latest
+
+      - name: Export D1 to SQL
+        env:
+          CLOUDFLARE_API_TOKEN:  ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID secrets must both be set."
+            exit 1
+          fi
+          DATE=$(date -u +%Y-%m-%d)
+          OUT="d1-backup-$DATE.sql"
+          wrangler d1 export saudade_db --remote --output "$OUT"
+          ls -lh "$OUT"
+          BYTES=$(stat -c %s "$OUT")
+          echo "BACKUP_DATE=$DATE" >> $GITHUB_ENV
+          echo "BACKUP_BYTES=$BYTES" >> $GITHUB_ENV
+          mkdir -p .backups
+          mv "$OUT" .backups/
+
+      - name: Commit to backup branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="backup/d1/${{ env.BACKUP_DATE }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Detach + fresh branch so we don't carry main history into the backup
+          git checkout --orphan "$BRANCH"
+          git rm -rf . > /dev/null 2>&1 || true
+          mkdir -p .backups
+          # restore the SQL file that lived in .backups/ from prior step
+          ls -la
+          # We previously moved the SQL into .backups before this checkout;
+          # the orphan checkout cleared it, so re-export.
+          wrangler d1 export saudade_db --remote --output ".backups/d1-${{ env.BACKUP_DATE }}.sql"
+          git add .backups/
+          git commit -m "backup: D1 snapshot ${{ env.BACKUP_DATE }} (${{ env.BACKUP_BYTES }} bytes)"
+          git push -u origin "$BRANCH"
+
+      - name: Prune backups older than 30 days
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOUDFLARE_API_TOKEN:  ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          # List backup/d1/* branches, delete any older than 30 days by date.
+          CUTOFF=$(date -u -d '30 days ago' +%Y-%m-%d)
+          git ls-remote --heads origin 'backup/d1/*' | awk '{print $2}' | sed 's|refs/heads/||' | while read branch; do
+            date=${branch#backup/d1/}
+            if [ "$date" \< "$CUTOFF" ]; then
+              echo "pruning $branch"
+              git push origin --delete "$branch" || true
+            fi
+          done

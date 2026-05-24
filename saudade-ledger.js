@@ -261,6 +261,22 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 }
 .sdd-ld-entry .rm:hover { color: var(--rust); border-color: var(--rust); }
 
+/* Legal disclaimer above the add form — small caps, bone-d weight,
+   not a wall of text but unmissable. */
+.sdd-ld-disclaimer {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: var(--tr-mono-meta);
+    color: var(--bone-d);
+    margin: 0 0 16px;
+    padding: 10px 12px;
+    border-left: 1px solid var(--rule-2, var(--rule));
+    border-right: 1px solid var(--rule-2, var(--rule));
+    background: var(--paper-d);
+}
+
 /* 인라인 폼 (모달 X) — ADD A NEW ENTRY */
 .sdd-ld-form {
     display: grid;
@@ -727,7 +743,18 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             `<option value="${cat.type}">${escapeHtml(cat.label)}</option>`
         ).join('');
 
+        // Legal disclaimer — Ledger holds visa/tax dates by jurisdiction.
+        // Surfacing the "not advice" line is cheap and material.
+        const disclaimer = T({
+            en: 'Informational only. Not legal, immigration, or tax advice. Consult a licensed adviser before acting on any date shown.',
+            ko: '정보 제공 목적입니다. 법률·이민·세무 자문이 아닙니다. 표시된 날짜에 따라 행동하기 전에 공인 전문가와 상담하십시오.',
+            ja: '情報提供のみ。法律・移民・税務に関する助言ではありません。表示された日付に基づいて行動する前に資格を持つ専門家にご相談ください。',
+            pt: 'Apenas informativo. Não constitui aconselhamento jurídico, de imigração ou fiscal. Consulte um profissional licenciado antes de agir com base em qualquer data apresentada.',
+            es: 'Solo informativo. No constituye asesoramiento legal, migratorio ni fiscal. Consulte a un profesional autorizado antes de actuar según cualquier fecha mostrada.'
+        });
+
         const formHtml = `
+            <p class="sdd-ld-disclaimer">${escapeHtml(disclaimer)}</p>
             <form class="sdd-ld-form" data-add-entry>
                 <div>
                     <label for="ld-cat">${escapeHtml(T({ en: 'Category', ko: '분류', ja: '区分', pt: 'Categoria', es: 'Categoría' }))}</label>
