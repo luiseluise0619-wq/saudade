@@ -1347,5 +1347,81 @@
     "amenities": "WIFI",
     "notes_kr": "이색 토스트 메뉴와 함께 가볍게 오전에 모바일 업무 체크인",
     "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "nozy-coffee-setagaya-tokyo",
+    "name": "Nozy Coffee Setagaya",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-32-10 Setagaya",
+    "address": "Mishuku 2-chome-32-10 Setagaya",
+    "rating": 4.7,
+    "google_url": "https://maps.app.goo.gl/x7f74H1B9Q4y4t4g7",
+    "google_maps_search_url": "https://www.google.com/maps/search/Nozy%20Coffee%20Setagaya%20Tokyo%20Mishuku%202-chome-32-10%20Setagaya",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "노지 커피 세타가야",
+      "미시쿠 2-초메 32-10"
+    ],
+    "amenities": "WIFI",
+    "notes_kr": "로컬 주민들의 깊은 신뢰를 받는 클래식 매장으로 정숙한 분위기 유지",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "arise-coffee-entangle-tokyo",
+    "name": "Arise Coffee Entangle",
+    "city": "Tokyo",
+    "neighborhood": "1-chome-13-8 Koto",
+    "address": "Hirano 1-chome-13-8 Koto",
+    "rating": 4.8,
+    "google_url": "https://maps.app.goo.gl/j239w9Q691m2223b7",
+    "google_maps_search_url": "https://www.google.com/maps/search/Arise%20Coffee%20Entangle%20Tokyo%20Hirano%201-chome-13-8%20Koto",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "아리스 커피 엔탱글",
+      "도쿄 카페"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "기요스미 시라카와의 숨은 강자로 주민들과 단조로운 기분 속 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "wired-tokyo-1999-tokyo",
+    "name": "Wired Tokyo 1999",
+    "city": "Tokyo",
+    "neighborhood": "21-6 Shibuya",
+    "address": "Udagawacho 21-6 Shibuya",
+    "rating": 4.7,
+    "google_url": "https://maps.app.goo.gl/35u49F7N9128pT4u6",
+    "google_maps_search_url": "https://www.google.com/maps/search/Wired%20Tokyo%201999%20Tokyo%20Udagawacho%2021-6%20Shibuya",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "시부야 명소",
+      "카페 겸 서점"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "시부야 츠타야 상위층 위치로 서적들에 둘러싸여 풍부한 와이파이 속 가속 작업",
+    "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "little-toy-box-tokyo",
+    "name": "Little Toy Box",
+    "city": "Tokyo",
+    "neighborhood": "2-chome-18-1 Setagaya",
+    "address": "Komazawa 2-chome-18-1 Setagaya",
+    "rating": 4.7,
+    "google_url": "https://maps.app.goo.gl/j422zY693hJ9222n7",
+    "google_maps_search_url": "https://www.google.com/maps/search/Little%20Toy%20Box%20Tokyo%20Komazawa%202-chome-18-1%20Setagaya",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "리틀 토이 박스",
+      "도쿄 세타가야 카페"
+    ],
+    "amenities": "OUTLET",
+    "notes_kr": "소박하고 미니멀한 화이트 정체성으로 편안하게 노트북 처리 가능",
+    "source": "gemini-2.5-flash-grounded"
   }
 ]
