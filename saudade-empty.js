@@ -160,22 +160,31 @@
                     note: ''
                 };
             case 'listening':
+                // When the room is entirely empty (no tracks loaded at all),
+                // we tell the truth: the editor hasn't selected any yet.
+                // §3 — list only what we've heard carefully.
                 return {
                     eyebrow: L({ en: 'THE LISTENING ROOM.', ko: '청취실.', ja: 'リスニングルーム。', pt: 'A SALA DE ESCUTA.', es: 'LA SALA DE ESCUCHA.' }),
-                    headline: L({ en: 'Choose a city to listen.', ko: '들을 도시를 고르라.', ja: '聞く都市を選ぶ。', pt: 'Escolha uma cidade para ouvir.', es: 'Elija una ciudad para escuchar.' }),
+                    headline: L({
+                        en: 'Awaiting the first track.',
+                        ko: '첫 트랙을 기다린다.',
+                        ja: '最初のトラックを待つ。',
+                        pt: 'À espera da primeira faixa.',
+                        es: 'A la espera de la primera pista.'
+                    }),
                     lede: L({
-                        en: 'Field-recorded. One ambient track per city. <em>Headphones recommended; not required.</em>',
-                        ko: '현장 녹음. 도시당 한 트랙. <em>이어폰 권장; 필수 아님.</em>',
-                        ja: '現場録音。都市につき一トラック。<em>イヤホン推奨。必須ではない。</em>',
-                        pt: 'Gravado no terreno. Uma faixa por cidade. <em>Auscultadores recomendados; não obrigatórios.</em>',
-                        es: 'Grabado en el lugar. Una pista por ciudad. <em>Auriculares recomendados; no obligatorios.</em>'
+                        en: 'Field recordings are added one at a time — listened to in full before they are filed. <em>The room is empty until the editor presses play and means it.</em>',
+                        ko: '현장 녹음은 한 트랙씩 추가한다 — 편집장이 전체를 들어 본 뒤에야 게재한다. <em>편집장이 재생을 누르고 동의하기 전까지 방은 비어 있다.</em>',
+                        ja: 'フィールド録音は一トラックずつ追加する — 編集長が全編を聴いた上で掲載する。<em>編集長が再生を押し、納得するまで部屋は空のまま。</em>',
+                        pt: 'As gravações de campo são adicionadas uma a uma — ouvidas na íntegra antes de serem arquivadas. <em>A sala fica vazia até o editor carregar em play e concordar.</em>',
+                        es: 'Las grabaciones de campo se añaden de una en una — escuchadas por completo antes de archivarse. <em>La sala queda vacía hasta que el editor pulsa reproducir y lo aprueba.</em>'
                     }),
                     note: L({
-                        en: 'Every track declares its licence and credits. CONTENT-LICENSE.md §3.',
+                        en: 'Every track will declare its licence and credits. CONTENT-LICENSE.md §3.',
                         ko: '모든 트랙은 라이선스와 크레딧을 명시한다. CONTENT-LICENSE.md §3.',
-                        ja: '全トラックがライセンスとクレジットを明記。CONTENT-LICENSE.md §3。',
-                        pt: 'Cada faixa declara a sua licença e créditos. CONTENT-LICENSE.md §3.',
-                        es: 'Cada pista declara su licencia y créditos. CONTENT-LICENSE.md §3.'
+                        ja: '全トラックがライセンスとクレジットを明記する。CONTENT-LICENSE.md §3。',
+                        pt: 'Cada faixa declarará a sua licença e créditos. CONTENT-LICENSE.md §3.',
+                        es: 'Cada pista declarará su licencia y créditos. CONTENT-LICENSE.md §3.'
                     })
                 };
             default:
