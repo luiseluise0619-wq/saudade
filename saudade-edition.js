@@ -23,6 +23,56 @@
         es: { name: 'Español',   loading: 'Abriendo la edición en español…' }
     };
 
+    // SEO + OG meta per edition. index.html ships a static EN/KO mix
+    // (og:locale was hardcoded ko_KR even on EN visits). syncMetaTags()
+    // rewrites the <meta> tags after applyEdition() so each edition's
+    // share card matches what readers actually see.
+    const META_SEO = {
+        en: {
+            locale: 'en_US',
+            title:  'Saudade — a slow newspaper for digital nomads',
+            desc:   'Visa ledger, café atlas, dispatches, listening room. Quiet by design.'
+        },
+        ko: {
+            locale: 'ko_KR',
+            title:  '사우다지 — 디지털 노마드를 위한 느린 신문',
+            desc:   '비자 장부 · 카페 지도 · 통신 · 청취실. 조용히, 천천히.'
+        },
+        ja: {
+            locale: 'ja_JP',
+            title:  'サウダージ — デジタルノマドのための、ゆっくりとした新聞',
+            desc:   'ビザ帳簿・カフェ地図・通信・リスニングルーム。静かに、ゆっくりと。'
+        },
+        pt: {
+            locale: 'pt_PT',
+            title:  'Saudade — um jornal lento para nómadas digitais',
+            desc:   'Livro-razão de vistos, atlas de cafés, despachos, sala de escuta. Calmo por escolha.'
+        },
+        es: {
+            locale: 'es_ES',
+            title:  'Saudade — un periódico lento para nómadas digitales',
+            desc:   'Libro mayor de visas, atlas de cafés, despachos, sala de escucha. Tranquilo por elección.'
+        }
+    };
+
+    function setMeta(selector, attr, value) {
+        const el = document.head.querySelector(selector);
+        if (el) el.setAttribute(attr, value);
+    }
+    function syncMetaTags(ed) {
+        const m = META_SEO[ed] || META_SEO.en;
+        // <title> + description
+        document.title = m.title;
+        setMeta('meta[name="description"]', 'content', m.desc);
+        // OG
+        setMeta('meta[property="og:title"]',       'content', m.title);
+        setMeta('meta[property="og:description"]', 'content', m.desc);
+        setMeta('meta[property="og:locale"]',      'content', m.locale);
+        // Twitter
+        setMeta('meta[name="twitter:title"]',       'content', m.title);
+        setMeta('meta[name="twitter:description"]', 'content', m.desc);
+    }
+
     let _config = null;     // editions.json once loaded
     let _configP = null;    // promise
 
@@ -101,6 +151,7 @@
         document.documentElement.setAttribute('lang', ed);
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        syncMetaTags(ed);
     }
 
     function showLoadingFlash(toEd) {
