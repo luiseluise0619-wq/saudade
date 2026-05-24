@@ -409,3 +409,127 @@ body.edition-en .dock-btn-label, body.edition-pt .dock-btn-label, body.edition-e
 }
 body.edition-ko .dock-btn-label { letter-spacing: 0.16em; }
 body.edition-ja .dock-btn-label { letter-spacing: 0.28em; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   4th design pass — quote marks, link affordance, caption rhythm,
+   section-mark numerals. Each edition takes typographic stance from
+   its own print tradition; constitution §1 (ONE accent) still holds.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Quote marks — each edition opens / closes by its own convention.
+   The HTML uses U+201C/D (curly) by default; we override via CSS so
+   the markup stays identical across editions. */
+body.edition-en .sdd-disp-quote,
+body.edition-en blockquote { quotes: '\201C' '\201D' '\2018' '\2019'; }   /* "curly" 'single' */
+body.edition-pt .sdd-disp-quote,
+body.edition-pt blockquote { quotes: '\00AB' '\00BB' '\2039' '\203A'; }   /* «guillemets» */
+body.edition-es .sdd-disp-quote,
+body.edition-es blockquote { quotes: '\00AB' '\00BB' '\201C' '\201D'; }   /* «with curly fallback» */
+body.edition-ko .sdd-disp-quote,
+body.edition-ko blockquote { quotes: '\300C' '\300D' '\300E' '\300F'; }   /* 「낫표」 */
+body.edition-ja .sdd-disp-quote,
+body.edition-ja blockquote { quotes: '\300C' '\300D' '\300E' '\300F'; }   /* 「鉤括弧」 */
+
+/* For sdd-disp-quote that hard-codes &ldquo;/&rdquo; in markup, swap to
+   pseudo-element marks per edition. Hide the inline glyphs only when
+   the edition's pseudo-element is active. */
+body.edition-ko .sdd-disp-quote,
+body.edition-ja .sdd-disp-quote,
+body.edition-pt .sdd-disp-quote,
+body.edition-es .sdd-disp-quote {
+    quotes: inherit;
+}
+body.edition-ko .sdd-disp-quote::before,
+body.edition-ja .sdd-disp-quote::before { content: '\300C'; color: var(--accent); margin-right: 0.1em; }
+body.edition-ko .sdd-disp-quote::after,
+body.edition-ja .sdd-disp-quote::after  { content: '\300D'; color: var(--accent); margin-left: 0.1em; }
+body.edition-pt .sdd-disp-quote::before { content: '\00AB'; color: var(--accent); margin-right: 0.15em; }
+body.edition-pt .sdd-disp-quote::after  { content: '\00BB'; color: var(--accent); margin-left: 0.15em; }
+body.edition-es .sdd-disp-quote::before { content: '\00AB'; color: var(--accent); margin-right: 0.15em; }
+body.edition-es .sdd-disp-quote::after  { content: '\00BB'; color: var(--accent); margin-left: 0.15em; }
+
+/* Link affordance — each edition picks its own underline character.
+   EN: hairline. KO/JA: 0.5px solid under the baseline (CJK reads cleaner
+   without an underline crossing diacritics). PT: dotted. ES: 1.5px. */
+body.edition-en a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]) {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 2px;
+}
+body.edition-ko a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]),
+body.edition-ja a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]) {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 3px;
+}
+body.edition-pt a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]) {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 2px;
+}
+body.edition-es a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]) {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--accent);
+}
+
+/* Caption alignment — EN/PT/ES centered (Latin tradition);
+   KO/JA right-aligned (CJK column tradition).
+   Applies to dispatches lede small-print and atlas footer. */
+body.edition-en .sdd-disp-meta,
+body.edition-pt .sdd-disp-meta,
+body.edition-es .sdd-disp-meta { text-align: left; }
+body.edition-ko .sdd-disp-meta,
+body.edition-ja .sdd-disp-meta { text-align: right; }
+
+/* Dispatch numerals — EN uses Arabic with tabular figures, KO arabic
+   too but old-style figures for hangul reading rhythm, JA prefers
+   monospaced figures so 全角 / 半角 don't collide. PT/ES = Arabic
+   with old-style proportional. */
+body.edition-en .sdd-disp-num { font-feature-settings: "tnum", "lnum"; }
+body.edition-ko .sdd-disp-num { font-feature-settings: "tnum", "onum"; }
+body.edition-ja .sdd-disp-num { font-feature-settings: "tnum", "lnum"; letter-spacing: 0.06em; }
+body.edition-pt .sdd-disp-num { font-feature-settings: "pnum", "onum"; }
+body.edition-es .sdd-disp-num { font-feature-settings: "pnum", "onum"; }
+
+/* Body text justification — Latin justifies, CJK left-aligns
+   (CJK justification needs full kashida-like tracking which the
+   browser implements poorly; left-align reads better). */
+body.edition-en .sdd-disp-body p,
+body.edition-pt .sdd-disp-body p,
+body.edition-es .sdd-disp-body p { text-align: justify; hyphens: auto; }
+body.edition-ko .sdd-disp-body p,
+body.edition-ja .sdd-disp-body p { text-align: left; }
+
+/* Selection color — picks up the edition accent so the highlight
+   feels native to the magazine, not the browser default blue. */
+body.edition-en ::selection { background: rgba(43, 90, 60, .22); }    /* sage green */
+body.edition-ko ::selection { background: rgba(120, 36, 32, .22); }   /* dansaek red */
+body.edition-ja ::selection { background: rgba(178, 60, 44, .22); }   /* 朱 vermilion */
+body.edition-pt ::selection { background: rgba(46, 90, 132, .22); }   /* azulejo blue */
+body.edition-es ::selection { background: rgba(140, 30, 30, .25); }   /* sangre */
+
+/* Focus ring — same accent, edition-aware thickness. ES gets a thicker
+   focus ring (matches its bolder rule weight from §3 pass). */
+body.edition-en *:focus-visible,
+body.edition-ko *:focus-visible,
+body.edition-ja *:focus-visible,
+body.edition-pt *:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 2px; }
+body.edition-es *:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Heading kerning — Latin tight, CJK looser. Falls on dispatch + atlas
+   + cover headings. */
+body.edition-en h1, body.edition-en h2 { letter-spacing: -0.018em; }
+body.edition-pt h1, body.edition-pt h2 { letter-spacing: -0.012em; }
+body.edition-es h1, body.edition-es h2 { letter-spacing: -0.005em; }
+body.edition-ko h1, body.edition-ko h2 { letter-spacing: -0.025em; }   /* Pretendard tight */
+body.edition-ja h1, body.edition-ja h2 { letter-spacing: 0;          } /* Noto JP neutral */
+
+/* Page-mark dot — appears between section number and body. PT/ES use
+   middot, KO uses 가운뎃점, JA uses 中黒, EN uses bullet. Mostly aesthetic. */
+body.edition-en .sdd-mark::after { content: ' \2022'; opacity: 0.5; margin-left: 0.2em; }
+body.edition-pt .sdd-mark::after,
+body.edition-es .sdd-mark::after { content: ' \00B7'; opacity: 0.6; margin-left: 0.25em; }
+body.edition-ko .sdd-mark::after { content: ' \30FB'; opacity: 0.6; margin-left: 0.2em; }
+body.edition-ja .sdd-mark::after { content: ' \30FB'; opacity: 0.55; margin-left: 0.15em; }
