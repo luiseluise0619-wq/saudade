@@ -723,7 +723,13 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             const rows = recordsOf(cat.type);
             const cardsHtml = rows.length
                 ? rows.map(r => recordCard(r, cat)).join('')
-                : '<p class="sdd-ld-empty">No entries yet. Add below.</p>';
+                : `<p class="sdd-ld-empty">${escapeHtml(T({
+                    en: 'No entries yet. Example: KR · visa-free 90 days, entered 2026-04-01.',
+                    ko: '아직 항목이 없다. 예: KR · 무비자 90일, 입국 2026-04-01.',
+                    ja: 'まだ項目がない。例：KR・ビザなし90日、入国 2026-04-01。',
+                    pt: 'Sem registos. Exemplo: KR · isenção de visto 90 dias, entrada 2026-04-01.',
+                    es: 'Sin registros. Ejemplo: KR · sin visa 90 días, entrada 2026-04-01.'
+                }))}</p>`;
             return `
                 <section class="sdd-ld-cat" data-cat="${cat.type}">
                     <header class="sdd-ld-cat-head">
