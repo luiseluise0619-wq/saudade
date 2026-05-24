@@ -17,13 +17,14 @@
         const ed = currentEdition();
         if (_cache[ed]) return Promise.resolve(_cache[ed]);
 
-        // v8 §02 — D1 활성 + signed-in 사용자면 worker /dispatches/today fetch.
-        // (Following 도시 user_id 기반 매칭 → fresh 데이터). 실패 시 static JSON fallback.
+        // v8 §02 — Worker /dispatches/today 가 fresh D1 데이터 반환.
+        // Signed-in 사용자면 Following 도시로 필터, 익명이면 edition 전체.
+        // 어느 쪽이든 static JSON 보다 신선해서 둘 다 시도. 실패 시 static fallback.
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         const user = window.SAUDADE_AUTH?.getUser?.();
-        if (base && user && user.id) {
+        if (base) {
             const wUrl = base + '/dispatches/today?edition=' + encodeURIComponent(ed) +
-                                          '&user_id=' + encodeURIComponent(user.id);
+                          (user && user.id ? '&user_id=' + encodeURIComponent(user.id) : '');
             return fetch(wUrl, { cache: 'no-cache', credentials: 'omit' })
                 .then(r => r.ok ? r.json() : null)
                 .then(j => {
