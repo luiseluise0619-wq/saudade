@@ -99,6 +99,20 @@ function exists(rel) { return fs.existsSync(path.join(ROOT, rel)); }
     } catch (e) {
         record('BLOCKER', 'tests', 'node --test', false, 'failed');
     }
+    try {
+        execSync('npx tsc --noEmit -p .', { cwd: ROOT, stdio: 'pipe' });
+        record('WARN', 'tests', 'tsc typecheck', true, 'clean');
+    } catch (e) {
+        record('WARN', 'tests', 'tsc typecheck', false,
+            'failed (see `npm run typecheck`)');
+    }
+    try {
+        execSync('npx eslint .', { cwd: ROOT, stdio: 'pipe' });
+        record('WARN', 'tests', 'eslint (errors only)', true, 'clean');
+    } catch (e) {
+        record('WARN', 'tests', 'eslint (errors only)', false,
+            'errors present (see `npm run lint`)');
+    }
 })();
 
 // ─── BLOCKER: content validation passes ────────────────────────────────
