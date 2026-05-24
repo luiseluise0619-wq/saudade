@@ -635,6 +635,7 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             ? items.filter(c =>
                 (c.name || '').toLowerCase().includes(q) ||
                 (c.neighborhood || '').toLowerCase().includes(q) ||
+                (c.city || '').toLowerCase().includes(q) ||
                 (c.amenities || '').toLowerCase().includes(q)
               )
             : items;
@@ -654,11 +655,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             es: `${visited} de ${total} visitados`
         });
         const searchPh = T({
-            en: 'SEARCH NAME · NEIGHBORHOOD · AMENITY',
-            ko: '이름 · 동네 · 편의 검색',
-            ja: '名前 · 街 · 設備で検索',
-            pt: 'BUSCAR NOME · BAIRRO · COMODIDADE',
-            es: 'BUSCAR NOMBRE · BARRIO · COMODIDAD'
+            en: 'SEARCH NAME · CITY · NEIGHBORHOOD · AMENITY',
+            ko: '이름 · 도시 · 동네 · 편의 검색',
+            ja: '名前 · 都市 · 街 · 設備で検索',
+            pt: 'BUSCAR NOME · CIDADE · BAIRRO · COMODIDADE',
+            es: 'BUSCAR NOMBRE · CIUDAD · BARRIO · COMODIDAD'
         });
         // v7 §8.7 PR1 — LIST/MAP 뷰 토글 (5 에디션). 두 라벨 모두 노출, 현재 모드 강조.
         const _curView = root.getAttribute('data-view') || 'list';
