@@ -1,0 +1,57 @@
+name: Sunday digest
+
+# Weekly email retention loop — constitution-compatible:
+# explicit opt-in, weekly cadence, one-click unsubscribe in every email.
+# Runs on GitHub Actions (not Worker cron) to keep CF cron slots free.
+#
+# Saturday 21:00 UTC = Sunday 06:00 KST — aligns with §9.5 daily filing time
+# in the editor's primary timezone. Other editions land Sunday morning local
+# (JA close, PT/ES previous evening — accepted trade-off for single send).
+#
+# Founder setup once:
+#   1. wrangler secret put EDITOR_TOKEN  (any 32+ char random hex)
+#      cf:        echo -n "$(openssl rand -hex 32)" | wrangler secret put EDITOR_TOKEN
+#   2. wrangler secret put RESEND_API_KEY  (from resend.com)
+#   3. wrangler d1 execute saudade_db --remote --file=schema/digest_subscribers.sql
+#   4. GitHub → Settings → Secrets and variables → Actions → New repository secret
+#      DIGEST_SEND_TOKEN  (same value as EDITOR_TOKEN above)
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "Edition (en/ko/ja/pt/es) or blank for all"
+        required: false
+        default: ""
+      dry:
+        description: "Dry run? (no email sent, just count)"
+        required: false
+        default: "false"
+  schedule:
+    - cron: '0 21 * * 6'   # Saturday 21:00 UTC = Sunday 06:00 KST
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Call /digest/send on the Worker
+        env:
+          DIGEST_SEND_TOKEN: ${{ secrets.DIGEST_SEND_TOKEN }}
+        run: |
+          if [ -z "$DIGEST_SEND_TOKEN" ]; then
+            echo "::error::DIGEST_SEND_TOKEN secret not set."
+            exit 1
+          fi
+          QS=""
+          if [ -n "${{ inputs.edition }}" ]; then QS="?edition=${{ inputs.edition }}"; fi
+          if [ "${{ inputs.dry }}" = "true" ]; then
+            if [ -z "$QS" ]; then QS="?dry=1"; else QS="$QS&dry=1"; fi
+          fi
+          RESP=$(curl -sS -w '\nHTTP:%{http_code}\n' \
+            -X POST \
+            -H "Authorization: Bearer $DIGEST_SEND_TOKEN" \
+            "https://saudade.absbjj1230.workers.dev/digest/send$QS")
+          echo "$RESP"
+          # Fail the run if HTTP code != 200
+          echo "$RESP" | grep -q 'HTTP:200' || (echo '::error::send failed'; exit 1)
