@@ -379,6 +379,36 @@ body.section-active[data-section="02"] .sdd-atlas { display: block; }
     color: var(--ink);
     border-color: var(--ink);
 }
+.sdd-atlas-city {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft, var(--ink));
+    padding-left: 4px;
+    border-left: 0.5px solid var(--rule);
+    margin-left: 4px;
+}
+.sdd-atlas-extlink {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 3px 6px;
+    border: 0.5px solid var(--rule);
+    background: transparent;
+    text-decoration: none;
+    margin-left: auto;
+}
+.sdd-atlas-extlink:hover,
+.sdd-atlas-extlink:focus-visible {
+    color: var(--jade);
+    border-color: var(--jade);
+    outline: none;
+}
 
 .sdd-atlas-foot {
     margin-top: clamp(40px, 6vw, 80px);
@@ -697,22 +727,32 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                          onerror="this.remove()" />
                 </figure>
             ` : '';
+            const ratingHtml = (typeof c.rating === 'number' && c.rating > 0)
+                ? `★ ${c.rating.toFixed(1)}`
+                : distKm;
+            const cityChip = c.city
+                ? ` · <span class="sdd-atlas-city">${escapeHtml(c.city)}</span>`
+                : '';
+            const mapsLink = c.google_url
+                ? `<a class="sdd-atlas-extlink" href="${escapeHtml(c.google_url)}" target="_blank" rel="noopener" aria-label="Open in Google Maps">↗ MAPS</a>`
+                : '';
             return `
                 <article class="sdd-atlas-item" data-cafe-id="${c.id}" tabindex="0" role="button"
                          data-has-photo="${photoSrc ? '1' : '0'}"
-                         aria-label="${c.name}, ${c.neighborhood || ''}, ${distKm}">
+                         aria-label="${escapeHtml(c.name)}, ${escapeHtml(c.neighborhood || '')}, ${distKm}">
                     <span class="sdd-atlas-badge ${status === 'JADE' ? 'jade' : 'bone'}" aria-hidden="true"></span>
                     <div class="sdd-atlas-head-line">
-                        <span class="sdd-atlas-name">${lineNum} · ${c.name}</span>
-                        <span class="sdd-atlas-neigh">${c.neighborhood || ''}</span>
+                        <span class="sdd-atlas-name">${lineNum} · ${escapeHtml(c.name)}</span>
+                        <span class="sdd-atlas-neigh">${escapeHtml(c.neighborhood || '')}${cityChip}</span>
                     </div>
-                    <span class="sdd-atlas-meta">${distKm}</span>
+                    <span class="sdd-atlas-meta">${ratingHtml}</span>
                     <div class="sdd-atlas-body">
                         ${lines.map(l => `<p>${escapeHtml(l)}</p>`).join('')}
                     </div>
                     <div class="sdd-atlas-amen">
                         <span class="sdd-atlas-status ${status === 'JADE' ? 'is-jade' : ''}">${escapeHtml(status)}</span>
                         ${amenityChips}
+                        ${mapsLink}
                     </div>
                     ${photoHtml}
                 </article>
