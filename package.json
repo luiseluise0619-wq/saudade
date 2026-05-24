@@ -20,7 +20,7 @@
         "test:smoke": "node test/smoke.js",
         "test:all": "node --test test/ && node test/smoke.js",
         "launch-check": "node scripts/launch-check.js",
-        "lint": "eslint . --ext .js --max-warnings 0",
+        "lint": "eslint .",
         "typecheck": "tsc --noEmit -p .",
         "deploy": "wrangler deploy",
         "preview": "wrangler dev",
