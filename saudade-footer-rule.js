@@ -76,9 +76,39 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         document.head.appendChild(s);
     }
 
+    const FOOTER_COPY = {
+        en: { archive: 'ARCHIVE',  desks: 'DESKS',     letter: 'LETTER',
+              archT:   'every issue we have filed',
+              desksT:  'stringers writing under the saudade masthead',
+              letterT: 'write a letter to the editor',
+              tag:     'saudade · a longing for what cannot return' },
+        ko: { archive: '발행 기록',  desks: '특파원',   letter: '편지',
+              archT:   '발행한 모든 호',
+              desksT:  '사우다지 이름으로 글 쓰는 특파원들',
+              letterT: '편집장에게 보내는 편지',
+              tag:     '사우다지 · 돌아갈 수 없는 것을 향한 그리움' },
+        ja: { archive: 'アーカイブ', desks: '特派員',  letter: '手紙',
+              archT:   'これまで発行した号',
+              desksT:  'サウダージ名義で書く特派員',
+              letterT: '編集長に宛てる手紙',
+              tag:     'サウダージ · 戻らないものへの想い' },
+        pt: { archive: 'ARQUIVO',   desks: 'MESAS',    letter: 'CARTA',
+              archT:   'todas as edições publicadas',
+              desksT:  'correspondentes que escrevem sob o nome saudade',
+              letterT: 'escrever uma carta ao editor',
+              tag:     'saudade · um anseio pelo que não pode voltar' },
+        es: { archive: 'ARCHIVO',   desks: 'MESAS',    letter: 'CARTA',
+              archT:   'todas las ediciones publicadas',
+              desksT:  'corresponsales que escriben bajo el nombre saudade',
+              letterT: 'escribir una carta al editor',
+              tag:     'saudade · un anhelo por lo que no puede volver' }
+    };
+
     function ensureFooter() {
         let f = document.getElementById('sddFooter');
         if (f) return f;
+        const ed = (window.state && window.state.lang) || 'en';
+        const c = FOOTER_COPY[ed] || FOOTER_COPY.en;
         f = document.createElement('footer');
         f.id = 'sddFooter';
         f.className = 'sdd-footer-rule';
@@ -88,11 +118,11 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
-                <a class="sdd-footer-link" href="/issues/" title="every issue we have filed">ARCHIVE</a>
-                <a class="sdd-footer-link" href="desks.html" title="stringers writing under the saudade masthead">DESKS</a>
-                <a class="sdd-footer-link" href="#letter" title="write a letter to the editor">LETTER</a>
+                <a class="sdd-footer-link" href="/issues/" title="${c.archT}">${c.archive}</a>
+                <a class="sdd-footer-link" href="desks.html" title="${c.desksT}">${c.desks}</a>
+                <a class="sdd-footer-link" href="#letter" title="${c.letterT}">${c.letter}</a>
                 <a class="sdd-footer-copy" href="etymology.html"
-                   title="saudade /sɐwˈðaðɨ/ — read the etymology">saudade · a longing for what cannot return</a>
+                   title="saudade /sɐwˈðaðɨ/">${c.tag}</a>
                 <span class="sdd-footer-issue">© 2026</span>
             </div>
         `;
