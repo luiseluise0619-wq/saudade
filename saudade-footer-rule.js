@@ -100,20 +100,30 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         return f;
     }
 
+    const COVER_LABEL = {
+        en: 'ISSUE COVER', ko: '표지', ja: '表紙', pt: 'CAPA', es: 'PORTADA'
+    };
+
     function update() {
         const f = ensureFooter();
         const sec = document.body.getAttribute('data-section');
+        const ed = (window.state && window.state.lang) || 'en';
         const SECTIONS = window.SAUDADE_MASTHEAD?.SECTIONS;
         if (sec && SECTIONS) {
             const matched = Object.values(SECTIONS).find(s => s.num === sec);
             if (matched) {
+                // PR #81 changed `matched.name` from a flat string to a
+                // {en,ko,ja,pt,es} map. This used to render "[object Object]".
+                const name = (matched.name && typeof matched.name === 'object')
+                    ? (matched.name[ed] || matched.name.en)
+                    : matched.name;
                 f.querySelector('.sdd-footer-page').textContent = matched.page + ' OF 12';
-                f.querySelector('.sdd-footer-section').textContent = '§ ' + matched.num + ' · ' + matched.name;
+                f.querySelector('.sdd-footer-section').textContent = '§ ' + matched.num + ' · ' + name;
                 return;
             }
         }
         f.querySelector('.sdd-footer-page').textContent = 'P. 01 OF 12';
-        f.querySelector('.sdd-footer-section').textContent = '§ 00 · ISSUE COVER';
+        f.querySelector('.sdd-footer-section').textContent = '§ 00 · ' + (COVER_LABEL[ed] || COVER_LABEL.en);
     }
 
     function init() {

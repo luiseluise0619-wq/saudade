@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v683')
+        return fetch('./data/listening.json?v=v684')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1431,13 +1431,22 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         } catch (e) {}
     }
 
+    const CTA_LABEL = {
+        en: 'LISTENING ROOM',
+        ko: '청취실',
+        ja: 'リスニングルーム',
+        pt: 'SALA DE ESCUTA',
+        es: 'SALA DE ESCUCHA'
+    };
+
     function ensureCoverCTA() {
         if (document.getElementById('sddCoverListenCta')) return;
+        const ed = (window.state && window.state.lang) || 'en';
         const btn = document.createElement('button');
         btn.id = 'sddCoverListenCta';
         btn.className = 'sdd-cover-listen-cta';
         btn.type = 'button';
-        btn.textContent = 'LISTENING ROOM';
+        btn.textContent = CTA_LABEL[ed] || CTA_LABEL.en;
         btn.addEventListener('click', () => open());
         document.body.appendChild(btn);
     }
