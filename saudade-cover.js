@@ -483,6 +483,21 @@ body.section-active .sdd-cover { display: none !important; }
     const TODAY_LABEL = {
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
+    // Cover nav — Section labels per edition. Each magazine should read
+    // in its own language; English placeholders on non-EN editions were
+    // a real i18n bug, not a design choice.
+    const NAV_LABEL_LEDGER = {
+        en: 'LEDGER',     ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO',  es: 'LIBRO MAYOR'
+    };
+    const NAV_LABEL_ATLAS = {
+        en: 'ATLAS',      ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'
+    };
+    const NAV_LABEL_DISPATCHES = {
+        en: 'DISPATCHES', ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'
+    };
+    const NAV_LABEL_DESK = {
+        en: 'THE DESK',   ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'
+    };
     const ISSUE_LEDE_5 = {
         en: 'Three cities, no schedule. Edited from $editorCity.',
         ko: '세 도시, 일정 없음. $editorCity에서 편집.',
@@ -626,10 +641,10 @@ body.section-active .sdd-cover { display: none !important; }
             </section>
 
             <nav class="sdd-cover-nav">
-                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>LEDGER</a>
-                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>ATLAS</a>
-                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
-                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
+                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>${escapeHtml(NAV_LABEL_LEDGER[ed] || NAV_LABEL_LEDGER.en)}</a>
+                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>${escapeHtml(NAV_LABEL_ATLAS[ed] || NAV_LABEL_ATLAS.en)}</a>
+                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>${escapeHtml(NAV_LABEL_DISPATCHES[ed] || NAV_LABEL_DISPATCHES.en)}</a>
+                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>${escapeHtml(NAV_LABEL_DESK[ed] || NAV_LABEL_DESK.en)}</a>
             </nav>
 
             <!-- v644 — direct path to the issue archive + per-issue PDF download.

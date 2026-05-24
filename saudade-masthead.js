@@ -11,11 +11,24 @@
     if (window.SAUDADE_MASTHEAD) return;
 
     // dock data-cat → § 정보 (Handoff v2 §4 — tz/trip 재매핑)
+    // 5 editions — each gets its own section name.
     const SECTIONS = {
-        visa: { num: '01', name: 'THE LEDGER',     ko: '레저',      page: 'P. 04' },
-        cafe: { num: '02', name: 'THE ATLAS',      ko: '아틀라스',   page: 'P. 08' },
-        tz:   { num: '03', name: 'DISPATCHES',     ko: '디스패치',   page: 'P. 13' },
-        trip: { num: '04', name: 'THE DESK',       ko: '데스크',     page: 'P. 18' }
+        visa: {
+            num: '01', page: 'P. 04',
+            name: { en: 'THE LEDGER',  ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO', es: 'LIBRO MAYOR' }
+        },
+        cafe: {
+            num: '02', page: 'P. 08',
+            name: { en: 'THE ATLAS',   ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'       }
+        },
+        tz: {
+            num: '03', page: 'P. 13',
+            name: { en: 'DISPATCHES',  ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'   }
+        },
+        trip: {
+            num: '04', page: 'P. 18',
+            name: { en: 'THE DESK',    ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'     }
+        }
     };
 
     function injectStyles() {
@@ -117,9 +130,9 @@ body.section-active::before { content: none !important; }
         const sec = SECTIONS[cat];
         if (!sec) return;
         const m = ensureMasthead();
-        const ko = window.state && window.state.lang === 'ko';
+        const ed = (window.state && window.state.lang) || 'en';
         m.querySelector('.sdd-mast-num').textContent  = '§ ' + sec.num;
-        m.querySelector('.sdd-mast-name').textContent = ko ? sec.ko : sec.name;
+        m.querySelector('.sdd-mast-name').textContent = sec.name[ed] || sec.name.en;
         m.querySelector('.sdd-mast-page').textContent = sec.page;
     }
 
