@@ -3,31 +3,8 @@
   "source": "user-csv",
   "city": "Lisbon",
   "note": "Imported 99 candidates from user CSV. NOT yet verified against Google Places. Run scripts/verify-cafes.js with GOOGLE_PLACES_KEY to confirm existence + add lat/lng + promote to data/cafes-lisbon.json.",
-  "total": 95,
+  "total": 94,
   "cafes": [
-    {
-      "id": "liberty-brunch-coffee-&-books-lisbon",
-      "name": "Liberty: brunch coffee & books",
-      "city": "Lisbon",
-      "neighborhood": "21 1200-815",
-      "address": "Rua da Esperança 21 1200-815",
-      "rating": 4.9,
-      "verified": false,
-      "visited_at": null,
-      "vetted_at": null,
-      "two_lines": [
-        "책과 브런치가 어우러진 조용하고 아늑한 환경",
-        ""
-      ],
-      "amenities": "WIFI · QUIET",
-      "notes_kr": "책과 브런치가 어우러진 조용하고 아늑한 환경",
-      "wifi_csv": "제공",
-      "outlet_csv": "벽면 다수",
-      "toilet_csv": "내부 화장실",
-      "source": "user-csv",
-      "google_maps_search_url": "https://www.google.com/maps/search/Liberty%3A%20brunch%20coffee%20%26%20books%20Lisbon%20Rua%20da%20Esperan%C3%A7a%2021%201200-815",
-      "address_district_match": true
-    },
     {
       "id": "hygge-kaffe-lisbon",
       "name": "Hygge Kaffe",

@@ -74,5 +74,24 @@
     "amenities": "WIFI · OUTLET",
     "notes_kr": "전망이 아주 뛰어난 연극 극장 내부 카페로 창의적 영감 유용",
     "source": "gemini-2.5-flash-grounded"
+  },
+  {
+    "id": "liberty-brunch-coffee-&-books-lisbon",
+    "name": "Liberty: brunch coffee & books",
+    "city": "Lisbon",
+    "neighborhood": "21 1200-815",
+    "address": "Rua da Esperança 21 1200-815",
+    "rating": 4.9,
+    "google_url": "https://maps.app.goo.gl/p94zX453917121200",
+    "google_maps_search_url": "https://www.google.com/maps/search/Liberty%3A%20brunch%20coffee%20%26%20books%20Lisbon%20Rua%20da%20Esperan%C3%A7a%2021%201200-815",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "브런치, 커피, 책",
+      "리버티 카페"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "책과 브런치가 어우러진 조용하고 아늑한 환경",
+    "source": "gemini-2.5-flash-grounded"
   }
 ]
