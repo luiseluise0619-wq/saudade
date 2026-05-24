@@ -1888,5 +1888,26 @@
     "amenities": "WIFI",
     "notes_kr": "충무로 힙한 을지로 감성 가득한 이색 케이크 카페로 트렌드 서칭용 작업",
     "source": "gemini-grounded"
+  },
+  {
+    "id": "coffee-temple-seoul",
+    "name": "커피템플 (Coffee Temple)",
+    "city": "Seoul",
+    "neighborhood": "마포구",
+    "address": "서울 마포구 월드컵북로54길 25",
+    "rating": 4.7,
+    "google_url": "https://maps.app.goo.gl/784f9X2a73f1j31u6",
+    "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
+    "vetted_at": "2026-05-24",
+    "visited_at": null,
+    "two_lines": [
+      "커피템플",
+      "서울 마포구 월드컵북로54길 25"
+    ],
+    "amenities": "WIFI · OUTLET · QUIET",
+    "notes_kr": "상암동 디지털미디어시티 내 위치하여 평일 작업에 적합함",
+    "source": "gemini-2.5-flash-grounded",
+    "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
+    "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025"
   }
 ]

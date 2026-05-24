@@ -3,33 +3,8 @@
   "source": "user-csv",
   "city": "Seoul",
   "note": "Imported 100 candidates from user CSV. NOT yet verified against Google Places. Run scripts/verify-cafes.js with GOOGLE_PLACES_KEY to confirm existence + add lat/lng + promote to data/cafes-seoul.json.",
-  "total": 10,
+  "total": 9,
   "cafes": [
-    {
-      "id": "coffee-temple-seoul",
-      "name": "커피템플 (Coffee Temple)",
-      "city": "Seoul",
-      "neighborhood": "마포구",
-      "address": "서울 마포구 월드컵북로54길 25",
-      "rating": 4.7,
-      "verified": false,
-      "visited_at": null,
-      "vetted_at": null,
-      "two_lines": [
-        "상암동 디지털미디어시티 내 위치하여 평일 작업에 적합함",
-        ""
-      ],
-      "amenities": "WIFI · OUTLET",
-      "notes_kr": "상암동 디지털미디어시티 내 위치하여 평일 작업에 적합함",
-      "wifi_csv": "제공",
-      "outlet_csv": "테이블 일부 콘센트",
-      "toilet_csv": "상가 화장실",
-      "source": "user-csv",
-      "google_maps_search_url": "https://www.google.com/maps/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20Seoul%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
-      "kakao_search_url": "https://map.kakao.com/?q=%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
-      "naver_search_url": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%ED%85%9C%ED%94%8C%20(Coffee%20Temple)%20%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%B6%81%EB%A1%9C54%EA%B8%B8%2025",
-      "address_district_match": true
-    },
     {
       "id": "relieve-seoul",
       "name": "릴리브 (Relieve)",
