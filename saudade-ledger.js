@@ -730,32 +730,32 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         const formHtml = `
             <form class="sdd-ld-form" data-add-entry>
                 <div>
-                    <label for="ld-cat">Category</label>
+                    <label for="ld-cat">${escapeHtml(T({ en: 'Category', ko: '분류', ja: '区分', pt: 'Categoria', es: 'Categoría' }))}</label>
                     <select id="ld-cat" name="cat" required>
                         ${typeOptions}
                     </select>
                 </div>
                 <div>
-                    <label for="ld-iso">Country</label>
+                    <label for="ld-iso">${escapeHtml(T({ en: 'Country', ko: '국가', ja: '国', pt: 'País', es: 'País' }))}</label>
                     <input type="text" id="ld-iso" name="iso" placeholder="KR" maxlength="3" required />
                 </div>
                 <div>
-                    <label for="ld-type">Sub-type</label>
+                    <label for="ld-type">${escapeHtml(T({ en: 'Sub-type', ko: '세부 유형', ja: '種別', pt: 'Subtipo', es: 'Subtipo' }))}</label>
                     <select id="ld-type" name="type" required>
                         ${VISA_TYPES.map(t => `<option value="${t.code}" data-days="${t.days}">${t.label}</option>`).join('')}
                     </select>
                 </div>
                 <div>
-                    <label for="ld-entered">Entered</label>
+                    <label for="ld-entered">${escapeHtml(T({ en: 'Entered', ko: '입국일', ja: '入国日', pt: 'Entrada', es: 'Entrada' }))}</label>
                     <input type="date" id="ld-entered" name="entered" value="${today}" required />
                 </div>
                 <div data-expiry-wrap>
-                    <label for="ld-expiry">Expiry</label>
+                    <label for="ld-expiry">${escapeHtml(T({ en: 'Expiry', ko: '만료일', ja: '満了日', pt: 'Validade', es: 'Caducidad' }))}</label>
                     <input type="date" id="ld-expiry" name="expiry" />
                 </div>
                 <div>
                     <label>&nbsp;</label>
-                    <button type="submit">ADD</button>
+                    <button type="submit">${escapeHtml(T({ en: 'ADD', ko: '추가', ja: '追加', pt: 'ADICIONAR', es: 'AÑADIR' }))}</button>
                 </div>
             </form>
         `;
