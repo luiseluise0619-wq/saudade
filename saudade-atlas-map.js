@@ -30,6 +30,8 @@
     let _map = null;
     let _ml  = null;
     let _loadPromise = null;
+    let _markers = [];
+    let _noticeEl = null;
 
     // unpkg CDN — 키 X, 무료. 버전 핀.
     const ML_VERSION = '4.7.1';
@@ -252,6 +254,75 @@
     text-transform: uppercase;
 }
 
+/* 좌표 데이터 부재 안내 — 지도는 뜨지만 마커 0개일 때.
+   잡지 톤 카드. 지도 위에 떠서 사용자가 '왜 비었나' 혼란 막음. */
+.sdd-atlas-map-notice {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    max-width: 360px;
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    padding: 12px 14px;
+    z-index: 5;
+    pointer-events: none;
+}
+.sdd-atlas-map-notice__h {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-mast);
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 4px;
+}
+.sdd-atlas-map-notice__p {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: var(--tr-mono-meta);
+    color: var(--bone-d);
+    margin: 0;
+}
+
+/* 카페 마커 — 종이 톤 점. JADE (visited) vs BONE (vetted) 구분. */
+.sdd-atlas-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .12s ease;
+}
+.sdd-atlas-marker.is-jade { background: var(--jade); border-color: var(--jade); }
+.sdd-atlas-marker:hover   { transform: scale(1.5); }
+
+/* MapLibre popup 잡지 톤 재스타일 */
+.sdd-atlas-map .maplibregl-popup-content {
+    background: var(--paper);
+    border: 0.5px solid var(--rule);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: var(--tr-mono-meta);
+    color: var(--ink);
+    text-transform: uppercase;
+}
+.sdd-atlas-map .maplibregl-popup-tip { display: none; }
+.sdd-atlas-map .maplibregl-popup-close-button {
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: 2px 6px;
+}
+
 @media (max-width: 768px) {
     .sdd-atlas-map { height: calc(100vh - 200px); }
     /* 모바일은 핀치 줌 우선 — 컨트롤 제거로 화면 정리 (v7 검토 정정) */
@@ -307,6 +378,84 @@
 
     function getMap() { return _map; }
 
+    function clearMarkers() {
+        _markers.forEach(m => { try { m.remove(); } catch (e) {} });
+        _markers = [];
+    }
+
+    function clearNotice() {
+        if (_noticeEl && _noticeEl.parentNode) {
+            _noticeEl.parentNode.removeChild(_noticeEl);
+        }
+        _noticeEl = null;
+    }
+
+    function showNotice(container, lang) {
+        clearNotice();
+        if (!container) return;
+        const COPY = {
+            en: { h: 'Coordinates pending.', p: 'Cafés below are vetted; map coordinates land in the next data refresh.' },
+            ko: { h: '좌표 데이터 준비 중.', p: '아래 카페는 검수된 곳. 지도 좌표는 다음 데이터 갱신에 들어옵니다.' },
+            ja: { h: '座標データ準備中。', p: 'カフェは検証済み。地図上の座標は次回のデータ更新で反映されます。' },
+            pt: { h: 'Coordenadas pendentes.', p: 'Cafés abaixo verificados; coordenadas chegam na próxima atualização.' },
+            es: { h: 'Coordenadas pendientes.', p: 'Cafés abajo verificados; coordenadas llegan en la próxima actualización.' }
+        };
+        const c = COPY[lang] || COPY.en;
+        const el = document.createElement('aside');
+        el.className = 'sdd-atlas-map-notice';
+        el.innerHTML = `<p class="sdd-atlas-map-notice__h">${c.h}</p><p class="sdd-atlas-map-notice__p">${c.p}</p>`;
+        container.appendChild(el);
+        _noticeEl = el;
+    }
+
+    // setCafes(cafes, opts?) — 좌표 있는 카페만 마커. 0개면 안내 카드.
+    function setCafes(cafes, opts) {
+        if (!_map || !_ml) return;
+        opts = opts || {};
+        clearMarkers();
+        clearNotice();
+        const list = Array.isArray(cafes) ? cafes : [];
+        const withCoords = list.filter(c =>
+            typeof c.lat === 'number' && typeof c.lng === 'number' &&
+            Number.isFinite(c.lat) && Number.isFinite(c.lng)
+        );
+
+        if (withCoords.length === 0) {
+            const container = _map.getContainer();
+            const lang = (window.state && window.state.lang) || 'en';
+            showNotice(container, lang);
+            return;
+        }
+
+        const bounds = new _ml.LngLatBounds();
+        withCoords.forEach(c => {
+            const el = document.createElement('div');
+            const isJade = (c.visited_at && c.visited_at !== '');
+            el.className = 'sdd-atlas-marker' + (isJade ? ' is-jade' : '');
+            el.setAttribute('aria-label', c.name || '');
+            const popupHtml =
+                `<strong>${(c.name || '').replace(/[<>&"]/g, '')}</strong>` +
+                (c.neighborhood ? `<br/>${c.neighborhood.replace(/[<>&"]/g, '')}` : '') +
+                (typeof c.rating === 'number' ? `<br/>★ ${c.rating.toFixed(1)}` : '') +
+                (c.google_url ? `<br/><a href="${c.google_url.replace(/["<>]/g, '')}" target="_blank" rel="noopener">↗ MAPS</a>` : '');
+            const popup = new _ml.Popup({ offset: 10, closeButton: true })
+                .setHTML(popupHtml);
+            const marker = new _ml.Marker({ element: el })
+                .setLngLat([c.lng, c.lat])
+                .setPopup(popup)
+                .addTo(_map);
+            _markers.push(marker);
+            bounds.extend([c.lng, c.lat]);
+        });
+
+        if (!opts.skipFit && withCoords.length > 1) {
+            _map.fitBounds(bounds, { padding: 48, maxZoom: 15, duration: 0 });
+        } else if (withCoords.length === 1) {
+            _map.setCenter([withCoords[0].lng, withCoords[0].lat]);
+            _map.setZoom(14);
+        }
+    }
+
     function init() {
         injectStyles();
     }
@@ -321,6 +470,7 @@
         loadMapLibre,
         initMap,
         getMap,
+        setCafes,
         // 추후 PR2/3/4 에서 사용할 hook
         DEFAULT_CENTER,
         DEFAULT_ZOOM

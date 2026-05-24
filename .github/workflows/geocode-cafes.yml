@@ -1,0 +1,84 @@
+name: Geocode cafes (Nominatim)
+
+# Manual trigger. Walks data/cafes-{city}.json, geocodes any entry
+# without lat/lng via OpenStreetMap Nominatim, opens a PR with the
+# new coordinates.
+#
+# Nominatim policy (https://operations.osmfoundation.org/policies/nominatim/):
+#   - 1 request/second max — script enforces 1100ms between calls
+#   - identifying User-Agent — script sends saudade-magazine/1.0
+#   - bulk geocoding (>1k/day) discouraged — fine for our 297 entries
+#
+# Free, no key, no billing — but accuracy varies. For better quality
+# enable Google Places API (New) and run verify-cafes workflow instead.
+
+on:
+  workflow_dispatch:
+    inputs:
+      city:
+        description: "City slug (seoul, da-nang, bali, tokyo, lisbon) or 'all'"
+        required: false
+        default: "all"
+      dry:
+        description: "Dry run? (no writes, just report)"
+        required: false
+        default: "false"
+
+jobs:
+  geocode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with: { node-version: "20" }
+
+      - name: Geocode via Nominatim
+        run: |
+          ARGS=""
+          if [ "${{ inputs.city }}" != "all" ]; then
+            ARGS="--city ${{ inputs.city }}"
+          fi
+          if [ "${{ inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          node scripts/geocode-cafes.js $ARGS
+
+      - name: Validate
+        run: node scripts/validate-content.js
+        continue-on-error: true
+
+      - name: Open pull request
+        if: ${{ inputs.dry != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="content/cafe-coords-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/cafes-*.json
+          if git diff --staged --quiet; then
+            echo "No new coordinates — every entry either had lat/lng already or Nominatim returned no match."
+            exit 0
+          fi
+          git commit -m "content: Nominatim coords for cafes (${{ inputs.city }})"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "content: cafe coordinates — ${{ inputs.city }}" \
+            --body "Automated batch via \`.github/workflows/geocode-cafes.yml\`.
+
+          **Source:** OpenStreetMap Nominatim (free, no key)
+          **Gate:** display_name must contain the city token
+          **Stamped:** lat, lng, geo_source='nominatim', geo_at
+
+          ### Reviewer checklist
+          - [ ] Spot-check 5 random entries on the MAP tab — markers in the right neighborhood?
+          - [ ] \`node scripts/validate-content.js\` passes (CI)
+          - [ ] Squash-merge.
+
+          Nominatim accuracy varies; entries it could not place stay without coords and are excluded from the map. For higher quality + reviews + hours, enable Google Places API (New) and run \`verify-cafes\` instead."
