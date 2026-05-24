@@ -890,6 +890,9 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                     }
                     try {
                         await window.SAUDADE_ATLAS_MAP.initMap(container);
+                        if (window.SAUDADE_ATLAS_MAP.setCafes) {
+                            window.SAUDADE_ATLAS_MAP.setCafes(filtered);
+                        }
                     } catch (err) {
                         if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + (err && err.message || 'UNKNOWN ERROR').toUpperCase() + '</p>';
                         console.warn('[ATLAS] map init failed:', err);
