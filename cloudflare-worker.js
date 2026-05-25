@@ -2125,7 +2125,11 @@ const PUBLISH_TARGET_EDITIONS = ['ko','ja','pt','es'];   // 'en' 은 source
 function publishLLMRewrite(env) {
     return async function(text, instructions) {
         if (!env || !env.GEMINI_KEY) return null;
-        const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + env.GEMINI_KEY;
+        // gemini-2.0-flash was retired from the free tier (limit:0 as of
+        // 2026-05) — same failure that silently broke the ko/ja/pt/es
+        // refresh script. Default to 2.5-flash-lite; overridable via env.
+        const model = env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+        const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + env.GEMINI_KEY;
         const body = {
             contents: [{ parts: [{ text: instructions + '\n\nSource:\n' + text }] }],
             generationConfig: { temperature: 0.4, maxOutputTokens: 600, responseMimeType: 'application/json' }
@@ -2167,6 +2171,44 @@ function publishHasForbidden(text) {
     return PUBLISH_FORBIDDEN.some(w => new RegExp('\\b' + w + '\\b', 'i').test(text));
 }
 
+// AI re-review of a Gemini-rewritten EN dispatch, BEFORE it is staged.
+// The raw feed was already quietness-scored (ai_score >= 5) and the
+// rewritten text passed publishHasForbidden(). This catches the subtler
+// failures the keyword filter can't: invented precision, breaking-news
+// cadence, over-long quotes, politics that slipped through. Mirrors the
+// ko/ja/pt/es review gate so all five editions are "AI files + AI
+// reviews". Fails CLOSED — null/error/unparseable verdict → reject.
+async function publishReview(env, item) {
+    if (!env || !env.GEMINI_KEY) return { pass: true, reason: 'no_key_skip' };  // don't block if reviewer unavailable on EN
+    const model = env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+    const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + env.GEMINI_KEY;
+    const prompt = [
+        'You are the copy desk for the English edition of saudade, a slow-news magazine.',
+        'Review this single rewritten dispatch. You are the last gate before publication.',
+        'Set pass=false if ANY is true:',
+        ' 1. Covers politics, election, war, conflict, crime, scandal, death, disaster-spectacle, or protest.',
+        ' 2. Reads like a breaking-news headline, not a calm declarative observation.',
+        ' 3. States a specific statistic/price/figure that is not common public record (invented precision).',
+        ' 4. Contains a quotation longer than 25 words.',
+        'Dispatch JSON:',
+        JSON.stringify({ headline: item.headline, lede: item.lede, body: item.body }),
+        'Return STRICT JSON only: {"pass": true|false, "reason": "<short>"}'
+    ].join('\n');
+    const body = {
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0, maxOutputTokens: 120, responseMimeType: 'application/json' }
+    };
+    try {
+        const r = await fetchT(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }, 15000);
+        if (!r.ok) return { pass: false, reason: 'reviewer_http_' + r.status };
+        const j = await r.json();
+        const txt = (((j.candidates || [])[0] || {}).content || {}).parts?.[0]?.text || '';
+        const parsed = parseRewrite(txt) || (() => { try { return JSON.parse(txt); } catch (e) { return null; } })();
+        if (!parsed || typeof parsed.pass !== 'boolean') return { pass: false, reason: 'unparseable_verdict' };
+        return { pass: parsed.pass, reason: parsed.reason || '' };
+    } catch (e) { return { pass: false, reason: 'reviewer_error' }; }
+}
+
 // Phase 4: write — top scored unprocessed → Gemini rewrite → INSERT staged (en)
 async function pipelineWrite(env) {
     if (!env.SAUDADE_DB) return { ok: false, phase: 'write', reason: 'no_db' };
@@ -2188,6 +2230,14 @@ async function pipelineWrite(env) {
             const parsed = parseRewrite(out);
             if (!parsed || publishHasForbidden(parsed.headline + ' ' + parsed.body)) {
                 // 폐기 (재시도 안 함 — 다음 cron 에서 다른 row 처리)
+                await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
+                skipped++;
+                continue;
+            }
+            // AI re-review of the rewritten output — fail-closed gate so
+            // EN matches the ko/ja/pt/es review path. Rejected → discard row.
+            const verdict = await publishReview(env, parsed);
+            if (!verdict.pass) {
                 await env.SAUDADE_DB.prepare('UPDATE raw_feeds SET processed_at = ? WHERE id = ?').bind(now, row.id).run();
                 skipped++;
                 continue;
