@@ -122,3 +122,23 @@ test('SEO meta tags carry English defaults (syncMetaTags rewrites per edition)',
     assert.ok(ogLoc, 'og:locale missing');
     assert.strictEqual(ogLoc[1], 'en_US', 'og:locale should be en_US (was hardcoded ko_KR pre-#84)');
 });
+
+test('no pinned/retired Gemini model in live code (use the -latest alias)', () => {
+    // gemini-2.0-flash retiring from the free tier (limit:0) silently
+    // broke the dispatch pipeline three times this development cycle
+    // (#77, #94, #95). The fix is the gemini-flash[-lite]-latest alias.
+    // Fail if a pinned version sneaks back into executable code. Comments
+    // (which explain the history) are stripped first.
+    const files = [
+        'cloudflare-worker.js',
+        'scripts/refresh-dispatches.js',
+        'scripts/verify-cafes-gemini.js'
+    ];
+    // Retired or soon-retired pins we never want hard-coded again.
+    const banned = /gemini-(?:2\.0-flash|1\.5-[a-z]+|1\.0-[a-z]+|pro)\b/;
+    for (const f of files) {
+        const src = stripComments(read(f));
+        const m = src.match(banned);
+        assert.ok(!m, `${f}: pinned/retired Gemini model "${m && m[0]}" in live code — use gemini-flash-lite-latest`);
+    }
+});
