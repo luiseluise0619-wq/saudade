@@ -43,10 +43,12 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 
-// gemini-2.0-flash was retired from the free tier (limit:0 as of 2026-05).
-// 2.5-flash-lite is the current cheapest workable model; it accepts the
-// same prompt shape and writes the same dispatch JSON.
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+// Use the -latest alias, not a pinned version. gemini-2.0-flash was
+// retired from the free tier (limit:0) and silently killed this script
+// once already; pinning 2.5-flash-lite would just defer the same bug to
+// its eventual retirement. gemini-flash-lite-latest always routes to the
+// current stable flash-lite (cheap tier), immune to deprecation.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-flash-lite-latest';
 const GEMINI_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 // ── Per-edition city pools ──────────────────────────────────────────────

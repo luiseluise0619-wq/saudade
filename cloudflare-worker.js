@@ -2125,10 +2125,11 @@ const PUBLISH_TARGET_EDITIONS = ['ko','ja','pt','es'];   // 'en' 은 source
 function publishLLMRewrite(env) {
     return async function(text, instructions) {
         if (!env || !env.GEMINI_KEY) return null;
-        // gemini-2.0-flash was retired from the free tier (limit:0 as of
-        // 2026-05) — same failure that silently broke the ko/ja/pt/es
-        // refresh script. Default to 2.5-flash-lite; overridable via env.
-        const model = env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+        // gemini-2.0-flash was retired from the free tier (limit:0) and
+        // silently killed pipelineWrite — every rewrite returned null, no
+        // EN dispatches staged. Use the -latest alias so the next model
+        // retirement can't reintroduce the same bug. Overridable via env.
+        const model = env.GEMINI_MODEL || 'gemini-flash-lite-latest';
         const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + env.GEMINI_KEY;
         const body = {
             contents: [{ parts: [{ text: instructions + '\n\nSource:\n' + text }] }],
@@ -2180,7 +2181,7 @@ function publishHasForbidden(text) {
 // reviews". Fails CLOSED — null/error/unparseable verdict → reject.
 async function publishReview(env, item) {
     if (!env || !env.GEMINI_KEY) return { pass: true, reason: 'no_key_skip' };  // don't block if reviewer unavailable on EN
-    const model = env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+    const model = env.GEMINI_MODEL || 'gemini-flash-lite-latest';
     const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + env.GEMINI_KEY;
     const prompt = [
         'You are the copy desk for the English edition of saudade, a slow-news magazine.',
