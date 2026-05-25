@@ -2476,13 +2476,22 @@ async function digestSend(req, env, ctx) {
     const dry    = url.searchParams.get('dry') === '1';
 
     const results = {};
+    let anyErr = false, totalSent = 0, totalFailed = 0;
     for (const ed of DIGEST_EDITIONS) {
         if (onlyEd && onlyEd !== ed) continue;
-        const subs = await env.SAUDADE_DB.prepare(
-            `SELECT email, token FROM digest_subscribers
-             WHERE edition = ? AND confirmed_at IS NOT NULL AND unsubscribed_at IS NULL`
-        ).bind(ed).all();
-        const list = (subs && subs.results) || [];
+        let list = [];
+        try {
+            const subs = await env.SAUDADE_DB.prepare(
+                `SELECT email, token FROM digest_subscribers
+                 WHERE edition = ? AND confirmed_at IS NOT NULL AND unsubscribed_at IS NULL`
+            ).bind(ed).all();
+            list = (subs && subs.results) || [];
+        } catch (e) {
+            // Most likely cause: schema/digest_subscribers.sql not applied.
+            results[ed] = { error: String(e && e.message || e).slice(0, 120) };
+            anyErr = true;
+            continue;
+        }
         const dispatchUrl = digestSiteBase(env) + (ed === 'en' ? '/data/dispatches.json' : `/data/dispatches.${ed}.json`);
         let dispatchData = null;
         try {
@@ -2507,10 +2516,19 @@ async function digestSend(req, env, ctx) {
                 ).bind(Date.now(), s.token).run());
             } else { failed++; }
         }
+        totalSent += sent; totalFailed += failed;
         results[ed] = { subscribers: list.length, sent, failed, dry };
     }
-    return new Response(JSON.stringify({ ok: true, results }, null, 2), {
-        status: 200, headers: hdrs(req, { 'Content-Type': 'application/json' })
+    // Surface real trouble as non-200 so the cron / caller fails loudly:
+    //   - a query error (missing table), OR
+    //   - every attempted send failed (expired Resend key, unverified domain).
+    const sendFailure = !dry && totalFailed > 0 && totalSent === 0;
+    const status = (anyErr || sendFailure) ? 502 : 200;
+    return new Response(JSON.stringify({
+        ok: status === 200, results,
+        totals: { sent: totalSent, failed: totalFailed }
+    }, null, 2), {
+        status, headers: hdrs(req, { 'Content-Type': 'application/json' })
     });
 }
 
