@@ -18,12 +18,22 @@
  *     "cities":      [{ "city": "서울", "items": [{ n, headline, lede, body, ... }] }]
  *   }
  *
+ * Two-stage AI pipeline (no human in the loop, by founder decision):
+ *   1. DRAFT  — Gemini writes 3 items per city in the edition's voice.
+ *   2. REVIEW — a second Gemini pass copy-edits the draft against the
+ *               constitution's hard rules (no politics/violence/scandal,
+ *               declarative tone, no invented figures, quotes ≤25 words,
+ *               right language, right cities, Latin numerals). If ANY
+ *               item is rejected, publication is BLOCKED and the previous
+ *               day's file is kept. Bad copy never auto-publishes.
+ *
  * Usage:
  *   GEMINI_KEY=xxxx node scripts/refresh-dispatches.js
  *   GEMINI_KEY=xxxx node scripts/refresh-dispatches.js --editions ko,ja
  *   GEMINI_KEY=xxxx node scripts/refresh-dispatches.js --dry
+ *   GEMINI_KEY=xxxx node scripts/refresh-dispatches.js --no-review   # skip the gate
  *
- * Exit: 0 on full success, 1 if any edition failed (other editions still write).
+ * Exit: 0 on full success, 1 if any edition failed/was-blocked (others still write).
  */
 'use strict';
 
@@ -87,7 +97,7 @@ const EDITION_CONFIG = {
 };
 
 function parseArgs(argv) {
-    const out = { editions: Object.keys(EDITION_CONFIG), dry: false };
+    const out = { editions: Object.keys(EDITION_CONFIG), dry: false, noReview: false };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i];
         if (a === '--editions') {
@@ -100,6 +110,8 @@ function parseArgs(argv) {
             }
         } else if (a === '--dry') {
             out.dry = true;
+        } else if (a === '--no-review') {
+            out.noReview = true;
         }
     }
     return out;
@@ -214,6 +226,68 @@ function validate(parsed, cfg) {
     return null;
 }
 
+// ── AI review gate ────────────────────────────────────────────────────
+// The founder dropped the human-rewrite step (cadence sustainability).
+// So a second AI pass acts as copy editor: it scores the draft against
+// the constitution's hard rules and BLOCKS publication if any item
+// violates them. Bad output never reaches readers; the previous day's
+// file stays in place until a clean draft passes. This is the "AI files,
+// AI reviews" model — with a real gate, not a rubber stamp.
+function buildReviewPrompt(edition, cities) {
+    const cfg = EDITION_CONFIG[edition];
+    return [
+        `You are the copy desk for the ${cfg.label} edition of saudade, a slow-news`,
+        `magazine. Review the drafted dispatches below against these HARD rules.`,
+        `Be strict — you are the last gate before publication, there is no human after you.`,
+        ``,
+        `REJECT an item (pass=false) if ANY of these is true:`,
+        `  1. It covers politics, elections, war, conflict, crime, scandal, death,`,
+        `     disaster-as-spectacle, or protest. (Quiet civic notes are fine.)`,
+        `  2. It reads like a breaking-news headline rather than a calm, declarative`,
+        `     observation a resident might make.`,
+        `  3. It states a specific statistic, price, or hard figure that is not`,
+        `     common public record (invented precision).`,
+        `  4. It contains a quotation longer than 25 words.`,
+        `  5. It is not written in ${cfg.label}, or mixes other languages.`,
+        `  6. A numeral that means a count/date/time is spelled out instead of`,
+        `     Latin digits (e.g. 十日 instead of 10일). Word-idioms like 사흘/이틀 are OK.`,
+        `  7. The city does not belong to this edition. Allowed cities: ${cfg.cities.join(', ')}.`,
+        ``,
+        `Drafted dispatches (JSON):`,
+        JSON.stringify({ cities }, null, 1),
+        ``,
+        `Return STRICT JSON only:`,
+        `{`,
+        `  "overall_pass": true | false,`,
+        `  "rejected": [ { "city": "<city>", "n": "<NN>", "reason": "<short>" } ],`,
+        `  "notes": "<one sentence overall>"`,
+        `}`,
+        `overall_pass MUST be false if "rejected" is non-empty.`
+    ].join('\n');
+}
+
+async function reviewDispatches(edition, cities, key) {
+    let raw;
+    try {
+        raw = await callGemini(buildReviewPrompt(edition, cities), key);
+    } catch (e) {
+        // If the reviewer itself errors (quota, network), fail closed:
+        // do NOT publish unreviewed content.
+        return { pass: false, rejected: [], notes: `reviewer error: ${e.message}`, errored: true };
+    }
+    const v = safeParse(raw);
+    if (!v || typeof v.overall_pass !== 'boolean') {
+        return { pass: false, rejected: [], notes: 'reviewer returned unparseable verdict', errored: true };
+    }
+    const rejected = Array.isArray(v.rejected) ? v.rejected : [];
+    return {
+        pass: v.overall_pass === true && rejected.length === 0,
+        rejected,
+        notes: v.notes || '',
+        errored: false
+    };
+}
+
 async function refreshOne(edition, opts, key) {
     const cfg = EDITION_CONFIG[edition];
     process.stderr.write(`[${edition}] generating… `);
@@ -231,13 +305,32 @@ async function refreshOne(edition, opts, key) {
         console.error(`FAIL parse/validate: ${err}`);
         return false;
     }
+
+    // AI review gate — blocks publication on any hard-rule violation.
+    // Skippable with --no-review (debugging / quota), but the default
+    // path always reviews so unreviewed copy never auto-publishes.
+    let review = { pass: true, rejected: [], notes: 'review skipped', errored: false };
+    if (!opts.noReview) {
+        process.stderr.write('reviewing… ');
+        review = await reviewDispatches(edition, parsed.cities, key);
+        if (!review.pass) {
+            console.error(`BLOCKED by review: ${review.notes}` +
+                (review.rejected.length ? ` — rejected ${review.rejected.map(r => `${r.city}/${r.n}`).join(', ')}` : ''));
+            console.error('  (previous file kept; nothing published)');
+            return false;
+        }
+    }
+
     const { filed_at, next_filing } = isoNowKst();
     const out = {
         edition,
         filed_at,
         next_filing,
         ai_assisted: true,
-        ai_disclosure: 'Drafted with Gemini, written for this edition\'s readers — not translated from English.',
+        ai_reviewed: !opts.noReview,
+        ai_disclosure: opts.noReview
+            ? 'Drafted with Gemini for this edition\'s readers — not translated from English. Review skipped this run.'
+            : 'Drafted and copy-reviewed by AI (Gemini) against the saudade editorial rules. Written for this edition\'s readers — not translated from English. No human rewrite.',
         cities: parsed.cities
     };
     if (opts.dry) {
