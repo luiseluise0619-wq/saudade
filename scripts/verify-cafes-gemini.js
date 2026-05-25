@@ -37,7 +37,9 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
 const KEY = process.env.GEMINI_API_KEY;
-const MODEL = 'gemini-2.5-flash-lite';
+// -latest alias: deprecation-proof (a pinned version retiring is how the
+// dispatch pipelines silently died twice). Grounding tool works the same.
+const MODEL = process.env.GEMINI_MODEL || 'gemini-flash-lite-latest';
 const CITIES = ['seoul', 'da-nang', 'bali', 'tokyo', 'lisbon'];
 const SLEEP_MS = 1500;
 const TODAY = new Date().toISOString().slice(0, 10);
