@@ -129,6 +129,37 @@
         const today = todayUTC();
         const moments = [];
 
+        // 0. Returning-reader moment — the one hook that needs no setup and
+        // no content: it greets anyone who comes back. A slow magazine that
+        // remembers you is the whole saudade ethos. Low weight so a real
+        // visa/tax urgency always sits above it; present so the cover is
+        // never cold. Reads the prior visit BEFORE stamping the new one.
+        const KEY_LAST_VISIT = 'saudade.personal.last_visit';
+        try {
+            const prev = toUTC(localStorage.getItem(KEY_LAST_VISIT));
+            if (prev) {
+                const gap = diffDays(today, prev);
+                if (gap >= 1) {
+                    moments.push({
+                        kind: 'return',
+                        weight: 30,
+                        line: L({
+                            en: gap === 1 ? 'A day since you were last here.' : `${gap} days since you were last here.`,
+                            ko: gap === 1 ? '여기 다녀간 지 하루.' : `여기 다녀간 지 ${gap}일.`,
+                            ja: gap === 1 ? 'ここに来てから一日。' : `ここに来てから ${gap} 日。`,
+                            pt: gap === 1 ? 'Um dia desde a sua última visita.' : `${gap} dias desde a sua última visita.`,
+                            es: gap === 1 ? 'Un día desde su última visita.' : `${gap} días desde su última visita.`
+                        }, ed)
+                    });
+                }
+            }
+            // Only stamp on the real cover render (opts.stampVisit), not the
+            // demo/homes preview re-renders, so the gap reflects genuine visits.
+            if (opts.stampVisit) {
+                localStorage.setItem(KEY_LAST_VISIT, today.toISOString().slice(0, 10));
+            }
+        } catch (e) { /* private mode / disabled storage — skip silently */ }
+
         // 1. Saudade meter — days since last visit per home city.
         const homes = getHomes();
         for (const code of homes) {
@@ -348,7 +379,10 @@
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
         if (!host) return;
         const ed = (opts && opts.lang) || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
-        const moments = compute({ lang: ed, max: (opts && opts.max) || 4 });
+        const moments = compute({ lang: ed, max: (opts && opts.max) || 4, stampVisit: !!(opts && opts.stampVisit) });
+        // A visitor whose only moment is the returning-reader greeting still
+        // has no real data — keep the setup CTAs visible alongside the line.
+        const dataMoments = moments.filter(m => m.kind !== 'return');
 
         const eyebrowLabel = L({
             en: 'NOTES FOR ONE READER',
@@ -358,8 +392,11 @@
             es: 'NOTAS PARA UN LECTOR'
         }, ed);
 
-        if (!moments.length) {
-            // Fresh-visitor empathy hook.
+        if (!dataMoments.length) {
+            // No real data yet. Show the setup hook — and, if they have been
+            // here before, lead with the returning-reader greeting so even
+            // the empty cover feels like it remembers them.
+            const ret = moments.find(m => m.kind === 'return');
             const emptyLine = L({
                 en: 'You have not told us where you are. <strong>Set a home city</strong>, or <strong>see how this looks populated</strong>.',
                 ko: '아직 어디에 있는지 알려주지 않았다. <strong>홈 도시를 설정하거나</strong>, <strong>예시 데이터로 본다</strong>.',
@@ -369,9 +406,13 @@
             }, ed);
             const ctaSet  = L({ en: 'SET HOME CITIES', ko: '홈 도시 설정', ja: 'ホーム都市', pt: 'CIDADES-BASE', es: 'CIUDADES BASE' }, ed);
             const ctaDemo = L({ en: 'SHOW DEMO',       ko: '예시 보기',   ja: 'サンプル', pt: 'VER EXEMPLO', es: 'VER EJEMPLO' }, ed);
+            const retLine = ret
+                ? `<p class="sdd-personal__line is-memory">${escapeHtml(ret.line)}</p>`
+                : '';
             host.innerHTML = `
                 <section class="sdd-personal sdd-personal--empty" lang="${ed}">
                     <p class="sdd-personal__eyebrow">${escapeHtml(eyebrowLabel)}</p>
+                    ${retLine}
                     <p class="sdd-personal__line">${emptyLine /* trusted in-file copy */}</p>
                     <p class="sdd-personal__cta">
                         <a href="#homes">${escapeHtml(ctaSet)}</a>
@@ -385,7 +426,7 @@
         const lines = moments.map(m => {
             const cls = (m.kind === 'schengen-warn' || m.kind === 'tax-over') ? 'is-alert'
                       : (m.kind === 'ins-warn' || m.kind === 'tax-near')      ? 'is-warn'
-                      : (m.kind === 'memory')                                  ? 'is-memory' : '';
+                      : (m.kind === 'memory' || m.kind === 'return')           ? 'is-memory' : '';
             return `<p class="sdd-personal__line ${cls}">${escapeHtml(m.line)}</p>`;
         }).join('');
 
