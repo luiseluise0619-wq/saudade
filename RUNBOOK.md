@@ -32,6 +32,8 @@ A Gemini key was pasted into a chat during development and must be treated as co
 | `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | `D1 backup (daily)` workflow |
 | `DIGEST_SEND_TOKEN` | `Sunday digest` workflow — same value as `EDITOR_TOKEN` |
 | `PEXELS_KEY` + `FREESOUND_TOKEN` | `Fetch listening-room content` workflow |
+| `KAKAO_KEY` *(optional)* | `Fetch Seoul cafes (Kakao)` — only if enriching café data |
+| `GOOGLE_PLACES_KEY` *(optional)* | `Verify cafes against Google Places` — only if running that check |
 
 ### 4. D1 schema migrations (`wrangler d1 execute saudade_db --remote --file=<f>`)
 Apply any not yet run — at minimum `schema/digest_subscribers.sql` (Sunday digest) and the auth/session/feed schemas in `schema/`.
