@@ -1690,9 +1690,19 @@ async function authRequest(req, env, ctx) {
 
     const link = MAGIC_LINK_BASE + token;
 
-    // Resend 미설정 — 응답 body 로 link 노출 (베타 / 솔로 파운더 모드)
-    if (!env.RESEND_KEY) {
-        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt });
+    // SECURITY: returning the magic link in the HTTP response means anyone
+    // who POSTs an email gets a working sign-in link for it — account
+    // takeover for any address, no inbox access required. That "inline"
+    // mode is a deliberate localhost/solo escape hatch ONLY, gated behind
+    // an explicit opt-in flag. In production (flag unset) we never expose
+    // the link: if email can't be sent, we error and the user retries.
+    const inlineOk = env.MAGIC_INLINE_OK === '1';
+    const resendKey = env.RESEND_KEY || env.RESEND_API_KEY;   // accept either secret name
+
+    if (!resendKey) {
+        if (inlineOk) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt });
+        return E(req, 'EMAIL_NOT_CONFIGURED',
+            'Sign-in email is not configured. Set RESEND_API_KEY (or RESEND_KEY).', 503);
     }
 
     // Resend 이메일 발송
@@ -1700,7 +1710,7 @@ async function authRequest(req, env, ctx) {
         const r = await fetchT('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer ' + env.RESEND_KEY,
+                'Authorization': 'Bearer ' + resendKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -1710,11 +1720,16 @@ async function authRequest(req, env, ctx) {
                 text:    `Click to sign in. Link expires in 15 minutes.\n\n${link}\n\n— Saudade`
             })
         }, 10000);
-        if (!r.ok) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_failed' });
+        if (!r.ok) {
+            if (inlineOk) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_failed' });
+            return E(req, 'EMAIL_SEND_FAILED', 'Could not send sign-in email. Please try again.', 502);
+        }
         return J(req, { ok: true, mode: 'sent', expires_at: expiresAt });
     } catch (e) {
-        // 이메일 fallback — 응답 body 로
-        return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_offline' });
+        // Email transport error. Never leak the link in production — the
+        // token is already stored; the user simply requests another.
+        if (inlineOk) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_offline' });
+        return E(req, 'EMAIL_OFFLINE', 'Sign-in email service is unreachable. Please try again.', 502);
     }
 }
 
@@ -2614,12 +2629,13 @@ function digestEmailText(ed, data, token, baseUrl) {
 }
 
 async function digestSendOne(env, { to, subject, html, text }) {
-    if (!env.RESEND_API_KEY) return false;
+    const resendKey = env.RESEND_API_KEY || env.RESEND_KEY;   // accept either secret name
+    if (!resendKey) return false;
     try {
         const r = await fetch('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer ' + env.RESEND_API_KEY,
+                'Authorization': 'Bearer ' + resendKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
