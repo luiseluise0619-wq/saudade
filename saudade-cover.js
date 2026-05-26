@@ -673,7 +673,10 @@ body.section-active .sdd-cover { display: none !important; }
         // the empty-state empathy hook when there is no data.
         try {
             if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
-                window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
+                // stampVisit:true — only the real cover render records the
+                // visit date that powers the "N days since you were last
+                // here" greeting. Demo/homes re-renders must not stamp.
+                window.SAUDADE_PERSONAL.render('#sddCoverPersonal', { stampVisit: true });
             }
         } catch (e) {}
 
