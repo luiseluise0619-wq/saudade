@@ -6,24 +6,57 @@ If something is on fire, see the **Incident response** section at the bottom.
 
 ---
 
-## Daily (30~60 minutes)
+## One-time setup (before launch)
 
-### 06:30 KST — Dispatch review
+Do these once. Nothing below works until they are done. `npm run launch-check` prints what software can verify; this list is the human-only part.
 
-The cron at `0 21 UTC` (= 06:00 KST) opens a PR with refreshed KO/JA/PT/ES dispatches. Goal: **rewrite ~30% of headlines** (constitution §9.5 — the magazine voice is yours, not Gemini's).
+### 1. Rotate the exposed Gemini key — **do this first**
+A Gemini key was pasted into a chat during development and must be treated as compromised.
+- Google Cloud Console → APIs & Services → Credentials → delete the old key, create a new one.
+- Put the new value **only** in GitHub/Worker secrets (never in code or chat).
 
-```bash
-# Open the latest dispatch PR (usually content/dispatches-XXX)
-gh pr list --label content --state open
-gh pr checkout <NUM>
+### 2. Worker secrets (`wrangler secret put <NAME>`)
+| Secret | Powers | Notes |
+|---|---|---|
+| `GEMINI_KEY` | EN dispatch rewrite + review | the rotated key from step 1 |
+| `RESEND_API_KEY` | sign-in email **and** Sunday digest | one key serves both (`RESEND_KEY` also accepted) |
+| `EDITOR_TOKEN` | `/digest/send` + `/admin` auth | any 32+ char hex (`openssl rand -hex 32`) |
+| `LICENSE_SIGNING_KEY` | (only if you re-enable paid tiers) | currently dormant |
 
-# For each city in each edition, scan headline + lede:
-#   - Does it sound like a tweet headline? Rewrite.
-#   - Does it cover politics/scandal? Replace topic.
-#   - Does it match the existing voice in dispatches.<ed>.json archive?
-```
+**Never set `MAGIC_INLINE_OK`.** It exposes sign-in links in the HTTP response — localhost dev only. In production it is an account-takeover switch.
 
-Edit the JSON, commit, push, merge. **5-10 min if Gemini drafts are clean.** The EN dispatch (different cron, different writer) usually doesn't need rewrites.
+### 3. GitHub Actions secrets (Settings → Secrets → Actions)
+| Secret | Powers |
+|---|---|
+| `GEMINI_KEY` | `Refresh per-edition dispatches` workflow (KO/JA/PT/ES) |
+| `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | `D1 backup (daily)` workflow |
+| `DIGEST_SEND_TOKEN` | `Sunday digest` workflow — same value as `EDITOR_TOKEN` |
+| `PEXELS_KEY` + `FREESOUND_TOKEN` | `Fetch listening-room content` workflow |
+
+### 4. D1 schema migrations (`wrangler d1 execute saudade_db --remote --file=<f>`)
+Apply any not yet run — at minimum `schema/digest_subscribers.sql` (Sunday digest) and the auth/session/feed schemas in `schema/`.
+
+### 5. Seed first content (run each workflow once)
+- Actions → **Refresh per-edition dispatches** → Run → fills KO/JA/PT/ES (AI drafts + AI review gate, no human step).
+- Actions → **Geocode cafes (Nominatim)** → `city: all` → adds map coordinates.
+- Actions → **Fetch listening-room content** → fills the listening room (needs PEXELS/FREESOUND).
+- Actions → **D1 backup (daily)** → Run once to seed the `backups` branch.
+
+### 6. Decide two things (write them down)
+- **Intent**: craft project / editorial business / venture. Every later trade-off depends on this.
+- **Cadence**: §9.5 says daily. With the AI-files-AI-reviews pipeline this is now sustainable without daily human work — but confirm you're comfortable publishing AI-reviewed copy unattended (the disclosure says so honestly).
+
+---
+
+## Daily (5 minutes — optional)
+
+### Dispatch publishing — now automatic
+
+As of the AI-review-gate change, dispatches **file and review themselves**:
+- KO/JA/PT/ES: the `0 21 UTC` cron drafts with Gemini, then a second Gemini pass copy-edits against the constitution (no politics/violence/scandal, declarative tone, no invented figures, quotes ≤25 words, right language/city/numerals). Anything that fails is **blocked** — the prior day's file stays. Clean drafts publish with `ai_reviewed: true`.
+- EN: the Worker pipeline gathers → quietness-scores → forbidden-filters → rewrites → **re-reviews** before staging.
+
+No daily human step is required. If you *want* to spot-check, open the dispatch PR and skim — but the gate already enforces the hard rules. Your time is better spent on the things AI can't do (café visits, the voice of the about/etymology pages).
 
 ### Lunch — café visit (3-5 times/week)
 
@@ -162,9 +195,10 @@ If anything is fake: fix immediately. The trust dies on first lie.
 
 ### "GEMINI_KEY rate limited"
 
-Free tier 2.0-flash is 15 RPM. The refresh-dispatches script paces 1.5s between editions, but if you trigger manually + cron fires same minute, you can hit 429.
-- Wait 1 minute, retry
-- Or upgrade to paid tier (≈ $0.075 / 1M input tokens, very cheap for our volume)
+All Gemini callers use the `gemini-flash-lite-latest` alias (never a pinned version — a pinned model retiring silently broke the pipeline three times during development; a render-lint test now blocks re-pinning). Free-tier grounding/generation quota is still the real limit.
+- Wait for the daily quota window to reset (UTC midnight), retry
+- Or upgrade to paid tier (very cheap at our volume)
+- The dispatch review gate doubles Gemini calls (draft + review); if quota is tight, `--no-review` skips the gate for a run (not recommended for unattended publishing)
 
 ### "Pexels / Freesound quota exhausted"
 
