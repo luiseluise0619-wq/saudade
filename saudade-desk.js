@@ -780,8 +780,8 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                     Each dispatch is rewritten in our own words from the source listed.
                     We quote no more than twenty-five words. We link to the original.
                     We do not republish AP, Reuters, or Bloomberg copy. We never use
-                    photographs we did not take ourselves. Dispatches are AI-assisted
-                    and reviewed by a human editor.
+                    photographs we did not take ourselves. Dispatches are AI-drafted
+                    and AI-reviewed against the magazine’s constitution before filing.
                 </p>
             </section>
 

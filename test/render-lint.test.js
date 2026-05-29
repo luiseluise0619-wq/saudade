@@ -142,3 +142,32 @@ test('no pinned/retired Gemini model in live code (use the -latest alias)', () =
         assert.ok(!m, `${f}: pinned/retired Gemini model "${m && m[0]}" in live code — use gemini-flash-lite-latest`);
     }
 });
+
+test('data/dispatches.<ed>.json ai_disclosure must not claim human-editor review', () => {
+    // Locked after #103 / #(this PR) — the AI-review-gate (#93/#94) moved
+    // dispatch review from a human editor to a second Gemini pass against
+    // the constitution. The user-facing copy lagged by 6 surfaces for
+    // weeks. This is the §3 honesty contract: the machine-readable
+    // disclosure (EU AI Act Art.50) must describe what actually happens.
+    //
+    // Letters and desks are NOT covered here — they're separately
+    // moderated and may honestly claim human review.
+    const FALSE_CLAIMS = {
+        en: /human editor/i,
+        ko: /사람 편집장/,
+        ja: /人間の編集/,
+        pt: /editor humano/i,
+        es: /editor humano/i
+    };
+    for (const ed of ['ko', 'ja', 'pt', 'es']) {
+        const json = JSON.parse(read(`data/dispatches.${ed}.json`));
+        const disc = String(json.ai_disclosure || '');
+        const re = FALSE_CLAIMS[ed];
+        assert.ok(!re.test(disc),
+            `dispatches.${ed}.json ai_disclosure still claims human-editor review — pipeline is AI-only since #93/#94`);
+    }
+    const enJson = JSON.parse(read('data/dispatches.json'));
+    const enDisc = String(enJson.ai_disclosure || '');
+    assert.ok(!FALSE_CLAIMS.en.test(enDisc),
+        'dispatches.json (en) ai_disclosure claims human-editor review');
+});
