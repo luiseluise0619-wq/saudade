@@ -4,7 +4,7 @@
     "next_filing": "2026-05-02T06:00:00+09:00",
     "ai_assisted": true,
     "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
-    "ai_disclosure": "本号の各項目は AI 補助で分類・採点・翻訳されました。各項目に 'AI DRAFT' または 'REWRITTEN' ラベルが付き、REWRITTEN は人間の編集長が手を入れた項目です。詳細は CONTENT-LICENSE.md §7。",
+    "ai_disclosure": "本号の各項目は AI が起草したのち、発行前に AI がもう一度、本誌憲法(政治・暴力・醜聞の禁止、引用二十五語以内、独自の語り口)に照らして検閲します。詳細は CONTENT-LICENSE.md §7。",
     "cities": [
         {
             "city": "東京",
