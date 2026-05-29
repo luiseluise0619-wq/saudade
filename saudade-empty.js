@@ -139,11 +139,11 @@
                         es: 'La redacción archiva tres elementos por ciudad, seis días por semana. <em>El domingo es silencio — intencionado.</em>'
                     }),
                     note: L({
-                        en: 'Dispatches are AI-assisted and reviewed by a human editor. Sources are quoted at most twenty-five words.',
-                        ko: '디스패치는 AI 보조로 작성되고 사람 편집장이 다시 본다. 인용은 25 단어를 넘지 않는다.',
-                        ja: 'ディスパッチは AI 補助で書き、人間の編集長が手を入れる。引用は二十五語を超えない。',
-                        pt: 'Os despachos são assistidos por IA e revistos por um editor humano. Citamos no máximo vinte e cinco palavras.',
-                        es: 'Los despachos son asistidos por IA y revisados por un editor humano. Citamos como máximo veinticinco palabras.'
+                        en: 'Dispatches are AI-drafted and AI-reviewed against the magazine’s constitution. Sources are quoted at most twenty-five words.',
+                        ko: '디스패치는 AI 가 초안을 작성하고, 발행 전 AI 가 매거진 헌법에 맞는지 다시 검수한다. 인용은 25 단어를 넘지 않는다.',
+                        ja: 'ディスパッチは AI が起草し、発行前に AI がもう一度、本誌憲法に照らして検閲する。引用は二十五語を超えない。',
+                        pt: 'Os despachos são redigidos por IA e revistos por uma segunda passagem de IA contra a constituição editorial. Citamos no máximo vinte e cinco palavras.',
+                        es: 'Los despachos los redacta una IA y los revisa una segunda pasada de IA frente a la constitución editorial. Citamos como máximo veinticinco palabras.'
                     })
                 };
             case 'cover':
