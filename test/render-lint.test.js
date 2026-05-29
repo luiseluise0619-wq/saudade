@@ -191,3 +191,33 @@ test('every user-facing HTML page declares viewport, html lang, and a <main> lan
             `${f}: <main> landmark missing — screen readers cannot skip to content`);
     }
 });
+
+test('index.html JSON-LD describes the current product (no retired tier prices, no decision-tool copy)', () => {
+    // Locked after a sweep found the schema.org block in index.html still
+    // advertised a "Digital nomad decision tool — visa counter, tax
+    // residency..." plus paid Patron/Subscriber tiers at $3/$5 — while the
+    // worker has been in GONE_FREE_MODE for billing for months. This
+    // copy gets republished verbatim by Google AI Overviews, ChatGPT,
+    // and Perplexity, so the lie propagates beyond the site itself.
+    const html = read('index.html');
+    const m = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    assert.ok(m, 'index.html: no JSON-LD block');
+    const block = m[1];
+
+    // Retired product vocabulary that must not return.
+    const RETIRED = [
+        /decision tool/i,
+        /visa counter/i,
+        /Schengen/i,
+        /tax residency/i,
+        /Patron/i,
+        /Subscriber/i
+    ];
+    for (const re of RETIRED) {
+        assert.ok(!re.test(block),
+            `index.html JSON-LD still mentions retired product vocabulary matching ${re}`);
+    }
+    // Current product must be there.
+    assert.ok(/magazine|newspaper/i.test(block),
+        'index.html JSON-LD description should call the site a magazine / newspaper');
+});
