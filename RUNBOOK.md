@@ -22,6 +22,7 @@ A Gemini key was pasted into a chat during development and must be treated as co
 | `RESEND_API_KEY` | sign-in email **and** Sunday digest | one key serves both (`RESEND_KEY` also accepted) |
 | `EDITOR_TOKEN` | `/digest/send` + `/admin` auth | any 32+ char hex (`openssl rand -hex 32`) |
 | `LICENSE_SIGNING_KEY` | (only if you re-enable paid tiers) | currently dormant |
+| `SITE_ORIGIN` *(optional)* | base URL of magic-link emails + Atom feed self-links | set once a custom domain (e.g. `https://saudade.app`) is live; default is `https://saudade.pages.dev` |
 
 **Never set `MAGIC_INLINE_OK`.** It exposes sign-in links in the HTTP response — localhost dev only. In production it is an account-takeover switch.
 

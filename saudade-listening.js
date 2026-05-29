@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v696')
+        return fetch('./data/listening.json?v=v697')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1343,11 +1343,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 <p>
                     <strong>${escapeHtml(T({ en: 'A note on sound.', ko: '소리에 대한 메모.', ja: '音についての覚書。', pt: 'Uma nota sobre o som.', es: 'Una nota sobre el sonido.' }))}</strong>
                     ${escapeHtml(T({
-                        en: 'Each track is recorded in person or licensed under Creative Commons from Freesound.org. No music. No conversation. The full license list is at saudade.app/listening-room/credits.',
-                        ko: '모든 트랙은 직접 녹음했거나 Freesound.org 의 크리에이티브 커먼즈 라이선스로 받았다. 음악 없음. 대화 없음. 전체 라이선스 목록은 saudade.app/listening-room/credits 에 있다.',
-                        ja: '全トラックは自ら録音したか、Freesound.org のクリエイティブ・コモンズ・ライセンスで取得した。音楽なし。会話なし。ライセンス一覧は saudade.app/listening-room/credits に。',
-                        pt: 'Cada faixa é gravada pessoalmente ou licenciada sob Creative Commons em Freesound.org. Sem música. Sem conversa. A lista completa de licenças está em saudade.app/listening-room/credits.',
-                        es: 'Cada pista se graba en persona o se obtiene bajo Creative Commons en Freesound.org. Sin música. Sin conversación. La lista completa de licencias está en saudade.app/listening-room/credits.'
+                        en: 'Each track is recorded in person or licensed under Creative Commons from Freesound.org. No music. No conversation. The full license list is on the credits page.',
+                        ko: '모든 트랙은 직접 녹음했거나 Freesound.org 의 크리에이티브 커먼즈 라이선스로 받았다. 음악 없음. 대화 없음. 전체 라이선스 목록은 크레딧 페이지에 있다.',
+                        ja: '全トラックは自ら録音したか、Freesound.org のクリエイティブ・コモンズ・ライセンスで取得した。音楽なし。会話なし。ライセンス一覧はクレジットページに。',
+                        pt: 'Cada faixa é gravada pessoalmente ou licenciada sob Creative Commons em Freesound.org. Sem música. Sem conversa. A lista completa de licenças está na página de créditos.',
+                        es: 'Cada pista se graba en persona o se obtiene bajo Creative Commons en Freesound.org. Sin música. Sin conversación. La lista completa de licencias está en la página de créditos.'
                     }))}
                 </p>
             </footer>

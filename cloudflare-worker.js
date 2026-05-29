@@ -706,7 +706,7 @@ export default {
 
             switch (path) {
                 case '/': case '/health':
-                    return J(req, { status: 'ok', service: 'AURA Backend', version: '4.0', ts: Date.now() });
+                    return J(req, { status: 'ok', service: 'saudade', ts: Date.now() });
                 case '/rss':            return rss(req, env, ctx);
                 case '/quakes':         return quakes(req, env, ctx);
                 case '/disasters':      return disasters(req, env, ctx);
@@ -1642,7 +1642,16 @@ async function cafeSubmit(req, env, ctx) {
 // 응답 body 에 magic link 노출 — 솔로 파운더 / 베타 단계 fallback.
 
 const MAGIC_TOKEN_TTL_MS = 15 * 60 * 1000;   // 15 분
-const MAGIC_LINK_BASE    = 'https://saudade.app/?token=';   // 운영자 도메인 변경 가능
+
+// Canonical site origin. saudade.app is the planned custom domain but
+// not yet provisioned — fall back to saudade.pages.dev (the actually
+// deployed URL) so magic links, Atom feed self-links, and digest
+// landing pages don't 404. Operator sets env.SITE_ORIGIN once the
+// custom domain is live: `wrangler secret put SITE_ORIGIN`.
+function siteOrigin(env) {
+    const o = (env && env.SITE_ORIGIN) || 'https://saudade.pages.dev';
+    return o.replace(/\/+$/, '');
+}
 
 function genToken() {
     // 32 byte hex token
@@ -1688,7 +1697,7 @@ async function authRequest(req, env, ctx) {
         return E(req, 'DB_INSERT', 'Could not request link', 500);
     }
 
-    const link = MAGIC_LINK_BASE + token;
+    const link = siteOrigin(env) + '/?token=' + token;
 
     // SECURITY: returning the magic link in the HTTP response means anyone
     // who POSTs an email gets a working sign-in link for it — account
@@ -3546,9 +3555,10 @@ async function feedAtom(req, env, ctx) {
     }
 
     const self = url.origin + '/feed.atom?edition=' + edition;
-    const homeMap = { en: 'https://saudade.app/', ko: 'https://saudade.app/?edition=ko',
-                      ja: 'https://saudade.app/?edition=ja', pt: 'https://saudade.app/?edition=pt',
-                      es: 'https://saudade.app/?edition=es' };
+    const home = siteOrigin(env);
+    const homeMap = { en: home + '/',                ko: home + '/?edition=ko',
+                      ja: home + '/?edition=ja',     pt: home + '/?edition=pt',
+                      es: home + '/?edition=es' };
     const titleMap = {
         en: 'saudade — dispatches', ko: 'saudade — 디스패치',
         ja: 'saudade — ディスパッチ', pt: 'saudade — despachos',

@@ -221,3 +221,30 @@ test('index.html JSON-LD describes the current product (no retired tier prices, 
     assert.ok(/magazine|newspaper/i.test(block),
         'index.html JSON-LD description should call the site a magazine / newspaper');
 });
+
+test('cloudflare-worker /health response describes the actual product, no AURA branding', () => {
+    // Caught in the same drift sweep that fixed JSON-LD (#107). The
+    // worker's / and /health endpoints returned
+    //   { status: 'ok', service: 'AURA Backend', version: '4.0', ... }
+    // when the product had been saudade for many months. Uptime monitors,
+    // dev consoles, and curl-checks all picked up the stale brand.
+    const src = read('cloudflare-worker.js');
+    const healthLines = src.split('\n').filter(l => /service:\s*['"]/.test(l));
+    for (const line of healthLines) {
+        assert.ok(!/AURA/.test(line),
+            `cloudflare-worker.js leaks AURA brand in a health-style response: ${line.trim()}`);
+    }
+});
+
+test('cloudflare-worker uses env.SITE_ORIGIN, not a hardcoded saudade.app, for user-facing URLs', () => {
+    // saudade.app is the planned custom domain but is not provisioned.
+    // Magic-link emails and the Atom feed used to point at it; users got
+    // DNS errors. Both now derive from siteOrigin(env), defaulting to
+    // saudade.pages.dev (the actually-deployed URL).
+    const src = read('cloudflare-worker.js');
+    // The two specific hardcodes we removed must not reappear.
+    assert.ok(!/['"]https:\/\/saudade\.app\/\?token=['"]/.test(src),
+        'magic-link base reverted to https://saudade.app/?token= — env.SITE_ORIGIN required');
+    assert.ok(!/homeMap\s*=\s*\{\s*en:\s*['"]https:\/\/saudade\.app\//.test(src),
+        'Atom feed homeMap reverted to https://saudade.app/ — env.SITE_ORIGIN required');
+});
