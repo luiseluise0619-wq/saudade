@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720">
+  <rect width="540" height="720" fill="#F2EEE3"/>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#16151A">
+    <text x="270" y="120" text-anchor="middle" font-size="56" font-style="italic">saudade</text>
+    <line x1="80" y1="160" x2="460" y2="160" stroke="#16151A" stroke-width="1"/>
+    <text x="270" y="195" text-anchor="middle" font-size="13" letter-spacing="4">DISPATCHES · ATLAS · LISTENING ROOM</text>
+
+    <text x="80" y="290" font-size="14" letter-spacing="3">SEOUL — TODAY</text>
+    <text x="80" y="332" font-size="28" font-style="italic">The rain returns to Jongno.</text>
+    <line x1="80" y1="360" x2="200" y2="360" stroke="#5BA890" stroke-width="1.5"/>
+    <text x="80" y="392" font-size="14" opacity="0.7">Three lines. One source. Linked.</text>
+
+    <line x1="80" y1="460" x2="460" y2="460" stroke="#16151A" stroke-width="0.5" opacity="0.25"/>
+    <text x="80" y="500" font-size="14" letter-spacing="3">LISBON — TODAY</text>
+    <text x="80" y="540" font-size="24" font-style="italic">Trams empty before noon.</text>
+  </g>
+  <g transform="translate(270, 640)" fill="none">
+    <circle r="22" stroke="#16151A" stroke-width="1.5"/>
+    <circle r="12" stroke="#16151A" stroke-width="1"/>
+    <circle r="4" stroke="#9A3324" stroke-width="1"/>
+  </g>
+</svg>

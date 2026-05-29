@@ -44,7 +44,18 @@ Apply any not yet run — at minimum `schema/digest_subscribers.sql` (Sunday dig
 - Actions → **Fetch listening-room content** → fills the listening room (needs PEXELS/FREESOUND).
 - Actions → **D1 backup (daily)** → Run once to seed the `backups` branch.
 
-### 6. Decide two things (write them down)
+### 6. Generate the share-card image (one-off, locally)
+The site ships with `og-cover.svg` (designed, brand-consistent). Facebook, Instagram, and Twitter scrapers reject SVG, so they need `og-cover.png` next to it:
+
+```bash
+npm install --no-save sharp
+node scripts/build-og.js
+git add og-cover.png && git commit -m "build: og-cover.png"
+```
+
+LinkedIn / Slack / Discord pick up the SVG fallback and work today; the PNG unblocks the marketing primary (Instagram bio link, DM shares, Twitter cross-posts). `npm run launch-check` warns if the PNG is missing.
+
+### 7. Decide two things (write them down)
 - **Intent**: craft project / editorial business / venture. Every later trade-off depends on this.
 - **Cadence**: §9.5 says daily. With the AI-files-AI-reviews pipeline this is now sustainable without daily human work — but confirm you're comfortable publishing AI-reviewed copy unattended (the disclosure says so honestly).
 
