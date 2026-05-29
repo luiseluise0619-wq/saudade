@@ -186,6 +186,15 @@ function exists(rel) { return fs.existsSync(path.join(ROOT, rel)); }
         tracks >= cities * 3, `${tracks} tracks / ${cities} cities`);
 })();
 
+// ─── WARN: og-cover.png present (FB/IG/Twitter scrapers reject SVG) ─────
+(function checkOgImage() {
+    const ok = exists('og-cover.png');
+    record(ok ? 'INFO' : 'WARN',
+        'marketing', 'og-cover.png (share-card image)',
+        ok,
+        ok ? 'present' : 'missing — run: npm install --no-save sharp && node scripts/build-og.js');
+})();
+
 // ─── WARN: founder secrets — surfaced as INFO (we can't verify remote) ─
 (function infoSecrets() {
     const need = [

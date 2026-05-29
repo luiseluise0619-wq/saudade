@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F2EEE3"/>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#16151A">
+    <text x="80" y="80" font-size="18" letter-spacing="6">EN · KO · JA · PT · ES</text>
+    <text x="600" y="340" text-anchor="middle" font-size="180" font-style="italic">saudade</text>
+    <line x1="500" y1="385" x2="700" y2="385" stroke="#5BA890" stroke-width="2"/>
+    <text x="600" y="445" text-anchor="middle" font-size="28" font-style="italic">a slow newspaper for digital nomads</text>
+    <text x="600" y="540" text-anchor="middle" font-size="16" letter-spacing="4" opacity="0.6">QUIET · BY · DESIGN</text>
+  </g>
+  <g transform="translate(1080, 530)" fill="none">
+    <circle r="40" stroke="#16151A" stroke-width="2"/>
+    <circle r="22" stroke="#16151A" stroke-width="1.5"/>
+    <circle r="8" stroke="#9A3324" stroke-width="1.5"/>
+  </g>
+</svg>
