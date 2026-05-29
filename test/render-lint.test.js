@@ -171,3 +171,23 @@ test('data/dispatches.<ed>.json ai_disclosure must not claim human-editor review
     assert.ok(!FALSE_CLAIMS.en.test(enDisc),
         'dispatches.json (en) ai_disclosure claims human-editor review');
 });
+
+test('every user-facing HTML page declares viewport, html lang, and a <main> landmark', () => {
+    // Locked after a static a11y/mobile sweep found 9 pages
+    // (credits/install/privacy ×5/support/terms) shipping with no <main>
+    // landmark — screen readers fell through to <body>. Dev-only pages
+    // (admin, test-suite, logo-preview) are excluded; they're disallowed
+    // by robots.txt and not the front door.
+    const DEV_ONLY = /^(admin|test-suite|logo-preview)\./;
+    const files = fs.readdirSync(ROOT)
+        .filter(f => f.endsWith('.html') && !DEV_ONLY.test(f));
+    for (const f of files) {
+        const src = read(f);
+        assert.ok(/<html\s+lang=["'][a-z]{2}/i.test(src),
+            `${f}: <html lang="…"> missing`);
+        assert.ok(/<meta\s+name=["']viewport["']/i.test(src),
+            `${f}: viewport meta missing — mobile users see desktop layout`);
+        assert.ok(/<main\b/i.test(src),
+            `${f}: <main> landmark missing — screen readers cannot skip to content`);
+    }
+});
