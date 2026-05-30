@@ -279,3 +279,19 @@ test('README + desk PIPELINE describe the current AI stack, not the retired one'
     assert.ok(!/Human editor reviews/i.test(desk),
         'saudade-desk.js still claims a human editor reviews — the AI-review gate replaced human review in #93/#94');
 });
+
+test('etymology.html describes the actual product (filed daily from Seoul, not Lisbon)', () => {
+    // Locked alongside #109. etymology.html had the same drift as the
+    // README tagline — claimed the newspaper is filed from Lisbon and
+    // doesn't have a publication schedule. credits.html explicitly says
+    // "Issue 03 was edited from Seoul" and constitution §9.5 says
+    // daily filing at 06:00 KST. The about-page text now matches both.
+    //
+    // The per-edition cover lede uses a dynamic $editorCity template
+    // (Seoul for KO, Lisbon for EN, etc.) — that's intentional brand
+    // framing and lives in saudade-cover.js / saudade.editorial.js,
+    // not on this static prose page.
+    const html = read('etymology.html');
+    assert.ok(!/(?:edited|filed)\s+from\s+lisbon/i.test(html),
+        'etymology.html still claims the newspaper is edited/filed from Lisbon — credits.html says Seoul');
+});
