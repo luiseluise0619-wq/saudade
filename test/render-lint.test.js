@@ -248,3 +248,34 @@ test('cloudflare-worker uses env.SITE_ORIGIN, not a hardcoded saudade.app, for u
     assert.ok(!/homeMap\s*=\s*\{\s*en:\s*['"]https:\/\/saudade\.app\//.test(src),
         'Atom feed homeMap reverted to https://saudade.app/ — env.SITE_ORIGIN required');
 });
+
+test('README + desk PIPELINE describe the current AI stack, not the retired one', () => {
+    // Caught alongside the same drift sweep that fixed JSON-LD (#107)
+    // and SITE_ORIGIN (#108). The README and the in-app desk page both
+    // advertised:
+    //   - "Gemini 2.0 Flash" (retired from free tier, #95 fixed code)
+    //   - A "TRANSLATE" pipeline step (contradicts the constitution:
+    //     KO/JA/PT/ES are independent editions, not translations)
+    //   - "Human editor reviews afterwards" (after #93/#94 the review
+    //     gate is an AI pass — no human editor in the loop)
+    const readme = read('README.md');
+    const desk   = read('saudade-desk.js');
+
+    // Retired Gemini version names — alias-only is enforced (see existing
+    // "Gemini model name pin" test for live code).
+    for (const where of [{ name: 'README.md', src: readme },
+                         { name: 'saudade-desk.js', src: desk }]) {
+        assert.ok(!/gemini-?2\.0-?flash/i.test(where.src),
+            `${where.name}: still names gemini-2.0-flash (retired) — use the gemini-flash-lite-latest alias`);
+        assert.ok(!/gemini 2\.0 flash/i.test(where.src),
+            `${where.name}: still names "Gemini 2.0 Flash" in prose — use "Gemini Flash" (latest)`);
+    }
+
+    // PIPELINE step "TRANSLATE" describes a workflow that does not exist.
+    assert.ok(!/step:\s*['"]TRANSLATE['"]/.test(desk),
+        'saudade-desk.js PIPELINE still has a TRANSLATE step — KO/JA/PT/ES are independent editions, not translations');
+
+    // The desk file step used to claim "Human editor reviews afterwards".
+    assert.ok(!/Human editor reviews/i.test(desk),
+        'saudade-desk.js still claims a human editor reviews — the AI-review gate replaced human review in #93/#94');
+});
