@@ -1,6 +1,6 @@
 # saudade
 
-> A slow newspaper for digital nomads. Three cities, no schedule. Edited from Lisbon.
+> A slow newspaper for digital nomads. Five editions, fourteen cities, daily. Edited from Seoul.
 
 [![status](https://img.shields.io/badge/status-MVP-orange)]()
 [![pricing](https://img.shields.io/badge/pricing-free%20core-brightgreen)]()
@@ -32,7 +32,7 @@ For the module map, data flow, and the "adding a feature" checklist, see [ARCHIT
 
 - **Frontend** — vanilla JS IIFE modules, no bundler. PWA-installable, prefers-reduced-motion respected.
 - **Backend** — single Cloudflare Worker (`cloudflare-worker.js`) + D1 (`schema/`) + KV cache.
-- **AI pipeline** — Workers AI (Llama 3.1 8B) for sort/score, Gemini 2.0 Flash for write. Disclosed per dispatch.
+- **AI pipeline** — Workers AI (Llama 3.1 8B) for sort/score, Gemini Flash (`gemini-flash-lite-latest` alias — never a pinned version, a render-lint test blocks re-pinning) for draft + a second Gemini pass that copy-edits against the constitution before filing. Disclosed per dispatch.
 - **Per-edition refresh** — GitHub Actions cron + `scripts/refresh-dispatches.js` writes KO/JA/PT/ES native-voice content daily.
 - **Auth** — passwordless magic-link (Resend), opaque server sessions, full revocation flow.
 
@@ -57,7 +57,8 @@ Required worker secrets (all optional unless noted):
 
 | Secret | Purpose |
 |---|---|
-| `RESEND_KEY` + `RESEND_FROM` | sends magic-link sign-in email (else returns the link inline — fine for solo) |
+| `RESEND_API_KEY` (or `RESEND_KEY`) + `RESEND_FROM` | sends magic-link sign-in email and the Sunday digest. Without it, `/auth/request` returns a 503 — never expose the link in the HTTP response in production (`MAGIC_INLINE_OK=1` is the localhost-only opt-in for that) |
+| `SITE_ORIGIN` | base URL used in magic-link emails and the Atom feed (default `https://saudade.pages.dev` until the custom domain is provisioned) |
 | `EDITOR_TOKEN` | bearer for `/editor/*` and `/admin/*` |
 | `LICENSE_SIGNING_KEY` | only if you re-enable paid plans |
 | `GEMINI_KEY` | rewrite step in The Desk pipeline |
@@ -108,16 +109,17 @@ Every AI-generated dispatch is labelled `AI-assisted` (EU AI Act compliance).
 
 ## Roadmap
 
-- [x] Multi-edition desk pipeline (Lisbon)
-- [x] Atlas — Seoul cafés (110)
+- [x] Multi-edition desk pipeline (filed from Seoul)
+- [x] Atlas — 303 cafés across Seoul / Da Nang / Bali / Tokyo / Lisbon
 - [x] Magic-link auth + tour mode
-- [x] Permission revocation (this branch)
-- [ ] Bundler (24 modules → 4)
+- [x] Permission revocation
+- [x] RSS/Atom feed of Dispatches (`/feed.atom?edition=…`)
+- [x] AI-review gate on dispatches (second Gemini pass against the constitution before filing)
+- [ ] Bundler (51 modules → ~6)
 - [ ] Schengen 90/180 auto-calculator (input passport stamps → remaining days)
 - [ ] Native field-recording library per city (R2)
 - [ ] Quarterly PDF/EPUB issue
-- [ ] RSS/Atom feed of Dispatches
-- [ ] Stripe Pro tier ($8/mo) — issue archive + alerts
+- [ ] Stripe Pro tier ($8/mo) — issue archive + alerts (currently free-only; worker billing returns 410 GONE_FREE_MODE)
 
 ---
 

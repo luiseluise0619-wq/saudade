@@ -7,16 +7,19 @@
 (function() {
     if (window.SAUDADE_DESK) return;
 
-    // v3 pipeline — 100% free AI stack (Workers AI + Gemini 2.0 Flash).
+    // v3 pipeline — 100% free AI stack (Workers AI + Gemini Flash alias).
     // 운영비 0원. provider 는 LLM_*_PROVIDER env var 로 swap 가능.
+    // Model name uses the gemini-flash-lite-latest alias — never a pinned
+    // version, since pinning silently broke the pipeline three times
+    // during development as Google retired older flash variants.
     const PIPELINE = [
         { time: '00:00 KST', step: 'GATHER',    desc: 'rss-parser collects RSS from city halls, museums, local press.' },
         { time: '00:30 KST', step: 'SORT',      desc: 'Workers AI · Llama 3.1 8B — city classification, noise removed.' },
         { time: '02:00 KST', step: 'SCORE',     desc: 'Workers AI · Llama 3.1 8B — quietness scored one to ten.' },
-        { time: '04:00 KST', step: 'WRITE',     desc: 'Gemini 2.0 Flash — three to four sentence dispatches rewritten.' },
-        { time: '05:00 KST', step: 'TRANSLATE', desc: 'Gemini 2.0 Flash — base edition into four separate impressions.' },
-        { time: '05:30 KST', step: 'STAGE',     desc: 'D1 staged for editorial review.' },
-        { time: '06:00 KST', step: 'FILE',      desc: 'Top nine publish. Human editor reviews afterwards.' }
+        { time: '04:00 KST', step: 'WRITE',     desc: 'Gemini Flash (latest) — three to four sentence dispatches rewritten.' },
+        { time: '05:00 KST', step: 'REVIEW',    desc: 'Gemini Flash — second pass copy-edits against the constitution; anything that fails the gate is blocked.' },
+        { time: '05:30 KST', step: 'STAGE',     desc: 'D1 staged.' },
+        { time: '06:00 KST', step: 'FILE',      desc: 'Top items publish. KO/JA/PT/ES are independently drafted by a parallel GitHub Actions cron on the same schedule — not translations of the EN edition.' }
     ];
 
     function injectStyles() {
