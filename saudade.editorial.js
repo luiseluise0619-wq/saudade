@@ -1299,6 +1299,55 @@ body.section-active::before { content: none !important; }
     function init() {
         const ed = getEdition() || DEFAULT;
         applyEdition(ed);
+        applySkin(pickSkin());
+    }
+
+    // ── Theme skin (paper / saturated / dark) ─────────────────────────
+    // Ported from the (dead) saudade-edition.js. When the standalone file
+    // was bundled into this editorial.js the skin API got dropped on the
+    // floor — window.SAUDADE_EDITION.setSkin was undefined, so every
+    // theme-switch click in saudade-theme-switch.js + the cover theme
+    // button silently no-op'd. Restored here.
+    const SKINS = ['paper', 'saturated', 'dark'];
+    const KEY_SKIN = 'saudade.skin';
+    function isoWeekNumber(d) {
+        const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        const dayNum = (date.getUTCDay() + 6) % 7;
+        date.setUTCDate(date.getUTCDate() - dayNum + 3);
+        const firstThursday = date.valueOf();
+        date.setUTCMonth(0, 1);
+        if (date.getUTCDay() !== 4) date.setUTCMonth(0, 1 + ((4 - date.getUTCDay()) + 7) % 7);
+        return 1 + Math.ceil((firstThursday - date) / 604800000);
+    }
+    function getSkinPref() {
+        try {
+            const v = localStorage.getItem(KEY_SKIN);
+            return v && (SKINS.includes(v) || v === 'auto') ? v : 'auto';
+        } catch (e) { return 'auto'; }
+    }
+    function saveSkinPref(v) {
+        try { localStorage.setItem(KEY_SKIN, v); } catch (e) {}
+    }
+    function pickSkin() {
+        const pref = getSkinPref();
+        if (pref !== 'auto') return pref;
+        const mm = (typeof matchMedia === 'function') ? matchMedia : null;
+        if (!mm) return 'paper';
+        if (mm('(prefers-reduced-motion: reduce)').matches) return 'paper';
+        if (mm('(prefers-color-scheme: dark)').matches) return 'dark';
+        const week = isoWeekNumber(new Date());
+        const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
+        return cycle[week % cycle.length];
+    }
+    function applySkin(skin) {
+        const s = SKINS.includes(skin) ? skin : 'paper';
+        document.documentElement.setAttribute('data-skin', s);
+        return s;
+    }
+    function setSkin(v) {
+        if (v !== 'auto' && !SKINS.includes(v)) return;
+        saveSkinPref(v);
+        applySkin(pickSkin());
     }
 
     // v621 — body 가 있을 때 한 번 + DOMContentLoaded 이후 한 번 더 (race 방지).
@@ -1311,7 +1360,17 @@ body.section-active::before { content: none !important; }
         init();
     }
 
-    window.SAUDADE_EDITION = { set, get: () => getEdition() || DEFAULT, SUPPORTED, META };
+    window.SAUDADE_EDITION = {
+        set,
+        get: () => getEdition() || DEFAULT,
+        SUPPORTED, META,
+        // Skin API — restored from the dead standalone saudade-edition.js.
+        // Required by saudade-theme-switch.js and the cover theme button.
+        setSkin,
+        skin: () => document.documentElement.getAttribute('data-skin') || 'paper',
+        skinPref: getSkinPref,
+        SKINS
+    };
 
     // v622 — 글로벌 i18n 헬퍼. 컴포넌트들이 self-내장 COPY 정의할 필요 없이 호출.
     // 사용: SAUDADE_T({ en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés' })
