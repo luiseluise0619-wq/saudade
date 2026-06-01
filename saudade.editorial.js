@@ -417,6 +417,96 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     margin-right: auto;
 }
 
+/* Cover hero — today's three dispatch headlines, front-page style.
+   Big serif italic, like a newspaper lead. Clicking jumps to §03. */
+.sdd-cover-heads {
+    margin: 0 auto clamp(28px, 4vw, 48px);
+    max-width: 640px;
+    width: 100%;
+    pointer-events: auto;
+}
+.sdd-cover-heads-eyebrow {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 clamp(14px, 2vw, 22px);
+    padding-bottom: clamp(8px, 1.2vw, 12px);
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-cover-heads-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sdd-cover-head {
+    padding: clamp(14px, 2vw, 20px) 0;
+    border-bottom: 0.5px solid var(--rule);
+}
+.sdd-cover-head:last-child { border-bottom: 0; }
+.sdd-cover-head a {
+    display: grid;
+    grid-template-columns: minmax(72px, auto) 1fr;
+    gap: clamp(12px, 2vw, 20px);
+    align-items: baseline;
+    color: inherit;
+    text-decoration: none;
+    transition: color .12s;
+}
+.sdd-cover-head a:hover .headline,
+.sdd-cover-head a:focus-visible .headline { color: var(--rust); }
+.sdd-cover-head .city {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    padding-top: 4px;
+}
+.sdd-cover-head .headline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 30px);
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+}
+.sdd-cover-head--pending .dots {
+    display: inline-block;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--bone-d);
+    opacity: 0.55;
+    font-size: clamp(20px, 2.4vw, 30px);
+}
+
+/* Secondary 'today' counters — demoted now that dispatch headlines own
+   the hero. Keep them quietly visible: smaller, ink-soft, single row. */
+.sdd-cover-today--secondary {
+    border-top: 0.5px dashed var(--rule);
+    border-bottom: 0.5px dashed var(--rule);
+    padding: clamp(10px, 1.5vw, 16px) 0;
+}
+.sdd-cover-today--secondary .sdd-cover-today-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(12px, 2vw, 24px);
+    justify-content: center;
+}
+.sdd-cover-today--secondary .sdd-cover-today-item {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-cover-today--secondary .sdd-cover-today-item::before { content: ''; }
+
 /* TODAY 요약 — 신문 frontpage 의 'INSIDE TODAY' */
 .sdd-cover-today {
     margin: 0 auto clamp(28px, 4vw, 48px);
@@ -759,8 +849,22 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                  hook with shortcuts to set home cities or load demo data. -->
             <div id="sddCoverPersonal"></div>
 
-            <section class="sdd-cover-today">
-                <p class="sdd-cover-today-eyebrow">${escapeHtml(TODAY_LABEL[ed] || 'TODAY')}</p>
+            <!-- v8 cover hero — today's three dispatch headlines, front-page
+                 style. Filled async from data/dispatches.<ed>.json after
+                 cover renders. Falls back to a pending state if the file
+                 is empty or fetch fails. -->
+            <section class="sdd-cover-heads">
+                <p class="sdd-cover-heads-eyebrow">${escapeHtml((TODAY_LABEL[ed] || 'TODAY') + ' · § 03')}</p>
+                <ol class="sdd-cover-heads-list" id="sddCoverHeads">
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                </ol>
+            </section>
+
+            <!-- Secondary counters (Ledger / Atlas / Listening). Demoted
+                 from hero now that dispatch headlines own the cover. -->
+            <section class="sdd-cover-today sdd-cover-today--secondary">
                 <ul class="sdd-cover-today-list">${todayHtml}</ul>
             </section>
 
@@ -850,6 +954,60 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         // wait for a 12-second backstop.
         try { window.dispatchEvent(new CustomEvent('sdd-cover-rendered')); }
         catch (e) {}
+
+        // v8 cover hero — load today's three dispatch headlines and replace
+        // the pending placeholder. One headline per city, top of each list.
+        loadDispatchHeads(ed);
+    }
+
+    function loadDispatchHeads(ed) {
+        const file = ed === 'en' ? 'dispatches.json' : `dispatches.${ed}.json`;
+        const release = (typeof window !== 'undefined' && window.SAUDADE_RELEASE) || 'v0';
+        fetch(`./data/${file}?v=${release}`, { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .then(d => {
+                const heads = pickCoverHeads(d);
+                renderCoverHeads(heads, ed);
+            })
+            .catch(() => {});
+    }
+
+    function pickCoverHeads(d) {
+        if (!d || !Array.isArray(d.cities)) return [];
+        const out = [];
+        for (const c of d.cities) {
+            const items = Array.isArray(c.items) ? c.items : [];
+            const first = items.find(it => it && it.headline);
+            if (first) out.push({ city: c.city || '', headline: first.headline });
+            if (out.length >= 3) break;
+        }
+        return out;
+    }
+
+    function renderCoverHeads(heads, ed) {
+        const root = document.getElementById('sddCoverHeads');
+        if (!root || !heads.length) return;
+        root.innerHTML = heads.map(h => `
+            <li class="sdd-cover-head">
+                <a href="#section-03" data-sdd-jump="tz">
+                    <span class="city">${escapeHtml(h.city || '')}</span>
+                    <span class="headline">${escapeHtml(h.headline || '')}</span>
+                </a>
+            </li>
+        `).join('');
+        // The newly-rendered <a data-sdd-jump="tz"> links need the same
+        // click delegation as the cover-nav. Hook them now.
+        root.querySelectorAll('[data-sdd-jump]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                const cat = a.getAttribute('data-sdd-jump');
+                const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
+                if (btn) {
+                    btn.click();
+                    document.body.classList.add('section-active');
+                }
+            });
+        });
     }
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는
