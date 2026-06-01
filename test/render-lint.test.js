@@ -321,3 +321,19 @@ test('cover lede + Atom subtitle reflect daily filing from Seoul (no "no schedul
             `${f}: KO copy still claims 리스본에서 편집 — credits.html 서울`);
     }
 });
+
+test('SAUDADE_EDITION export in editorial.js includes the skin API (setSkin, skinPref, SKINS)', () => {
+    // Caught when the user reported the cover theme button + the legal-strip
+    // theme switcher both silently no-op'd. saudade-edition.js (the
+    // standalone) exports a full skin API; the editorial.js bundled module
+    // ships a trimmed export that dropped setSkin/skinPref/SKINS, so every
+    // caller's `SAUDADE_EDITION?.setSkin?.(v)` chain was a no-op.
+    const src = read('saudade.editorial.js');
+    const m = src.match(/window\.SAUDADE_EDITION\s*=\s*\{([\s\S]*?)\};/);
+    assert.ok(m, 'editorial.js: window.SAUDADE_EDITION export not found');
+    const block = m[1];
+    for (const fn of ['setSkin', 'skinPref', 'SKINS']) {
+        assert.ok(new RegExp('\\b' + fn + '\\b').test(block),
+            `editorial.js SAUDADE_EDITION export missing "${fn}" — skin switching will silently fail`);
+    }
+});
