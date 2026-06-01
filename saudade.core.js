@@ -2557,13 +2557,13 @@ body[data-tour="1"] .sdd-cover::before {
             case 'cover':
                 return {
                     eyebrow: L({ en: 'TODAY.', ko: '오늘.', ja: '今日。', pt: 'HOJE.', es: 'HOY.' }),
-                    headline: L({ en: 'Three cities, no schedule.', ko: '세 도시, 정해진 시간 없음.', ja: '三つの都市、時刻表なし。', pt: 'Três cidades, sem horário.', es: 'Tres ciudades, sin horario.' }),
+                    headline: L({ en: 'Three cities, filed daily.', ko: '세 도시, 매일 발행.', ja: '三つの都市、毎日発行。', pt: 'Três cidades, publicadas diariamente.', es: 'Tres ciudades, publicadas a diario.' }),
                     lede: L({
-                        en: 'Edited from Lisbon. <em>A slow newspaper for digital nomads.</em>',
-                        ko: '리스본에서 편집. <em>디지털 노마드를 위한 느린 신문.</em>',
-                        ja: 'リスボン編集。<em>デジタルノマドのための、ゆっくりとした新聞。</em>',
-                        pt: 'Editado em Lisboa. <em>Um jornal lento para nómadas digitais.</em>',
-                        es: 'Editado desde Lisboa. <em>Un periódico lento para nómadas digitales.</em>'
+                        en: 'Edited from Seoul. <em>A slow newspaper for digital nomads.</em>',
+                        ko: '서울에서 편집. <em>디지털 노마드를 위한 느린 신문.</em>',
+                        ja: 'ソウル編集。<em>デジタルノマドのための、ゆっくりとした新聞。</em>',
+                        pt: 'Editado em Seul. <em>Um jornal lento para nómadas digitais.</em>',
+                        es: 'Editado desde Seúl. <em>Un periódico lento para nómadas digitales.</em>'
                     }),
                     note: ''
                 };
@@ -2631,11 +2631,11 @@ body[data-tour="1"] .sdd-cover::before {
             {
                 eyebrow:  L({ en: 'WELCOME.', ko: '어서 오라.', ja: 'ようこそ。', pt: 'BEM-VINDO.', es: 'BIENVENIDO.' }),
                 headline: L({
-                    en: 'A slow newspaper. Three cities, no schedule.',
-                    ko: '느린 신문. 세 도시, 정해진 시간 없음.',
-                    ja: 'ゆっくりとした新聞。三つの都市、時刻表なし。',
-                    pt: 'Um jornal lento. Três cidades, sem horário.',
-                    es: 'Un periódico lento. Tres ciudades, sin horario.'
+                    en: 'A slow newspaper. Three cities, filed daily.',
+                    ko: '느린 신문. 세 도시, 매일 발행.',
+                    ja: 'ゆっくりとした新聞。三つの都市、毎日発行。',
+                    pt: 'Um jornal lento. Três cidades, publicadas diariamente.',
+                    es: 'Un periódico lento. Tres ciudades, publicadas a diario.'
                 }),
                 body: L({
                     en: '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.',

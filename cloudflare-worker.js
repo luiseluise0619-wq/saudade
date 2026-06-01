@@ -3564,12 +3564,15 @@ async function feedAtom(req, env, ctx) {
         ja: 'saudade — ディスパッチ', pt: 'saudade — despachos',
         es: 'saudade — despachos'
     };
+    // Per-edition Atom feed subtitle — mirrors saudade.editorial.js
+    // ISSUE_LEDE_5 so RSS readers see the same identity as the homepage.
+    // Daily filing per §9.5; editor in Seoul per credits.html.
     const subMap = {
-        en: 'Three cities, no schedule. Edited from Lisbon.',
-        ko: '세 도시, 정해진 시간 없음. 리스본에서 편집.',
-        ja: '三つの都市、時刻表なし。リスボン編集。',
-        pt: 'Três cidades, sem horário. Editado em Lisboa.',
-        es: 'Tres ciudades, sin horario. Editado desde Lisboa.'
+        en: 'Three cities, filed daily. Edited from Seoul.',
+        ko: '세 도시, 매일 발행. 서울에서 편집.',
+        ja: '三つの街、毎日発行。ソウル編集。',
+        pt: 'Três cidades, publicadas diariamente. Editado em Seul.',
+        es: 'Tres ciudades, publicadas a diario. Editado desde Seúl.'
     };
 
     const updated = items[0] && items[0].published_at
