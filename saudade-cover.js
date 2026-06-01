@@ -290,6 +290,109 @@ body.section-active .sdd-cover { display: none !important; }
     border-bottom-color: var(--rust, #9A3324);
 }
 
+/* Theme color picker — round button top-right of the cover that pops
+   a panel of skin swatches. Each swatch shows the skin's actual
+   primary color; the labels sit on a paper-tone strip so contrast
+   stays readable on any background. */
+.sdd-cover-theme {
+    position: absolute;
+    top: clamp(12px, 2vw, 20px);
+    right: clamp(12px, 2vw, 20px);
+    z-index: 5;
+    pointer-events: auto;   /* parent .sdd-cover sets pointer-events: none */
+}
+.sdd-cover-theme-toggle {
+    width: 40px; height: 40px;
+    min-width: 44px; min-height: 44px;     /* mobile touch */
+    border-radius: 50%;
+    border: 1px solid var(--ink, #16151A);
+    background: var(--paper, #F2EEE3);
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .12s;
+}
+.sdd-cover-theme-toggle:hover { transform: scale(1.08); }
+.sdd-cover-theme-toggle:focus-visible {
+    outline: 2px solid var(--rust, #9A3324);
+    outline-offset: 2px;
+}
+/* Inner mark — conic gradient through the three skins so the button
+   itself previews what's behind the popover. */
+.sdd-cover-theme-toggle-mark {
+    display: block;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            #F2EEE3 0 33%,
+            var(--accent, #B8442D) 33% 66%,
+            #15130E 66% 100%
+        );
+    border: 0.5px solid var(--ink, #16151A);
+}
+.sdd-cover-theme-pop {
+    position: absolute;
+    top: 52px; right: 0;
+    background: #F2EEE3;       /* always paper so labels read clean */
+    color: #16151A;
+    border: 0.5px solid #16151A;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    min-width: 180px;
+}
+.sdd-cover-theme-pop[hidden] { display: none; }
+.sdd-cover-theme-opt {
+    background: transparent;
+    border: 0;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    align-items: center;
+    min-height: 44px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: #16151A;             /* labels: ink on paper, always readable */
+    cursor: pointer;
+    text-align: left;
+    transition: background .12s;
+    border-radius: 2px;
+}
+.sdd-cover-theme-opt:hover,
+.sdd-cover-theme-opt:focus-visible {
+    background: rgba(22,21,26,.06);
+    outline: none;
+}
+.sdd-cover-theme-opt[aria-current="true"] {
+    background: rgba(22,21,26,.10);
+}
+.sdd-cover-theme-opt[aria-current="true"] .label::before {
+    content: '· ';
+    color: var(--rust, #9A3324);
+}
+.sdd-cover-theme-opt .swatch {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 0.5px solid #16151A;
+}
+.sdd-cover-theme-opt .swatch.swatch-auto {
+    background:
+        linear-gradient(135deg,
+            #F2EEE3 0%, #F2EEE3 49%,
+            #15130E 51%, #15130E 100%);
+}
+.sdd-cover-theme-opt .swatch.swatch-paper     { background: #F2EEE3; }
+.sdd-cover-theme-opt .swatch.swatch-saturated { background: var(--accent, #B8442D); }
+.sdd-cover-theme-opt .swatch.swatch-dark      { background: #15130E; }
+
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
     text-align: center;
@@ -662,10 +765,36 @@ body.section-active .sdd-cover { display: none !important; }
                     aria-current="${code === ed ? 'true' : 'false'}"
                     aria-label="Switch to ${code.toUpperCase()} edition">${code.toUpperCase()}</button>`).join('');
 
+        const currentSkinPref = (window.SAUDADE_EDITION?.skinPref?.()) || 'auto';
+        const SKIN_LABEL = { auto: 'AUTO', paper: 'PAPER', saturated: 'SATURATED', dark: 'DARK' };
+        const SKIN_ORDER = ['auto', 'paper', 'saturated', 'dark'];
+        const themeOptsHtml = SKIN_ORDER.map(k => `
+            <button type="button"
+                    class="sdd-cover-theme-opt"
+                    data-skin="${k}"
+                    aria-current="${k === currentSkinPref ? 'true' : 'false'}"
+                    aria-label="Theme: ${SKIN_LABEL[k]}">
+                <span class="swatch swatch-${k}" aria-hidden="true"></span>
+                <span class="label">${SKIN_LABEL[k]}</span>
+            </button>`).join('');
+
         cover.innerHTML = `
             <nav class="sdd-cover-editions" aria-label="Edition">
                 ${editionsHtml}
             </nav>
+
+            <div class="sdd-cover-theme">
+                <button type="button"
+                        class="sdd-cover-theme-toggle"
+                        data-sdd-theme-toggle
+                        aria-label="Theme color"
+                        aria-expanded="false">
+                    <span class="sdd-cover-theme-toggle-mark" aria-hidden="true"></span>
+                </button>
+                <div class="sdd-cover-theme-pop" data-sdd-theme-pop role="menu" hidden>
+                    ${themeOptsHtml}
+                </div>
+            </div>
 
             <header class="sdd-cover-mast">
                 <h1 class="sdd-cover-wordmark">SAUDADE</h1>
@@ -728,6 +857,49 @@ body.section-active .sdd-cover { display: none !important; }
                 if (code && window.SAUDADE_EDITION?.set) window.SAUDADE_EDITION.set(code);
             });
         });
+
+        // Theme switcher — round button reveals a popover of skin swatches.
+        // SAUDADE_EDITION.setSkin handles persistence + applies the new
+        // <html data-skin="…"> attribute. Labels live on a paper-tone strip
+        // so contrast stays readable regardless of which swatch is shown.
+        const themeToggle = cover.querySelector('[data-sdd-theme-toggle]');
+        const themePop    = cover.querySelector('[data-sdd-theme-pop]');
+        if (themeToggle && themePop) {
+            const closePop = () => {
+                themePop.hidden = true;
+                themeToggle.setAttribute('aria-expanded', 'false');
+            };
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const open = themePop.hidden;
+                themePop.hidden = !open;
+                themeToggle.setAttribute('aria-expanded', String(open));
+            });
+            themePop.querySelectorAll('[data-skin]').forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const k = opt.getAttribute('data-skin');
+                    if (k && window.SAUDADE_EDITION?.setSkin) {
+                        window.SAUDADE_EDITION.setSkin(k);
+                        // refresh aria-current within the open popover
+                        themePop.querySelectorAll('[data-skin]').forEach(o => {
+                            o.setAttribute('aria-current', o === opt ? 'true' : 'false');
+                        });
+                    }
+                    closePop();
+                });
+            });
+            // Click outside closes the popover.
+            document.addEventListener('click', (e) => {
+                if (!themePop.hidden && !themePop.contains(e.target) && e.target !== themeToggle) {
+                    closePop();
+                }
+            });
+            // Escape closes.
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closePop();
+            });
+        }
 
         // v641 — paint the personal block. SAUDADE_PERSONAL falls back to
         // the empty-state empathy hook when there is no data.
