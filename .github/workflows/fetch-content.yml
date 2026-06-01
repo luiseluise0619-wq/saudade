@@ -104,13 +104,16 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          # Stage only the fetched paths (deliberately narrow — keeps the PR focused)
-          shopt -s nullglob
-          git add \
-            data/listening-photos.json \
-            data/listening-tracks.json \
-            data/licenses/*.json \
-            audio/asmr/*.mp3 2>/dev/null || true
+          # Stage only the fetched paths. Use directory args (not globs) so an
+          # empty audio/asmr/ doesn't hand a literal '*.mp3' pathspec to git
+          # — that's how the 2026-05-06 runs all failed (Pexels photos +
+          # Freesound JSON wrote fine, but the mp3 download step had nothing
+          # to commit, and the glob fataled the whole step instead of
+          # producing the photos-only PR it was meant to produce).
+          git add data/listening-photos.json 2>/dev/null || true
+          git add data/listening-tracks.json 2>/dev/null || true
+          git add data/licenses 2>/dev/null || true
+          git add audio/asmr 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No fetched content to commit — skipping PR."
             exit 0
