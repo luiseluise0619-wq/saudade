@@ -7,8 +7,8 @@
       content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.workers.dev; object-src 'none'; base-uri 'self'" />
 <title>Saudade — Support</title>
 <link rel="stylesheet" href="saudade-tokens.css" />
-<link rel="stylesheet" href="saudade-edition-tokens.css?v=v713" />
-<script defer src="saudade-edition.js?v=v713"></script>
+<link rel="stylesheet" href="saudade-edition-tokens.css?v=v714" />
+<script defer src="saudade-edition.js?v=v714"></script>
 <script defer src="saudade-billing.js"></script>
 <style>
   body {
@@ -89,6 +89,42 @@
     color: var(--ink);
     line-height: 1.55;
   }
+  /* Forthcoming tier — visually muted so readers don't tap an
+     unavailable CTA, but the value-prop remains visible as roadmap. */
+  .tier--upcoming {
+    opacity: 0.72;
+    background: repeating-linear-gradient(
+      135deg,
+      transparent 0px, transparent 14px,
+      rgba(11,11,15,0.025) 14px, rgba(11,11,15,0.025) 28px
+    );
+  }
+  .tier--upcoming .tier-benefits { color: var(--bone-d); }
+  .tier-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--bone-d);
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+  .tier-note {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 0.5px dashed var(--rule);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--bone-d);
+    font-weight: 300;
+  }
+  .tier-note em { color: var(--rust); font-style: italic; }
   .tier-cta {
     display: inline-block;
     margin-top: 12px;
@@ -141,13 +177,13 @@
       <a class="tier-cta" href="https://buymeacoffee.com/saudade" target="_blank" rel="noopener">Become a patron →</a>
     </div>
 
-    <div class="tier">
-      <p class="tier-name">Subscriber</p>
-      <p class="tier-price">$5<span style="font-size:14px;color:var(--bone-d)"> / month, or $50 / year</span></p>
-      <p class="tier-benefits">The full archive — every dispatch we have ever filed, indexed by city, searchable, kept open forever. Free readers see the most recent week; subscribers see all of it.</p>
+    <div class="tier tier--upcoming">
+      <p class="tier-name">Subscriber <span class="tier-badge">FORTHCOMING</span></p>
+      <p class="tier-price">$5<span style="font-size:14px;color:var(--bone-d)"> / month, or $50 / year (when it opens)</span></p>
+      <p class="tier-benefits">The full dispatch archive, indexed by city, searchable, kept open forever. Free readers see the most recent week; subscribers will see all of it.</p>
       <p class="tier-benefits">A printable PDF of the quarterly issue, mailed to your inbox four times a year.</p>
       <p class="tier-benefits">Vote on the next city we open a desk in.</p>
-      <a class="tier-cta" href="#" data-saudade-checkout="subscriber" id="subscribeBtn">Subscribe →</a>
+      <p class="tier-note"><em>None of this exists yet.</em> The archive needs a year of dispatches first; the quarterly PDF needs the first issue closed; the city-vote needs an audience to vote. Subscriber opens once those three are real, not before. Patron (above) is how to support the paper today.</p>
     </div>
   </div>
 
