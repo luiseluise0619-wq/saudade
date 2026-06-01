@@ -244,6 +244,105 @@ body.section-active .sdd-cover { display: none !important; }
 }
 .sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
+/* Theme color picker — round button top-right of the cover that pops
+   a panel of skin swatches. Each swatch shows the skin's actual
+   primary color; the labels sit on a paper-tone strip so contrast
+   stays readable on any active skin. */
+.sdd-cover-theme {
+    position: absolute;
+    top: clamp(12px, 2vw, 20px);
+    right: clamp(12px, 2vw, 20px);
+    z-index: 5;
+    pointer-events: auto;
+}
+.sdd-cover-theme-toggle {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--ink, #16151A);
+    background: var(--paper, #F2EEE3);
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .12s;
+}
+.sdd-cover-theme-toggle:hover { transform: scale(1.08); }
+.sdd-cover-theme-toggle:focus-visible {
+    outline: 2px solid var(--rust, #9A3324);
+    outline-offset: 2px;
+}
+.sdd-cover-theme-toggle-mark {
+    display: block;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            #F2EEE3 0 33%,
+            var(--accent, #B8442D) 33% 66%,
+            #15130E 66% 100%
+        );
+    border: 0.5px solid var(--ink, #16151A);
+}
+.sdd-cover-theme-pop {
+    position: absolute;
+    top: 52px; right: 0;
+    background: #F2EEE3;
+    color: #16151A;
+    border: 0.5px solid #16151A;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    padding: 8px;
+    display: grid;
+    gap: 4px;
+    min-width: 188px;
+}
+.sdd-cover-theme-pop[hidden] { display: none; }
+.sdd-cover-theme-opt {
+    background: transparent;
+    border: 0;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    align-items: center;
+    min-height: 44px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: #16151A;
+    cursor: pointer;
+    text-align: left;
+    transition: background .12s;
+    border-radius: 2px;
+}
+.sdd-cover-theme-opt:hover,
+.sdd-cover-theme-opt:focus-visible {
+    background: rgba(22,21,26,.06);
+    outline: none;
+}
+.sdd-cover-theme-opt[aria-current="true"] { background: rgba(22,21,26,.10); }
+.sdd-cover-theme-opt[aria-current="true"] .label::before {
+    content: '· '; color: var(--rust, #9A3324);
+}
+.sdd-cover-theme-opt .swatch {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 0.5px solid #16151A;
+}
+.sdd-cover-theme-opt .swatch.swatch-auto {
+    background: linear-gradient(135deg, #F2EEE3 0 49%, #15130E 51% 100%);
+}
+.sdd-cover-theme-opt .swatch.swatch-paper     { background: #F2EEE3; }
+.sdd-cover-theme-opt .swatch.swatch-saturated { background: var(--accent, #B8442D); }
+.sdd-cover-theme-opt .swatch.swatch-dark      { background: #15130E; }
+
+/* Floating LISTENING ROOM CTA used to be a fixed bottom-right button.
+   It overlapped the cover Today / nav content. Now that § 05 sits in
+   the cover-nav alongside §01-04 (and the dock already exposes
+   LISTENING), the floating CTA is redundant. Hide it. */
+.sdd-cover-listen-cta { display: none !important; }
+
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
     text-align: center;
@@ -593,7 +692,33 @@ body.section-active .sdd-cover { display: none !important; }
             `<li class="sdd-cover-today-item">→ ${escapeHtml(l)}</li>`
         ).join('');
 
+        const currentSkinPref = (window.SAUDADE_EDITION?.skinPref?.()) || 'auto';
+        const SKIN_LABEL = { auto: 'AUTO', paper: 'PAPER', saturated: 'SATURATED', dark: 'DARK' };
+        const SKIN_ORDER = ['auto', 'paper', 'saturated', 'dark'];
+        const themeOptsHtml = SKIN_ORDER.map(k => `
+            <button type="button"
+                    class="sdd-cover-theme-opt"
+                    data-skin="${k}"
+                    aria-current="${k === currentSkinPref ? 'true' : 'false'}"
+                    aria-label="Theme: ${SKIN_LABEL[k]}">
+                <span class="swatch swatch-${k}" aria-hidden="true"></span>
+                <span class="label">${SKIN_LABEL[k]}</span>
+            </button>`).join('');
+
         cover.innerHTML = `
+            <div class="sdd-cover-theme">
+                <button type="button"
+                        class="sdd-cover-theme-toggle"
+                        data-sdd-theme-toggle
+                        aria-label="Theme color"
+                        aria-expanded="false">
+                    <span class="sdd-cover-theme-toggle-mark" aria-hidden="true"></span>
+                </button>
+                <div class="sdd-cover-theme-pop" data-sdd-theme-pop role="menu" hidden>
+                    ${themeOptsHtml}
+                </div>
+            </div>
+
             <header class="sdd-cover-mast">
                 <h1 class="sdd-cover-wordmark">SAUDADE</h1>
                 <div class="sdd-cover-mast-rule"></div>
@@ -622,6 +747,7 @@ body.section-active .sdd-cover { display: none !important; }
                 <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>ATLAS</a>
                 <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
                 <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
+                <a href="#section-05" data-sdd-jump="listening"><span class="sdd-mark">§ 05</span>LISTENING ROOM</a>
             </nav>
 
             <!-- v644 — direct path to the issue archive + per-issue PDF download.
@@ -633,11 +759,15 @@ body.section-active .sdd-cover { display: none !important; }
             </p>
         `;
 
-        // nav 클릭 시 기존 dock 버튼으로 위임
+        // nav 클릭 시 기존 dock 버튼으로 위임. § 05 LISTENING 은 별도 모듈로 직접 진입.
         cover.querySelectorAll('[data-sdd-jump]').forEach(a => {
             a.addEventListener('click', (e) => {
                 e.preventDefault();
                 const cat = a.getAttribute('data-sdd-jump');
+                if (cat === 'listening') {
+                    try { window.SAUDADE_LISTENING?.open?.(); } catch (err) {}
+                    return;
+                }
                 const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
                 if (btn) {
                     btn.click();
@@ -645,6 +775,45 @@ body.section-active .sdd-cover { display: none !important; }
                 }
             });
         });
+
+        // Theme switcher — round button reveals a popover of skin swatches.
+        // Popover background + labels are hard-coded paper/ink so contrast
+        // stays readable on any active skin.
+        const themeToggle = cover.querySelector('[data-sdd-theme-toggle]');
+        const themePop    = cover.querySelector('[data-sdd-theme-pop]');
+        if (themeToggle && themePop) {
+            const closePop = () => {
+                themePop.hidden = true;
+                themeToggle.setAttribute('aria-expanded', 'false');
+            };
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const open = themePop.hidden;
+                themePop.hidden = !open;
+                themeToggle.setAttribute('aria-expanded', String(open));
+            });
+            themePop.querySelectorAll('[data-skin]').forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const k = opt.getAttribute('data-skin');
+                    if (k && window.SAUDADE_EDITION?.setSkin) {
+                        window.SAUDADE_EDITION.setSkin(k);
+                        themePop.querySelectorAll('[data-skin]').forEach(o => {
+                            o.setAttribute('aria-current', o === opt ? 'true' : 'false');
+                        });
+                    }
+                    closePop();
+                });
+            });
+            document.addEventListener('click', (e) => {
+                if (!themePop.hidden && !themePop.contains(e.target) && e.target !== themeToggle) {
+                    closePop();
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closePop();
+            });
+        }
 
         // v641 — paint the personal block. SAUDADE_PERSONAL falls back to
         // the empty-state empathy hook when there is no data.
@@ -843,6 +1012,29 @@ body.cafe-mode .sdd-masthead { display: none; }
 .sdd-mast-name    { color: var(--ink); font-weight: 500; }
 .sdd-mast-issue,
 .sdd-mast-page    { color: var(--bone-d); font-weight: 400; letter-spacing: var(--tr-mono-meta); }
+/* Wordmark on the masthead — small italic serif. Existing
+   [data-sdd-wordmark] click handler already calls backToCover(); this
+   just gives users a visible logo to tap from any section. */
+.sdd-mast-wordmark {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin-right: clamp(8px, 1.5vw, 16px);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: color .12s;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+.sdd-mast-wordmark em { font-style: italic; }
+.sdd-mast-wordmark:hover,
+.sdd-mast-wordmark:focus-visible { color: var(--rust); outline: none; }
 .sdd-mast-back {
     background: transparent;
     border: 0;
@@ -885,6 +1077,8 @@ body.section-active::before { content: none !important; }
         m.className = 'sdd-masthead';
         m.innerHTML = `
             <div class="sdd-mast-left">
+                <button type="button" class="sdd-mast-wordmark" data-sdd-wordmark
+                        aria-label="saudade — back to cover"><em>saudade</em></button>
                 <span class="sdd-mast-num"></span>
                 <span class="sdd-mast-name"></span>
             </div>
