@@ -448,9 +448,8 @@ body.listening-active .sdd-cover-theme { display: none !important; }
 .sdd-cover-head:last-child { border-bottom: 0; }
 .sdd-cover-head a {
     display: grid;
-    grid-template-columns: minmax(72px, auto) 1fr;
-    gap: clamp(12px, 2vw, 20px);
-    align-items: baseline;
+    grid-template-columns: 1fr;
+    row-gap: clamp(6px, 0.8vw, 10px);
     color: inherit;
     text-decoration: none;
     transition: color .12s;
@@ -463,18 +462,36 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     font-size: 10px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--bone-d);
-    padding-top: 4px;
+    color: var(--rust);
 }
 .sdd-cover-head .headline {
     font-family: var(--serif);
     font-weight: 300;
     font-style: italic;
-    font-size: clamp(20px, 2.4vw, 30px);
-    line-height: 1.2;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.18;
     color: var(--ink);
     letter-spacing: -0.005em;
     text-wrap: pretty;
+}
+.sdd-cover-head .lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.4vw, 17px);
+    line-height: 1.45;
+    color: var(--bone-d);
+    text-wrap: pretty;
+    max-width: 56ch;
+}
+.sdd-cover-head .source {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    opacity: 0.7;
+    margin-top: 2px;
 }
 .sdd-cover-head--pending .dots {
     display: inline-block;
@@ -978,23 +995,49 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         for (const c of d.cities) {
             const items = Array.isArray(c.items) ? c.items : [];
             const first = items.find(it => it && it.headline);
-            if (first) out.push({ city: c.city || '', headline: first.headline });
+            if (first) out.push({
+                city:        c.city || '',
+                headline:    first.headline,
+                lede:        first.lede || '',
+                source:      first.source || '',
+                source_date: first.source_date || ''
+            });
             if (out.length >= 3) break;
         }
         return out;
     }
 
+    // Per-edition city-desk suffix — "SEOUL DESK" / "서울 데스크" / etc.
+    // (Existing DESK_SUFFIX uses 책상 in KO which is furniture-desk; the
+    // newspaper sense in Korean is 데스크 — used here so the cover hero
+    // reads like a city's local newspaper byline.)
+    const COVER_DESK_LABEL = {
+        en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'MESA'
+    };
+
     function renderCoverHeads(heads, ed) {
         const root = document.getElementById('sddCoverHeads');
         if (!root || !heads.length) return;
-        root.innerHTML = heads.map(h => `
+        const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
+        root.innerHTML = heads.map(h => {
+            const cityUp = (h.city || '').toUpperCase();
+            const srcLine = [h.source, h.source_date].filter(Boolean).join(' · ');
+            const ledeHtml = h.lede
+                ? `<span class="lede">${escapeHtml(h.lede)}</span>`
+                : '';
+            const srcHtml = srcLine
+                ? `<span class="source">${escapeHtml(srcLine)}</span>`
+                : '';
+            return `
             <li class="sdd-cover-head">
                 <a href="#section-03" data-sdd-jump="tz">
-                    <span class="city">${escapeHtml(h.city || '')}</span>
+                    <span class="city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</span>
                     <span class="headline">${escapeHtml(h.headline || '')}</span>
+                    ${ledeHtml}
+                    ${srcHtml}
                 </a>
-            </li>
-        `).join('');
+            </li>`;
+        }).join('');
         // The newly-rendered <a data-sdd-jump="tz"> links need the same
         // click delegation as the cover-nav. Hook them now.
         root.querySelectorAll('[data-sdd-jump]').forEach(a => {
