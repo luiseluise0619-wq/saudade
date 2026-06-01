@@ -299,6 +299,12 @@
     transition: transform .12s ease;
 }
 .sdd-atlas-marker.is-jade { background: var(--jade); border-color: var(--jade); }
+/* Approximate (district centroid) — dashed ring + slightly faded so
+   readers visually distinguish them from precisely-geocoded pins. */
+.sdd-atlas-marker.is-approx {
+    border-style: dashed;
+    opacity: 0.85;
+}
 .sdd-atlas-marker:hover   { transform: scale(1.5); }
 
 /* MapLibre popup 잡지 톤 재스타일 */
@@ -408,52 +414,92 @@
         _noticeEl = el;
     }
 
-    // setCafes(cafes, opts?) — 좌표 있는 카페만 마커. 0개면 안내 카드.
+    // District centroid fallback. Lets the map render pins for cafes
+    // without exact lat/lng — clustered to the gu (district) centroid
+    // until the Geocode cafes (Nominatim) workflow runs and stamps
+    // precise per-entry coords. Honest about being approximate via the
+    // popup label + a dashed marker outline.
+    let _centroidsCache = null;
+    function loadCentroids() {
+        if (_centroidsCache) return Promise.resolve(_centroidsCache);
+        return fetch('./data/seoul-districts.json', { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .then(d => { _centroidsCache = (d && d.districts) || {}; return _centroidsCache; })
+            .catch(() => { _centroidsCache = {}; return _centroidsCache; });
+    }
+
+    function withFallback(cafe, centroids) {
+        if (typeof cafe.lat === 'number' && typeof cafe.lng === 'number'
+            && Number.isFinite(cafe.lat) && Number.isFinite(cafe.lng)) {
+            return { lat: cafe.lat, lng: cafe.lng, approx: false };
+        }
+        const c = centroids[cafe.neighborhood];
+        if (c) return { lat: c.lat, lng: c.lng, approx: true };
+        return null;
+    }
+
+    // setCafes(cafes, opts?) — 좌표 있는 카페는 정확 핀, 없으면 동네 centroid 로 근사 핀.
+    // 0개면 안내 카드.
     function setCafes(cafes, opts) {
         if (!_map || !_ml) return;
         opts = opts || {};
         clearMarkers();
         clearNotice();
         const list = Array.isArray(cafes) ? cafes : [];
-        const withCoords = list.filter(c =>
-            typeof c.lat === 'number' && typeof c.lng === 'number' &&
-            Number.isFinite(c.lat) && Number.isFinite(c.lng)
-        );
 
-        if (withCoords.length === 0) {
-            const container = _map.getContainer();
+        loadCentroids().then(centroids => {
+            const resolved = list
+                .map(c => ({ cafe: c, pos: withFallback(c, centroids) }))
+                .filter(x => x.pos);
+
+            if (resolved.length === 0) {
+                const container = _map.getContainer();
+                const lang = (window.state && window.state.lang) || 'en';
+                showNotice(container, lang);
+                return;
+            }
+
+            const APPROX_LABEL = {
+                en: 'approximate — district centroid',
+                ko: '근사 — 자치구 중심',
+                ja: '概算 — 区の中心',
+                pt: 'aproximado — centro do distrito',
+                es: 'aproximado — centro del distrito'
+            };
             const lang = (window.state && window.state.lang) || 'en';
-            showNotice(container, lang);
-            return;
-        }
+            const approxNote = APPROX_LABEL[lang] || APPROX_LABEL.en;
 
-        const bounds = new _ml.LngLatBounds();
-        withCoords.forEach(c => {
-            const el = document.createElement('div');
-            const isJade = (c.visited_at && c.visited_at !== '');
-            el.className = 'sdd-atlas-marker' + (isJade ? ' is-jade' : '');
-            el.setAttribute('aria-label', c.name || '');
-            const popupHtml =
-                `<strong>${(c.name || '').replace(/[<>&"]/g, '')}</strong>` +
-                (c.neighborhood ? `<br/>${c.neighborhood.replace(/[<>&"]/g, '')}` : '') +
-                (typeof c.rating === 'number' ? `<br/>★ ${c.rating.toFixed(1)}` : '') +
-                (c.google_url ? `<br/><a href="${c.google_url.replace(/["<>]/g, '')}" target="_blank" rel="noopener">↗ MAPS</a>` : '');
-            const popup = new _ml.Popup({ offset: 10, closeButton: true })
-                .setHTML(popupHtml);
-            const marker = new _ml.Marker({ element: el })
-                .setLngLat([c.lng, c.lat])
-                .setPopup(popup)
-                .addTo(_map);
-            _markers.push(marker);
-            bounds.extend([c.lng, c.lat]);
+            const bounds = new _ml.LngLatBounds();
+            resolved.forEach(({ cafe: c, pos }) => {
+                const el = document.createElement('div');
+                const isJade = (c.visited_at && c.visited_at !== '');
+                el.className = 'sdd-atlas-marker'
+                    + (isJade ? ' is-jade' : '')
+                    + (pos.approx ? ' is-approx' : '');
+                el.setAttribute('aria-label', c.name || '');
+                const popupHtml =
+                    `<strong>${(c.name || '').replace(/[<>&"]/g, '')}</strong>` +
+                    (c.neighborhood ? `<br/>${c.neighborhood.replace(/[<>&"]/g, '')}` : '') +
+                    (typeof c.rating === 'number' ? `<br/>★ ${c.rating.toFixed(1)}` : '') +
+                    (pos.approx ? `<br/><small style="opacity:.7">${approxNote}</small>` : '') +
+                    (c.google_url ? `<br/><a href="${c.google_url.replace(/["<>]/g, '')}" target="_blank" rel="noopener">↗ MAPS</a>` : '');
+                const popup = new _ml.Popup({ offset: 10, closeButton: true })
+                    .setHTML(popupHtml);
+                const marker = new _ml.Marker({ element: el })
+                    .setLngLat([pos.lng, pos.lat])
+                    .setPopup(popup)
+                    .addTo(_map);
+                _markers.push(marker);
+                bounds.extend([pos.lng, pos.lat]);
+            });
+
+            if (!opts.skipFit && resolved.length > 1) {
+                _map.fitBounds(bounds, { padding: 48, maxZoom: 15, duration: 0 });
+            } else if (resolved.length === 1) {
+                _map.setCenter([resolved[0].pos.lng, resolved[0].pos.lat]);
+                _map.setZoom(14);
+            }
         });
-
-        if (!opts.skipFit && withCoords.length > 1) {
-            _map.fitBounds(bounds, { padding: 48, maxZoom: 15, duration: 0 });
-        } else if (withCoords.length === 1) {
-            _map.setCenter([withCoords[0].lng, withCoords[0].lat]);
-            _map.setZoom(14);
-        }
     }
 
     function init() {
