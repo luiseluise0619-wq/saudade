@@ -59,7 +59,7 @@
         'Dubai':        { noun: 'Glass.',    ko: '유리의 도시.' }
     };
 
-    function detectCity() {
+    function detectCity(ed) {
         // v6 §5 — 사용자 명시 home city + Switch the Desk 활성 시 임시 city
         // saudade-city.js 의 activeDeskCity() 가 우선 (사용자가 desk 에서 골랐을 것)
         try {
@@ -75,7 +75,13 @@
             const geo = JSON.parse(localStorage.getItem('aura_geoip_v1') || '{}');
             if (geo.city && COVER_COPY[geo.city]) return geo.city;
         } catch (e) {}
-        return 'Lisbon';   // v1 첫 호 권장
+        // Per-edition notional desk city — matches each edition's audience
+        // home and (for EN) the editor's actual location per credits.html
+        // "Issue 03 was edited from Seoul". Was unconditional 'Lisbon'.
+        const PER_EDITION_DESK = {
+            en: 'Seoul', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
+        };
+        return PER_EDITION_DESK[ed] || 'Seoul';
     }
 
     function isKo() {
@@ -581,11 +587,11 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
     const ISSUE_LEDE_5 = {
-        en: 'Three cities, no schedule. Edited from $editorCity.',
-        ko: '세 도시, 일정 없음. $editorCity에서 편집.',
-        ja: '三つの街、日程なし。$editorCityで編集。',
-        pt: 'Três cidades, sem agenda. Editada a partir de $editorCity.',
-        es: 'Tres ciudades, sin agenda. Editada desde $editorCity.'
+        en: 'Three cities, filed daily. Edited from $editorCity.',
+        ko: '세 도시, 매일 발행. $editorCity에서 편집.',
+        ja: '三つの街、毎日発行。$editorCityで編集。',
+        pt: 'Três cidades, publicadas diariamente. Editada a partir de $editorCity.',
+        es: 'Tres ciudades, publicadas a diario. Editada desde $editorCity.'
     };
 
     function formatMastDate(ed) {
@@ -675,8 +681,8 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     }
 
     function render() {
-        const city = detectCity();
         const ed = currentEdition();
+        const city = detectCity(ed);
         const c = COPY_5[ed] || COPY_5.en;
 
         let cover = document.getElementById('sddCover');

@@ -295,3 +295,29 @@ test('etymology.html describes the actual product (filed daily from Seoul, not L
     assert.ok(!/(?:edited|filed)\s+from\s+lisbon/i.test(html),
         'etymology.html still claims the newspaper is edited/filed from Lisbon — credits.html says Seoul');
 });
+
+test('cover lede + Atom subtitle reflect daily filing from Seoul (no "no schedule" / "from Lisbon")', () => {
+    // Locked after a screenshot showed the deployed cover still claiming
+    // "Three cities, no schedule. Edited from Lisbon." — both clauses
+    // contradict the magazine's own sources:
+    //   - §9.5 mandates daily filing at 06:00 KST, not "no schedule"
+    //   - credits.html: "Issue 03 was edited from Seoul"
+    //
+    // Live files:
+    //   - saudade.editorial.js — ISSUE_LEDE_5 (cover lede) + detectCity
+    //   - saudade.core.js — empty-state cover + welcome copy (duplicates
+    //     of the dead saudade-empty.js / saudade-welcome.js bundled here)
+    //   - cloudflare-worker.js — Atom feed subMap (RSS subscriber face)
+    const LIVE_FILES = ['saudade.editorial.js', 'saudade.core.js', 'cloudflare-worker.js'];
+    for (const f of LIVE_FILES) {
+        const src = read(f);
+        assert.ok(!/Three cities,\s*no schedule/i.test(src),
+            `${f}: still claims "Three cities, no schedule" — §9.5 mandates daily filing`);
+        assert.ok(!/Edited from Lisbon/i.test(src),
+            `${f}: still claims "Edited from Lisbon" — credits.html says Seoul`);
+        assert.ok(!/세 도시,\s*정해진 시간 없음/.test(src),
+            `${f}: KO copy still claims 정해진 시간 없음 — §9.5 매일 발행`);
+        assert.ok(!/리스본에서 편집/.test(src),
+            `${f}: KO copy still claims 리스본에서 편집 — credits.html 서울`);
+    }
+});
