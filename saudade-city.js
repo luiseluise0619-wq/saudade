@@ -33,18 +33,24 @@
         return !!getDefinedCity(name);
     }
 
-    // 사용자가 명시적으로 선택한 home city. 없으면 edition default.
+    // Per-edition home city. The legacy single KEY_HOME was edition-agnostic,
+    // so a 'Seoul' saved while reading EN persisted into ES and the cover
+    // kept showing Seoul cafés. Each edition now has its own memory at
+    // KEY_HOME + '.<ed>'. No legacy migration — without knowing which edition
+    // the legacy value was chosen under, migrating risks miscarrying the
+    // user's EN choice into KO. New per-edition data accrues on next pick.
     function getHomeCity() {
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         try {
-            const v = localStorage.getItem(KEY_HOME);
+            const v = localStorage.getItem(KEY_HOME + '.' + ed);
             if (v && isDefined(v)) return v;
         } catch (e) {}
-        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         return _defs?.edition_default_home?.[ed] || 'Lisbon';
     }
     function setHomeCity(name) {
         if (!name) return false;
-        try { localStorage.setItem(KEY_HOME, name); } catch (e) {}
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        try { localStorage.setItem(KEY_HOME + '.' + ed, name); } catch (e) {}
         // 모든 saudade-* 모듈 reload
         try { window.SAUDADE_COVER?.render?.(); } catch (e) {}
         try { window.SAUDADE_DISPATCHES?.reload?.(); } catch (e) {}
