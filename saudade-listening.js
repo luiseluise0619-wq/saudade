@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v699')
+        return fetch('./data/listening.json?v=v700')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1047,7 +1047,10 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             const homeSlug = String(home).toLowerCase().replace(/\s+/g, '-');
             if (has(homeSlug)) return homeSlug;
         }
-        return cities[0].slug;
+        // Prefer a city with a photo so the first landing isn't a placeholder
+        // card when the user has no saved preference.
+        const withPhoto = cities.find(c => c.default_photo_url || c.photo_url);
+        return (withPhoto || cities[0]).slug;
     }
 
     function setMode(m) {
@@ -1073,8 +1076,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         const tracks = (data && data.tracks) || [];
         const cities = (data && data.cities) || [];
 
-        // v637 — full-room empty state (no library at all)
-        if (!tracks.length && window.SAUDADE_EMPTY) {
+        // Photo-only city mode: cities that already carry a curated default
+        // photo render the listening room visually while the Freesound fetch
+        // workflow is still pending. Each photo is real (Pexels CC0 with
+        // sidecars) and the per-city "no tracks yet" line preserves §3
+        // honesty about audio still being awaited.
+        const citiesWithPhoto = cities.filter(c => c.default_photo_url || c.photo_url);
+
+        // v637 — full-room empty state. Only fall through when we have
+        // neither tracks nor city photos; otherwise let the city mode
+        // photo gallery carry the room.
+        if (!tracks.length && !citiesWithPhoto.length && window.SAUDADE_EMPTY) {
             const t = window.SAUDADE_EMPTY.text('listening');
             window.SAUDADE_EMPTY.render(root, {
                 eyebrow: t.eyebrow, headline: t.headline, lede: t.lede, note: t.note
@@ -1082,9 +1094,12 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             return;
         }
 
-        // 도시 모드 가능 여부 (cities 0 이면 category 강제)
-        const cityModeAvailable = cities.length > 0 && tracks.some(t => t.city);
-        const effectiveMode = (cityModeAvailable && _mode === 'city') ? 'city' : 'category';
+        // 도시 모드 가능 여부 — tracks 가 있고 city 태그가 있거나, 사진만 있는 도시가 있어도 활성.
+        const cityModeAvailable = cities.length > 0
+            && (tracks.some(t => t.city) || citiesWithPhoto.length > 0);
+        // tracks 가 비어있으면 category 모드는 표시할 게 없으니 city 모드 강제 — 사진 갤러리로 작동.
+        const tracksEmpty = tracks.length === 0;
+        const effectiveMode = (cityModeAvailable && (_mode === 'city' || tracksEmpty)) ? 'city' : 'category';
 
         // v6 §11 simplify — ASMR 라이브러리. 카테고리별 그룹 헤더 + 평면 인덱스로 클릭→재생.
         // 분기/도시 매칭 X. 발행 호수 X. 사용자가 카테고리 보고 직접 고름.
