@@ -436,6 +436,19 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     padding-bottom: clamp(8px, 1.2vw, 12px);
     border-bottom: 0.5px solid var(--rule);
 }
+/* Staleness chip appended to the eyebrow when filed_at > 1 day old.
+   "1 DAY AGO" stays muted; >2 days flips to rust to make the cron
+   pause obvious from the cover. */
+.sdd-cover-heads-stale {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    margin-left: 8px;
+}
+.sdd-cover-heads-stale.is-warn { color: var(--rust); }
 .sdd-cover-heads-list {
     list-style: none;
     padding: 0;
@@ -985,8 +998,42 @@ body.listening-active .sdd-cover-theme { display: none !important; }
             .then(d => {
                 const heads = pickCoverHeads(d);
                 renderCoverHeads(heads, ed);
+                surfaceFreshness(d, ed);
             })
             .catch(() => {});
+    }
+
+    // Surface the dispatch file's filed_at age in the cover hero eyebrow.
+    // Daily filing per §9.5; anything older than 1 day means the cron has
+    // missed — readers see the lag, founder gets an immediate signal
+    // ("cron paused"). Was hidden in the existing per-page staleness chip
+    // on §03 Dispatches; pulling it to the cover makes the failure
+    // obvious from the front door.
+    function surfaceFreshness(d, ed) {
+        if (!d || !d.filed_at) return;
+        const eyebrow = document.querySelector('.sdd-cover-heads-eyebrow');
+        if (!eyebrow) return;
+        const filed = new Date(d.filed_at).getTime();
+        if (!Number.isFinite(filed)) return;
+        const days = Math.floor((Date.now() - filed) / 86400000);
+        if (days < 1) return;   // fresh — eyebrow stays as-is
+        // Localized labels mirror saudade-dispatches.js staleness chip.
+        const LABELS = {
+            en: (n) => `${n} ${n === 1 ? 'DAY' : 'DAYS'} AGO`,
+            ko: (n) => `${n}일 전`,
+            ja: (n) => `${n}日前`,
+            pt: (n) => `HÁ ${n} ${n === 1 ? 'DIA' : 'DIAS'}`,
+            es: (n) => `HACE ${n} ${n === 1 ? 'DÍA' : 'DÍAS'}`
+        };
+        const label = (LABELS[ed] || LABELS.en)(days);
+        const warn = days > 2 ? ' is-warn' : '';
+        const chip = document.createElement('span');
+        chip.className = 'sdd-cover-heads-stale' + warn;
+        chip.textContent = '· ' + label;
+        // Replace any prior chip so re-renders don't stack.
+        const prior = eyebrow.querySelector('.sdd-cover-heads-stale');
+        if (prior) prior.remove();
+        eyebrow.appendChild(chip);
     }
 
     function pickCoverHeads(d) {
