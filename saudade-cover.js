@@ -252,6 +252,44 @@ body.section-active .sdd-cover { display: none !important; }
 }
 .sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
+/* Edition switcher row at the top of the cover. Discreet mono row
+   above the masthead; click any other code to switch. The current
+   edition is jade-tinted; others fade. SAUDADE_EDITION.set handles
+   the loading flash + reload chain. */
+.sdd-cover-editions {
+    display: flex;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 20px);
+    margin: 0 0 clamp(20px, 3vw, 32px);
+    padding-bottom: clamp(8px, 1vw, 12px);
+    border-bottom: 0.5px solid var(--rule, rgba(11,11,15,.12));
+    flex-wrap: wrap;
+}
+.sdd-cover-ed-opt {
+    background: transparent;
+    border: 0;
+    padding: 8px 4px;
+    min-height: 44px;
+    min-width: 44px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    color: var(--bone-d);
+    cursor: pointer;
+    transition: color .12s, border-color .12s;
+    border-bottom: 1.5px solid transparent;
+}
+.sdd-cover-ed-opt:hover,
+.sdd-cover-ed-opt:focus-visible {
+    color: var(--ink);
+    outline: none;
+}
+.sdd-cover-ed-opt[aria-current="true"] {
+    color: var(--ink);
+    border-bottom-color: var(--rust, #9A3324);
+}
+
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
     text-align: center;
@@ -616,7 +654,19 @@ body.section-active .sdd-cover { display: none !important; }
             `<li class="sdd-cover-today-item">→ ${escapeHtml(l)}</li>`
         ).join('');
 
+        const supported = (window.SAUDADE_EDITION?.SUPPORTED) || ['en','ko','ja','pt','es'];
+        const editionsHtml = supported.map(code => `
+            <button type="button"
+                    class="sdd-cover-ed-opt"
+                    data-edition="${code}"
+                    aria-current="${code === ed ? 'true' : 'false'}"
+                    aria-label="Switch to ${code.toUpperCase()} edition">${code.toUpperCase()}</button>`).join('');
+
         cover.innerHTML = `
+            <nav class="sdd-cover-editions" aria-label="Edition">
+                ${editionsHtml}
+            </nav>
+
             <header class="sdd-cover-mast">
                 <h1 class="sdd-cover-wordmark">SAUDADE</h1>
                 <div class="sdd-cover-mast-rule"></div>
@@ -666,6 +716,16 @@ body.section-active .sdd-cover { display: none !important; }
                     btn.click();
                     document.body.classList.add('section-active');
                 }
+            });
+        });
+
+        // Edition switch from the cover. Delegates to SAUDADE_EDITION.set —
+        // which handles the loading flash, persisting the choice, and
+        // reloading every section module against the new edition.
+        cover.querySelectorAll('.sdd-cover-ed-opt[data-edition]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const code = btn.getAttribute('data-edition');
+                if (code && window.SAUDADE_EDITION?.set) window.SAUDADE_EDITION.set(code);
             });
         });
 
