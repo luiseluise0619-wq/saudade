@@ -67,6 +67,29 @@ body.cafe-mode .sdd-masthead { display: none; }
 .sdd-mast-name    { color: var(--ink); font-weight: 500; }
 .sdd-mast-issue,
 .sdd-mast-page    { color: var(--bone-d); font-weight: 400; letter-spacing: var(--tr-mono-meta); }
+/* Wordmark inside the masthead — small italic serif, click returns to cover.
+   The existing document-level click handler on [data-sdd-wordmark] fires
+   backToCover(); this just gives users a visible affordance from any tab. */
+.sdd-mast-wordmark {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin-right: clamp(8px, 1.5vw, 16px);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: color .12s;
+    min-height: 44px;           /* mobile touch target */
+    display: inline-flex;
+    align-items: center;
+}
+.sdd-mast-wordmark em { font-style: italic; }
+.sdd-mast-wordmark:hover,
+.sdd-mast-wordmark:focus-visible { color: var(--rust); outline: none; }
 .sdd-mast-back {
     background: transparent;
     border: 0;
@@ -109,6 +132,8 @@ body.section-active::before { content: none !important; }
         m.className = 'sdd-masthead';
         m.innerHTML = `
             <div class="sdd-mast-left">
+                <button type="button" class="sdd-mast-wordmark" data-sdd-wordmark
+                        aria-label="saudade — back to cover"><em>saudade</em></button>
                 <span class="sdd-mast-num"></span>
                 <span class="sdd-mast-name"></span>
             </div>
