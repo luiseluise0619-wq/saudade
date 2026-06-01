@@ -244,17 +244,23 @@ body.section-active .sdd-cover { display: none !important; }
 }
 .sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
-/* Theme color picker — round button top-right of the cover that pops
-   a panel of skin swatches. Each swatch shows the skin's actual
-   primary color; the labels sit on a paper-tone strip so contrast
-   stays readable on any active skin. */
+/* Theme color picker — round button at the top of the cover, popping
+   a panel of skin swatches. Sits to the LEFT of the existing EN▼
+   edition dropdown (saudade-skin.css: .sdd-cover-edition is fixed
+   top: 16-24px / right: 16-24px) so the two don't overlap. Labels
+   match the existing legal-strip theme switch (saudade-theme-switch.js):
+   AUTO / PAPER / COVER / NIGHT — same skins, brand-consistent names. */
 .sdd-cover-theme {
-    position: absolute;
-    top: clamp(12px, 2vw, 20px);
-    right: clamp(12px, 2vw, 20px);
-    z-index: 5;
+    position: fixed;
+    top: clamp(16px, 2vw, 24px);
+    /* leave room for EN▼ (~40px) + 12px gap to the right */
+    right: calc(clamp(16px, 2vw, 24px) + 40px + 12px);
+    z-index: var(--z-cover, 4);
     pointer-events: auto;
 }
+body.section-active .sdd-cover-theme,
+body.cafe-mode .sdd-cover-theme,
+body.listening-active .sdd-cover-theme { display: none !important; }
 .sdd-cover-theme-toggle {
     width: 44px; height: 44px;
     border-radius: 50%;
@@ -693,16 +699,26 @@ body.section-active .sdd-cover { display: none !important; }
         ).join('');
 
         const currentSkinPref = (window.SAUDADE_EDITION?.skinPref?.()) || 'auto';
-        const SKIN_LABEL = { auto: 'AUTO', paper: 'PAPER', saturated: 'SATURATED', dark: 'DARK' };
+        // Labels mirror saudade-theme-switch.js (the legal-strip switcher).
+        // Per-edition translations keep the brand voice consistent.
+        const skinLabelEd = (key) => {
+            const lookup = {
+                auto:      { en: 'AUTO',    ko: '자동',  ja: '自動',     pt: 'AUTO',   es: 'AUTO' },
+                paper:     { en: 'PAPER',   ko: '종이',  ja: '紙',       pt: 'PAPEL',  es: 'PAPEL' },
+                saturated: { en: 'COVER',   ko: '표지',  ja: '表紙',     pt: 'CAPA',   es: 'TAPA' },
+                dark:      { en: 'NIGHT',   ko: '밤',    ja: '夜',       pt: 'NOITE',  es: 'NOCHE' }
+            };
+            return (lookup[key] && (lookup[key][ed] || lookup[key].en)) || key.toUpperCase();
+        };
         const SKIN_ORDER = ['auto', 'paper', 'saturated', 'dark'];
         const themeOptsHtml = SKIN_ORDER.map(k => `
             <button type="button"
                     class="sdd-cover-theme-opt"
                     data-skin="${k}"
                     aria-current="${k === currentSkinPref ? 'true' : 'false'}"
-                    aria-label="Theme: ${SKIN_LABEL[k]}">
+                    aria-label="Theme: ${skinLabelEd(k)}">
                 <span class="swatch swatch-${k}" aria-hidden="true"></span>
-                <span class="label">${SKIN_LABEL[k]}</span>
+                <span class="label">${skinLabelEd(k)}</span>
             </button>`).join('');
 
         cover.innerHTML = `
