@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v708')
+        return fetch('./data/listening.json?v=v709')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -129,7 +129,10 @@ body.listening-active .sdd-listen { display: block; }
     position: fixed;
     top: 16px; left: 16px;
     z-index: calc(var(--z-section-page, 8) + 2);
-    background: rgba(242,238,227,.85);
+    /* Was rgba(242,238,227,.85) — hardcoded paper bg. In dark skin
+       --ink becomes paper-tone too, so text + bg collided → invisible.
+       Use var(--paper) so bg flips with the skin in lock-step with --ink. */
+    background: var(--paper);
     border: 0.5px solid var(--ink);
     color: var(--ink);
     font-family: var(--mono);
@@ -1265,12 +1268,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                         <p class="note">${escapeHtml(placeholderText)}</p>
                     </div>
                     <img class="sdd-listen-city-photo-img"
+                         data-sdd-city-photo
                          src="${escapeHtml(photoUrl)}"
                          alt="${escapeHtml(activeName)}"
                          loading="lazy"
-                         decoding="async"
-                         onload="this.classList.add('is-loaded')"
-                         onerror="this.remove()" />
+                         decoding="async" />
                 </figure>
             ` : `
                 <figure class="sdd-listen-city-photo">
@@ -1383,6 +1385,20 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         `;
 
         root.querySelector('[data-listen-back]')?.addEventListener('click', () => close());
+
+        // City photo fade-in. Used to be set via inline onload="…" on the
+        // <img> tag, but the page CSP (script-src 'self' https:, no
+        // 'unsafe-inline') blocks inline event handlers — the photo loaded
+        // but the .is-loaded class was never added, so it stayed at
+        // opacity: 0 forever. Bind properly here instead.
+        root.querySelectorAll('img[data-sdd-city-photo]').forEach(img => {
+            if (img.complete && img.naturalWidth > 0) {
+                img.classList.add('is-loaded');
+            } else {
+                img.addEventListener('load',  () => img.classList.add('is-loaded'));
+                img.addEventListener('error', () => img.remove());
+            }
+        });
 
         // v7 §11 By City — 모드 토글 + 도시 전환
         root.querySelectorAll('[data-set-mode]').forEach(btn => {
