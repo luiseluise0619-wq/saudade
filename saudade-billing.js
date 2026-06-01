@@ -59,10 +59,15 @@
             window.location.href = r.body.url;
             return { ok: true };
         }
-        if (r.status === 503) {
-            // Stripe not configured yet — point at the BMaC fallback.
+        // Billing is dormant — worker returns 410 GONE_FREE_MODE on
+        // checkout/portal until Stripe is wired. 503 is the older signal
+        // for the same state (Stripe not configured). Both surface the
+        // same friendly message — the default "Checkout failed." or the
+        // raw "GONE_FREE_MODE" code would confuse a reader who just
+        // clicked Subscribe on the support page.
+        if (r.status === 410 || r.status === 503) {
             alert('Subscriptions are not yet open. The patron link on the support page works today.');
-            return { ok: false, status: 503 };
+            return { ok: false, status: r.status };
         }
         const msg = (r.body && r.body.error) || 'Checkout failed.';
         alert(msg);
@@ -76,6 +81,12 @@
         if (r.ok && r.body && r.body.url) {
             window.location.href = r.body.url;
             return { ok: true };
+        }
+        // Same dormant-billing handling as startCheckout — friendly message
+        // instead of "Could not open billing portal." on the 410/503 path.
+        if (r.status === 410 || r.status === 503) {
+            alert('Subscriptions are not yet open — no billing portal to show. The patron link on the support page works today.');
+            return { ok: false, status: r.status };
         }
         alert((r.body && r.body.error) || 'Could not open billing portal.');
         return { ok: false };
