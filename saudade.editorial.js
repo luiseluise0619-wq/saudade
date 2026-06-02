@@ -477,6 +477,37 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     border-bottom: 0.5px solid var(--rule);
 }
 .sdd-cover-head:last-child { border-bottom: 0; }
+/* Drop cap on the lead story — newspaper convention. ::first-letter
+   on the headline gives a 3-line drop, rust-tinted, that announces
+   "this is the lead" without an explicit label. Browser support:
+   Chrome / Safari / Firefox all support ::first-letter; only Safari +
+   recent Chrome support initial-letter for true newspaper sinking.
+   Use both — initial-letter if available, font-size + float fallback
+   everywhere else. */
+.sdd-cover-head.is-lead .headline::first-letter {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--rust);
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    /* Fallback for browsers without initial-letter support. */
+    font-size: 2.6em;
+    line-height: 0.85;
+    float: left;
+    margin-right: 0.08em;
+    margin-top: 0.04em;
+    padding-right: 0.04em;
+}
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    .sdd-cover-head.is-lead .headline::first-letter {
+        font-size: inherit;
+        line-height: inherit;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+}
 .sdd-cover-head a {
     display: grid;
     grid-template-columns: 1fr;
@@ -1198,23 +1229,35 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         const root = document.getElementById('sddCoverHeads');
         if (!root || !heads.length) return;
         const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
-        root.innerHTML = heads.map(h => {
+        root.innerHTML = heads.map((h, i) => {
             const cityUp = (h.city || '').toUpperCase();
-            const srcLine = [h.source, h.source_date].filter(Boolean).join(' · ');
             const ledeHtml = h.lede
                 ? `<span class="lede">${escapeHtml(h.lede)}</span>`
                 : '';
-            const srcHtml = srcLine
-                ? `<span class="source">${escapeHtml(srcLine)}</span>`
+            // Semantic <time datetime="…"> for the source date — screen
+            // readers parse it, Google understands the article date.
+            const srcHtml = h.source || h.source_date
+                ? `<span class="source">${escapeHtml(h.source || '')}${h.source && h.source_date ? ' · ' : ''}${
+                        h.source_date
+                            ? `<time datetime="${escapeHtml(h.source_date)}">${escapeHtml(h.source_date)}</time>`
+                            : ''
+                    }</span>`
                 : '';
+            // Each headline is a real <article> for semantic correctness +
+            // search engines + screen readers. First item gets `is-lead`
+            // so CSS can apply the drop-cap on the lead story (newspaper
+            // convention). Wrapped in <li> so the outer <ol> still
+            // numbers them semantically.
             return `
-            <li class="sdd-cover-head">
-                <a href="#section-03" data-sdd-jump="tz">
-                    <span class="city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</span>
-                    <span class="headline">${escapeHtml(h.headline || '')}</span>
-                    ${ledeHtml}
-                    ${srcHtml}
-                </a>
+            <li class="sdd-cover-head${i === 0 ? ' is-lead' : ''}">
+                <article>
+                    <a href="#section-03" data-sdd-jump="tz">
+                        <span class="city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</span>
+                        <span class="headline">${escapeHtml(h.headline || '')}</span>
+                        ${ledeHtml}
+                        ${srcHtml}
+                    </a>
+                </article>
             </li>`;
         }).join('');
         // The newly-rendered <a data-sdd-jump="tz"> links need the same
