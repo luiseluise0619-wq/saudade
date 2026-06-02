@@ -594,6 +594,158 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     color: var(--bone-d);
 }
 
+/* Cover reader modal — opens when the user taps a hero headline.
+   Paper-tone card on a faded scrim. Body + quote + source link in
+   one column, max-width 64ch. Esc / scrim click / × button close. */
+.sdd-cover-reader[hidden] { display: none; }
+.sdd-cover-reader {
+    position: fixed; inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(16px, 4vw, 48px);
+    pointer-events: auto;
+}
+.sdd-cover-reader__scrim {
+    position: absolute; inset: 0;
+    background: rgba(11,11,15,0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+body.cover-reader-open { overflow: hidden; }
+.sdd-cover-reader__card {
+    position: relative;
+    background: var(--paper);
+    color: var(--ink);
+    border: 0.5px solid var(--ink);
+    padding: clamp(28px, 4vw, 56px) clamp(24px, 5vw, 56px);
+    max-width: 64ch;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(11,11,15,0.28);
+}
+.sdd-cover-reader__close {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 36px; height: 36px;
+    min-width: 44px; min-height: 44px;
+    background: transparent;
+    border: 0;
+    color: var(--bone-d);
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color .12s;
+}
+.sdd-cover-reader__close:hover,
+.sdd-cover-reader__close:focus-visible { color: var(--rust); outline: none; }
+.sdd-cover-reader__city {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin: 0 0 clamp(8px, 1.2vw, 14px);
+}
+.sdd-cover-reader__headline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(26px, 3.4vw, 40px);
+    line-height: 1.14;
+    color: var(--ink);
+    margin: 0 0 clamp(12px, 2vw, 18px);
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+}
+.sdd-cover-reader__lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.45;
+    color: var(--bone-d);
+    margin: 0 0 clamp(16px, 2.5vw, 24px);
+    max-width: 56ch;
+}
+.sdd-cover-reader__body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(15px, 1.5vw, 18px);
+    line-height: 1.6;
+    color: var(--ink);
+    white-space: pre-line;
+    max-width: 56ch;
+    margin: 0 0 clamp(16px, 2.5vw, 24px);
+}
+.sdd-cover-reader__quote {
+    margin: clamp(20px, 3vw, 28px) 0;
+    padding-left: clamp(16px, 2.5vw, 24px);
+    border-left: 1px solid var(--rust);
+}
+.sdd-cover-reader__quote blockquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(16px, 1.8vw, 22px);
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 6px;
+}
+.sdd-cover-reader__quote figcaption {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-cover-reader__source {
+    margin: clamp(20px, 3vw, 28px) 0 0;
+    padding-top: clamp(12px, 2vw, 16px);
+    border-top: 0.5px dashed var(--rule);
+    display: grid;
+    gap: 6px;
+}
+.sdd-cover-reader__source .label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--rust);
+}
+.sdd-cover-reader__source .value {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+}
+.sdd-cover-reader__source .link {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--ink);
+    padding-bottom: 2px;
+    align-self: start;
+    margin-top: 4px;
+}
+.sdd-cover-reader__source .link:hover,
+.sdd-cover-reader__source .link:focus-visible {
+    color: var(--rust); border-bottom-color: var(--rust); outline: none;
+}
+@media (max-width: 600px) {
+    .sdd-cover-reader { padding: 0; }
+    .sdd-cover-reader__card {
+        max-width: none; max-height: 100vh; height: 100vh;
+        border: 0;
+    }
+}
+
 /* Secondary 'today' counters — demoted now that dispatch headlines own
    the hero. Keep them quietly visible: smaller, ink-soft, single row. */
 .sdd-cover-today--secondary {
@@ -1199,6 +1351,10 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         eyebrow.appendChild(chip);
     }
 
+    // Cached for the reader modal — full item objects, not just the
+    // hero summary. Keyed by index matching the rendered hero <article>s.
+    let _coverHeads = [];
+
     function pickCoverHeads(d) {
         if (!d || !Array.isArray(d.cities)) return [];
         const out = [];
@@ -1206,11 +1362,15 @@ body.listening-active .sdd-cover-theme { display: none !important; }
             const items = Array.isArray(c.items) ? c.items : [];
             const first = items.find(it => it && it.headline);
             if (first) out.push({
-                city:        c.city || '',
-                headline:    first.headline,
-                lede:        first.lede || '',
-                source:      first.source || '',
-                source_date: first.source_date || ''
+                city:         c.city || '',
+                headline:     first.headline,
+                lede:         first.lede || '',
+                body:         first.body || '',
+                quote:        first.quote || '',
+                quote_source: first.quote_source || '',
+                source:       first.source || '',
+                source_date:  first.source_date || '',
+                source_url:   first.source_url || ''
             });
             if (out.length >= 3) break;
         }
@@ -1228,14 +1388,13 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     function renderCoverHeads(heads, ed) {
         const root = document.getElementById('sddCoverHeads');
         if (!root || !heads.length) return;
+        _coverHeads = heads;   // cache for the reader modal click handler
         const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
         root.innerHTML = heads.map((h, i) => {
             const cityUp = (h.city || '').toUpperCase();
             const ledeHtml = h.lede
                 ? `<span class="lede">${escapeHtml(h.lede)}</span>`
                 : '';
-            // Semantic <time datetime="…"> for the source date — screen
-            // readers parse it, Google understands the article date.
             const srcHtml = h.source || h.source_date
                 ? `<span class="source">${escapeHtml(h.source || '')}${h.source && h.source_date ? ' · ' : ''}${
                         h.source_date
@@ -1243,15 +1402,13 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                             : ''
                     }</span>`
                 : '';
-            // Each headline is a real <article> for semantic correctness +
-            // search engines + screen readers. First item gets `is-lead`
-            // so CSS can apply the drop-cap on the lead story (newspaper
-            // convention). Wrapped in <li> so the outer <ol> still
-            // numbers them semantically.
+            // Each headline opens an in-place reader modal — body + quote +
+            // source link, no section navigation needed. Falls back to the
+            // §03 jump only when full body data is missing.
             return `
             <li class="sdd-cover-head${i === 0 ? ' is-lead' : ''}">
                 <article>
-                    <a href="#section-03" data-sdd-jump="tz">
+                    <a href="#section-03" data-sdd-head-idx="${i}">
                         <span class="city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</span>
                         <span class="headline">${escapeHtml(h.headline || '')}</span>
                         ${ledeHtml}
@@ -1260,20 +1417,110 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                 </article>
             </li>`;
         }).join('');
-        // The newly-rendered <a data-sdd-jump="tz"> links need the same
-        // click delegation as the cover-nav. Hook them now.
-        root.querySelectorAll('[data-sdd-jump]').forEach(a => {
+        // Headline click → open reader modal (or fall back to §03 jump).
+        root.querySelectorAll('[data-sdd-head-idx]').forEach(a => {
             a.addEventListener('click', (e) => {
                 e.preventDefault();
-                const cat = a.getAttribute('data-sdd-jump');
-                const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
-                if (btn) {
-                    btn.click();
-                    document.body.classList.add('section-active');
+                const idx = parseInt(a.getAttribute('data-sdd-head-idx'), 10);
+                const h = _coverHeads[idx];
+                if (h && (h.body || h.quote)) {
+                    openHeadReader(h, ed);
+                } else {
+                    // Body missing — fall through to §03 (the old behaviour).
+                    const btn = document.querySelector('.dock-btn[data-cat="tz"]');
+                    if (btn) {
+                        btn.click();
+                        document.body.classList.add('section-active');
+                    }
                 }
             });
         });
     }
+
+    // ── Cover headline reader modal ───────────────────────────────────
+    // Click any cover hero headline → opens a paper-tone reader overlay
+    // with body + quote + source link, no navigation. Esc / click-outside
+    // / close button all dismiss.
+    let _readerEl = null;
+    function ensureReaderEl() {
+        if (_readerEl && document.body.contains(_readerEl)) return _readerEl;
+        _readerEl = document.createElement('div');
+        _readerEl.className = 'sdd-cover-reader';
+        _readerEl.setAttribute('role', 'dialog');
+        _readerEl.setAttribute('aria-modal', 'true');
+        _readerEl.setAttribute('aria-labelledby', 'sddReaderHeadline');
+        _readerEl.hidden = true;
+        document.body.appendChild(_readerEl);
+        return _readerEl;
+    }
+    function closeHeadReader() {
+        if (!_readerEl) return;
+        _readerEl.hidden = true;
+        document.body.classList.remove('cover-reader-open');
+        // Restore focus to the previously-clicked headline if known.
+        if (_readerEl._lastTrigger && typeof _readerEl._lastTrigger.focus === 'function') {
+            try { _readerEl._lastTrigger.focus(); } catch (e) {}
+        }
+    }
+    function openHeadReader(h, ed) {
+        const el = ensureReaderEl();
+        const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
+        const cityUp = (h.city || '').toUpperCase();
+        const READER_LABELS = {
+            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL' },
+            ko: { close: '닫기',    source: '출처',   read: '원문 보기' },
+            ja: { close: '閉じる',  source: '出典',   read: '原文を読む' },
+            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE' },
+            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL' }
+        };
+        const L = READER_LABELS[ed] || READER_LABELS.en;
+        const quoteHtml = h.quote
+            ? `<figure class="sdd-cover-reader__quote">
+                   <blockquote>${escapeHtml(h.quote)}</blockquote>
+                   ${h.quote_source ? `<figcaption>— ${escapeHtml(h.quote_source)}</figcaption>` : ''}
+               </figure>`
+            : '';
+        const sourceLine = [h.source, h.source_date].filter(Boolean).join(' · ');
+        const sourceHtml = sourceLine
+            ? `<p class="sdd-cover-reader__source">
+                   <span class="label">${escapeHtml(L.source)}</span>
+                   <span class="value">${escapeHtml(h.source || '')}${h.source && h.source_date ? ' · ' : ''}${
+                       h.source_date
+                           ? `<time datetime="${escapeHtml(h.source_date)}">${escapeHtml(h.source_date)}</time>`
+                           : ''
+                   }</span>
+                   ${h.source_url
+                       ? `<a class="link" href="${escapeHtml(h.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(L.read)} ↗</a>`
+                       : ''}
+               </p>`
+            : '';
+        el.innerHTML = `
+            <div class="sdd-cover-reader__scrim" data-sdd-reader-close></div>
+            <article class="sdd-cover-reader__card">
+                <button type="button" class="sdd-cover-reader__close"
+                        data-sdd-reader-close aria-label="${escapeHtml(L.close)}">×</button>
+                <p class="sdd-cover-reader__city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</p>
+                <h2 class="sdd-cover-reader__headline" id="sddReaderHeadline">${escapeHtml(h.headline || '')}</h2>
+                ${h.lede ? `<p class="sdd-cover-reader__lede">${escapeHtml(h.lede)}</p>` : ''}
+                ${h.body ? `<div class="sdd-cover-reader__body">${escapeHtml(h.body)}</div>` : ''}
+                ${quoteHtml}
+                ${sourceHtml}
+            </article>
+        `;
+        el.hidden = false;
+        document.body.classList.add('cover-reader-open');
+        el._lastTrigger = document.activeElement;
+        // Focus the close button so keyboard users land somewhere predictable.
+        const closeBtn = el.querySelector('.sdd-cover-reader__close');
+        if (closeBtn) try { closeBtn.focus(); } catch (e) {}
+        el.querySelectorAll('[data-sdd-reader-close]').forEach(b => {
+            b.addEventListener('click', closeHeadReader);
+        });
+    }
+    // Global Esc — close modal if open.
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && _readerEl && !_readerEl.hidden) closeHeadReader();
+    });
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는
     // saudade 워드마크 클릭 (추후 PR — 일단 ESC).
