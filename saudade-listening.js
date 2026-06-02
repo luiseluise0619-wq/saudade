@@ -521,7 +521,11 @@ body.listening-active .sdd-listen { display: block; }
     align-items: center;
     gap: 14px;
     padding: 10px 18px;
-    background: rgba(242,238,227,.92);
+    /* Was rgba(242,238,227,.92) — paper hardcoded. In dark skin --ink
+       becomes paper-tone too, so player labels collided with bg →
+       invisible. Use var(--paper) so bg flips with the skin in lock-
+       step with --ink, mirroring the back-button fix from #120. */
+    background: var(--paper);
     border: 0.5px solid var(--rule-2);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
