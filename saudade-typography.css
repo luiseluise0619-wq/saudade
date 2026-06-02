@@ -279,3 +279,31 @@ html, body {
 .def-body {
     quotes: "\201C" "\201D" "\2018" "\2019";
 }
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   FOCUS-VISIBLE POLISH
+   Replace browser default focus rings with branded rust outline. Only on
+   keyboard navigation (:focus-visible) — mouse clicks don't trigger it.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* Universal — interactive elements that haven't set their own focus state
+   below pick up this rust outline + small offset. */
+:where(a, button, [role="button"], [role="menuitem"], summary,
+       input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--rust);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Quiet variants — elements with their own border / underline don't need
+   an offset ring; replace with a thicker brand outline that doesn't break
+   the existing visual. */
+.sdd-cover-head a:focus-visible,
+.sdd-cover-nav a:focus-visible,
+.sdd-cover-archive-link:focus-visible {
+    outline: none;
+    box-shadow: inset 0 -2px 0 var(--rust);
+}
+
+/* Skip-link already has its own .sdd-skip-link:focus rule (index.html). */

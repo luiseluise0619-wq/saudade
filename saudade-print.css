@@ -125,6 +125,129 @@
 
     a { color: inherit; }
 
+    
+    /* v8 cover hero — newspaper-style print of today's three dispatch
+       headlines. Lives above .sdd-disp-item rules so the cover page
+       prints cleanly when "Print issue" or Cmd+P is used from §00. */
+    .sdd-cover {
+        position: static !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: none !important;
+    }
+    .sdd-cover-editions, .sdd-cover-theme, .sdd-cover-nav,
+    .sdd-cover-archive, .sdd-cover-listen-cta,
+    .sdd-cover-today--secondary, .sdd-skip-link {
+        display: none !important;
+    }
+    .sdd-cover-mast {
+        text-align: center;
+        margin: 0 0 18pt;
+        padding-bottom: 8pt;
+        border-bottom: 0.5pt solid #1A130D;
+    }
+    .sdd-cover-wordmark {
+        font-family: "Fraunces", serif !important;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 48pt;
+        line-height: 0.9;
+        margin: 0;
+        color: #1A130D;
+    }
+    .sdd-cover-mast-rule {
+        border-top: 0.5pt solid #1A130D !important;
+        border-bottom: 0.5pt solid #1A130D !important;
+        height: 4pt;
+        background: none !important;
+        width: 60mm;
+        margin: 4pt auto;
+    }
+    .sdd-cover-mast-date {
+        font-family: "JetBrains Mono", monospace !important;
+        font-size: 8pt;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #1A130D;
+    }
+    .sdd-cover-mast-tagline {
+        font-family: "Fraunces", serif !important;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 11pt;
+        color: #3F3A32;
+        margin: 6pt auto 0;
+        max-width: 60ch;
+    }
+    .sdd-cover-heads {
+        margin: 12pt 0;
+        max-width: none;
+    }
+    .sdd-cover-heads-eyebrow {
+        font-family: "JetBrains Mono", monospace !important;
+        font-size: 8pt;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #7E2818;
+        margin: 0 0 8pt;
+        padding-bottom: 4pt;
+        border-bottom: 0.5pt solid #1A130D;
+    }
+    .sdd-cover-heads-stale {
+        margin-left: 6pt;
+        color: #7E2818;
+    }
+    .sdd-cover-heads-list { list-style: none; padding: 0; margin: 0; }
+    .sdd-cover-head {
+        page-break-inside: avoid;
+        padding: 10pt 0;
+        border-bottom: 0.5pt solid #5e554a;
+    }
+    .sdd-cover-head:last-child { border-bottom: 0; }
+    .sdd-cover-head a { color: inherit; text-decoration: none; }
+    .sdd-cover-head .city {
+        font-family: "JetBrains Mono", monospace !important;
+        font-size: 8pt;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #7E2818;
+        display: block;
+        margin-bottom: 3pt;
+    }
+    .sdd-cover-head .headline {
+        font-family: "Fraunces", serif !important;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 18pt;
+        line-height: 1.18;
+        color: #1A130D;
+        display: block;
+        margin: 0 0 4pt;
+    }
+    .sdd-cover-head .lede {
+        font-family: "Fraunces", serif !important;
+        font-weight: 300;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #3F3A32;
+        display: block;
+        margin: 0 0 3pt;
+        max-width: 56ch;
+    }
+    .sdd-cover-head .source {
+        font-family: "JetBrains Mono", monospace !important;
+        font-size: 7pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6E625A;
+        display: block;
+    }
+    .sdd-cover-head--rest,
+    .sdd-cover-head--pending-msg {
+        text-align: center;
+        padding: 14pt 0;
+    }
+
     /* OpenStreetMap attribution must remain visible — leave it alone. */
 }
 
