@@ -527,6 +527,36 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     opacity: 0.55;
     font-size: clamp(20px, 2.4vw, 30px);
 }
+/* Sunday silence + empty-state messages — single-row hero copy when
+   there are no headlines to show (KST Sunday per §9.1, or the cron
+   hasn't filed yet). Same vertical stack as a real headline so the
+   layout doesn't reflow. */
+.sdd-cover-head--rest,
+.sdd-cover-head--pending-msg {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clamp(6px, 0.8vw, 10px);
+    padding: clamp(20px, 3vw, 28px) 0;
+}
+.sdd-cover-head--rest .headline,
+.sdd-cover-head--pending-msg .headline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.18;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+}
+.sdd-cover-head--rest .lede,
+.sdd-cover-head--pending-msg .lede {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(14px, 1.4vw, 17px);
+    line-height: 1.45;
+    color: var(--bone-d);
+}
 
 /* Secondary 'today' counters — demoted now that dispatch headlines own
    the hero. Keep them quietly visible: smaller, ink-soft, single row. */
@@ -1017,17 +1047,87 @@ body.listening-active .sdd-cover-theme { display: none !important; }
         loadDispatchHeads(ed);
     }
 
+    // Constitution §9.1 — Saudade does not publish on Sundays. The
+    // dispatches page already handles this (saudade-dispatches.js:654),
+    // but the cover hero used to fetch yesterday's headlines anyway and
+    // show them with a "1 DAY AGO" chip — making intentional silence
+    // look like a missed cron. Detect KST Sunday on the cover and show
+    // the silence message instead of the stale headlines.
+    function isSundayKST() {
+        // KST is UTC+9. Build a Date for "now in KST" and check getDay().
+        const utcMs = Date.now();
+        const kstMs = utcMs + 9 * 60 * 60 * 1000;
+        const kst = new Date(kstMs);
+        return kst.getUTCDay() === 0;
+    }
+
     function loadDispatchHeads(ed) {
+        if (isSundayKST()) {
+            renderCoverHeadsSunday(ed);
+            return;
+        }
         const file = ed === 'en' ? 'dispatches.json' : `dispatches.${ed}.json`;
         const release = (typeof window !== 'undefined' && window.SAUDADE_RELEASE) || 'v0';
         fetch(`./data/${file}?v=${release}`, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
             .then(d => {
                 const heads = pickCoverHeads(d);
-                renderCoverHeads(heads, ed);
+                if (heads.length) {
+                    renderCoverHeads(heads, ed);
+                } else {
+                    renderCoverHeadsPending(ed);
+                }
                 surfaceFreshness(d, ed);
             })
-            .catch(() => {});
+            .catch(() => renderCoverHeadsPending(ed));
+    }
+
+    function renderCoverHeadsSunday(ed) {
+        const root = document.getElementById('sddCoverHeads');
+        if (!root) return;
+        const COPY = {
+            en: { line1: 'Saudade does not publish on Sundays.',
+                  line2: 'Dispatches resume Monday at 06:00 KST.' },
+            ko: { line1: 'Saudade는 일요일에 발행하지 않는다.',
+                  line2: '월요일 새벽 6시(KST) 디스패치 재개.' },
+            ja: { line1: 'Saudadeは日曜日に発行しない。',
+                  line2: '月曜日 朝6時(KST)に通信を再開する。' },
+            pt: { line1: 'Saudade não publica aos domingos.',
+                  line2: 'Os despachos recomeçam segunda às 06:00 KST.' },
+            es: { line1: 'Saudade no publica los domingos.',
+                  line2: 'Los despachos vuelven el lunes a las 06:00 KST.' }
+        };
+        const c = COPY[ed] || COPY.en;
+        root.innerHTML = `
+            <li class="sdd-cover-head sdd-cover-head--rest">
+                <span class="headline">${escapeHtml(c.line1)}</span>
+                <span class="lede">${escapeHtml(c.line2)}</span>
+            </li>
+        `;
+    }
+
+    function renderCoverHeadsPending(ed) {
+        const root = document.getElementById('sddCoverHeads');
+        if (!root) return;
+        const COPY = {
+            en: { line1: 'Tomorrow morning, three city dispatches land here.',
+                  line2: 'Filed daily at 06:00 KST.' },
+            ko: { line1: '내일 아침, 세 도시의 디스패치가 여기에 도착한다.',
+                  line2: '매일 KST 06:00 발행.' },
+            ja: { line1: '明朝、三つの街から通信が届く。',
+                  line2: '毎日 KST 6:00 に発行。' },
+            pt: { line1: 'Amanhã de manhã, três despachos chegam aqui.',
+                  line2: 'Publicado todos os dias às 06:00 KST.' },
+            es: { line1: 'Mañana, tres despachos llegan aquí.',
+                  line2: 'Publicado todos los días a las 06:00 KST.' }
+        };
+        const c = COPY[ed] || COPY.en;
+        root.innerHTML = `
+            <li class="sdd-cover-head sdd-cover-head--pending-msg">
+                <span class="headline">${escapeHtml(c.line1)}</span>
+                <span class="lede">${escapeHtml(c.line2)}</span>
+            </li>
+        `;
     }
 
     // Surface the dispatch file's filed_at age in the cover hero eyebrow.
