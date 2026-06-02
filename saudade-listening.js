@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v721')
+        return fetch('./data/listening.json?v=v722')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -425,6 +425,10 @@ body.listening-active .sdd-listen { display: block; }
 
 /* 사진 헤더 — 화면 상단, 4px paper frame, 14px 여백 (풀블리드 X) */
 .sdd-listen-city-photo {
+    /* Anchor for the absolute-positioned .sdd-listen-city-photo-placeholder
+       inside. Without this the placeholder escaped to the viewport on some
+       layouts and the photo never stacked correctly above it. */
+    position: relative;
     margin: 0 0 12px;
     padding: 4px;
     background: var(--paper);
