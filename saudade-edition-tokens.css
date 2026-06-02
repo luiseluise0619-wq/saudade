@@ -224,6 +224,35 @@ html[data-skin="saturated"] .sdd-cover .sdd-cover-mast-rule {
     border-color: var(--paper-d) !important;
     background: var(--paper-d) !important;
 }
+/* Saturated coverage for the cover hero + tagline + counters + nav
+   that landed in #122 / #123 / #124 / #128 / #130 / #131 — all use
+   var(--ink) or var(--bone-d) by default, which collapse to invisible
+   on the accent-color cover bg. Force paper-tone text so the front
+   page stays readable when the user picks COVER skin. */
+html[data-skin="saturated"] .sdd-cover .sdd-cover-mast-tagline,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads-eyebrow,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head .city,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head .headline,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head .lede,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head .source,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head--pending .dots,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-today-item,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-issue-eyebrow,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-nav a,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-nav .sdd-mark,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-archive-link,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads-stale {
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head a:hover .headline,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head a:focus-visible .headline {
+    color: var(--paper-d) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-today--secondary {
+    border-color: rgba(242,238,227,0.28) !important;
+}
 
 /* Dark — reading-room mode. Whole magazine inverts. */
 html[data-skin="dark"] body {
