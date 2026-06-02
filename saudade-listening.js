@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v715')
+        return fetch('./data/listening.json?v=v716')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -461,18 +461,44 @@ body.listening-active .sdd-listen { display: block; }
     align-items: center;
     justify-content: center;
     gap: 12px;
+    /* Default: paper-d flat. Per-city blocks below override with a
+       scenic sky → horizon → ground gradient evoking each location.
+       Real Pexels photos overlay these once the workflow runs. */
     background: var(--paper-d);
     color: var(--bone-d);
     text-align: center;
     padding: 24px;
 }
+
+/* Per-city scenic gradients — sky / horizon / ground palette. Subtle
+   enough that the city name + "awaiting photograph" line stays
+   readable on top, evocative enough that an empty card no longer
+   feels broken. */
+.sdd-listen-city-photo-placeholder[data-city-slug="lisbon"]      { background: linear-gradient(180deg, #9CC6E6 0%, #E9C893 55%, #C66B47 100%); color: #2E1A12; }
+.sdd-listen-city-photo-placeholder[data-city-slug="porto"]       { background: linear-gradient(180deg, #87B4D9 0%, #C9B894 60%, #8C3E26 100%); color: #2E1A12; }
+.sdd-listen-city-photo-placeholder[data-city-slug="madrid"]      { background: linear-gradient(180deg, #E9C893 0%, #C77A4A 50%, #8B3A21 100%); color: #2A1411; }
+.sdd-listen-city-photo-placeholder[data-city-slug="barcelona"]   { background: linear-gradient(180deg, #7AAEE0 0%, #C9B894 60%, #6B6356 100%); color: #1B2233; }
+.sdd-listen-city-photo-placeholder[data-city-slug="berlin"]      { background: linear-gradient(180deg, #C7D0D9 0%, #A8AEB5 55%, #5B5A53 100%); color: #1A1815; }
+.sdd-listen-city-photo-placeholder[data-city-slug="tokyo"]       { background: linear-gradient(180deg, #BFC2D4 0%, #7E889E 55%, #2A2F44 100%); color: #F2EEE3; }
+.sdd-listen-city-photo-placeholder[data-city-slug="seoul"]       { background: linear-gradient(180deg, #B7CFE0 0%, #B0A790 55%, #5A4A3E 100%); color: #2A1F1A; }
+.sdd-listen-city-photo-placeholder[data-city-slug="chiang-mai"]  { background: linear-gradient(180deg, #E7D08A 0%, #B8943E 40%, #4A6841 100%); color: #1F2D1F; }
+.sdd-listen-city-photo-placeholder[data-city-slug="bali"]        { background: linear-gradient(180deg, #B4D89B 0%, #6FAA66 50%, #2D6B83 100%); color: #1F2D1F; }
+.sdd-listen-city-photo-placeholder[data-city-slug="da-nang"]     { background: linear-gradient(180deg, #F2D89A 0%, #D2A55B 40%, #437694 100%); color: #2A1F12; }
+.sdd-listen-city-photo-placeholder[data-city-slug="mexico-city"] { background: linear-gradient(180deg, #F2C6D6 0%, #E6A86C 50%, #6E4A7F 100%); color: #2A1F2F; }
+.sdd-listen-city-photo-placeholder[data-city-slug="medellin"]    { background: linear-gradient(180deg, #A8C9E2 0%, #88B27A 55%, #4E7E51 100%); color: #1F2D1F; }
+.sdd-listen-city-photo-placeholder[data-city-slug="buenos-aires"]{ background: linear-gradient(180deg, #B8D4E8 0%, #E8DEB5 60%, #8C7F50 100%); color: #2A2517; }
+.sdd-listen-city-photo-placeholder[data-city-slug="tbilisi"]     { background: linear-gradient(180deg, #C7BDA8 0%, #A88B6E 55%, #5B3E2F 100%); color: #2A1F18; }
 .sdd-listen-city-photo-placeholder .city {
     font-family: var(--serif);
     font-weight: 300;
     font-style: italic;
     font-size: clamp(28px, 4vw, 40px);
     line-height: 1;
-    color: var(--ink);
+    /* Was var(--ink); now inherits from the placeholder so each city's
+       scenic gradient picks the right text contrast (dark name on
+       sunset palette, light name on dusk Tokyo, etc.). */
+    color: inherit;
+    text-shadow: 0 1px 2px rgba(11,11,15,.16);
 }
 .sdd-listen-city-photo-placeholder .note {
     font-family: var(--mono);
@@ -1267,7 +1293,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             });
             const photoHtml = photoUrl ? `
                 <figure class="sdd-listen-city-photo">
-                    <div class="sdd-listen-city-photo-placeholder">
+                    <div class="sdd-listen-city-photo-placeholder" data-city-slug="${escapeHtml(activeSlug)}">
                         <p class="city">${escapeHtml(activeName)}</p>
                         <p class="note">${escapeHtml(placeholderText)}</p>
                     </div>
@@ -1280,7 +1306,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 </figure>
             ` : `
                 <figure class="sdd-listen-city-photo">
-                    <div class="sdd-listen-city-photo-placeholder">
+                    <div class="sdd-listen-city-photo-placeholder" data-city-slug="${escapeHtml(activeSlug)}">
                         <p class="city">${escapeHtml(activeName)}</p>
                         <p class="note">${escapeHtml(placeholderText)}</p>
                     </div>
