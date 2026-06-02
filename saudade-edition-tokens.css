@@ -17,8 +17,10 @@ body.edition-en, body[data-edition="en"] {
     --paper-d:      #E2D9C4;
     --ink:          #1B1812;
     --ink-soft:     #110F0A;
-    --accent:       #B8442D;
-    --rust:         #B8442D;
+    /* EN — deep rust, refined American magazine spot color
+       (was #B8442D / orange-red). */
+    --accent:       #7A2A1A;
+    --rust:         #7A2A1A;
     --jade:         #B8442D;
     --bone:         #6E665A;
     --bone-d:       #443D34;
@@ -37,8 +39,11 @@ body.edition-ko, body[data-edition="ko"] {
     --paper-d:      #DCD3BD;
     --ink:          #1A1815;
     --ink-soft:     #100E0B;
-    --accent:       #A8341E;
-    --rust:         #A8341E;
+    /* KO — deep celadon teal. Korean ceramic / hanbok tradition runs
+       cooler than the previous dark-red; differentiates the edition
+       from JA/ES which were also red. (was #A8341E) */
+    --accent:       #1E5562;
+    --rust:         #1E5562;
     --jade:         #A8341E;
     --bone:         #6E6960;
     --bone-d:       #45413B;
@@ -82,8 +87,10 @@ body.edition-ja, body[data-edition="ja"] {
     --paper-d:      #E5DEC9;
     --ink:          #1B1A1F;
     --ink-soft:     #100F14;
-    --accent:       #9C2A1A;
-    --rust:         #9C2A1A;
+    /* JA — deep lacquer carmine. Kimono lining / 漆 red with more
+       brown depth than the previous dark-red. (was #9C2A1A) */
+    --accent:       #6B1F23;
+    --rust:         #6B1F23;
     --jade:         #9C2A1A;
     --bone:         #6F6A60;
     --bone-d:       #45413A;
@@ -117,8 +124,10 @@ body.edition-pt, body[data-edition="pt"] {
     --paper-d:      #E2DCC4;
     --ink:          #2A1D14;
     --ink-soft:     #1B120B;
-    --accent:       #2D5A8C;
-    --rust:         #2D5A8C;
+    /* PT — deep azulejo cobalt. Lisbon-tile blue, deeper than the
+       previous mid-navy. (was #2D5A8C) */
+    --accent:       #1F4570;
+    --rust:         #1F4570;
     --jade:         #2D5A8C;
     --bone:         #6E6055;
     --bone-d:       #423831;
@@ -148,8 +157,10 @@ body.edition-es, body[data-edition="es"] {
     --paper-d:      #DED5BB;
     --ink:          #1F1A12;
     --ink-soft:     #100D08;
-    --accent:       #8B1A1A;
-    --rust:         #8B1A1A;
+    /* ES — ochre-burgundy. Sangria with brown depth instead of
+       another pure dark red. (was #8B1A1A) */
+    --accent:       #6E2A2E;
+    --rust:         #6E2A2E;
     --jade:         #8B1A1A;
     --bone:         #706A5D;
     --bone-d:       #443D33;
