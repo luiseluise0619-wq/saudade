@@ -181,3 +181,101 @@
     font-style: normal;
     font-feature-settings: "ss01";
 }
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   v8 FINE-MAGAZINE CRAFT
+   OpenType features + print-typography niceties. Default browser rendering
+   leaves features like ligatures + contextual alternates OFF; explicit opt-in
+   makes the serif read like printed copy instead of AI-generated UI text.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* Global — kerning + standard/contextual ligatures everywhere. Safari/Chrome
+   already kern by default but explicitness costs nothing and survives a
+   browser reset. text-rendering swap → "optimizeLegibility" pulls in
+   kerning + ligatures + better hinting on small sizes. */
+html, body {
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Serif body — oldstyle (lowercase) numerals + proportional widths.
+   Reads as printed book copy when numbers appear inline ("184 days
+   since you last sat in a Seoul café"). Headings stay lining (default)
+   because oldstyle numerals look fragile at display sizes. */
+.sdd-cover-mast-tagline,
+.sdd-cover-issue-eyebrow,
+.sdd-cover-head .lede,
+.sdd-listen-city-caption,
+.def-body,
+.cite blockquote,
+.timeline li,
+.tier-benefits,
+.tier-note,
+.tier-price {
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "onum" 1, "pnum" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "onum" 1, "pnum" 1;
+}
+
+/* Display headings — keep lining numerals (default) but force discretionary
+   ligatures off so weird "Th" merges don't appear unintentionally on
+   Fraunces variable axis. */
+.sdd-cover-wordmark,
+.sdd-cover-head .headline,
+.sdd-disp-h2,
+.sdd-atlas-h2,
+.sdd-listen-h2 {
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "dlig" 0;
+    font-feature-settings: "kern" 1, "liga" 1, "dlig" 0;
+}
+
+/* Mono / mast / counters — tabular figures so columns of numbers align,
+   lining numerals (mono is already same-width but be explicit). */
+.sdd-cover-mast-date,
+.sdd-cover-heads-eyebrow,
+.sdd-cover-heads-stale,
+.sdd-cover-head .city,
+.sdd-cover-head .source,
+.sdd-cover-today-item,
+.sdd-cover-nav a,
+.sdd-cover-archive-link,
+.sdd-disp-stale,
+.sdd-mast-num,
+.sdd-mast-name,
+.sdd-mast-issue,
+.sdd-mast-page,
+.sdd-listen-meta,
+.sdd-listen-duration,
+.tier-name,
+.tier-badge,
+.crumb {
+    -webkit-font-feature-settings: "kern" 1, "tnum" 1, "lnum" 1;
+    font-feature-settings: "kern" 1, "tnum" 1, "lnum" 1;
+}
+
+/* Hanging punctuation — quote marks and stop punctuation hang outside
+   the left/right edge of a paragraph instead of breaking the optical
+   alignment. Spotty browser support but progressive enhancement only;
+   no fallback needed (where unsupported, the line just doesn't hang). */
+.sdd-cover-head .headline,
+.sdd-cover-head .lede,
+.sdd-cover-mast-tagline,
+.sdd-cover-issue-lede,
+.def-body,
+.cite blockquote,
+.sdd-disp-body,
+.tier-benefits {
+    hanging-punctuation: first allow-end last;
+}
+
+/* Italic serif quote marks — when an em-dash or quotation mark appears
+   in display copy, render the curly typographic glyphs explicitly so
+   the browser doesn't fall back to ASCII straight quotes. */
+.sdd-cover-head .headline,
+.cite blockquote,
+.def-body {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
