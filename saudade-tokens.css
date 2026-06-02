@@ -5,26 +5,35 @@
    ════════════════════════════════════════════════════════════════════════════ */
 
 :root {
-    /* ─── paper system (light, magazine print 느낌) ─── */
-    --paper:    #F2EEE3;
-    --paper-d:  #E5DFD0;
-    --ink:      #16151A;
-    --ink-soft: #0F0E12;
+    /* ─── paper system — refined palette (v8 "fine magazine" pass) ─────
+       Old values felt closer to a desktop UI grey-cream. New values
+       shift toward aged-paper warmth + ink-on-paper depth. Contrast
+       ratios still ≥ 7:1 ink-on-paper (verified) and ≥ 4.5:1 for
+       bone-d / paper.
+                          old       new
+       --paper          #F2EEE3   #F4ECD6  (warmer cream, more butter)
+       --paper-d        #E5DFD0   #E6DBC1  (deeper aged paper)
+       --ink            #16151A   #1A130D  (brown-black, less neutral)
+       --ink-soft       #0F0E12   #100A06
+    */
+    --paper:    #F4ECD6;
+    --paper-d:  #E6DBC1;
+    --ink:      #1A130D;
+    --ink-soft: #100A06;
 
-    /* ─── accent (rust = 비자 D-day, 섹션 번호. signal/jade 절제 사용) ─── */
-    --rust:     #9A3324;
-    --signal:   #E07B43;
-    --jade:     #5BA890;
-    --gold:     #D4A574;     /* v1 비활성, 변수만 보존 */
+    /* ─── accent — refined (rust deeper, jade aged, gold antique) ─── */
+    /* Was rust #9A3324 / signal #E07B43 / jade #5BA890 / gold #D4A574 */
+    --rust:     #7E2818;
+    --signal:   #C26938;
+    --jade:     #4D8576;
+    --gold:     #B8915C;
 
-    /* ─── label / divider ─── */
-    /* v7 §4.1 — bone × paper 토큰은 비-텍스트 데코 전용 (rules, dividers,
-       8px dot markers, hairline). 텍스트는 모두 bone-d 사용.
-       값은 edition-en override 와 동기화 (4.64:1, 8.17:1, ≥4.5/≥7 통과). */
-    --bone:     #6F6A60;
-    --bone-d:   #4A4540;
-    --rule:     rgba(11,11,15,.16);
-    --rule-2:   rgba(11,11,15,.42);
+    /* ─── label / divider — warmer bone, ink-rule with more presence ─── */
+    /* Was bone #6F6A60 / bone-d #4A4540 / rule alpha .16 */
+    --bone:     #6E625A;
+    --bone-d:   #3F3A32;
+    --rule:     rgba(26,19,13,.18);
+    --rule-2:   rgba(26,19,13,.42);
 
     /* ─── fonts (오직 두 개) ─── */
     --serif:  "Fraunces", Georgia, serif;

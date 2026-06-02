@@ -256,14 +256,17 @@ html[data-skin="saturated"] .sdd-cover .sdd-cover-today--secondary {
 
 /* Dark — reading-room mode. Whole magazine inverts. */
 html[data-skin="dark"] body {
-    --paper:    #15130E;
-    --paper-d:  #1F1B14;
-    --ink:      #EFE7D6;
-    --ink-soft: #FFFFFF;
-    --bone:     #8E867A;
-    --bone-d:   #C5BDB0;
-    --rule:     rgba(239,231,214,.18);
-    --rule-2:   rgba(239,231,214,.40);
+    /* Dark "NIGHT" — v8 refined: warmer cocoa-black bg + deeper warm-
+       cream ink. Aged-leather feel instead of pure-grey OS dark. Still
+       ≥ 4.5:1 contrast for body, ≥ 7:1 for headings. */
+    --paper:    #18120A;     /* was #15130E — warmer + slightly deeper */
+    --paper-d:  #221A0E;     /* was #1F1B14 */
+    --ink:      #EDDFC2;     /* was #EFE7D6 — warmer butter-cream */
+    --ink-soft: #FFF8E6;     /* was #FFFFFF */
+    --bone:     #A89C84;     /* was #8E867A — warmer */
+    --bone-d:   #D8CCB1;     /* was #C5BDB0 — warmer light */
+    --rule:     rgba(237,223,194,.18);
+    --rule-2:   rgba(237,223,194,.42);
 }
 html[data-skin="dark"] body.edition-ko::before {
     /* Dim the hanji texture in dark mode */
