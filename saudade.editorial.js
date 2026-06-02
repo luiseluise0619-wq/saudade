@@ -388,6 +388,19 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     color: var(--ink);
     margin: 0;
 }
+/* Tagline — small italic serif beneath the date line, NYT-masthead
+   tradition. One-line answer to "what is this?" before the hero. */
+.sdd-cover-mast-tagline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(13px, 1.3vw, 16px);
+    line-height: 1.35;
+    color: var(--bone-d);
+    margin: clamp(8px, 1vw, 12px) auto 0;
+    max-width: 38ch;
+    text-wrap: balance;
+}
 
 /* 분기 ISSUE 정보 */
 .sdd-cover-issue {
@@ -873,6 +886,10 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                 <h1 class="sdd-cover-wordmark">SAUDADE</h1>
                 <div class="sdd-cover-mast-rule"></div>
                 <p class="sdd-cover-mast-date">${escapeHtml(mastDate)} · ${escapeHtml(deskLine)}</p>
+                <!-- Tagline beneath the masthead — NYT-style "All the News
+                     That's Fit to Print" position. Answers "what is this?"
+                     in one line before the visitor scrolls to the hero. -->
+                <p class="sdd-cover-mast-tagline">${escapeHtml(issueLede)}</p>
             </header>
 
             <!-- v8 cover hero — today's three dispatch headlines, front-page
@@ -889,9 +906,10 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                 </ol>
             </section>
 
+            <!-- Issue eyebrow only — the lede was promoted into the
+                 masthead as the tagline above. -->
             <section class="sdd-cover-issue">
                 <p class="sdd-cover-issue-eyebrow">${escapeHtml(QUARTER_LABEL[ed] || 'THIS ISSUE')} · ${escapeHtml(quarter)}</p>
-                <p class="sdd-cover-issue-lede">${escapeHtml(issueLede)}</p>
             </section>
 
             <!-- v641 — personal block. Empathy layer that turns the user's
