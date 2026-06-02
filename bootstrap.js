@@ -3,6 +3,33 @@
 // 4가지 부트 작업: 서버 URL, 캐시 마이그레이션, SW 등록, globe.gl CDN 로딩, 로딩 타임아웃.
 'use strict';
 
+// ─── 0) Skin pre-load — apply <html data-skin> BEFORE first paint ─────
+// saudade.editorial.js sets the data-skin attribute in its init(), but
+// it loads with `defer` so the first paint flashes paper skin for
+// ~50-200ms before the dark / cover skin kicks in (FOUC). This synchronous
+// read of localStorage 'saudade.skin' + the system dark-mode query sets
+// the attribute before the first paint so the chosen skin renders from
+// frame 1. Runs from bootstrap.js (script-src 'self' allowed).
+(function preApplySkin() {
+    try {
+        const SKINS = ['paper', 'saturated', 'dark'];
+        let pref = null;
+        try { pref = localStorage.getItem('saudade.skin'); } catch (e) {}
+        let skin = SKINS.includes(pref) ? pref : null;
+        if (!skin) {
+            // Mirror editorial.js pickSkin() — prefers-reduced-motion
+            // forces paper; OS dark-mode forces dark; otherwise paper.
+            // ISO-week rotation lives in editorial.js, not here (this is
+            // just the FOUC-elimination synchronous path).
+            const mm = (typeof matchMedia === 'function') ? matchMedia : null;
+            if (mm && mm('(prefers-reduced-motion: reduce)').matches)      skin = 'paper';
+            else if (mm && mm('(prefers-color-scheme: dark)').matches)     skin = 'dark';
+            else                                                            skin = 'paper';
+        }
+        document.documentElement.setAttribute('data-skin', skin);
+    } catch (e) { /* never block bootstrap */ }
+})();
+
 function safeStorageGet(storage, key) {
     try { return storage.getItem(key); } catch (e) { window.AURA?.dbgWarn?.('caught', e); return null; }
 }
@@ -43,7 +70,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const SAUDADE_RELEASE = 'v725';
+const SAUDADE_RELEASE = 'v727';
 window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp cache-buster query strings.
                                             // Kept in lock-step with sw.js CACHE_VERSION by scripts/bump-cache.js.
 
