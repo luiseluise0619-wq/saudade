@@ -647,9 +647,17 @@ body.listening-active .sdd-cover-theme { display: none !important; }
 .sdd-cover-nav a .sdd-mark { color: var(--bone-d); margin-right: 4px; font-weight: 400; }
 
 @media (max-width: 768px) {
-    .sdd-cover { justify-content: center; padding: 0 24px; }
-    .sdd-cover-nav { gap: 14px; font-size: 10px; }
-    .sdd-cover-nav a { padding: 4px 0; }
+    .sdd-cover { justify-content: flex-start; padding: 88px 24px calc(var(--dock-h, 56px) + 64px); }
+    /* On mobile the bottom dock already exposes all 5 sections — the
+       cover-nav repeats the same links and just lengthens the scroll.
+       Hide it; desktop (where there's no dock) keeps it. */
+    .sdd-cover-nav { display: none; }
+    /* Issue lede + personal block are quiet on mobile so the dispatch
+       hero stays the lead story. */
+    .sdd-cover-issue { margin: clamp(16px, 3vw, 24px) 0; }
+    .sdd-cover-issue-lede { font-size: 15px; line-height: 1.4; opacity: 0.85; }
+    /* Dispatch hero gets a touch more breathing room as the actual lead. */
+    .sdd-cover-heads { margin-bottom: clamp(20px, 3vw, 32px); }
 }
 `;
         document.head.appendChild(s);
@@ -867,6 +875,20 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                 <p class="sdd-cover-mast-date">${escapeHtml(mastDate)} · ${escapeHtml(deskLine)}</p>
             </header>
 
+            <!-- v8 cover hero — today's three dispatch headlines, front-page
+                 style. Promoted above masthead-issue/personal so the first
+                 paint on mobile is the news, not the funding model copy.
+                 Filled async from data/dispatches.<ed>.json after cover
+                 renders. Falls back to a pending state if fetch fails. -->
+            <section class="sdd-cover-heads">
+                <p class="sdd-cover-heads-eyebrow">${escapeHtml((TODAY_LABEL[ed] || 'TODAY') + ' · § 03')}</p>
+                <ol class="sdd-cover-heads-list" id="sddCoverHeads">
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
+                </ol>
+            </section>
+
             <section class="sdd-cover-issue">
                 <p class="sdd-cover-issue-eyebrow">${escapeHtml(QUARTER_LABEL[ed] || 'THIS ISSUE')} · ${escapeHtml(quarter)}</p>
                 <p class="sdd-cover-issue-lede">${escapeHtml(issueLede)}</p>
@@ -878,19 +900,6 @@ body.listening-active .sdd-cover-theme { display: none !important; }
                  there is no data, the block becomes the empty-state empathy
                  hook with shortcuts to set home cities or load demo data. -->
             <div id="sddCoverPersonal"></div>
-
-            <!-- v8 cover hero — today's three dispatch headlines, front-page
-                 style. Filled async from data/dispatches.<ed>.json after
-                 cover renders. Falls back to a pending state if the file
-                 is empty or fetch fails. -->
-            <section class="sdd-cover-heads">
-                <p class="sdd-cover-heads-eyebrow">${escapeHtml((TODAY_LABEL[ed] || 'TODAY') + ' · § 03')}</p>
-                <ol class="sdd-cover-heads-list" id="sddCoverHeads">
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                </ol>
-            </section>
 
             <!-- Secondary counters (Ledger / Atlas / Listening). Demoted
                  from hero now that dispatch headlines own the cover. -->
