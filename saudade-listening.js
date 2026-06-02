@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v714')
+        return fetch('./data/listening.json?v=v715')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -521,7 +521,11 @@ body.listening-active .sdd-listen { display: block; }
     align-items: center;
     gap: 14px;
     padding: 10px 18px;
-    background: rgba(242,238,227,.92);
+    /* Was rgba(242,238,227,.92) — paper hardcoded. In dark skin --ink
+       becomes paper-tone too, so player labels collided with bg →
+       invisible. Use var(--paper) so bg flips with the skin in lock-
+       step with --ink, mirroring the back-button fix from #120. */
+    background: var(--paper);
     border: 0.5px solid var(--rule-2);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
