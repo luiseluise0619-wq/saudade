@@ -721,11 +721,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 <figure class="sdd-atlas-photo" aria-hidden="true">
                     <div class="sdd-atlas-photo__ph">${escapeHtml(c.name.split(' ').slice(0, 2).join(' '))}</div>
                     <img class="sdd-atlas-photo__img"
+                         data-sdd-atlas-photo
                          src="${escapeHtml(photoSrc)}"
                          alt="${escapeHtml(photoAlt)}"
-                         loading="lazy" decoding="async"
-                         onload="this.classList.add('is-loaded')"
-                         onerror="this.remove()" />
+                         loading="lazy" decoding="async" />
                 </figure>
             ` : '';
             const ratingHtml = (typeof c.rating === 'number' && c.rating > 0)
@@ -938,6 +937,21 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         });
 
         // 클릭 시 cafe detail 페이지 진입 (모달 X — 헌법 §3)
+        // Cafe photo fade-in. The inline onload="this.classList…" attribute
+        // used to live on the <img> tag, but the page CSP is
+        //   script-src 'self' https:;   (no 'unsafe-inline')
+        // so the handler was blocked → .is-loaded class never added →
+        // opacity stayed 0 → all cafe photos invisible. Same bug as the
+        // listening-room photo fix in #120. Bind properly here instead.
+        root.querySelectorAll('img[data-sdd-atlas-photo]').forEach(img => {
+            if (img.complete && img.naturalWidth > 0) {
+                img.classList.add('is-loaded');
+            } else {
+                img.addEventListener('load',  () => img.classList.add('is-loaded'));
+                img.addEventListener('error', () => img.remove());
+            }
+        });
+
         root.querySelectorAll('.sdd-atlas-item').forEach(el => {
             el.addEventListener('click', (ev) => {
                 const id = el.getAttribute('data-cafe-id');
