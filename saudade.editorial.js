@@ -373,10 +373,15 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     text-transform: lowercase;
 }
 .sdd-cover-mast-rule {
-    height: 0;
-    border-top: 0.5px solid var(--rule-2);
+    /* v8 fine-magazine — double rule beneath the wordmark.
+       NYT/Le Monde masthead tradition (two thin parallel lines).
+       Was a single 0.5px hairline. */
+    height: 5px;
+    border-top: 0.5px solid var(--ink);
+    border-bottom: 0.5px solid var(--ink);
+    background: none;
     margin: clamp(8px, 1.2vw, 14px) auto;
-    width: clamp(120px, 20vw, 240px);
+    width: clamp(140px, 22vw, 260px);
 }
 .sdd-cover-mast-date {
     font-family: var(--mono);
