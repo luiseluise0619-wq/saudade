@@ -337,3 +337,22 @@ test('SAUDADE_EDITION export in editorial.js includes the skin API (setSkin, ski
             `editorial.js SAUDADE_EDITION export missing "${fn}" — skin switching will silently fail`);
     }
 });
+
+test('no inline onload="this.classList.add..." in live JS — CSP blocks it', () => {
+    // Caught twice now: #120 (listening room city photo) and #129 (atlas
+    // cafe photo). The page CSP is
+    //     script-src 'self' https:;   (no 'unsafe-inline')
+    // so inline event-handler attributes are blocked. Images load but
+    // the .is-loaded class is never added → opacity stays 0 forever.
+    // Always bind via addEventListener('load', …) on rendered <img>.
+    const LIVE = [
+        'saudade.editorial.js', 'saudade.core.js', 'saudade-listening.js',
+        'saudade-dispatches.js', 'saudade-atlas.js', 'saudade-atlas-map.js',
+        'saudade-desk.js', 'saudade-ledger.js'
+    ];
+    for (const f of LIVE) {
+        const src = stripComments(read(f));
+        assert.ok(!/onload="this\.classList/.test(src),
+            `${f}: inline onload="this.classList…" detected — CSP blocks it. Use addEventListener instead (see #120 / #129).`);
+    }
+});
