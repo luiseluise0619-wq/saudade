@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v730')
+        return fetch('./data/listening.json?v=v731')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1193,14 +1193,10 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         })();
 
         const T = window.SAUDADE_T || ((s) => s.en);
-        const headLabel = T({
-            en: 'The', ko: '듣는', ja: '聴く',
-            pt: 'A', es: 'La'
-        });
-        const headItalic = T({
-            en: 'listening room.', ko: '방.', ja: '部屋。',
-            pt: 'sala de escuta.', es: 'sala de escucha.'
-        });
+        const V = window.SAUDADE_VOICE;
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const headLabel  = (V && V.get('listeningHead', ed))   || 'The';
+        const headItalic = (V && V.get('listeningItalic', ed)) || 'listening room.';
         const backLabel = T({
             en: 'BACK TO COVER', ko: '표지로 돌아가기', ja: '表紙へ',
             pt: 'VOLTAR À CAPA', es: 'VOLVER A LA PORTADA'

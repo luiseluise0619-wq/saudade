@@ -795,15 +795,10 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 
         // v6 §7.2 — Ledger 기사 톤 (PORTUGAL D7, IN FIVE LINES) — 5 에디션 i18n
         // (T / editorialBadge / yourRecordsLabel 는 위에서 이미 선언 — TDZ 방지)
-        const headLabel = T({
-            en: 'How many days',  ko: '며칠이',
-            ja: 'のこされた日々',  pt: 'Quantos dias',
-            es: 'Cuántos días'
-        });
-        const headItalic = T({
-            en: 'remain.', ko: '남았는가.', ja: 'いくつ。',
-            pt: 'restam.', es: 'quedan.'
-        });
+        const V = window.SAUDADE_VOICE;
+        const _vEd = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const headLabel  = (V && V.get('ledgerHead', _vEd))   || 'How many days';
+        const headItalic = (V && V.get('ledgerItalic', _vEd)) || 'remain.';
         const introEyebrow = T({
             en: 'A LEDGER, IN FOUR COLUMNS.', ko: '네 칸의 장부.',
             ja: '四欄の台帳。', pt: 'UM LIVRO-RAZÃO, EM QUATRO COLUNAS.',

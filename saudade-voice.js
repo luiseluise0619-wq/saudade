@@ -16,6 +16,10 @@
  * Template tokens:
  *   $editorCity — the city the edition is filed from (already in the
  *                 reader's language; see cityIn() in saudade.editorial.js)
+ *
+ * Pillar-title pairs (head + italic) are rendered as two stacked lines
+ * — a roman label on top, an italic phrase under it. Compose the pair
+ * together so it scans as one sentence on the page.
  */
 (function () {
     if (window.SAUDADE_VOICE) return;
@@ -31,13 +35,86 @@
         es: 'Tres ciudades, cada amanecer. Redacción en $editorCity.'
     };
 
-    const VOICE = {
-        en: { mastTagline: mastTagline.en },
-        ko: { mastTagline: mastTagline.ko },
-        ja: { mastTagline: mastTagline.ja },
-        pt: { mastTagline: mastTagline.pt },
-        es: { mastTagline: mastTagline.es }
+    /* brief: pillar title for the listening room (ambient audio + city
+       photographs). Roman head + italic phrase, two lines, poetic. */
+    const listeningHead   = { en: 'The',  ko: '듣는', ja: '聴く', pt: 'A',  es: 'La' };
+    const listeningItalic = {
+        en: 'listening room.',
+        ko: '방.',
+        ja: '部屋。',
+        pt: 'sala de escuta.',
+        es: 'sala de escucha.'
     };
+
+    /* brief: pillar title for the atlas of cafés. The editor only lists
+       what they've physically sat in (or carefully read). Roman head +
+       italic phrase. PT/ES use "visited" rather than "verified" because
+       that's the actual editorial bar in the constitution. */
+    const atlasHead   = { en: 'Cafés',     ko: '카페,',     ja: 'カフェ、', pt: 'Cafés',       es: 'Cafés'       };
+    const atlasItalic = {
+        en: 'verified.',
+        ko: '들른 곳.',
+        ja: '訪れた場所。',
+        pt: 'visitados.',
+        es: 'visitados.'
+    };
+
+    /* brief: pillar title for the ledger — schengen / tax / pension /
+       insurance counters. The line should read like a sigh. */
+    const ledgerHead   = {
+        en: 'How many days',
+        ko: '며칠이',
+        ja: 'のこるは',
+        pt: 'Quantos dias',
+        es: 'Cuántos días'
+    };
+    const ledgerItalic = {
+        en: 'remain.',
+        ko: '남았는가.',
+        ja: '幾日。',
+        pt: 'restam.',
+        es: 'quedan.'
+    };
+
+    /* brief: pillar title for dispatches — the wire-service news, rewritten.
+       Three states: head + edited (six-day default) + resting (Sunday silence
+       per the constitution §9.1). */
+    const dispatchesHead    = {
+        en: 'The wires,',
+        ko: '통신,',
+        ja: '通信、',
+        pt: 'Os despachos,',
+        es: 'Los despachos,'
+    };
+    const dispatchesEdited  = {
+        en: 'edited.',
+        ko: '편집된.',
+        ja: '編集ずみ。',
+        pt: 'editados.',
+        es: 'editados.'
+    };
+    const dispatchesResting = {
+        en: 'resting.',
+        ko: '휴간.',
+        ja: '休刊。',
+        pt: 'em pausa.',
+        es: 'en pausa.'
+    };
+
+    const KEYS = {
+        mastTagline,
+        listeningHead, listeningItalic,
+        atlasHead, atlasItalic,
+        ledgerHead, ledgerItalic,
+        dispatchesHead, dispatchesEdited, dispatchesResting
+    };
+
+    const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };
+    Object.keys(KEYS).forEach(k => {
+        Object.keys(VOICE).forEach(lang => {
+            VOICE[lang][k] = KEYS[k][lang];
+        });
+    });
 
     function get(key, ed) {
         const lang = (VOICE[ed] && VOICE[ed][key] != null) ? ed : 'en';

@@ -641,12 +641,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             : items;
 
         const T = window.SAUDADE_T || ((s) => s.en);
-        const headLabel = T({
-            en: 'Cafés', ko: '카페,', ja: 'カフェ、', pt: 'Cafés', es: 'Cafés'
-        });
-        const headItalic = T({
-            en: 'verified.', ko: '들른 곳.', ja: '訪れた場所。', pt: 'verificados.', es: 'verificados.'
-        });
+        const V = window.SAUDADE_VOICE;
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const headLabel  = (V && V.get('atlasHead', ed))   || 'Cafés';
+        const headItalic = (V && V.get('atlasItalic', ed)) || 'verified.';
         const visitedLabel = T({
             en: `${visited} of ${total} visited`,
             ko: `${total}곳 중 ${visited}곳 방문`,

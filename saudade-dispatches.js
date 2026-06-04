@@ -935,18 +935,11 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 
         // v622 — 5 에디션 자국어 헤더
         const T = window.SAUDADE_T || ((s) => s.en);
-        const headLabel = T({
-            en: 'The wires,', ko: '통신,', ja: '通信、',
-            pt: 'Os despachos,', es: 'Los despachos,'
-        });
-        const headEdited = T({
-            en: 'edited.', ko: '편집된.', ja: '編集ずみ。',
-            pt: 'editados.', es: 'editados.'
-        });
-        const headResting = T({
-            en: 'resting.', ko: '휴간.', ja: '休刊。',
-            pt: 'em descanso.', es: 'en descanso.'
-        });
+        const V = window.SAUDADE_VOICE;
+        const _vEd = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const headLabel   = (V && V.get('dispatchesHead', _vEd))    || 'The wires,';
+        const headEdited  = (V && V.get('dispatchesEdited', _vEd))  || 'edited.';
+        const headResting = (V && V.get('dispatchesResting', _vEd)) || 'resting.';
         const subTpl = T({
             en: `Three a day. Six days a week. ${'$section'}.`,
             ko: `매일 세 편. 주 엿새. ${'$section'}.`,
