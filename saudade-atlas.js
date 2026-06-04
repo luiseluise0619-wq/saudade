@@ -762,10 +762,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         const _V = window.SAUDADE_VOICE;
         const noteTitle = (_V && _V.get('atlasNoteTitle', _vEdNote)) || 'A note on places.';
         const noteBody  = (_V && _V.get('atlasNoteBody',  _vEdNote)) || 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.';
-        const noMatches = T({
-            en: 'No matches.', ko: '검색 결과 없음.', ja: '該当なし。',
-            pt: 'Sem resultados.', es: 'Sin resultados.'
-        });
+        const _vEdNoMatch = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const noMatches = (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('atlasNoMatches', _vEdNoMatch)) || 'No matches.';
         const footLine = T({
             en: total === 0
                 ? 'Awaiting first entry · 0 user reviews · 0 stars'
@@ -796,34 +794,12 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         if (!root.hasAttribute('data-view')) root.setAttribute('data-view', 'list');
 
         // v7 검토 정정 — Atlas 전체 빈 상태 (cafes = [] 일 때만)
-        const emptyAtlasH3 = T({
-            en: 'The atlas opens with a city.',
-            ko: '아틀라스는 도시 한 곳에서 시작한다.',
-            ja: 'アトラスは一つの街から始まる。',
-            pt: 'O atlas abre com uma cidade.',
-            es: 'El atlas se abre con una ciudad.'
-        });
-        const emptyAtlasBody = T({
-            en: 'Each café in this list is a place we have walked into. We list none until we have. Switch the desk to the city you live in, or write to suggest one we should visit.',
-            ko: '이 목록에 오른 카페는 모두 우리가 직접 걸어 들어간 곳이다. 들르기 전에는 적지 않는다. 거주하는 도시로 데스크를 옮기거나, 들렀으면 하는 곳을 제안한다.',
-            ja: 'この一覧に並ぶカフェは、いずれも私たちが実際に足を運んだ場所だ。訪れるまでは載せない。住む街にデスクを切り替えるか、訪ねるべき場所を知らせてほしい。',
-            pt: 'Cada café desta lista é um lugar onde entrámos. Não listamos nenhum antes disso. Mude a redação para a cidade onde vive, ou escreva-nos a sugerir um que devíamos visitar.',
-            es: 'Cada café de esta lista es un lugar al que hemos entrado. No listamos ninguno hasta haberlo hecho. Cambia la mesa a la ciudad donde vives, o escríbenos para sugerir uno que deberíamos visitar.'
-        });
-        const emptyAtlasSwitch = T({
-            en: '+ Switch the desk to your home city',
-            ko: '+ 데스크를 거주 도시로 옮기기',
-            ja: '+ デスクを住む街へ切り替える',
-            pt: '+ Mudar a redação para a sua cidade',
-            es: '+ Cambiar la mesa a tu ciudad'
-        });
-        const emptyAtlasSubmit = T({
-            en: '+ Submit a café we should visit',
-            ko: '+ 들렀으면 하는 카페 제안하기',
-            ja: '+ 訪ねるべきカフェを知らせる',
-            pt: '+ Sugerir um café que devíamos visitar',
-            es: '+ Sugerir un café que deberíamos visitar'
-        });
+        const _vEdEmpty = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const _Ve = window.SAUDADE_VOICE;
+        const emptyAtlasH3     = (_Ve && _Ve.get('atlasEmptyHeadline', _vEdEmpty)) || 'The atlas opens with a city.';
+        const emptyAtlasBody   = (_Ve && _Ve.get('atlasEmptyBody',     _vEdEmpty)) || 'Each café in this list is a place we have walked into.';
+        const emptyAtlasSwitch = (_Ve && _Ve.get('atlasEmptySwitch',   _vEdEmpty)) || '+ Switch the desk to your home city';
+        const emptyAtlasSubmit = (_Ve && _Ve.get('atlasEmptySubmit',   _vEdEmpty)) || '+ Submit a café we should visit';
         const isAtlasEmpty = total === 0;
 
         root.innerHTML = headHtml +

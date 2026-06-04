@@ -267,6 +267,65 @@
         es: 'Hasta 800 caracteres. Leída por un editor humano antes de publicar.'
     };
 
+    /* brief: atlas — what shows when the editor has not yet listed any
+       café in the current city. Headline + body + two CTAs (switch the
+       desk to a city we already cover; suggest a place we should visit).
+       ES was using "la mesa" for the desk inside the body and CTA — fixed
+       to "la redacción" to match the rest of the cover voice. */
+    const atlasEmptyHeadline = {
+        en: 'The atlas opens with a city.',
+        ko: '아틀라스는 도시 한 곳에서 시작한다.',
+        ja: 'アトラスは一つの街から始まる。',
+        pt: 'O atlas abre com uma cidade.',
+        es: 'El atlas se abre con una ciudad.'
+    };
+    const atlasEmptyBody = {
+        en: 'Each café in this list is a place we have walked into. We list none until we have. Switch the desk to the city you live in, or write to suggest one we should visit.',
+        ko: '이 목록에 오른 카페는 모두 우리가 직접 걸어 들어간 곳이다. 들르기 전에는 적지 않는다. 거주하는 도시로 데스크를 옮기거나, 들렀으면 하는 곳을 제안한다.',
+        ja: 'この一覧に並ぶカフェは、いずれも私たちが実際に足を運んだ場所だ。訪れるまでは載せない。住む街にデスクを切り替えるか、訪ねるべき場所を知らせてほしい。',
+        pt: 'Cada café desta lista é um lugar onde entrámos. Não listamos nenhum antes disso. Mude a redação para a cidade onde vive, ou escreva-nos a sugerir um que devíamos visitar.',
+        es: 'Cada café de esta lista es un lugar al que hemos entrado. No listamos ninguno hasta haberlo hecho. Cambie la redacción a la ciudad donde vive, o escríbanos para sugerir uno que deberíamos visitar.'
+    };
+    const atlasEmptySwitch = {
+        en: '+ Switch the desk to your home city',
+        ko: '+ 데스크를 거주 도시로 옮기기',
+        ja: '+ デスクを住む街へ切り替える',
+        pt: '+ Mudar a redação para a sua cidade',
+        es: '+ Cambiar la redacción a su ciudad'
+    };
+    const atlasEmptySubmit = {
+        en: '+ Submit a café we should visit',
+        ko: '+ 들렀으면 하는 카페 제안하기',
+        ja: '+ 訪ねるべきカフェを知らせる',
+        pt: '+ Sugerir um café que devíamos visitar',
+        es: '+ Sugerir un café que deberíamos visitar'
+    };
+    const atlasNoMatches = {
+        en: 'No matches.',
+        ko: '검색 결과 없음.',
+        ja: '該当なし。',
+        pt: 'Sem resultados.',
+        es: 'Sin resultados.'
+    };
+
+    /* brief: listening room — editorial note under the player. Explains
+       the sourcing rule (self-recorded or CC-licensed via Freesound),
+       and the "no music, no talking" constraint. */
+    const listeningSoundNoteTitle = {
+        en: 'A note on sound.',
+        ko: '소리에 대한 메모.',
+        ja: '音についての覚書。',
+        pt: 'Uma nota sobre o som.',
+        es: 'Una nota sobre el sonido.'
+    };
+    const listeningSoundNoteBody = {
+        en: 'Each track is recorded in person or licensed under Creative Commons from Freesound.org. No music. No conversation. The full license list is on the credits page.',
+        ko: '모든 트랙은 직접 녹음했거나 Freesound.org 의 크리에이티브 커먼즈 라이선스로 받았다. 음악 없음. 대화 없음. 전체 라이선스 목록은 크레딧 페이지에 있다.',
+        ja: '全トラックは自ら録音したか、Freesound.org のクリエイティブ・コモンズ・ライセンスで取得した。音楽なし。会話なし。ライセンス一覧はクレジットページに。',
+        pt: 'Cada faixa é gravada pessoalmente ou licenciada em Creative Commons no Freesound.org. Sem música. Sem conversa. A lista completa de licenças está na página de créditos.',
+        es: 'Cada pista se graba en persona o se obtiene bajo Creative Commons en Freesound.org. Sin música. Sin conversación. La lista completa de licencias está en la página de créditos.'
+    };
+
     const KEYS = {
         mastTagline,
         listeningHead, listeningItalic,
@@ -280,7 +339,9 @@
         ledgerIntroEyebrow, ledgerIntroBody,
         ledgerEmptyHeadline, ledgerEmptyBody, ledgerEditorNote,
         sundayMessage, sundayResume,
-        lettersModalTitle, lettersModalLede
+        lettersModalTitle, lettersModalLede,
+        atlasEmptyHeadline, atlasEmptyBody, atlasEmptySwitch, atlasEmptySubmit, atlasNoMatches,
+        listeningSoundNoteTitle, listeningSoundNoteBody
     };
 
     const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };
