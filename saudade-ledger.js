@@ -870,10 +870,13 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             });
             // v644 — the article intro above already shows the eyebrow in
             // big rust caps. Suppress the duplicate inside the empty-state.
+            // v738 — headline/lede/note now read from voice (ledgerEmptyHeadline,
+            // ledgerEmptyBody, ledgerEditorNote) — the empty.js text() bundle
+            // had stale per-edition strings that contradicted the voice file.
             window.SAUDADE_EMPTY.render('#sddLedgerEmpty', {
                 eyebrow: '',
-                headline: t.headline,
-                lede: t.lede,
+                headline: emptyHeadline,
+                lede: emptyBody,
                 actions: [
                     // v640 — primary action is now "show me populated", because
                     // a fresh user staring at four empty calculators learns
@@ -887,7 +890,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
                     { label: addLabel.insurance, onClick: () => jumpToCat('insurance') },
                     { label: addLabel.pension,   onClick: () => jumpToCat('pension') }
                 ],
-                note: t.note
+                note: editorNote
             });
         }
 

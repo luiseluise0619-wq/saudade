@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v738')
+        return fetch('./data/listening.json?v=v739')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1380,6 +1380,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     </h2>
                     ${switcherHtml}
                 </div>
+                <p class="sdd-listen-meta">${escapeHtml(tracksLabel)}</p>
                 ${modeToggleHtml}
                 ${photoHtml}
                 ${captionHtml}

@@ -386,6 +386,55 @@ test('saudade-voice.js: every key has a non-empty string in all 5 editions', () 
     }
 });
 
+test('saudade-ledger.js empty-state delegates to voice keys, not the empty.js text bundle', () => {
+    // Caught in v738 browser audit: SAUDADE_EMPTY.render('#sddLedgerEmpty', …)
+    // was being called with t.headline / t.lede / t.note where t came from
+    // window.SAUDADE_EMPTY.text('ledger') — that bundle holds its own
+    // per-edition strings ('장부에 아직 아무것도 없다', etc.) that compete
+    // with and override the voice file's ledgerEmptyHeadline /
+    // ledgerEmptyBody / ledgerEditorNote. The visible empty state ended up
+    // not matching the voice file anywhere.
+    // The fix is to pass the voice-sourced variables directly. This
+    // regression test pins the fix.
+    const src = read('saudade-ledger.js');
+    // Find the SAUDADE_EMPTY.render('#sddLedgerEmpty', {…}) block
+    const m = src.match(/SAUDADE_EMPTY\.render\(['"]#sddLedgerEmpty['"],\s*\{([\s\S]*?)\}\s*\)/);
+    assert.ok(m, 'saudade-ledger.js: SAUDADE_EMPTY.render(#sddLedgerEmpty, …) call not found');
+    const block = m[1];
+    assert.ok(/headline:\s*emptyHeadline\b/.test(block),
+        'ledger empty render must pass headline: emptyHeadline (voice ledgerEmptyHeadline), not t.headline');
+    assert.ok(/lede:\s*emptyBody\b/.test(block),
+        'ledger empty render must pass lede: emptyBody (voice ledgerEmptyBody), not t.lede');
+    assert.ok(/note:\s*editorNote\b/.test(block),
+        'ledger empty render must pass note: editorNote (voice ledgerEditorNote), not t.note');
+});
+
+test('saudade-listening.js: tracksLabel renders in BOTH city mode and category mode', () => {
+    // Caught in v738 browser audit: the "AUDIO FORTHCOMING · PHOTOGRAPHS NOW"
+    // label only lived inside categoryModeHtml, but when tracks.length === 0
+    // the page forces city mode (line 1138 ish: tracksEmpty → 'city'), so
+    // the FORTHCOMING label was never visible — defeating its whole purpose.
+    // The fix puts the tracksLabel into cityModeHtml's header too.
+    const src = stripComments(read('saudade-listening.js'));
+    // Find both mode HTML blocks and assert tracksLabel appears in each
+    const cityIdx  = src.indexOf('cityModeHtml = `');
+    const catIdx   = src.indexOf('categoryModeHtml');
+    assert.ok(cityIdx > 0 && catIdx > 0, 'listening: cityModeHtml / categoryModeHtml blocks not found');
+    // Walk forward to the closing backtick of each template literal and check
+    // that "tracksLabel" appears between the assignment and its end.
+    function blockContent(startIdx) {
+        const open = src.indexOf('`', startIdx);
+        const close = src.indexOf('`;', open + 1);
+        return src.slice(open, close + 1);
+    }
+    const cityBlock = blockContent(cityIdx);
+    const catBlock  = blockContent(catIdx);
+    assert.ok(/tracksLabel/.test(cityBlock),
+        'listening: cityModeHtml does NOT include tracksLabel — the FORTHCOMING/0-tracks message will never show when the page is in city mode (which is forced when tracks=0)');
+    assert.ok(/tracksLabel/.test(catBlock),
+        'listening: categoryModeHtml does not reference tracksLabel');
+});
+
 test('no inline onload="this.classList.add..." in live JS — CSP blocks it', () => {
     // Caught twice now: #120 (listening room city photo) and #129 (atlas
     // cafe photo). The page CSP is
