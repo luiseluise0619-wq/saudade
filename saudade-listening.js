@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v737')
+        return fetch('./data/listening.json?v=v738')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -585,6 +585,12 @@ body.listening-active .sdd-listen { display: block; }
 }
 .sdd-listen-ctl:hover { color: var(--ink); }
 .sdd-listen-ctl[aria-pressed="true"] { color: var(--ink); }
+.sdd-listen-ctl[disabled] {
+    color: var(--bone-d);
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}
 .sdd-listen-ctl-sep { color: var(--rule-2); }
 .sdd-listen-vol-label {
     font-family: var(--mono);
@@ -1201,13 +1207,26 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             en: 'BACK TO COVER', ko: '표지로 돌아가기', ja: '表紙へ',
             pt: 'VOLTAR À CAPA', es: 'VOLVER A LA PORTADA'
         });
-        const tracksLabel = T({
-            en: `${tracks.length} TRACKS`,
-            ko: `트랙 ${tracks.length}개`,
-            ja: `${tracks.length} トラック`,
-            pt: `${tracks.length} FAIXAS`,
-            es: `${tracks.length} PISTAS`
-        });
+        // v738 — when the audio library is empty (which it is until tracks
+        // are added by hand under §3), the page is de facto a photo gallery
+        // of the listening cities. Showing "0 TRACKS" would advertise an
+        // absent feature; show "FORTHCOMING" instead, so the eyebrow tells
+        // the truth.
+        const tracksLabel = tracks.length === 0
+            ? T({
+                en: 'AUDIO FORTHCOMING · PHOTOGRAPHS NOW',
+                ko: '오디오 곧 개설 · 지금은 사진',
+                ja: '音声は近日 · 当面は写真',
+                pt: 'ÁUDIO EM BREVE · POR AGORA FOTOGRAFIAS',
+                es: 'AUDIO PRÓXIMAMENTE · POR AHORA FOTOGRAFÍAS'
+              })
+            : T({
+                en: `${tracks.length} TRACKS`,
+                ko: `트랙 ${tracks.length}개`,
+                ja: `${tracks.length} トラック`,
+                pt: `${tracks.length} FAIXAS`,
+                es: `${tracks.length} PISTAS`
+              });
         const catsCount = categoriesInOrder.length;
         const categoriesLabel = T({
             en: `${catsCount} CATEGORIES`,
@@ -1392,9 +1411,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                     ${escapeHtml((window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('listeningSoundNoteBody', ed)) || 'Each track is recorded in person or licensed under Creative Commons.')}
                 </p>
             </footer>
-            <!-- 컨트롤 바 — 직선 + 점만 (헌법 §5.5 둥근 버튼 X) + v6 §11.2 work session timer -->
+            <!-- 컨트롤 바 — 직선 + 점만 (헌법 §5.5 둥근 버튼 X) + v6 §11.2 work session timer
+                 v738 — when there are zero tracks, the PLAY button is rendered
+                 but disabled so nobody mashes a button that does nothing. -->
             <div class="sdd-listen-controls">
-                <button class="sdd-listen-ctl" data-listen-play aria-pressed="false">${escapeHtml(T({ en: 'PLAY', ko: '재생', ja: '再生', pt: 'TOCAR', es: 'TOCAR' }))}</button>
+                <button class="sdd-listen-ctl" data-listen-play aria-pressed="false"${tracks.length === 0 ? ' disabled aria-disabled="true"' : ''}>${escapeHtml(T({ en: 'PLAY', ko: '재생', ja: '再生', pt: 'TOCAR', es: 'TOCAR' }))}</button>
                 <span class="sdd-listen-ctl-sep">·</span>
                 <label class="sdd-listen-vol-label" for="sddListenVol">${escapeHtml(T({ en: 'VOL', ko: '볼륨', ja: '音量', pt: 'VOL', es: 'VOL' }))}</label>
                 <input type="range" id="sddListenVol" class="sdd-listen-vol"

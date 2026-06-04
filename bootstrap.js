@@ -70,7 +70,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const SAUDADE_RELEASE = 'v737';
+const SAUDADE_RELEASE = 'v738';
 window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp cache-buster query strings.
                                             // Kept in lock-step with sw.js CACHE_VERSION by scripts/bump-cache.js.
 
