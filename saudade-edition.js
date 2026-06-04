@@ -154,6 +154,33 @@
         } catch (e) {}
     }
 
+    // v741 — Per-edition font lazy-load. See saudade.editorial.js bundle
+    // for the same logic — kept in sync because both ship.
+    const EDITION_FONT_URLS = {
+        ko: [
+            'https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&display=swap',
+            'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
+        ],
+        ja: ['https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap'],
+        pt: ['https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap'],
+        es: ['https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap']
+    };
+    const _editionFontLoaded = new Set();
+    function loadEditionFonts(ed) {
+        if (_editionFontLoaded.has(ed)) return;
+        const urls = EDITION_FONT_URLS[ed];
+        if (!urls) { _editionFontLoaded.add(ed); return; }
+        for (const href of urls) {
+            if (document.querySelector(`link[href="${href}"]`)) continue;
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+        }
+        _editionFontLoaded.add(ed);
+    }
+
     function applyEdition(ed) {
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
         // body 없을 때 (script in <head>) skip — init re-runs after DOMContentLoaded
@@ -167,6 +194,7 @@
         document.documentElement.setAttribute('lang', ed);
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        loadEditionFonts(ed);
         syncMetaTags(ed);
         pingOnce(ed);
     }

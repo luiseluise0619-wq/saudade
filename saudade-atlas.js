@@ -809,6 +809,15 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             `<div class="sdd-atlas-foot">${escapeHtml(footLine)}</div>` +
             noteHtml;
 
+        // v741 — keep map pins in sync with the filter. The map's setCafes
+        // is idempotent; calling it here on every render means typing in
+        // the search box narrows the pins in real time even while MAP is
+        // the active view.
+        if (root.getAttribute('data-view') === 'map'
+            && window.SAUDADE_ATLAS_MAP && window.SAUDADE_ATLAS_MAP.setCafes) {
+            try { window.SAUDADE_ATLAS_MAP.setCafes(filtered); } catch (e) {}
+        }
+
         // v636 — unified empty-state component (saudade-empty.js)
         if (isAtlasEmpty && window.SAUDADE_EMPTY) {
             // v644 — eyebrow suppressed; Atlas already shows 'CAFÉS, VERIFIED.'
@@ -868,6 +877,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         });
 
         // v607 — search input 핸들러 (입력 변화 시 즉시 재렌더, focus 유지)
+        // v741 — render() now also pushes the filtered list to the map module
+        // if MAP view is active, so search filters pins in both modes.
         const qInput = root.querySelector('#sddAtlasQ');
         if (qInput) {
             qInput.addEventListener('input', (ev) => {

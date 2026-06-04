@@ -1808,6 +1808,19 @@ body.section-active::before { content: none !important; }
         try { localStorage.setItem('saudade.last.screen', 'cover'); } catch (e) {}
         try { window.SAUDADE_RINGS?.unmount?.(); window.SAUDADE_RINGS?.mount?.('macro', 'bottom-right'); } catch (e) {}
         try { window.SAUDADE_COVER?.render?.(); } catch (e) {}
+        // v741 — Atlas view-state reset: leaving the section returns the
+        // next entry to LIST. The map-state-persisting-across-cover-bounces
+        // was confusing — readers re-entered atlas wondering why search
+        // was missing. Single-toggle state per visit.
+        try {
+            const atlas = document.querySelector('.sdd-atlas');
+            if (atlas && atlas.getAttribute('data-view') === 'map') {
+                atlas.setAttribute('data-view', 'list');
+                atlas.querySelectorAll('[data-view-set]').forEach(b => {
+                    b.setAttribute('aria-selected', String(b.getAttribute('data-view-set') === 'list'));
+                });
+            }
+        } catch (e) {}
     }
 
     // v607 — 새로고침 시 마지막 § 복원 (자동 진입). 표지면 복원 안 함.
@@ -1899,6 +1912,43 @@ body.section-active::before { content: none !important; }
         try { localStorage.setItem(KEY, v); } catch (e) {}
     }
 
+    // v741 — Per-edition font lazy-load. Core (Fraunces + JetBrains Mono) is
+    // eager via index.html; the per-edition serif (and KO Pretendard sans)
+    // load only when that edition activates. Saves ~150-200KB on cold load
+    // for any user who only reads one edition (most readers).
+    const EDITION_FONT_URLS = {
+        ko: [
+            'https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&display=swap',
+            'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
+        ],
+        ja: [
+            'https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap'
+        ],
+        pt: [
+            'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap'
+        ],
+        es: [
+            'https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap'
+        ]
+    };
+    const _editionFontLoaded = new Set();
+    function loadEditionFonts(ed) {
+        if (_editionFontLoaded.has(ed)) return;
+        const urls = EDITION_FONT_URLS[ed];
+        if (!urls) { _editionFontLoaded.add(ed); return; }
+        for (const href of urls) {
+            // Guard against duplicate inject — also catch the case where the
+            // <link> was added eagerly elsewhere (e.g., index.html legacy).
+            if (document.querySelector(`link[href="${href}"]`)) continue;
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+        }
+        _editionFontLoaded.add(ed);
+    }
+
     function applyEdition(ed) {
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
         // v621 — body 없으면 (script in <head> 일 때) skip. init 이 DOMContentLoaded 후 다시 호출.
@@ -1913,6 +1963,8 @@ body.section-active::before { content: none !important; }
         // window.state.lang 도 동기화 (saudade-cover/atlas 등 lang 보는 곳)
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        // v741 — lazy-load this edition's serif/sans.
+        loadEditionFonts(ed);
     }
 
     function showLoadingFlash(toEd) {
