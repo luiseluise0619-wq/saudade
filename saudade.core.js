@@ -2627,23 +2627,13 @@ body[data-tour="1"] .sdd-cover::before {
         // is enough to set tone without robbing the cover of its first
         // impression. Etymology and section overview moved to /etymology.html
         // and /sitemap.html, which are linked from the cover footer.
+        const V = window.SAUDADE_VOICE;
+        const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return [
             {
-                eyebrow:  L({ en: 'WELCOME.', ko: '어서 오라.', ja: 'ようこそ。', pt: 'BEM-VINDO.', es: 'BIENVENIDO.' }),
-                headline: L({
-                    en: 'A slow newspaper. Three cities, filed daily.',
-                    ko: '느린 신문. 세 도시, 매일 발행.',
-                    ja: 'ゆっくりとした新聞。三つの都市、毎日発行。',
-                    pt: 'Um jornal lento. Três cidades, publicadas diariamente.',
-                    es: 'Un periódico lento. Tres ciudades, publicadas a diario.'
-                }),
-                body: L({
-                    en: '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.',
-                    ko: '<em>saudade</em> 는 돌아갈 수 없는 장소에 대한 그리움이라는 뜻의 포르투갈어. 일주일에 엿새, 도시당 세 항목. 일요일은 침묵 — 의도된 것. 그냥 읽어도 좋고, 로그인하면 남은 일수를 헤아려준다.',
-                    ja: '<em>saudade</em> は戻れない場所への切なさを意味するポルトガル語。週六日、都市ごとに三本。日曜は沈黙 — 意図されたもの。そのまま読むも良し、サインインすれば残り日数を数える。',
-                    pt: '<em>saudade</em> em português é a ausência de algo a que não se pode regressar. Três itens por cidade, seis dias por semana. Domingo é silêncio — propositado. Continue a ler, ou entre para contar os dias.',
-                    es: '<em>saudade</em> en portugués significa la añoranza por los lugares a los que no se puede volver. Tres elementos por ciudad, seis días por semana. El domingo es silencio — intencionado. Siga leyendo, o entre para contar los días.'
-                })
+                eyebrow:  (V && V.get('welcomeEyebrow', ed))  || 'WELCOME.',
+                headline: (V && V.get('welcomeHeadline', ed)) || 'A slow newspaper. Three cities, filed daily.',
+                body:     (V && V.get('welcomeBody', ed))     || '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.'
             }
         ];
     }

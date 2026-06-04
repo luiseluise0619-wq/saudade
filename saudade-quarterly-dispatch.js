@@ -477,6 +477,8 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
     }
 
     function copy() {
+        const V = window.SAUDADE_VOICE;
+        const _vEd = currentEdition();
         return {
             mastName: L({
                 en: 'DISPATCHES',
@@ -492,21 +494,9 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
                 pt: 'VOLTAR AO ATLAS',
                 es: 'VOLVER AL ATLAS'
             }),
-            head1: L({
-                en: 'The wires,', ko: '통신,', ja: '通信、',
-                pt: 'Os despachos,', es: 'Los despachos,'
-            }),
-            head2: L({
-                en: 'edited.', ko: '편집된.', ja: '編集ずみ。',
-                pt: 'editados.', es: 'editados.'
-            }),
-            sub: L({
-                en: 'Three from each.',
-                ko: '각각에서 셋.',
-                ja: 'それぞれに三つ。',
-                pt: 'Três de cada.',
-                es: 'Tres de cada.'
-            }),
+            head1: (V && V.get('dispatchesHead', _vEd))   || 'The wires,',
+            head2: (V && V.get('dispatchesEdited', _vEd)) || 'edited.',
+            sub:   (V && V.get('quarterlySubtitle', _vEd)) || 'Three from each city.',
             line: L({
                 en: 'Three items per city. Three cities. No more.',
                 ko: '도시당 세 편. 세 도시. 그 이상은 없음.',
