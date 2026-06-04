@@ -945,13 +945,8 @@ body.cover-reader-open { overflow: hidden; }
     const TODAY_LABEL = {
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
-    const ISSUE_LEDE_5 = {
-        en: 'Three cities, filed daily. Edited from $editorCity.',
-        ko: '세 도시, 매일 발행. $editorCity에서 편집.',
-        ja: '三つの街、毎日発行。$editorCityで編集。',
-        pt: 'Três cidades, publicadas diariamente. Editada a partir de $editorCity.',
-        es: 'Tres ciudades, publicadas a diario. Editada desde $editorCity.'
-    };
+    // Cover-tagline copy lives in saudade-voice.js (mastTagline), authored
+    // natively per edition rather than translated. See that file.
 
     function formatMastDate(ed) {
         const d = new Date();
@@ -1056,7 +1051,9 @@ body.cover-reader-open { overflow: hidden; }
         const mastDate = formatMastDate(ed);
         const deskLine = `${cityName.toUpperCase()} ${DESK_SUFFIX[ed] || 'DESK'}`;
         const quarter = quarterRange(ed);
-        const issueLede = (ISSUE_LEDE_5[ed] || ISSUE_LEDE_5.en).replace('$editorCity', cityName);
+        const voiceLede = (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('mastTagline', ed))
+            || 'Three cities, filed daily. Edited from $editorCity.';
+        const issueLede = voiceLede.replace('$editorCity', cityName);
 
         const todayLines = todaySummary(ed);
         const todayHtml = todayLines.map(l =>
