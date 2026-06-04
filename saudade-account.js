@@ -24,7 +24,7 @@
 
     function copy() {
         return {
-            title:    L({ en: 'Account & permissions.', ko: '계정 및 권한.', ja: 'アカウントと権限。', pt: 'Conta e permissões.', es: 'Cuenta y permisos.' }),
+            title:    (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('accountModalTitle', (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en')) || 'Account & permissions.',
             close:    L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }),
             sectIdent:L({ en: 'IDENTITY', ko: '계정', ja: 'アカウント', pt: 'IDENTIDADE', es: 'IDENTIDAD' }),
             sectSess: L({ en: 'ACTIVE SESSIONS', ko: '활성 세션', ja: 'アクティブセッション', pt: 'SESSÕES ATIVAS', es: 'SESIONES ACTIVAS' }),

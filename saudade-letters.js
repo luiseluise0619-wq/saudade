@@ -173,13 +173,7 @@
             lblSign: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
             phSign:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),
             lblBody: L({ en: 'YOUR LETTER', ko: '편지 본문', ja: '本文', pt: 'A SUA CARTA', es: 'SU CARTA' }, lang),
-            phBody:  L({
-                en: 'Dear editor, …',
-                ko: '편집장님께, …',
-                ja: '編集長様、…',
-                pt: 'Caro editor, …',
-                es: 'Estimado editor, …'
-            }, lang),
+            phBody:  (V && V.get('lettersPhBody', lang)) || 'Dear editor, …',
             send:    L({ en: 'SEND', ko: '보내기', ja: '送る', pt: 'ENVIAR', es: 'ENVIAR' }, lang),
             cancel:  L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }, lang),
             ok:      L({ en: 'Letter received. The editor will read it before the next dispatch.', ko: '편지가 도착했다. 편집장이 다음 디스패치 전에 읽는다.', ja: '手紙を受け取った。次のディスパッチ前に編集長が読む。', pt: 'Carta recebida. O editor lerá antes do próximo despacho.', es: 'Carta recibida. El editor la leerá antes del próximo despacho.' }, lang),

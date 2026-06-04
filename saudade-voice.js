@@ -392,6 +392,41 @@
         es: 'Una columna bajo la cabecera de saudade, con su nombre. Invitamos despacio — dos semanas si encaja.'
     };
 
+    /* brief: dispatches subtitle — sits under the pillar head on the
+       dispatches page. Has a $section token that's replaced with the
+       current weekday's section eyebrow at the call site. Rhythm: two
+       short clauses, then the section name. Already native in all five
+       editions; only relocating. */
+    const dispatchesSubTagline = {
+        en: 'Three a day. Six days a week. $section.',
+        ko: '매일 세 편. 주 엿새. $section.',
+        ja: '日に三本、週に六日。$section。',
+        pt: 'Três por dia. Seis dias por semana. $section.',
+        es: 'Tres al día. Seis días por semana. $section.'
+    };
+
+    /* brief: account modal — title shown at the top of the account /
+       permissions sheet. One declarative phrase. The rest of the modal
+       (section eyebrows, buttons) is chrome and stays inline. */
+    const accountModalTitle = {
+        en: 'Account & permissions.',
+        ko: '계정 및 권한.',
+        ja: 'アカウントと権限。',
+        pt: 'Conta e permissões.',
+        es: 'Cuenta y permisos.'
+    };
+
+    /* brief: letters modal — placeholder text inside the textarea so the
+       reader sees what tone is expected before they type. Salutation only,
+       no body. */
+    const lettersPhBody = {
+        en: 'Dear editor, …',
+        ko: '편집장님께, …',
+        ja: '編集長様、…',
+        pt: 'Caro editor, …',
+        es: 'Estimado editor, …'
+    };
+
     const KEYS = {
         mastTagline,
         listeningHead, listeningItalic,
@@ -410,7 +445,10 @@
         listeningSoundNoteTitle, listeningSoundNoteBody,
         dispatchesOnboardHead, dispatchesOnboardBody,
         lettersPageTitle, lettersPageWrite, lettersPageNone,
-        desksApplyTitle, desksApplyLede
+        desksApplyTitle, desksApplyLede,
+        dispatchesSubTagline,
+        accountModalTitle,
+        lettersPhBody
     };
 
     const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };

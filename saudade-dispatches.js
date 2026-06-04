@@ -940,13 +940,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const headLabel   = (V && V.get('dispatchesHead', _vEd))    || 'The wires,';
         const headEdited  = (V && V.get('dispatchesEdited', _vEd))  || 'edited.';
         const headResting = (V && V.get('dispatchesResting', _vEd)) || 'resting.';
-        const subTpl = T({
-            en: `Three a day. Six days a week. ${'$section'}.`,
-            ko: `매일 세 편. 주 엿새. ${'$section'}.`,
-            ja: `日に三本、週に六日。${'$section'}。`,
-            pt: `Três por dia. Seis dias por semana. ${'$section'}.`,
-            es: `Tres al día. Seis días por semana. ${'$section'}.`
-        });
+        const subTpl = (V && V.get('dispatchesSubTagline', _vEd)) || 'Three a day. Six days a week. $section.';
         const filedLabel = T({
             en: 'FILED', ko: '발행', ja: '発行', pt: 'PUBLICADO', es: 'PUBLICADO'
         });
