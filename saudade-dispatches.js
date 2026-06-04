@@ -615,10 +615,16 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         try { return new Date(iso).toISOString().slice(0, 10); }
         catch (e) { return ''; }
     }
+    // v739 — was hardcoded " AT " in all editions ("발행 2026-04-30 AT 21:00 KST",
+    // "PUBLICADO 2026-04-30 AT 21:00 KST" etc.). The "AT" leaked English into
+    // KO/JA/PT/ES. Use a per-edition separator instead — most newspapers print
+    // the time after a comma or a centred dot.
     function fmtDateTime(iso) {
         try {
             const d = new Date(iso);
-            return d.toISOString().slice(0, 10) + ' AT ' +
+            const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+            const SEP = { en: ' · ', ko: ' · ', ja: ' · ', pt: ' · ', es: ' · ' };
+            return d.toISOString().slice(0, 10) + (SEP[ed] || SEP.en) +
                 d.toISOString().slice(11, 16) + ' KST';
         } catch (e) { return ''; }
     }

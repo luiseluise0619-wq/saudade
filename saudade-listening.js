@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v739')
+        return fetch('./data/listening.json?v=v740')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -905,13 +905,26 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             const elapsed = Math.floor((Date.now() - _sessionStart) / 1000);
             const total = (_sessionPhase === 'work' ? SESSION_WORK_MIN : SESSION_REST_MIN) * 60;
             const remain = Math.max(0, total - elapsed);
-            const label = _sessionPhase === 'work' ? 'WORK' : 'REST';
+            // v739 — labels were hardcoded English ('WORK', 'REST', 'SESSIONS TODAY').
+            // The listening room is reachable in all 5 editions; the timer leaked en.
+            const T = window.SAUDADE_T || ((s) => s.en);
+            const workLbl = T({ en: 'WORK', ko: '작업', ja: '作業', pt: 'TRABALHO', es: 'TRABAJO' });
+            const restLbl = T({ en: 'REST', ko: '휴식', ja: '休憩', pt: 'PAUSA',    es: 'DESCANSO' });
+            const label = _sessionPhase === 'work' ? workLbl : restLbl;
             stateEl.textContent = `${label} · ${fmtTimer(remain)}`;
             stateEl.className = 'sdd-listen-session-state ' + _sessionPhase;
         }
         if (counterEl) {
             const n = sessionsToday();
-            counterEl.textContent = n === 0 ? '' : `${n} ${n === 1 ? 'SESSION' : 'SESSIONS'} TODAY`;
+            const T = window.SAUDADE_T || ((s) => s.en);
+            const sessionsToday_label = n === 0 ? '' : T({
+                en: `${n} ${n === 1 ? 'SESSION' : 'SESSIONS'} TODAY`,
+                ko: `오늘 ${n}회`,
+                ja: `本日 ${n} 回`,
+                pt: `HOJE ${n} ${n === 1 ? 'SESSÃO' : 'SESSÕES'}`,
+                es: `HOY ${n} ${n === 1 ? 'SESIÓN' : 'SESIONES'}`
+            });
+            counterEl.textContent = sessionsToday_label;
         }
     }
 

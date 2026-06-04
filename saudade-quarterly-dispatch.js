@@ -412,7 +412,9 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
             const day = String(d.getUTCDate()).padStart(2, '0');
             // KST = UTC+9. iso 가 +09:00 이라 시간 부분만 직접 잘라 KST 로 표기
             const hm = String(iso).slice(11, 16);
-            return `${y}-${m}-${day} AT ${hm} KST`;
+            // v739 — was " AT " which leaks English into all 5 editions.
+            // Centred dot is edition-neutral and matches newspaper register.
+            return `${y}-${m}-${day} · ${hm} KST`;
         } catch (e) { return ''; }
     }
 
