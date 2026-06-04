@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- v742 — cover URL exposes all 5 editions via xhtml:link hreflang.
+         Each edition is reachable through the same /?ed=XX SPA route. -->
     <url>
         <loc>https://saudade.pages.dev/</loc>
+        <xhtml:link rel="alternate" hreflang="en"        href="https://saudade.pages.dev/" />
+        <xhtml:link rel="alternate" hreflang="ko"        href="https://saudade.pages.dev/?ed=ko" />
+        <xhtml:link rel="alternate" hreflang="ja"        href="https://saudade.pages.dev/?ed=ja" />
+        <xhtml:link rel="alternate" hreflang="pt"        href="https://saudade.pages.dev/?ed=pt" />
+        <xhtml:link rel="alternate" hreflang="es"        href="https://saudade.pages.dev/?ed=es" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://saudade.pages.dev/" />
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://saudade.pages.dev/?ed=ko</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://saudade.pages.dev/?ed=ja</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://saudade.pages.dev/?ed=pt</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://saudade.pages.dev/?ed=es</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://saudade.pages.dev/support.html</loc>

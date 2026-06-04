@@ -1,13 +1,15 @@
 {
-  "name": "saudade",
-  "short_name": "saudade",
-  "description": "A magazine, in app form. For digital nomads.",
+  "id": "saudade.pages.dev",
+  "name": "Saudade — a slow newspaper for digital nomads",
+  "short_name": "Saudade",
+  "description": "Three cities, filed daily, edited from Seoul. Visa ledger, café atlas, dispatches, listening room. Quiet by design.",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#F2EEE3",
-  "theme_color": "#F2EEE3",
+  "background_color": "#F4ECD6",
+  "theme_color": "#F4ECD6",
   "lang": "en",
+  "dir": "ltr",
   "scope": "./",
   "icons": [
     {
@@ -30,23 +32,48 @@
       "sizes": "540x720",
       "type": "image/svg+xml",
       "form_factor": "narrow",
-      "label": "Saudade — quiet dispatches by city"
+      "label": "Saudade — the cover"
     },
     {
       "src": "screenshot-wide.svg",
       "sizes": "1280x720",
       "type": "image/svg+xml",
       "form_factor": "wide",
-      "label": "Saudade — quiet dispatches by city"
+      "label": "Saudade — three cities, filed daily"
     }
   ],
   "shortcuts": [
     {
-      "name": "Cafe Mode",
-      "short_name": "Cafe",
-      "description": "Fullscreen ambient cafe mode",
-      "url": "./index.html?mode=cafe"
+      "name": "Today's dispatches",
+      "short_name": "Dispatches",
+      "description": "Three city dispatches, filed at 06:00 KST",
+      "url": "./index.html#dispatches"
+    },
+    {
+      "name": "Café atlas",
+      "short_name": "Atlas",
+      "description": "Cafés the editor has sat in",
+      "url": "./index.html#atlas"
+    },
+    {
+      "name": "Visa ledger",
+      "short_name": "Ledger",
+      "description": "Schengen, tax, insurance, pension counters",
+      "url": "./index.html#ledger"
+    },
+    {
+      "name": "Listening room",
+      "short_name": "Listen",
+      "description": "Ambient stems + city photographs",
+      "url": "./index.html#listen"
     }
   ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "handle_links": "preferred",
   "prefer_related_applications": false
 }

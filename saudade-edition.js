@@ -244,8 +244,18 @@
         }, 1200);
     }
 
+    // v742 — also honour ?ed= / ?edition= query param so links like
+    // saudade.pages.dev/?ed=ko land readers in the right edition.
+    function getEditionFromQuery() {
+        try {
+            const p = new URLSearchParams(location.search);
+            const v = (p.get('ed') || p.get('edition') || '').toLowerCase();
+            return SUPPORTED.includes(v) ? v : null;
+        } catch (e) { return null; }
+    }
+
     function init() {
-        const ed = getEdition() || DEFAULT;
+        const ed = getEditionFromQuery() || getEdition() || DEFAULT;
         applyEdition(ed);
         applySkin(pickSkin());
         loadConfig();

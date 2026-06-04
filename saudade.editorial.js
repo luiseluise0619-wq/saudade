@@ -1894,6 +1894,41 @@ body.section-active::before { content: none !important; }
         });
     }
 
+    // v742 — hash routing for manifest.json shortcuts (#dispatches, #atlas,
+    // #ledger, #listen). Maps the user-visible hash to the internal data-cat,
+    // which dock-btn click would normally drive. Lets a PWA shortcut deep-link
+    // straight into a section without making the user tap a button after launch.
+    const HASH_TO_CAT = {
+        '#ledger':     'visa',
+        '#visa':       'visa',
+        '#atlas':      'cafe',
+        '#cafe':       'cafe',
+        '#dispatches': 'tz',
+        '#listen':     'listen',
+        '#listening':  'listen',
+        '#desk':       'trip'
+    };
+    function applyHashRoute() {
+        const h = location.hash || '';
+        const cat = HASH_TO_CAT[h];
+        if (!cat) return;
+        if (cat === 'listen') {
+            // Listening room is rendered by saudade-listening.js, not by
+            // setSection() (which only knows the masthead's 4 sections).
+            // saudade-listening.js has its own honourListenHash() in init —
+            // leave the hash in place so that module sees it on its own
+            // boot. Don't clear it here, and don't try to call open() now
+            // (the module may not have loaded yet).
+            return;
+        }
+        if (!SECTIONS[cat]) return;
+        setSection(cat);
+        // Clear the hash so refreshes don't repeat and so the back button
+        // returns to the cover instead of cycling hash states. The visited
+        // section is already remembered in saudade.last.screen.
+        try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    }
+
     function init() {
         injectStyles();
         ensureMasthead();
@@ -1902,7 +1937,10 @@ body.section-active::before { content: none !important; }
         // 이전엔 setTimeout 200ms → cover 가 잠깐 보였다가 section 으로 점프 = 두 번 진입 느낌.
         // 이제 init 에서 동기적으로 attribute 만 설정 → cover 자체가 한 번도 안 보임.
         // 각 § 모듈의 MutationObserver 가 attribute 변경 감지하여 콘텐츠 렌더 (마이크로태스크).
-        restoreLastScreen();
+        // v742 — hash takes priority over last-screen so manifest shortcuts work.
+        if (HASH_TO_CAT[location.hash]) applyHashRoute();
+        else restoreLastScreen();
+        window.addEventListener('hashchange', applyHashRoute);
         window.SAUDADE_MASTHEAD = { setSection, backToCover, restoreLastScreen, SECTIONS };
     }
 
@@ -2043,8 +2081,21 @@ body.section-active::before { content: none !important; }
         }, 1200);
     }
 
+    // v742 — also honour ?ed= / ?edition= query param so links like
+    // saudade.pages.dev/?ed=ko land readers in the right edition. Search
+    // engines and shared deep-links rely on this to bridge the SPA gap
+    // (hreflang links in index.html all point to the same path with
+    // different ?ed= values).
+    function getEditionFromQuery() {
+        try {
+            const p = new URLSearchParams(location.search);
+            const v = (p.get('ed') || p.get('edition') || '').toLowerCase();
+            return SUPPORTED.includes(v) ? v : null;
+        } catch (e) { return null; }
+    }
+
     function init() {
-        const ed = getEdition() || DEFAULT;
+        const ed = getEditionFromQuery() || getEdition() || DEFAULT;
         applyEdition(ed);
         applySkin(pickSkin());
     }

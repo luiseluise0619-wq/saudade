@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v742')
+        return fetch('./data/listening.json?v=v743')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1564,11 +1564,25 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         });
     }
 
+    // v742 — hash routing for the manifest shortcut. Saudade-editorial.js
+    // also dispatches hashes but its applyHashRoute fires before this
+    // module's init(), so SAUDADE_LISTENING.open is undefined at that
+    // moment. Doing the check here means the listen section opens whether
+    // editorial loaded first or last.
+    function honourListenHash() {
+        if (location.hash === '#listen' || location.hash === '#listening') {
+            open();
+            try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+        }
+    }
+
     function init() {
         injectStyles();
         ensureCoverCTA();
         load().then(render);
         watchEsc();
+        honourListenHash();
+        window.addEventListener('hashchange', honourListenHash);
         // v7 §6 — � 05 dock 버튼 (5탭). cover CTA 와 병행.
         document.addEventListener('click', (e) => {
             const btn = e.target.closest && e.target.closest('.dock-btn[data-cat="listen"]');
