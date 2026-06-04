@@ -351,7 +351,7 @@
     // ─── Submit modal (signed-in stringers) ──────────────────────────────
     function copySubmit(lang) {
         return {
-            title:    L({ en: 'File a dispatch.', ko: 'dispatch 보내기.', ja: 'ディスパッチを送る。', pt: 'Enviar um despacho.', es: 'Enviar un despacho.' }, lang),
+            title:    L({ en: 'File a dispatch.', ko: '디스패치 보내기.', ja: 'ディスパッチを送る。', pt: 'Enviar um despacho.', es: 'Enviar un despacho.' }, lang),
             lede:     L({
                 en: 'Your post will be reviewed before publication. The masthead is one rust thread above your name; treat it gently.',
                 ko: '게시 전에 편집장이 검토한다. 마스트헤드는 당신의 이름 위에 한 줄로 놓인다. 정중히 다루기를.',
@@ -360,7 +360,7 @@
                 es: 'El texto será revisado antes de publicarse. La cabecera queda un hilo sobre su nombre; trátela con cuidado.'
             }, lang),
             close:    L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, lang),
-            lblSlug:  L({ en: 'YOUR DESK', ko: '당신의 데스크', ja: 'あなたの席', pt: 'A SUA REDAÇÃO', es: 'SU MESA' }, lang),
+            lblSlug:  L({ en: 'YOUR DESK', ko: '당신의 데스크', ja: 'あなたのデスク', pt: 'A SUA REDAÇÃO', es: 'SU REDACCIÓN' }, lang),
             lblTitle: L({ en: 'TITLE', ko: '제목', ja: '見出し', pt: 'TÍTULO', es: 'TITULAR' }, lang),
             lblLede:  L({ en: 'LEDE (ITALIC)', ko: '레드 (이탤릭)', ja: 'リード（イタリック）', pt: 'LEDE (ITÁLICO)', es: 'ENTRADILLA (CURSIVA)' }, lang),
             lblBody:  L({ en: 'BODY', ko: '본문', ja: '本文', pt: 'CORPO', es: 'CUERPO' }, lang),
@@ -501,7 +501,7 @@
         if (!host) return;
         const ed = (opts && opts.edition) || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const c  = {
-            title:  L({ en: 'The desks.', ko: '책상들.', ja: '席。', pt: 'As redações.', es: 'Las mesas.' }, ed),
+            title:  L({ en: 'The desks.', ko: '데스크.', ja: 'デスク。', pt: 'As redações.', es: 'Las redacciones.' }, ed),
             lede:   L({
                 en: 'Stringers writing under the saudade masthead, one city each. Cadence varies — the editor invites slowly.',
                 ko: '도시별 통신원이 saudade 마스트헤드 아래에서 쓴다. 주기는 데스크마다 다름 — 편집장은 천천히 초대한다.',
@@ -509,10 +509,10 @@
                 pt: 'Correspondentes a escrever sob o cabeçalho da saudade, uma cidade por cada. A cadência varia — o editor convida devagar.',
                 es: 'Corresponsales bajo la cabecera de saudade, una ciudad cada uno. La cadencia varía — el editor invita despacio.'
             }, ed),
-            apply:  L({ en: 'Become a stringer →', ko: '통신원 지원 →', ja: '通信員に応募 →', pt: 'Candidatar-se →', es: 'Postular →' }, ed),
-            none:   L({ en: 'No active desks yet. The first will be invited soon.', ko: '아직 활동 중인 데스크가 없다. 곧 첫 통신원이 초대된다.', ja: 'まだ稼働中のデスクはない。最初の通信員はまもなく。', pt: 'Ainda sem redações activas. A primeira será convidada em breve.', es: 'Aún sin mesas activas. La primera será invitada pronto.' }, ed),
+            apply:  L({ en: 'Become a stringer →', ko: '통신원 지원 →', ja: '通信員に応募 →', pt: 'Candidatar-se →', es: 'Presentar candidatura →' }, ed),
+            none:   L({ en: 'No active desks yet. The first will be invited soon.', ko: '아직 활동 중인 데스크가 없다. 곧 첫 통신원이 초대된다.', ja: 'まだ稼働中のデスクはない。最初の通信員はまもなく。', pt: 'Ainda sem redações activas. A primeira será convidada em breve.', es: 'Aún sin redacciones activas. La primera será invitada pronto.' }, ed),
             since:  L({ en: 'SINCE',  ko: '시작',  ja: '開始',  pt: 'DESDE',  es: 'DESDE' }, ed),
-            last:   L({ en: 'LAST FILED', ko: '최근 dispatch', ja: '直近', pt: 'ÚLTIMO', es: 'ÚLTIMO' }, ed)
+            last:   L({ en: 'LAST FILED', ko: '최근 디스패치', ja: '直近', pt: 'ÚLTIMO', es: 'ÚLTIMO' }, ed)
         };
 
         let desks = [];

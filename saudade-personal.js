@@ -195,7 +195,7 @@
                             weight: 95,
                             line: L({
                                 en: `Schengen: ${r.used_in_window} of 90 used. ${r.remaining} left.`,
-                                ko: `셰겐 ${r.used_in_window}/90 사용. 남은 ${r.remaining}일.`,
+                                ko: `솅겐 ${r.used_in_window}/90 사용. 남은 ${r.remaining}일.`,
                                 ja: `シェンゲン ${r.used_in_window}/90 使用。残り ${r.remaining} 日。`,
                                 pt: `Schengen: ${r.used_in_window} de 90 usados. ${r.remaining} restantes.`,
                                 es: `Schengen: ${r.used_in_window} de 90 usados. ${r.remaining} restantes.`
@@ -207,7 +207,7 @@
                             weight: 60,
                             line: L({
                                 en: `Your Schengen clock has ${r.remaining} days of room.`,
-                                ko: `셰겐 시계에 ${r.remaining}일 여유.`,
+                                ko: `솅겐 시계에 ${r.remaining}일 여유.`,
                                 ja: `シェンゲンの余裕は ${r.remaining} 日。`,
                                 pt: `O seu relógio Schengen tem ${r.remaining} dias.`,
                                 es: `Su reloj Schengen tiene ${r.remaining} días.`

@@ -1047,16 +1047,16 @@ body[data-tour="1"] .sdd-cover::before {
 
     function copy(lang) {
         return {
-            title:   L({ en: 'Schengen 90/180.', ko: '셰겐 90/180.', ja: 'シェンゲン 90/180。', pt: 'Schengen 90/180.', es: 'Schengen 90/180.' }, lang),
+            title:   L({ en: 'Schengen 90/180.', ko: '솅겐 90/180.', ja: 'シェンゲン 90/180。', pt: 'Schengen 90/180.', es: 'Schengen 90/180.' }, lang),
             usedLab: L({ en: 'DAYS USED',    ko: '사용 일수',  ja: '使用日数',    pt: 'DIAS USADOS',  es: 'DÍAS USADOS' }, lang),
             remLab:  L({ en: 'DAYS REMAINING', ko: '남은 일수', ja: '残り日数',   pt: 'DIAS RESTANTES', es: 'DÍAS RESTANTES' }, lang),
             window:  L({ en: 'IN THE 180 DAYS ENDING', ko: '기준일 직전 180일', ja: '基準日までの180日間', pt: 'NOS 180 DIAS ATÉ', es: 'EN LOS 180 DÍAS HASTA' }, lang),
-            insideY: L({ en: 'You are inside Schengen on the reference date.', ko: '기준일 현재 셰겐 안에 있다.', ja: '基準日現在シェンゲン圏内にいる。', pt: 'Está dentro de Schengen na data de referência.', es: 'Está dentro de Schengen en la fecha de referencia.' }, lang),
-            insideN: L({ en: 'You are outside Schengen on the reference date.', ko: '기준일 현재 셰겐 밖에 있다.', ja: '基準日現在シェンゲン圏外にいる。', pt: 'Está fora de Schengen na data de referência.', es: 'Está fuera de Schengen en la fecha de referencia.' }, lang),
+            insideY: L({ en: 'You are inside Schengen on the reference date.', ko: '기준일 현재 솅겐 안에 있다.', ja: '基準日現在シェンゲン圏内にいる。', pt: 'Está dentro de Schengen na data de referência.', es: 'Está dentro de Schengen en la fecha de referencia.' }, lang),
+            insideN: L({ en: 'You are outside Schengen on the reference date.', ko: '기준일 현재 솅겐 밖에 있다.', ja: '基準日現在シェンゲン圏外にいる。', pt: 'Está fora de Schengen na data de referência.', es: 'Está fuera de Schengen en la fecha de referencia.' }, lang),
             full:    L({ en: 'WINDOW FULLY RESETS', ko: '윈도우 완전 초기화', ja: 'ウィンドウ完全リセット', pt: 'JANELA REINICIA POR COMPLETO', es: 'VENTANA SE REINICIA POR COMPLETO' }, lang),
             safe:    L({ en: 'NEXT SAFE ENTRY ≥ 1 DAY', ko: '다음 입국 가능 (≥1일)', ja: '次に入国可能 (≥1日)', pt: 'PRÓXIMA ENTRADA SEGURA (≥1 DIA)', es: 'PRÓXIMA ENTRADA SEGURA (≥1 DÍA)' }, lang),
             note:    L({ en: 'A calendar, not advice. Verify with your consulate.', ko: '계산기가 아니라 달력. 영사관에 확인하라.', ja: 'これは計算機ではなく暦。領事館に確認を。', pt: 'Um calendário, não um conselho. Confirme com o seu consulado.', es: 'Un calendario, no un consejo. Confirme con su consulado.' }, lang),
-            empty:   L({ en: 'Add at least one Schengen entry above.', ko: '셰겐 입국 기록을 하나 이상 추가하라.', ja: '少なくとも一回のシェンゲン入国を追加してください。', pt: 'Adicione pelo menos uma entrada Schengen acima.', es: 'Añada al menos una entrada Schengen arriba.' }, lang)
+            empty:   L({ en: 'Add at least one Schengen entry above.', ko: '솅겐 입국 기록을 하나 이상 추가하라.', ja: '少なくとも一回のシェンゲン入国を追加してください。', pt: 'Adicione pelo menos uma entrada Schengen acima.', es: 'Añada al menos una entrada Schengen arriba.' }, lang)
         };
     }
 
@@ -2214,7 +2214,7 @@ body[data-tour="1"] .sdd-cover::before {
             }, lang),
             help:  L({
                 en: 'One row per stay. We compute Schengen 90/180 and tax 183 from the same data — no need to enter twice.',
-                ko: '한 줄에 한 체류. 같은 데이터로 셰겐 90/180 과 세금 183 을 함께 계산한다 — 두 번 입력하지 않아도 된다.',
+                ko: '한 줄에 한 체류. 같은 데이터로 솅겐 90/180 과 세금 183 을 함께 계산한다 — 두 번 입력하지 않아도 된다.',
                 ja: '一行に一滞在。同じデータからシェンゲン 90/180 と税 183 を一緒に計算する — 二度入力しなくていい。',
                 pt: 'Uma linha por estadia. Calculamos Schengen 90/180 e fiscal 183 a partir dos mesmos dados — sem precisar repetir.',
                 es: 'Una fila por estancia. Calculamos Schengen 90/180 y fiscal 183 a partir de los mismos datos — sin repetir.'
@@ -2227,7 +2227,7 @@ body[data-tour="1"] .sdd-cover::before {
             none:    L({ en: 'No stays yet. Add the most recent first.', ko: '아직 체류 기록이 없다. 가장 최근부터 입력하라.', ja: 'まだ滞在記録がない。直近から追加。', pt: 'Sem estadias ainda. Comece pela mais recente.', es: 'Sin estancias aún. Empiece por la más reciente.' }, lang),
             remove:  L({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }, lang),
             empty:   L({ en: 'still there', ko: '체류 중', ja: '滞在中', pt: 'ainda lá', es: 'aún ahí' }, lang),
-            sch:     L({ en: 'SCHENGEN', ko: '셰겐', ja: 'シェンゲン', pt: 'SCHENGEN', es: 'SCHENGEN' }, lang),
+            sch:     L({ en: 'SCHENGEN', ko: '솅겐', ja: 'シェンゲン', pt: 'SCHENGEN', es: 'SCHENGEN' }, lang),
             tax:     L({ en: 'TAX', ko: '세금', ja: '税', pt: 'FISCAL', es: 'FISCAL' }, lang)
         };
     }
@@ -3462,7 +3462,7 @@ body[data-tour="1"] .sdd-cover::before {
                             weight: 95,
                             line: L({
                                 en: `Schengen: ${r.used_in_window} of 90 used. ${r.remaining} left.`,
-                                ko: `셰겐 ${r.used_in_window}/90 사용. 남은 ${r.remaining}일.`,
+                                ko: `솅겐 ${r.used_in_window}/90 사용. 남은 ${r.remaining}일.`,
                                 ja: `シェンゲン ${r.used_in_window}/90 使用。残り ${r.remaining} 日。`,
                                 pt: `Schengen: ${r.used_in_window} de 90 usados. ${r.remaining} restantes.`,
                                 es: `Schengen: ${r.used_in_window} de 90 usados. ${r.remaining} restantes.`
@@ -3474,7 +3474,7 @@ body[data-tour="1"] .sdd-cover::before {
                             weight: 60,
                             line: L({
                                 en: `Your Schengen clock has ${r.remaining} days of room.`,
-                                ko: `셰겐 시계에 ${r.remaining}일 여유.`,
+                                ko: `솅겐 시계에 ${r.remaining}일 여유.`,
                                 ja: `シェンゲンの余裕は ${r.remaining} 日。`,
                                 pt: `O seu relógio Schengen tem ${r.remaining} dias.`,
                                 es: `Su reloj Schengen tiene ${r.remaining} días.`
@@ -5035,15 +5035,15 @@ body[data-tour="1"] .sdd-cover::before {
     function openCity() {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const c = {
-            title: L({ en: 'Ask the desk to open in a city.', ko: '데스크를 열어달라고 요청.', ja: 'デスクを開くよう要請。', pt: 'Pedir uma redação numa cidade.', es: 'Pedir una mesa en una ciudad.' }, ed),
-            lede:  L({ en: 'When 100 readers ask for a city, we open the desk. Tell us where you live, and what an editor in that city should be paying attention to.', ko: '100명의 독자가 한 도시를 요청하면 데스크를 연다. 어디에 사는지, 그곳의 편집자가 무엇에 주의를 기울여야 할지 알려달라.', ja: '百人の読者が一つの都市を求めれば、デスクを開く。どこに住み、その都市の編集者が何に注意すべきか教えてほしい。', pt: 'Quando 100 leitores pedirem uma cidade, abrimos a redação. Diga-nos onde vive, e a que um editor dessa cidade deveria prestar atenção.', es: 'Cuando 100 lectores piden una ciudad, abrimos la mesa. Cuéntenos dónde vive, y a qué debería prestar atención un editor allí.' }, ed),
+            title: L({ en: 'Ask the desk to open in a city.', ko: '데스크를 열어달라고 요청.', ja: 'デスクを開くよう要請。', pt: 'Pedir uma redação numa cidade.', es: 'Pedir una redacción en una ciudad.' }, ed),
+            lede:  L({ en: 'When 100 readers ask for a city, we open the desk. Tell us where you live, and what an editor in that city should be paying attention to.', ko: '100명의 독자가 한 도시를 요청하면 데스크를 연다. 어디에 사는지, 그곳의 편집자가 무엇에 주의를 기울여야 할지 알려달라.', ja: '百人の読者が一つの都市を求めれば、デスクを開く。どこに住み、その都市の編集者が何に注意すべきか教えてほしい。', pt: 'Quando 100 leitores pedirem uma cidade, abrimos a redação. Diga-nos onde vive, e a que um editor dessa cidade deveria prestar atenção.', es: 'Cuando 100 lectores piden una ciudad, abrimos la redacción. Cuéntenos dónde vive, y a qué debería prestar atención un editor allí.' }, ed),
             close: L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, ed),
             lblCity: L({ en: 'CITY', ko: '도시', ja: '都市', pt: 'CIDADE', es: 'CIUDAD' }, ed),
             phCity:  L({ en: 'mexico-city, hanoi, marrakech, …', ko: 'mexico-city, hanoi, marrakech, …', ja: 'mexico-city, hanoi, marrakech, …', pt: 'mexico-city, hanoi, marrakech, …', es: 'mexico-city, hanoi, marrakech, …' }, ed),
             lblWhy: L({ en: 'WHY THIS CITY (OPTIONAL)', ko: '왜 이 도시인가 (선택)', ja: 'なぜこの都市か（任意）', pt: 'PORQUÊ ESTA CIDADE (OPCIONAL)', es: 'POR QUÉ ESTA CIUDAD (OPCIONAL)' }, ed),
             send: L({ en: 'SEND', ko: '보내기', ja: '送る', pt: 'ENVIAR', es: 'ENVIAR' }, ed),
             cancel: L({ en: 'CANCEL', ko: '취소', ja: 'キャンセル', pt: 'CANCELAR', es: 'CANCELAR' }, ed),
-            ok: L({ en: 'Recorded. We open a desk when 100 readers ask.', ko: '기록됨. 100명이 요청하면 데스크를 연다.', ja: '記録した。百人が求めればデスクを開く。', pt: 'Registado. Abrimos uma redação quando 100 leitores pedem.', es: 'Registrado. Abrimos una mesa cuando 100 lectores piden.' }, ed),
+            ok: L({ en: 'Recorded. We open a desk when 100 readers ask.', ko: '기록됨. 100명이 요청하면 데스크를 연다.', ja: '記録した。百人が求めればデスクを開く。', pt: 'Registado. Abrimos uma redação quando 100 leitores pedem.', es: 'Registrado. Abrimos una redacción cuando 100 lectores piden.' }, ed),
             err: L({ en: 'Could not send.', ko: '전송 실패.', ja: '送信失敗。', pt: 'Falha ao enviar.', es: 'Falló el envío.' }, ed),
             tooShort: L({ en: 'City required.', ko: '도시명을 입력하라.', ja: '都市が必要。', pt: 'Cidade obrigatória.', es: 'Ciudad obligatoria.' }, ed)
         };

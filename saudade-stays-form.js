@@ -100,7 +100,7 @@
             }, lang),
             help:  L({
                 en: 'One row per stay. We compute Schengen 90/180 and tax 183 from the same data — no need to enter twice.',
-                ko: '한 줄에 한 체류. 같은 데이터로 셰겐 90/180 과 세금 183 을 함께 계산한다 — 두 번 입력하지 않아도 된다.',
+                ko: '한 줄에 한 체류. 같은 데이터로 솅겐 90/180 과 세금 183 을 함께 계산한다 — 두 번 입력하지 않아도 된다.',
                 ja: '一行に一滞在。同じデータからシェンゲン 90/180 と税 183 を一緒に計算する — 二度入力しなくていい。',
                 pt: 'Uma linha por estadia. Calculamos Schengen 90/180 e fiscal 183 a partir dos mesmos dados — sem precisar repetir.',
                 es: 'Una fila por estancia. Calculamos Schengen 90/180 y fiscal 183 a partir de los mismos datos — sin repetir.'
@@ -113,7 +113,7 @@
             none:    L({ en: 'No stays yet. Add the most recent first.', ko: '아직 체류 기록이 없다. 가장 최근부터 입력하라.', ja: 'まだ滞在記録がない。直近から追加。', pt: 'Sem estadias ainda. Comece pela mais recente.', es: 'Sin estancias aún. Empiece por la más reciente.' }, lang),
             remove:  L({ en: 'Remove', ko: '삭제', ja: '削除', pt: 'Remover', es: 'Eliminar' }, lang),
             empty:   L({ en: 'still there', ko: '체류 중', ja: '滞在中', pt: 'ainda lá', es: 'aún ahí' }, lang),
-            sch:     L({ en: 'SCHENGEN', ko: '셰겐', ja: 'シェンゲン', pt: 'SCHENGEN', es: 'SCHENGEN' }, lang),
+            sch:     L({ en: 'SCHENGEN', ko: '솅겐', ja: 'シェンゲン', pt: 'SCHENGEN', es: 'SCHENGEN' }, lang),
             tax:     L({ en: 'TAX', ko: '세금', ja: '税', pt: 'FISCAL', es: 'FISCAL' }, lang)
         };
     }

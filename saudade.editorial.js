@@ -938,7 +938,7 @@ body.cover-reader-open { overflow: hidden; }
         pt: ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'],
         es: ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC']
     };
-    const DESK_SUFFIX = { en: 'DESK', ko: '책상', ja: 'デスク', pt: 'MESA', es: 'MESA' };
+    const DESK_SUFFIX = { en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'REDACCIÓN' };
     const QUARTER_LABEL = {
         en: 'THIS ISSUE', ko: '이번 호', ja: '本号', pt: 'ESTA EDIÇÃO', es: 'ESTA EDICIÓN'
     };
@@ -1378,11 +1378,8 @@ body.cover-reader-open { overflow: hidden; }
     }
 
     // Per-edition city-desk suffix — "SEOUL DESK" / "서울 데스크" / etc.
-    // (Existing DESK_SUFFIX uses 책상 in KO which is furniture-desk; the
-    // newspaper sense in Korean is 데스크 — used here so the cover hero
-    // reads like a city's local newspaper byline.)
     const COVER_DESK_LABEL = {
-        en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'MESA'
+        en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'REDACCIÓN'
     };
 
     function renderCoverHeads(heads, ed) {
@@ -1470,8 +1467,8 @@ body.cover-reader-open { overflow: hidden; }
             en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL' },
             ko: { close: '닫기',    source: '출처',   read: '원문 보기' },
             ja: { close: '閉じる',  source: '出典',   read: '原文を読む' },
-            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE' },
-            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL' }
+            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER NO ORIGINAL' },
+            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER EL ORIGINAL' }
         };
         const L = READER_LABELS[ed] || READER_LABELS.en;
         const quoteHtml = h.quote

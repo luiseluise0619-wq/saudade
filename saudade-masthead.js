@@ -27,7 +27,7 @@
         },
         trip: {
             num: '04', page: 'P. 18',
-            name: { en: 'THE DESK',    ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'     }
+            name: { en: 'THE DESK',    ko: '데스크', ja: 'デスク', pt: 'A REDAÇÃO',   es: 'LA REDACCIÓN' }
         }
     };
 

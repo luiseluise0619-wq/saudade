@@ -617,7 +617,7 @@ body.section-active .sdd-cover { display: none !important; }
         pt: ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'],
         es: ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC']
     };
-    const DESK_SUFFIX = { en: 'DESK', ko: '책상', ja: 'デスク', pt: 'MESA', es: 'MESA' };
+    const DESK_SUFFIX = { en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'REDACCIÓN' };
     const QUARTER_LABEL = {
         en: 'THIS ISSUE', ko: '이번 호', ja: '本号', pt: 'ESTA EDIÇÃO', es: 'ESTA EDICIÓN'
     };
@@ -637,7 +637,7 @@ body.section-active .sdd-cover { display: none !important; }
         en: 'DISPATCHES', ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'
     };
     const NAV_LABEL_DESK = {
-        en: 'THE DESK',   ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'
+        en: 'THE DESK',   ko: '데스크', ja: 'デスク', pt: 'A REDAÇÃO',   es: 'LA REDACCIÓN'
     };
     const ISSUE_LEDE_5 = {
         en: 'Three cities, no schedule. Edited from $editorCity.',

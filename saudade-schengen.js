@@ -132,16 +132,16 @@
 
     function copy(lang) {
         return {
-            title:   L({ en: 'Schengen 90/180.', ko: '셰겐 90/180.', ja: 'シェンゲン 90/180。', pt: 'Schengen 90/180.', es: 'Schengen 90/180.' }, lang),
+            title:   L({ en: 'Schengen 90/180.', ko: '솅겐 90/180.', ja: 'シェンゲン 90/180。', pt: 'Schengen 90/180.', es: 'Schengen 90/180.' }, lang),
             usedLab: L({ en: 'DAYS USED',    ko: '사용 일수',  ja: '使用日数',    pt: 'DIAS USADOS',  es: 'DÍAS USADOS' }, lang),
             remLab:  L({ en: 'DAYS REMAINING', ko: '남은 일수', ja: '残り日数',   pt: 'DIAS RESTANTES', es: 'DÍAS RESTANTES' }, lang),
             window:  L({ en: 'IN THE 180 DAYS ENDING', ko: '기준일 직전 180일', ja: '基準日までの180日間', pt: 'NOS 180 DIAS ATÉ', es: 'EN LOS 180 DÍAS HASTA' }, lang),
-            insideY: L({ en: 'You are inside Schengen on the reference date.', ko: '기준일 현재 셰겐 안에 있다.', ja: '基準日現在シェンゲン圏内にいる。', pt: 'Está dentro de Schengen na data de referência.', es: 'Está dentro de Schengen en la fecha de referencia.' }, lang),
-            insideN: L({ en: 'You are outside Schengen on the reference date.', ko: '기준일 현재 셰겐 밖에 있다.', ja: '基準日現在シェンゲン圏外にいる。', pt: 'Está fora de Schengen na data de referência.', es: 'Está fuera de Schengen en la fecha de referencia.' }, lang),
+            insideY: L({ en: 'You are inside Schengen on the reference date.', ko: '기준일 현재 솅겐 안에 있다.', ja: '基準日現在シェンゲン圏内にいる。', pt: 'Está dentro de Schengen na data de referência.', es: 'Está dentro de Schengen en la fecha de referencia.' }, lang),
+            insideN: L({ en: 'You are outside Schengen on the reference date.', ko: '기준일 현재 솅겐 밖에 있다.', ja: '基準日現在シェンゲン圏外にいる。', pt: 'Está fora de Schengen na data de referência.', es: 'Está fuera de Schengen en la fecha de referencia.' }, lang),
             full:    L({ en: 'WINDOW FULLY RESETS', ko: '윈도우 완전 초기화', ja: 'ウィンドウ完全リセット', pt: 'JANELA REINICIA POR COMPLETO', es: 'VENTANA SE REINICIA POR COMPLETO' }, lang),
             safe:    L({ en: 'NEXT SAFE ENTRY ≥ 1 DAY', ko: '다음 입국 가능 (≥1일)', ja: '次に入国可能 (≥1日)', pt: 'PRÓXIMA ENTRADA SEGURA (≥1 DIA)', es: 'PRÓXIMA ENTRADA SEGURA (≥1 DÍA)' }, lang),
             note:    L({ en: 'A calendar, not advice. Verify with your consulate.', ko: '계산기가 아니라 달력. 영사관에 확인하라.', ja: 'これは計算機ではなく暦。領事館に確認を。', pt: 'Um calendário, não um conselho. Confirme com o seu consulado.', es: 'Un calendario, no un consejo. Confirme con su consulado.' }, lang),
-            empty:   L({ en: 'Add at least one Schengen entry above.', ko: '셰겐 입국 기록을 하나 이상 추가하라.', ja: '少なくとも一回のシェンゲン入国を追加してください。', pt: 'Adicione pelo menos uma entrada Schengen acima.', es: 'Añada al menos una entrada Schengen arriba.' }, lang)
+            empty:   L({ en: 'Add at least one Schengen entry above.', ko: '솅겐 입국 기록을 하나 이상 추가하라.', ja: '少なくとも一回のシェンゲン入国を追加してください。', pt: 'Adicione pelo menos uma entrada Schengen acima.', es: 'Añada al menos una entrada Schengen arriba.' }, lang)
         };
     }
 

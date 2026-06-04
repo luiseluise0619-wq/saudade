@@ -42,10 +42,10 @@
 
     function copy(lang) {
         return {
-            title:    L({ en: 'Your Schengen log.', ko: '셰겐 입국 기록.', ja: 'シェンゲン入国記録。', pt: 'O seu registo Schengen.', es: 'Su registro Schengen.' }, lang),
+            title:    L({ en: 'Your Schengen log.', ko: '솅겐 입국 기록.', ja: 'シェンゲン入国記録。', pt: 'O seu registo Schengen.', es: 'Su registro Schengen.' }, lang),
             help:     L({
                 en: 'Type each Schengen entry and exit. We never send this anywhere — it stays in your browser.',
-                ko: '셰겐 입국과 출국을 한 줄씩 입력하라. 어디에도 전송하지 않는다 — 브라우저 안에만 머문다.',
+                ko: '솅겐 입국과 출국을 한 줄씩 입력하라. 어디에도 전송하지 않는다 — 브라우저 안에만 머문다.',
                 ja: 'シェンゲンの入国と出国を一行ずつ入力。どこにも送信しない — ブラウザ内に留まる。',
                 pt: 'Adicione cada entrada e saída Schengen. Não enviamos para nenhum servidor — fica no seu browser.',
                 es: 'Añada cada entrada y salida Schengen. No lo enviamos a ningún servidor — se queda en su navegador.'
