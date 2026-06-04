@@ -165,15 +165,10 @@
     }
 
     function copyM(lang) {
+        const V = window.SAUDADE_VOICE;
         return {
-            title:   L({ en: 'Write to the editor.', ko: '편집장에게 편지.', ja: '編集長への手紙。', pt: 'Escrever ao editor.', es: 'Escribir al editor.' }, lang),
-            lede:    L({
-                en: 'Up to 800 characters. Read by a human editor before publication.',
-                ko: '800자 이내. 편집장이 읽고 검토한 뒤 공개.',
-                ja: '八百字以内。編集長の確認を経て公開。',
-                pt: 'Até 800 caracteres. Lida por um editor antes de publicar.',
-                es: 'Hasta 800 caracteres. Leída por un editor antes de publicar.'
-            }, lang),
+            title:   (V && V.get('lettersModalTitle', lang)) || 'Write to the editor.',
+            lede:    (V && V.get('lettersModalLede',  lang)) || 'Up to 800 characters. Read by a human editor before publication.',
             close:   L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, lang),
             lblSign: L({ en: 'SIGNED AS', ko: '서명', ja: '署名', pt: 'ASSINADO POR', es: 'FIRMADO POR' }, lang),
             phSign:  L({ en: 'Laia, Barcelona', ko: '라이아, 바르셀로나', ja: 'ライア、バルセロナ', pt: 'Laia, Barcelona', es: 'Laia, Barcelona' }, lang),

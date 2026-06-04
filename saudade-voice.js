@@ -203,6 +203,70 @@
         es: 'Los cuatro números que un nómada digital mira cada mañana: <em>cuántos días permite el visado, cuánto tiempo desde la última entrada a un país fiscal, cuándo se interrumpe el seguro de salud, cuándo se presenta la residencia de pensión.</em> Esta página es un calendario, no un consejo.'
     };
 
+    /* brief: ledger empty state — first time a reader opens the page with
+       no entries. Headline is one terse sentence; body is the call to
+       action with the four counters named. JA was 'まだ台帳に何も書かれて
+       いない。' — workable but flat; new line uses 白紙 (blank paper) for
+       the editorial image. */
+    const ledgerEmptyHeadline = {
+        en: 'Nothing on the ledger yet.',
+        ko: '아직 장부에 적힌 것이 없다.',
+        ja: 'まだ台帳は白紙のまま。',
+        pt: 'Nada no livro-razão ainda.',
+        es: 'Nada en el libro mayor todavía.'
+    };
+    const ledgerEmptyBody = {
+        en: 'Add a visa, a tax-residency entry, a health-insurance pause, or a pension filing below. Each entry is a row this newspaper will count from tomorrow morning.',
+        ko: '아래에서 비자·세금 거주일·건강보험 정지·연금 신고를 추가한다. 각 항목은 이 신문이 내일 아침부터 헤아릴 한 줄이 된다.',
+        ja: '下のフォームからビザ・税居住日・健康保険の停止・年金届出を加える。一つひとつが、明朝からこの新聞が数える一行になる。',
+        pt: 'Adicione abaixo um visto, uma entrada de residência fiscal, uma pausa de seguro de saúde ou um registo de pensão. Cada entrada é uma linha que este jornal contará a partir de amanhã de manhã.',
+        es: 'Añada abajo un visado, una entrada de residencia fiscal, una pausa de seguro de salud o un registro de pensión. Cada entrada es una fila que este periódico contará desde mañana por la mañana.'
+    };
+    const ledgerEditorNote = {
+        en: 'A note from the editor. We never store your visa data on a server. It lives on this device only — clear your browser, and it disappears with you.',
+        ko: '편집장의 메모. 비자 데이터는 서버에 저장하지 않는다. 이 기기에만 머문다 — 브라우저를 비우면 함께 사라진다.',
+        ja: '編集長より。ビザの記録はサーバーに残さない。この端末だけにある — ブラウザを消せば、ともに消える。',
+        pt: 'Uma nota do editor. Nunca guardamos os seus dados de visto num servidor. Vivem apenas neste dispositivo — limpe o navegador, e desaparecem consigo.',
+        es: 'Una nota del editor. Nunca guardamos sus datos de visado en un servidor. Viven sólo en este dispositivo — limpie el navegador, y desaparecen con usted.'
+    };
+
+    /* brief: Sunday silence — the constitution §9.1 forbids publishing on
+       Sundays. Two lines: declarative message + resume time. KST is the
+       editorial timezone and stays in Latin letters across all editions
+       (it's how the editorial calendar names itself). */
+    const sundayMessage = {
+        en: 'Saudade does not publish on Sundays.',
+        ko: 'Saudade는 일요일에 쉰다.',
+        ja: 'Saudade は日曜日に発行しない。',
+        pt: 'A Saudade não publica aos domingos.',
+        es: 'Saudade no publica los domingos.'
+    };
+    const sundayResume = {
+        en: 'Dispatches resume Monday at 06:00 KST.',
+        ko: '월요일 새벽 6시(KST) 통신 재개.',
+        ja: '月曜 朝6時(KST)に通信再開。',
+        pt: 'Os despachos voltam segunda às 06h00 KST.',
+        es: 'Los despachos vuelven el lunes a las 06:00 KST.'
+    };
+
+    /* brief: write-to-editor modal — title above the form + one-line lede
+       under it. Voice is plain newspaper: explain what to expect (length
+       limit, human review), nothing else. */
+    const lettersModalTitle = {
+        en: 'Write to the editor.',
+        ko: '편집장에게 편지.',
+        ja: '編集長への手紙。',
+        pt: 'Escrever ao editor.',
+        es: 'Escribir al editor.'
+    };
+    const lettersModalLede = {
+        en: 'Up to 800 characters. Read by a human editor before publication.',
+        ko: '800자 이내. 편집장이 직접 읽고 검토한 뒤 공개.',
+        ja: '八百字まで。編集長が目を通したうえで公開。',
+        pt: 'Até 800 caracteres. Lida por um editor humano antes de publicar.',
+        es: 'Hasta 800 caracteres. Leída por un editor humano antes de publicar.'
+    };
+
     const KEYS = {
         mastTagline,
         listeningHead, listeningItalic,
@@ -213,7 +277,10 @@
         quarterlySubtitle,
         atlasNoteTitle, atlasNoteBody,
         dispatchesNoteTitleFull, dispatchesNoteToggle, dispatchesNoteBody,
-        ledgerIntroEyebrow, ledgerIntroBody
+        ledgerIntroEyebrow, ledgerIntroBody,
+        ledgerEmptyHeadline, ledgerEmptyBody, ledgerEditorNote,
+        sundayMessage, sundayResume,
+        lettersModalTitle, lettersModalLede
     };
 
     const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };

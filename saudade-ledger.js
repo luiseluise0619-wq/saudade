@@ -811,33 +811,15 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
 
         // v7 검토 정정 — 전체 빈 상태 안내 (records 0일 때만)
         // 잡지의 빈 페이지처럼 — 추가 액션 4개 + 편집부 메모.
-        const emptyHeadline = T({
-            en: 'Nothing on the ledger yet.',
-            ko: '아직 장부에 적힌 것이 없다.',
-            ja: 'まだ台帳に何も書かれていない。',
-            pt: 'Nada no livro-razão ainda.',
-            es: 'Nada en el libro mayor todavía.'
-        });
-        const emptyBody = T({
-            en: 'Add a visa, a tax-residency entry, a health-insurance pause, or a pension filing below. Each entry is a row this newspaper will count from tomorrow morning.',
-            ko: '아래에서 비자·세금 거주일·건강보험 정지·연금 신고를 추가한다. 각 항목은 이 신문이 내일 아침부터 헤아릴 한 줄이 된다.',
-            ja: '下のフォームからビザ・税居住日・健康保険の停止・年金届出を加える。一つひとつが、明朝からこの新聞が数える一行になる。',
-            pt: 'Adicione um visto, uma entrada de residência fiscal, uma pausa de seguro de saúde ou um registo de pensão em baixo. Cada entrada é uma linha que este jornal contará a partir de amanhã de manhã.',
-            es: 'Añade un visado, una entrada de residencia fiscal, una pausa de seguro de salud o un registro de pensión abajo. Cada entrada es una fila que este periódico contará desde mañana por la mañana.'
-        });
+        const emptyHeadline = (V && V.get('ledgerEmptyHeadline', _vEd)) || 'Nothing on the ledger yet.';
+        const emptyBody     = (V && V.get('ledgerEmptyBody',     _vEd)) || 'Add a visa, a tax-residency entry, a health-insurance pause, or a pension filing below.';
         const addLabel = {
             visa:      T({ en: 'Add a visa',                ko: '비자 추가',          ja: 'ビザを追加',           pt: 'Adicionar um visto',                  es: 'Añadir un visado' }),
             tax:       T({ en: 'Add a tax-residency entry', ko: '세금 거주일 추가',    ja: '税居住日を追加',        pt: 'Adicionar entrada fiscal',            es: 'Añadir entrada fiscal' }),
             insurance: T({ en: 'Add a health-insurance entry', ko: '건강보험 항목 추가',  ja: '健康保険を追加',        pt: 'Adicionar entrada de seguro',         es: 'Añadir entrada de seguro' }),
             pension:   T({ en: 'Add a pension entry',       ko: '연금 항목 추가',      ja: '年金届出を追加',        pt: 'Adicionar entrada de pensão',         es: 'Añadir entrada de pensión' })
         };
-        const editorNote = T({
-            en: 'A note from the editor. We never store your visa data on a server. It lives on this device only — clear your browser, and it disappears with you.',
-            ko: '편집장의 메모. 비자 데이터는 서버에 저장하지 않는다. 이 기기에만 머문다 — 브라우저를 비우면 함께 사라진다.',
-            ja: '編集長より。ビザの情報はサーバーに保存しない。この端末だけにある — ブラウザを消せば、ともに消える。',
-            pt: 'Uma nota do editor. Nunca guardamos os seus dados de visto num servidor. Vivem apenas neste dispositivo — limpe o navegador, e desaparecem consigo.',
-            es: 'Una nota del editor. Nunca guardamos sus datos de visado en un servidor. Viven sólo en este dispositivo — limpie el navegador, y desaparecen con usted.'
-        });
+        const editorNote = (V && V.get('ledgerEditorNote', _vEd)) || 'A note from the editor.';
         const isLedgerEmpty = records.length === 0;
         const emptyStateHtml = isLedgerEmpty ? `
             <section class="sdd-ld-empty-state">

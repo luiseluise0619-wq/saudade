@@ -974,6 +974,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
 
         // 일요일 휴간 (v6 §9.1)
         if (isSundayToday()) {
+            const sundayMsg = (_V && _V.get('sundayMessage', _vEdNote)) || W.sundayMsg;
+            const sundaySub = (_V && _V.get('sundayResume',  _vEdNote)) || W.sundaySub;
             root.innerHTML = `
                 <header class="sdd-disp-head">
                     <h2 class="sdd-disp-h2">
@@ -982,8 +984,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                     </h2>
                 </header>
                 <section class="sdd-disp-sunday">
-                    <p class="sdd-disp-sunday-line">${escapeHtml(W.sundayMsg)}</p>
-                    <p class="sdd-disp-sunday-sub">${escapeHtml(W.sundaySub)}</p>
+                    <p class="sdd-disp-sunday-line">${escapeHtml(sundayMsg)}</p>
+                    <p class="sdd-disp-sunday-sub">${escapeHtml(sundaySub)}</p>
                 </section>
                 <details class="sdd-disp-foot">
                     <summary class="sdd-disp-disclaimer-toggle">${escapeHtml(noteToggleLabel)}</summary>
