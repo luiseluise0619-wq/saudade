@@ -2137,9 +2137,32 @@ body.section-active::before { content: none !important; }
         const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
         return cycle[week % cycle.length];
     }
+    // v743 — keep the browser chrome (Android URL bar, iOS status notch)
+    // in sync with the active skin. Without this the chrome stays on the
+    // paper colour even when the reader picks dark, so the cover sits
+    // inside a bright frame at night — jarring.
+    const SKIN_THEME_COLOR = {
+        paper:     '#F4ECD6',
+        saturated: '#7A2A1A',
+        dark:      '#18120A'
+    };
+    function updateThemeColorMeta(skin) {
+        const color = SKIN_THEME_COLOR[skin] || SKIN_THEME_COLOR.paper;
+        const metas = document.querySelectorAll('meta[name="theme-color"]');
+        if (!metas.length) {
+            const m = document.createElement('meta');
+            m.name = 'theme-color';
+            m.content = color;
+            document.head.appendChild(m);
+            return;
+        }
+        metas.forEach(m => m.setAttribute('content', color));
+    }
+
     function applySkin(skin) {
         const s = SKINS.includes(skin) ? skin : 'paper';
         document.documentElement.setAttribute('data-skin', s);
+        updateThemeColorMeta(s);
         return s;
     }
     function setSkin(v) {
