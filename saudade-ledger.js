@@ -799,18 +799,8 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         const _vEd = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const headLabel  = (V && V.get('ledgerHead', _vEd))   || 'How many days';
         const headItalic = (V && V.get('ledgerItalic', _vEd)) || 'remain.';
-        const introEyebrow = T({
-            en: 'A LEDGER, IN FOUR COLUMNS.', ko: '네 칸의 장부.',
-            ja: '四欄の台帳。', pt: 'UM LIVRO-RAZÃO, EM QUATRO COLUNAS.',
-            es: 'UN LIBRO MAYOR, EN CUATRO COLUMNAS.'
-        });
-        const introBody = T({
-            en: 'The four numbers a digital nomad watches each morning: <em>how many days the visa permits, how long since the last entry to a tax country, when health insurance pauses, when pension residency files.</em> This page is a calendar, not advice.',
-            ko: '디지털 노마드가 매일 아침 들여다보는 네 가지 숫자다: <em>비자가 허용한 날짜, 가장 최근 입국 후 며칠 지났는가, 건강보험은 언제 정지되는가, 연금 해외체류 신고는 언제인가.</em> 이 페이지는 달력이지 조언이 아니다.',
-            ja: 'デジタルノマドが毎朝確かめる四つの数字 — <em>ビザの許可する日数、最後の入国から何日たったか、健康保険がいつ止まるか、年金の海外居住届はいつか。</em>このページは暦であり、助言ではない。',
-            pt: 'Os quatro números que um nómada digital observa todas as manhãs: <em>quantos dias o visto permite, quanto tempo desde a última entrada num país fiscal, quando o seguro de saúde pausa, quando o registo de pensão é apresentado.</em> Esta página é um calendário, não um conselho.',
-            es: 'Los cuatro números que un nómada digital mira cada mañana: <em>cuántos días permite el visado, cuánto tiempo desde la última entrada a un país fiscal, cuándo se pausa el seguro de salud, cuándo se presenta la residencia de pensión.</em> Esta página es un calendario, no un consejo.'
-        });
+        const introEyebrow = (V && V.get('ledgerIntroEyebrow', _vEd)) || 'A LEDGER, IN FOUR COLUMNS.';
+        const introBody    = (V && V.get('ledgerIntroBody',    _vEd)) || 'The four numbers a digital nomad watches each morning.';
 
         const articleIntro = `
             <article class="sdd-ld-article">

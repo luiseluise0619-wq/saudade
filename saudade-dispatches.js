@@ -679,8 +679,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             todayLabel: 'HOJE', archiveLabel: 'A SEMANA PASSADA', empty: 'Nenhum despacho publicado hoje.'
         },
         es: {
-            1: 'VISADOS Y POLÍTICA', 2: 'MUSEO Y GALERÍA', 3: 'AVISOS DEL AYUNTAMIENTO',
-            4: 'NUEVO EN LA MESA', 5: 'LA FOTOGRAFÍA DEL EDITOR', 6: 'NOTICIAS QUIETAS',
+            1: 'VISADOS Y POLÍTICA', 2: 'MUSEOS Y GALERÍAS', 3: 'AVISOS MUNICIPALES',
+            4: 'NUEVO EN LA REDACCIÓN', 5: 'LA FOTOGRAFÍA DEL EDITOR', 6: 'NOTICIAS QUIETAS',
             sundayMsg: 'Saudade no publica los domingos.',
             sundaySub:  'Los despachos vuelven el lunes a las 06:00 KST.',
             todayLabel: 'HOY', archiveLabel: 'LA SEMANA PASADA', empty: 'Aún no hay despacho publicado hoy.'
@@ -966,25 +966,11 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const warn = filedAgeDays > 2 ? ' is-warn' : '';
             ageChipHtml = ` <span class="sdd-disp-stale${warn}">${escapeHtml(ageLabel)}</span>`;
         }
-        const noteTitle = T({
-            en: 'A note on sources.', ko: '출처에 대한 메모.',
-            ja: '出典についての覚書。', pt: 'Uma nota sobre as fontes.',
-            es: 'Una nota sobre las fuentes.'
-        });
-        const noteBody = T({
-            en: 'Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. We do not republish AP, Reuters, or Bloomberg copy. We never use photographs we did not take ourselves. Dispatches are AI-drafted and AI-reviewed against the magazine’s constitution before filing.',
-            ko: '각 디스패치는 명시된 출처에서 우리의 언어로 다시 쓴다. 인용은 25 단어를 넘지 않는다. 원문 링크를 단다. AP·Reuters·Bloomberg 의 기사는 재배포하지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 디스패치는 AI 가 초안을 작성하고, 발행 전 AI 가 매거진 헌법에 어긋나지 않는지 한 번 더 검수한다.',
-            ja: '各通信は明示された出典から自らの言葉で書き直す。引用は二十五語以内。出典リンクを付ける。AP・Reuters・Bloomberg の記事は再配布しない。自身で撮影していない写真は使わない。通信は AI が起草し、発行前に AI がもう一度、本誌憲法に照らして検閲する。',
-            pt: 'Cada despacho é reescrito em nossas próprias palavras a partir da fonte listada. Citamos no máximo vinte e cinco palavras. Ligamos ao original. Não republicamos AP, Reuters ou Bloomberg. Nunca usamos fotografias que não tirámos. Os despachos são redigidos por IA e revistos por uma segunda passagem de IA contra a constituição editorial antes de serem publicados.',
-            es: 'Cada despacho se reescribe con nuestras propias palabras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. No reeditamos copia de AP, Reuters o Bloomberg. Nunca usamos fotografías que no tomamos nosotros. Los despachos los redacta una IA y luego una segunda pasada de IA los revisa frente a la constitución editorial antes de su publicación.'
-        });
-
-        // v7 검토 정정 — 면책 라벨 (toggle summary)
-        const noteToggleLabel = T({
-            en: 'A note on sources', ko: '출처에 대한 메모',
-            ja: '出典についての覚書', pt: 'Uma nota sobre as fontes',
-            es: 'Una nota sobre las fuentes'
-        });
+        const _vEdNote = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const _V = window.SAUDADE_VOICE;
+        const noteTitle       = (_V && _V.get('dispatchesNoteTitleFull', _vEdNote)) || 'A note on sources.';
+        const noteBody        = (_V && _V.get('dispatchesNoteBody',      _vEdNote)) || 'Each dispatch is rewritten in our own words from the source listed.';
+        const noteToggleLabel = (_V && _V.get('dispatchesNoteToggle',    _vEdNote)) || 'A note on sources';
 
         // 일요일 휴간 (v6 §9.1)
         if (isSundayToday()) {

@@ -139,6 +139,70 @@
         es: 'Tres por ciudad.'
     };
 
+    /* brief: editorial note shown at the bottom of the atlas page. Explains
+       the listing bar (visited or vetted), no payment, no borrowed photos. */
+    const atlasNoteTitle = {
+        en: 'A note on places.',
+        ko: '편집부 메모.',
+        ja: '場所についての覚書。',
+        pt: 'Uma nota sobre os lugares.',
+        es: 'Una nota sobre los lugares.'
+    };
+    const atlasNoteBody = {
+        en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
+        ko: '직접 방문한 곳만 게재한다. 입점료는 받지 않는다. 본인이 촬영하지 않은 사진은 쓰지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
+        ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使わない。掲載辞退は luiseluise0619@gmail.com まで。',
+        pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e quiser ser removido, escreva para luiseluise0619@gmail.com.',
+        es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea retirarse, escriba a luiseluise0619@gmail.com.'
+    };
+
+    /* brief: editorial note shown at the bottom of the dispatches page.
+       Explains how dispatches are written (own words, max 25-word quotes,
+       linked source, no wire-service reuse, no borrowed photos, AI-drafted
+       and AI-reviewed against the constitution). Voice is matter-of-fact. */
+    const dispatchesNoteTitleFull = {
+        en: 'A note on sources.',
+        ko: '출처에 대한 메모.',
+        ja: '出典についての覚書。',
+        pt: 'Uma nota sobre as fontes.',
+        es: 'Una nota sobre las fuentes.'
+    };
+    const dispatchesNoteToggle = {
+        en: 'A note on sources',
+        ko: '출처에 대한 메모',
+        ja: '出典についての覚書',
+        pt: 'Uma nota sobre as fontes',
+        es: 'Una nota sobre las fuentes'
+    };
+    /* JA was 検閲する (censor) — wrong word; the action is 校閲 (proofread /
+       editorial review). Fixed here as part of the voice migration. */
+    const dispatchesNoteBody = {
+        en: 'Each dispatch is rewritten in our own words from the source listed. We quote no more than twenty-five words. We link to the original. We do not republish AP, Reuters, or Bloomberg copy. We never use photographs we did not take ourselves. Dispatches are AI-drafted and AI-reviewed against the magazine’s constitution before filing.',
+        ko: '각 디스패치는 명시된 출처를 바탕으로 우리의 언어로 다시 쓴다. 인용은 25 단어를 넘지 않는다. 원문 링크를 단다. AP·Reuters·Bloomberg 기사는 재배포하지 않는다. 본인이 촬영하지 않은 사진은 쓰지 않는다. 디스패치는 AI 가 초안을 잡고, 발행 전 다시 한 번 AI 가 매거진 헌법에 비추어 검수한다.',
+        ja: '各通信は明示された出典から自らの言葉で書き直す。引用は二十五語以内。出典リンクを付ける。AP・Reuters・Bloomberg の記事は再配布しない。自身で撮影していない写真は使わない。通信は AI が起草し、発行前に AI がもう一度、本誌憲法に照らして校閲する。',
+        pt: 'Cada despacho é reescrito em palavras nossas a partir da fonte listada. Citamos no máximo vinte e cinco palavras. Ligamos ao original. Não republicamos AP, Reuters ou Bloomberg. Nunca usamos fotografias que não tirámos. Os despachos são redigidos por IA e revistos por uma segunda passagem de IA contra a constituição editorial antes de serem publicados.',
+        es: 'Cada despacho se reescribe con palabras nuestras a partir de la fuente indicada. Citamos no más de veinticinco palabras. Enlazamos al original. No reeditamos copia de AP, Reuters o Bloomberg. Nunca usamos fotografías que no tomamos nosotros. Los despachos los redacta una IA y luego una segunda pasada de IA los revisa frente a la constitución editorial antes de su publicación.'
+    };
+
+    /* brief: ledger intro — sits above the four counters (visa / tax /
+       insurance / pension). Eyebrow is uppercase formal; body is one
+       paragraph with the four numbers in italic, ending with the
+       editorial disclaimer "a calendar, not advice." */
+    const ledgerIntroEyebrow = {
+        en: 'A LEDGER, IN FOUR COLUMNS.',
+        ko: '네 칸의 장부.',
+        ja: '四欄の台帳。',
+        pt: 'UM LIVRO-RAZÃO, EM QUATRO COLUNAS.',
+        es: 'UN LIBRO MAYOR, EN CUATRO COLUMNAS.'
+    };
+    const ledgerIntroBody = {
+        en: 'The four numbers a digital nomad watches each morning: <em>how many days the visa permits, how long since the last entry to a tax country, when health insurance pauses, when pension residency files.</em> This page is a calendar, not advice.',
+        ko: '디지털 노마드가 매일 아침 들여다보는 네 가지 숫자: <em>비자가 허용한 날짜, 가장 최근 입국 후 며칠이 지났는가, 건강보험은 언제 정지되는가, 연금 해외체류 신고는 언제인가.</em> 이 페이지는 달력이지 조언이 아니다.',
+        ja: 'デジタルノマドが毎朝確かめる四つの数字 — <em>ビザの許す日数、最後の入国から何日たったか、健康保険がいつ止まるか、年金の海外居住届はいつか。</em> このページは暦であり、助言ではない。',
+        pt: 'Os quatro números que um nómada digital observa todas as manhãs: <em>quantos dias o visto permite, quanto tempo desde a última entrada num país fiscal, quando o seguro de saúde se interrompe, quando se apresenta o registo da pensão.</em> Esta página é um calendário, não um conselho.',
+        es: 'Los cuatro números que un nómada digital mira cada mañana: <em>cuántos días permite el visado, cuánto tiempo desde la última entrada a un país fiscal, cuándo se interrumpe el seguro de salud, cuándo se presenta la residencia de pensión.</em> Esta página es un calendario, no un consejo.'
+    };
+
     const KEYS = {
         mastTagline,
         listeningHead, listeningItalic,
@@ -146,7 +210,10 @@
         ledgerHead, ledgerItalic,
         dispatchesHead, dispatchesEdited, dispatchesResting,
         welcomeEyebrow, welcomeHeadline, welcomeBody,
-        quarterlySubtitle
+        quarterlySubtitle,
+        atlasNoteTitle, atlasNoteBody,
+        dispatchesNoteTitleFull, dispatchesNoteToggle, dispatchesNoteBody,
+        ledgerIntroEyebrow, ledgerIntroBody
     };
 
     const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };

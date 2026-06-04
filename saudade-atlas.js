@@ -757,19 +757,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             `;
         }).join('');
 
-        // Notes from the desk (Handoff v2 §7.4) — i18n
-        const noteTitle = T({
-            en: 'A note on places.', ko: '편집부 메모.',
-            ja: '場所についての覚書。', pt: 'Uma nota sobre os lugares.',
-            es: 'Una nota sobre los lugares.'
-        });
-        const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
-        });
+        // Notes from the desk (Handoff v2 §7.4) — voice-owned.
+        const _vEdNote = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const _V = window.SAUDADE_VOICE;
+        const noteTitle = (_V && _V.get('atlasNoteTitle', _vEdNote)) || 'A note on places.';
+        const noteBody  = (_V && _V.get('atlasNoteBody',  _vEdNote)) || 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.';
         const noMatches = T({
             en: 'No matches.', ko: '검색 결과 없음.', ja: '該当なし。',
             pt: 'Sem resultados.', es: 'Sin resultados.'
@@ -978,18 +970,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
 
         // v7 §8.10 면책 노출 필요 — list footer 와 동일 카피
         const T = window.SAUDADE_T || ((s) => s.en);
-        const noteTitle = T({
-            en: 'A note on places.', ko: '편집부 메모.',
-            ja: '場所についての覚書。', pt: 'Uma nota sobre os lugares.',
-            es: 'Una nota sobre los lugares.'
-        });
-        const noteBody = T({
-            en: 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.',
-            ko: '직접 방문한 곳만 게재한다. 입점료를 받지 않는다. 본인이 촬영하지 않은 사진은 사용하지 않는다. 삭제를 원하는 점주는 luiseluise0619@gmail.com 으로 연락 바람.',
-            ja: '実際に訪れた場所のみを掲載する。掲載料は受け取らない。自身で撮影していない写真は使用しない。掲載辞退は luiseluise0619@gmail.com まで。',
-            pt: 'Listamos apenas o que visitámos. Não aceitamos pagamento pela inclusão. Nunca usamos uma fotografia que não seja nossa. Se é proprietário e deseja ser removido, escreva para luiseluise0619@gmail.com.',
-            es: 'Sólo listamos lo que hemos visitado. No aceptamos pago por inclusión. Nunca usamos una fotografía que no sea nuestra. Si es propietario y desea ser retirado, escriba a luiseluise0619@gmail.com.'
-        });
+        const _vEdNote2 = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        const _V2 = window.SAUDADE_VOICE;
+        const noteTitle = (_V2 && _V2.get('atlasNoteTitle', _vEdNote2)) || 'A note on places.';
+        const noteBody  = (_V2 && _V2.get('atlasNoteBody',  _vEdNote2)) || 'We list only what we have visited. We accept no payment for inclusion. We never use a photograph that is not our own. If you are an owner and would like to be removed, write to luiseluise0619@gmail.com.';
 
         detail.innerHTML = `
             <header class="sdd-atlas-d-head">
