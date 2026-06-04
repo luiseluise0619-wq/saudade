@@ -563,6 +563,37 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     opacity: 0.55;
     font-size: clamp(20px, 2.4vw, 30px);
 }
+/* v741 — skeleton rows that hint at real layout (city eyebrow + two-line
+   headline + one source line) so the cover doesn't collapse on first paint
+   while dispatches.json is in flight. Animated shimmer is intentionally
+   slow — newspaper register, not SaaS-spinner. */
+.sdd-cover-head--pending {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clamp(6px, 0.8vw, 10px);
+}
+.sdd-cover-head--pending .dots { display: none; }
+.sdd-cover-head--pending::before,
+.sdd-cover-head--pending::after {
+    content: '';
+    display: block;
+    height: clamp(12px, 1.4vw, 16px);
+    background: linear-gradient(90deg,
+        rgba(11,11,15,0.05) 0%, rgba(11,11,15,0.10) 50%, rgba(11,11,15,0.05) 100%);
+    background-size: 200% 100%;
+    animation: sddPendingShimmer 2.4s ease-in-out infinite;
+    border-radius: 1px;
+}
+.sdd-cover-head--pending::before { width: 36%; height: 9px; }
+.sdd-cover-head--pending::after  { width: 86%; }
+@keyframes sddPendingShimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-head--pending::before,
+    .sdd-cover-head--pending::after { animation: none; }
+}
 /* Sunday silence + empty-state messages — single-row hero copy when
    there are no headlines to show (KST Sunday per §9.1, or the cron
    hasn't filed yet). Same vertical stack as a real headline so the
