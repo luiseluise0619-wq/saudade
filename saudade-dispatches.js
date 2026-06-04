@@ -1004,17 +1004,8 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const todaySection = W[wdIdx] || W[1];
         let todayHtml;
         if (!followingList.length) {
-            const onboardingHead = T({
-                en: 'No cities yet.', ko: '아직 도시가 없다.', ja: 'まだ街がない。',
-                pt: 'Ainda sem cidades.', es: 'Aún sin ciudades.'
-            });
-            const onboardingBody = T({
-                en: 'Pick a starting set below — or open The Desk to choose three cities yourself.',
-                ko: '아래에서 시작 묶음을 고른다 — 또는 데스크에서 세 도시를 직접 고른다.',
-                ja: '下から始まりの組み合わせを選ぶ — またはデスクで三つの街を自分で選ぶ。',
-                pt: 'Escolha um conjunto inicial abaixo — ou abra A Mesa para escolher três cidades você mesmo.',
-                es: 'Elija un conjunto inicial abajo — o abra La Mesa para elegir tres ciudades usted mismo.'
-            });
+            const onboardingHead = (V && V.get('dispatchesOnboardHead', _vEd)) || 'No cities yet.';
+            const onboardingBody = (V && V.get('dispatchesOnboardBody', _vEd)) || 'Pick a starting set below — or open The Desk to choose three cities yourself.';
             const pairings = window.SAUDADE_FOLLOWING?.pairings?.() || [];
             const pairingsHtml = pairings.map(p => {
                 const lbl = window.SAUDADE_FOLLOWING.pairingLabel(p, ed);

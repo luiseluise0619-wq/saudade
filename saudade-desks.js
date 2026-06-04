@@ -208,15 +208,10 @@
 
     // ─── Apply modal ─────────────────────────────────────────────────────
     function copyApply(lang) {
+        const V = window.SAUDADE_VOICE;
         return {
-            title:   L({ en: 'Become a stringer.', ko: '통신원으로 합류.', ja: '通信員になる。', pt: 'Tornar-se correspondente.', es: 'Hazte corresponsal.' }, lang),
-            lede:    L({
-                en: 'A column under the saudade masthead, signed with your name. We invite slowly — within two weeks if it fits.',
-                ko: 'saudade 마스트헤드 아래 본인 이름의 칼럼. 천천히 초대한다 — 어울리면 2주 안에 답장.',
-                ja: 'saudadeのマストヘッド下に自分の名前で。ゆっくり招く — 合えば二週間以内に返信。',
-                pt: 'Uma coluna sob a cabeçalho da saudade, com o seu nome. Convidamos devagar — duas semanas se encaixar.',
-                es: 'Una columna bajo la cabecera de saudade, con su nombre. Invitamos despacio — dos semanas si encaja.'
-            }, lang),
+            title:   (V && V.get('desksApplyTitle', lang)) || 'Become a stringer.',
+            lede:    (V && V.get('desksApplyLede',  lang)) || 'A column under the saudade masthead, signed with your name.',
             close:   L({ en: 'CLOSE', ko: '닫기', ja: '閉じる', pt: 'FECHAR', es: 'CERRAR' }, lang),
             lblName: L({ en: 'NAME', ko: '이름', ja: '名前', pt: 'NOME', es: 'NOMBRE' }, lang),
             phName:  L({ en: 'Inês Coutinho',     ko: '이네스 코티뇨', ja: 'イネス・コチーニョ', pt: 'Inês Coutinho', es: 'Inês Coutinho' }, lang),

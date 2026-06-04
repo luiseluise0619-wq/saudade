@@ -326,6 +326,72 @@
         es: 'Cada pista se graba en persona o se obtiene bajo Creative Commons en Freesound.org. Sin música. Sin conversación. La lista completa de licencias está en la página de créditos.'
     };
 
+    /* brief: dispatches onboarding — what a reader sees when they have
+       not picked any cities to follow yet. Headline + one-line body that
+       points at the pairings list below or "The Desk". PT/ES were using
+       "A Mesa / La Mesa" for The Desk; corrected here to redação /
+       redacción for consistency with the cover. */
+    const dispatchesOnboardHead = {
+        en: 'No cities yet.',
+        ko: '아직 도시가 없다.',
+        ja: 'まだ街がない。',
+        pt: 'Ainda sem cidades.',
+        es: 'Aún sin ciudades.'
+    };
+    const dispatchesOnboardBody = {
+        en: 'Pick a starting set below — or open The Desk to choose three cities yourself.',
+        ko: '아래에서 시작 묶음을 고른다 — 또는 데스크에서 세 도시를 직접 고른다.',
+        ja: '下から始まりの組み合わせを選ぶ — またはデスクで三つの街を自分で選ぶ。',
+        pt: 'Escolha um conjunto inicial abaixo — ou abra A Redação para escolher três cidades você mesmo.',
+        es: 'Elija un conjunto inicial abajo — o abra La Redacción para elegir tres ciudades usted mismo.'
+    };
+
+    /* brief: letters page header — section title shown above the list of
+       published letters. Three lines: title (uppercase eyebrow style),
+       write-your-own CTA, and the empty-state line for when none have
+       been published yet. */
+    const lettersPageTitle = {
+        en: 'LETTERS TO THE EDITOR',
+        ko: '편집장에게 보낸 편지',
+        ja: '編集長への手紙',
+        pt: 'CARTAS AO EDITOR',
+        es: 'CARTAS AL EDITOR'
+    };
+    const lettersPageWrite = {
+        en: 'Write your own',
+        ko: '직접 쓰기',
+        ja: '一通書く',
+        pt: 'Escrever uma',
+        es: 'Escribir una'
+    };
+    const lettersPageNone = {
+        en: 'No letters published yet. Be the first.',
+        ko: '아직 공개된 편지가 없다. 첫 편지가 되어 보라.',
+        ja: 'まだ公開された手紙はない。最初の一通を。',
+        pt: 'Ainda sem cartas publicadas. Seja o primeiro.',
+        es: 'Aún sin cartas publicadas. Sea el primero.'
+    };
+
+    /* brief: stringer application modal — title + lede explaining what a
+       stringer column at saudade is. PT was 'sob A cabeçalho' (wrong
+       article gender — cabeçalho is masculine); fixed to 'sob O cabeçalho'
+       here. ES was 'Hazte' (informal tú); revised to 'Hágase' (usted)
+       for register consistency with the rest of the modal. */
+    const desksApplyTitle = {
+        en: 'Become a stringer.',
+        ko: '통신원으로 합류.',
+        ja: '通信員になる。',
+        pt: 'Tornar-se correspondente.',
+        es: 'Hágase corresponsal.'
+    };
+    const desksApplyLede = {
+        en: 'A column under the saudade masthead, signed with your name. We invite slowly — within two weeks if it fits.',
+        ko: 'saudade 마스트헤드 아래 본인 이름의 칼럼. 천천히 초대한다 — 어울리면 2주 안에 답장.',
+        ja: 'saudade のマストヘッド下に自分の名前で。ゆっくり招く — 合えば二週間以内に返信。',
+        pt: 'Uma coluna sob o cabeçalho da saudade, com o seu nome. Convidamos devagar — duas semanas se encaixar.',
+        es: 'Una columna bajo la cabecera de saudade, con su nombre. Invitamos despacio — dos semanas si encaja.'
+    };
+
     const KEYS = {
         mastTagline,
         listeningHead, listeningItalic,
@@ -341,7 +407,10 @@
         sundayMessage, sundayResume,
         lettersModalTitle, lettersModalLede,
         atlasEmptyHeadline, atlasEmptyBody, atlasEmptySwitch, atlasEmptySubmit, atlasNoMatches,
-        listeningSoundNoteTitle, listeningSoundNoteBody
+        listeningSoundNoteTitle, listeningSoundNoteBody,
+        dispatchesOnboardHead, dispatchesOnboardBody,
+        lettersPageTitle, lettersPageWrite, lettersPageNone,
+        desksApplyTitle, desksApplyLede
     };
 
     const VOICE = { en: {}, ko: {}, ja: {}, pt: {}, es: {} };

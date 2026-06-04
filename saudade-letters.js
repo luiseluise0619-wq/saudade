@@ -298,9 +298,9 @@
         const dRef = opts.dispatch_ref || '';
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         const c    = {
-            title: L({ en: 'LETTERS TO THE EDITOR', ko: '편집장에게 보낸 편지', ja: '編集長への手紙', pt: 'CARTAS AO EDITOR', es: 'CARTAS AL EDITOR' }, ed),
-            write: L({ en: 'Write your own', ko: '직접 쓰기', ja: '書く', pt: 'Escrever uma', es: 'Escribir una' }, ed),
-            none:  L({ en: 'No letters published yet. Be the first.', ko: '아직 공개된 편지가 없다. 첫 편지가 되어 보라.', ja: 'まだ公開された手紙はない。最初の一通を。', pt: 'Ainda sem cartas publicadas. Seja o primeiro.', es: 'Aún sin cartas publicadas. Sea el primero.' }, ed)
+            title: (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('lettersPageTitle', ed)) || 'LETTERS TO THE EDITOR',
+            write: (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('lettersPageWrite', ed)) || 'Write your own',
+            none:  (window.SAUDADE_VOICE && window.SAUDADE_VOICE.get('lettersPageNone',  ed)) || 'No letters published yet. Be the first.'
         };
 
         let letters = [];
