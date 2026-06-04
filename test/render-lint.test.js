@@ -338,6 +338,54 @@ test('SAUDADE_EDITION export in editorial.js includes the skin API (setSkin, ski
     }
 });
 
+test('saudade-voice.js: every key has a non-empty string in all 5 editions', () => {
+    // Added after the per-edition voice migration (PR #141 ff.). The voice
+    // file is the single source of truth for ~45 voice-bearing strings.
+    // A merge that accidentally deletes one language's value for a key
+    // would silently fall back to EN at runtime — quiet regression.
+    // This test loads the module in a fake window, walks the KEYS object,
+    // and asserts presence + non-emptiness for every (key, language) pair.
+    const src = read('saudade-voice.js');
+    const fakeWindow = {};
+    new Function('window', src)(fakeWindow);
+    const V = fakeWindow.SAUDADE_VOICE;
+    assert.ok(V && typeof V.get === 'function', 'voice file did not register window.SAUDADE_VOICE.get');
+    const LANGS = ['en', 'ko', 'ja', 'pt', 'es'];
+    assert.deepStrictEqual(V.langs, LANGS, 'voice langs list does not match the 5 editions');
+    // Extract the KEYS block to know every key's name.
+    const m = src.match(/const KEYS\s*=\s*\{([\s\S]*?)\};/);
+    assert.ok(m, 'voice: KEYS block not found');
+    const keyNames = m[1]
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/\/\/[^\n]*/g, '')
+        .split(/[,\n]/)
+        .map(s => s.trim())
+        .filter(Boolean);
+    assert.ok(keyNames.length >= 40, `voice: only ${keyNames.length} keys found; expected ≥40 after migration waves`);
+    for (const k of keyNames) {
+        for (const L of LANGS) {
+            const v = V.get(k, L);
+            // length >= 1: PT "A" (article) and similar single-char real
+            // words are legitimate; we only ban empty / undefined.
+            assert.ok(typeof v === 'string' && v.length >= 1,
+                `voice key "${k}" missing or empty in edition "${L}"`);
+            // EN fallback detection — non-EN should not silently return EN.
+            if (L !== 'en') {
+                const enVal = V.get(k, 'en');
+                // It's legitimate for Cafés / visitados / editados to overlap
+                // across romance languages (real cognates). Whitelist those.
+                const COGNATE_OK = new Set([
+                    'atlasHead', 'atlasItalic', 'dispatchesEdited'
+                ]);
+                if (!COGNATE_OK.has(k)) {
+                    assert.notStrictEqual(v, enVal,
+                        `voice key "${k}" in "${L}" is identical to EN — likely a missing native rendering`);
+                }
+            }
+        }
+    }
+});
+
 test('no inline onload="this.classList.add..." in live JS — CSP blocks it', () => {
     // Caught twice now: #120 (listening room city photo) and #129 (atlas
     // cafe photo). The page CSP is
