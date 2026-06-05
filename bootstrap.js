@@ -43,7 +43,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const SAUDADE_RELEASE = 'v657';
+const SAUDADE_RELEASE = 'v659';
 window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp cache-buster query strings
 
 // v557 — v1 출시 정리: 삭제된 모듈 (dancing-cat, movies, games, music-charts,
@@ -123,6 +123,24 @@ window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp
 //        10초 도는 것 차단 (early return). saudade 가 globe 안 그림.
 window.__CDN_READY = true;
 window.AURA_USE_2D_MAP = true;
+
+// ─── 4b) Cafe-mode trigger from the manifest shortcut.
+//        manifest.json has a "Cafe Mode" shortcut → ?mode=cafe; the CSS
+//        in saudade-masthead/hud/listening/etc all references
+//        body.cafe-mode but no JS ever added the class. v659: add it
+//        on boot when the query is present, so the shortcut becomes a
+//        real entry point instead of a dead-end link.
+(function cafeModeFromQuery() {
+    try {
+        const p = new URLSearchParams(location.search);
+        if (p.get('mode') === 'cafe') {
+            const apply = () => document.body && document.body.classList.add('cafe-mode');
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', apply);
+            } else { apply(); }
+        }
+    } catch (e) {}
+})();
 
 // ─── 5) 로딩 오버레이 fade — saudade-boot.js 가 처리.
 //        v650 — moved the cover-rendered listener + backstop timers into

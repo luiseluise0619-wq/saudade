@@ -94,19 +94,14 @@ html, body {
 </main>
 
 <!-- Module loaded by the editorial bundle on the cover; here we load it
-     standalone for direct visits to /desks. -->
-<script src="saudade-tokens.css"></script>
-<script defer src="saudade-edition.js?v=v641"></script>
-<script defer src="saudade-auth.js?v=v641"></script>
-<script defer src="saudade-desks.js?v=v641"></script>
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        if (window.SAUDADE_DESKS && window.SAUDADE_DESKS.renderIndex) {
-            window.SAUDADE_DESKS.renderIndex('#sddDesksHost');
-        }
-    }, 80);
-});
-</script>
+     standalone for direct visits to /desks.
+     v659 — was `<script src="saudade-tokens.css">` (CSS loaded as JS,
+     parser choked on the first `:` it saw → console error in production).
+     The tokens stylesheet is already linked above; this entry needs only
+     the JS bootstrap. -->
+<script defer src="saudade-edition.js?v=v659"></script>
+<script defer src="saudade-auth.js?v=v659"></script>
+<script defer src="saudade-desks.js?v=v659"></script>
+<script defer src="desks-bootstrap.js?v=v659"></script>
 </body>
 </html>

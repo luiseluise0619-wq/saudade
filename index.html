@@ -13,7 +13,7 @@
     <meta name="description" content="Saudade — a daily magazine for digital nomads. Weather, dispatches, atlas, listening room. Quiet by design." />
     <!-- 서버 엔드포인트 (배포 시 설정) - 비워두면 로컬 DB만 사용 -->
     <!-- 부트 로직 (서버 URL · 캐시 마이그 · SW · CDN 로딩 · 로딩 타임아웃) — bootstrap.js 한 곳으로 통합 -->
-    <script src="bootstrap.js?v=v657"></script>
+    <script src="bootstrap.js?v=v659"></script>
     <meta name="theme-color" content="#F2EEE3" />
     <!-- v598 SAUDADE — favicon = 동심원 두 개 (워드마크 생략, 16px 가독성).
          paper 배경 + ink 링. 어떤 그라디언트도 없음. -->
@@ -99,39 +99,39 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,0..100;1,9..144,300..500,0..100&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&family=Shippori+Mincho+B1:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Infant:ital,wght@1,300;0,400&family=Crimson+Pro:ital,wght@0,400;1,400;0,500&display=swap"
         rel="stylesheet" />
     <!-- v562: design tokens (Linear/Raycast/Vercel hybrid) — style.css 보다 먼저 로드 -->
-    <link rel="stylesheet" href="design-tokens.css?v=v657" />
+    <link rel="stylesheet" href="design-tokens.css?v=v659" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <!-- Geist Mono — mono-num / eyebrow / FX 숫자 표시용 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css" />
-    <link rel="stylesheet" href="style.css?v=v657" />
+    <link rel="stylesheet" href="style.css?v=v659" />
     <!-- v598 SAUDADE 스킨 — paper / ink / rust 매거진 톤. style.css 보다 뒤에 로드해서 강제 override.
          tokens → typography → skin 순서. -->
-    <link rel="stylesheet" href="saudade-tokens.css?v=v657" />
-    <link rel="stylesheet" href="saudade-typography.css?v=v657" />
+    <link rel="stylesheet" href="saudade-tokens.css?v=v659" />
+    <link rel="stylesheet" href="saudade-typography.css?v=v659" />
     <!-- v636 microtypography — opsz, tnum, hyphens, balanced wrap, hanging-punctuation -->
-    <link rel="stylesheet" href="saudade-microtype.css?v=v657" />
+    <link rel="stylesheet" href="saudade-microtype.css?v=v659" />
     <!-- v636 unified empty-state look across every section -->
-    <link rel="stylesheet" href="saudade-empty.css?v=v657" />
+    <link rel="stylesheet" href="saudade-empty.css?v=v659" />
     <!-- v608 SAUDADE Handoff v2 — 5 edition DNA tokens (en/ko/ja/pt/es) -->
-    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v657" />
-    <link rel="stylesheet" href="saudade-print.css?v=v657" media="print" />
+    <link rel="stylesheet" href="saudade-edition-tokens.css?v=v659" />
+    <link rel="stylesheet" href="saudade-print.css?v=v659" media="print" />
     <!-- Atom feed for nomad-friendly readers (Feedly, NetNewsWire, NewsBlur) -->
     <link rel="alternate" type="application/atom+xml" title="saudade — dispatches (en)"
           href="/feed.atom?edition=en" />
-    <link rel="stylesheet" href="saudade-skin.css?v=v657" />
-    <link rel="stylesheet" href="style-color.css?v=v657" />
+    <link rel="stylesheet" href="saudade-skin.css?v=v659" />
+    <link rel="stylesheet" href="style-color.css?v=v659" />
     <!-- globe.gl + 로딩 안전장치는 bootstrap.js 에서 처리 -->
 
 
     <!-- SECRETS - 가장 먼저 로드 (window.AURA_SERVER 등 설정) -->
     <!-- ⚠️ aura-secrets.js는 .gitignore에 포함되어 git에 올라가지 않음 -->
-    <script src="aura-secrets.js?v=v657"></script>
+    <script src="aura-secrets.js?v=v659"></script>
     <!-- CONSENT (GDPR/PIPA) — must load before any analytics or tracking script -->
-    <script src="consent.js?v=v657"></script>
+    <script src="consent.js?v=v659"></script>
     <!-- v651 — minimal boot helpers: toast, fade overlay, debounce/throttle,
          pausableInterval (auto-pauses when tab hidden — battery + heat),
          haptic. Replaces ~239 KB of legacy modules in ~5 KB. -->
-    <script defer src="saudade-boot.js?v=v657"></script>
+    <script defer src="saudade-boot.js?v=v659"></script>
 
     <!-- v649 dead-code purge: ~417 KB of legacy AURA modules removed
          (app.js / ambient-mode.js / cafe-mode.js / city-videos.js /
@@ -143,16 +143,16 @@
     <!-- v657 — saudade.editorial.js bundles edition + cover + cover-edition + masthead
          into one HTTP request (was 4 separate loads). Built by `npm run bundle`,
          committed alongside source. CI checks for drift against /scripts/build-bundle.js. -->
-    <script defer src="saudade.editorial.js?v=v657"></script>
+    <script defer src="saudade.editorial.js?v=v659"></script>
     <!-- v623 Handoff v6 §5 — 도시 시스템 (home + adjacent + Switch the Desk) -->
-    <script defer src="saudade-city.js?v=v657"></script>
+    <script defer src="saudade-city.js?v=v659"></script>
     <!-- v8 §02 — 사용자 도시 선택 Dispatches (Following 3) -->
-    <script defer src="saudade-following.js?v=v657"></script>
+    <script defer src="saudade-following.js?v=v659"></script>
     <!-- v8 §13 — 약한 연결 표시 (M3 활성화 시 자동 노출, 데이터 없으면 hide) -->
-    <script defer src="saudade-weak-signals.js?v=v657"></script>
+    <script defer src="saudade-weak-signals.js?v=v659"></script>
     <!-- v614 — print HUD corner marks (헌법 §1.4) -->
-    <script defer src="saudade-hud.js?v=v657"></script>
-    <script defer src="saudade-rings.js?v=v657"></script>
+    <script defer src="saudade-hud.js?v=v659"></script>
+    <script defer src="saudade-rings.js?v=v659"></script>
     <!-- <script defer src="saudade-cover.js"></script>           in saudade.editorial.js -->
     <!-- <script defer src="saudade-cover-edition.js"></script>   in saudade.editorial.js -->
     <!-- <script defer src="saudade-masthead.js"></script>        in saudade.editorial.js -->
@@ -165,38 +165,38 @@
       modules. Individual sources stay in the tree for dev iteration — their
       IIFE guards (`if (window.X) return;`) make them no-ops if also loaded.
     -->
-    <script defer src="saudade.core.js?v=v657"></script>
+    <script defer src="saudade.core.js?v=v659"></script>
     <!-- footer-rule is in saudade.core.js -->
-    <!-- <script defer src="saudade-footer-rule.js?v=v657"></script>     in bundle -->
+    <!-- <script defer src="saudade-footer-rule.js?v=v659"></script>     in bundle -->
     <!-- v604 SAUDADE 보강 — § 04 NEXT ISSUE wrapper + wordmark 인라인 + skins C/D -->
-    <script defer src="saudade-wordmark.js?v=v657"></script>
+    <script defer src="saudade-wordmark.js?v=v659"></script>
     <!-- v605 정합성 — § 02 ATLAS + § 03 OVERLAP + colophon (헌법 §4-3, §4-4, 콜로폰) -->
-    <script defer src="saudade-atlas.js?v=v657"></script>
+    <script defer src="saudade-atlas.js?v=v659"></script>
     <!-- v7 §8 PR1 — Atlas paper map (MapLibre lazy + OSM raster + paper-tone CSS filter) -->
-    <script defer src="saudade-atlas-map.js?v=v657"></script>
+    <script defer src="saudade-atlas-map.js?v=v659"></script>
     <!-- v7 §8 PR2 — Atlas GPS · 사전 모달 · 핀 fallback · 사용자 위치 마커 (§8.1·§8.2·§8.3·§8.5) -->
-    <script defer src="saudade-atlas-gps.js?v=v657"></script>
+    <script defer src="saudade-atlas-gps.js?v=v659"></script>
     <!-- v7 §8 PR3 — Atlas walkring 동심원 200m/500m/1km (§8.4) -->
-    <script defer src="saudade-atlas-walkring.js?v=v657"></script>
+    <script defer src="saudade-atlas-walkring.js?v=v659"></script>
     <!-- v7 §8 PR4 — Atlas 카페 마커 (§8.6) + 메타데이터 어휘 풀 (§8.8) -->
-    <script defer src="saudade-atlas-cafes.js?v=v657"></script>
+    <script defer src="saudade-atlas-cafes.js?v=v659"></script>
     <!-- v7 §8 PR5 — Atlas 카페 제출 (§8.9) + 면책 강화 (§8.10) -->
-    <script defer src="saudade-atlas-submit.js?v=v657"></script>
+    <script defer src="saudade-atlas-submit.js?v=v659"></script>
     <!-- v624 부록 — § 02b QUARTERLY DISPATCH (헌법 §0.5 잡지 톤). 도시당 3건 · 분기 1회 발행. -->
     <!-- v654 — saudade-quarterly-dispatch.js lazy-loaded only when the
          user navigates to the #02b hash. Saves 32 KB on every cold load. -->
     <!-- <script defer src="saudade-quarterly-dispatch.js"></script>  lazy -->
     <!-- v606 — § 01 LEDGER 풀 구현 -->
-    <script defer src="saudade-ledger.js?v=v657"></script>
+    <script defer src="saudade-ledger.js?v=v659"></script>
     <!-- v608 Handoff v2 — § 03 DISPATCHES + § 04 DESK -->
-    <script defer src="saudade-dispatches.js?v=v657"></script>
-    <script defer src="saudade-desk.js?v=v657"></script>
+    <script defer src="saudade-dispatches.js?v=v659"></script>
+    <script defer src="saudade-desk.js?v=v659"></script>
     <!-- v609 — § 05 LISTENING ROOM (cover 우하단 진입) + 한국어판 dispatches -->
-    <script defer src="saudade-listening.js?v=v657"></script>
+    <script defer src="saudade-listening.js?v=v659"></script>
     <!-- v624 — v6 §9.10 Editor-on-Leave Auto-Pause (worker /editor/leave-status 어댑터) -->
-    <script defer src="saudade-editor-leave.js?v=v657"></script>
+    <script defer src="saudade-editor-leave.js?v=v659"></script>
     <!-- billing — Stripe Checkout + Customer Portal (free / patron / subscriber) -->
-    <script defer src="saudade-billing.js?v=v657"></script>
+    <script defer src="saudade-billing.js?v=v659"></script>
     <!--
       v637 — auth / account / schengen / schengen-form / empty / welcome /
       footer-rule are bundled into saudade.core.js (loaded at line 167).
@@ -205,25 +205,25 @@
       defines the globals. Re-enable any single line to debug that module
       in isolation.
     -->
-    <!-- <script defer src="saudade-auth.js?v=v657"></script>            in bundle -->
-    <!-- <script defer src="saudade-account.js?v=v657"></script>         in bundle -->
-    <!-- <script defer src="saudade-schengen.js?v=v657"></script>        in bundle -->
-    <!-- <script defer src="saudade-tax.js?v=v657"></script>             in bundle -->
-    <!-- <script defer src="saudade-tax-form.js?v=v657"></script>        in bundle -->
-    <!-- <script defer src="saudade-coverage.js?v=v657"></script>        in bundle -->
-    <!-- <script defer src="saudade-coverage-form.js?v=v657"></script>   in bundle -->
-    <!-- <script defer src="saudade-schengen-form.js?v=v657"></script>   in bundle -->
-    <!-- <script defer src="saudade-empty.js?v=v657"></script>           in bundle -->
-    <!-- <script defer src="saudade-welcome.js?v=v657"></script>         in bundle -->
+    <!-- <script defer src="saudade-auth.js?v=v659"></script>            in bundle -->
+    <!-- <script defer src="saudade-account.js?v=v659"></script>         in bundle -->
+    <!-- <script defer src="saudade-schengen.js?v=v659"></script>        in bundle -->
+    <!-- <script defer src="saudade-tax.js?v=v659"></script>             in bundle -->
+    <!-- <script defer src="saudade-tax-form.js?v=v659"></script>        in bundle -->
+    <!-- <script defer src="saudade-coverage.js?v=v659"></script>        in bundle -->
+    <!-- <script defer src="saudade-coverage-form.js?v=v659"></script>   in bundle -->
+    <!-- <script defer src="saudade-schengen-form.js?v=v659"></script>   in bundle -->
+    <!-- <script defer src="saudade-empty.js?v=v659"></script>           in bundle -->
+    <!-- <script defer src="saudade-welcome.js?v=v659"></script>         in bundle -->
     <!-- v8 §02 — v7 §5.4 Switch the desk 폐기 (Following 으로 대체). 모듈 미로드. -->
-    <!-- <script defer src="saudade-switch-desk.js?v=v657"></script> -->
+    <!-- <script defer src="saudade-switch-desk.js?v=v659"></script> -->
     <!-- v7 §5.5 — saudade-city.js 의 startSwitch/endSwitch/makePermanent 도 dead code -->
-    <!-- <script defer src="saudade-city.js?v=v657"></script>  ← 이미 위에서 로드됨 (Atlas home city 용) -->
+    <!-- <script defer src="saudade-city.js?v=v659"></script>  ← 이미 위에서 로드됨 (Atlas home city 용) -->
     <!-- v6 §9.10 — saudade-editor-leave.js 는 편집부 자동 정지 로직으로 유지 -->
     <!-- v7 §10 — desk-admin 은 키보드 단축키만, 로드 유지 (UI 노출 X) -->
 
     <!-- v7 §10 — /desk admin route (Ctrl+Shift+D 또는 #desk) -->
-    <script defer src="saudade-desk-admin.js?v=v657"></script>
+    <script defer src="saudade-desk-admin.js?v=v659"></script>
     <style>
     /* 좌측 패널 - 깔끔 재정의 (main.css 충돌 해결) */
     .left-drawer {
@@ -625,10 +625,31 @@
          localStorage 의 saudade.last.screen 을 첫 paint 전 동기 적용.
          v657 — extracted from inline <script> for CSP compliance
          (script-src 'self' https:; no unsafe-inline). -->
-    <script src="saudade-restore-section.js?v=v657"></script>
+    <script src="saudade-restore-section.js?v=v659"></script>
 </head>
 
 <body class="theme-default right-open">
+
+    <!-- v659 a11y — Skip-to-main link. Keyboard users (Tab on landing) used
+         to land on the first dock-btn, having to tab through 5 buttons +
+         edition switcher before reaching readable content. The skip link
+         is visually hidden until focused; first Tab now offers the jump. -->
+    <a href="#sddCover" class="sdd-skip-link">Skip to main content</a>
+    <style>
+        .sdd-skip-link {
+            position: absolute; left: -9999px; top: 0;
+            background: var(--ink, #16151A); color: var(--paper, #F2EEE3);
+            padding: 10px 16px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-weight: 500; font-size: 11px; letter-spacing: 0.18em;
+            text-transform: uppercase; text-decoration: none;
+            z-index: 100000;
+        }
+        .sdd-skip-link:focus, .sdd-skip-link:focus-visible {
+            left: 16px; top: 16px;
+            outline: 2px solid var(--rust, #9A3324); outline-offset: 2px;
+        }
+    </style>
 
     <!-- SVG SYMBOLS: Saudade prism + AURA legacy + UI icons -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -1000,7 +1021,7 @@
         <!-- v657 — extracted from inline <script> for CSP compliance. The
              "+ MY CITY" link was wired to a removed AURA module; saudade-legal-menu.js
              now repoints it at SAUDADE_HOMES so the link does what it says. -->
-        <script defer src="saudade-legal-menu.js?v=v657"></script>
+        <script defer src="saudade-legal-menu.js?v=v659"></script>
 
         <!-- COUNTRY MODAL (Command Center) -->
         <div id="countryModal" class="country-modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" aria-hidden="true">
