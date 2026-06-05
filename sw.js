@@ -15,28 +15,36 @@ const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
 // 셸 자산 (오프라인에서도 앱 켜지게 — 실제 데이터는 못 오지만 UI는 뜸)
-// v655 — 옛 AURA 모듈 (app.js / ambient-mode.js / city-videos.js) 제거됨.
-//        bootstrap + boot + bundle + 표지/마스트헤드만 캐시. 나머지는 runtime 캐시로 흡수.
+// v659 — high-traffic preflight. Precache covers everything that the cover
+// hero needs to render. Atlas/ledger/dispatches/listening are lazy via SWR
+// (cached on first visit, served from cache on subsequent visits).
+// Each entry uses `?v=v729` so the cache version-bumps and the SW install
+// fetches the new file without bypassing the long-cache CF headers.
+const CB = '?v=v729';
 const STATIC_ASSETS = [
     './',
     './index.html',
     './manifest.json',
-    './style.css',
-    './saudade-tokens.css',
-    './saudade-typography.css',
-    './saudade-skin.css',
-    './saudade-edition-tokens.css',
-    './saudade-microtype.css',
-    './saudade-empty.css',
-    './bootstrap.js',
-    './consent.js',
-    './saudade-boot.js',
-    './saudade.core.js',
-    './saudade-edition.js',
-    './saudade-cover.js',
-    './saudade-masthead.js',
-    './saudade-rings.js',
-    './saudade-wordmark.js',
+    './style.css' + CB,
+    './saudade-tokens.css' + CB,
+    './saudade-typography.css' + CB,
+    './saudade-skin.css' + CB,
+    './saudade-edition-tokens.css' + CB,
+    './saudade-microtype.css' + CB,
+    './saudade-empty.css' + CB,
+    './design-tokens.css' + CB,
+    './bootstrap.js' + CB,
+    './consent.js' + CB,
+    './saudade-boot.js' + CB,
+    './saudade.core.js' + CB,
+    './saudade.editorial.js' + CB,
+    './saudade-edition.js' + CB,
+    './saudade-cover.js' + CB,
+    './saudade-masthead.js' + CB,
+    './saudade-rings.js' + CB,
+    './saudade-wordmark.js' + CB,
+    './saudade-hud.js' + CB,
+    // critical data the cover hero awaits
     './data/city-definitions.json',
     './data/cover-titles.json',
     './data/dispatches.json'
@@ -113,11 +121,44 @@ self.addEventListener('fetch', (e) => {
 
     const apiLike = isApiRequest(req, url);
 
-    // Cross-origin (CDN, fonts): network 우선, 실패 시 cache
+    // ─── v659 — stale-while-revalidate helper ────────────────────────────
+    // Serve from cache instantly, then revalidate in the background. Drops
+    // p95 latency to ~5ms for repeat visitors and lets the page render
+    // while CF Pages absorbs the freshness check at the edge.
+    function staleWhileRevalidate(cacheName) {
+        const cachedP = caches.match(req);
+        const networkP = fetch(req).then(res => {
+            if (res && res.ok) {
+                const clone = res.clone();
+                caches.open(cacheName).then(c => c.put(req, clone)).catch(() => {});
+            }
+            return res;
+        }).catch(() => null);
+        return cachedP.then(cached => {
+            if (cached) {
+                // Fire-and-forget revalidation; don't block the response.
+                networkP.catch(() => {});
+                return cached;
+            }
+            return networkP.then(res => res || (apiLike
+                ? offlineJsonResponse()
+                : (req.destination === 'document' || req.mode === 'navigate')
+                    ? caches.match('./index.html').then(r2 => r2 || offlineResponse('Offline'))
+                    : offlineResponse('Offline')));
+        });
+    }
+
+    // Cross-origin (CDN, fonts): cache-first (immutable URLs), update in bg.
+    // Fonts/CSS from CDN don't change at a given URL — once cached, the
+    // network roundtrip is pure waste.
     if (url.origin !== location.origin) {
+        if (/\.(woff2?|ttf|otf|eot|css|svg)(\?.*)?$/.test(url.pathname)) {
+            e.respondWith(staleWhileRevalidate(RUNTIME_CACHE));
+            return;
+        }
+        // Other cross-origin (analytics, JSON APIs): network-first
         e.respondWith(
             fetch(req).then(res => {
-                // 폰트/이미지/CDN 라이브러리는 cache 저장
                 if (res.ok && /\.(woff2?|ttf|otf|eot|js|css|png|jpg|svg)(\?.*)?$/.test(url.pathname)) {
                     const clone = res.clone();
                     caches.open(RUNTIME_CACHE).then(c => c.put(req, clone)).catch(() => {});
@@ -128,16 +169,33 @@ self.addEventListener('fetch', (e) => {
         return;
     }
 
-    // Same-origin: network-first (최신 코드 우선), 오프라인이면 cache
+    // Same-origin static assets (versioned via ?v=) — cache-first SWR.
+    // These URLs change when content changes, so the cached copy is always
+    // exactly right; refresh-in-background keeps it warm.
+    if (/\.(js|css|woff2?|svg|png|webp|jpg|ico)(\?.*)?$/.test(url.pathname)) {
+        e.respondWith(staleWhileRevalidate(STATIC_CACHE));
+        return;
+    }
+
+    // Same-origin data JSON — SWR with shorter revalidation window. Edge
+    // header (_headers) already says max-age=60 swr=86400, so the SW
+    // matches: serve cached instantly, refresh in background.
+    if (/^\/data\//.test(url.pathname) && url.pathname.endsWith('.json')) {
+        e.respondWith(staleWhileRevalidate(RUNTIME_CACHE));
+        return;
+    }
+
+    // HTML / navigation — network-first (deploy visibility) with cache fallback.
     e.respondWith(
         fetch(req).then(res => {
-            const clone = res.clone();
-            caches.open(STATIC_CACHE).then(c => c.put(req, clone)).catch(() => {});
+            if (res && res.ok) {
+                const clone = res.clone();
+                caches.open(STATIC_CACHE).then(c => c.put(req, clone)).catch(() => {});
+            }
             return res;
         }).catch(() =>
             caches.match(req).then(r => {
                 if (r) return r;
-                // SPA fallback: navigation 요청에만 index.html 반환. JSON/api 는 503 JSON.
                 if (apiLike) return offlineJsonResponse();
                 if (req.destination === 'document' || req.mode === 'navigate') {
                     return caches.match('./index.html').then(r2 => r2 || offlineResponse('Offline'));
