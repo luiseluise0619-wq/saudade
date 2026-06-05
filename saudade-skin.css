@@ -1527,9 +1527,15 @@ body:not([data-section="04"]) #sddNext { display: none !important; }
    6. Reading Room 워드마크 중복 → 큰 italic 하나만, "Seoul night" 빨간 자막 제거
    ════════════════════════════════════════════════════════════════════════════ */
 
-/* 62. 모달 0개 룰 — sdd-* 외 모든 [class|id*=modal] 영구 hide (헌법 §3) */
-[id*="modal"]:not(#sddCover):not(#sddAtlas):not(#sddDispatches):not(#sddDesk):not(#sddListening):not(#sddMasthead):not(#sddFooter),
-[class*="modal"]:not(.sdd-cover):not(.sdd-atlas):not(.sdd-disp):not(.sdd-desk):not(.sdd-listen):not(.sdd-masthead):not(.sdd-footer-rule),
+/* 62. 모달 0개 룰 — sdd-* 외 모든 [class|id*=modal] 영구 hide (헌법 §3).
+   v659: 이전 :not() 체인이 sdd-acct-modal / sdd-auth-modal / sdd-let-modal /
+   sdd-cafe-submit-modal / sdd-gps-modal / sdd-homes-modal / sdd-imp-modal /
+   sdd-cb-modal / sdd-desk-modal 등 새 saudade 모달들을 빠뜨려 강제 hide
+   되던 launch blocker. 이 모든 element 가 'sdd-' prefix 를 쓰므로
+   [class^="sdd-"] / [id^="sdd"] 로 한 번에 제외. 새 모달 추가해도
+   prefix 만 지키면 자동 통과. */
+[id*="modal"]:not([id^="sdd"]):not(#sddCover):not(#sddAtlas):not(#sddDispatches):not(#sddDesk):not(#sddListening):not(#sddMasthead):not(#sddFooter),
+[class*="modal"]:not([class^="sdd-"]):not([class*=" sdd-"]),
 .modal-backdrop, .modal-bd {
     display: none !important;
     opacity: 0 !important;

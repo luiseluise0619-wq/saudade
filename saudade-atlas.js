@@ -893,7 +893,12 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                             window.SAUDADE_ATLAS_MAP.setCafes(filtered);
                         }
                     } catch (err) {
-                        if (container) container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + (err && err.message || 'UNKNOWN ERROR').toUpperCase() + '</p>';
+                        // v659 — was injecting err.message into innerHTML unescaped (potential XSS
+                        // vector if maplibre ever surfaces user-controlled error text). escapeHtml.
+                        if (container) {
+                            const msg = ((err && err.message) || 'UNKNOWN ERROR').toUpperCase();
+                            container.innerHTML = '<p class="sdd-atlas-map-error">MAP UNAVAILABLE · ' + escapeHtml(msg) + '</p>';
+                        }
                         console.warn('[ATLAS] map init failed:', err);
                     }
                 }
