@@ -1,0 +1,76 @@
+# Cloudflare Pages — edge cache + security headers.
+# Format: path matcher (one per block) followed by indented Name: Value lines.
+# Pages parses this on every deploy. https://developers.cloudflare.com/pages/configuration/headers/
+
+# ─── 1) Global security headers (all routes) ─────────────────────────────────
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+
+# ─── 2) Cache-busted JS/CSS — fingerprint via ?v=v659. Browser+edge can
+#         cache forever; the URL changes when the file changes. ───────────────
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+# ─── 3) Images / SVG / icons / fonts — long cache (content-addressed by name) ─
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── 4) Data files — short cache + SWR. Browser shows last value instantly,
+#         edge serves stale while revalidating in the background. Lets a
+#         single fresh upload propagate within 60s without hammering origin. ──
+/data/*.json
+  Cache-Control: public, max-age=60, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+
+# ─── 5) HTML — short cache so a deploy is visible within minutes, but edge
+#         still buffers identical responses to absorb traffic bursts. ─────────
+/
+  Cache-Control: public, max-age=60, stale-while-revalidate=600
+  Vary: Accept-Encoding
+/*.html
+  Cache-Control: public, max-age=60, stale-while-revalidate=600
+  Vary: Accept-Encoding
+
+# ─── 6) Manifest / service worker — must be near-real-time (a stale SW
+#         pins clients to an old release for hours). ────────────────────────
+/manifest.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ─── 7) RSS / sitemap / robots — daily refresh window. ──────────────────────
+/feed.atom
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# ─── 8) Licence / privacy / terms — months ───────────────────────────────
+/CONTENT-LICENSE.md
+  Cache-Control: public, max-age=2592000
+/privacy*.html
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/terms.html
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/credits.html
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/etymology.html
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
