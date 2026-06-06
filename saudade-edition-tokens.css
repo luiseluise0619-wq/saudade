@@ -278,6 +278,41 @@ html[data-skin="dark"] body {
     --bone-d:   #D8CCB1;     /* was #C5BDB0 — warmer light */
     --rule:     rgba(237,223,194,.18);
     --rule-2:   rgba(237,223,194,.42);
+    /* v729 — accent (rust) token must lighten in dark, or every eyebrow
+       (.sdd-cover-heads-eyebrow, .sdd-cover-stale, etc.) collapses to
+       1.8:1 against the cocoa bg. Sample: rust #7A2A1A on paper #18120A
+       = 1.86 ratio (AA fail). EN default (terracotta) — each edition
+       overrides below to keep its own accent identity. */
+    --rust:     #E0846A;     /* was #7A2A1A — terracotta */
+    --rust-d:   #C76A52;
+    --rust-soft:#F0AC97;
+    --accent:   #E0846A;
+}
+/* Per-edition dark accent — lift each edition's signature hue while
+   keeping its hue family. Every value below tested ≥4.5:1 on #18120A. */
+html[data-skin="dark"] body.edition-ko {
+    --rust:     #6FB8C7;     /* light teal — KO 단청 톤 유지 */
+    --rust-d:   #5BA2B1;
+    --rust-soft:#9ED2DC;
+    --accent:   #6FB8C7;
+}
+html[data-skin="dark"] body.edition-ja {
+    --rust:     #E68585;     /* coral — JA 朱 톤 유지 */
+    --rust-d:   #D06B6B;
+    --rust-soft:#F4ADAD;
+    --accent:   #E68585;
+}
+html[data-skin="dark"] body.edition-pt {
+    --rust:     #88B0E8;     /* light azulejo blue — PT 정체성 */
+    --rust-d:   #7099D4;
+    --rust-soft:#B2CFF1;
+    --accent:   #88B0E8;
+}
+html[data-skin="dark"] body.edition-es {
+    --rust:     #E89090;     /* rose — ES sangre 톤 유지 */
+    --rust-d:   #D47676;
+    --rust-soft:#F2B5B5;
+    --accent:   #E89090;
 }
 html[data-skin="dark"] body.edition-ko::before {
     /* Dim the hanji texture in dark mode */
@@ -295,6 +330,11 @@ html[data-skin="dark"] body.edition-ko::before {
         --bone-d:   #C5BDB0;
         --rule:     rgba(239,231,214,.18);
         --rule-2:   rgba(239,231,214,.40);
+        /* v729 — auto-dark also lifts the rust accent so the same eyebrow
+           rules read correctly when the reader's OS picks dark. */
+        --rust:     #E0846A;
+        --rust-d:   #C76A52;
+        --rust-soft:#F0AC97;
     }
 }
 
