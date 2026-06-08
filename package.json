@@ -9,7 +9,7 @@
         "url": "https://instagram.com/jaddy_102"
     },
     "scripts": {
-        "build": "echo 'static site — no build step (Vercel / CF Pages auto-deploy)' && exit 0",
+        "build": "true",
         "serve": "node scripts/run-serve.cjs",
         "bundle": "node scripts/build-bundle.js",
         "bundle:esbuild": "esbuild --bundle --minify --sourcemap --outdir=dist/bundle --format=iife --target=es2019 saudade-auth.js saudade-account.js saudade-schengen.js saudade-schengen-form.js saudade-empty.js saudade-welcome.js",
