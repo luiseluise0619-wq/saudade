@@ -218,7 +218,15 @@
     position: fixed;
     inset: 0;
     z-index: 4;
-    pointer-events: none;
+    /* v729 — was `pointer-events: none` with selected children opting back
+       in via `pointer-events: auto`. Side effect: empty cover regions
+       returned pointer-events:none to elementFromPoint, so wheel events
+       in those regions passed straight through cover into body
+       (body.overflow:hidden), and the cover stopped scrolling after a few
+       ticks (stuck at scrollTop ≈ 600/1007 — readers reported the page
+       "freezes when you scroll down").
+       Cover needs to receive its own wheel so its overflow-y:auto works. */
+    pointer-events: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

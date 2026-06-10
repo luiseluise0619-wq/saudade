@@ -104,7 +104,20 @@ a { color: inherit; text-decoration: none; }
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    /* v729 — #app is the legacy AURA root. #sddCover is a direct body
+       child (not inside #app) but #app's 100vw×100vh overlay catches
+       wheel events before they reach the cover. Result: after ~3
+       wheel ticks the cover freezes at scrollTop ≈ 600/1007.
+       Disable pointer-events on #app itself; only the interactive
+       chrome (topbar, bottom-dock, legal-strip, toast) opts back in.
+       .shell stays unreachable (every child is hidden anyway). */
+    pointer-events: none;
 }
+#app > .topbar,
+#app > .bottom-dock,
+#app > #toast,
+#app > .sdd-legal-strip,
+#app > #auraLegalStrip { pointer-events: auto; }
 
 /* FX layer (perf: 사용자 보고 렉 → opacity 낮추고 카페 모드에서 숨김) */
 .scanlines {
@@ -668,6 +681,16 @@ body.cafe-mode .scanlines { display: none !important; }
     display: grid;
     grid-template-columns: 0 1fr 0;
     transition: grid-template-columns 0.3s ease, bottom 0.3s ease;
+    /* v729 — .shell is a dead AURA shim: every interactive child is
+       hidden (see index.html ~520, just hidden <span> placeholders for
+       app.js optional-chain references). But because .shell is fixed
+       and covers the whole viewport interior, every wheel event in
+       that region was hitting .shell first — and since .shell has no
+       overflow:scroll, the wheel stopped right there, leaving the cover
+       inert after a couple of scrolls (#sddCover behind .shell stops
+       receiving wheel events at ~scrollTop=600). pointer-events:none
+       lets clicks + wheel pass straight through to the cover. */
+    pointer-events: none;
 }
 
 body.left-open .shell { grid-template-columns: var(--left-w) 1fr 0; }

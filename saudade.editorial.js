@@ -216,7 +216,11 @@
     position: fixed;
     inset: 0;
     z-index: 4;
-    pointer-events: none;
+    /* v729 — auto so the cover catches its own wheel events. Was none
+       with selective children opt-in, which caused wheel to pass
+       through empty cover regions into body and freeze scroll at
+       ~scrollTop 600. See saudade-cover.js for full note. */
+    pointer-events: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
