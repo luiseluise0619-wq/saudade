@@ -773,6 +773,30 @@ body.cover-reader-open { overflow: hidden; }
     margin: clamp(16px, 2.5vw, 24px) 0 0;
     display: flex;
     justify-content: flex-end;
+    gap: 8px;
+}
+/* v731 — clip button: identical chrome to share, distinct color when active. */
+.sdd-cover-reader__clip {
+    appearance: none;
+    background: none;
+    border: 0.5px solid var(--rule-2);
+    padding: 8px 14px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    cursor: pointer;
+    transition: color .15s ease, border-color .15s ease;
+}
+.sdd-cover-reader__clip .glyph { letter-spacing: 0; margin-left: 2px; }
+.sdd-cover-reader__clip:hover,
+.sdd-cover-reader__clip:focus-visible {
+    color: var(--rust); border-color: var(--rust); outline: none;
+}
+.sdd-cover-reader__clip[aria-pressed="true"] {
+    color: var(--rust); border-color: var(--rust);
 }
 .sdd-cover-reader__share {
     appearance: none;
@@ -1537,16 +1561,69 @@ body.cover-reader-open { overflow: hidden; }
             try { _readerEl._lastTrigger.focus(); } catch (e) {}
         }
     }
+    // v731 — clippings. The newspaper register: readers cut articles out.
+    // Stored as { id, ed, headline, city, lede, source, source_url,
+    //             source_date, clipped_at } in localStorage. Capped at 200
+    //             entries (oldest dropped) to keep storage bounded.
+    const CLIPS_KEY = 'saudade.clippings';
+    const CLIPS_MAX = 200;
+    function clipsId(h, ed) {
+        const sig = [(h && h.headline) || '', (h && h.city) || '', (h && h.source_url) || ''].join('|');
+        let hash = 0;
+        for (let i = 0; i < sig.length; i++) { hash = (hash * 31 + sig.charCodeAt(i)) | 0; }
+        return ed + ':' + (hash >>> 0).toString(36);
+    }
+    function clipsList() {
+        try {
+            const raw = localStorage.getItem(CLIPS_KEY);
+            const arr = raw ? JSON.parse(raw) : [];
+            return Array.isArray(arr) ? arr : [];
+        } catch (e) { return []; }
+    }
+    function clipsSave(arr) {
+        try { localStorage.setItem(CLIPS_KEY, JSON.stringify(arr.slice(-CLIPS_MAX))); } catch (e) {}
+    }
+    function clipsHas(h, ed) {
+        const id = clipsId(h, ed);
+        return clipsList().some(c => c.id === id);
+    }
+    function clipsToggle(h, ed) {
+        const id = clipsId(h, ed);
+        const list = clipsList();
+        const idx = list.findIndex(c => c.id === id);
+        if (idx >= 0) {
+            list.splice(idx, 1);
+            clipsSave(list);
+            return false;
+        }
+        list.push({
+            id, ed,
+            headline: h.headline || '',
+            city:     h.city || '',
+            lede:     h.lede || '',
+            source:     h.source || '',
+            source_url: h.source_url || '',
+            source_date: h.source_date || '',
+            clipped_at: new Date().toISOString()
+        });
+        clipsSave(list);
+        return true;
+    }
+    // Expose for the listing page (cover footer link, future /clippings.html).
+    try {
+        window.SAUDADE_CLIPS = { list: clipsList, has: clipsHas, toggle: clipsToggle, key: CLIPS_KEY };
+    } catch (e) {}
+
     function openHeadReader(h, ed) {
         const el = ensureReaderEl();
         const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
         const cityUp = (h.city || '').toUpperCase();
         const READER_LABELS = {
-            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL', share: 'SHARE', copied: 'LINK COPIED' },
-            ko: { close: '닫기',    source: '출처',   read: '원문 보기',          share: '공유',   copied: '링크 복사됨' },
-            ja: { close: '閉じる',  source: '出典',   read: '原文を読む',         share: '共有',   copied: 'リンクをコピー済み' },
-            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE',        share: 'PARTILHAR', copied: 'LINK COPIADO' },
-            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL',      share: 'COMPARTIR', copied: 'ENLACE COPIADO' }
+            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL', share: 'SHARE',     copied: 'LINK COPIED',         clip: 'CLIP',     unclip: 'CLIPPED' },
+            ko: { close: '닫기',    source: '출처',   read: '원문 보기',          share: '공유',       copied: '링크 복사됨',          clip: '스크랩',   unclip: '스크랩됨' },
+            ja: { close: '閉じる',  source: '出典',   read: '原文を読む',         share: '共有',       copied: 'リンクをコピー済み',  clip: '切り抜く',  unclip: '切り抜き済' },
+            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE',        share: 'PARTILHAR', copied: 'LINK COPIADO',        clip: 'RECORTAR', unclip: 'RECORTADO' },
+            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL',      share: 'COMPARTIR', copied: 'ENLACE COPIADO',      clip: 'RECORTAR', unclip: 'RECORTADO' }
         };
         const L = READER_LABELS[ed] || READER_LABELS.en;
         const quoteHtml = h.quote
@@ -1581,6 +1658,9 @@ body.cover-reader-open { overflow: hidden; }
                 ${quoteHtml}
                 ${sourceHtml}
                 <p class="sdd-cover-reader__actions">
+                    <button type="button" class="sdd-cover-reader__clip" data-sdd-reader-clip aria-pressed="${clipsHas(h, ed) ? 'true' : 'false'}">
+                        ${escapeHtml(clipsHas(h, ed) ? L.unclip : L.clip)} <span class="glyph" aria-hidden="true">${clipsHas(h, ed) ? '★' : '☆'}</span>
+                    </button>
                     <button type="button" class="sdd-cover-reader__share" data-sdd-reader-share>${escapeHtml(L.share)} ↗</button>
                 </p>
             </article>
@@ -1615,6 +1695,31 @@ body.cover-reader-open { overflow: hidden; }
                     shareBtn.classList.add('is-copied');
                     setTimeout(() => { shareBtn.textContent = prev; shareBtn.classList.remove('is-copied'); }, 1600);
                 } catch (e) { /* clipboard denied — silently keep the button */ }
+            });
+        }
+        // v731 — clip toggle. ★/☆ flip; label updates to CLIP/CLIPPED in
+        // the active edition. Updates the cover head card's clip mark too
+        // (if the cover render added one), so the cover reflects state.
+        const clipBtn = el.querySelector('[data-sdd-reader-clip]');
+        if (clipBtn) {
+            clipBtn.addEventListener('click', () => {
+                const nowClipped = clipsToggle(h, ed);
+                clipBtn.setAttribute('aria-pressed', nowClipped ? 'true' : 'false');
+                const lab = nowClipped ? L.unclip : L.clip;
+                const glyph = nowClipped ? '★' : '☆';
+                clipBtn.innerHTML = '';
+                clipBtn.appendChild(document.createTextNode(lab + ' '));
+                const sp = document.createElement('span');
+                sp.className = 'glyph'; sp.setAttribute('aria-hidden', 'true'); sp.textContent = glyph;
+                clipBtn.appendChild(sp);
+                // Reflect on the cover head card if it carries a clip mark
+                try {
+                    const idx = (_coverHeads || []).findIndex(x => x === h);
+                    if (idx >= 0) {
+                        const card = document.querySelector('[data-sdd-head-idx="' + idx + '"]');
+                        if (card) card.setAttribute('data-clipped', nowClipped ? '1' : '');
+                    }
+                } catch (e) {}
             });
         }
     }
@@ -1948,6 +2053,66 @@ body.section-active::before { content: none !important; }
             }
         });
 
+        // v731 — keyboard shortcuts. Newspaper kiosk register: digit jumps
+        // straight to a section, ? opens the cheat-sheet, g→h returns home.
+        // Skipped while typing in inputs/textareas/contenteditable so the
+        // letters/contribute/atlas-search forms aren't sabotaged.
+        (function bindShortcuts() {
+            let gPending = false;
+            let gTimer = null;
+            const KEY_TO_CAT = { '1': 'visa', '2': 'cafe', '3': 'tz', '4': 'trip' };
+            function isTyping(t) {
+                if (!t) return false;
+                if (t.isContentEditable) return true;
+                const n = (t.tagName || '').toUpperCase();
+                if (n === 'INPUT' || n === 'TEXTAREA' || n === 'SELECT') return true;
+                return false;
+            }
+            function jumpListen() { try { window.SAUDADE_LISTENING?.open?.(); } catch (e) {} }
+            document.addEventListener('keydown', (e) => {
+                if (e.metaKey || e.ctrlKey || e.altKey) return;
+                if (isTyping(e.target)) return;
+                // The reader modal owns Escape; don't fire shortcuts while it's open.
+                if (document.body.classList.contains('cover-reader-open')) return;
+                // g, h sequence — vim convention for "go home" (back to cover).
+                if (e.key === 'g' && !e.shiftKey) {
+                    gPending = true;
+                    clearTimeout(gTimer);
+                    gTimer = setTimeout(() => { gPending = false; }, 700);
+                    return;
+                }
+                if (gPending && e.key === 'h') {
+                    gPending = false;
+                    clearTimeout(gTimer);
+                    if (document.body.classList.contains('section-active') ||
+                        document.body.classList.contains('listening-active')) {
+                        backToCover();
+                        try { window.SAUDADE_LISTENING?.close?.(); } catch (er) {}
+                    }
+                    e.preventDefault();
+                    return;
+                }
+                gPending = false;
+                const cat = KEY_TO_CAT[e.key];
+                if (cat && SECTIONS[cat]) {
+                    setSection(cat);
+                    const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
+                    if (btn) btn.click();
+                    e.preventDefault();
+                    return;
+                }
+                if (e.key === '5') {
+                    jumpListen();
+                    e.preventDefault();
+                    return;
+                }
+                if (e.key === '?' || (e.shiftKey && e.key === '/')) {
+                    toggleShortcutsHelp();
+                    e.preventDefault();
+                }
+            });
+        })();
+
         // saudade 워드마크 클릭 = back to cover (있으면)
         document.addEventListener('click', (e) => {
             const wm = e.target.closest('.brand-stack, [data-sdd-wordmark]');
@@ -1955,6 +2120,102 @@ body.section-active::before { content: none !important; }
                 backToCover();
             }
         });
+    }
+
+    // v731 — keyboard shortcut cheat-sheet. Toggle via `?`. Pure mono
+    // newspaper register; auto-closes on Escape or backdrop click.
+    // (Masthead IIFE has no escapeHtml — short helper inline.)
+    function _kbdEsc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[ch]);
+    }
+    let _kbdHelpEl = null;
+    function shortcutsHelpCopy() {
+        let ed = 'en';
+        try { ed = window.SAUDADE_EDITION?.get?.() || 'en'; } catch (e) {}
+        const TITLE = { en: 'KEYBOARD',       ko: '단축키',         ja: 'ショートカット',   pt: 'TECLAS',         es: 'TECLAS' };
+        const HINT  = { en: 'press ? to close', ko: '닫기 ?',       ja: '? で閉じる',       pt: 'fechar com ?',   es: 'cerrar con ?' };
+        const ROWS  = {
+            en: [['1','Ledger'], ['2','Atlas'], ['3','Dispatches'], ['4','The Desk'], ['5','Listening Room'], ['G H','Back to cover'], ['Esc','Back to cover'], ['?','Show / hide this card']],
+            ko: [['1','장부'],   ['2','지도'], ['3','통신'],         ['4','데스크'],   ['5','청취실'],         ['G H','표지로'],          ['Esc','표지로'],          ['?','이 카드 열고 닫기']],
+            ja: [['1','帳簿'],   ['2','地図'], ['3','通信'],         ['4','デスク'],   ['5','聴く部屋'],       ['G H','表紙へ'],          ['Esc','表紙へ'],          ['?','このカードを表示']],
+            pt: [['1','Livro'],  ['2','Atlas'], ['3','Despachos'],    ['4','Redação'], ['5','Sala de escuta'], ['G H','Capa'],            ['Esc','Capa'],            ['?','Mostrar / ocultar']],
+            es: [['1','Libro'],  ['2','Atlas'], ['3','Despachos'],    ['4','Redacción'],['5','Sala de escucha'],['G H','Portada'],         ['Esc','Portada'],         ['?','Mostrar / ocultar']]
+        };
+        return { title: TITLE[ed] || TITLE.en, hint: HINT[ed] || HINT.en, rows: ROWS[ed] || ROWS.en };
+    }
+    function ensureShortcutsHelp() {
+        if (_kbdHelpEl) return _kbdHelpEl;
+        if (!document.getElementById('sddKbdHelpStyles')) {
+            const s = document.createElement('style');
+            s.id = 'sddKbdHelpStyles';
+            s.textContent = `
+.sdd-kbd-help { position: fixed; inset: 0; z-index: 100000; display: none;
+    align-items: center; justify-content: center; padding: clamp(20px, 4vw, 48px); }
+.sdd-kbd-help[open] { display: flex; }
+.sdd-kbd-help__scrim { position: absolute; inset: 0; background: rgba(11,11,15,.55); backdrop-filter: blur(2px); }
+.sdd-kbd-help__card { position: relative; z-index: 1;
+    background: var(--paper); color: var(--ink);
+    border: 0.5px solid var(--rule-2);
+    padding: clamp(28px, 4vw, 44px) clamp(28px, 5vw, 56px);
+    max-width: 420px; width: 100%;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; }
+.sdd-kbd-help__eyebrow { font-weight: 500; font-size: 9.5px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--rust); margin: 0 0 18px;
+    border-bottom: 0.5px solid var(--rule); padding-bottom: 10px;
+    display: flex; justify-content: space-between; }
+.sdd-kbd-help__eyebrow .hint { color: var(--bone-d); font-weight: 400; letter-spacing: 0.18em; text-transform: none; }
+.sdd-kbd-help__list { list-style: none; padding: 0; margin: 0;
+    display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; align-items: baseline; }
+.sdd-kbd-help__list kbd { font-family: var(--mono); font-weight: 500;
+    font-size: 11px; letter-spacing: 0.06em;
+    background: var(--paper-d); color: var(--ink);
+    border: 0.5px solid var(--rule-2); padding: 4px 8px;
+    border-radius: 1px; display: inline-block; min-width: 1.6em; text-align: center; }
+.sdd-kbd-help__list .label { font-family: var(--serif); font-weight: 300;
+    font-style: italic; font-size: 14px; color: var(--ink); }
+@media (prefers-reduced-motion: no-preference) {
+    .sdd-kbd-help[open] .sdd-kbd-help__card { animation: sddKbdHelpIn .18s ease-out both; }
+}
+@keyframes sddKbdHelpIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; } }
+`;
+            document.head.appendChild(s);
+        }
+        _kbdHelpEl = document.createElement('div');
+        _kbdHelpEl.className = 'sdd-kbd-help';
+        _kbdHelpEl.setAttribute('role', 'dialog');
+        _kbdHelpEl.setAttribute('aria-modal', 'true');
+        _kbdHelpEl.setAttribute('aria-label', 'Keyboard shortcuts');
+        document.body.appendChild(_kbdHelpEl);
+        _kbdHelpEl.addEventListener('click', (e) => {
+            if (e.target.classList.contains('sdd-kbd-help__scrim')) toggleShortcutsHelp(false);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && _kbdHelpEl && _kbdHelpEl.hasAttribute('open')) {
+                toggleShortcutsHelp(false);
+                e.stopPropagation();
+            }
+        });
+        return _kbdHelpEl;
+    }
+    function toggleShortcutsHelp(force) {
+        const el = ensureShortcutsHelp();
+        const open = (typeof force === 'boolean') ? force : !el.hasAttribute('open');
+        if (open) {
+            const c = shortcutsHelpCopy();
+            el.innerHTML = `
+                <div class="sdd-kbd-help__scrim"></div>
+                <div class="sdd-kbd-help__card">
+                    <p class="sdd-kbd-help__eyebrow"><span>${_kbdEsc(c.title)}</span><span class="hint">${_kbdEsc(c.hint)}</span></p>
+                    <ul class="sdd-kbd-help__list">
+                        ${c.rows.map(([k, v]) => `<li><kbd>${_kbdEsc(k)}</kbd></li><li class="label">${_kbdEsc(v)}</li>`).join('')}
+                    </ul>
+                </div>`;
+            el.setAttribute('open', '');
+        } else {
+            el.removeAttribute('open');
+        }
     }
 
     function init() {

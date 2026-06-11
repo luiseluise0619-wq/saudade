@@ -10,7 +10,7 @@
 // CACHE_VERSION 을 v533 으로 강제 점프 — 사용자 보고 'css/js 변경 안 보임'.
 // 옛 v515 캐시가 남아 있어서 새 자산이 안 들어오던 문제 차단.
 // activate 핸들러가 startsWith(CACHE_VERSION) 외 모든 캐시 삭제.
-const CACHE_VERSION = 'saudade-v731';
+const CACHE_VERSION = 'saudade-v732';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -18,9 +18,9 @@ const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 // v659 — high-traffic preflight. Precache covers everything that the cover
 // hero needs to render. Atlas/ledger/dispatches/listening are lazy via SWR
 // (cached on first visit, served from cache on subsequent visits).
-// Each entry uses `?v=v731` so the cache version-bumps and the SW install
+// Each entry uses `?v=v732` so the cache version-bumps and the SW install
 // fetches the new file without bypassing the long-cache CF headers.
-const CB = '?v=v731';
+const CB = '?v=v732';
 const STATIC_ASSETS = [
     './',
     './index.html',
