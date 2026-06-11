@@ -254,6 +254,31 @@ body.section-active .sdd-cover { display: none !important; }
 }
 .sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
+/* v730 — scroll cue. Quiet ↓ above the dock; slow breathing fade, never
+   a bounce. Removed permanently (per session) after first cover scroll. */
+.sdd-cover-scroll-cue {
+    position: fixed;
+    left: 50%;
+    bottom: calc(var(--dock-h, 56px) + 18px);
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--bone-d);
+    opacity: 0;
+    animation: sddCueBreathe 3.2s ease-in-out 1.2s infinite;
+    transition: opacity .5s ease;
+}
+.sdd-cover-scroll-cue.is-gone { animation: none; opacity: 0 !important; }
+@keyframes sddCueBreathe {
+    0%, 100% { opacity: 0; }
+    50%      { opacity: .65; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-scroll-cue { animation: none; opacity: .5; }
+}
+
 /* Theme color picker — round button at the top of the cover, popping
    a panel of skin swatches. Sits to the LEFT of the existing EN▼
    edition dropdown (saudade-skin.css: .sdd-cover-edition is fixed
@@ -742,6 +767,32 @@ body.cover-reader-open { overflow: hidden; }
 .sdd-cover-reader__source .link:focus-visible {
     color: var(--rust); border-bottom-color: var(--rust); outline: none;
 }
+/* v730 — share row. Same mono register as the source link; sits at the
+   card's foot so it reads like a newspaper's "clip this article" corner. */
+.sdd-cover-reader__actions {
+    margin: clamp(16px, 2.5vw, 24px) 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.sdd-cover-reader__share {
+    appearance: none;
+    background: none;
+    border: 0.5px solid var(--rule-2);
+    padding: 8px 14px;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    cursor: pointer;
+    transition: color .15s ease, border-color .15s ease;
+}
+.sdd-cover-reader__share:hover,
+.sdd-cover-reader__share:focus-visible {
+    color: var(--rust); border-color: var(--rust); outline: none;
+}
+.sdd-cover-reader__share.is-copied { color: var(--rust); border-color: var(--rust); }
 @media (max-width: 600px) {
     .sdd-cover-reader { padding: 0; }
     .sdd-cover-reader__card {
@@ -1164,6 +1215,26 @@ body.cover-reader-open { overflow: hidden; }
             </p>
         `;
 
+        // v730 — scroll cue. The cover scrolls (overflow-y:auto) but nothing
+        // told the reader so; several reported the page "ends" at the fold.
+        // A quiet mono ↓ pinned to the bottom edge, gone forever after the
+        // first scroll (per session). Newspaper register — no bouncing.
+        if (!sessionStorage.getItem('saudade.cover.scrolled') &&
+            cover.scrollHeight > cover.clientHeight + 40) {
+            const cue = document.createElement('div');
+            cue.className = 'sdd-cover-scroll-cue';
+            cue.setAttribute('aria-hidden', 'true');
+            cue.innerHTML = '<span>↓</span>';
+            cover.appendChild(cue);
+            const dismiss = () => {
+                try { sessionStorage.setItem('saudade.cover.scrolled', '1'); } catch (e) {}
+                cue.classList.add('is-gone');
+                setTimeout(() => cue.remove(), 600);
+                cover.removeEventListener('scroll', dismiss);
+            };
+            cover.addEventListener('scroll', dismiss, { passive: true, once: true });
+        }
+
         // nav 클릭 시 기존 dock 버튼으로 위임. § 05 LISTENING 은 별도 모듈로 직접 진입.
         cover.querySelectorAll('[data-sdd-jump]').forEach(a => {
             a.addEventListener('click', (e) => {
@@ -1471,11 +1542,11 @@ body.cover-reader-open { overflow: hidden; }
         const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
         const cityUp = (h.city || '').toUpperCase();
         const READER_LABELS = {
-            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL' },
-            ko: { close: '닫기',    source: '출처',   read: '원문 보기' },
-            ja: { close: '閉じる',  source: '出典',   read: '原文を読む' },
-            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE' },
-            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL' }
+            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL', share: 'SHARE', copied: 'LINK COPIED' },
+            ko: { close: '닫기',    source: '출처',   read: '원문 보기',          share: '공유',   copied: '링크 복사됨' },
+            ja: { close: '閉じる',  source: '出典',   read: '原文を読む',         share: '共有',   copied: 'リンクをコピー済み' },
+            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE',        share: 'PARTILHAR', copied: 'LINK COPIADO' },
+            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL',      share: 'COMPARTIR', copied: 'ENLACE COPIADO' }
         };
         const L = READER_LABELS[ed] || READER_LABELS.en;
         const quoteHtml = h.quote
@@ -1509,6 +1580,9 @@ body.cover-reader-open { overflow: hidden; }
                 ${h.body ? `<div class="sdd-cover-reader__body">${escapeHtml(h.body)}</div>` : ''}
                 ${quoteHtml}
                 ${sourceHtml}
+                <p class="sdd-cover-reader__actions">
+                    <button type="button" class="sdd-cover-reader__share" data-sdd-reader-share>${escapeHtml(L.share)} ↗</button>
+                </p>
             </article>
         `;
         el.hidden = false;
@@ -1520,6 +1594,29 @@ body.cover-reader-open { overflow: hidden; }
         el.querySelectorAll('[data-sdd-reader-close]').forEach(b => {
             b.addEventListener('click', closeHeadReader);
         });
+        // v730 — share. Web Share API on mobile; clipboard fallback on desktop.
+        // The shared text is the headline + city byline + the site URL —
+        // a dispatch in a sentence, the way you'd read one aloud to a friend.
+        const shareBtn = el.querySelector('[data-sdd-reader-share]');
+        if (shareBtn) {
+            shareBtn.addEventListener('click', async () => {
+                const url = location.origin + location.pathname + (ed !== 'en' ? '?ed=' + ed : '');
+                const text = `${h.headline || ''} — ${cityUp} ${deskLabel} · saudade`;
+                try {
+                    if (navigator.share) {
+                        await navigator.share({ title: 'saudade', text, url });
+                        return;
+                    }
+                } catch (e) { /* user cancelled — fall through to nothing */ return; }
+                try {
+                    await navigator.clipboard.writeText(`${text}\n${url}`);
+                    const prev = shareBtn.textContent;
+                    shareBtn.textContent = L.copied;
+                    shareBtn.classList.add('is-copied');
+                    setTimeout(() => { shareBtn.textContent = prev; shareBtn.classList.remove('is-copied'); }, 1600);
+                } catch (e) { /* clipboard denied — silently keep the button */ }
+            });
+        }
     }
     // Global Esc — close modal if open.
     document.addEventListener('keydown', (e) => {

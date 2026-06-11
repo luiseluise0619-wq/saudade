@@ -70,7 +70,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
-const SAUDADE_RELEASE = 'v730';
+const SAUDADE_RELEASE = 'v731';
 window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp cache-buster query strings.
                                             // Kept in lock-step with sw.js CACHE_VERSION by scripts/bump-cache.js.
 
@@ -168,6 +168,54 @@ window.AURA_USE_2D_MAP = true;
             } else { apply(); }
         }
     } catch (e) {}
+})();
+
+// ─── 4c) Offline chip — the SW serves the magazine from cache when the
+//        network drops, which is a feature, but readers should know they're
+//        looking at yesterday's paper. A quiet mono chip appears top-center
+//        while offline and leaves when the connection returns. 5 editions.
+(function offlineChip() {
+    if (typeof navigator === 'undefined' || !('onLine' in navigator)) return;
+    let el = null;
+    const LABEL = {
+        en: 'OFFLINE · READING FROM CACHE',
+        ko: '오프라인 · 저장된 지면',
+        ja: 'オフライン · 保存紙面',
+        pt: 'OFFLINE · EDIÇÃO GUARDADA',
+        es: 'SIN CONEXIÓN · EDICIÓN GUARDADA'
+    };
+    function edition() {
+        try { const v = localStorage.getItem('saudade.edition'); return /^(en|ko|ja|pt|es)$/.test(v) ? v : 'en'; }
+        catch (e) { return 'en'; }
+    }
+    function show() {
+        if (el || !document.body) return;
+        el = document.createElement('div');
+        el.setAttribute('role', 'status');
+        el.style.cssText = [
+            'position:fixed', 'top:10px', 'left:50%', 'transform:translateX(-50%)',
+            'z-index:100001', 'padding:6px 14px',
+            'font-family:JetBrains Mono,ui-monospace,monospace', 'font-weight:500',
+            'font-size:9px', 'letter-spacing:0.22em',
+            'background:var(--ink,#1A130D)', 'color:var(--paper,#F4ECD6)',
+            'border-radius:2px', 'opacity:0', 'transition:opacity .4s ease',
+            'pointer-events:none'
+        ].join(';');
+        el.textContent = LABEL[edition()] || LABEL.en;
+        document.body.appendChild(el);
+        requestAnimationFrame(() => { el.style.opacity = '0.92'; });
+    }
+    function hide() {
+        if (!el) return;
+        el.style.opacity = '0';
+        setTimeout(() => { el?.remove(); el = null; }, 450);
+    }
+    function sync() { if (navigator.onLine) hide(); else show(); }
+    window.addEventListener('online', sync);
+    window.addEventListener('offline', sync);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', sync);
+    } else { sync(); }
 })();
 
 // ─── 5) 로딩 오버레이 fade — saudade-boot.js 가 처리.
