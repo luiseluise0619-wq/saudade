@@ -633,3 +633,322 @@ body[data-edition]::before {
     background-size: auto !important;
     background-position: 0 0 !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v3 — section layouts (Ledger bento / Dispatches cinematic / Atlas big cards / dark refinement)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Ledger — bento grid (D-day · Tax · Entries · Form) ─────── */
+
+.sdd-ld {
+    display: block;
+}
+/* The ledger article contains: head, dday counter, tax 183 rows, stays
+   entries, form. On wide screens, organize as a bento — dday + tax sit
+   side-by-side at the top, entries spans full width, form full width. */
+.sdd-ld-article {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(12px, 1.5vw, 20px);
+    align-items: start;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+.sdd-ld-article > * { grid-column: 1 / -1; }
+
+.sdd-ld-head {
+    grid-column: 1 / -1;
+    padding: clamp(20px, 3vw, 32px);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--paper) 70%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.sdd-ld-dday {
+    grid-column: 1 / span 7;
+    padding: clamp(20px, 3vw, 36px) !important;
+    border-radius: var(--radius-lg) !important;
+    background:
+        radial-gradient(ellipse at 80% 20%, color-mix(in srgb, var(--accent) 18%, transparent) 0%, transparent 60%),
+        color-mix(in srgb, var(--paper) 75%, transparent);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    position: relative;
+    overflow: hidden;
+}
+.sdd-ld-tax {
+    grid-column: 8 / -1;
+    padding: clamp(20px, 3vw, 32px) !important;
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 70%, transparent);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+}
+.sdd-ld-entries {
+    grid-column: 1 / -1;
+    padding: clamp(20px, 3vw, 32px) !important;
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 65%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+.sdd-ld-form {
+    grid-column: 1 / -1;
+    padding: clamp(20px, 3vw, 32px) !important;
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 65%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+}
+.sdd-ld-disclaimer {
+    grid-column: 1 / -1;
+    padding: 16px clamp(16px, 2vw, 24px) !important;
+    border-radius: var(--radius) !important;
+    background: color-mix(in srgb, var(--accent) 8%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent) !important;
+    color: var(--bone-d);
+    font-size: 13px;
+}
+
+/* D-day numeral hero treatment */
+.sdd-ld-dday-num {
+    font-family: var(--mono) !important;
+    font-weight: 700 !important;
+    font-size: clamp(48px, 9vw, 96px) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent !important;
+}
+.sdd-ld-dday-unit {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--bone-d);
+    font-weight: 600 !important;
+}
+
+/* Tax 183 rows — pill chips */
+.sdd-ld-tax-row {
+    padding: 10px 14px !important;
+    border-radius: var(--radius) !important;
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+    border: 1px solid var(--rule) !important;
+    margin-block: 6px;
+    transition: background .15s, transform .15s;
+}
+.sdd-ld-tax-row:hover {
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    transform: translateX(2px);
+}
+.sdd-ld-tax-iso {
+    font-family: var(--mono) !important;
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.2em !important;
+}
+.sdd-ld-tax-num {
+    font-family: var(--mono) !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 760px) {
+    .sdd-ld-dday, .sdd-ld-tax { grid-column: 1 / -1; }
+}
+
+/* ─── Dispatches — cinematic full-bleed hero + sidebar ────────── */
+
+/* The first dispatch item becomes a hero with the accent → secondary
+   gradient wash; subsequent items stack as a glass sidebar. */
+.sdd-disp-list,
+[data-disp-list] {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: clamp(16px, 2.4vw, 28px);
+    align-items: start;
+}
+.sdd-disp-list > .sdd-disp-item:first-child,
+[data-disp-list] > .sdd-disp-item:first-child {
+    grid-column: 1;
+    grid-row: span 4;
+    padding: clamp(28px, 4vw, 48px) !important;
+    border-radius: var(--radius-lg) !important;
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent) 0%, color-mix(in srgb, var(--secondary) 8%, transparent) 100%),
+        color-mix(in srgb, var(--paper) 75%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+}
+.sdd-disp-list > .sdd-disp-item:first-child::before,
+[data-disp-list] > .sdd-disp-item:first-child::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -10%;
+    width: 50%; height: 80%;
+    background: radial-gradient(ellipse at center, var(--accent), transparent 65%);
+    filter: blur(60px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+}
+.sdd-disp-list > .sdd-disp-item:first-child > *,
+[data-disp-list] > .sdd-disp-item:first-child > * { position: relative; z-index: 1; }
+.sdd-disp-list > .sdd-disp-item:first-child .sdd-disp-headline,
+[data-disp-list] > .sdd-disp-item:first-child .sdd-disp-headline {
+    font-size: clamp(28px, 4.2vw, 48px) !important;
+    line-height: 1.05 !important;
+}
+.sdd-disp-list > .sdd-disp-item:not(:first-child),
+[data-disp-list] > .sdd-disp-item:not(:first-child) {
+    grid-column: 2;
+    padding: clamp(14px, 1.8vw, 18px) !important;
+    border-radius: var(--radius) !important;
+    background: color-mix(in srgb, var(--paper) 70%, transparent);
+    border: 1px solid var(--rule) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: var(--rule) !important;
+}
+.sdd-disp-list > .sdd-disp-item:not(:first-child) .sdd-disp-headline,
+[data-disp-list] > .sdd-disp-item:not(:first-child) .sdd-disp-headline {
+    font-size: clamp(16px, 1.6vw, 20px) !important;
+    line-height: 1.2 !important;
+}
+
+@media (max-width: 760px) {
+    .sdd-disp-list, [data-disp-list] {
+        grid-template-columns: 1fr;
+    }
+    .sdd-disp-list > .sdd-disp-item:first-child,
+    .sdd-disp-list > .sdd-disp-item:not(:first-child),
+    [data-disp-list] > .sdd-disp-item:first-child,
+    [data-disp-list] > .sdd-disp-item:not(:first-child) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+/* Quote treatment — italic, accent left-bar, indented */
+.sdd-disp-quote {
+    font-style: italic;
+    padding: 16px 20px !important;
+    margin-block: 16px;
+    border-left: 3px solid var(--accent) !important;
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: var(--ink);
+}
+
+/* ─── Atlas — alternating big cards ─────────────────────────── */
+
+.sdd-atlas-list,
+[data-atlas-list] {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 1.6vw, 20px);
+}
+.sdd-atlas-row {
+    padding: clamp(20px, 2.6vw, 32px) !important;
+    background: color-mix(in srgb, var(--paper) 70%, transparent) !important;
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+    border-radius: var(--radius-lg) !important;
+    position: relative;
+    overflow: hidden;
+}
+.sdd-atlas-row:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 35%; height: 80%;
+    background: radial-gradient(ellipse at center, var(--accent), transparent 65%);
+    filter: blur(50px);
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 0;
+}
+.sdd-atlas-row:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: -20%; left: -10%;
+    width: 35%; height: 80%;
+    background: radial-gradient(ellipse at center, var(--secondary), transparent 65%);
+    filter: blur(50px);
+    opacity: 0.20;
+    pointer-events: none;
+    z-index: 0;
+}
+.sdd-atlas-row > * { position: relative; z-index: 1; }
+.sdd-atlas-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 50px -22px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* ─── Dark skin refinement — softer glass + warmer glow ────── */
+
+html[data-skin="dark"] body {
+    background:
+        radial-gradient(ellipse 60vw 60vh at 20% 10%, color-mix(in srgb, var(--accent) 22%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse 50vw 50vh at 90% 80%, color-mix(in srgb, var(--secondary) 18%, transparent) 0%, transparent 65%),
+        var(--paper) !important;
+}
+html[data-skin="dark"] .sdd-ld-head,
+html[data-skin="dark"] .sdd-ld-dday,
+html[data-skin="dark"] .sdd-ld-tax,
+html[data-skin="dark"] .sdd-ld-entries,
+html[data-skin="dark"] .sdd-ld-form,
+html[data-skin="dark"] .sdd-atlas-row,
+html[data-skin="dark"] .sdd-cover-head,
+html[data-skin="dark"] [data-disp-list] > .sdd-disp-item:first-child,
+html[data-skin="dark"] [data-disp-list] > .sdd-disp-item:not(:first-child),
+html[data-skin="dark"] .sdd-disp-list > .sdd-disp-item:first-child,
+html[data-skin="dark"] .sdd-disp-list > .sdd-disp-item:not(:first-child) {
+    background: color-mix(in srgb, var(--paper-d) 65%, transparent) !important;
+    border-color: color-mix(in srgb, var(--ink) 10%, transparent) !important;
+}
+html[data-skin="dark"] .sdd-ld-disclaimer {
+    background: color-mix(in srgb, var(--accent) 12%, transparent) !important;
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent) !important;
+    color: var(--ink) !important;
+}
+html[data-skin="dark"] .sdd-stays__row,
+html[data-skin="dark"] .sdd-ld-tax-row {
+    background: color-mix(in srgb, var(--paper-d) 60%, transparent) !important;
+    border-color: color-mix(in srgb, var(--ink) 10%, transparent) !important;
+}
+html[data-skin="dark"] input,
+html[data-skin="dark"] select,
+html[data-skin="dark"] textarea {
+    background: color-mix(in srgb, var(--paper-d) 75%, transparent) !important;
+    color: var(--ink) !important;
+    border-color: color-mix(in srgb, var(--ink) 14%, transparent) !important;
+}
+html[data-skin="dark"] .topbar,
+html[data-skin="dark"] .bottom-dock {
+    background: color-mix(in srgb, var(--paper-d) 70%, transparent) !important;
+    border-color: color-mix(in srgb, var(--ink) 12%, transparent) !important;
+}
+
+/* Dark cover wordmark — restore gradient (was being kept light, but on
+   deep-violet bg the gradient pops) */
+html[data-skin="dark"] .sdd-cover-wordmark {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
