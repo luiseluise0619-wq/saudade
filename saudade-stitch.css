@@ -1598,3 +1598,337 @@ body[data-edition] *:focus:not(:focus-visible) { outline: none !important; }
 .sdd-listen {
     padding-bottom: max(96px, calc(env(safe-area-inset-bottom) + 96px)) !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v7 — welcome · auth · letters · personal · footer · reader · sub-pages
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Welcome / onboarding ─────────────────────────────────── */
+
+.sdd-welcome {
+    background:
+        radial-gradient(ellipse 70vw 70vh at 50% 30%, color-mix(in srgb, var(--accent) 22%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse 50vw 50vh at 80% 80%, color-mix(in srgb, var(--secondary) 15%, transparent) 0%, transparent 65%),
+        color-mix(in srgb, var(--paper) 90%, transparent) !important;
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+}
+.sdd-welcome h1, .sdd-welcome h2 {
+    font-family: var(--serif) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.035em !important;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent !important;
+}
+.sdd-welcome button,
+.sdd-welcome [class*="-btn"] {
+    border-radius: var(--radius-pill) !important;
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    padding: 14px 32px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    transition: background .15s, transform .12s, box-shadow .15s !important;
+}
+.sdd-welcome button:hover,
+.sdd-welcome [class*="-btn"]:hover {
+    background: var(--rust-d) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+/* ─── Auth modal ───────────────────────────────────────────── */
+
+.sdd-auth-modal {
+    background: color-mix(in srgb, var(--paper) 92%, transparent) !important;
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    box-shadow: 0 40px 100px -30px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+.sdd-auth-inner { padding: clamp(28px, 4vw, 48px) !important; }
+.sdd-auth-intro {
+    font-family: var(--serif) !important;
+    font-size: clamp(20px, 2.4vw, 28px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    margin-block-end: 16px !important;
+}
+.sdd-auth-label {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-auth-field {
+    margin-block: 12px !important;
+}
+.sdd-auth-actions {
+    display: flex !important;
+    gap: 12px !important;
+    margin-block-start: 24px !important;
+}
+.sdd-auth-btn {
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    border: 0 !important;
+    transition: background .15s, transform .12s !important;
+}
+.sdd-auth-btn:hover { background: var(--rust-d) !important; transform: translateY(-1px); }
+.sdd-auth-btn[data-secondary],
+.sdd-auth-btn.is-secondary {
+    background: transparent !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent) !important;
+}
+.sdd-auth-status {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    color: var(--bone-d) !important;
+}
+
+/* ─── Letters (Letters to the Editor) modal ────────────────── */
+
+.sdd-let-modal {
+    background: color-mix(in srgb, var(--paper) 92%, transparent) !important;
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    box-shadow: 0 40px 100px -30px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+.sdd-let-inner { padding: clamp(28px, 4vw, 48px) !important; }
+.sdd-let-section {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    margin-block: 24px 12px !important;
+}
+.sdd-let-lede {
+    font-family: var(--serif) !important;
+    font-size: clamp(15px, 1.6vw, 18px) !important;
+    line-height: 1.6 !important;
+    color: var(--bone-d) !important;
+    font-style: italic;
+}
+.sdd-let-textarea {
+    border-radius: var(--radius) !important;
+    padding: 14px !important;
+    min-height: 120px !important;
+    line-height: 1.55 !important;
+    background: color-mix(in srgb, var(--paper) 92%, transparent) !important;
+}
+.sdd-let-count {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    color: var(--bone) !important;
+    letter-spacing: 0.18em !important;
+}
+.sdd-let-btn {
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 24px !important;
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    border: 0 !important;
+}
+.sdd-let-close {
+    border-radius: var(--radius-pill) !important;
+    background: transparent !important;
+    color: var(--bone-d) !important;
+}
+.sdd-letter {
+    padding: 16px !important;
+    border-radius: var(--radius) !important;
+    background: color-mix(in srgb, var(--paper) 65%, transparent) !important;
+    border: 1px solid var(--rule) !important;
+    margin-block: 8px !important;
+}
+
+/* ─── Personal block (on cover) ────────────────────────────── */
+
+.sdd-personal {
+    border-radius: var(--radius-lg) !important;
+    padding: clamp(16px, 2.4vw, 24px) !important;
+    background: color-mix(in srgb, var(--paper) 72%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.sdd-personal--empty {
+    border-style: dashed !important;
+    border-color: color-mix(in srgb, var(--accent) 25%, transparent) !important;
+    text-align: center;
+    font-style: italic;
+    color: var(--bone-d);
+}
+
+/* ─── Footer ────────────────────────────────────────────────── */
+
+.sdd-footer-page,
+.sdd-footer-section {
+    margin-block-start: clamp(48px, 6vw, 80px) !important;
+    padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px) !important;
+    border-top: 1px solid var(--rule) !important;
+}
+.sdd-footer-l,
+.sdd-footer-r {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-footer-issue {
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-footer-link {
+    color: var(--bone-d) !important;
+    text-decoration: none !important;
+    transition: color .15s;
+}
+.sdd-footer-link:hover { color: var(--accent) !important; }
+.sdd-footer-copy {
+    font-family: var(--serif) !important;
+    font-style: italic;
+    color: var(--bone) !important;
+    font-size: 13px;
+}
+
+/* ─── Reader modal (article view) actions ──────────────────── */
+
+.sdd-reader [class*="action"],
+.sdd-reader [class*="-btn"],
+.sdd-reader button:not([class*="close"]) {
+    border-radius: var(--radius-pill) !important;
+    padding: 10px 16px !important;
+    background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent) !important;
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase;
+    transition: background .15s, transform .12s;
+}
+.sdd-reader [class*="action"]:hover,
+.sdd-reader [class*="-btn"]:hover,
+.sdd-reader button:not([class*="close"]):hover {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    transform: translateY(-1px);
+}
+
+/* ─── Sub-pages (privacy, terms, install, credits, etc.) ───── */
+
+body main,
+body article {
+    max-width: 72ch;
+    margin-inline: auto;
+}
+body article h1, body article h2, body article h3 {
+    font-family: var(--serif) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    margin-block-start: clamp(32px, 4vw, 48px) !important;
+}
+body article h1 {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body article p {
+    font-size: clamp(15px, 1.6vw, 17px) !important;
+    line-height: 1.7 !important;
+    color: var(--bone-d) !important;
+    margin-block: 16px !important;
+}
+body article a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    transition: border-color .15s, color .15s;
+}
+body article a:hover {
+    border-bottom-color: var(--accent);
+    color: var(--rust-d);
+}
+body article ul, body article ol {
+    padding-inline-start: 24px;
+}
+body article li {
+    margin-block: 6px;
+    color: var(--bone-d);
+}
+body article code {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--rust-d);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+}
+body article pre {
+    background: color-mix(in srgb, var(--paper-d) 60%, transparent);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 16px;
+    overflow-x: auto;
+}
+body article blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 12px 20px;
+    margin-block: 20px;
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--bone-d);
+}
+
+/* ─── Form validation states ───────────────────────────────── */
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not([value=""]),
+.is-invalid input,
+.is-invalid select {
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondary) 18%, transparent) !important;
+}
+.is-valid input,
+.is-valid select,
+input:valid {
+    /* don't aggressively border-color valid — too noisy */
+}
+
+/* ─── Anchor / chip / link in any module — accent on hover ── */
+
+body[data-edition] a:not([class*="footer"]):not(.dock-btn) {
+    transition: color .15s !important;
+}
+
+/* ─── Selection highlight in headings — accent gradient ─── */
+
+h1::selection, h2::selection, h3::selection,
+.sdd-cover-wordmark::selection,
+.sdd-section-hero__title::selection,
+.sdd-cover-head .headline::selection {
+    background: color-mix(in srgb, var(--accent) 40%, transparent) !important;
+    -webkit-text-fill-color: var(--ink) !important;
+    color: var(--ink) !important;
+}
