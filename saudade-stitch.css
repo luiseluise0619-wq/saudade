@@ -392,3 +392,244 @@ body[data-edition] hr, body[data-edition] .sdd-rule {
     border-top-style: solid !important;
     border-top-width: 1px !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v2 — section-level visual depth
+   Cover gets an ethereal echo halo. Atlas pins pulse. Listening room
+   gets a CSS-only 32-bar waveform. Cards lift on hover.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Cover — ethereal echo halo behind wordmark ───────────────── */
+
+.sdd-cover-wordmark {
+    position: relative;
+    isolation: isolate;
+    display: inline-block;
+}
+.sdd-cover-wordmark::after {
+    content: '';
+    position: absolute;
+    inset: -40% -20%;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at 30% 50%, color-mix(in srgb, var(--accent) 35%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, color-mix(in srgb, var(--secondary) 28%, transparent) 0%, transparent 60%);
+    filter: blur(40px);
+    opacity: 0.65;
+    pointer-events: none;
+    animation: sddEcho 8s ease-in-out infinite alternate;
+}
+@keyframes sddEcho {
+    from { transform: translate3d(-2%, -1%, 0) scale(1); opacity: 0.55; }
+    to   { transform: translate3d(2%, 1%, 0) scale(1.06); opacity: 0.78; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-wordmark::after { animation: none; opacity: 0.5; }
+}
+
+/* Cover declutter — hide the heaviest secondary surfaces on the cover so
+   the masthead + 1 lede + dispatch list read at a glance. Reveal again
+   via :hover on .sdd-cover for power users. (Stitch mockups: one hero,
+   nothing else above the fold.) */
+.sdd-cover-today--secondary {
+    opacity: 0.55;
+    transition: opacity .25s;
+}
+.sdd-cover:hover .sdd-cover-today--secondary {
+    opacity: 1;
+}
+
+/* ─── Universal card — soft glass + hover lift ────────────────── */
+
+.sdd-card,
+.sdd-disp-item,
+.sdd-atlas-row,
+.sdd-cover-head {
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.sdd-disp-item:hover,
+.sdd-atlas-row:hover,
+.sdd-cover-head:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -16px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* ─── Atlas — pulsing pin animation ───────────────────────────── */
+
+.sdd-atlas-pin,
+.sdd-pin,
+[data-pin],
+.maplibregl-marker {
+    position: relative;
+}
+.sdd-atlas-pin::after,
+.sdd-pin::after,
+[data-pin]::after,
+.maplibregl-marker::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.4;
+    z-index: -1;
+    animation: sddPulse 2.4s ease-out infinite;
+    pointer-events: none;
+}
+@keyframes sddPulse {
+    0%   { transform: scale(0.5); opacity: 0.6; }
+    80%  { transform: scale(2.4); opacity: 0; }
+    100% { transform: scale(2.4); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-atlas-pin::after, .sdd-pin::after, [data-pin]::after, .maplibregl-marker::after {
+        animation: none;
+        opacity: 0.3;
+    }
+}
+
+/* ─── Listening Room — 32-bar CSS waveform ────────────────────── */
+
+.sdd-waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 56px;
+    padding: 8px 12px;
+}
+.sdd-waveform__bar {
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--secondary));
+    border-radius: 2px;
+    transform-origin: center;
+    animation: sddWave 1.3s ease-in-out infinite;
+}
+.sdd-waveform__bar:nth-child(1)  { animation-delay: -1.20s; height: 30%; }
+.sdd-waveform__bar:nth-child(2)  { animation-delay: -1.08s; height: 55%; }
+.sdd-waveform__bar:nth-child(3)  { animation-delay: -0.96s; height: 40%; }
+.sdd-waveform__bar:nth-child(4)  { animation-delay: -0.84s; height: 70%; }
+.sdd-waveform__bar:nth-child(5)  { animation-delay: -0.72s; height: 85%; }
+.sdd-waveform__bar:nth-child(6)  { animation-delay: -0.60s; height: 50%; }
+.sdd-waveform__bar:nth-child(7)  { animation-delay: -0.48s; height: 35%; }
+.sdd-waveform__bar:nth-child(8)  { animation-delay: -0.36s; height: 60%; }
+.sdd-waveform__bar:nth-child(9)  { animation-delay: -0.24s; height: 80%; }
+.sdd-waveform__bar:nth-child(10) { animation-delay: -0.12s; height: 45%; }
+.sdd-waveform__bar:nth-child(11) { animation-delay:  0.00s; height: 65%; }
+.sdd-waveform__bar:nth-child(12) { animation-delay: -1.32s; height: 75%; }
+.sdd-waveform__bar:nth-child(13) { animation-delay: -1.44s; height: 40%; }
+.sdd-waveform__bar:nth-child(14) { animation-delay: -1.56s; height: 90%; }
+.sdd-waveform__bar:nth-child(15) { animation-delay: -1.68s; height: 55%; }
+.sdd-waveform__bar:nth-child(16) { animation-delay: -1.80s; height: 35%; }
+.sdd-waveform__bar:nth-child(n+17) { animation-delay: var(--d, 0s); height: var(--h, 50%); }
+@keyframes sddWave {
+    0%, 100% { transform: scaleY(0.6); opacity: 0.7; }
+    50%      { transform: scaleY(1.4); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-waveform__bar { animation: none; transform: scaleY(0.7); }
+}
+
+/* ─── Section heading treatment ─────────────────────────────── */
+
+body[data-edition] .sdd-mark,
+body[data-edition] .sdd-cover-issue-eyebrow,
+body[data-edition] .sdd-cover-heads-eyebrow {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+/* ─── Cover head — hero treatment ───────────────────────────── */
+
+.sdd-cover-head .city {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.32em !important;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+}
+.sdd-cover-head .headline {
+    font-size: clamp(28px, 4.5vw, 56px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.035em !important;
+    font-weight: 700 !important;
+    margin-block: 12px !important;
+}
+.sdd-cover-head .lede {
+    font-size: clamp(15px, 1.6vw, 18px) !important;
+    line-height: 1.6 !important;
+    color: var(--bone-d) !important;
+    font-weight: 400 !important;
+}
+
+/* ─── Dispatch headline — Stitch-y display ──────────────────── */
+
+.sdd-disp-headline {
+    font-size: clamp(20px, 2.6vw, 32px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+    font-weight: 700 !important;
+}
+
+/* ─── Bottom dock — bigger pill, more breathing ──────────────── */
+
+.bottom-dock {
+    padding: 8px !important;
+    gap: 4px !important;
+    box-shadow: 0 12px 40px -16px color-mix(in srgb, var(--accent) 30%, transparent),
+                0 1px 0 color-mix(in srgb, var(--ink) 6%, transparent) inset;
+}
+.dock-btn {
+    padding: 10px 14px !important;
+    min-height: 44px;
+}
+
+/* ─── Topbar — float + lift ─────────────────────────────────── */
+
+.topbar {
+    box-shadow: 0 12px 40px -20px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* ─── Decorative glow blobs — auto-mounted via body::before/::after ─ */
+
+body::before, body::after {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+}
+body::before {
+    top: -15vh; left: -10vw;
+    width: 50vw; height: 50vh;
+    background: var(--accent);
+}
+body::after {
+    bottom: -15vh; right: -10vw;
+    width: 50vw; height: 50vh;
+    background: var(--secondary);
+    opacity: 0.28;
+}
+html[data-skin="dark"] body::before { opacity: 0.25; }
+html[data-skin="dark"] body::after  { opacity: 0.18; }
+@media (prefers-reduced-motion: reduce) {
+    body::before, body::after { opacity: 0.18 !important; }
+}
+
+/* The KO hanji ::before was already display:none in §1. Make sure our
+   glow doesn't get clobbered by re-setting display. */
+body[data-edition]::before {
+    display: block !important;
+    content: '' !important;
+    background-image: none !important;
+    background-size: auto !important;
+    background-position: 0 0 !important;
+}
