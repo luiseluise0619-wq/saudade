@@ -1932,3 +1932,409 @@ h1::selection, h2::selection, h3::selection,
     -webkit-text-fill-color: var(--ink) !important;
     color: var(--ink) !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v8 — atlas map · schengen / tax panels · kbd cheat-sheet · edition switcher
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Atlas map / globe ───────────────────────────────────── */
+
+.sdd-atlas-map {
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    box-shadow: 0 20px 60px -24px color-mix(in srgb, var(--accent) 40%, transparent);
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+}
+.sdd-atlas-map canvas,
+.sdd-atlas-map svg {
+    filter: saturate(0.85) contrast(0.95);
+}
+.sdd-atlas-map-error {
+    padding: clamp(24px, 4vw, 40px) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px dashed color-mix(in srgb, var(--secondary) 30%, transparent) !important;
+    background: color-mix(in srgb, var(--secondary) 5%, transparent) !important;
+    color: var(--bone-d);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Atlas detail page */
+.sdd-atlas-d-page {
+    padding: clamp(24px, 4vw, 48px) !important;
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 78%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.sdd-atlas-d-head {
+    margin-block-end: clamp(20px, 3vw, 32px) !important;
+}
+.sdd-atlas-d-h {
+    font-family: var(--serif) !important;
+    font-size: clamp(28px, 4vw, 44px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.05 !important;
+}
+.sdd-atlas-d-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-block: 20px;
+}
+.sdd-atlas-d-data > * {
+    padding: 14px;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
+    border: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-d);
+}
+.sdd-atlas-d-disclaimer {
+    padding: 14px 18px !important;
+    border-radius: var(--radius) !important;
+    background: color-mix(in srgb, var(--accent) 8%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent) !important;
+    color: var(--bone-d);
+    font-size: 13px;
+    margin-block: 16px !important;
+}
+.sdd-atlas-d-back {
+    border-radius: var(--radius-pill) !important;
+    padding: 10px 18px !important;
+    background: transparent !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent) !important;
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase;
+    transition: background .15s, transform .12s;
+}
+.sdd-atlas-d-back:hover {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    transform: translateX(-2px);
+}
+
+/* Atlas chips / badges */
+.sdd-atlas-badge,
+.sdd-atlas-amen,
+.sdd-atlas-chip {
+    display: inline-block;
+    padding: 4px 10px !important;
+    border-radius: var(--radius-pill) !important;
+    background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent) !important;
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    margin: 2px;
+}
+
+/* Atlas neighborhood + meta */
+.sdd-atlas-neigh,
+.sdd-atlas-meta,
+.sdd-atlas-count,
+.sdd-atlas-q-count {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.24em !important;
+    text-transform: uppercase;
+    color: var(--bone-d) !important;
+}
+.sdd-atlas-name {
+    font-family: var(--serif) !important;
+    font-weight: 700 !important;
+    font-size: clamp(18px, 2vw, 22px) !important;
+    letter-spacing: -0.02em !important;
+    color: var(--ink);
+}
+.sdd-atlas-photo {
+    border-radius: var(--radius) !important;
+    overflow: hidden;
+}
+
+/* Atlas submit link */
+.sdd-atlas-submit-link {
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 24px !important;
+    background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent) !important;
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: background .15s, transform .12s;
+}
+.sdd-atlas-submit-link:hover {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    transform: translateY(-1px);
+}
+
+/* Atlas empty state */
+.sdd-atlas-empty-state {
+    padding: clamp(28px, 4vw, 48px) !important;
+    border-radius: var(--radius-lg) !important;
+    background:
+        radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent) 0%, transparent 65%),
+        color-mix(in srgb, var(--paper) 60%, transparent) !important;
+    border: 1px dashed color-mix(in srgb, var(--accent) 28%, transparent) !important;
+    text-align: center;
+}
+.sdd-atlas-empty-h {
+    font-family: var(--serif) !important;
+    font-size: clamp(20px, 2.4vw, 28px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    margin-block-end: 12px !important;
+}
+.sdd-atlas-empty-body {
+    color: var(--bone-d) !important;
+    font-style: italic;
+}
+.sdd-atlas-empty-btn {
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 24px !important;
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    border: 0 !important;
+    margin-block-start: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+}
+
+/* ─── Schengen 90/180 panel ─────────────────────────────── */
+
+.sdd-sch-panel {
+    padding: clamp(20px, 3vw, 32px) !important;
+    border-radius: var(--radius-lg) !important;
+    background:
+        radial-gradient(ellipse at 80% 20%, color-mix(in srgb, var(--accent) 14%, transparent) 0%, transparent 65%),
+        color-mix(in srgb, var(--paper) 75%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.sdd-sch-h {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-sch-num {
+    font-family: var(--mono) !important;
+    font-weight: 700 !important;
+    font-size: clamp(48px, 9vw, 88px) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent !important;
+}
+.sdd-sch-num.is-over {
+    background: linear-gradient(135deg, var(--secondary) 0%, #FF5C8A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sdd-sch-of,
+.sdd-sch-label,
+.sdd-sch-meta,
+.sdd-sch-window,
+.sdd-sch-status {
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.24em !important;
+    text-transform: uppercase;
+    color: var(--bone-d) !important;
+}
+.sdd-sch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8px, 1fr));
+    gap: 2px;
+    margin-block: 16px;
+}
+.sdd-sch-cell {
+    aspect-ratio: 1;
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--ink) 8%, transparent);
+    transition: background .15s;
+}
+.sdd-sch-cell[data-used="1"],
+.sdd-sch-cell.is-used {
+    background: var(--accent);
+}
+.sdd-sch-cell.is-today {
+    box-shadow: 0 0 0 1.5px var(--secondary);
+}
+.sdd-sch-empty {
+    padding: 16px;
+    text-align: center;
+    color: var(--bone-d);
+    font-style: italic;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--paper) 50%, transparent);
+}
+.sdd-sch-note {
+    font-size: 12px !important;
+    color: var(--bone) !important;
+    font-style: italic;
+    margin-block-start: 12px !important;
+}
+
+/* ─── Tax 183 panel ─────────────────────────────────────── */
+
+.sdd-tax-panel {
+    padding: clamp(20px, 3vw, 32px) !important;
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 75%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.sdd-tax-h {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-tax-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+.sdd-tax-row {
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+}
+.sdd-tax-c,
+.sdd-tax-d,
+.sdd-tax-t,
+.sdd-tax-w {
+    padding: 10px 14px !important;
+    font-family: var(--mono) !important;
+    font-size: 12px !important;
+}
+.sdd-tax-c {
+    font-weight: 700 !important;
+    color: var(--accent) !important;
+    letter-spacing: 0.18em !important;
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+.sdd-tax-w {
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+.sdd-tax-empty {
+    padding: 16px;
+    text-align: center;
+    color: var(--bone-d);
+    font-style: italic;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--paper) 50%, transparent);
+}
+.sdd-tax-note {
+    font-size: 12px !important;
+    color: var(--bone) !important;
+    font-style: italic;
+    margin-block-start: 12px !important;
+}
+
+/* ─── Keyboard cheat-sheet overlay ───────────────────────── */
+
+.sdd-kbd-help,
+[data-kbd-help] {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important;
+    display: grid !important;
+    place-items: center !important;
+    background: color-mix(in srgb, var(--ink) 65%, transparent) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 24px;
+}
+.sdd-kbd-help > *,
+[data-kbd-help] > * {
+    background: color-mix(in srgb, var(--paper) 95%, transparent) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    padding: clamp(24px, 4vw, 40px) !important;
+    box-shadow: 0 40px 100px -30px color-mix(in srgb, var(--accent) 50%, transparent);
+    max-width: 480px;
+    width: 100%;
+}
+.sdd-kbd-help h2,
+.sdd-kbd-help h3 {
+    font-family: var(--serif) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+}
+.sdd-kbd-help kbd,
+[data-kbd-help] kbd {
+    display: inline-block;
+    padding: 4px 10px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    border-radius: var(--radius-sm);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* ─── Edition switcher ─────────────────────────────────── */
+
+.sdd-cover-edition {
+    border-radius: var(--radius-pill) !important;
+    padding: 6px 14px !important;
+    background: color-mix(in srgb, var(--paper) 75%, transparent) !important;
+    border: 1px solid var(--rule) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.sdd-cover-edition-list {
+    border-radius: var(--radius-lg) !important;
+    background: color-mix(in srgb, var(--paper) 92%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent) !important;
+    box-shadow: 0 24px 60px -20px color-mix(in srgb, var(--accent) 40%, transparent);
+    padding: 6px !important;
+}
+.sdd-cover-edition-opt {
+    border-radius: var(--radius) !important;
+    padding: 10px 14px !important;
+    transition: background .15s, color .15s;
+}
+.sdd-cover-edition-opt:hover {
+    background: color-mix(in srgb, var(--accent) 12%, transparent) !important;
+    color: var(--accent) !important;
+}
+.sdd-cover-edition-opt[aria-current="true"],
+.sdd-cover-edition-opt.is-active {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    font-weight: 600 !important;
+}
