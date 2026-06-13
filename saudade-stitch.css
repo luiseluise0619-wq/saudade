@@ -952,3 +952,216 @@ html[data-skin="dark"] .sdd-cover-wordmark {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v4 — cover simplify · section hero · waveform play-state
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Cover simplify — hide the noisiest secondary elements ──────── */
+
+/* Existing v2 dimmed .sdd-cover-today--secondary to 55% on idle. Go
+   further: hide the personal block + topic chips + archive link by
+   default so the cover reads as: wordmark + 1 hero head + dispatch list.
+   They re-appear on cover :hover for power users. */
+
+.sdd-cover-today--secondary,
+#sddCoverPersonal,
+.sdd-cover-issue-eyebrow + .sdd-cover-issue-meta,
+.sdd-cover-topics,
+.sdd-cover-archive-link {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .35s, transform .35s;
+    pointer-events: none;
+}
+.sdd-cover:hover .sdd-cover-today--secondary,
+.sdd-cover:hover #sddCoverPersonal,
+.sdd-cover:hover .sdd-cover-topics,
+.sdd-cover:hover .sdd-cover-archive-link,
+.sdd-cover:focus-within .sdd-cover-today--secondary,
+.sdd-cover:focus-within #sddCoverPersonal,
+.sdd-cover:focus-within .sdd-cover-topics,
+.sdd-cover:focus-within .sdd-cover-archive-link {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-today--secondary,
+    #sddCoverPersonal,
+    .sdd-cover-topics,
+    .sdd-cover-archive-link {
+        transition: none;
+        opacity: 0.6;
+        transform: none;
+        pointer-events: auto;
+    }
+}
+
+/* Touch (no hover) — reveal everything by default since hover can't fire */
+@media (hover: none) {
+    .sdd-cover-today--secondary,
+    #sddCoverPersonal,
+    .sdd-cover-topics,
+    .sdd-cover-archive-link {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+}
+
+/* ─── Section hero — every section gets a giant display title ──── */
+
+.sdd-section-hero {
+    padding: clamp(40px, 8vw, 120px) clamp(20px, 4vw, 60px) clamp(24px, 4vw, 48px);
+    text-align: center;
+}
+.sdd-section-hero__eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-block-end: 16px;
+    display: block;
+}
+.sdd-section-hero__title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 8vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    margin: 0 0 20px;
+    background: linear-gradient(135deg, var(--ink) 0%, color-mix(in srgb, var(--accent) 65%, var(--ink)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.sdd-section-hero__lede {
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.6vw, 19px);
+    line-height: 1.55;
+    color: var(--bone-d);
+    max-width: 56ch;
+    margin-inline: auto;
+}
+
+/* Atlas / Ledger / Dispatches / Listening — first child of each panel
+   container is treated as the section hero if it has the marker class.
+   (Modules can add the marker; legacy panels remain untouched.) */
+
+/* ─── Waveform — playback state ───────────────────────────────── */
+
+.sdd-waveform__bar {
+    animation-play-state: paused;
+    opacity: 0.45;
+    transition: opacity .25s;
+}
+.sdd-waveform.is-playing .sdd-waveform__bar {
+    animation-play-state: running;
+    opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-waveform__bar { animation-play-state: paused; opacity: 0.65; }
+}
+
+/* Inject waveform inside the listening room header gracefully */
+.sdd-listen-head .sdd-waveform {
+    margin-block-start: 16px;
+    height: 44px;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--paper) 50%, transparent);
+    padding: 6px 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ─── Listening track row — pill row with active accent ────────── */
+
+.sdd-listen-track {
+    padding: clamp(10px, 1.4vw, 14px) clamp(12px, 1.6vw, 16px) !important;
+    border-radius: var(--radius) !important;
+    margin-block: 4px;
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
+    border: 1px solid var(--rule) !important;
+    transition: background .15s, transform .12s, border-color .15s;
+}
+.sdd-listen-track:hover {
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 25%, transparent) !important;
+}
+.sdd-listen-track[aria-pressed="true"],
+.sdd-listen-track.is-playing {
+    background: color-mix(in srgb, var(--accent) 12%, transparent) !important;
+    border-color: var(--accent) !important;
+}
+.sdd-listen-track .sdd-listen-num {
+    font-family: var(--mono) !important;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-listen-track .sdd-listen-title {
+    font-family: var(--serif) !important;
+    font-weight: 600 !important;
+}
+.sdd-listen-track .sdd-listen-duration {
+    font-family: var(--mono) !important;
+    color: var(--bone) !important;
+}
+
+/* Listening city photo — round corners + soft shadow */
+.sdd-listen-city-photo {
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden;
+    box-shadow: 0 12px 40px -16px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Category header inside listening */
+.sdd-listen-cat-head {
+    padding: clamp(14px, 1.8vw, 20px) 0 !important;
+    border: 0 !important;
+    margin-block-start: clamp(20px, 3vw, 32px);
+}
+.sdd-listen-cat-name {
+    font-family: var(--serif) !important;
+    font-size: clamp(22px, 2.6vw, 32px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+}
+.sdd-listen-cat-count {
+    font-family: var(--mono) !important;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.28em !important;
+}
+
+/* ─── Bigger fonts globally — breathing room (Stitch is generous) ── */
+
+body[data-edition] {
+    font-size: 17px;
+    line-height: 1.62;
+}
+@media (max-width: 720px) {
+    body[data-edition] { font-size: 16px; }
+}
+
+/* Stays form — bigger headings, more padding */
+.sdd-stays__h {
+    font-size: 11px !important;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+.sdd-stays__help {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-block-end: 24px !important;
+}
+
+/* Stays row inputs — taller for touch */
+.sdd-stays__row input,
+.sdd-stays__row select {
+    min-height: 44px !important;
+}
