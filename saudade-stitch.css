@@ -2577,3 +2577,63 @@ body article h1, body article h2 { text-wrap: balance; }
 /* Anti-flash — paint the surface immediately while fonts load */
 html { background: var(--paper, #FAFAFB); color-scheme: light; }
 html[data-skin="dark"] { color-scheme: dark; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v10 — SATURATED skin contrast fix
+   When the user picks the "saturated" (accent-as-cover-bg) skin, the
+   gradient-text wordmark disappears because it clips to a transparent
+   fill — and the background is the same accent color the gradient ends
+   on. Force solid paper-color fill on accent backgrounds. Same for
+   section hero titles and sub-page H1.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+html[data-skin="saturated"] .sdd-cover .sdd-cover-wordmark,
+html[data-skin="saturated"] .sdd-cover h1,
+html[data-skin="saturated"] .sdd-cover h2 {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: var(--paper) !important;
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-wordmark::after {
+    /* the echo halo also reads as a darker smudge over the accent bg —
+       calm it down so it doesn't compete with the wordmark. */
+    opacity: 0.25 !important;
+    filter: blur(60px) !important;
+}
+/* Force every saturated-cover text element to paper — Stitch glass cards
+   on saturated cover would otherwise stay ink (dark) on accent bg. The
+   v1 cover-head glass uses paper-tinted bg + ink text, which is fine
+   when the surrounding cover is paper; on saturated cover the glass
+   becomes a translucent accent panel and ink turns invisible. Drop the
+   glass on saturated cover. */
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-today,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-today--secondary,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads {
+    background: rgba(255,255,255,0.10) !important;
+    border-color: rgba(255,255,255,0.20) !important;
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head *,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-today *,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads * {
+    color: var(--paper) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head .city,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-heads-eyebrow,
+html[data-skin="saturated"] .sdd-cover .sdd-cover-issue-eyebrow,
+html[data-skin="saturated"] .sdd-cover .sdd-disp-num,
+html[data-skin="saturated"] .sdd-cover .sdd-mark {
+    color: rgba(255,255,255,0.78) !important;
+}
+html[data-skin="saturated"] .sdd-cover .sdd-cover-head a:hover .headline {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+/* Dark skin — same precaution. Gradient text on a near-black bg is fine
+   when the gradient stays bright, but if a particular section uses the
+   accent itself as background, the wordmark would vanish there too.
+   We never set accent-as-bg in dark, but harden anyway: section heroes
+   keep the gradient (visible on deep violet), only saturated overrides. */
