@@ -2338,3 +2338,242 @@ h1::selection, h2::selection, h3::selection,
     color: var(--paper) !important;
     font-weight: 600 !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v9 — color tone refinement · HUD · button hierarchy · wide clamp · a11y
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Color tone — pull the violet warmer + saudade soul ─────── */
+
+/* The generic Stitch violet #674bb5 reads as "wellness app" out of the
+   box. Pulling it slightly warmer + adding a soft rust tertiary gives
+   it the saudade undertone (longing, dusk, paper light). Per edition
+   we override below where it matters — EN gets the rust tertiary
+   so the cover still nods at the original terracotta. */
+body[data-edition] {
+    --accent:    #6E4FBE;   /* slightly warmer violet */
+    --rust:      #6E4FBE;
+    --rust-d:    #5A3FA8;
+    --rust-soft: #9A82DA;
+    --secondary: #F47AB8;   /* slightly muted pink, less candy */
+    --tertiary:  #D67756;   /* terracotta — saudade undertone */
+}
+body.edition-en { --accent: #6E4FBE; --rust: #6E4FBE; --rust-d: #5A3FA8; --rust-soft: #9A82DA; --tertiary: #D67756; }
+body.edition-ko { --accent: #5896E8; --rust: #5896E8; --rust-d: #3F7DD0; --rust-soft: #8DB7EE; --tertiary: #D67756; }
+body.edition-ja { --accent: #F47AB8; --rust: #F47AB8; --rust-d: #DC5FA0; --rust-soft: #FBA3CE; --tertiary: #6E4FBE; }
+body.edition-pt { --accent: #5A7BD8; --rust: #5A7BD8; --rust-d: #4862C0; --rust-soft: #94A8E5; --tertiary: #D67756; }
+body.edition-es { --accent: #B070C7; --rust: #B070C7; --rust-d: #9555AE; --rust-soft: #CEA0DC; --tertiary: #D67756; }
+
+/* Dark skin — lift accents but warmer */
+html[data-skin="dark"] body.edition-en { --accent: #9A82DA; --rust: #9A82DA; --rust-d: #826AC8; --rust-soft: #B8A6E3; --tertiary: #E8A07C; }
+html[data-skin="dark"] body.edition-ko { --accent: #8DB7EE; --rust: #8DB7EE; --rust-d: #6FA0E0; --rust-soft: #B0CEF4; --tertiary: #E8A07C; }
+html[data-skin="dark"] body.edition-ja { --accent: #FBA3CE; --rust: #FBA3CE; --rust-d: #F085B6; --rust-soft: #FDC2DE; --tertiary: #9A82DA; }
+html[data-skin="dark"] body.edition-pt { --accent: #94A8E5; --rust: #94A8E5; --rust-d: #7890DC; --rust-soft: #B6C2EE; --tertiary: #E8A07C; }
+html[data-skin="dark"] body.edition-es { --accent: #CEA0DC; --rust: #CEA0DC; --rust-d: #B888CB; --rust-soft: #DCBBE5; --tertiary: #E8A07C; }
+
+/* ─── HUD corner marks — print-style registration crosses ──── */
+
+body[data-edition]::before,
+body[data-edition]::after {
+    /* keep the glow blobs from v2 but layer HUD over them */
+}
+.sdd-hud,
+[data-hud] {
+    position: fixed !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    width: 12px !important;
+    height: 12px !important;
+    color: color-mix(in srgb, var(--accent) 60%, transparent) !important;
+}
+.sdd-hud--tl { top: 16px; left: 16px; }
+.sdd-hud--tr { top: 16px; right: 16px; }
+.sdd-hud--bl { bottom: 16px; left: 16px; }
+.sdd-hud--br { bottom: 16px; right: 16px; }
+.sdd-hud::before,
+.sdd-hud::after,
+[data-hud]::before,
+[data-hud]::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+}
+.sdd-hud::before, [data-hud]::before { width: 100%; height: 1px; top: 50%; }
+.sdd-hud::after,  [data-hud]::after  { width: 1px; height: 100%; left: 50%; }
+
+/* ─── Button hierarchy — primary / secondary / tertiary / ghost ── */
+
+[data-btn="primary"],
+.sdd-btn--primary,
+button[type="submit"]:not([class*="-rm"]):not(.dock-btn) {
+    background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--secondary) 70%, var(--accent)) 100%) !important;
+    color: var(--paper) !important;
+    border: 0 !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 28px !important;
+    font-family: var(--sans) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    box-shadow: 0 8px 24px -10px color-mix(in srgb, var(--accent) 60%, transparent);
+    transition: transform .12s, box-shadow .15s, filter .15s !important;
+}
+[data-btn="primary"]:hover,
+.sdd-btn--primary:hover,
+button[type="submit"]:not([class*="-rm"]):not(.dock-btn):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 32px -10px color-mix(in srgb, var(--accent) 70%, transparent);
+    filter: brightness(1.05);
+}
+[data-btn="secondary"],
+.sdd-btn--secondary {
+    background: transparent !important;
+    color: var(--accent) !important;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent) !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 28px !important;
+    font-family: var(--sans) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+}
+[data-btn="secondary"]:hover,
+.sdd-btn--secondary:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+}
+[data-btn="ghost"],
+.sdd-btn--ghost {
+    background: transparent !important;
+    color: var(--bone-d) !important;
+    border: 0 !important;
+    padding: 10px 16px !important;
+}
+[data-btn="ghost"]:hover,
+.sdd-btn--ghost:hover {
+    color: var(--accent) !important;
+}
+
+/* ─── Disabled state — uniform across modules ───────────────── */
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled,
+[aria-disabled="true"] {
+    opacity: 0.45 !important;
+    cursor: not-allowed !important;
+    filter: grayscale(0.4);
+}
+
+/* ─── Loading state on buttons ─────────────────────────────── */
+
+button.is-loading,
+button[data-loading="true"] {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+}
+button.is-loading::after,
+button[data-loading="true"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 16px; height: 16px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: sddSpin .8s linear infinite;
+    color: var(--paper);
+}
+@keyframes sddSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+    button.is-loading::after,
+    button[data-loading="true"]::after { animation-duration: 2.4s; }
+}
+
+/* ─── Wide-screen clamp — don't sprawl on ultrawides ───────── */
+
+.sdd-cover,
+.sdd-disp,
+.sdd-atlas,
+.sdd-ld,
+.sdd-listen {
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+/* ─── High-contrast OS preference — kill glass + bump borders ─ */
+
+@media (prefers-contrast: more) {
+    .sdd-glass,
+    .sdd-cover-head,
+    .sdd-cover-today,
+    .sdd-cover-today--secondary,
+    .sdd-cover-heads,
+    .sdd-ld-head,
+    .sdd-ld-dday,
+    .sdd-ld-tax,
+    .sdd-ld-entries,
+    .sdd-ld-form,
+    .sdd-atlas-row,
+    .sdd-atlas-d-page,
+    .sdd-sch-panel,
+    .sdd-tax-panel,
+    .sdd-disp-list > .sdd-disp-item,
+    [data-disp-list] > .sdd-disp-item {
+        background: var(--paper) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-width: 1.5px !important;
+        border-color: var(--ink) !important;
+    }
+    body::before, body::after, .sdd-glow {
+        display: none !important;
+    }
+    .sdd-cover-wordmark,
+    .sdd-section-hero__title,
+    body article h1,
+    .sdd-welcome h1, .sdd-welcome h2,
+    .sdd-sch-num,
+    .sdd-ld-dday-num {
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        -webkit-text-fill-color: var(--ink) !important;
+        color: var(--ink) !important;
+    }
+}
+
+/* ─── Reduced data — drop glow blobs on save-data ────────── */
+
+@media (prefers-reduced-data: reduce) {
+    body::before, body::after, .sdd-glow { display: none !important; }
+    *, *::before, *::after { animation: none !important; }
+}
+
+/* ─── Cover hero parallax on mouse move (light delight) ──── */
+
+.sdd-cover-wordmark::after {
+    transition: transform .35s ease-out;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .sdd-cover:hover .sdd-cover-wordmark::after {
+        animation-duration: 5s;
+    }
+}
+
+/* ─── Final micro — visual rhythm tightening ────────────── */
+
+/* Ensure dispatch headlines never wrap on a single short word */
+.sdd-disp-headline { text-wrap: balance; }
+.sdd-cover-head .headline { text-wrap: balance; }
+.sdd-section-hero__title { text-wrap: balance; }
+body article h1, body article h2 { text-wrap: balance; }
+
+/* Avoid orphan lines in lede / body */
+.sdd-disp-lede, .sdd-disp-fulltext,
+.sdd-cover-head .lede,
+.sdd-section-hero__lede { text-wrap: pretty; }
+
+/* Anti-flash — paint the surface immediately while fonts load */
+html { background: var(--paper, #FAFAFB); color-scheme: light; }
+html[data-skin="dark"] { color-scheme: dark; }
