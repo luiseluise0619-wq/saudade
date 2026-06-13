@@ -48,7 +48,9 @@ body.edition-pt, body.edition-es {
 
     /* type stack — Plus Jakarta Sans for everything readable, Manrope
        where saudade previously used mono. Falls back gracefully if the
-       Google Fonts load is blocked. */
+       Google Fonts load is blocked. CJK fonts inserted per edition
+       below so Korean / Japanese hangul + kanji don't fall through to
+       system raster. */
     --serif: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
     --sans:  "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
     --mono:  "Manrope", "Plus Jakarta Sans", system-ui, sans-serif;
@@ -67,6 +69,20 @@ body.edition-ko { --accent: #5a9ff4; --rust: #5a9ff4; --rust-d: #3F86E0; --rust-
 body.edition-ja { --accent: #fc79bd; --rust: #fc79bd; --rust-d: #E45AA0; --rust-soft: #FFA1D2; }
 body.edition-pt { --accent: #6B8BF8; --rust: #6B8BF8; --rust-d: #506FDC; --rust-soft: #9DB3FA; }
 body.edition-es { --accent: #B57BD9; --rust: #B57BD9; --rust-d: #9C5FC1; --rust-soft: #CFA3E6; }
+
+/* CJK font stacks — Plus Jakarta Sans falls through to system on hangul
+   / kanji glyphs (renders ugly). Prepend Pretendard / Noto Sans JP so
+   the Stitch register stays consistent across scripts. */
+body.edition-ko {
+    --serif: "Pretendard Variable", "Pretendard", "Plus Jakarta Sans", "Noto Sans KR", system-ui, sans-serif;
+    --sans:  "Pretendard Variable", "Pretendard", "Plus Jakarta Sans", "Noto Sans KR", system-ui, sans-serif;
+    --mono:  "Manrope", "Pretendard Variable", "Noto Sans KR", system-ui, sans-serif;
+}
+body.edition-ja {
+    --serif: "Noto Sans JP", "Plus Jakarta Sans", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
+    --sans:  "Noto Sans JP", "Plus Jakarta Sans", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
+    --mono:  "Manrope", "Noto Sans JP", system-ui, sans-serif;
+}
 
 /* Dark skin — Stitch's deep-violet night palette. */
 html[data-skin="dark"] body {
@@ -1164,4 +1180,207 @@ body[data-edition] {
 .sdd-stays__row input,
 .sdd-stays__row select {
     min-height: 44px !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   STITCH v5 — enter motion · skeleton loading · topbar slim · chip pills
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── Page enter motion — staggered fade-up on first paint ─────── */
+
+@keyframes sddEnter {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.sdd-cover-head,
+.sdd-disp-item,
+.sdd-atlas-row,
+.sdd-ld-head,
+.sdd-ld-dday,
+.sdd-ld-tax,
+.sdd-ld-entries,
+.sdd-ld-form,
+.sdd-listen-track,
+.sdd-listen-cat-head,
+.sdd-listen-city-photo {
+    animation: sddEnter .55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Stagger via nth-child timing — keeps things lively without JS */
+.sdd-disp-item:nth-child(1)  { animation-delay: .05s; }
+.sdd-disp-item:nth-child(2)  { animation-delay: .10s; }
+.sdd-disp-item:nth-child(3)  { animation-delay: .15s; }
+.sdd-disp-item:nth-child(4)  { animation-delay: .20s; }
+.sdd-disp-item:nth-child(5)  { animation-delay: .25s; }
+.sdd-disp-item:nth-child(6)  { animation-delay: .30s; }
+.sdd-disp-item:nth-child(n+7){ animation-delay: .35s; }
+
+.sdd-atlas-row:nth-child(1)  { animation-delay: .05s; }
+.sdd-atlas-row:nth-child(2)  { animation-delay: .10s; }
+.sdd-atlas-row:nth-child(3)  { animation-delay: .15s; }
+.sdd-atlas-row:nth-child(4)  { animation-delay: .20s; }
+.sdd-atlas-row:nth-child(5)  { animation-delay: .25s; }
+.sdd-atlas-row:nth-child(n+6){ animation-delay: .30s; }
+
+.sdd-listen-track:nth-child(1)  { animation-delay: .04s; }
+.sdd-listen-track:nth-child(2)  { animation-delay: .08s; }
+.sdd-listen-track:nth-child(3)  { animation-delay: .12s; }
+.sdd-listen-track:nth-child(4)  { animation-delay: .16s; }
+.sdd-listen-track:nth-child(5)  { animation-delay: .20s; }
+.sdd-listen-track:nth-child(n+6){ animation-delay: .24s; }
+
+.sdd-ld-dday { animation-delay: .05s; }
+.sdd-ld-tax  { animation-delay: .12s; }
+.sdd-ld-entries { animation-delay: .20s; }
+.sdd-ld-form { animation-delay: .28s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-head,
+    .sdd-disp-item,
+    .sdd-atlas-row,
+    .sdd-ld-head,
+    .sdd-ld-dday,
+    .sdd-ld-tax,
+    .sdd-ld-entries,
+    .sdd-ld-form,
+    .sdd-listen-track,
+    .sdd-listen-cat-head,
+    .sdd-listen-city-photo {
+        animation: none;
+    }
+}
+
+/* ─── Skeleton / loading shimmer ─────────────────────────────── */
+
+.sdd-skeleton,
+[data-skeleton],
+.is-loading,
+.sdd-empty {
+    position: relative;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--paper) 70%, transparent);
+    border-radius: var(--radius);
+}
+.sdd-skeleton::after,
+[data-skeleton]::after,
+.is-loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        color-mix(in srgb, var(--accent) 12%, transparent) 50%,
+        transparent 100%
+    );
+    animation: sddShimmer 1.6s ease-in-out infinite;
+}
+@keyframes sddShimmer {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sdd-skeleton::after,
+    [data-skeleton]::after,
+    .is-loading::after { animation: none; opacity: 0.15; }
+}
+
+/* ─── Empty states — soft accent callouts (saudade-empty.css base) ─ */
+
+.sdd-empty,
+[data-empty],
+.sdd-cover-head--pending {
+    padding: clamp(24px, 4vw, 48px) !important;
+    border-radius: var(--radius-lg) !important;
+    background:
+        radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 70%),
+        color-mix(in srgb, var(--paper) 60%, transparent) !important;
+    border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent) !important;
+    text-align: center;
+    color: var(--bone-d);
+    font-style: italic;
+}
+.sdd-empty .dots,
+.sdd-cover-head--pending .dots {
+    color: var(--accent) !important;
+    letter-spacing: 0.4em;
+    opacity: 0.7;
+}
+
+/* ─── Topbar slimmer — match Stitch's minimal header ─────────── */
+
+.topbar {
+    min-height: 48px !important;
+    padding: 6px clamp(12px, 2vw, 20px) !important;
+    font-size: 12px;
+}
+.topbar a, .topbar button {
+    padding: 6px 10px !important;
+    border-radius: var(--radius-pill) !important;
+}
+
+/* ─── Chip pills — topic chips / filters get the Stitch pill treatment ─ */
+
+.sdd-chip,
+[role="tab"],
+.sdd-cover-topics > *,
+.sdd-listen-mode-btn,
+.sdd-listen-catnav-link {
+    border-radius: var(--radius-pill) !important;
+    padding: 6px 14px !important;
+    background: color-mix(in srgb, var(--paper) 75%, transparent) !important;
+    border: 1px solid var(--rule) !important;
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase;
+    transition: background .15s, color .15s, transform .12s;
+}
+.sdd-chip:hover,
+[role="tab"]:hover,
+.sdd-listen-mode-btn:hover,
+.sdd-listen-catnav-link:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+    color: var(--accent) !important;
+    transform: translateY(-1px);
+}
+.sdd-chip[aria-pressed="true"],
+.sdd-chip.is-active,
+[role="tab"][aria-selected="true"],
+.sdd-listen-mode-btn[aria-pressed="true"] {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    border-color: var(--accent) !important;
+}
+
+/* ─── Toast — glass pill instead of slab ─────────────────────── */
+
+#toast {
+    background: color-mix(in srgb, var(--ink) 92%, transparent) !important;
+    color: var(--paper) !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 12px 24px !important;
+    box-shadow: 0 16px 48px -16px color-mix(in srgb, var(--accent) 50%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-family: var(--sans) !important;
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+/* ─── Scrollbars — slim accent track ─────────────────────────── */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--accent) 40%, transparent) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: var(--radius-pill);
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--accent) 60%, transparent);
 }
