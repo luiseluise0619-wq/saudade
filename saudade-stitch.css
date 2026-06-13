@@ -1,0 +1,394 @@
+/* ════════════════════════════════════════════════════════════════════════
+   SAUDADE · STITCH SKIN
+   wholesale visual reset to the Stitch-mockup design language.
+   Loaded LAST in index.html so it overrides every prior token + chrome.
+
+   To revert: remove the <link rel="stylesheet" href="saudade-stitch.css">
+   line in index.html. Nothing else needs touching.
+
+   Palette:
+     primary    #674bb5  violet
+     secondary  #fc79bd  pink
+     tertiary   #5a9ff4  blue
+     surface    #FAFAFB  off-white
+     surface-d  #0F0B1F  deep violet-black (dark skin)
+     ink        #1A1230  deep violet-ink
+   Type:
+     display    Plus Jakarta Sans   (600/700)
+     body       Plus Jakarta Sans   (400/500)
+     mono       Manrope             (400/500 — used where saudade used JetBrains)
+   Surfaces:
+     .sdd-glass — backdrop-filter blur + translucent fill, 20px radius
+     .sdd-glow  — fixed decorative blob behind a section
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ─── 1. Token override — applied to every edition + every skin ───── */
+
+body[data-edition],
+body.edition-en, body.edition-ko, body.edition-ja,
+body.edition-pt, body.edition-es {
+    --paper:     #FAFAFB;
+    --paper-d:   #F1ECFA;
+    --ink:       #1A1230;
+    --ink-soft:  #0C0719;
+    --bone:      #6C5F8A;
+    --bone-d:    #3B2F5B;
+    --rule:      rgba(26, 18, 48, 0.10);
+    --rule-2:    rgba(26, 18, 48, 0.30);
+
+    /* primary brand accent — per-edition hue swap below, all in the
+       Stitch family (purple / pink / blue). */
+    --accent:    #674bb5;
+    --rust:      #674bb5;
+    --rust-d:    #533BA0;
+    --rust-soft: #8C75D1;
+    --jade:      #5a9ff4;
+    --secondary: #fc79bd;
+    --tertiary:  #5a9ff4;
+
+    /* type stack — Plus Jakarta Sans for everything readable, Manrope
+       where saudade previously used mono. Falls back gracefully if the
+       Google Fonts load is blocked. */
+    --serif: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    --sans:  "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    --mono:  "Manrope", "Plus Jakarta Sans", system-ui, sans-serif;
+
+    /* radii — Stitch is rounded; saudade was square. */
+    --radius-sm: 8px;
+    --radius:    16px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+}
+
+/* Per-edition accent — each language picks its own Stitch-family hue so
+   editions still feel different at a glance. */
+body.edition-en { --accent: #674bb5; --rust: #674bb5; --rust-d: #533BA0; --rust-soft: #8C75D1; }
+body.edition-ko { --accent: #5a9ff4; --rust: #5a9ff4; --rust-d: #3F86E0; --rust-soft: #8DBEF7; }
+body.edition-ja { --accent: #fc79bd; --rust: #fc79bd; --rust-d: #E45AA0; --rust-soft: #FFA1D2; }
+body.edition-pt { --accent: #6B8BF8; --rust: #6B8BF8; --rust-d: #506FDC; --rust-soft: #9DB3FA; }
+body.edition-es { --accent: #B57BD9; --rust: #B57BD9; --rust-d: #9C5FC1; --rust-soft: #CFA3E6; }
+
+/* Dark skin — Stitch's deep-violet night palette. */
+html[data-skin="dark"] body {
+    --paper:     #0F0B1F;
+    --paper-d:   #1A1235;
+    --ink:       #F1ECFA;
+    --ink-soft:  #FFFFFF;
+    --bone:      #B5A8D0;
+    --bone-d:    #D4CAE8;
+    --rule:      rgba(241, 236, 250, 0.14);
+    --rule-2:    rgba(241, 236, 250, 0.36);
+}
+html[data-skin="dark"] body.edition-en { --accent: #8C75D1; --rust: #8C75D1; --rust-d: #7461C0; --rust-soft: #B0A0DF; }
+html[data-skin="dark"] body.edition-ko { --accent: #8DBEF7; --rust: #8DBEF7; --rust-d: #6FA9F0; --rust-soft: #B5D3FA; }
+html[data-skin="dark"] body.edition-ja { --accent: #FFA1D2; --rust: #FFA1D2; --rust-d: #FB85C0; --rust-soft: #FFC0E0; }
+html[data-skin="dark"] body.edition-pt { --accent: #9DB3FA; --rust: #9DB3FA; --rust-d: #7E97F0; --rust-soft: #BCCAFB; }
+html[data-skin="dark"] body.edition-es { --accent: #CFA3E6; --rust: #CFA3E6; --rust-d: #B988D5; --rust-soft: #DEBEEE; }
+
+/* Drop the hanji-dot texture under KO — Stitch is glass, not paper. */
+body.edition-ko::before { display: none !important; }
+
+/* Drop the JA 横組み writing-mode override side-effects (傍点) — keep italics. */
+body.edition-ja em {
+    text-emphasis: none !important;
+    font-style: italic !important;
+}
+
+/* Drop per-edition ribbon / azulejo motifs — Stitch surfaces are bare. */
+body.edition-pt .sdd-cover-mast-rule,
+body.edition-es .sdd-cover-mast-rule {
+    background-image: none !important;
+    background: var(--rule) !important;
+    height: 1px !important;
+    width: clamp(120px, 20vw, 240px) !important;
+}
+body.edition-es .sdd-cover-mast-rule::before,
+body.edition-es .sdd-cover-mast-rule::after { display: none !important; }
+
+/* Drop per-edition link affordances + ribbon focus rings — Stitch uses
+   one global affordance. */
+body.edition-en a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]),
+body.edition-ko a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]),
+body.edition-ja a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]),
+body.edition-pt a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]),
+body.edition-es a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]) {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color .15s;
+}
+body[data-edition] a:not(.dock-btn):not([class*="-btn"]):not([class*="sdd-cover"]):hover {
+    color: var(--rust-d);
+}
+
+/* ─── 2. Global surface — Stitch backgrounds are gradients + glow ─── */
+
+body {
+    background:
+        radial-gradient(ellipse 60vw 60vh at 20% 10%, color-mix(in srgb, var(--accent) 18%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse 50vw 50vh at 90% 80%, color-mix(in srgb, var(--secondary) 14%, transparent) 0%, transparent 65%),
+        var(--paper) !important;
+    background-attachment: fixed !important;
+    color: var(--ink);
+    font-family: var(--sans);
+    letter-spacing: -0.005em;
+}
+
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+    body { background: var(--paper) !important; }
+}
+
+/* ─── 3. Typography reset — Plus Jakarta everywhere ───────────────── */
+
+body, body input, body select, body button, body textarea {
+    font-family: var(--sans);
+    font-feature-settings: "ss01", "ss02";
+}
+body h1, body h2, body h3, body h4,
+body .sdd-cover-wordmark,
+body .sdd-disp-headline,
+body .sdd-cover-head .headline,
+body .sdd-cover-head .city {
+    font-family: var(--serif);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-style: normal !important;
+}
+body .sdd-disp-num,
+body [class*="-mono"],
+body [data-mono],
+body time,
+body code, body kbd {
+    font-family: var(--mono);
+    font-feature-settings: "tnum", "lnum";
+}
+
+/* Wordmark — italic was Fraunces-specific; Plus Jakarta italic is OK but
+   the brand mark reads better roman + tight. */
+body .sdd-cover-wordmark {
+    font-style: normal !important;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+/* ─── 4. Glass + glow utilities ─────────────────────────────────── */
+
+.sdd-glass {
+    background: color-mix(in srgb, var(--paper) 70%, transparent);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    border-radius: var(--radius-lg);
+}
+html[data-skin="dark"] .sdd-glass {
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+}
+
+.sdd-glow {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    z-index: -1;
+}
+.sdd-glow--a { top: -10vh; left: -10vw; width: 60vw; height: 60vh; background: var(--accent); }
+.sdd-glow--b { bottom: -15vh; right: -15vw; width: 50vw; height: 50vh; background: var(--secondary); opacity: 0.25; }
+
+@media (prefers-reduced-motion: reduce) {
+    .sdd-glow { opacity: 0.15 !important; }
+}
+
+/* ─── 5. Re-skin saudade chrome to feel glass-y + pilled ─────────── */
+
+/* Topbar / bottom dock → glass pill */
+.topbar, .bottom-dock {
+    background: color-mix(in srgb, var(--paper) 65%, transparent) !important;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-color: color-mix(in srgb, var(--ink) 8%, transparent) !important;
+}
+.bottom-dock { border-radius: var(--radius-pill) !important; }
+
+.dock-btn {
+    border-radius: var(--radius-pill) !important;
+    transition: background .2s, color .2s;
+}
+.dock-btn[aria-current="true"],
+.dock-btn.is-active {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+}
+.dock-btn[aria-current="true"] .dock-btn-label,
+.dock-btn.is-active .dock-btn-label {
+    color: var(--paper) !important;
+    font-weight: 600 !important;
+}
+
+/* Cover panels → soft glass cards */
+.sdd-cover-head,
+.sdd-cover-today,
+.sdd-cover-today--secondary,
+.sdd-cover-heads {
+    border-radius: var(--radius-lg);
+    padding: clamp(20px, 3vw, 32px);
+    margin-block: 12px;
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+    border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--ink) 6%, transparent) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Dispatch list rows */
+body[data-edition] .sdd-disp-item {
+    border-bottom: 1px solid var(--rule) !important;
+    border-bottom-style: solid !important;
+    padding: clamp(16px, 2.4vw, 24px) 0;
+}
+
+/* Atlas rows */
+.sdd-atlas-row {
+    border-radius: var(--radius);
+    padding: clamp(16px, 2.2vw, 24px) clamp(12px, 2vw, 20px);
+    margin-block: 4px;
+    transition: background .15s;
+}
+.sdd-atlas-row:hover {
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+/* Buttons → pill, accent-fill primary */
+button:not(.sdd-stays__rm):not(.dock-btn):not([class*="-rm"]),
+.sdd-stays__add,
+.sdd-cover-archive-link,
+[class*="-btn"]:not(.dock-btn) {
+    border-radius: var(--radius-pill) !important;
+    padding-inline: clamp(16px, 2vw, 24px) !important;
+    transition: background .15s, color .15s, transform .12s;
+}
+.sdd-stays__add {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+    border: none !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.18em !important;
+}
+.sdd-stays__add:hover {
+    background: var(--rust-d) !important;
+    color: var(--paper) !important;
+    transform: translateY(-1px);
+}
+.sdd-stays__add::before { display: none; }
+
+/* Inputs → pilled, glass, accent focus */
+input, select, textarea {
+    border-radius: var(--radius-sm) !important;
+    background: color-mix(in srgb, var(--paper) 90%, transparent) !important;
+    border: 1px solid var(--rule) !important;
+    padding: 10px 14px !important;
+    transition: border-color .15s, box-shadow .15s;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent) !important;
+    outline: none !important;
+}
+
+/* Stays form rows: drop the hairline, give breathing room */
+.sdd-stays__row {
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
+    border-radius: var(--radius);
+    padding: 12px !important;
+    margin-bottom: 6px;
+    border-bottom: 0 !important;
+}
+.sdd-stays__cols { border-bottom: 0 !important; opacity: 0.6; }
+
+/* Focus rings — uniform accent across editions */
+body[data-edition] *:focus-visible {
+    outline: 2px solid var(--accent) !important;
+    outline-offset: 3px !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* Selection — use accent at low opacity for every edition */
+body[data-edition] ::selection {
+    background: color-mix(in srgb, var(--accent) 25%, transparent) !important;
+    color: var(--ink);
+}
+
+/* Concentric rings on cover — fade more, Stitch already has glow blobs */
+body[data-edition] [data-sdd-rings] {
+    opacity: 0.18 !important;
+}
+
+/* Drop per-edition footer rule ornaments — uniform hairline */
+body[data-edition] .sdd-footer-rule {
+    border-top: 1px solid var(--rule) !important;
+    background: none !important;
+    height: 1px !important;
+}
+body.edition-ko .sdd-footer-rule::before { display: none; }
+
+/* Drop dotted/dashed dispatch separators */
+body[data-edition] .sdd-disp-item {
+    border-bottom-style: solid !important;
+}
+
+/* ─── 6. Cover wordmark — bigger, Stitch-display-y ───────────────── */
+
+.sdd-cover-wordmark {
+    font-size: clamp(48px, 9vw, 96px) !important;
+    line-height: 1 !important;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sdd-cover-wordmark {
+        background: none;
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        color: var(--accent) !important;
+        -webkit-text-fill-color: var(--accent);
+    }
+}
+
+/* ─── 7. Material Symbols icon class (loaded but optional) ───────── */
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ─── 8. Edition-DNA overrides that conflict with the reset ──────── */
+
+/* The edition-tokens file forces JA's text-emphasis circles + KO line-height
+   1.6 — we keep the line-height (it helps CJK) but kill the circles. Done
+   above. KO hangs heavier, JA roomier — already inherited. */
+
+/* ─── 9. Reduce visual clutter ── kill the per-edition ornamentation
+   that survives via !important specificity wars. Stitch is clean. ── */
+
+body[data-edition] .sdd-mark::after { content: '' !important; }
+body[data-edition] hr, body[data-edition] .sdd-rule {
+    border-top: 1px solid var(--rule) !important;
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+}
