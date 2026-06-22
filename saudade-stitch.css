@@ -1,4 +1,79 @@
 /* ════════════════════════════════════════════════════════════════════════
+   ★ 초보자용 가이드 — 이 파일이 뭐 하는 건지 한국어로
+   ════════════════════════════════════════════════════════════════════════
+
+   ── 한 줄 요약 ──
+   saudade 의 모든 색·폰트·모서리·여백을 "Stitch 디자인" 톤으로 갈아끼우는
+   덧칠 레이어. index.html 에서 가장 마지막에 로드돼서 앞 CSS 들을 다 덮음.
+
+   ── 뺄려면? ──
+   index.html 에서 <link rel="stylesheet" href="saudade-stitch.css"> 한 줄
+   지우면 끝. 원래 종이 신문 톤으로 즉시 복귀.
+
+   ────────────────────────────────────────────────────────────────────────
+   ★ 미리 알아두면 좋은 CSS 개념 5가지
+   ────────────────────────────────────────────────────────────────────────
+
+   ① CSS 변수 (custom properties)
+      :root 또는 body 같은 데서 --이름: 값; 으로 선언하면 변수가 된다.
+      쓸 때는 var(--이름). 한 곳만 바꾸면 전체에 반영됨.
+      예: --accent: #6E4FBE;  →  color: var(--accent);
+      saudade 는 에디션마다 다른 --accent 를 줘서 5 개 잡지 색이 다르게 보임.
+
+   ② !important
+      "이거 무조건 이겨야 돼" 표시. 보통 안 쓰는 게 좋지만, 이 파일은
+      앞 CSS 를 덮어쓰는 게 목적이라 일부러 사용. 평소엔 남발 X.
+
+   ③ color-mix(in srgb, A 70%, B)
+      두 색을 비율로 섞는다. 예:
+        color-mix(in srgb, var(--paper) 70%, transparent)
+        → paper 색 70% + 투명 30% = 반투명 종이색.
+      글래스(반투명 카드) 효과의 핵심.
+
+   ④ backdrop-filter: blur(20px)
+      "내 뒷배경" 을 흐리게 만든다. 카드는 반투명인데 뒤가 흐려져서
+      "유리" 느낌이 남. Stitch 의 글래스모피즘이 이거다.
+      ⚠ Safari 는 -webkit- 접두사 필요.
+
+   ⑤ clamp(min, ideal, max)
+      반응형 사이즈. clamp(15px, 1.6vw, 19px) =
+      "최소 15px / 보통 화면너비의 1.6% / 최대 19px".
+      화면이 작아도/커도 가독성 유지.
+
+   ────────────────────────────────────────────────────────────────────────
+   ★ 이 파일의 구조 (총 10개 레이어, 위 → 아래 순서로 쌓임)
+   ────────────────────────────────────────────────────────────────────────
+
+   §1  토큰 override         — 5 에디션 × 색/폰트/radius 변수 다 갈아끼움
+   §2  글래스/글로우 유틸     — .sdd-glass / .sdd-glow 재사용 클래스
+   §3  타이포 리셋           — Plus Jakarta Sans 강제 적용
+   §4  도크/카드/입력         — 모든 chrome 을 pill / glass 톤으로
+   §5  Cover hero            — 워드마크 그라디언트 텍스트 + echo halo
+   §6  Section depth         — pulsing pin / waveform / hover lift
+   §7  Section layouts        — Ledger 벤토 / Dispatches 시네마틱 / Atlas 큰 카드
+   §8  모바일 폴리시          — safe-area / mobile dock / 작은화면 단순화
+   §9  Welcome/Auth/Letters  — 모달/온보딩 톤 통일
+   §10 마무리 폴리시          — 톤 다운 + a11y + 와이드 클램프
+
+   각 § 위에 한국어 한 줄 코멘트 달아둠. 한 섹션씩 읽으면 따라잡힘.
+
+   ────────────────────────────────────────────────────────────────────────
+   ★ CSS 우선순위 (specificity) — 왜 이 순서로 쓰는가
+   ────────────────────────────────────────────────────────────────────────
+
+   같은 요소에 여러 규칙이 매치되면 "더 자세히 가리킨 규칙" 이 이긴다.
+   계산법 (대략):  id(100) > class/속성(10) > 태그(1)
+
+   예:  body.edition-en  vs  body[data-edition]
+        → 둘 다 (class 1 + element 1) = 같은 무게.
+        → 그래서 "나중에 쓴 게" 이김.
+
+   이 파일은 saudade 기존 CSS 뒤에 로드되므로, 같은 무게 규칙끼리는
+   자동으로 우리가 이긴다. 무게가 부족할 땐 !important 로 보강.
+   ════════════════════════════════════════════════════════════════════════ */
+
+
+/* ════════════════════════════════════════════════════════════════════════
    SAUDADE · STITCH SKIN
    wholesale visual reset to the Stitch-mockup design language.
    Loaded LAST in index.html so it overrides every prior token + chrome.
@@ -22,11 +97,19 @@
      .sdd-glow  — fixed decorative blob behind a section
    ═══════════════════════════════════════════════════════════════════════ */
 
-/* ─── 1. Token override — applied to every edition + every skin ───── */
+/* ─── §1. 토큰 override — 모든 에디션 + 모든 스킨에 적용 ───────────────
+   여기서 변수를 한 번 갈면, 페이지 안 모든 색·폰트·radius 가 갈린다.
+   각 에디션(en/ko/ja/pt/es) 줄에선 액센트 색만 살짝 다르게 줘서 5개
+   잡지 정체성을 유지함. */
 
+/* 셀렉터 읽기:
+     body[data-edition]   = body 태그 중 data-edition 속성이 있는 거 (= 무조건 매치)
+     body.edition-en, …   = body 에 edition-en 같은 클래스가 붙은 거
+   쉼표는 "또는". 다섯 다 한꺼번에 같은 변수 묶음을 받는다. */
 body[data-edition],
 body.edition-en, body.edition-ko, body.edition-ja,
 body.edition-pt, body.edition-es {
+    /* 표면 색 — paper 는 본문 배경, ink 는 본문 글자. */
     --paper:     #FAFAFB;
     --paper-d:   #F1ECFA;
     --ink:       #1A1230;
@@ -410,6 +493,9 @@ body[data-edition] hr, body[data-edition] .sdd-rule {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §6 — 섹션 깊이. 워드마크 뒤에 호흡하는 그라디언트 halo, 카드
+   호버 시 살짝 뜨는 그림자, Atlas 핀이 펄스처럼 퍼지는 링, Listening
+   웨이브폼 16-bar CSS 애니메이션. 정적이던 화면이 살아 움직임.
    STITCH v2 — section-level visual depth
    Cover gets an ethereal echo halo. Atlas pins pulse. Listening room
    gets a CSS-only 32-bar waveform. Cards lift on hover.
@@ -651,6 +737,9 @@ body[data-edition]::before {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §7 — 섹션 레이아웃. Ledger 를 12-column 벤토(D-day · Tax 따로
+   분리), Dispatches 첫 항목을 풀블리드 시네마틱 hero + 나머지 사이드
+   바, Atlas 행을 좌우 교차 큰 카드 + blur blob. 다크 모드 톤 미세조정.
    STITCH v3 — section layouts (Ledger bento / Dispatches cinematic / Atlas big cards / dark refinement)
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -970,6 +1059,10 @@ html[data-skin="dark"] .sdd-cover-wordmark {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §8 — Cover 단순화 + 섹션 hero + waveform 재생 상태. Cover 의
+   부차 요소들은 평소 숨겨두고 hover 시만 등장 (Stitch "한 화면 한
+   메시지"). 모든 섹션이 .sdd-section-hero 큰 그라디언트 디스플레이
+   타이틀을 가질 수 있게 유틸 클래스 제공.
    STITCH v4 — cover simplify · section hero · waveform play-state
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -1183,6 +1276,9 @@ body[data-edition] {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §9 — 들어오는 모션 + 로딩 스켈레톤 + 슬림 topbar + chip 필.
+   카드들이 nth-child 로 시간차 fade-up. 로딩 중에는 accent 그라디언트
+   shimmer. KO 는 Pretendard, JA 는 Noto Sans JP 가 폰트 stack 맨 앞.
    STITCH v5 — enter motion · skeleton loading · topbar slim · chip pills
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -1386,6 +1482,9 @@ body[data-edition] {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §10 — 모바일 폴리시. env(safe-area-inset-*) 로 노치/홈 인디케이터
+   회피. 모바일에선 dock 비활성 라벨 숨기고 active 만 accent 필. 와이드
+   화면 (≥1100w) 에선 워드마크 140px 까지 커짐. 프린트 모드도 살림.
    STITCH v6 — mobile polish · safe-area · dock icons · wide cover hero
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -1600,6 +1699,9 @@ body[data-edition] *:focus:not(:focus-visible) { outline: none !important; }
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §11 — 셸 모듈 통일. 처음 들어오는 Welcome, 로그인 Auth, 편지 보내기
+   Letters, 개인 블록, Footer, Article reader 모달, 그리고 서브페이지
+   (privacy/terms/install/credits) 모두 같은 글래스 + accent 톤으로.
    STITCH v7 — welcome · auth · letters · personal · footer · reader · sub-pages
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -1934,6 +2036,9 @@ h1::selection, h2::selection, h3::selection,
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §12 — 남은 표면들. Atlas 지도 컨테이너 + 디테일 페이지, Schengen
+   90/180 (gradient 큰 숫자, 셀 그리드), Tax 183, 키보드 단축키 cheat-sheet,
+   에디션 스위처 드롭다운. 모두 같은 글래스 + accent 그라디언트.
    STITCH v8 — atlas map · schengen / tax panels · kbd cheat-sheet · edition switcher
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -2340,6 +2445,10 @@ h1::selection, h2::selection, h3::selection,
 }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §13 — 마지막 폴리시. 보라 톤 살짝 따뜻하게 #6E4FBE (덜 wellness),
+   tertiary 테라코타로 saudade 의 옛 rust 영혼 슬쩍 복귀. 버튼 위계
+   (primary/secondary/ghost), 로딩 spinner, HUD 코너 마크, a11y
+   (prefers-contrast / reduced-data), 1400px wide clamp.
    STITCH v9 — color tone refinement · HUD · button hierarchy · wide clamp · a11y
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -2579,6 +2688,13 @@ html { background: var(--paper, #FAFAFB); color-scheme: light; }
 html[data-skin="dark"] { color-scheme: dark; }
 
 /* ════════════════════════════════════════════════════════════════════════
+   ★ §14 — "Saturated" 스킨 contrast 버그 수정.
+   문제: saturated 스킨은 cover 배경을 accent (보라) 로 깐다. 우리가
+   워드마크를 gradient-text 로 바꿔서 글자 채움색이 "투명" 인데,
+   배경 자체가 보라 → 보라 글자가 보라 배경에 묻혀 안 보임.
+   해결: saturated 일 때만 gradient 끄고 솔리드 paper 색으로 fallback.
+   배운 점: gradient-text 효과는 "배경이 다른 색일 때만" 안전하다.
+
    STITCH v10 — SATURATED skin contrast fix
    When the user picks the "saturated" (accent-as-cover-bg) skin, the
    gradient-text wordmark disappears because it clips to a transparent
