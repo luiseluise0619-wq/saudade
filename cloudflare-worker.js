@@ -154,7 +154,7 @@ function rate(id, p) {
 function chkOrigin(req) {
     const o = req.headers.get('Origin') || '';
     if (ALLOWED_ORIGIN_RX.test(o)) return true;
-    return ALLOWED_ORIGINS.some(a => a === 'null' ? !o : (o === a || o.startsWith(a)));
+    return ALLOWED_ORIGINS.some(a => a === 'null' ? !o : o === a);
 }
 
 function chkUA(req) {
@@ -179,7 +179,7 @@ const clean = (t, m = 500) => !t ? '' : String(t).replace(/[\x00-\x1f\x7f]/g, ''
 
 function hdrs(req, extra = {}) {
     const o = req.headers.get('Origin') || '';
-    let allow = ALLOWED_ORIGINS.find(a => a === 'null' ? !o : (o === a || o.startsWith(a)));
+    let allow = ALLOWED_ORIGINS.find(a => a === 'null' ? !o : o === a);
     if (!allow && ALLOWED_ORIGIN_RX.test(o)) allow = o;   // *.aura-os-cao.pages.dev preview
     return {
         'Content-Type': 'application/json; charset=utf-8',
