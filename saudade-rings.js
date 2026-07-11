@@ -4,12 +4,16 @@
 // 회전 애니메이션 금지. 페이드인 0.4s 한 번만. paper 위 ink rule color.
 'use strict';
 
+// IIFE — 로드 즉시 실행. 잡지의 유일한 시각 모티프인 동심원(rings) SVG 를 그리는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_RINGS) return;
     window.SAUDADE_RINGS = { ready: false };
 
+    // NS — SVG 요소를 만들 때 필요한 네임스페이스 URI.
     const NS = 'http://www.w3.org/2000/svg';
 
+    // originXY — 동심원 중심을 화면 어디에 둘지(모서리/중앙) 좌표로 환산.
     // origin 옵션: 'center' | 'bottom-right' | 'top-left' | 'bottom-left'
     function originXY(origin, w, h) {
         switch (origin) {
@@ -22,6 +26,7 @@
         }
     }
 
+    // injectMobileStyles — 모바일에서 링 투명도를 낮추는 CSS 를 한 번만 주입(성능/가독성).
     // 메인 SVG 빌더 — 14개 macro rings 또는 8개 meso rings
     function injectMobileStyles() {
         if (document.getElementById('sddRingsMobileStyles')) return;
@@ -32,10 +37,12 @@
     }
     injectMobileStyles();
 
+    // buildSvg — scale(macro/meso/micro)에 따라 원 개수/반경/투명도를 정해 SVG 를 만든다.
     function buildSvg(scale, origin) {
         const w = 1600, h = 1200;     // viewBox — 16:12 매거진 비율
         const { cx, cy } = originXY(origin, w, h);
 
+        // scale 별 파라미터: macro=표지 배경 14개, meso=섹션 8개, 그 외=단일 원.
         const params = scale === 'macro'
             ? { count: 14, strokeOpacity: [0.06, 0.18], rMin: 80, rStep: 100 }
             : scale === 'meso'
@@ -79,6 +86,7 @@
         return svg;
     }
 
+    // mount — 링 SVG 를 body 에 붙이고 페이드인(같은 scale 이 있으면 교체).
     // 페이지에 마운트 — body 직접 자식으로. cafe-mode 진입 시 자동 hide.
     function mount(scale = 'macro', origin = 'bottom-right') {
         const isMobile = window.innerWidth <= 768;
@@ -103,6 +111,7 @@
         return svg;
     }
 
+    // unmount — 특정 scale(또는 전체) 링을 페이드아웃 후 제거.
     function unmount(scale) {
         if (scale) {
             const el = document.getElementById('saudadeRings_' + scale);
@@ -115,6 +124,7 @@
         }
     }
 
+    // watchCafeMode — 카페(리딩룸) 모드에서는 링을 숨기고 나오면 다시 보인다.
     // 카페 모드 토글 시 자동 hide/show (existing class observer)
     function watchCafeMode() {
         const mo = new MutationObserver(() => {
@@ -126,6 +136,7 @@
         mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
 
+    // init — 표지 기본 화면에 macro 링을 깔고 카페 모드 감시 시작.
     function init() {
         // § 00 ISSUE COVER 가 디폴트 화면 — macro rings (또는 모바일은 meso)
         mount('macro', 'bottom-right');
@@ -133,6 +144,7 @@
         window.SAUDADE_RINGS.ready = true;
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
