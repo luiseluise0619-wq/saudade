@@ -18,26 +18,34 @@
 //   window.SAUDADE_PERSONAL.getHomes()
 'use strict';
 
+// IIFE — 로드 즉시 실행. 사용자 localStorage 데이터를 이탤릭 한 줄 문장으로 바꾸는 "공감 레이어".
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_PERSONAL) return;
     const KEY_HOMES = 'saudade.homes';
 
+    // 하루의 밀리초(24*60*60*1000). 날짜 차이 계산에 사용.
     const MS_DAY = 86400000;
 
+    // L — 여러 언어 문자열 중 현재 에디션에 맞는 것을 고른다(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자를 엔티티로(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // safeRead — localStorage 에서 JSON 을 읽어 배열/객체면 반환, 아니면 fallback(try/catch 필수).
     function safeRead(k, fallback) {
         try { const r = localStorage.getItem(k); if (!r) return fallback; const a = JSON.parse(r); return Array.isArray(a) || (a && typeof a === 'object') ? a : fallback; }
         catch (e) { return fallback; }
     }
+    // safeWrite — localStorage 에 JSON 저장(사생활 보호 모드 등 실패해도 조용히 무시).
     function safeWrite(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    // toUTC — "YYYY-MM-DD" 문자열을 UTC 자정 Date 로 파싱(형식 안 맞거나 무효면 null).
     function toUTC(s) {
         if (!s) return null;
         const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s));
@@ -45,10 +53,12 @@
         const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
         return isNaN(d.getTime()) ? null : d;
     }
+    // todayUTC — 오늘을 UTC 자정 Date 로(시간대 영향 없이 날짜만 비교하려고).
     function todayUTC() {
         const n = new Date();
         return new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()));
     }
+    // diffDays — 두 날짜 사이의 일수 차이(a - b).
     function diffDays(a, b) { return Math.round((a.getTime() - b.getTime()) / MS_DAY); }
 
     // ─── Curated home-city dictionary ────────────────────────────────────
@@ -72,6 +82,7 @@
         MED: { en: 'Medellín',   ko: '메데인',   ja: 'メデジン',  pt: 'Medellín',   es: 'Medellín' },
         BUE: { en: 'Buenos Aires', ko: '부에노스아이레스', ja: 'ブエノスアイレス', pt: 'Buenos Aires', es: 'Buenos Aires' }
     };
+    // cityName — 도시 코드(예: 'LIS')를 현재 언어 도시명("리스본")으로. 없으면 코드 그대로.
     function cityName(code, ed) { const c = CITIES[code]; return (c && c[ed]) || (c && c.en) || code; }
 
     // Map ISO-2 country codes to a representative home city when the user
@@ -83,11 +94,13 @@
     };
 
     // ─── Per-source readers ──────────────────────────────────────────────
+    // 각 도메인 데이터를 localStorage 에서 읽는 얇은 헬퍼들(없으면 빈 배열).
     function readSchengen() { return safeRead('saudade.schengen.stays', []); }
     function readTax()      { return safeRead('saudade.tax.stays', []); }
     function readIns()      { return safeRead('saudade.insurance.policies', []); }
     function readPen()      { return safeRead('saudade.pension.filings', []); }
 
+    // lastSeenInCountry — 세금 체류 기록에서 해당 국가에 마지막으로 있었던 날짜.
     function lastSeenInCountry(country) {
         // Most recent date the user was inside `country`, drawn from tax stays.
         const stays = readTax().filter(s => s.country === country);
@@ -100,11 +113,13 @@
         return latest;
     }
 
+    // setHomes — 홈 도시 목록을 저장한다(유효 코드만, 최대 3개).
     function setHomes(arr) {
         const cleaned = (Array.isArray(arr) ? arr : []).filter(c => CITIES[c]).slice(0, 3);
         safeWrite(KEY_HOMES, cleaned);
         return cleaned;
     }
+    // getHomes — 저장된 홈 도시를 반환. 없으면 세금 체류일이 많은 나라에서 자동 추론.
     function getHomes() {
         const stored = safeRead(KEY_HOMES, null);
         if (Array.isArray(stored) && stored.length) return stored;
@@ -123,10 +138,13 @@
     }
 
     // ─── Sentence generators ────────────────────────────────────────────
+    // compute — 사용자 데이터를 훑어 "순간(moment)" 문장 배열을 만든다.
+    // 각 항목에 weight(중요도)를 매겨 마지막에 높은 순으로 정렬·상위 max개만 반환.
     function compute(opts) {
         opts = opts || {};
         const ed = opts.lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const today = todayUTC();
+        // moments — 후보 문장들을 모으는 배열.
         const moments = [];
 
         // 0. Returning-reader moment — the one hook that needs no setup and
@@ -160,6 +178,7 @@
             }
         } catch (e) { /* private mode / disabled storage — skip silently */ }
 
+        // 1. 사우다지 미터 — 홈 도시별로 "마지막 방문 이후 며칠"을 문장으로.
         // 1. Saudade meter — days since last visit per home city.
         const homes = getHomes();
         for (const code of homes) {
@@ -183,6 +202,7 @@
             });
         }
 
+        // 2. 셰겐 90/180 창 상태 — 데이터 있으면 사용일/남은일 경고.
         // 2. Schengen window status (if any data).
         if (window.SAUDADE_SCHENGEN) {
             const stays = readSchengen();
@@ -218,6 +238,7 @@
             }
         }
 
+        // 3. 보험 만료 임박(30일 이내면 경고 문장).
         // 3. Insurance gap proximity.
         if (window.SAUDADE_COVERAGE) {
             const policies = readIns();
@@ -249,6 +270,7 @@
             }
         }
 
+        // 4. 세금 거주 임계(183일) 근접/초과 경고.
         // 4. Tax-residency near threshold.
         if (window.SAUDADE_TAX) {
             const stays = readTax();
@@ -284,6 +306,7 @@
             }
         }
 
+        // 5. "오늘 그날" — 과거 체류 도착일과 오늘 월/일이 같으면 회고 문장.
         // 5. On-this-day — anniversary of any past stay.
         const taxStays = readTax();
         const todayMD = `-${String(today.getUTCMonth() + 1).padStart(2,'0')}-${String(today.getUTCDate()).padStart(2,'0')}`;
@@ -309,6 +332,7 @@
             });
         }
 
+        // 가중치 높은 순으로 정렬해 가장 중요한 순간이 먼저 오게 하고, 상위 max개만.
         // Sort by weight descending — strongest first.
         moments.sort((a, b) => b.weight - a.weight);
         const max = (opts.max != null) ? opts.max : 4;
@@ -374,8 +398,10 @@
         document.head.appendChild(s);
     }
 
+    // render — compute 결과를 target 요소에 이탤릭 문장 카드로 그린다. 데이터 없으면 설정 유도.
     function render(target, opts) {
         injectStyles();
+        // target 이 문자열이면 선택자로 요소를 찾고, 요소면 그대로 쓴다.
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
         if (!host) return;
         const ed = (opts && opts.lang) || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
@@ -443,5 +469,6 @@
         else injectStyles();
     }
 
+    // 전역 공개 API — 표지/데모 등에서 순간 계산·렌더·홈도시 설정에 사용.
     window.SAUDADE_PERSONAL = { compute, render, setHomes, getHomes, CITIES };
 })();
