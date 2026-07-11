@@ -24,9 +24,15 @@
 // (검수 항목 A — atlas 진입 자체는 부담 X)
 'use strict';
 
+// IIFE — 로드 즉시 실행. 아틀라스의 "종이 지도"(MapLibre + OSM) 전담 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_ATLAS_MAP) return;
 
+    // 모듈 전역 상태.
+    // _map: MapLibre 지도 인스턴스. _ml: maplibregl 라이브러리 핸들.
+    // _loadPromise: CDN 로드 진행 중 Promise(중복 로드 방지). _markers: 카페 마커 배열.
+    // _noticeEl: "좌표 준비 중" 안내 카드 엘리먼트.
     let _map = null;
     let _ml  = null;
     let _loadPromise = null;
@@ -66,6 +72,8 @@
         ]
     };
 
+    // loadMapLibre — MapLibre 라이브러리를 CDN 에서 지연 로드(사용자가 MAP 켤 때만).
+    // 이미 로드됐거나 로드 중이면 그 Promise 를 재사용(중복 <script> 방지).
     function loadMapLibre() {
         if (_ml) return Promise.resolve(_ml);
         if (_loadPromise) return _loadPromise;
@@ -77,6 +85,7 @@
             link.setAttribute('data-sdd-ml', '1');
             document.head.appendChild(link);
         }
+        // <script> 를 동적으로 붙이고 onload/onerror 로 성공·실패를 Promise 로 감싼다.
         _loadPromise = new Promise((resolve, reject) => {
             const s = document.createElement('script');
             s.src = ML_JS_URL;
@@ -95,6 +104,7 @@
         return _loadPromise;
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(색은 전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddAtlasMapStyles')) return;
         const s = document.createElement('style');
@@ -353,6 +363,7 @@
     async function initMap(container, opts) {
         if (!container) throw new Error('container required');
         opts = opts || {};
+        // 지도 라이브러리가 준비될 때까지 기다린다(지연 로드).
         await loadMapLibre();
         // 이미 같은 컨테이너에 마운트된 map 이 있으면 그대로
         if (_map && _map.getContainer() === container) {
@@ -361,8 +372,10 @@
         }
         // 다른 컨테이너 (혹은 처음) — 기존 인스턴스 정리
         if (_map) { try { _map.remove(); } catch (e) {} _map = null; }
+        // 옵션이 없으면 기본 중심/줌(서울)을 쓴다.
         const center = opts.center || DEFAULT_CENTER;
         const zoom   = Number.isFinite(opts.zoom) ? opts.zoom : DEFAULT_ZOOM;
+        // 회전/피치 비활성 — "종이 지도" 느낌을 위해 평면 상태 유지.
         _map = new _ml.Map({
             container,
             style: PAPER_RASTER_STYLE,
@@ -382,13 +395,16 @@
         return _map;
     }
 
+    // getMap — 현재 지도 인스턴스를 돌려준다(없으면 null).
     function getMap() { return _map; }
 
+    // clearMarkers — 지도에 붙은 모든 카페 마커를 제거하고 배열을 비운다.
     function clearMarkers() {
         _markers.forEach(m => { try { m.remove(); } catch (e) {} });
         _markers = [];
     }
 
+    // clearNotice — "좌표 준비 중" 안내 카드를 DOM 에서 떼어낸다.
     function clearNotice() {
         if (_noticeEl && _noticeEl.parentNode) {
             _noticeEl.parentNode.removeChild(_noticeEl);
@@ -396,6 +412,7 @@
         _noticeEl = null;
     }
 
+    // showNotice — 마커가 0개일 때 지도 위에 다국어 안내 카드를 띄운다(§3 정직성).
     function showNotice(container, lang) {
         clearNotice();
         if (!container) return;
@@ -419,7 +436,9 @@
     // until the Geocode cafes (Nominatim) workflow runs and stamps
     // precise per-entry coords. Honest about being approximate via the
     // popup label + a dashed marker outline.
+    // 자치구 중심 좌표 캐시 — 정확한 lat/lng 없는 카페의 근사 위치용.
     let _centroidsCache = null;
+    // loadCentroids — 구별 중심 좌표를 한 번만 로드해 캐시(force-cache 로 재요청 최소화).
     function loadCentroids() {
         if (_centroidsCache) return Promise.resolve(_centroidsCache);
         return fetch('./data/seoul-districts.json', { cache: 'force-cache' })
@@ -428,6 +447,8 @@
             .catch(() => { _centroidsCache = {}; return _centroidsCache; });
     }
 
+    // withFallback — 카페 좌표를 정한다: 정확한 lat/lng 있으면 그대로(approx:false),
+    // 없으면 동네 이름으로 자치구 중심을 찾아 근사(approx:true), 둘 다 없으면 null.
     function withFallback(cafe, centroids) {
         if (typeof cafe.lat === 'number' && typeof cafe.lng === 'number'
             && Number.isFinite(cafe.lat) && Number.isFinite(cafe.lng)) {
@@ -443,15 +464,18 @@
     function setCafes(cafes, opts) {
         if (!_map || !_ml) return;
         opts = opts || {};
+        // 이전 마커/안내를 지우고 새로 그린다.
         clearMarkers();
         clearNotice();
         const list = Array.isArray(cafes) ? cafes : [];
 
         loadCentroids().then(centroids => {
+            // 각 카페의 좌표를 확정하고, 좌표 없는 것은 걸러낸다.
             const resolved = list
                 .map(c => ({ cafe: c, pos: withFallback(c, centroids) }))
                 .filter(x => x.pos);
 
+            // 그릴 게 하나도 없으면 안내 카드만 띄우고 끝.
             if (resolved.length === 0) {
                 const container = _map.getContainer();
                 const lang = (window.state && window.state.lang) || 'en';
@@ -469,9 +493,11 @@
             const lang = (window.state && window.state.lang) || 'en';
             const approxNote = APPROX_LABEL[lang] || APPROX_LABEL.en;
 
+            // bounds — 모든 핀을 감싸는 경계. 마지막에 fitBounds 로 화면에 맞춘다.
             const bounds = new _ml.LngLatBounds();
             resolved.forEach(({ cafe: c, pos }) => {
                 const el = document.createElement('div');
+                // 방문한 카페(visited_at 있음)는 JADE 색, 아니면 기본 톤.
                 const isJade = (c.visited_at && c.visited_at !== '');
                 el.className = 'sdd-atlas-marker'
                     + (isJade ? ' is-jade' : '')
@@ -493,6 +519,7 @@
                 bounds.extend([pos.lng, pos.lat]);
             });
 
+            // 핀이 여러 개면 전부 보이게 맞추고, 하나면 그 위치로 중심 이동.
             if (!opts.skipFit && resolved.length > 1) {
                 _map.fitBounds(bounds, { padding: 48, maxZoom: 15, duration: 0 });
             } else if (resolved.length === 1) {
@@ -502,16 +529,19 @@
         });
     }
 
+    // init — 모듈 시동: 스타일만 주입(지도는 사용자가 MAP 켤 때 지연 생성).
     function init() {
         injectStyles();
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 아틀라스 본체가 지도를 켜고 카페를 세팅할 때 사용.
     window.SAUDADE_ATLAS_MAP = {
         loadMapLibre,
         initMap,
