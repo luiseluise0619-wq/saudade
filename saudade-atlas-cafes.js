@@ -14,22 +14,29 @@
 // 의존: saudade-atlas-map.js (PR1) · saudade-atlas.js (기존 cafe data + renderDetail)
 'use strict';
 
+// IIFE — 로드 즉시 실행. 아틀라스 지도 위 카페 마커 + 상세 메타데이터를 담당하는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_ATLAS_CAFES) return;
 
+    // _vocab: 어휘 풀 JSON 캐시. _vocabLoading: 로드 중 Promise(중복 방지).
+    // _markers: 지도에 붙은 마커 배열. _bound: 바인딩 여부 플래그.
     let _vocab = null;
     let _vocabLoading = null;
     let _markers = [];
     let _bound = false;
 
+    // L — 여러 언어 문자열 중 현재 에디션 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // ed — 현재 에디션 코드(en/ko/ja/pt/es)를 반환.
     function ed() {
         return (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
     }
 
+    // loadVocabulary — 카페 메타 어휘 풀을 한 번만 로드해 캐시(force-cache).
     function loadVocabulary() {
         if (_vocab) return Promise.resolve(_vocab);
         if (_vocabLoading) return _vocabLoading;
@@ -40,6 +47,7 @@
         return _vocabLoading;
     }
 
+    // phraseOf — 어휘 그룹+키를 현재 에디션 문구로. 자유 입력이 아니라 정의된 어휘만 쓴다.
     // 어휘 키 → 현재 에디션 phrase
     function phraseOf(group, key) {
         const e = ed();
@@ -48,6 +56,7 @@
         return item[e] || item.en || key;
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddCafeMarkerStyles')) return;
         const s = document.createElement('style');
@@ -150,16 +159,19 @@
     }
 
     // ─── 마커 렌더 (지도 위) ─────────────────────────────────
+    // clearMarkers — 지도의 카페 마커를 모두 제거하고 배열을 비운다.
     function clearMarkers() {
         _markers.forEach(m => { try { m.remove(); } catch (e) {} });
         _markers = [];
     }
 
+    // renderMarkers — 카페 목록을 번호 붙은 정사각 마커로 지도에 그린다(방문지는 jade).
     function renderMarkers(cafes) {
         const map = window.SAUDADE_ATLAS_MAP && window.SAUDADE_ATLAS_MAP.getMap && window.SAUDADE_ATLAS_MAP.getMap();
         if (!map || !window.maplibregl) return;
         clearMarkers();
         cafes.forEach((c, i) => {
+            // 좌표 없는 카페는 마커를 찍지 않는다.
             if (typeof c.lat !== 'number' || typeof c.lng !== 'number') return;
             const el = document.createElement('button');
             el.type = 'button';
@@ -184,6 +196,7 @@
         });
     }
 
+    // openDetail — 마커 클릭 시 아틀라스의 상세 화면을 연다(리스트 항목 클릭을 우회 호출).
     // 기존 atlas 의 renderDetail 호출 — 직접 export 안 됐으면 클릭 시뮬레이션 fallback
     function openDetail(cafe) {
         // 기존 renderDetail 함수가 모듈 내부 — DOM 의 atlas-item 클릭으로 우회
@@ -208,6 +221,7 @@
     }
 
     // ─── §8.8 메타데이터 — atlas detail 페이지에 추가 렌더 ────
+    // augmentDetailWithMetadata — 상세 화면에 편의시설/태그/편집장 노트 영역을 덧붙인다.
     function augmentDetailWithMetadata(cafe) {
         const detail = document.getElementById('sddAtlasDetail');
         if (!detail) return;
@@ -290,6 +304,7 @@
         'cafes-tokyo.json',
         'cafes-lisbon.json'
     ];
+    // loadCafes — 5개 도시 카페 파일을 병렬로 로드해 하나의 배열로 합친다(검증된 카페만).
     function loadCafes() {
         return Promise.all(CAFE_CITY_FILES.map(f =>
             fetch(`./data/${f}`, { cache: 'force-cache' })
@@ -299,12 +314,14 @@
         )).then(arrs => arrs.flat());
     }
 
+    // applyMarkers — 카페와 어휘를 함께 로드한 뒤 마커를 그린다.
     function applyMarkers() {
         Promise.all([loadCafes(), loadVocabulary()]).then(([cafes]) => {
             renderMarkers(cafes);
         });
     }
 
+    // watchMap — 지도와 아틀라스가 준비되면 마커를 심고, MAP 뷰 진입마다 재확인.
     function watchMap() {
         // map 준비 + atlas 가 MAP 뷰일 때만 마커 표시
         const iv = setInterval(() => {
@@ -336,6 +353,7 @@
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-edition'] });
     }
 
+    // init — 모듈 시동: 스타일 주입 + 어휘 선로드 + 지도/에디션 감시 시작.
     function init() {
         injectStyles();
         loadVocabulary();
@@ -343,12 +361,14 @@
         watchEdition();
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시(150ms 지연으로 지도 모듈 뒤).
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => setTimeout(init, 150));
     } else {
         setTimeout(init, 150);
     }
 
+    // 전역 공개 API — 마커 재로딩/제거 + 어휘 조회.
     window.SAUDADE_ATLAS_CAFES = {
         reloadMarkers: applyMarkers,
         clearMarkers,
