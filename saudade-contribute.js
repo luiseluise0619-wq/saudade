@@ -12,18 +12,23 @@
 //   #cafe-submit   #city-request
 'use strict';
 
+// IIFE — 로드 즉시 실행. 카페 제안 + 도시 개설 요청 두 폼을 담은 기여 UI 모듈.
 (function () {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_CONTRIBUTE) return;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // authH — POST 에 쓸 헤더. 로그인 상태면 인증 헤더를 합쳐 사용자를 연결.
     function authH() {
         const h = { 'Content-Type': 'application/json' };
         if (window.SAUDADE_AUTH && window.SAUDADE_AUTH.authHeaders) {
@@ -32,7 +37,9 @@
         return h;
     }
 
+    // 두 폼이 공유하는 모달 DOM 캐시.
     let _modal = null;
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddContribStyles')) return;
         const s = document.createElement('style');
@@ -98,6 +105,7 @@
         document.head.appendChild(s);
     }
 
+    // ensureModal — 공유 모달 컨테이너를 한 번만 만들고 ESC 닫기를 건다(접근성).
     function ensureModal() {
         if (_modal) return _modal;
         injectStyles();
@@ -111,9 +119,11 @@
         });
         return _modal;
     }
+    // closeModal — 모달을 숨긴다.
     function closeModal() { if (_modal) _modal.classList.remove('active'); }
 
     // ─── Cafe submit ────────────────────────────────────────────────────
+    // openCafe — "카페 제안" 폼을 모달에 그리고 표시.
     function openCafe() {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const c = {
@@ -159,6 +169,7 @@
     }
 
     // ─── City request ───────────────────────────────────────────────────
+    // openCity — "도시 개설 요청" 폼을 모달에 그리고 표시.
     function openCity() {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         const c = {
@@ -199,6 +210,7 @@
         _modal.classList.add('active');
     }
 
+    // wire — 닫기/취소/전송 버튼을 배선한다. kind(cafe/city)에 따라 다른 엔드포인트로 POST.
     function wire(kind, c) {
         const status = _modal.querySelector('[data-status]');
         const setStat = (m, k) => { status.className = 'sdd-cb-status ' + (k || ''); status.textContent = m || ''; };
@@ -210,6 +222,7 @@
             try {
                 setStat('…');
                 let url, body;
+                // 카페 제안: 이름/동네 필수 → /cafe/submit 로 전송.
                 if (kind === 'cafe') {
                     const name  = _modal.querySelector('[data-name]').value.trim();
                     const neigh = _modal.querySelector('[data-neigh]').value.trim();
@@ -217,6 +230,7 @@
                     if (!name || !neigh) { setStat(c.tooShort || c.err, 'error'); return; }
                     url = base + '/cafe/submit';
                     body = JSON.stringify({ name, neighborhood: neigh, notes });
+                // 도시 요청: 도시명 필수 → /city/request 로 전송(100명 요청 시 데스크 개설).
                 } else {
                     const city = _modal.querySelector('[data-city]').value.trim().toLowerCase();
                     const why  = _modal.querySelector('[data-why]').value.trim();
@@ -234,6 +248,7 @@
         });
     }
 
+    // handleHash — #cafe-submit / #city-request 딥링크로 해당 폼을 열고 해시를 지운다.
     function handleHash() {
         if (location.hash === '#cafe-submit') {
             openCafe();
@@ -247,5 +262,6 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 전역 공개 API — 카페/도시 폼 열기 + 닫기.
     window.SAUDADE_CONTRIBUTE = { openCafe, openCity, closeModal };
 })();
