@@ -17,11 +17,15 @@
 //   window.SAUDADE_DEMO.isLoaded()
 'use strict';
 
+// IIFE — 로드 즉시 실행. 예시 여행자 데이터를 계산기들에 채워 첫 방문자가 바로 체감하게 하는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_DEMO) return;
+    // FLAG — 데모 데이터가 로드됐음을 표시하는 localStorage 키.
     const FLAG = 'saudade.demo.loaded';
 
     // ─── The persona ─────────────────────────────────────────────────────
+    // 아래 배열들은 가상의 인물 "Inês"의 셰겐/세금/보험/연금/홈도시 예시 데이터.
     const SCHENGEN_STAYS = [
         { in: '2026-01-08', out: '2026-02-21', country: 'PT' },   // 45 days Lisbon
         { in: '2026-03-12', out: '2026-04-02', country: 'ES' },   // 22 days Madrid
@@ -52,6 +56,7 @@
     // the cover: "184 days since you last sat in a Seoul café."
     const HOMES = ['LIS', 'SEL', 'DPS'];
 
+    // load — 예시 데이터를 localStorage 에 채운다. 실제 사용자 데이터가 있으면 확인 후에만 덮어쓴다.
     function load(opts) {
         opts = opts || {};
         // v644 — refuse to overwrite real user data unless explicitly forced.
@@ -83,6 +88,7 @@
             localStorage.setItem('saudade.homes',              JSON.stringify(HOMES));
             localStorage.setItem(FLAG, '1');
         } catch (e) { return false; }
+        // 화면에 떠 있는 계산기 폼들과 표지 공감 블록을 새 데이터로 다시 그린다.
         // Re-render the calculator forms if mounted.
         if (window.SAUDADE_STAYS_FORM)     refreshForm(window.SAUDADE_STAYS_FORM);
         if (window.SAUDADE_SCHENGEN_FORM)  refreshForm(window.SAUDADE_SCHENGEN_FORM);
@@ -96,6 +102,7 @@
         return true;
     }
 
+    // refreshForm — 모듈에 맞는 호스트 선택자를 찾아 폼을 다시 마운트(재렌더).
     function refreshForm(mod) {
         // Re-paint the form by remounting it onto its current host.
         const sel = (mod === window.SAUDADE_STAYS_FORM)     ? '#sddStaysForm'
@@ -108,6 +115,7 @@
         if (host && mod.mount) mod.mount(host);
     }
 
+    // clear — 데모 데이터만 지운다(데모가 로드된 상태일 때만 동작).
     function clear() {
         if (!isLoaded()) return false;
         try {
@@ -126,11 +134,13 @@
         return true;
     }
 
+    // isLoaded — 데모 데이터가 현재 로드돼 있는지 여부.
     function isLoaded() {
         try { return localStorage.getItem(FLAG) === '1'; } catch (e) { return false; }
     }
 
     // ─── Hash trigger ────────────────────────────────────────────────────
+    // handleHash — #demo 면 데모 로드 후 장부로 이동, #demo-clear 면 데모 제거.
     function handleHash() {
         if (location.hash === '#demo') {
             load();
@@ -146,5 +156,6 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 전역 공개 API — 데모 로드/제거/상태 조회.
     window.SAUDADE_DEMO = { load, clear, isLoaded };
 })();

@@ -18,9 +18,12 @@
 //                                            cover / dispatches / listening
 'use strict';
 
+// IIFE — 로드 즉시 실행. 모든 섹션의 "빈 상태"를 편집장 메모 톤으로 그리는 공용 컴포넌트.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_EMPTY) return;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
@@ -31,12 +34,14 @@
         pt: 'Nota do editor', es: 'Nota del editor'
     };
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // render — eyebrow/headline/lede/actions/note 로 빈 상태 섹션을 그리고 target 에 넣는다.
     function render(target, opts) {
         if (!target) return null;
         opts = opts || {};
@@ -67,6 +72,7 @@
             ${note ? `<p class="sdd-empty__note">${escapeHtml(note)}</p>` : ''}
         `;
 
+        // 액션 버튼에 onClick 콜백 또는 href 이동을 연결한다.
         // Wire actions
         root.querySelectorAll('.sdd-empty__action').forEach(btn => {
             const idx = parseInt(btn.dataset.actionIdx, 10);
@@ -87,6 +93,7 @@
     }
 
     // ─── Pre-translated copy banks, per section ─────────────────────────
+    // text — 섹션 이름으로 미리 번역된 빈 상태 문구 묶음(eyebrow/headline/lede/note)을 돌려준다.
     function text(section) {
         switch (section) {
             case 'ledger':
@@ -192,5 +199,6 @@
         }
     }
 
+    // 전역 공개 API — 빈 상태 렌더 + 섹션별 문구 조회.
     window.SAUDADE_EMPTY = { render, text };
 })();
