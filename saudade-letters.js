@@ -12,21 +12,27 @@
 //   window.SAUDADE_LETTERS.renderRecent(target, { edition?, dispatch_ref?, max? })
 'use strict';
 
+// IIFE — 로드 즉시 실행. "편집장에게 보내는 편지"(제출 모달 + 공개된 편지 목록) 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_LETTERS) return;
 
+    // L — 여러 언어 문자열 중 현재 에디션 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // 제출 모달 DOM 캐시(한 번 만들어 재사용).
     let _modal = null;
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddLettersStyles')) return;
         const s = document.createElement('style');
@@ -164,6 +170,7 @@
         document.head.appendChild(s);
     }
 
+    // copyM — 제출 모달의 모든 문구를 현재 언어로 묶어 반환.
     function copyM(lang) {
         return {
             title:   L({ en: 'Write to the editor.', ko: '편집장에게 편지.', ja: '編集長への手紙。', pt: 'Escrever ao editor.', es: 'Escribir al editor.' }, lang),
@@ -195,6 +202,7 @@
         };
     }
 
+    // ensureModal — 제출 모달 컨테이너를 한 번만 만들고 ESC 닫기를 건다(접근성).
     function ensureModal() {
         if (_modal) return _modal;
         injectStyles();
@@ -209,6 +217,7 @@
         return _modal;
     }
 
+    // openModal — 편지 작성 모달을 열고 입력/글자수/전송 핸들러를 건다.
     function openModal(opts) {
         opts = opts || {};
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
@@ -245,14 +254,17 @@
         const bodyEl   = _modal.querySelector('[data-body]');
         const countEl  = _modal.querySelector('[data-count]');
 
+        // 입력할 때마다 글자수를 갱신하고 700/800 근처에서 경고 색으로.
         bodyEl.addEventListener('input', () => {
             const n = bodyEl.value.length;
             countEl.textContent = `${n} / 800`;
             countEl.className = 'sdd-let-count' + (n > 800 ? ' is-over' : n > 700 ? ' is-warn' : '');
         });
 
+        // 닫기/취소 버튼.
         _modal.querySelector('[data-close]').addEventListener('click', closeModal);
         _modal.querySelector('[data-cancel]').addEventListener('click', closeModal);
+        // 전송 — 서명 분리 + 길이 검증 후 Worker 에 POST.
         _modal.querySelector('[data-send]').addEventListener('click', async () => {
             // Single 'Name, City' field — split on the last comma so names with
             // commas in them survive (e.g. "Lee, Jaejin, Lisbon").
@@ -261,16 +273,19 @@
             const name = lastComma > 0 ? sign.slice(0, lastComma).trim() : sign;
             const city = lastComma > 0 ? sign.slice(lastComma + 1).trim() : '';
             const body = bodyEl.value.trim();
+            // 30~800자 범위를 벗어나면 전송하지 않고 안내.
             if (body.length < 30) { setStat(c.tooShort, 'error'); return; }
             if (body.length > 800) { setStat(c.tooLong,  'error'); return; }
             const base = (window.AURA_SERVER || '').replace(/\/$/, '');
             if (!base) { setStat(c.failClosed, 'error'); return; }
             try {
                 setStat('…');
+                // 로그인 상태면 인증 헤더를 함께 실어 편지에 사용자를 연결.
                 const headers = { 'Content-Type': 'application/json' };
                 if (window.SAUDADE_AUTH && window.SAUDADE_AUTH.authHeaders) {
                     Object.assign(headers, window.SAUDADE_AUTH.authHeaders());
                 }
+                // POST /letters/submit — 편지를 검수 큐에 넣는다(즉시 공개 아님).
                 const r = await fetch(base + '/letters/submit', {
                     method: 'POST', headers, credentials: 'omit',
                     body: JSON.stringify({
@@ -290,9 +305,11 @@
         _modal.classList.add('active');
         setTimeout(() => bodyEl.focus(), 80);
     }
+    // closeModal — 모달을 숨긴다.
     function closeModal() { if (_modal) _modal.classList.remove('active'); }
 
     // ─── Read-only block: published letters ──────────────────────────────
+    // renderRecent — 같은 에디션에서 공개된 편지들을 읽기 전용 블록으로 그린다(async).
     async function renderRecent(target, opts) {
         injectStyles();
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
@@ -308,9 +325,11 @@
             none:  L({ en: 'No letters published yet. Be the first.', ko: '아직 공개된 편지가 없다. 첫 편지가 되어 보라.', ja: 'まだ公開された手紙はない。最初の一通を。', pt: 'Ainda sem cartas publicadas. Seja o primeiro.', es: 'Aún sin cartas publicadas. Sea el primero.' }, ed)
         };
 
+        // GET /letters/list — 에디션/디스패치별 공개 편지를 조회(서버 없으면 빈 목록).
         let letters = [];
         if (base) {
             try {
+                // URLSearchParams 로 edition/limit/dispatch_ref 쿼리 파라미터를 안전하게 붙인다.
                 const u = new URL(base + '/letters/list');
                 u.searchParams.set('edition', ed);
                 u.searchParams.set('limit', String(max));
@@ -342,6 +361,7 @@
         `;
     }
 
+    // handleHash — URL 이 #letter 이면 작성 모달을 열고 해시를 지운다(딥링크 트리거).
     // Hash trigger.
     function handleHash() {
         if (location.hash === '#letter') {
@@ -353,5 +373,6 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 전역 공개 API — 모달 열기/닫기 + 공개 편지 목록 렌더.
     window.SAUDADE_LETTERS = { openModal, closeModal, renderRecent };
 })();
