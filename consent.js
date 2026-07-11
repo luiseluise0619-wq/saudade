@@ -1,9 +1,18 @@
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// consent.js = 쿠키/저장소 사용 "동의" 관리(개인정보법 GDPR/ePrivacy/한국 PIPA 대응).
+// 통계(Google Analytics)나 개인화 추적은 사용자가 명시적으로 허용해야만 켜진다.
+// 지역 기본값: 유럽(EU/EEA/UK)은 기본 "거부", 그 외(한국/미국 등)는 기본 "허용"(opt-out 모델).
+// 사용자의 선택은 localStorage 'aura_consent' 에 저장되고, 바뀌면 이벤트로 알린다.
+// ═══════════════════════════════════════════════════════════════════════
 // AURA — Cookie / Storage Consent (GDPR + ePrivacy + KR PIPA)
 // 'analytics' 동의가 명시적으로 'granted' 가 되어야만 GA / 광고 추적이 켜짐.
 // EU/EEA/UK 사용자는 default = denied. 그 외 지역은 default = granted (KR/US 등 opt-out 모델).
 'use strict';
+// IIFE — 내부 변수를 전역에서 숨긴다.
 (function() {
 
+    // KEY = 저장 키, VERSION = 저장 형식 버전(형식이 바뀌면 올려 옛 데이터 무시).
     const KEY = 'aura_consent';
     const VERSION = 1;
 
@@ -14,13 +23,17 @@
         'Atlantic/Canary', 'Atlantic/Azores'
     ];
 
+    // inEU: 브라우저의 시간대(timezone)로 유럽 거주 여부를 대략 추정(100% 정확하진 않음).
     function inEU() {
         try {
+            // 예: "Europe/Lisbon". 사용자의 시간대 문자열을 얻는다.
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+            // 유럽 접두어 중 하나로 시작하면 EU 로 본다.
             return EU_TZ_PREFIXES.some(p => tz === p || tz.startsWith(p));
         } catch (e) { return false; }
     }
 
+    // load: 저장된 동의 상태를 읽음. 없거나 형식 버전이 다르면 null(→ 기본값 사용).
     function load() {
         try {
             const raw = localStorage.getItem(KEY);
@@ -45,18 +58,23 @@
         };
     }
 
+    // 현재 상태 = 저장된 값이 있으면 그것, 없으면 기본값.
     let state = load() || defaultState();
 
+    // get: 현재 상태의 복사본 반환(스프레드로 얕은 복사 — 바깥이 원본을 못 바꾸게).
     function get() { return { ...state }; }
 
+    // set: 상태 일부를 바꾸고(사용자 결정으로 표시) 저장 + 알림.
     function set(partial) {
         state = { ...state, ...partial, decided: true };
         save(state);
         broadcast();
     }
 
+    // broadcast: 동의 상태가 바뀌었음을 앱 전체(+GA)에 알린다.
     function broadcast() {
         try {
+            // 커스텀 이벤트 발행 — 관심 있는 코드가 'aura:consent' 를 듣고 반응.
             window.dispatchEvent(new CustomEvent('aura:consent', { detail: get() }));
         } catch (e) { if (window.AURA && window.AURA.dbgWarn) window.AURA.dbgWarn('caught', e); }
         // gtag consent mode v2
@@ -161,8 +179,11 @@
     }
 
     // 즉시 broadcast (페이지 로드 시 GA 가 초기 상태 알도록)
+    // setTimeout(…, 0): 지금 실행 흐름이 끝난 직후로 미뤄 GA 초기화 뒤 상태를 전달.
     setTimeout(broadcast, 0);
+    // 필요하면 동의 모달 표시(EU 미결정 시) 또는 자동 처리.
     maybeShow();
 
+    // 공개 API — privacy 메뉴 등에서 window.AURA_CONSENT.openSettings() 로 다시 열 수 있다.
     window.AURA_CONSENT = { get, set, openSettings, inEU };
 })();
