@@ -23,17 +23,22 @@
 //   window.SAUDADE_IMPORT.openModal()          → file picker UI
 'use strict';
 
+// IIFE — 로드 즉시 실행. 여행 체류 기록의 CSV/JSON 가져오기·내보내기 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_IMPORT) return;
 
+    // 셰겐 27개국 + 관련국 ISO-2 집합 — 가져온 행 중 셰겐 대상만 골라낼 때 사용.
     const SCHENGEN_ISO = new Set([
         'AT','BE','BG','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH'
     ]);
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -41,18 +46,21 @@
     }
 
     // ─── Parsers ─────────────────────────────────────────────────────────
+    // parseCSV — CSV 텍스트를 {country,in,out} 행 배열로 파싱(헤더 자동 감지, 쉼표/세미콜론/탭 구분).
     function parseCSV(text) {
         if (!text) return [];
         // Strip BOM + normalise line endings.
         text = String(text).replace(/^﻿/, '').replace(/\r\n?/g, '\n').trim();
         const lines = text.split('\n').filter(l => l.trim().length > 0);
         if (!lines.length) return [];
+        // 첫 줄에 country/in 류 단어가 있으면 헤더로 보고 건너뛴다.
         // Detect header.
         const first = lines[0].toLowerCase();
         const hasHeader = /country|iso|cca/.test(first) && /in|from|entry/.test(first);
         const dataLines = hasHeader ? lines.slice(1) : lines;
         const rows = [];
         for (const line of dataLines) {
+            // 구분자로 나누고 앞뒤 따옴표를 벗긴다. 국가+입국일이 유효한 행만 채택.
             const cols = line.split(/[,;\t]/).map(s => s.trim().replace(/^"(.*)"$/, '$1'));
             if (cols.length < 2) continue;
             const country = (cols[0] || '').toUpperCase().slice(0, 3);
@@ -64,6 +72,7 @@
         return rows;
     }
 
+    // parseJSON — JSON 텍스트를 {country,in,out} 행 배열로. 배열 또는 번들 형식 모두 지원.
     function parseJSON(text) {
         if (!text) return [];
         let parsed;
@@ -84,6 +93,7 @@
         return [];
     }
 
+    // applyStays — 가져온 행을 기존 tax/schengen 저장소에 병합(덮어쓰지 않고 중복 제거 후 추가).
     function applyStays(rows) {
         if (!Array.isArray(rows) || !rows.length) return { added: 0, schengen: 0 };
         // Merge with existing tax stays (don't overwrite — append + dedupe by country+in+out).
@@ -100,6 +110,7 @@
         }
         try { localStorage.setItem('saudade.tax.stays', JSON.stringify(existing)); } catch (e) {}
 
+        // 가져온 행 중 셰겐 국가만 골라 셰겐 저장소에도 같은 방식으로 병합.
         // Schengen subset.
         const schengenSubset = rows.filter(r => SCHENGEN_ISO.has(r.country));
         let schExisting = [];
@@ -115,17 +126,20 @@
         }
         try { localStorage.setItem('saudade.schengen.stays', JSON.stringify(schExisting)); } catch (e) {}
 
+        // 화면에 떠 있는 폼이 있으면 새 데이터로 다시 그린다.
         // Trigger live re-render of any mounted form.
         if (window.SAUDADE_TAX_FORM)      remount('#sddTaxForm', window.SAUDADE_TAX_FORM);
         if (window.SAUDADE_SCHENGEN_FORM) remount('#sddSchForm', window.SAUDADE_SCHENGEN_FORM);
 
         return { added, schengen: addedSch };
     }
+    // remount — 선택자로 폼 호스트를 찾아 모듈의 mount 로 다시 렌더.
     function remount(sel, mod) {
         const host = document.querySelector(sel);
         if (host && mod && mod.mount) mod.mount(host);
     }
 
+    // exportAll — 4개 계산기 입력값을 하나의 JSON 문자열로 묶어 백업용으로 반환.
     function exportAll() {
         const out = {
             format: 'saudade.calc-stays.v1',
@@ -137,12 +151,14 @@
         };
         return JSON.stringify(out, null, 2);
     }
+    // safeRead — localStorage 에서 JSON 배열을 안전하게 읽는다(깨져 있으면 빈 배열).
     function safeRead(k) {
         try { return JSON.parse(localStorage.getItem(k) || '[]'); } catch (e) { return []; }
     }
 
     // ─── Modal UI ────────────────────────────────────────────────────────
     let _modal = null;
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddImportStyles')) return;
         const s = document.createElement('style');
@@ -213,6 +229,7 @@
         document.head.appendChild(s);
     }
 
+    // openModal — 가져오기/내보내기 모달을 만들고(최초 1회) 열어 핸들러를 건다.
     function openModal() {
         injectStyles();
         if (!_modal) {
@@ -221,6 +238,7 @@
             _modal.setAttribute('role', 'dialog');
             _modal.setAttribute('aria-modal', 'true');
             document.body.appendChild(_modal);
+            // ESC 로 닫기(접근성).
             document.addEventListener('keydown', e => {
                 if (e.key === 'Escape' && _modal.classList.contains('active')) closeModal();
             });
@@ -269,6 +287,7 @@
         const status = _modal.querySelector('[data-status]');
         const setStatus = (m, k) => { status.className = 'sdd-imp-status ' + (k || ''); status.textContent = m || ''; };
         _modal.querySelector('[data-close]').addEventListener('click', closeModal);
+        // 가져오기 — 붙여넣은 텍스트가 { 또는 [ 로 시작하면 JSON, 아니면 CSV 로 파싱해 병합.
         _modal.querySelector('[data-imp-btn]').addEventListener('click', () => {
             const text = _modal.querySelector('[data-imp-text]').value;
             const trimmed = (text || '').trim();
@@ -278,6 +297,7 @@
             const r = applyStays(rows);
             setStatus(`+ ${r.added} TAX · + ${r.schengen} SCHENGEN`, 'ok');
         });
+        // 내보내기 — 전체 백업 JSON 을 Blob 다운로드로.
         _modal.querySelector('[data-exp-btn]').addEventListener('click', () => {
             const blob = new Blob([exportAll()], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
@@ -290,13 +310,16 @@
 
         _modal.classList.add('active');
     }
+    // closeModal — 모달을 숨긴다.
     function closeModal() { if (_modal) _modal.classList.remove('active'); }
 
+    // handleHash — URL 이 #import 이면 모달을 열고 해시를 지운다(딥링크 트리거).
     // Hash trigger.
     function handleHash() { if (location.hash === '#import') { openModal(); try { history.replaceState(null,'',location.pathname+location.search); } catch(e){} } }
     window.addEventListener('hashchange', handleHash);
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 전역 공개 API — 파서/병합/내보내기 + 모달 제어.
     window.SAUDADE_IMPORT = { parseCSV, parseJSON, applyStays, exportAll, openModal, closeModal };
 })();
