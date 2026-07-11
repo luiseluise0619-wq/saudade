@@ -5,31 +5,45 @@
 // "BREAKING / 추천 / 방금 / Top stories" 어휘 0건. 빨간 점·뱃지·"New" 라벨 없음.
 'use strict';
 
+// IIFE — 로드 즉시 실행. 내부 선언은 전역을 오염시키지 않는다.
 (function() {
+    // 중복 로드 방어 — 이미 초기화됐으면 다시 실행하지 않는다.
     if (window.SAUDADE_QUARTERLY) return;
 
+    // URL 해시(#02b)로 이 부록 페이지를 열고 닫는다(뒤로가기/딥링크 지원).
     const HASH = '#02b';
+    // 마지막으로 본 화면을 localStorage 에 기억하는 키.
     const STATE_KEY = 'saudade.last.screen';
+    // 에디션별 데이터 캐시. 키는 언어코드, 값은 파싱된 JSON. 한 번 받으면 재사용.
     let _cache = {};
 
+    // 현재 에디션 코드(en/ko/ja/pt/es). 없으면 영어로 폴백.
     function currentEdition() {
         return (window.SAUDADE_EDITION?.get?.() || 'en');
     }
 
+    // 분기 디스패치 데이터를 비동기로 읽어온다. 에디션별 파일 → 실패 시 영어 파일로 폴백.
     function load() {
         const ed = currentEdition();
+        // 이미 캐시에 있으면 네트워크 없이 즉시 반환.
         if (_cache[ed]) return Promise.resolve(_cache[ed]);
+        // 영어는 기본 파일, 나머지는 언어 접미사가 붙은 파일(quarterly-dispatch.ko.json 등).
         const url = ed === 'en'
             ? './data/quarterly-dispatch.json'
             : `./data/quarterly-dispatch.${ed}.json`;
+        // force-cache — 캐시에 있으면 네트워크 없이 캐시본 사용(정적 데이터).
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
             .then(d => {
+                // 언어판이 있으면 캐시에 담아 반환.
                 if (d) { _cache[ed] = d; return d; }
+                // 언어판이 없으면(아직 미번역 등) 영어판을 대신 읽는다.
                 return fetch('./data/quarterly-dispatch.json', { cache: 'force-cache' })
                     .then(r => r.ok ? r.json() : null)
+                    // 영어판마저 없으면 빈 도시 목록으로 안전 폴백.
                     .then(d2 => { _cache[ed] = d2 || { cities: [] }; return _cache[ed]; });
             })
+            // 네트워크/파싱 어떤 예외든 빈 목록으로 마무리.
             .catch(() => { _cache[ed] = { cities: [] }; return _cache[ed]; });
     }
 
@@ -396,14 +410,17 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // 외부 링크 방어 — http/https 만 허용. javascript: 같은 위험한 스킴을 걸러 XSS 를 막는다.
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
         try {
+            // URL 파싱이 실패하면(잘못된 주소) catch 로 빠져 null.
             const url = new URL(u);
             return /^https?:$/.test(url.protocol) ? url.toString() : null;
         } catch (e) { return null; }
     }
 
+    // 발행 시각(ISO 문자열)을 "YYYY-MM-DD AT HH:MM KST" 형태로 표기.
     function fmtFiledKst(iso) {
         try {
             const d = new Date(iso);
@@ -423,6 +440,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
 
     // v6 §10.6 — 분기 D-14 발행 락. next_filing 이 14일 이내면 편집 창구 닫힘.
     // 음수면 발행일 지남 (overdue) — 편집자가 분기를 놓친 상태.
+    // 다음 발행일까지 남은 일수. 86400000 = 하루(ms). 음수면 발행일이 이미 지난 것.
     function daysUntilFiling(data) {
         const iso = data && data.next_filing;
         if (!iso) return null;
@@ -430,6 +448,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         if (!Number.isFinite(ts)) return null;
         return Math.floor((ts - Date.now()) / 86400000);
     }
+    // 남은 일수를 세 상태로 분류: open(열림)/lock(D-14 이내 잠금)/overdue(발행 지남).
     function lockState(data) {
         const d = daysUntilFiling(data);
         if (d === null)   return { state: 'open',    days: null };
@@ -444,6 +463,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
     const REWRITE_THRESHOLD = 0.30;
     const EDITOR_KEY = 'saudade.editor';
 
+    // 편집자 모드 여부(localStorage 플래그). 켜져 있으면 재작성 카운터/드래프트 배지가 보인다.
     function isEditorMode() {
         try { return localStorage.getItem(EDITOR_KEY) === '1'; }
         catch (e) { return false; }
@@ -451,15 +471,18 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
     function setEditorMode(on) {
         try { localStorage.setItem(EDITOR_KEY, on ? '1' : '0'); } catch (e) {}
     }
+    // 사람이 다시 쓴 기사 비율 계산 — 전체 아이템 중 human_rewritten=true 개수.
     function rewriteRatio(data) {
         const cities = (data && data.cities) || [];
         let total = 0, rewritten = 0;
+        // 도시마다 최대 3건씩 순회하며 합계와 재작성 개수를 센다.
         for (const city of cities) {
             for (const it of clamp3(city.items)) {
                 total++;
                 if (it && it.human_rewritten === true) rewritten++;
             }
         }
+        // 0으로 나누기 방지: 아이템이 없으면 비율 0.
         const ratio = total ? rewritten / total : 0;
         return {
             rewritten, total, ratio,
@@ -631,7 +654,10 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         };
     }
 
+    // ── 렌더 계층: renderItem(기사 1건) → renderCity(도시 1개, 기사 최대 3) → render(전체 페이지) ──
+    // 기사 한 건을 HTML 문자열로. c 는 copy()가 만든 현재 언어 문구 묶음.
     function renderItem(it, c) {
+        // 출처 URL 이 안전하면(safeUrl 통과) 링크로, 아니면 텍스트로만 표시.
         const safeSrc = safeUrl(it.source_url);
         const srcLine = `${escapeHtml(it.source || '')}${it.source_date ? ' · ' + escapeHtml(it.source_date) : ''}`;
         const srcAnchor = safeSrc
@@ -654,7 +680,9 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         `;
     }
 
+    // 도시 한 곳을 헤더 + 기사 최대 3건으로 그린다.
     function renderCity(city, c) {
+        // clamp3 로 3건까지만 자른 뒤 각각 renderItem 으로 변환해 이어붙인다.
         const items = clamp3(city.items).map(it => renderItem(it, c)).join('');
         const seasonHtml = city.season
             ? `<span class="season">${escapeHtml(city.season)}</span>`
@@ -672,7 +700,9 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         `;
     }
 
+    // 부록 페이지 전체를 조립해 그린다: 마스트헤드 + 인트로(+락/편집자 배지) + 도시들 + 각주.
     function render(data) {
+        // 루트 컨테이너 확보(없으면 생성).
         let root = document.getElementById('sddQuarterlyDispatch');
         if (!root) {
             root = document.createElement('section');
@@ -681,6 +711,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
             document.body.appendChild(root);
         }
 
+        // 현재 언어 문구 묶음과, 3개까지 자른 도시 목록.
         const c = copy();
         const cities = clamp3(data && data.cities);
         const filed = data && data.filed_at ? fmtFiledKst(data.filed_at) : '';
@@ -756,12 +787,14 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
             </footer>
         `;
 
+        // 조각들을 한 번에 그린 뒤, "아틀라스로 돌아가기" 버튼에 close 를 연결.
         root.innerHTML = head + intro + body + foot;
 
         const back = root.querySelector('[data-qdisp-back]');
         if (back) back.addEventListener('click', close);
     }
 
+    // 부록 페이지 열기: body 클래스 부착 → 상태 저장 → 데이터 로드 후 렌더 → 해시 동기화.
     function open() {
         document.body.classList.add('qdispatch-active');
         try { localStorage.setItem(STATE_KEY, '02b'); } catch (e) {}
@@ -794,6 +827,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
     function injectAtlasEntry() {
         const root = document.getElementById('sddAtlas');
         if (!root) return false;
+        // 이미 진입 링크가 붙어 있으면 중복 추가하지 않는다.
         if (root.querySelector('.sdd-qdisp-entry')) return true;
         const c = copy();
         const a = document.createElement('button');
@@ -833,6 +867,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         });
     }
 
+    // URL 해시와 페이지 상태를 양방향 동기화. #02b 면 열고, 아니면 닫는다(뒤로가기/딥링크 대응).
     function watchHash() {
         const sync = () => {
             if (location.hash === HASH) {
@@ -841,10 +876,12 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
                 close();
             }
         };
+        // hashchange — 브라우저 URL 해시가 바뀔 때 발생하는 이벤트.
         window.addEventListener('hashchange', sync);
         sync();   // 초기 진입 시
     }
 
+    // 키보드 단축키: Esc 로 닫기, Ctrl+Shift+E 로 편집자 모드 토글.
     function watchKeys() {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && document.body.classList.contains('qdispatch-active')) {
@@ -870,6 +907,7 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         else document.body.removeAttribute('data-editor');
     }
 
+    // 모듈 초기화: 스타일 주입 → 편집자 속성 반영 → 데이터 예열 → 각종 관찰자/단축키 등록.
     function init() {
         injectStyles();
         applyEditorBodyAttr();
@@ -880,12 +918,14 @@ body[data-editor="1"] .sdd-qdisp-rewrite-tag { display: inline-block; }
         watchKeys();
     }
 
+    // DOM 로딩 중이면 준비 후 init, 이미 끝났으면 즉시 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — 다른 모듈이 열기/닫기/락 상태/편집자 모드를 조회·제어할 수 있게 노출.
     window.SAUDADE_QUARTERLY = {
         open, close,
         reload: () => { _cache = {}; load().then(render); },
