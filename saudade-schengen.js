@@ -20,26 +20,44 @@
 //
 //   window.SAUDADE_SCHENGEN.render(container, { stays, ref, lang })
 //     Paints a compact panel into `container`.
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// saudade-schengen.js = 셍겐(Schengen) "90/180 규칙" 계산기.
+// 규칙: 어떤 연속된 180일 창(window) 안에서도 셍겐 지역 체류는 최대 90일까지.
+//   입국일과 출국일을 모두 포함해서 센다(EU 규정).
+// 이 파일은 "순수 계산"만 한다 — 조언이 아니라 달력(집계 결과)을 낸다.
+// calc() 가 핵심 엔진, render() 가 결과를 화면 패널로 그린다.
+// 날짜는 시간대 버그를 피하려 전부 UTC 기준으로 다룬다.
+// ═══════════════════════════════════════════════════════════════════════
 'use strict';
 
+// IIFE + 중복 로드 가드.
 (function() {
     if (window.SAUDADE_SCHENGEN) return;
 
+    // 규칙 상수: 최대 90일, 창 길이 180일, 하루 밀리초.
     const MAX = 90;
     const WINDOW = 180;
     const MS_DAY = 86400000;
 
+    // L: 현재 언어(또는 lang 인자)에 맞는 문구 선택.
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // toUTCDate: 'YYYY-MM-DD' 문자열(또는 Date)을 시분초 없는 UTC 자정 Date 로 변환.
+    // 시간대에 따라 하루가 밀리는 버그를 막으려고 UTC 로 통일한다.
     function toUTCDate(s) {
         if (!s) return null;
+        // 이미 Date 면 UTC 연/월/일만 뽑아 자정으로.
         if (s instanceof Date) return new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth(), s.getUTCDate()));
+        // 정규식으로 연-월-일 3덩어리 추출. +m[1] = 문자열을 숫자로.
         const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s));
         if (!m) return null;
+        // 월은 0부터라 -1. Date.UTC 로 UTC 자정 생성.
         const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+        // 잘못된 날짜면 null.
         return isNaN(d.getTime()) ? null : d;
     }
     function fmt(d) {
@@ -48,18 +66,25 @@
         const day = String(d.getUTCDate()).padStart(2, '0');
         return `${y}-${m}-${day}`;
     }
+    // addDays: 날짜에 n일 더한 새 Date. diffDays: 두 날짜의 일수 차이.
     function addDays(d, n) { return new Date(d.getTime() + n * MS_DAY); }
     function diffDays(a, b) { return Math.round((a.getTime() - b.getTime()) / MS_DAY); }
 
+    // expandStays: 체류 구간들을 "셍겐 안에 있던 날짜들"의 집합(Set)으로 펼친다.
+    // 출국일(out)이 없는 "진행 중" 체류는 기준일(ref)까지로 본다.
     // Build a per-day Set of dates the traveller was inside Schengen.
     // Open stays (no `out`) end at `ref` if `in <= ref`.
     function expandStays(stays, ref) {
         const set = new Set();
         for (const s of (stays || [])) {
+            // 입국일.
             const a = toUTCDate(s.in);
             if (!a) continue;
+            // 출국일(없으면 기준일).
             const b = toUTCDate(s.out) || ref;
+            // 출국이 입국보다 이르면 잘못된 구간 → 건너뜀.
             if (b < a) continue;
+            // 입국일부터 출국일까지 하루씩 돌며 날짜 문자열을 집합에 넣는다(양 끝 포함).
             // Include both endpoints.
             for (let d = new Date(a); d <= b; d = addDays(d, 1)) {
                 set.add(fmt(d));
@@ -68,47 +93,63 @@
         return set;
     }
 
+    // calc: 핵심 계산. 기준일 기준으로 "지난 180일 창에서 며칠 썼는지/얼마 남았는지" 등을 낸다.
     function calc(opts) {
         opts = opts || {};
+        // 기준일(ref). 안 주면 오늘(UTC 자정).
         const ref = toUTCDate(opts.ref) || (function () {
             const now = new Date();
             return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
         })();
         const stays = Array.isArray(opts.stays) ? opts.stays : [];
+        // 셍겐 안에 있던 날짜 집합.
         const set = expandStays(stays, ref);
 
+        // 창 = 기준일로 끝나는 180일(기준일 포함). 그래서 시작은 ref 에서 179일 전.
         // Window is the 180 days ending on ref (inclusive). EU practice: ref counts.
         const start = addDays(ref, -(WINDOW - 1));
         let used = 0;
         const timeline = [];
+        // 창의 180일을 하루씩 돌며 "그날 셍겐 안이었나"를 확인하고 사용일수를 센다.
         for (let i = 0; i < WINDOW; i++) {
             const d = addDays(start, i);
             const inside = set.has(fmt(d));
             if (inside) used++;
             timeline.push({ date: fmt(d), inside });
         }
+        // 남은 일수 = 90 - 사용일수(음수면 0).
         const remaining = Math.max(0, MAX - used);
+        // 기준일 당일에 셍겐 안이었는지.
         const todayInside = set.has(fmt(ref));
 
+        // 미래로 창을 하루씩 굴려(roll) 사용일수가 0이 되는 날(완전 초기화)과
+        // 다시 입국해도 되는(≥1일 남는) 첫 날을 찾는다. 최대 365일까지만 굴림(과도 계산 방지).
         // Roll forward to find when used drops to 0 (full reset) and the next safe-entry date.
         // Optimisation cap: don't roll more than 365 days.
         let nextSafeEntry = null;
         let fullReset = null;
+        // cur = 현재 사용일수에서 출발해 하루씩 갱신할 값.
         let cur = used;
+        // 각 날짜가 셍겐 안(1)/밖(0)인지 빠르게 조회할 지도(Map).
         const insideByDay = new Map();
         for (let i = 0; i < WINDOW; i++) {
             insideByDay.set(fmt(addDays(start, i)), set.has(fmt(addDays(start, i))) ? 1 : 0);
         }
+        // 하루 굴릴 때마다: 창 뒤쪽(가장 오래된 날) 하나가 빠지고(dropping), 창 앞쪽에 하루가 들어온다(adding).
         for (let off = 1; off <= 365; off++) {
+            // 이번에 창에서 빠질 날 / 새로 들어올 날.
             const dropDate = addDays(start, off - 1);
             const addDate  = addDays(ref,   off);
             const dropping = insideByDay.get(fmt(dropDate)) || 0;
             const adding = set.has(fmt(addDate)) ? 1 : 0;   // future stays user may have entered
+            // 슬라이딩 윈도우 갱신: 빠진 만큼 빼고 들어온 만큼 더한다.
             cur = cur - dropping + adding;
             insideByDay.set(fmt(addDate), adding);
+            // 90 미만이 되는 첫 날 = 다음 안전 입국일.
             if (cur < MAX && nextSafeEntry === null) {
                 nextSafeEntry = fmt(addDate);
             }
+            // 0이 되는 날 = 창 완전 초기화. 찾으면 반복 종료.
             if (cur === 0 && fullReset === null) {
                 fullReset = fmt(addDate);
                 break;
@@ -151,16 +192,20 @@
         })[ch]);
     }
 
+    // render: 계산 결과를 컨테이너(root)에 컴팩트 패널로 그린다.
     function render(root, opts) {
         if (!root) return;
         const stays = (opts && opts.stays) || [];
         const lang  = opts && opts.lang;
+        // 입력 체류가 하나도 없으면 안내 문구만.
         if (!stays.length) {
             root.innerHTML = `<p class="sdd-sch-empty">${escapeHtml(copy(lang).empty)}</p>`;
             return;
         }
+        // 계산 실행.
         const r = calc({ stays, ref: opts && opts.ref });
         const c = copy(lang);
+        // 90일 이상이면 위험(danger), 75일 이상이면 경고(warn), 아니면 정상(ok) — 색상 결정용.
         const danger = r.used_in_window >= MAX;
         const warn   = r.used_in_window >= 75 && !danger;
         const cls = danger ? 'danger' : warn ? 'warn' : 'ok';
@@ -265,5 +310,6 @@
         } else { injectStyles(); }
     }
 
+    // 공개 API — calc(순수 계산)과 render(패널 그리기).
     window.SAUDADE_SCHENGEN = { calc, render };
 })();
