@@ -12,20 +12,26 @@
 //   window.SAUDADE_COVERAGE_FORM.getPension()
 'use strict';
 
+// IIFE — 로드 즉시 실행. 건강보험 + 연금 입력 폼(두 개의 편집기)을 그리는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_COVERAGE_FORM) return;
+    // KEY_INS/KEY_PEN — 보험/연금 기록을 각각 저장하는 localStorage 키.
     const KEY_INS = 'saudade.insurance.policies';
     const KEY_PEN = 'saudade.pension.filings';
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // get/set — 키별 기록 읽기/쓰기(깨져 있으면 빈 배열).
     function get(key) {
         try { const r = localStorage.getItem(key); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
         catch (e) { return []; }
@@ -55,6 +61,7 @@
         };
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddCovFormStyles')) return;
         const s = document.createElement('style');
@@ -100,6 +107,7 @@
         document.head.appendChild(s);
     }
 
+    // rowIns — 보험 한 줄(보험사/국가 select + 시작/종료 date + 삭제 버튼) HTML.
     function rowIns(s, i, c) {
         return `
             <div class="sdd-covf__row" data-idx="${i}">
@@ -116,6 +124,7 @@
             </div>
         `;
     }
+    // rowPen — 연금 한 줄(제도/국가 select + 시작/종료 date + 삭제 버튼) HTML.
     function rowPen(s, i, c) {
         return `
             <div class="sdd-covf__row" data-idx="${i}">
@@ -133,6 +142,7 @@
         `;
     }
 
+    // paint — 보험/연금 두 섹션을 그리고 각각에 추가/수정/삭제 이벤트를 배선(wire).
     function paint(host, lang) {
         const c = copy(lang);
         const ins = get(KEY_INS);
@@ -173,6 +183,7 @@
         wire(host, KEY_PEN, '[data-section="pen"]', '[data-add-pen]', lang);
     }
 
+    // wire — 한 섹션(보험 또는 연금)의 추가 버튼과 각 행 입력/삭제에 핸들러를 건다.
     function wire(host, key, sectionSel, addSel, lang) {
         host.querySelector(addSel).addEventListener('click', () => {
             const cur = get(key);
@@ -196,6 +207,7 @@
         });
     }
 
+    // renderCalc — 현재 입력으로 보험 공백/연금 개월 패널을 다시 그린다(패널이 있을 때만).
     function renderCalc() {
         if (!window.SAUDADE_COVERAGE) return;
         const insPanel = document.getElementById('sddInsPanel');
@@ -210,6 +222,7 @@
         }
     }
 
+    // mount — 폼을 host 에 장착: 스타일 주입 + 렌더 + 계산기 초기 실행.
     function mount(target, opts) {
         injectStyles();
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
@@ -218,5 +231,6 @@
         renderCalc();
     }
 
+    // 전역 공개 API — 폼 장착 + 보험/연금 기록 조회.
     window.SAUDADE_COVERAGE_FORM = { mount, getInsurance: () => get(KEY_INS), getPension: () => get(KEY_PEN) };
 })();
