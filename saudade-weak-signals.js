@@ -14,13 +14,17 @@
 
 'use strict';
 
+// IIFE — 로드 즉시 실행. "약한 연결"(독자 수 등 통계)을 잡지 톤으로 노출하는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_WEAK_SIGNALS) return;
 
+    // _stats: Worker 통계 응답 캐시. _fetchedAt: 마지막 로드 시각. TTL_MS: 캐시 유효기간(1시간).
     let _stats = null;          // worker 응답 캐시
     let _fetchedAt = 0;
     const TTL_MS = 60 * 60 * 1000;   // 1 시간 (cron 은 주 1회지만 클라이언트는 더 자주 갱신 시도 OK)
 
+    // spell — 숫자를 영어 단어로 풀어쓴다("47" → "forty-seven"). 톤 규칙(§13.3).
     // 영문 숫자 풀어쓰기 — 0~99 정확, 그 외 mass term ("hundreds", "thousands")
     const ONES = ['zero','one','two','three','four','five','six','seven','eight','nine'];
     const TEENS = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
@@ -51,10 +55,12 @@
         return 'many thousand';
     }
 
+    // fetchStats — 주간 통계를 Worker 에서 가져와 캐시(서버 없으면 null, 캐시 신선하면 재사용).
     function fetchStats() {
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) return Promise.resolve(null);
         if (_stats && (Date.now() - _fetchedAt) < TTL_MS) return Promise.resolve(_stats);
+        // GET /stats/weekly — 월요일 cron 이 갱신하는 도시별/전체 통계.
         return fetch(base + '/stats/weekly?key=all', { cache: 'no-cache', credentials: 'omit' })
             .then(r => r.ok ? r.json() : null)
             .then(j => {
@@ -68,6 +74,7 @@
     // ── Cover: 같은 도시 독자 수 ─────────────────────────────────
     // "Lisbon today: forty-seven readers on the desk."
     // 5 명 미만: "Lisbon today: a quiet desk."
+    // coverCopy — 표지용 문구: "같은 도시 독자 N명"(5명 미만이면 "a quiet desk").
     function coverCopy(stats) {
         const f = window.SAUDADE_FOLLOWING?.list?.() || [];
         const slug = f[0];
@@ -84,6 +91,7 @@
 
     // ── Atlas: 주간 카페 제출 활동 ───────────────────────────────
     // "This week, three readers added cafés in Porto. Pending review."
+    // atlasCopy — 아틀라스용 문구: 이번 주 카페 제출이 가장 많은 도시.
     function atlasCopy(stats) {
         const entry = stats['atlas:weekly_submissions'];
         if (!entry || !entry.value || !Array.isArray(entry.value.top_cities)) return null;
@@ -96,6 +104,7 @@
 
     // ── Listening: 누적 세션 수 ──────────────────────────────────
     // "Two thousand eight hundred sessions logged this week from twenty-three cities."
+    // listeningCopy — 청취실용 문구: 이번 주 세션 수/도시 수(100 미만이면 노출 안 함).
     function listeningCopy(stats) {
         const entry = stats['listening:weekly_total'];
         if (!entry || !entry.value) return null;
@@ -105,6 +114,7 @@
         return `${spell(sessions)} sessions logged this week from ${spell(cities)} cit${cities === 1 ? 'y' : 'ies'}.`;
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddWeakSignalsStyles')) return;
         const s = document.createElement('style');
@@ -141,6 +151,7 @@ body.listening-active .sdd-cover-weak { display: none !important; }
         document.head.appendChild(s);
     }
 
+    // ensureCoverEl — 표지 하단 통계 문구 요소를 한 번만 만든다.
     function ensureCoverEl() {
         let el = document.getElementById('sddCoverWeak');
         if (el) return el;
@@ -151,6 +162,7 @@ body.listening-active .sdd-cover-weak { display: none !important; }
         return el;
     }
 
+    // renderAll — 통계를 받아 표지/아틀라스/청취실 각 자리에 문구를 채운다.
     function renderAll() {
         fetchStats().then(stats => {
             if (!stats) return;
@@ -187,6 +199,7 @@ body.listening-active .sdd-cover-weak { display: none !important; }
         });
     }
 
+    // init — 모듈 시동: 스타일 주입 + 첫 렌더 + 섹션/에디션/팔로잉 변화 시 재계산.
     function init() {
         injectStyles();
         renderAll();
@@ -198,11 +211,13 @@ body.listening-active .sdd-cover-weak { display: none !important; }
         }
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 숫자 풀어쓰기 + 통계 로드 + 렌더.
     window.SAUDADE_WEAK_SIGNALS = { spell, fetchStats, renderAll };
 })();
