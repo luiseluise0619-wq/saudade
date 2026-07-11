@@ -5,9 +5,14 @@
 // 라이선스 트래커 필수 표시 (Freesound CC0/CC-BY · own recording).
 'use strict';
 
+// IIFE — 로드 즉시 실행. "리스닝 룸"(ASMR 오디오 라이브러리) 화면 전담 모듈.
 (function() {
+    // 중복 로드 방어 — 이미 등록됐으면 즉시 반환(멱등).
     if (window.SAUDADE_LISTENING) return;
 
+    // 모듈 전역(클로저) 상태 — 화면 하나만 존재하므로 싱글턴처럼 다룬다.
+    // _data: listening.json 캐시(트랙/도시). _activeIdx: 현재 선택 트랙 인덱스.
+    // _audio: HTML5 Audio 싱글턴. _wakeLock: 재생 중 화면 꺼짐 방지. _isPlaying: 재생 여부.
     let _data = null;
     let _activeIdx = null;
     let _audio = null;          // HTML5 Audio element (singleton)
@@ -33,7 +38,9 @@
         return licenseHtml + ' · ' + c.toUpperCase();
     }
 
+    // 재생 실패(404·디코드 오류)한 트랙 인덱스를 모아두는 집합 — 다시 시도하지 않게.
     const _unavailable = new Set();
+    // markTrackUnavailable — 트랙 행을 "비가용"으로 표시하고 재생을 막는다.
     function markTrackUnavailable(idx) {
         _unavailable.add(idx);
         const root = document.getElementById('sddListening');
@@ -65,7 +72,9 @@
     const SESSION_REST_MIN = 10;
     const SESSION_KEY = 'saudade.listening.sessions';   // 헌법 §9 키
 
+    // load — listening.json 을 한 번만 가져와 _data 에 캐시(async, Promise 반환).
     function load() {
+        // 이미 로드했으면 네트워크 없이 캐시를 즉시 돌려준다.
         if (_data) return Promise.resolve(_data);
         // Use default cache mode + a release-stamped query string so a
         // fresh listening.json (e.g. after a fetch-content PR) reaches the
@@ -75,6 +84,8 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
+        // ?v=v743 캐시버스터 — sw.js CACHE_VERSION 과 lock-step 으로 갱신(fresh JSON 도달).
+        // 실패(오프라인 등)해도 앱이 죽지 않도록 빈 tracks 로 폴백한다.
         return fetch('./data/listening.json?v=v743')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
@@ -772,15 +783,19 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     // 50 min work + 10 min rest. 트랙 재생 시작 = 세션 시작.
     // 끝나면 종소리 1회. 사용자만 보이는 'sessions today' 카운터 (공유 X).
 
+    // getSessions — 날짜별 세션 카운트를 localStorage 에서 읽는다(깨져 있으면 빈 객체).
     function getSessions() {
         try { return JSON.parse(localStorage.getItem(SESSION_KEY) || '{}'); }
         catch (e) { return {}; }
     }
+    // todayKey — 오늘 날짜를 YYYY-MM-DD 문자열로. (집계 키. 로컬 자정 경계는 무시)
     function todayKey() { return new Date().toISOString().slice(0, 10); }
+    // sessionsToday — 오늘 완료한 작업 세션 수.
     function sessionsToday() {
         const all = getSessions();
         return all[todayKey()] || 0;
     }
+    // bumpSessionsToday — 오늘 세션 카운트를 1 늘리고 30일 지난 기록은 청소.
     function bumpSessionsToday() {
         const all = getSessions();
         const k = todayKey();
@@ -794,7 +809,9 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     }
 
     let _sessionLogId = null;       // v8 §11 — worker INSERT 후 받는 row id
+    // startSession — 작업 세션 시작(50분 work). tick 인터벌 시작 + 서버에 로그.
     function startSession() {
+        // 이미 work 중이면 중복 시작 방지.
         if (_sessionPhase === 'work') return;
         _sessionStart = Date.now();
         _sessionPhase = 'work';
@@ -808,13 +825,17 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     // v8 §11 — listening_sessions INSERT, row id 캡처 (UPDATE duration 용)
     function logListeningSessionStart() {
         _sessionLogId = null;
+        // AURA_SERVER — Worker 백엔드 URL. 없으면 로그를 건너뛴다(오프라인/미설정).
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) return;
         const tracks = _data?.tracks || [];
         const t = (_activeIdx != null) ? tracks[_activeIdx] : null;
         if (!t) return;
+        // 로그인 사용자면 id 를 함께 보낸다(익명이면 null).
         const user = window.SAUDADE_AUTH?.getUser?.() || null;
         try {
+            // POST /listening/log — D1 의 listening_sessions 에 INSERT.
+            // 응답의 row id 를 _sessionLogId 에 저장 → 종료 시 duration UPDATE 에 사용.
             fetch(base + '/listening/log', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -832,9 +853,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     }
     // v8 §11 — duration_seconds UPDATE (세션 종료 시. 정확한 약한 연결 집계).
     function logListeningSessionEnd() {
+        // 시작 로그가 없으면(id 없음) 갱신할 대상이 없다.
         if (!_sessionLogId || !_sessionStart) return;
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) return;
+        // 경과 초 계산(음수 방지). 같은 /listening/log 에 id + duration 만 실어 UPDATE.
         const duration = Math.max(0, Math.floor((Date.now() - _sessionStart) / 1000));
         try {
             fetch(base + '/listening/log', {
@@ -842,15 +865,18 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id: _sessionLogId, duration_seconds: duration }),
                 credentials: 'omit',
+                // keepalive — 탭을 닫는 중에도 요청이 취소되지 않고 끝까지 전송된다.
                 keepalive: true   // 페이지 떠나도 전송 보장
             }).catch(() => {});
         } catch (e) {}
         _sessionLogId = null;
     }
+    // pauseSession — 일시정지: phase 는 유지하고 1초 tick 인터벌만 멈춘다.
     function pauseSession() {
         // 일시정지 = phase 유지, tick 만 멈춤. 재개 시 elapsed 보존 위해 _pausedAt 저장.
         if (_sessionTickIv) { clearInterval(_sessionTickIv); _sessionTickIv = null; }
     }
+    // endSession — 세션 완전 종료: 서버 duration 갱신 → idle 로 리셋 → tick 정리.
     function endSession() {
         // v8 §11 — duration UPDATE 먼저 (start 값 살아있을 때)
         logListeningSessionEnd();
@@ -860,10 +886,12 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         renderSessionState();
     }
     // v8 §11 — 페이지 종료 시 마지막 세션 duration UPDATE (keepalive 로 전송 보장)
+    // 페이지를 떠날 때(탭 닫기/이동) 마지막 세션 길이를 서버에 마저 기록한다.
     if (typeof window !== 'undefined') {
         window.addEventListener('pagehide', () => { logListeningSessionEnd(); });
         window.addEventListener('beforeunload', () => { logListeningSessionEnd(); });
     }
+    // tickSession — 1초마다 호출. work→rest 전환, rest 종료 시 세션 끝을 처리.
     function tickSession() {
         if (_sessionPhase === 'idle' || !_sessionStart) return;
         const elapsedSec = Math.floor((Date.now() - _sessionStart) / 1000);
@@ -882,11 +910,13 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         }
         renderSessionState();
     }
+    // fmtTimer — 초를 MM:SS 형태 문자열로(앞자리 0 채움).
     function fmtTimer(seconds) {
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
         return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
+    // renderSessionState — 남은 시간/오늘 세션 수를 화면 라벨에 반영한다.
     function renderSessionState() {
         const root = document.getElementById('sddListening');
         const stateEl = root?.querySelector('[data-session-state]');
@@ -931,10 +961,13 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     }
 
     // ─── HTML5 Audio + Wake Lock (Handoff v3 §5.5) ───────────────────────
+    // ensureAudio — HTML5 Audio 싱글턴을 처음 한 번만 만들고 이벤트들을 건다.
     function ensureAudio() {
         if (_audio) return _audio;
         _audio = new Audio();
+        // preload='metadata' — 길이 등 메타만 미리 로드, 본문은 재생 시.
         _audio.preload = 'metadata';
+        // crossOrigin='anonymous' — R2 등 교차출처 오디오를 CORS 로 로드.
         _audio.crossOrigin = 'anonymous';
         // 초기 볼륨 복원
         try {
@@ -942,6 +975,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             _audio.volume = (Number.isFinite(saved) && saved >= 0 && saved <= 1) ? saved : 0.7;
         } catch (e) { _audio.volume = 0.7; }
 
+        // play — 재생 시작: 상태 갱신 + 화면 꺼짐 방지(Wake Lock) + 세션 타이머 시작.
         _audio.addEventListener('play',  () => {
             _isPlaying = true;
             syncControlState();
@@ -954,6 +988,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             releaseWakeLock();
             pauseSession();         // tick 멈춤 (phase 유지)
         });
+        // ended — 트랙이 끝나면 다음 트랙으로 넘어가고, 마지막이면 세션 종료.
         _audio.addEventListener('ended', () => {
             _isPlaying = false;
             syncControlState();
@@ -968,6 +1003,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             }
             endSession();   // 마지막 트랙 끝 = 세션 종료
         });
+        // timeupdate — 재생 위치를 30초마다 저장해 다음에 이어듣기 가능하게.
         _audio.addEventListener('timeupdate', () => {
             // 30초마다 saudade.reading.position 갱신
             try {
@@ -981,6 +1017,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 }
             } catch (e) {}
         });
+        // error — 로드/디코드 실패(주로 404). 해당 트랙을 비가용으로 표시.
         _audio.addEventListener('error', () => {
             _isPlaying = false;
             syncControlState();
@@ -991,8 +1028,10 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         return _audio;
     }
 
+    // playTrack — idx 트랙을 재생한다. 저장 위치가 있으면 이어서.
     function playTrack(idx) {
         const tracks = _data?.tracks || [];
+        // 범위 밖/비가용/오디오 URL 없음 → 재생하지 않음(방어).
         if (idx < 0 || idx >= tracks.length) return;
         if (_unavailable.has(idx)) return;   // 비가용 트랙은 재생 시도 X
         const t = tracks[idx];
@@ -1007,6 +1046,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
                 a.currentTime = pos.position;
             }
         } catch (e) {}
+        // play() 는 Promise 반환. 브라우저가 자동재생을 막으면 reject 될 수 있다.
         a.play().catch((err) => {
             // autoplay 차단 또는 audio file 없음 — UI 만 업데이트
             _isPlaying = false;
@@ -1023,14 +1063,18 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     function pauseAudio()  { if (_audio && !_audio.paused) _audio.pause(); }
     function resumeAudio() { if (_audio && _audio.paused && _audio.src) _audio.play().catch(() => {}); }
 
+    // requestWakeLock — 재생 중 화면이 자동으로 꺼지지 않도록 Wake Lock 요청(지원 시).
     async function requestWakeLock() {
+        // 이미 잠금 보유 시 중복 요청 방지.
         if (_wakeLock) return;
+        // 미지원 브라우저면 조용히 통과.
         if (!('wakeLock' in navigator)) return;
         try {
             _wakeLock = await navigator.wakeLock.request('screen');
             _wakeLock.addEventListener('release', () => { _wakeLock = null; });
         } catch (e) { /* user denied or unsupported */ }
     }
+    // releaseWakeLock — 재생 멈추면 Wake Lock 을 해제해 배터리 절약.
     function releaseWakeLock() {
         if (_wakeLock) {
             try { _wakeLock.release(); } catch (e) {}
@@ -1039,6 +1083,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     }
 
     // ─── 컨트롤 UI 동기화 (헌법: 직선 + 점만, 둥근 버튼 X) ────────────────
+    // syncControlState — 재생/일시정지 버튼의 라벨과 aria-pressed 를 현재 상태에 맞춘다.
     function syncControlState() {
         const playBtn = document.querySelector('[data-listen-play]');
         if (playBtn) {
@@ -1046,6 +1091,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             playBtn.textContent = _isPlaying ? 'PAUSE' : 'PLAY';
         }
     }
+    // syncTrackHighlight — 현재 재생 중인 트랙 행에 aria-current 표시(강조).
     function syncTrackHighlight() {
         const root = document.getElementById('sddListening');
         if (!root) return;
@@ -1054,11 +1100,13 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         });
     }
 
+    // escapeHtml — innerHTML 주입 전 위험한 5글자를 엔티티로 바꿔 XSS 방지.
     function escapeHtml(s) {
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
+    // dropItalicPunct — 이탤릭 헤드라인 끝의 마침표류를 별도 span 으로 분리(기울임 보정).
     // v7 검토 정정 — italic 헤드라인 마침표 regular 분리
     function dropItalicPunct(s) {
         if (!s) return '';
@@ -1066,6 +1114,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         if (!m) return escapeHtml(s);
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
+    // safeUrl — http/https 링크만 통과시키는 화이트리스트(javascript: 등 위험 스킴 차단).
     function safeUrl(u) {
         if (!u || typeof u !== 'string') return null;
         try { const url = new URL(u); return /^https?:$/.test(url.protocol) ? url.toString() : null; }
@@ -1073,9 +1122,11 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
     }
 
     // v7 §11 By City — 도시 우선 모드 결정 (priority: 명시 > localStorage > home city > 첫 도시)
+    // resolveActiveCity — 어느 도시를 먼저 보여줄지 결정(우선순위: 명시 > 저장값 > 홈도시 > 사진있는 첫 도시).
     function resolveActiveCity(data) {
         const cities = (data && data.cities) || [];
         if (!cities.length) return null;
+        // has — 주어진 slug 가 실제 도시 목록에 있는지 확인하는 헬퍼.
         const has = (slug) => cities.some(c => c.slug === slug);
         if (_activeCity && has(_activeCity)) return _activeCity;
         // home city — Atlas / Desk 의 정착 도시 활용 (분리된 임시 모드, §5.4 와 별개)
@@ -1090,18 +1141,22 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         return (withPhoto || cities[0]).slug;
     }
 
+    // setMode — 보기 모드('city'|'category') 전환 → localStorage 저장 → 다시 렌더.
     function setMode(m) {
         _mode = m === 'category' ? 'category' : 'city';
         try { localStorage.setItem(KEY_MODE, _mode); } catch (e) {}
         render(_data);
     }
+    // setActiveCity — 활성 도시 변경 → localStorage 저장 → 다시 렌더.
     function setActiveCity(slug) {
         _activeCity = slug;
         try { localStorage.setItem(KEY_CITY, slug); } catch (e) {}
         render(_data);
     }
 
+    // render — 데이터로 리스닝 룸 화면 전체를 그린다(도시 갤러리 또는 카테고리 목록).
     function render(data) {
+        // 섹션 컨테이너가 없으면 만들어 body 에 붙인다(최초 1회).
         let root = document.getElementById('sddListening');
         if (!root) {
             root = document.createElement('section');
@@ -1508,6 +1563,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         es: 'SALA DE ESCUCHA'
     };
 
+    // ensureCoverCTA — 표지 화면에 "청취실" 진입 버튼을 한 번만 만든다.
     function ensureCoverCTA() {
         if (document.getElementById('sddCoverListenCta')) return;
         const ed = (window.state && window.state.lang) || 'en';
@@ -1520,17 +1576,20 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         document.body.appendChild(btn);
     }
 
+    // open — 청취실 화면 표시(body 클래스 토글). 마지막 화면을 localStorage 에 기록해 새로고침 복원.
     function open() {
         document.body.classList.remove('section-active', 'colophon-active');
         document.body.removeAttribute('data-section');
         document.body.classList.add('listening-active');
         try { localStorage.setItem('saudade.last.screen', 'listening'); } catch (e) {}
     }
+    // close — 청취실을 닫고 표지로 돌아간다.
     function close() {
         document.body.classList.remove('listening-active');
         try { localStorage.setItem('saudade.last.screen', 'cover'); } catch (e) {}
     }
 
+    // watchEsc — ESC 키로 청취실을 닫는다(키보드 접근성).
     function watchEsc() {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && document.body.classList.contains('listening-active')) {
@@ -1539,6 +1598,7 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         });
     }
 
+    // init — 모듈 시동: 스타일 주입 + 진입 버튼 + 데이터 로드 후 렌더 + ESC 감시 + dock 버튼.
     function init() {
         injectStyles();
         ensureCoverCTA();
@@ -1551,11 +1611,13 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
         }, true);
     }
 
+    // 문서가 로딩 중이면 DOMContentLoaded 후, 이미 끝났으면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 다른 모듈에서 열기/닫기/렌더/새로고침을 호출할 수 있게.
     window.SAUDADE_LISTENING = { open, close, render, reload: () => { _data = null; init(); } };
 })();
