@@ -8,15 +8,20 @@
 //   • re-openable via window.SAUDADE_WELCOME.open() or #welcome hash
 'use strict';
 
+// IIFE — 로드 즉시 실행. 새 기기에서 한 번만 뜨는 환영 카드 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_WELCOME) return;
+    // KEY — "이미 봤음" 플래그 localStorage 키.
     const KEY = 'saudade.welcome.seen';
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -60,6 +65,7 @@
         };
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddWelcomeStyles')) return;
         const s = document.createElement('style');
@@ -153,9 +159,11 @@
         document.head.appendChild(s);
     }
 
+    // _root: 모달 컨테이너. _step: 현재 카드 인덱스(카드 1장이라 항상 0).
     let _root = null;
     let _step = 0;
 
+    // ensureRoot — 모달 컨테이너를 한 번만 만들고 ESC/좌우 화살표 키를 건다(접근성).
     function ensureRoot() {
         if (_root) return _root;
         _root = document.createElement('div');
@@ -173,6 +181,7 @@
         return _root;
     }
 
+    // paint — 현재 카드를 그리고 건너뛰기/뒤로/다음 버튼 핸들러를 건다.
     function paint() {
         const cards = copy();
         const step = cards[_step];
@@ -196,21 +205,25 @@
         _root.querySelector('[data-next]').addEventListener('click', next);
     }
 
+    // next — 다음 카드로(마지막이면 닫으며 본 것으로 표시).
     function next() {
         const len = copy().length;
         if (_step < len - 1) { _step++; paint(); }
         else { close(true); }
     }
+    // prev — 이전 카드로.
     function prev() {
         if (_step > 0) { _step--; paint(); }
     }
 
+    // open — 첫 카드부터 환영 화면을 표시.
     function open() {
         injectStyles();
         _step = 0;
         paint();
         ensureRoot().classList.add('active');
     }
+    // close — 화면을 닫는다. seen 이면 "봤음" 플래그를 저장해 다시 안 뜨게.
     function close(seen) {
         if (_root) _root.classList.remove('active');
         if (seen) try { localStorage.setItem(KEY, '1'); } catch (e) {}
@@ -219,6 +232,7 @@
         }
     }
 
+    // maybeAutoOpen — 처음 방문(플래그 없음)에만 자동으로 띄운다. 토큰/다른 딥링크 위엔 안 띄움.
     function maybeAutoOpen() {
         try {
             if (localStorage.getItem(KEY) === '1') return;
@@ -230,6 +244,7 @@
         setTimeout(open, 600);
     }
 
+    // init — 스타일 주입 + #welcome 딥링크면 즉시 열기, 아니면 첫 방문 자동 표시 판단.
     function init() {
         injectStyles();
         if (location.hash === '#welcome') { open(); return; }
@@ -239,5 +254,6 @@
         document.addEventListener('DOMContentLoaded', init);
     } else { init(); }
 
+    // 전역 공개 API — 환영 화면 열기/닫기.
     window.SAUDADE_WELCOME = { open, close };
 })();
