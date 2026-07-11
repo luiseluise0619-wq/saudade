@@ -3,11 +3,15 @@
 // "Submit a café" 링크 (atlas footer) → 모달 → POST /cafe/submit.
 'use strict';
 
+// IIFE — 로드 즉시 실행. "카페 제보" 모달을 담당하는 독립 모듈.
 (function() {
+    // 중복 로드 방어.
     if (window.SAUDADE_ATLAS_SUBMIT) return;
 
+    // 제보 모달 DOM. 한 번 만들면 재사용(ensureModal 이 캐시).
     let _modalEl = null;
 
+    // 현재 에디션 언어에 맞는 문구를 고른다(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
