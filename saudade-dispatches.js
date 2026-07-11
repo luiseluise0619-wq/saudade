@@ -2,38 +2,58 @@
 // 일간 06:00 KST 발행. 9 quiet news (3 도시 × 3 items).
 // data/dispatches.json fetch → 매거진 페이지 렌더.
 // 카드 X — 1px rule + mono 번호 + Fraunces 헤드 + italic lede + mono 출처.
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// saudade-dispatches.js = "통신(Dispatches)" 섹션. 매일 06:00 KST 에 발행되는
+// 조용한 뉴스 9건(도시 3 × 항목 3)을 받아 잡지 지면으로 그린다.
+// 데이터 출처: 우선 백엔드 Worker 의 /dispatches/today(신선한 D1 데이터)를 시도하고,
+//   실패하면 정적 파일 data/dispatches.json 으로 대체(fallback)한다.
+// 판(edition)별로 다른 내용이며, 로그인 사용자는 팔로우 도시로 필터될 수 있다.
+// ═══════════════════════════════════════════════════════════════════════
+// SAUDADE · § 03 DISPATCHES 원문 주석 참고.
 'use strict';
 
+// IIFE + 중복 로드 가드.
 (function() {
     if (window.SAUDADE_DISPATCHES) return;
 
+    // _cache = 판별로 한 번 받은 데이터를 기억(같은 판 재요청 방지).
     let _cache = {};   // edition → data
 
+    // currentEdition: 현재 판 읽기(없으면 en).
     function currentEdition() {
         return (window.SAUDADE_EDITION?.get?.() || 'en');
     }
 
+    // load: 현재 판의 통신 데이터를 가져온다(캐시 → Worker → 정적 파일 순).
     function load() {
         const ed = currentEdition();
+        // 이미 받아둔 게 있으면 즉시 완료된 약속으로 반환.
         if (_cache[ed]) return Promise.resolve(_cache[ed]);
 
         // v8 §02 — Worker /dispatches/today 가 fresh D1 데이터 반환.
         // Signed-in 사용자면 Following 도시로 필터, 익명이면 edition 전체.
         // 어느 쪽이든 static JSON 보다 신선해서 둘 다 시도. 실패 시 static fallback.
+        // 백엔드 주소와 로그인 사용자.
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         const user = window.SAUDADE_AUTH?.getUser?.();
         if (base) {
+            // Worker 엔드포인트 URL 구성. 로그인 사용자면 user_id 도 붙여 팔로우 필터.
             const wUrl = base + '/dispatches/today?edition=' + encodeURIComponent(ed) +
                           (user && user.id ? '&user_id=' + encodeURIComponent(user.id) : '');
+            // no-cache = 항상 신선하게. 실패하면 아래 .catch 로 정적 파일 대체.
             return fetch(wUrl, { cache: 'no-cache', credentials: 'omit' })
                 .then(r => r.ok ? r.json() : null)
                 .then(j => {
+                    // 유효한 항목 배열이 오면 화면이 기대하는 { cities: [...] } 구조로 재구성.
                     if (j && Array.isArray(j.items) && j.items.length) {
                         // worker 응답을 v7 cities 구조로 변환 — flattenForDay 가 그대로 매핑.
                         const synthetic = { edition: ed, cities: [] };
+                        // 도시별로 항목을 묶는다.
                         const byCity = {};
                         j.items.forEach(it => {
                             const city = it._city || 'UNKNOWN';
+                            // 처음 보는 도시면 그룹을 새로 만든다.
                             if (!byCity[city]) {
                                 byCity[city] = { city, items: [] };
                                 synthetic.cities.push(byCity[city]);
@@ -45,14 +65,19 @@
                         _cache[ed] = synthetic;
                         return synthetic;
                     }
+                    // 항목이 없으면 정적 파일로.
                     return loadStatic(ed);
                 })
+                // 네트워크/파싱 오류도 정적 파일로 대체.
                 .catch(() => loadStatic(ed));
         }
+        // 백엔드 주소가 없으면 바로 정적 파일.
         return loadStatic(ed);
     }
 
+    // loadStatic: 정적 JSON 파일에서 통신 데이터를 읽는다(오프라인/백엔드 실패 시 대비).
     function loadStatic(ed) {
+        // 영어판은 dispatches.json, 다른 판은 dispatches.<판>.json.
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
         // v647 — also load dispatches.week.json (when present) and attach
         // the days array so the Past Week archive can render real per-day
@@ -1238,12 +1263,15 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         }
     }
 
+    // init: 스타일 주입 + 데이터/철회목록 동시 로드 후 렌더 + 섹션/판 변경 감시.
     function init() {
         injectStyles();
         // 두 fetch 다 끝나고 render — retract 리스트가 생겨야 필터링 정확
+        // Promise.all = 두 비동기 작업이 모두 끝나길 기다림. [d] = 첫 결과만 구조분해.
         Promise.all([load(), fetchRetracts()]).then(([d]) => render(d));
         // section 진입 + edition 변경 시 재로드
         const mo = new MutationObserver(() => {
+            // 03(통신) 섹션에 들어오면 다시 불러 그린다.
             if (document.body.getAttribute('data-section') === '03') {
                 load().then(render);
             }
@@ -1251,11 +1279,13 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section', 'data-edition'] });
     }
 
+    // DOM 준비 상태에 따라 init 시점 결정.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — reload(): 캐시를 비우고 다시 초기화(판을 바꾸면 edition 모듈이 호출).
     window.SAUDADE_DISPATCHES = { reload: () => { _cache = {}; init(); } };
 })();
