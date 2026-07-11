@@ -4,11 +4,22 @@
 // 헌법 §9 키:
 //   saudade.visa.entries = [{ country, type, days, entered, expiry }]
 //   saudade.tax.entries = [{ country, days, year }]
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// saudade-ledger.js = "장부(Ledger)" 섹션. 디지털 노마드의 비자/세금거주일/보험/연금을
+// 날짜로 기록하고 "며칠 남았는지(D-day)"를 보여준다.
+// 중요 원칙: 이 앱은 "계산기"가 아니라 "달력"이다 — 사용자가 입력한 입국일 기준으로 지난 날을
+//   세어 보여줄 뿐, 비자/세금 임계값을 판정하지 않는다(법적 조언 아님).
+// 데이터는 localStorage 'saudade.visa.entries' 에 배열로 저장된다.
+// ═══════════════════════════════════════════════════════════════════════
+// SAUDADE · § 01 THE LEDGER 원문 주석 참고.
 'use strict';
 
+// IIFE + 중복 로드 가드.
 (function() {
     if (window.SAUDADE_LEDGER) return;
 
+    // 저장 키: 비자 기록 / 세금 기록.
     const KEY_VISA = 'saudade.visa.entries';   // legacy + visa records
     const KEY_TAX  = 'saudade.tax.entries';    // 자동 계산되므로 광범위 X
 
@@ -61,43 +72,58 @@
         }
     ];
 
+    // getVisas: 저장된 비자 기록 배열을 읽음. 없거나 깨졌으면 빈 배열.
     function getVisas() {
         try { return JSON.parse(localStorage.getItem(KEY_VISA) || '[]'); }
         catch (e) { return []; }
     }
+    // setVisas: 비자 기록 배열을 저장.
     function setVisas(arr) {
         try { localStorage.setItem(KEY_VISA, JSON.stringify(arr)); } catch (e) {}
     }
 
+    // activeVisa: 지금 유효한(만료일이 오늘 이후) 비자 중 만료가 가장 임박한 것 하나를 고른다.
     // 활성 비자 = expiry 가 오늘 이후 + 가장 가까운 expiry
     function activeVisa() {
         const v = getVisas();
         const today = Date.now();
         const active = v
+            // 각 기록에 만료시각(_ms, 밀리초)을 계산해 붙인다.
             .map(e => ({ ...e, _ms: new Date(e.expiry).getTime() }))
+            // 유효한 날짜 + 아직 안 지난 것만 남김.
             .filter(e => Number.isFinite(e._ms) && e._ms > today)
+            // 만료가 이른 순으로 정렬(오름차순).
             .sort((a, b) => a._ms - b._ms);
+        // 맨 앞(가장 임박)을 반환. 없으면 null.
         return active[0] || null;
     }
 
+    // daysLeft: 만료일까지 남은 날짜 수. 86400000ms = 하루. Math.ceil = 올림(남은 하루도 1일로).
     function daysLeft(expiryStr) {
         const ms = new Date(expiryStr).getTime() - Date.now();
         return Math.ceil(ms / 86400000);
     }
 
+    // taxResidency: 올해 각 나라(ISO)에 머문 날 수를 단순 합산한다(판정이 아니라 집계).
     // 세금 거주일 자동 합산 — 비자 entries 의 나라별 days_in_country 단순 sum
     function taxResidency() {
         const v = getVisas();
+        // 올해 1월 1일 자정의 시각(밀리초). new Date(연,0,1) = 그 해 1월 1일.
         const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
         const result = {};   // ISO → days
         v.forEach(e => {
+            // 입국일/국가 코드가 없으면 건너뜀.
             if (!e.entered || !e.iso) return;
             const enteredMs = new Date(e.entered).getTime();
             if (!Number.isFinite(enteredMs)) return;
+            // 만료일이 있으면 그때까지, 없으면 오늘까지로 본다.
             const expiryMs = e.expiry ? new Date(e.expiry).getTime() : Date.now();
+            // 집계 구간 = [올해 시작과 입국일 중 늦은 쪽, 오늘과 만료일 중 이른 쪽].
+            // 즉 "올해 안에, 실제 체류한" 구간만 센다.
             const start = Math.max(enteredMs, yearStart);
             const end = Math.min(expiryMs, Date.now());
             if (end > start) {
+                // 구간 길이를 일수로 환산해 나라별로 누적.
                 const days = Math.floor((end - start) / 86400000);
                 result[e.iso] = (result[e.iso] || 0) + days;
             }
@@ -631,12 +657,15 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         document.head.appendChild(s);
     }
 
+    // fmtDate: 날짜 문자열을 "YYYY-MM-DD" 로 예쁘게. 값 없으면 "—", 오류면 원문 그대로.
     function fmtDate(s) {
         if (!s) return '—';
         try { return new Date(s).toISOString().slice(0, 10); } catch (e) { return s; }
     }
 
+    // render: 장부 섹션 전체를 화면에 그린다(없으면 <section> 을 만들어 붙임).
     function render() {
+        // 이미 있는 컨테이너를 찾고, 없으면 새로 만든다.
         let root = document.getElementById('sddLedger');
         if (!root) {
             root = document.createElement('section');
@@ -645,6 +674,7 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
             document.body.appendChild(root);
         }
 
+        // 저장된 모든 기록 + 오늘 날짜.
         const records = getVisas();   // unified ledger (각 record 에 type 필드)
         const today = new Date().toISOString().slice(0, 10);
 
@@ -1078,10 +1108,13 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // refreshVisaUrgent: 활성 비자 만료가 7일 이내면 body 에 긴급 표시(도트). 조용한 알림.
     // v8 §07 — 도크 LEDGER 탭 visa expiry 긴급 도트 (조용한 알림, 알림 API X)
     function refreshVisaUrgent() {
         const v = activeVisa();
+        // 활성 비자가 있으면 남은 날 계산, 없으면 null.
         const days = v ? daysLeft(v.expiry) : null;
+        // 7일 이하로 남았으면 긴급 속성 부여, 아니면 제거.
         if (days != null && days <= 7) {
             document.body.setAttribute('data-visa-urgent', '1');
         } else {
@@ -1089,16 +1122,19 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         }
     }
 
+    // init: 모듈 시작 — 스타일 주입 + 첫 렌더 + 섹션 진입 감지 + 1분마다 갱신.
     function init() {
         injectStyles();
         render();
         refreshVisaUrgent();
         // body section 변경 감지 — 01 진입 시 재렌더
+        // MutationObserver = DOM 속성 변화를 지켜보는 감시자. data-section 이 바뀌면 콜백 실행.
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '01') render();
         });
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section'] });
         // 1분마다 D-day 갱신 + visa urgency 재계산
+        // (자정을 넘기면 남은 날이 바뀌므로 주기적으로 다시 그린다.)
         setInterval(() => {
             if (document.body.getAttribute('data-section') === '01') render();
             refreshVisaUrgent();
@@ -1111,5 +1147,6 @@ body.section-active[data-section="01"] .sdd-ledger { display: block; }
         init();
     }
 
+    // 공개 API — 다른 모듈(표지 D-day 등)이 장부 데이터/기능을 쓰는 창구.
     window.SAUDADE_LEDGER = { render, getVisas, setVisas, activeVisa, daysLeft, taxResidency, refreshVisaUrgent };
 })();
