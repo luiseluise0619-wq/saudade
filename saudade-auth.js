@@ -9,17 +9,32 @@
 //   window.SAUDADE_AUTH.getUser()          — { id, email, edition, tier } | null
 //   window.SAUDADE_AUTH.isSignedIn()       — boolean
 //   window.SAUDADE_AUTH.startTour()        — 둘러보기 모드 진입 (no signup)
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// saudade-auth.js = 브라우저(클라이언트) 쪽 로그인 담당. 백엔드의 매직 링크와 짝을 이룬다.
+//   - 가입 모달(이메일 한 줄) 표시 → 서버 /auth/request 로 링크 요청
+//   - 주소에 ?token=... 이 있으면 /auth/verify 로 검증해 로그인 확정
+//   - 로그인 정보/세션 토큰을 localStorage 에 보관
+//   - "가입 없이 둘러보기(Tour)" 모드 제공
+// 다른 모듈은 window.SAUDADE_AUTH.getUser() 등으로 이 기능을 쓴다(전역 네임스페이스).
+// ═══════════════════════════════════════════════════════════════════════
+// SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode 관련은 위 원문 주석 참고.
 'use strict';
 
+// IIFE(즉시 실행 함수) — 모듈 내부 변수를 전역에서 숨긴다.
 (function() {
+    // 중복 로드 방지 가드: 이미 SAUDADE_AUTH 가 있으면 즉시 종료(두 번 실행돼도 안전).
     if (window.SAUDADE_AUTH) return;
 
+    // localStorage 에 쓸 키 이름들(사용자/둘러보기여부/세션토큰).
     const KEY_USER    = 'saudade.auth.user';
     const KEY_TOUR    = 'saudade.auth.tour';
     const KEY_SESSION = 'saudade.auth.session';   // opaque server session token (revocable)
 
+    // 열려 있는 모달 DOM 요소를 기억하는 변수(없으면 null).
     let _modalEl = null;
 
+    // L: 현재 판(언어)에 맞는 문구를 고르는 도우미. 없으면 영어.
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
@@ -81,41 +96,55 @@
         };
     }
 
+    // escapeHtml: 사용자 입력을 화면에 넣기 전에 특수문자를 안전한 형태로 바꿈(XSS 방지).
+    // 예: < 를 &lt; 로. 그래야 입력이 태그로 해석되어 스크립트가 실행되는 걸 막는다.
     function escapeHtml(s) {
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // getUser: 저장된 로그인 사용자 정보를 읽음(JSON 파싱). 없거나 깨졌으면 null.
     function getUser() {
+        // localStorage 접근/파싱은 실패할 수 있어 try/catch 필수.
         try { return JSON.parse(localStorage.getItem(KEY_USER) || 'null'); }
         catch (e) { return null; }
     }
+    // setUser: 사용자 정보 저장(u 가 있으면 저장, 없으면 삭제 = 로그아웃).
     function setUser(u) {
         try {
             if (u) localStorage.setItem(KEY_USER, JSON.stringify(u));
             else localStorage.removeItem(KEY_USER);
         } catch (e) {}
     }
+    // getSessionToken: 서버 세션 토큰 읽기(이후 요청 인증에 씀).
     function getSessionToken() {
         try { return localStorage.getItem(KEY_SESSION) || null; } catch (e) { return null; }
     }
+    // setSessionToken: 세션 토큰 저장/삭제.
     function setSessionToken(t) {
         try {
             if (t) localStorage.setItem(KEY_SESSION, t);
             else localStorage.removeItem(KEY_SESSION);
         } catch (e) {}
     }
+    // authHeaders: 서버 요청에 붙일 헤더를 만든다. 세션 토큰이 있으면 Authorization 추가.
+    // 이 헤더가 백엔드의 authedUser 가 읽는 "Bearer <토큰>" 이다.
     function authHeaders(extra) {
+        // 기존 헤더에 얕은 복사로 합침(원본 훼손 방지).
         const h = Object.assign({}, extra || {});
         const t = getSessionToken();
         if (t) h['Authorization'] = 'Bearer ' + t;
         return h;
     }
+    // isSignedIn: 로그인 여부. !! = 값을 true/false 로 변환.
     function isSignedIn() { return !!getUser(); }
+    // isTour: "가입 없이 둘러보기" 모드인지.
     function isTour() { try { return localStorage.getItem(KEY_TOUR) === '1'; } catch (e) { return false; } }
+    // startTour: 둘러보기 모드 진입 — 플래그 저장 + 화면 표시 + 모달 닫기.
     function startTour() {
         try { localStorage.setItem(KEY_TOUR, '1'); } catch (e) {}
+        // body 에 data-tour 속성을 달아 CSS/다른 코드가 둘러보기 상태를 알게.
         document.body.setAttribute('data-tour', '1');
         closeModal();
     }
@@ -314,19 +343,25 @@ body[data-tour="1"] .sdd-cover::before {
         if (_modalEl) _modalEl.classList.remove('active');
     }
 
+    // onSubmit: 이메일 폼 제출 시 서버에 로그인 링크를 요청한다.
     async function onSubmit(e) {
+        // 기본 폼 전송(페이지 새로고침)을 막고 우리가 fetch 로 처리.
         e.preventDefault();
         const form = e.target;
+        // FormData 로 입력값을 읽는다.
         const fd = new FormData(form);
         const email = (fd.get('email') || '').toString().trim();
+        // 상태 표시줄/전송 버튼 DOM 을 찾음.
         const status = _modalEl.querySelector('[data-status]');
         const sendBtn = _modalEl.querySelector('[data-l-send]');
+        // 중복 전송 방지로 버튼 비활성 + "..." 표시.
         sendBtn.disabled = true;
         status.classList.remove('error', 'ok');
         status.classList.add('active');
         status.textContent = '...';
         const c = copy();
 
+        // 백엔드 주소(끝 슬래시 제거). 없으면 아직 로그인 창구가 안 열린 것.
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) {
             status.classList.add('error');
@@ -336,15 +371,19 @@ body[data-tour="1"] .sdd-cover::before {
         }
 
         try {
+            // POST /auth/request 로 이메일 전송. body 는 JSON 문자열, credentials:'omit' = 쿠키 안 보냄.
             const r = await fetch(base + '/auth/request', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),
                 credentials: 'omit'
             });
+            // 응답 JSON 파싱(실패하면 null).
             const j = await r.json().catch(() => null);
+            // 성공 처리.
             if (r.ok && j && j.ok) {
                 status.classList.add('ok');
+                // inline 모드(개발용)면 링크를 화면에 직접 보여준다.
                 if (j.mode === 'inline' && j.link) {
                     // 베타 / 솔로 fallback — link 직접 노출
                     status.innerHTML = escapeHtml(c.sentInline) + ' <a href="' + escapeHtml(j.link) + '">OPEN</a>';
@@ -366,37 +405,46 @@ body[data-tour="1"] .sdd-cover::before {
         }
     }
 
+    // processVerifyToken: 메일 링크로 들어와 주소에 ?token= 이 있으면 자동으로 검증한다.
     // URL ?token=XXX 진입 — 자동 verify
     async function processVerifyToken() {
         const u = new URL(location.href);
+        // 주소에서 token 값을 꺼냄.
         const token = u.searchParams.get('token');
+        // 길이 64가 아니면(우리 토큰 형식 아님) 무시.
         if (!token || token.length !== 64) return;
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!base) return;
 
         try {
+            // GET /auth/verify?token=... 호출. encodeURIComponent 로 URL 안전하게 인코딩.
             const r = await fetch(base + '/auth/verify?token=' + encodeURIComponent(token), {
                 method: 'GET', credentials: 'omit'
             });
             const j = await r.json().catch(() => null);
+            // 성공하면 사용자/세션을 저장하고 로그인 확정.
             if (r.ok && j && j.ok && j.user) {
                 setUser(j.user);
                 if (j.session && j.session.token) setSessionToken(j.session.token);
                 endTour();   // 가입 완료 → tour 모드 해제
             }
         } catch (e) {}
+        // 보안/미관상 주소창에서 token 을 지운다(뒤로가기·공유로 재사용 안 되게).
         // URL 정리 — token 파라미터 제거
         try {
             u.searchParams.delete('token');
+            // replaceState: 페이지 새로고침 없이 주소만 조용히 교체.
             history.replaceState(null, '', u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash);
         } catch (e) {}
     }
 
+    // signOut: 로그아웃. opts.everywhere=true 면 모든 기기, 아니면 이 기기만.
     async function signOut(opts) {
         const all = !!(opts && opts.everywhere);
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         const token = getSessionToken();
         // Best-effort server revoke. Ignore network errors so the user always gets logged out locally.
+        // 서버 세션도 취소 시도(실패해도 로컬 로그아웃은 무조건 진행).
         if (base && token) {
             try {
                 await fetch(base + (all ? '/auth/signout-all' : '/auth/signout'), {
@@ -488,6 +536,7 @@ body[data-tour="1"] .sdd-cover::before {
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-edition'] });
     }
 
+    // init: 모듈 시작점 — 스타일 주입 + 상태 복원 + 토큰 검증 + 언어 변화 감시.
     function init() {
         injectStyles();
         // tour 모드 복원
@@ -497,12 +546,14 @@ body[data-tour="1"] .sdd-cover::before {
         watchEdition();
     }
 
+    // DOM 이 아직 로딩 중이면 완료 이벤트를 기다렸다 init, 이미 준비됐으면 바로 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — 다른 모듈이 window.SAUDADE_AUTH.xxx 로 호출하는 창구.
     window.SAUDADE_AUTH = {
         openModal,
         closeModal,
