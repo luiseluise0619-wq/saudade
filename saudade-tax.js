@@ -27,9 +27,12 @@
 // Caveat displayed inline: "We are not your accountant."
 'use strict';
 
+// IIFE — 로드 즉시 실행. 국가별 "세금 거주일"(183일 규칙)을 세는 순수 계산 + 렌더 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_TAX) return;
 
+    // THRESHOLD: 세금 거주 임계(183일). NEAR: 경고 시작 임계(150일). MS_DAY: 하루 밀리초.
     const THRESHOLD = 183;
     const NEAR      = 150;       // amber warning when close
     const MS_DAY    = 86400000;
@@ -45,11 +48,13 @@
         // All others fall back to Jan 1.
     };
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // toUTC — 문자열/Date 를 UTC 자정 Date 로 정규화(시간대 영향 없이 날짜만 비교).
     function toUTC(s) {
         if (!s) return null;
         if (s instanceof Date) return new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth(), s.getUTCDate()));
@@ -64,13 +69,16 @@
         const day = String(d.getUTCDate()).padStart(2, '0');
         return `${y}-${m}-${day}`;
     }
+    // addDays — 날짜에 n일 더한 새 Date.
     function addDays(d, n) { return new Date(d.getTime() + n * MS_DAY); }
+    // clamp — 날짜를 [min, max] 범위 안으로 자른다.
     function clamp(d, min, max) {
         if (d < min) return new Date(min);
         if (d > max) return new Date(max);
         return new Date(d);
     }
 
+    // taxYearWindow — 국가의 과세연도 시작~끝 날짜를 구한다(예외국은 표, 나머지는 1/1~12/31).
     function taxYearWindow(country, year) {
         const cfg = TAX_YEAR_START[country];
         if (!cfg) {
@@ -85,6 +93,7 @@
         return [start, end];
     }
 
+    // calc — 체류 기록을 국가별로 묶어 과세연도 내 체류일/총 체류일/임계 근접·초과를 계산.
     function calc(opts) {
         opts = opts || {};
         const stays = Array.isArray(opts.stays) ? opts.stays : [];
@@ -94,6 +103,7 @@
         })();
         const year = opts.year ? +opts.year : ref.getUTCFullYear();
 
+        // 체류 기록을 국가별 [시작,종료] 구간 배열로 묶는다(무효 항목은 건너뜀).
         // Group stays by country.
         const byCountry = {};
         for (const s of stays) {
@@ -106,6 +116,7 @@
             (byCountry[country] = byCountry[country] || []).push([a, b]);
         }
 
+        // 국가마다 하루씩 날짜를 집합에 넣어(중복 제거) 연내/총 체류일을 센다.
         const per_country = Object.keys(byCountry).sort().map(country => {
             const ranges = byCountry[country];
             const [winStart, winEnd] = taxYearWindow(country, year);
@@ -139,6 +150,7 @@
         return { year, ref: fmt(ref), per_country, threshold: THRESHOLD };
     }
 
+    // copy — 표/안내 문구를 현재 언어로 묶어 반환.
     function copy(lang) {
         return {
             title:   L({ en: 'Tax-residency days.', ko: '세금 거주일.', ja: '税居住日。', pt: 'Dias de residência fiscal.', es: 'Días de residencia fiscal.' }, lang),
@@ -159,17 +171,20 @@
         };
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // render — 계산 결과를 국가별 표로 그린다(근접=amber, 초과=rust 강조).
     function render(root, opts) {
         if (!root) return;
         const stays = (opts && opts.stays) || [];
         const lang  = opts && opts.lang;
         const c = copy(lang);
+        // 입력이 없으면 빈 상태 문구만.
         if (!stays.length) {
             root.innerHTML = `<p class="sdd-tax-empty">${escapeHtml(c.none)}</p>`;
             return;
@@ -206,6 +221,7 @@
         `;
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddTaxStyles')) return;
         const s = document.createElement('style');
@@ -284,5 +300,6 @@
         else injectStyles();
     }
 
+    // 전역 공개 API — 계산(calc) + 렌더 + 임계값 상수 노출.
     window.SAUDADE_TAX = { calc, render, THRESHOLD };
 })();
