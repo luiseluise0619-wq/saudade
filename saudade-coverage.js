@@ -33,17 +33,22 @@
 //   window.SAUDADE_COVERAGE.renderPension(container, { filings, lang })
 'use strict';
 
+// IIFE — 로드 즉시 실행. 건강보험 공백일 + 연금 납입개월을 계산·렌더하는 순수 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_COVERAGE) return;
 
+    // MS_DAY — 하루의 밀리초. 날짜 차이 계산용.
     const MS_DAY  = 86400000;
     const NPS_MIN = 120;     // KR NPS minimum qualifying months for retirement (10 years)
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // toUTC — 문자열/Date 를 UTC 자정 Date 로 정규화(시간대 영향 없이 날짜만 비교).
     function toUTC(s) {
         if (!s) return null;
         if (s instanceof Date) return new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth(), s.getUTCDate()));
@@ -58,27 +63,33 @@
         const day = String(d.getUTCDate()).padStart(2, '0');
         return `${y}-${m}-${day}`;
     }
+    // addDays — 날짜에 n일 더한 새 Date.
     function addDays(d, n) { return new Date(d.getTime() + n * MS_DAY); }
+    // diffDays — 두 날짜 사이 일수(포함 계산이라 +1).
     function diffDays(a, b) { return Math.round((a.getTime() - b.getTime()) / MS_DAY) + 1; }
 
     // ─── Health insurance ───────────────────────────────────────────────
+    // insurance — 보험 가입 구간들을 받아 올해 "가입일/공백일/최장 공백/공백 구간 목록"을 계산.
     function insurance(opts) {
         opts = opts || {};
         const ref = toUTC(opts.ref) || (function () {
             const now = new Date();
             return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
         })();
+        // 대상 연도의 1/1 ~ 12/31 범위. 진행 중인 해면 오늘(ref)까지만 센다(cap).
         const year = opts.year ? +opts.year : ref.getUTCFullYear();
         const yearStart = new Date(Date.UTC(year, 0, 1));
         const yearEnd   = new Date(Date.UTC(year, 11, 31));
         // Reference cap for "to date" in the running year:
         const cap = ref < yearEnd ? ref : yearEnd;
 
+        // 각 보험 구간을 _a(시작)/_b(종료; 없으면 오늘)로 정규화하고 유효한 것만 정렬.
         const policies = (opts.policies || [])
             .map(p => ({ ...p, _a: toUTC(p.in), _b: toUTC(p.out) || ref }))
             .filter(p => p._a && p._b >= p._a)
             .sort((a, b) => a._a - b._a);
 
+        // covered — 가입된 날짜(YYYY-MM-DD)를 담는 집합. 구간마다 하루씩 채운다.
         // Mark every day in year as covered/uncovered.
         const covered = new Set();
         for (const p of policies) {
@@ -90,6 +101,7 @@
             }
         }
 
+        // 연초부터 cap 까지 하루씩 걸으며 가입일/공백일을 세고, 연속 공백을 구간으로 묶는다.
         // Compute gaps by walking yearStart → cap.
         let coveredDays = 0;
         let gapDays = 0;
@@ -114,6 +126,7 @@
                 curGap++;
             }
         }
+        // 루프가 공백 중에 끝났으면 마지막 공백 구간을 마무리한다.
         if (gapStart) {
             gaps.push({ from: fmt(gapStart), to: fmt(cap), days: curGap });
             if (curGap > longestGap) longestGap = curGap;
@@ -129,6 +142,7 @@
     }
 
     // ─── Pension ────────────────────────────────────────────────────────
+    // pension — 연금 납입 구간들을 제도별로 묶어 "납입 개월수 + 120/240개월까지 남은 수"를 계산.
     function pension(opts) {
         opts = opts || {};
         const ref = toUTC(opts.ref) || (function () {
@@ -148,6 +162,7 @@
         }
 
         const per_scheme = Object.entries(byScheme).map(([scheme, ranges]) => {
+            // 납입한 적 있는 "달"을 집합에 모은다(YYYY-MM). 하루라도 납입하면 그 달은 카운트.
             // Count whole calendar months in which the user contributed at any
             // point — that's the typical pension counting model.
             const months = new Set();
@@ -176,6 +191,7 @@
     }
 
     // ─── Render ─────────────────────────────────────────────────────────
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -218,10 +234,12 @@
         };
     }
 
+    // renderInsurance — 보험 계산 결과를 종이 톤 패널로 그린다(공백 있으면 danger 강조).
     function renderInsurance(root, opts) {
         if (!root) return;
         const policies = (opts && opts.policies) || [];
         const c = copyInsurance(opts && opts.lang);
+        // 입력이 없으면 빈 상태 문구만 보여준다.
         if (!policies.length) {
             root.innerHTML = `<p class="sdd-cov-empty">${escapeHtml(c.none)}</p>`;
             return;
@@ -265,10 +283,12 @@
         `;
     }
 
+    // renderPension — 연금 계산 결과를 제도별 표로 그린다(120개월 달성 시 vested 강조).
     function renderPension(root, opts) {
         if (!root) return;
         const filings = (opts && opts.filings) || [];
         const c = copyPension(opts && opts.lang);
+        // 입력이 없으면 빈 상태 문구만.
         if (!filings.length) {
             root.innerHTML = `<p class="sdd-cov-empty">${escapeHtml(c.none)}</p>`;
             return;
@@ -305,6 +325,7 @@
         `;
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddCovStyles')) return;
         const s = document.createElement('style');
@@ -408,5 +429,6 @@
         else injectStyles();
     }
 
+    // 전역 공개 API — 계산(insurance/pension) + 렌더 함수 노출.
     window.SAUDADE_COVERAGE = { insurance, pension, renderInsurance, renderPension };
 })();
