@@ -2,11 +2,23 @@
 // 5 별쇄 — en / ko / ja / pt / es. body[data-edition] 토글로 다른 잡지 입장.
 // 실시간 번역 X — 사용자가 명시적 선택. 각 에디션은 자기 도시·자기 voice.
 // localStorage: saudade.edition.
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// saudade-edition.js = "판(edition)" 전환 시스템. 이 신문은 5개 언어판(en/ko/ja/pt/es)이
+// 각각 다른 도시·다른 목소리를 가진 별개 잡지다(자동 번역 아님). 사용자가 판을 고르면
+// body 의 data-edition 속성을 바꾸고, 각 섹션 모듈을 새 판으로 다시 그린다.
+// 또한 "스킨(skin: paper/saturated/dark)" 을 이번 주(ISO week) 기준으로 정해
+// 같은 주엔 모든 독자가 같은 표지를 보게 한다(잡지의 "이번 호" 개념).
+// 선택은 localStorage 'saudade.edition' 에 저장된다.
+// ═══════════════════════════════════════════════════════════════════════
+// SAUDADE · EDITION SYSTEM 원문 주석은 위/아래 참고.
 'use strict';
 
+// IIFE + 중복 로드 가드.
 (function() {
     if (window.SAUDADE_EDITION) return;
 
+    // KEY = 저장 키, SUPPORTED = 지원 언어, DEFAULT = 기본 언어, SKINS = 표지 테마 종류.
     const KEY        = 'saudade.edition';
     const SUPPORTED  = ['en', 'ko', 'ja', 'pt', 'es'];
     const DEFAULT    = 'en';
@@ -73,11 +85,15 @@
         setMeta('meta[name="twitter:description"]', 'content', m.desc);
     }
 
+    // _config = 불러온 editions.json 데이터, _configP = 그 로딩 약속(Promise). 한 번만 받게 캐싱.
     let _config = null;     // editions.json once loaded
     let _configP = null;    // promise
 
+    // loadConfig: 판별 상세 설정(도시/목소리)을 한 번만 불러온다.
     function loadConfig() {
+        // 이미 로딩을 시작했으면 그 약속을 재사용(중복 요청 방지).
         if (_configP) return _configP;
+        // cache:'force-cache' = 가능하면 캐시에서(네트워크 아낌). 실패해도 앱은 계속.
         _configP = fetch('./data/editions.json', { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
             .then(d => { _config = d; return d; })
@@ -85,10 +101,12 @@
         return _configP;
     }
 
+    // getEdition: 저장된 판을 읽음(지원 목록에 있을 때만). 없으면 null.
     function getEdition() {
         try { const v = localStorage.getItem(KEY); return SUPPORTED.includes(v) ? v : null; }
         catch (e) { return null; }
     }
+    // saveEdition: 선택한 판을 저장.
     function saveEdition(v) {
         try { localStorage.setItem(KEY, v); } catch (e) {}
     }
@@ -116,12 +134,17 @@
     }
     function saveSkinPref(v) { try { localStorage.setItem(KEY_SKIN, v); } catch {} }
 
+    // pickSkin: 지금 보여줄 표지 테마를 결정.
     function pickSkin() {
         const pref = getSkinPref();
+        // 사용자가 직접 골랐으면 그대로.
         if (pref !== 'auto') return pref;
         if (!matchMedia) return 'paper';
+        // 움직임 최소화를 선호하면 차분한 paper.
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) return 'paper';
+        // 기기가 다크 모드면 dark.
         if (matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+        // 그 외엔 이번 주 번호로 결정(같은 주 = 같은 표지).
         const week = isoWeekNumber(new Date());
         // 5-week rotation when auto: paper × 3, saturated, dark.
         const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
@@ -154,20 +177,27 @@
         } catch (e) {}
     }
 
+    // applyEdition: 실제로 화면을 이 판으로 바꾼다(속성/클래스/언어/메타 반영).
     function applyEdition(ed) {
+        // 알 수 없는 판이면 기본값으로.
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
         // body 없을 때 (script in <head>) skip — init re-runs after DOMContentLoaded
         if (!document.body) {
             document.documentElement.setAttribute('lang', ed);
             return;
         }
+        // body 에 현재 판을 표시(CSS 가 이걸로 판별 스타일 적용).
         document.body.setAttribute('data-edition', ed);
+        // 이전 판 클래스들을 모두 지우고(스프레드로 펼침) 현재 판 클래스만 추가.
         document.body.classList.remove(...SUPPORTED.map(c => 'edition-' + c));
         document.body.classList.add('edition-' + ed);
         document.documentElement.setAttribute('lang', ed);
+        // 전역 상태(window.state)에도 언어 기록(다른 코드 참조용).
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        // SEO/공유카드 메타 태그를 이 판에 맞게 갱신.
         syncMetaTags(ed);
+        // 익명 방문 카운터 1회 전송.
         pingOnce(ed);
     }
 
@@ -191,14 +221,18 @@
         return el;
     }
 
+    // set: 사용자가 판을 바꿀 때의 공개 진입점. 로딩 연출 후 적용 + 모든 섹션 다시 그림.
     function set(ed, opts) {
         if (!SUPPORTED.includes(ed)) return;
         const cur = getEdition() || DEFAULT;
+        // 같은 판이고 연출 생략 옵션이면 바로 적용.
         if (cur === ed && opts?.skipFlash) {
             applyEdition(ed);
             return;
         }
+        // "판을 펼치는 중…" 전체화면 안내를 띄운다.
         const flash = showLoadingFlash(ed);
+        // 잠깐 뒤(600ms) 실제 전환. ?.()= 그 모듈이 있을 때만 호출(옵셔널).
         setTimeout(() => {
             applyEdition(ed);
             saveEdition(ed);
@@ -216,6 +250,7 @@
         }, 1200);
     }
 
+    // init: 시작 시 저장된 판/스킨을 적용하고 설정 파일을 미리 불러온다.
     function init() {
         const ed = getEdition() || DEFAULT;
         applyEdition(ed);
@@ -223,6 +258,7 @@
         loadConfig();
     }
 
+    // 먼저 한 번 실행(가능한 빨리 lang/skin 반영), DOM 준비 후 다시 한 번(body 확보).
     init();
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
@@ -267,6 +303,7 @@
         return s;
     }
 
+    // 공개 API — 다른 모듈이 판/스킨/설정에 접근하는 창구.
     window.SAUDADE_EDITION = {
         set,
         get: () => getEdition() || DEFAULT,
@@ -286,9 +323,11 @@
 
     // Global i18n helper. Components: SAUDADE_T({ en, ko, ja, pt, es })
     // Missing edition → en fallback.
+    // SAUDADE_T: 어디서든 쓰는 번역 도우미. 현재 판의 문자열을, 없으면 영어를 반환.
     window.SAUDADE_T = function(strings) {
         if (!strings || typeof strings !== 'object') return '';
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         return strings[ed] || strings.en || Object.values(strings)[0] || '';
     };
+// IIFE 끝 — 파일이 로드되면 위 전체가 자동 실행된다.
 })();
