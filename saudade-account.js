@@ -9,14 +9,19 @@
 // API: window.SAUDADE_ACCOUNT.openPanel()
 'use strict';
 
+// IIFE — 로드 즉시 실행. 로그인 사용자용 "계정 및 권한" 패널(세션/동의/내보내기/삭제).
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_ACCOUNT) return;
 
+    // KEY_CONSENT: 동의 항목 저장 localStorage 키. POLICY_VER: 개인정보 정책 버전.
     const KEY_CONSENT = 'saudade.consent.v1';   // { analytics, marketing, ai, functional }
     const POLICY_VER  = '2026-04-30';
 
+    // 패널 DOM 캐시(한 번 만들어 재사용).
     let _panelEl = null;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
@@ -70,26 +75,31 @@
         };
     }
 
+    // getConsent — 동의 항목을 localStorage 에서 읽는다(깨져 있으면 빈 객체).
     function getConsent() {
         try { return JSON.parse(localStorage.getItem(KEY_CONSENT) || '{}'); }
         catch (e) { return {}; }
     }
+    // setConsent — 동의 항목을 localStorage 에 저장.
     function setConsent(c) {
         try { localStorage.setItem(KEY_CONSENT, JSON.stringify(c)); } catch (e) {}
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // fmtDate — 밀리초 타임스탬프를 "YYYY-MM-DD HH:MM UTC" 로 표시(없으면 대시).
     function fmtDate(ms) {
         if (!ms) return '—';
         try { return new Date(ms).toISOString().slice(0, 16).replace('T', ' ') + ' UTC'; }
         catch (e) { return '—'; }
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddAcctStyles')) return;
         const s = document.createElement('style');
@@ -182,6 +192,7 @@
         document.head.appendChild(s);
     }
 
+    // ensurePanel — 모달 컨테이너를 한 번만 만들고 ESC 닫기를 건다(접근성).
     function ensurePanel() {
         if (_panelEl) return _panelEl;
         _panelEl = document.createElement('div');
@@ -195,6 +206,7 @@
         return _panelEl;
     }
 
+    // renderSignedOut — 비로그인 상태: 로그인 유도 화면만 그린다.
     function renderSignedOut() {
         const c = copy();
         ensurePanel().innerHTML = `
@@ -214,9 +226,11 @@
         });
     }
 
+    // renderSignedIn — 로그인 상태: 신원/세션/동의/데이터/위험구역 섹션을 그리고 핸들러를 건다.
     async function renderSignedIn() {
         const c = copy();
         const u = (window.SAUDADE_AUTH && window.SAUDADE_AUTH.getUser && window.SAUDADE_AUTH.getUser()) || {};
+        // 저장된 동의값에 기본값(기능성=필수)을 덮어써 최종 상태를 만든다.
         const consent = Object.assign({ analytics: false, marketing: false, ai: true, functional: true }, getConsent());
 
         ensurePanel().innerHTML = `
@@ -280,6 +294,7 @@
 
         _panelEl.querySelector('[data-close]').addEventListener('click', closePanel);
 
+        // 동의 체크박스 — 변경 시 localStorage 저장 + 서버에 동의 로그 남김.
         // Consent toggles — local + server log.
         _panelEl.querySelectorAll('input[data-consent]').forEach(el => {
             el.addEventListener('change', () => {
@@ -297,10 +312,12 @@
             status.textContent = msg || '';
         };
 
+        // 내보내기 — 서버에서 내 데이터를 받아 JSON 파일로 다운로드(GDPR Art.20).
         _panelEl.querySelector('[data-export]').addEventListener('click', async () => {
             try {
                 setStatus('…');
                 const data = await window.SAUDADE_AUTH.exportData();
+                // Blob + object URL 로 브라우저 다운로드를 유발한다.
                 const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -314,6 +331,7 @@
             } catch (e) { setStatus(c.err, 'error'); }
         });
 
+        // 로그아웃(이 기기) — 현재 세션만 폐기.
         _panelEl.querySelector('[data-out]').addEventListener('click', async () => {
             try {
                 await window.SAUDADE_AUTH.signOut({ everywhere: false });
@@ -322,6 +340,7 @@
             } catch (e) { setStatus(c.err, 'error'); }
         });
 
+        // 모든 기기 로그아웃 — 전 세션 폐기 + 미사용 매직링크 소각.
         _panelEl.querySelector('[data-out-all]').addEventListener('click', async () => {
             try {
                 await window.SAUDADE_AUTH.signOut({ everywhere: true });
@@ -330,6 +349,7 @@
             } catch (e) { setStatus(c.err, 'error'); }
         });
 
+        // 계정 삭제 — "DELETE" 정확 입력을 확인한 뒤에만 영구 삭제(GDPR Art.17).
         _panelEl.querySelector('[data-del]').addEventListener('click', async () => {
             const confirm = (_panelEl.querySelector('[data-del-confirm]').value || '').trim();
             const reason  = (_panelEl.querySelector('[data-del-reason]').value || '').trim();
@@ -342,6 +362,7 @@
             } catch (e) { setStatus(c.err, 'error'); }
         });
 
+        // 활성 세션 목록을 비동기로 불러와 섹션을 채운다(현재 기기는 강조).
         // Async session list.
         try {
             const r = await window.SAUDADE_AUTH.listSessions();
@@ -356,6 +377,7 @@
         } catch (e) {}
     }
 
+    // openPanel — 패널을 열고 로그인 여부에 따라 알맞은 화면을 렌더.
     function openPanel() {
         injectStyles();
         ensurePanel().classList.add('active');
@@ -363,10 +385,12 @@
         if (signedIn) renderSignedIn();
         else renderSignedOut();
     }
+    // closePanel — 패널을 숨긴다.
     function closePanel() {
         if (_panelEl) _panelEl.classList.remove('active');
     }
 
+    // init — 스타일 주입 + #account 딥링크로 패널을 여는 해시 훅.
     function init() {
         injectStyles();
         // URL hash hook — let any page link to #account to deep-open the panel.
@@ -382,5 +406,6 @@
         document.addEventListener('DOMContentLoaded', init);
     } else { init(); }
 
+    // 전역 공개 API — 패널 열기/닫기 + 동의값 조회/저장.
     window.SAUDADE_ACCOUNT = { openPanel, closePanel, getConsent, setConsent };
 })();
