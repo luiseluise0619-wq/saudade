@@ -11,23 +11,29 @@
 //   #desk-submit       → post submission modal (must be signed in)
 'use strict';
 
+// IIFE — 로드 즉시 실행. "스트링어(통신원) 데스크" 지원/기고 모달을 담당하는 모듈.
 (function() {
+    // 중복 로드 방어.
     if (window.SAUDADE_DESKS) return;
 
+    // L — 여러 언어 문구 묶음에서 현재 에디션에 맞는 것을 고른다(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // HTML 특수문자를 이스케이프해 사용자 입력을 안전하게 화면에 넣는다(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // 타임스탬프(ms)를 YYYY-MM-DD 로. 값이 없거나 깨지면 대시(—).
     function fmtDate(ms) {
         if (!ms) return '—';
         try { return new Date(ms).toISOString().slice(0, 10); }
         catch (e) { return '—'; }
     }
+    // fetch 에 붙일 헤더 — 기본 JSON + 로그인 세션 토큰(있으면 Authorization) 병합.
     function authHeaders() {
         const h = { 'Content-Type': 'application/json' };
         if (window.SAUDADE_AUTH && window.SAUDADE_AUTH.authHeaders) {
@@ -314,6 +320,7 @@
         });
         root.querySelector('[data-close]').addEventListener('click', closeModal);
         root.querySelector('[data-cancel]').addEventListener('click', closeModal);
+        // 보내기 버튼: 입력값을 모아 검증한 뒤 워커의 /desks/apply 로 POST 한다.
         root.querySelector('[data-send]').addEventListener('click', async () => {
             const name    = root.querySelector('[data-name]').value.trim();
             const city    = root.querySelector('[data-city]').value.trim();
@@ -323,13 +330,16 @@
             // We can re-introduce the choice later in the editor's onboarding flow.
             const cadence = 'monthly';
             const pitchTxt = pitch.value.trim();
+            // 클라이언트 검증: 이름·도시 필수, 이메일 형식, 지원글 80자 이상.
             if (!name || !city) { setStat(c.tooShort, 'error'); return; }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setStat(c.badEmail, 'error'); return; }
             if (pitchTxt.length < 80) { setStat(c.tooShort, 'error'); return; }
+            // 서버 주소 정규화(끝 슬래시 제거). 서버가 없으면 전송 불가 안내.
             const base = (window.AURA_SERVER || '').replace(/\/$/, '');
             if (!base) { setStat(c.failClosed, 'error'); return; }
             try {
                 setStat('…');
+                // await 로 응답을 기다린다. body 는 지원 내용을 담은 JSON.
                 const r = await fetch(base + '/desks/apply', {
                     method: 'POST',
                     headers: authHeaders(),
@@ -495,8 +505,10 @@
     function closeModal() { if (_modal) _modal.classList.remove('active'); }
 
     // ─── Index page renderer ─────────────────────────────────────────────
+    // 활동 중인 데스크(통신원) 목록을 서버에서 받아 target 요소 안에 그린다. async 함수.
     async function renderIndex(target, opts) {
         injectStyles();
+        // target 이 문자열이면 선택자로 보고 요소를 찾고, 아니면 요소 자체로 쓴다.
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
         if (!host) return;
         const ed = (opts && opts.edition) || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
@@ -515,6 +527,7 @@
             last:   L({ en: 'LAST FILED', ko: '최근 dispatch', ja: '直近', pt: 'ÚLTIMO', es: 'ÚLTIMO' }, ed)
         };
 
+        // 서버에서 이 에디션의 데스크 목록을 받아온다. 실패해도 빈 배열로 두고 계속 진행.
         let desks = [];
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (base) {
@@ -555,6 +568,8 @@
     }
 
     // Hash triggers.
+    // URL 해시로 모달을 연다: #desk-apply → 지원 모달, #desk-submit → 기고 모달.
+    // 연 뒤엔 해시를 지워(replaceState) 새로고침 시 모달이 다시 뜨지 않게 한다.
     function handleHash() {
         if (location.hash === '#desk-apply') {
             openApply();
@@ -564,9 +579,11 @@
             try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
         }
     }
+    // 해시 변경 이벤트 구독 + 최초 진입 시 1회 확인.
     window.addEventListener('hashchange', handleHash);
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 공개 API — 지원/기고 모달 열기, 모달 닫기, 데스크 목록 렌더.
     window.SAUDADE_DESKS = { openApply, openSubmit, closeModal, renderIndex };
 })();
