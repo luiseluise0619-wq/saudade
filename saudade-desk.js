@@ -4,9 +4,14 @@
 // 모달 X — 페이지 진입.
 'use strict';
 
+// IIFE — 파일이 로드되면 즉시 실행되는 익명 함수. 내부 변수는 전역을 더럽히지 않는다.
 (function() {
+    // 중복 로드 방어 — 이미 초기화됐으면(window.SAUDADE_DESK 존재) 다시 실행하지 않는다.
     if (window.SAUDADE_DESK) return;
 
+    // PIPELINE — § 04 DESK 화면에 "매일 발행 파이프라인"을 표로 보여주기 위한 데이터.
+    // 각 원소는 시각(KST)·단계 이름·설명을 담은 객체. 실제 크론은 worker/GitHub Actions 에 있고
+    // 여기 배열은 순수 표시용(설명 텍스트)일 뿐이다.
     // v3 pipeline — 100% free AI stack (Workers AI + Gemini Flash alias).
     // 운영비 0원. provider 는 LLM_*_PROVIDER env var 로 swap 가능.
     // Model name uses the gemini-flash-lite-latest alias — never a pinned
@@ -437,9 +442,15 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // ── 아래 renderXxxSection 함수들은 각각 § 04 DESK 안의 한 블록(HTML 문자열)을 만든다. ──
+    // 공통 패턴: T(...) 로 5개 에디션(en/ko/ja/pt/es) 문구를 고른 뒤 템플릿 문자열로 HTML 조립.
+    // T 는 window.SAUDADE_T 가 있으면 그것을, 없으면 영어만 반환하는 기본 함수를 쓴다(안전 폴백).
+
+    // 테마(스킨) 선택 블록 — AUTO/PAPER/COVER/NIGHT 중 하나를 라디오처럼 고르게 한다.
     // v7 §13 — Account section (sign-in / tour / sign-out). 헌법 §13 매직 링크.
     function renderThemeSection() {
         const T = window.SAUDADE_T || ((s) => s.en);
+        // 현재 저장된 스킨 선호값(없으면 'auto'). 어느 버튼에 체크 표시를 할지 결정.
         const cur = window.SAUDADE_EDITION?.skinPref?.() || 'auto';
         const head = T({
             en: 'THEME', ko: '테마', ja: 'テーマ', pt: 'TEMA', es: 'TEMA'
@@ -475,6 +486,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         `;
     }
 
+    // 주간 다이제스트(주 1회 이메일) 구독 폼 블록. 실제 전송 처리는 render() 안의 submit 핸들러.
     function renderDigestSection() {
         const T = window.SAUDADE_T || ((s) => s.en);
         const head = T({ en: 'SUNDAY DIGEST', ko: '주간 다이제스트', ja: '週刊ダイジェスト', pt: 'DIGEST DOMINICAL', es: 'DIGEST DOMINICAL' });
@@ -518,8 +530,11 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         `;
     }
 
+    // 계정 블록 — 로그인 상태에 따라 세 갈래로 다른 HTML 을 보여준다.
+    // (1) 로그인됨 → 이메일 + 로그아웃, (2) 둘러보기 중 → 로그인 유도, (3) 비로그인 → 로그인/둘러보기.
     function renderAccountSection() {
         const T = window.SAUDADE_T || ((s) => s.en);
+        // ?. 는 옵셔널 체이닝: SAUDADE_AUTH 나 getUser 가 없어도 에러 없이 undefined 를 준다.
         const user   = window.SAUDADE_AUTH?.getUser?.() || null;
         const onTour = window.SAUDADE_AUTH?.isTour?.() || false;
 
@@ -567,6 +582,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             es: 'FINALIZAR VISITA · ENTRAR'
         });
 
+        // 상태별로 stateHtml 을 다르게 채운다(위에서 준비한 문구를 끼워 넣는다).
         let stateHtml;
         if (user) {
             stateHtml = `
@@ -623,6 +639,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         };
 
         // 3 슬롯 — 채워진 건 도시명 + remove, 빈 슬롯은 + Add (드롭다운 details)
+        // [0,1,2].map 으로 세 칸을 순서대로 그린다. cur[i] 에 도시 slug 가 있으면 채워진 슬롯.
         const slotsHtml = [0, 1, 2].map(i => {
             const slug = cur[i];
             if (slug) {
@@ -713,7 +730,10 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         `;
     }
 
+    // § 04 DESK 화면 전체를 조립해 그리고, 새로 만들어진 버튼/폼에 이벤트를 연결한다.
+    // 위의 renderXxxSection 조각들을 한 innerHTML 안에 끼워 넣는 구조.
     function render() {
+        // 루트 컨테이너 확보(없으면 만들어 body 에 붙임).
         let root = document.getElementById('sddDesk');
         if (!root) {
             root = document.createElement('section');
@@ -722,6 +742,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             document.body.appendChild(root);
         }
 
+        // 현재 에디션 코드(en/ko/ja/pt/es). 에디션 목록에서 어느 버튼을 강조할지에 쓰인다.
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         const editionsHtml = (window.SAUDADE_EDITION?.SUPPORTED || ['en','ko','ja','pt','es']).map(code => {
             const meta = window.SAUDADE_EDITION?.META?.[code] || { name: code };
@@ -811,6 +832,8 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             </footer>
         `;
 
+        // ── innerHTML 을 새로 그렸으므로 방금 만들어진 요소들에 이벤트를 (다시) 붙인다. ──
+        // 테마 버튼: 클릭하면 스킨을 저장하고 화면을 다시 그려 체크 표시를 갱신한다.
         root.querySelectorAll('[data-skin]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const skin = btn.getAttribute('data-skin');
@@ -820,14 +843,18 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             });
         });
 
+        // 다이제스트 구독 폼 제출 처리.
         const digestForm = root.querySelector('[data-digest-form]');
         if (digestForm) {
+            // async 핸들러 — 안에서 await 로 서버 응답을 기다린다.
             digestForm.addEventListener('submit', async (ev) => {
+                // 폼 기본 동작(페이지 새로고침)을 막는다. SPA 라 직접 처리한다.
                 ev.preventDefault();
                 const T = window.SAUDADE_T || ((s) => s.en);
                 const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
                 const email = (digestForm.querySelector('input[name="email"]').value || '').trim();
                 const status = root.querySelector('[data-digest-status]');
+                // 이메일 형식 정규식 검증: (골뱅이 앞) @ (도메인) . (TLD). 틀리면 안내만 하고 중단.
                 if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
                     status.textContent = T({ en: 'Enter a valid email.', ko: '올바른 이메일을 입력하세요.', ja: '有効なメールを入力してください。', pt: 'Indique um email válido.', es: 'Indique un correo válido.' });
                     return;
@@ -839,11 +866,13 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                 }
                 status.textContent = T({ en: 'Sending…', ko: '전송 중…', ja: '送信中…', pt: 'A enviar…', es: 'Enviando…' });
                 try {
+                    // 워커의 구독 엔드포인트로 이메일+에디션을 JSON 으로 POST. await 로 응답 대기.
                     const r = await fetch(base + '/digest/subscribe', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ email, edition: ed })
                     });
+                    // r.ok 는 HTTP 200~299. 성공이면 "받은편지함 확인" 안내 + 폼 리셋.
                     if (r.ok) {
                         status.textContent = T({
                             en: 'Check your inbox to confirm.',
@@ -862,6 +891,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
             });
         }
 
+        // 에디션 버튼: 클릭하면 그 언어판으로 전환(SAUDADE_EDITION.set).
         root.querySelectorAll('[data-edition]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const code = btn.getAttribute('data-edition');
@@ -870,6 +900,7 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         });
 
         // v8 §02 — Following handlers
+        // 도시 추가/제거/추천묶음 적용 버튼. 각 동작 후 render() 로 슬롯 UI 를 다시 그린다.
         root.querySelectorAll('[data-following-add]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const slug = btn.getAttribute('data-following-add');
@@ -908,10 +939,13 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         // v8 §02 — v6 §5.4 Switch the desk 핸들러 제거 (Following 이 도시 변경 담당)
 
         // v6 §5.5 — 정의 안 된 도시 요청 폼
+        // 사용자가 아직 없는 도시를 요청하면: 이미 정의된 도시면 바로 정착, 아니면 요청 카운트를
+        // 올리고 "100명 모이면 개설" 안내를 보여준다.
         const reqForm = root.querySelector('[data-request-form]');
         if (reqForm) {
             reqForm.addEventListener('submit', (e) => {
                 e.preventDefault();
+                // FormData 로 input[name=city] 값을 읽는다.
                 const fd = new FormData(reqForm);
                 const cityName = String(fd.get('city') || '').trim();
                 if (!cityName) return;
@@ -923,9 +957,11 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
                     return;
                 }
                 // 미정의 → worker D1 INSERT (v7 §5.5) + local fallback
+                // 먼저 로컬(localStorage)에 요청을 기록해 즉시 카운트를 얻고(오프라인에서도 동작),
                 let count = window.SAUDADE_CITY?.recordRequest?.(cityName) || 0;
                 const status = root.querySelector('[data-request-status]');
                 // POST /city/request — fire-and-forget, count 갱신
+                // 이어서 서버에도 보내 정확한 누적 count 로 갱신한다("발사 후 잊기" 방식).
                 const _base = (window.AURA_SERVER || '').replace(/\/$/, '');
                 if (_base) {
                     fetch(_base + '/city/request', {
@@ -961,8 +997,11 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
 
     // topbar #settingsBtn 클릭 capturing 가로채 → § 04 DESK 진입 (잡지 콜로폰).
     // (이전 saudade-colophon.js 의 hook 이 여기로 통합됨)
+    // capturing 단계(addEventListener 의 세 번째 인자 true)에서 클릭을 먼저 가로채,
+    // 다른 핸들러가 실행되기 전에 DESK 로 이동시킨다. stopImmediatePropagation 으로 뒤 핸들러 차단.
     function watchSettings() {
         document.addEventListener('click', (e) => {
+            // closest — 클릭 지점에서 위로 올라가며 설정 버튼(또는 data-saudade-desk)을 찾는다.
             const btn = e.target.closest('#settingsBtn, [data-saudade-desk]');
             if (!btn) return;
             e.preventDefault();
@@ -977,21 +1016,25 @@ body.section-active[data-section="04"] .sdd-desk { display: block; }
         }, true);
     }
 
+    // 모듈 초기화: 스타일 주입 → 첫 렌더 → 설정 버튼 후킹 → 섹션/에디션 변화 감지.
     function init() {
         injectStyles();
         render();
         watchSettings();
+        // data-section 이 04(DESK)로 바뀌거나 에디션이 바뀌면 화면을 최신으로 다시 그린다.
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '04') render();
         });
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section', 'data-edition'] });
     }
 
+    // DOM 이 아직 로딩 중이면 준비 완료 후 init, 이미 끝났으면 즉시 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — 다른 모듈이 desk 를 다시 그리게 할 수 있도록 render 만 노출.
     window.SAUDADE_DESK = { render };
 })();
