@@ -9,19 +9,28 @@
 // PR3 walkring 이 subscribe() 로 center 변경 구독.
 'use strict';
 
+// IIFE — 로드 즉시 실행. 위치정보(GPS)는 민감하므로 상태를 이 스코프 안에 가둔다.
 (function() {
+    // 중복 로드 방어.
     if (window.SAUDADE_ATLAS_GPS) return;
 
     // ─── localStorage 키 ────────────────────────────────────────
+    // 위치 권한 허용/거부 여부와, GPS 대신 사용자가 직접 찍은 핀 좌표를 기억한다.
     const KEY_GRANTED  = 'saudade.atlas.gps.granted';
     const KEY_DECLINED = 'saudade.atlas.gps.declined';
     const KEY_PIN      = 'saudade.atlas.pin';
 
     // ─── §8.1 갱신 임계값 ──────────────────────────────────────
+    // 위치가 바뀌어도 15초 미만 & 30m 미만 이동이면 갱신을 건너뛴다(배터리·소음 절약).
     const UPDATE_INTERVAL_MS = 15 * 1000;
     const UPDATE_THRESHOLD_M = 30;
 
     // ─── 상태 ─────────────────────────────────────────────────
+    // _watchId: geolocation.watchPosition 이 돌려준 구독 id(해제할 때 필요).
+    // _lastPublished: 마지막으로 반영한 위치+시각(위경도와 t).
+    // _currentCenter: 현재 중심 좌표(위경도와 출처 source 는 gps 또는 pin).
+    // _pinPending: 지도 클릭으로 핀 찍기를 기다리는 중인지.
+    // _marker: 지도 위 사용자 위치 마커. _modalEl: 사전 안내 모달 DOM. _pinPromptEl: 핀 안내 배너 DOM.
     let _watchId = null;
     let _lastPublished = null;     // { lat, lng, t }
     let _currentCenter = null;     // { lat, lng, source: 'gps' | 'pin' }
@@ -29,6 +38,7 @@
     let _marker = null;
     let _modalEl = null;
     let _pinPromptEl = null;
+    // 위치가 바뀔 때 알림 받을 구독자(walkring 등)를 담는 집합.
     const _subscribers = new Set();
 
     function L(strings) {
@@ -100,6 +110,7 @@
     function isGranted()  { return getStored(KEY_GRANTED)  === '1'; }
     function isDeclined() { return getStored(KEY_DECLINED) === '1'; }
 
+    // 저장된 핀 좌표를 읽는다. 형식이 깨졌거나 lat/lng 가 숫자가 아니면 null.
     function getPin() {
         try {
             const raw = getStored(KEY_PIN);
@@ -114,8 +125,10 @@
     }
 
     // 거리 (m) — Haversine. 갱신 임계값 판정용.
+    // 두 위경도 사이의 지표면 거리(미터)를 구하는 표준 공식. R 은 지구 반지름(m).
     function distanceM(a, b) {
         const R = 6371000;
+        // 각도(도) → 라디안 변환. 삼각함수는 라디안을 받는다.
         const toRad = d => d * Math.PI / 180;
         const dLat = toRad(b.lat - a.lat);
         const dLng = toRad(b.lng - a.lng);
@@ -126,7 +139,10 @@
     }
 
     // ─── §8.1 Geolocation watch ───────────────────────────────
+    // watchPosition 은 위치가 바뀔 때마다 onPosition 을 계속 호출하는 브라우저 API.
+    // 옵션: enableHighAccuracy false(대략 위치로 충분·배터리 절약), maximumAge 5s(최근값 재사용), timeout 30s.
     function startWatch() {
+        // 이미 감시 중이거나 geolocation 미지원이면 아무것도 하지 않는다.
         if (_watchId !== null || !('geolocation' in navigator)) return;
         try {
             _watchId = navigator.geolocation.watchPosition(
@@ -144,12 +160,14 @@
         }
     }
 
+    // watchPosition 콜백 — 새 위치가 들어올 때마다 호출된다. pos.coords 에 위경도가 있다.
     function onPosition(pos) {
         const lat = pos.coords.latitude;
         const lng = pos.coords.longitude;
         const t = Date.now();
         const candidate = { lat, lng, t };
         // §8.1 — 15s + 30m 임계값 (둘 다 미달이면 무시)
+        // 최근 반영값에서 시간·거리 둘 다 임계 미만이면 잔떨림으로 보고 무시한다.
         if (_lastPublished) {
             const dt = t - _lastPublished.t;
             const dm = distanceM(_lastPublished, candidate);
@@ -437,10 +455,12 @@
     function showModal() { ensureModal().classList.add('active'); }
     function hideModal() { if (_modalEl) _modalEl.classList.remove('active'); }
 
+    // "계속" — 우리 안내 모달을 닫고, 이제 브라우저/OS 의 진짜 위치 권한 요청을 띄운다.
     function onContinue() {
         hideModal();
         if (!('geolocation' in navigator)) return;
         // OS 모달이 다음에 뜸
+        // getCurrentPosition 은 한 번만 현재 위치를 묻는다. 성공/실패 두 콜백을 받는다.
         navigator.geolocation.getCurrentPosition(
             (pos) => {
                 setStored(KEY_GRANTED, '1');
@@ -490,6 +510,8 @@
         atlas.setAttribute('data-pin-mode', '1');
         ensurePinPrompt().classList.add('active');
         // 지도 준비 후 클릭 핸들러 부착 — initMap 이 비동기라 폴링
+        // 지도 인스턴스가 아직 없을 수 있어 200ms 마다 최대 50회(=10초) 확인하다,
+        // 준비되면 map.once('click') 로 "다음 한 번의 클릭"만 핀 찍기로 받는다.
         let attempts = 0;
         const iv = setInterval(() => {
             const map = window.SAUDADE_ATLAS_MAP && window.SAUDADE_ATLAS_MAP.getMap();
@@ -497,6 +519,7 @@
                 map.once('click', onMapClickForPin);
                 clearInterval(iv);
             }
+            // 지도가 끝내 안 뜨거나 사용자가 취소하면 폴링을 멈춘다.
             if (++attempts > 50 || !_pinPending) clearInterval(iv);
         }, 200);
     }
@@ -548,6 +571,8 @@
     }
 
     // ─── 통합 흐름 ────────────────────────────────────────────
+    // 위치가 바뀔 때 한 곳에서: 마커/배지/버튼을 갱신하고 모든 구독자에게 새 좌표를 알린다.
+    // 구독자 콜백 하나가 예외를 던져도 try/catch 로 나머지 구독자에게 영향이 없게 한다.
     function publishUpdate() {
         updateMarker();
         renderStatusBadge();
@@ -555,6 +580,7 @@
         _subscribers.forEach(fn => { try { fn(_currentCenter); } catch (e) {} });
     }
 
+    // 앱 시작 시 초기 위치 확보 — 저장된 핀이 있으면 그걸 중심으로, 권한이 있으면 GPS 감시 시작.
     function bootstrap() {
         // 우선순위: GPS granted > pin > 없음
         const pin = getPin();
@@ -765,6 +791,7 @@
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-edition'] });
     }
 
+    // 모듈 초기화: 스타일 주입 → 초기 위치 확보 → 아틀라스/에디션 변화 감시.
     function init() {
         injectStyles();
         bootstrap();
@@ -772,18 +799,21 @@
         watchEdition();
     }
 
+    // DOM 로딩 중이면 준비 후 init, 이미 끝났으면 즉시 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — 현재 좌표 조회, 모달/핀 모드 제어, 그리고 위치 변경 구독 훅.
     window.SAUDADE_ATLAS_GPS = {
         getCenter: () => _currentCenter,
         showModal,
         enterPinMode,
         cancelPinMode,
         // PR3 walkring 이 구독할 hook — center 변경 시 호출됨
+        // subscribe 는 구독 해제 함수를 돌려준다(반환값을 부르면 목록에서 제거).
         subscribe: (fn) => { _subscribers.add(fn); return () => _subscribers.delete(fn); },
         // 디버그/리셋 (사용자가 결정 변경 시)
         reset: () => {
