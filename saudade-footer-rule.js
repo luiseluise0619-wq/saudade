@@ -4,9 +4,12 @@
 // "PG 04 OF 12 · § 01 · LEDGER · saudade" 식.
 'use strict';
 
+// IIFE — 로드 즉시 실행. dock 위 항상 떠 있는 하단 룰 + 카피라인(페이지/섹션/링크) 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_FOOTER) return;
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddFooterStyles')) return;
         const s = document.createElement('style');
@@ -104,6 +107,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
               tag:     'saudade · un anhelo por lo que no puede volver' }
     };
 
+    // ensureFooter — 하단 푸터 요소를 한 번만 만들어 body 에 붙인다(현재 언어 링크 문구).
     function ensureFooter() {
         let f = document.getElementById('sddFooter');
         if (f) return f;
@@ -134,6 +138,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         en: 'ISSUE COVER', ko: '표지', ja: '表紙', pt: 'CAPA', es: 'PORTADA'
     };
 
+    // update — 현재 섹션에 맞춰 푸터의 페이지 번호/섹션 라벨을 갱신(표지면 § 00).
     function update() {
         const f = ensureFooter();
         const sec = document.body.getAttribute('data-section');
@@ -156,6 +161,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         f.querySelector('.sdd-footer-section').textContent = '§ 00 · ' + (COVER_LABEL[ed] || COVER_LABEL.en);
     }
 
+    // init — 스타일 주입 + 푸터 생성 + 첫 갱신 + 섹션/클래스 변화 감시 + 전역 노출.
     function init() {
         injectStyles();
         ensureFooter();
@@ -166,6 +172,7 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         window.SAUDADE_FOOTER = { update };
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
