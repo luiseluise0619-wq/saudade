@@ -1,3 +1,17 @@
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// cloudflare-worker.js = 이 서비스(Saudade)의 "백엔드" 전체.
+// Cloudflare Worker 란: 전 세계 Cloudflare 엣지(edge) 서버에서 돌아가는
+//   작은 서버 프로그램. 별도 서버 컴퓨터를 빌리지 않고, 사용자와 가까운
+//   데이터센터에서 실행되어 응답이 빠르다. (서버리스 = serverless)
+// 이 파일이 하는 일 크게 세 가지:
+//   1) 외부 API 프록시 — 날씨/지진/뉴스 RSS 등을 대신 호출해 캐싱(중계).
+//      (API 키를 브라우저에 노출하지 않기 위해 서버가 대신 부른다.)
+//   2) 로그인(인증) — 이메일 "매직 링크" 방식. 비밀번호가 없고, 메일로 온
+//      일회용 링크를 클릭하면 로그인된다. (뒤쪽 /auth/* 경로들)
+//   3) 결제(billing) — 외부 결제사(Stripe 등) 웹훅을 HMAC 서명으로 검증.
+// 저장소: D1(=Cloudflare 의 서버리스 SQLite 데이터베이스) + KV(간단 키-값).
+// ═══════════════════════════════════════════════════════════════════════
 // AURA WORLD PULSE — Backend v4.0 (Production)
 // All external APIs proxied · Cache API + KV · Rate limit
 // © 2026 LEEJAEJIN
@@ -5,6 +19,10 @@
 // Saudade 운영 도메인 + 로컬 개발 + Cloudflare Pages preview/production.
 // .pages.dev 와일드카드: Cloudflare Pages 가 자동 발급하는 모든 preview deployment 허용
 // (예: <hash>.saudade.pages.dev — 운영자 본인 계정).
+// CORS(교차 출처 자원 공유) 허용 목록.
+// 브라우저는 "어느 웹사이트(origin)에서 이 API 를 불렀는지"를 Origin 헤더로 보낸다.
+// 아래 목록에 있는 주소에서 온 요청만 응답을 내준다(보안). 목록 밖이면 차단.
+// const = 재할당 불가 상수. 배열([ ])에 허용 도메인들을 문자열로 나열.
 const ALLOWED_ORIGINS = [
     'https://saudade.app',
     'https://www.saudade.app',
@@ -22,8 +40,15 @@ const ALLOWED_ORIGINS = [
 // .pages.dev preview / production 서브도메인 자동 허용
 //   - <hash>.saudade.pages.dev (현재 프로젝트 — production + preview)
 //   - <hash>.aura-os-cao.pages.dev / <hash>.lounj01.pages.dev (역사 — 옛 프로젝트)
+// 정규식(RegExp)으로 *.pages.dev 서브도메인을 한 번에 허용.
+//   ^ = 문자열 시작, $ = 끝, \/ = 슬래시(/) 이스케이프.
+//   (saudade|aura-os-cao|lounj01) = 셋 중 하나. 앞의 (...)? = 임의 해시 서브도메인 선택적.
+// 이렇게 하면 <hash>.saudade.pages.dev 같은 미리보기 배포 주소도 자동 허용된다.
 const ALLOWED_ORIGIN_RX = /^https:\/\/([a-z0-9-]+\.)?(saudade|aura-os-cao|lounj01)\.pages\.dev$/;
 
+// RL = Rate Limit(요청 속도 제한) 표. 경로(path)별로 "창(win, 밀리초) 안에 최대 max회" 허용.
+// 예: '/auth/request' 는 60000ms(=1분) 안에 5번만. 무차별 공격/남용을 막는다.
+// { } 안은 객체(object) — 키:값 쌍의 모음. win 60000 = 60초.
 const RL = {
     '/rss':            { max: 30,  win: 60000 },
     '/quakes':         { max: 30,  win: 60000 },
@@ -45,6 +70,7 @@ const RL = {
     '/editor/leave-status': { max: 60, win: 60000 },
     '/editor/log':          { max: 30, win: 60000 },
     '/cafe/submit':         { max: 5,  win: 60000 },
+    // 인증(로그인) 계열 — 남용에 민감하므로 max 를 낮게(5~10) 잡는다.
     '/auth/request':   { max: 5,  win: 60000 },
     '/auth/verify':    { max: 10, win: 60000 },
     '/auth/sessions':  { max: 30, win: 60000 },
@@ -57,6 +83,7 @@ const RL = {
     '/letters/list':   { max: 60, win: 60000 },
     '/letters/queue':  { max: 30, win: 60000 },
     '/desks/apply':    { max: 3,  win: 60000 },
+    // 결제(billing) 계열 — 체크아웃/포털은 낮게, webhook 은 외부 결제사가 자주 부를 수 있어 넉넉히.
     '/billing/checkout': { max: 5,  win: 60000 },
     '/billing/portal':   { max: 5,  win: 60000 },
     '/billing/webhook':  { max: 60, win: 60000 },
@@ -77,9 +104,12 @@ const RL = {
     '/feed':       { max: 60, win: 60000 },
     '/feed.xml':   { max: 60, win: 60000 },
     '/feed.atom':  { max: 60, win: 60000 },
+    // DEFAULT = 위 표에 없는 경로에 적용되는 기본값(1분에 20회).
     DEFAULT:           { max: 20,  win: 60000 }
 };
 
+// TTL = Time To Live(캐시 유효 시간, 초 단위). 외부 API 응답을 이 시간 동안 캐시에 보관.
+// 예: weather 900초(15분) 동안은 같은 요청에 캐시된 값을 즉시 돌려줘 외부 호출을 아낀다.
 const TTL = {
     rss: 300, quakes: 180, disasters: 600,
     weather: 900, aqi: 900, currency: 3600,
@@ -128,99 +158,167 @@ const RSS_OK = [
     'snopes.com','factcheck.org'
 ];
 
+// SSRF(서버측 요청 위조) 방어용 차단 목록.
+// 공격자가 프록시에게 "내부 주소를 대신 불러줘"라고 시켜 내부망을 훔쳐보는 걸 막는다.
+// BLOCK_HOST = 내부 호스트 이름 정규식(localhost 등). 끝의 i = 대소문자 무시.
 const BLOCK_HOST = /^(localhost|0\.0\.0\.0|.*\.local|.*\.internal)$/i;
+// BLOCK_IP = 사설/내부 IP 대역 정규식 배열(127.x, 10.x, 192.168.x, 172.16~31.x, IPv6 내부 등).
 const BLOCK_IP = [/^127\./,/^10\./,/^192\.168\./,/^172\.(1[6-9]|2\d|3[01])\./,/^169\.254\./,/^::1$/,/^fc00:/i,/^fe80:/i];
 
+// rlStore = 요청 속도 제한 카운터를 담는 메모리 맵(Map). 키:"IP:경로" → 카운트 정보.
+// (엣지 인스턴스 메모리라 영구 저장은 아님. 재시작되면 리셋되지만 남용 방지엔 충분.)
 const rlStore = new Map();
+// rate(id, p): 특정 요청자 id(보통 IP)가 경로 p 를 너무 자주 부르는지 판정.
 function rate(id, p) {
+    // 이 경로의 한도를 찾는다. 없으면 DEFAULT 사용.
     const lim = RL[p] || RL.DEFAULT;
+    // k = 이 사용자+경로의 고유 키. now = 현재 시각(밀리초). 백틱 `` 은 템플릿 문자열.
     const k = `${id}:${p}`, now = Date.now();
+    // 기존 카운터를 꺼낸다(없으면 undefined).
     let e = rlStore.get(k);
+    // 카운터가 없거나 시간창(win)이 지났으면 새로 시작(count 0으로 리셋).
     if (!e || now - e.start > lim.win) e = { start: now, count: 0, blockedUntil: 0 };
+    // 아직 차단 시간(blockedUntil) 안이면, 몇 초 뒤 재시도하라고 알려주며 거부.
     if (now < e.blockedUntil) return { ok: false, retry: Math.ceil((e.blockedUntil - now) / 1000) };
+    // ++e.count = 카운트를 1 올린 뒤 비교. 한도(max)를 넘으면 차단.
     if (++e.count > lim.max) {
+        // 지금부터 창 길이만큼 차단.
         e.blockedUntil = now + lim.win;
         rlStore.set(k, e);
+        // 맵이 너무 커지면(5000개 초과) 오래된(10분 전) 항목을 청소해 메모리 누수 방지.
         if (rlStore.size > 5000) {
             const cut = now - 600000;
+            // 구조 분해: [kk, vv] = [키, 값]. 오래된 항목 삭제.
             for (const [kk, vv] of rlStore) if (vv.start < cut) rlStore.delete(kk);
         }
+        // 거부 응답 — 창 길이(초)만큼 뒤 재시도.
         return { ok: false, retry: Math.ceil(lim.win / 1000) };
     }
+    // 한도 이내면 카운터 저장 후 통과.
     rlStore.set(k, e);
     return { ok: true };
 }
 
+// chkOrigin: 요청의 Origin 이 허용 목록/정규식에 맞는지 검사(true/false).
 function chkOrigin(req) {
+    // Origin 헤더를 읽되 없으면 빈 문자열. (|| '' = 앞이 falsy면 뒤 값)
     const o = req.headers.get('Origin') || '';
+    // 미리보기 서브도메인 정규식에 맞으면 즉시 허용.
     if (ALLOWED_ORIGIN_RX.test(o)) return true;
+    // some(): 목록 중 하나라도 일치하면 true. 'null' 항목은 Origin 이 비었을 때(!o) 허용.
     return ALLOWED_ORIGINS.some(a => a === 'null' ? !o : o === a);
 }
 
+// chkUA: User-Agent(브라우저 식별 문자열)로 봇/스크래퍼 여부를 대략 거른다.
 function chkUA(req) {
     const ua = req.headers.get('User-Agent') || '';
+    // 너무 짧으면 정상 브라우저가 아님 → 거부.
     if (ua.length < 10) return false;
+    // curl/wget/봇/크롤러 키워드가 있으면 거부. i = 대소문자 무시.
     if (/curl|wget|python-requests|scrapy|bot|spider|crawl/i.test(ua)) return false;
     return true;
 }
 
+// chkUrl: 프록시가 대신 부를 URL 이 안전한지 검사(SSRF 방어 + 화이트리스트 wl).
 function chkUrl(u, wl) {
+    // 없거나 너무 길면 거부.
     if (!u || u.length > 2048) return false;
+    // new URL()로 파싱 시도. 형식이 틀리면 예외 → catch 에서 거부.
     let url; try { url = new URL(u); } catch { return false; }
+    // http/https 만 허용(file:, ftp: 등 차단).
     if (!/^https?:$/.test(url.protocol)) return false;
+    // 호스트명을 소문자로.
     const h = url.hostname.toLowerCase();
+    // 내부 호스트 이름이면 거부.
     if (BLOCK_HOST.test(h)) return false;
+    // 사설/내부 IP 대역이면 거부.
     for (const re of BLOCK_IP) if (re.test(h)) return false;
+    // 화이트리스트(wl)가 주어졌으면, 그 도메인이거나 그 하위 도메인이어야 통과.
     if (wl && !wl.some(d => h === d || h.endsWith('.' + d))) return false;
     return true;
 }
 
+// clean: 사용자 입력 정리 — 제어문자 제거 + 앞뒤 공백 제거 + 최대 m글자로 자름.
+// \x00-\x1f\x7f = 보이지 않는 제어문자. 화살표함수(=>)로 짧게 정의.
 const clean = (t, m = 500) => !t ? '' : String(t).replace(/[\x00-\x1f\x7f]/g, '').trim().slice(0, m);
 
+// hdrs: 모든 응답에 붙일 HTTP 헤더 묶음을 만든다(CORS + 보안 헤더).
+// extra = {} : 추가 헤더가 필요하면 넘김(기본은 빈 객체).
 function hdrs(req, extra = {}) {
     const o = req.headers.get('Origin') || '';
+    // 허용 목록에서 이 Origin 을 찾아 그대로 되돌려줌(CORS 는 정확한 출처를 요구).
     let allow = ALLOWED_ORIGINS.find(a => a === 'null' ? !o : o === a);
+    // 목록엔 없지만 미리보기 정규식엔 맞으면 그 Origin 을 허용.
     if (!allow && ALLOWED_ORIGIN_RX.test(o)) allow = o;   // *.aura-os-cao.pages.dev preview
     return {
+        // 응답 본문은 JSON.
         'Content-Type': 'application/json; charset=utf-8',
+        // 이 출처의 브라우저에 응답 읽기를 허용(CORS 핵심 헤더).
         'Access-Control-Allow-Origin': allow || 'null',
+        // 허용 메서드/헤더.
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
+        // Vary: Origin — 캐시가 출처별로 응답을 구분하게 함.
         'Vary': 'Origin',
+        // 브라우저가 Content-Type 을 멋대로 추측하지 않게(스니핑 방지).
         'X-Content-Type-Options': 'nosniff',
+        // 다른 사이트가 iframe 으로 못 감싸게(클릭재킹 방지).
         'X-Frame-Options': 'DENY',
+        // 앞으로 1년간 항상 HTTPS 로만 접속(HSTS).
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+        // 다른 사이트로 이동 시 최소한의 리퍼러만 전달.
         'Referrer-Policy': 'strict-origin-when-cross-origin',
+        // ...extra = 전개(spread) 연산자. 추가 헤더를 여기 펼쳐 병합.
         ...extra
     };
 }
 
+// J: JSON 응답을 간단히 만드는 도우미. body 가 문자열이면 그대로, 객체면 JSON 문자열로.
 const J = (req, body, status = 200, extra = {}) =>
     new Response(typeof body === 'string' ? body : JSON.stringify(body),
         { status, headers: hdrs(req, extra) });
+// E: 에러 응답 도우미. { error, code } 형태 JSON 을 status(기본 400)로 반환.
 const E = (req, code, msg, status = 400) => J(req, { error: msg, code }, status);
 
+// cGet: 캐시에서 key 로 값 읽기. async 함수 = 비동기(await 로 결과를 기다림).
 async function cGet(key, env) {
+    // 먼저 엣지 Cache API 에서 찾음. await = 완료될 때까지 기다림.
     const m = await caches.default.match(new Request(`https://cache.aura/${key}`));
+    // 있으면 본문 텍스트 반환.
     if (m) return await m.text();
+    // 캐시에 없으면 KV(키-값 저장소)에서 시도. ?. = env 가 없으면 안전하게 건너뜀(옵셔널 체이닝).
     if (env?.AURA_KV) { const v = await env.AURA_KV.get(key); if (v) return v; }
+    // 둘 다 없으면 null.
     return null;
 }
+// cPut: 값을 캐시(+KV)에 ttl(초)만큼 저장.
 async function cPut(key, body, ttl, env, ctx) {
+    // 캐시에 넣을 응답 객체. max-age 로 유효기간 지정.
     const r = new Response(body, { headers: { 'Cache-Control': `public, max-age=${ttl}` } });
+    // ctx.waitUntil: 응답을 사용자에게 보낸 뒤에도 이 쓰기 작업을 백그라운드로 마치게 함.
     ctx.waitUntil(caches.default.put(new Request(`https://cache.aura/${key}`), r));
+    // KV 에도 같은 값을 만료시간과 함께 저장(있을 때만).
     if (env?.AURA_KV) ctx.waitUntil(env.AURA_KV.put(key, body, { expirationTtl: ttl }));
 }
 
+// fetchT: 시간제한(timeout) 있는 fetch. ms(기본 8초) 안에 응답 없으면 중단.
 async function fetchT(url, opts = {}, ms = 8000) {
+    // AbortController = 진행 중인 요청을 취소할 수 있는 리모컨.
     const c = new AbortController();
+    // ms 뒤에 abort() 호출 예약(타이머).
     const t = setTimeout(() => c.abort(), ms);
+    // 정상 응답이면 타이머 해제 후 반환.
     try { const r = await fetch(url, { ...opts, signal: c.signal }); clearTimeout(t); return r; }
+    // 실패/취소 시에도 타이머 해제 후 에러 전달.
     catch (e) { clearTimeout(t); throw e; }
 }
 
+// sha: 문자열 s 를 SHA-256 으로 해시해 앞 32자(16진수)만 반환.
+// 해시 = 원문을 되돌릴 수 없는 지문. 토큰/이메일을 원문 대신 저장할 때 쓴다.
 async function sha(s) {
+    // TextEncoder 로 문자열을 바이트로 바꾼 뒤 SHA-256 다이제스트 계산.
     const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+    // 바이트 배열 → 각 바이트를 2자리 16진수로 → 이어붙임 → 앞 32자.
     return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('').slice(0, 32);
 }
 
@@ -653,12 +751,18 @@ async function pipelineScore(env, llm) {
 }
 async function pipelineStub(phase) { return { ok: true, phase, todo: 'next PR' }; }
 
+// export default { ... } = 이 Worker 의 진입점 묶음. Cloudflare 가 두 가지를 호출한다:
+//   scheduled(...) = 정해진 시각마다 자동 실행(cron). fetch(...) = HTTP 요청 처리.
 export default {
+    // scheduled: 크론(cron) 스케줄에 따라 자동 실행되는 배치 작업.
+    // event.cron 에 어떤 스케줄이 트리거됐는지 문자열로 들어온다(아래 switch 로 분기).
+    // 여기선 매일 정해진 UTC 시각에 뉴스 수집→분류→점수→작성→발행 파이프라인을 돌린다.
     async scheduled(event, env, ctx) {
         // v649 — wire the real pipeline functions to cron, not pipelineStub.
         // Free-tier Cloudflare allows max 5 cron triggers, so Sort runs
         // inside Score (consolidation) and Stage runs inside File. Result is
         // tucked into AURA_KV for /admin debugging.
+        // LLM(AI 모델) 호출용 헬퍼 준비.
         const llm = pipelineLLM(env);
         let result;
         try {
@@ -692,18 +796,30 @@ export default {
         return result;
     },
 
+    // ════════ fetch: 모든 HTTP 요청의 진입점(라우터) ════════
+    // 사용자가 이 백엔드로 보내는 요청은 전부 여기로 들어와, 경로(path)별로 알맞은
+    // 처리 함수로 나뉘어(switch) 간다. req=요청, env=환경변수/DB바인딩, ctx=실행문맥.
     async fetch(req, env, ctx) {
         try {
+            // 요청 URL 파싱.
             const url = new URL(req.url);
+            // 경로 끝의 슬래시를 떼어 통일. 비어 있으면 '/'.
             const path = url.pathname.replace(/\/$/, '') || '/';
+            // OPTIONS = 브라우저의 CORS 사전 요청(preflight). 본문 없이 204로 허용.
             if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: hdrs(req) });
+            // 공개 경로(/, /health)를 뺀 나머지는 허용 출처에서 온 요청만 통과.
             if (path !== '/' && path !== '/health' && !chkOrigin(req)) return E(req, 'BAD_ORIGIN', 'Invalid origin', 403);
+            // 봇/스크래퍼 차단.
             if (!chkUA(req)) return E(req, 'BAD_UA', 'Invalid client', 403);
+            // 요청자 식별용 IP(Cloudflare 가 넣어주는 실제 접속 IP).
             const cid = req.headers.get('CF-Connecting-IP') || 'unknown';
+            // 속도 제한 검사.
             const r = rate(cid, path);
+            // 한도 초과면 429(Too Many Requests) + 몇 초 뒤 재시도 안내.
             if (!r.ok) return new Response(JSON.stringify({ error: 'Too many requests', retry: r.retry }),
                 { status: 429, headers: hdrs(req, { 'Retry-After': String(r.retry) }) });
 
+            // switch(path) = 경로에 따라 담당 함수로 분기. case 별로 하나의 엔드포인트.
             switch (path) {
                 case '/': case '/health':
                     return J(req, { status: 'ok', service: 'saudade', ts: Date.now() });
@@ -771,25 +887,36 @@ export default {
                 case '/following':            return followingHandler(req, env, ctx);
                 case '/listening/log':        return listeningLog(req, env, ctx);
                 case '/stats/weekly':         return statsWeekly(req, env, ctx);
+                // 위 어느 경로에도 안 맞으면 404.
                 default:                return E(req, 'NOT_FOUND', 'Not found', 404);
             }
+        // 처리 중 예상 못 한 오류는 500으로 감싼다(내부 상세는 노출 안 함).
         } catch (e) { return E(req, 'INTERNAL', 'Server error', 500); }
     }
 };
 
+// rss: 외부 RSS 피드를 대신 받아 캐싱해 돌려주는 프록시(대표적인 "캐시 후 프록시" 패턴).
 async function rss(req, env, ctx) {
+    // ?url= 로 넘어온 대상 주소.
     const t = new URL(req.url).searchParams.get('url');
+    // 화이트리스트(RSS_OK)에 없는 주소면 거부(SSRF/남용 방지).
     if (!chkUrl(t, RSS_OK)) return E(req, 'BAD_URL', 'Disallowed URL');
+    // 캐시 키 = "rss:" + 주소의 해시.
     const k = `rss:${await sha(t)}`;
+    // 먼저 캐시 확인 — 있으면 외부 호출 없이 즉시 반환(HIT).
     const c = await cGet(k, env);
     if (c) return new Response(c, { status: 200, headers: hdrs(req, { 'Content-Type': 'application/xml; charset=utf-8', 'X-Cache': 'HIT' }) });
     try {
+        // 캐시에 없으면 외부에서 실제로 가져옴(MISS).
         const r = await fetchT(t, { headers: { 'User-Agent': 'AuraWorldPulse/4.0', 'Accept': 'application/rss+xml,application/xml,text/xml' } });
         if (!r.ok) return E(req, 'UPSTREAM', 'Upstream', 502);
         const text = await r.text();
+        // RSS/Atom 형식이 맞는지 최소 확인.
         if (!/<rss|<feed|<rdf/i.test(text)) return E(req, 'NOT_RSS', 'Not RSS', 422);
+        // 다음 요청을 위해 캐시에 저장.
         await cPut(k, text, TTL.rss, env, ctx);
         return new Response(text, { status: 200, headers: hdrs(req, { 'Content-Type': 'application/xml; charset=utf-8', 'X-Cache': 'MISS' }) });
+    // 타임아웃이면 TIMEOUT, 그 외 실패면 FETCH_FAIL.
     } catch (e) { return E(req, e.name === 'AbortError' ? 'TIMEOUT' : 'FETCH_FAIL', 'Fetch failed', 502); }
 }
 
@@ -1127,63 +1254,99 @@ async function getCityBlocklist(env, city) {
 //
 // 디바이스 fingerprint (UA + 화면 크기 + tz hash) → 같은 키로 6대 이상이면 가장 오래된 거 자동 비활성.
 
+// ════════ HMAC(서명) 유틸 — 위조 불가능한 토큰/웹훅 검증에 사용 ════════
+// HMAC = 비밀 키 + 메시지 → 고정 길이의 "서명". 키를 모르면 같은 서명을 못 만든다.
+// 그래서 "이 데이터가 진짜 우리가/결제사가 보낸 것"인지 증명할 수 있다.
+
+// b64url: 바이트 → URL 안전 Base64 문자열(+ 와 / 대신 - 와 _, 끝 = 제거).
 function b64url(buf) {
     const arr = new Uint8Array(buf);
     let s = '';
+    // 각 바이트를 문자로 이어붙임.
     for (let i = 0; i < arr.length; i++) s += String.fromCharCode(arr[i]);
+    // btoa = Base64 인코딩. 이어서 URL 안전 문자로 치환.
     return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
+// b64urlDecode: 위의 역변환(URL 안전 Base64 → 바이트 배열).
 function b64urlDecode(s) {
+    // 치환을 되돌리고,
     s = s.replace(/-/g, '+').replace(/_/g, '/');
+    // 길이를 4의 배수로 맞추도록 = 패딩 복원.
     while (s.length % 4) s += '=';
+    // atob = Base64 디코딩 → 각 문자를 바이트로.
     return Uint8Array.from(atob(s), c => c.charCodeAt(0));
 }
+// hmacSign: 비밀 key 로 메시지 msg 의 HMAC-SHA256 서명을 만들어 b64url 로 반환.
 async function hmacSign(key, msg) {
+    // 문자열 키를 WebCrypto 가 쓸 수 있는 CryptoKey 로 가져옴(sign 용도).
     const k = await crypto.subtle.importKey('raw', new TextEncoder().encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    // 실제 서명 계산.
     const sig = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode(msg));
     return b64url(sig);
 }
+// hmacVerify: 받은 서명 sig 가 우리가 계산한 서명과 같은지 확인.
 async function hmacVerify(key, msg, sig) {
+    // 우리가 직접 다시 서명해 보고,
     const expected = await hmacSign(key, msg);
     // timing-safe compare
+    // 타이밍 안전 비교 — 길이가 다르면 즉시 false.
+    // (한 글자씩 빨리 끊지 않고 전부 비교해, 비교에 걸린 시간으로 서명을 추측하는 공격을 막음)
     if (expected.length !== sig.length) return false;
     let diff = 0;
+    // ^ = XOR(다르면 1), |= 로 차이를 누적. 모두 같아야 diff 가 0.
     for (let i = 0; i < expected.length; i++) diff |= expected.charCodeAt(i) ^ sig.charCodeAt(i);
     return diff === 0;
 }
+// issueToken: 서버가 payload 를 담아 서명한 짧은 토큰 발급(1시간 유효). "머리.서명" 형태.
 async function issueToken(env, payload) {
+    // 서명 키가 없으면 발급 불가.
     if (!env.LICENSE_SIGNING_KEY) throw new Error('LICENSE_SIGNING_KEY not configured');
+    // exp = 만료 시각(현재 초 + 3600초 = 1시간 뒤).
     const exp = Math.floor(Date.now() / 1000) + 3600;     // 1시간
+    // payload 에 exp 를 합쳐 본문 구성.
     const body = { ...payload, exp };
+    // 본문을 JSON→바이트→b64url 로 인코딩해 "머리(head)"로.
     const head = b64url(new TextEncoder().encode(JSON.stringify(body)));
+    // 머리를 서명.
     const sig = await hmacSign(env.LICENSE_SIGNING_KEY, head);
+    // "머리.서명" 형태로 합침(JWT 와 비슷한 구조).
     return `${head}.${sig}`;
 }
+// verifyToken: issueToken 이 만든 토큰이 위조·만료되지 않았는지 확인하고 본문 반환.
 async function verifyToken(env, token) {
     if (!token || !env.LICENSE_SIGNING_KEY) return null;
+    // "머리.서명" 을 점(.)으로 분리.
     const parts = token.split('.');
     if (parts.length !== 2) return null;
+    // 서명이 맞는지 확인(위조 방지).
     const ok = await hmacVerify(env.LICENSE_SIGNING_KEY, parts[0], parts[1]);
     if (!ok) return null;
     try {
+        // 머리를 디코딩해 본문 복원.
         const body = JSON.parse(new TextDecoder().decode(b64urlDecode(parts[0])));
+        // 만료됐으면 무효.
         if (!body.exp || body.exp < Math.floor(Date.now() / 1000)) return null;
         return body;
     } catch { return null; }
 }
 
 // 라이선스 키 → KV: { plan: 'pro', issuedAt, devices: [fp, ...], status: 'active'|'cancelled' }
+// readLicense: KV 저장소에서 라이선스 키의 상태(플랜/기기/활성여부)를 읽음.
 async function readLicense(env, licenseKey) {
     if (!env.AURA_KV || !licenseKey) return null;
+    // KV 키 형식은 "license:<키>". 저장된 값은 JSON 문자열.
     const raw = await env.AURA_KV.get(`license:${licenseKey}`);
+    // 있으면 객체로 파싱, 없으면 null.
     return raw ? JSON.parse(raw) : null;
 }
 // 라이선스 KV 보관 정책:
 //   active        → 90일 TTL (lastSeen 갱신 시 매번 연장 — 사용 중이면 살아있음)
 //   cancelled/refunded → 7일 TTL (감사·환불기간 지나면 자동 정리)
 //   기본          → 90일
+// writeLicense: 라이선스 상태를 KV 에 저장. 상태에 따라 보관기간(TTL)을 달리함.
 async function writeLicense(env, licenseKey, data) {
     if (!env.AURA_KV) return;
+    // 취소/환불이면 7일만 보관(감사 후 자동 삭제), 그 외 활성은 90일.
     const ttl = (data && (data.status === 'cancelled' || data.status === 'refunded'))
         ? 7 * 86400
         : 90 * 86400;
@@ -1191,27 +1354,34 @@ async function writeLicense(env, licenseKey, data) {
 }
 
 // POST /license/validate { licenseKey, deviceFp } → { token, plan, expires }
+// licenseValidate: 앱이 라이선스 키+기기지문을 보내 유효성 확인 후 1시간짜리 토큰을 받는다.
 async function licenseValidate(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'BAD_METHOD', 'POST only', 405);
     let body;
     try { body = await req.json(); } catch { return E(req, 'BAD_JSON', 'Bad JSON'); }
+    // 입력 정리(키 80자, 기기지문 64자 제한).
     const licenseKey = clean(body.licenseKey, 80);
     const deviceFp = clean(body.deviceFp, 64);
     if (!licenseKey || !deviceFp) return E(req, 'BAD_INPUT', 'Missing licenseKey/deviceFp');
 
+    // 키가 활성 상태가 아니면 거부(402/403).
     const lic = await readLicense(env, licenseKey);
     if (!lic || lic.status !== 'active') return E(req, 'NOT_ACTIVE', 'License not active', 403);
 
     // device bind — 5대까지. 6번째는 가장 오래된 거 교체
+    // 기기 등록 — 한 키에 최대 5대. 새 기기면 목록 앞에 추가하고 초과분은 잘라 오래된 기기 밀어냄.
     const MAX_DEVICES = 5;
     lic.devices = lic.devices || [];
     if (!lic.devices.includes(deviceFp)) {
+        // unshift = 배열 맨 앞에 추가.
         lic.devices.unshift(deviceFp);
+        // 길이를 MAX 로 잘라 오래된 기기 제거.
         if (lic.devices.length > MAX_DEVICES) lic.devices.length = MAX_DEVICES;
         lic.lastSeen = Date.now();
         await writeLicense(env, licenseKey, lic);
     }
 
+    // 확인 완료 → 서명된 토큰 발급(앱은 매시간 이걸로 재검증).
     const token = await issueToken(env, { lk: licenseKey, dfp: deviceFp, plan: lic.plan || 'pro' });
     return J(req, { token, plan: lic.plan || 'pro', expires: Math.floor(Date.now() / 1000) + 3600 });
 }
@@ -1231,20 +1401,28 @@ async function licenseRedeem(req, env, ctx) {
 
 // POST /license/webhook — Lemon Squeezy 결제/취소 webhook
 // 시그니처 검증: x-signature 헤더 = HMAC-SHA256(env.LEMONSQUEEZY_WEBHOOK_SECRET, body)
+// licenseWebhook: 결제사(Lemon Squeezy)가 결제/취소를 알려오는 웹훅.
+// 핵심: 아무나 못 부르게 x-signature(HMAC 서명)로 "진짜 결제사가 보낸 것"인지 먼저 검증.
 async function licenseWebhook(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'BAD_METHOD', 'POST only', 405);
+    // 웹훅 검증용 비밀이 없으면 처리 불가.
     if (!env.LEMONSQUEEZY_WEBHOOK_SECRET) return E(req, 'NOT_CONFIGURED', 'Webhook secret missing', 503);
+    // 본문 원문(raw)을 그대로 읽어야 서명 계산이 일치한다(파싱 전 원문 기준).
     const raw = await req.text();
+    // 결제사가 보낸 서명.
     const sig = req.headers.get('x-signature') || '';
     const expected = await hmacSign(env.LEMONSQUEEZY_WEBHOOK_SECRET, raw);
     // LS는 hex 시그니처. 위 hmacSign 은 b64url. → hex 비교 따로
+    // 즉시실행 함수(IIFE)로 hex 형식 서명을 따로 계산한다.
     const hexExpected = await (async () => {
         const k = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.LEMONSQUEEZY_WEBHOOK_SECRET), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
         const s = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode(raw));
         return Array.from(new Uint8Array(s)).map(b => b.toString(16).padStart(2, '0')).join('');
     })();
+    // 서명 불일치면 위조 요청 → 401 거부.
     if (sig !== hexExpected) return E(req, 'BAD_SIG', 'Invalid signature', 401);
 
+    // 서명 통과 후에만 본문을 신뢰하고 파싱.
     const data = JSON.parse(raw);
     const eventName = data?.meta?.event_name || '';
     const licenseKey = data?.data?.attributes?.key || data?.meta?.custom_data?.license_key || '';
@@ -1641,6 +1819,15 @@ async function cafeSubmit(req, env, ctx) {
 // 무료 인프라: D1 (토큰 + 사용자) + Resend (이메일, 옵션). RESEND_KEY 미설정 시
 // 응답 body 에 magic link 노출 — 솔로 파운더 / 베타 단계 fallback.
 
+// ════════ 매직 링크 로그인(비밀번호 없는 인증) — 이 백엔드의 핵심 ════════
+// 흐름 요약:
+//   1) 사용자가 이메일을 보내면(/auth/request) 서버가 무작위 토큰을 만들고,
+//      토큰의 "해시"만 DB 에 저장한 뒤(원문은 저장 안 함) 메일로 링크를 보낸다.
+//   2) 사용자가 메일의 링크를 클릭(/auth/verify?token=...)하면 서버가 토큰을
+//      해시해 DB 와 대조 → 맞고 · 미사용 · 미만료면 로그인 성공, 토큰은 소각(1회용).
+//   3) 로그인 성공 시 별도의 "세션 토큰"을 발급해 이후 요청 인증에 쓴다.
+// 왜 안전한가: 토큰은 무작위(추측 불가) + 15분 만료 + 단 1회 사용 + DB엔 해시만.
+// MAGIC_TOKEN_TTL_MS = 매직 토큰 유효 시간(15분). TTL = Time To Live.
 const MAGIC_TOKEN_TTL_MS = 15 * 60 * 1000;   // 15 분
 
 // Canonical site origin. saudade.app is the planned custom domain but
@@ -1648,55 +1835,83 @@ const MAGIC_TOKEN_TTL_MS = 15 * 60 * 1000;   // 15 분
 // deployed URL) so magic links, Atom feed self-links, and digest
 // landing pages don't 404. Operator sets env.SITE_ORIGIN once the
 // custom domain is live: `wrangler secret put SITE_ORIGIN`.
+// siteOrigin: 링크에 쓸 이 사이트의 기준 주소를 반환.
 function siteOrigin(env) {
+    // 환경변수 SITE_ORIGIN 이 있으면 그것, 없으면 기본 배포 주소.
     const o = (env && env.SITE_ORIGIN) || 'https://saudade.pages.dev';
+    // 끝의 슬래시(/)들을 제거해 깔끔한 주소로. \/+$ = 끝에 붙은 슬래시들.
     return o.replace(/\/+$/, '');
 }
 
+// genToken: 추측 불가능한 무작위 매직 토큰 생성(32바이트 → 64자리 16진수).
 function genToken() {
     // 32 byte hex token
+    // Uint8Array(32) = 0~255 값 32개 배열.
     const buf = new Uint8Array(32);
+    // crypto.getRandomValues = 암호학적으로 안전한 난수로 배열을 채움(예측 불가).
     crypto.getRandomValues(buf);
+    // 각 바이트를 2자리 16진수로 바꿔 이어붙임 → 64글자 토큰.
     return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+// genUserId: 짧고 URL 안전한 사용자 ID 생성(nanoid 방식, 21자).
 function genUserId() {
     // 21 char nanoid-like
+    // 사용할 문자 집합.
     const alphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict';
     const buf = new Uint8Array(21);
+    // 역시 암호학적 난수로 채움.
     crypto.getRandomValues(buf);
+    // 각 바이트를 문자집합 길이로 나눈 나머지(%)로 문자 하나씩 골라 21자 문자열 완성.
     return Array.from(buf).map(b => alphabet[b % alphabet.length]).join('');
 }
 
+// isValidEmail: 이메일 형식이 그럴듯한지 간단 검사(문자열 + @있고 .있고 200자 이하).
 function isValidEmail(s) {
+    // \S = 공백 아닌 문자. "@ 앞뒤에 공백 없는 글자 + 점 도메인" 패턴.
     return typeof s === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) && s.length <= 200;
 }
 
 // POST /auth/request  body: { email }  →  magic link 발송 (또는 응답)
+// authRequest: 로그인 링크 요청 처리. POST /auth/request, 본문 { email }.
 async function authRequest(req, env, ctx) {
+    // POST 만 허용. 아니면 405.
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
+    // DB(D1)가 연결 안 됐으면 아직 인증 못 엶 → 503.
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open. Try again later.', 503);
 
+    // 요청 본문(JSON)을 파싱. 형식 오류면 catch 로 400.
     let body;
     try { body = await req.json(); }
     catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
 
+    // 이메일을 정리(clean)하고 소문자로 통일.
     const email = clean(body.email, 200).toLowerCase();
+    // 형식이 이상하면 거부.
     if (!isValidEmail(email)) return E(req, 'BAD_EMAIL', 'Email looks invalid', 400);
 
+    // 무작위 토큰 생성.
     const token = genToken();
+    // DB 엔 토큰 원문이 아니라 "해시"만 저장(유출돼도 원문 토큰을 알 수 없게).
     const tokenHash = await sha(token);
     const now = Date.now();
+    // 만료 시각 = 지금 + 15분.
     const expiresAt = now + MAGIC_TOKEN_TTL_MS;
 
     try {
+        // D1(서버리스 SQLite)에 매직 토큰 저장.
+        // prepare() = SQL 준비, ? = 자리표시자(placeholder), bind() = 그 자리에 값 주입.
+        // ?/bind 방식이 핵심: 값을 SQL 문자열에 직접 이어붙이지 않아 "SQL 인젝션"을 원천 차단.
+        // INSERT INTO 테이블(열들) VALUES(값들) = 새 행 추가.
         await env.SAUDADE_DB.prepare(
             'INSERT INTO magic_tokens (token_hash, email, created_at, expires_at) VALUES (?, ?, ?, ?)'
         ).bind(tokenHash, email, now, expiresAt).run();
     } catch (e) {
+        // 저장 실패 시 500.
         return E(req, 'DB_INSERT', 'Could not request link', 500);
     }
 
+    // 사용자에게 보낼 링크. 여기엔 (해시가 아닌) 토큰 원문이 들어간다.
     const link = siteOrigin(env) + '/?token=' + token;
 
     // SECURITY: returning the magic link in the HTTP response means anyone
@@ -1705,9 +1920,13 @@ async function authRequest(req, env, ctx) {
     // mode is a deliberate localhost/solo escape hatch ONLY, gated behind
     // an explicit opt-in flag. In production (flag unset) we never expose
     // the link: if email can't be sent, we error and the user retries.
+    // inlineOk = 개발/솔로용 탈출구 플래그. 켜져 있을 때만 응답에 링크를 직접 노출한다.
+    // (운영에서 켜면 누구나 남의 이메일로 로그인 링크를 받아 계정 탈취 가능 → 절대 켜면 안 됨)
     const inlineOk = env.MAGIC_INLINE_OK === '1';
+    // 이메일 발송용 API 키(두 가지 이름 중 있는 것 사용).
     const resendKey = env.RESEND_KEY || env.RESEND_API_KEY;   // accept either secret name
 
+    // 이메일 키가 없으면: 개발모드면 링크를 그냥 돌려주고, 운영이면 에러(링크 절대 노출 안 함).
     if (!resendKey) {
         if (inlineOk) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt });
         return E(req, 'EMAIL_NOT_CONFIGURED',
@@ -1716,12 +1935,14 @@ async function authRequest(req, env, ctx) {
 
     // Resend 이메일 발송
     try {
+        // 외부 이메일 서비스(Resend) API 호출. Authorization 헤더에 비밀 키를 담아 인증.
         const r = await fetchT('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + resendKey,
                 'Content-Type': 'application/json'
             },
+            // 보낼 메일 내용: 보내는 이/받는 이/제목/본문(링크 포함).
             body: JSON.stringify({
                 from:    env.RESEND_FROM || 'Saudade <desk@saudade.app>',
                 to:      [email],
@@ -1729,6 +1950,7 @@ async function authRequest(req, env, ctx) {
                 text:    `Click to sign in. Link expires in 15 minutes.\n\n${link}\n\n— Saudade`
             })
         }, 10000);
+        // 발송 실패면: 개발모드는 링크 반환, 운영은 502.
         if (!r.ok) {
             if (inlineOk) return J(req, { ok: true, mode: 'inline', link, expires_at: expiresAt, warn: 'email_failed' });
             return E(req, 'EMAIL_SEND_FAILED', 'Could not send sign-in email. Please try again.', 502);
@@ -1743,52 +1965,70 @@ async function authRequest(req, env, ctx) {
 }
 
 // GET /auth/verify?token=XXX  →  user object + 1회용 세션 ID
+// authVerify: 링크 클릭 처리. GET /auth/verify?token=... → 로그인 확정 + 세션 발급.
 async function authVerify(req, env, ctx) {
+    // GET 만 허용.
     if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
 
+    // URL 의 쿼리스트링에서 token 값을 꺼냄.
     const u = new URL(req.url);
     const token = (u.searchParams.get('token') || '').trim();
+    // 토큰 길이는 정확히 64자여야 함(genToken 이 만든 길이). 아니면 거부.
     if (!token || token.length !== 64) return E(req, 'BAD_TOKEN', 'Token invalid', 400);
 
+    // 받은 토큰을 해시해서 DB의 해시와 대조할 준비.
     const tokenHash = await sha(token);
     const now = Date.now();
 
     try {
+        // SELECT 열들 FROM 테이블 WHERE 조건 = 조건에 맞는 행 1개 조회. first()=첫 행.
         const row = await env.SAUDADE_DB.prepare(
             'SELECT email, expires_at, used_at FROM magic_tokens WHERE token_hash = ?'
         ).bind(tokenHash).first();
 
+        // 토큰 검증 3단계 — 이 셋을 통과해야 로그인 허용:
+        // (1) 존재하지 않으면 404.
         if (!row)              return E(req, 'BAD_TOKEN', 'Token not found',  404);
+        // (2) 이미 사용된 토큰이면 410(1회용 원칙).
         if (row.used_at)       return E(req, 'USED_TOKEN','Token already used', 410);
+        // (3) 만료됐으면 410.
         if (row.expires_at < now) return E(req, 'EXPIRED', 'Token expired',     410);
 
         const email = row.email;
 
         // mark used (single-use)
+        // 사용 처리(1회용) — used_at 에 현재 시각을 기록해 재사용을 막는다.
+        // UPDATE 테이블 SET 열=값 WHERE 조건 = 기존 행 수정.
         await env.SAUDADE_DB.prepare(
             'UPDATE magic_tokens SET used_at = ? WHERE token_hash = ?'
         ).bind(now, tokenHash).run();
 
         // user 존재 여부 확인 / 신규 생성
+        // 이 이메일의 사용자가 이미 있는지 조회.
         let user = await env.SAUDADE_DB.prepare(
             'SELECT id, email, edition, tier, created_at FROM users WHERE email = ?'
         ).bind(email).first();
 
+        // 없으면 새 사용자 생성(기본 edition=en, tier=free).
         if (!user) {
             const id = genUserId();
             await env.SAUDADE_DB.prepare(
                 'INSERT INTO users (id, email, edition, tier, created_at, last_login_at) VALUES (?, ?, ?, ?, ?, ?)'
             ).bind(id, email, 'en', 'free', now, now).run();
+            // 방금 만든 사용자 객체를 메모리에도 구성.
             user = { id, email, edition: 'en', tier: 'free', created_at: now };
         } else {
+            // 이미 있으면 마지막 로그인 시각만 갱신.
             await env.SAUDADE_DB.prepare(
                 'UPDATE users SET last_login_at = ? WHERE id = ?'
             ).bind(now, user.id).run();
         }
 
         // Issue a server-side session so the user can revoke it later.
+        // 서버측 세션을 발급 — 사용자가 나중에 개별 기기 로그아웃(취소)할 수 있게.
         const session = await issueSession(env, req, user.id);
+        // 성공: 사용자 정보 + 세션 토큰 반환.
         return J(req, { ok: true, user, session });
     } catch (e) {
         return E(req, 'DB_ERROR', 'Verify failed', 500);
@@ -1796,8 +2036,10 @@ async function authVerify(req, env, ctx) {
 }
 
 // ─── permission revocation — sessions, export, delete, consent ────────────
+// 세션 유효기간 = 30일. 세션 = 로그인 후 신원을 기억하는 서버측 표.
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;   // 30 days
 
+// genSessionToken: 세션용 무작위 토큰(매직 토큰과 동일 방식, 별개 용도).
 function genSessionToken() {
     const buf = new Uint8Array(32);
     crypto.getRandomValues(buf);
@@ -1821,65 +2063,92 @@ function shortLabelFromUA(ua) {
     return browser + ' · ' + os;
 }
 
+// issueSession: 로그인 성공 후 세션을 만들어 DB 에 저장하고 토큰을 반환.
 async function issueSession(env, req, userId) {
+    // 무작위 세션 토큰 생성.
     const token = genSessionToken();
+    // DB엔 토큰 원문 대신 해시(id)만 저장. (매직 토큰과 같은 "해시만 저장" 원칙)
     const id = await sha(token);
     const now = Date.now();
+    // 기기 식별용 UA / IP 수집.
     const ua = req.headers.get('User-Agent') || '';
     const ip = req.headers.get('CF-Connecting-IP') || req.headers.get('X-Forwarded-For') || '';
+    // 개인정보 보호를 위해 UA/IP 도 원문이 아니라 해시로 저장.
     const uaHash = ua ? await sha(ua) : null;
+    // IP 해시엔 날짜를 섞어(salt) 같은 IP라도 날마다 다른 해시가 되게 함.
     const ipHash = ip ? await sha(ip + ':' + new Date().toISOString().slice(0, 10)) : null;
+    // 사람이 읽을 수 있는 기기 라벨(예: "Chrome · macOS").
     const label  = shortLabelFromUA(ua);
 
+    // 세션 행 저장(만료시각 = 지금+30일).
     await env.SAUDADE_DB.prepare(
         'INSERT INTO sessions (id, user_id, created_at, last_used_at, expires_at, ua_hash, ip_hash, label) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
     ).bind(id, userId, now, now, now + SESSION_TTL_MS, uaHash, ipHash, label).run();
 
+    // 클라이언트엔 토큰 원문을 돌려준다(이후 요청의 신분증).
     return { token, expires_at: now + SESSION_TTL_MS, label };
 }
 
+// readSession: 세션 토큰이 유효한지 확인하고 세션 행을 반환(없으면 null).
 async function readSession(env, sessionToken) {
+    // 토큰이 없거나 형식(64자)이 아니면 무효.
     if (!sessionToken || typeof sessionToken !== 'string' || sessionToken.length !== 64) return null;
+    // 토큰을 해시해 DB의 id(=해시)와 대조.
     const id = await sha(sessionToken);
     const row = await env.SAUDADE_DB.prepare(
         'SELECT id, user_id, created_at, last_used_at, expires_at, label, revoked_at FROM sessions WHERE id = ?'
     ).bind(id).first();
+    // 없으면 무효.
     if (!row) return null;
+    // 사용자가 로그아웃(취소)한 세션이면 무효.
     if (row.revoked_at) return null;
+    // 만료됐으면 무효.
     if (row.expires_at && row.expires_at < Date.now()) return null;
     return row;
 }
 
+// authedUser: 요청의 Authorization 헤더로 현재 로그인 사용자를 알아낸다(핵심 인증 관문).
 async function authedUser(req, env) {
+    // "Authorization: Bearer <토큰>" 형식에서 토큰만 추출.
     const auth = req.headers.get('Authorization') || '';
     const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : null;
+    // 세션 유효성 확인.
     const session = await readSession(env, token);
     if (!session) return null;
     // touch last_used_at (best-effort, no await on response)
+    // 마지막 사용 시각 갱신(실패해도 무시 — 부가 기능).
     try {
         await env.SAUDADE_DB.prepare(
             'UPDATE sessions SET last_used_at = ? WHERE id = ?'
         ).bind(Date.now(), session.id).run();
     } catch (e) {}
+    // 세션의 user_id 로 사용자 정보 조회.
     const user = await env.SAUDADE_DB.prepare(
         'SELECT id, email, edition, tier, created_at FROM users WHERE id = ?'
     ).bind(session.user_id).first();
     if (!user) return null;
+    // { 사용자, 세션 } 을 함께 반환.
     return { user, session };
 }
 
 // GET /auth/sessions — list active sessions for current user
+// authSessions: 현재 사용자의 활성 세션(로그인된 기기) 목록을 돌려준다.
 async function authSessions(req, env, ctx) {
     if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
+    // 로그인 확인. 안 됐으면 401.
     const ctxAuth = await authedUser(req, env);
     if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
 
+    // 이 사용자의 살아있는(취소 안 됨 + 미만료) 세션들을 최근 사용순으로 조회.
+    // AND = 여러 조건 동시 만족, ORDER BY ... DESC = 내림차순 정렬. all()=여러 행.
     const rows = await env.SAUDADE_DB.prepare(
         'SELECT id, label, created_at, last_used_at, expires_at FROM sessions WHERE user_id = ? AND revoked_at IS NULL AND expires_at > ? ORDER BY last_used_at DESC'
     ).bind(ctxAuth.user.id, Date.now()).all();
 
+    // 결과를 클라이언트용으로 가공. map() = 각 행을 새 객체로 변환.
     const list = (rows.results || []).map(r => ({
+        // id_short = 식별용 앞 8자만(전체 노출 안 함). is_current = 지금 쓰는 세션인지.
         id_short:    r.id.slice(0, 8),
         is_current:  r.id === ctxAuth.session.id,
         label:       r.label || 'Unknown device',
@@ -1891,12 +2160,15 @@ async function authSessions(req, env, ctx) {
 }
 
 // POST /auth/signout — revoke current session only
+// authSignOut: 현재 기기의 세션만 로그아웃(취소)한다.
 async function authSignOut(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
     const ctxAuth = await authedUser(req, env);
+    // 이미 로그아웃 상태면 그냥 성공으로 응답(idempotent = 여러 번 불러도 결과 같음).
     if (!ctxAuth) return J(req, { ok: true, already: true });   // idempotent
 
+    // 현재 세션에 revoked_at(취소 시각) 기록 → 이후 readSession 에서 무효 처리됨.
     await env.SAUDADE_DB.prepare(
         'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE id = ? AND revoked_at IS NULL'
     ).bind(Date.now(), 'user', ctxAuth.session.id).run();
@@ -1905,6 +2177,8 @@ async function authSignOut(req, env, ctx) {
 }
 
 // POST /auth/signout-all — revoke every session and pending magic link for this user
+// authSignOutAll: 이 사용자의 모든 기기 세션 + 미사용 매직 링크를 전부 무효화.
+// (기기 분실/해킹 의심 시 "모든 기기에서 로그아웃".)
 async function authSignOutAll(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
@@ -1912,11 +2186,13 @@ async function authSignOutAll(req, env, ctx) {
     if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
 
     const now = Date.now();
+    // 이 사용자의 취소 안 된 세션을 전부 취소.
     await env.SAUDADE_DB.prepare(
         'UPDATE sessions SET revoked_at = ?, revoked_by = ? WHERE user_id = ? AND revoked_at IS NULL'
     ).bind(now, 'user_all', ctxAuth.user.id).run();
 
     // Also burn every unused magic link for this email (in case attacker has it).
+    // 공격자가 아직 안 쓴 매직 링크를 갖고 있을 수 있으니, 미사용 링크도 전부 소각.
     try {
         await env.SAUDADE_DB.prepare(
             'UPDATE magic_tokens SET used_at = ? WHERE email = ? AND used_at IS NULL'
@@ -1927,15 +2203,19 @@ async function authSignOutAll(req, env, ctx) {
 }
 
 // GET /auth/export — JSON dump of everything we hold for this user (GDPR Art.20)
+// authExport: 사용자가 자기 데이터를 통째로 내려받게 함(GDPR 20조 데이터 이동권).
 async function authExport(req, env, ctx) {
     if (req.method !== 'GET') return E(req, 'METHOD', 'GET required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
     const ctxAuth = await authedUser(req, env);
     if (!ctxAuth) return E(req, 'UNAUTHORIZED', 'Sign in required', 401);
 
+    // 로그인한 본인의 id/email 로만 조회(남의 데이터 못 봄).
     const uid   = ctxAuth.user.id;
     const email = ctxAuth.user.email;
 
+    // safeAll: 쿼리 실패(테이블 없음 등)해도 빈 배열을 돌려주는 안전 래퍼.
+    // ...params = 가변 인자를 배열로 모음. bind(...params) 로 다시 펼쳐 넣음.
     async function safeAll(sql, ...params) {
         try {
             const r = await env.SAUDADE_DB.prepare(sql).bind(...params).all();
@@ -1979,6 +2259,7 @@ async function authExport(req, env, ctx) {
 // POST /auth/delete  body: { confirm: 'DELETE', reason?: string }
 //   Hard-deletes the user row, every session, every magic token, and every UGC row tied to email.
 //   Writes a hashed-only tombstone to deletion_log for audit.
+// authDelete: 계정과 관련 데이터를 영구 삭제(GDPR 잊힐 권리). 본문에 confirm:'DELETE' 필요.
 async function authDelete(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD', 'POST required', 405);
     if (!env.SAUDADE_DB) return E(req, 'NO_DB', 'Auth not yet open.', 503);
@@ -1989,6 +2270,7 @@ async function authDelete(req, env, ctx) {
     try { body = await req.json(); }
     catch (e) { return E(req, 'BAD_JSON', 'Invalid JSON', 400); }
 
+    // 실수 방지: 정확히 "DELETE" 라고 입력해야 진행.
     if ((body.confirm || '').toString() !== 'DELETE') {
         return E(req, 'BAD_CONFIRM', 'Type DELETE to confirm', 400);
     }
@@ -1997,10 +2279,13 @@ async function authDelete(req, env, ctx) {
     const email  = ctxAuth.user.email;
     const now    = Date.now();
     const reason = clean(body.reason, 500) || null;
+    // 감사 로그엔 원문이 아니라 해시만 남긴다(누가 지웠는지 확인은 되지만 신원 복원은 불가).
     const uidHash   = await sha(uid);
     const emailHash = await sha(email);
 
     // Best-effort cascade. SQLite/D1 lacks cross-table FKs guarantees here.
+    // 여러 테이블에서 이 사용자의 흔적을 순서대로 지운다.
+    // D1(SQLite)은 여기서 테이블 간 외래키 연쇄삭제를 보장하지 않으므로 하나씩 직접 지움.
     const deletes = [
         ['DELETE FROM sessions      WHERE user_id = ?', uid],
         ['DELETE FROM magic_tokens  WHERE email   = ?', email],
@@ -2011,11 +2296,13 @@ async function authDelete(req, env, ctx) {
         ['DELETE FROM user_following_cities WHERE user_id = ?', uid],
         ['DELETE FROM users           WHERE id = ?', uid]
     ];
+    // 각 DELETE 문 실행. 아직 없는 테이블이면 조용히 건너뜀.
     for (const [sql, p] of deletes) {
         try { await env.SAUDADE_DB.prepare(sql).bind(p).run(); }
         catch (e) { /* table may not exist in early deployments */ }
     }
 
+    // 삭제 사실을 해시만 담은 "묘비(tombstone)" 로그로 남김(법적 감사 대비).
     try {
         await env.SAUDADE_DB.prepare(
             'INSERT INTO deletion_log (user_id_hash, email_hash, requested_at, deleted_at, reason) VALUES (?, ?, ?, ?, ?)'
@@ -3670,16 +3957,20 @@ function billingNotConfigured(req) {
         'Subscriptions are not yet enabled — patron contributions accepted via the link on the support page.', 503);
 }
 
+// readUserFromAuth: 결제 계열에서 쓰는 간단 인증. Authorization: Bearer <user_id> 로 사용자 조회.
 async function readUserFromAuth(req, env) {
     // Magic Link auth pattern: client carries user id in localStorage and
     // sends it in Authorization: Bearer <user_id>. Simple. Sessions table
     // is a v2 backlog (see schema/auth.sql comment).
+    // Authorization 헤더에서 Bearer 뒤 값을 정규식으로 추출.
     const auth = req.headers.get('authorization') || '';
     const m = /^Bearer\s+(.+)$/i.exec(auth);
     if (!m) return null;
+    // m[1] = 정규식 첫 번째 캡처 그룹(= user id).
     const id = m[1].trim();
     if (!env.SAUDADE_DB) return null;
     try {
+        // 그 id 의 사용자 조회.
         const row = await env.SAUDADE_DB.prepare(
             'SELECT id, email, edition, tier FROM users WHERE id = ?'
         ).bind(id).first();
@@ -3687,20 +3978,26 @@ async function readUserFromAuth(req, env) {
     } catch (e) { return null; }
 }
 
+// billingCheckout: Stripe 결제 페이지 URL 을 만들어 반환(구독 시작).
 async function billingCheckout(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
+    // Stripe 키가 없으면 결제 비활성(무료 모드).
     if (!env.STRIPE_KEY) return billingNotConfigured(req);
 
+    // 로그인 확인.
     const user = await readUserFromAuth(req, env);
     if (!user) return E(req, 'AUTH_REQUIRED', 'Sign in first.', 401);
 
     let body = {};
     try { body = await req.json(); } catch (e) {}
+    // 요청한 플랜(기본 subscriber). patron 이면 후원가 price 사용.
     const plan = (body.plan || 'subscriber').toLowerCase();
     const priceId = plan === 'patron' ? env.STRIPE_PRICE_PATRON : env.STRIPE_PRICE_SUBSCRIBER;
     if (!priceId) return billingNotConfigured(req);
 
+    // 성공/취소 후 돌아올 주소의 기준 origin.
     const origin = new URL(req.url).origin;
+    // Stripe 는 폼(x-www-form-urlencoded) 형식으로 파라미터를 받는다. URLSearchParams 로 구성.
     const params = new URLSearchParams({
         mode: 'subscription',
         'line_items[0][price]': priceId,
@@ -3715,6 +4012,7 @@ async function billingCheckout(req, env, ctx) {
     });
 
     try {
+        // Stripe 결제 세션 생성 API 호출. 비밀 키는 Authorization 헤더로.
         const res = await fetch('https://api.stripe.com/v1/checkout/sessions', {
             method: 'POST',
             headers: {
@@ -3724,13 +4022,16 @@ async function billingCheckout(req, env, ctx) {
             body: params.toString()
         });
         const j = await res.json();
+        // 실패면 Stripe 오류 메시지 전달.
         if (!res.ok) return E(req, 'STRIPE_ERROR', j.error?.message || 'Checkout failed', 502);
+        // 성공: 사용자를 보낼 결제 URL 반환.
         return J(req, { ok: true, url: j.url });
     } catch (e) {
         return E(req, 'STRIPE_FETCH_FAILED', 'Could not reach Stripe.', 502);
     }
 }
 
+// billingPortal: 이미 구독 중인 사용자의 Stripe 고객 포털(결제수단/해지) URL 반환.
 async function billingPortal(req, env, ctx) {
     if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
     if (!env.STRIPE_KEY) return billingNotConfigured(req);
@@ -3739,6 +4040,7 @@ async function billingPortal(req, env, ctx) {
     if (!user) return E(req, 'AUTH_REQUIRED', 'Sign in first.', 401);
     if (!env.SAUDADE_DB) return billingNotConfigured(req);
 
+    // 이 사용자의 가장 최근 구독에서 Stripe 고객 ID 를 찾는다. LIMIT 1 = 한 개만.
     const sub = await env.SAUDADE_DB.prepare(
         'SELECT stripe_customer_id FROM subscriptions WHERE user_id = ? ORDER BY created_at DESC LIMIT 1'
     ).bind(user.id).first();
@@ -3767,6 +4069,7 @@ async function billingPortal(req, env, ctx) {
     }
 }
 
+// billingMe: 현재 사용자의 등급(tier)+구독 상태를 알려줌(클라이언트 UI 노출 판단용).
 async function billingMe(req, env, ctx) {
     // Returns the caller's tier + subscription status. Used by the client to
     // gate UI without an extra round-trip. Unauthed callers get tier=free.
@@ -3780,26 +4083,33 @@ async function billingMe(req, env, ctx) {
     return J(req, { ok: true, tier: user.tier, signed_in: true, subscription: sub || null });
 }
 
+// billingWebhook: Stripe 가 결제/구독 상태 변화를 알려오는 웹훅. 서명 검증 후 DB 갱신.
 async function billingWebhook(req, env, ctx) {
     // Stripe webhook receiver. Verifies signature, then updates users.tier
     // and the subscriptions table on lifecycle events.
     if (req.method !== 'POST') return E(req, 'METHOD_NOT_ALLOWED', 'POST only', 405);
     if (!env.STRIPE_WEBHOOK_SECRET || !env.SAUDADE_DB) return billingNotConfigured(req);
 
+    // Stripe 서명 헤더 + 원문 본문(서명 계산은 원문 기준).
     const sig = req.headers.get('stripe-signature') || '';
     const raw = await req.text();
+    // 서명 검증 — 진짜 Stripe 가 보낸 것인지 확인. 실패면 400 거부.
     const verified = await verifyStripeSignature(raw, sig, env.STRIPE_WEBHOOK_SECRET);
     if (!verified) return E(req, 'BAD_SIGNATURE', 'Stripe signature invalid.', 400);
 
+    // 검증 통과 후 본문 파싱.
     let event;
     try { event = JSON.parse(raw); } catch (e) {
         return E(req, 'BAD_JSON', 'Webhook body not JSON.', 400);
     }
 
     try {
+        // 이벤트 종류(event.type)에 따라 처리 분기.
         switch (event.type) {
+            // 결제 완료 — 즉시 접근권을 주기 위해 등급을 subscriber 로 선반영.
             case 'checkout.session.completed': {
                 const s = event.data.object;
+                // 우리가 결제 시작 때 심어둔 user_id 회수.
                 const userId = s.client_reference_id || s.metadata?.user_id;
                 const customerId = s.customer;
                 const subId = s.subscription;
@@ -3812,6 +4122,7 @@ async function billingWebhook(req, env, ctx) {
                 }
                 break;
             }
+            // 구독 생성/변경 — subscriptions 표를 갱신하고 사용자 등급 조정.
             case 'customer.subscription.created':
             case 'customer.subscription.updated': {
                 const s = event.data.object;
@@ -3819,9 +4130,12 @@ async function billingWebhook(req, env, ctx) {
                 const plan = s.metadata?.plan || 'subscriber';
                 if (!userId) break;
                 const status = s.status;
+                // 활성/체험중이면 해당 플랜, 아니면 무료로.
                 const newTier = (status === 'active' || status === 'trialing')
                     ? plan
                     : 'free';
+                // UPSERT: 같은 id 가 있으면 갱신, 없으면 새로 삽입.
+                // ON CONFLICT(id) DO UPDATE ... excluded.열 = 새로 넣으려던 값. (SQLite 문법)
                 await env.SAUDADE_DB.prepare(
                     'INSERT INTO subscriptions (id, user_id, stripe_customer_id, status, plan, current_period_start, current_period_end, cancel_at_period_end, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET status = excluded.status, current_period_end = excluded.current_period_end, cancel_at_period_end = excluded.cancel_at_period_end, updated_at = excluded.updated_at'
                 ).bind(
@@ -3831,11 +4145,13 @@ async function billingWebhook(req, env, ctx) {
                     s.cancel_at_period_end ? 1 : 0,
                     Date.now(), Date.now()
                 ).run();
+                // 사용자 등급도 함께 갱신.
                 await env.SAUDADE_DB.prepare(
                     'UPDATE users SET tier = ? WHERE id = ?'
                 ).bind(newTier, userId).run();
                 break;
             }
+            // 구독 종료(해지) — 상태를 canceled 로, 사용자 등급을 free 로.
             case 'customer.subscription.deleted': {
                 const s = event.data.object;
                 const userId = s.metadata?.user_id;
@@ -3856,35 +4172,46 @@ async function billingWebhook(req, env, ctx) {
     return J(req, { received: true });
 }
 
+// verifyStripeSignature: Stripe 웹훅 서명이 진짜인지 HMAC 으로 검증(+ 재전송 공격 방지).
 async function verifyStripeSignature(rawBody, header, secret) {
     // Stripe signs as: t=ts,v1=hex(hmacsha256(ts.body, secret))
     if (!header) return false;
+    // "t=...,v1=..." 형태 헤더를 쉼표로 쪼개 { t, v1 } 객체로 모은다. reduce = 누적 처리.
     const parts = header.split(',').reduce((m, p) => {
         const [k, v] = p.split('=');
         if (!m[k]) m[k] = v;
         return m;
     }, {});
+    // t = 타임스탬프, v1 = Stripe 가 보낸 서명.
     const ts = parts.t;
     const v1 = parts.v1;
     if (!ts || !v1) return false;
+    // 서명 대상 = "타임스탬프.본문원문".
     const data = `${ts}.${rawBody}`;
     try {
         const enc = new TextEncoder();
+        // 비밀로 HMAC 키 준비.
         const key = await crypto.subtle.importKey(
             'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
         );
+        // 우리가 직접 서명 계산.
         const sig = await crypto.subtle.sign('HMAC', key, enc.encode(data));
+        // 16진수 문자열로 변환.
         const hex = [...new Uint8Array(sig)].map(b => b.toString(16).padStart(2, '0')).join('');
         // Reject events older than 5 minutes (replay protection)
+        // 타임스탬프가 5분(300초) 넘게 차이나면 오래된(가로챈) 요청으로 보고 거부.
         const drift = Math.abs(Math.floor(Date.now() / 1000) - parseInt(ts, 10));
         if (drift > 300) return false;
+        // 타이밍 안전 비교로 서명 일치 확인.
         return timingSafeEqual(hex, v1);
     } catch (e) { return false; }
 }
 
+// timingSafeEqual: 두 문자열을 "항상 끝까지" 비교(일치 위치로 시간이 새지 않게).
 function timingSafeEqual(a, b) {
     if (a.length !== b.length) return false;
     let r = 0;
+    // XOR 차이를 누적 — 하나라도 다르면 r 이 0 이 아님.
     for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i);
     return r === 0;
 }
