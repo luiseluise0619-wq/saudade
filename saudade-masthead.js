@@ -7,9 +7,12 @@
 // 3. ESC / saudade 워드마크 클릭 → 표지로 복귀
 'use strict';
 
+// IIFE — 로드 즉시 실행. 섹션별 마스트헤드(상단 제호) + 섹션 라우터 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_MASTHEAD) return;
 
+    // SECTIONS — dock 버튼 카테고리(visa/cafe/tz/trip) → 섹션 번호/페이지/다국어 이름.
     // dock data-cat → § 정보 (Handoff v2 §4 — tz/trip 재매핑)
     // 5 editions — each gets its own section name.
     const SECTIONS = {
@@ -31,6 +34,7 @@
         }
     };
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddMastheadStyles')) return;
         const s = document.createElement('style');
@@ -124,6 +128,7 @@ body.section-active::before { content: none !important; }
         document.head.appendChild(s);
     }
 
+    // ensureMasthead — 상단 마스트헤드 요소를 한 번만 만들고 워드마크/뒤로 버튼을 배선.
     function ensureMasthead() {
         let m = document.getElementById('sddMasthead');
         if (m) return m;
@@ -151,6 +156,7 @@ body.section-active::before { content: none !important; }
         return m;
     }
 
+    // applyMasthead — 해당 섹션의 번호/이름/페이지를 마스트헤드에 채운다(현재 언어).
     function applyMasthead(cat) {
         const sec = SECTIONS[cat];
         if (!sec) return;
@@ -161,6 +167,7 @@ body.section-active::before { content: none !important; }
         m.querySelector('.sdd-mast-page').textContent = sec.page;
     }
 
+    // setSection — 섹션 진입: body 클래스/속성 세팅 + 마스트헤드 갱신 + 마지막 화면 기록 + 링 재배치.
     function setSection(cat) {
         document.body.classList.add('section-active');
         document.body.setAttribute('data-section', SECTIONS[cat] ? SECTIONS[cat].num : '');
@@ -171,6 +178,7 @@ body.section-active::before { content: none !important; }
         try { window.SAUDADE_RINGS?.unmount?.(); window.SAUDADE_RINGS?.mount?.('meso', 'top-right'); } catch (e) {}
     }
 
+    // backToCover — 섹션을 나와 표지로 복귀: 클래스 해제 + 링 매크로 복귀 + 표지 재렌더.
     function backToCover() {
         document.body.classList.remove('section-active');
         document.body.removeAttribute('data-section');
@@ -179,6 +187,7 @@ body.section-active::before { content: none !important; }
         try { window.SAUDADE_COVER?.render?.(); } catch (e) {}
     }
 
+    // restoreLastScreen — 새로고침 시 마지막으로 보던 섹션을 자동 복원(표지면 복원 안 함).
     // v607 — 새로고침 시 마지막 § 복원 (자동 진입). 표지면 복원 안 함.
     function restoreLastScreen() {
         try {
@@ -191,6 +200,7 @@ body.section-active::before { content: none !important; }
         } catch (e) {}
     }
 
+    // watchDock — dock 버튼 클릭(캡처링)/ESC/워드마크 클릭을 감지해 섹션 전환·복귀를 처리.
     // dock-btn 클릭 hook — JS 함수 손 안 대고 click 이벤트 capturing 으로 감지
     function watchDock() {
         document.addEventListener('click', (e) => {
@@ -219,6 +229,7 @@ body.section-active::before { content: none !important; }
         });
     }
 
+    // init — 시동: 스타일 주입 + 마스트헤드 생성 + dock 감시 + 마지막 화면 복원 + 전역 노출.
     function init() {
         injectStyles();
         ensureMasthead();
