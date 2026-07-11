@@ -1,3 +1,12 @@
+// ═══════════════════════════════════════════════════════════════════════
+// [파일 역할 배너 — 초보자 안내]
+// bootstrap.js = 페이지가 뜰 때 가장 먼저 도는 "초기 세팅" 스크립트.
+// 원래 index.html 안에 인라인으로 있던 코드를 밖으로 빼낸 것(그래야 CSP 보안에서
+// 'unsafe-inline' 을 없앨 수 있다 — 인라인 스크립트 금지가 더 안전).
+// 하는 일: 첫 페인트 전에 스킨 지정(깜빡임 방지) · 서버 주소 설정 · 옛 캐시 정리 ·
+//          서비스 워커 등록/갱신 · 오프라인 표시 등.
+// 이 파일도 여러 개의 IIFE(즉시 실행 함수)로 나뉘어 각 부팅 작업을 독립 실행한다.
+// ═══════════════════════════════════════════════════════════════════════
 // AURA — bootstrap (extracted from inline scripts in index.html)
 // 이 파일이 따로 빠져 나오면서 CSP 에서 'unsafe-inline' 제거 가능.
 // 4가지 부트 작업: 서버 URL, 캐시 마이그레이션, SW 등록, globe.gl CDN 로딩, 로딩 타임아웃.
@@ -10,11 +19,14 @@
 // read of localStorage 'saudade.skin' + the system dark-mode query sets
 // the attribute before the first paint so the chosen skin renders from
 // frame 1. Runs from bootstrap.js (script-src 'self' allowed).
+// preApplySkin: 첫 그림(paint) 전에 스킨을 즉시 지정 → 색이 바뀌며 깜빡이는 현상(FOUC) 방지.
 (function preApplySkin() {
     try {
         const SKINS = ['paper', 'saturated', 'dark'];
         let pref = null;
+        // 저장된 스킨 선호값 읽기(실패 무시).
         try { pref = localStorage.getItem('saudade.skin'); } catch (e) {}
+        // 유효한 값이면 사용, 아니면 null(아래에서 기기 설정으로 결정).
         let skin = SKINS.includes(pref) ? pref : null;
         if (!skin) {
             // Mirror editorial.js pickSkin() — prefers-reduced-motion
@@ -30,6 +42,8 @@
     } catch (e) { /* never block bootstrap */ }
 })();
 
+// safeStorage* : localStorage/sessionStorage 접근을 try/catch 로 감싼 안전 래퍼.
+// (사생활 보호 모드/용량 초과 등에서 저장소 접근이 예외를 던질 수 있어 앱이 죽지 않게 감쌈)
 function safeStorageGet(storage, key) {
     try { return storage.getItem(key); } catch (e) { window.AURA?.dbgWarn?.('caught', e); return null; }
 }
@@ -46,6 +60,7 @@ function safeStorageRemove(storage, key) {
 // ⚠ 형식: https://<worker-name>.<account-subdomain>.workers.dev   (slash 없이 끝남)
 //   Cloudflare Dashboard → Workers & Pages → 해당 Worker → 상단 표시된 URL 그대로 복붙
 //   현재: Worker 이름 'saudade' (wrangler.toml) + 계정 subdomain 'absbjj1230'
+// 전역 window.AURA_SERVER = 백엔드(Worker) 주소. 클라이언트의 모든 서버 요청이 이 주소를 쓴다.
 window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // window.AURA_SERVER = 'https://aura-api.your-name.workers.dev';
 
@@ -70,6 +85,7 @@ window.AURA_SERVER = 'https://saudade.absbjj1230.workers.dev';
 // 사용자 보고 '여러 번 push 해도 모바일에 변경사항 반영 안 됨' →
 // 옛 SW (lounj-v515) 가 새 SW 설치 자체를 차단. localStorage 에 release 마커
 // 기록해서 새 버전마다 1회 unregister + caches.delete + reload 강제.
+// SAUDADE_RELEASE = 이번 배포 버전표. sw.js 의 CACHE_VERSION 과 항상 같이 올려야 한다(캐시 버스터).
 const SAUDADE_RELEASE = 'v743';
 window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp cache-buster query strings.
                                             // Kept in lock-step with sw.js CACHE_VERSION by scripts/bump-cache.js.
@@ -96,12 +112,17 @@ window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp
     } catch (e) { window.AURA?.dbgWarn?.("caught", e); }
 })();
 
+// saudadeReleaseGuard: 새 배포마다 옛 서비스 워커/캐시를 1회 강제로 지워 "변경이 반영 안 되는"
+// 문제를 막는다. localStorage 의 release 마커로 "이미 갱신했는지"를 판별한다.
 (function saudadeReleaseGuard() {
+    // 서비스 워커 미지원 브라우저면 아무것도 안 함.
     if (!('serviceWorker' in navigator)) return;
+    // HTTPS 가 아니거나 Electron 이면 SW 를 아예 해제(등록하지 않음).
     if (location.protocol !== 'https:' || navigator.userAgent.includes('Electron')) {
         navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister())).catch(() => {});
         return;
     }
+    // 지난번 저장해 둔 배포 버전.
     const prev = safeStorageGet(localStorage, 'saudade_release');
 
     // 첫 방문 (prev === null) 은 nuke 할 캐시도 SW 도 없음 — marker 만 세팅 후 정상 등록.
@@ -130,6 +151,7 @@ window.SAUDADE_RELEASE = SAUDADE_RELEASE;   // expose so other modules can stamp
     window.addEventListener('load', () => {
         // 첫 install 시 controllerchange 가 reload 트리거하지 않도록 사전 컨트롤러 유무 캡처
         const hadController = !!navigator.serviceWorker.controller;
+        // sw.js 를 등록. ?v= 로 버전을 붙여 새 배포 때 새 파일을 받게 한다(캐시 버스터).
         navigator.serviceWorker.register('./sw.js?v=' + SAUDADE_RELEASE).then(reg => {
             let _reloaded = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
