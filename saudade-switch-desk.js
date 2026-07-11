@@ -15,35 +15,44 @@
 //   window.SAUDADE_DESK_SWITCH.getHomeCity()         — Atlas/Ledger 정착 도시
 'use strict';
 
+// IIFE — 로드 즉시 실행. "데스크를 임시로 다른 도시로 3일간 전환"하는 클라이언트 전용 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_DESK_SWITCH) return;
 
+    // KEY_HOME: 정착 도시. KEY_SWITCH: 임시 전환 상태(from/to/until). 전환 유지 기간 3일.
     const KEY_HOME   = 'saudade.home.city';        // 정착 도시
     const KEY_SWITCH = 'saudade.desk.switch';      // 임시 전환 { from, to, until }
     const SWITCH_DAYS = 3;
     const SWITCH_MS   = SWITCH_DAYS * 86400 * 1000;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // getStored/setStored — localStorage 읽기/쓰기 얇은 래퍼(실패해도 조용히 통과).
     function getStored(k)    { try { return localStorage.getItem(k); } catch (e) { return null; } }
     function setStored(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} }
 
+    // getHomeCity — 정착 도시(없으면 기본 Lisbon).
     function getHomeCity() {
         return getStored(KEY_HOME) || 'Lisbon';   // default per spec example
     }
+    // setHomeCity — 정착 도시를 저장(공백 제거).
     function setHomeCity(city) {
         setStored(KEY_HOME, String(city || '').trim());
     }
 
+    // getActive — 유효한 임시 전환 상태를 반환. 만료됐으면 자동 청소 후 null.
     function getActive() {
         try {
             const raw = getStored(KEY_SWITCH);
@@ -58,6 +67,7 @@
         } catch (e) { return null; }
     }
 
+    // switchTo — 대상 도시로 3일간 임시 전환(정착 도시와 같으면 무시).
     function switchTo(city) {
         const home = getHomeCity();
         const target = String(city || '').trim();
@@ -68,6 +78,7 @@
         return true;
     }
 
+    // makePermanent — 임시 전환 대상을 아예 정착 도시로 굳힌다.
     function makePermanent() {
         const a = getActive();
         if (!a) return false;
@@ -77,18 +88,21 @@
         return true;
     }
 
+    // revert — 임시 전환을 즉시 취소하고 정착 도시로 복귀.
     function revert() {
         setStored(KEY_SWITCH, null);
         notifyChange();
         return true;
     }
 
+    // getDispatchCity — 디스패치가 쓸 도시(전환 중이면 대상, 아니면 정착 도시).
     // Dispatches 가 사용할 도시 (switch 활성 시 to, 아니면 home)
     function getDispatchCity() {
         const a = getActive();
         return a ? a.to : getHomeCity();
     }
 
+    // notifyChange — 전환 상태를 body 속성 + 커스텀 이벤트로 알리고 배너를 갱신.
     // 변경 알림 — body data attr + custom event
     function notifyChange() {
         const a = getActive();
@@ -109,6 +123,7 @@
         renderBanner();
     }
 
+    // daysRemaining — 전환 만료까지 남은 일수(올림).
     function daysRemaining() {
         const a = getActive();
         if (!a) return 0;
@@ -116,6 +131,7 @@
     }
 
     // ─── 배너: "Returning to Lisbon in 3 days" ────────────────
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddDeskSwitchStyles')) return;
         const s = document.createElement('style');
@@ -184,6 +200,7 @@ body[data-desk-switched="1"] .sdd-desk-switch-banner { display: flex; }
         document.head.appendChild(s);
     }
 
+    // ensureBanner — "N일 후 복귀" 배너 요소를 한 번만 만들고 버튼 핸들러를 건다.
     function ensureBanner() {
         let b = document.getElementById('sddDeskSwitchBanner');
         if (b) return b;
@@ -207,6 +224,7 @@ body[data-desk-switched="1"] .sdd-desk-switch-banner { display: flex; }
         return b;
     }
 
+    // renderBanner — 전환 중일 때 배너 문구(복귀 D-day, 유지/복귀 버튼 라벨)를 채운다.
     function renderBanner() {
         const a = getActive();
         if (!a) return;
@@ -237,11 +255,13 @@ body[data-desk-switched="1"] .sdd-desk-switch-banner { display: flex; }
         });
     }
 
+    // watchEdition — 언어가 바뀌면 배너 문구를 다시 채운다.
     function watchEdition() {
         const mo = new MutationObserver(() => renderBanner());
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-edition'] });
     }
 
+    // startExpiryWatch — 1분마다 만료를 확인해 지나면 자동 복귀, 아니면 D-day 갱신.
     // 매 분 만료 체크 — 자동 복귀
     function startExpiryWatch() {
         setInterval(() => {
@@ -252,6 +272,7 @@ body[data-desk-switched="1"] .sdd-desk-switch-banner { display: flex; }
         }, 60 * 1000);
     }
 
+    // init — 모듈 시동: 스타일 주입 + 부팅 시 상태 동기화 + 감시 시작.
     function init() {
         injectStyles();
         notifyChange();   // 부팅 시 banner 상태 동기화
@@ -259,12 +280,14 @@ body[data-desk-switched="1"] .sdd-desk-switch-banner { display: flex; }
         startExpiryWatch();
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 전환/복귀/정착 도시 관리 + 디스패치 도시 조회.
     window.SAUDADE_DESK_SWITCH = {
         switchTo,
         makePermanent,
