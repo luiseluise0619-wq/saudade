@@ -9,19 +9,26 @@
 //   window.SAUDADE_TAX_FORM.getStays()
 'use strict';
 
+// IIFE — 로드 즉시 실행. 세금 거주일 입력 폼(국가별 입/출국)을 그리는 모듈.
+// (참고: 현재는 saudade-stays-form.js 로 대체돼 번들에서 빠졌지만 소스는 남아 있음.)
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_TAX_FORM) return;
+    // KEY — 세금 체류 기록 저장 localStorage 키.
     const KEY = 'saudade.tax.stays';
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // getStays/setStays — 세금 체류 기록 읽기/쓰기(깨져 있으면 빈 배열).
     function getStays() {
         try { const r = localStorage.getItem(KEY); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
         catch (e) { return []; }
@@ -54,6 +61,7 @@
         };
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddTaxFormStyles')) return;
         const s = document.createElement('style');
@@ -107,6 +115,7 @@
         document.head.appendChild(s);
     }
 
+    // row — 체류 한 줄(국가 select + 입/출국 date + 삭제 버튼) HTML.
     function row(s, i, c) {
         return `
             <div class="sdd-taxf__row" data-idx="${i}">
@@ -121,6 +130,7 @@
         `;
     }
 
+    // paint — 폼을 그리고 추가/수정/삭제 핸들러를 건다. 변경 시 저장 + 계산기 재실행.
     function paint(host, lang) {
         const c = copy(lang);
         const stays = getStays();
@@ -163,6 +173,7 @@
         });
     }
 
+    // renderCalc — 현재 입력으로 세금 183일 계산 패널을 다시 그린다(패널이 있을 때만).
     function renderCalc() {
         const panel = document.getElementById('sddTaxPanel');
         if (!panel || !window.SAUDADE_TAX) return;
@@ -170,6 +181,7 @@
         window.SAUDADE_TAX.render(panel, { stays });
     }
 
+    // mount — 폼을 host 에 장착: 스타일 주입 + 렌더 + 계산기 초기 실행.
     function mount(target, opts) {
         injectStyles();
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
@@ -178,5 +190,6 @@
         renderCalc();
     }
 
+    // 전역 공개 API — 폼 장착 + 체류 목록 조회.
     window.SAUDADE_TAX_FORM = { mount, getStays };
 })();
