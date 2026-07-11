@@ -4,7 +4,9 @@
 // CSS pseudo-element 만으로는 다중 라인 매거진 표지 한계 → 신규 컴포넌트로 별도 마운트.
 'use strict';
 
+// IIFE — 로드 즉시 실행. § 00 표지 화면을 담당하는 독립 모듈.
 (function() {
+    // 중복 로드 방어 — 이미 초기화됐으면 다시 실행하지 않는다.
     if (window.SAUDADE_COVER) return;
 
     // 도시별 카피라인 (v1 한정 큐레이션 — 헌법 §4-1: AI 자동 생성 X, 손으로 짠 시드)
@@ -64,6 +66,9 @@
         en: 'Lisbon', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
     };
 
+    // 표지에 띄울 도시를 결정한다. 우선순위 폭포수:
+    // (1) 사용자가 데스크에서 고른 도시 → (2) 위치 알림 캐시 → (3) GeoIP 캐시 → (4) 에디션 기본 도시.
+    // 각 단계는 실패해도(try/catch) 다음 단계로 자연스럽게 내려간다.
     function detectCity() {
         // v6 §5 — 사용자 명시 home city + Switch the Desk 활성 시 임시 city
         // saudade-city.js 의 activeDeskCity() 가 우선 (사용자가 desk 에서 골랐을 것)
@@ -159,11 +164,13 @@
     }
 
     // 비자 D-day (있으면) — saudade.visa.entries 우선, fallback aura_visa_v1
+    // 아직 만료 안 된(미래) 비자 중 가장 임박한 것의 남은 일수를 계산한다.
     function visaDaysLeft() {
         try {
             const sdd = JSON.parse(localStorage.getItem('saudade.visa.entries') || '[]');
             if (Array.isArray(sdd) && sdd.length) {
                 const today = Date.now();
+                // 만료일을 ms 로 계산(_ms)해 붙이고 → 미래 것만 남기고 → 가장 빠른 만료를 고른다([0]).
                 const active = sdd
                     .map(e => ({ ...e, _ms: new Date(e.expiry).getTime() }))
                     .filter(e => Number.isFinite(e._ms) && e._ms > today)
@@ -186,16 +193,19 @@
     }
 
     // v607 — 세금 거주일 (saudade.visa.entries 의 ISO 별 days_in_year)
+    // 올해 각 국가(ISO 코드)에 머문 일수를 합산해, 가장 오래 머문 나라 하나를 돌려준다.
     function topTaxResidency() {
         try {
             const sdd = JSON.parse(localStorage.getItem('saudade.visa.entries') || '[]');
             if (!Array.isArray(sdd) || !sdd.length) return null;
+            // 올해 1월 1일 0시의 ms. 체류 구간을 올해 범위로 자를 때 하한선으로 쓴다.
             const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
             const result = {};
             sdd.forEach(e => {
                 if (!e.entered || !e.iso) return;
                 const enteredMs = new Date(e.entered).getTime();
                 const expiryMs = e.expiry ? new Date(e.expiry).getTime() : Date.now();
+                // 체류 구간을 [올해 시작, 오늘] 범위로 잘라 실제 올해 체류일만 센다.
                 const start = Math.max(enteredMs, yearStart);
                 const end = Math.min(expiryMs, Date.now());
                 if (end > start) {
@@ -203,6 +213,7 @@
                     result[e.iso] = (result[e.iso] || 0) + days;
                 }
             });
+            // 나라별 합계를 내림차순 정렬해 1위를 고른다.
             const top = Object.entries(result).sort((a, b) => b[1] - a[1])[0];
             return top ? { iso: top[0], days: top[1] } : null;
         } catch (e) { return null; }
@@ -588,10 +599,12 @@ body.section-active .sdd-cover { display: none !important; }
     }
 
     // v609 — 오늘 dispatch 의 top 1 헤드라인을 표지에 1회 fetch
+    // 전역 플래그로 "한 번만" 로드하게 막고, 첫 도시의 첫 기사만 표지 문구로 저장한다.
     function loadTodayDispatch() {
         if (window._sddTodayDispatchLoaded) return Promise.resolve();
         window._sddTodayDispatchLoaded = true;
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        // 영어는 기본 파일, 나머지는 언어 접미사 파일.
         const url = ed === 'en' ? './data/dispatches.json' : `./data/dispatches.${ed}.json`;
         return fetch(url, { cache: 'force-cache' })
             .then(r => r.ok ? r.json() : null)
@@ -655,8 +668,10 @@ body.section-active .sdd-cover { display: none !important; }
         es: 'Tres ciudades, sin agenda. Editada desde $editorCity.'
     };
 
+    // 마스트헤드 날짜 문구를 에디션 언어에 맞춰 만든다(요일·월 이름 현지화, ja/ko 는 별도 형식).
     function formatMastDate(ed) {
         const d = new Date();
+        // d.getDay()=요일(0=일), d.getMonth()=월(0=1월). 위 테이블에서 이름을 뽑는다.
         const wd = WEEKDAY_NAMES[ed] || WEEKDAY_NAMES.en;
         const mo = MONTH_NAMES[ed] || MONTH_NAMES.en;
         const dayName = wd[d.getDay()];
@@ -668,6 +683,7 @@ body.section-active .sdd-cover { display: none !important; }
         return `${dayName} · ${day} ${month} ${year}`;
     }
 
+    // 현재가 속한 분기(3개월)의 범위 문구를 만든다. 발행월은 3/6/9/12월.
     function quarterRange(ed) {
         // v7 §10.6 — 분기 발행일 3/6/9/12월 1일.
         // 3개월 범위: Mar–May / Jun–Aug / Sep–Nov / Dec–Feb.
@@ -688,8 +704,10 @@ body.section-active .sdd-cover { display: none !important; }
     }
 
     // TODAY 요약 4줄 — 실제 데이터 조회
+    // localStorage 에 저장된 사용자 데이터(비자/아틀라스/리스닝)를 읽어 한 줄씩 요약을 만든다.
     function todaySummary(ed) {
         // Ledger OPEN / CLOSED
+        // 만료 안 된 비자는 OPEN, 지난 것은 CLOSED 로 센다.
         let openN = 0, closedN = 0;
         try {
             const v = JSON.parse(localStorage.getItem('saudade.visa.entries') || '[]');
@@ -741,11 +759,14 @@ body.section-active .sdd-cover { display: none !important; }
         return lines;
     }
 
+    // 표지 전체를 그린다: 도시/에디션 결정 → 마스트헤드·리드·오늘 요약 조립 → DOM 반영.
     function render() {
         const city = detectCity();
         const ed = currentEdition();
+        // 현재 언어의 문구 묶음(없으면 영어).
         const c = COPY_5[ed] || COPY_5.en;
 
+        // 표지 컨테이너 확보(없으면 만들어 body 에 붙임).
         let cover = document.getElementById('sddCover');
         if (!cover) {
             cover = document.createElement('div');
@@ -937,10 +958,12 @@ body.section-active .sdd-cover { display: none !important; }
         });
     }
 
+    // 모듈 초기화: 스타일 주입 → 표지 데이터 병렬 로드 후 렌더 → 재렌더 트리거 등록.
     function init() {
         injectStyles();
         // v606 — cover-titles.json 우선 로드 (DRY). 실패하면 inline 시드 사용.
         // v609 — 오늘 dispatch top 1 도 같이 fetch (병렬).
+        // Promise.all — 두 fetch 를 동시에 시작하고 둘 다 끝나면(finally) 한 번만 렌더한다.
         Promise.all([
             fetch('./data/cover-titles.json', { cache: 'force-cache' })
                 .then(r => r.ok ? r.json() : null)
@@ -953,6 +976,7 @@ body.section-active .sdd-cover { display: none !important; }
         });
 
         // 언어 변경 시 재렌더
+        // 'storage' 이벤트는 다른 탭에서 localStorage 가 바뀌면 발생. 언어/상태 키면 다시 그린다.
         window.addEventListener('storage', (e) => {
             if (e.key && /lang|state/i.test(e.key)) render();
         });
@@ -966,11 +990,13 @@ body.section-active .sdd-cover { display: none !important; }
         }
     }
 
+    // DOM 로딩 중이면 준비 후 init, 이미 끝났으면 즉시 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 공개 API — 다시 그리기(render), 도시 감지(detectCity), 카피 테이블 참조(COPY).
     window.SAUDADE_COVER = { render, detectCity, COPY: COVER_COPY };
 })();
