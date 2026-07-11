@@ -45,7 +45,7 @@
             return fetch(wUrl, { cache: 'no-cache', credentials: 'omit' })
                 .then(r => r.ok ? r.json() : null)
                 .then(j => {
-                    // 유효한 항목 배열이 오면 화면이 기대하는 { cities: [...] } 구조로 재구성.
+                    // 유효한 항목 배열이 오면 화면이 기대하는 cities 배열 구조로 재구성.
                     if (j && Array.isArray(j.items) && j.items.length) {
                         // worker 응답을 v7 cities 구조로 변환 — flattenForDay 가 그대로 매핑.
                         const synthetic = { edition: ed, cities: [] };
