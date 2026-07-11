@@ -22,9 +22,12 @@
 //   window.SAUDADE_STAYS_FORM.getStays()
 'use strict';
 
+// IIFE — 로드 즉시 실행. "어디에 언제 있었나" 통합 입력 폼(셰겐 + 세금 공통 소스) 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_STAYS_FORM) return;
 
+    // KEY: 마스터 저장 키. KEY_SCH/KEY_TAX: 계산기가 읽는 미러 키(저장 시 함께 갱신).
     const KEY      = 'saudade.stays';
     const KEY_SCH  = 'saudade.schengen.stays';
     const KEY_TAX  = 'saudade.tax.stays';
@@ -44,22 +47,27 @@
         'TR','UA','US','UY','VN','ZA'
     ];
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
+    // safeRead — localStorage 에서 JSON 배열을 안전하게 읽는다(깨져 있으면 빈 배열).
     function safeRead(k) {
         try { const r = localStorage.getItem(k); if (!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }
         catch (e) { return []; }
     }
+    // safeWrite — localStorage 에 JSON 저장(실패해도 조용히 무시).
     function safeWrite(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
     // ─── One-shot migration ─────────────────────────────────────────────
+    // migrateOnce — 마스터 키가 비어 있고 옛 tax/schengen 키에 데이터가 있으면 병합해 옮긴다(1회).
     function migrateOnce() {
         const stays = safeRead(KEY);
         if (stays.length) return;            // already in the new model
@@ -80,7 +88,9 @@
         if (merged.length) safeWrite(KEY, merged);
     }
 
+    // getStays — 마스터 체류 목록을 읽는다.
     function getStays() { return safeRead(KEY); }
+    // setStays — 마스터 저장 + 계산기용 미러 키(tax 전체 / schengen 필터)도 함께 갱신.
     function setStays(arr) {
         safeWrite(KEY, arr);
         // Mirror into the calculator-specific keys so saudade-tax + saudade-schengen
@@ -89,6 +99,7 @@
         safeWrite(KEY_SCH, arr.filter(s => SCHENGEN_27.has((s.country || '').toUpperCase())));
     }
 
+    // copy — 폼 라벨/안내 문구를 현재 언어로 묶어 반환.
     function copy(lang) {
         return {
             title: L({
@@ -118,6 +129,7 @@
         };
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddStaysFormStyles')) return;
         const s = document.createElement('style');
@@ -182,10 +194,12 @@
         document.head.appendChild(s);
     }
 
+    // isInvalid — 출국일이 입국일보다 이르면 잘못된 행(ISO 날짜 문자열은 사전순=시간순).
     function isInvalid(s) {
         return s && s.in && s.out && s.out < s.in;   // ISO date strings sort lexically
     }
 
+    // row — 체류 한 줄(국가 select + 입/출국 date + 삭제 버튼) HTML 을 만든다.
     function row(s, i, c) {
         const invalid = isInvalid(s);
         return `
@@ -202,6 +216,7 @@
         `;
     }
 
+    // paint — 폼 전체를 그리고 추가/수정/삭제 핸들러를 건다. 변경 시 저장 + 계산기 재실행.
     function paint(host, lang) {
         const c = copy(lang);
         const stays = getStays();
@@ -251,6 +266,7 @@
         });
     }
 
+    // rerunCalcs — 현재 체류로 셰겐/세금/공감 블록을 다시 렌더(마운트된 것만).
     function rerunCalcs() {
         const stays = getStays().filter(s => s.country && s.in);
         try {
@@ -273,6 +289,7 @@
         } catch (e) {}
     }
 
+    // mount — 폼을 host 에 장착: 스타일 주입 + 마이그레이션 + 렌더 + 계산기 초기 실행.
     function mount(target, opts) {
         injectStyles();
         migrateOnce();
@@ -288,5 +305,6 @@
         } else { migrateOnce(); }
     }
 
+    // 전역 공개 API — 폼 장착 + 체류 목록 읽기/쓰기.
     window.SAUDADE_STAYS_FORM = { mount, getStays, setStays };
 })();
