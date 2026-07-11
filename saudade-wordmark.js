@@ -7,9 +7,12 @@
 //   <span data-saudade-wordmark="favicon"></span>// 16-32px (탭)
 'use strict';
 
+// IIFE — 로드 즉시 실행. "saudade" 워드마크(로고)를 4가지 변형 인라인 SVG 로 렌더하는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_WORDMARK) return;
 
+    // SVG — 변형(full/small/icon/favicon)별 인라인 SVG 문자열. 외부 아이콘 라이브러리 대신.
     const SVG = {
         full:
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" aria-label="saudade">' +
@@ -36,6 +39,7 @@
             '</svg>'
     };
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddWordmarkStyles')) return;
         const s = document.createElement('style');
@@ -61,6 +65,7 @@
         document.head.appendChild(s);
     }
 
+    // render — data-saudade-wordmark 속성의 변형에 맞는 SVG 를 노드에 넣는다(한 번만).
     function render(node) {
         const variant = node.getAttribute('data-saudade-wordmark') || 'small';
         const svg = SVG[variant] || SVG.small;
@@ -69,10 +74,12 @@
         node.dataset.sddRendered = '1';
     }
 
+    // renderAll — 페이지의 모든 워드마크 자리표시자를 렌더.
     function renderAll() {
         document.querySelectorAll('[data-saudade-wordmark]').forEach(render);
     }
 
+    // init — 스타일 주입 + 전체 렌더 + 동적으로 추가되는 노드도 자동 렌더(MutationObserver).
     function init() {
         injectStyles();
         renderAll();
@@ -81,11 +88,13 @@
         mo.observe(document.body, { childList: true, subtree: true });
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — SVG 정의 + 개별/전체 렌더.
     window.SAUDADE_WORDMARK = { SVG, render, renderAll };
 })();
