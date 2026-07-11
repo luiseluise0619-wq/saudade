@@ -11,25 +11,35 @@
 // 워커 미바인딩/오프라인 시 stage='active' 폴백 — 무해.
 'use strict';
 
+// IIFE — 로드 즉시 실행. "편집장 휴직 자동 정지"를 클라이언트에 반영하는 어댑터.
+// Worker 가 준 stage 를 body[data-leave-stage] 로 세팅 → CSS 가 UI 변화를 담당.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_LEAVE) return;
 
+    // CACHE_TTL_MS: 상태 캐시 유효기간(10분). _status: 현재 단계 캐시.
+    // _fetchedAt: 마지막 로드 시각. _fetching: 진행 중 fetch Promise(중복 요청 방지).
     const CACHE_TTL_MS = 10 * 60 * 1000;
     let _status = { stage: 'active', days_idle: null, last_activity: null };
     let _fetchedAt = 0;
     let _fetching = null;
 
+    // load — Worker 에서 편집장 휴직 단계를 가져온다(force 로 캐시 무시 가능).
     function load(force) {
+        // 캐시가 아직 신선하면 네트워크 없이 반환.
         if (!force && _fetchedAt && (Date.now() - _fetchedAt) < CACHE_TTL_MS) {
             return Promise.resolve(_status);
         }
+        // 이미 로드 중이면 그 Promise 를 재사용.
         if (_fetching) return _fetching;
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        // 서버 주소가 없으면 stage='active' 로 폴백(무해).
         if (!base) {
             _fetchedAt = Date.now();
             applyState();
             return Promise.resolve(_status);
         }
+        // GET /editor/leave-status — 편집장 활동 유휴 상태와 단계를 받는다.
         _fetching = fetch(base + '/editor/leave-status', {
             cache: 'no-cache',
             credentials: 'omit'
@@ -52,11 +62,13 @@
         return _fetching;
     }
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // copy — 배너/정지 메시지 문구를 현재 언어로 묶어 반환.
     function copy() {
         return {
             head: L({
@@ -114,12 +126,14 @@
         };
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         })[ch]);
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입. body[data-leave-stage] 값별 규칙.
     function injectStyles() {
         if (document.getElementById('sddLeaveStyles')) return;
         const s = document.createElement('style');
@@ -279,6 +293,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         document.head.appendChild(s);
     }
 
+    // ensureBanner — 상단 "편집장 휴직" 배너 요소를 한 번만 만든다(aria-live 로 알림).
     function ensureBanner() {
         let b = document.getElementById('sddLeaveBanner');
         if (b) return b;
@@ -291,6 +306,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         return b;
     }
 
+    // ensureCoverMsg — 표지 위에 뜨는 "휴직" 안내 메시지 요소를 한 번만 만든다.
     function ensureCoverMsg() {
         let m = document.getElementById('sddLeaveCoverMsg');
         if (m) return m;
@@ -302,6 +318,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         return m;
     }
 
+    // ensureDispatchPaused — § 03 디스패치 화면 안에 "정지" 안내 블록을 한 번만 삽입.
     function ensureDispatchPaused() {
         const root = document.getElementById('sddDispatches');
         if (!root) return null;
@@ -316,6 +333,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         return el;
     }
 
+    // applyEditionVar — SOFT 단계의 "UNEDITED" 라벨 문구를 CSS 변수로 넘긴다(::before content).
     function applyEditionVar() {
         const c = copy();
         // CSS string 안전 escape — 작은따옴표는 백슬래시 처리
@@ -323,6 +341,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         document.documentElement.style.setProperty('--sdd-leave-unedited-label', `'${safe}'`);
     }
 
+    // renderBanner — hard/subscription 단계에서만 상단 배너 문구를 채운다(그 외엔 비운다).
     function renderBanner() {
         const stage = (_status && _status.stage) || 'active';
         const b = ensureBanner();
@@ -340,6 +359,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
             `<em>${escapeHtml(c.paused)}</em> ${escapeHtml(c.sinceTpl(days))}${escapeHtml(sub)}`;
     }
 
+    // renderDispatchPause — hard/subscription 단계에서 § 03 정지 블록 문구를 채운다.
     function renderDispatchPause() {
         const stage = (_status && _status.stage) || 'active';
         if (stage !== 'hard' && stage !== 'subscription') return;
@@ -351,6 +371,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         el.querySelector('.sdd-disp-paused-sub').textContent = c.resume;
     }
 
+    // renderCoverMsg — hard/subscription 단계에서 표지 안내 메시지 문구를 채운다.
     function renderCoverMsg() {
         const stage = (_status && _status.stage) || 'active';
         if (stage !== 'hard' && stage !== 'subscription') return;
@@ -360,6 +381,7 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         m.querySelector('.body').textContent = c.paused;
     }
 
+    // applyState — 현재 단계를 body 속성에 반영하고 배너/정지/표지 문구를 모두 갱신.
     function applyState() {
         const stage = (_status && _status.stage) || 'active';
         document.body.setAttribute('data-leave-stage', stage);
@@ -369,12 +391,14 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         renderCoverMsg();
     }
 
+    // init — 모듈 시동: 스타일 주입 + 초기 active 세팅 + 상태 로드 + 변화 감시 + 주기적 재로딩.
     function init() {
         injectStyles();
         // 첫 진입 — body 속성 미리 active 로
         document.body.setAttribute('data-leave-stage', 'active');
         applyEditionVar();
         load();
+        // 에디션/섹션 속성이 바뀌면 문구를 다시 채우고 정지 블록을 재주입.
         // edition / section 변경 시 카피 갱신 + paused element 재주입
         const mo = new MutationObserver(() => applyState());
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-edition', 'data-section'] });
@@ -388,12 +412,14 @@ body.qdispatch-active .sdd-leave-cover-msg { display: none !important; }
         setInterval(() => load(true), 30 * 60 * 1000);
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 현재 상태/단계 조회, 강제 새로고침, 문구 접근.
     window.SAUDADE_LEAVE = {
         getStatus: () => _status,
         getStage:  () => (_status && _status.stage) || 'active',
