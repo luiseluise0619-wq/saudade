@@ -16,26 +16,33 @@
 // 의존: window.AURA_SERVER (worker URL).
 'use strict';
 
+// IIFE — 로드 즉시 실행. 편집장 전용 /desk 관리 화면(일일 큐 검수) 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_DESK_ADMIN) return;
 
+    // KEY_TOKEN: 편집자 인증 토큰 localStorage 키. HASH: 이 화면의 URL 해시(#desk).
     const KEY_TOKEN = 'saudade.editor.token';
     const HASH = '#desk';
 
+    // _root: 화면 컨테이너 캐시. _data: 오늘 디스패치 JSON 캐시.
     let _root = null;
     let _data = null;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings) {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
 
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s || '').replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // getToken — 편집자 토큰을 localStorage 에서 읽는다(없으면 null → 액션은 인라인 전용).
     function getToken() {
         try { return localStorage.getItem(KEY_TOKEN) || null; } catch (e) { return null; }
     }
@@ -80,6 +87,7 @@
         };
     }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddDeskAdminStyles')) return;
         const s = document.createElement('style');
@@ -244,11 +252,14 @@
         document.head.appendChild(s);
     }
 
+    // logAction — 편집자 액션(검토/편집/철회)을 Worker 에 기록(§9.10 활동 감지 입력).
+    // 토큰이나 서버 주소가 없으면 서버 호출 없이 시각 토글만(인라인 전용).
     async function logAction(action, target) {
         const token = getToken();
         const base = (window.AURA_SERVER || '').replace(/\/$/, '');
         if (!token || !base) return { ok: false, reason: 'no_token_or_server' };
         try {
+            // POST /editor/log — Authorization: Bearer 토큰으로 인증해 액션을 남긴다.
             const r = await fetch(base + '/editor/log', {
                 method: 'POST',
                 headers: {
@@ -265,6 +276,7 @@
         }
     }
 
+    // ensureRoot — 화면 컨테이너를 한 번만 만들어 body 에 붙이고 캐시.
     function ensureRoot() {
         if (_root) return _root;
         _root = document.createElement('section');
@@ -274,6 +286,7 @@
         return _root;
     }
 
+    // loadData — 오늘 디스패치 큐를 가져온다(no-cache: 항상 최신 검수 대상).
     function loadData() {
         return fetch('./data/dispatches.json', { cache: 'no-cache' })
             .then(r => r.ok ? r.json() : null)
@@ -281,6 +294,7 @@
             .catch(() => { _data = null; return null; });
     }
 
+    // flattenItems — 도시별로 중첩된 디스패치를 평면 목록으로 펼친다(id 는 "도시-항목" 인덱스).
     function flattenItems(data) {
         if (!data || !Array.isArray(data.cities)) return [];
         const out = [];
@@ -299,6 +313,7 @@
         return out;
     }
 
+    // render — 큐 목록과 각 항목의 검토/편집/철회 버튼을 그린다.
     function render() {
         const c = copy();
         const root = ensureRoot();
@@ -338,8 +353,10 @@
                 `).join('')
             }
         `;
+        // 닫기 버튼 + 각 액션 버튼에 핸들러 연결.
         root.querySelector('[data-close]').addEventListener('click', close);
         root.querySelectorAll('[data-action]').forEach(btn => {
+            // 버튼 클릭 → 서버에 액션 기록 → "logged"/"— inline" 배지를 2초간 표시.
             btn.addEventListener('click', async () => {
                 const action = btn.getAttribute('data-action');
                 const target = btn.getAttribute('data-target');
@@ -353,6 +370,7 @@
         });
     }
 
+    // open — 화면을 열고 URL 해시를 #desk 로 맞춘 뒤 데이터를 로드해 렌더.
     function open() {
         ensureRoot().classList.add('active');
         if (location.hash !== HASH) {
@@ -360,6 +378,7 @@
         }
         loadData().then(render);
     }
+    // close — 화면을 닫고 해시를 원래 경로로 되돌린다.
     function close() {
         if (_root) _root.classList.remove('active');
         try {
@@ -367,6 +386,7 @@
         } catch (e) {}
     }
 
+    // watchHash — URL 해시(#desk)와 화면 표시 상태를 동기화(뒤로가기/딥링크 대응).
     function watchHash() {
         const sync = () => {
             if (location.hash === HASH) open();
@@ -376,6 +396,7 @@
         sync();
     }
 
+    // watchKeys — 단축키: Ctrl+Shift+D 로 열고/닫기, ESC 로 닫기.
     function watchKeys() {
         document.addEventListener('keydown', (e) => {
             if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
@@ -387,18 +408,21 @@
         });
     }
 
+    // init — 모듈 시동: 스타일 주입 + 해시/단축키 감시 시작.
     function init() {
         injectStyles();
         watchHash();
         watchKeys();
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 열기/닫기 + 토큰 설정/조회.
     window.SAUDADE_DESK_ADMIN = {
         open, close,
         setToken: (t) => { try { t ? localStorage.setItem(KEY_TOKEN, t) : localStorage.removeItem(KEY_TOKEN); } catch (e) {} },
