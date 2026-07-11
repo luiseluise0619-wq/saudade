@@ -7,21 +7,27 @@
 // Triggered via #homes URL hash or window.SAUDADE_HOMES.openModal().
 'use strict';
 
+// IIFE — 로드 즉시 실행. "홈 도시 3곳 고르기" 모달(공감 엔진의 사우다지 미터 입력) 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_HOMES) return;
 
+    // L — 현재 에디션 언어 문자열 선택(없으면 영어).
     function L(strings, lang) {
         const ed = lang || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
         return strings[ed] || strings.en;
     }
+    // escapeHtml — innerHTML 주입 전 위험 문자 이스케이프(XSS 방지).
     function escapeHtml(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
         })[ch]);
     }
 
+    // 모달 DOM 캐시(한 번 만들어 재사용).
     let _modal = null;
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddHomesStyles')) return;
         const s = document.createElement('style');
@@ -104,8 +110,11 @@
         document.head.appendChild(s);
     }
 
+    // paint — 도시 목록을 그리고 선택/저장/초기화 핸들러를 건다.
+    // 선택된 도시는 앞으로 정렬 + 순번(1~3) 표시. 저장(Save) 전까지는 실제 저장 안 함.
     function paint() {
         const ed = (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
+        // 도시 사전과 현재 저장된 홈 도시는 공감 모듈(PERSONAL)에서 가져온다.
         const cities = (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.CITIES) || {};
         const current = (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.getHomes && window.SAUDADE_PERSONAL.getHomes()) || [];
         const c = {
@@ -153,9 +162,11 @@
                 </div>
             </div>
         `;
+        // local — 저장 전 임시 선택 배열(Save 눌러야 실제 저장).
         let local = sel;
         _modal.querySelector('[data-close]').addEventListener('click', closeModal);
         _modal.querySelectorAll('.sdd-homes-row').forEach(row => {
+            // 행 클릭 = 토글: 이미 있으면 제거, 3개 미만이면 추가, 꽉 찼으면 마지막을 교체.
             row.addEventListener('click', () => {
                 const code = row.dataset.code;
                 const idx = local.indexOf(code);
@@ -181,6 +192,7 @@
                 });
             });
         });
+        // 저장 — 임시 선택을 실제 저장하고 모달을 닫은 뒤 표지 공감 블록을 다시 그린다.
         _modal.querySelector('[data-save]').addEventListener('click', () => {
             if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.setHomes) {
                 window.SAUDADE_PERSONAL.setHomes(local);
@@ -201,6 +213,7 @@
         });
     }
 
+    // openModal — 모달을 만들고(최초 1회, ESC 닫기 포함) 그린 뒤 표시.
     function openModal() {
         injectStyles();
         if (!_modal) {
@@ -216,8 +229,10 @@
         paint();
         _modal.classList.add('active');
     }
+    // closeModal — 모달을 숨긴다.
     function closeModal() { if (_modal) _modal.classList.remove('active'); }
 
+    // handleHash — URL 이 #homes 이면 모달을 열고 해시를 지운다(딥링크 트리거).
     function handleHash() {
         if (location.hash === '#homes') {
             openModal();
@@ -228,5 +243,6 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', handleHash);
     else handleHash();
 
+    // 전역 공개 API — 모달 열기/닫기.
     window.SAUDADE_HOMES = { openModal, closeModal };
 })();
