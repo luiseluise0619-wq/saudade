@@ -5,9 +5,12 @@
 // Mounted as a dropdown next to the legal-strip MENU, bottom-left.
 'use strict';
 
+// IIFE — 로드 즉시 실행. 테마(auto/paper/saturated/dark) 전환 드롭다운 모듈.
 (function () {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_THEME_SWITCH) return;
 
+    // T_LABEL/ORDER — 각 테마의 다국어 라벨과 표시 순서.
     const T_LABEL = {
         auto:      { en: 'AUTO',    ko: '자동',  ja: '自動',     pt: 'AUTO',   es: 'AUTO' },
         paper:     { en: 'PAPER',   ko: '종이',  ja: '紙',       pt: 'PAPEL',  es: 'PAPEL' },
@@ -16,12 +19,15 @@
     };
     const ORDER = ['auto', 'paper', 'saturated', 'dark'];
 
+    // T — 현재 에디션 언어 문자열 선택(없으면 영어).
     function T(strings) {
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
         return strings[ed] || strings.en;
     }
+    // label — 테마 코드의 현재 언어 라벨.
     function label(skin) { return T(T_LABEL[skin] || T_LABEL.auto); }
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddThemeStyles')) return;
         const s = document.createElement('style');
@@ -98,6 +104,7 @@ body.listening-active .sdd-theme-wrapper { display: none; }
         document.head.appendChild(s);
     }
 
+    // ensureMount — 하단 법적 스트립 안에 테마 토글 버튼 + 메뉴를 한 번만 만든다.
     function ensureMount() {
         // Mount inside the legal strip if present, otherwise next to it.
         const strip = document.getElementById('auraLegalStrip');
@@ -120,6 +127,7 @@ body.listening-active .sdd-theme-wrapper { display: none; }
         return wrapper;
     }
 
+    // renderMenu — 테마 옵션 목록을 그리고 현재 선택을 강조, 토글 라벨도 갱신.
     function renderMenu(wrapper) {
         const menu = wrapper.querySelector('.sdd-theme-menu');
         const cur = window.SAUDADE_EDITION?.skinPref?.() || 'auto';
@@ -129,6 +137,7 @@ body.listening-active .sdd-theme-wrapper { display: none; }
         wrapper.querySelector('.sdd-theme-toggle-label').textContent = label(cur);
     }
 
+    // bind — 토글 클릭으로 메뉴 열고/닫기, 바깥 클릭 시 닫기, 옵션 클릭 시 테마 적용.
     function bind(wrapper) {
         const toggle = wrapper.querySelector('.sdd-theme-toggle');
         const menu   = wrapper.querySelector('.sdd-theme-menu');
@@ -155,6 +164,7 @@ body.listening-active .sdd-theme-wrapper { display: none; }
         });
     }
 
+    // init — 스타일 주입 + 마운트 + 메뉴 렌더 + 이벤트 배선.
     function init() {
         injectStyles();
         const w = ensureMount();
@@ -163,12 +173,14 @@ body.listening-active .sdd-theme-wrapper { display: none; }
         bind(w);
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 다른 탭에서 에디션이 바뀌면(storage 이벤트) 라벨을 새 언어로 다시 렌더.
     // Re-render label when edition changes (so labels translate)
     window.addEventListener('storage', (e) => {
         if (e.key === 'saudade.edition') {
