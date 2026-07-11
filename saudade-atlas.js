@@ -5,42 +5,68 @@
 // 자동 강등: visited_at + 30일 < 오늘 → JADE → BONE.
 'use strict';
 
+// IIFE (즉시 실행 함수) 패턴 — 파일이 로드되면 이 익명 함수가 곧바로 실행된다.
+// 안쪽에서 선언한 변수/함수는 전역을 오염시키지 않고 이 스코프 안에만 산다.
 (function() {
+    // 중복 로드 방어 — 이 스크립트가 두 번 <script> 태그로 실려도
+    // window.SAUDADE_ATLAS 가 이미 있으면 곧장 return 하여 다시 초기화하지 않는다.
+    // (index.html 은 소스 모듈과 번들을 함께 싣기 때문에 이 가드가 꼭 필요하다.)
     if (window.SAUDADE_ATLAS) return;
 
+    // localStorage 에 방문 기록을 저장할 때 쓰는 키 이름. 헌법 §9 가 정한 네임스페이스.
     const VISITED_KEY = 'saudade.atlas.visited';     // 헌법 §9 키
+    // 카페 목록 캐시. 처음엔 null, load() 가 한 번 채우면 다시 fetch 하지 않는다.
     let _cafes = null;
+    // 현재 검색어. 사용자가 검색창에 입력한 문자열을 담아 render() 가 필터링에 쓴다.
     let _query = '';     // v607 검색 query
 
+    // 카페 데이터(data/cafes-seoul.json)를 비동기로 읽어온다. Promise 를 돌려준다.
     function load() {
+        // 이미 한 번 읽었으면 네트워크를 다시 타지 않고 캐시된 배열을 즉시 반환한다.
         if (_cafes) return Promise.resolve(_cafes);
+        // fetch 는 네트워크 요청을 하는 브라우저 표준 API. Promise 를 반환한다.
+        // cache: 'force-cache' — 캐시에 있으면 네트워크 없이 캐시본을 쓴다(정적 데이터라 안전).
         return fetch('./data/cafes-seoul.json', { cache: 'force-cache' })
+            // 응답이 200 OK(r.ok) 면 JSON 으로 파싱, 아니면 빈 배열로 대체.
             .then(r => r.ok ? r.json() : [])
+            // 배열이 맞는지 방어적으로 확인한 뒤 캐시에 담아 돌려준다.
             .then(d => { _cafes = Array.isArray(d) ? d : []; return _cafes; })
+            // 네트워크 실패/파싱 실패 등 어떤 예외든 빈 배열로 안전하게 마무리.
             .catch(() => { _cafes = []; return _cafes; });
     }
 
     // 방문 기록 — saudade.atlas.visited = { id: timestamp_ms }
+    // 사용자가 "방문함"으로 표시한 카페의 id 를 키로, 표시한 시각(ms)을 값으로 담는 객체.
     function getVisited() {
+        // localStorage 는 문자열만 저장하므로 JSON 문자열을 객체로 되돌린다(parse).
+        // 값이 없으면 빈 객체 문자열로 시작. 파싱이 깨지면 빈 객체로 안전 복구.
         try { return JSON.parse(localStorage.getItem(VISITED_KEY) || '{}'); }
         catch (e) { return {}; }
     }
+    // 방문 기록 한 건을 쓰거나(ts 있으면) 지운다(ts 가 falsy 면 delete).
     function setVisited(id, ts) {
         const all = getVisited();
         if (ts) all[id] = ts; else delete all[id];
+        // 객체 → JSON 문자열로 직렬화해 저장. 사생활보호 모드 등 저장 실패는 무시.
         try { localStorage.setItem(VISITED_KEY, JSON.stringify(all)); } catch (e) {}
     }
 
     // 30일 이내 방문 = JADE, 그 외 = BONE
+    // 카페 하나의 상태 색을 결정한다: 30일 이내 방문 = JADE(초록), 그 외 = BONE(뼈색).
     function statusFor(c) {
         const v = getVisited();
         const ts = v[c.id];
+        // Date.now() 는 현재 시각(ms). 86400000 = 하루(ms). 30일 = 30*86400000.
+        // 사용자가 최근 30일 안에 방문 표시를 했으면 JADE.
         if (ts && (Date.now() - ts) < 30 * 86400000) return 'JADE';
         // visited_at 시드 값도 확인 (서버 큐레이션 데이터)
+        // 사용자 기록이 없더라도 서버 큐레이션 데이터의 visited_at(편집자 방문일)을 확인.
         if (c.visited_at) {
             const seedTs = new Date(c.visited_at).getTime();
+            // Number.isFinite — 날짜 파싱이 성공(NaN 아님)했는지 확인.
             if (Number.isFinite(seedTs) && (Date.now() - seedTs) < 30 * 86400000) return 'JADE';
         }
+        // 그 밖에는 오래됐거나 방문 안 함 → BONE 으로 강등.
         return 'BONE';
     }
 
@@ -616,7 +642,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         document.head.appendChild(s);
     }
 
+    // 아틀라스 § 02 전체 화면을 그린다. items = 카페 배열.
+    // 순서: 루트 섹션 확보 → 통계 계산 → 검색 필터 → 헤더/행/노트 HTML 조립 → 이벤트 연결.
     function render(items) {
+        // 섹션 컨테이너가 아직 DOM 에 없으면 새로 만들어 body 에 붙인다(최초 1회).
         let root = document.getElementById('sddAtlas');
         if (!root) {
             root = document.createElement('section');
@@ -625,11 +654,13 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             document.body.appendChild(root);
         }
 
+        // 전체 개수와 그중 JADE(최근 방문) 개수를 세어 헤더 카운터에 쓴다.
         const total = items.length;
         const visited = items.filter(c => statusFor(c) === 'JADE').length;
         const ko = (window.state && window.state.lang === 'ko');
 
         // v607 search filter — name/neighborhood/amenities 부분 매칭
+        // 검색어를 소문자로 정규화해 이름/동네/도시/편의시설 부분 일치 검색.
         const q = _query.trim().toLowerCase();
         const filtered = q
             ? items.filter(c =>
@@ -692,8 +723,11 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             </div>
         `;
 
+        // 필터된 카페 목록을 각각 한 줄(article)의 HTML 문자열로 변환해 이어붙인다.
+        // .map(...) 은 배열을 같은 길이의 새 배열로 바꾸는 함수, .join('') 로 하나의 문자열이 된다.
         const rowsHtml = filtered.map((c, i) => {
             const status = statusFor(c);
+            // 거리 표기: 1km 미만은 소수 1자리("0.4 KM"), 이상은 반올림. 없으면 빈 문자열.
             const distKm = (typeof c.distance_km === 'number')
                 ? (c.distance_km < 1 ? c.distance_km.toFixed(1) : Math.round(c.distance_km * 10) / 10) + ' KM'
                 : '';
@@ -836,6 +870,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         });
         const isAtlasEmpty = total === 0;
 
+        // 조립한 조각들을 하나의 innerHTML 로 한 번에 그린다(부분 조작보다 단순하고 빠르다).
+        // 빈 아틀라스면 리스트 대신 빈 상태 컴포넌트가, 검색 0건이면 "No matches" 가 들어간다.
         root.innerHTML = headHtml +
             `<div id="sddAtlasEmpty"></div>` +
             (isAtlasEmpty ? '' : `<div class="sdd-atlas-list">${rowsHtml || `<div class="sdd-atlas-empty">${escapeHtml(noMatches)}</div>`}</div>`) +
@@ -869,7 +905,10 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             });
         }
 
+        // ── innerHTML 을 새로 그렸으므로, 방금 만들어진 버튼/입력에 이벤트를 다시 붙인다. ──
         // v7 §8.7 PR1 — LIST/MAP 토글 핸들러 (페어 버튼). MAP 첫 진입 시 lazy load.
+        // addEventListener('click', ...) — 버튼을 누르면 실행될 콜백을 등록.
+        // async 함수라 안에서 await(비동기 대기)로 지도 모듈 초기화를 기다릴 수 있다.
         root.querySelectorAll('[data-view-set]').forEach(btn => {
             btn.addEventListener('click', async () => {
                 const next = btn.getAttribute('data-view-set');
@@ -907,6 +946,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         });
 
         // v607 — search input 핸들러 (입력 변화 시 즉시 재렌더, focus 유지)
+        // 'input' 이벤트는 글자를 칠 때마다 발생. 매번 render 를 다시 부르는 대신
+        // 커서 위치(selectionStart)를 저장했다가 새 입력창에 복원해 타이핑이 끊기지 않게 한다.
         const qInput = root.querySelector('#sddAtlasQ');
         if (qInput) {
             qInput.addEventListener('input', (ev) => {
@@ -957,6 +998,8 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
             }
         });
 
+        // 각 카페 행을 클릭하면 그 카페의 상세 페이지로 이동한다(모달이 아니라 전체 페이지).
+        // data-cafe-id 로 클릭된 행이 어떤 카페인지 알아내 items 에서 원본 객체를 찾는다.
         root.querySelectorAll('.sdd-atlas-item').forEach(el => {
             el.addEventListener('click', (ev) => {
                 const id = el.getAttribute('data-cafe-id');
@@ -1031,11 +1074,14 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
                 </p>
             </footer>
         `;
+        // body 에 클래스를 붙이면 CSS 가 상세 페이지를 화면 위로 띄운다.
         document.body.classList.add('atlas-detail-open');
 
+        // "← BACK TO ATLAS" — 클래스를 떼어 상세 페이지를 닫고 목록으로 돌아간다.
         detail.querySelector('[data-d-back]').addEventListener('click', () => {
             document.body.classList.remove('atlas-detail-open');
         });
+        // 방문 표시 토글: 이미 방문(cur)이면 null 로 지우고, 아니면 지금 시각을 기록.
         detail.querySelector('[data-toggle-visit]').addEventListener('click', () => {
             const cur = getVisited()[cafe.id];
             setVisited(cafe.id, cur ? null : Date.now());
@@ -1058,23 +1104,31 @@ body.atlas-detail-open .sdd-atlas-detail { display: block; }
         return escapeHtml(m[1]) + '<span class="sdd-punct">' + escapeHtml(m[2]) + '</span>';
     }
 
+    // 모듈 초기화: 스타일 주입 + 첫 렌더 + 섹션 진입 감지.
     function init() {
         injectStyles();
         load().then(items => render(items));
         // body section 변경 감지 — 02 진입 시 재렌더 (JADE/BONE 새로고침)
+        // MutationObserver — DOM 변화를 감시하는 브라우저 API.
+        // body 의 data-section 속성이 바뀔 때마다 콜백이 돌아, § 02(아틀라스)로
+        // 들어온 순간 다시 그려 JADE/BONE 상태를 최신으로 새로고침한다.
         const mo = new MutationObserver(() => {
             if (document.body.getAttribute('data-section') === '02') {
                 load().then(items => render(items));
             }
         });
+        // body 의 attributes 중 data-section 만 관찰(불필요한 콜백을 줄인다).
         mo.observe(document.body, { attributes: true, attributeFilter: ['data-section'] });
     }
 
+    // 문서가 아직 로딩 중이면 DOM 준비 완료(DOMContentLoaded) 후 init, 이미 끝났으면 즉시 init.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 이 모듈의 공개 API 를 window 전역에 붙여 다른 모듈이 호출할 수 있게 한다.
+    // reload 는 캐시(_cafes)를 비우고 다시 초기화한다(에디션/도시 전환 시 사용).
     window.SAUDADE_ATLAS = { reload: () => { _cafes = null; init(); }, statusFor, getVisited, setVisited };
 })();
