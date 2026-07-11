@@ -5,11 +5,15 @@
 // 헌법 §3 — 카드 UI 금지 룰의 보완: paper 가 실제 종이임을 시각적으로 단언.
 'use strict';
 
+// IIFE — 로드 즉시 실행. 페이지 네 모서리에 인쇄용 L자 코너 마크를 그리는 모듈.
 (function() {
+    // 중복 로드 방어(멱등).
     if (window.SAUDADE_HUD) return;
 
+    // NS — SVG 요소를 만들 때 필요한 네임스페이스 URI.
     const NS = 'http://www.w3.org/2000/svg';
 
+    // injectStyles — 이 모듈 전용 CSS 를 <head> 에 한 번만 주입(전역 CSS 변수 사용).
     function injectStyles() {
         if (document.getElementById('sddHudStyles')) return;
         const s = document.createElement('style');
@@ -68,6 +72,7 @@ body.listening-active .sdd-hud-corners { display: none !important; }
         return rotation;
     }
 
+    // svgFor — 모서리별(tl/tr/bl/br) L자 SVG 를 만든다(안쪽으로 뻗는 두 획).
     function svgFor(corner) {
         // 각 모서리 별 path. 18×18 viewBox. stroke 안쪽으로 9px 두 개.
         const PATHS = {
@@ -86,6 +91,7 @@ body.listening-active .sdd-hud-corners { display: none !important; }
         return svg;
     }
 
+    // mount — 네 모서리 마크를 담은 오버레이를 body 에 한 번만 붙인다.
     function mount() {
         if (document.getElementById('sddHudCorners')) return;
         const wrap = document.createElement('div');
@@ -104,16 +110,19 @@ body.listening-active .sdd-hud-corners { display: none !important; }
         document.body.appendChild(wrap);
     }
 
+    // init — 스타일 주입 후 코너 마크를 마운트.
     function init() {
         injectStyles();
         mount();
     }
 
+    // 문서 로딩 중이면 DOMContentLoaded 후, 아니면 즉시 시동.
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
 
+    // 전역 공개 API — 코너 마크 마운트.
     window.SAUDADE_HUD = { mount };
 })();
