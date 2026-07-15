@@ -60,6 +60,18 @@ jobs:
         run: node scripts/validate-content.js
         continue-on-error: true
 
+      - name: Bump cache if dispatches changed
+        if: always()
+        run: |
+          # 디스패치 파일이 실제로 바뀌었으면 캐시버스터를 범프(sw.js + index.html).
+          # 디스패치는 프론트에서 force-cache 로 읽으므로, 범프 없이는 서비스워커가
+          # 옛 매거진 글을 계속 서빙한다 → "글이 안 바뀐다"의 원인. 범프하면 배포 후
+          # 사용자에게 새 글이 즉시 반영된다.
+          if ! git diff --quiet data/dispatches.ko.json data/dispatches.ja.json \
+                                data/dispatches.pt.json data/dispatches.es.json 2>/dev/null; then
+            node scripts/bump-cache.js
+          fi
+
       - name: Open pull request
         if: always()
         env:
@@ -72,6 +84,8 @@ jobs:
           shopt -s nullglob
           git add data/dispatches.ko.json data/dispatches.ja.json \
                   data/dispatches.pt.json data/dispatches.es.json 2>/dev/null || true
+          # 캐시 범프 결과(sw.js + index.html)도 함께 커밋 → 머지 한 번으로 새 글이 반영됨.
+          git add sw.js index.html 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No dispatch changes to commit — skipping PR."
             exit 0

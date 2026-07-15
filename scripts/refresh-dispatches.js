@@ -180,15 +180,29 @@ async function callGemini(prompt, key) {
             responseMimeType: 'application/json'
         }
     };
-    const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-    });
-    if (!res.ok) throw new Error(`Gemini ${res.status}: ${(await res.text()).slice(0, 300)}`);
-    const data = await res.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-    return text;
+    // 429(무료 등급 분당 한도 ≈15rpm)·503(과부하)는 잠깐 기다리면 대부분 풀린다.
+    // 이전엔 즉시 throw → 마지막 에디션(es)이 앞 에디션 재시도로 찬 분당창에 걸려
+    // 그냥 실패했다. 지수 백오프로 창이 비길 기다렸다가 다시 친다.
+    const RL_RETRIES = 4;
+    for (let i = 0; ; i++) {
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        });
+        if (res.ok) {
+            const data = await res.json();
+            return data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        }
+        const detail = (await res.text()).slice(0, 300);
+        if ((res.status === 429 || res.status === 503) && i < RL_RETRIES) {
+            const waitMs = Math.min(60000, 8000 * (i + 1)); // 8s·16s·24s·32s (최대 60s)
+            console.error(`  Gemini ${res.status} — ${Math.round(waitMs / 1000)}s 후 재시도 (${i + 1}/${RL_RETRIES})`);
+            await new Promise(r => setTimeout(r, waitMs));
+            continue;
+        }
+        throw new Error(`Gemini ${res.status}: ${detail}`);
+    }
 }
 
 function safeParse(s) {
