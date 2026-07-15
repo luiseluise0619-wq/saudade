@@ -183,9 +183,9 @@ function buildPrompt(edition, todayStr, facts) {
         `      "items": [`,
         `        {`,
         `          "n": "01",`,
-        `          "headline": "<one declarative sentence in ${cfg.label}, ≤ 18 words>",`,
-        `          "lede":     "<one supporting sentence in ${cfg.label}, ≤ 22 words>",`,
-        `          "body":     "<two short sentences in ${cfg.label}, ≤ 60 words total>",`,
+        `          "headline": "<one declarative sentence in ${cfg.label}, ≤ 20 words>",`,
+        `          "lede":     "<one or two supporting sentences in ${cfg.label}, ≤ 35 words>",`,
+        `          "body":     "<a fuller paragraph in ${cfg.label}: 4 to 6 sentences, 110-160 words. Weave in the SOURCE FACTS (weather, holiday, exchange rate, civic news) and give the reader real, useful context — not just mood.>",`,
         `          "source":      "saudade desk",`,
         `          "source_date": "${today}"`,
         `        }`,
@@ -220,7 +220,8 @@ async function callGemini(prompt, key) {
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
         generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 2048,
+            // 본문을 길게(문단형) 요청하므로 상향. KO/JA 는 토큰이 무거워 2048 이면 잘림.
+            maxOutputTokens: 4096,
             responseMimeType: 'application/json'
         }
     };
