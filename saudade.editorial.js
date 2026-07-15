@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-05-05T10:42:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-07-15T06:15:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -59,7 +59,15 @@
         'Dubai':        { noun: 'Glass.',    ko: '유리의 도시.' }
     };
 
-    function detectCity(ed) {
+    // Per-edition default editor city. KO opens in Seoul, JA in Tokyo, etc.
+    // Used only when the reader has no explicit pick (no Switch-the-Desk +
+    // no GeoIP). The English city name is the canonical key — cityIn(city, ed)
+    // translates to the localised form before render.
+    const EDITION_DEFAULT_CITY = {
+        en: 'Lisbon', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
+    };
+
+    function detectCity() {
         // v6 §5 — 사용자 명시 home city + Switch the Desk 활성 시 임시 city
         // saudade-city.js 의 activeDeskCity() 가 우선 (사용자가 desk 에서 골랐을 것)
         try {
@@ -75,13 +83,10 @@
             const geo = JSON.parse(localStorage.getItem('aura_geoip_v1') || '{}');
             if (geo.city && COVER_COPY[geo.city]) return geo.city;
         } catch (e) {}
-        // Per-edition notional desk city — matches each edition's audience
-        // home and (for EN) the editor's actual location per credits.html
-        // "Issue 03 was edited from Seoul". Was unconditional 'Lisbon'.
-        const PER_EDITION_DESK = {
-            en: 'Seoul', ko: 'Seoul', ja: 'Tokyo', pt: 'Lisbon', es: 'Madrid'
-        };
-        return PER_EDITION_DESK[ed] || 'Seoul';
+        // Edition-default — KO 가 리스본을 첫 화면으로 보면 안 된다.
+        const ed = (window.SAUDADE_EDITION?.get?.()) ||
+                   (window.state && window.state.lang) || 'en';
+        return EDITION_DEFAULT_CITY[ed] || 'Lisbon';
     }
 
     function isKo() {
@@ -216,10 +221,14 @@
     position: fixed;
     inset: 0;
     z-index: 4;
-    /* v729 — auto so the cover catches its own wheel events. Was none
-       with selective children opt-in, which caused wheel to pass
-       through empty cover regions into body and freeze scroll at
-       ~scrollTop 600. See saudade-cover.js for full note. */
+    /* v729 — was 'pointer-events: none' with selected children opting back
+       in via 'pointer-events: auto'. Side effect: empty cover regions
+       returned pointer-events:none to elementFromPoint, so wheel events
+       in those regions passed straight through cover into body
+       (body.overflow:hidden), and the cover stopped scrolling after a few
+       ticks (stuck at scrollTop ≈ 600/1007 — readers reported the page
+       "freezes when you scroll down").
+       Cover needs to receive its own wheel so its overflow-y:auto works. */
     pointer-events: auto;
     display: flex;
     flex-direction: column;
@@ -254,50 +263,58 @@ body.section-active .sdd-cover { display: none !important; }
 }
 .sdd-cover-archive-link:hover { color: var(--ink); border-bottom-color: var(--ink); padding-left: 4px; }
 
-/* v730 — scroll cue. Quiet ↓ above the dock; slow breathing fade, never
-   a bounce. Removed permanently (per session) after first cover scroll. */
-.sdd-cover-scroll-cue {
-    position: fixed;
-    left: 50%;
-    bottom: calc(var(--dock-h, 56px) + 18px);
-    transform: translateX(-50%);
-    z-index: 5;
-    pointer-events: none;
+/* Edition switcher row at the top of the cover. Discreet mono row
+   above the masthead; click any other code to switch. The current
+   edition is jade-tinted; others fade. SAUDADE_EDITION.set handles
+   the loading flash + reload chain. */
+.sdd-cover-editions {
+    display: flex;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 20px);
+    margin: 0 0 clamp(20px, 3vw, 32px);
+    padding-bottom: clamp(8px, 1vw, 12px);
+    border-bottom: 0.5px solid var(--rule, rgba(11,11,15,.12));
+    flex-wrap: wrap;
+}
+.sdd-cover-ed-opt {
+    background: transparent;
+    border: 0;
+    padding: 8px 4px;
+    min-height: 44px;
+    min-width: 44px;
     font-family: var(--mono);
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     color: var(--bone-d);
-    opacity: 0;
-    animation: sddCueBreathe 3.2s ease-in-out 1.2s infinite;
-    transition: opacity .5s ease;
+    cursor: pointer;
+    transition: color .12s, border-color .12s;
+    border-bottom: 1.5px solid transparent;
 }
-.sdd-cover-scroll-cue.is-gone { animation: none; opacity: 0 !important; }
-@keyframes sddCueBreathe {
-    0%, 100% { opacity: 0; }
-    50%      { opacity: .65; }
+.sdd-cover-ed-opt:hover,
+.sdd-cover-ed-opt:focus-visible {
+    color: var(--ink);
+    outline: none;
 }
-@media (prefers-reduced-motion: reduce) {
-    .sdd-cover-scroll-cue { animation: none; opacity: .5; }
+.sdd-cover-ed-opt[aria-current="true"] {
+    color: var(--ink);
+    border-bottom-color: var(--rust, #9A3324);
 }
 
-/* Theme color picker — round button at the top of the cover, popping
-   a panel of skin swatches. Sits to the LEFT of the existing EN▼
-   edition dropdown (saudade-skin.css: .sdd-cover-edition is fixed
-   top: 16-24px / right: 16-24px) so the two don't overlap. Labels
-   match the existing legal-strip theme switch (saudade-theme-switch.js):
-   AUTO / PAPER / COVER / NIGHT — same skins, brand-consistent names. */
+/* Theme color picker — round button top-right of the cover that pops
+   a panel of skin swatches. Each swatch shows the skin's actual
+   primary color; the labels sit on a paper-tone strip so contrast
+   stays readable on any background. */
 .sdd-cover-theme {
-    position: fixed;
-    top: clamp(16px, 2vw, 24px);
-    /* leave room for EN▼ (~40px) + 12px gap to the right */
-    right: calc(clamp(16px, 2vw, 24px) + 40px + 12px);
-    z-index: var(--z-cover, 4);
-    pointer-events: auto;
+    position: absolute;
+    top: clamp(12px, 2vw, 20px);
+    right: clamp(12px, 2vw, 20px);
+    z-index: 5;
+    pointer-events: auto;   /* parent .sdd-cover sets pointer-events: none */
 }
-body.section-active .sdd-cover-theme,
-body.cafe-mode .sdd-cover-theme,
-body.listening-active .sdd-cover-theme { display: none !important; }
 .sdd-cover-theme-toggle {
-    width: 44px; height: 44px;
+    width: 40px; height: 40px;
+    min-width: 44px; min-height: 44px;     /* mobile touch */
     border-radius: 50%;
     border: 1px solid var(--ink, #16151A);
     background: var(--paper, #F2EEE3);
@@ -313,9 +330,11 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     outline: 2px solid var(--rust, #9A3324);
     outline-offset: 2px;
 }
+/* Inner mark — conic gradient through the three skins so the button
+   itself previews what's behind the popover. */
 .sdd-cover-theme-toggle-mark {
     display: block;
-    width: 24px; height: 24px;
+    width: 22px; height: 22px;
     border-radius: 50%;
     background:
         conic-gradient(
@@ -328,14 +347,15 @@ body.listening-active .sdd-cover-theme { display: none !important; }
 .sdd-cover-theme-pop {
     position: absolute;
     top: 52px; right: 0;
-    background: #F2EEE3;
+    background: #F2EEE3;       /* always paper so labels read clean */
     color: #16151A;
     border: 0.5px solid #16151A;
-    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
     padding: 8px;
     display: grid;
+    grid-template-columns: 1fr;
     gap: 4px;
-    min-width: 188px;
+    min-width: 180px;
 }
 .sdd-cover-theme-pop[hidden] { display: none; }
 .sdd-cover-theme-opt {
@@ -351,7 +371,7 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     font-weight: 500;
     font-size: 10px;
     letter-spacing: 0.28em;
-    color: #16151A;
+    color: #16151A;             /* labels: ink on paper, always readable */
     cursor: pointer;
     text-align: left;
     transition: background .12s;
@@ -362,9 +382,12 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     background: rgba(22,21,26,.06);
     outline: none;
 }
-.sdd-cover-theme-opt[aria-current="true"] { background: rgba(22,21,26,.10); }
+.sdd-cover-theme-opt[aria-current="true"] {
+    background: rgba(22,21,26,.10);
+}
 .sdd-cover-theme-opt[aria-current="true"] .label::before {
-    content: '· '; color: var(--rust, #9A3324);
+    content: '· ';
+    color: var(--rust, #9A3324);
 }
 .sdd-cover-theme-opt .swatch {
     width: 22px; height: 22px;
@@ -372,17 +395,14 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     border: 0.5px solid #16151A;
 }
 .sdd-cover-theme-opt .swatch.swatch-auto {
-    background: linear-gradient(135deg, #F2EEE3 0 49%, #15130E 51% 100%);
+    background:
+        linear-gradient(135deg,
+            #F2EEE3 0%, #F2EEE3 49%,
+            #15130E 51%, #15130E 100%);
 }
 .sdd-cover-theme-opt .swatch.swatch-paper     { background: #F2EEE3; }
 .sdd-cover-theme-opt .swatch.swatch-saturated { background: var(--accent, #B8442D); }
 .sdd-cover-theme-opt .swatch.swatch-dark      { background: #15130E; }
-
-/* Floating LISTENING ROOM CTA used to be a fixed bottom-right button.
-   It overlapped the cover Today / nav content. Now that § 05 sits in
-   the cover-nav alongside §01-04 (and the dock already exposes
-   LISTENING), the floating CTA is redundant. Hide it. */
-.sdd-cover-listen-cta { display: none !important; }
 
 /* 마스트헤드 — 신문 NYT/Guardian 식 */
 .sdd-cover-mast {
@@ -402,15 +422,10 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     text-transform: lowercase;
 }
 .sdd-cover-mast-rule {
-    /* v8 fine-magazine — double rule beneath the wordmark.
-       NYT/Le Monde masthead tradition (two thin parallel lines).
-       Was a single 0.5px hairline. */
-    height: 5px;
-    border-top: 0.5px solid var(--ink);
-    border-bottom: 0.5px solid var(--ink);
-    background: none;
+    height: 0;
+    border-top: 0.5px solid var(--rule-2);
     margin: clamp(8px, 1.2vw, 14px) auto;
-    width: clamp(140px, 22vw, 260px);
+    width: clamp(120px, 20vw, 240px);
 }
 .sdd-cover-mast-date {
     font-family: var(--mono);
@@ -421,19 +436,6 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     text-transform: uppercase;
     color: var(--ink);
     margin: 0;
-}
-/* Tagline — small italic serif beneath the date line, NYT-masthead
-   tradition. One-line answer to "what is this?" before the hero. */
-.sdd-cover-mast-tagline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(13px, 1.3vw, 16px);
-    line-height: 1.35;
-    color: var(--bone-d);
-    margin: clamp(8px, 1vw, 12px) auto 0;
-    max-width: 38ch;
-    text-wrap: balance;
 }
 
 /* 분기 ISSUE 정보 */
@@ -463,389 +465,6 @@ body.listening-active .sdd-cover-theme { display: none !important; }
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Cover hero — today's three dispatch headlines, front-page style.
-   Big serif italic, like a newspaper lead. Clicking jumps to §03. */
-.sdd-cover-heads {
-    margin: 0 auto clamp(28px, 4vw, 48px);
-    max-width: 640px;
-    width: 100%;
-    pointer-events: auto;
-}
-.sdd-cover-heads-eyebrow {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin: 0 0 clamp(14px, 2vw, 22px);
-    padding-bottom: clamp(8px, 1.2vw, 12px);
-    border-bottom: 0.5px solid var(--rule);
-}
-/* Staleness chip appended to the eyebrow when filed_at > 1 day old.
-   "1 DAY AGO" stays muted; >2 days flips to rust to make the cron
-   pause obvious from the cover. */
-.sdd-cover-heads-stale {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-    margin-left: 8px;
-}
-.sdd-cover-heads-stale.is-warn { color: var(--rust); }
-.sdd-cover-heads-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.sdd-cover-head {
-    padding: clamp(14px, 2vw, 20px) 0;
-    border-bottom: 0.5px solid var(--rule);
-}
-.sdd-cover-head:last-child { border-bottom: 0; }
-/* Drop cap on the lead story — newspaper convention. ::first-letter
-   on the headline gives a 3-line drop, rust-tinted, that announces
-   "this is the lead" without an explicit label. Browser support:
-   Chrome / Safari / Firefox all support ::first-letter; only Safari +
-   recent Chrome support initial-letter for true newspaper sinking.
-   Use both — initial-letter if available, font-size + float fallback
-   everywhere else. */
-.sdd-cover-head.is-lead .headline::first-letter {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--rust);
-    -webkit-initial-letter: 2;
-    initial-letter: 2;
-    /* Fallback for browsers without initial-letter support. */
-    font-size: 2.6em;
-    line-height: 0.85;
-    float: left;
-    margin-right: 0.08em;
-    margin-top: 0.04em;
-    padding-right: 0.04em;
-}
-@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
-    .sdd-cover-head.is-lead .headline::first-letter {
-        font-size: inherit;
-        line-height: inherit;
-        float: none;
-        margin: 0;
-        padding: 0;
-    }
-}
-.sdd-cover-head a {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: clamp(6px, 0.8vw, 10px);
-    color: inherit;
-    text-decoration: none;
-    transition: color .12s;
-}
-.sdd-cover-head a:hover .headline,
-.sdd-cover-head a:focus-visible .headline { color: var(--rust); }
-.sdd-cover-head .city {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--rust);
-}
-.sdd-cover-head .headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(22px, 2.6vw, 32px);
-    line-height: 1.18;
-    color: var(--ink);
-    letter-spacing: -0.005em;
-    text-wrap: pretty;
-}
-.sdd-cover-head .lede {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(14px, 1.4vw, 17px);
-    line-height: 1.45;
-    color: var(--bone-d);
-    text-wrap: pretty;
-    max-width: 56ch;
-}
-.sdd-cover-head .source {
-    font-family: var(--mono);
-    font-weight: 400;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-    opacity: 0.7;
-    margin-top: 2px;
-}
-.sdd-cover-head--pending .dots {
-    display: inline-block;
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--bone-d);
-    opacity: 0.55;
-    font-size: clamp(20px, 2.4vw, 30px);
-}
-/* Sunday silence + empty-state messages — single-row hero copy when
-   there are no headlines to show (KST Sunday per §9.1, or the cron
-   hasn't filed yet). Same vertical stack as a real headline so the
-   layout doesn't reflow. */
-.sdd-cover-head--rest,
-.sdd-cover-head--pending-msg {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: clamp(6px, 0.8vw, 10px);
-    padding: clamp(20px, 3vw, 28px) 0;
-}
-.sdd-cover-head--rest .headline,
-.sdd-cover-head--pending-msg .headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(22px, 2.6vw, 32px);
-    line-height: 1.18;
-    color: var(--ink);
-    letter-spacing: -0.005em;
-    text-wrap: pretty;
-}
-.sdd-cover-head--rest .lede,
-.sdd-cover-head--pending-msg .lede {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(14px, 1.4vw, 17px);
-    line-height: 1.45;
-    color: var(--bone-d);
-}
-
-/* Cover reader modal — opens when the user taps a hero headline.
-   Paper-tone card on a faded scrim. Body + quote + source link in
-   one column, max-width 64ch. Esc / scrim click / × button close. */
-.sdd-cover-reader[hidden] { display: none; }
-.sdd-cover-reader {
-    position: fixed; inset: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(16px, 4vw, 48px);
-    pointer-events: auto;
-}
-.sdd-cover-reader__scrim {
-    position: absolute; inset: 0;
-    background: rgba(11,11,15,0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-}
-body.cover-reader-open { overflow: hidden; }
-.sdd-cover-reader__card {
-    position: relative;
-    background: var(--paper);
-    color: var(--ink);
-    border: 0.5px solid var(--ink);
-    padding: clamp(28px, 4vw, 56px) clamp(24px, 5vw, 56px);
-    max-width: 64ch;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 24px 60px rgba(11,11,15,0.28);
-}
-.sdd-cover-reader__close {
-    position: absolute;
-    top: 12px; right: 12px;
-    width: 36px; height: 36px;
-    min-width: 44px; min-height: 44px;
-    background: transparent;
-    border: 0;
-    color: var(--bone-d);
-    font-family: var(--serif);
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    transition: color .12s;
-}
-.sdd-cover-reader__close:hover,
-.sdd-cover-reader__close:focus-visible { color: var(--rust); outline: none; }
-.sdd-cover-reader__city {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin: 0 0 clamp(8px, 1.2vw, 14px);
-}
-.sdd-cover-reader__headline {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(26px, 3.4vw, 40px);
-    line-height: 1.14;
-    color: var(--ink);
-    margin: 0 0 clamp(12px, 2vw, 18px);
-    letter-spacing: -0.005em;
-    text-wrap: pretty;
-}
-.sdd-cover-reader__lede {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(16px, 1.6vw, 19px);
-    line-height: 1.45;
-    color: var(--bone-d);
-    margin: 0 0 clamp(16px, 2.5vw, 24px);
-    max-width: 56ch;
-}
-.sdd-cover-reader__body {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: clamp(15px, 1.5vw, 18px);
-    line-height: 1.6;
-    color: var(--ink);
-    white-space: pre-line;
-    max-width: 56ch;
-    margin: 0 0 clamp(16px, 2.5vw, 24px);
-}
-.sdd-cover-reader__quote {
-    margin: clamp(20px, 3vw, 28px) 0;
-    padding-left: clamp(16px, 2.5vw, 24px);
-    border-left: 1px solid var(--rust);
-}
-.sdd-cover-reader__quote blockquote {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(16px, 1.8vw, 22px);
-    line-height: 1.4;
-    color: var(--ink);
-    margin: 0 0 6px;
-}
-.sdd-cover-reader__quote figcaption {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-}
-.sdd-cover-reader__source {
-    margin: clamp(20px, 3vw, 28px) 0 0;
-    padding-top: clamp(12px, 2vw, 16px);
-    border-top: 0.5px dashed var(--rule);
-    display: grid;
-    gap: 6px;
-}
-.sdd-cover-reader__source .label {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--rust);
-}
-.sdd-cover-reader__source .value {
-    font-family: var(--serif);
-    font-size: 14px;
-    color: var(--ink);
-}
-.sdd-cover-reader__source .link {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--ink);
-    padding-bottom: 2px;
-    align-self: start;
-    margin-top: 4px;
-}
-.sdd-cover-reader__source .link:hover,
-.sdd-cover-reader__source .link:focus-visible {
-    color: var(--rust); border-bottom-color: var(--rust); outline: none;
-}
-/* v730 — share row. Same mono register as the source link; sits at the
-   card's foot so it reads like a newspaper's "clip this article" corner. */
-.sdd-cover-reader__actions {
-    margin: clamp(16px, 2.5vw, 24px) 0 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-}
-/* v731 — clip button: identical chrome to share, distinct color when active. */
-.sdd-cover-reader__clip {
-    appearance: none;
-    background: none;
-    border: 0.5px solid var(--rule-2);
-    padding: 8px 14px;
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-    cursor: pointer;
-    transition: color .15s ease, border-color .15s ease;
-}
-.sdd-cover-reader__clip .glyph { letter-spacing: 0; margin-left: 2px; }
-.sdd-cover-reader__clip:hover,
-.sdd-cover-reader__clip:focus-visible {
-    color: var(--rust); border-color: var(--rust); outline: none;
-}
-.sdd-cover-reader__clip[aria-pressed="true"] {
-    color: var(--rust); border-color: var(--rust);
-}
-.sdd-cover-reader__share {
-    appearance: none;
-    background: none;
-    border: 0.5px solid var(--rule-2);
-    padding: 8px 14px;
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-    cursor: pointer;
-    transition: color .15s ease, border-color .15s ease;
-}
-.sdd-cover-reader__share:hover,
-.sdd-cover-reader__share:focus-visible {
-    color: var(--rust); border-color: var(--rust); outline: none;
-}
-.sdd-cover-reader__share.is-copied { color: var(--rust); border-color: var(--rust); }
-@media (max-width: 600px) {
-    .sdd-cover-reader { padding: 0; }
-    .sdd-cover-reader__card {
-        max-width: none; max-height: 100vh; height: 100vh;
-        border: 0;
-    }
-}
-
-/* Secondary 'today' counters — demoted now that dispatch headlines own
-   the hero. Keep them quietly visible: smaller, ink-soft, single row. */
-.sdd-cover-today--secondary {
-    border-top: 0.5px dashed var(--rule);
-    border-bottom: 0.5px dashed var(--rule);
-    padding: clamp(10px, 1.5vw, 16px) 0;
-}
-.sdd-cover-today--secondary .sdd-cover-today-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(12px, 2vw, 24px);
-    justify-content: center;
-}
-.sdd-cover-today--secondary .sdd-cover-today-item {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--bone-d);
-}
-.sdd-cover-today--secondary .sdd-cover-today-item::before { content: ''; }
 
 /* TODAY 요약 — 신문 frontpage 의 'INSIDE TODAY' */
 .sdd-cover-today {
@@ -957,17 +576,9 @@ body.cover-reader-open { overflow: hidden; }
 .sdd-cover-nav a .sdd-mark { color: var(--bone-d); margin-right: 4px; font-weight: 400; }
 
 @media (max-width: 768px) {
-    .sdd-cover { justify-content: flex-start; padding: 88px 24px calc(var(--dock-h, 56px) + 64px); }
-    /* On mobile the bottom dock already exposes all 5 sections — the
-       cover-nav repeats the same links and just lengthens the scroll.
-       Hide it; desktop (where there's no dock) keeps it. */
-    .sdd-cover-nav { display: none; }
-    /* Issue lede + personal block are quiet on mobile so the dispatch
-       hero stays the lead story. */
-    .sdd-cover-issue { margin: clamp(16px, 3vw, 24px) 0; }
-    .sdd-cover-issue-lede { font-size: 15px; line-height: 1.4; opacity: 0.85; }
-    /* Dispatch hero gets a touch more breathing room as the actual lead. */
-    .sdd-cover-heads { margin-bottom: clamp(20px, 3vw, 32px); }
+    .sdd-cover { justify-content: center; padding: 0 24px; }
+    .sdd-cover-nav { gap: 14px; font-size: 10px; }
+    .sdd-cover-nav a { padding: 4px 0; }
 }
 `;
         document.head.appendChild(s);
@@ -1024,12 +635,27 @@ body.cover-reader-open { overflow: hidden; }
     const TODAY_LABEL = {
         en: 'TODAY', ko: '오늘', ja: '本日', pt: 'HOJE', es: 'HOY'
     };
+    // Cover nav — Section labels per edition. Each magazine should read
+    // in its own language; English placeholders on non-EN editions were
+    // a real i18n bug, not a design choice.
+    const NAV_LABEL_LEDGER = {
+        en: 'LEDGER',     ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO',  es: 'LIBRO MAYOR'
+    };
+    const NAV_LABEL_ATLAS = {
+        en: 'ATLAS',      ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'
+    };
+    const NAV_LABEL_DISPATCHES = {
+        en: 'DISPATCHES', ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'
+    };
+    const NAV_LABEL_DESK = {
+        en: 'THE DESK',   ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'
+    };
     const ISSUE_LEDE_5 = {
-        en: 'Three cities, filed daily. Edited from $editorCity.',
-        ko: '세 도시, 매일 발행. $editorCity에서 편집.',
-        ja: '三つの街、毎日発行。$editorCityで編集。',
-        pt: 'Três cidades, publicadas diariamente. Editada a partir de $editorCity.',
-        es: 'Tres ciudades, publicadas a diario. Editada desde $editorCity.'
+        en: 'Three cities, no schedule. Edited from $editorCity.',
+        ko: '세 도시, 일정 없음. $editorCity에서 편집.',
+        ja: '三つの街、日程なし。$editorCityで編集。',
+        pt: 'Três cidades, sem agenda. Editada a partir de $editorCity.',
+        es: 'Tres ciudades, sin agenda. Editada desde $editorCity.'
     };
 
     function formatMastDate(ed) {
@@ -1119,8 +745,8 @@ body.cover-reader-open { overflow: hidden; }
     }
 
     function render() {
+        const city = detectCity();
         const ed = currentEdition();
-        const city = detectCity(ed);
         const c = COPY_5[ed] || COPY_5.en;
 
         let cover = document.getElementById('sddCover');
@@ -1142,30 +768,32 @@ body.cover-reader-open { overflow: hidden; }
             `<li class="sdd-cover-today-item">→ ${escapeHtml(l)}</li>`
         ).join('');
 
+        const supported = (window.SAUDADE_EDITION?.SUPPORTED) || ['en','ko','ja','pt','es'];
+        const editionsHtml = supported.map(code => `
+            <button type="button"
+                    class="sdd-cover-ed-opt"
+                    data-edition="${code}"
+                    aria-current="${code === ed ? 'true' : 'false'}"
+                    aria-label="Switch to ${code.toUpperCase()} edition">${code.toUpperCase()}</button>`).join('');
+
         const currentSkinPref = (window.SAUDADE_EDITION?.skinPref?.()) || 'auto';
-        // Labels mirror saudade-theme-switch.js (the legal-strip switcher).
-        // Per-edition translations keep the brand voice consistent.
-        const skinLabelEd = (key) => {
-            const lookup = {
-                auto:      { en: 'AUTO',    ko: '자동',  ja: '自動',     pt: 'AUTO',   es: 'AUTO' },
-                paper:     { en: 'PAPER',   ko: '종이',  ja: '紙',       pt: 'PAPEL',  es: 'PAPEL' },
-                saturated: { en: 'COVER',   ko: '표지',  ja: '表紙',     pt: 'CAPA',   es: 'TAPA' },
-                dark:      { en: 'NIGHT',   ko: '밤',    ja: '夜',       pt: 'NOITE',  es: 'NOCHE' }
-            };
-            return (lookup[key] && (lookup[key][ed] || lookup[key].en)) || key.toUpperCase();
-        };
+        const SKIN_LABEL = { auto: 'AUTO', paper: 'PAPER', saturated: 'SATURATED', dark: 'DARK' };
         const SKIN_ORDER = ['auto', 'paper', 'saturated', 'dark'];
         const themeOptsHtml = SKIN_ORDER.map(k => `
             <button type="button"
                     class="sdd-cover-theme-opt"
                     data-skin="${k}"
                     aria-current="${k === currentSkinPref ? 'true' : 'false'}"
-                    aria-label="Theme: ${skinLabelEd(k)}">
+                    aria-label="Theme: ${SKIN_LABEL[k]}">
                 <span class="swatch swatch-${k}" aria-hidden="true"></span>
-                <span class="label">${skinLabelEd(k)}</span>
+                <span class="label">${SKIN_LABEL[k]}</span>
             </button>`).join('');
 
         cover.innerHTML = `
+            <nav class="sdd-cover-editions" aria-label="Edition">
+                ${editionsHtml}
+            </nav>
+
             <div class="sdd-cover-theme">
                 <button type="button"
                         class="sdd-cover-theme-toggle"
@@ -1183,30 +811,11 @@ body.cover-reader-open { overflow: hidden; }
                 <h1 class="sdd-cover-wordmark">SAUDADE</h1>
                 <div class="sdd-cover-mast-rule"></div>
                 <p class="sdd-cover-mast-date">${escapeHtml(mastDate)} · ${escapeHtml(deskLine)}</p>
-                <!-- Tagline beneath the masthead — NYT-style "All the News
-                     That's Fit to Print" position. Answers "what is this?"
-                     in one line before the visitor scrolls to the hero. -->
-                <p class="sdd-cover-mast-tagline">${escapeHtml(issueLede)}</p>
             </header>
 
-            <!-- v8 cover hero — today's three dispatch headlines, front-page
-                 style. Promoted above masthead-issue/personal so the first
-                 paint on mobile is the news, not the funding model copy.
-                 Filled async from data/dispatches.<ed>.json after cover
-                 renders. Falls back to a pending state if fetch fails. -->
-            <section class="sdd-cover-heads">
-                <p class="sdd-cover-heads-eyebrow">${escapeHtml((TODAY_LABEL[ed] || 'TODAY') + ' · § 03')}</p>
-                <ol class="sdd-cover-heads-list" id="sddCoverHeads">
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                    <li class="sdd-cover-head sdd-cover-head--pending"><span class="dots">…</span></li>
-                </ol>
-            </section>
-
-            <!-- Issue eyebrow only — the lede was promoted into the
-                 masthead as the tagline above. -->
             <section class="sdd-cover-issue">
                 <p class="sdd-cover-issue-eyebrow">${escapeHtml(QUARTER_LABEL[ed] || 'THIS ISSUE')} · ${escapeHtml(quarter)}</p>
+                <p class="sdd-cover-issue-lede">${escapeHtml(issueLede)}</p>
             </section>
 
             <!-- v641 — personal block. Empathy layer that turns the user's
@@ -1216,18 +825,16 @@ body.cover-reader-open { overflow: hidden; }
                  hook with shortcuts to set home cities or load demo data. -->
             <div id="sddCoverPersonal"></div>
 
-            <!-- Secondary counters (Ledger / Atlas / Listening). Demoted
-                 from hero now that dispatch headlines own the cover. -->
-            <section class="sdd-cover-today sdd-cover-today--secondary">
+            <section class="sdd-cover-today">
+                <p class="sdd-cover-today-eyebrow">${escapeHtml(TODAY_LABEL[ed] || 'TODAY')}</p>
                 <ul class="sdd-cover-today-list">${todayHtml}</ul>
             </section>
 
             <nav class="sdd-cover-nav">
-                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>LEDGER</a>
-                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>ATLAS</a>
-                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>DISPATCHES</a>
-                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>THE DESK</a>
-                <a href="#section-05" data-sdd-jump="listening"><span class="sdd-mark">§ 05</span>LISTENING ROOM</a>
+                <a href="#section-01" data-sdd-jump="visa"><span class="sdd-mark">§ 01</span>${escapeHtml(NAV_LABEL_LEDGER[ed] || NAV_LABEL_LEDGER.en)}</a>
+                <a href="#section-02" data-sdd-jump="cafe"><span class="sdd-mark">§ 02</span>${escapeHtml(NAV_LABEL_ATLAS[ed] || NAV_LABEL_ATLAS.en)}</a>
+                <a href="#section-03" data-sdd-jump="tz"><span class="sdd-mark">§ 03</span>${escapeHtml(NAV_LABEL_DISPATCHES[ed] || NAV_LABEL_DISPATCHES.en)}</a>
+                <a href="#section-04" data-sdd-jump="trip"><span class="sdd-mark">§ 04</span>${escapeHtml(NAV_LABEL_DESK[ed] || NAV_LABEL_DESK.en)}</a>
             </nav>
 
             <!-- v644 — direct path to the issue archive + per-issue PDF download.
@@ -1239,35 +846,11 @@ body.cover-reader-open { overflow: hidden; }
             </p>
         `;
 
-        // v730 — scroll cue. The cover scrolls (overflow-y:auto) but nothing
-        // told the reader so; several reported the page "ends" at the fold.
-        // A quiet mono ↓ pinned to the bottom edge, gone forever after the
-        // first scroll (per session). Newspaper register — no bouncing.
-        if (!sessionStorage.getItem('saudade.cover.scrolled') &&
-            cover.scrollHeight > cover.clientHeight + 40) {
-            const cue = document.createElement('div');
-            cue.className = 'sdd-cover-scroll-cue';
-            cue.setAttribute('aria-hidden', 'true');
-            cue.innerHTML = '<span>↓</span>';
-            cover.appendChild(cue);
-            const dismiss = () => {
-                try { sessionStorage.setItem('saudade.cover.scrolled', '1'); } catch (e) {}
-                cue.classList.add('is-gone');
-                setTimeout(() => cue.remove(), 600);
-                cover.removeEventListener('scroll', dismiss);
-            };
-            cover.addEventListener('scroll', dismiss, { passive: true, once: true });
-        }
-
-        // nav 클릭 시 기존 dock 버튼으로 위임. § 05 LISTENING 은 별도 모듈로 직접 진입.
+        // nav 클릭 시 기존 dock 버튼으로 위임
         cover.querySelectorAll('[data-sdd-jump]').forEach(a => {
             a.addEventListener('click', (e) => {
                 e.preventDefault();
                 const cat = a.getAttribute('data-sdd-jump');
-                if (cat === 'listening') {
-                    try { window.SAUDADE_LISTENING?.open?.(); } catch (err) {}
-                    return;
-                }
                 const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
                 if (btn) {
                     btn.click();
@@ -1276,9 +859,20 @@ body.cover-reader-open { overflow: hidden; }
             });
         });
 
+        // Edition switch from the cover. Delegates to SAUDADE_EDITION.set —
+        // which handles the loading flash, persisting the choice, and
+        // reloading every section module against the new edition.
+        cover.querySelectorAll('.sdd-cover-ed-opt[data-edition]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const code = btn.getAttribute('data-edition');
+                if (code && window.SAUDADE_EDITION?.set) window.SAUDADE_EDITION.set(code);
+            });
+        });
+
         // Theme switcher — round button reveals a popover of skin swatches.
-        // Popover background + labels are hard-coded paper/ink so contrast
-        // stays readable on any active skin.
+        // SAUDADE_EDITION.setSkin handles persistence + applies the new
+        // <html data-skin="…"> attribute. Labels live on a paper-tone strip
+        // so contrast stays readable regardless of which swatch is shown.
         const themeToggle = cover.querySelector('[data-sdd-theme-toggle]');
         const themePop    = cover.querySelector('[data-sdd-theme-pop]');
         if (themeToggle && themePop) {
@@ -1298,6 +892,7 @@ body.cover-reader-open { overflow: hidden; }
                     const k = opt.getAttribute('data-skin');
                     if (k && window.SAUDADE_EDITION?.setSkin) {
                         window.SAUDADE_EDITION.setSkin(k);
+                        // refresh aria-current within the open popover
                         themePop.querySelectorAll('[data-skin]').forEach(o => {
                             o.setAttribute('aria-current', o === opt ? 'true' : 'false');
                         });
@@ -1305,11 +900,13 @@ body.cover-reader-open { overflow: hidden; }
                     closePop();
                 });
             });
+            // Click outside closes the popover.
             document.addEventListener('click', (e) => {
                 if (!themePop.hidden && !themePop.contains(e.target) && e.target !== themeToggle) {
                     closePop();
                 }
             });
+            // Escape closes.
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') closePop();
             });
@@ -1319,7 +916,10 @@ body.cover-reader-open { overflow: hidden; }
         // the empty-state empathy hook when there is no data.
         try {
             if (window.SAUDADE_PERSONAL && window.SAUDADE_PERSONAL.render) {
-                window.SAUDADE_PERSONAL.render('#sddCoverPersonal');
+                // stampVisit:true — only the real cover render records the
+                // visit date that powers the "N days since you were last
+                // here" greeting. Demo/homes re-renders must not stamp.
+                window.SAUDADE_PERSONAL.render('#sddCoverPersonal', { stampVisit: true });
             }
         } catch (e) {}
 
@@ -1328,405 +928,7 @@ body.cover-reader-open { overflow: hidden; }
         // wait for a 12-second backstop.
         try { window.dispatchEvent(new CustomEvent('sdd-cover-rendered')); }
         catch (e) {}
-
-        // v8 cover hero — load today's three dispatch headlines and replace
-        // the pending placeholder. One headline per city, top of each list.
-        loadDispatchHeads(ed);
     }
-
-    // Constitution §9.1 — Saudade does not publish on Sundays. The
-    // dispatches page already handles this (saudade-dispatches.js:654),
-    // but the cover hero used to fetch yesterday's headlines anyway and
-    // show them with a "1 DAY AGO" chip — making intentional silence
-    // look like a missed cron. Detect KST Sunday on the cover and show
-    // the silence message instead of the stale headlines.
-    function isSundayKST() {
-        // KST is UTC+9. Build a Date for "now in KST" and check getDay().
-        const utcMs = Date.now();
-        const kstMs = utcMs + 9 * 60 * 60 * 1000;
-        const kst = new Date(kstMs);
-        return kst.getUTCDay() === 0;
-    }
-
-    function loadDispatchHeads(ed) {
-        if (isSundayKST()) {
-            renderCoverHeadsSunday(ed);
-            return;
-        }
-        const file = ed === 'en' ? 'dispatches.json' : `dispatches.${ed}.json`;
-        const release = (typeof window !== 'undefined' && window.SAUDADE_RELEASE) || 'v0';
-        fetch(`./data/${file}?v=${release}`, { cache: 'force-cache' })
-            .then(r => r.ok ? r.json() : null)
-            .then(d => {
-                const heads = pickCoverHeads(d);
-                if (heads.length) {
-                    renderCoverHeads(heads, ed);
-                } else {
-                    renderCoverHeadsPending(ed);
-                }
-                surfaceFreshness(d, ed);
-            })
-            .catch(() => renderCoverHeadsPending(ed));
-    }
-
-    function renderCoverHeadsSunday(ed) {
-        const root = document.getElementById('sddCoverHeads');
-        if (!root) return;
-        const COPY = {
-            en: { line1: 'Saudade does not publish on Sundays.',
-                  line2: 'Dispatches resume Monday at 06:00 KST.' },
-            ko: { line1: 'Saudade는 일요일에 발행하지 않는다.',
-                  line2: '월요일 새벽 6시(KST) 디스패치 재개.' },
-            ja: { line1: 'Saudadeは日曜日に発行しない。',
-                  line2: '月曜日 朝6時(KST)に通信を再開する。' },
-            pt: { line1: 'Saudade não publica aos domingos.',
-                  line2: 'Os despachos recomeçam segunda às 06:00 KST.' },
-            es: { line1: 'Saudade no publica los domingos.',
-                  line2: 'Los despachos vuelven el lunes a las 06:00 KST.' }
-        };
-        const c = COPY[ed] || COPY.en;
-        root.innerHTML = `
-            <li class="sdd-cover-head sdd-cover-head--rest">
-                <span class="headline">${escapeHtml(c.line1)}</span>
-                <span class="lede">${escapeHtml(c.line2)}</span>
-            </li>
-        `;
-    }
-
-    function renderCoverHeadsPending(ed) {
-        const root = document.getElementById('sddCoverHeads');
-        if (!root) return;
-        const COPY = {
-            en: { line1: 'Tomorrow morning, three city dispatches land here.',
-                  line2: 'Filed daily at 06:00 KST.' },
-            ko: { line1: '내일 아침, 세 도시의 디스패치가 여기에 도착한다.',
-                  line2: '매일 KST 06:00 발행.' },
-            ja: { line1: '明朝、三つの街から通信が届く。',
-                  line2: '毎日 KST 6:00 に発行。' },
-            pt: { line1: 'Amanhã de manhã, três despachos chegam aqui.',
-                  line2: 'Publicado todos os dias às 06:00 KST.' },
-            es: { line1: 'Mañana, tres despachos llegan aquí.',
-                  line2: 'Publicado todos los días a las 06:00 KST.' }
-        };
-        const c = COPY[ed] || COPY.en;
-        root.innerHTML = `
-            <li class="sdd-cover-head sdd-cover-head--pending-msg">
-                <span class="headline">${escapeHtml(c.line1)}</span>
-                <span class="lede">${escapeHtml(c.line2)}</span>
-            </li>
-        `;
-    }
-
-    // Surface the dispatch file's filed_at age in the cover hero eyebrow.
-    // Daily filing per §9.5; anything older than 1 day means the cron has
-    // missed — readers see the lag, founder gets an immediate signal
-    // ("cron paused"). Was hidden in the existing per-page staleness chip
-    // on §03 Dispatches; pulling it to the cover makes the failure
-    // obvious from the front door.
-    function surfaceFreshness(d, ed) {
-        if (!d || !d.filed_at) return;
-        const eyebrow = document.querySelector('.sdd-cover-heads-eyebrow');
-        if (!eyebrow) return;
-        const filed = new Date(d.filed_at).getTime();
-        if (!Number.isFinite(filed)) return;
-        const days = Math.floor((Date.now() - filed) / 86400000);
-        if (days < 1) return;   // fresh — eyebrow stays as-is
-        // Localized labels mirror saudade-dispatches.js staleness chip.
-        const LABELS = {
-            en: (n) => `${n} ${n === 1 ? 'DAY' : 'DAYS'} AGO`,
-            ko: (n) => `${n}일 전`,
-            ja: (n) => `${n}日前`,
-            pt: (n) => `HÁ ${n} ${n === 1 ? 'DIA' : 'DIAS'}`,
-            es: (n) => `HACE ${n} ${n === 1 ? 'DÍA' : 'DÍAS'}`
-        };
-        const label = (LABELS[ed] || LABELS.en)(days);
-        const warn = days > 2 ? ' is-warn' : '';
-        const chip = document.createElement('span');
-        chip.className = 'sdd-cover-heads-stale' + warn;
-        chip.textContent = '· ' + label;
-        // Replace any prior chip so re-renders don't stack.
-        const prior = eyebrow.querySelector('.sdd-cover-heads-stale');
-        if (prior) prior.remove();
-        eyebrow.appendChild(chip);
-    }
-
-    // Cached for the reader modal — full item objects, not just the
-    // hero summary. Keyed by index matching the rendered hero <article>s.
-    let _coverHeads = [];
-
-    function pickCoverHeads(d) {
-        if (!d || !Array.isArray(d.cities)) return [];
-        const out = [];
-        for (const c of d.cities) {
-            const items = Array.isArray(c.items) ? c.items : [];
-            const first = items.find(it => it && it.headline);
-            if (first) out.push({
-                city:         c.city || '',
-                headline:     first.headline,
-                lede:         first.lede || '',
-                body:         first.body || '',
-                quote:        first.quote || '',
-                quote_source: first.quote_source || '',
-                source:       first.source || '',
-                source_date:  first.source_date || '',
-                source_url:   first.source_url || ''
-            });
-            if (out.length >= 3) break;
-        }
-        return out;
-    }
-
-    // Per-edition city-desk suffix — "SEOUL DESK" / "서울 데스크" / etc.
-    // (Existing DESK_SUFFIX uses 책상 in KO which is furniture-desk; the
-    // newspaper sense in Korean is 데스크 — used here so the cover hero
-    // reads like a city's local newspaper byline.)
-    const COVER_DESK_LABEL = {
-        en: 'DESK', ko: '데스크', ja: 'デスク', pt: 'REDAÇÃO', es: 'MESA'
-    };
-
-    function renderCoverHeads(heads, ed) {
-        const root = document.getElementById('sddCoverHeads');
-        if (!root || !heads.length) return;
-        _coverHeads = heads;   // cache for the reader modal click handler
-        const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
-        root.innerHTML = heads.map((h, i) => {
-            const cityUp = (h.city || '').toUpperCase();
-            const ledeHtml = h.lede
-                ? `<span class="lede">${escapeHtml(h.lede)}</span>`
-                : '';
-            const srcHtml = h.source || h.source_date
-                ? `<span class="source">${escapeHtml(h.source || '')}${h.source && h.source_date ? ' · ' : ''}${
-                        h.source_date
-                            ? `<time datetime="${escapeHtml(h.source_date)}">${escapeHtml(h.source_date)}</time>`
-                            : ''
-                    }</span>`
-                : '';
-            // Each headline opens an in-place reader modal — body + quote +
-            // source link, no section navigation needed. Falls back to the
-            // §03 jump only when full body data is missing.
-            return `
-            <li class="sdd-cover-head${i === 0 ? ' is-lead' : ''}">
-                <article>
-                    <a href="#section-03" data-sdd-head-idx="${i}">
-                        <span class="city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</span>
-                        <span class="headline">${escapeHtml(h.headline || '')}</span>
-                        ${ledeHtml}
-                        ${srcHtml}
-                    </a>
-                </article>
-            </li>`;
-        }).join('');
-        // Headline click → open reader modal (or fall back to §03 jump).
-        root.querySelectorAll('[data-sdd-head-idx]').forEach(a => {
-            a.addEventListener('click', (e) => {
-                e.preventDefault();
-                const idx = parseInt(a.getAttribute('data-sdd-head-idx'), 10);
-                const h = _coverHeads[idx];
-                if (h && (h.body || h.quote)) {
-                    openHeadReader(h, ed);
-                } else {
-                    // Body missing — fall through to §03 (the old behaviour).
-                    const btn = document.querySelector('.dock-btn[data-cat="tz"]');
-                    if (btn) {
-                        btn.click();
-                        document.body.classList.add('section-active');
-                    }
-                }
-            });
-        });
-    }
-
-    // ── Cover headline reader modal ───────────────────────────────────
-    // Click any cover hero headline → opens a paper-tone reader overlay
-    // with body + quote + source link, no navigation. Esc / click-outside
-    // / close button all dismiss.
-    let _readerEl = null;
-    function ensureReaderEl() {
-        if (_readerEl && document.body.contains(_readerEl)) return _readerEl;
-        _readerEl = document.createElement('div');
-        _readerEl.className = 'sdd-cover-reader';
-        _readerEl.setAttribute('role', 'dialog');
-        _readerEl.setAttribute('aria-modal', 'true');
-        _readerEl.setAttribute('aria-labelledby', 'sddReaderHeadline');
-        _readerEl.hidden = true;
-        document.body.appendChild(_readerEl);
-        return _readerEl;
-    }
-    function closeHeadReader() {
-        if (!_readerEl) return;
-        _readerEl.hidden = true;
-        document.body.classList.remove('cover-reader-open');
-        // Restore focus to the previously-clicked headline if known.
-        if (_readerEl._lastTrigger && typeof _readerEl._lastTrigger.focus === 'function') {
-            try { _readerEl._lastTrigger.focus(); } catch (e) {}
-        }
-    }
-    // v731 — clippings. The newspaper register: readers cut articles out.
-    // Stored as { id, ed, headline, city, lede, source, source_url,
-    //             source_date, clipped_at } in localStorage. Capped at 200
-    //             entries (oldest dropped) to keep storage bounded.
-    const CLIPS_KEY = 'saudade.clippings';
-    const CLIPS_MAX = 200;
-    function clipsId(h, ed) {
-        const sig = [(h && h.headline) || '', (h && h.city) || '', (h && h.source_url) || ''].join('|');
-        let hash = 0;
-        for (let i = 0; i < sig.length; i++) { hash = (hash * 31 + sig.charCodeAt(i)) | 0; }
-        return ed + ':' + (hash >>> 0).toString(36);
-    }
-    function clipsList() {
-        try {
-            const raw = localStorage.getItem(CLIPS_KEY);
-            const arr = raw ? JSON.parse(raw) : [];
-            return Array.isArray(arr) ? arr : [];
-        } catch (e) { return []; }
-    }
-    function clipsSave(arr) {
-        try { localStorage.setItem(CLIPS_KEY, JSON.stringify(arr.slice(-CLIPS_MAX))); } catch (e) {}
-    }
-    function clipsHas(h, ed) {
-        const id = clipsId(h, ed);
-        return clipsList().some(c => c.id === id);
-    }
-    function clipsToggle(h, ed) {
-        const id = clipsId(h, ed);
-        const list = clipsList();
-        const idx = list.findIndex(c => c.id === id);
-        if (idx >= 0) {
-            list.splice(idx, 1);
-            clipsSave(list);
-            return false;
-        }
-        list.push({
-            id, ed,
-            headline: h.headline || '',
-            city:     h.city || '',
-            lede:     h.lede || '',
-            source:     h.source || '',
-            source_url: h.source_url || '',
-            source_date: h.source_date || '',
-            clipped_at: new Date().toISOString()
-        });
-        clipsSave(list);
-        return true;
-    }
-    // Expose for the listing page (cover footer link, future /clippings.html).
-    try {
-        window.SAUDADE_CLIPS = { list: clipsList, has: clipsHas, toggle: clipsToggle, key: CLIPS_KEY };
-    } catch (e) {}
-
-    function openHeadReader(h, ed) {
-        const el = ensureReaderEl();
-        const deskLabel = COVER_DESK_LABEL[ed] || COVER_DESK_LABEL.en;
-        const cityUp = (h.city || '').toUpperCase();
-        const READER_LABELS = {
-            en: { close: 'CLOSE',  source: 'SOURCE', read: 'READ THE ORIGINAL', share: 'SHARE',     copied: 'LINK COPIED',         clip: 'CLIP',     unclip: 'CLIPPED' },
-            ko: { close: '닫기',    source: '출처',   read: '원문 보기',          share: '공유',       copied: '링크 복사됨',          clip: '스크랩',   unclip: '스크랩됨' },
-            ja: { close: '閉じる',  source: '出典',   read: '原文を読む',         share: '共有',       copied: 'リンクをコピー済み',  clip: '切り抜く',  unclip: '切り抜き済' },
-            pt: { close: 'FECHAR', source: 'FONTE',  read: 'LER A FONTE',        share: 'PARTILHAR', copied: 'LINK COPIADO',        clip: 'RECORTAR', unclip: 'RECORTADO' },
-            es: { close: 'CERRAR', source: 'FUENTE', read: 'LEER ORIGINAL',      share: 'COMPARTIR', copied: 'ENLACE COPIADO',      clip: 'RECORTAR', unclip: 'RECORTADO' }
-        };
-        const L = READER_LABELS[ed] || READER_LABELS.en;
-        const quoteHtml = h.quote
-            ? `<figure class="sdd-cover-reader__quote">
-                   <blockquote>${escapeHtml(h.quote)}</blockquote>
-                   ${h.quote_source ? `<figcaption>— ${escapeHtml(h.quote_source)}</figcaption>` : ''}
-               </figure>`
-            : '';
-        const sourceLine = [h.source, h.source_date].filter(Boolean).join(' · ');
-        const sourceHtml = sourceLine
-            ? `<p class="sdd-cover-reader__source">
-                   <span class="label">${escapeHtml(L.source)}</span>
-                   <span class="value">${escapeHtml(h.source || '')}${h.source && h.source_date ? ' · ' : ''}${
-                       h.source_date
-                           ? `<time datetime="${escapeHtml(h.source_date)}">${escapeHtml(h.source_date)}</time>`
-                           : ''
-                   }</span>
-                   ${h.source_url
-                       ? `<a class="link" href="${escapeHtml(h.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(L.read)} ↗</a>`
-                       : ''}
-               </p>`
-            : '';
-        el.innerHTML = `
-            <div class="sdd-cover-reader__scrim" data-sdd-reader-close></div>
-            <article class="sdd-cover-reader__card">
-                <button type="button" class="sdd-cover-reader__close"
-                        data-sdd-reader-close aria-label="${escapeHtml(L.close)}">×</button>
-                <p class="sdd-cover-reader__city">${escapeHtml(cityUp)} ${escapeHtml(deskLabel)}</p>
-                <h2 class="sdd-cover-reader__headline" id="sddReaderHeadline">${escapeHtml(h.headline || '')}</h2>
-                ${h.lede ? `<p class="sdd-cover-reader__lede">${escapeHtml(h.lede)}</p>` : ''}
-                ${h.body ? `<div class="sdd-cover-reader__body">${escapeHtml(h.body)}</div>` : ''}
-                ${quoteHtml}
-                ${sourceHtml}
-                <p class="sdd-cover-reader__actions">
-                    <button type="button" class="sdd-cover-reader__clip" data-sdd-reader-clip aria-pressed="${clipsHas(h, ed) ? 'true' : 'false'}">
-                        ${escapeHtml(clipsHas(h, ed) ? L.unclip : L.clip)} <span class="glyph" aria-hidden="true">${clipsHas(h, ed) ? '★' : '☆'}</span>
-                    </button>
-                    <button type="button" class="sdd-cover-reader__share" data-sdd-reader-share>${escapeHtml(L.share)} ↗</button>
-                </p>
-            </article>
-        `;
-        el.hidden = false;
-        document.body.classList.add('cover-reader-open');
-        el._lastTrigger = document.activeElement;
-        // Focus the close button so keyboard users land somewhere predictable.
-        const closeBtn = el.querySelector('.sdd-cover-reader__close');
-        if (closeBtn) try { closeBtn.focus(); } catch (e) {}
-        el.querySelectorAll('[data-sdd-reader-close]').forEach(b => {
-            b.addEventListener('click', closeHeadReader);
-        });
-        // v730 — share. Web Share API on mobile; clipboard fallback on desktop.
-        // The shared text is the headline + city byline + the site URL —
-        // a dispatch in a sentence, the way you'd read one aloud to a friend.
-        const shareBtn = el.querySelector('[data-sdd-reader-share]');
-        if (shareBtn) {
-            shareBtn.addEventListener('click', async () => {
-                const url = location.origin + location.pathname + (ed !== 'en' ? '?ed=' + ed : '');
-                const text = `${h.headline || ''} — ${cityUp} ${deskLabel} · saudade`;
-                try {
-                    if (navigator.share) {
-                        await navigator.share({ title: 'saudade', text, url });
-                        return;
-                    }
-                } catch (e) { /* user cancelled — fall through to nothing */ return; }
-                try {
-                    await navigator.clipboard.writeText(`${text}\n${url}`);
-                    const prev = shareBtn.textContent;
-                    shareBtn.textContent = L.copied;
-                    shareBtn.classList.add('is-copied');
-                    setTimeout(() => { shareBtn.textContent = prev; shareBtn.classList.remove('is-copied'); }, 1600);
-                } catch (e) { /* clipboard denied — silently keep the button */ }
-            });
-        }
-        // v731 — clip toggle. ★/☆ flip; label updates to CLIP/CLIPPED in
-        // the active edition. Updates the cover head card's clip mark too
-        // (if the cover render added one), so the cover reflects state.
-        const clipBtn = el.querySelector('[data-sdd-reader-clip]');
-        if (clipBtn) {
-            clipBtn.addEventListener('click', () => {
-                const nowClipped = clipsToggle(h, ed);
-                clipBtn.setAttribute('aria-pressed', nowClipped ? 'true' : 'false');
-                const lab = nowClipped ? L.unclip : L.clip;
-                const glyph = nowClipped ? '★' : '☆';
-                clipBtn.innerHTML = '';
-                clipBtn.appendChild(document.createTextNode(lab + ' '));
-                const sp = document.createElement('span');
-                sp.className = 'glyph'; sp.setAttribute('aria-hidden', 'true'); sp.textContent = glyph;
-                clipBtn.appendChild(sp);
-                // Reflect on the cover head card if it carries a clip mark
-                try {
-                    const idx = (_coverHeads || []).findIndex(x => x === h);
-                    if (idx >= 0) {
-                        const card = document.querySelector('[data-sdd-head-idx="' + idx + '"]');
-                        if (card) card.setAttribute('data-clipped', nowClipped ? '1' : '');
-                    }
-                } catch (e) {}
-            });
-        }
-    }
-    // Global Esc — close modal if open.
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && _readerEl && !_readerEl.hidden) closeHeadReader();
-    });
 
     // dock 버튼이 클릭되면 cover 숨김. 메인 표지로 돌아오는 hook 은 키보드 ESC 또는
     // saudade 워드마크 클릭 (추후 PR — 일단 ESC).
@@ -1867,11 +1069,24 @@ body.cover-reader-open { overflow: hidden; }
     if (window.SAUDADE_MASTHEAD) return;
 
     // dock data-cat → § 정보 (Handoff v2 §4 — tz/trip 재매핑)
+    // 5 editions — each gets its own section name.
     const SECTIONS = {
-        visa: { num: '01', name: 'THE LEDGER',     ko: '레저',      page: 'P. 04' },
-        cafe: { num: '02', name: 'THE ATLAS',      ko: '아틀라스',   page: 'P. 08' },
-        tz:   { num: '03', name: 'DISPATCHES',     ko: '디스패치',   page: 'P. 13' },
-        trip: { num: '04', name: 'THE DESK',       ko: '데스크',     page: 'P. 18' }
+        visa: {
+            num: '01', page: 'P. 04',
+            name: { en: 'THE LEDGER',  ko: '장부',  ja: '帳簿',  pt: 'LIVRO-RAZÃO', es: 'LIBRO MAYOR' }
+        },
+        cafe: {
+            num: '02', page: 'P. 08',
+            name: { en: 'THE ATLAS',   ko: '지도',  ja: '地図',  pt: 'ATLAS',        es: 'ATLAS'       }
+        },
+        tz: {
+            num: '03', page: 'P. 13',
+            name: { en: 'DISPATCHES',  ko: '통신',  ja: '通信',  pt: 'DESPACHOS',    es: 'DESPACHOS'   }
+        },
+        trip: {
+            num: '04', page: 'P. 18',
+            name: { en: 'THE DESK',    ko: '데스크', ja: 'デスク', pt: 'A MESA',      es: 'LA MESA'     }
+        }
     };
 
     function injectStyles() {
@@ -1910,9 +1125,9 @@ body.cafe-mode .sdd-masthead { display: none; }
 .sdd-mast-name    { color: var(--ink); font-weight: 500; }
 .sdd-mast-issue,
 .sdd-mast-page    { color: var(--bone-d); font-weight: 400; letter-spacing: var(--tr-mono-meta); }
-/* Wordmark on the masthead — small italic serif. Existing
-   [data-sdd-wordmark] click handler already calls backToCover(); this
-   just gives users a visible logo to tap from any section. */
+/* Wordmark inside the masthead — small italic serif, click returns to cover.
+   The existing document-level click handler on [data-sdd-wordmark] fires
+   backToCover(); this just gives users a visible affordance from any tab. */
 .sdd-mast-wordmark {
     background: transparent;
     border: 0;
@@ -1926,7 +1141,7 @@ body.cafe-mode .sdd-masthead { display: none; }
     cursor: pointer;
     letter-spacing: 0.01em;
     transition: color .12s;
-    min-height: 44px;
+    min-height: 44px;           /* mobile touch target */
     display: inline-flex;
     align-items: center;
 }
@@ -1998,9 +1213,9 @@ body.section-active::before { content: none !important; }
         const sec = SECTIONS[cat];
         if (!sec) return;
         const m = ensureMasthead();
-        const ko = window.state && window.state.lang === 'ko';
+        const ed = (window.state && window.state.lang) || 'en';
         m.querySelector('.sdd-mast-num').textContent  = '§ ' + sec.num;
-        m.querySelector('.sdd-mast-name').textContent = ko ? sec.ko : sec.name;
+        m.querySelector('.sdd-mast-name').textContent = sec.name[ed] || sec.name.en;
         m.querySelector('.sdd-mast-page').textContent = sec.page;
     }
 
@@ -2053,66 +1268,6 @@ body.section-active::before { content: none !important; }
             }
         });
 
-        // v731 — keyboard shortcuts. Newspaper kiosk register: digit jumps
-        // straight to a section, ? opens the cheat-sheet, g→h returns home.
-        // Skipped while typing in inputs/textareas/contenteditable so the
-        // letters/contribute/atlas-search forms aren't sabotaged.
-        (function bindShortcuts() {
-            let gPending = false;
-            let gTimer = null;
-            const KEY_TO_CAT = { '1': 'visa', '2': 'cafe', '3': 'tz', '4': 'trip' };
-            function isTyping(t) {
-                if (!t) return false;
-                if (t.isContentEditable) return true;
-                const n = (t.tagName || '').toUpperCase();
-                if (n === 'INPUT' || n === 'TEXTAREA' || n === 'SELECT') return true;
-                return false;
-            }
-            function jumpListen() { try { window.SAUDADE_LISTENING?.open?.(); } catch (e) {} }
-            document.addEventListener('keydown', (e) => {
-                if (e.metaKey || e.ctrlKey || e.altKey) return;
-                if (isTyping(e.target)) return;
-                // The reader modal owns Escape; don't fire shortcuts while it's open.
-                if (document.body.classList.contains('cover-reader-open')) return;
-                // g, h sequence — vim convention for "go home" (back to cover).
-                if (e.key === 'g' && !e.shiftKey) {
-                    gPending = true;
-                    clearTimeout(gTimer);
-                    gTimer = setTimeout(() => { gPending = false; }, 700);
-                    return;
-                }
-                if (gPending && e.key === 'h') {
-                    gPending = false;
-                    clearTimeout(gTimer);
-                    if (document.body.classList.contains('section-active') ||
-                        document.body.classList.contains('listening-active')) {
-                        backToCover();
-                        try { window.SAUDADE_LISTENING?.close?.(); } catch (er) {}
-                    }
-                    e.preventDefault();
-                    return;
-                }
-                gPending = false;
-                const cat = KEY_TO_CAT[e.key];
-                if (cat && SECTIONS[cat]) {
-                    setSection(cat);
-                    const btn = document.querySelector(`.dock-btn[data-cat="${cat}"]`);
-                    if (btn) btn.click();
-                    e.preventDefault();
-                    return;
-                }
-                if (e.key === '5') {
-                    jumpListen();
-                    e.preventDefault();
-                    return;
-                }
-                if (e.key === '?' || (e.shiftKey && e.key === '/')) {
-                    toggleShortcutsHelp();
-                    e.preventDefault();
-                }
-            });
-        })();
-
         // saudade 워드마크 클릭 = back to cover (있으면)
         document.addEventListener('click', (e) => {
             const wm = e.target.closest('.brand-stack, [data-sdd-wordmark]');
@@ -2120,102 +1275,6 @@ body.section-active::before { content: none !important; }
                 backToCover();
             }
         });
-    }
-
-    // v731 — keyboard shortcut cheat-sheet. Toggle via `?`. Pure mono
-    // newspaper register; auto-closes on Escape or backdrop click.
-    // (Masthead IIFE has no escapeHtml — short helper inline.)
-    function _kbdEsc(s) {
-        return String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({
-            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-        })[ch]);
-    }
-    let _kbdHelpEl = null;
-    function shortcutsHelpCopy() {
-        let ed = 'en';
-        try { ed = window.SAUDADE_EDITION?.get?.() || 'en'; } catch (e) {}
-        const TITLE = { en: 'KEYBOARD',       ko: '단축키',         ja: 'ショートカット',   pt: 'TECLAS',         es: 'TECLAS' };
-        const HINT  = { en: 'press ? to close', ko: '닫기 ?',       ja: '? で閉じる',       pt: 'fechar com ?',   es: 'cerrar con ?' };
-        const ROWS  = {
-            en: [['1','Ledger'], ['2','Atlas'], ['3','Dispatches'], ['4','The Desk'], ['5','Listening Room'], ['G H','Back to cover'], ['Esc','Back to cover'], ['?','Show / hide this card']],
-            ko: [['1','장부'],   ['2','지도'], ['3','통신'],         ['4','데스크'],   ['5','청취실'],         ['G H','표지로'],          ['Esc','표지로'],          ['?','이 카드 열고 닫기']],
-            ja: [['1','帳簿'],   ['2','地図'], ['3','通信'],         ['4','デスク'],   ['5','聴く部屋'],       ['G H','表紙へ'],          ['Esc','表紙へ'],          ['?','このカードを表示']],
-            pt: [['1','Livro'],  ['2','Atlas'], ['3','Despachos'],    ['4','Redação'], ['5','Sala de escuta'], ['G H','Capa'],            ['Esc','Capa'],            ['?','Mostrar / ocultar']],
-            es: [['1','Libro'],  ['2','Atlas'], ['3','Despachos'],    ['4','Redacción'],['5','Sala de escucha'],['G H','Portada'],         ['Esc','Portada'],         ['?','Mostrar / ocultar']]
-        };
-        return { title: TITLE[ed] || TITLE.en, hint: HINT[ed] || HINT.en, rows: ROWS[ed] || ROWS.en };
-    }
-    function ensureShortcutsHelp() {
-        if (_kbdHelpEl) return _kbdHelpEl;
-        if (!document.getElementById('sddKbdHelpStyles')) {
-            const s = document.createElement('style');
-            s.id = 'sddKbdHelpStyles';
-            s.textContent = `
-.sdd-kbd-help { position: fixed; inset: 0; z-index: 100000; display: none;
-    align-items: center; justify-content: center; padding: clamp(20px, 4vw, 48px); }
-.sdd-kbd-help[open] { display: flex; }
-.sdd-kbd-help__scrim { position: absolute; inset: 0; background: rgba(11,11,15,.55); backdrop-filter: blur(2px); }
-.sdd-kbd-help__card { position: relative; z-index: 1;
-    background: var(--paper); color: var(--ink);
-    border: 0.5px solid var(--rule-2);
-    padding: clamp(28px, 4vw, 44px) clamp(28px, 5vw, 56px);
-    max-width: 420px; width: 100%;
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; }
-.sdd-kbd-help__eyebrow { font-weight: 500; font-size: 9.5px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--rust); margin: 0 0 18px;
-    border-bottom: 0.5px solid var(--rule); padding-bottom: 10px;
-    display: flex; justify-content: space-between; }
-.sdd-kbd-help__eyebrow .hint { color: var(--bone-d); font-weight: 400; letter-spacing: 0.18em; text-transform: none; }
-.sdd-kbd-help__list { list-style: none; padding: 0; margin: 0;
-    display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; align-items: baseline; }
-.sdd-kbd-help__list kbd { font-family: var(--mono); font-weight: 500;
-    font-size: 11px; letter-spacing: 0.06em;
-    background: var(--paper-d); color: var(--ink);
-    border: 0.5px solid var(--rule-2); padding: 4px 8px;
-    border-radius: 1px; display: inline-block; min-width: 1.6em; text-align: center; }
-.sdd-kbd-help__list .label { font-family: var(--serif); font-weight: 300;
-    font-style: italic; font-size: 14px; color: var(--ink); }
-@media (prefers-reduced-motion: no-preference) {
-    .sdd-kbd-help[open] .sdd-kbd-help__card { animation: sddKbdHelpIn .18s ease-out both; }
-}
-@keyframes sddKbdHelpIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; } }
-`;
-            document.head.appendChild(s);
-        }
-        _kbdHelpEl = document.createElement('div');
-        _kbdHelpEl.className = 'sdd-kbd-help';
-        _kbdHelpEl.setAttribute('role', 'dialog');
-        _kbdHelpEl.setAttribute('aria-modal', 'true');
-        _kbdHelpEl.setAttribute('aria-label', 'Keyboard shortcuts');
-        document.body.appendChild(_kbdHelpEl);
-        _kbdHelpEl.addEventListener('click', (e) => {
-            if (e.target.classList.contains('sdd-kbd-help__scrim')) toggleShortcutsHelp(false);
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && _kbdHelpEl && _kbdHelpEl.hasAttribute('open')) {
-                toggleShortcutsHelp(false);
-                e.stopPropagation();
-            }
-        });
-        return _kbdHelpEl;
-    }
-    function toggleShortcutsHelp(force) {
-        const el = ensureShortcutsHelp();
-        const open = (typeof force === 'boolean') ? force : !el.hasAttribute('open');
-        if (open) {
-            const c = shortcutsHelpCopy();
-            el.innerHTML = `
-                <div class="sdd-kbd-help__scrim"></div>
-                <div class="sdd-kbd-help__card">
-                    <p class="sdd-kbd-help__eyebrow"><span>${_kbdEsc(c.title)}</span><span class="hint">${_kbdEsc(c.hint)}</span></p>
-                    <ul class="sdd-kbd-help__list">
-                        ${c.rows.map(([k, v]) => `<li><kbd>${_kbdEsc(k)}</kbd></li><li class="label">${_kbdEsc(v)}</li>`).join('')}
-                    </ul>
-                </div>`;
-            el.setAttribute('open', '');
-        } else {
-            el.removeAttribute('open');
-        }
     }
 
     function init() {
@@ -2238,19 +1297,23 @@ body.section-active::before { content: none !important; }
 })();
 
 /* ── saudade-edition.js ──────────────────────────────────────────────────── */
-// SAUDADE · EDITION SYSTEM (Handoff v2 §2)
+// SAUDADE · EDITION SYSTEM
 // 5 별쇄 — en / ko / ja / pt / es. body[data-edition] 토글로 다른 잡지 입장.
-// 실시간 번역 X — 사용자가 명시적 선택.
+// 실시간 번역 X — 사용자가 명시적 선택. 각 에디션은 자기 도시·자기 voice.
 // localStorage: saudade.edition.
 'use strict';
 
 (function() {
     if (window.SAUDADE_EDITION) return;
 
-    const KEY = 'saudade.edition';
-    const SUPPORTED = ['en', 'ko', 'ja', 'pt', 'es'];
-    const DEFAULT = 'en';
+    const KEY        = 'saudade.edition';
+    const SUPPORTED  = ['en', 'ko', 'ja', 'pt', 'es'];
+    const DEFAULT    = 'en';
+    const SKINS      = ['paper', 'saturated', 'dark'];
 
+    // Static fallback meta. The full editions config lives in
+    // data/editions.json — loaded async. Modules that need cities/voice
+    // data should await SAUDADE_EDITION.config(ed) instead of using META.
     const META = {
         en: { name: 'English',   loading: 'Opening English edition…' },
         ko: { name: '한국어',    loading: '한국어판을 펼치는 중…' },
@@ -2258,6 +1321,68 @@ body.section-active::before { content: none !important; }
         pt: { name: 'Português', loading: 'A abrir a edição portuguesa…' },
         es: { name: 'Español',   loading: 'Abriendo la edición en español…' }
     };
+
+    // SEO + OG meta per edition. index.html ships a static EN/KO mix
+    // (og:locale was hardcoded ko_KR even on EN visits). syncMetaTags()
+    // rewrites the <meta> tags after applyEdition() so each edition's
+    // share card matches what readers actually see.
+    const META_SEO = {
+        en: {
+            locale: 'en_US',
+            title:  'Saudade — a slow newspaper for digital nomads',
+            desc:   'Visa ledger, café atlas, dispatches, listening room. Quiet by design.'
+        },
+        ko: {
+            locale: 'ko_KR',
+            title:  '사우다지 — 디지털 노마드를 위한 느린 신문',
+            desc:   '비자 장부 · 카페 지도 · 통신 · 청취실. 조용히, 천천히.'
+        },
+        ja: {
+            locale: 'ja_JP',
+            title:  'サウダージ — デジタルノマドのための、ゆっくりとした新聞',
+            desc:   'ビザ帳簿・カフェ地図・通信・リスニングルーム。静かに、ゆっくりと。'
+        },
+        pt: {
+            locale: 'pt_PT',
+            title:  'Saudade — um jornal lento para nómadas digitais',
+            desc:   'Livro-razão de vistos, atlas de cafés, despachos, sala de escuta. Calmo por escolha.'
+        },
+        es: {
+            locale: 'es_ES',
+            title:  'Saudade — un periódico lento para nómadas digitales',
+            desc:   'Libro mayor de visas, atlas de cafés, despachos, sala de escucha. Tranquilo por elección.'
+        }
+    };
+
+    function setMeta(selector, attr, value) {
+        const el = document.head.querySelector(selector);
+        if (el) el.setAttribute(attr, value);
+    }
+    function syncMetaTags(ed) {
+        const m = META_SEO[ed] || META_SEO.en;
+        // <title> + description
+        document.title = m.title;
+        setMeta('meta[name="description"]', 'content', m.desc);
+        // OG
+        setMeta('meta[property="og:title"]',       'content', m.title);
+        setMeta('meta[property="og:description"]', 'content', m.desc);
+        setMeta('meta[property="og:locale"]',      'content', m.locale);
+        // Twitter
+        setMeta('meta[name="twitter:title"]',       'content', m.title);
+        setMeta('meta[name="twitter:description"]', 'content', m.desc);
+    }
+
+    let _config = null;     // editions.json once loaded
+    let _configP = null;    // promise
+
+    function loadConfig() {
+        if (_configP) return _configP;
+        _configP = fetch('./data/editions.json', { cache: 'force-cache' })
+            .then(r => r.ok ? r.json() : null)
+            .then(d => { _config = d; return d; })
+            .catch(() => null);
+        return _configP;
+    }
 
     function getEdition() {
         try { const v = localStorage.getItem(KEY); return SUPPORTED.includes(v) ? v : null; }
@@ -2267,9 +1392,70 @@ body.section-active::before { content: none !important; }
         try { localStorage.setItem(KEY, v); } catch (e) {}
     }
 
+    // ─── Skin rotation (per-issue, not per-user) ──────────────────────
+    // Three rotations per edition: paper / saturated / dark.
+    // Selected deterministically from ISO week so every reader sees the
+    // same cover this week — that's the whole point of an "issue".
+    function isoWeekNumber(d) {
+        const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        const dayNum = (date.getUTCDay() + 6) % 7;
+        date.setUTCDate(date.getUTCDate() - dayNum + 3);
+        const firstThursday = date.valueOf();
+        date.setUTCMonth(0, 1);
+        if (date.getUTCDay() !== 4) date.setUTCMonth(0, 1 + ((4 - date.getUTCDay()) + 7) % 7);
+        return 1 + Math.ceil((firstThursday - date) / 604800000);
+    }
+    // Theme override key — user picks "auto" / "paper" / "saturated" / "dark".
+    // "auto" defers to the ISO-week rotation below + prefers-color-scheme.
+    const KEY_SKIN = 'saudade.skin';
+    function getSkinPref() {
+        try { const v = localStorage.getItem(KEY_SKIN);
+              return v && (SKINS.includes(v) || v === 'auto') ? v : 'auto'; }
+        catch { return 'auto'; }
+    }
+    function saveSkinPref(v) { try { localStorage.setItem(KEY_SKIN, v); } catch {} }
+
+    function pickSkin() {
+        const pref = getSkinPref();
+        if (pref !== 'auto') return pref;
+        if (!matchMedia) return 'paper';
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return 'paper';
+        if (matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+        const week = isoWeekNumber(new Date());
+        // 5-week rotation when auto: paper × 3, saturated, dark.
+        const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
+        return cycle[week % cycle.length];
+    }
+    function applySkin(skin) {
+        const s = SKINS.includes(skin) ? skin : 'paper';
+        document.documentElement.setAttribute('data-skin', s);
+        return s;
+    }
+    function setSkin(v) {
+        if (v !== 'auto' && !SKINS.includes(v)) return;
+        saveSkinPref(v);
+        applySkin(pickSkin());
+    }
+
+    let _pinged = false;
+    function pingOnce(ed) {
+        // One anonymous counter call per session ("did anyone visit").
+        // Worker /api/ping increments a KV counter keyed by date+edition.
+        // No identifier, no UA, no IP logging.
+        if (_pinged) return;
+        _pinged = true;
+        const base = (window.AURA_SERVER || '').replace(/\/$/, '');
+        if (!base) return;
+        try {
+            fetch(base + '/api/ping?e=session_start&ed=' + encodeURIComponent(ed),
+                  { method: 'GET', mode: 'cors', credentials: 'omit', keepalive: true })
+                .catch(() => {});
+        } catch (e) {}
+    }
+
     function applyEdition(ed) {
         if (!SUPPORTED.includes(ed)) ed = DEFAULT;
-        // v621 — body 없으면 (script in <head> 일 때) skip. init 이 DOMContentLoaded 후 다시 호출.
+        // body 없을 때 (script in <head>) skip — init re-runs after DOMContentLoaded
         if (!document.body) {
             document.documentElement.setAttribute('lang', ed);
             return;
@@ -2278,9 +1464,10 @@ body.section-active::before { content: none !important; }
         document.body.classList.remove(...SUPPORTED.map(c => 'edition-' + c));
         document.body.classList.add('edition-' + ed);
         document.documentElement.setAttribute('lang', ed);
-        // window.state.lang 도 동기화 (saudade-cover/atlas 등 lang 보는 곳)
         if (!window.state) window.state = {};
         try { window.state.lang = ed; } catch (e) {}
+        syncMetaTags(ed);
+        pingOnce(ed);
     }
 
     function showLoadingFlash(toEd) {
@@ -2314,7 +1501,7 @@ body.section-active::before { content: none !important; }
         setTimeout(() => {
             applyEdition(ed);
             saveEdition(ed);
-            // 모든 saudade-* 모듈 reload
+            // Reload all section modules — each rebuilds against the new edition
             try { window.SAUDADE_COVER?.render?.(); } catch (e) {}
             try { window.SAUDADE_ATLAS?.reload?.(); } catch (e) {}
             try { window.SAUDADE_LEDGER?.render?.(); } catch (e) {}
@@ -2332,81 +1519,72 @@ body.section-active::before { content: none !important; }
         const ed = getEdition() || DEFAULT;
         applyEdition(ed);
         applySkin(pickSkin());
+        loadConfig();
     }
 
-    // ── Theme skin (paper / saturated / dark) ─────────────────────────
-    // Ported from the (dead) saudade-edition.js. When the standalone file
-    // was bundled into this editorial.js the skin API got dropped on the
-    // floor — window.SAUDADE_EDITION.setSkin was undefined, so every
-    // theme-switch click in saudade-theme-switch.js + the cover theme
-    // button silently no-op'd. Restored here.
-    const SKINS = ['paper', 'saturated', 'dark'];
-    const KEY_SKIN = 'saudade.skin';
-    function isoWeekNumber(d) {
-        const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-        const dayNum = (date.getUTCDay() + 6) % 7;
-        date.setUTCDate(date.getUTCDate() - dayNum + 3);
-        const firstThursday = date.valueOf();
-        date.setUTCMonth(0, 1);
-        if (date.getUTCDay() !== 4) date.setUTCMonth(0, 1 + ((4 - date.getUTCDay()) + 7) % 7);
-        return 1 + Math.ceil((firstThursday - date) / 604800000);
-    }
-    function getSkinPref() {
-        try {
-            const v = localStorage.getItem(KEY_SKIN);
-            return v && (SKINS.includes(v) || v === 'auto') ? v : 'auto';
-        } catch (e) { return 'auto'; }
-    }
-    function saveSkinPref(v) {
-        try { localStorage.setItem(KEY_SKIN, v); } catch (e) {}
-    }
-    function pickSkin() {
-        const pref = getSkinPref();
-        if (pref !== 'auto') return pref;
-        const mm = (typeof matchMedia === 'function') ? matchMedia : null;
-        if (!mm) return 'paper';
-        if (mm('(prefers-reduced-motion: reduce)').matches) return 'paper';
-        if (mm('(prefers-color-scheme: dark)').matches) return 'dark';
-        const week = isoWeekNumber(new Date());
-        const cycle = ['paper', 'paper', 'paper', 'saturated', 'dark'];
-        return cycle[week % cycle.length];
-    }
-    function applySkin(skin) {
-        const s = SKINS.includes(skin) ? skin : 'paper';
-        document.documentElement.setAttribute('data-skin', s);
-        return s;
-    }
-    function setSkin(v) {
-        if (v !== 'auto' && !SKINS.includes(v)) return;
-        saveSkinPref(v);
-        applySkin(pickSkin());
-    }
-
-    // v621 — body 가 있을 때 한 번 + DOMContentLoaded 이후 한 번 더 (race 방지).
-    // 이렇게 하면 lang attr 은 가능한 빨리, body class 는 body 있을 때 안전하게.
     init();
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
-        // 이미 로드됨 → init() 한 번 더 (body 있을 것)
         init();
+    }
+
+    // ─── Latin digit normaliser ──────────────────────────────────────
+    // 헌법: numerals are ALWAYS Latin digits (47, 06, 1.2 km), never
+    // "사십칠" or "四十七". This helper converts any string written with
+    // Korean / Japanese / Arabic-Indic numerals back to Latin so cover/
+    // dispatch headlines that AI-drafted in non-Latin form get fixed
+    // before render.
+    const NUM_MAPS = [
+        // CJK numerals
+        { from: ['零','〇','〇'], to: '0' },
+        { from: ['一','壹'], to: '1' },
+        { from: ['二','貳','弐'], to: '2' },
+        { from: ['三','參','参'], to: '3' },
+        { from: ['四','肆'], to: '4' },
+        { from: ['五','伍'], to: '5' },
+        { from: ['六','陸'], to: '6' },
+        { from: ['七','柒'], to: '7' },
+        { from: ['八','捌'], to: '8' },
+        { from: ['九','玖'], to: '9' }
+    ];
+    // Full-width digits 0-9 → ASCII
+    function toLatinDigits(s) {
+        if (typeof s !== 'string' || !s) return s;
+        // Full-width 0-9 (U+FF10..FF19)
+        s = s.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+        // Arabic-Indic 0-9
+        s = s.replace(/[٠-٩]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x0660 + 48));
+        s = s.replace(/[۰-۹]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x06F0 + 48));
+        // CJK simple numerals — best-effort. Only swap when isolated digit
+        // (avoids breaking compound kanji words like 三日).
+        for (const m of NUM_MAPS) {
+            for (const ch of m.from) {
+                s = s.split(ch).join(m.to);   // best-effort; constitution wants Latin
+            }
+        }
+        return s;
     }
 
     window.SAUDADE_EDITION = {
         set,
         get: () => getEdition() || DEFAULT,
-        SUPPORTED, META,
-        // Skin API — restored from the dead standalone saudade-edition.js.
-        // Required by saudade-theme-switch.js and the cover theme button.
-        setSkin,
         skin: () => document.documentElement.getAttribute('data-skin') || 'paper',
-        skinPref: getSkinPref,
-        SKINS
+        setSkin,                            // 'auto' | 'paper' | 'saturated' | 'dark'
+        skinPref: getSkinPref,              // returns current pref ('auto' or named)
+        config: async (ed) => {
+            await loadConfig();
+            return _config?.[ed || (getEdition() || DEFAULT)] || null;
+        },
+        configSync: (ed) => _config?.[ed || (getEdition() || DEFAULT)] || null,
+        toLatinDigits,
+        SUPPORTED,
+        SKINS,
+        META
     };
 
-    // v622 — 글로벌 i18n 헬퍼. 컴포넌트들이 self-내장 COPY 정의할 필요 없이 호출.
-    // 사용: SAUDADE_T({ en: 'Cafés', ko: '카페', ja: 'カフェ', pt: 'Cafés', es: 'Cafés' })
-    // 누락된 에디션은 en fallback.
+    // Global i18n helper. Components: SAUDADE_T({ en, ko, ja, pt, es })
+    // Missing edition → en fallback.
     window.SAUDADE_T = function(strings) {
         if (!strings || typeof strings !== 'object') return '';
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
