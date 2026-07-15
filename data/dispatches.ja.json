@@ -1,127 +1,97 @@
 {
-    "edition": "ja",
-    "filed_at": "2026-05-01T06:00:00+09:00",
-    "next_filing": "2026-05-02T06:00:00+09:00",
-    "ai_assisted": true,
-    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
-    "ai_disclosure": "本号の各項目は AI が起草したのち、発行前に AI がもう一度、本誌憲法(政治・暴力・醜聞の禁止、引用二十五語以内、独自の語り口)に照らして検閲します。詳細は CONTENT-LICENSE.md §7。",
-    "cities": [
+  "edition": "ja",
+  "filed_at": "2026-07-15T06:00:00+09:00",
+  "next_filing": "2026-07-15T21:00:00+00:00",
+  "ai_assisted": true,
+  "ai_reviewed": true,
+  "ai_disclosure": "Drafted and copy-reviewed by AI (Gemini) against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
+  "cities": [
+    {
+      "city": "東京",
+      "items": [
         {
-            "city": "東京",
-            "season": "春",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "上野公園の遅咲きが、今年は10日ほど続く。",
-                    "lede": "桜は終わっても、八重桜は今が盛り。",
-                    "body": "公園管理事務所は4月最後の週から5月第1週までを見頃と発表した。台東区側の八重桜並木が一番見やすい。早朝の人出は少ない。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "東京都公園協会",
-                    "source_date": "2026-04-25",
-                    "source_url": "https://www.tokyo-park.or.jp/"
-                },
-                {
-                    "n": "02",
-                    "headline": "羽田空港の第3ターミナル、深夜便が1便増えた。",
-                    "lede": "ICN行きは午前1時15分発に。",
-                    "body": "国土交通省は4月22日付で深夜枠の追加を認可した。ソウル仁川行きは大韓航空便が新規就航する。早朝バスは始発が2時に繰り上がる。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "国土交通省",
-                    "source_date": "2026-04-22",
-                    "source_url": "https://www.mlit.go.jp/"
-                },
-                {
-                    "n": "03",
-                    "headline": "神田の古書店街で、5月の青空市が再開する。",
-                    "lede": "2年ぶりの開催、初日は11日。",
-                    "body": "神田古書店連盟は5月11日から13日までの日程を公表した。会場は靖国通り沿い。雨天決行。地下鉄神保町駅A6出口から徒歩3分。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "神田古書店連盟",
-                    "source_date": "2026-04-19",
-                    "source_url": "https://jimbou.info/"
-                }
-            ]
+          "n": "01",
+          "headline": "隅田川の夕凪が、水面にビル群の輪郭を溶かす。",
+          "lede": "湿った風が吹き抜け、川沿いの歩道に涼を求める人が集まる。",
+          "body": "屋形船の提灯がひとつ、またひとつと灯る。夏の夜の気配が、潮の香りと混ざり合う。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "大阪",
-            "season": "春",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "淀川の水位が、今春一番低い。",
-                    "lede": "降水量が平年の4割で推移。",
-                    "body": "大阪管区気象台は4月の累積降水量を平年比42%と発表した。淀川河川公園のグラウンドは予定通り使用可能だが、5月初旬まで散水車が出る予定。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "大阪管区気象台",
-                    "source_date": "2026-04-28",
-                    "source_url": "https://www.jma-net.go.jp/osaka/"
-                },
-                {
-                    "n": "02",
-                    "headline": "天王寺公園の動物園、夜間開園が5月10日からはじまる。",
-                    "lede": "金曜と土曜のみ、21時まで。",
-                    "body": "大阪市は夏季夜間開園の日程を発表した。5月10日から9月末まで、毎週金土の2日間に限る。入園料は通常通り、夕方割引はなし。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "大阪市公園局",
-                    "source_date": "2026-04-26",
-                    "source_url": "https://www.tennojizoo.jp/"
-                },
-                {
-                    "n": "03",
-                    "headline": "中之島図書館の読書室が、新装開室する。",
-                    "lede": "5月1日、改修工事が完了。",
-                    "body": "府立図書館は5月1日から平日9時、土曜10時開室の通常運営に戻ると告知した。閲覧席は20席増えた。古典籍コーナーは別予約制。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "大阪府立中之島図書館",
-                    "source_date": "2026-04-30",
-                    "source_url": "https://www.nakanoshima-library.jp/"
-                }
-            ]
+          "n": "02",
+          "headline": "代々木公園の木陰が、午後3時の避難所になる。",
+          "lede": "蝉時雨の合間に、アスファルトの熱を忘れる場所がある。",
+          "body": "芝生の上で読書をする人の影が、少しずつ長く伸びていく。風が木々を揺らし、乾いた音を立てる。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "京都",
-            "season": "春",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "鴨川の床営業が、今年は4月29日から始まった。",
-                    "lede": "例年より3日早い、5月の連休に合わせて。",
-                    "body": "京都鴨川納涼床協同組合は4月最終週からの営業を発表した。河原町三条から五条までの店舗が対象。降雨時は終日休業。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "京都鴨川納涼床協同組合",
-                    "source_date": "2026-04-27",
-                    "source_url": "https://www.kyoto-yuka.jp/"
-                },
-                {
-                    "n": "02",
-                    "headline": "嵐山の竹林が、夜間ライトアップを縮小する。",
-                    "lede": "5月の点灯は週末のみ、30分早く消える。",
-                    "body": "右京区観光協会は気温対策として点灯時間を短縮すると公表した。5月は金土日の3日のみ19時から21時。例年は連日22時まで。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "右京区観光協会",
-                    "source_date": "2026-04-24",
-                    "source_url": "https://www.kyoto-arashiyama.jp/"
-                },
-                {
-                    "n": "03",
-                    "headline": "西陣の織元4軒で、ふだん非公開の工房が一般に開く。",
-                    "lede": "5月17日と18日、午前10時から16時まで。",
-                    "body": "西陣織工業組合は2日間の工房公開を行う。要事前予約、定員は各日20名。地下鉄今出川駅から徒歩5分の集合場所で受付。",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "西陣織工業組合",
-                    "source_date": "2026-04-20",
-                    "source_url": "https://nishijin.or.jp/"
-                }
-            ]
+          "n": "03",
+          "headline": "路地裏の軒先に、風鈴が3つ並んで揺れている。",
+          "lede": "下町の古い長屋から、涼やかな音が絶え間なく聞こえる。",
+          "body": "夕立の後の舗装路が、熱を帯びてわずかに煙る。夏をやり過ごす知恵が、そこには静かに息づく。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         }
-    ]
+      ]
+    },
+    {
+      "city": "大阪",
+      "items": [
+        {
+          "n": "01",
+          "headline": "中之島のバラ園で、夏の剪定が始まった。",
+          "lede": "次の季節に向けて、庭師たちが手際よく枝を整える。",
+          "body": "川面を渡る風が、切りたての緑の匂いを運ぶ。ひと休みのベンチで、誰かが冷たい茶を飲む。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "御堂筋の街路樹が、強い日差しを遮る。",
+          "lede": "ビルの谷間を歩く人々に、緑のトンネルが影を落とす。",
+          "body": "信号待ちの数分間、人々は少しだけ足を止めて深呼吸をする。都市の喧騒が、熱気の中に溶けていく。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "天神祭の準備が、境内のあちこちで進む。",
+          "lede": "祭囃子の練習音が、夕暮れの空に小さく響き始めた。",
+          "body": "飾り付けられた船が、川に浮かぶ時を静かに待っている。街の鼓動が、少しずつ早まるのを感じる。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "city": "京都",
+      "items": [
+        {
+          "n": "01",
+          "headline": "鴨川の石畳が、夜露で濡れて光る。",
+          "lede": "深夜の静寂の中で、川のせせらぎだけが際立つ。",
+          "body": "対岸の灯りが水面に映り込み、ゆらゆらと揺れている。古い街が、一日の終わりを告げようとしている。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "寺院の庭の苔が、朝露を吸って深く色づく。",
+          "lede": "静謐な空間に、時が止まったような錯覚を覚える。",
+          "body": "線香の香りが、湿気を含んだ空気に漂う。誰の足音も聞こえない、ただ風の音だけが境界をゆする。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "商店街の氷旗が、風を受けて勢いよく翻る。",
+          "lede": "買い物帰りの人々が、氷の文字に誘われて足を止める。",
+          "body": "軒先で売られる京野菜が、瑞々しく並んでいる。夏の日差しが、石畳に強い影を刻み込んでいる。",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    }
+  ]
 }
