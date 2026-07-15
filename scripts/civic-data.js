@@ -48,6 +48,18 @@ async function getJson(url, ms = 12000) {
     }
 }
 
+async function getText(url, ms = 12000) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), ms);
+    try {
+        const res = await fetch(url, { signal: ctrl.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.text();
+    } finally {
+        clearTimeout(t);
+    }
+}
+
 // 어제 ~ 2주 뒤 사이의 공휴일(국가 단위). 연말 경계면 다음 해도 조회.
 async function holidaysSoon(cc, todayStr) {
     const year = Number(todayStr.slice(0, 4));
@@ -168,22 +180,72 @@ async function quakesFor(meta, todayStr) {
     } catch (e) { return null; }
 }
 
-// 도시명 배열 → { <도시명>: { holidays:[...], weather:{...} } | null }
-async function fetchCityFacts(cityNames, todayStr) {
+// 작은 지역 civic 뉴스 — "한강공원 개장" 같은 것. Google 뉴스 RSS(키 불필요, 전 언어).
+// 도시명 + civic 키워드로 검색 → 최근 헤드라인. 정치/사건은 리뷰 게이트가 거른다.
+const NEWS = {
+    en: { hl: 'en',    gl: 'US', ceid: 'US:en',     terms: 'park OR festival OR exhibition OR opening OR library OR reopens' },
+    ko: { hl: 'ko',    gl: 'KR', ceid: 'KR:ko',     terms: '공원 OR 축제 OR 전시 OR 개장 OR 무료개방 OR 도서관 OR 개관' },
+    ja: { hl: 'ja',    gl: 'JP', ceid: 'JP:ja',     terms: '公園 OR 祭り OR 展覧会 OR オープン OR 開館 OR 無料開放' },
+    pt: { hl: 'pt-PT', gl: 'PT', ceid: 'PT:pt-150', terms: 'parque OR festival OR exposição OR inauguração OR reabre' },
+    es: { hl: 'es',    gl: 'ES', ceid: 'ES:es',     terms: 'parque OR festival OR exposición OR apertura OR reabre' }
+};
+
+function decodeXml(s) {
+    return String(s || '')
+        .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+        .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&#0?39;/g, "'")
+        .replace(/&amp;/g, '&')
+        .trim();
+}
+
+function parseNewsRss(xml, todayStr, maxAgeDays = 6) {
+    const out = [];
+    const cutoff = new Date(ymdShift(todayStr, -maxAgeDays) + 'T00:00:00Z').getTime();
+    const re = /<item>([\s\S]*?)<\/item>/g;
+    let m;
+    while ((m = re.exec(xml)) && out.length < 4) {
+        const block = m[1];
+        const rawTitle = (block.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || '';
+        const pd = (block.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || '';
+        // Google 뉴스 제목은 "헤드라인 - 매체" 형식 → 매체 부분 제거.
+        const title = decodeXml(rawTitle).replace(/\s+-\s+[^-]+$/, '').trim();
+        if (!title || title.length < 6) continue;
+        const when = pd ? Date.parse(pd) : NaN;
+        if (!isNaN(when) && when < cutoff) continue;   // 오래된 것 제외(날짜 없으면 통과)
+        out.push(title);
+    }
+    return out;
+}
+
+async function civicNewsFor(name, edition, todayStr) {
+    const cfg = NEWS[edition] || NEWS.en;
+    try {
+        const q = encodeURIComponent(`"${name}" (${cfg.terms})`);
+        const url = `https://news.google.com/rss/search?q=${q}&hl=${cfg.hl}&gl=${cfg.gl}&ceid=${cfg.ceid}`;
+        const xml = await getText(url, 15000);
+        const items = parseNewsRss(xml, todayStr);
+        return items.length ? items : null;
+    } catch (e) { return null; }
+}
+
+// 도시명 배열 → { <도시명>: { holidays, weather, air, festivals, fx, quake, news } | null }
+async function fetchCityFacts(cityNames, todayStr, edition) {
     const out = {};
     for (const name of cityNames) {
         const meta = CITY_META[name] || CITY_META[String(name).toUpperCase()];
         if (!meta) { out[name] = null; continue; }
         try {
-            const [holidays, weather, air, festivals, fx, quake] = await Promise.all([
+            const [holidays, weather, air, festivals, fx, quake, news] = await Promise.all([
                 holidaysSoon(meta.cc, todayStr),
                 weatherFor(meta, todayStr),
                 airQualityFor(meta),
                 festivalsFor(meta, todayStr),
                 fxFor(meta),
-                quakesFor(meta, todayStr)
+                quakesFor(meta, todayStr),
+                civicNewsFor(name, edition, todayStr)
             ]);
-            out[name] = { holidays, weather, air, festivals, fx, quake };
+            out[name] = { holidays, weather, air, festivals, fx, quake, news };
         } catch (e) {
             out[name] = null;
         }
@@ -239,6 +301,9 @@ function factsLine(name, f) {
     }
     if (f.festivals && f.festivals.length) {
         parts.push('festivals/events on now: ' + f.festivals.map(x => x.title).join('; '));
+    }
+    if (f.news && f.news.length) {
+        parts.push('recent local civic headlines (use only calm, non-political ones): ' + f.news.join(' | '));
     }
     if (f.quake && f.quake.mag != null) {
         parts.push(`recent earthquake: M${f.quake.mag}${f.quake.place ? ' — ' + f.quake.place : ''}`);
