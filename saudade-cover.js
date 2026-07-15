@@ -218,8 +218,8 @@
     position: fixed;
     inset: 0;
     z-index: 4;
-    /* v729 — was `pointer-events: none` with selected children opting back
-       in via `pointer-events: auto`. Side effect: empty cover regions
+    /* v729 — was 'pointer-events: none' with selected children opting back
+       in via 'pointer-events: auto'. Side effect: empty cover regions
        returned pointer-events:none to elementFromPoint, so wheel events
        in those regions passed straight through cover into body
        (body.overflow:hidden), and the cover stopped scrolling after a few

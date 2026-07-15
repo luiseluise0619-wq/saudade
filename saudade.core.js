@@ -1,4 +1,4 @@
-/*! saudade · saudade.core.js · built 2026-05-05T10:42:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.core.js · built 2026-07-15T06:15:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-auth.js ──────────────────────────────────────────────────── */
 // SAUDADE · v7 §13 — Magic Link auth (client) + Tour mode
@@ -2557,33 +2557,42 @@ body[data-tour="1"] .sdd-cover::before {
             case 'cover':
                 return {
                     eyebrow: L({ en: 'TODAY.', ko: '오늘.', ja: '今日。', pt: 'HOJE.', es: 'HOY.' }),
-                    headline: L({ en: 'Three cities, filed daily.', ko: '세 도시, 매일 발행.', ja: '三つの都市、毎日発行。', pt: 'Três cidades, publicadas diariamente.', es: 'Tres ciudades, publicadas a diario.' }),
+                    headline: L({ en: 'Three cities, no schedule.', ko: '세 도시, 정해진 시간 없음.', ja: '三つの都市、時刻表なし。', pt: 'Três cidades, sem horário.', es: 'Tres ciudades, sin horario.' }),
                     lede: L({
-                        en: 'Edited from Seoul. <em>A slow newspaper for digital nomads.</em>',
-                        ko: '서울에서 편집. <em>디지털 노마드를 위한 느린 신문.</em>',
-                        ja: 'ソウル編集。<em>デジタルノマドのための、ゆっくりとした新聞。</em>',
-                        pt: 'Editado em Seul. <em>Um jornal lento para nómadas digitais.</em>',
-                        es: 'Editado desde Seúl. <em>Un periódico lento para nómadas digitales.</em>'
+                        en: 'Edited from Lisbon. <em>A slow newspaper for digital nomads.</em>',
+                        ko: '리스본에서 편집. <em>디지털 노마드를 위한 느린 신문.</em>',
+                        ja: 'リスボン編集。<em>デジタルノマドのための、ゆっくりとした新聞。</em>',
+                        pt: 'Editado em Lisboa. <em>Um jornal lento para nómadas digitais.</em>',
+                        es: 'Editado desde Lisboa. <em>Un periódico lento para nómadas digitales.</em>'
                     }),
                     note: ''
                 };
             case 'listening':
+                // When the room is entirely empty (no tracks loaded at all),
+                // we tell the truth: the editor hasn't selected any yet.
+                // §3 — list only what we've heard carefully.
                 return {
                     eyebrow: L({ en: 'THE LISTENING ROOM.', ko: '청취실.', ja: 'リスニングルーム。', pt: 'A SALA DE ESCUTA.', es: 'LA SALA DE ESCUCHA.' }),
-                    headline: L({ en: 'Choose a city to listen.', ko: '들을 도시를 고르라.', ja: '聞く都市を選ぶ。', pt: 'Escolha uma cidade para ouvir.', es: 'Elija una ciudad para escuchar.' }),
+                    headline: L({
+                        en: 'Awaiting the first track.',
+                        ko: '첫 트랙을 기다린다.',
+                        ja: '最初のトラックを待つ。',
+                        pt: 'À espera da primeira faixa.',
+                        es: 'A la espera de la primera pista.'
+                    }),
                     lede: L({
-                        en: 'Field-recorded. One ambient track per city. <em>Headphones recommended; not required.</em>',
-                        ko: '현장 녹음. 도시당 한 트랙. <em>이어폰 권장; 필수 아님.</em>',
-                        ja: '現場録音。都市につき一トラック。<em>イヤホン推奨。必須ではない。</em>',
-                        pt: 'Gravado no terreno. Uma faixa por cidade. <em>Auscultadores recomendados; não obrigatórios.</em>',
-                        es: 'Grabado en el lugar. Una pista por ciudad. <em>Auriculares recomendados; no obligatorios.</em>'
+                        en: 'Field recordings are added one at a time — listened to in full before they are filed. <em>The room is empty until the editor presses play and means it.</em>',
+                        ko: '현장 녹음은 한 트랙씩 추가한다 — 편집장이 전체를 들어 본 뒤에야 게재한다. <em>편집장이 재생을 누르고 동의하기 전까지 방은 비어 있다.</em>',
+                        ja: 'フィールド録音は一トラックずつ追加する — 編集長が全編を聴いた上で掲載する。<em>編集長が再生を押し、納得するまで部屋は空のまま。</em>',
+                        pt: 'As gravações de campo são adicionadas uma a uma — ouvidas na íntegra antes de serem arquivadas. <em>A sala fica vazia até o editor carregar em play e concordar.</em>',
+                        es: 'Las grabaciones de campo se añaden de una en una — escuchadas por completo antes de archivarse. <em>La sala queda vacía hasta que el editor pulsa reproducir y lo aprueba.</em>'
                     }),
                     note: L({
-                        en: 'Every track declares its licence and credits. CONTENT-LICENSE.md §3.',
+                        en: 'Every track will declare its licence and credits. CONTENT-LICENSE.md §3.',
                         ko: '모든 트랙은 라이선스와 크레딧을 명시한다. CONTENT-LICENSE.md §3.',
-                        ja: '全トラックがライセンスとクレジットを明記。CONTENT-LICENSE.md §3。',
-                        pt: 'Cada faixa declara a sua licença e créditos. CONTENT-LICENSE.md §3.',
-                        es: 'Cada pista declara su licencia y créditos. CONTENT-LICENSE.md §3.'
+                        ja: '全トラックがライセンスとクレジットを明記する。CONTENT-LICENSE.md §3。',
+                        pt: 'Cada faixa declarará a sua licença e créditos. CONTENT-LICENSE.md §3.',
+                        es: 'Cada pista declarará su licencia y créditos. CONTENT-LICENSE.md §3.'
                     })
                 };
             default:
@@ -2631,11 +2640,11 @@ body[data-tour="1"] .sdd-cover::before {
             {
                 eyebrow:  L({ en: 'WELCOME.', ko: '어서 오라.', ja: 'ようこそ。', pt: 'BEM-VINDO.', es: 'BIENVENIDO.' }),
                 headline: L({
-                    en: 'A slow newspaper. Three cities, filed daily.',
-                    ko: '느린 신문. 세 도시, 매일 발행.',
-                    ja: 'ゆっくりとした新聞。三つの都市、毎日発行。',
-                    pt: 'Um jornal lento. Três cidades, publicadas diariamente.',
-                    es: 'Un periódico lento. Tres ciudades, publicadas a diario.'
+                    en: 'A slow newspaper. Three cities, no schedule.',
+                    ko: '느린 신문. 세 도시, 정해진 시간 없음.',
+                    ja: 'ゆっくりとした新聞。三つの都市、時刻表なし。',
+                    pt: 'Um jornal lento. Três cidades, sem horário.',
+                    es: 'Un periódico lento. Tres ciudades, sin horario.'
                 }),
                 body: L({
                     en: '<em>saudade</em> is Portuguese for the longing you carry for places you cannot return to. We file three city items, six days a week. Sunday is silence — by design. Read on, or sign in to track the days you have left.',
@@ -3427,6 +3436,37 @@ body[data-tour="1"] .sdd-cover::before {
         const today = todayUTC();
         const moments = [];
 
+        // 0. Returning-reader moment — the one hook that needs no setup and
+        // no content: it greets anyone who comes back. A slow magazine that
+        // remembers you is the whole saudade ethos. Low weight so a real
+        // visa/tax urgency always sits above it; present so the cover is
+        // never cold. Reads the prior visit BEFORE stamping the new one.
+        const KEY_LAST_VISIT = 'saudade.personal.last_visit';
+        try {
+            const prev = toUTC(localStorage.getItem(KEY_LAST_VISIT));
+            if (prev) {
+                const gap = diffDays(today, prev);
+                if (gap >= 1) {
+                    moments.push({
+                        kind: 'return',
+                        weight: 30,
+                        line: L({
+                            en: gap === 1 ? 'A day since you were last here.' : `${gap} days since you were last here.`,
+                            ko: gap === 1 ? '여기 다녀간 지 하루.' : `여기 다녀간 지 ${gap}일.`,
+                            ja: gap === 1 ? 'ここに来てから一日。' : `ここに来てから ${gap} 日。`,
+                            pt: gap === 1 ? 'Um dia desde a sua última visita.' : `${gap} dias desde a sua última visita.`,
+                            es: gap === 1 ? 'Un día desde su última visita.' : `${gap} días desde su última visita.`
+                        }, ed)
+                    });
+                }
+            }
+            // Only stamp on the real cover render (opts.stampVisit), not the
+            // demo/homes preview re-renders, so the gap reflects genuine visits.
+            if (opts.stampVisit) {
+                localStorage.setItem(KEY_LAST_VISIT, today.toISOString().slice(0, 10));
+            }
+        } catch (e) { /* private mode / disabled storage — skip silently */ }
+
         // 1. Saudade meter — days since last visit per home city.
         const homes = getHomes();
         for (const code of homes) {
@@ -3646,7 +3686,10 @@ body[data-tour="1"] .sdd-cover::before {
         const host = (typeof target === 'string') ? document.querySelector(target) : target;
         if (!host) return;
         const ed = (opts && opts.lang) || (window.SAUDADE_EDITION && window.SAUDADE_EDITION.get && window.SAUDADE_EDITION.get()) || 'en';
-        const moments = compute({ lang: ed, max: (opts && opts.max) || 4 });
+        const moments = compute({ lang: ed, max: (opts && opts.max) || 4, stampVisit: !!(opts && opts.stampVisit) });
+        // A visitor whose only moment is the returning-reader greeting still
+        // has no real data — keep the setup CTAs visible alongside the line.
+        const dataMoments = moments.filter(m => m.kind !== 'return');
 
         const eyebrowLabel = L({
             en: 'NOTES FOR ONE READER',
@@ -3656,8 +3699,11 @@ body[data-tour="1"] .sdd-cover::before {
             es: 'NOTAS PARA UN LECTOR'
         }, ed);
 
-        if (!moments.length) {
-            // Fresh-visitor empathy hook.
+        if (!dataMoments.length) {
+            // No real data yet. Show the setup hook — and, if they have been
+            // here before, lead with the returning-reader greeting so even
+            // the empty cover feels like it remembers them.
+            const ret = moments.find(m => m.kind === 'return');
             const emptyLine = L({
                 en: 'You have not told us where you are. <strong>Set a home city</strong>, or <strong>see how this looks populated</strong>.',
                 ko: '아직 어디에 있는지 알려주지 않았다. <strong>홈 도시를 설정하거나</strong>, <strong>예시 데이터로 본다</strong>.',
@@ -3667,9 +3713,13 @@ body[data-tour="1"] .sdd-cover::before {
             }, ed);
             const ctaSet  = L({ en: 'SET HOME CITIES', ko: '홈 도시 설정', ja: 'ホーム都市', pt: 'CIDADES-BASE', es: 'CIUDADES BASE' }, ed);
             const ctaDemo = L({ en: 'SHOW DEMO',       ko: '예시 보기',   ja: 'サンプル', pt: 'VER EXEMPLO', es: 'VER EJEMPLO' }, ed);
+            const retLine = ret
+                ? `<p class="sdd-personal__line is-memory">${escapeHtml(ret.line)}</p>`
+                : '';
             host.innerHTML = `
                 <section class="sdd-personal sdd-personal--empty" lang="${ed}">
                     <p class="sdd-personal__eyebrow">${escapeHtml(eyebrowLabel)}</p>
+                    ${retLine}
                     <p class="sdd-personal__line">${emptyLine /* trusted in-file copy */}</p>
                     <p class="sdd-personal__cta">
                         <a href="#homes">${escapeHtml(ctaSet)}</a>
@@ -3683,7 +3733,7 @@ body[data-tour="1"] .sdd-cover::before {
         const lines = moments.map(m => {
             const cls = (m.kind === 'schengen-warn' || m.kind === 'tax-over') ? 'is-alert'
                       : (m.kind === 'ins-warn' || m.kind === 'tax-near')      ? 'is-warn'
-                      : (m.kind === 'memory')                                  ? 'is-memory' : '';
+                      : (m.kind === 'memory' || m.kind === 'return')           ? 'is-memory' : '';
             return `<p class="sdd-personal__line ${cls}">${escapeHtml(m.line)}</p>`;
         }).join('');
 
@@ -5301,9 +5351,39 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         document.head.appendChild(s);
     }
 
+    const FOOTER_COPY = {
+        en: { archive: 'ARCHIVE',  desks: 'DESKS',     letter: 'LETTER',
+              archT:   'every issue we have filed',
+              desksT:  'stringers writing under the saudade masthead',
+              letterT: 'write a letter to the editor',
+              tag:     'saudade · a longing for what cannot return' },
+        ko: { archive: '발행 기록',  desks: '특파원',   letter: '편지',
+              archT:   '발행한 모든 호',
+              desksT:  '사우다지 이름으로 글 쓰는 특파원들',
+              letterT: '편집장에게 보내는 편지',
+              tag:     '사우다지 · 돌아갈 수 없는 것을 향한 그리움' },
+        ja: { archive: 'アーカイブ', desks: '特派員',  letter: '手紙',
+              archT:   'これまで発行した号',
+              desksT:  'サウダージ名義で書く特派員',
+              letterT: '編集長に宛てる手紙',
+              tag:     'サウダージ · 戻らないものへの想い' },
+        pt: { archive: 'ARQUIVO',   desks: 'MESAS',    letter: 'CARTA',
+              archT:   'todas as edições publicadas',
+              desksT:  'correspondentes que escrevem sob o nome saudade',
+              letterT: 'escrever uma carta ao editor',
+              tag:     'saudade · um anseio pelo que não pode voltar' },
+        es: { archive: 'ARCHIVO',   desks: 'MESAS',    letter: 'CARTA',
+              archT:   'todas las ediciones publicadas',
+              desksT:  'corresponsales que escriben bajo el nombre saudade',
+              letterT: 'escribir una carta al editor',
+              tag:     'saudade · un anhelo por lo que no puede volver' }
+    };
+
     function ensureFooter() {
         let f = document.getElementById('sddFooter');
         if (f) return f;
+        const ed = (window.state && window.state.lang) || 'en';
+        const c = FOOTER_COPY[ed] || FOOTER_COPY.en;
         f = document.createElement('footer');
         f.id = 'sddFooter';
         f.className = 'sdd-footer-rule';
@@ -5313,11 +5393,11 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 <span class="sdd-footer-section"></span>
             </div>
             <div class="sdd-footer-r">
-                <a class="sdd-footer-link" href="/issues/" title="every issue we have filed">ARCHIVE</a>
-                <a class="sdd-footer-link" href="desks.html" title="stringers writing under the saudade masthead">DESKS</a>
-                <a class="sdd-footer-link" href="#letter" title="write a letter to the editor">LETTER</a>
+                <a class="sdd-footer-link" href="/issues/" title="${c.archT}">${c.archive}</a>
+                <a class="sdd-footer-link" href="desks.html" title="${c.desksT}">${c.desks}</a>
+                <a class="sdd-footer-link" href="#letter" title="${c.letterT}">${c.letter}</a>
                 <a class="sdd-footer-copy" href="etymology.html"
-                   title="saudade /sɐwˈðaðɨ/ — read the etymology">saudade · a longing for what cannot return</a>
+                   title="saudade /sɐwˈðaðɨ/">${c.tag}</a>
                 <span class="sdd-footer-issue">© 2026</span>
             </div>
         `;
@@ -5325,20 +5405,43 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         return f;
     }
 
+    const COVER_LABEL = {
+        en: 'ISSUE COVER', ko: '표지', ja: '表紙', pt: 'CAPA', es: 'PORTADA'
+    };
+
+    // 이슈 총 페이지 수 — 마스트헤드의 가장 큰 섹션 페이지에서 유도한다.
+    // 예전엔 'OF 12' 로 하드코딩돼 § 03(P. 13) 이 불가능한 "P. 13 OF 12" 를
+    // 렌더했다. 섹션이 늘어나도 항상 유효하도록 최대 페이지를 계산해 쓴다.
+    function issueTotal() {
+        const S = window.SAUDADE_MASTHEAD?.SECTIONS;
+        let max = 12;
+        if (S) for (const s of Object.values(S)) {
+            const n = parseInt(String(s.page).replace(/\D/g, ''), 10);
+            if (Number.isFinite(n) && n > max) max = n;
+        }
+        return String(max).padStart(2, '0');
+    }
+
     function update() {
         const f = ensureFooter();
         const sec = document.body.getAttribute('data-section');
+        const ed = (window.state && window.state.lang) || 'en';
         const SECTIONS = window.SAUDADE_MASTHEAD?.SECTIONS;
         if (sec && SECTIONS) {
             const matched = Object.values(SECTIONS).find(s => s.num === sec);
             if (matched) {
-                f.querySelector('.sdd-footer-page').textContent = matched.page + ' OF 12';
-                f.querySelector('.sdd-footer-section').textContent = '§ ' + matched.num + ' · ' + matched.name;
+                // PR #81 changed `matched.name` from a flat string to a
+                // {en,ko,ja,pt,es} map. This used to render "[object Object]".
+                const name = (matched.name && typeof matched.name === 'object')
+                    ? (matched.name[ed] || matched.name.en)
+                    : matched.name;
+                f.querySelector('.sdd-footer-page').textContent = matched.page + ' OF ' + issueTotal();
+                f.querySelector('.sdd-footer-section').textContent = '§ ' + matched.num + ' · ' + name;
                 return;
             }
         }
-        f.querySelector('.sdd-footer-page').textContent = 'P. 01 OF 12';
-        f.querySelector('.sdd-footer-section').textContent = '§ 00 · ISSUE COVER';
+        f.querySelector('.sdd-footer-page').textContent = 'P. 01 OF ' + issueTotal();
+        f.querySelector('.sdd-footer-section').textContent = '§ 00 · ' + (COVER_LABEL[ed] || COVER_LABEL.en);
     }
 
     function init() {
