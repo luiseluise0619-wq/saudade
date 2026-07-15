@@ -39,6 +39,7 @@
 
 const fs   = require('node:fs');
 const path = require('node:path');
+const { fetchCityFacts, factsLine } = require('./civic-data');
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
@@ -132,19 +133,41 @@ function parseArgs(argv) {
     return out;
 }
 
-function buildPrompt(edition, todayStr) {
+function buildPrompt(edition, todayStr, facts) {
     const cfg = EDITION_CONFIG[edition];
     const today = todayStr || new Date().toISOString().slice(0, 10);
+
+    // 실제 공공 데이터(공휴일 + 날씨)를 도시별 한 줄로. 있으면 프롬프트에 접지 소스로.
+    const factsBlock = [];
+    if (facts) {
+        for (const c of cfg.cities) {
+            const line = factsLine(c, facts[c]);
+            if (line) factsBlock.push('  ' + line);
+        }
+    }
+    const factsSection = factsBlock.length ? [
+        `SOURCE FACTS for ${today} — REAL data from public APIs (weather: Open-Meteo,`,
+        `holidays: Nager.Date). GROUND each city's items in these facts. Base the`,
+        `observation on the given temperature range / precipitation / holiday, and`,
+        `phrase it in saudade's calm magazine voice — do not just invent mood.`,
+        `If a public holiday falls in the coming days, ONE item MAY note the practical`,
+        `closures (government offices, banks, post offices) like a resident's reminder.`,
+        ...factsBlock,
+        ``
+    ] : [];
+
     const lines = [
         `You are writing the ${cfg.label} edition of saudade — a slow-news magazine`,
         `for travelers and quiet observers. Voice: ${cfg.voice}`,
         ``,
-        `Today is ${today}. For each of these cities, write ONE seasonal observation`,
-        `that a careful resident or returning traveler might notice this week.`,
-        `Topics: weather, architecture, public space, transit, gardens, festivals,`,
-        `quiet neighborhood news. NEVER cover politics, war, scandals, or violence.`,
+        `Today is ${today}. For each of these cities, write ONE grounded observation`,
+        `a careful resident or returning traveler would actually find useful this week.`,
+        `Topics: real weather, holiday/closure notes, transit, public space, gardens,`,
+        `festivals. NEVER cover politics, war, scandals, or violence.`,
         `Each item is small, declarative, magazine-tone — not news headlines.`,
+        `Prefer a concrete, useful detail over pure atmosphere.`,
         ``,
+        ...factsSection,
         `Cities (write items in this exact city order, in ${cfg.label}):`,
         ...cfg.cities.map(c => `  - ${c}`),
         ``,
@@ -174,15 +197,12 @@ function buildPrompt(edition, todayStr) {
         `Each city gets exactly 3 items numbered "01", "02", "03".`,
         `Total 9 items. Every string is ${cfg.label}, no other languages.`,
         ``,
-        `CRITICAL — no invented figures. This is the #1 reason drafts are`,
-        `rejected. Do NOT state a specific temperature, percentage, count,`,
-        `price, distance, or duration unless it is fixed public record`,
-        `(a real festival date, a published opening time). Weather, nature,`,
-        `and seasonal notes must be QUALITATIVE, not quantified — describe`,
-        `the change ("아침 공기가 부쩍 서늘해졌다" / "the morning air has`,
-        `turned noticeably cooler"), never invent a measured quantity`,
-        `("기온이 5도 내려갔다", "개화율 80%", "3배 늘었다"). When unsure,`,
-        `describe; don't quantify.`,
+        `FIGURES: you MAY state the real figures given in SOURCE FACTS above`,
+        `(today's temperature range like 24–31°C, precipitation in mm, holiday`,
+        `names and dates). Those are verified. But do NOT invent ANY other`,
+        `number that was not provided — no made-up percentages, bloom rates,`,
+        `counts, prices, or "3x" multipliers. If SOURCE FACTS is missing for a`,
+        `city, keep that city's note qualitative (describe, don't quantify).`,
         ``,
         `CRITICAL — numerals (only when a real, allowed number appears):`,
         `ALWAYS Latin digits (10日, 4月29日, 21:00, 30分,`,
@@ -367,7 +387,14 @@ async function refreshOne(edition, opts, key, dayOffset) {
     dayOffset = dayOffset || 0;
     const cfg = EDITION_CONFIG[edition];
     const ymd = ymdKst(dayOffset);            // 백필 시 과거 날짜, 평상시 오늘
-    const prompt = buildPrompt(edition, ymd);
+    // 실제 공공 데이터(공휴일 + 날씨)로 접지. 실패하면 null → 무드 폴백(생성은 계속).
+    let facts = null;
+    try {
+        process.stderr.write(`[${edition}] fetching civic data (${ymd})… `);
+        facts = await fetchCityFacts(cfg.cities, ymd);
+        console.error('ok');
+    } catch (e) { console.error('skip: ' + e.message); }
+    const prompt = buildPrompt(edition, ymd, facts);
     const pause = () => new Promise(r => setTimeout(r, 1500));
 
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
@@ -418,7 +445,7 @@ async function refreshOne(edition, opts, key, dayOffset) {
         ai_reviewed: !opts.noReview,
         ai_disclosure: opts.noReview
             ? 'Drafted with Gemini for this edition\'s readers — not translated from English. Review skipped this run.'
-            : 'Drafted and copy-reviewed by AI (Gemini) against the saudade editorial rules. Written for this edition\'s readers — not translated from English. No human rewrite.',
+            : 'Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition\'s readers — not translated from English. No human rewrite.',
         cities: parsed.cities
     };
     if (opts.dry) {
