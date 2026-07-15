@@ -95,6 +95,19 @@ jobs:
           # open the PR with whatever was retrieved.
           exit 0
 
+      - name: Wire fetched content into listening.json + bump cache
+        if: always()
+        run: |
+          # 페치된 사진/음악을 도시(cities[])에 연결(wire). 각 입력 파일이 있을 때만.
+          # wire 스크립트는 인자 없이 data/listening.json 을 갱신한다(멱등).
+          [ -f data/listening-photos.json ] && node scripts/wire-listening-photos.js || true
+          [ -f data/listening-tracks.json ] && node scripts/wire-listening-tracks.js || true
+          # listening.json 이 실제로 바뀌었으면 캐시 버전을 락스텝 범프(sw.js + index.html)
+          # → 배포 후 사용자에게 새 사진/음악이 즉시 반영된다.
+          if ! git diff --quiet data/listening.json 2>/dev/null; then
+            node scripts/bump-cache.js
+          fi
+
       - name: Open pull request
         if: always()
         env:
@@ -114,6 +127,8 @@ jobs:
           git add data/listening-tracks.json 2>/dev/null || true
           git add data/licenses 2>/dev/null || true
           git add audio/asmr 2>/dev/null || true
+          # 자동 wire 결과 + 캐시 범프 파일도 함께 커밋 → 머지 한 번으로 도시에 연결됨.
+          git add data/listening.json sw.js index.html 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No fetched content to commit — skipping PR."
             exit 0
@@ -138,3 +153,9 @@ jobs:
           - [ ] Squash-merge
 
           Keys: \`PEXELS_KEY\` / \`FREESOUND_TOKEN\` from repo secrets — never leave the runner."
+
+          # PR 자동 머지 — 페치→wire→머지까지 무인. main 직접 push 아니라 PR 경유라 규칙 유지.
+          # 즉시 squash-merge → 필수 체크로 막히면 auto-merge → 둘 다 실패면 경고만(수동 머지).
+          gh pr merge "$BRANCH" --squash --delete-branch \
+            || gh pr merge "$BRANCH" --squash --auto --delete-branch \
+            || echo "::warning::자동 머지 실패 — Actions 로그 확인 후 PR 을 수동으로 머지하세요."
