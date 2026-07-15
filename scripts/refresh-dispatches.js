@@ -290,38 +290,54 @@ async function reviewDispatches(edition, cities, key) {
     };
 }
 
+// 한 에디션이 리뷰 게이트에 막히거나(예: KO 부산 항목의 '구체적 시각' 규칙 위반)
+// 생성/검증이 실패하면, 같은 프롬프트로 재생성해서 최대 MAX_ATTEMPTS 번 재시도한다.
+// Gemini 는 temperature 0.7 이라 같은 프롬프트로도 매번 다른 초안을 내므로,
+// 재시도하면 대부분 통과한다 → 품질 게이트(리뷰)는 그대로 두고도 KO 등이 안정적으로 발행됨.
+const MAX_ATTEMPTS = 3;
 async function refreshOne(edition, opts, key) {
     const cfg = EDITION_CONFIG[edition];
-    process.stderr.write(`[${edition}] generating… `);
     const prompt = buildPrompt(edition);
-    let raw;
-    try {
-        raw = await callGemini(prompt, key);
-    } catch (e) {
-        console.error(`FAIL Gemini: ${e.message}`);
-        return false;
-    }
-    const parsed = safeParse(raw);
-    const err = validate(parsed, cfg);
-    if (err) {
-        console.error(`FAIL parse/validate: ${err}`);
-        return false;
-    }
+    const pause = () => new Promise(r => setTimeout(r, 1500));
 
-    // AI review gate — blocks publication on any hard-rule violation.
-    // Skippable with --no-review (debugging / quota), but the default
-    // path always reviews so unreviewed copy never auto-publishes.
-    let review = { pass: true, rejected: [], notes: 'review skipped', errored: false };
-    if (!opts.noReview) {
-        process.stderr.write('reviewing… ');
-        review = await reviewDispatches(edition, parsed.cities, key);
-        if (!review.pass) {
-            console.error(`BLOCKED by review: ${review.notes}` +
-                (review.rejected.length ? ` — rejected ${review.rejected.map(r => `${r.city}/${r.n}`).join(', ')}` : ''));
-            console.error('  (previous file kept; nothing published)');
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        const tag = attempt > 1 ? ` (재시도 ${attempt}/${MAX_ATTEMPTS})` : '';
+        process.stderr.write(`[${edition}] generating…${tag} `);
+        let raw;
+        try {
+            raw = await callGemini(prompt, key);
+        } catch (e) {
+            console.error(`FAIL Gemini: ${e.message}`);
+            if (attempt < MAX_ATTEMPTS) { await pause(); continue; }
             return false;
         }
-    }
+        const parsed = safeParse(raw);
+        const err = validate(parsed, cfg);
+        if (err) {
+            console.error(`FAIL parse/validate: ${err}`);
+            if (attempt < MAX_ATTEMPTS) { await pause(); continue; }
+            return false;
+        }
+
+        // AI review gate — blocks publication on any hard-rule violation.
+        // Skippable with --no-review (debugging / quota), but the default
+        // path always reviews so unreviewed copy never auto-publishes.
+        let review = { pass: true, rejected: [], notes: 'review skipped', errored: false };
+        if (!opts.noReview) {
+            process.stderr.write('reviewing… ');
+            review = await reviewDispatches(edition, parsed.cities, key);
+            if (!review.pass) {
+                console.error(`BLOCKED by review: ${review.notes}` +
+                    (review.rejected.length ? ` — rejected ${review.rejected.map(r => `${r.city}/${r.n}`).join(', ')}` : ''));
+                if (attempt < MAX_ATTEMPTS) {
+                    console.error(`  → 재생성 후 재시도 (${attempt}/${MAX_ATTEMPTS})`);
+                    await pause();
+                    continue;
+                }
+                console.error('  (previous file kept; nothing published)');
+                return false;
+            }
+        }
 
     const { filed_at, next_filing } = isoNowKst();
     const out = {
@@ -340,9 +356,12 @@ async function refreshOne(edition, opts, key) {
         console.log(JSON.stringify(out, null, 2).slice(0, 600) + '…');
         return true;
     }
-    fs.writeFileSync(fileFor(edition), JSON.stringify(out, null, 2) + '\n');
-    console.log(`OK → ${path.relative(ROOT, fileFor(edition))} (${out.cities.reduce((s,c)=>s+c.items.length,0)} items)`);
-    return true;
+        fs.writeFileSync(fileFor(edition), JSON.stringify(out, null, 2) + '\n');
+        console.log(`OK → ${path.relative(ROOT, fileFor(edition))} (${out.cities.reduce((s,c)=>s+c.items.length,0)} items)`);
+        return true;
+    }
+    // 모든 재시도가 리뷰에 막혔거나 실패 → 이 에디션은 이번엔 발행 안 함(옛 파일 유지).
+    return false;
 }
 
 async function main() {
