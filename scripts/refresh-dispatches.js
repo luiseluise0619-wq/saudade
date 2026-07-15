@@ -56,6 +56,16 @@ const GEMINI_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models
 // cover Lisbon — Lisbon is EN's job. PT covers Iberia + lusofonia, ES
 // covers Spain + Latam, JA covers Japan, KO covers Korea.
 const EDITION_CONFIG = {
+    en: {
+        label: 'English',
+        cities: ['SEOUL', 'TOKYO', 'LISBON'],
+        voice: 'Declarative. Magazine tone. Short sentences. Observation + restraint. Not news.',
+        examples: [
+            'The late rain reaches the hanok roofs of Bukchon slowly.',
+            'Ueno Park\'s late cherries hold on about ten more days this year.',
+            'The 28 tram returns to Graça, in pieces, after repairs.'
+        ]
+    },
     ko: {
         label: 'Korean',
         cities: ['서울', '부산', '제주'],

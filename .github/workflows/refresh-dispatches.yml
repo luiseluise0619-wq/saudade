@@ -1,9 +1,11 @@
 name: Refresh per-edition dispatches
 
-# Replaces the broken translate cron. Each edition (ko/ja/pt/es) gets its
-# own Gemini-drafted dispatches in native voice — KO speaks to Seoul/Busan/
-# Jeju readers, JA to Tokyo/Osaka/Kyoto, PT to Lisboa/Porto/Sintra, ES to
-# Madrid/Barcelona/Buenos Aires. EN keeps its existing Worker D1 pipeline.
+# Replaces the broken translate cron. Each edition (en/ko/ja/pt/es) gets its
+# own Gemini-drafted dispatches in native voice — EN speaks to Seoul/Tokyo/
+# Lisbon readers, KO to Seoul/Busan/Jeju, JA to Tokyo/Osaka/Kyoto, PT to
+# Lisboa/Porto/Sintra, ES to Madrid/Barcelona/Buenos Aires.
+# EN was previously the Worker D1 cron, but that pipeline stalled (froze at
+# 2026-05-05); EN now refreshes through this reliable path like the others.
 #
 # Setup:
 #   Settings → Secrets → New repository secret
@@ -67,7 +69,7 @@ jobs:
           # 디스패치는 프론트에서 force-cache 로 읽으므로, 범프 없이는 서비스워커가
           # 옛 매거진 글을 계속 서빙한다 → "글이 안 바뀐다"의 원인. 범프하면 배포 후
           # 사용자에게 새 글이 즉시 반영된다.
-          if ! git diff --quiet data/dispatches.ko.json data/dispatches.ja.json \
+          if ! git diff --quiet data/dispatches.json data/dispatches.ko.json data/dispatches.ja.json \
                                 data/dispatches.pt.json data/dispatches.es.json 2>/dev/null; then
             node scripts/bump-cache.js
           fi
@@ -82,7 +84,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
           shopt -s nullglob
-          git add data/dispatches.ko.json data/dispatches.ja.json \
+          git add data/dispatches.json data/dispatches.ko.json data/dispatches.ja.json \
                   data/dispatches.pt.json data/dispatches.es.json 2>/dev/null || true
           # 캐시 범프 결과(sw.js + index.html)도 함께 커밋 → 머지 한 번으로 새 글이 반영됨.
           git add sw.js index.html 2>/dev/null || true
@@ -100,7 +102,7 @@ jobs:
 
           Each edition (ko/ja/pt/es) is independently authored in native voice for that audience's cities. **Not translations.**
 
-          Editions covered: \`${{ inputs.editions || 'ko,ja,pt,es (all)' }}\`
+          Editions covered: \`${{ inputs.editions || 'en,ko,ja,pt,es (all)' }}\`
 
           ### Reviewer checklist
           - [ ] Tone check — declarative voice, magazine cadence, not news
