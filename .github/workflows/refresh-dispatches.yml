@@ -96,3 +96,11 @@ jobs:
           - [ ] \`node scripts/validate-content.js\` passes (CI)
 
           Squash-merge."
+
+          # PR 자동 머지 — 매일 무인 갱신을 위해. main 에 직접 push 하지 않고
+          # PR 을 거쳐 머지하므로 저장소 규칙(직접 push 금지)을 지킨다.
+          # 1) 즉시 squash-merge 시도 → 2) 필수 체크로 막히면 auto-merge 활성화 →
+          # 3) 둘 다 실패(예: 설정에서 auto-merge 비활성)하면 경고만 남기고 PR 은 그대로 두어 수동 머지.
+          gh pr merge "$BRANCH" --squash --delete-branch \
+            || gh pr merge "$BRANCH" --squash --auto --delete-branch \
+            || echo "::warning::자동 머지 실패 — Actions 로그 확인 후 PR 을 수동으로 머지하세요."
