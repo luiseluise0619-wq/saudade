@@ -1,0 +1,652 @@
+{
+  "edition": "es",
+  "updated": "2026-07-15T06:00:00+09:00",
+  "ai_assisted": true,
+  "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
+  "days": [
+    {
+      "filed_at": "2026-07-15T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las noches de verano invitan al descanso bajo las acacias.",
+              "lede": "El aire estancado del mediodía deja paso a una brisa tenue en los patios interiores.",
+              "body": "Las persianas permanecen bajadas hasta la caída del sol. El asfalto desprende el calor acumulado en las horas de luz.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "El Jardín Botánico resguarda sus especies del sol intenso.",
+              "lede": "Los sistemas de riego nebulizado refrescan los caminos principales durante el horario de apertura.",
+              "body": "La vegetación busca la sombra de los ejemplares más antiguos. Es un refugio necesario frente a la aridez de julio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "La actividad cultural se desplaza hacia los cines de verano.",
+              "lede": "Las proyecciones al aire libre aprovechan la bajada de temperatura en los distritos periféricos.",
+              "body": "El aroma a palomitas se mezcla con el aire seco de la noche. Los vecinos ocupan sus sillas plegables con calma.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa marina suaviza el ambiente en el Barrio Gótico.",
+              "lede": "El aire del Mediterráneo recorre las calles estrechas al final de la tarde.",
+              "body": "Las fachadas de piedra conservan una frescura atípica. Es el momento preferido para pasear sin rumbo fijo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "Las terrazas de los mercados locales exhiben frutas de temporada.",
+              "lede": "El color de los melocotones y los higos marca el ritmo del calendario estival.",
+              "body": "Los puestos lucen su mejor género antes del cierre. La clientela busca productos frescos para las comidas ligeras.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "El Parc de la Ciutadella acoge a los lectores bajo los plátanos.",
+              "lede": "Las sombras proyectadas por los árboles ofrecen un respiro frente a la humedad del litoral.",
+              "body": "Los bancos de madera son el lugar predilecto para observar el paso del tiempo. El silencio predomina sobre el bullicio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El invierno porteño tiñe los parques de tonos ocres.",
+              "lede": "La luz del sol de julio es tenue y se filtra entre las ramas desnudas.",
+              "body": "El aire frío invita a buscar refugio en los cafés de siempre. La ciudad camina con paso apresurado por las avenidas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "Las librerías de antiguo mantienen sus puertas abiertas al frío.",
+              "lede": "El aroma a papel viejo y café caliente domina los interiores de San Telmo.",
+              "body": "Los lectores se agrupan cerca de las estanterías de madera. El tiempo parece detenerse entre las páginas desgastadas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "El Teatro Colón inicia su ciclo de conciertos invernales.",
+              "lede": "La acústica de la sala principal resuena con la calidez de las maderas nobles.",
+              "body": "El público acude con abrigos oscuros a disfrutar de la música clásica. La elegancia se funde con la sobriedad de la estación.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-14T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El asfalto madrileño conserva el calor tras la puesta de sol.",
+              "lede": "La piedra de los edificios históricos irradia una calidez persistente durante las noches de julio.",
+              "body": "Los paseantes buscan la sombra de los soportales en la Plaza Mayor. El aire se vuelve denso al caer la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "Los jazmines florecen en los patios interiores del Barrio de las Letras.",
+              "lede": "El aroma dulce inunda los callejones estrechos durante las horas de calma extrema.",
+              "body": "Las ventanas permanecen abiertas para capturar la brisa nocturna. Es un refugio silencioso en el centro de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "Las terrazas de los cines de verano inician sus proyecciones bajo las estrellas.",
+              "lede": "El cine al aire libre recupera su lugar como punto de encuentro vecinal.",
+              "body": "El proyector ilumina la pantalla instalada en los antiguos solares. El murmullo de la ciudad queda amortiguado por la proyección.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa del Mediterráneo refresca los balcones del Eixample.",
+              "lede": "El viento marino recorre las manzanas rectangulares al atardecer.",
+              "body": "Los toldos bajan para proteger los interiores de la luz intensa. La vida social se desplaza hacia los espacios abiertos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "Los mercados locales exhiben la madurez de la fruta de hueso.",
+              "lede": "Los puestos de La Boquería ofrecen colores vibrantes propios de la temporada estival.",
+              "body": "El género refleja la cosecha reciente de los campos cercanos. La selección de productos dicta el ritmo de las cocinas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "El parque de la Ciutadella es un refugio bajo la sombra de las acacias.",
+              "lede": "La vegetación ofrece un respiro ante la humedad característica de la costa.",
+              "body": "Los visitantes descansan sobre el césped bajo los árboles centenarios. El tiempo parece detenerse en los senderos arbolados.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El invierno porteño tiñe de gris el cielo sobre el Río de la Plata.",
+              "lede": "Las jornadas son breves y la luz adquiere un tono plateado al mediodía.",
+              "body": "Los árboles de las avenidas muestran sus ramas desnudas. El frío invita a las caminatas pausadas por Recoleta.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "El aroma a café y libros inunda las librerías de la calle Corrientes.",
+              "lede": "Los lectores buscan refugio en los interiores cálidos frente al descenso de la temperatura.",
+              "body": "Las estanterías altas custodian el silencio de los pasillos estrechos. La rutina urbana se vuelve introspectiva y pausada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "Los jacarandás esperan el ciclo de floración en los parques de Palermo.",
+              "lede": "La estructura de los árboles destaca contra el cielo invernal de la ciudad.",
+              "body": "Los parques se mantienen en calma durante las mañanas de escarcha. La naturaleza descansa antes de la primavera.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-13T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El asfalto madrileño conserva el calor tras la puesta de sol.",
+              "lede": "La ciudad retiene la calidez del día en sus plazas de piedra.",
+              "body": "Los vecinos buscan refugio bajo las sombras de los soportales. La vida social se traslada a las terrazas al caer la noche.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Las fuentes de los parques ofrecen un alivio constante.",
+              "lede": "El agua corriente marca el ritmo pausado de los paseos estivales.",
+              "body": "El sonido del agua amortigua el ruido del tráfico urbano. Los jardines históricos mantienen su frescor gracias al riego nocturno.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "El cielo de julio se tiñe de violeta al atardecer.",
+              "lede": "La luz del crepúsculo transforma la arquitectura clásica del centro.",
+              "body": "Los tejados de la capital reflejan los últimos rayos del sol. Es el momento en que la ciudad recupera su calma.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa marina recorre las calles del Barrio Gótico.",
+              "lede": "El aire del Mediterráneo suaviza el clima en los callejones antiguos.",
+              "body": "Las ventanas se mantienen abiertas para capturar el viento salino. El olor a mar llega hasta los patios interiores.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Las buganvillas cubren de color los balcones del Eixample.",
+              "lede": "La vegetación urbana florece con fuerza bajo el sol intenso.",
+              "body": "Las flores aportan una nota cromática sobre las fachadas modernistas. La naturaleza reclama su lugar entre el hierro y la piedra.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "El horario de las playas se extiende hasta la medianoche.",
+              "lede": "La arena se convierte en el lugar de encuentro preferido por los locales.",
+              "body": "Las luces de la costa guían a los paseantes nocturnos. El murmullo de las olas reemplaza al bullicio de la jornada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El aire invernal invita a buscar refugio en cafés históricos.",
+              "lede": "Las puertas de madera protegen a los clientes del frío exterior.",
+              "body": "El aroma a café y libros inunda los salones de San Telmo. El vapor de las tazas empaña los cristales antiguos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Las hojas secas tapizan los senderos de los bosques de Palermo.",
+              "lede": "El paisaje urbano adquiere los tonos ocres característicos de la estación.",
+              "body": "El viento dispersa el follaje sobre los caminos de tierra batida. Los caminantes caminan con paso firme para entrar en calor.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "La luz del mediodía acentúa las sombras en las avenidas anchas.",
+              "lede": "El sol bajo de invierno esculpe la silueta de los edificios clásicos.",
+              "body": "Las fachadas de estilo francés lucen con una claridad inusual. La ciudad parece detenerse bajo la luz limpia del mediodía.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-12T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las noches de julio invitan a la calma en los jardines de Sabatini.",
+              "lede": "El aire estival retiene el calor del asfalto hasta bien entrada la madrugada.",
+              "body": "Los paseantes buscan el alivio de las sombras alargadas. La piedra del Palacio Real parece enfriarse bajo la luz de la luna.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "Los toldos de lona despliegan su sombra sobre las aceras de Chamberí.",
+              "lede": "El comercio tradicional ajusta sus horarios para protegerse del sol de mediodía.",
+              "body": "Las persianas metálicas permanecen bajadas durante las horas de mayor intensidad lumínica. La vida del barrio se traslada al interior de los cafés.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "El riego nocturno devuelve el frescor a los parques del distrito de Arganzuela.",
+              "lede": "El olor a tierra mojada marca el final de una jornada de alta insolación.",
+              "body": "Los vecinos aprovechan el descenso térmico para caminar junto al río Manzanares. El silencio acompaña el cierre de los quioscos locales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa marina suaviza el ambiente en los callejones del barrio Gótico.",
+              "lede": "El salitre se mezcla con el aroma de los jazmines en los patios interiores.",
+              "body": "Las fachadas históricas conservan la humedad acumulada durante la noche. Los residentes abren sus balcones al amanecer para ventilar las estancias.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "Los jardines de Mossèn Costa i Llobera muestran su esplendor bajo el sol pleno.",
+              "lede": "La vegetación xerófila destaca por sus formas geométricas y colores terrosos.",
+              "body": "El camino hacia Montjuïc ofrece vistas despejadas sobre el puerto industrial. La luz del verano resalta las texturas de las plantas crasas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "Las heladerías artesanales alargan su actividad hasta el cierre de la jornada.",
+              "lede": "El sonido de las cucharas contra el cristal es la banda sonora de la noche.",
+              "body": "Las familias pasean por el frente marítimo buscando la corriente de aire constante. El mar se mantiene en calma absoluta bajo el cielo despejado.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El invierno porteño tiñe los árboles de la ciudad con tonos ocres.",
+              "lede": "Las veredas se cubren lentamente con el follaje seco de los plátanos.",
+              "body": "El viento frío recorre las avenidas principales al caer la tarde. Los vecinos caminan con paso rápido buscando refugio en los bares de época.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "El humo de los hogares se mezcla con el aroma del café recién servido.",
+              "lede": "La atmósfera se vuelve densa y acogedora en los rincones de San Telmo.",
+              "body": "Los adoquines brillan bajo la escarcha ligera de las primeras horas. El tiempo parece detenerse en los salones con techos altos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "Los parques de Palermo invitan a la contemplación bajo un sol pálido.",
+              "lede": "La luz de julio es corta pero intensa sobre los lagos del sector.",
+              "body": "Los patos buscan refugio en las orillas protegidas por la vegetación. El silencio del invierno se siente en la quietud de los senderos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-11T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "MADRID",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las terrazas de La Latina prolongan el murmullo bajo las estrellas.",
+              "lede": "El asfalto retiene el calor del día mientras la ciudad busca el alivio nocturno.",
+              "body": "Los vecinos ocupan las aceras al caer el sol. Es el momento de la conversación pausada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "El aroma a jazmín inunda los patios interiores del Madrid antiguo.",
+              "lede": "Las flores nocturnas florecen con el calor estival de julio.",
+              "body": "El aire se vuelve denso y dulce al cruzar los zaguanes. Los jardines privados ofrecen un refugio fresco.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "Los cines de verano recuperan el ritual de la butaca al aire libre.",
+              "lede": "Las pantallas blancas se despliegan en los patios de armas de la villa.",
+              "body": "El cine clásico vuelve a proyectarse bajo el cielo abierto. Es un hábito que sobrevive al paso del tiempo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        },
+        {
+          "city": "BARCELONA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La luz del atardecer tiñe de ocre las fachadas del Barrio Gótico.",
+              "lede": "El sol de julio se filtra por los callejones estrechos durante la tarde.",
+              "body": "Las sombras se alargan sobre la piedra centenaria. Es la hora en que el turista se retira.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "Las playas urbanas guardan un silencio inusual antes del amanecer.",
+              "lede": "El Mediterráneo se mantiene en calma mientras la ciudad duerme todavía.",
+              "body": "Solo los nadadores habituales recorren la orilla a primera hora. La arena está limpia y fresca.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "Las buganvillas cubren los balcones del Eixample con su color intenso.",
+              "lede": "La vegetación urbana alcanza su punto máximo de esplendor en pleno verano.",
+              "body": "Las flores trepadoras contrastan con la sobriedad del modernismo. El paisaje urbano se vuelve más orgánico.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        },
+        {
+          "city": "BUENOS AIRES",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El aire fresco de julio invita a caminar por los parques de Palermo.",
+              "lede": "La ciudad vive el invierno con días despejados y cielos intensamente azules.",
+              "body": "Las hojas secas tapizan los senderos de los bosques. Es tiempo de café caliente y abrigo ligero.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "Las librerías de antiguo abren sus puertas al abrigo del frío.",
+              "lede": "Los lectores buscan refugio entre estanterías de madera y libros usados.",
+              "body": "El olor a papel viejo inunda las salas. La pausa se vuelve necesaria en el ritmo porteño.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "El sol de mediodía calienta las fachadas de San Telmo.",
+              "lede": "La arquitectura colonial resplandece bajo el sol invernal de este viernes.",
+              "body": "Los vecinos aprovechan los bancos de las plazas para conversar. El frío queda suspendido por un momento.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El asfalto madrileño irradia un calor seco bajo el sol de julio.",
+              "lede": "La ciudad busca refugio en los patios interiores y las sombras de los edificios antiguos.",
+              "body": "Los toldos de lona despliegan su protección sobre los escaparates del centro. El aire se vuelve denso al caer la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Las terrazas de La Latina prolongan su actividad hasta la madrugada.",
+              "lede": "El murmullo de las conversaciones llena las plazas estrechas del barrio castizo.",
+              "body": "Los vecinos buscan la brisa en los callejones históricos. La vida social se traslada al exterior durante las noches estivales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Los parques urbanos reducen su riego para conservar la humedad del suelo.",
+              "lede": "La vegetación mediterránea se adapta al ciclo natural del verano madrileño.",
+              "body": "El color dorado predomina en los jardines de los Austrias. El riego nocturno mantiene la frescura de los arbustos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa del Mediterráneo suaviza la humedad en el barrio del Born.",
+              "lede": "El mar influye en el ritmo pausado de las mañanas junto al puerto.",
+              "body": "Los balcones lucen flores frescas bajo la luz intensa del mediodía. El ambiente es tranquilo mientras la ciudad descansa.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Las fachadas modernistas capturan destellos dorados en el Eixample.",
+              "lede": "La luz de julio acentúa los detalles ornamentales de la piedra labrada.",
+              "body": "Los transeúntes caminan buscando la sombra de los plátanos de sombra. El pavimento refleja el brillo del sol intenso.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Los mercados locales exhiben frutas de hueso en sus puestos abiertos.",
+              "lede": "La cosecha de verano inunda los pasillos con aromas intensos y colores vibrantes.",
+              "body": "Los vendedores ofrecen productos frescos llegados del campo cercano. La compra diaria se convierte en un ritual pausado.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El aire invernal trae un frescor constante a las calles de San Telmo.",
+              "lede": "La niebla matutina se disipa lentamente sobre los adoquines históricos del barrio.",
+              "body": "Las cafeterías ofrecen refugio con el aroma del café recién hecho. Los árboles desnudos definen el paisaje urbano de julio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Los parques de Palermo muestran tonos ocres bajo el cielo despejado.",
+              "lede": "El invierno avanza con calma sobre los senderos bordeados de árboles antiguos.",
+              "body": "Los corredores aprovechan las horas centrales del día con sol. El silencio domina los rincones alejados de la avenida.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Las librerías de la calle Corrientes reciben a lectores en busca de refugio.",
+              "lede": "El hábito de la lectura crece al amparo del clima frío de la ciudad.",
+              "body": "Los estantes ofrecen novedades literarias bajo luces tenues. La calma interior contrasta con el movimiento habitual de la zona.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-09T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El asfalto retiene el calor tras el ocaso.",
+              "lede": "La vida nocturna se desplaza hacia las plazas arboladas donde corre una brisa tenue.",
+              "body": "Los vecinos buscan la sombra de los soportales. La piedra de los edificios antiguos libera el frescor acumulado durante la madrugada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Las terrazas de La Latina prolongan su horario estival.",
+              "lede": "El bullicio de las conversaciones se funde con el sonido de las fuentes de piedra.",
+              "body": "La luz ámbar de las farolas baña las mesas dispuestas sobre el adoquín. El ambiente invita a permanecer al aire libre hasta la medianoche.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "Los jardines del Palacio Real muestran sus flores de temporada.",
+              "lede": "El aroma a lavanda inunda los senderos durante las horas centrales del día.",
+              "body": "El riego automático refresca los parterres antes del amanecer. Los visitantes encuentran refugio bajo las copas de los árboles centenarios.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La brisa marina mitiga el bochorno en la Barceloneta.",
+              "lede": "El aire del Mediterráneo recorre las calles estrechas del barrio antiguo al caer la tarde.",
+              "body": "Las persianas de madera permanecen bajadas para proteger los interiores del sol intenso. La ciudad se vuelve más lenta bajo la luz blanca de julio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Las fachadas modernistas reflejan un brillo renovado.",
+              "lede": "El sol de mediodía acentúa los detalles cerámicos en las cornisas del Ensanche.",
+              "body": "Los balcones se llenan de plantas que buscan la claridad. El diseño urbano permite que el viento circule entre las manzanas de casas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "El parque de la Ciutadella es un refugio verde.",
+              "lede": "Los músicos de cuerda encuentran acústica natural bajo las frondosas ramas de los plátanos.",
+              "body": "La hierba conserva la humedad gracias al cuidado constante de los jardineros. El lago permanece en calma mientras las barcas se deslizan lentamente.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El aire de invierno se siente nítido en los parques.",
+              "lede": "La luz dorada de la tarde dibuja sombras alargadas sobre el césped de Palermo.",
+              "body": "Los árboles de hojas caducas muestran sus ramas desnudas contra el cielo despejado. Los paseantes caminan rápido para mantener el calor corporal.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Las cafeterías de San Telmo ofrecen refugio frente al frío.",
+              "lede": "El vapor de las tazas de café empaña los cristales de los locales históricos.",
+              "body": "Los clientes prefieren las mesas interiores cerca de la madera antigua. El aroma a tostado y libros viejos define la atmósfera del barrio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "La arquitectura del centro destaca bajo el sol bajo.",
+              "lede": "Las cornisas de los edificios de estilo francés capturan la claridad del mediodía invernal.",
+              "body": "El tránsito en las avenidas anchas parece más pausado que en otras estaciones. La luz de julio transforma las texturas de la piedra caliza.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
