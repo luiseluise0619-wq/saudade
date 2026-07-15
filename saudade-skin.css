@@ -1859,10 +1859,9 @@ body[data-visa-urgent="1"] .dock-btn[data-cat="visa"]::before {
     z-index: 10;
     pointer-events: auto;
 }
-/* v750 — 섹션에서도 언어 전환 가능하게 노출(예전엔 section-active 시 숨겨
-   디스패치 등 섹션에서 언어 변경 불가). 몰입 모드(cafe/listening)만 숨김. */
-body.cafe-mode .sdd-cover-edition,
-body.listening-active .sdd-cover-edition { display: none !important; }
+/* v754 — 우상단 언어 버튼 제거(사용자 요청). 언어 전환은 §04 The Desk 의
+   Editions 목록에서 그대로 가능. 커버/섹션 어디서도 우상단엔 표시 안 함. */
+.sdd-cover-edition { display: none !important; }
 .sdd-cover-edition > summary {
     list-style: none;
     cursor: pointer;

@@ -109,10 +109,13 @@ const EDITION_CONFIG = {
 };
 
 function parseArgs(argv) {
-    const out = { editions: Object.keys(EDITION_CONFIG), dry: false, noReview: false };
+    const out = { editions: Object.keys(EDITION_CONFIG), dry: false, noReview: false, backfill: 0 };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i];
-        if (a === '--editions') {
+        if (a === '--backfill') {
+            // 지난 N일치(오늘 포함)를 한 번에 생성해 지난-한-주 아카이브를 채운다. 1~7.
+            out.backfill = Math.max(0, Math.min(7, parseInt(argv[++i] || '0', 10) || 0));
+        } else if (a === '--editions') {
             out.editions = (argv[++i] || '')
                 .split(',').map(s => s.trim()).filter(Boolean)
                 .filter(s => EDITION_CONFIG[s]);
@@ -129,9 +132,9 @@ function parseArgs(argv) {
     return out;
 }
 
-function buildPrompt(edition) {
+function buildPrompt(edition, todayStr) {
     const cfg = EDITION_CONFIG[edition];
-    const today = new Date().toISOString().slice(0, 10);
+    const today = todayStr || new Date().toISOString().slice(0, 10);
     const lines = [
         `You are writing the ${cfg.label} edition of saudade — a slow-news magazine`,
         `for travelers and quiet observers. Voice: ${cfg.voice}`,
@@ -234,17 +237,20 @@ function safeParse(s) {
     try { return JSON.parse(t); } catch (e) { return null; }
 }
 
-function isoNowKst() {
-    // KST 06:00 today. Next filing = +24h.
+// KST 날짜 문자열(yyyy-mm-dd). offsetDays 만큼 과거로 이동(백필용).
+function ymdKst(offsetDays) {
     const d = new Date();
-    const kst = new Date(d.getTime() + 9 * 3600 * 1000);
-    const ymd = kst.toISOString().slice(0, 10);
+    const kst = new Date(d.getTime() + 9 * 3600 * 1000 - (offsetDays || 0) * 24 * 3600 * 1000);
+    return kst.toISOString().slice(0, 10);
+}
+function isoKstForDate(ymd) {
     return {
         filed_at:    `${ymd}T06:00:00+09:00`,
         next_filing: new Date(new Date(`${ymd}T06:00:00+09:00`).getTime() + 24 * 3600 * 1000)
             .toISOString().replace(/\.\d{3}Z$/, '+00:00')
     };
 }
+function isoNowKst() { return isoKstForDate(ymdKst(0)); }
 
 function fileFor(edition) {
     return path.join(DATA, edition === 'en' ? 'dispatches.json' : `dispatches.${edition}.json`);
@@ -357,9 +363,11 @@ async function reviewDispatches(edition, cities, key) {
 // Gemini 는 temperature 0.7 이라 같은 프롬프트로도 매번 다른 초안을 내므로,
 // 재시도하면 대부분 통과한다 → 품질 게이트(리뷰)는 그대로 두고도 KO 등이 안정적으로 발행됨.
 const MAX_ATTEMPTS = 3;
-async function refreshOne(edition, opts, key) {
+async function refreshOne(edition, opts, key, dayOffset) {
+    dayOffset = dayOffset || 0;
     const cfg = EDITION_CONFIG[edition];
-    const prompt = buildPrompt(edition);
+    const ymd = ymdKst(dayOffset);            // 백필 시 과거 날짜, 평상시 오늘
+    const prompt = buildPrompt(edition, ymd);
     const pause = () => new Promise(r => setTimeout(r, 1500));
 
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
@@ -401,7 +409,7 @@ async function refreshOne(edition, opts, key) {
             }
         }
 
-    const { filed_at, next_filing } = isoNowKst();
+    const { filed_at, next_filing } = isoKstForDate(ymd);
     const out = {
         edition,
         filed_at,
@@ -418,9 +426,11 @@ async function refreshOne(edition, opts, key) {
         console.log(JSON.stringify(out, null, 2).slice(0, 600) + '…');
         return true;
     }
-        fs.writeFileSync(fileFor(edition), JSON.stringify(out, null, 2) + '\n');
-        archiveWeek(edition, out);   // 오늘분을 지난-한-주 아카이브에 누적
-        console.log(`OK → ${path.relative(ROOT, fileFor(edition))} (${out.cities.reduce((s,c)=>s+c.items.length,0)} items)`);
+        // 백필(과거 날짜)은 라이브 파일을 덮지 않고 아카이브에만 쌓는다.
+        // dayOffset===0(오늘) 만 dispatches.<ed>.json 을 갱신한다.
+        if (dayOffset === 0) fs.writeFileSync(fileFor(edition), JSON.stringify(out, null, 2) + '\n');
+        archiveWeek(edition, out);   // 발행분을 지난-한-주 아카이브에 누적
+        console.log(`OK → ${dayOffset === 0 ? path.relative(ROOT, fileFor(edition)) : 'archive'} ${ymd} (${out.cities.reduce((s,c)=>s+c.items.length,0)} items)`);
         return true;
     }
     // 모든 재시도가 리뷰에 막혔거나 실패 → 이 에디션은 이번엔 발행 안 함(옛 파일 유지).
@@ -436,13 +446,21 @@ async function main() {
     }
     const opts = parseArgs(process.argv.slice(2));
     let ok = 0, fail = 0;
+    // 백필: 각 에디션마다 오래된 날 → 최신 날 순으로 생성(아카이브가 최신순으로 쌓임).
+    // 평상시(backfill=0): 오늘 하루만.
+    const offsets = opts.backfill > 0
+        ? Array.from({ length: opts.backfill }, (_, i) => opts.backfill - 1 - i)  // [N-1..0]
+        : [0];
+    if (opts.backfill > 0) console.log(`[backfill] 지난 ${opts.backfill}일치 생성 · 에디션 ${opts.editions.join(',')}`);
     for (const ed of opts.editions) {
-        const r = await refreshOne(ed, opts, key);
-        if (r) ok++; else fail++;
-        // Light pacing — Gemini free tier 15/min for 2.0-flash.
-        await new Promise(r => setTimeout(r, 1500));
+        for (const off of offsets) {
+            const r = await refreshOne(ed, opts, key, off);
+            if (r) ok++; else fail++;
+            // Light pacing — Gemini free tier 15/min for 2.0-flash.
+            await new Promise(r => setTimeout(r, 1500));
+        }
     }
-    console.log(`\n[done] ${ok} edition(s) refreshed · ${fail} failed`);
+    console.log(`\n[done] ${ok} filing(s) written · ${fail} failed`);
     process.exit(fail === 0 ? 0 : 1);
 }
 
