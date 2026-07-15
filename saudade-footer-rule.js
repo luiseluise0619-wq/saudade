@@ -134,6 +134,19 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
         en: 'ISSUE COVER', ko: '표지', ja: '表紙', pt: 'CAPA', es: 'PORTADA'
     };
 
+    // 이슈 총 페이지 수 — 마스트헤드의 가장 큰 섹션 페이지에서 유도한다.
+    // 예전엔 'OF 12' 로 하드코딩돼 § 03(P. 13) 이 불가능한 "P. 13 OF 12" 를
+    // 렌더했다. 섹션이 늘어나도 항상 유효하도록 최대 페이지를 계산해 쓴다.
+    function issueTotal() {
+        const S = window.SAUDADE_MASTHEAD?.SECTIONS;
+        let max = 12;
+        if (S) for (const s of Object.values(S)) {
+            const n = parseInt(String(s.page).replace(/\D/g, ''), 10);
+            if (Number.isFinite(n) && n > max) max = n;
+        }
+        return String(max).padStart(2, '0');
+    }
+
     function update() {
         const f = ensureFooter();
         const sec = document.body.getAttribute('data-section');
@@ -147,12 +160,12 @@ body:not(.cafe-mode) .bottom-dock::before { content: none !important; display: n
                 const name = (matched.name && typeof matched.name === 'object')
                     ? (matched.name[ed] || matched.name.en)
                     : matched.name;
-                f.querySelector('.sdd-footer-page').textContent = matched.page + ' OF 12';
+                f.querySelector('.sdd-footer-page').textContent = matched.page + ' OF ' + issueTotal();
                 f.querySelector('.sdd-footer-section').textContent = '§ ' + matched.num + ' · ' + name;
                 return;
             }
         }
-        f.querySelector('.sdd-footer-page').textContent = 'P. 01 OF 12';
+        f.querySelector('.sdd-footer-page').textContent = 'P. 01 OF ' + issueTotal();
         f.querySelector('.sdd-footer-section').textContent = '§ 00 · ' + (COVER_LABEL[ed] || COVER_LABEL.en);
     }
 
