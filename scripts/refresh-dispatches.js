@@ -391,7 +391,7 @@ async function refreshOne(edition, opts, key, dayOffset) {
     let facts = null;
     try {
         process.stderr.write(`[${edition}] fetching civic data (${ymd})… `);
-        facts = await fetchCityFacts(cfg.cities, ymd);
+        facts = await fetchCityFacts(cfg.cities, ymd, edition);
         console.error('ok');
     } catch (e) { console.error('skip: ' + e.message); }
     const prompt = buildPrompt(edition, ymd, facts);
