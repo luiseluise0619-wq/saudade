@@ -1,4 +1,4 @@
-/*! saudade · saudade.editorial.js · built 2026-07-15T06:15:17Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
+/*! saudade · saudade.editorial.js · built 2026-07-15T06:23:39Z · https://saudade.app — concatenated IIFE modules, see /scripts/build-bundle.js */
 
 /* ── saudade-cover.js ──────────────────────────────────────────────────── */
 // SAUDADE · § 00 ISSUE COVER — 신규 화면 (헌법 §4-1)
@@ -1309,7 +1309,7 @@ body.section-active::before { content: none !important; }
     const KEY        = 'saudade.edition';
     const SUPPORTED  = ['en', 'ko', 'ja', 'pt', 'es'];
     const DEFAULT    = 'en';
-    const SKINS      = ['paper', 'saturated', 'dark'];
+    const SKINS      = ['paper', 'saturated', 'dark', 'sepia', 'midnight', 'forest'];
 
     // Static fallback meta. The full editions config lives in
     // data/editions.json — loaded async. Modules that need cities/voice

@@ -184,6 +184,54 @@ html[data-skin="dark"] body.edition-ja { --accent: #FFA1D2; --rust: #FFA1D2; --r
 html[data-skin="dark"] body.edition-pt { --accent: #9DB3FA; --rust: #9DB3FA; --rust-d: #7E97F0; --rust-soft: #BCCAFB; }
 html[data-skin="dark"] body.edition-es { --accent: #CFA3E6; --rust: #CFA3E6; --rust-d: #B988D5; --rust-soft: #DEBEEE; }
 
+/* Sepia — warm aged-newsprint reading tone (light). */
+html[data-skin="sepia"] body {
+    --paper:     #F4ECD8;
+    --paper-d:   #EADFC4;
+    --ink:       #382E22;
+    --ink-soft:  #241C12;
+    --bone:      #8C7B62;
+    --bone-d:    #6B5A42;
+    --rule:      rgba(56, 46, 34, 0.16);
+    --rule-2:    rgba(56, 46, 34, 0.34);
+    --accent:    #A8531E;
+    --rust:      #A8531E;
+    --rust-d:    #8C4216;
+    --rust-soft: #C67C4A;
+}
+
+/* Midnight — deep navy night (dark), an alternative to the violet dark. */
+html[data-skin="midnight"] body {
+    --paper:     #0A1020;
+    --paper-d:   #131C33;
+    --ink:       #E6ECF7;
+    --ink-soft:  #FFFFFF;
+    --bone:      #8FA1C0;
+    --bone-d:    #B3C2DD;
+    --rule:      rgba(230, 236, 247, 0.14);
+    --rule-2:    rgba(230, 236, 247, 0.34);
+    --accent:    #5F9BE0;
+    --rust:      #5F9BE0;
+    --rust-d:    #4785CC;
+    --rust-soft: #8FBCEC;
+}
+
+/* Forest — muted deep-green night (dark). */
+html[data-skin="forest"] body {
+    --paper:     #0C1712;
+    --paper-d:   #14231B;
+    --ink:       #E8F0EA;
+    --ink-soft:  #FFFFFF;
+    --bone:      #8FA898;
+    --bone-d:    #B2C7BA;
+    --rule:      rgba(232, 240, 234, 0.13);
+    --rule-2:    rgba(232, 240, 234, 0.32);
+    --accent:    #6FB98A;
+    --rust:      #6FB98A;
+    --rust-d:    #55A272;
+    --rust-soft: #97D0AC;
+}
+
 /* Drop the hanji-dot texture under KO — Stitch is glass, not paper. */
 body.edition-ko::before { display: none !important; }
 
@@ -2686,6 +2734,9 @@ body article h1, body article h2 { text-wrap: balance; }
 /* Anti-flash — paint the surface immediately while fonts load */
 html { background: var(--paper, #FAFAFB); color-scheme: light; }
 html[data-skin="dark"] { color-scheme: dark; }
+html[data-skin="sepia"] { color-scheme: light; }
+html[data-skin="midnight"] { color-scheme: dark; }
+html[data-skin="forest"] { color-scheme: dark; }
 
 /* ════════════════════════════════════════════════════════════════════════
    ★ §14 — "Saturated" 스킨 contrast 버그 수정.

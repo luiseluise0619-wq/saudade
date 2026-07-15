@@ -12,9 +12,12 @@
         auto:      { en: 'AUTO',    ko: '자동',  ja: '自動',     pt: 'AUTO',   es: 'AUTO' },
         paper:     { en: 'PAPER',   ko: '종이',  ja: '紙',       pt: 'PAPEL',  es: 'PAPEL' },
         saturated: { en: 'COVER',   ko: '표지',  ja: '表紙',     pt: 'CAPA',   es: 'TAPA' },
-        dark:      { en: 'NIGHT',   ko: '밤',    ja: '夜',       pt: 'NOITE',  es: 'NOCHE' }
+        dark:      { en: 'NIGHT',   ko: '밤',    ja: '夜',       pt: 'NOITE',  es: 'NOCHE' },
+        sepia:     { en: 'SEPIA',   ko: '세피아', ja: 'セピア',   pt: 'SÉPIA',  es: 'SEPIA' },
+        midnight:  { en: 'MIDNIGHT',ko: '자정',  ja: '真夜中',   pt: 'MEIA-NOITE', es: 'MEDIANOCHE' },
+        forest:    { en: 'FOREST',  ko: '숲',    ja: '森',       pt: 'FLORESTA', es: 'BOSQUE' }
     };
-    const ORDER = ['auto', 'paper', 'saturated', 'dark'];
+    const ORDER = ['auto', 'paper', 'saturated', 'dark', 'sepia', 'midnight', 'forest'];
 
     function T(strings) {
         const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
