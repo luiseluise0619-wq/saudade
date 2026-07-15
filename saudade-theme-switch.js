@@ -61,10 +61,20 @@
     color: var(--accent);
     line-height: 1;
 }
+.sdd-theme-wrapper {
+    position: fixed;
+    top: calc(clamp(16px, 2vw, 24px) + 46px);
+    right: clamp(16px, 2vw, 24px);
+    /* 커버(z-index 4)·섹션 페이지(8) 위로 올려 클릭이 가로막히지 않게.
+       모달(50+)보다는 아래라 모달이 뜨면 정상적으로 덮인다. */
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+}
 .sdd-theme-menu {
     position: absolute;
-    bottom: 36px;
-    left: 0;
+    top: calc(100% + 4px);
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -93,20 +103,22 @@
 .sdd-theme-opt:hover { color: var(--ink); background: var(--paper-d); }
 .sdd-theme-opt[aria-current="true"] { color: var(--accent); }
 .sdd-theme-opt[aria-current="true"]::after { content: ' ·'; }
+body.cafe-mode .sdd-theme-wrapper,
 body.listening-active .sdd-theme-wrapper { display: none; }
 `;
         document.head.appendChild(s);
     }
 
     function ensureMount() {
-        // Mount inside the legal strip if present, otherwise next to it.
-        const strip = document.getElementById('auraLegalStrip');
-        if (!strip) return null;
-        let wrapper = strip.querySelector('.sdd-theme-wrapper');
-        if (wrapper) return wrapper;
+        // v750 — the legal strip that used to host this was hidden globally
+        // ('투어가이드 요청'으로 좌하단 LEGAL pill 삭제), which left the theme
+        // toggle 0×0 and unusable. Mount as a standalone fixed control instead,
+        // stacked just under the cover edition switcher (top-right), so it is
+        // visible on the cover AND on section pages.
+        let wrapper = document.querySelector('.sdd-theme-wrapper');
+        if (wrapper && document.body.contains(wrapper)) return wrapper;
         wrapper = document.createElement('span');
         wrapper.className = 'sdd-theme-wrapper';
-        wrapper.style.cssText = 'position:relative;display:inline-flex;align-items:center';
 
         const cur = window.SAUDADE_EDITION?.skinPref?.() || 'auto';
         wrapper.innerHTML = `
@@ -116,7 +128,7 @@ body.listening-active .sdd-theme-wrapper { display: none; }
             </button>
             <div class="sdd-theme-menu" role="menu" hidden></div>
         `;
-        strip.appendChild(wrapper);
+        document.body.appendChild(wrapper);
         return wrapper;
     }
 

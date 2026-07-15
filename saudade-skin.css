@@ -1854,10 +1854,13 @@ body[data-visa-urgent="1"] .dock-btn[data-cat="visa"]::before {
     position: fixed;
     top: clamp(16px, 2vw, 24px);
     right: clamp(16px, 2vw, 24px);
-    z-index: var(--z-cover, 4);
+    /* 커버(z-index 4)와 동률이라 커버가 클릭을 가로채 언어 전환이 안 됐다.
+       커버·섹션(8) 위로 올림. 모달(50+)보다는 아래. */
+    z-index: 10;
     pointer-events: auto;
 }
-body.section-active .sdd-cover-edition,
+/* v750 — 섹션에서도 언어 전환 가능하게 노출(예전엔 section-active 시 숨겨
+   디스패치 등 섹션에서 언어 변경 불가). 몰입 모드(cafe/listening)만 숨김. */
 body.cafe-mode .sdd-cover-edition,
 body.listening-active .sdd-cover-edition { display: none !important; }
 .sdd-cover-edition > summary {
