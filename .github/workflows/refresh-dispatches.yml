@@ -24,7 +24,11 @@ on:
   workflow_dispatch:
     inputs:
       editions:
-        description: "Editions (comma-separated). Leave blank for all four."
+        description: "Editions (comma-separated). Leave blank for all five."
+        required: false
+        default: ""
+      backfill:
+        description: "Backfill last N days into the Past-Week archive (1-7). Blank/0 = today only."
         required: false
         default: ""
   # 21:00 UTC daily = 06:00 KST next morning (matches §9.5 daily filing).
@@ -55,6 +59,9 @@ jobs:
           ARGS=""
           if [ -n "${{ inputs.editions }}" ]; then
             ARGS="--editions ${{ inputs.editions }}"
+          fi
+          if [ -n "${{ inputs.backfill }}" ]; then
+            ARGS="$ARGS --backfill ${{ inputs.backfill }}"
           fi
           eval node scripts/refresh-dispatches.js $ARGS
 

@@ -66,7 +66,7 @@
 }
 .sdd-theme-wrapper {
     position: fixed;
-    top: calc(clamp(16px, 2vw, 24px) + 46px);
+    top: clamp(16px, 2vw, 24px);
     right: clamp(16px, 2vw, 24px);
     /* 커버(z-index 4)·섹션 페이지(8) 위로 올려 클릭이 가로막히지 않게.
        모달(50+)보다는 아래라 모달이 뜨면 정상적으로 덮인다. */
