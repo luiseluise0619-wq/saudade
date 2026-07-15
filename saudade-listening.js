@@ -75,7 +75,7 @@
         // defined → always fell back to v0 → listening.json effectively
         // pinned forever. That bug is why fresh photos/audio sometimes
         // didn't reach readers after a fetch-content merge.)
-        return fetch('./data/listening.json?v=v743')
+        return fetch('./data/listening.json?v=v744')
             .then(r => r.ok ? r.json() : null)
             .then(d => { _data = d || { tracks: [] }; return _data; })
             .catch(() => { _data = { tracks: [] }; return _data; });
@@ -1268,7 +1268,15 @@ body.colophon-active .sdd-cover-listen-cta { display: none !important; }
             const activeSlug = resolveActiveCity(data);
             const activeCity = cities.find(c => c.slug === activeSlug) || cities[0];
             const activeName = activeCity?.names?.[(window.SAUDADE_EDITION?.get?.() || 'en')] || activeCity?.slug || '';
-            const photoUrl = activeCity?.default_photo_url || '';
+            // 도시별로 여러 장(photos[])이 있으면 렌더할 때마다 랜덤으로 한 장 고른다
+            // → 방문/전환할 때마다 사진이 바뀐다. 배열이 없으면 기존 default_photo_url
+            //   한 장으로 폴백(하위호환 — 아직 wire 안 된 도시).
+            const _photoPool = (activeCity?.photos && activeCity.photos.length)
+                ? activeCity.photos
+                : (activeCity?.default_photo_url ? [activeCity.default_photo_url] : []);
+            const photoUrl = _photoPool.length
+                ? _photoPool[Math.floor(Math.random() * _photoPool.length)]
+                : '';
             const caption  = activeCity?.photo_caption?.[(window.SAUDADE_EDITION?.get?.() || 'en')] || '';
 
             // 도시 dropdown — cities 1개면 정적 텍스트, 그 외 details/summary
