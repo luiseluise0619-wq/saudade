@@ -10,7 +10,7 @@
     const KEY        = 'saudade.edition';
     const SUPPORTED  = ['en', 'ko', 'ja', 'pt', 'es'];
     const DEFAULT    = 'en';
-    const SKINS      = ['paper', 'saturated', 'dark'];
+    const SKINS      = ['paper', 'saturated', 'dark', 'sepia', 'midnight', 'forest'];
 
     // Static fallback meta. The full editions config lives in
     // data/editions.json — loaded async. Modules that need cities/voice
