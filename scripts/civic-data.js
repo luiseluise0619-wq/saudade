@@ -100,11 +100,20 @@ async function airQualityFor(meta) {
     } catch (e) { return null; }
 }
 
-// 축제/행사. 한국관광공사 TourAPI(searchFestival) — 무료 키 필요(DATA_GO_KR_KEY).
-// KR 도시(area 코드 있음)만. 키 없으면 조용히 스킵.
+function ymdShift(ymd, deltaDays) {
+    const t = new Date(ymd + 'T00:00:00Z').getTime() + deltaDays * 86400000;
+    return new Date(t).toISOString().slice(0, 10);
+}
+
+// 축제/행사 — KR 은 한국관광공사 TourAPI, 그 외 도시는 Ticketmaster.
+// 둘 다 무료 키 옵션(DATA_GO_KR_KEY / TICKETMASTER_KEY). 키 없으면 스킵.
 async function festivalsFor(meta, todayStr) {
+    if (meta.cc === 'KR' && meta.area) return festivalsKR(meta, todayStr);
+    return festivalsIntl(meta, todayStr);
+}
+async function festivalsKR(meta, todayStr) {
     const key = (process.env.DATA_GO_KR_KEY || '').trim();
-    if (!key || !meta.area || meta.cc !== 'KR') return null;
+    if (!key) return null;
     try {
         const start = todayStr.replace(/-/g, '');
         const url = `https://apis.data.go.kr/B551011/KorService1/searchFestival1` +
@@ -113,11 +122,49 @@ async function festivalsFor(meta, todayStr) {
         const d = await getJson(url, 15000);
         const items = d && d.response && d.response.body && d.response.body.items && d.response.body.items.item;
         const arr = Array.isArray(items) ? items : (items ? [items] : []);
-        return arr.slice(0, 3).map(it => ({
-            title: it.title,
-            start: it.eventstartdate,
-            end: it.eventenddate
+        return arr.slice(0, 3).map(it => ({ title: it.title, start: it.eventstartdate })).filter(f => f.title);
+    } catch (e) { return null; }
+}
+async function festivalsIntl(meta, todayStr) {
+    const key = (process.env.TICKETMASTER_KEY || '').trim();
+    if (!key) return null;
+    try {
+        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${encodeURIComponent(key)}` +
+            `&latlong=${meta.lat},${meta.lng}&radius=25&unit=km&size=5&sort=date,asc` +
+            `&startDateTime=${todayStr}T00:00:00Z`;
+        const d = await getJson(url, 15000);
+        const evs = d && d._embedded && d._embedded.events;
+        const arr = Array.isArray(evs) ? evs : [];
+        return arr.slice(0, 3).map(e => ({
+            title: e.name,
+            start: e.dates && e.dates.start && e.dates.start.localDate
         })).filter(f => f.title);
+    } catch (e) { return null; }
+}
+
+// 환율 — Frankfurter(ECB), 키 불필요. 현지 통화 1 USD 기준. 노마드 핵심 정보.
+const CURRENCY = { KR: 'KRW', JP: 'JPY', PT: 'EUR', ES: 'EUR', AR: 'ARS' };
+async function fxFor(meta) {
+    const cur = CURRENCY[meta.cc];
+    if (!cur) return null;
+    try {
+        const d = await getJson(`https://api.frankfurter.app/latest?from=USD&to=${cur}`);
+        const rate = d && d.rates && d.rates[cur];
+        return rate ? { cur, rate } : null;    // 1 USD = rate <cur>
+    } catch (e) { return null; }
+}
+
+// 지진 — USGS(키 불필요). 최근 3일, 도시 반경 ~350km, 규모 4.5+.
+async function quakesFor(meta, todayStr) {
+    try {
+        const start = ymdShift(todayStr, -3);
+        const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=4.5` +
+            `&latitude=${meta.lat}&longitude=${meta.lng}&maxradiuskm=350&starttime=${start}&orderby=magnitude`;
+        const d = await getJson(url, 15000);
+        const feats = d && d.features;
+        if (!Array.isArray(feats) || !feats.length) return null;
+        const top = feats[0];
+        return { mag: top.properties && top.properties.mag, place: top.properties && top.properties.place };
     } catch (e) { return null; }
 }
 
@@ -128,13 +175,15 @@ async function fetchCityFacts(cityNames, todayStr) {
         const meta = CITY_META[name] || CITY_META[String(name).toUpperCase()];
         if (!meta) { out[name] = null; continue; }
         try {
-            const [holidays, weather, air, festivals] = await Promise.all([
+            const [holidays, weather, air, festivals, fx, quake] = await Promise.all([
                 holidaysSoon(meta.cc, todayStr),
                 weatherFor(meta, todayStr),
                 airQualityFor(meta),
-                festivalsFor(meta, todayStr)
+                festivalsFor(meta, todayStr),
+                fxFor(meta),
+                quakesFor(meta, todayStr)
             ]);
-            out[name] = { holidays, weather, air, festivals };
+            out[name] = { holidays, weather, air, festivals, fx, quake };
         } catch (e) {
             out[name] = null;
         }
@@ -184,8 +233,15 @@ function factsLine(name, f) {
         const pm = f.air.pm25 != null ? `, PM2.5 ${Math.round(f.air.pm25)}` : '';
         parts.push(`air quality: ${t}${pm}`);
     }
+    if (f.fx && f.fx.rate != null) {
+        const r = f.fx.rate >= 100 ? Math.round(f.fx.rate) : Math.round(f.fx.rate * 100) / 100;
+        parts.push(`exchange rate: 1 USD = ${r} ${f.fx.cur}`);
+    }
     if (f.festivals && f.festivals.length) {
-        parts.push('festivals on now: ' + f.festivals.map(x => x.title).join('; '));
+        parts.push('festivals/events on now: ' + f.festivals.map(x => x.title).join('; '));
+    }
+    if (f.quake && f.quake.mag != null) {
+        parts.push(`recent earthquake: M${f.quake.mag}${f.quake.place ? ' — ' + f.quake.place : ''}`);
     }
     if (f.holidays && f.holidays.length) {
         parts.push('public holidays soon: ' + f.holidays.map(h => `${h.name} (${h.date})`).join('; '));

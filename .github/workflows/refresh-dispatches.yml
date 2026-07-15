@@ -50,6 +50,11 @@ jobs:
       - name: Refresh dispatches via Gemini
         env:
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          # 선택 — 축제/행사 접지용 무료 키. 없으면 축제만 스킵(나머지 접지는 정상).
+          #   DATA_GO_KR_KEY  : 한국관광공사 TourAPI (KR 도시 축제)
+          #   TICKETMASTER_KEY: Ticketmaster Discovery (외국 도시 행사)
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+          TICKETMASTER_KEY: ${{ secrets.TICKETMASTER_KEY }}
         run: |
           if [ -z "$GEMINI_KEY" ]; then
             echo "::error::GEMINI_KEY secret not set."
