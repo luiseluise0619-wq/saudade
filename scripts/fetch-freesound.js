@@ -21,11 +21,11 @@
  *   The "API token" (not OAuth) is enough for search + preview download.
  *
  * Filters applied:
- *   - duration >= 60s, <= 600s
- *   - sample rate >= 44100 Hz
+ *   - duration >= 20s, <= 1200s
+ *   - sample rate >= 22050 Hz (previews are mp3 anyway)
  *   - license CC0 or CC-BY (NC excluded so commercial use is safe)
- *   - num_downloads >= 100 (rough quality signal)
- *   - rating >= 3.5 (Freesound community ratings)
+ *   - num_downloads >= 10 (rough quality signal)
+ *   - rating: keep unrated; drop only sounds rated >=3 times AND scoring < 2.5
  *
  * Rate limit: 60/min (Freesound free tier).
  */
@@ -138,8 +138,12 @@ function slugify(s) {
 async function searchFreesound(token, query, per) {
     const url = new URL('https://freesound.org/apiv2/search/text/');
     url.searchParams.set('query', query);
+    // 필터 완화: 이전 값(duration 60-600 · samplerate≥44100 · downloads≥100)은
+    // 도시별 니치 쿼리("porto rain on tile roof" 등)에 대해 0건을 반환했다.
+    // 앰비언트/ASMR 은 짧은(20s~) 루프도, 22.05kHz 프리뷰도, 다운로드 적은 것도
+    // 충분히 쓸 만하다. 프리뷰 mp3 만 받으므로 원음 샘플레이트는 덜 중요.
     url.searchParams.set('filter',
-        'duration:[60 TO 600] samplerate:[44100 TO 192000] num_downloads:[100 TO 999999]');
+        'duration:[20 TO 1200] samplerate:[22050 TO 192000] num_downloads:[10 TO 999999]');
     url.searchParams.set('sort', 'rating_desc');
     url.searchParams.set('page_size', String(Math.max(per * 4, 12))); // overfetch + filter
     url.searchParams.set('fields', FIELDS);
@@ -188,10 +192,17 @@ async function main() {
         try { r = await searchFreesound(token, q, opts.per); }
         catch (e) { console.error('FAIL: ' + e.message); continue; }
 
-        const candidates = (r.results || [])
-            .filter(s => isCommercialOk(s.license))
-            .filter(s => (s.avg_rating || 0) >= 3.5 || s.num_ratings >= 5)
+        // 상업 이용 가능 라이선스(CC0 / CC-BY)만 남긴다 — 이건 양보 불가.
+        const commercial = (r.results || []).filter(s => isCommercialOk(s.license));
+        // 평점 게이트 완화: 예전엔 `평점≥3.5 || 평가수≥5` 라 평가 0개인 음원을
+        // 전부 버렸다(앰비언트 대부분이 평가 0개 → 0건). 이제는 "여러 번 평가받고도
+        // 낮은" 것만 배제하고 미평가 음원은 통과시킨다. 다운로드 하한(필터)이
+        // 이미 최소 품질 신호 역할을 한다.
+        let candidates = commercial
+            .filter(s => !((s.num_ratings || 0) >= 3 && (s.avg_rating || 0) < 2.5))
             .slice(0, opts.per);
+        // 폴백: 게이트가 다 걸러도 상업 이용 가능한 후보가 있으면 상위 것을 쓴다.
+        if (!candidates.length && commercial.length) candidates = commercial.slice(0, opts.per);
 
         console.error(`${candidates.length}/${(r.results||[]).length} pass filters`);
 
