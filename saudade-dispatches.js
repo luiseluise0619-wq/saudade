@@ -57,8 +57,12 @@
         // v647 — also load dispatches.week.json (when present) and attach
         // the days array so the Past Week archive can render real per-day
         // content rather than reusing today's items rotated by weekday.
-        const weekP = fetch('./data/dispatches.week.json', { cache: 'force-cache' })
-            .then(r => r.ok ? r.json() : null)
+        // v752 — 판별 롤링 아카이브(dispatches.week.<ed>.json)를 우선 로드하고,
+        // 없으면 옛 단일 파일로 폴백. 워크플로가 매일 실제 발행분을 여기 누적한다.
+        const weekP = fetch(`./data/dispatches.week.${ed}.json`, { cache: 'force-cache' })
+            .then(r => r.ok ? r.json()
+                : fetch('./data/dispatches.week.json', { cache: 'force-cache' })
+                    .then(r2 => r2.ok ? r2.json() : null))
             .catch(() => null);
 
         return fetch(url, { cache: 'force-cache' })
@@ -899,12 +903,14 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             const dateKey = d.toISOString().slice(0, 10);
             const dayData = byDate[dateKey];
 
-            // Use the simulated week's per-day cities when present.
+            // 실제 아카이브가 있는 날만 표시한다. 예전엔 없는 날을
+            // flattenForDay(data, wd)(=오늘 내용 요일 회전)로 채워 같은 항목이
+            // 반복돼 "이렇게만 뜬다"의 원인이었다. 이제 진짜 기록만 쌓여 보인다.
             let items;
             if (dayData && Array.isArray(dayData.cities)) {
                 items = flattenForDay({ cities: dayData.cities }, wd);
             } else {
-                items = flattenForDay(data, wd);
+                continue;   // 그 날짜의 실제 발행 기록이 아직 없으면 건너뜀
             }
             if (!items.length) continue;
             result.push({ date: dateKey, weekdayIdx: wd, items });

@@ -86,6 +86,8 @@ jobs:
           shopt -s nullglob
           git add data/dispatches.json data/dispatches.ko.json data/dispatches.ja.json \
                   data/dispatches.pt.json data/dispatches.es.json 2>/dev/null || true
+          # 판별 롤링 주간 아카이브(지난 한 주) 파일도 함께 커밋.
+          git add data/dispatches.week.*.json 2>/dev/null || true
           # 캐시 범프 결과(sw.js + index.html)도 함께 커밋 → 머지 한 번으로 새 글이 반영됨.
           git add sw.js index.html 2>/dev/null || true
           if git diff --staged --quiet; then

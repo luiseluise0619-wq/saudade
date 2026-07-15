@@ -250,6 +250,33 @@ function fileFor(edition) {
     return path.join(DATA, edition === 'en' ? 'dispatches.json' : `dispatches.${edition}.json`);
 }
 
+function weekFileFor(edition) {
+    return path.join(DATA, `dispatches.week.${edition}.json`);
+}
+
+// 오늘 발행분을 판별 롤링 주간 아카이브에 누적한다(최근 7일, 멱등).
+// 예전엔 과거 기록을 저장하지 않아 PAST WEEK 가 오늘 내용을 요일만 바꿔
+// 반복 표시했다. 이제 매일 실제 발행분을 쌓아 진짜 지난 한 주를 보여준다.
+function archiveWeek(edition, out) {
+    const wf = weekFileFor(edition);
+    let arc = {};
+    try { arc = JSON.parse(fs.readFileSync(wf, 'utf8')); } catch (e) {}
+    let days = Array.isArray(arc.days) ? arc.days : [];
+    const todayKey = (out.filed_at || '').slice(0, 10);
+    // 멱등: 같은 날 재실행 시 오늘분을 교체(중복 방지)
+    days = days.filter(d => (d.filed_at || '').slice(0, 10) !== todayKey);
+    days.unshift({ filed_at: out.filed_at, cities: out.cities });
+    days = days.slice(0, 7); // 최근 7일만 유지
+    const next = {
+        edition,
+        updated: out.filed_at,
+        ai_assisted: true,
+        ai_disclosure: 'Rolling 7-day archive of this edition\'s daily AI-drafted, AI-reviewed filings.',
+        days
+    };
+    fs.writeFileSync(wf, JSON.stringify(next, null, 2) + '\n');
+}
+
 function validate(parsed, cfg) {
     if (!parsed || !Array.isArray(parsed.cities)) return 'cities array missing';
     if (parsed.cities.length !== cfg.cities.length) return `expected ${cfg.cities.length} cities, got ${parsed.cities.length}`;
@@ -392,6 +419,7 @@ async function refreshOne(edition, opts, key) {
         return true;
     }
         fs.writeFileSync(fileFor(edition), JSON.stringify(out, null, 2) + '\n');
+        archiveWeek(edition, out);   // 오늘분을 지난-한-주 아카이브에 누적
         console.log(`OK → ${path.relative(ROOT, fileFor(edition))} (${out.cities.reduce((s,c)=>s+c.items.length,0)} items)`);
         return true;
     }
