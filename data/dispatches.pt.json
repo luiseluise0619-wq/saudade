@@ -1,127 +1,97 @@
 {
-    "edition": "pt",
-    "filed_at": "2026-05-01T06:00:00+09:00",
-    "next_filing": "2026-05-02T06:00:00+09:00",
-    "ai_assisted": true,
-    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
-    "ai_disclosure": "Os itens desta edição são redigidos por IA e depois revistos por uma segunda passagem de IA contra a constituição editorial (sem política, violência ou escândalo; citações até vinte e cinco palavras; voz própria) antes da publicação. Ver CONTENT-LICENSE.md §7.",
-    "cities": [
+  "edition": "pt",
+  "filed_at": "2026-07-15T06:00:00+09:00",
+  "next_filing": "2026-07-15T21:00:00+00:00",
+  "ai_assisted": true,
+  "ai_reviewed": true,
+  "ai_disclosure": "Drafted and copy-reviewed by AI (Gemini) against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
+  "cities": [
+    {
+      "city": "Lisboa",
+      "items": [
         {
-            "city": "LISBOA",
-            "season": "Primavera",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "O 28, em pedaços, regressa.",
-                    "lede": "A linha mais antiga reabre depois de quinze meses.",
-                    "body": "A Carris confirmou em despacho municipal a reabertura da linha 28 a partir de 12 de maio. Os elétricos antigos voltam ao Largo do Camões em horário reduzido. A primeira semana é de circulação experimental.",
-                    "quote": "Voltamos com calma, e voltamos inteiros.",
-                    "quote_source": "Carris",
-                    "source": "CÂMARA MUNICIPAL DE LISBOA",
-                    "source_date": "2026-04-28",
-                    "source_url": "https://www.lisboa.pt/"
-                },
-                {
-                    "n": "02",
-                    "headline": "Manteigaria sobe o pastel para 1,40 €.",
-                    "lede": "É o primeiro ajuste em três anos.",
-                    "body": "A pastelaria do Chiado anunciou o aumento de 0,15 € por unidade a partir de 1 de junho. As lojas do Time Out Market e do Príncipe Real seguem o mesmo preço. A receita não mudou.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "DN",
-                    "source_date": "2026-04-22",
-                    "source_url": "https://www.dn.pt/"
-                },
-                {
-                    "n": "03",
-                    "headline": "A Fundação Gulbenkian abre o jardim depois das 22h00 às sextas.",
-                    "lede": "Maio inteiro, com entrada gratuita.",
-                    "body": "A Fundação informou que o passeio noturno está disponível todas as sextas-feiras de maio entre as 22h00 e a meia-noite. A entrada é livre. Não há programa de música.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "FUNDAÇÃO GULBENKIAN",
-                    "source_date": "2026-04-19",
-                    "source_url": "https://gulbenkian.pt/"
-                }
-            ]
+          "n": "01",
+          "headline": "O ar da manhã em Alfama arrefece com a brisa do Tejo.",
+          "lede": "Os turistas esperam a sombra dos edifícios antes do meio-dia.",
+          "body": "As fachadas caiadas refletem a luz intensa. O silêncio das ruelas dura apenas até às 10.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "PORTO",
-            "season": "Primavera",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "A ponte Luís I fecha ao trânsito durante uma noite.",
-                    "lede": "Manutenção do tabuleiro superior, dia 15.",
-                    "body": "A Câmara Municipal do Porto confirmou o corte total entre as 22h00 do dia 15 e as 06h00 do dia 16. O Metro mantém o serviço habitual. Pedestres podem atravessar pela ponte do Infante.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "CÂMARA MUNICIPAL DO PORTO",
-                    "source_date": "2026-04-26",
-                    "source_url": "https://www.cm-porto.pt/"
-                },
-                {
-                    "n": "02",
-                    "headline": "A Livraria Lello reduz o número diário de visitantes.",
-                    "lede": "São agora 4.500, eram 5.000.",
-                    "body": "A livraria publicou em comunicado a nova política a partir de 1 de junho. O bilhete continua nos 8 €, descontados em qualquer compra. Reservas online recomendadas para o fim de semana.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "LIVRARIA LELLO",
-                    "source_date": "2026-04-30",
-                    "source_url": "https://www.livrarialello.pt/"
-                },
-                {
-                    "n": "03",
-                    "headline": "A festa de São João adia o início para as 20h00.",
-                    "lede": "Pela primeira vez em vinte anos.",
-                    "body": "A organização comunicou a alteração para acomodar o calendário escolar. Os fogos da meia-noite mantêm-se. As marteladas de plástico nas ruas continuam permitidas.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "ASSOCIAÇÃO DE FESTAS DE SÃO JOÃO",
-                    "source_date": "2026-04-23",
-                    "source_url": "https://www.cm-porto.pt/"
-                }
-            ]
+          "n": "02",
+          "headline": "As esplanadas do Príncipe Real ocupam os passeios sob as acácias.",
+          "lede": "O movimento abranda quando o sol atinge o ponto mais alto.",
+          "body": "Os residentes procuram mesas com sombra. O café serve-se devagar enquanto o trânsito flui lá fora.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "SINTRA",
-            "season": "Primavera",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "O Palácio da Pena reabre a sala oriental depois de restauro.",
-                    "lede": "Visitas guiadas começam a 5 de maio.",
-                    "body": "A Parques de Sintra anunciou a reabertura da sala restaurada após dezoito meses de obras. A entrada inclui-se no bilhete normal do palácio. A capacidade da sala é limitada a vinte pessoas por turno.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "PARQUES DE SINTRA",
-                    "source_date": "2026-04-25",
-                    "source_url": "https://www.parquesdesintra.pt/"
-                },
-                {
-                    "n": "02",
-                    "headline": "Os autocarros 434 e 435 mudam de horário até ao verão.",
-                    "lede": "A primeira partida de cada manhã passa para as 09h15.",
-                    "body": "A Scotturb publicou o novo horário no posto da estação. A última volta da noite mantém-se. As paragens da Quinta da Regaleira e do Cabo da Roca não sofrem alterações.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "SCOTTURB",
-                    "source_date": "2026-04-20",
-                    "source_url": "https://www.scotturb.com/"
-                },
-                {
-                    "n": "03",
-                    "headline": "O nevoeiro da serra chega quase todas as manhãs deste mês.",
-                    "lede": "Levanta-se por volta das 11h30.",
-                    "body": "O Instituto Português do Mar e da Atmosfera registou a nebulosidade matinal em 26 dos últimos 30 dias. O microclima do Cabo da Roca permanece mais limpo. A previsão para a primeira semana de maio mantém o padrão.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "IPMA",
-                    "source_date": "2026-04-18",
-                    "source_url": "https://www.ipma.pt/"
-                }
-            ]
+          "n": "03",
+          "headline": "O ferry para Cacilhas cruza o rio com a maré cheia.",
+          "lede": "A travessia oferece uma vista clara sobre a colina da cidade.",
+          "body": "O vento salgado refresca o convés. Os passageiros observam a silhueta da Ponte 25 de Abril.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         }
-    ]
+      ]
+    },
+    {
+      "city": "Porto",
+      "items": [
+        {
+          "n": "01",
+          "headline": "As flores das varandas da Ribeira ganham cor com o calor.",
+          "lede": "O granito retém o calor do dia até ao cair da noite.",
+          "body": "Os barcos rabelos balançam suavemente no Douro. O movimento das águas acalma o centro histórico.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "O mercado do Bolhão exibe os primeiros figos da estação.",
+          "lede": "As bancas de madeira organizam os produtos com rigor visual.",
+          "body": "O cheiro a fruta fresca domina o átrio central. Os locais escolhem os melhores exemplares para o almoço.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "A luz dourada incide sobre as azulejarias da Estação de São Bento.",
+          "lede": "O vaivém dos passageiros desenha sombras rápidas no mármore.",
+          "body": "O relógio da torre marca as 18 horas com precisão. A cidade prepara-se para o jantar.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "city": "Sintra",
+      "items": [
+        {
+          "n": "01",
+          "headline": "A névoa matinal protege as encostas da serra do sol direto.",
+          "lede": "O microclima mantém a humidade entre as árvores seculares.",
+          "body": "O musgo cresce sobre os muros de pedra antiga. O ar fresco convida a caminhadas pelos trilhos.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "Os jardins da Regaleira escondem recantos longe das multidões.",
+          "lede": "A vegetação densa cria um isolamento natural na encosta.",
+          "body": "A água corre nos poços iniciáticos. O silêncio é quebrado apenas pelo canto dos pássaros.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "A vila fecha as portas antes das 21 horas.",
+          "lede": "As luzes dos candeeiros revelam a arquitetura romântica das vilas.",
+          "body": "O ar torna-se mais frio à medida que a noite desce. O centro histórico recupera a sua quietude habitual.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    }
+  ]
 }

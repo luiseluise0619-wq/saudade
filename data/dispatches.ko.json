@@ -1,127 +1,97 @@
 {
-    "edition": "ko",
-    "filed_at": "2026-05-01T06:00:00+09:00",
-    "next_filing": "2026-05-02T06:00:00+09:00",
-    "ai_assisted": true,
-    "ai_models": ["workers-ai-llama-3.1-8b", "gemini-2.0-flash"],
-    "ai_disclosure": "본 호의 항목은 AI 가 초안을 작성하고, 발행 전 AI 가 매거진 헌법(정치·폭력·스캔들 금지, 인용 25 단어 이하, 고유 어조)에 어긋나지 않는지 한 번 더 검수합니다. 자세한 내용은 CONTENT-LICENSE.md §7 참조.",
-    "cities": [
+  "edition": "ko",
+  "filed_at": "2026-07-15T06:00:00+09:00",
+  "next_filing": "2026-07-15T21:00:00+00:00",
+  "ai_assisted": true,
+  "ai_reviewed": true,
+  "ai_disclosure": "Drafted and copy-reviewed by AI (Gemini) against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
+  "cities": [
+    {
+      "city": "서울",
+      "items": [
         {
-            "city": "서울",
-            "season": "봄",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "북촌의 한옥 지붕에서, 빗방울이 늦게 떨어진다.",
-                    "lede": "올해 첫 봄비, 평년보다 사흘 늦었다.",
-                    "body": "서울시 기후정보과는 4월 마지막 주 강수량이 평년의 절반에 못 미쳤다고 발표했다. 5월 첫 주 평균 기온은 평년 수준으로 회복될 전망이다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "서울시청 공지",
-                    "source_date": "2026-04-28",
-                    "source_url": "https://www.seoul.go.kr/"
-                },
-                {
-                    "n": "02",
-                    "headline": "광화문에서, 늦은 모란이 핀다.",
-                    "lede": "경복궁 향원지 일대 모란이 일주일 늦게 만개.",
-                    "body": "문화재청은 향원정 인근 모란이 5월 둘째 주에 절정에 이를 것으로 예상했다. 출입은 오전 9시부터 오후 5시까지. 사진 촬영은 무료.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "문화재청",
-                    "source_date": "2026-04-22",
-                    "source_url": "https://www.cha.go.kr/"
-                },
-                {
-                    "n": "03",
-                    "headline": "한강 산책로 일부 구간이, 보수를 위해 닫힌다.",
-                    "lede": "5월 12일부터 14일까지, 잠수교 남단.",
-                    "body": "서울시 한강사업본부는 잠수교 남단 600미터 구간을 사흘간 폐쇄한다고 알렸다. 우회 경로는 동작대교 또는 반포대교를 이용하면 된다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "한강사업본부",
-                    "source_date": "2026-04-25",
-                    "source_url": "https://hangang.seoul.go.kr/"
-                }
-            ]
+          "n": "01",
+          "headline": "종로의 좁은 골목에, 여름의 습한 열기가 고여 있다.",
+          "lede": "오래된 벽돌 담장 사이로 옅은 이끼 냄새가 번진다.",
+          "body": "오후 3시의 햇볕이 잠시 멈춘다. 낡은 창틀 아래로 길고양이 한 마리가 낮잠을 청한다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "부산",
-            "season": "봄",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "광안리 모래사장이, 하루 동안 비어 있었다.",
-                    "lede": "5월 1일 새벽 청소 후, 인적이 늦게 돌아왔다.",
-                    "body": "수영구청은 정기 모래 청소를 새벽 4시부터 9시까지 진행했다. 같은 날 광안대교 야간 점등은 평소대로 9시에 켜진다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "수영구청",
-                    "source_date": "2026-05-01",
-                    "source_url": "https://www.suyeong.go.kr/"
-                },
-                {
-                    "n": "02",
-                    "headline": "해운대에서, 까나리 어선이 다시 나가기 시작했다.",
-                    "lede": "올해 어획량은 평년의 90% 수준으로 예상.",
-                    "body": "부산수산자원연구소는 4월 말 첫 출항 이후 평년 대비 어획량이 양호하다고 분석했다. 시민들에게는 새벽 5시 이전 부두 접근 자제를 안내했다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "부산수산자원연구소",
-                    "source_date": "2026-04-26",
-                    "source_url": "https://www.busan.go.kr/"
-                },
-                {
-                    "n": "03",
-                    "headline": "감천문화마을의 골목길이, 새로 도색되었다.",
-                    "lede": "여름 관광 성수기 전, 마지막 손질.",
-                    "body": "사하구청은 한 달 간의 도색 작업을 마쳤다고 공지했다. 골목 끝의 하늘마중길 전망대는 5월 5일부터 정상 운영한다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "사하구청",
-                    "source_date": "2026-04-30",
-                    "source_url": "https://www.saha.go.kr/"
-                }
-            ]
+          "n": "02",
+          "headline": "한강 공원의 벤치 위로, 짙은 녹음이 그림자를 드리운다.",
+          "lede": "강바람이 불어올 때마다 버드나무 가지가 가볍게 흔들린다.",
+          "body": "자전거를 타는 사람들이 1열로 줄지어 지나간다. 강물은 둔치 근처에서 느릿하게 맴돈다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         },
         {
-            "city": "제주",
-            "season": "봄",
-            "items": [
-                {
-                    "n": "01",
-                    "headline": "한라산의 철쭉이, 이주째 전성기에 머물러 있다.",
-                    "lede": "윗세오름 일대, 평년보다 일주일 길게 핀다.",
-                    "body": "한라산국립공원은 4월 셋째 주부터 시작된 철쭉 개화가 5월 첫 주까지 이어질 것으로 보고 있다. 영실 코스가 가장 가까운 진입 경로다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "한라산국립공원",
-                    "source_date": "2026-04-24",
-                    "source_url": "https://www.jeju.go.kr/hallasan.htm"
-                },
-                {
-                    "n": "02",
-                    "headline": "성산일출봉의 일출 시각이, 5시 21분으로 빨라졌다.",
-                    "lede": "관람용 등대는 새벽 4시 30분 개방.",
-                    "body": "서귀포시 관광과는 5월 평균 일출 시각을 5시 21분으로 안내했다. 정상까지 도보 25분, 매표소는 새벽 4시 30분에 연다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "서귀포시청",
-                    "source_date": "2026-04-29",
-                    "source_url": "https://www.seogwipo.go.kr/"
-                },
-                {
-                    "n": "03",
-                    "headline": "동백동산이, 비 온 다음 날 가장 조용하다.",
-                    "lede": "동굴 입구의 이끼는 4월 말부터 푸르러졌다.",
-                    "body": "조천읍 사무소는 동백동산 람사르 습지의 출입을 새벽 6시부터 오후 5시까지로 운영한다고 공지했다. 비 온 다음 날 정오 이후가 가장 한산하다.",
-                    "quote": null,
-                    "quote_source": null,
-                    "source": "조천읍 사무소",
-                    "source_date": "2026-04-23",
-                    "source_url": "https://www.jeju.go.kr/"
-                }
-            ]
+          "n": "03",
+          "headline": "지하철역 계단 끝에서, 빗물 젖은 우산들이 모여든다.",
+          "lede": "퇴근길 사람들의 발걸음이 평소보다 조금 더 조심스럽다.",
+          "body": "역사 내부의 공기가 차갑게 가라앉는다. 밖으로 나가는 이들의 표정에 짧은 안도감이 스친다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
         }
-    ]
+      ]
+    },
+    {
+      "city": "부산",
+      "items": [
+        {
+          "n": "01",
+          "headline": "영도 대교 아래로, 작은 어선들이 줄지어 항구로 돌아온다.",
+          "lede": "바다의 비린내와 섞인 짠 내음이 골목 안쪽까지 닿는다.",
+          "body": "수평선 위로 구름이 낮게 깔려 있다. 부두의 녹슨 철제 기둥이 묵묵히 시간을 견딘다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "해운대의 백사장이, 새벽의 고요를 온전히 간직하고 있다.",
+          "lede": "밀려오는 파도 소리가 아침의 시작을 알리는 유일한 신호다.",
+          "body": "모래 위에는 엇갈린 발자국이 2~3개뿐이다. 바다는 밤사이 차가운 기운을 씻어냈다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "산복도로의 가로등이, 어둠 속에서 하나둘씩 켜지기 시작한다.",
+          "lede": "경사면을 따라 자리 잡은 집들이 작은 별처럼 빛난다.",
+          "body": "언덕 위에서 내려다보는 바다는 깊은 남색이다. 10분 뒤 도시의 소음은 완전히 잦아든다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "city": "제주",
+      "items": [
+        {
+          "n": "01",
+          "headline": "돌담 사이로, 여름 수국이 마지막 빛깔을 잃어가고 있다.",
+          "lede": "화려했던 꽃잎들이 빗물에 젖어 땅으로 조용히 내려앉는다.",
+          "body": "바람이 불 때마다 잎사귀들이 서로 몸을 비빈다. 제주의 여름은 느린 속도로 깊어진다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "02",
+          "headline": "중산간의 숲길에서, 짙은 안개가 나무 사이를 통과한다.",
+          "lede": "시야가 5미터 앞까지 좁혀지며 세상이 고립된 듯하다.",
+          "body": "발밑의 흙냄새가 평소보다 짙게 올라온다. 숲속의 새들은 소리 없이 나뭇가지로 숨어든다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        },
+        {
+          "n": "03",
+          "headline": "해안 도로의 쉼터에, 낡은 의자 하나가 바다를 향해 있다.",
+          "lede": "주인 없는 의자가 텅 빈 수평선을 묵묵히 응시한다.",
+          "body": "오가는 차들은 20분 동안 단 한 대도 보이지 않는다. 이곳의 시간은 파도와 함께 흐른다.",
+          "source": "saudade desk",
+          "source_date": "2026-07-15"
+        }
+      ]
+    }
+  ]
 }
