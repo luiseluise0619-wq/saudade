@@ -32,11 +32,11 @@ if (!fs.existsSync(PHOTOS)) {
 const photos = JSON.parse(fs.readFileSync(PHOTOS, 'utf8'));
 const listen = JSON.parse(fs.readFileSync(LISTEN, 'utf8'));
 
-// city name → first photo (deterministic on photos.json order)
-const firstByCity = {};
+// city name → ALL photos for that city (배열, 랜덤 표시용). photos.json 순서 유지.
+const allByCity = {};
 for (const p of (photos.photos || [])) {
-    if (!p.city || firstByCity[p.city]) continue;
-    firstByCity[p.city] = p;
+    if (!p.city) continue;
+    (allByCity[p.city] = allByCity[p.city] || []).push(p);
 }
 
 let updated = 0;
@@ -46,15 +46,18 @@ let skipped = 0;
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 for (const c of (listen.cities || [])) {
     const enName = c.names?.en || c.slug || '';
-    const match = Object.values(firstByCity).find(p => norm(p.city) === norm(enName));
-    if (!match) { skipped++; continue; }
-    c.default_photo_url   = match.src;          // Pexels CDN URL (durable)
-    c.photo_credit        = `Photo by ${match.photographer} on Pexels`;
-    c.photo_credit_url    = match.photographer_url;
+    const key  = Object.keys(allByCity).find(k => norm(k) === norm(enName));
+    const pool = key ? allByCity[key] : null;
+    if (!pool || !pool.length) { skipped++; continue; }
+    const first = pool[0];
+    c.default_photo_url   = first.src;                  // 하위호환: 첫 장(랜덤 폴백용)
+    c.photos              = pool.map(p => p.src);        // 랜덤 표시용 전체 URL 배열
+    c.photo_credit        = `Photo by ${first.photographer} on Pexels`;
+    c.photo_credit_url    = first.photographer_url;
     c.photo_source        = 'Pexels';
-    c.photo_source_url    = match.pexels_url;
+    c.photo_source_url    = first.pexels_url;
     updated++;
-    console.log(`  ${c.slug.padEnd(15)} → ${match.alt?.slice(0, 60) || ''}…`);
+    console.log(`  ${c.slug.padEnd(15)} → ${pool.length} photo(s)`);
 }
 
 fs.writeFileSync(LISTEN, JSON.stringify(listen, null, 4) + '\n');
