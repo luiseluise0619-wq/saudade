@@ -278,6 +278,26 @@ body.section-active[data-section="03"] .sdd-disp { display: block; }
     padding-top: clamp(16px, 2vw, 24px);
     border-top: 0.5px solid var(--rule);
 }
+.sdd-disp-pdf {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 16px;
+    cursor: pointer;
+    background: transparent;
+    border: 0.5px solid var(--rule-2, var(--rule));
+    border-radius: 4px;
+    color: var(--bone-d);
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color .15s, border-color .15s;
+}
+.sdd-disp-pdf:hover { color: var(--accent); border-color: var(--accent); }
+.sdd-disp-pdf:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 2px; }
 .sdd-disp-deeper {
     margin: clamp(32px, 5vw, 56px) 0 0;
     padding-top: clamp(20px, 3vw, 28px);
@@ -825,6 +845,56 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         `;
     }
 
+    // v753 — 디스패치(오늘 + 지난 한 주)를 격리된 iframe 에 복제해 인쇄한다.
+    // @media print 로 앱 전체를 숨기려 하면 고정 레이아웃 섹션들이 겹쳐 여러 쪽의
+    // 어두운 PDF 가 나온다. iframe 에 본문만 담고 자체 스타일로 인쇄하면 앱 CSS 와
+    // 완전히 분리된 깨끗한 흑백 한 부가 나온다 → 브라우저 대화상자에서 'PDF로 저장'.
+    function printDispatchPDF(root) {
+        if (!root) return;
+        const clone = root.cloneNode(true);
+        clone.querySelectorAll(
+            '.sdd-disp-cities-bar, .sdd-disp-pdf, .sdd-disp-deeper, .sdd-disp-foot, ' +
+            '.sdd-disp-rewrite-tag, button, [data-open-city-picker]'
+        ).forEach(e => e.remove());
+        const css = [
+            "* { margin:0; padding:0; box-sizing:border-box; }",
+            "body { font-family: Georgia, 'Times New Roman', serif; color:#111; background:#fff; padding:36px 44px; line-height:1.5; }",
+            ".sdd-disp-head { margin-bottom:28px; padding-bottom:16px; border-bottom:1px solid #cbcbcb; }",
+            ".sdd-disp-h2 { font-size:30px; font-weight:400; font-style:italic; line-height:1.1; margin-bottom:10px; }",
+            ".sdd-disp-sub { font-size:13px; color:#555; }",
+            ".sdd-disp-meta { font-family:Arial,sans-serif; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#8a8a8a; margin-top:8px; }",
+            ".sdd-disp-day-eyebrow, .sdd-disp-archive-mast, .sdd-disp-day-head { font-family:Arial,sans-serif; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#8a8a8a; margin:26px 0 10px; }",
+            ".sdd-disp-archive-day { margin:18px 0; page-break-inside:avoid; break-inside:avoid; }",
+            ".sdd-disp-archive-head { display:flex; gap:12px; align-items:baseline; margin-bottom:8px; }",
+            ".sdd-disp-archive-date { font-family:Arial,sans-serif; font-size:11px; color:#8a8a8a; }",
+            ".sdd-disp-archive-section { font-family:Arial,sans-serif; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#a5a5a5; }",
+            ".sdd-disp-item { display:flex; gap:12px; margin:16px 0; page-break-inside:avoid; break-inside:avoid; }",
+            ".sdd-disp-num { font-family:Arial,sans-serif; font-size:11px; color:#b0b0b0; min-width:22px; }",
+            ".sdd-disp-citytag { display:block; font-family:Arial,sans-serif; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#9a9a9a; margin-bottom:3px; }",
+            ".sdd-disp-headline { font-size:17px; font-weight:600; line-height:1.25; margin-bottom:3px; }",
+            ".sdd-disp-lede { font-size:13.5px; color:#333; }",
+            ".sdd-disp-fulltext { font-size:12.5px; color:#444; margin-top:5px; }",
+            ".sdd-disp-quote { font-size:13px; font-style:italic; color:#555; margin-top:6px; padding-left:12px; border-left:2px solid #ddd; }",
+            ".sdd-disp-source { font-family:Arial,sans-serif; font-size:10px; letter-spacing:.04em; color:#a0a0a0; margin-top:6px; }",
+            ".sdd-disp-source a { color:#a0a0a0; text-decoration:none; }",
+            ".sdd-disp-awaiting { opacity:.6; }",
+            "@page { margin:14mm; }"
+        ].join('\n');
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('aria-hidden', 'true');
+        iframe.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;';
+        document.body.appendChild(iframe);
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write('<!doctype html><html><head><meta charset="utf-8"><title>saudade · dispatches</title><style>' +
+            css + '</style></head><body>' + clone.innerHTML + '</body></html>');
+        doc.close();
+        setTimeout(() => {
+            try { iframe.contentWindow.focus(); iframe.contentWindow.print(); } catch (e) {}
+            setTimeout(() => iframe.remove(), 1500);
+        }, 250);
+    }
+
     // v8 §02 — 사용자 도시 선택 모델. 정착 + 주변 자동 매핑 폐기.
     // 사용자의 SAUDADE_FOLLOWING.list() 3 도시 각각에서 1개씩 추출.
     // dispatches.json 에 해당 도시 없으면 "Awaiting first dispatch" 플레이스홀더.
@@ -1095,6 +1165,12 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         }).join('');
 
         const subFilled = subTpl.replace('$section', todaySection);
+        // v753 — 이 호(오늘 + 지난 한 주)를 PDF 로 저장. window.print() +
+        // @media print 스타일로 크롬(마스트헤드/독/컨트롤)을 숨기고 본문만 출력.
+        const pdfLabel = T({
+            en: 'SAVE AS PDF', ko: 'PDF로 저장', ja: 'PDFで保存',
+            pt: 'GUARDAR EM PDF', es: 'GUARDAR EN PDF'
+        });
         const headHtml = `
             <header class="sdd-disp-head">
                 <h2 class="sdd-disp-h2">
@@ -1103,6 +1179,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
                 </h2>
                 <p class="sdd-disp-sub">${escapeHtml(subFilled)}</p>
                 <p class="sdd-disp-meta">${escapeHtml(filedLabel)} ${escapeHtml(filed)} · ${escapeHtml(nextLabel)} ${escapeHtml(next)}${ageChipHtml}</p>
+                <button type="button" class="sdd-disp-pdf" data-disp-print>${escapeHtml(pdfLabel)}</button>
             </header>
         `;
 
@@ -1204,6 +1281,10 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         `;
 
         root.innerHTML = headHtml + todayBlock + archiveBlock + deeperBlock + disclaimer;
+
+        // v753 — PDF 저장: 격리된 iframe 에 디스패치 본문만 담아 인쇄.
+        const printBtn = root.querySelector('[data-disp-print]');
+        if (printBtn) printBtn.addEventListener('click', () => printDispatchPDF(root));
 
         // v8 §02 — onboarding pairing 카드 클릭 → Following 적용 + 즉시 재렌더
         root.querySelectorAll('[data-disp-pairing]').forEach(btn => {
