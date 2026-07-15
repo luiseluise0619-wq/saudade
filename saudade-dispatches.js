@@ -856,9 +856,51 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
             '.sdd-disp-cities-bar, .sdd-disp-pdf, .sdd-disp-deeper, .sdd-disp-foot, ' +
             '.sdd-disp-rewrite-tag, button, [data-open-city-picker]'
         ).forEach(e => e.remove());
+
+        // ── 매거진 표지 (PDF 첫 페이지) ─────────────────────────────
+        const ed = (window.SAUDADE_EDITION?.get?.() || 'en');
+        const edLabel = ({ en: 'ENGLISH', ko: '한국어', ja: '日本語', pt: 'PORTUGUÊS', es: 'ESPAÑOL' })[ed] || ed.toUpperCase();
+        const now = new Date();
+        let dateStr;
+        try { dateStr = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase(); }
+        catch (e) { dateStr = now.toISOString().slice(0, 10); }
+        const cities = Array.from(new Set(
+            Array.from(clone.querySelectorAll('.sdd-disp-citytag')).map(e => e.textContent.trim()).filter(Boolean)
+        )).join('   ·   ');
+        const KICKER = {
+            en: 'DISPATCHES · THE PAST WEEK', ko: '통신 · 지난 한 주', ja: '通信 · 先週',
+            pt: 'DESPACHOS · A SEMANA PASSADA', es: 'DESPACHOS · LA SEMANA PASADA'
+        };
+        const kicker = KICKER[ed] || KICKER.en;
+        const coverHtml =
+            '<section class="pdf-cover">' +
+              '<div class="pdf-cover-row"><span class="pdf-cover-kicker">' + escapeHtml(kicker) + '</span>' +
+                '<span class="pdf-cover-kicker">' + escapeHtml(ed.toUpperCase()) + '</span></div>' +
+              '<div class="pdf-cover-mid">' +
+                '<h1 class="pdf-cover-word">saudade</h1>' +
+                '<p class="pdf-cover-tag">a longing for what cannot return</p>' +
+              '</div>' +
+              '<div class="pdf-cover-bot">' +
+                '<div class="pdf-cover-rule"></div>' +
+                '<p class="pdf-cover-issue">' + escapeHtml(edLabel) + ' EDITION' + (cities ? '  —  ' + escapeHtml(cities) : '') + '</p>' +
+                '<p class="pdf-cover-date">' + escapeHtml(dateStr) + '</p>' +
+              '</div>' +
+            '</section>';
+
         const css = [
             "* { margin:0; padding:0; box-sizing:border-box; }",
             "body { font-family: Georgia, 'Times New Roman', serif; color:#111; background:#fff; padding:36px 44px; line-height:1.5; }",
+            // 표지 — 한 페이지 꽉 채우고 다음 페이지로 넘김
+            ".pdf-cover { height:245mm; display:flex; flex-direction:column; justify-content:space-between; padding:6mm 2mm; page-break-after:always; break-after:page; }",
+            ".pdf-cover-row { display:flex; justify-content:space-between; align-items:baseline; }",
+            ".pdf-cover-kicker { font-family:Arial,sans-serif; font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:#8a8a8a; }",
+            ".pdf-cover-mid { flex:1; display:flex; flex-direction:column; justify-content:center; }",
+            ".pdf-cover-word { font-family:Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:96px; line-height:.9; letter-spacing:-.02em; color:#0e0e0e; }",
+            ".pdf-cover-tag { font-family:Georgia,serif; font-style:italic; font-size:19px; color:#555; margin-top:18px; }",
+            ".pdf-cover-bot { }",
+            ".pdf-cover-rule { border-top:1.5px solid #111; margin-bottom:14px; }",
+            ".pdf-cover-issue { font-family:Arial,sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#222; }",
+            ".pdf-cover-date { font-family:Arial,sans-serif; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#999; margin-top:6px; }",
             ".sdd-disp-head { margin-bottom:28px; padding-bottom:16px; border-bottom:1px solid #cbcbcb; }",
             ".sdd-disp-h2 { font-size:30px; font-weight:400; font-style:italic; line-height:1.1; margin-bottom:10px; }",
             ".sdd-disp-sub { font-size:13px; color:#555; }",
@@ -887,7 +929,7 @@ body[data-editor="1"] .sdd-disp-rewrite-tag { display: inline-block; }
         const doc = iframe.contentWindow.document;
         doc.open();
         doc.write('<!doctype html><html><head><meta charset="utf-8"><title>saudade · dispatches</title><style>' +
-            css + '</style></head><body>' + clone.innerHTML + '</body></html>');
+            css + '</style></head><body>' + coverHtml + clone.innerHTML + '</body></html>');
         doc.close();
         setTimeout(() => {
             try { iframe.contentWindow.focus(); iframe.contentWindow.print(); } catch (e) {}
