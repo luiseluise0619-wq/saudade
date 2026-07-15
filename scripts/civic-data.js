@@ -17,11 +17,12 @@
  */
 
 // 도시 표시명(EDITION_CONFIG 의 cities 값) → 국가코드 + 좌표 + 타임존.
+// area = 한국관광공사 TourAPI areaCode (KR 도시만; 축제 API 옵션용).
 const CITY_META = {
-    'SEOUL':        { cc: 'KR', lat: 37.57,  lng: 126.98, tz: 'Asia/Seoul' },
-    '서울':         { cc: 'KR', lat: 37.57,  lng: 126.98, tz: 'Asia/Seoul' },
-    '부산':         { cc: 'KR', lat: 35.18,  lng: 129.08, tz: 'Asia/Seoul' },
-    '제주':         { cc: 'KR', lat: 33.51,  lng: 126.52, tz: 'Asia/Seoul' },
+    'SEOUL':        { cc: 'KR', lat: 37.57,  lng: 126.98, tz: 'Asia/Seoul', area: 1 },
+    '서울':         { cc: 'KR', lat: 37.57,  lng: 126.98, tz: 'Asia/Seoul', area: 1 },
+    '부산':         { cc: 'KR', lat: 35.18,  lng: 129.08, tz: 'Asia/Seoul', area: 6 },
+    '제주':         { cc: 'KR', lat: 33.51,  lng: 126.52, tz: 'Asia/Seoul', area: 39 },
     'TOKYO':        { cc: 'JP', lat: 35.68,  lng: 139.69, tz: 'Asia/Tokyo' },
     '東京':         { cc: 'JP', lat: 35.68,  lng: 139.69, tz: 'Asia/Tokyo' },
     '大阪':         { cc: 'JP', lat: 34.69,  lng: 135.50, tz: 'Asia/Tokyo' },
@@ -68,17 +69,55 @@ async function weatherFor(meta, todayStr) {
     try {
         const d = await getJson(
             `https://api.open-meteo.com/v1/forecast?latitude=${meta.lat}&longitude=${meta.lng}` +
-            `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode` +
+            `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode,sunrise,sunset,uv_index_max` +
             `&timezone=${encodeURIComponent(meta.tz)}&start_date=${todayStr}&end_date=${todayStr}`
         );
         const day = d && d.daily;
         if (!day) return null;
+        const hhmm = s => (typeof s === 'string' && s.length >= 16) ? s.slice(11, 16) : null;
         return {
             tmax: day.temperature_2m_max && day.temperature_2m_max[0],
             tmin: day.temperature_2m_min && day.temperature_2m_min[0],
             precip: day.precipitation_sum && day.precipitation_sum[0],
-            code: day.weathercode && day.weathercode[0]
+            code: day.weathercode && day.weathercode[0],
+            sunrise: hhmm(day.sunrise && day.sunrise[0]),
+            sunset: hhmm(day.sunset && day.sunset[0]),
+            uv: day.uv_index_max && day.uv_index_max[0]
         };
+    } catch (e) { return null; }
+}
+
+// 대기질(미세먼지). Open-Meteo Air-Quality — 키 불필요. 오늘 스냅샷.
+async function airQualityFor(meta) {
+    try {
+        const d = await getJson(
+            `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${meta.lat}&longitude=${meta.lng}` +
+            `&current=pm2_5,pm10,european_aqi&timezone=${encodeURIComponent(meta.tz)}`
+        );
+        const c = d && d.current;
+        if (!c) return null;
+        return { pm25: c.pm2_5, pm10: c.pm10, aqi: c.european_aqi };
+    } catch (e) { return null; }
+}
+
+// 축제/행사. 한국관광공사 TourAPI(searchFestival) — 무료 키 필요(DATA_GO_KR_KEY).
+// KR 도시(area 코드 있음)만. 키 없으면 조용히 스킵.
+async function festivalsFor(meta, todayStr) {
+    const key = (process.env.DATA_GO_KR_KEY || '').trim();
+    if (!key || !meta.area || meta.cc !== 'KR') return null;
+    try {
+        const start = todayStr.replace(/-/g, '');
+        const url = `https://apis.data.go.kr/B551011/KorService1/searchFestival1` +
+            `?serviceKey=${encodeURIComponent(key)}&MobileOS=ETC&MobileApp=saudade&_type=json` +
+            `&arrange=A&areaCode=${meta.area}&eventStartDate=${start}&numOfRows=5&pageNo=1`;
+        const d = await getJson(url, 15000);
+        const items = d && d.response && d.response.body && d.response.body.items && d.response.body.items.item;
+        const arr = Array.isArray(items) ? items : (items ? [items] : []);
+        return arr.slice(0, 3).map(it => ({
+            title: it.title,
+            start: it.eventstartdate,
+            end: it.eventenddate
+        })).filter(f => f.title);
     } catch (e) { return null; }
 }
 
@@ -89,11 +128,13 @@ async function fetchCityFacts(cityNames, todayStr) {
         const meta = CITY_META[name] || CITY_META[String(name).toUpperCase()];
         if (!meta) { out[name] = null; continue; }
         try {
-            const [holidays, weather] = await Promise.all([
+            const [holidays, weather, air, festivals] = await Promise.all([
                 holidaysSoon(meta.cc, todayStr),
-                weatherFor(meta, todayStr)
+                weatherFor(meta, todayStr),
+                airQualityFor(meta),
+                festivalsFor(meta, todayStr)
             ]);
-            out[name] = { holidays, weather };
+            out[name] = { holidays, weather, air, festivals };
         } catch (e) {
             out[name] = null;
         }
@@ -115,6 +156,15 @@ function wmoText(code) {
 }
 
 // 도시 하나의 facts 를 프롬프트용 한 줄 요약으로.
+function aqiText(aqi) {
+    if (aqi == null) return '';
+    if (aqi <= 20) return 'good';
+    if (aqi <= 40) return 'fair';
+    if (aqi <= 60) return 'moderate';
+    if (aqi <= 80) return 'poor';
+    if (aqi <= 100) return 'very poor';
+    return 'extremely poor';
+}
 function factsLine(name, f) {
     if (!f) return null;
     const parts = [];
@@ -125,7 +175,17 @@ function factsLine(name, f) {
         if (w.tmax != null && w.tmin != null) bits.push(`${Math.round(w.tmin)}–${Math.round(w.tmax)}°C`);
         if (w.precip != null && w.precip > 0) bits.push(`${w.precip}mm precip`);
         if (wx) bits.push(wx);
+        if (w.uv != null && w.uv >= 8) bits.push(`UV ${Math.round(w.uv)} (very high)`);
+        if (w.sunset) bits.push(`sunset ${w.sunset}`);
         if (bits.length) parts.push('weather: ' + bits.join(', '));
+    }
+    if (f.air && f.air.aqi != null) {
+        const t = aqiText(f.air.aqi);
+        const pm = f.air.pm25 != null ? `, PM2.5 ${Math.round(f.air.pm25)}` : '';
+        parts.push(`air quality: ${t}${pm}`);
+    }
+    if (f.festivals && f.festivals.length) {
+        parts.push('festivals on now: ' + f.festivals.map(x => x.title).join('; '));
     }
     if (f.holidays && f.holidays.length) {
         parts.push('public holidays soon: ' + f.holidays.map(h => `${h.name} (${h.date})`).join('; '));
