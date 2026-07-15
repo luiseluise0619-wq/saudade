@@ -10,7 +10,7 @@
 // CACHE_VERSION 을 v533 으로 강제 점프 — 사용자 보고 'css/js 변경 안 보임'.
 // 옛 v515 캐시가 남아 있어서 새 자산이 안 들어오던 문제 차단.
 // activate 핸들러가 startsWith(CACHE_VERSION) 외 모든 캐시 삭제.
-const CACHE_VERSION = 'saudade-v746';
+const CACHE_VERSION = 'saudade-v747';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
