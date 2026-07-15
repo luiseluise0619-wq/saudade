@@ -1,0 +1,652 @@
+{
+  "edition": "en",
+  "updated": "2026-07-15T06:00:00+09:00",
+  "ai_assisted": true,
+  "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
+  "days": [
+    {
+      "filed_at": "2026-07-15T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humid haze settles over the Han River at dusk.",
+              "lede": "Office lights reflect on the dark water as the city breathes in the heavy summer air.",
+              "body": "The river parks remain crowded well past midnight. People seek the breeze near the water edge.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom in the secret ponds of Gyeongbokgung.",
+              "lede": "The pale petals unfold against the dark, waxy leaves in the stagnant mid-July heat.",
+              "body": "Visitors pause on the wooden bridges to watch the koi. The stone walls provide a brief, cooling shade.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "Cicadas begin their steady rhythm in the residential alleys.",
+              "lede": "The sound rises from the overgrown gardens tucked behind low brick walls in Samcheong-dong.",
+              "body": "It signals the peak of the season. The streets grow quiet as the sun hits its highest point.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Wind chimes hang from the eaves of old Yanaka houses.",
+              "lede": "The glass bells ring softly whenever a breeze drifts through the narrow, shaded corridors.",
+              "body": "Residents leave their doors open to invite the draft. The sound creates a respite from the humidity.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "Hydrangeas fade to muted green in the temple gardens.",
+              "lede": "The vibrant blue and purple shades of early summer surrender to the relentless sun.",
+              "body": "Gardeners begin the seasonal pruning of the shrubs. The moss remains damp in the deep shadows.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "The evening trains carry a scent of damp pavement.",
+              "lede": "Brief afternoon showers leave the stations slick and cool before the night commute begins.",
+              "body": "Commuters fold their umbrellas with practiced precision. The platform air feels heavy and still.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Tagus reflects a blinding, silver light at noon.",
+              "lede": "The river remains calm while the city climbs the steep hills under a cloudless sky.",
+              "body": "Fishermen retreat to the shade of the stone piers. The boats bob rhythmically in the tide.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "02",
+              "headline": "Bougainvillea spills over the white walls of Alfama.",
+              "lede": "Bright pink blossoms cling to the sun-baked stone, softening the sharp edges of the ancient quarter.",
+              "body": "Narrow alleys trap the heat until late in the evening. Residents wait for the Atlantic wind.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            },
+            {
+              "n": "03",
+              "headline": "Evening meals move to the sidewalk tables.",
+              "lede": "The air finally softens as the sun dips behind the western hills of the city.",
+              "body": "Clinking glasses replace the noise of afternoon traffic. The scent of grilled fish lingers in the breeze.",
+              "source": "saudade desk",
+              "source_date": "2026-07-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-14T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humid haze settles over the Han River at dusk.",
+              "lede": "Office lights reflect on the dark water as the city transitions into the peak of summer.",
+              "body": "The riverbanks grow crowded with evening walkers. Quiet stillness returns once the heat fades.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "Stone walls in Bukchon radiate heat long after sunset.",
+              "lede": "The ancient alleys retain the day's warmth, creating a heavy, stagnant air in the narrow passages.",
+              "body": "Residents leave their wooden doors slightly ajar. The scent of damp earth lingers near the eaves.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "Lotus flowers bloom in the ponds of Gyeongbokgung.",
+              "lede": "The heavy, waxy petals open fully during the mid-July heat, resting against large, flat leaves.",
+              "body": "Visitors stand in the shade of the pavilions to watch them. The movement is slow and deliberate.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The cicadas begin their rhythmic chorus in the temple gardens.",
+              "lede": "The sound marks the height of the season, vibrating through the thick, green canopy of Yanaka.",
+              "body": "Shadows stretch thin across the gravel paths. The air feels dense with the weight of summer.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "Wind chimes hang from the eaves of traditional wooden houses.",
+              "lede": "A light breeze rings the glass bells, offering a brief, melodic respite from the heavy humidity.",
+              "body": "Shopkeepers spray water on the pavement to cool the entrance. The street looks refreshed for a moment.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "The evening trains carry a quiet, weary crowd toward the suburbs.",
+              "lede": "The fluorescent lights inside the carriages cast a sterile glow on the tired commuters.",
+              "body": "Outside, the city lights blur into streaks of color. The rhythmic clatter remains a constant pulse.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sunlight bleaches the tiles of the Alfama district.",
+              "lede": "The white ceramic surfaces reflect the harsh afternoon glare, making the narrow streets feel blindingly bright.",
+              "body": "Laundry hangs motionless on iron balconies. The cats find deep shade in the corners of doorways.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "02",
+              "headline": "The Tagus River breeze brings relief to the waterfront squares.",
+              "lede": "As the sun dips lower, the salt-heavy air cools the stone plazas of Praça do Comércio.",
+              "body": "The cafes fill with people lingering over cold drinks. Shadows lengthen across the patterned cobblestones.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            },
+            {
+              "n": "03",
+              "headline": "Bougainvillea spills over the garden walls in Graça.",
+              "lede": "Vibrant pink and purple clusters bloom against the pale stucco, framing the views of the city below.",
+              "body": "The vines grow thick during the long, dry days. They provide a splash of color against the heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-13T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
+              "lede": "Midsummer air settles heavily over the palace grounds during the afternoon.",
+              "body": "Stone paths radiate heat long after the sun dips. Visitors seek shade under the ancient zelkova trees.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom in the ponds of Buyongji.",
+              "lede": "Petals unfurl against the dark, still water of the royal gardens.",
+              "body": "The blossoms signal the peak of the summer cycle. Watchers gather silently at the pond edge at dusk.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "Evening cicadas drone from the trees lining the Namsan trails.",
+              "lede": "The sound rises to a rhythmic chorus as the city lights flicker.",
+              "body": "Walkers slow their pace to match the pulsing noise. The sound defines the thick, warm nights of July.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Morning mist retreats from the Sumida River.",
+              "lede": "Early commuters watch the river surface turn glassy and clear.",
+              "body": "The water reflects the metallic sheen of the bridges. A quiet stillness holds before the city wakes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Wind chimes hang in the eaves of Yanaka houses.",
+              "lede": "Glass bells catch the breeze, marking the passage of the afternoon.",
+              "body": "The sharp, clear sound cuts through the heavy summer air. It is a fragile signal of the changing season.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "Hydrangeas fade to muted green in neighborhood gardens.",
+              "lede": "The vibrant blues of early summer soften into dried, dusty tones.",
+              "body": "Foliage leans against wooden fences, heavy with the weight of the rain. The garden beds prepare for the coming heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Atlantic breeze cools the Alfama alleys at sunset.",
+              "lede": "Salt air flows through the narrow gaps between the tiled walls.",
+              "body": "The temperature drops as the shadows stretch across the cobblestones. Residents open windows to capture the evening draft.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "02",
+              "headline": "Yellow tram paint glows under the harsh midday sun.",
+              "lede": "The iconic cars rattle through the steep, narrow turns of the city.",
+              "body": "Metal reflects the bright light against the white limestone facades. Tourists and locals share the small, wooden benches.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            },
+            {
+              "n": "03",
+              "headline": "Jacaranda petals carpet the squares in shades of violet.",
+              "lede": "The late bloom creates a soft, purple layer over the pavement.",
+              "body": "Pedestrians walk carefully over the fallen flowers near the river. The scent of summer lingers in the quiet plazas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-12T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
+              "lede": "Midsummer air settles heavily over the palace grounds.",
+              "body": "The moss between the paving stones deepens in color. Visitors walk slowly to avoid the midday heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom fully in the ponds of Buyongji.",
+              "lede": "Pink petals rise above the dark, still water.",
+              "body": "The garden paths remain quiet during the afternoon. Shadows stretch long across the wooden pavilions.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "Cicadas hum incessantly within the trees of Namsan.",
+              "lede": "The sound defines the rhythm of the city afternoon.",
+              "body": "Hikers seek the shade of the thick canopy. The city below looks blurred through the summer haze.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Wind chimes sound from the eaves of Yanaka houses.",
+              "lede": "Glass bells mark the movement of the breeze.",
+              "body": "The neighborhood remains calm despite the seasonal heat. Residents step outside to water the potted ferns.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "Hydrangeas fade to muted shades in temple gardens.",
+              "lede": "The rainy season transitions into the bright summer sun.",
+              "body": "Gardeners prune the damp stems with careful hands. The earth smells of wet soil and fresh growth.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "Paper lanterns hang ready for the coming festivals.",
+              "lede": "The quiet streets anticipate the evening light.",
+              "body": "Craftsmen inspect the bamboo frames near the shrine. A sense of preparation fills the narrow alleys.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Atlantic breeze cools the Alfama rooftops.",
+              "lede": "Salt air flows through the narrow, winding streets.",
+              "body": "Laundry dries quickly in the persistent coastal wind. The morning light reflects sharply off the white tile walls.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "02",
+              "headline": "Jasmines bloom against the old garden fences.",
+              "lede": "The sweet scent lingers in the warm evening air.",
+              "body": "Local cats rest on the sun-warmed stone stairs. Neighbors gather briefly to share the shade of a vine.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            },
+            {
+              "n": "03",
+              "headline": "The Tagus river sparkles under the midday sun.",
+              "lede": "Boats drift toward the horizon in silence.",
+              "body": "Ferry passengers watch the city skyline from the deck. The water looks like polished blue glass.",
+              "source": "saudade desk",
+              "source_date": "2026-07-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-11T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
+              "lede": "Midsummer air settles heavily over the palace grounds.",
+              "body": "Visitors seek the shade of the ancient pillars. The stone remains cool despite the heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom across the pond in Buyongji.",
+              "lede": "Pale pink petals emerge above the dark, still water.",
+              "body": "The garden path grows quiet in the afternoon sun. Bees hover near the opening blossoms.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "Cicadas begin their steady rhythm in the Namsan pine trees.",
+              "lede": "The sound marks the height of the summer season.",
+              "body": "Hikers pause on the shaded trails to listen. The canopy provides a reprieve from the glare.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Wind chimes hang from the eaves of Yanaka houses.",
+              "lede": "Glass bells ring softly when the breeze moves through the narrow alleys.",
+              "body": "Residents leave windows open to catch the air. The sound defines the neighborhood mood.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "Evening light lingers longer against the Shinjuku skyline.",
+              "lede": "The sky holds a deep indigo hue well past dinner.",
+              "body": "Office towers glow before the city lights fully emerge. The transition feels slow and deliberate.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "Hydrangeas fade to muted shades in the temple gardens.",
+              "lede": "The vibrant blue petals turn to soft parchment colors.",
+              "body": "Rain has washed the garden paths clean. A quiet stillness follows the recent downpours.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Tagus river catches the morning light in silver ribbons.",
+              "lede": "Boats drift toward the horizon as the tide shifts.",
+              "body": "The waterfront air smells of salt and drying nets. Seagulls circle the empty piers.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "02",
+              "headline": "Bougainvillea spills over the white walls of Alfama.",
+              "lede": "Deep magenta vines provide shelter from the midday sun.",
+              "body": "The cobblestones radiate heat as the afternoon peaks. Cats sleep in the shadows of doorways.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            },
+            {
+              "n": "03",
+              "headline": "Night air carries the faint scent of jasmine through the plazas.",
+              "lede": "The city cools down once the sun dips behind the hills.",
+              "body": "People linger at outdoor tables to watch the stars. The pace of movement slows to a crawl.",
+              "source": "saudade desk",
+              "source_date": "2026-07-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
+              "lede": "Early morning mist settles over the palace grounds before the heat arrives.",
+              "body": "Stone pathways remain cool under the shade of ancient trees. Visitors walk slowly to avoid the midday glare.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom in the secret ponds of the northern districts.",
+              "lede": "Large pink petals open wide during the quiet hours of the afternoon.",
+              "body": "The water reflects the dense green canopy above. Locals pause here to watch the dragonflies hover.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Evening breezes stir the paper lanterns along the stream.",
+              "body": "Office workers linger by the water after sunset. The city noise fades into the gentle sound of flowing current.",
+              "lede": "The stream offers a brief respite from the warmth of the pavement.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cicadas begin their persistent chorus in the shrine groves.",
+              "lede": "The sound fills the air as the sun climbs high over the city.",
+              "body": "Shadows stretch long across the gravel paths. Summer has firmly taken hold of the neighborhood gardens.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Hydrangeas fade to muted shades in the residential alleys.",
+              "lede": "The petals lose their vibrant blue hue as the season shifts forward.",
+              "body": "Potted plants line the narrow doorways of wooden homes. Residents trim the stems to prepare for the coming weeks.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Iced tea signs appear in the windows of small kissaten.",
+              "body": "Glass cups chime against wooden counters. The cool drinks offer relief to those escaping the afternoon warmth.",
+              "lede": "A simple menu change signals the height of the summer season.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Atlantic breeze cools the tiled facades of Alfama.",
+              "lede": "Salt air flows through the narrow streets despite the bright sun overhead.",
+              "body": "Laundry dries quickly on the iron balconies. The sound of distant gulls echoes against the stone walls.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "02",
+              "headline": "Bougainvillea spills over the garden walls in vibrant magenta.",
+              "lede": "The climbing vines reach their peak as the summer light intensifies.",
+              "body": "Bees work the blossoms in the midday stillness. The scent of dry earth and flowers fills the squares.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            },
+            {
+              "n": "03",
+              "headline": "Evening light turns the Tagus into a sheet of hammered silver.",
+              "body": "Commuters gather at the riverfront to watch the ferries cross. The water remains calm as the day ends.",
+              "lede": "The horizon glows with a soft golden hue at twilight.",
+              "source": "saudade desk",
+              "source_date": "2026-07-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "filed_at": "2026-07-09T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Jangma rains soften the granite walls of the old city gates.",
+              "lede": "Mist clings to the hillsides as the heavy summer humidity settles over the stone.",
+              "body": "Moss darkens the crevices of the fortress paths. The city slows its pace beneath the clouds.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Lotus flowers bloom in the ponds of Gyeongbokgung Palace.",
+              "body": "Petals unfold against the reflective water surface. Visitors walk quietly along the wooden bridges.",
+              "lede": "The blossoms signal the peak of the midsummer season.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "Evening cicadas hum in the trees near Namsan.",
+              "body": "The sound rises as the sun dips below the horizon. It fills the gaps between the city lights.",
+              "lede": "A rhythmic vibration marks the transition into the humid Seoul night.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Wind chimes sound from the narrow porches of Yanaka.",
+              "body": "Glass bells catch the breeze in the quiet lanes. The clear tone cuts through the heavy summer air.",
+              "lede": "Summer brings a delicate acoustic shift to the residential districts.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Hydrangeas fade along the stone paths of temple gardens.",
+              "body": "Colors mute as the rainy season reaches its final days. The soil remains damp under the canopy.",
+              "lede": "The flowers lean low, heavy with the weight of the humidity.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "Paper lanterns hang ready for the upcoming Bon festivals.",
+              "body": "Neighborhood associations prepare the wooden frames in silence. The preparations hint at a coming communal warmth.",
+              "lede": "Public spaces are marked by the quiet anticipation of summer traditions.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Tagus river catches the midday glare.",
+              "body": "Light reflects off the water into the narrow streets of Alfama. The air feels still and dry.",
+              "lede": "A brilliant clarity defines the mid-July light across the city.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "02",
+              "headline": "Jacaranda blossoms carpet the sidewalks in violet dust.",
+              "body": "The trees shed their final petals onto the mosaic stones. Pedestrians tread carefully over the fading color.",
+              "lede": "The seasonal cycle of the city streets turns toward the heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            },
+            {
+              "n": "03",
+              "headline": "Café chairs remain occupied well into the blue hour.",
+              "body": "Conversations drift slowly across the plazas. The evening breeze provides relief from the day.",
+              "lede": "Social life spills into the open squares as the heat recedes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-09"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
