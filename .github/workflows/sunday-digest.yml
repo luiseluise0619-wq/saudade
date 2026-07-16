@@ -27,8 +27,8 @@ on:
         description: "Dry run? (no email sent, just count)"
         required: false
         default: "false"
-  schedule:
-    - cron: '0 21 * * 6'   # Saturday 21:00 UTC = Sunday 06:00 KST
+  # 스케줄 제거 — Worker /digest/send + Resend 시크릿(DIGEST_SEND_TOKEN) 필요.
+  # 시크릿 미설정 상태라 매주 실패만 났다. 수동(workflow_dispatch)으로만.
 
 jobs:
   send:
@@ -40,8 +40,8 @@ jobs:
           DIGEST_SEND_TOKEN: ${{ secrets.DIGEST_SEND_TOKEN }}
         run: |
           if [ -z "$DIGEST_SEND_TOKEN" ]; then
-            echo "::error::DIGEST_SEND_TOKEN secret not set."
-            exit 1
+            echo "::warning::DIGEST_SEND_TOKEN 미설정 — 다이제스트 발송 건너뜀(실패 아님)."
+            exit 0
           fi
           QS=""
           if [ -n "${{ inputs.edition }}" ]; then QS="?edition=${{ inputs.edition }}"; fi
