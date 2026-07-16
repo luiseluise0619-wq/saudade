@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-15T06:00:00+09:00",
+  "updated": "2026-07-17T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-17T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival Escenas de Verano activa la agenda cultural de la ciudad.",
+              "lede": "La programación de teatro, música y cine al aire libre ocupa los espacios públicos de la capital durante toda la semana.",
+              "body": "La tercera semana del festival Escenas de Verano ofrece una selección de cine y teatro en puntos clave de la ciudad. Es el momento ideal para explorar las exposiciones que analizan la transformación urbanística de Madrid, como la muestra sobre el Madrid en construcción. El festival de teatro alternativo Surge Madrid 2026 aporta 58 propuestas nuevas a la oferta cultural. Recuerde que el 25 de julio es festivo por el día de Santiago Apóstol, lo que alterará los horarios habituales de oficinas y servicios administrativos. Planifique sus visitas a las exposiciones con antelación, ya que los centros culturales ajustan sus aperturas durante estas jornadas. El tipo de cambio se mantiene en 1 USD a 0.87 EUR para sus compras locales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición sobre la evolución de la ciudad invita a la reflexión.",
+              "lede": "La muestra Madrid entre épocas permite observar el cambio del paisaje urbano desde sus orígenes hasta la actualidad.",
+              "body": "La exposición sobre el Madrid que dejó de ser campo ofrece una mirada pausada a la historia reciente de la capital. Este recorrido es una pausa necesaria frente al ritmo de la ciudad durante el mes de julio. La oferta de teatro alternativo de Surge Madrid 2026 complementa estas visitas con 37 estrenos absolutos. Tenga presente el festivo del 25 de julio, Santiago Apóstol, al organizar sus gestiones, pues la administración pública cerrará sus puertas. La moneda local se estabiliza en 0.87 EUR por cada 1 USD. Aproveche las noches templadas para disfrutar de las artes escénicas al aire libre antes de que llegue la festividad de finales de mes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "03",
+              "headline": "El festival Surge Madrid 2026 abre su programación de teatro alternativo.",
+              "lede": "Con 58 propuestas en cartel, este evento se consolida como el eje de la creación escénica independiente.",
+              "body": "La cartelera de Surge Madrid 2026 incluye 37 estrenos absolutos, ideales para quienes buscan propuestas fuera de los circuitos comerciales. La ciudad celebra este despliegue cultural mientras se prepara para el festivo de Santiago Apóstol el 25 de julio. Durante esa fecha, los servicios bancarios y oficinas de correos permanecerán cerrados en toda la comunidad. El tipo de cambio actual de 1 USD a 0.87 EUR facilita la planificación de sus entradas y gastos. Se recomienda consultar los horarios de las salas de teatro antes de desplazarse, ya que la festividad suele alterar las funciones programadas. Disfrute del cine al aire libre que acompaña este festival antes del cierre administrativo del próximo viernes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las temperaturas oscilan entre 24–31°C con presencia de niebla.",
+              "lede": "El clima húmedo y cálido marca el ritmo de una semana centrada en el Festival Cruïlla.",
+              "body": "Barcelona registra hoy temperaturas entre 24–31°C con una calidad del aire calificada como fair, con niveles de PM2.5 en 15. La niebla matutina se disipa hacia el mediodía, permitiendo disfrutar de los eventos al aire libre en el Parc del Fòrum. El Festival Cruïlla concentra la actividad musical, mientras la ciudad conmemora los 10 años del Plan de Barrios con una exposición itinerante. El tipo de cambio se sitúa en 1 USD por 0.87 EUR. Tenga en cuenta que el 25 de julio es festivo por Santiago Apóstol y el 28 de julio se celebra el Día de las Instituciones de Cantabria, lo cual afectará el funcionamiento de los comercios y oficinas locales. El sol se oculta a las 21:22.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Cruïlla domina la agenda cultural en el Parc del Fòrum.",
+              "lede": "La música en directo convive con las celebraciones del Plan de Barrios en diversos puntos de la ciudad.",
+              "body": "El Parc del Fòrum acoge el Festival Cruïlla, una cita esencial para observar la escena musical actual. Paralelamente, la exposición itinerante sobre los 10 años del Plan de Barrios permite comprender la transformación social urbana de Barcelona. El tiempo se mantiene entre 24–31°C, con una calidad del aire fair y 15 de PM2.5. La puesta de sol a las 21:22 invita a pasear por la costa tras los conciertos. Prepare sus desplazamientos considerando los festivos del 25 de julio, Santiago Apóstol, y el 28 de julio, Día de las Instituciones de Cantabria. Las oficinas públicas y bancos permanecerán cerrados en estas fechas señaladas. El tipo de cambio actual es 1 USD igual a 0.87 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "03",
+              "headline": "La exposición del Plan de Barrios recorre la transformación urbana local.",
+              "lede": "Una mirada a la década de cambios sociales que han definido la estructura actual de los distritos barceloneses.",
+              "body": "La muestra sobre los 10 años del Plan de Barrios es una oportunidad para entender Barcelona más allá de sus rutas turísticas. La ciudad vive estos días bajo temperaturas de 24–31°C y una calidad del aire fair, con PM2.5 en 15. El Festival Cruïlla añade dinamismo a las tardes, con el sol poniéndose a las 21:22. Es necesario recordar el calendario de festivos: el 25 de julio es Santiago Apóstol y el 28 de julio se celebra el Día de las Instituciones de Cantabria. Durante estos días, los servicios administrativos y bancos no prestarán atención al público. Con un tipo de cambio de 1 USD a 0.87 EUR, la ciudad ofrece un entorno estable para el visitante atento.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Tormentas con granizo marcan la jornada en Buenos Aires.",
+              "lede": "Se esperan 11.8mm de precipitación a lo largo del día, con temperaturas frescas entre 18–20°C.",
+              "body": "El tiempo inestable con tormentas y granizo sugiere optar por planes en espacios cerrados este jueves. La calidad del aire es fair, con un registro de PM2.5 en 7. El Museo de Arte Moderno, conocido como el Moderno, invita a visitar su colección en el parque, una opción ideal para refugiarse de la lluvia. El nuevo Parque de la Innovación ha inaugurado sus espacios públicos, ofreciendo una arquitectura contemporánea interesante para recorrer cuando el clima mejore. El sol se pondrá a las 18:02, marcando el fin de una jornada gris. La ciudad mantiene su oferta cultural gratuita, incluyendo el Festival de las Estrellas. Manténgase atento a los avisos meteorológicos antes de planificar sus traslados por la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "02",
+              "headline": "El Moderno presenta su colección en un entorno de parque renovado.",
+              "lede": "El museo integra sus obras con el paisaje urbano, aprovechando la reciente apertura del Parque de la Innovación.",
+              "body": "La memoria de la colección del Moderno en el parque es una propuesta que conecta el arte con el espacio público. A pesar de las tormentas previstas con 11.8mm de lluvia, el acceso a estas áreas sigue siendo un punto de interés. Las temperaturas oscilan entre 18–20°C, requiriendo abrigo ligero. La calidad del aire es favorable, con 7 de PM2.5. El Festival de las Estrellas, con entrada gratuita, es una alternativa cultural relevante para quienes visitan la ciudad esta semana. La puesta de sol a las 18:02 cierra una tarde de exploración urbana. Se recomienda verificar la accesibilidad de los parques tras las precipitaciones intensas que pueden afectar los senderos peatonales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival de las Estrellas ofrece actividades culturales gratuitas.",
+              "lede": "La agenda de la ciudad se completa con la inauguración de los nuevos espacios públicos del Parque de la Innovación.",
+              "body": "Buenos Aires despliega su oferta gratuita con el Festival de las Estrellas, un evento que aprovecha la vitalidad de sus espacios culturales. Hoy, la ciudad enfrenta 11.8mm de lluvia y posibles tormentas con granizo, con temperaturas entre 18–20°C. La calidad del aire es fair, con un índice de 7 para PM2.5. La reciente apertura del Parque de la Innovación brinda una nueva perspectiva sobre el desarrollo urbano local. Con la puesta de sol a las 18:02, las actividades en interiores como la muestra del Moderno cobran protagonismo. Es un momento propicio para observar la ciudad bajo una luz distinta, refugiándose en sus galerías y museos hasta que el tiempo se estabilice mañana.",
+              "source": "saudade desk",
+              "source_date": "2026-07-17"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-15T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los estantes ofrecen novedades literarias bajo luces tenues. La calma interior contrasta con el movimiento habitual de la zona.",
               "source": "saudade desk",
               "source_date": "2026-07-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El asfalto retiene el calor tras el ocaso.",
-              "lede": "La vida nocturna se desplaza hacia las plazas arboladas donde corre una brisa tenue.",
-              "body": "Los vecinos buscan la sombra de los soportales. La piedra de los edificios antiguos libera el frescor acumulado durante la madrugada.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Las terrazas de La Latina prolongan su horario estival.",
-              "lede": "El bullicio de las conversaciones se funde con el sonido de las fuentes de piedra.",
-              "body": "La luz ámbar de las farolas baña las mesas dispuestas sobre el adoquín. El ambiente invita a permanecer al aire libre hasta la medianoche.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "Los jardines del Palacio Real muestran sus flores de temporada.",
-              "lede": "El aroma a lavanda inunda los senderos durante las horas centrales del día.",
-              "body": "El riego automático refresca los parterres antes del amanecer. Los visitantes encuentran refugio bajo las copas de los árboles centenarios.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La brisa marina mitiga el bochorno en la Barceloneta.",
-              "lede": "El aire del Mediterráneo recorre las calles estrechas del barrio antiguo al caer la tarde.",
-              "body": "Las persianas de madera permanecen bajadas para proteger los interiores del sol intenso. La ciudad se vuelve más lenta bajo la luz blanca de julio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Las fachadas modernistas reflejan un brillo renovado.",
-              "lede": "El sol de mediodía acentúa los detalles cerámicos en las cornisas del Ensanche.",
-              "body": "Los balcones se llenan de plantas que buscan la claridad. El diseño urbano permite que el viento circule entre las manzanas de casas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "El parque de la Ciutadella es un refugio verde.",
-              "lede": "Los músicos de cuerda encuentran acústica natural bajo las frondosas ramas de los plátanos.",
-              "body": "La hierba conserva la humedad gracias al cuidado constante de los jardineros. El lago permanece en calma mientras las barcas se deslizan lentamente.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El aire de invierno se siente nítido en los parques.",
-              "lede": "La luz dorada de la tarde dibuja sombras alargadas sobre el césped de Palermo.",
-              "body": "Los árboles de hojas caducas muestran sus ramas desnudas contra el cielo despejado. Los paseantes caminan rápido para mantener el calor corporal.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Las cafeterías de San Telmo ofrecen refugio frente al frío.",
-              "lede": "El vapor de las tazas de café empaña los cristales de los locales históricos.",
-              "body": "Los clientes prefieren las mesas interiores cerca de la madera antigua. El aroma a tostado y libros viejos define la atmósfera del barrio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "La arquitectura del centro destaca bajo el sol bajo.",
-              "lede": "Las cornisas de los edificios de estilo francés capturan la claridad del mediodía invernal.",
-              "body": "El tránsito en las avenidas anchas parece más pausado que en otras estaciones. La luz de julio transforma las texturas de la piedra caliza.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
             }
           ]
         }
