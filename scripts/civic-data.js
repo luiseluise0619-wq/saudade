@@ -236,16 +236,16 @@ async function fetchCityFacts(cityNames, todayStr, edition) {
         const meta = CITY_META[name] || CITY_META[String(name).toUpperCase()];
         if (!meta) { out[name] = null; continue; }
         try {
-            const [holidays, weather, air, festivals, fx, quake, news] = await Promise.all([
+            // 지진(quakesFor)은 리뷰 게이트의 '재난' 규칙과 충돌해 제외.
+            const [holidays, weather, air, festivals, fx, news] = await Promise.all([
                 holidaysSoon(meta.cc, todayStr),
                 weatherFor(meta, todayStr),
                 airQualityFor(meta),
                 festivalsFor(meta, todayStr),
                 fxFor(meta),
-                quakesFor(meta, todayStr),
                 civicNewsFor(name, edition, todayStr)
             ]);
-            out[name] = { holidays, weather, air, festivals, fx, quake, news };
+            out[name] = { holidays, weather, air, festivals, fx, news };
         } catch (e) {
             out[name] = null;
         }
@@ -304,9 +304,6 @@ function factsLine(name, f) {
     }
     if (f.news && f.news.length) {
         parts.push('recent local civic headlines (use only calm, non-political ones): ' + f.news.join(' | '));
-    }
-    if (f.quake && f.quake.mag != null) {
-        parts.push(`recent earthquake: M${f.quake.mag}${f.quake.place ? ' — ' + f.quake.place : ''}`);
     }
     if (f.holidays && f.holidays.length) {
         parts.push('public holidays soon: ' + f.holidays.map(h => `${h.name} (${h.date})`).join('; '));

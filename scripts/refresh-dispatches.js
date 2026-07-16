@@ -324,20 +324,40 @@ function validate(parsed, cfg) {
 // violates them. Bad output never reaches readers; the previous day's
 // file stays in place until a clean draft passes. This is the "AI files,
 // AI reviews" model — with a real gate, not a rubber stamp.
-function buildReviewPrompt(edition, cities) {
+function buildReviewPrompt(edition, cities, facts) {
     const cfg = EDITION_CONFIG[edition];
+    const factsBlock = [];
+    if (facts) {
+        for (const c of cfg.cities) {
+            const line = factsLine(c, facts[c]);
+            if (line) factsBlock.push('  ' + line);
+        }
+    }
+    const factsSection = factsBlock.length ? [
+        `VERIFIED FACTS (real public-data APIs the writer was given — weather, air`,
+        `quality, exchange rate, public holidays, local civic headlines):`,
+        ...factsBlock,
+        `Figures that MATCH these verified facts (today's temperature, precipitation,`,
+        `air quality, exchange rate, holiday names/dates) are REAL — do NOT reject`,
+        `them as invented precision. Only rule 3 applies to figures NOT in this list.`,
+        ``
+    ] : [];
     return [
         `You are the copy desk for the ${cfg.label} edition of saudade, a slow-news`,
         `magazine. Review the drafted dispatches below against these HARD rules.`,
         `Be strict — you are the last gate before publication, there is no human after you.`,
         ``,
+        ...factsSection,
         `REJECT an item (pass=false) if ANY of these is true:`,
-        `  1. It covers politics, elections, war, conflict, crime, scandal, death,`,
-        `     disaster-as-spectacle, or protest. (Quiet civic notes are fine.)`,
+        `  1. It covers politics, elections, war, crime, scandal, or protest. A calm,`,
+        `     factual note (a public holiday closure, a festival, a park reopening, a`,
+        `     weather/air-quality note) is FINE and encouraged. Sports/cultural events`,
+        `     are NOT "conflict". Do not treat useful civic information as news.`,
         `  2. It reads like a breaking-news headline rather than a calm, declarative`,
         `     observation a resident might make.`,
-        `  3. It states a specific statistic, price, or hard figure that is not`,
-        `     common public record (invented precision).`,
+        `  3. It states a specific statistic, price, or hard figure that is NEITHER`,
+        `     common public record NOR present in the VERIFIED FACTS above`,
+        `     (i.e. genuinely invented precision).`,
         `  4. It contains a quotation longer than 25 words.`,
         `  5. It is not written in ${cfg.label}, or mixes other languages.`,
         `  6. A numeral that means a count/date/time is spelled out instead of`,
@@ -357,10 +377,10 @@ function buildReviewPrompt(edition, cities) {
     ].join('\n');
 }
 
-async function reviewDispatches(edition, cities, key) {
+async function reviewDispatches(edition, cities, key, facts) {
     let raw;
     try {
-        raw = await callGemini(buildReviewPrompt(edition, cities), key);
+        raw = await callGemini(buildReviewPrompt(edition, cities, facts), key);
     } catch (e) {
         // If the reviewer itself errors (quota, network), fail closed:
         // do NOT publish unreviewed content.
@@ -423,7 +443,7 @@ async function refreshOne(edition, opts, key, dayOffset) {
         let review = { pass: true, rejected: [], notes: 'review skipped', errored: false };
         if (!opts.noReview) {
             process.stderr.write('reviewing… ');
-            review = await reviewDispatches(edition, parsed.cities, key);
+            review = await reviewDispatches(edition, parsed.cities, key, facts);
             if (!review.pass) {
                 console.error(`BLOCKED by review: ${review.notes}` +
                     (review.rejected.length ? ` — rejected ${review.rejected.map(r => `${r.city}/${r.n}`).join(', ')}` : ''));
