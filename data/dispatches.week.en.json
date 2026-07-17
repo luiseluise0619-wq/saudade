@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-15T06:00:00+09:00",
+  "updated": "2026-07-18T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-18T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain complicates movement across the city this week.",
+              "lede": "Expect 76.2mm of precipitation as the monsoon settles over the capital.",
+              "body": "The current weather brings 22–28°C temperatures paired with significant rainfall. Travelers should prepare for damp streets and limited outdoor transit efficiency. With the exchange rate at 1 USD to 1485 KRW, budget accordingly for indoor diversions. The recent Constitution Day holiday on 2026-07-17 means many administrative offices remain quiet or closed. Keep your umbrella close as the rain continues to shape the rhythm of the city. Seek shelter in the galleries rather than the parks until the skies clear.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "02",
+              "headline": "Frida Kahlo’s influence blooms at the Seoul Botanic Park.",
+              "lede": "Botanical art meets the indoor comfort of the greenhouse.",
+              "body": "The newly opened exhibition at Seoul Botanic Park provides a necessary escape from the 76.2mm of rain falling across the city. Amidst the humidity and 28°C warmth, the Frida Kahlo-inspired displays offer a quiet study of color and nature. While the air quality remains poor at a PM2.5 level of 16, the park’s controlled environment remains a safe harbor. It is a thoughtful way to spend an afternoon while waiting for the heavy monsoon showers to pass. Observe the floral arrangements that mirror the artist's own connection to the earth.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "03",
+              "headline": "The K-Pet Fair brings new trends to the exhibition halls.",
+              "lede": "Fur-focused design takes center stage in local retail.",
+              "body": "Local civic interest turns toward the K-Pet Fair, where fashion and animal care intersect. Even with the persistent rain, the indoor venues are buzzing with activity. The exchange rate of 1 USD to 1485 KRW makes small, artisan pet goods accessible for those interested in local craftsmanship. Following the recent Constitution Day holiday, the city returns to a steady, if wet, pace of commerce. Visitors interested in the intersection of design and companionship will find much to observe here. The event highlights a growing local focus on pet-centric lifestyle products.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Marine Day approaches with a soft drizzle over the bay.",
+              "lede": "Prepare for the public holiday on 2026-07-20 with an eye on the forecast.",
+              "body": "Tokyo sees light drizzle today with 1.4mm of precipitation expected. Temperatures hover between 24–28°C, making for a humid but manageable weekend. As the Marine Day holiday on 2026-07-20 nears, expect banks and government offices to close their doors. The exchange rate currently sits at 1 USD to 162 JPY. While the UV index is high at 8, the cloud cover offers a brief reprieve. Use this time to explore the city’s quieter corners before the holiday crowds emerge for the celebrations.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "02",
+              "headline": "TeamLab Borderless refines its light sculptures for summer visitors.",
+              "lede": "The immersive art landmark invites quiet contemplation in the dark.",
+              "body": "Escape the 24–28°C heat and high UV levels by stepping into the darkened halls of the re-opened TeamLab Borderless. The light sculptures provide a stark, beautiful contrast to the gray, drizzly weather outside. With the PM2.5 level holding steady at 11, the indoor air remains crisp and comfortable. It is an ideal refuge as the city prepares for the upcoming Marine Day holiday. The exhibition rewards a slow, deliberate pace, allowing the light to guide your movement through the space. Keep your transit pass ready for the return trip through the city.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "03",
+              "headline": "Coffee culture and cocktails define the Tokyo evening.",
+              "lede": "From neighborhood cafes to high-end bars, the city remains sharp.",
+              "body": "Tokyo’s cocktail scene continues to draw global attention, with local institutions influencing nightlife as far away as New York. As the sun sets at 18:56, the city’s bars offer a refined atmosphere against the backdrop of a moderate 24–28°C evening. The exchange rate of 1 USD to 162 JPY remains favorable for those seeking quality experiences. Whether you are following literary accounts of Tokyo’s coffee obsession or seeking a quiet drink, the city delivers with precision. Remember the upcoming holiday on 2026-07-20 when planning your weekend itineraries. The streets remain safe, orderly, and deeply immersive for the observant traveler.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Gulbenkian Museum reopens its doors to the public.",
+              "lede": "A restored masterpiece welcomes visitors under an overcast Lisbon sky.",
+              "body": "The restoration of the Calouste Gulbenkian Museum brings the space back to its original 1969 design. Today’s weather is overcast with temperatures between 19–27°C, perfect for indoor art viewing. With a UV index of 8, the shade of the museum’s galleries is a welcome relief. The exchange rate is 1 USD to 0.87 EUR, providing stable value for your museum entry. Lisbon feels vibrant, with the NOS Alive festival energy still lingering in the air. Take the time to appreciate the architectural clarity of the restored galleries.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "02",
+              "headline": "Science meets culture at the GIMM Festival this week.",
+              "lede": "Microbiology experts gather to share insights in the heart of the city.",
+              "body": "The GIMM Festival has transformed the city into a hub for biological engineering and microbiology discourse. While the sky remains overcast, the intellectual atmosphere is bright. Temperatures are mild, ranging from 19–27°C, making it pleasant to walk between festival venues. Air quality is fair with PM2.5 at 5, ensuring a comfortable outdoor experience despite the cloud cover. As the city recovers from the excitement of the NOS Alive festival, this scientific gathering offers a quieter, more focused engagement. Enjoy the unique blend of history and future-facing science that Lisbon currently hosts.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            },
+            {
+              "n": "03",
+              "headline": "Navigate the hills as the festival season winds down.",
+              "lede": "Lisbon’s pace returns to a steady, rhythmic hum.",
+              "body": "With the conclusion of major festivals like NOS Alive, the city finds its breath once more. The weather remains cool at 19–27°C, offering a break from the intense summer heat. The exchange rate of 1 USD to 0.87 EUR remains steady for travelers exploring the historic districts. Be mindful that while the sun sets late at 20:59, the high UV index of 8 requires protection during your afternoon walks. Visit the newly restored Gulbenkian gardens to witness the intersection of art and landscape. It is a time for quiet observation as the city transitions between major events.",
+              "source": "saudade desk",
+              "source_date": "2026-07-18"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-15T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "lede": "The horizon glows with a soft golden hue at twilight.",
               "source": "saudade desk",
               "source_date": "2026-07-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The Jangma rains soften the granite walls of the old city gates.",
-              "lede": "Mist clings to the hillsides as the heavy summer humidity settles over the stone.",
-              "body": "Moss darkens the crevices of the fortress paths. The city slows its pace beneath the clouds.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Lotus flowers bloom in the ponds of Gyeongbokgung Palace.",
-              "body": "Petals unfold against the reflective water surface. Visitors walk quietly along the wooden bridges.",
-              "lede": "The blossoms signal the peak of the midsummer season.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "Evening cicadas hum in the trees near Namsan.",
-              "body": "The sound rises as the sun dips below the horizon. It fills the gaps between the city lights.",
-              "lede": "A rhythmic vibration marks the transition into the humid Seoul night.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Wind chimes sound from the narrow porches of Yanaka.",
-              "body": "Glass bells catch the breeze in the quiet lanes. The clear tone cuts through the heavy summer air.",
-              "lede": "Summer brings a delicate acoustic shift to the residential districts.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Hydrangeas fade along the stone paths of temple gardens.",
-              "body": "Colors mute as the rainy season reaches its final days. The soil remains damp under the canopy.",
-              "lede": "The flowers lean low, heavy with the weight of the humidity.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "Paper lanterns hang ready for the upcoming Bon festivals.",
-              "body": "Neighborhood associations prepare the wooden frames in silence. The preparations hint at a coming communal warmth.",
-              "lede": "Public spaces are marked by the quiet anticipation of summer traditions.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The Tagus river catches the midday glare.",
-              "body": "Light reflects off the water into the narrow streets of Alfama. The air feels still and dry.",
-              "lede": "A brilliant clarity defines the mid-July light across the city.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "02",
-              "headline": "Jacaranda blossoms carpet the sidewalks in violet dust.",
-              "body": "The trees shed their final petals onto the mosaic stones. Pedestrians tread carefully over the fading color.",
-              "lede": "The seasonal cycle of the city streets turns toward the heat.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
-            },
-            {
-              "n": "03",
-              "headline": "Café chairs remain occupied well into the blue hour.",
-              "body": "Conversations drift slowly across the plazas. The evening breeze provides relief from the day.",
-              "lede": "Social life spills into the open squares as the heat recedes.",
-              "source": "saudade desk",
-              "source_date": "2026-07-09"
             }
           ]
         }
