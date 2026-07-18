@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-07-18T06:00:00+09:00",
-  "next_filing": "2026-07-18T21:00:00+00:00",
+  "filed_at": "2026-07-19T06:00:00+09:00",
+  "next_filing": "2026-07-19T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Lisboa",
+      "city": "LISBOA",
       "items": [
         {
           "n": "01",
-          "headline": "O Parque das Nações ganha uma nova superfície comercial.",
-          "lede": "O Lidl reforça a sua presença na zona oriental da cidade com uma nova loja.",
-          "body": "A expansão comercial no Parque das Nações segue o seu curso habitual. Esta nova abertura oferece uma alternativa prática para quem circula nesta zona moderna de Lisboa. O câmbio atual de 1 USD para 0.87 EUR mantém-se estável para os visitantes. A zona continua a ser um ponto de referência para serviços e conveniência urbana. A integração de novas superfícies comerciais reflete o crescimento sustentado da área.",
+          "headline": "O FUSO traz a videoarte às noites de Lisboa.",
+          "lede": "O Festival Internacional de Videoarte ocupa espaços públicos com projeções ao ar livre.",
+          "body": "A cidade acolhe o FUSO, uma mostra que transforma recantos históricos em galerias de luz e sombra. É uma oportunidade rara de observar a videoarte contemporânea fora dos museus convencionais. A taxa de câmbio de 1 USD para 0.87 EUR mantém-se estável para os visitantes que planeiam roteiros culturais. Aconselha-se o uso de calçado confortável para percorrer os locais das exposições. A atmosfera noturna convida à contemplação, longe das multidões diurnas mais densas. Planeie a sua rota com antecedência para evitar os pontos de maior afluência turística.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "02",
-          "headline": "A Feira do Livro já aponta para o calendário de 2027.",
-          "lede": "O Parque Eduardo VII voltará a receber o evento entre 26 de maio e 13 de junho.",
-          "body": "O planeamento cultural em Lisboa antecipa os meses de calor com antecedência. A organização confirmou as datas para o próximo ano, garantindo o regresso ao Parque Eduardo VII. Enquanto aguardamos, a cidade foca-se nas celebrações de mérito, como os 40 anos da Universidade Autónoma de Lisboa. O reconhecimento internacional de criatividade reforça o prestígio da instituição. A vida académica e literária continua a moldar o ritmo da capital.",
+          "headline": "As exposições de arte marcam o ritmo deste fim-de-semana.",
+          "lede": "Lisboa oferece um roteiro curado de exposições espalhadas pela capital.",
+          "body": "A oferta cultural deste fim-de-semana é vasta, com diversas galerias e centros de arte a abrir portas ao público. É um momento ideal para explorar as exposições em curso, que cobrem desde a fotografia até à arte conceptual. Com a taxa de câmbio de 1 USD para 0.87 EUR, o acesso a estes espaços permanece acessível para o viajante. Recomenda-se verificar os horários de encerramento antes de partir, pois alguns espaços privados operam sob agendamento. Lisboa vive um período de efervescência criativa que convida a um olhar atento sobre a produção artística nacional.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "03",
-          "headline": "Lisboa celebra a doçaria com festivais de fatias XXL.",
-          "lede": "O festival que vai da Nutella ao doce de leite está de volta à cidade.",
-          "body": "A doçaria ocupa o centro das atenções com o regresso do festival de fatias gigantes. É uma oportunidade para observar o entusiasmo local por eventos gastronómicos de grande escala. A cidade equilibra o seu lado institucional com momentos de lazer descontraído. Com o câmbio de 1 USD para 0.87 EUR, o poder de compra dos visitantes permanece consistente. Estes eventos pontuais criam uma dinâmica vibrante nas ruas da capital.",
+          "headline": "Prepare-se para o Festival Política no outono.",
+          "lede": "O evento de arte e cidadania prepara a sua próxima edição em várias cidades.",
+          "body": "O Festival Política, que ocorrerá entre setembro e novembro, começa a preparar a sua programação em Lisboa, Coimbra, Loulé e Torres Vedras. Este evento propõe uma reflexão sobre a sociedade através de múltiplas linguagens artísticas. Para os viajantes, é uma oportunidade de integrar o calendário cultural de várias regiões do país. A taxa de câmbio atual, de 1 USD para 0.87 EUR, permite uma gestão orçamental eficiente para quem planeia estadias prolongadas. Mantenha-se atento às futuras divulgações sobre os locais exatos das intervenções. O evento promete ser um ponto de encontro para observadores atentos à realidade contemporânea.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         }
       ]
     },
     {
-      "city": "Porto",
+      "city": "PORTO",
       "items": [
         {
           "n": "01",
-          "headline": "O nevoeiro matinal acompanha os dias de temperatura amena.",
-          "lede": "As temperaturas oscilam entre 18°C e 24°C, com o pôr do sol marcado para as 21:03.",
-          "body": "O clima no Porto mantém-se fresco e húmido, típico desta época do ano. A qualidade do ar é considerada boa, com níveis de PM2.5 na casa dos 7. É um tempo propício para caminhadas junto ao rio ou pelo centro histórico. O pôr do sol após as 21:00 permite aproveitar as noites longas de verão. Os visitantes devem considerar um casaco leve para as horas de maior nebulosidade.",
+          "headline": "O céu nublado acompanha o Porto neste sábado.",
+          "lede": "As temperaturas oscilam entre 20 e 24°C com qualidade do ar favorável.",
+          "body": "O Porto apresenta-se hoje com um céu predominantemente nublado e uma temperatura amena, variando entre 20 e 24°C. Com um nível de PM2.5 de 10, a qualidade do ar é considerada boa para caminhadas urbanas. O sol põe-se às 21:03, permitindo longas horas de luz para explorar a zona ribeirinha. A taxa de câmbio de 1 USD para 0.87 EUR favorece o consumo local em livrarias e cafés tradicionais. Prepare um agasalho leve para o final da tarde, quando a humidade do rio se faz sentir mais intensamente. É o clima ideal para quem prefere evitar o calor extremo.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "02",
-          "headline": "O padel reúne entusiastas no Parque da Cidade.",
-          "lede": "O Mimosa Open Porto traz os melhores atletas da modalidade à zona verde da cidade.",
-          "body": "O Parque da Cidade converte-se num centro desportivo de referência durante este fim de semana. O torneio atrai competidores de alto nível, consolidando a importância do espaço para o lazer ativo. Paralelamente, o Porto oferece uma agenda cultural densa, com concertos e cinema espalhados pelos vários bairros. A oferta diversificada garante opções para todos os perfis de visitantes. Aproveite a estadia para explorar as zonas verdes que definem a geografia urbana.",
+          "headline": "O fado ecoa na Ribeira com o Festival Caixa.",
+          "lede": "O Festival Caixa Ribeira leva a música tradicional a 4 palcos distintos.",
+          "body": "O Festival Caixa Ribeira transforma o coração do Porto num grande palco de fado. Com concertos espalhados por 4 locais emblemáticos, a música ocupa as ruas estreitas e as praças da zona histórica. A atmosfera é de uma celebração contida, respeitando a melancolia própria do género musical. A taxa de câmbio de 1 USD para 0.87 EUR torna a compra de bilhetes uma despesa controlada para o visitante. O festival é uma porta de entrada para a alma da cidade. Aproveite para observar a arquitetura granítica que serve de cenário natural a estes espetáculos noturnos.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "03",
-          "headline": "A música do mundo viaja até ao litoral alentejano.",
-          "lede": "O festival FMM Sines inicia hoje a sua jornada de descoberta cultural.",
-          "body": "Embora o evento decorra em Porto Covo e Sines, o seu impacto ressoa no Porto. A programação é apresentada como um ato de resistência e um convite à descoberta de novas sonoridades. O festival mantém-se fiel ao seu espírito de encontro entre culturas, sem guiões pré-definidos. Para quem está no Porto, é o momento de consultar a oferta cultural local que complementa este ambiente artístico. O câmbio de 1 USD para 0.87 EUR facilita o planeamento de deslocações.",
+          "headline": "A arte contemporânea expande-se com novas exposições.",
+          "lede": "O Porto recebe a exposição Equilibrium na Paróquia de Santa Maria Madalena.",
+          "body": "A inauguração da exposição Equilibrium na Paróquia de Santa Maria Madalena marca uma nova proposta cultural na cidade. Paralelamente, a mostra itinerante (In)fluxos leva arte contemporânea ao Porto Santo, estendendo a rede de contactos artísticos. Para quem viaja, estas exposições oferecem um contraponto silencioso ao bulício das ruas. A taxa de câmbio de 1 USD para 0.87 EUR é um dado útil para planear as visitas a museus e espaços independentes. O Porto continua a ser um destino onde a história e a modernidade se encontram em constante diálogo. Reserve tempo para apreciar os detalhes das obras nestes espaços tranquilos.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         }
       ]
     },
     {
-      "city": "Sintra",
+      "city": "SINTRA",
       "items": [
         {
           "n": "01",
-          "headline": "O céu nublado de Sintra convida a passeios tranquilos.",
-          "lede": "As temperaturas entre 18°C e 24°C definem um dia de céu encoberto e ar fresco.",
-          "body": "O clima em Sintra mantém-se estável, com níveis de PM2.5 baixos, situados nos 4. A humidade natural da serra é atenuada pelas temperaturas amenas, tornando as caminhadas muito agradáveis. O pôr do sol ocorre às 21:00, proporcionando uma luz difusa ideal para a fotografia. Com um câmbio de 1 USD para 0.87 EUR, a experiência permanece acessível para os viajantes. É o momento perfeito para visitar os parques sem o calor excessivo do verão.",
+          "headline": "Sintra desfruta de um dia parcialmente nublado.",
+          "lede": "A temperatura situa-se entre 18 e 24°C, ideal para percorrer os trilhos serranos.",
+          "body": "O clima em Sintra mantém-se agradável, com temperaturas entre 18 e 24°C e um céu parcialmente nublado. A qualidade do ar é excelente, com um índice de PM2.5 de 6, proporcionando uma respiração límpida durante os passeios. O pôr do sol ocorre às 20:59, marcando o fim de um dia propício para visitas a jardins históricos. A taxa de câmbio de 1 USD para 0.87 EUR permite um acesso equilibrado aos monumentos da vila. É aconselhável levar água e um casaco, pois a Serra de Sintra apresenta variações térmicas súbitas. A luz suave desta época valoriza a vegetação densa da encosta.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "02",
-          "headline": "O Parque Urbano Felício Loureiro promove o desporto local.",
-          "lede": "A iniciativa Sintra+Ativa leva dinâmicas de movimento e diversão ao espaço público.",
-          "body": "O esforço de revitalização dos espaços públicos em Sintra continua através de programas comunitários. O Parque Urbano Felício Loureiro é o ponto de encontro para quem procura atividade física ao ar livre. Estas iniciativas são fundamentais para a coesão local e para o bem-estar dos residentes. O ambiente é convidativo para famílias e observadores que apreciam a vida quotidiana. A organização do espaço público reflete o cuidado com a qualidade de vida no concelho.",
+          "headline": "O Festival de Folclore celebra as Lavadeiras no Sabugo.",
+          "lede": "As celebrações dos 60 anos das Lavadeiras ocupam a agenda local.",
+          "body": "O Festival de Folclore, integrado nas comemorações dos 60 anos das Lavadeiras, traz tradição ao Sabugo. Este evento é uma oportunidade para observar a preservação das raízes culturais da região de Sintra. Com a taxa de câmbio de 1 USD para 0.87 EUR, o viajante pode facilmente apoiar o comércio local nas imediações do recinto. O ambiente é comunitário, refletindo o orgulho na história das gentes da serra. É um evento que exige paciência e vontade de aprender sobre os costumes locais. Aconselha-se a utilização de transportes públicos para aceder à zona, dada a limitação de estacionamento local.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         },
         {
           "n": "03",
-          "headline": "O folclore marca presença nos 60 anos das Lavadeiras.",
-          "lede": "O Sabugo acolhe o Festival de Folclore num tributo à tradição local.",
-          "body": "A celebração das seis décadas das Lavadeiras é um marco cultural importante para a região. O festival integra-se num calendário rico que também viu o encerramento da edição deste ano do MUSCARIUM. Enquanto um ciclo termina, a promessa de um novo formato em 2027 já gera expetativa. A tradição oral e musical de Sintra continua viva nestes eventos de bairro. É uma oportunidade para conhecer o lado mais autêntico e histórico da vila.",
+          "headline": "O Parque Urbano Felício Loureiro convida ao desporto.",
+          "lede": "A iniciativa Sintra+Ativa promove o bem-estar no espaço público.",
+          "body": "O projeto Sintra+Ativa ocupa o Parque Urbano Felício Loureiro, oferecendo atividades físicas e momentos de convívio para todas as idades. É um exemplo de como o espaço público pode ser dinamizado de forma saudável e inclusiva. A taxa de câmbio de 1 USD para 0.87 EUR garante que a estadia em Sintra seja economicamente viável para quem participa nestas dinâmicas. O parque é um refúgio verde, ideal para quem procura um momento de pausa ativa entre visitas aos palácios. Observe a forma como os residentes interagem com o espaço, aproveitando a manhã para o exercício. A vitalidade local é contagiante e oferece uma perspetiva diferente da vila.",
           "source": "saudade desk",
-          "source_date": "2026-07-18"
+          "source_date": "2026-07-19"
         }
       ]
     }

@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-07-18T06:00:00+09:00",
+  "updated": "2026-07-19T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-19T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O FUSO traz a videoarte às noites de Lisboa.",
+              "lede": "O Festival Internacional de Videoarte ocupa espaços públicos com projeções ao ar livre.",
+              "body": "A cidade acolhe o FUSO, uma mostra que transforma recantos históricos em galerias de luz e sombra. É uma oportunidade rara de observar a videoarte contemporânea fora dos museus convencionais. A taxa de câmbio de 1 USD para 0.87 EUR mantém-se estável para os visitantes que planeiam roteiros culturais. Aconselha-se o uso de calçado confortável para percorrer os locais das exposições. A atmosfera noturna convida à contemplação, longe das multidões diurnas mais densas. Planeie a sua rota com antecedência para evitar os pontos de maior afluência turística.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "02",
+              "headline": "As exposições de arte marcam o ritmo deste fim-de-semana.",
+              "lede": "Lisboa oferece um roteiro curado de exposições espalhadas pela capital.",
+              "body": "A oferta cultural deste fim-de-semana é vasta, com diversas galerias e centros de arte a abrir portas ao público. É um momento ideal para explorar as exposições em curso, que cobrem desde a fotografia até à arte conceptual. Com a taxa de câmbio de 1 USD para 0.87 EUR, o acesso a estes espaços permanece acessível para o viajante. Recomenda-se verificar os horários de encerramento antes de partir, pois alguns espaços privados operam sob agendamento. Lisboa vive um período de efervescência criativa que convida a um olhar atento sobre a produção artística nacional.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "03",
+              "headline": "Prepare-se para o Festival Política no outono.",
+              "lede": "O evento de arte e cidadania prepara a sua próxima edição em várias cidades.",
+              "body": "O Festival Política, que ocorrerá entre setembro e novembro, começa a preparar a sua programação em Lisboa, Coimbra, Loulé e Torres Vedras. Este evento propõe uma reflexão sobre a sociedade através de múltiplas linguagens artísticas. Para os viajantes, é uma oportunidade de integrar o calendário cultural de várias regiões do país. A taxa de câmbio atual, de 1 USD para 0.87 EUR, permite uma gestão orçamental eficiente para quem planeia estadias prolongadas. Mantenha-se atento às futuras divulgações sobre os locais exatos das intervenções. O evento promete ser um ponto de encontro para observadores atentos à realidade contemporânea.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O céu nublado acompanha o Porto neste sábado.",
+              "lede": "As temperaturas oscilam entre 20 e 24°C com qualidade do ar favorável.",
+              "body": "O Porto apresenta-se hoje com um céu predominantemente nublado e uma temperatura amena, variando entre 20 e 24°C. Com um nível de PM2.5 de 10, a qualidade do ar é considerada boa para caminhadas urbanas. O sol põe-se às 21:03, permitindo longas horas de luz para explorar a zona ribeirinha. A taxa de câmbio de 1 USD para 0.87 EUR favorece o consumo local em livrarias e cafés tradicionais. Prepare um agasalho leve para o final da tarde, quando a humidade do rio se faz sentir mais intensamente. É o clima ideal para quem prefere evitar o calor extremo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "02",
+              "headline": "O fado ecoa na Ribeira com o Festival Caixa.",
+              "lede": "O Festival Caixa Ribeira leva a música tradicional a 4 palcos distintos.",
+              "body": "O Festival Caixa Ribeira transforma o coração do Porto num grande palco de fado. Com concertos espalhados por 4 locais emblemáticos, a música ocupa as ruas estreitas e as praças da zona histórica. A atmosfera é de uma celebração contida, respeitando a melancolia própria do género musical. A taxa de câmbio de 1 USD para 0.87 EUR torna a compra de bilhetes uma despesa controlada para o visitante. O festival é uma porta de entrada para a alma da cidade. Aproveite para observar a arquitetura granítica que serve de cenário natural a estes espetáculos noturnos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "03",
+              "headline": "A arte contemporânea expande-se com novas exposições.",
+              "lede": "O Porto recebe a exposição Equilibrium na Paróquia de Santa Maria Madalena.",
+              "body": "A inauguração da exposição Equilibrium na Paróquia de Santa Maria Madalena marca uma nova proposta cultural na cidade. Paralelamente, a mostra itinerante (In)fluxos leva arte contemporânea ao Porto Santo, estendendo a rede de contactos artísticos. Para quem viaja, estas exposições oferecem um contraponto silencioso ao bulício das ruas. A taxa de câmbio de 1 USD para 0.87 EUR é um dado útil para planear as visitas a museus e espaços independentes. O Porto continua a ser um destino onde a história e a modernidade se encontram em constante diálogo. Reserve tempo para apreciar os detalhes das obras nestes espaços tranquilos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sintra desfruta de um dia parcialmente nublado.",
+              "lede": "A temperatura situa-se entre 18 e 24°C, ideal para percorrer os trilhos serranos.",
+              "body": "O clima em Sintra mantém-se agradável, com temperaturas entre 18 e 24°C e um céu parcialmente nublado. A qualidade do ar é excelente, com um índice de PM2.5 de 6, proporcionando uma respiração límpida durante os passeios. O pôr do sol ocorre às 20:59, marcando o fim de um dia propício para visitas a jardins históricos. A taxa de câmbio de 1 USD para 0.87 EUR permite um acesso equilibrado aos monumentos da vila. É aconselhável levar água e um casaco, pois a Serra de Sintra apresenta variações térmicas súbitas. A luz suave desta época valoriza a vegetação densa da encosta.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival de Folclore celebra as Lavadeiras no Sabugo.",
+              "lede": "As celebrações dos 60 anos das Lavadeiras ocupam a agenda local.",
+              "body": "O Festival de Folclore, integrado nas comemorações dos 60 anos das Lavadeiras, traz tradição ao Sabugo. Este evento é uma oportunidade para observar a preservação das raízes culturais da região de Sintra. Com a taxa de câmbio de 1 USD para 0.87 EUR, o viajante pode facilmente apoiar o comércio local nas imediações do recinto. O ambiente é comunitário, refletindo o orgulho na história das gentes da serra. É um evento que exige paciência e vontade de aprender sobre os costumes locais. Aconselha-se a utilização de transportes públicos para aceder à zona, dada a limitação de estacionamento local.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            },
+            {
+              "n": "03",
+              "headline": "O Parque Urbano Felício Loureiro convida ao desporto.",
+              "lede": "A iniciativa Sintra+Ativa promove o bem-estar no espaço público.",
+              "body": "O projeto Sintra+Ativa ocupa o Parque Urbano Felício Loureiro, oferecendo atividades físicas e momentos de convívio para todas as idades. É um exemplo de como o espaço público pode ser dinamizado de forma saudável e inclusiva. A taxa de câmbio de 1 USD para 0.87 EUR garante que a estadia em Sintra seja economicamente viável para quem participa nestas dinâmicas. O parque é um refúgio verde, ideal para quem procura um momento de pausa ativa entre visitas aos palácios. Observe a forma como os residentes interagem com o espaço, aproveitando a manhã para o exercício. A vitalidade local é contagiante e oferece uma perspetiva diferente da vila.",
+              "source": "saudade desk",
+              "source_date": "2026-07-19"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-18T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A água corre de forma subtil pelos canais de pedra. O som da natureza domina o ambiente isolado do mundo.",
               "source": "saudade desk",
               "source_date": "2026-07-12"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-11T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O cheiro a sardinha domina as ruelas de Alfama.",
-              "lede": "As festas populares deixam um rasto persistente nos azulejos históricos da cidade.",
-              "body": "O fumo dos grelhadores sobe ao entardecer. As ruas estreitas conservam o calor do sol.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "02",
-              "headline": "A luz do Tejo reflete-se com maior intensidade no final da tarde.",
-              "lede": "O rio brilha sob o sol de julho, iluminando as fachadas caiadas de branco.",
-              "body": "As gaivotas procuram abrigo nas sombras das docas. O movimento dos barcos abranda lentamente.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "03",
-              "headline": "Os jacarandás perdem as últimas pétalas lilases nos passeios.",
-              "lede": "A cidade cobre-se de um tapete suave antes do pico do verão.",
-              "body": "As árvores oferecem sombra densa aos transeuntes. O ar mantém-se seco e parado sob a luz.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A brisa marítima refresca as encostas do Douro ao cair da noite.",
-              "lede": "O vento vindo do Atlântico modera o calor acumulado nas pedras graníticas.",
-              "body": "As janelas das casas abrem-se para deixar entrar o fresco. O som do rio é constante.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "02",
-              "headline": "As flores nos jardins da Foz florescem em tons vibrantes.",
-              "lede": "A vegetação costeira mostra a sua força sob a luz intensa de julho.",
-              "body": "Os jardins convidam a pausas longas durante a tarde. O salgado do mar nota-se no ar.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "03",
-              "headline": "O elétrico circula com as janelas abertas pela marginal.",
-              "lede": "O transporte antigo aproveita a corrente de ar que atravessa a cidade.",
-              "body": "O rangido dos carris mistura-se com o ruído das ondas. Os passageiros observam o rio calmo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A névoa matinal abraça as torres do Palácio da Pena.",
-              "lede": "O nevoeiro característico protege a serra do calor excessivo do verão.",
-              "body": "As encostas permanecem húmidas e frescas. A floresta respira sob o manto branco.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "02",
-              "headline": "O musgo nas fontes antigas cresce com o orvalho constante.",
-              "lede": "A humidade da serra preserva a frescura dos recantos menos visitados.",
-              "body": "A água corre cristalina pelas bicas de pedra. O silêncio domina os caminhos sombrios.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
-            },
-            {
-              "n": "03",
-              "headline": "As camélias dão lugar à folhagem densa nos parques.",
-              "lede": "A paisagem verde de Sintra intensifica-se com a chegada plena da estação.",
-              "body": "O sol filtra-se pelas copas das árvores centenárias. O ambiente convida ao repouso absoluto.",
-              "source": "saudade desk",
-              "source_date": "2026-07-11"
             }
           ]
         }
