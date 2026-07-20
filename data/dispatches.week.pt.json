@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-07-20T06:00:00+09:00",
+  "updated": "2026-07-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Museu Gulbenkian reabre portas ao público com entrada livre.",
+              "lede": "A instituição retoma as suas atividades culturais com uma programação especial.",
+              "body": "O Museu Gulbenkian reabre as suas galerias com entrada gratuita para todos os visitantes. É o momento ideal para revisitar a coleção permanente e participar nas atividades de celebração agendadas para esta semana. O ambiente é de renovação e tranquilidade nos jardins circundantes. A taxa de câmbio atual situa-se em 1 USD para 0.88 EUR, facilitando o planeamento das suas despesas locais. Aproveite a pausa para observar a curadoria renovada em Lisboa.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "A maior exposição de LEGO da Europa chega finalmente a Lisboa.",
+              "lede": "A contagem decrescente para o evento termina com a montagem das estruturas.",
+              "body": "Lisboa prepara-se para acolher a maior exposição de LEGO da Europa. O entusiasmo é visível entre os residentes que acompanham a preparação dos espaços. Este evento promete transformar a percepção arquitetónica da cidade através de peças icónicas. Com uma taxa de câmbio estável de 1 USD para 0.88 EUR, o acesso a eventos culturais torna-se mais previsível. Reserve tempo para percorrer as instalações com calma durante os próximos dias. A cidade aguarda por este momento criativo com serenidade.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "O Pavilhão do Conhecimento mantém a sua agenda de ciência viva.",
+              "lede": "O centro convida a uma exploração pausada pelo conhecimento científico contemporâneo.",
+              "body": "O Pavilhão do Conhecimento - Centro Ciência Viva continua a ser um refúgio de saber para observadores atentos. As exposições interativas oferecem uma perspetiva lúcida sobre os temas da atualidade. A gestão do tempo de visita é facilitada pela estabilidade económica, com o câmbio de 1 USD para 0.88 EUR. Recomendamos a visita durante o período da manhã para evitar o fluxo mais intenso. É uma oportunidade para refletir sobre a ciência num ambiente de silêncio e descoberta.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O nevoeiro matinal acompanha as temperaturas amenas no Porto.",
+              "lede": "A cidade oscila entre 19°C e 24°C sob um manto de bruma.",
+              "body": "O Porto amanhece com nevoeiro, mantendo as temperaturas entre 19°C e 24°C durante esta semana. O pôr do sol ocorre às 21:01, permitindo longas caminhadas pela Ribeira. A qualidade do ar é considerada justa, com PM2.5 em 13, o que favorece as atividades ao ar livre. A taxa de câmbio de 1 USD para 0.88 EUR permanece favorável para quem visita a cidade. Prepare-se para um clima temperado e uma luz suave nas ruas históricas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "O Douro & Porto Wine Festival celebra o encontro entre música e vinhos.",
+              "lede": "A harmonização perfeita acontece à beira do rio com um brinde coletivo.",
+              "body": "O Douro & Porto Wine Festival combina concertos e provas de vinhos numa experiência sensorial única. É uma excelente forma de apreciar a cultura local sob o céu do Norte. A taxa de câmbio de 1 USD para 0.88 EUR permite desfrutar destas experiências com tranquilidade. Com o pôr do sol às 21:01, o ambiente torna-se ideal para provar as castas da região. O evento reforça o carácter hospitalar da cidade nesta altura do ano.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "Um novo restaurante japonês reabre num hotel boutique emblemático.",
+              "lede": "Vítor Matos assina uma proposta gastronómica que revitaliza o espaço.",
+              "body": "Após um encerramento repentino, um hotel boutique no Porto reabre as portas com uma nova oferta culinária. O restaurante japonês, assinado pelo chef Vítor Matos, eleva a fasquia da gastronomia local. Com o clima ameno entre 19°C e 24°C, o acesso ao centro histórico é agradável. A taxa de câmbio oficial de 1 USD para 0.88 EUR mantém-se estável para os viajantes. É uma excelente adição à oferta de restauração da cidade, mantendo a qualidade do serviço.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O nevoeiro de Sintra protege a serra num dia de calor moderado.",
+              "lede": "As temperaturas variam entre 18°C e 25°C com índice UV muito alto.",
+              "body": "Sintra apresenta-se hoje com nevoeiro e temperaturas entre 18°C e 25°C. O índice UV de 8 é muito alto, exigindo proteção adequada mesmo sob a bruma matinal. O pôr do sol ocorre às 20:58, prolongando a luz sobre os palácios. A qualidade do ar é justa, com PM2.5 em 11, mantendo a atmosfera fresca na serra. A taxa de câmbio de 1 USD para 0.88 EUR facilita as suas compras de artesanato local.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "O desporto ocupa o Parque Urbano Felício Loureiro com a iniciativa Sintra+Ativa.",
+              "lede": "O espaço público transforma-se num centro de movimento para todas as idades.",
+              "body": "A iniciativa Sintra+Ativa traz dinamismo ao Parque Urbano Felício Loureiro. É um convite para observar a comunidade em movimento num espaço verde bem cuidado. Com a temperatura a atingir os 25°C, o parque oferece sombras refrescantes para quem prefere a observação calma. A taxa de câmbio situa-se em 1 USD para 0.88 EUR. O ambiente é de bem-estar e convívio, refletindo a vivacidade atual de Sintra para além dos seus monumentos históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "O Festival de Folclore homenageia as Lavadeiras no Sabugo.",
+              "lede": "A tradição ganha fôlego nos 60 anos de uma celebração comunitária.",
+              "body": "O Festival de Folclore integrado nas comemorações dos 60 anos das Lavadeiras é um evento de memória. No Sabugo, a tradição é celebrada com rigor e respeito pelo passado. O clima entre 18°C e 25°C é propício para estas reuniões ao ar livre. A taxa de câmbio de 1 USD para 0.88 EUR permite gerir o orçamento de viagem com total clareza. Sintra demonstra, mais uma vez, a sua capacidade de preservar a identidade cultural através da música e da dança.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-20T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O som do regato torna-se o único ruído no caminho. A vegetação cresce livre e densa.",
               "source": "saudade desk",
               "source_date": "2026-07-14"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-13T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O vento de norte limpa o céu sobre o Tejo.",
-              "lede": "A luz da tarde ganha uma nitidez metálica sobre as fachadas de azulejo.",
-              "body": "As ruas da Baixa refletem um brilho intenso. É o momento em que a cidade parece recuar para dentro das sombras dos pátios.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "As jacarandás perdem as últimas flores.",
-              "lede": "Um tapete violeta desvanece-se lentamente sobre as calçadas do Príncipe Real.",
-              "body": "O chão torna-se seco e rugoso. O ciclo da floração fecha-se perante o calor que se instala.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "O elétrico 28 circula com as janelas abertas.",
-              "lede": "O som dos carris funde-se com as conversas que escapam para a rua.",
-              "body": "Os passageiros procuram a corrente de ar nas curvas apertadas. O ferro aquece sob o sol do meio-dia.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A neblina matinal dissolve-se sobre o Douro.",
-              "lede": "O rio mantém a frescura das correntes que descem das montanhas.",
-              "body": "As barcas permanecem imóveis junto à margem de Gaia. A cidade desperta com o som das gaivotas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "As videiras nas encostas exibem um verde profundo.",
-              "lede": "A seiva corre nos troncos antigos enquanto o sol atinge o zénite.",
-              "body": "O trabalho no campo segue o ritmo das horas lentas. O silêncio domina o vale entre as sombras das quintas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "A Ribeira prepara-se para o movimento das noites longas.",
-              "lede": "As esplanadas ocupam os espaços entre as pedras graníticas.",
-              "body": "O granito retém o calor do dia. O cheiro a maresia confunde-se com o aroma dos peixes grelhados.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A humidade da serra abranda o calor do verão.",
-              "lede": "As copas das árvores filtram a luz que atinge o musgo das rochas.",
-              "body": "Os jardins retêm a frescura dos poços antigos. O ar denso convida a um passo mais lento.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "As samambaias crescem nos muros do Palácio da Pena.",
-              "lede": "A vegetação exótica reclama o seu espaço entre a pedra e a cerâmica.",
-              "body": "O restauro das fachadas revela cores vivas. A natureza insiste em envolver a arquitetura romântica.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "O nevoeiro esconde as torres no final do dia.",
-              "lede": "A névoa sobe do vale e envolve o Castelo dos Mouros.",
-              "body": "O isolamento da serra torna-se absoluto. O mundo exterior desaparece por trás das nuvens baixas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
             }
           ]
         }
