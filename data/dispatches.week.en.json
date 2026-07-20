@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-20T06:00:00+09:00",
+  "updated": "2026-07-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Persistent rain settles over the city streets today.",
+              "lede": "Expect 38.7mm of precipitation as the humidity remains high.",
+              "body": "The city experiences a steady rainfall today with temperatures hovering between 25°C and 26°C. With 38.7mm of expected precipitation, the outdoor libraries and parks are likely to be quiet. Travelers should pack waterproof gear while navigating the city. The air quality remains manageable, with PM2.5 levels at 7. Keep in mind the current exchange rate of 1 USD to 1481 KRW when planning your transit. If you seek shelter, the new LOE BAKESHOP offers a dry respite from the damp weather. The sun will set at 19:49, marking the end of a gray, reflective day in the capital.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "Seoul’s public reading rooms offer shelter from the rain.",
+              "lede": "The outdoor library initiative transforms urban parks into quiet, sheltered reading spaces.",
+              "body": "While the rain persists at 25°C to 26°C, the city’s outdoor library project continues to provide a unique cultural experience. These spaces are designed to integrate literature into the daily rhythm of urban life. Even with 38.7mm of rain, the atmosphere remains focused and calm. Visitors can observe how these parks serve as open-air reading rooms, offering a peaceful alternative to busy cafes. It is a moment to slow down and appreciate the quiet civic design of Seoul. The sunset at 19:49 provides a soft conclusion to a day spent indoors among books.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "The rhythm of the city slows under the summer clouds.",
+              "lede": "Recent cultural highlights bring the heart of Seoul to a global audience.",
+              "body": "Despite the rain, the city remains vibrant with ongoing cultural movements. The recent collaboration bringing the Heart of Seoul to London highlights the city's enduring appeal. With the exchange rate at 1 USD to 1481 KRW, local experiences are accessible. The children playing at the Summer Beach Festival remind us of the simple joys found in the city’s public spaces. Today's moderate air quality of 7 PM2.5 makes for a clear, albeit wet, environment. As the sun sets at 19:49, the streets begin to shimmer under the damp evening light. It is a time for quiet observation.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The summer heat intensifies under a partly cloudy sky.",
+              "lede": "Temperatures reach 34°C today, making the midday sun quite sharp.",
+              "body": "With a high of 34°C and a low of 24°C, Tokyo is firmly in the grasp of midsummer. The UV index is very high at 8, so take care when walking between neighborhoods. The city feels crowded yet organized following the Marine Day holiday on 2026-07-20. The air quality is fair with PM2.5 at 25, so take a moment to rest in shaded areas. The exchange rate is 1 USD to 162 JPY, a figure to note for your daily expenses. Sunset arrives at 18:54, offering a cooler reprieve from the intense heat of the afternoon.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "New convenience store concepts challenge the traditional urban rhythm.",
+              "lede": "Family Mart’s new flagship store invites a different kind of experience.",
+              "body": "The latest flagship convenience store in Tokyo suggests that efficiency is not always the only goal. As you navigate the city, you may notice these shifts in retail design. With temperatures between 24°C and 34°C, it is wise to prioritize comfort over speed. The UV index remains at 8, so stay protected during your walks. The recent holiday on 2026-07-20 has left the city with a lingering, relaxed energy. The exchange rate of 1 USD to 162 JPY remains steady for your convenience. As the sun sets at 18:54, the city lights begin to soften the concrete landscape.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "Cultural anticipation builds as the film season approaches.",
+              "lede": "Tokyo’s creative scene prepares for international premieres while the city remains warm.",
+              "body": "The announcement of new film premieres at the 2026 Toronto International Film Festival has sparked quiet interest across the city. Amidst the 24°C to 34°C heat, Tokyo’s residents find balance in pop culture and classic city life. Following the 2026-07-20 holiday, the pace of life feels measured and thoughtful. The air quality is fair, with PM2.5 at 25. Remember that the UV index is 8, so carry a parasol if you plan to explore the parks. The exchange rate stands at 1 USD to 162 JPY. Sunset at 18:54 signals the transition into a warm, humid evening.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Gulbenkian gardens reopen with their classic 1969 design.",
+              "lede": "Restoration work invites a return to the original vision of this iconic space.",
+              "body": "The Calouste Gulbenkian Museum has restored its grounds to the 1969 design, offering a serene environment for an afternoon walk. With temperatures ranging from 19°C to 28°C, the weather is ideal for exploring the gardens. The UV index is very high at 8, so wear a hat while strolling the paths. The air quality is fair, with PM2.5 levels at 12. The exchange rate is 1 USD to 0.88 EUR, keeping costs predictable. As the sun sets at 20:57, the light across the city becomes golden and soft. It is a perfect time to observe the calm restoration of a local treasure.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "02",
+              "headline": "Festival season lingers in the air of the capital.",
+              "lede": "Lisbon remains a hub of activity following the recent festival momentum.",
+              "body": "The influence of events like NOS Alive continues to shape the city's mood. Even after the crowds disperse, the energy persists in the local parks and museums. Today, temperatures are mild, between 19°C and 28°C. The UV index is 8, so keep your sunglasses close. The exchange rate of 1 USD to 0.88 EUR makes it easy to enjoy a quiet coffee near the river. The air quality is fair at 12 PM2.5. Sunset at 20:57 brings a cool breeze that makes the evening hours particularly pleasant for those walking the hills.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            },
+            {
+              "n": "03",
+              "headline": "A quiet challenge at the library marks a steady summer week.",
+              "lede": "Reading programs and restoration projects define the intellectual pace of the city.",
+              "body": "The successful completion of the Lepper Library program challenge highlights the quiet dedication of local readers. It is this focus that defines the character of Lisbon this week. With the temperature reaching 28°C and dropping to 19°C, the climate is comfortable for outdoor activity. The UV index is 8, so remain aware of the sun's strength. The exchange rate is 1 USD to 0.88 EUR. With air quality at 12 PM2.5, the city feels fresh and inviting. As the sun sets at 20:57, the city prepares for a calm evening, perfect for quiet reflection and reading.",
+              "source": "saudade desk",
+              "source_date": "2026-07-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-20T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Pedestrians walk carefully over the fallen flowers near the river. The scent of summer lingers in the quiet plazas.",
               "source": "saudade desk",
               "source_date": "2026-07-13"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-12T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
-              "lede": "Midsummer air settles heavily over the palace grounds.",
-              "body": "The moss between the paving stones deepens in color. Visitors walk slowly to avoid the midday heat.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "02",
-              "headline": "Lotus flowers bloom fully in the ponds of Buyongji.",
-              "lede": "Pink petals rise above the dark, still water.",
-              "body": "The garden paths remain quiet during the afternoon. Shadows stretch long across the wooden pavilions.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "03",
-              "headline": "Cicadas hum incessantly within the trees of Namsan.",
-              "lede": "The sound defines the rhythm of the city afternoon.",
-              "body": "Hikers seek the shade of the thick canopy. The city below looks blurred through the summer haze.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Wind chimes sound from the eaves of Yanaka houses.",
-              "lede": "Glass bells mark the movement of the breeze.",
-              "body": "The neighborhood remains calm despite the seasonal heat. Residents step outside to water the potted ferns.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "02",
-              "headline": "Hydrangeas fade to muted shades in temple gardens.",
-              "lede": "The rainy season transitions into the bright summer sun.",
-              "body": "Gardeners prune the damp stems with careful hands. The earth smells of wet soil and fresh growth.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "03",
-              "headline": "Paper lanterns hang ready for the coming festivals.",
-              "lede": "The quiet streets anticipate the evening light.",
-              "body": "Craftsmen inspect the bamboo frames near the shrine. A sense of preparation fills the narrow alleys.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The Atlantic breeze cools the Alfama rooftops.",
-              "lede": "Salt air flows through the narrow, winding streets.",
-              "body": "Laundry dries quickly in the persistent coastal wind. The morning light reflects sharply off the white tile walls.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "02",
-              "headline": "Jasmines bloom against the old garden fences.",
-              "lede": "The sweet scent lingers in the warm evening air.",
-              "body": "Local cats rest on the sun-warmed stone stairs. Neighbors gather briefly to share the shade of a vine.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
-            },
-            {
-              "n": "03",
-              "headline": "The Tagus river sparkles under the midday sun.",
-              "lede": "Boats drift toward the horizon in silence.",
-              "body": "Ferry passengers watch the city skyline from the deck. The water looks like polished blue glass.",
-              "source": "saudade desk",
-              "source_date": "2026-07-12"
             }
           ]
         }
