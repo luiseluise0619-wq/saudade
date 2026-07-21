@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-21T06:00:00+09:00",
+  "updated": "2026-07-22T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-22T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light rain falls across Seoul as the afternoon yields to dusk.",
+              "lede": "Temperatures hover between 22 and 29°C while 9.2mm of precipitation settles over the stone courtyards.",
+              "body": "Light rain falls across Seoul as the afternoon yields to dusk, cooling the humid air after a long stretch of midday heat. Temperatures hover between 22 and 29°C while 9.2mm of precipitation settles over the stone courtyards of the historic center. Air quality remains fair with PM2.5 at 42, making evening walks manageable beneath an umbrella. Currency exchanges trade at 1 USD to 1478 KRW across local banks. The evening sunset arrives at 19:49, casting long shadows over the wet pavement. It is a quiet evening to seek shelter in a neighborhood tea house or browse through covered alleys.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "Seoul Grand Park welcomes new arrivals to its forested hillside enclosures.",
+              "lede": "Endangered red panda twins have been born naturally at the park for the first time.",
+              "body": "Seoul Grand Park welcomes new arrivals to its forested hillside enclosures as keepers tend to the facility's newest residents. Endangered red panda twins have been born naturally at the park for the first time, marking a quiet milestone for regional conservation efforts. Visitors walking the shaded pathways will find the surrounding grounds lush and deeply green from the recent seasonal rains. The park remains an accessible retreat from the dense commercial districts of the capital. Families and quiet observers often spend hours watching the bamboo groves where the young red pandas slowly acclimate to their outdoor surroundings.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "Concert halls and exhibition spaces prepare for a rich cultural season.",
+              "lede": "World-class orchestras and soloists fill Seoul's calendar as Space K exhibits new works by KAWS.",
+              "body": "Concert halls and exhibition spaces prepare for a rich cultural season as autumn approaches the capital. World-class orchestras and soloists fill Seoul's calendar, offering evening performances across major cultural venues. Meanwhile, at Seoul’s Space K, KAWS brings new tensions between friendship, conflict, and fame to an attentive public. These exhibitions provide a contemplative indoor refuge from the damp weather outside. Ticket offices advise booking in advance for weekend orchestra performances, though weekday gallery viewings remain unhurried and peaceful for the solitary traveler.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Intense summer sun beats down on Tokyo under a clear, bright sky.",
+              "lede": "Temperatures climb from 25 to 35°C with a very high UV index of 8.",
+              "body": "Intense summer sun beats down on Tokyo under a clear, bright sky, demanding deliberate pacing from daytime travelers. Temperatures climb from 25 to 35°C with a very high UV index of 8, making midday shade essential. Air quality registers as poor with PM2.5 at 37, lingering in the heavy urban atmosphere. Financial transactions reflect an exchange rate of 1 USD to 163 JPY across commercial districts. The sun sets at 18:53, bringing a slight relief of evening breeze to the concrete avenues. Pedestrians seek refuge beneath station concourses and air-conditioned department stores until dusk settles.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "Park Hyatt Tokyo manages its ongoing transformation with quiet precision.",
+              "lede": "The legendary hotel navigates a thoughtful renovation while preserving its timeless interior atmosphere.",
+              "body": "Park Hyatt Tokyo manages its ongoing transformation with quiet precision as loyal guests watch the property evolve. The legendary hotel navigates a thoughtful renovation while preserving its timeless interior atmosphere high above the sprawling metropolis. Elsewhere in the city, retail spaces experiment with form, such as Family Mart’s new Tokyo flagship store, which challenges conventional convenience. These minor civic shifts reveal a city constantly refining its everyday spaces without losing its distinct character. Observers find that even standard routines in Tokyo offer unexpected moments of architectural and spatial design inquiry.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "Cinematic arts take center stage as seasonal film showcases begin.",
+              "lede": "The Tokyo Horror Film Festival presents a curated program of compelling short films.",
+              "body": "Cinematic arts take center stage as seasonal film showcases begin to draw cinephiles into darkened auditoriums. The Tokyo Horror Film Festival presents a curated program of compelling short films that explore mood and narrative tension. Concurrently, animation fans follow the latest developments of the Tokyo Revengers arc, featuring new musical themes by JO1. These cultural offerings provide a welcome escape from the scorching afternoon heat outside. Neighborhood cinemas remain peaceful sanctuaries where visitors can experience contemporary Japanese storytelling away from the bustling tourist corridors.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Partly cloudy skies frame the historic limestone façades of Lisbon.",
+              "lede": "Temperatures range from 20 to 28°C under a high UV index of 8.",
+              "body": "Partly cloudy skies frame the historic limestone façades of Lisbon as a mild Atlantic breeze sweeps through the alleyways. Temperatures range from 20 to 28°C under a high UV index of 8, offering pleasant conditions for walking the hills. Air quality remains exceptionally fair with PM2.5 at 10, keeping the coastal air crisp and clear. Currency exchanges trade at 1 USD to 0.88 EUR throughout local banking institutions. Sunset arrives late at 20:56, bathing the Tagus River in a long, golden twilight. It is an ideal climate for sitting outdoors at a neighborhood belvedere as evening falls.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "The Calouste Gulgentkian Museum welcomes visitors back to its restored galleries.",
+              "lede": "A meticulous restoration brings the modernist museum back to its original 1969 design.",
+              "body": "The Calouste Gulbenkian Museum welcomes visitors back to its restored galleries following a meticulous multi-year project. A careful restoration brings the modernist museum back to its original 1969 design, honoring its architectural heritage. The surrounding gardens remain a tranquil sanctuary where water features and shaded paths offer relief from the afternoon warmth. Art enthusiasts can spend hours moving between the indoor galleries and the outdoor sculpture lawns without interruption. This reopening marks a significant moment for cultural observers returning to the Portuguese capital this season.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "Music and community gatherings animate the waterfront districts this week.",
+              "lede": "NOS Alive anchors the summer festival calendar while local community charity events continue.",
+              "body": "Music and community gatherings animate the waterfront districts this week as summer celebrations reach their peak. NOS Alive anchors the summer festival calendar, drawing international crowds to the coastal venues along the river. Meanwhile, smaller civic gatherings take place across the city, including the recent charity Ukrainian borscht festival raising funds for children. Libraries also mark quiet milestones, such as a local reader completing the Lepper Library program challenge. These diverse events highlight a city that balances large-scale cultural spectacles with intimate, community-driven traditions.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-21T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "The vines grow thick during the long, dry days. They provide a splash of color against the heat.",
               "source": "saudade desk",
               "source_date": "2026-07-14"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-13T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The humidity clings to the stone walls of Gyeongbokgung.",
-              "lede": "Midsummer air settles heavily over the palace grounds during the afternoon.",
-              "body": "Stone paths radiate heat long after the sun dips. Visitors seek shade under the ancient zelkova trees.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Lotus flowers bloom in the ponds of Buyongji.",
-              "lede": "Petals unfurl against the dark, still water of the royal gardens.",
-              "body": "The blossoms signal the peak of the summer cycle. Watchers gather silently at the pond edge at dusk.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "Evening cicadas drone from the trees lining the Namsan trails.",
-              "lede": "The sound rises to a rhythmic chorus as the city lights flicker.",
-              "body": "Walkers slow their pace to match the pulsing noise. The sound defines the thick, warm nights of July.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Morning mist retreats from the Sumida River.",
-              "lede": "Early commuters watch the river surface turn glassy and clear.",
-              "body": "The water reflects the metallic sheen of the bridges. A quiet stillness holds before the city wakes.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Wind chimes hang in the eaves of Yanaka houses.",
-              "lede": "Glass bells catch the breeze, marking the passage of the afternoon.",
-              "body": "The sharp, clear sound cuts through the heavy summer air. It is a fragile signal of the changing season.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "Hydrangeas fade to muted green in neighborhood gardens.",
-              "lede": "The vibrant blues of early summer soften into dried, dusty tones.",
-              "body": "Foliage leans against wooden fences, heavy with the weight of the rain. The garden beds prepare for the coming heat.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The Atlantic breeze cools the Alfama alleys at sunset.",
-              "lede": "Salt air flows through the narrow gaps between the tiled walls.",
-              "body": "The temperature drops as the shadows stretch across the cobblestones. Residents open windows to capture the evening draft.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Yellow tram paint glows under the harsh midday sun.",
-              "lede": "The iconic cars rattle through the steep, narrow turns of the city.",
-              "body": "Metal reflects the bright light against the white limestone facades. Tourists and locals share the small, wooden benches.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "Jacaranda petals carpet the squares in shades of violet.",
-              "lede": "The late bloom creates a soft, purple layer over the pavement.",
-              "body": "Pedestrians walk carefully over the fallen flowers near the river. The scent of summer lingers in the quiet plazas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
             }
           ]
         }

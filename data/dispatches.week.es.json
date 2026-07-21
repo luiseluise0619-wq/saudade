@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-21T06:00:00+09:00",
+  "updated": "2026-07-22T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-22T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Comunidad de Madrid habilita 52 puntos de observación para seguir el eclipse solar.",
+              "lede": "Los espacios públicos se preparan para un seguimiento astronómico seguro y ordenado este verano.",
+              "body": "El cielo madrileño acoge una cita de gran interés científico y divulgativo con la habilitación de 52 puntos específicos de observación distribuidos por toda la región. Los residentes y visitantes pueden acercarse a estos enclaves para seguir el eclipse solar con las debidas garantías técnicas. Paralelamente, Buitrago del Lozoya acoge un festival complementario que combina foodtrucks y música en directo para animar la jornada. Es una oportunidad excelente para disfrutar del patrimonio natural mientras se observa el firmamento. Se recomienda consultar los horarios exactos de apertura y la ubicación precisa de cada punto en la web institucional antes de planificar el desplazamiento.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Hispanidad 2026 llenará Madrid de conciertos gratuitos y más de 150 actividades.",
+              "lede": "La agenda cultural de la ciudad suma espectáculos musicales y propuestas artísticas para todos los públicos.",
+              "body": "La programación cultural de la capital anticipa uno de sus eventos más esperados con el avance del Festival Hispanidad 2026. La iniciativa llenará las calles y plazas de conciertos gratuitos y más de 150 actividades culturales diseñadas para celebrar la diversidad. Entre los anuncios destacados figura la actuación de Sebastián Yatra, programada para el 10 de octubre dentro del mismo ciclo festivo. Además, la Sala Berlanga acoge estos días el 35º Festival de Cine de Madrid – PNR, consolidando el pulso cinematográfico del circuito independiente. Conviene revisar la disponibilidad de entradas anticipadas para los auditorios cerrados, ya que el aforo suele completarse con rapidez.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "Los servicios administrativos sufrirán modificaciones por la festividad de Santiago Apóstol.",
+              "lede": "El calendario de julio contempla jornadas festivas que afectarán a la atención ciudadana ordinaria.",
+              "body": "El próximo 25 de julio se celebra la festividad de Santiago Apóstol, una fecha marcada en rojo en el calendario laboral de la Comunidad de Madrid. Los viajeros y residentes deben tener en cuenta que las oficinas de la administración pública, los bancos y las principales sucursales de correos permanecerán cerradas durante esa jornada. Asimismo, el 28 de julio se conmemora el Día de las Instituciones de Cantabria, lo que también alterará ciertos trámites con delegaciones autonómicas. Se aconseja adelantar cualquier gestión urgente de carácter administrativo o financiero para evitar contratiempos en los desplazamientos. El comercio local mantendrá sus horarios habituales de apertura salvo excepciones puntuales en los barrios céntricos.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La ciudad registra temperaturas de 24 a 30°C bajo cielos completamente cubiertos.",
+              "lede": "La jornada se presenta templada y estable, con una calidad del aire calificada como fair.",
+              "body": "El mercurio se mueve hoy entre los 24 y los 30°C en Barcelona, bajo un cielo cubierto que suaviza la sensación térmica veraniega. Los registros de calidad del aire se sitúan en niveles fair, con una concentración de PM2.5 de 8, lo que permite pasear con total normalidad por los espacios abiertos. El atardecer está previsto para las 21:18, regalando una tarde larga y propicia para la caminata pausada junto al litoral. Conviene llevar una prenda ligera por si la brisa marina refresca el ambiente al caer la noche. La visibilidad es correcta pese a la capa de nubes altas que cubre el horizonte urbano durante todo el día.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "El Experimental Photo Festival arranca su séptima edición en espacios culturales.",
+              "lede": "La fotografía contemporánea y de autor toma el pulso de la ciudad con talleres y exposiciones.",
+              "body": "La oferta artística de la semana destaca por el inicio de la séptima edición del Experimental Photo Festival, que reúne a creadores nacionales e internacionales. Paralelamente, los amantes del arte pueden visitar la exposición ‘Ocho’ de Frederic Amat, una muestra que profundiza en el lenguaje pictórico y objetual del autor catalán. Estos eventos enriquecen la agenda cultural en un momento de transición vacacional para muchos residentes. Los espacios expositivos adaptan sus horarios de verano para facilitar el acceso durante las horas centrales del día, cuando el sol y las nubes alternan sobre las calles. Se recomienda consultar la programación de charlas y visitas guiadas en las sedes oficiales del festival.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "La festividad de Santiago Apóstol modifica el ritmo administrativo en Cataluña.",
+              "lede": "El calendario de julio incluye jornadas festivas que reducen la actividad en oficinas y entidades bancarias.",
+              "body": "Con motivo de la festividad de Santiago Apóstol el 25 de julio, los servicios administrativos y las oficinas bancarias ajustarán sus horarios o permanecerán cerrados en función de los convenios locales. Esta pausa institucional coincide con el periodo estival, por lo que muchos comercios de barrio reorganizan sus días de descanso. Además, el 28 de julio se celebra el Día de las Instituciones de Cantabria, un festivo autonómico relevante para quienes realicen gestiones interregionales. Es prudente verificar la apertura de bibliotecas públicas, museos y centros cívicos antes de planificar visitas institucionales. El transporte público mantendrá sus frecuencias habituales de verano a pesar de las jornadas festivas señaladas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra una temperatura de 9 a 14°C bajo un cielo completamente cubierto.",
+              "lede": "El clima invernal invita a resguardarse en espacios cerrados mientras la calidad del aire se mantiene óptima.",
+              "body": "La jornada porteña discurre con temperaturas frescas que oscilan entre los 9 y los 14°C, acompañadas por un cielo cubierto propio de la estación invernal. La calidad del aire se califica como good, registrando un valor de PM2.5 de 9, lo que garantiza una atmósfera limpia a pesar de la nubosidad persistente. El sol se ocultará a las 18:05, dando paso a una noche fría en la que apetecerá disfrutar de la oferta cultural bajo techo. Los parques y plazas de la ciudad muestran una estampa tranquila, ideal para caminatas breves antes de que caiga la tarde. Se aconseja abrigarse adecuadamente con prendas de abrigo y abrigo ligero para contrarrestar la humedad característica del estuario.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "02",
+              "headline": "La agenda de vacaciones de invierno despliega propuestas para toda la familia.",
+              "lede": "El gobierno porteño activa un circuito cultural y recreativo que se extenderá hasta los primeros días de agosto.",
+              "body": "El receso escolar llena la ciudad con la completa agenda de vacaciones de invierno lanzada por el gobierno porteño, vigente del 18 de julio al 2 de agosto. Entre los hitos musicales de la temporada destaca el concierto 'Carmen, de Sevilla a Buenos Aires', interpretado por la Orquesta 'ADDA Simfónica' bajo la dirección de Josep Vicent en el marco del evento cultural Albatera. Asimismo, el Centro de Exposiciones y Convenciones exhibe las maquetas y proyectos finalistas del Concurso Parque, consolidando el interés por el diseño urbano contemporáneo. Las familias pueden aprovechar estas propuestas en museos, teatros y centros culturales que han adaptado sus funciones a horario vespertino. Se sugiere adquirir las localidades con antelación debido a la alta demanda estacional.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            },
+            {
+              "n": "03",
+              "headline": "Barrio Parque consolida su perfil exclusivo en el mercado inmobiliario de la capital.",
+              "lede": "El sector de ultra lujo opera con dinámicas singulares que lo asemejan a enclaves residenciales internacionales.",
+              "body": "La zona residencial de Barrio Parque continúa acaparando la atención del sector inmobiliario de alta gama, operando con dinámicas propias que muchos analistas comparan con los mercados de José Ignacio. Este rincón arbolado y de trazado pintoresco mantiene una demanda sostenida por parte de inversores que buscan exclusividad y privacidad absoluta. Las transacciones en este sector no suelen verse afectadas por las fluctuaciones generales de la economía urbana. Pasear por sus calles serpenteantes permite observar una arquitectura señorial integrada con abundante vegetación madura. Los observadores urbanos valoran este enclave por su capacidad para preservar un ritmo de vida apacible a pocos minutos del bullicio céntrico.",
+              "source": "saudade desk",
+              "source_date": "2026-07-22"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-21T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los parques se mantienen en calma durante las mañanas de escarcha. La naturaleza descansa antes de la primavera.",
               "source": "saudade desk",
               "source_date": "2026-07-14"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-13T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El asfalto madrileño conserva el calor tras la puesta de sol.",
-              "lede": "La ciudad retiene la calidez del día en sus plazas de piedra.",
-              "body": "Los vecinos buscan refugio bajo las sombras de los soportales. La vida social se traslada a las terrazas al caer la noche.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Las fuentes de los parques ofrecen un alivio constante.",
-              "lede": "El agua corriente marca el ritmo pausado de los paseos estivales.",
-              "body": "El sonido del agua amortigua el ruido del tráfico urbano. Los jardines históricos mantienen su frescor gracias al riego nocturno.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "El cielo de julio se tiñe de violeta al atardecer.",
-              "lede": "La luz del crepúsculo transforma la arquitectura clásica del centro.",
-              "body": "Los tejados de la capital reflejan los últimos rayos del sol. Es el momento en que la ciudad recupera su calma.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La brisa marina recorre las calles del Barrio Gótico.",
-              "lede": "El aire del Mediterráneo suaviza el clima en los callejones antiguos.",
-              "body": "Las ventanas se mantienen abiertas para capturar el viento salino. El olor a mar llega hasta los patios interiores.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Las buganvillas cubren de color los balcones del Eixample.",
-              "lede": "La vegetación urbana florece con fuerza bajo el sol intenso.",
-              "body": "Las flores aportan una nota cromática sobre las fachadas modernistas. La naturaleza reclama su lugar entre el hierro y la piedra.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "El horario de las playas se extiende hasta la medianoche.",
-              "lede": "La arena se convierte en el lugar de encuentro preferido por los locales.",
-              "body": "Las luces de la costa guían a los paseantes nocturnos. El murmullo de las olas reemplaza al bullicio de la jornada.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El aire invernal invita a buscar refugio en cafés históricos.",
-              "lede": "Las puertas de madera protegen a los clientes del frío exterior.",
-              "body": "El aroma a café y libros inunda los salones de San Telmo. El vapor de las tazas empaña los cristales antiguos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "02",
-              "headline": "Las hojas secas tapizan los senderos de los bosques de Palermo.",
-              "lede": "El paisaje urbano adquiere los tonos ocres característicos de la estación.",
-              "body": "El viento dispersa el follaje sobre los caminos de tierra batida. Los caminantes caminan con paso firme para entrar en calor.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
-            },
-            {
-              "n": "03",
-              "headline": "La luz del mediodía acentúa las sombras en las avenidas anchas.",
-              "lede": "El sol bajo de invierno esculpe la silueta de los edificios clásicos.",
-              "body": "Las fachadas de estilo francés lucen con una claridad inusual. La ciudad parece detenerse bajo la luz limpia del mediodía.",
-              "source": "saudade desk",
-              "source_date": "2026-07-13"
             }
           ]
         }
