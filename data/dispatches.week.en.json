@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-22T06:00:00+09:00",
+  "updated": "2026-07-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light summer rain falls across the capital as temperatures settle into a cooler band.",
+              "lede": "The afternoon air stays heavy with moisture under grey skies. Umbrellas line the entrances of quiet tea houses.",
+              "body": "The daily temperature ranges from 25 to 28°C under a steady veil of light rain. Precipitation totals 10.4mm, dampening the stone walkways of old alleyways without creating severe flooding. Sunset arrives at 19:48, drawing a muted curtain over the damp pavement. Air quality remains fair with PM2.5 standing at 5, making outdoor walks pleasant despite the persistent drizzle. The exchange rate holds at 1 USD to 1480 KRW for visitors managing currency needs. This steady downpour offers a quiet rhythm for those lingering in traditional neighborhoods.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "Stone courtyards shine under a light summer drizzle while visitors seek sheltered pavilions.",
+              "lede": "The palace grounds wear a darker hue in the wet afternoon light. Puddles reflect the traditional eaves.",
+              "body": "Temperatures hover between 25 and 28°C while 10.4mm of precipitation refreshes the city's green spaces. The air feels clean with PM2.5 at 5, keeping breathing comfortable during the damp afternoon hours. Sunset occurs at 19:48, ending the long daylight period with a soft gray glow over the tiled roofs. The exchange rate sits at 1 USD to 1480 KRW for travelers settling cafe tabs after the rain passes. Visitors walking the palace grounds will find fewer crowds and deep silence beneath the eaves.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "Evening strolls along the stream move slowly through the quiet mist of late July.",
+              "lede": "Water flows steadily over smooth stones while the city lights reflect on the wet surface.",
+              "body": "The atmosphere remains cool as the temperature stays within the 25 to 28°C range. A total of 10.4mm of precipitation keeps the surrounding foliage thoroughly washed and green. The sun dips below the horizon at 19:48, giving way to an evening of low humidity and fair air quality at PM2.5 of 5. Financial transactions settle around 1 USD to 1480 KRW across local markets and neighborhood shops. The gentle weather invites quiet reflection along the stone banks after the day's light rain ceases.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Intense summer sun beats down on asphalt while ultraviolet levels climb to their peak.",
+              "lede": "Shade offers the only relief from the afternoon glare. Sidewalks empty out during the hottest hours.",
+              "body": "Temperatures surge from 26 to 36°C under mainly clear skies that test the endurance of afternoon commuters. The UV index reaches 8, demanding strong sun protection for anyone spending time outdoors. Sunset comes early at 18:53, bringing brief relief as the evening heat begins to dissipate. Air quality registers as poor with PM2.5 at 36, advising sensitive travelers to limit strenuous outdoor exertion. The exchange rate rests at 1 USD to 163 JPY for visitors navigating daily expenses. Proper hydration remains essential during these scorching midsummer afternoons.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "Shaded temple gardens provide cool refuge from the bright glare of the afternoon.",
+              "lede": "Stone lanterns stand quietly beneath the heavy canopy of ancient trees. Cicadas drone loudly in the heat.",
+              "body": "The thermometer climbs from 26 to 36°C while clear skies leave no room for cooling cloud cover. The UV index hits 8, making direct exposure uncomfortable within minutes of stepping into the open. Sunset occurs at 18:53, casting long shadows across mossy paths and gravel courtyards. Air quality holds at PM2.5 of 36, maintaining a hazy yellow tint over the distant skyline. Financial exchanges operate at 1 USD to 163 JPY for tourists visiting traditional craft shops. Seeking out deep garden shade remains the best strategy for surviving the peak heat.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "Evening breezes finally stir the humid air after a long day of intense heat.",
+              "lede": "Neon signs flicker to life against the darkening sky. The streets grow busier as temperatures dip.",
+              "body": "After reaching highs of 36°C from an early morning low of 26°C, the city slowly cools down after sunset at 18:53. Clear skies dominate the evening, though the UV index of 8 earlier in the day leaves its warmth in the concrete. Air quality remains poor with PM2.5 recorded at 36, encouraging indoor dining by open windows. Currency exchanges trade at 1 USD to 163 JPY for travelers settling evening dinner bills. Neighborhood alleys offer a quieter pace away from the main commercial avenues once night settles in.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Morning light hits the pastel facades along the river while financial exchanges steady.",
+              "lede": "The historic trams rattle up the steep hill past laundry hanging from iron balconies.",
+              "body": "The city moves at its familiar unhurried pace under clear coastal skies and warm Atlantic air. The exchange rate holds steady at 1 USD to 0.88 EUR for travelers settling into local guesthouses. Cobblestone streets echo with the sound of early morning deliveries and the scrape of wooden crates. Cafes fill with the scent of roasted coffee and fresh pasteis de nata baked just minutes prior. Visitors walking the old quarters will find standard weekday services operating normally across all districts. This balanced currency rate makes browsing artisan shops along the steep lanes straightforward.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "River views open up from the hilltop viewpoints as the morning breeze picks up.",
+              "lede": "Tiled facades gleam in the bright sunlight. Seagulls circle lazily above the terracotta roofs.",
+              "body": "Travelers managing their holiday funds will find the exchange rate settled at 1 USD to 0.88 EUR across local banks. The historic center buzzes with quiet routine as residents open their wooden shutters to the morning air. Public spaces and gardens remain open for leisurely strolls beneath the sprawling shade of jacaranda trees. The steady currency value assists visitors planning day trips into neighboring coastal towns via regional rail lines. Every corner of the neighborhood reflects the timeless character of the Portuguese capital.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "Afternoon shadows lengthen across the tiled plazas of the lower city.",
+              "lede": "Outdoor tables fill with residents sharing small plates and cool drinks. The light turns golden on the stone.",
+              "body": "The financial rhythm of the city remains calm with the exchange rate fixed at 1 USD to 0.88 EUR. Markets and neighborhood merchants conduct business as usual without holiday interruptions or closures. Visitors can navigate the winding streets easily, relying on standard currency conversions for all daily purchases. The warm afternoon sun bathes the riverfront in a brilliant amber glow before the evening mist arrives. Observing the late afternoon calm offers an ideal window to appreciate the slower details of Lisbon.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-22T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Clinking glasses replace the noise of afternoon traffic. The scent of grilled fish lingers in the breeze.",
               "source": "saudade desk",
               "source_date": "2026-07-15"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The humid haze settles over the Han River at dusk.",
-              "lede": "Office lights reflect on the dark water as the city transitions into the peak of summer.",
-              "body": "The riverbanks grow crowded with evening walkers. Quiet stillness returns once the heat fades.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "Stone walls in Bukchon radiate heat long after sunset.",
-              "lede": "The ancient alleys retain the day's warmth, creating a heavy, stagnant air in the narrow passages.",
-              "body": "Residents leave their wooden doors slightly ajar. The scent of damp earth lingers near the eaves.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "Lotus flowers bloom in the ponds of Gyeongbokgung.",
-              "lede": "The heavy, waxy petals open fully during the mid-July heat, resting against large, flat leaves.",
-              "body": "Visitors stand in the shade of the pavilions to watch them. The movement is slow and deliberate.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The cicadas begin their rhythmic chorus in the temple gardens.",
-              "lede": "The sound marks the height of the season, vibrating through the thick, green canopy of Yanaka.",
-              "body": "Shadows stretch thin across the gravel paths. The air feels dense with the weight of summer.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "Wind chimes hang from the eaves of traditional wooden houses.",
-              "lede": "A light breeze rings the glass bells, offering a brief, melodic respite from the heavy humidity.",
-              "body": "Shopkeepers spray water on the pavement to cool the entrance. The street looks refreshed for a moment.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "The evening trains carry a quiet, weary crowd toward the suburbs.",
-              "lede": "The fluorescent lights inside the carriages cast a sterile glow on the tired commuters.",
-              "body": "Outside, the city lights blur into streaks of color. The rhythmic clatter remains a constant pulse.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sunlight bleaches the tiles of the Alfama district.",
-              "lede": "The white ceramic surfaces reflect the harsh afternoon glare, making the narrow streets feel blindingly bright.",
-              "body": "Laundry hangs motionless on iron balconies. The cats find deep shade in the corners of doorways.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "The Tagus River breeze brings relief to the waterfront squares.",
-              "lede": "As the sun dips lower, the salt-heavy air cools the stone plazas of Praça do Comércio.",
-              "body": "The cafes fill with people lingering over cold drinks. Shadows lengthen across the patterned cobblestones.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "Bougainvillea spills over the garden walls in Graça.",
-              "lede": "Vibrant pink and purple clusters bloom against the pale stucco, framing the views of the city below.",
-              "body": "The vines grow thick during the long, dry days. They provide a splash of color against the heat.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
             }
           ]
         }
