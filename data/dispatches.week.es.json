@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-22T06:00:00+09:00",
+  "updated": "2026-07-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid alcanza los 38°C este fin de semana",
+              "lede": "El calor aprieta con fuerza mientras la ciudad encara el fin de semana.",
+              "body": "La temperatura oscila entre los 23°C y los 38°C bajo cielos mayormente despejados y un índice ultravioleta que alcanza el nivel 8, considerado muy alto. El sol se oculta alrededor de las 21:38, alargando unas tardes de verano donde la sombra de los grandes parques se vuelve indispensable. Conviene planificar los paseos matutinos antes de que el asfalto acumule el calor del mediodía. Las fuentes públicas de los barrios históricos ofrecen un alivio constante para quienes caminan sin prisa por las aceras. La luz de la tarde tiñe las fachadas de un tono ocre profundo antes de dar paso a la tregua nocturna.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "Aviso por festividades y cierres comerciales",
+              "lede": "El calendario marca celebraciones locales que modifican la rutina diaria de la capital.",
+              "body": "El próximo 25 de julio se celebra Santiago Apóstol, una festividad que altera ligeramente los horarios comerciales y administrativos habituales en la región. Además, el 28 de julio se conmemora el Día de las Instituciones de Cantabria, festividad relevante para las comunidades norteñas residentes. Los trámites bancarios y las oficinas de correos ajustan sus puertas durante estas jornadas de pausa institucional. Es recomendable verificar cualquier gestión pendiente antes de que lleguen estos días de menor actividad urbana. Las calles del centro muestran un pulso más pausado, propicio para la lectura en terrazas tranquilas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "El tipo de cambio oficial se sitúa en 1 USD a 0.88 EUR",
+              "lede": "Los viajeros internacionales operan bajo una paridad estable en las entidades financieras.",
+              "body": "La cotización monetaria actual fija el valor en 1 USD igual a 0.88 EUR para las transacciones habituales de cambio de divisas. Esta estabilidad facilita el cálculo de presupuestos en librerías, cafés de barrio y pequeños mercados artesanales. Las casas de cambio del centro histórico mantienen tarifas transparentes y accesibles para los visitantes que llegan desde el extranjero. Conviene utilizar tarjetas sin comisiones internacionales para simplificar los pagos cotidianos en transporte y hostelería. La economía local fluye con la discreción característica de una capital que atiende tanto al residente como al viajero.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra 31°C con aire mayormente limpio",
+              "lede": "La brisa marina acompaña un día cálido con cielos despejados junto al Mediterráneo.",
+              "body": "Los termómetros se mueven entre los 22°C y los 31°C en una jornada donde la calidad del aire se mantiene en niveles muy favorables, con un registro de PM2.5 de 8. El atardecer llega puntualmente a las 21:17, regalando horizontes dorados sobre el mar. Las mañanas invitan a recorrer los callejones góticos antes de que el calor comience a reflejarse en los adoquines antiguos. La atmósfera limpia permite disfrutar de las vistas desde los miradores urbanos con total nitidez. Los parques urbanos ofrecen refugio fresco bajo la frondosidad de sus árboles centenarios.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "Modificaciones por el festivo de Santiago Apóstol",
+              "lede": "La jornada del 25 de julio trae cierres parciales en servicios administrativos y bancarios.",
+              "body": "La celebración de Santiago Apóstol el 25 de julio marca un paréntesis en la actividad institucional de la ciudad. Asimismo, el 28 de julio se celebra el Día de las Instituciones de Cantabria, afectando a ciertas agendas de carácter autonómico. Los servicios postales y las oficinas bancarias permanecen cerrados o con horarios muy reducidos durante estas fechas clave. Los mercados municipales y los pequeños comercios de barrio adaptan sus persianas al ritmo festivo de los vecinos. Es el momento perfecto para pasear por barrios residenciales donde reina un silencio desacostumbrado.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "Operaciones financieras con un cambio de 1 USD a 0.88 EUR",
+              "lede": "La conversión de moneda extranjera se mantiene estable para el visitante.",
+              "body": "El tipo de cambio actual se establece en 1 USD equivalente a 0.88 EUR en los principales puntos de cambio autorizados. Esta cifra constante ayuda a planificar con precisión los gastos diarios en museos, transporte y gastronomía local. Las librerías independientes y los cafés de especialidad aceptan pagos electrónicos con total fluidez en toda la ciudad. Los cajeros automáticos operan con normalidad, aplicando las tasas estándar del mercado financiero europeo. La relación entre moneda y valor cotidiano acompaña la experiencia de una estancia sosegada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires presenta una excelente calidad del aire",
+              "lede": "La atmósfera porteña se muestra limpia y clara para recorrer las calles arboladas.",
+              "body": "Los registros ambientales sitúan el indicador de PM2.5 en un valor de 10, lo que denota una calidad del aire considerada buena en toda la extensión urbana. Las condiciones atmosféricas favorecen los largos paseos a pie por los bulevares del norte y del sur de la ciudad. La claridad del día permite apreciar con detalle las fachadas históricas y los balcones de hierro forjado. Es una época propicia para detenerse en las tradicionales librerías de viejo sin prisa alguna. La brisa suave acompaña las caminatas vespertinas bajo la densa cobertura vegetal de las plazas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "02",
+              "headline": "Pausas administrativas y ritmo templado en la capital",
+              "lede": "La actividad institucional se adapta al compás pausado del invierno austral.",
+              "body": "Mientras el hemisferio norte transita el verano, la ciudad vive su invierno con un compás calmo y reflexivo en sus dependencias públicas. Los edificios gubernamentales y las oficinas postales mantienen sus horarios habituales sin sobresaltos por festividades locales recientes. Las esquinas tradicionales conservan el bullicio moderado de los cafés donde los vecinos leen el periódico. Las librerías de barrio abren sus puertas ofreciendo refugio contra la brisa fresca de la temporada. Cada rincón invita a la observación detallada de una arquitectura que mezcla nostalgias europeas y criollas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            },
+            {
+              "n": "03",
+              "headline": "Movimientos monetarios y transacciones cotidianas",
+              "lede": "El pulso financiero de la metrópoli mantiene sus referencias habituales para el viajero.",
+              "body": "Las transacciones comerciales en los circuitos formales se rigen por las cotizaciones oficiales vigentes en el mercado cambiario. Los cafés tradicionales y los transportes públicos operan con normalidad mediante medios electrónicos de pago y efectivo. Es recomendable consultar las tasas actualizadas en las entidades bancarias antes de realizar operaciones de cambio significativas. Los quioscos y los mercados barriales aceptan tarjetas con total inmediatez en sus terminales de cobro. La rutina financiera transcurre con la predictibilidad necesaria para disfrutar de la ciudad con total tranquilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-07-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-22T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El público acude con abrigos oscuros a disfrutar de la música clásica. La elegancia se funde con la sobriedad de la estación.",
               "source": "saudade desk",
               "source_date": "2026-07-15"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El asfalto madrileño conserva el calor tras la puesta de sol.",
-              "lede": "La piedra de los edificios históricos irradia una calidez persistente durante las noches de julio.",
-              "body": "Los paseantes buscan la sombra de los soportales en la Plaza Mayor. El aire se vuelve denso al caer la tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "Los jazmines florecen en los patios interiores del Barrio de las Letras.",
-              "lede": "El aroma dulce inunda los callejones estrechos durante las horas de calma extrema.",
-              "body": "Las ventanas permanecen abiertas para capturar la brisa nocturna. Es un refugio silencioso en el centro de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "Las terrazas de los cines de verano inician sus proyecciones bajo las estrellas.",
-              "lede": "El cine al aire libre recupera su lugar como punto de encuentro vecinal.",
-              "body": "El proyector ilumina la pantalla instalada en los antiguos solares. El murmullo de la ciudad queda amortiguado por la proyección.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La brisa del Mediterráneo refresca los balcones del Eixample.",
-              "lede": "El viento marino recorre las manzanas rectangulares al atardecer.",
-              "body": "Los toldos bajan para proteger los interiores de la luz intensa. La vida social se desplaza hacia los espacios abiertos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "Los mercados locales exhiben la madurez de la fruta de hueso.",
-              "lede": "Los puestos de La Boquería ofrecen colores vibrantes propios de la temporada estival.",
-              "body": "El género refleja la cosecha reciente de los campos cercanos. La selección de productos dicta el ritmo de las cocinas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "El parque de la Ciutadella es un refugio bajo la sombra de las acacias.",
-              "lede": "La vegetación ofrece un respiro ante la humedad característica de la costa.",
-              "body": "Los visitantes descansan sobre el césped bajo los árboles centenarios. El tiempo parece detenerse en los senderos arbolados.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El invierno porteño tiñe de gris el cielo sobre el Río de la Plata.",
-              "lede": "Las jornadas son breves y la luz adquiere un tono plateado al mediodía.",
-              "body": "Los árboles de las avenidas muestran sus ramas desnudas. El frío invita a las caminatas pausadas por Recoleta.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "02",
-              "headline": "El aroma a café y libros inunda las librerías de la calle Corrientes.",
-              "lede": "Los lectores buscan refugio en los interiores cálidos frente al descenso de la temperatura.",
-              "body": "Las estanterías altas custodian el silencio de los pasillos estrechos. La rutina urbana se vuelve introspectiva y pausada.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
-            },
-            {
-              "n": "03",
-              "headline": "Los jacarandás esperan el ciclo de floración en los parques de Palermo.",
-              "lede": "La estructura de los árboles destaca contra el cielo invernal de la ciudad.",
-              "body": "Los parques se mantienen en calma durante las mañanas de escarcha. La naturaleza descansa antes de la primavera.",
-              "source": "saudade desk",
-              "source_date": "2026-07-14"
             }
           ]
         }

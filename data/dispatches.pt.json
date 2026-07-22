@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-07-22T06:00:00+09:00",
-  "next_filing": "2026-07-22T21:00:00+00:00",
+  "filed_at": "2026-07-23T06:00:00+09:00",
+  "next_filing": "2026-07-23T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "A luz atinge o índice UV 8 sob céu parcialmente nublado.",
-          "lede": "Os termoscópios marcam entre 20 e 28°C na cidade, prolongando a claridade até às 20:56.",
-          "body": "A tarde convida a pausas prolongadas à sombra enquanto o termómetro oscila entre 20 e 28°C. Com o índice UV a atingir o valor 8, a protecção solar torna-se indispensável para quem percorre a baixa. O céu parcialmente nublado abranda o calor directo, mas mantém a luminosidade intensa até perto das 20:56. Para quem faz câmbios, a taxa de referência fixa-se em 1 USD para 0.88 EUR. É um dia propício para caminhar sem pressa entre miradouros e ruas de calçada polida.",
+          "headline": "A praça do Comércio recebe a luz limpa da manhã.",
+          "lede": "O Tejo reflete o azul claro do verão sem nuvens.",
+          "body": "As pedras calçadas brilham sob o sol firme que já aquece a baixa lisboeta logo cedo. Pela margem sul, o vaivém dos barcos mantém o ritmo calmo de quem cruza o rio por rotina ou silêncio. Nos cafés tradicionais da Ribeira, as mesas na esplanada enchem-se de leitores solitários e chávenas de café curto. Quem passeia pelos miradouros encontra a cidade estendida em tons de ocre e telha antiga. As árvores dos jardins públicos oferecem sombras densas onde os moradores procuram refúgio durante as horas de maior calor. É um tempo propício para caminhar sem pressa pelas ruas inclinadas da capital, escutando o eco distante dos elétricos.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "02",
-          "headline": "O cinema brasileiro ocupa a Galeria Duplacena 77.",
-          "lede": "Karim Aïnouz e Marcelo Gomes inauguram uma mostra de videoarte na cidade.",
-          "body": "A Galeria Duplacena 77 acolhe esta semana uma nova exposição dedicada à videoarte e ao cinema brasileiro. Os realizadores Karim Aïnouz e Marcelo Gomes assinam a curadoria de um espaço que cruza imagens em movimento e reflexão contemporânea. Esta iniciativa cultural junta-se a outras propostas na cidade, como a chegada da lã Churra Algarvia a partir de Loulé e a preparação da grande exposição de LEGO na Europa. É um programa ideal para as horas de maior calor no final da tarde.",
+          "headline": "A cotação oficial fixa o euro estável.",
+          "lede": "Cada dólar troca-se por 0.88 euros nos balcões habituais.",
+          "body": "A conversão cambial mantém-se firme esta semana, facilitando as contas de quem viaja de fora da zona euro. Os mercados financeiros continuam a refletir uma estabilidade discreta nas principais praças europeias. Nos postos de atendimento ao público e nas casas de câmbio históricas da Baixa, o movimento decorre com normalidade e sem filas demoradas. Para os visitantes que planeiam estadias longas ou pequenas compras de artesanato local, esta taxa previsível simplifica o orçamento diário. É aconselhável verificar sempre os valores afixados antes de efetuar qualquer operação financeira. A transparência nos balcões garante segurança em cada transação comercial realizada no centro.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "03",
-          "headline": "O Pavilhão do Conhecimento expande horizontes científicos.",
-          "lede": "O Centro Ciência Viva propõe novas leituras visuais e tecnológicas.",
-          "body": "O Pavilhão do Conhecimento continua a atrair visitantes curiosos pelas suas colecções interactivas e laboratórios abertos. Situado no Parque das Nações, o centro complementa a oferta cultural de Lisboa com experiências adaptadas a todas as idades. Enquanto se aguardam novas mostras internacionais, as exposições residentes mantêm portas abertas durante todo o dia. A proximidade do rio oferece sempre uma brisa ligeira, ideal para contrariar os efeitos das temperaturas que chegam aos 28°C.",
+          "headline": "Os jardins de Belém guardam o silêncio da tarde.",
+          "lede": "A relva verde convida a pausas longas junto ao rio.",
+          "body": "A vegetação luxuriante dos parques ribeirinhos beneficia da rega matinal e do ar fresco que sopra do oceano Atlântico. Famílias locais e leitores atentos ocupam os bancos de madeira sob a copa frondosa das árvores centenárias. O murmúrio da água nas fontes antigas mistura-se com o chilrear dos pássaros que habitam estes recantos urbanos. Perto dos monumentos de pedra calcária, o fluxo de visitantes abranda à medida que o dia avança para o final da tarde. É o momento ideal para observar os detalhes arquitetónicos sem o bulício das horas centrais. A cidade respira num compasso pausado que recompensa quem sabe esperar.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "O nevoeiro matinal dissipa-se lentamente sobre a Ribeira.",
-          "lede": "Os termómetros registam entre 17 e 24°C, com o sol a ocultar-se às 21:00.",
-          "body": "A manhã começa envolta numa neblina característica que se desfaz ao longo das primeiras horas, revelando a silhueta das pontes sobre o Douro. Com temperaturas entre 17 e 24°C, o ambiente mantém-se fresco e propício a longas caminhadas pela marginal. A qualidade do ar é considerada fair, com o indicador PM2.5 fixado em 11, garantindo condições estáveis para estar ao ar livre. O anoitecer estende-se até às 21:00, permitindo jantares tardios com vista para o rio. No plano financeiro, mantém-se a cotação de 1 USD para 0.88 EUR.",
+          "headline": "O céu cinzento cobre a Ribeira com uma luz suave.",
+          "lede": "Os termómetros marcam entre 19 e 24°C sob um manto overcast.",
+          "body": "A atmosfera portuense veste-se de tons neutros nesta jornada de verão temperado e sem excessos térmicos. O ar apresenta uma qualidade fair, registando 12 de PM2.5, o que torna a respiração ao ar livre leve e agradável. As fachadas graníticas da margem duriense ganham uma textura melancólica sob a cobertura persistente das nuvens altas. Os barcos rabelos alinham-se pacientemente junto ao cais, balançados pelo movimento lento das correntes fluviais. A temperatura amena convida a longas caminhadas pelas ruas íngremes que sobem em direção à Sé. É uma paisagem urbana que favorece a contemplação silenciosa e o ritmo pausado dos dias nortenhos.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "02",
-          "headline": "O Objeto do Mês ganha destaque na agenda cultural.",
-          "lede": "A Casa do Infante promove uma visita comentada à cronologia 2016-2025.",
-          "body": "A agenda cultural destaca a visita comentada subordinada ao tema Objeto do Mês, revisitando a exposição temporária do período entre 2016 e 2025. Esta iniciativa convida a uma observação detalhada de peças que definiram a memória recente da cidade. Paralelamente, o Porto inspira eventos além-fronteiras locais, como o festival de teatro de rua em Porto de Mós e a celebração dos 50 anos da Autonomia da Madeira com a chegada da exposição 50 Anos - 50 Braguinhas ao Porto Santo. A programação artística continua rica em pequenas descobertas.",
+          "headline": "A conversão monetária mantém o valor habitual.",
+          "lede": "A cotação fixa-se em 1 USD para 0.88 EUR nos serviços financeiros.",
+          "body": "A estabilidade cambial permanece inalterada na cidade, acompanhando os padrões verificados em todo o território nacional. Quem chega de fora encontra facilidade nos pagamentos eletrónicos e nas trocas efetuadas nas instituições bancárias locais. Os estabelecimentos comerciais do centro histórico processam as operações diárias sem sobressaltos ou variações inesperadas. Esta consistência financeira apoia o planeamento tranquilo de itinerários culturais por livrarias, cafés e adegas tradicionais. A gestão do orçamento de viagem torna-se mais simples com taxas previsíveis e transparentes. O comércio tradicional e os espaços modernos aceitam esta referência sem atritos de maior.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "03",
-          "headline": "A brisa atlântica suaviza o clima na foz do rio.",
-          "lede": "A atmosfera tranquila convida a percorrer os jardins e arruamentos ribeirinhos.",
-          "body": "A atmosfera urbana respira com serenidade enquanto o nevoeiro cede lugar a uma tarde luminosa mas temperada. Com o ar classificado como fair e PM2.5 a 11, passear pelos espaços verdes da cidade revela-se um exercício revigorante. Os cafés tradicionais e as livrarias históricas oferecem refúgio contra o vento húmido que por vezes sopra do mar. A noite cai de forma gradual, prolongando-se até às 21:00 num ritmo pausado que caracteriza a identidade duriense.",
+          "headline": "A noite desce sobre o Douro pouco antes das 21:00.",
+          "lede": "O crepúsculo prolonga-se enquanto as pontes acendem as primeiras luzes.",
+          "body": "O pôr do sol ocorre pontualmente às 21:00, marcando a transição suave entre o dia nublado e a penumbra noturna. À medida que a claridade diminui, os candeeiros públicos delineiam os arcos seculares das pontes sobre o rio. A circulação automóvel e pedonal adapta-se à penumbra com a serenidade habitual dos residentes do norte. Nas esplanadas abrigadas do vento fluvial, conversas discretas acompanham copos de vinho verde fresco. A qualidade do ar continua estável, permitindo desfrutar do exterior até tarde sem incómodos atmosféricos. É o fecho perfeito para um dia moldado pela sobriedade e pela beleza melancólica do Porto.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "O nevoeiro matinal envolve os palácios da serra.",
-          "lede": "A temperatura oscila entre 18 e 25°C sob um índice UV de valor 8.",
-          "body": "A serra acorda coberta por uma bruma densa que protege a vegetação luxuriante do calor iminente. Ao longo do dia, o termómetro varia entre 18 e 25°C, enquanto o índice UV atinge o patamar 8, exigindo cuidado redobrado nos trilhos expostos. A qualidade do ar regista-se como fair, com PM2.5 em 8, mantendo a pureza habitual da atmosfera serrana. O pôr do sol ocorre às 20:57, oferecendo os últimos tons dourados sobre a paisagem cultural. A taxa de câmbio permanece estável em 1 USD para 0.88 EUR.",
+          "headline": "A serra oculta-se sob um manto parcialmente nublado.",
+          "lede": "Os registos térmicos situam-se entre 18 e 24°C na encosta.",
+          "body": "A humidade matinal evapora-se lentamente entre os fetos e as árvores antigas que cobrem a montanha mística. Com termómetros a oscilar entre 18 e 24°C, o clima convida a subidas tranquilas pelos trilhos sombreados da serra. A cobertura de nuvens fragmentadas deixa passar clarões súbitos que iluminam os palácios escondidos na vegetação. Os visitantes caminham com precaução redobrada devido ao índice UV 8, que se mantém muito alto apesar da nebulosidade passageira. A proteção solar torna-se indispensável para quem passa longas horas ao ar livre nos jardins históricos. É um cenário de transição onde a natureza respira num equilíbrio delicado e constante.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "02",
-          "headline": "As exposições caninas ocupam a vila durante 3 dias.",
-          "lede": "O programa inclui entradas gratuitas e encontros dedicados aos amantes de animais.",
-          "body": "Sintra recebe este fim-de-semana três dias consecutivos de exposições caninas com entrada inteiramente gratuita, reunindo criadores e visitantes nos espaços designados da vila. A iniciativa complementa-se com o Festival de Folclore no Sabugo, que assinala os 60 anos do grupo das Lavadeiras, celebrando as tradições etnográficas locais. Para quem procura movimento, o programa Sintra+Ativa leva iniciativas desportivas e de lazer ao Parque Urbano Felício Loureiro. São propostas que dinamizam as freguesias fora dos circuitos estritamente monumentais.",
+          "headline": "Os espaços verdes exigem cuidado com a radiação solar.",
+          "lede": "O nível UV 8 exige proteção adequada nos trilhos da serra.",
+          "body": "A intensidade solar na região serrana surpreende quem se aventura pelos parques românticos sem proteção adequada. Embora o céu apresente abertas e nuvens intercaladas, a radiação ultravioleta atinge o patamar de 8, considerado muito alto. Os jardineiros e guardas dos parques aconselham o uso de chapéus e óculos escuros durante os percursos pedestres. A qualidade do ar permanece em níveis muito favoráveis, registando 7 de PM2.5, o que purifica a atmosfera boscosa. Os recantos verdejantes do Parque da Pena oferecem túneis arbóreos onde a sombra abriga temporariamente os caminhantes. Cada recanto convida ao descanso prolongado longe da urgência do mundo moderno.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         },
         {
           "n": "03",
-          "headline": "Os jardins históricos beneficiam da humidade matinal.",
-          "lede": "A vegetação densa conserva a frescura típica da encosta atlântica.",
-          "body": "Os parques românticos da vila encontram nas condições de nevoeiro matinal o elemento ideal para preservar o seu esplendor botânico. Com a temperatura máxima a fixar-se nos 25°C, caminhar sob a copa das árvores centenárias proporciona um refúgio natural contra a intensidade do sol. O final da tarde, prolongado até às 20:57, convida a regressar aos miradouros à medida que a neblina regressa suavemente às copas. É um tempo de contemplação silenciosa nos caminhos de pedra.",
+          "headline": "O crepúsculo ilumina as torres românticas às 20:56.",
+          "lede": "A claridade desvanece-se lentamente sobre a encosta atlântica.",
+          "body": "O sol despede-se da paisagem sintrense pontualmente às 20:56, tingindo o horizonte de tons dourados e cinzentos. A descida da noite traz uma brisa fresca que contrasta com o calor acumulado durante as horas de maior exposição. Os turistas diurnos já abandonaram os palácios, devolvendo à vila a sua calma secular e recatada. Nas ruas estreitas do centro histórico, as portas de madeira fecham-se enquanto os moradores desfrutam da serenidade noturna. É o momento em que a serra recupera o seu mistério original, sussurrada pelo vento entre os pinheiros centenários. A vila adormece sob uma atmosfera de recolhimento poético e absoluto sossego.",
           "source": "saudade desk",
-          "source_date": "2026-07-22"
+          "source_date": "2026-07-23"
         }
       ]
     }
