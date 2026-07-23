@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-23T06:00:00+09:00",
+  "updated": "2026-07-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Mañana es festivo por Santiago Apóstol en la capital.",
+              "lede": "Las administraciones públicas y entidades bancarias permanecerán cerradas este 2026-07-25 debido a la festividad.",
+              "body": "Mañana es festivo por Santiago Apóstol en la capital. Las administraciones públicas y entidades bancarias permanecerán cerradas este 2026-07-25 debido a la festividad. Los servicios esenciales municipales operarán con normalidad mientras que el comercio local ajustará sus horarios habituales. Es un día propicio para pasear por unas calles históricas notablemente más silenciosas de lo habitual. Los visitantes encontrarán menor afluencia en los principales museos y espacios culturales del centro. Conviene revisar las aperturas específicas antes de planificar desplazamientos largos este viernes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "02",
+              "headline": "El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR.",
+              "lede": "Esta referencia monetaria rige las transacciones financieras y comerciales en la región durante toda la semana.",
+              "body": "El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR. Esta referencia monetaria rige las transacciones financieras y comerciales en la región durante toda la semana. Los viajeros procedentes de Estados Unidos perciben una estabilidad favorable en sus gastos cotidianos en alojamientos y restaurantes. Las tarjetas de crédito procesan las conversiones de forma automática aplicando esta paridad vigente. Conviene consultar las comisiones bancarias particulares antes de realizar operaciones de gran envergadura en comercios locales. La economía urbana transcurre con la fluidez habitual propia de la temporada estival madrileña.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "03",
+              "headline": "Escenas de Verano despide julio con propuestas culturales gratuitas.",
+              "lede": "El programa institucional ofrece cine al aire libre, música clásica y artes escénicas en diversos puntos.",
+              "body": "Escenas de Verano despide julio con propuestas culturales gratuitas. El programa institucional ofrece cine al aire libre, música clásica y artes escénicas en diversos puntos. Las plazas y parques de la región acogen espectáculos diseñados para disfrutar de las templadas noches estivales. Paralelamente, se prepara la llegada del festival nocturno que llenará de actividad las semanas venideras. El Parque Juan Carlos I ultima los detalles para acoger en septiembre los tradicionales farolillos flotantes asiáticos. Los ciudadanos ya pueden consultar los calendarios detallados de cada actividad en las plataformas oficiales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La jornada se presenta con cielos cubiertos y temperaturas de 23 a 30°C.",
+              "lede": "El termómetro alcanza los 30°C bajo un manto nuboso que suaviza la intensidad del sol estival.",
+              "body": "La jornada se presenta con cielos cubiertos y temperaturas de 23 a 30°C. El termómetro alcanza los 30°C bajo un manto nuboso que suaviza la intensidad del sol estival. La calidad del aire es fair con un registro de PM2.5 de 11, ofreciendo un ambiente aceptable para la movilidad urbana. El ocaso está previsto para las 21:16, alargando las horas de luz vespertina en los paseos marítimos. El tipo de cambio oficial se mantiene en 1 USD por 0.88 EUR para las transacciones monetarias vigentes. Estas condiciones meteorológicas resultan idóneas para recorrer los espacios públicos sin el agobio del calor extremo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "02",
+              "headline": "Mañana se celebra Santiago Apóstol con cierres administrativos generalizados.",
+              "lede": "Las oficinas gubernamentales y las entidades bancarias permanecerán cerradas este 2026-07-25 por ser jornada festiva.",
+              "body": "Mañana se celebra Santiago Apóstol con cierres administrativos generalizados. Las oficinas gubernamentales y las entidades bancarias permanecerán cerradas este 2026-07-25 por ser jornada festiva. Los residentes aprovechan la pausa laboral para disfrutar de las exposiciones gratuitas y festivales culturales de la ciudad. El transporte público funcionará con los horarios adaptados propios de los días festivos en el área metropolitana. Conviene anticipar cualquier gestión burocrática urgente antes del cierre oficial de las dependencias. La festividad de la próxima semana, el Día de las Instituciones de Cantabria el 2026-07-28, no afecta al calendario laboral catalán.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "03",
+              "headline": "El Parc del Fòrum y las salas de la ciudad concentran la agenda cultural.",
+              "lede": "Barcelona despide la Exposición Central del Congreso Mundial de Arquitectos UIA 2026 tras superar los 20.000 visitantes.",
+              "body": "El Parc del Fòrum y las salas de la ciudad concentran la agenda cultural. Barcelona despide la Exposición Central del Congreso Mundial de Arquitectos UIA 2026 tras superar los 20.000 visitantes. Las muestras temporales dedicadas al universo cinematográfico y los festivales musicales completan la oferta de ocio. Los espacios abiertos del litoral acogen a los asistentes con total normalidad bajo el cielo nublado. La participación ciudadana en estos eventos confirma el dinamismo artístico de la capital catalana este verano. Se recomienda consultar los accesos específicos y los horarios de cada recinto cultural con antelación.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El invierno porteño registra hoy temperaturas de 12 a 15°C con llovizna.",
+              "lede": "Una ligera precipitación de 1mm acompaña la jornada fresca mientras el sol se despide a las 18:07.",
+              "body": "El invierno porteño registra hoy temperaturas de 12 a 15°C con llovizna. Una ligera precipitación de 1mm acompaña la jornada fresca mientras el sol se despide a las 18:07. La calidad del aire se mantiene en niveles good con un índice PM2.5 de 9, propicio para la respiración urbana. El abrigo ligero resulta indispensable para transitar por las calles húmedas y los parques arbolados de la ciudad. Las condiciones climáticas inviten al resguardo en cafés históricos y librerías tradicionales del centro. La atmósfera gris otorga a la capital esa quietud melancólica tan característica de sus tardes invernales.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "02",
+              "headline": "Las vacaciones de invierno dinamizan los espacios lúdicos y culturales porteños.",
+              "lede": "El parque inflable gigante instalado en CABA atrae a numerosas familias durante el receso escolar.",
+              "body": "Las vacaciones de invierno dinamizan los espacios lúdicos y culturales porteños. El parque inflable gigante instalado en CABA atrae a numerosas familias durante el receso escolar. La cartelera cinematográfica internacional también celebra el talento local con próximos estrenos destacados en la Mostra de Venecia. Asimismo, la música sinfónica dialoga con las tradiciones en conciertos especiales programados por las fiestas patronales. Los centros de exposiciones y convenciones continúan exhibiendo proyectos arquitectónicos y urbanísticos innovadores. Estas propuestas ofrecen alternativas cálidas para paliar la frescura exterior de la temporada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            },
+            {
+              "n": "03",
+              "headline": "La programación artística municipal integra la música y el patrimonio urbano.",
+              "lede": "Los auditorios y galerías de la ciudad acogen ciclos de conciertos sinfónicos y muestras de diseño.",
+              "body": "La programación artística municipal integra la música y el patrimonio urbano. Los auditorios y galerías de la ciudad acogen ciclos de conciertos sinfónicos y muestras de diseño. Los encuentros culturales refuerzan el intercambio entre creadores locales y visitantes durante el mes de julio. Los espacios verdes y centros de convenciones muestran intervenciones paisajísticas recientes de gran interés público. Conviene revisar las reservas previas para los espectáculos infantiles y conciertos debido a la alta demanda estacional. La vida cultural de Buenos Aires mantiene su pulso constante a pesar del descenso térmico.",
+              "source": "saudade desk",
+              "source_date": "2026-07-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Buenos Aires despliega su oferta gratuita con el Festival de las Estrellas, un evento que aprovecha la vitalidad de sus espacios culturales. Hoy, la ciudad enfrenta 11.8mm de lluvia y posibles tormentas con granizo, con temperaturas entre 18–20°C. La calidad del aire es fair, con un índice de 7 para PM2.5. La reciente apertura del Parque de la Innovación brinda una nueva perspectiva sobre el desarrollo urbano local. Con la puesta de sol a las 18:02, las actividades en interiores como la muestra del Moderno cobran protagonismo. Es un momento propicio para observar la ciudad bajo una luz distinta, refugiándose en sus galerías y museos hasta que el tiempo se estabilice mañana.",
               "source": "saudade desk",
               "source_date": "2026-07-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-15T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las noches de verano invitan al descanso bajo las acacias.",
-              "lede": "El aire estancado del mediodía deja paso a una brisa tenue en los patios interiores.",
-              "body": "Las persianas permanecen bajadas hasta la caída del sol. El asfalto desprende el calor acumulado en las horas de luz.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "02",
-              "headline": "El Jardín Botánico resguarda sus especies del sol intenso.",
-              "lede": "Los sistemas de riego nebulizado refrescan los caminos principales durante el horario de apertura.",
-              "body": "La vegetación busca la sombra de los ejemplares más antiguos. Es un refugio necesario frente a la aridez de julio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "03",
-              "headline": "La actividad cultural se desplaza hacia los cines de verano.",
-              "lede": "Las proyecciones al aire libre aprovechan la bajada de temperatura en los distritos periféricos.",
-              "body": "El aroma a palomitas se mezcla con el aire seco de la noche. Los vecinos ocupan sus sillas plegables con calma.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La brisa marina suaviza el ambiente en el Barrio Gótico.",
-              "lede": "El aire del Mediterráneo recorre las calles estrechas al final de la tarde.",
-              "body": "Las fachadas de piedra conservan una frescura atípica. Es el momento preferido para pasear sin rumbo fijo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "02",
-              "headline": "Las terrazas de los mercados locales exhiben frutas de temporada.",
-              "lede": "El color de los melocotones y los higos marca el ritmo del calendario estival.",
-              "body": "Los puestos lucen su mejor género antes del cierre. La clientela busca productos frescos para las comidas ligeras.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "03",
-              "headline": "El Parc de la Ciutadella acoge a los lectores bajo los plátanos.",
-              "lede": "Las sombras proyectadas por los árboles ofrecen un respiro frente a la humedad del litoral.",
-              "body": "Los bancos de madera son el lugar predilecto para observar el paso del tiempo. El silencio predomina sobre el bullicio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El invierno porteño tiñe los parques de tonos ocres.",
-              "lede": "La luz del sol de julio es tenue y se filtra entre las ramas desnudas.",
-              "body": "El aire frío invita a buscar refugio en los cafés de siempre. La ciudad camina con paso apresurado por las avenidas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "02",
-              "headline": "Las librerías de antiguo mantienen sus puertas abiertas al frío.",
-              "lede": "El aroma a papel viejo y café caliente domina los interiores de San Telmo.",
-              "body": "Los lectores se agrupan cerca de las estanterías de madera. El tiempo parece detenerse entre las páginas desgastadas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
-            },
-            {
-              "n": "03",
-              "headline": "El Teatro Colón inicia su ciclo de conciertos invernales.",
-              "lede": "La acústica de la sala principal resuena con la calidez de las maderas nobles.",
-              "body": "El público acude con abrigos oscuros a disfrutar de la música clásica. La elegancia se funde con la sobriedad de la estación.",
-              "source": "saudade desk",
-              "source_date": "2026-07-15"
             }
           ]
         }
