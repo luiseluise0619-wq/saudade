@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-07-23T06:00:00+09:00",
-  "next_filing": "2026-07-23T21:00:00+00:00",
+  "filed_at": "2026-07-24T06:00:00+09:00",
+  "next_filing": "2026-07-24T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Lisboa",
+      "city": "LISBOA",
       "items": [
         {
           "n": "01",
-          "headline": "A praça do Comércio recebe a luz limpa da manhã.",
-          "lede": "O Tejo reflete o azul claro do verão sem nuvens.",
-          "body": "As pedras calçadas brilham sob o sol firme que já aquece a baixa lisboeta logo cedo. Pela margem sul, o vaivém dos barcos mantém o ritmo calmo de quem cruza o rio por rotina ou silêncio. Nos cafés tradicionais da Ribeira, as mesas na esplanada enchem-se de leitores solitários e chávenas de café curto. Quem passeia pelos miradouros encontra a cidade estendida em tons de ocre e telha antiga. As árvores dos jardins públicos oferecem sombras densas onde os moradores procuram refúgio durante as horas de maior calor. É um tempo propício para caminhar sem pressa pelas ruas inclinadas da capital, escutando o eco distante dos elétricos.",
+          "headline": "O Festival Verão Clássico arranca em Lisboa com Verdi, Rossini e Puccini.",
+          "lede": "As grandes obras corais preenchem as noites da cidade neste final de julho.",
+          "body": "A programação musical da capital acolhe o Festival Verão Clássico, trazendo partituras exigentes de Verdi, Rossini e Puccini para as salas de concerto. Para quem viaja e aprecia a pausa sonora, estas atuações oferecem um refúgio calmo no meio do movimento urbano. O câmbio oficial cotado esta semana situa-se em 1 USD para 0.88 EUR, um detalhe útil para planear despesas culturais. Os bilhetes encontram-se disponíveis nas bilheteiras habituais e esgotam com facilidade. Recomenda-se chegar com antecedência para evitar filas prolongadas à entrada.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "02",
-          "headline": "A cotação oficial fixa o euro estável.",
-          "lede": "Cada dólar troca-se por 0.88 euros nos balcões habituais.",
-          "body": "A conversão cambial mantém-se firme esta semana, facilitando as contas de quem viaja de fora da zona euro. Os mercados financeiros continuam a refletir uma estabilidade discreta nas principais praças europeias. Nos postos de atendimento ao público e nas casas de câmbio históricas da Baixa, o movimento decorre com normalidade e sem filas demoradas. Para os visitantes que planeiam estadias longas ou pequenas compras de artesanato local, esta taxa previsível simplifica o orçamento diário. É aconselhável verificar sempre os valores afixados antes de efetuar qualquer operação financeira. A transparência nos balcões garante segurança em cada transação comercial realizada no centro.",
+          "headline": "O projeto imobiliário de luxo em Belém reabre o debate sobre os espaços livres.",
+          "lede": "A margem ribeirinha continua a ser discutida por residentes e urbanistas atentos.",
+          "body": "A intervenção planeada para a zona histórica de Belém volta a colocar em cima da mesa a preservação das zonas de circulação pública e vistas abertas sobre o Tejo. Quem caminha pela frente ribeirinha percebe a importância de manter estes corredores desimpedidos de construções densas. A taxa de câmbio de referência permanece estável em 1 USD para 0.88 EUR. Este tipo de planeamento urbano afeta diretamente a experiência de quem visita Lisboa a pé ou de bicicleta. A escuta atenta da cidade revela que o equilíbrio entre modernização e património continua delicado.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "03",
-          "headline": "Os jardins de Belém guardam o silêncio da tarde.",
-          "lede": "A relva verde convida a pausas longas junto ao rio.",
-          "body": "A vegetação luxuriante dos parques ribeirinhos beneficia da rega matinal e do ar fresco que sopra do oceano Atlântico. Famílias locais e leitores atentos ocupam os bancos de madeira sob a copa frondosa das árvores centenárias. O murmúrio da água nas fontes antigas mistura-se com o chilrear dos pássaros que habitam estes recantos urbanos. Perto dos monumentos de pedra calcária, o fluxo de visitantes abranda à medida que o dia avança para o final da tarde. É o momento ideal para observar os detalhes arquitetónicos sem o bulício das horas centrais. A cidade respira num compasso pausado que recompensa quem sabe esperar.",
+          "headline": "O Pavilhão do Conhecimento prepara oficinas científicas para os dias de verão.",
+          "lede": "O Parque das Nações atrai famílias em busca de atividades práticas e abrigadas.",
+          "body": "No Parque das Nações, o Pavilhão do Conhecimento mantém as portas abertas com exposições interativas desenhadas para todas as idades. É uma excelente alternativa para os dias em que o calor se faz sentir com mais intensidade junto ao rio. A conversão monetária atual regista 1 USD para 0.88 EUR nas principais transações financeiras. Paralelamente, os preparativos para o Festival Iminente em setembro, que juntará Mind da Gap, Sam The Kid e Vhils, já animam os bastidores culturais da cidade. Lisboa vive este período estival entre a ciência, a música urbana e a contemplação do Tejo.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         }
       ]
     },
     {
-      "city": "Porto",
+      "city": "PORTO",
       "items": [
         {
           "n": "01",
-          "headline": "O céu cinzento cobre a Ribeira com uma luz suave.",
-          "lede": "Os termómetros marcam entre 19 e 24°C sob um manto overcast.",
-          "body": "A atmosfera portuense veste-se de tons neutros nesta jornada de verão temperado e sem excessos térmicos. O ar apresenta uma qualidade fair, registando 12 de PM2.5, o que torna a respiração ao ar livre leve e agradável. As fachadas graníticas da margem duriense ganham uma textura melancólica sob a cobertura persistente das nuvens altas. Os barcos rabelos alinham-se pacientemente junto ao cais, balançados pelo movimento lento das correntes fluviais. A temperatura amena convida a longas caminhadas pelas ruas íngremes que sobem em direção à Sé. É uma paisagem urbana que favorece a contemplação silenciosa e o ritmo pausado dos dias nortenhos.",
+          "headline": "O hotel boutique na zona histórica reabre com restaurante japonês de Vítor Matos.",
+          "lede": "A hotelaria nortenha renova espaços com propostas gastronómicas de assinatura reconhecida.",
+          "body": "Após um período de fecho repentino que surpreendeu os moradores, a unidade hoteleira recupera a atividade na Invicta com uma nova oferta de alta cozinha a cargo do chefe Vítor Matos. A novidade enriquece o panorama culinário da baixa, atraindo residentes curiosos e viajantes atentos aos detalhes. Nas trocas financeiras correntes, o valor de referência mantém-se fixado em 1 USD para 0.88 EUR. A reserva prévia torna-se indispensável para garantir mesa no espaço japonês integrado. O Porto confirma assim a sua capacidade de reinventar os edifícios recuperados.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "02",
-          "headline": "A conversão monetária mantém o valor habitual.",
-          "lede": "A cotação fixa-se em 1 USD para 0.88 EUR nos serviços financeiros.",
-          "body": "A estabilidade cambial permanece inalterada na cidade, acompanhando os padrões verificados em todo o território nacional. Quem chega de fora encontra facilidade nos pagamentos eletrónicos e nas trocas efetuadas nas instituições bancárias locais. Os estabelecimentos comerciais do centro histórico processam as operações diárias sem sobressaltos ou variações inesperadas. Esta consistência financeira apoia o planeamento tranquilo de itinerários culturais por livrarias, cafés e adegas tradicionais. A gestão do orçamento de viagem torna-se mais simples com taxas previsíveis e transparentes. O comércio tradicional e os espaços modernos aceitam esta referência sem atritos de maior.",
+          "headline": "A exposição Equilibrium inaugura na Paróquia de Santa Maria Madalena.",
+          "lede": "O património religioso do Porto acolhe criações plásticas dedicadas à contemplação.",
+          "body": "A mostra intitulada Equilibrium abre portas ao público na Paróquia de Santa Maria Madalena, cruzando a arquitetura sacra com a expressão artística contemporânea. Trata-se de um ponto de paragem silencioso para quem percorre as ruas da cidade em busca de recantos menos óbvios. A cotação cambial oficial continua nos 1 USD para 0.88 EUR. Paralelamente, o arquivo municipal promove a visita comentada Objeto do Mês, revisitando o acervo recolhido entre 2016 e 2025. Ambas as iniciativas reforçam a oferta cultural dedicada a quem privilegia o ritmo lento e a observação atenta.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "03",
-          "headline": "A noite desce sobre o Douro pouco antes das 21:00.",
-          "lede": "O crepúsculo prolonga-se enquanto as pontes acendem as primeiras luzes.",
-          "body": "O pôr do sol ocorre pontualmente às 21:00, marcando a transição suave entre o dia nublado e a penumbra noturna. À medida que a claridade diminui, os candeeiros públicos delineiam os arcos seculares das pontes sobre o rio. A circulação automóvel e pedonal adapta-se à penumbra com a serenidade habitual dos residentes do norte. Nas esplanadas abrigadas do vento fluvial, conversas discretas acompanham copos de vinho verde fresco. A qualidade do ar continua estável, permitindo desfrutar do exterior até tarde sem incómodos atmosféricos. É o fecho perfeito para um dia moldado pela sobriedade e pela beleza melancólica do Porto.",
+          "headline": "O parque municipal recebe música, teatro e oficinas gratuitas ao domingo.",
+          "lede": "Os espaços verdes da cidade transformam-se em palcos abertos para famílias e transeuntes.",
+          "body": "A agenda dominical do Porto aposta na descentralização cultural através de um programa ao ar livre que inclui teatro ligeiro, apontamentos musicais e oficinas pedagógicas sem custo de entrada. É uma oportunidade para desfrutar da vegetação urbana sem pressas, observando a rotina dos habitantes locais. Para quem chega de fora, a taxa de câmbio pratica-se a 1 USD para 0.88 EUR. Os relvados convidam ao descanso prolongado nas horas de menor calor. Estas iniciativas gratuitas consolidam o papel dos jardins como verdadeiras salas de estar da comunidade nortenha.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         }
       ]
     },
     {
-      "city": "Sintra",
+      "city": "SINTRA",
       "items": [
         {
           "n": "01",
-          "headline": "A serra oculta-se sob um manto parcialmente nublado.",
-          "lede": "Os registos térmicos situam-se entre 18 e 24°C na encosta.",
-          "body": "A humidade matinal evapora-se lentamente entre os fetos e as árvores antigas que cobrem a montanha mística. Com termómetros a oscilar entre 18 e 24°C, o clima convida a subidas tranquilas pelos trilhos sombreados da serra. A cobertura de nuvens fragmentadas deixa passar clarões súbitos que iluminam os palácios escondidos na vegetação. Os visitantes caminham com precaução redobrada devido ao índice UV 8, que se mantém muito alto apesar da nebulosidade passageira. A proteção solar torna-se indispensável para quem passa longas horas ao ar livre nos jardins históricos. É um cenário de transição onde a natureza respira num equilíbrio delicado e constante.",
+          "headline": "A atmosfera serrana regista valores amenos com índice ultravioleta muito elevado.",
+          "lede": "O termómetro oscila entre 18 e 23°C sob céu parcialmente nublado na serra.",
+          "body": "A meteorologia desta quinta-feira em Sintra apresenta uma amplitude térmica moderada, com mínimas de 18°C e máximas que não ultrapassam os 23°C. O ar permanece limpo, registando um valor de PM2.5 de 7, o que favorece as caminhadas matinais pelos trilhos sombreados. Contudo, o índice UV atinge o nível 8, exigindo proteção solar adequada para quem passa o dia ao ar livre. O pôr do sol está previsto para as 20:56, permitindo aproveitar as longas horas de luz vespertina. A conversão cambial oficial situa-se em 1 USD para 0.88 EUR. A serra mantém o seu microclima fresco, ideal para escapar ao calor intenso da capital.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "02",
-          "headline": "Os espaços verdes exigem cuidado com a radiação solar.",
-          "lede": "O nível UV 8 exige proteção adequada nos trilhos da serra.",
-          "body": "A intensidade solar na região serrana surpreende quem se aventura pelos parques românticos sem proteção adequada. Embora o céu apresente abertas e nuvens intercaladas, a radiação ultravioleta atinge o patamar de 8, considerado muito alto. Os jardineiros e guardas dos parques aconselham o uso de chapéus e óculos escuros durante os percursos pedestres. A qualidade do ar permanece em níveis muito favoráveis, registando 7 de PM2.5, o que purifica a atmosfera boscosa. Os recantos verdejantes do Parque da Pena oferecem túneis arbóreos onde a sombra abriga temporariamente os caminhantes. Cada recanto convida ao descanso prolongado longe da urgência do mundo moderno.",
+          "headline": "Sintra promove um fim de semana cultural com múltiplas atividades de lazer.",
+          "lede": "A programação municipal convida a descobertas tranquilas pelo património e vilas.",
+          "body": "A agenda cultural do concelho propõe percursos guiados e iniciativas de lazer concebidas para valorizar a identidade local longe das grandes multidões. A circulação na vila requer atenção aos horários dos transportes públicos locais devido à afluência habitual de visitantes. A moeda estrangeira troca-se à proporção de 1 USD para 0.88 EUR. A qualidade do ar local é classificada como razoável, com o parâmetro PM2.5 em 7, beneficiando as atividades pedestres. O entardecer prolonga-se até às 20:56, oferecendo excelentes condições para regressar a pé dos palácios para o centro histórico.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         },
         {
           "n": "03",
-          "headline": "O crepúsculo ilumina as torres românticas às 20:56.",
-          "lede": "A claridade desvanece-se lentamente sobre a encosta atlântica.",
-          "body": "O sol despede-se da paisagem sintrense pontualmente às 20:56, tingindo o horizonte de tons dourados e cinzentos. A descida da noite traz uma brisa fresca que contrasta com o calor acumulado durante as horas de maior exposição. Os turistas diurnos já abandonaram os palácios, devolvendo à vila a sua calma secular e recatada. Nas ruas estreitas do centro histórico, as portas de madeira fecham-se enquanto os moradores desfrutam da serenidade noturna. É o momento em que a serra recupera o seu mistério original, sussurrada pelo vento entre os pinheiros centenários. A vila adormece sob uma atmosfera de recolhimento poético e absoluto sossego.",
+          "headline": "As exposições caninas ocupam a vila durante três dias com entrada livre.",
+          "lede": "Os espaços designados do município recebem criadores e aficionados da cinofilia.",
+          "body": "Durante este fim de semana, Sintra acolhe três dias consecutivos de exibições caninas abertas ao público sem custos de bilheteira, atraindo criadores de várias regiões. O evento decorre num ambiente ordeiro e familiar, aproveitando a brisa da serra com temperaturas entre 18 e 23°C. O índice UV mantém-se nos 8 pontos, pelo que se aconselha o uso de chapéus e protetor nas zonas descobertas. O sol despede-se da paisagem cultural às 20:56, fechando o dia com luz dourada sobre a vegetação luxuriante. A taxa de câmbio de 1 USD para 0.88 EUR permanece válida em todas as transações locais. É um pretexto calmo para subir à serra e observar a vida comunitária.",
           "source": "saudade desk",
-          "source_date": "2026-07-23"
+          "source_date": "2026-07-24"
         }
       ]
     }
