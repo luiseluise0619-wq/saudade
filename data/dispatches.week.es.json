@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-25T06:00:00+09:00",
+  "updated": "2026-07-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cambio de divisas se sitúa este mes en 1 USD por 0.88 EUR.",
+              "lede": "Los viajeros norteamericanos notan una ligera variación en sus transacciones cotidianas al operar en efectivo o tarjeta.",
+              "body": "La economía local opera bajo un tipo de cambio estable que favorece las transacciones en pequeños comercios de barrio. Los cajeros automáticos del centro histórico aplican esta paridad sin comisiones ocultas si se elige el cobro en moneda local. Conviene revisar las condiciones del banco emisor antes de realizar grandes pagos en establecimientos tradicionales. Las librerías de viejo y los cafés centenarios aceptan ambos métodos de pago habituales con total normalidad. Este valor facilita el cálculo rápido de los precios en los mercados municipales durante las compras matinales. Los residentes recomiendan utilizar tarjetas sin comisiones internacionales para maximizar el rendimiento del presupuesto diario de viaje.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "El festivo de Santiago Apóstol deja calles tranquilas tras los actos religiosos.",
+              "lede": "Las celebraciones del 25 de julio modifican los horarios habituales de apertura en los comercios del casco antiguo.",
+              "body": "La festividad nacional del 25 de julio altera ligeramente el ritmo habitual de la capital española durante el fin de semana. Numerosos establecimientos de barrio y oficinas administrativas permanecen cerrados al público por descanso festivo. Los museos estatales mantienen sus puertas abiertas con horarios especiales que conviene consultar con antelación. Las terrazas del Paseo del Prado recuperan una quietud inusual al descender el tráfico rodado por las avenidas principales. Es una ocasión propicia para recorrer los callejones del Madrid de los Austrias sin prisa ni aglomeraciones turísticas. Los mercados de abastos retoman su actividad comercial ordinaria a partir del lunes siguiente al día festivo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Las instituciones de Cantabria celebran su día grande en vísperas de julio.",
+              "lede": "La conmemoración regional del 28 de julio resuena en los centros culturales de la comunidad instalados en la capital.",
+              "body": "El Día de las Instituciones de Cantabria, fijado en el calendario para el 28 de julio, moviliza a la diáspora norteña residente. Diversos centros culturales y casas regionales organizan muestras gastronómicas y conferencias sobre la historia marinera regional. Los visitantes pueden acercarse a conocer la artesanía típica y las tradiciones populares transmitidas durante generaciones. Esta festividad refuerza los lazos entre Madrid y las tierras cántabras mediante encuentros abiertos a todo el público curioso. Las oficinas representativas ofrecen folletos informativos sobre rutas de interior y pueblos costeros recomendables para agosto. La atmósfera cultural de la ciudad enriquece su oferta con esta celebración de identidad norteña.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La cotización monetaria marca 1 USD equivalente a 0.88 EUR.",
+              "lede": "El mercado de divisas europeo mantiene una estabilidad favorable para los visitantes procedentes de Estados Unidos.",
+              "body": "Las transacciones comerciales en el Eixample y el Barrio Gótico reflejan esta tasa de conversión en comercios y restaurantes. Los pagos electrónicos se consolidan como el método preferido para abonar los trayectos en transporte público urbano. Conviene recordar que los pequeños comercios de barrio valoran el pago exacto en efectivo para compras menores. Los viajeros habituales recomiendan consultar las comisiones bancarias antes de realizar retiradas en cajeros automáticos compartidos. Esta relación cambiaria permite planificar con precisión los gastos destinados a la gastronomía local y los museos. La moneda europea circula con fluidez en todas las rutas turísticas y comerciales del área metropolitana.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "El calendario estival acoge la festividad de Santiago Apóstol en pleno verano.",
+              "lede": "La jornada del 25 de julio transforma el pulso comercial de los barrios históricos con cierres temporales.",
+              "body": "La celebración de Santiago Apóstol el 25 de julio reduce significativamente la actividad administrativa en toda la ciudad condal. Los mercados municipales y las oficinas bancarias suspenden sus servicios presenciales durante esta jornada de carácter festivo. Las playas urbanas y los paseos marítimos concentran a los ciudadanos que buscan el descanso estival al aire libre. La red de metro funciona con normalidad, aunque con menor frecuencia en las líneas de polígonos industriales. Los restaurantes del frente marítimo registran una alta ocupación por parte de visitantes locales y turistas. El comercio de proximidad reanuda sus horarios habituales tras este paréntesis veraniego en el calendario.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Cantabria conmemora sus instituciones a finales de julio con actos culturales.",
+              "lede": "La festividad regional del 28 de julio encuentra eco en las asociaciones cántabras de la capital catalana.",
+              "body": "Los actos conmemorativos del Día de las Instituciones de Cantabria, previstos para el 28 de julio, promueven el intercambio cultural. Diversas entidades cántabras en Barcelona organizan actos conmemorativos para recordar la historia y el folclore norteño. Los espacios de encuentro cultural abren sus puertas para ofrecer proyecciones y charlas sobre el patrimonio montañés. Es una oportunidad excelente para conocer la riqueza paisajística de la región cantábrica desde la distancia mediterránea. Las oficinas de turismo facilitan guías detalladas para quienes planean una escapada hacia el norte peninsular. La convivencia festiva enriquece el tejido asociativo de la ciudad durante estas semanas centrales del verano.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La tarde porteña registra entre 11 y 17°C bajo un cielo completamente overcast.",
+              "lede": "El invierno austral muestra su cara más sobria con temperaturas frescas y una luz difusa que suaviza el paisaje.",
+              "body": "El termómetro oscila entre 11 y 17°C durante estas horas centrales de la jornada dominical en la capital federal. El cielo cubierto de nubes grises envuelve las cúpulas históricas de la Avenida de Mayo en una atmósfera melancólica. La puesta de sol se adelanta hasta las 18:08, marcando el inicio temprano de las rutinas nocturnas. Los cafés tradicionales invigen a resguardarse del viento fresco con un cortado caliente y medialunas. Los parques urbanos muestran senderos húmedos de hojas caídas bajo la frondosidad de los árboles centenarios. Los transeúntes caminan abrigados con tapados de lana mientras observan el río desde la costanera.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "La calidad del aire se mantiene en niveles considerados justos con PM2.5 en 10.",
+              "lede": "Las mediciones ambientales reflejan una atmósfera respirable en los barrios residenciales y comerciales de la metrópoli.",
+              "body": "Los registros de contaminación atmosférica sitúan el indicador PM2.5 en 10, garantizando una calidad del aire aceptable. Esta condición favorece los paseos largos a pie por los bosques de Palermo y las diagonales arboladas de Belgrano. La ausencia de vientos fuertes mantiene estable la atmósfera urbana durante las primeras horas de la mañana. Los ciclistas aprovechan la tregua climática para recorrer la red de ciclovías que cruza la cuadrícula porteña. Las autoridades ambientales recomiendan mantener las rutinas al aire libre sin restricciones especiales para la salud. La neblina ligera matinal se disipa lentamente conforme avanza la tarde invernal sobre el asfalto.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "El ocaso invernal a las 18:08 anticipa las largas veladas en librerías y tanguerías.",
+              "lede": "La caída temprana de la tarde transforma el ritmo de los barrios clásicos como San Telmo y Almagro.",
+              "body": "La luz grisácea del día da paso a la iluminación amarilla de los faroles antiguos en las calles empedradas. Con el atardecer fijado a las 18:08, los libreros de la calle Corrientes acomodan las mesas de saldos. Los milongueros se preparan para una noche de danza en los clubes de barrio tradicionales del sur porteño. La temperatura fresca invita a buscar refugio en salas de teatro independiente y bodegones históricos. Los árboles sin hojas permiten ver las fachadas ornamentadas del patrimonio arquitectónico de la belle époque. Es el momento en que la ciudad recupera su pulso más íntimo, literario y contemplativo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-25T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El Festival Internacional de Animación, SMOF 2026, ha comenzado su actividad presentando 100 cortometrajes que exploran las nuevas fronteras del cine animado. Además de las proyecciones, el festival inaugura el primer Mercado Latinoamericano de Animación, consolidando a la ciudad como un nodo creativo regional. Es una cita ineludible para los interesados en las artes visuales y la narrativa digital. Las funciones se distribuyen en diversos centros culturales, por lo que se recomienda revisar la cartelera para elegir las sesiones de su interés. El evento fomenta el encuentro entre profesionales y público general, dinamizando la oferta cultural de Buenos Aires. Aproveche estas jornadas para explorar las últimas tendencias en animación global mientras se refugia del frío invernal en las salas de cine.",
               "source": "saudade desk",
               "source_date": "2026-07-20"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-18T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Silo de Hortaleza presenta el trabajo del artista Julio Ovejero.",
-              "lede": "El espacio cultural invita a recorrer una nueva exposición que fusiona identidad y territorio.",
-              "body": "El Silo de Hortaleza acoge actualmente una muestra dedicada al artista hispano-argentino Julio Ovejero. Es una oportunidad para observar su obra en un entorno industrial reconvertido. El acceso es sencillo y permite disfrutar de una tarde tranquila lejos del bullicio. Recuerde que el tipo de cambio actual es 1 USD a 0.87 EUR. Planifique sus visitas con antelación si busca evitar las horas de mayor afluencia. La exposición es un remanso de calma en la agenda cultural de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "02",
-              "headline": "El cine español celebra su tradición en la Sala Berlanga.",
-              "lede": "La 35ª edición del Festival de Cine de Madrid honra las trayectorias que definen nuestra memoria visual.",
-              "body": "La Sala Berlanga se prepara para el 35º Festival de Cine de Madrid, organizado por PNR del 15 al 19 de septiembre de 2026. Es el momento perfecto para revisar el cine local y conocer a figuras clave como Miguel Rellán. Rellán recibirá la Estrella de Madrid por sus más de 50 años de trayectoria. Mientras tanto, la programación estival sigue activa con el festival Escenas de Verano. Mantenga sus documentos en orden si realiza cambios de divisa, considerando la tasa de 0.87 EUR por USD. La ciudad respira cine durante estos meses.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "03",
-              "headline": "Prevea cierres administrativos por la festividad de Santiago Apóstol.",
-              "lede": "El próximo 25 de julio de 2026 los servicios públicos reducirán su actividad habitual.",
-              "body": "La festividad de Santiago Apóstol, marcada para el 25 de julio de 2026, afectará el funcionamiento de oficinas bancarias y centros administrativos. Es recomendable gestionar cualquier trámite urgente antes de esta fecha. La actividad se verá interrumpida nuevamente el 28 de julio de 2026 por el Día de las Instituciones de Cantabria. Aproveche estos días de menor ritmo para visitar los parques urbanos o caminar por el centro. Tenga en cuenta que el mercado financiero ajustará sus horarios según el calendario oficial. Disfrute de la ciudad en este breve receso de verano.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo cubierto suaviza las temperaturas de este viernes.",
-              "lede": "Barcelona registra hoy valores entre 24 y 32°C con una atmósfera estable.",
-              "body": "El clima hoy en Barcelona se mantiene entre 24 y 32°C bajo un cielo mayormente cubierto. La calidad del aire es buena, con niveles de PM2.5 en 10. El atardecer ocurrirá a las 21:21, ofreciendo una luz tenue ideal para pasear. Es un día cómodo para visitar el Parque Central de La Clota, donde los vecinos participan activamente en su rediseño. El tipo de cambio se mantiene en 1 USD a 0.87 EUR para sus transacciones. Aproveche la brisa ligera antes de que caiga el sol.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "02",
-              "headline": "El Laie Fest facilita el acceso a los monumentos emblemáticos.",
-              "lede": "Consiga entradas para la Sagrada Familia y La Pedrera a través de las iniciativas culturales vigentes.",
-              "body": "El Laie Fest propone nuevas formas de visitar los iconos arquitectónicos de Barcelona como la Sagrada Familia y La Pedrera. Esta iniciativa busca acercar el patrimonio a los residentes y visitantes interesados. Paralelamente, la exposición central del Congreso Mundial de Arquitectos UIA 2026 invita a reflexionar sobre la transición planetaria. Es una semana intensa para quienes aprecian la arquitectura moderna y la planificación urbana. Verifique la disponibilidad de entradas en los portales oficiales para asegurar su acceso a los recintos. Recuerde llevar calzado cómodo para recorrer las exposiciones dispersas por la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "03",
-              "headline": "Calendario festivo de finales de julio en la ciudad.",
-              "lede": "Tome nota de los festivos del 25 y 28 de julio de 2026 para sus planes.",
-              "body": "El 25 de julio de 2026 es festivo por Santiago Apóstol, lo que implicará el cierre de oficinas de correos y entidades bancarias. Unos días después, el 28 de julio de 2026, se celebra el Día de las Instituciones de Cantabria, afectando también el ritmo habitual de la ciudad. Planee sus compras y gestiones bancarias con antelación para evitar inconvenientes. La ciudad suele vaciarse ligeramente en estas fechas, siendo un momento propicio para disfrutar de los espacios públicos sin multitudes. Mantenga su presupuesto bajo control con el cambio de 0.87 EUR por USD. Es un periodo ideal para el descanso.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Tormentas y granizo marcan la jornada en Buenos Aires.",
-              "lede": "Se esperan hasta 19.9mm de precipitación con temperaturas entre 11 y 17°C.",
-              "body": "El clima hoy presenta inestabilidad, con tormentas y granizo que obligan a permanecer en interiores. La temperatura oscilará entre 11 y 17°C, con una calidad del aire en niveles de PM2.5 de 33. El atardecer está previsto para las 18:03, cerrando una jornada de cielos grises. Es un día adecuado para visitar espacios cerrados como el Museo de Arte Moderno en el parque, que alberga la muestra La memoria de la colección. Evite las zonas bajas de la ciudad donde la acumulación de agua pueda ser mayor. Planifique sus traslados con transporte público protegido.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "02",
-              "headline": "La historieta y el arte ocupan las agendas culturales.",
-              "lede": "Cuatro sedes distintas acogen la tercera edición del festival ¡Esto Es Historieta!.",
-              "body": "La tercera edición del festival ¡Esto Es Historieta! se despliega en 4 sedes de Buenos Aires. Es una oportunidad para explorar el lenguaje visual y narrativo en un ambiente compartido. A esto se suma el Festival de las Estrellas, que ofrece actividades gratuitas para todo el público. Si prefiere el diseño arquitectónico, la Galería de Fachadas metálicas invita a observar cómo se equilibra privacidad y apertura en los edificios de la ciudad. El Moderno en el parque sigue siendo un punto de referencia para los amantes del arte contemporáneo. Consulte la programación de cada sede para organizar su recorrido cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
-            },
-            {
-              "n": "03",
-              "headline": "Refugio en los espacios culturales ante la lluvia.",
-              "lede": "El Moderno en el parque se consolida como el mejor refugio para este viernes.",
-              "body": "Ante el pronóstico de 19.9mm de lluvia, los museos ofrecen el resguardo necesario para los observadores inquietos. La muestra La memoria de la colección en el Moderno permite recorrer la historia del arte local sin mojarse. La entrada al Festival de las Estrellas es gratuita, lo que facilita el acceso a diversas propuestas artísticas en espacios cerrados. Manténgase informado sobre posibles demoras en el transporte público debido a las condiciones climáticas. La ciudad ofrece una calidez interna que compensa el frío exterior de 11 a 17°C. Disfrute del silencio que la lluvia impone en las calles porteñas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-18"
             }
           ]
         }
