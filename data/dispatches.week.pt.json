@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-07-25T06:00:00+09:00",
+  "updated": "2026-07-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A taxa de câmbio estabiliza nos mercados cambiais.",
+              "lede": "A conversão mantém o valor de 1 USD a 0.88 EUR.",
+              "body": "O câmbio atual define uma proporção estável de 1 USD para 0.88 EUR nas transações correntes da capital. Os viajantes que chegam de fora da zona euro encontram valores previsíveis ao gerir as suas despesas diárias em numerário ou cartões. Convirá verificar com antecedência se o seu banco aplica taxas adicionais em cada levantamento efetuado nas caixas automáticas locais. Pequenos estabelecimentos tradicionais continuam a preferir o pagamento em dinheiro vivo para compras de menor valor. A gestão financeira da viagem ganha assim uma simplicidade que convida a passeios sem grandes preocupações logísticas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "As esplanadas do Tejo acolhem o final de tarde.",
+              "lede": "A luz estival prolonga-se sobre as pedras calcárias da ribeira.",
+              "body": "A brisa do rio refresca discretamente as ruas inclinadas que descem em direção à margem. Os elétricos continuam a sua marcha cadenciada por entre fachadas revestidas de azulejos antigos e calcário claro. É o momento ideal para observar o movimento calmo dos transeuntes junto aos antigos armazéns portuários reconvertidos. As conversas desenrolam-se a ritmo lento nas mesas colocadas ao ar livre sob toldos de lona branca. A cidade revela a sua textura genuína quando o calor do dia cede lugar a uma noite amena.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Os jardins históricos oferecem sombra e silêncio.",
+              "lede": "A vegetação densa protege os bancos de jardim do calor estival.",
+              "body": "Os parques botânicos da cidade convidam a pausas prolongadas longe do bulício urbano e do trânsito automóvel. As copas das árvores centenárias filtram a luz intensa do sol de julho, criando recantos de penumbra fresca. Os residentes aproveitam estas horas matinais para leituras solitárias ou passeios tranquilos pelos caminhos empedrados. A água das fontes antigas murmura suavemente ao fundo, quebrando o silêncio com uma nota de frescura. Cada recanto verdejante funciona como um refúgio indispensável para quem procura o lado mais contemplativo da capital.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro marca valores amenos entre 16 e 26°C.",
+              "lede": "O céu limpo acompanha o pôr do sol previsto para as 20:57.",
+              "body": "A amplitude térmica diária situa-se entre os 16 e os 26°C, proporcionando um dia perfeitamente claro e luminoso. Com o ar classificado como de qualidade fair e níveis de PM2.5 a 8, as condições atmosféricas convidam a longas caminhadas ao ar livre. O céu totalmente limpo garante uma visibilidade excecional sobre os telhados de telha vã e o leito do rio Douro. À medida que o dia avança, o sol descolora lentamente o horizonte até ao cair da noite pelas 20:57. É um período propício para observar a arquitetura granítica da cidade sob uma luz dourada e nítida.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "A taxa de câmbio fixa-se em 1 USD para 0.88 EUR.",
+              "lede": "As transações mantêm conversões estáveis em toda a Baixa.",
+              "body": "A paridade cambial regista o valor de 1 USD equivalente a 0.88 EUR nas operações comerciais do norte do país. Os visitantes estrangeiros beneficiam de uma cotação clara que facilita o planeamento financeiro durante a estada na Invicta. As casas de câmbio tradicionais na zona central mantêm margens reduzidas para notas norte-americanas. Os pagamentos eletrónicos continuam a ser amplamente aceites, embora persistam pequenos cafés onde o multibanco não substitui o troco em moedas. Esta estabilidade económica contribui para a serenidade com que se vive o quotidiano urbano.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "As margens do Douro acompanham o ritmo das marés.",
+              "lede": "A circulação pedonal flui sem pressas junto aos cais históricos.",
+              "body": "A brisa fluvial desce a corrente e refresca os passadiços de madeira onde atracam as embarcações tradicionais. Os observadores atentos encontram nos detalhes da cantaria granítica a verdadeira essência desta geografia ribeirinha. As pontes metálicas desenham silhuetas precisas contra o azul limpo do firmamento estival. Poucos ruídos perturbam a atmosfera de sossego que caracteriza as primeiras horas da manhã nas margens. O Porto mostra-se assim na sua faceta mais essencial, feita de pedra, água e silêncio.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra oscila entre os 18 e os 25°C sob nuvens passageiras.",
+              "lede": "O céu parcialmente nublado abranda o calor com o pôr do sol às 20:54.",
+              "body": "A temperatura na serra varia entre os 18 e os 25°C, enquadrada por um céu parcialmente nublado que modera a incidência solar direta. Com um índice de qualidade do ar considerado moderate e valores de PM2.5 nos 11, a atmosfera mantém a sua humidade característica e densa. A nebulosidade matinal costuma dissipar-se parcialmente, deixando filtrar uma claridade difusa ideal para deambular pelos trilhos arborizados. O entardecer desenha-se com o ocaso marcado para as 20:54, tingindo o horizonte com tons suaves. Esta meteorologia amena favorece a preservação do microclima único que sempre atraiu poetas e viajantes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "A conversão monetária opera à base de 1 USD por 0.88 EUR.",
+              "lede": "O comércio local processa pagamentos com cotações estáveis.",
+              "body": "A taxa de câmbio de 1 USD para 0.88 EUR aplica-se de forma uniforme nos estabelecimentos comerciais da vila histórica. Os viajantes vindos de fora do espaço europeu encontram facilidade na gestão dos pagamentos correntes em bilheteiras e cafés. Convirá prever dinheiro trocado para pequenas despesas nas zonas mais afastadas do centro urbano. A simplicidade financeira apoia o ritmo desacelerado de quem visita os palácios e quintas românticos. O comércio tradicional preserva o hábito de atender cada cliente sem pressas tecnológicas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Os bosques seculares guardam a humidade da manhã.",
+              "lede": "A vegetação luxuriante retém o silêncio sob a copa das árvores.",
+              "body": "Os caminhos sinuosos que serpenteiam a encosta convidam a passos contados por entre fetos gigantes e musgo antigo. A neblina matinal deixa vestígios de orvalho nas folhas largas que cobrem o solo sombrio da montanha. O ar moderadamente fresco convida a usar um casaco leve durante os percursos pedestres mais longos. O chilrear dos pássaros rompe discretamente a penumbra verdejante que envolve os antigos chalés românticos. É um território feito para a observação minuciosa e para o descanso da vista.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-25T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O festival MUSCARIUM chega ao fim, mas já prepara o seu renascimento em 2027 com uma estrutura renovada. A cultura em Sintra está em constante transformação. O tempo apresenta-se encoberto, com temperaturas entre 19°C e 24°C. O índice UV de 8 exige atenção aos cuidados com a pele. A qualidade do ar é justa, com um valor de 8 para PM2.5. Para os visitantes, a conversão de 1 USD para 0,87 EUR é o dado a reter. O pôr do sol, às 20:59, marca a transição para uma nova fase cultural na vila. Sintra continua a ser um refúgio para observadores que valorizam a continuidade e o planeamento a longo prazo das artes.",
               "source": "saudade desk",
               "source_date": "2026-07-20"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-19T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O FUSO traz a videoarte às noites de Lisboa.",
-              "lede": "O Festival Internacional de Videoarte ocupa espaços públicos com projeções ao ar livre.",
-              "body": "A cidade acolhe o FUSO, uma mostra que transforma recantos históricos em galerias de luz e sombra. É uma oportunidade rara de observar a videoarte contemporânea fora dos museus convencionais. A taxa de câmbio de 1 USD para 0.87 EUR mantém-se estável para os visitantes que planeiam roteiros culturais. Aconselha-se o uso de calçado confortável para percorrer os locais das exposições. A atmosfera noturna convida à contemplação, longe das multidões diurnas mais densas. Planeie a sua rota com antecedência para evitar os pontos de maior afluência turística.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "As exposições de arte marcam o ritmo deste fim-de-semana.",
-              "lede": "Lisboa oferece um roteiro curado de exposições espalhadas pela capital.",
-              "body": "A oferta cultural deste fim-de-semana é vasta, com diversas galerias e centros de arte a abrir portas ao público. É um momento ideal para explorar as exposições em curso, que cobrem desde a fotografia até à arte conceptual. Com a taxa de câmbio de 1 USD para 0.87 EUR, o acesso a estes espaços permanece acessível para o viajante. Recomenda-se verificar os horários de encerramento antes de partir, pois alguns espaços privados operam sob agendamento. Lisboa vive um período de efervescência criativa que convida a um olhar atento sobre a produção artística nacional.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "Prepare-se para o Festival Política no outono.",
-              "lede": "O evento de arte e cidadania prepara a sua próxima edição em várias cidades.",
-              "body": "O Festival Política, que ocorrerá entre setembro e novembro, começa a preparar a sua programação em Lisboa, Coimbra, Loulé e Torres Vedras. Este evento propõe uma reflexão sobre a sociedade através de múltiplas linguagens artísticas. Para os viajantes, é uma oportunidade de integrar o calendário cultural de várias regiões do país. A taxa de câmbio atual, de 1 USD para 0.87 EUR, permite uma gestão orçamental eficiente para quem planeia estadias prolongadas. Mantenha-se atento às futuras divulgações sobre os locais exatos das intervenções. O evento promete ser um ponto de encontro para observadores atentos à realidade contemporânea.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu nublado acompanha o Porto neste sábado.",
-              "lede": "As temperaturas oscilam entre 20 e 24°C com qualidade do ar favorável.",
-              "body": "O Porto apresenta-se hoje com um céu predominantemente nublado e uma temperatura amena, variando entre 20 e 24°C. Com um nível de PM2.5 de 10, a qualidade do ar é considerada boa para caminhadas urbanas. O sol põe-se às 21:03, permitindo longas horas de luz para explorar a zona ribeirinha. A taxa de câmbio de 1 USD para 0.87 EUR favorece o consumo local em livrarias e cafés tradicionais. Prepare um agasalho leve para o final da tarde, quando a humidade do rio se faz sentir mais intensamente. É o clima ideal para quem prefere evitar o calor extremo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "O fado ecoa na Ribeira com o Festival Caixa.",
-              "lede": "O Festival Caixa Ribeira leva a música tradicional a 4 palcos distintos.",
-              "body": "O Festival Caixa Ribeira transforma o coração do Porto num grande palco de fado. Com concertos espalhados por 4 locais emblemáticos, a música ocupa as ruas estreitas e as praças da zona histórica. A atmosfera é de uma celebração contida, respeitando a melancolia própria do género musical. A taxa de câmbio de 1 USD para 0.87 EUR torna a compra de bilhetes uma despesa controlada para o visitante. O festival é uma porta de entrada para a alma da cidade. Aproveite para observar a arquitetura granítica que serve de cenário natural a estes espetáculos noturnos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "A arte contemporânea expande-se com novas exposições.",
-              "lede": "O Porto recebe a exposição Equilibrium na Paróquia de Santa Maria Madalena.",
-              "body": "A inauguração da exposição Equilibrium na Paróquia de Santa Maria Madalena marca uma nova proposta cultural na cidade. Paralelamente, a mostra itinerante (In)fluxos leva arte contemporânea ao Porto Santo, estendendo a rede de contactos artísticos. Para quem viaja, estas exposições oferecem um contraponto silencioso ao bulício das ruas. A taxa de câmbio de 1 USD para 0.87 EUR é um dado útil para planear as visitas a museus e espaços independentes. O Porto continua a ser um destino onde a história e a modernidade se encontram em constante diálogo. Reserve tempo para apreciar os detalhes das obras nestes espaços tranquilos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sintra desfruta de um dia parcialmente nublado.",
-              "lede": "A temperatura situa-se entre 18 e 24°C, ideal para percorrer os trilhos serranos.",
-              "body": "O clima em Sintra mantém-se agradável, com temperaturas entre 18 e 24°C e um céu parcialmente nublado. A qualidade do ar é excelente, com um índice de PM2.5 de 6, proporcionando uma respiração límpida durante os passeios. O pôr do sol ocorre às 20:59, marcando o fim de um dia propício para visitas a jardins históricos. A taxa de câmbio de 1 USD para 0.87 EUR permite um acesso equilibrado aos monumentos da vila. É aconselhável levar água e um casaco, pois a Serra de Sintra apresenta variações térmicas súbitas. A luz suave desta época valoriza a vegetação densa da encosta.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival de Folclore celebra as Lavadeiras no Sabugo.",
-              "lede": "As celebrações dos 60 anos das Lavadeiras ocupam a agenda local.",
-              "body": "O Festival de Folclore, integrado nas comemorações dos 60 anos das Lavadeiras, traz tradição ao Sabugo. Este evento é uma oportunidade para observar a preservação das raízes culturais da região de Sintra. Com a taxa de câmbio de 1 USD para 0.87 EUR, o viajante pode facilmente apoiar o comércio local nas imediações do recinto. O ambiente é comunitário, refletindo o orgulho na história das gentes da serra. É um evento que exige paciência e vontade de aprender sobre os costumes locais. Aconselha-se a utilização de transportes públicos para aceder à zona, dada a limitação de estacionamento local.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "O Parque Urbano Felício Loureiro convida ao desporto.",
-              "lede": "A iniciativa Sintra+Ativa promove o bem-estar no espaço público.",
-              "body": "O projeto Sintra+Ativa ocupa o Parque Urbano Felício Loureiro, oferecendo atividades físicas e momentos de convívio para todas as idades. É um exemplo de como o espaço público pode ser dinamizado de forma saudável e inclusiva. A taxa de câmbio de 1 USD para 0.87 EUR garante que a estadia em Sintra seja economicamente viável para quem participa nestas dinâmicas. O parque é um refúgio verde, ideal para quem procura um momento de pausa ativa entre visitas aos palácios. Observe a forma como os residentes interagem com o espaço, aproveitando a manhã para o exercício. A vitalidade local é contagiante e oferece uma perspetiva diferente da vila.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
             }
           ]
         }

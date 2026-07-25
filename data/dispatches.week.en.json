@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-25T06:00:00+09:00",
+  "updated": "2026-07-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A faint drizzle settles over the pavement.",
+              "lede": "The afternoon air cools slightly under light precipitation.",
+              "body": "The afternoon air cools slightly under light precipitation. A measured 2.1mm of precipitation falls across the alleys of Samcheong-dong, darkening the traditional tile roofs and keeping the stone pathways damp. Temperatures hold between 24 and 32°C, creating a humid quiet that empties the sidewalk terraces. Pedestrians trade linen for light umbrellas, moving with deliberate caution beneath the low gray canopy. Air quality registers as fair with PM2.5 levels at 9, making it a comfortable afternoon for walking if you stay clear of rushing runoff. Exchange counters value the dollar at 1461 KRW for travelers sorting their cash.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "The evening light fades softly past the western ridge.",
+              "lede": "Sunset arrives at 19:46 over the city skyline.",
+              "body": "Sunset arrives at 19:46 over the city skyline. The fading light washes the Han River in muted silver tones while the remaining humidity blurs the distant peaks of Inwangsan. Evening strollers find shelter beneath the stone arches of old palace walls as the day's warmth slowly dissipates into the damp asphalt. Markets transition from daytime fruit stands to vendors serving warm broths suited for the damp evening. The exchange rate sits steady at 1 USD to 1461 KRW for those settling evening tabs. PM2.5 readings stay at a clean 9, leaving the evening air transparent despite the earlier mist.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Quiet prevails along the quieter residential avenues.",
+              "lede": "Fine particulate matter measures 9 this afternoon.",
+              "body": "Fine particulate matter measures 9 this afternoon. Residents utilize the fair air quality to air out laundry on apartment balconies despite the persistent mist. Temperatures fluctuate from a low of 24°C up to a high of 32°C under the overcast skies. The 2.1mm of precipitation leaves puddles in the schoolyards and quiet neighborhood squares. Local cafes provide dry corners and hot infusions for travelers seeking respite from the heavy atmosphere. The banking rate of 1 USD to 1461 KRW holds through the weekend hours.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain drives pedestrians under station awnings.",
+              "lede": "A measured 25.4mm of precipitation falls across the asphalt.",
+              "body": "A measured 25.4mm of precipitation falls across the asphalt. The persistent downpour fills gutter channels and drenches the hydrangea bushes in neighborhood parks. Temperatures move between 23 and 32°C, wrapping the streets in warm, humid moisture. Despite the heavy cloud cover, the UV index hits 8, reminding commuters of the strong summer sun lurking behind the gray. Air quality registers as poor with PM2.5 at 35, urging sensitive travelers to limit extended exertion outdoors. Currency exchanges quote the dollar at 164 JPY for visiting observers.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "The evening darkens early through the heavy sheets of water.",
+              "lede": "Sunset occurs at 18:51 across the grey horizon.",
+              "body": "Sunset occurs at 18:51 across the grey horizon. The downpour eases slightly as the blue hour gives way to neon reflections on wet Shibuya crossings. Commuters navigate the puddles with steady umbrellas, moving purposefully toward subway entrances to escape the damp evening air. Temperatures hover near the lower end of the 23 to 32°C daily range. The air quality index marks PM2.5 at 35, keeping the atmosphere thick and heavy with urban moisture. Financial exchanges trade at 1 USD to 164 JPY for the evening market close.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Subway corridors provide dry passage from the storm.",
+              "lede": "PM2.5 levels remain at 35 through the afternoon.",
+              "body": "PM2.5 levels remain at 35 through the afternoon. The poor air quality combines with the 25.4mm of rainfall to keep most neighborhood streets remarkably uncrowded. Travelers find refuge in underground shopping arcades and station platforms where the humidity is managed by industrial vents. The thermometer spans from 23 to 32°C, making every sheltered interior a welcome relief from the muggy street conditions. A UV index of 8 requires caution even in indirect light. Banks and exchange booths operate at the standard 1 USD to 164 JPY rate.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Limestone pavements catch the bright afternoon glare.",
+              "lede": "Currency exchange values the dollar at 0.88 EUR.",
+              "body": "Currency exchange values the dollar at 0.88 EUR. The afternoon sun beats against the sloping calçada pavements of the Alfama district, reflecting sharp light off whitewashed walls. Residents pull heavy wooden shutters closed to keep the domestic interiors cool during the peak afternoon heat. Street vendors set out bowls of fresh fruit under striped canvas awnings while tram lines hum quietly in the distance. The financial rate of 1 USD to 0.88 EUR remains stable for visitors settling their hotel accounts. The riverfront breeze offers minor relief to those walking the steep inclines.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "02",
+              "headline": "Shadows stretch long across the plazas of Baixa.",
+              "lede": "The evening brings a cooler Atlantic draft inland.",
+              "body": "The evening brings a cooler Atlantic draft inland. Locals gather at neighborhood tascas to escape the residual heat trapped between the tall buildings of the downtown grid. Tables spill onto the stone pedestrian squares as conversations grow louder with the approaching dusk. Currency bureaus post the exchange rate at 1 USD to 0.88 EUR for weekend transactions. Street musicians tune their guitars beneath the stone archways, providing a steady soundtrack for the evening promenade. The air remains dry and clear, offering excellent visibility across the terracotta rooftops.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            },
+            {
+              "n": "03",
+              "headline": "Morning quiet settles over the upper viewpoints.",
+              "lede": "Travelers exchange currency at 0.88 EUR per dollar.",
+              "body": "Travelers exchange currency at 0.88 EUR per dollar. The early morning hours provide the best window for navigating the terraced gardens of São Pedro de Alcântara before the midday temperatures climb. Gardeners water the potted shrubs along the belvedere while delivery vans service the corner groceries. The financial rate holds steady at 1 USD to 0.88 EUR across the city's exchange houses. The surrounding streets are peaceful, save for the occasional rumble of an early delivery truck turning a tight corner.",
+              "source": "saudade desk",
+              "source_date": "2026-07-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-25T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Today’s temperatures of 20–27°C provide a comfortable backdrop for a walk through the city's historic quarters. With a UV index of 8, remain mindful of the sun until it sets at 20:57. The exchange rate is 1 USD to 0.87 EUR, making local cafes an accessible stop for a quiet reader. Air quality is excellent at PM2.5 8, lending a clarity to the light over the Tagus River. The city is currently celebrating the completion of library programs and the recent restoration of its most beloved museum. It is a time for rest and reflection before the new week begins.",
               "source": "saudade desk",
               "source_date": "2026-07-20"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-19T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies temper the heat in Seoul this weekend.",
-              "lede": "Temperatures hover between 23–28°C, offering a reprieve from the recent peak heat.",
-              "body": "The city remains under a thick blanket of clouds, keeping the air quality fair at PM2.5 24. While the sun sets at 19:51, the humidity requires a slower pace for those exploring the city streets. Residents are currently seeking relief in public cooling zones as the summer heatwave persists. The exchange rate of 1 USD to 1485 KRW remains stable for visitors managing their travel budgets. It is a quiet time to visit local art exhibitions, where people gather to view the displays of living fishes away from the outdoor glare. Plan your afternoon walks to coincide with the slightly cooler evening hours before the light fades.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "The tiger Sarang departs for a new home abroad.",
-              "lede": "A Korea-born Siberian tiger travels to the U.S. to support species conservation efforts.",
-              "body": "While the news of the tiger's departure marks a transition for local wildlife, the city continues its daily rhythm. Visitors can focus on cultural programming, such as the upcoming encore performance by Park Jihoon scheduled for September. The overcast weather provides a neutral backdrop for a day spent in Seoul's public parks or museums. With PM2.5 levels at 24, it is a suitable day for light outdoor activity if you prefer to avoid the confined spaces of the city's larger galleries. Keep an eye on local venue schedules if you intend to visit during your stay. The city is currently in a state of calm observation, perfect for the quiet traveler.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "Public spaces offer refuge as the city cools.",
-              "lede": "Art exhibitions provide a sensory escape from the 23–28°C weather.",
-              "body": "Residents are making use of public cooling facilities to manage the heatwave. The exhibition of fishes serves as a meditative point of interest for those seeking a quiet indoor environment. With the exchange rate at 1 USD to 1485 KRW, it is an accessible time to enjoy the city's cultural offerings without the rush of peak tourist seasons. Sunset arrives at 19:51, marking the end of the day's warmth. The air quality remains fair, making the late afternoon pleasant for a stroll through the quieter neighborhoods. Remember to check local listings for Park Jihoon's September show if you are planning an extended stay in the capital.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Marine Day closures arrive this Sunday.",
-              "lede": "Expect banking and government office closures on 2026-07-20 for 海の日.",
-              "body": "As Tokyo observes Marine Day on 2026-07-20, travelers should anticipate limited services at banks and post offices. The weather remains warm, between 25–30°C, with partly cloudy skies providing intermittent shade. The air quality is fair at PM2.5 11, making it a comfortable time for walking between districts. With an exchange rate of 1 USD to 162 JPY, visitors may find local shops and cafes busy over the holiday weekend. If you are planning to visit the Mori Art Museum for Mariko Mori’s retrospective, check for holiday-specific hours first. The city maintains its composure even as residents head toward the coast for the holiday.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "Art landmarks invite visitors for a slow summer.",
-              "lede": "TeamLab Borderless and the Mori Art Museum offer respite from the 25–30°C humidity.",
-              "body": "Tokyo's immersive art scene is currently defined by the reopening of the TeamLab Borderless light sculptures and the major Mariko Mori retrospective. These spaces provide a controlled climate during the warmer afternoon hours as temperatures reach 30°C. The city’s coffee culture, often discussed in literary circles, remains a constant comfort for the wandering observer. While some convenience stores attempt to redefine their utility, the quiet pleasure of a simple cup remains unchanged. With the exchange rate of 1 USD to 162 JPY, these cultural visits are well-supported. Sunset occurs at 18:55, casting a long, soft light over the cityscape as the day turns.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "Prepare for a quieter pace during the holiday.",
-              "lede": "Marine Day on 2026-07-20 slows the usual frantic pulse of the city.",
-              "body": "With the public holiday on 2026-07-20, the city shifts into a slightly slower gear. The weather is favorable for outdoor excursions, with temperatures peaking at 30°C and partly cloudy skies. PM2.5 levels remain low at 11, ensuring crisp visibility across the skyline. While banks and offices will be closed, the city's parks and museums remain open for those seeking reflection. The exchange rate of 1 USD to 162 JPY makes this an ideal time for extended museum visits or quiet observation in the city's gardens. Enjoy the transition of light as the sun sets at 18:55, signalling the end of the holiday eve.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The Gulbenkian Museum welcomes visitors to its restored home.",
-              "lede": "The institution reopens with a design faithful to its original 1969 vision.",
-              "body": "Lisbon enjoys mild weather, with temperatures ranging from 19–27°C and partly cloudy skies. The air quality is excellent, with PM2.5 at 6. The exchange rate of 1 USD to 0.87 EUR remains steady for those enjoying the city's cultural offerings. Following the recent festival season, where the Polyester Guide offered advice on festival dressing, the city returns to a quieter rhythm. The restoration of the Calouste Gulbenkian Museum is a highlight for those who appreciate architectural history. Sunset is late, at 20:58, allowing for long, lingering evenings in the city's public squares. It is a perfect time to explore the city's quieter corners.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "02",
-              "headline": "Festival season echoes in the city's quiet streets.",
-              "lede": "After the energy of NOS Alive, Lisbon finds a slow, reflective pace.",
-              "body": "The city has moved past the peak of the festival season, leaving behind a sense of calm. With temperatures between 19–27°C, the climate is ideal for walking through the historic districts. The air quality is clean at PM2.5 6, and the exchange rate of 1 USD to 0.87 EUR is favorable for local dining. Residents are engaging in literary pursuits, such as the completion of reading challenges at local libraries. The restored Calouste Gulbenkian Museum offers a serene space for quiet observation. As the sun sets at 20:58, the city’s light takes on a golden hue, perfect for an evening walk along the Tagus.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
-            },
-            {
-              "n": "03",
-              "headline": "Enjoy the long, lingering light of a Lisbon evening.",
-              "lede": "Sunset at 20:58 invites residents to the city's public gardens and plazas.",
-              "body": "With the mild 19–27°C weather, the evenings are the best time to explore Lisbon. The air quality is pristine at PM2.5 6, and the recent restoration of the Gulbenkian Museum adds a layer of depth to the city's cultural landscape. While the festival crowds have dispersed, the city retains its vibrant yet restrained character. The exchange rate of 1 USD to 0.87 EUR allows for leisurely afternoons in cafes. Whether you are finishing a book or visiting a museum, the atmosphere remains grounded and thoughtful. Take advantage of the late sunsets to observe the city as it transitions from the warmth of the day into the cool of the night.",
-              "source": "saudade desk",
-              "source_date": "2026-07-19"
             }
           ]
         }
