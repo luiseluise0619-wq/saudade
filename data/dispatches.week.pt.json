@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-07-26T06:00:00+09:00",
+  "updated": "2026-07-27T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-27T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Festival Verão Clássico enche as noites lisboetas com Verdi e Rossini.",
+              "lede": "A música clássica ocupa os auditórios da cidade com maestros de referência.",
+              "body": "O Festival Verão Clássico arranca em Lisboa com um programa dedicado a mestres como Verdi, Rossini e Puccini. Os concertos atraem entusiastas para salas emblemáticas da capital, proporcionando serões de grande intensidade musical. Com o termómetro a oscilar entre os 20°C e os 33°C, as noites tornam-se o refúgio ideal para escutar grandes orquestras. O céu limpo e o índice UV de 8 exigem proteção redobrada durante as deslocações diurnas. No câmbio, 1 USD equivale a 0.88 EUR. A cidade vive o ritmo pausado do final de julho, equilibrando o calor intenso com momentos de recolhimento cultural.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "02",
+              "headline": "Mais de 120 construções e 15 milhões de peças de Lego chegam ao Pavilhão do Conhecimento.",
+              "lede": "A maior exposição de Lego da Europa instala-se no Parque das Nações.",
+              "body": "O Pavilhão do Conhecimento, no Centro Ciência Viva, acolhe a maior exposição de Lego da Europa. Mais de 120 construções detalhadas e 15 milhões de peças transformam o espaço num desfile de arquitetura em miniatura. Famílias e curiosos descobrem monumentos e cenários fantásticos erguidos bloco a bloco. O sol forte brilha com um índice UV de 8, tornando as visitas a espaços interiores climatizados uma escolha acertada. A temperatura exterior atinge os 33°C no pico da tarde. Para quem chega de fora, a taxa de câmbio fixa 1 USD em 0.88 EUR. É um ponto de paragem obrigatório para observadores pacientes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "03",
+              "headline": "A Trienal de Lisboa inaugura a galeria do Triptyque.",
+              "lede": "A arquitetura contemporânea ganha destaque com a abertura de novas propostas espaciais.",
+              "body": "A Galeria de Abertura da exposição do Triptyque para a Trienal de Lisboa já recebeu os primeiros visitantes. O evento reforça o papel da capital como polo de reflexão sobre o território e a habitação. Com o pôr do sol marcado para as 20:52, as horas tardias convidam a longas caminhadas pelas ruas da baixa. O dia mantém-se limpo, com mínimas de 20°C e máximas de 33°C. A conversão monetária mantém-se estável, cotando 1 USD a 0.88 EUR. Os residentes evitam o calor do meio-dia, preferindo a penumbra das galerias e o aragem que sopra do Tejo ao cair da noite.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Parque das Águas acolhe o segundo domingo do ciclo Vizinhanças.",
+              "lede": "A programação cultural descentralizada ocupa os jardins da cidade do Porto.",
+              "body": "O Parque das Águas recebe o segundo domingo do Vizinhanças, promovendo encontros comunitários e artísticos ao ar livre. A qualidade do ar permanece em níveis justos, registando um valor de PM2.5 de 7, ideal para passeios matinais sob copas frondosas. O ambiente convida a pausas demoradas junto aos lagos e recantos arborizados. No plano financeiro, 1 USD equivale a 0.88 EUR para os viajantes que gerem as suas despesas na cidade. O Porto avança no verão com um ritmo calmo, onde os moradores aproveitam os espaços verdes antes do calor apertar. A observação atenta revela um quotidiano focado no bem-estar local.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "02",
+              "headline": "O chef Vítor Matos estreia-se na alta cozinha japonesa num hotel recuperado.",
+              "lede": "A reabertura de um espaço hoteleiro traz novidades à rota gastronómica invicta.",
+              "body": "Um hotel histórico reabre no Porto com um restaurante que marca a estreia do chef Vítor Matos na cozinha japonesa. A proposta une a disciplina oriental aos produtos locais, criando uma simbiose pouco habitual na restauração nortenha. Os clientes encontram um ambiente intimista, ideal para noites tranquilas de verão. A qualidade do ar regista PM2.5 de 7, mantendo a atmosfera agradável para circular a pé pela cidade. A conversão de 1 USD para 0.88 EUR orienta as escolhas dos visitantes estrangeiros. Este novo poiso gastronómica confirma a vitalidade discreta da culinária na Invicta.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "03",
+              "headline": "O Festival de Teatro de Rua celebra a multiculturalidade.",
+              "lede": "As artes performativas ocupam o espaço público com o Encontro de Culturas.",
+              "body": "O Festival de Teatro de Rua celebra a multiculturalidade através de companhias que animam praças e recantos. O evento promove a partilha de tradições e expressões cénicas vindas de vários pontos. A qualidade do ar, com PM2.5 de 7, favorece a permanência prolongada nas ruas durante as apresentações. A taxa de câmbio de 1 USD por 0.88 EUR facilita o planeamento de quem visita a região. Os espectadores sentam-se nos muretes e escadarias, seguindo cada ato com atenção redobrada. É uma forma de habitar o território através da festa e da pausa partilhada.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A lontra regressa à Serra de Sintra após décadas de ausência.",
+              "lede": "O primeiro registo em várias décadas confirma a recuperação ecológica na serra.",
+              "body": "A lontra voltou a ser avistada na Serra de Sintra, de onde havia desaparecido há longas décadas. Este primeiro registo científico e visual em várias gerações atesta a melhoria da qualidade dos cursos de água locais. Os observadores da natureza mantêm a discrição para não perturbar o animal no seu habitat recuperado. O céu parcialmente nublado abranda o calor, com temperaturas entre os 17°C e os 33°C. O pôr do sol ocorre às 20:53, tingindo a vegetação densa com tons dourados. No câmbio, 1 USD vale 0.88 EUR. A serra confirma assim o seu estatuto de santuário natural protegido.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "02",
+              "headline": "As exposições caninas regressam aos espaços verdes de Sintra.",
+              "lede": "Criadores e aficionados reúnem-se para avaliar exemplares de várias raças.",
+              "body": "As Exposições Caninas regressam a Sintra, atraindo participantes de todo o país para julgamentos e exibições técnicas. Os prados verdejantes servem de cenário a este evento tradicional que preenche o calendário de julho. O termómetro varia entre os 17°C e os 33°C sob um céu parcialmente nublado. Com o sol a esconder-se às 20:53, as tardes longas permitem passeios relaxados pelos arredores dos palácios. A cotação de 1 USD para 0.88 EUR apoia os viajantes na gestão financeira da estadia. A vila histórica mantém o seu silêncio matinal habitual, longe da agitação costeira.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            },
+            {
+              "n": "03",
+              "headline": "O microclima da serra abranda as tardes quentes de julho.",
+              "lede": "A neblina matinal dá lugar a abertas suaves entre pinhais e fetos.",
+              "body": "A Serra de Sintra regista temperaturas entre os 17°C e os 33°C, num regime de céu parcialmente nublado típico do verão atlântico. O contraste térmico entre a manhã fresca e a tarde aquecida molda a experiência de quem percorre os trilhos. O pôr do sol fixa-se às 20:53, oferecendo tréguas luminosas junto aos miradouros sobranceiros ao oceano. A taxa de câmbio de 1 USD por 0.88 EUR permanece estável para os turistas na região. A notícia do regresso da lontra à serra acrescenta um motivo de contemplação para quem caminha devagar. Sintra continua a ser um território de mistério e silêncio recuperado.",
+              "source": "saudade desk",
+              "source_date": "2026-07-27"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-26T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O Festival de Folclore integrado nas comemorações dos 60 anos das Lavadeiras é um evento de memória. No Sabugo, a tradição é celebrada com rigor e respeito pelo passado. O clima entre 18°C e 25°C é propício para estas reuniões ao ar livre. A taxa de câmbio de 1 USD para 0.88 EUR permite gerir o orçamento de viagem com total clareza. Sintra demonstra, mais uma vez, a sua capacidade de preservar a identidade cultural através da música e da dança.",
               "source": "saudade desk",
               "source_date": "2026-07-21"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-20T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Museu Gulbenkian celebra a reabertura com acesso gratuito.",
-              "lede": "Aproveite a entrada livre e as atividades especiais programadas para esta reabertura.",
-              "body": "O Museu Gulbenkian reabre portas com entrada gratuita e um programa de atividades de celebração. É uma oportunidade rara para revisitar as coleções permanentes sem custos. O tempo estará parcialmente nublado com temperaturas entre 20°C e 27°C. Com um índice UV de 8, a proteção solar é indispensável para quem caminha pelos jardins. Lembre-se que o câmbio atual é de 1 USD para 0,87 EUR. Planeie a sua visita durante o dia e aproveite a luz antes do pôr do sol, que ocorre às 20:57. O ar mantém uma qualidade justa, com PM2.5 em 8, garantindo um passeio agradável por entre as exposições.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "02",
-              "headline": "A maior exposição de LEGO da Europa chega à capital.",
-              "lede": "Lisboa prepara-se para receber uma das maiores mostras de construções LEGO do continente.",
-              "body": "A contagem decrescente para a maior exposição de LEGO da Europa em Lisboa aproxima-se do fim. Este evento promete ocupar o tempo de famílias e entusiastas da construção detalhada. Com 20°C a 27°C de temperatura, o clima convida a atividades em espaços interiores climatizados. O índice UV de 8 sugere cautela nas deslocações a pé durante a tarde. Ao trocar moeda, considere a taxa de 1 USD para 0,87 EUR. A qualidade do ar permanece justa, com um nível de 8 para PM2.5. O sol põe-se às 20:57, deixando tempo suficiente para explorar os roteiros de arte que a cidade oferece neste fim-de-semana.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "03",
-              "headline": "O roteiro de arte preenche o fim-de-semana lisboeta.",
-              "lede": "A agenda cultural da cidade destaca exposições variadas para os observadores mais atentos.",
-              "body": "Lisboa oferece um roteiro de arte diversificado para este fim-de-semana. As galerias e museus abrem as suas portas para exposições que dialogam com a história e a modernidade da cidade. O clima é ameno, variando entre 20°C e 27°C, apesar de o céu se apresentar parcialmente nublado. O índice UV de 8 exige proteção solar, mesmo com a cobertura de nuvens. A qualidade do ar está em 8 (PM2.5), sendo considerada justa. Para quem chega de fora, a taxa de câmbio é de 1 USD para 0,87 EUR. O pôr do sol acontece às 20:57, marcando o fim de uma jornada dedicada à contemplação artística na capital.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A exposição «Equilibrium» inaugura na Paróquia de Santa Maria Madalena.",
-              "lede": "A cultura encontra o seu espaço na Paróquia de Santa Maria Madalena com uma nova mostra.",
-              "body": "A exposição «Equilibrium» está oficialmente inaugurada na Paróquia de Santa Maria Madalena. É um convite à reflexão num ambiente sereno da cidade. O tempo está encoberto, com temperaturas frescas entre 19°C e 24°C. A qualidade do ar é justa, registando 10 para PM2.5. Se viaja com moeda estrangeira, a conversão atual é de 1 USD para 0,87 EUR. O pôr do sol ocorre às 21:02, proporcionando um final de tarde tranquilo. O Porto mantém a sua rotina cultural habitual, celebrando a arte apesar de desafios orçamentais noutros setores. Aproveite para caminhar pelas ruas da cidade sem a preocupação com o calor excessivo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "02",
-              "headline": "O padel reúne atletas no Parque da Cidade.",
-              "lede": "O Mimosa Open Porto traz os melhores jogadores de padel ao Parque da Cidade.",
-              "body": "O Parque da Cidade é palco do Mimosa Open Porto, reunindo alguns dos melhores jogadores de padel. O evento é um ponto de encontro para os amantes do desporto ao ar livre. Com o céu encoberto e temperaturas entre 19°C e 24°C, as condições são ideais para a prática desportiva. A qualidade do ar está em 10 (PM2.5), um nível aceitável para atividades físicas. A taxa de câmbio é de 1 USD para 0,87 EUR. O sol põe-se tarde, às 21:02, permitindo que os jogos se prolonguem pela noite dentro. O Porto continua a ser um centro de dinamismo, mesmo sob um manto de nuvens que cobre a cidade durante todo o dia.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "03",
-              "headline": "A música do mundo ressoa fiel às suas origens.",
-              "lede": "O FMM Sines resiste e mantém a sua essência de descoberta cultural.",
-              "body": "O festival Músicas do Mundo, em Porto Covo, e o FMM Sines mantêm-se fiéis à descoberta e ao encontro entre culturas. Mesmo com ajustes orçamentais, o espírito de resistência cultural prevalece. O Porto acompanha este movimento com uma atmosfera de reflexão sobre as artes. O tempo está encoberto, variando entre 19°C e 24°C. O ar apresenta uma qualidade justa (PM2.5 de 10). Para os viajantes, o câmbio de 1 USD para 0,87 EUR é a referência para o dia. O sol despede-se às 21:02, sob um céu que convida ao silêncio e à escuta atenta das sonoridades que chegam de várias partes do mundo. É o momento perfeito para observar a resiliência criativa.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O festival Sintra+Ativa leva desporto ao Parque Urbano Felício Loureiro.",
-              "lede": "A iniciativa Sintra+Ativa promove o bem-estar e a diversão no Parque Urbano Felício Loureiro.",
-              "body": "O Parque Urbano Felício Loureiro é o local escolhido para o programa Sintra+Ativa, que combina desporto e diversão. É uma excelente forma de aproveitar o espaço público local. O tempo está encoberto, com temperaturas entre 19°C e 24°C. O índice UV de 8 é muito alto, exigindo proteção mesmo sob o céu nublado. A qualidade do ar é justa, com PM2.5 em 8. Lembre-se que a taxa de câmbio é de 1 USD para 0,87 EUR. O sol põe-se às 20:59, marcando o fim das atividades ao ar livre. Sintra oferece um ambiente sereno para quem procura equilíbrio entre a atividade física e o descanso na natureza.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival de Folclore celebra os 60 anos das Lavadeiras no Sabugo.",
-              "lede": "A tradição local ganha destaque com o Festival de Folclore integrado nas comemorações das Lavadeiras.",
-              "body": "No Sabugo, o Festival de Folclore celebra os 60 anos das Lavadeiras, preservando a identidade cultural da região. O evento é um marco na vida comunitária de Sintra. Com temperaturas entre 19°C e 24°C, o clima é propício para celebrações ao ar livre, apesar do céu encoberto. O índice UV atinge 8, sendo recomendado o uso de protetor solar. A qualidade do ar, com 8 de PM2.5, mantém-se justa. A taxa de câmbio de 1 USD para 0,87 EUR é útil para quem visita a vila. O sol põe-se às 20:59, iluminando as tradições locais que definem o caráter único desta zona de Sintra. É uma oportunidade para observar a história viva.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
-            },
-            {
-              "n": "03",
-              "headline": "O festival MUSCARIUM despede-se e prepara o regresso em 2027.",
-              "lede": "O MUSCARIUM encerra o seu ciclo atual, prometendo um novo formato para o ano 2027.",
-              "body": "O festival MUSCARIUM chega ao fim, mas já prepara o seu renascimento em 2027 com uma estrutura renovada. A cultura em Sintra está em constante transformação. O tempo apresenta-se encoberto, com temperaturas entre 19°C e 24°C. O índice UV de 8 exige atenção aos cuidados com a pele. A qualidade do ar é justa, com um valor de 8 para PM2.5. Para os visitantes, a conversão de 1 USD para 0,87 EUR é o dado a reter. O pôr do sol, às 20:59, marca a transição para uma nova fase cultural na vila. Sintra continua a ser um refúgio para observadores que valorizam a continuidade e o planeamento a longo prazo das artes.",
-              "source": "saudade desk",
-              "source_date": "2026-07-20"
             }
           ]
         }
