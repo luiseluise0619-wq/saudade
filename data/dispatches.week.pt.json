@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-07-27T06:00:00+09:00",
+  "updated": "2026-07-28T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-28T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A Brasileira lança festival Sara Vai com artistas conterrâneos.",
+              "lede": "A icónica cafetaria lisboeta acolhe um ciclo cultural dedicado a vozes irmãs do outro lado do Atlântico.",
+              "body": "As mesas de madeira escura da Brasileira recebem agora o festival Sara Vai, reunindo artistas conterrâneos num diálogo íntimo de canções e poesia. O ar da baixa mantém-se limpo, registando um índice de PM2.5 de 12, ideal para longas tardes de esplanada. A taxa de câmbio permanece estável em 1 USD para 0.88 EUR, facilitando as trocas comerciais nos cafés históricos. Este encontro cultural celebra a língua comum sem pressas, convidando quem passa a sentar-se e escutar. O Chiado recupera assim uma cadência antiga, onde cada poema recitado parece fazer parte da própria arquitetura da rua.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "02",
+              "headline": "O Oceanário revela nova exposição temporária por 15€.",
+              "lede": "O fundo do mar fica mais acessível com bilhetes promocionais disponíveis por tempo limitado.",
+              "body": "As margens do Tejo convidam a uma visita ao Oceanário de Lisboa para descobrir o novo percurso expositivo recentemente inaugurado. Com o bilhete fixado nos 15€ por tempo limitado, o acesso a este mundo subaquático torna-se um convite irrecusável para os dias de verão. A qualidade do ar na capital continua fair, com leituras de PM2.5 em 12, garantindo um passeio agradável junto aos cais. O câmbio atual de 1 USD por 0.88 EUR atrai visitantes estrangeiros que procuram refugiar-se do calor nas profundezas azuis. É uma oportunidade rara para observar as espécies marinhas com a tranquilidade que a estação exige.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "03",
+              "headline": "O Parque Urbano do Jamor oferece sombra e silêncio entre Oeiras e Lisboa.",
+              "lede": "O grande pulmão verde convida a caminhadas longas ao longo da ribeira e dos pinhais.",
+              "body": "Entre a foz e as colinas, o Parque Urbano do Jamor afirma-se como o refúgio perfeito para quem foge ao betão da cidade. A qualidade do ar regista 12 de PM2.5, permitindo exercício físico e repouso debaixo dos plátanos centenários. A taxa de câmbio de 1 USD para 0.88 EUR apoia os visitantes que planeiam passar o dia inteiro nos relvados e cafés da zona desportiva. Perto dali, o Pavilhão do Conhecimento completa o roteiro científico para famílias em busca de saber prático. É um território de transição onde o rio e a mata dialogam em silêncio absoluto.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A Agenda cultural propõe a visita comentada à exposição temporária de plenos.",
+              "lede": "Os museus da Invicta abrem portas a percursos guiados que revelam segredos da criação artística.",
+              "body": "A programação cultural do Porto destaca esta semana a visita comentada à exposição temporária dedicada aos plenos, convidando a um olhar atento sobre as formas. Com uma qualidade do ar classificada como fair e PM2.5 nos 12, as ruas graníticas convidam a deslocações a pé sem pressas. O câmbio oficial de 1 USD para 0.88 EUR mantém-se favorável para os viajantes que exploram as galerias da baixa. Cada sala revela detalhes escultóricos e pictóricos que merecem pausa e contemplação prolongada. É o Porto intelectual a manifestar-se através do silêncio das salas de exposição.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "02",
+              "headline": "Artistas mascarados de Benim enchem as ruas de Porto-Novo.",
+              "lede": "O intercâmbio cultural traz cores vivas e tradições ancestrais para o espaço público.",
+              "body": "As ruas ganham ritmo com a chegada dos artistas mascarados vindos de Porto-Novo para celebrar um vibrante festival de máscaras. A atmosfera urbana mistura-se com os sons rituais e os trajes tradicionais que transformam a paisagem quotidiana. O ar mantém-se limpo, com um registo de PM2.5 de 12, ideal para assistir aos cortejos ao ar livre. A conversão monetária de 1 USD para 0.88 EUR acompanha a estadia dos visitantes internacionais na cidade. Este evento reforça os laços atlânticos através da arte performativa, surpreendentemente enraizada no coração portuense.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "03",
+              "headline": "A Praia do Porto Pim reabre a banhos sob o sol de verão.",
+              "lede": "As águas calmas da baía voltam a receber nadadores e banhistas em busca de frescura.",
+              "body": "A histórica Praia do Porto Pim anuncia a sua reabertura oficial a banhos, oferecendo areia limpa e mar sereno aos residentes. A curta distância, um parque de aventura na montanha desafia os corajosos com um slide a 130 km/h para quem procura adrenalina pura. A qualidade do ar regista 12 de PM2.5, assegurando um ambiente puro junto à costa atlântica. A taxa de câmbio de 1 USD para 0.88 EUR facilita o planeamento de férias costeiras relaxantes. É o momento perfeito para alternar entre a calmaria da baía e a velocidade vertiginosa dos vales circundantes.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Alegro Sintra cria parque infantil gigante para férias sem tédio.",
+              "lede": "O espaço comercial transforma-se num centro de diversão contínua para os mais novos.",
+              "body": "Com temperaturas a oscilar entre 18 e 27°C e a típica neblina matinal a cobrir as encostas, Sintra oferece alternativas abrigadas para as famílias. O Alegro Sintra inaugurou um parque infantil gigante projetado para garantir entretenimento durante todo o dia. A qualidade do ar local é fair, marcando 10 de PM2.5, num ambiente fresco que antecede o pôr do sol às 20:52. A taxa de câmbio de 1 USD para 0.88 EUR apoia as famílias estrangeiras em visita à região saloia. É uma solução prática para os dias em que a serra se esconde sob o manto branco da bruma.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "02",
+              "headline": "A lontra regressa à Serra de Sintra após décadas de ausência.",
+              "lede": "O avistamento confirma a recuperação ambiental dos cursos de água na serra encantada.",
+              "body": "A biodiversidade sintrense celebra o regresso da lontra aos riachos da serra, de onde havia desaparecido há várias décadas. Sob uma neblina persistente e temperaturas entre 18 e 27°C, a natureza mostra sinais claros de regeneração ecológica. A qualidade do ar regista ótimos valores de PM2.5 nos 10, consolidando a pureza dos vales verdejantes até ao anoitecer pelas 20:52. Com o câmbio de 1 USD a valer 0.88 EUR, os observadores de aves e naturalistas encontram condições económicas estáveis para explorar a região. Este animal esquivo volta a habitar os recantos mais secretos das ribeiras locais.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            },
+            {
+              "n": "03",
+              "headline": "Nafarros promove o Festival do Caracol com petiscos e artesanato.",
+              "lede": "A aldeia vizinha celebra os sabores tradicionais com música ao vivo e animação popular.",
+              "body": "A localidade de Nafarros acolhe o tradicional Festival do Caracol, reunindo petiscos genuínos, música popular e artesanato nas ruas típicas. O mercúrio marca entre 18 e 27°C, com a neblina característica da serra a dissipar-se lentamente antes de o sol se pôr às 20:52. A qualidade do ar local mantém-se saudável com 10 de PM2.5, proporcionando um ambiente rural muito agradável. A taxa de câmbio de 1 USD para 0.88 EUR facilita as pequenas compras de olaria e produtos locais nas bancas da festa. É um convite imperdível para saborear a gastronomia saloia na sua máxima autenticidade.",
+              "source": "saudade desk",
+              "source_date": "2026-07-28"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-27T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Os parques românticos da vila encontram nas condições de nevoeiro matinal o elemento ideal para preservar o seu esplendor botânico. Com a temperatura máxima a fixar-se nos 25°C, caminhar sob a copa das árvores centenárias proporciona um refúgio natural contra a intensidade do sol. O final da tarde, prolongado até às 20:57, convida a regressar aos miradouros à medida que a neblina regressa suavemente às copas. É um tempo de contemplação silenciosa nos caminhos de pedra.",
               "source": "saudade desk",
               "source_date": "2026-07-22"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-21T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Museu Gulbenkian reabre portas ao público com entrada livre.",
-              "lede": "A instituição retoma as suas atividades culturais com uma programação especial.",
-              "body": "O Museu Gulbenkian reabre as suas galerias com entrada gratuita para todos os visitantes. É o momento ideal para revisitar a coleção permanente e participar nas atividades de celebração agendadas para esta semana. O ambiente é de renovação e tranquilidade nos jardins circundantes. A taxa de câmbio atual situa-se em 1 USD para 0.88 EUR, facilitando o planeamento das suas despesas locais. Aproveite a pausa para observar a curadoria renovada em Lisboa.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "02",
-              "headline": "A maior exposição de LEGO da Europa chega finalmente a Lisboa.",
-              "lede": "A contagem decrescente para o evento termina com a montagem das estruturas.",
-              "body": "Lisboa prepara-se para acolher a maior exposição de LEGO da Europa. O entusiasmo é visível entre os residentes que acompanham a preparação dos espaços. Este evento promete transformar a percepção arquitetónica da cidade através de peças icónicas. Com uma taxa de câmbio estável de 1 USD para 0.88 EUR, o acesso a eventos culturais torna-se mais previsível. Reserve tempo para percorrer as instalações com calma durante os próximos dias. A cidade aguarda por este momento criativo com serenidade.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "03",
-              "headline": "O Pavilhão do Conhecimento mantém a sua agenda de ciência viva.",
-              "lede": "O centro convida a uma exploração pausada pelo conhecimento científico contemporâneo.",
-              "body": "O Pavilhão do Conhecimento - Centro Ciência Viva continua a ser um refúgio de saber para observadores atentos. As exposições interativas oferecem uma perspetiva lúcida sobre os temas da atualidade. A gestão do tempo de visita é facilitada pela estabilidade económica, com o câmbio de 1 USD para 0.88 EUR. Recomendamos a visita durante o período da manhã para evitar o fluxo mais intenso. É uma oportunidade para refletir sobre a ciência num ambiente de silêncio e descoberta.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O nevoeiro matinal acompanha as temperaturas amenas no Porto.",
-              "lede": "A cidade oscila entre 19°C e 24°C sob um manto de bruma.",
-              "body": "O Porto amanhece com nevoeiro, mantendo as temperaturas entre 19°C e 24°C durante esta semana. O pôr do sol ocorre às 21:01, permitindo longas caminhadas pela Ribeira. A qualidade do ar é considerada justa, com PM2.5 em 13, o que favorece as atividades ao ar livre. A taxa de câmbio de 1 USD para 0.88 EUR permanece favorável para quem visita a cidade. Prepare-se para um clima temperado e uma luz suave nas ruas históricas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "02",
-              "headline": "O Douro & Porto Wine Festival celebra o encontro entre música e vinhos.",
-              "lede": "A harmonização perfeita acontece à beira do rio com um brinde coletivo.",
-              "body": "O Douro & Porto Wine Festival combina concertos e provas de vinhos numa experiência sensorial única. É uma excelente forma de apreciar a cultura local sob o céu do Norte. A taxa de câmbio de 1 USD para 0.88 EUR permite desfrutar destas experiências com tranquilidade. Com o pôr do sol às 21:01, o ambiente torna-se ideal para provar as castas da região. O evento reforça o carácter hospitalar da cidade nesta altura do ano.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "03",
-              "headline": "Um novo restaurante japonês reabre num hotel boutique emblemático.",
-              "lede": "Vítor Matos assina uma proposta gastronómica que revitaliza o espaço.",
-              "body": "Após um encerramento repentino, um hotel boutique no Porto reabre as portas com uma nova oferta culinária. O restaurante japonês, assinado pelo chef Vítor Matos, eleva a fasquia da gastronomia local. Com o clima ameno entre 19°C e 24°C, o acesso ao centro histórico é agradável. A taxa de câmbio oficial de 1 USD para 0.88 EUR mantém-se estável para os viajantes. É uma excelente adição à oferta de restauração da cidade, mantendo a qualidade do serviço.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O nevoeiro de Sintra protege a serra num dia de calor moderado.",
-              "lede": "As temperaturas variam entre 18°C e 25°C com índice UV muito alto.",
-              "body": "Sintra apresenta-se hoje com nevoeiro e temperaturas entre 18°C e 25°C. O índice UV de 8 é muito alto, exigindo proteção adequada mesmo sob a bruma matinal. O pôr do sol ocorre às 20:58, prolongando a luz sobre os palácios. A qualidade do ar é justa, com PM2.5 em 11, mantendo a atmosfera fresca na serra. A taxa de câmbio de 1 USD para 0.88 EUR facilita as suas compras de artesanato local.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "02",
-              "headline": "O desporto ocupa o Parque Urbano Felício Loureiro com a iniciativa Sintra+Ativa.",
-              "lede": "O espaço público transforma-se num centro de movimento para todas as idades.",
-              "body": "A iniciativa Sintra+Ativa traz dinamismo ao Parque Urbano Felício Loureiro. É um convite para observar a comunidade em movimento num espaço verde bem cuidado. Com a temperatura a atingir os 25°C, o parque oferece sombras refrescantes para quem prefere a observação calma. A taxa de câmbio situa-se em 1 USD para 0.88 EUR. O ambiente é de bem-estar e convívio, refletindo a vivacidade atual de Sintra para além dos seus monumentos históricos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
-            },
-            {
-              "n": "03",
-              "headline": "O Festival de Folclore homenageia as Lavadeiras no Sabugo.",
-              "lede": "A tradição ganha fôlego nos 60 anos de uma celebração comunitária.",
-              "body": "O Festival de Folclore integrado nas comemorações dos 60 anos das Lavadeiras é um evento de memória. No Sabugo, a tradição é celebrada com rigor e respeito pelo passado. O clima entre 18°C e 25°C é propício para estas reuniões ao ar livre. A taxa de câmbio de 1 USD para 0.88 EUR permite gerir o orçamento de viagem com total clareza. Sintra demonstra, mais uma vez, a sua capacidade de preservar a identidade cultural através da música e da dança.",
-              "source": "saudade desk",
-              "source_date": "2026-07-21"
             }
           ]
         }
