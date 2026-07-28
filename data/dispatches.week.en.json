@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-07-28T06:00:00+09:00",
+  "updated": "2026-07-29T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-29T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Partly cloudy skies frame Seoul as temperatures settle between 24 and 31°C.",
+              "lede": "The afternoon air feels balanced under fair conditions as the sun sets at 19:43.",
+              "body": "Partly cloudy skies frame Seoul today as temperatures settle between 24 and 31°C. The afternoon air remains balanced under fair conditions with PM2.5 readings holding at 14, making it comfortable for walking along the restored stream networks. As dusk approaches, the sun sets quietly at 19:43 across the urban expanse. Currency exchange counters operate at a rate of 1 USD to 1459 KRW for visitors managing travel funds. Cultural spaces across the districts are active with special events, including the immersive LAYERS OF US exhibition celebrating the seventh anniversary of TOMORROW X TOGETHER. Residents and travelers can also explore independent cinema focusing on human portraits at local film festivals or visit curated ballet showcases featuring international guest stars.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "02",
+              "headline": "Curated cultural exhibitions and anniversary showcases arrive across the city this week.",
+              "lede": "Immersive installations and international ballet gatherings mark an active creative season in the capital.",
+              "body": "Curated cultural exhibitions and anniversary showcases arrive across the city this week. Fans of contemporary pop culture can visit the expansive LAYERS OF US exhibition in Seoul, marking the seventh anniversary of TOMORROW X TOGETHER. Meanwhile, classical dance enthusiasts can experience rare performances as Park Se-eun welcomes principal ballet stars from Paris, New York, and Milan. Film screenings continue to draw thoughtful audiences to independent venues dissecting nuanced human narratives. Outside the galleries, the weather stays partly cloudy with temperatures reaching 31°C by mid-afternoon before dropping to 24°C at night. Financial transactions hover near 1 USD to 1459 KRW, providing stable purchasing power for attendees navigating transit lines between major exhibition halls and intimate theaters.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "03",
+              "headline": "Concert pre-sale preparations and film retrospectives anchor the midsummer cultural calendar.",
+              "lede": "Quiet cinematic explorations and ticket access openings shape the rhythm of the capital.",
+              "body": "Concert pre-sale preparations and film retrospectives anchor the midsummer cultural calendar in Seoul. Ticket access opens for cardholders anticipating Jay Park's August World Tour concert through dedicated partnerships. Simultaneously, film retrospectives at local cultural hubs examine complex human stories and gentle cinematic flickers. The outdoor environment remains steady under partly cloudy skies with fair air quality, keeping PM2.5 levels down to 14. Temperatures span from 24 to 31°C, and the evening light fades by 19:43. Travelers exchanging currency will find rates around 1 USD to 1459 KRW at standard banking kiosks. The city moves at a deliberate pace, balancing large-scale musical events with quiet spaces for reflection and artistic discovery.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Mainly clear skies bring intense sunlight and strong UV indices across Tokyo.",
+              "lede": "Temperatures span from 22 to 34°C while the sun remains bright until 18:48.",
+              "body": "Mainly clear skies bring intense sunlight and strong UV indices across Tokyo today. Temperatures span from 22 to 34°C, accompanied by a very high UV rating of 8 that calls for adequate sun protection during midday strolls. Air quality remains fair with PM2.5 recorded at 41, creating a slightly hazy skyline over the metropolitan districts. As daylight fades, the sun sets cleanly at 18:48, cooling the paved avenues for evening pedestrians. Currency exchange rates trade around 1 USD to 164 JPY for incoming travelers. The urban landscape reflects on its recent history, with public spaces continuing to evolve five years after the major global sporting events, while architectural landmarks like The Royal Park Hotel Ginza 6-chome offer quiet resting points for visitors.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "02",
+              "headline": "Design hotels and public installations offer quiet refuge from the midday heat.",
+              "lede": "Travelers find shaded corridors and minimalist architecture throughout the central wards.",
+              "body": "Design hotels and public installations offer quiet refuge from the midday heat across Tokyo. Visitors navigating the central districts can observe thoughtful urban planning that still shapes the city five years after the hosting of the 2020 games. Architecture enthusiasts often pause at contemporary properties like The Royal Park Hotel Ginza 6-chome for respite from the bustling streetscape. Atmospheric conditions feature mainly clear skies and a high UV index of 8, with temperatures peaking at 34°C before dropping to 22°C overnight. Financial exchanges operate steadily at 1 USD to 164 JPY. Quirky pop-up spaces, including the temporary Hello Kitty installation where guests can check in but not stay, continue to draw curious onlookers without disrupting the calm flow of pedestrian traffic.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "03",
+              "headline": "Upcoming public holidays approach as summer heat crests over the metropolitan area.",
+              "lede": "Mountain Day preparations begin while outdoor venues manage the bright seasonal glare.",
+              "body": "Upcoming public holidays approach as summer heat crests over the metropolitan area. Residents note that Mountain Day on 2026-08-11 is drawing closer, though standard administrative offices remain fully operational for now. Outside, the weather remains mainly clear with temperatures ranging from 22 to 34°C and a sharp UV index of 8. Air quality indices register PM2.5 at 41 under fair atmospheric dispersal. Evening arrival brings sunset at 18:48, granting relief to outdoor commuters. Currency exchange holds near 1 USD to 164 JPY. While motorsport events like the recent Tokyo E-Prix bring brief waves of excitement to the waterfront courses, the surrounding residential neighborhoods maintain their usual restrained rhythm through the peak of the season.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Partly cloudy skies cover Lisbon as temperatures range between 19 and 29°C.",
+              "lede": "Strong UV radiation calls for caution while walking the shaded cobblestone alleys.",
+              "body": "Partly cloudy skies cover Lisbon today as temperatures range comfortably between 19 and 29°C. The atmosphere remains clean with a low PM2.5 reading of 9, ensuring crisp air along the riverfront. However, the UV index reaches a very high level of 8, requiring sunscreen for extended outdoor exploration. Daylight stretches long into the evening, with sunset illuminating the limestone facades at 20:50. Financial exchanges trade at a steady rate of 1 USD to 0.88 EUR for visitors settling accounts. Local cultural spaces blend contemporary design with history, highlighted by LEGO Ideas installations depicting scenes from Lisbon rooftops to the ancient Library of Alexandria, offering quiet indoor retreats during the warmer afternoon hours.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "02",
+              "headline": "Creative exhibitions connect local terracotta rooftops to ancient literary history.",
+              "lede": "Miniature brick architecture and upcoming film screenings enrich the cultural calendar.",
+              "body": "Creative exhibitions connect local terracotta rooftops to ancient literary history across the city. Visitors can view intricate LEGO Ideas installations that span from familiar Lisbon viewpoints all the way to the Library of Alexandria. Meanwhile, preparations continue for upcoming cinematic events, including the Lisbon Festival featuring works such as 'Skrzyżowanie' starring Jan Englert. Weather conditions support leisurely neighborhood walks with partly cloudy skies and temperatures spanning from 19 to 29°C. Air quality is exceptionally clear at PM2.5 level 9, though the midday sun demands respect with a UV index of 8. Financial transactions are conducted at 1 USD to 0.88 EUR, and sunset arrives gracefully at 20:50 over the Tagus estuary.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            },
+            {
+              "n": "03",
+              "headline": "Commercial districts and neighborhood squares adjust to the peak summer cadence.",
+              "lede": "Retail investments and cultural funding announcements ground the quiet rhythm of the capital.",
+              "body": "Commercial districts and neighborhood squares adjust to the peak summer cadence in Lisbon. Real estate movements, such as discussions surrounding retail park acquisitions, quietly shape the outer commercial zones while the historic center remains focused on arts and leisure. Cultural funding announcements highlight upcoming festival screenings that draw international cinema enthusiasts to local screening rooms. Ambient temperatures move between 19 and 29°C under partly cloudy skies, accompanied by fair air quality with PM2.5 at 9. The sun remains high until a late sunset at 20:50, while the UV index touches 8 during the afternoon peak. Travelers will find currency exchange rates holding at 1 USD to 0.88 EUR across local banking institutions.",
+              "source": "saudade desk",
+              "source_date": "2026-07-29"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-28T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "The financial rhythm of the city remains calm with the exchange rate fixed at 1 USD to 0.88 EUR. Markets and neighborhood merchants conduct business as usual without holiday interruptions or closures. Visitors can navigate the winding streets easily, relying on standard currency conversions for all daily purchases. The warm afternoon sun bathes the riverfront in a brilliant amber glow before the evening mist arrives. Observing the late afternoon calm offers an ideal window to appreciate the slower details of Lisbon.",
               "source": "saudade desk",
               "source_date": "2026-07-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-22T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light rain falls across Seoul as the afternoon yields to dusk.",
-              "lede": "Temperatures hover between 22 and 29°C while 9.2mm of precipitation settles over the stone courtyards.",
-              "body": "Light rain falls across Seoul as the afternoon yields to dusk, cooling the humid air after a long stretch of midday heat. Temperatures hover between 22 and 29°C while 9.2mm of precipitation settles over the stone courtyards of the historic center. Air quality remains fair with PM2.5 at 42, making evening walks manageable beneath an umbrella. Currency exchanges trade at 1 USD to 1478 KRW across local banks. The evening sunset arrives at 19:49, casting long shadows over the wet pavement. It is a quiet evening to seek shelter in a neighborhood tea house or browse through covered alleys.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "Seoul Grand Park welcomes new arrivals to its forested hillside enclosures.",
-              "lede": "Endangered red panda twins have been born naturally at the park for the first time.",
-              "body": "Seoul Grand Park welcomes new arrivals to its forested hillside enclosures as keepers tend to the facility's newest residents. Endangered red panda twins have been born naturally at the park for the first time, marking a quiet milestone for regional conservation efforts. Visitors walking the shaded pathways will find the surrounding grounds lush and deeply green from the recent seasonal rains. The park remains an accessible retreat from the dense commercial districts of the capital. Families and quiet observers often spend hours watching the bamboo groves where the young red pandas slowly acclimate to their outdoor surroundings.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "Concert halls and exhibition spaces prepare for a rich cultural season.",
-              "lede": "World-class orchestras and soloists fill Seoul's calendar as Space K exhibits new works by KAWS.",
-              "body": "Concert halls and exhibition spaces prepare for a rich cultural season as autumn approaches the capital. World-class orchestras and soloists fill Seoul's calendar, offering evening performances across major cultural venues. Meanwhile, at Seoul’s Space K, KAWS brings new tensions between friendship, conflict, and fame to an attentive public. These exhibitions provide a contemplative indoor refuge from the damp weather outside. Ticket offices advise booking in advance for weekend orchestra performances, though weekday gallery viewings remain unhurried and peaceful for the solitary traveler.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Intense summer sun beats down on Tokyo under a clear, bright sky.",
-              "lede": "Temperatures climb from 25 to 35°C with a very high UV index of 8.",
-              "body": "Intense summer sun beats down on Tokyo under a clear, bright sky, demanding deliberate pacing from daytime travelers. Temperatures climb from 25 to 35°C with a very high UV index of 8, making midday shade essential. Air quality registers as poor with PM2.5 at 37, lingering in the heavy urban atmosphere. Financial transactions reflect an exchange rate of 1 USD to 163 JPY across commercial districts. The sun sets at 18:53, bringing a slight relief of evening breeze to the concrete avenues. Pedestrians seek refuge beneath station concourses and air-conditioned department stores until dusk settles.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "Park Hyatt Tokyo manages its ongoing transformation with quiet precision.",
-              "lede": "The legendary hotel navigates a thoughtful renovation while preserving its timeless interior atmosphere.",
-              "body": "Park Hyatt Tokyo manages its ongoing transformation with quiet precision as loyal guests watch the property evolve. The legendary hotel navigates a thoughtful renovation while preserving its timeless interior atmosphere high above the sprawling metropolis. Elsewhere in the city, retail spaces experiment with form, such as Family Mart’s new Tokyo flagship store, which challenges conventional convenience. These minor civic shifts reveal a city constantly refining its everyday spaces without losing its distinct character. Observers find that even standard routines in Tokyo offer unexpected moments of architectural and spatial design inquiry.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "Cinematic arts take center stage as seasonal film showcases begin.",
-              "lede": "The Tokyo Horror Film Festival presents a curated program of compelling short films.",
-              "body": "Cinematic arts take center stage as seasonal film showcases begin to draw cinephiles into darkened auditoriums. The Tokyo Horror Film Festival presents a curated program of compelling short films that explore mood and narrative tension. Concurrently, animation fans follow the latest developments of the Tokyo Revengers arc, featuring new musical themes by JO1. These cultural offerings provide a welcome escape from the scorching afternoon heat outside. Neighborhood cinemas remain peaceful sanctuaries where visitors can experience contemporary Japanese storytelling away from the bustling tourist corridors.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the historic limestone façades of Lisbon.",
-              "lede": "Temperatures range from 20 to 28°C under a high UV index of 8.",
-              "body": "Partly cloudy skies frame the historic limestone façades of Lisbon as a mild Atlantic breeze sweeps through the alleyways. Temperatures range from 20 to 28°C under a high UV index of 8, offering pleasant conditions for walking the hills. Air quality remains exceptionally fair with PM2.5 at 10, keeping the coastal air crisp and clear. Currency exchanges trade at 1 USD to 0.88 EUR throughout local banking institutions. Sunset arrives late at 20:56, bathing the Tagus River in a long, golden twilight. It is an ideal climate for sitting outdoors at a neighborhood belvedere as evening falls.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "The Calouste Gulgentkian Museum welcomes visitors back to its restored galleries.",
-              "lede": "A meticulous restoration brings the modernist museum back to its original 1969 design.",
-              "body": "The Calouste Gulbenkian Museum welcomes visitors back to its restored galleries following a meticulous multi-year project. A careful restoration brings the modernist museum back to its original 1969 design, honoring its architectural heritage. The surrounding gardens remain a tranquil sanctuary where water features and shaded paths offer relief from the afternoon warmth. Art enthusiasts can spend hours moving between the indoor galleries and the outdoor sculpture lawns without interruption. This reopening marks a significant moment for cultural observers returning to the Portuguese capital this season.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "Music and community gatherings animate the waterfront districts this week.",
-              "lede": "NOS Alive anchors the summer festival calendar while local community charity events continue.",
-              "body": "Music and community gatherings animate the waterfront districts this week as summer celebrations reach their peak. NOS Alive anchors the summer festival calendar, drawing international crowds to the coastal venues along the river. Meanwhile, smaller civic gatherings take place across the city, including the recent charity Ukrainian borscht festival raising funds for children. Libraries also mark quiet milestones, such as a local reader completing the Lepper Library program challenge. These diverse events highlight a city that balances large-scale cultural spectacles with intimate, community-driven traditions.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
             }
           ]
         }
