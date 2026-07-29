@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-07-28T06:00:00+09:00",
+  "updated": "2026-07-30T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-07-30T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid alcanza los 38°C este final de julio con cielos parcialmente nublados.",
+              "lede": "Las tardes estivales prolongan la luz hasta las 21:31, invitando a buscar refugio en la sombra.",
+              "body": "El termómetro oscila entre los 24 y los 38°C durante estas jornadas de pleno verano en la capital. Los madrileños buscan alternativas al calor intenso en las terrazas de Madrid Río al caer la tarde. Con un tipo de cambio en 1 USD frente a 0.88 EUR, el presupuesto del viajero se mantiene estable. La agenda cultural ofrece cine al aire libre y las proyecciones del Festival de Cine de Madrid con la obra 'Kipuka'. Conviene planificar los paseos largos a primera hora de la mañana para evitar las horas de mayor insolación.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival de la Guitarra y el cine de verano marcan las noches madrileñas.",
+              "lede": "La programación estival combina acordes clásicos con proyecciones cinematográficas bajo el cielo nocturno.",
+              "body": "Las noches de este final de julio en Madrid ofrecen múltiples opciones culturales para los residentes que no han viajado. El Festival de la Guitarra inunda distintos espacios urbanos con su música instrumental mientras el sol se esconde tras el horizonte. Paralelamente, los cines de verano recuperan clásicos y novedades en plazas y parques de la ciudad. El cine de Madrid también acoge propuestas singulares como la proyección sobre el volcán Tajogaite. Es recomendable consultar los horarios con antelación debido a la alta demanda estacional.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "03",
+              "headline": "Tarifas especiales en el Parque Warner para los vecinos de Toledo.",
+              "lede": "Los municipios cercanos disfrutan de ventajas exclusivas en los recintos de ocio madrileños.",
+              "body": "El Ayuntamiento de Toledo ha acordado precios especiales en el Parque Warner y ofertas únicas en otros parques de ocio de Madrid. Esta iniciativa busca incentivar el turismo de proximidad durante los meses estivales. Los visitantes pueden combinar estas jornadas de atracciones con paseos tranquilos por las zonas verdes urbanas. Con una temperatura máxima prevista de 38°C, es imprescindible mantenerse hidratado durante la visita a los recintos al aire libre. La oferta se mantendrá activa durante las próximas semanas.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra una calidad del aire favorable con niveles de PM2.5 en 10.",
+              "lede": "El ambiente urbano se mantiene limpio y apto para recorrer los paseos marítimos a pie.",
+              "body": "Las condiciones atmosféricas en la ciudad condal son óptimas para la actividad al aire libre con un índice de PM2.5 situado en 10. El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR para las transacciones cotidianas. La oferta cultural de la semana incluye el Circuit Festival LGTBIQ+, que llena diversos puntos de la capital catalana con su edición más ambiciosa. Los espacios públicos y las terrazas disfrutan de una afluencia constante de paseantes y observadores silenciosos. Es un momento excelente para caminar sin rumbo fijo por el barrio gótico.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Poble Espanyol y el festival BARTS acogen propuestas musicales de gran formato.",
+              "lede": "La música en directo convive con exposiciones cinematográficas y muestras fotográficas gratuitas.",
+              "body": "La programación cultural de esta semana destaca por la presencia de artistas como Morrissey dentro del marco del BARTS Festival en el Poble Espanyol. Los aficionados al cine y la cultura pop también pueden visitar una exposición de Star Wars gratuita que incluye piezas originales de los rodajes. Además, la Galería de Olympus presenta una muestra fotográfica experimental en la ciudad. Estas actividades ofrecen un respiro cultural de calidad en espacios cerrados y semicubiertos. La afluencia moderada permite disfrutar de las obras con tranquilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "03",
+              "headline": "Exposiciones experimentales y muestras de cine ocupan las galerías barcelonesas.",
+              "lede": "El circuito artístico local amplía su oferta con propuestas visuales de carácter internacional.",
+              "body": "La agenda de la ciudad combina la fotografía contemporánea con muestras temáticas de gran calado popular. La Galería de Olympus expone su selección experimental, ideal para quienes buscan miradas fotográficas pausadas. Paralelamente, los grandes recintos como el Poble Espanyol concentran una parte importante de la vida musical del fin de semana. El transporte público funciona con total normalidad para conectar todos los puntos culturales. Conviene revisar los horarios de acceso a las exposiciones gratuitas para evitar esperas innecesarias en taquilla.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires amanece con un cielo totalmente cubierto y temperaturas de 10 a 15°C.",
+              "lede": "La puesta de sol a las 18:11 marca el inicio de unas tardes frescas de invierno austral.",
+              "body": "El clima porteño se mantiene estable con temperaturas que oscilan entre los 10 y los 15°C bajo un cielo overcast. La calidad del aire es buena, registrando un valor de PM2.5 de 14 en las estaciones de monitoreo urbano. La ciudad avanza en sus proyectos de mejora urbana, destacando la histórica obra de renovación en la pista de atletismo del Parque Chacabuco. Por otro lado, la Galería de Ganadores expone las obras del concurso Buenos Aires y el Río en el Parque Salguero. Las calles invitan a caminar con abrigo ligero mientras se observa el ritmo cotidiano.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Bendita Tú Festival de Cine trae cortometrajes feministas y queer a la ciudad.",
+              "lede": "Las salas independientes y centros culturales acogen una programación cinematográfica diversa y comprometida.",
+              "body": "La cartelera cultural de Buenos Aires suma esta semana propuestas independientes de gran valor artístico y social. El Bendita Tú Festival de Cine 2026 despliega una selección de cortometrajes que abordan nuevas narrativas audiovisuales. Los espacios alternativos se llenan de espectadores interesados en el cine de autor y los debates posteriores. Esta oferta se complementa con la apertura de nuevos espacios de marketing experiencial en los barrios comerciales, como la propuesta de Carolina Herrera en su 212 HOUSE. Es una semana propicia para disfrutar de los espacios culturales cerrados.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            },
+            {
+              "n": "03",
+              "headline": "El Parque Chacabuco inicia los preparativos para la renovación de su pista de atletismo.",
+              "lede": "Los deportistas locales verán modernizadas las instalaciones tras una intervención muy esperada por la comunidad.",
+              "body": "La pista de atletismo del tradicional Parque Chacabuco se prepara para acometer una histórica obra de remodelación. Los trabajos mejorarán la superficie de entrenamiento para los corredores y vecinos que utilizan diariamente este espacio público. Mientras tanto, los paseantes pueden recorrer la muestra fotográfica del concurso Buenos Aires y el Río en las inmediaciones de Parque Salguero. Con una temperatura máxima de 15°C y cielos nublados, las actividades al aire libre requieren una indumentaria adecuada para el frío. La ciudad mantiene su habitual dinamismo cultural y deportivo.",
+              "source": "saudade desk",
+              "source_date": "2026-07-30"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-07-28T06:00:00+09:00",
       "cities": [
@@ -552,98 +644,6 @@
               "body": "Las transacciones comerciales en los circuitos formales se rigen por las cotizaciones oficiales vigentes en el mercado cambiario. Los cafés tradicionales y los transportes públicos operan con normalidad mediante medios electrónicos de pago y efectivo. Es recomendable consultar las tasas actualizadas en las entidades bancarias antes de realizar operaciones de cambio significativas. Los quioscos y los mercados barriales aceptan tarjetas con total inmediatez en sus terminales de cobro. La rutina financiera transcurre con la predictibilidad necesaria para disfrutar de la ciudad con total tranquilidad.",
               "source": "saudade desk",
               "source_date": "2026-07-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-22T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Comunidad de Madrid habilita 52 puntos de observación para seguir el eclipse solar.",
-              "lede": "Los espacios públicos se preparan para un seguimiento astronómico seguro y ordenado este verano.",
-              "body": "El cielo madrileño acoge una cita de gran interés científico y divulgativo con la habilitación de 52 puntos específicos de observación distribuidos por toda la región. Los residentes y visitantes pueden acercarse a estos enclaves para seguir el eclipse solar con las debidas garantías técnicas. Paralelamente, Buitrago del Lozoya acoge un festival complementario que combina foodtrucks y música en directo para animar la jornada. Es una oportunidad excelente para disfrutar del patrimonio natural mientras se observa el firmamento. Se recomienda consultar los horarios exactos de apertura y la ubicación precisa de cada punto en la web institucional antes de planificar el desplazamiento.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Hispanidad 2026 llenará Madrid de conciertos gratuitos y más de 150 actividades.",
-              "lede": "La agenda cultural de la ciudad suma espectáculos musicales y propuestas artísticas para todos los públicos.",
-              "body": "La programación cultural de la capital anticipa uno de sus eventos más esperados con el avance del Festival Hispanidad 2026. La iniciativa llenará las calles y plazas de conciertos gratuitos y más de 150 actividades culturales diseñadas para celebrar la diversidad. Entre los anuncios destacados figura la actuación de Sebastián Yatra, programada para el 10 de octubre dentro del mismo ciclo festivo. Además, la Sala Berlanga acoge estos días el 35º Festival de Cine de Madrid – PNR, consolidando el pulso cinematográfico del circuito independiente. Conviene revisar la disponibilidad de entradas anticipadas para los auditorios cerrados, ya que el aforo suele completarse con rapidez.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "Los servicios administrativos sufrirán modificaciones por la festividad de Santiago Apóstol.",
-              "lede": "El calendario de julio contempla jornadas festivas que afectarán a la atención ciudadana ordinaria.",
-              "body": "El próximo 25 de julio se celebra la festividad de Santiago Apóstol, una fecha marcada en rojo en el calendario laboral de la Comunidad de Madrid. Los viajeros y residentes deben tener en cuenta que las oficinas de la administración pública, los bancos y las principales sucursales de correos permanecerán cerradas durante esa jornada. Asimismo, el 28 de julio se conmemora el Día de las Instituciones de Cantabria, lo que también alterará ciertos trámites con delegaciones autonómicas. Se aconseja adelantar cualquier gestión urgente de carácter administrativo o financiero para evitar contratiempos en los desplazamientos. El comercio local mantendrá sus horarios habituales de apertura salvo excepciones puntuales en los barrios céntricos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La ciudad registra temperaturas de 24 a 30°C bajo cielos completamente cubiertos.",
-              "lede": "La jornada se presenta templada y estable, con una calidad del aire calificada como fair.",
-              "body": "El mercurio se mueve hoy entre los 24 y los 30°C en Barcelona, bajo un cielo cubierto que suaviza la sensación térmica veraniega. Los registros de calidad del aire se sitúan en niveles fair, con una concentración de PM2.5 de 8, lo que permite pasear con total normalidad por los espacios abiertos. El atardecer está previsto para las 21:18, regalando una tarde larga y propicia para la caminata pausada junto al litoral. Conviene llevar una prenda ligera por si la brisa marina refresca el ambiente al caer la noche. La visibilidad es correcta pese a la capa de nubes altas que cubre el horizonte urbano durante todo el día.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "El Experimental Photo Festival arranca su séptima edición en espacios culturales.",
-              "lede": "La fotografía contemporánea y de autor toma el pulso de la ciudad con talleres y exposiciones.",
-              "body": "La oferta artística de la semana destaca por el inicio de la séptima edición del Experimental Photo Festival, que reúne a creadores nacionales e internacionales. Paralelamente, los amantes del arte pueden visitar la exposición ‘Ocho’ de Frederic Amat, una muestra que profundiza en el lenguaje pictórico y objetual del autor catalán. Estos eventos enriquecen la agenda cultural en un momento de transición vacacional para muchos residentes. Los espacios expositivos adaptan sus horarios de verano para facilitar el acceso durante las horas centrales del día, cuando el sol y las nubes alternan sobre las calles. Se recomienda consultar la programación de charlas y visitas guiadas en las sedes oficiales del festival.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "La festividad de Santiago Apóstol modifica el ritmo administrativo en Cataluña.",
-              "lede": "El calendario de julio incluye jornadas festivas que reducen la actividad en oficinas y entidades bancarias.",
-              "body": "Con motivo de la festividad de Santiago Apóstol el 25 de julio, los servicios administrativos y las oficinas bancarias ajustarán sus horarios o permanecerán cerrados en función de los convenios locales. Esta pausa institucional coincide con el periodo estival, por lo que muchos comercios de barrio reorganizan sus días de descanso. Además, el 28 de julio se celebra el Día de las Instituciones de Cantabria, un festivo autonómico relevante para quienes realicen gestiones interregionales. Es prudente verificar la apertura de bibliotecas públicas, museos y centros cívicos antes de planificar visitas institucionales. El transporte público mantendrá sus frecuencias habituales de verano a pesar de las jornadas festivas señaladas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra una temperatura de 9 a 14°C bajo un cielo completamente cubierto.",
-              "lede": "El clima invernal invita a resguardarse en espacios cerrados mientras la calidad del aire se mantiene óptima.",
-              "body": "La jornada porteña discurre con temperaturas frescas que oscilan entre los 9 y los 14°C, acompañadas por un cielo cubierto propio de la estación invernal. La calidad del aire se califica como good, registrando un valor de PM2.5 de 9, lo que garantiza una atmósfera limpia a pesar de la nubosidad persistente. El sol se ocultará a las 18:05, dando paso a una noche fría en la que apetecerá disfrutar de la oferta cultural bajo techo. Los parques y plazas de la ciudad muestran una estampa tranquila, ideal para caminatas breves antes de que caiga la tarde. Se aconseja abrigarse adecuadamente con prendas de abrigo y abrigo ligero para contrarrestar la humedad característica del estuario.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "02",
-              "headline": "La agenda de vacaciones de invierno despliega propuestas para toda la familia.",
-              "lede": "El gobierno porteño activa un circuito cultural y recreativo que se extenderá hasta los primeros días de agosto.",
-              "body": "El receso escolar llena la ciudad con la completa agenda de vacaciones de invierno lanzada por el gobierno porteño, vigente del 18 de julio al 2 de agosto. Entre los hitos musicales de la temporada destaca el concierto 'Carmen, de Sevilla a Buenos Aires', interpretado por la Orquesta 'ADDA Simfónica' bajo la dirección de Josep Vicent en el marco del evento cultural Albatera. Asimismo, el Centro de Exposiciones y Convenciones exhibe las maquetas y proyectos finalistas del Concurso Parque, consolidando el interés por el diseño urbano contemporáneo. Las familias pueden aprovechar estas propuestas en museos, teatros y centros culturales que han adaptado sus funciones a horario vespertino. Se sugiere adquirir las localidades con antelación debido a la alta demanda estacional.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
-            },
-            {
-              "n": "03",
-              "headline": "Barrio Parque consolida su perfil exclusivo en el mercado inmobiliario de la capital.",
-              "lede": "El sector de ultra lujo opera con dinámicas singulares que lo asemejan a enclaves residenciales internacionales.",
-              "body": "La zona residencial de Barrio Parque continúa acaparando la atención del sector inmobiliario de alta gama, operando con dinámicas propias que muchos analistas comparan con los mercados de José Ignacio. Este rincón arbolado y de trazado pintoresco mantiene una demanda sostenida por parte de inversores que buscan exclusividad y privacidad absoluta. Las transacciones en este sector no suelen verse afectadas por las fluctuaciones generales de la economía urbana. Pasear por sus calles serpenteantes permite observar una arquitectura señorial integrada con abundante vegetación madura. Los observadores urbanos valoran este enclave por su capacidad para preservar un ritmo de vida apacible a pocos minutos del bullicio céntrico.",
-              "source": "saudade desk",
-              "source_date": "2026-07-22"
             }
           ]
         }
