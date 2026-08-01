@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-01T06:00:00+09:00",
+  "updated": "2026-08-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El termómetro alcanza los 35°C este domingo bajo cielos parcialmente nublados.",
+              "lede": "La tarde madrileña mantiene temperaturas elevadas hasta la puesta de sol a las 21:28.",
+              "body": "El ambiente veraniego domina la capital con máximas de 35°C y mínimas de 23°C, acompañado de una calidad del aire fair con PM2.5 en 8. La moneda extranjera cotiza a 1 USD por 0.87 EUR para los viajeros internacionales que planifican su estancia. Las actividades culturales al aire libre se adaptan al calor con funciones vespertinas y proyecciones nocturnas. Conviene buscar refugio en los espacios arbolados durante las horas centrales del día para evitar la radiación directa. El ritmo de la ciudad se desacelera pausadamente mientras los residentes locales buscan las terrazas sombreadas al caer la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Escenas de Verano anima agosto con música y teatro en directo.",
+              "lede": "La programación estival llena plazas y centros culturales con propuestas para todos los públicos.",
+              "body": "Las noches de agosto en Madrid recuperan el pulso escénico gracias al Festival Escenas de Verano, que ofrece cine al aire libre y actuaciones musicales en diversos puntos de la región. Los municipios cercanos también participan con iniciativas como el Festival de Artes y Patrimonio 'Dragones' en Robledo de Chavela. Estas citas culturales aprovechan la bajada de temperaturas tras el ocaso a las 21:28 para reunir a vecinos y visitantes en plazas históricas. La oferta se completa con ventajas para residentes en parques temáticos cercanos según los acuerdos municipales vigentes. Es una oportunidad excelente para descubrir el patrimonio artístico sin las prisas habituales del calendario laboral.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "El festivo de la Asunción se aproxima en el calendario del mes.",
+              "lede": "La jornada festiva del 15 de agosto alterará los horarios habituales de comercios y oficinas.",
+              "body": "El próximo 15 de agosto se celebrará la festividad de la Asunción, un día de descanso nacional que afectará a la apertura de oficinas gubernamentales, bancos y administraciones públicas. Conviene anticipar cualquier gestión administrativa pendiente antes de que llegue esta fecha señalada en el calendario estival. Los comercios de barrio y los mercados municipales suelen modificar sus horarios habituales durante este fin de semana largo. La ciudad experimenta una tregua en su tráfico habitual a medida que muchos residentes emprenden sus desplazamientos vacacionales hacia la costa o la sierra. Planificar las compras con antelación garantiza una experiencia tranquila durante los días festivos en la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La niebla matinal da paso a una jornada templada con máximas de 31°C.",
+              "lede": "El litoral barcelonés registra una humedad perceptible bajo un cielo brumoso.",
+              "body": "Las temperaturas oscilan entre los 25°C y los 31°C en una jornada marcada por la presencia de niebla costera. La puesta de sol está prevista para las 21:07, ofreciendo un crepúsculo largo sobre el mar Mediterráneo. La calidad del aire se mantiene en niveles fair, registrando un valor de PM2.5 en 12. El tipo de cambio se sitúa en 1 USD por 0.87 EUR para quienes gestionan divisas extranjeras este fin de semana. La atmósfera brumosa suaviza la intensidad lumínica sobre las playas urbanas y los paseos marítimos durante las primeras horas del día. Los desplazamientos peatonales resultan agradables a pesar de la humedad ambiental.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "Circuit Barcelona y el SAGA Game Fest concentran el ocio del fin de semana.",
+              "lede": "Miles de visitantes acuden a los grandes eventos culturales y festivales de la ciudad.",
+              "body": "La agenda barcelonesa acoge este fin de semana el festival LGBTIQ+ Circuit Barcelona, reuniendo a numerosos asistentes internacionales en diversos espacios urbanos. Paralelamente, el SAGA Barcelona Game Fest convoca a los aficionados al sector digital con una amplia muestra de propuestas interactivas. Los amantes del coleccionismo también pueden visitar una exposición monográfica dedicada al universo cinematográfico de Star Wars. Estas convocatorias dinamizan la actividad económica y hotelera en los distintos barrios de la metrópoli mediterránea. Conviene consultar los accesos en transporte público para evitar aglomeraciones en las inmediaciones de los recintos principales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "La festividad del 15 de agosto marcará el cierre temporal de oficinas.",
+              "lede": "El día de la Asunción traerá consigo modificaciones en los servicios administrativos.",
+              "body": "El calendario laboral señala el próximo 15 de agosto como festivo nacional con motivo de la Asunción. Las oficinas de la administración pública, las sucursales bancarias y las oficinas de correos permanecerán cerradas durante esa jornada. Es recomendable revisar los horarios específicos de museos y bibliotecas municipales antes de planificar visitas culturales para ese día. La ciudad suele adoptar un ritmo más pausado mientras gran parte de la actividad institucional se detiene temporalmente. Los servicios esenciales de transporte público mantendrán sus frecuencias adaptadas a la menor demanda estival propia de mediados de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cielo cubierto define el domingo porteño con temperaturas de 10°C a 16°C.",
+              "lede": "La tarde avanza bajo un manto gris hasta el anochecer a las 18:13.",
+              "body": "Una atmósfera invernal y nublada domina Buenos Aires con registros térmicos que se mueven entre los 10°C y los 16°C. La calidad del aire es buena, con un índice de PM2.5 situado en 15. La puesta de sol se adelanta a las 18:13, acortando las horas de luz natural en las calles de la capital argentina. El ambiente invita a buscar refugio en librerías tradicionales, cafés históricos y espacios culturales cerrados. La humedad típica de la estación requiere abrigo ligero al caminar por las avenidas arboladas y los parques urbanos. La ciudad respira con la calma característica de los domingos de invierno.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "El cine queer y las rutas del vino protagonizan la agenda cultural del fin de semana.",
+              "lede": "Festivales temáticos y propuestas gastronómicas atraen al público a distintos puntos de la ciudad.",
+              "body": "La programación cultural de este fin de semana incluye el festival de cine Bendita Tú, centrado en cortometrajes feministas y queer en salas independientes. Paralelamente, propuestas enogastronómicas convocan a los residentes a disfrutar de experiencias de vino libre accesibles mediante transporte público. Los espacios verdes del litoral ribereño, como el Parque Costanera Norte, exhiben los proyectos ganadores de concursos recientes de paisajismo urbano. Estas iniciativas fomentan el redescubrimiento de la relación histórica entre la trama urbana y el río de la Plata. La oferta cultural ofrece un refugio cálido frente al clima fresco del exterior.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "Las líneas de transporte urbano ajustan sus frecuencias dominicales habituales.",
+              "lede": "El servicio de colectivos y subtes opera con horarios reducidos propios del descanso semanal.",
+              "body": "La red de transporte público de Buenos Aires funciona este domingo con las demoras y frecuencias características de los días no laborables. Conviene verificar los trayectos de colectivo y las combinaciones de subterráneo para asistir a los eventos culturales programados en distintos barrios. Las estaciones y andenes muestran un tránsito fluido de pasajeros que aprovechan la jornada para actividades de ocio bajo techo. Los desplazamientos hacia la zona norte y los centros culturales del casco histórico se realizan con total normalidad a pesar de la capa de nubes. El ritmo pausado del transporte facilita una movilidad sosegada para los observadores urbanos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-01T06:00:00+09:00",
       "cities": [
@@ -552,98 +644,6 @@
               "body": "La luz grisácea del día da paso a la iluminación amarilla de los faroles antiguos en las calles empedradas. Con el atardecer fijado a las 18:08, los libreros de la calle Corrientes acomodan las mesas de saldos. Los milongueros se preparan para una noche de danza en los clubes de barrio tradicionales del sur porteño. La temperatura fresca invita a buscar refugio en salas de teatro independiente y bodegones históricos. Los árboles sin hojas permiten ver las fachadas ornamentadas del patrimonio arquitectónico de la belle époque. Es el momento en que la ciudad recupera su pulso más íntimo, literario y contemplativo.",
               "source": "saudade desk",
               "source_date": "2026-07-26"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-25T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Sala Berlanga acoge el 35º Festival de Cine de Madrid.",
-              "lede": "El cine independiente ocupa las pantallas de la sala este fin de semana.",
-              "body": "La Sala Berlanga se convierte estos días en el epicentro de la creación cinematográfica independiente al acoger el 35º Festival de Cine de Madrid organizado por la PNR. Los espectadores pueden descubrir propuestas de autor alejadas de los circuitos comerciales habituales en un espacio concebido para la cercanía y la reflexión. Este encuentro anual reúne a cineastas emergentes y consolidados en proyecciones que invitan al debate pausado tras los créditos. Conviene consultar la programación previa para asegurar localidad en las sesiones de tarde. El ambiente en los pasillos de la sala favorece el intercambio de impresiones entre creadores y público local.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "02",
-              "headline": "Santiago Apóstol trae cierres administrativos en la capital.",
-              "lede": "Las oficinas públicas y los bancos permanecen cerrados por la festividad.",
-              "body": "El calendario laboral de la ciudad señala hoy la festividad de Santiago Apóstol en este 25 de julio de 2026. Los servicios administrativos municipales, las oficinas gubernamentales y las sucursales bancarias suspenden su atención al público durante la jornada festiva. La tasa de cambio vigente se sitúa en 1 USD frente a 0.88 EUR para quienes operen con divisas extranjeras en estos días. Las calles del centro muestran un ritmo más sosegado mientras muchos residentes aprovechan la pausa para pasear por parques y plazas. Los comercios de barrio mantienen horarios reducidos y la actividad institucional se retomará con normalidad al inicio de la próxima semana.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "03",
-              "headline": "El Parque Regional de la Cuenca Alta del Manzanares ofrece rutas frescas.",
-              "lede": "Los senderos naturales del noroeste madrileño invitan al paseo matutino.",
-              "body": "El Parque Regional de la Cuenca Alta del Manzanares propone refugio verde frente al calor estival de la meseta. Los caminos que serpentean junto al río y los embalses conservan una sombra amable durante las primeras horas de la mañana. Los caminantes encontrarán fuentes habilitadas y áreas de descanso bien señalizadas para completar recorridos de baja dificultad. Se recomienda iniciar la marcha temprano para evitar las horas centrales del día y disfrutar del silencio del entorno protegido. La flora autóctona mantiene tonos ocres y verdosos que recuerdan la resistencia vegetal propia de este paisaje madrileño.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra 26–29°C y cielos cubiertos este viernes.",
-              "lede": "La nubosidad suaviza la temperatura mientras la puesta de sol llega a las 21:16.",
-              "body": "La atmósfera barcelonesa presenta hoy una temperatura que oscila entre los 26 y los 29°C bajo un manto de nubes persistentes. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 8, lo que permite el tránsito peatonal sin sobresaltos. La puesta de sol está prevista para las 21:16, alargando una tarde propicia para caminar sin prisas por el litoral urbano. El cambio monetario se sitúa en 1 USD equivalente a 0.88 EUR para los visitantes internacionales. Las calles conservan esa humedad característica del Mediterráneo en pleno verano, ofreciendo un compás de espera antes de la caída definitiva de la noche.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición gratuita de Star Wars reúne colecciones privadas.",
-              "lede": "Una de las muestras más grandes de España abre sus puertas en la ciudad.",
-              "body": "Los aficionados a la cultura cinematográfica disponen estos días de una cita ineludible con la exposición gratuita de Star Wars en Barcelona. La muestra exhibe una de las colecciones privadas más extensas de todo el territorio nacional, con piezas originales y réplicas detalladas. Los visitantes pueden recorrer vitrinas que repasan décadas de diseño de naves, vestuarios y atrezo de la saga galáctica. El acceso libre fomenta la asistencia familiar y la curiosidad de los observadores más detallistas. Las salas ofrecen un recorrido ordenado que permite apreciar el minucioso trabajo artesanal detrás de cada objeto expuesto.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "03",
-              "headline": "Santiago Apóstol altera los trámites administrativos locales.",
-              "lede": "Bancos y oficinas gubernamentales cierran sus puertas por la festividad.",
-              "body": "Con motivo de la festividad de Santiago Apóstol en este 25 de julio de 2026, la actividad administrativa de Barcelona experimenta una pausa. Las oficinas gubernamentales, las entidades bancarias y las dependencias postales permanecen cerradas durante toda la jornada. Los residentes aprovechan el día festivo para recorrer espacios públicos y disfrutar de la oferta cultural gratuita de la ciudad. Los servicios esenciales y el transporte público operan con los ajustes habituales de los días festivos. La normalidad institucional regresará a los mostradores y ventanillas al concluir el fin de semana.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con 9–15°C y cielos cubiertos.",
-              "lede": "El aire fresco del invierno porteño acompaña el atardecer a las 18:07.",
-              "body": "La jornada porteña discurre hoy con un registro térmico que se mueve entre los 9 y los 15°C bajo un cielo completamente cubierto. La calidad del aire se califica como buena, con un nivel de PM2.5 situado en 18, ideal para caminar por los barrios tradicionales. La puesta de sol se adelantará hasta las 18:07, marcando el inicio temprano de las rutinas nocturnas en cafés y librerías. El ambiente frío invita a abrigarse con solidez para recorrer las veredas arboladas y los parques de la ciudad. La atmósfera gris otorga una sobriedad particular a la arquitectura clásica de las avenidas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "02",
-              "headline": "La música sinfónica dialoga con las tradiciones en la agenda cultural.",
-              "lede": "La Orquesta ADDA Simfónica interpreta obras singulares en los ciclos actuales.",
-              "body": "La agenda cultural de la ciudad destaca este fin de semana por la presencia de propuestas musicales de gran calado artístico. Entre los eventos señalados figura el concierto de la Orquesta ADDA Simfónica, bajo la dirección de Josep Vicent, dentro de los actos de hermanamiento cultural. Esta programación especial enriquece la oferta escénica porteña con repertorios que cruzan la península ibérica y el Río de la Plata. Los espectadores llenan las salas para disfrutar de interpretaciones cuidadas en acústicas de primer orden. La música clásica se consolida así como un refugio cálido frente a las bajas temperaturas exteriores del invierno.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
-            },
-            {
-              "n": "03",
-              "headline": "Nuevos espacios de cine amplían la oferta en el sur porteño.",
-              "lede": "La apertura de salas diversifica las opciones de ocio en los barrios del sur.",
-              "body": "El panorama cultural de Buenos Aires suma un nuevo atractivo con la apertura de un cine en el sur de la ciudad. Esta iniciativa amplía las opciones de entretenimiento y descentraliza la oferta audiovisual más allá de los circuitos tradicionales del centro. Los vecinos cuentan ahora con una pantalla de proximidad pensada para albergar estrenos y ciclos de cine independiente. La inauguración responde al interés constante por revitalizar los espacios urbanos mediante la cultura de cercanía. Las butacas ya reciben a los primeros espectadores en funciones que buscan consolidar la vida comunitaria en el barrio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-25"
             }
           ]
         }
