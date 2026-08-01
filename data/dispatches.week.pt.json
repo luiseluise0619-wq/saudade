@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-08-01T06:00:00+09:00",
+  "updated": "2026-08-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Parque Tejo acolhe o regresso do festival sob céu nublado.",
+              "lede": "A Operação Verão 2026 traz música ao grande espaço ribeirinho com temperaturas amenas.",
+              "body": "As margens do rio recebem a nova edição dos festivais de música integrados na Operação Verão 2026 em Lisboa, marcando o regresso do grande evento ao Parque Tejo. Sob um céu totalmente encoberto e uma temperatura a oscilar entre 19 e 29°C, o ambiente convida a longas caminhadas pela zona ribeirinha sem o calor sufocante de agosto. O ar mantém-se com qualidade considerada fair, registando 6 de PM2.5, ideal para estar ao ar livre. Para quem chega de fora, a taxa de câmbio fixa-se em 1 USD para 0.87 EUR. A programação estende-se por vários dias, exigindo atenção aos horários dos transportes públicos que servem a zona oriental.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "O renovado parque desportivo da Alta de Lisboa já abriu portas.",
+              "lede": "A Alta de Lisboa ganha um novo espaço público dedicado à prática desportiva.",
+              "body": "Está formalmente inaugurado o renovado parque desportivo na Alta de Lisboa, oferecendo aos moradores e visitantes novas infraestruturas para o exercício diário. Com o termómetro a marcar entre 19 e 29°C e um céu persistentemente nublado, as condições meteorológicas mostram-se bastante favoráveis para testar os novos campos e pistas. A qualidade do ar permanece fair, com o índice de PM2.5 fixado em 6. Esta intervenção urbanística valoriza a zona norte da cidade, integrando áreas verdes e zonas de lazer que atraem famílias ao fim de semana. A moeda estrangeira mantém a cotação de 1 USD a 0.87 EUR para os viajantes que planeiam despesas locais.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "O Parque das Nações recupera a normalidade após incidente com gás.",
+              "lede": "Trabalhadores relataram forte odor na zona oriental, mas a situação foi controlada.",
+              "body": "A tranquilidade regressou ao Parque das Nações depois de um susto provocado por uma fuga de gás que alarmou os trabalhadores locais devido ao odor muito forte sentido nas ruas. A situação ficou rapidamente resolvida pelas equipas de emergência, permitindo que a circulação pedonal na zona recuperasse o ritmo habitual. Com uma temperatura máxima de 29°C e mínima de 19°C sob nuvens persistentes, a tarde convida a percorrer a frente ribeirinha e a observar o Tejo. A qualidade do ar apresenta valores fair, com PM2.5 nos 6. Nota útil para o calendário: aproxima-se o feriado da Assunção de Nossa Sra. a 2026-08-15, altura em que serviços públicos e bancos encerrarão as portas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O festival Post Punk Strikes Back Again anima as noites invictas.",
+              "lede": "David J e os industriais Test Dept lideram o cartaz musical na cidade.",
+              "body": "O Porto recebe o festival Post Punk Strikes Back Again, reunindo nomes marcantes como David J, dos Bauhaus, e os industriais Test Dept num alinhamento imperdível para os apreciadores do género. O evento decorre sob um céu encoberto, com temperaturas que variam entre 19 e 23°C, mantendo a frescura típica da costa atlântica nesta altura do ano. A qualidade do ar encontra-se em níveis fair, com registo de 9 de PM2.5. Para os visitantes internacionais, a taxa de câmbio mantém-se estável em 1 USD equivalente a 0.87 EUR. A agenda cultural da cidade complementa-se com exposições temporárias e iniciativas académicas que celebram a história local.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "A Universidade Júnior assinala 20 anos com exposição comemorativa.",
+              "lede": "Duas décadas de história académica em exibição para toda a comunidade.",
+              "body": "A Universidade Júnior celebra o seu vigésimo aniversário com uma exposição especial que recorda duas décadas de história e formação de jovens na instituição portuense. A mostra integra a agenda cultural da cidade, decorrendo num período em que os termómetros oscilam entre 19 e 23°C sob um céu nublado que abranda o ritmo urbano. A qualidade do ar regista 9 de PM2.5, sendo considerada fair. Paralelamente, os visitantes encontram uma vasta oferta de visitas comentadas a objetos do mês e exposições temporárias em vários espaços museológicos. A conversão monetária permanece nos 0.87 EUR por cada 1 USD.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "Aproxima-se o feriado de meados de agosto com fecho de serviços.",
+              "lede": "A cidade prepara-se para a pausa da Assunção de Nossa Senhora.",
+              "body": "Com a proximidade do feriado da Assunção de Nossa Senhora a 2026-08-15, convém recordar que os serviços públicos, repartições e instituições bancárias encerrarão as portas nesse dia na região do Porto. O clima mantém-se fresco e cinzento, com temperaturas entre 19 e 23°C e um pôr do sol marcado para as 20:50. A qualidade do ar afere-se como fair, registando 9 de PM2.5. Quem viaja para o sul em direção a Sines e Porto Covo para o festival de música entre 3 a 8 de agosto encontrará alternativas de trânsito. A cotação oficial fixa-se em 1 USD para 0.87 EUR, facilitando o planeamento financeiro dos turistas na Invicta.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A lontra regressa oficialmente à Serra de Sintra após longa ausência.",
+              "lede": "A biodiversidade local recupera com o avistamento desta espécie na serra.",
+              "body": "A Serra de Sintra regista um momento histórico com o regresso da lontra após décadas de ausência, confirmando a melhoria dos ecossistemas fluviais da região. Este fenómeno natural coincide com um período de céu encoberto e temperaturas moderadas entre 18 e 24°C, perfeitas para explorar os trilhos protegidos da serra. A qualidade do ar é fair, com um valor muito baixo de 5 para PM2.5. Os visitantes devem consultar a agenda cultural conjunta de Mafra, Sintra e Torres Vedras para conhecer os eventos programados. A taxa de câmbio em vigor mantém-se em 1 USD equivalente a 0.87 EUR, facilitando as compras em comércio tradicional.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "02",
+              "headline": "A Quinta da Ribafria acolhe o cruzamento entre arte e tecnologia.",
+              "lede": "O Festival OCASO leva instalações contemporâneas ao cenário histórico.",
+              "body": "A histórica Quinta da Ribafria é o palco escolhido para o Festival OCASO, um evento que junta criadores em torno da arte e da tecnologia num ambiente bucólico. Sob um céu nublado e temperaturas que oscilam suavemente entre 18 e 24°C, a visita aos jardins e espaços expositivos decorre com total serenidade. O ar da serra apresenta uma qualidade fair, registando apenas 5 de PM2.5. Para famílias em viagem, as opções de lazer estendem-se a novos espaços de diversão na região. A cotação cambial mantém-se estável nos 0.87 EUR por cada 1 USD, mantendo o poder de compra dos turistas na zona saloia.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            },
+            {
+              "n": "03",
+              "headline": "O descanso na serra exige atenção ao calendário de feriados de agosto.",
+              "lede": "A chegada da Assunção de Nossa Senhora altera o funcionamento de serviços.",
+              "body": "A calmaria habitual da vila serrana convida a desfrutar do ambiente fresco, com mínimas de 18°C e máximas de 24°C sob nuvens persistentes e anoitecer às 20:47. Com vista ao planeamento da estadia, recorda-se que o feriado da Assunção de Nossa Senhora a 2026-08-15 trará o encerramento de repartições públicas, correios e bancos em todo o concelho. A qualidade do ar na serra mantém-se excelente e fair, com 5 de PM2.5. A taxa de câmbio permanece inalterada em 1 USD para 0.87 EUR. Aproveite para caminhar pelos trilhos arborizados enquanto a brisa atlântica suaviza a atmosfera estival.",
+              "source": "saudade desk",
+              "source_date": "2026-08-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-01T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A Serra de Sintra regista temperaturas entre os 17°C e os 33°C, num regime de céu parcialmente nublado típico do verão atlântico. O contraste térmico entre a manhã fresca e a tarde aquecida molda a experiência de quem percorre os trilhos. O pôr do sol fixa-se às 20:53, oferecendo tréguas luminosas junto aos miradouros sobranceiros ao oceano. A taxa de câmbio de 1 USD por 0.88 EUR permanece estável para os turistas na região. A notícia do regresso da lontra à serra acrescenta um motivo de contemplação para quem caminha devagar. Sintra continua a ser um território de mistério e silêncio recuperado.",
               "source": "saudade desk",
               "source_date": "2026-07-27"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-26T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A taxa de câmbio estabiliza nos mercados cambiais.",
-              "lede": "A conversão mantém o valor de 1 USD a 0.88 EUR.",
-              "body": "O câmbio atual define uma proporção estável de 1 USD para 0.88 EUR nas transações correntes da capital. Os viajantes que chegam de fora da zona euro encontram valores previsíveis ao gerir as suas despesas diárias em numerário ou cartões. Convirá verificar com antecedência se o seu banco aplica taxas adicionais em cada levantamento efetuado nas caixas automáticas locais. Pequenos estabelecimentos tradicionais continuam a preferir o pagamento em dinheiro vivo para compras de menor valor. A gestão financeira da viagem ganha assim uma simplicidade que convida a passeios sem grandes preocupações logísticas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "02",
-              "headline": "As esplanadas do Tejo acolhem o final de tarde.",
-              "lede": "A luz estival prolonga-se sobre as pedras calcárias da ribeira.",
-              "body": "A brisa do rio refresca discretamente as ruas inclinadas que descem em direção à margem. Os elétricos continuam a sua marcha cadenciada por entre fachadas revestidas de azulejos antigos e calcário claro. É o momento ideal para observar o movimento calmo dos transeuntes junto aos antigos armazéns portuários reconvertidos. As conversas desenrolam-se a ritmo lento nas mesas colocadas ao ar livre sob toldos de lona branca. A cidade revela a sua textura genuína quando o calor do dia cede lugar a uma noite amena.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "03",
-              "headline": "Os jardins históricos oferecem sombra e silêncio.",
-              "lede": "A vegetação densa protege os bancos de jardim do calor estival.",
-              "body": "Os parques botânicos da cidade convidam a pausas prolongadas longe do bulício urbano e do trânsito automóvel. As copas das árvores centenárias filtram a luz intensa do sol de julho, criando recantos de penumbra fresca. Os residentes aproveitam estas horas matinais para leituras solitárias ou passeios tranquilos pelos caminhos empedrados. A água das fontes antigas murmura suavemente ao fundo, quebrando o silêncio com uma nota de frescura. Cada recanto verdejante funciona como um refúgio indispensável para quem procura o lado mais contemplativo da capital.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O termómetro marca valores amenos entre 16 e 26°C.",
-              "lede": "O céu limpo acompanha o pôr do sol previsto para as 20:57.",
-              "body": "A amplitude térmica diária situa-se entre os 16 e os 26°C, proporcionando um dia perfeitamente claro e luminoso. Com o ar classificado como de qualidade fair e níveis de PM2.5 a 8, as condições atmosféricas convidam a longas caminhadas ao ar livre. O céu totalmente limpo garante uma visibilidade excecional sobre os telhados de telha vã e o leito do rio Douro. À medida que o dia avança, o sol descolora lentamente o horizonte até ao cair da noite pelas 20:57. É um período propício para observar a arquitetura granítica da cidade sob uma luz dourada e nítida.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "02",
-              "headline": "A taxa de câmbio fixa-se em 1 USD para 0.88 EUR.",
-              "lede": "As transações mantêm conversões estáveis em toda a Baixa.",
-              "body": "A paridade cambial regista o valor de 1 USD equivalente a 0.88 EUR nas operações comerciais do norte do país. Os visitantes estrangeiros beneficiam de uma cotação clara que facilita o planeamento financeiro durante a estada na Invicta. As casas de câmbio tradicionais na zona central mantêm margens reduzidas para notas norte-americanas. Os pagamentos eletrónicos continuam a ser amplamente aceites, embora persistam pequenos cafés onde o multibanco não substitui o troco em moedas. Esta estabilidade económica contribui para a serenidade com que se vive o quotidiano urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "03",
-              "headline": "As margens do Douro acompanham o ritmo das marés.",
-              "lede": "A circulação pedonal flui sem pressas junto aos cais históricos.",
-              "body": "A brisa fluvial desce a corrente e refresca os passadiços de madeira onde atracam as embarcações tradicionais. Os observadores atentos encontram nos detalhes da cantaria granítica a verdadeira essência desta geografia ribeirinha. As pontes metálicas desenham silhuetas precisas contra o azul limpo do firmamento estival. Poucos ruídos perturbam a atmosfera de sossego que caracteriza as primeiras horas da manhã nas margens. O Porto mostra-se assim na sua faceta mais essencial, feita de pedra, água e silêncio.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra oscila entre os 18 e os 25°C sob nuvens passageiras.",
-              "lede": "O céu parcialmente nublado abranda o calor com o pôr do sol às 20:54.",
-              "body": "A temperatura na serra varia entre os 18 e os 25°C, enquadrada por um céu parcialmente nublado que modera a incidência solar direta. Com um índice de qualidade do ar considerado moderate e valores de PM2.5 nos 11, a atmosfera mantém a sua humidade característica e densa. A nebulosidade matinal costuma dissipar-se parcialmente, deixando filtrar uma claridade difusa ideal para deambular pelos trilhos arborizados. O entardecer desenha-se com o ocaso marcado para as 20:54, tingindo o horizonte com tons suaves. Esta meteorologia amena favorece a preservação do microclima único que sempre atraiu poetas e viajantes.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "02",
-              "headline": "A conversão monetária opera à base de 1 USD por 0.88 EUR.",
-              "lede": "O comércio local processa pagamentos com cotações estáveis.",
-              "body": "A taxa de câmbio de 1 USD para 0.88 EUR aplica-se de forma uniforme nos estabelecimentos comerciais da vila histórica. Os viajantes vindos de fora do espaço europeu encontram facilidade na gestão dos pagamentos correntes em bilheteiras e cafés. Convirá prever dinheiro trocado para pequenas despesas nas zonas mais afastadas do centro urbano. A simplicidade financeira apoia o ritmo desacelerado de quem visita os palácios e quintas românticos. O comércio tradicional preserva o hábito de atender cada cliente sem pressas tecnológicas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
-            },
-            {
-              "n": "03",
-              "headline": "Os bosques seculares guardam a humidade da manhã.",
-              "lede": "A vegetação luxuriante retém o silêncio sob a copa das árvores.",
-              "body": "Os caminhos sinuosos que serpenteiam a encosta convidam a passos contados por entre fetos gigantes e musgo antigo. A neblina matinal deixa vestígios de orvalho nas folhas largas que cobrem o solo sombrio da montanha. O ar moderadamente fresco convida a usar um casaco leve durante os percursos pedestres mais longos. O chilrear dos pássaros rompe discretamente a penumbra verdejante que envolve os antigos chalés românticos. É um território feito para a observação minuciosa e para o descanso da vista.",
-              "source": "saudade desk",
-              "source_date": "2026-07-26"
             }
           ]
         }
