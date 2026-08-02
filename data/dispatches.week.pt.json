@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-08-02T06:00:00+09:00",
+  "updated": "2026-08-03T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-03T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O renovado parque desportivo na Alta de Lisboa já abriu.",
+              "lede": "Os residentes ganham um novo espaço de ar livre para as tardes de verão.",
+              "body": "A Alta de Lisboa conta agora com um renovado parque desportivo, perfeitamente integrado na malha urbana da zona norte. Este espaço verde convida a caminhadas matinais e a treinos ao ar livre longe da agitação do centro. Para quem planeia a estadia, vale a pena notar que o câmbio atual se mantém nos 1 USD para 0.87 EUR. A requalificação privilegia materiais duráveis e zonas de sombra naturais, essenciais nos meses mais quentes. Os moradores locais já adotaram os circuitos pedonais para as suas rotinas diárias. É um excelente ponto de paragem para quem aprecia a arquitetura paisagística contemporânea da cidade.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "02",
+              "headline": "O Parque Tejo prepara-se para acolher a nova edição do festival.",
+              "lede": "A Operação Verão 2026 traz de volta os grandes palcos à zona ribeirinha.",
+              "body": "A Operação Verão 2026 em Lisboa define o ritmo cultural da temporada com o regresso do gigante de espetáculos ao Parque Tejo. Os acessos fluviais e as ciclovias da zona oriental funcionam em pleno para absorver o fluxo de visitantes. A programação musical anima as noites quentes junto ao rio, oferecendo alternativas para todos os gostos. Quem caminha pela margem percebe a transformação recente desta frente ribeirinha em polo de lazer. As autoridades locais reforçaram os horários dos transportes públicos para facilitar as deslocações noturnas. Recomenda-se a compra antecipada de bilhetes para evitar filas nas entradas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "03",
+              "headline": "A próxima festividade de agosto trará alterações habituais aos serviços.",
+              "lede": "A Assunção de Nossa Senhora altera o funcionamento de repartições e bancos.",
+              "body": "Com a proximidade da Assunção de Nossa Senhora a 2026-08-15, os serviços públicos e as instituições bancárias em Lisboa encerrarão as suas portas. Os viajantes devem antecipar qualquer gestão burocrática ou troca de moeda para evitar contratempos durante o feriado. O comércio tradicional nos bairros históricos manterá horários reduzidos ou fechará para descanso do pessoal. Por outro lado, os espaços verdes e as esplanadas continuam acessíveis para quem prefere passear com calma. A cidade respira um ritmo mais lento e contemplativo nestas datas festivas. Planeie as suas refeições com antecedência, pois muitos restaurantes locais fecham para férias.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A temperatura oscila entre 18°C e 23°C sob céus nublados.",
+              "lede": "O ar apresenta qualidade fair com PM2.5 a 6, ideal para longas caminhadas.",
+              "body": "O Porto acolhe os visitantes com uma atmosfera fresca e nublada, registando temperaturas entre 18°C e 23°C ao longo do dia. A qualidade do ar é considerada fair, com um valor de PM2.5 fixado em 6, proporcionando um ambiente limpo para deambular pela ribeira. O pôr do sol acontece pelas 20:49, estendendo o crepúsculo sobre as pontes do Douro. A taxa de câmbio permanece estável em 1 USD para 0.87 EUR para transações correntes. O céu encoberto atenua o calor, tornando as caminhadas pelas ruas graníticas muito mais agradáveis. Aproveite para observar o movimento calmo dos barcos rabelos ancorados na margem.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "02",
+              "headline": "O festival Post Punk Strikes Back Again anima as noites da cidade.",
+              "lede": "A música independente toma conta dos espaços culturais portuenses.",
+              "body": "O festival Post Punk Strikes Back Again traz ao Porto nomes consagrados como David J, dos Bauhaus, e os industriais Test Dept. Os concertos decorrem em salas emblemáticas, reunindo entusiastas do género de várias origens. A programação cultural complementa-se com exposições dedicadas ao património desportivo local, incluindo o espólio do F. C. Porto. Para quem prefere deslocações eficientes, a rede de metro funciona com regularidade habitual entre os locais dos concertos. O ambiente urbano respira criatividade e partilha artística nestes dias de agosto. É uma excelente oportunidade para descobrir recantos menos óbvios da noite portuense.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "03",
+              "headline": "O feriado de meados de agosto condiciona o comércio local.",
+              "lede": "A Assunção de Nossa Senhora a 2026-08-15 pede planeamento prévio aos viajantes.",
+              "body": "A chegada da Assunção de Nossa Senhora a 2026-08-15 implicará o encerramento de repartições públicas, bancos e correios no Porto. Os serviços essenciais mantêm piquetes, mas o ritmo geral da cidade abranda significativamente. Os visitantes devem assegurar reservas em alojamentos e restaurantes com antecedência devido à afluência sazonal. A conversão de divisas à taxa de 1 USD para 0.87 EUR deve ser feita antes da data festiva. As ruas históricas ganham uma serenidade invulgar durante a manhã do feriado. É o momento perfeito para observar os detalhes arquitetónicos sem a pressa habitual do tráfego.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra regista temperaturas entre 18°C e 25°C com céu encoberto.",
+              "lede": "A qualidade do ar mantém-se excelente com PM2.5 a 3 na região.",
+              "body": "Sintra apresenta um clima ameno, com temperaturas a variarem entre 18°C e 25°C sob um teto de nuvens que protege a vegetação luxuriante. O ar puro regista um índice PM2.5 de 3, garantindo condições ótimas para trilhos na serra. O pôr do sol ocorre às 20:46, permitindo longas horas de luz difusa entre os palácios e jardins. A taxa de câmbio local encontra-se nos 1 USD para 0.87 EUR. O microclima característico da vila continua a oferecer uma trégua bem-vinda face ao calor do litoral. É o cenário ideal para observar a fauna local, incluindo a recente e bem-sucedida recuperação da lontra na Serra de Sintra.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival OCASO na Quinta da Ribafria une arte e tecnologia.",
+              "lede": "A programação cultural enriquece os espaços históricos da vila.",
+              "body": "A Quinta da Ribafria acolhe o Festival OCASO, um cruzamento singular entre a criação artística contemporânea e as novas tecnologias. As instalações interativas dialogam com a pedra antiga dos jardins e solares. Em simultâneo, novos espaços de lazer como o Parque Planeta Verão no Alegro Sintra oferecem alternativas para famílias. A oferta cultural da região equilibra o património clássico com iniciativas modernas e atrativas. Os acessos aos locais dos eventos beneficiam de transportes regulares a partir do centro histórico. Recomenda-se o uso de calçado confortável para percorrer os recintos ao ar livre.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            },
+            {
+              "n": "03",
+              "headline": "O feriado de Assunção de Nossa Senhora altera a rotina da vila.",
+              "lede": "A data de 2026-08-15 traz encerramentos previstos em serviços administrativos.",
+              "body": "Por altura da Assunção de Nossa Senhora a 2026-08-15, os serviços públicos, bancos e repartições em Sintra fecharão as portas. Os visitantes devem prever esta paragem temporária para transações financeiras e câmbios à taxa de 1 USD para 0.87 EUR. Os monumentos nacionais mantêm-se acessíveis, embora com fluxos de visitantes mais intensos devido ao fim de semana prolongado. As pastelarias tradicionais continuam abertas para servir os famosos queijamentos e travesseiros. Aconselha-se a utilização de transportes públicos para evitar constrangimentos de estacionamento junto aos palácios. Desfrute da tranquilidade matinal antes da chegada dos grupos turísticos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-03"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-02T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A localidade de Nafarros acolhe o tradicional Festival do Caracol, reunindo petiscos genuínos, música popular e artesanato nas ruas típicas. O mercúrio marca entre 18 e 27°C, com a neblina característica da serra a dissipar-se lentamente antes de o sol se pôr às 20:52. A qualidade do ar local mantém-se saudável com 10 de PM2.5, proporcionando um ambiente rural muito agradável. A taxa de câmbio de 1 USD para 0.88 EUR facilita as pequenas compras de olaria e produtos locais nas bancas da festa. É um convite imperdível para saborear a gastronomia saloia na sua máxima autenticidade.",
               "source": "saudade desk",
               "source_date": "2026-07-28"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-27T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival Verão Clássico enche as noites lisboetas com Verdi e Rossini.",
-              "lede": "A música clássica ocupa os auditórios da cidade com maestros de referência.",
-              "body": "O Festival Verão Clássico arranca em Lisboa com um programa dedicado a mestres como Verdi, Rossini e Puccini. Os concertos atraem entusiastas para salas emblemáticas da capital, proporcionando serões de grande intensidade musical. Com o termómetro a oscilar entre os 20°C e os 33°C, as noites tornam-se o refúgio ideal para escutar grandes orquestras. O céu limpo e o índice UV de 8 exigem proteção redobrada durante as deslocações diurnas. No câmbio, 1 USD equivale a 0.88 EUR. A cidade vive o ritmo pausado do final de julho, equilibrando o calor intenso com momentos de recolhimento cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "02",
-              "headline": "Mais de 120 construções e 15 milhões de peças de Lego chegam ao Pavilhão do Conhecimento.",
-              "lede": "A maior exposição de Lego da Europa instala-se no Parque das Nações.",
-              "body": "O Pavilhão do Conhecimento, no Centro Ciência Viva, acolhe a maior exposição de Lego da Europa. Mais de 120 construções detalhadas e 15 milhões de peças transformam o espaço num desfile de arquitetura em miniatura. Famílias e curiosos descobrem monumentos e cenários fantásticos erguidos bloco a bloco. O sol forte brilha com um índice UV de 8, tornando as visitas a espaços interiores climatizados uma escolha acertada. A temperatura exterior atinge os 33°C no pico da tarde. Para quem chega de fora, a taxa de câmbio fixa 1 USD em 0.88 EUR. É um ponto de paragem obrigatório para observadores pacientes.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "03",
-              "headline": "A Trienal de Lisboa inaugura a galeria do Triptyque.",
-              "lede": "A arquitetura contemporânea ganha destaque com a abertura de novas propostas espaciais.",
-              "body": "A Galeria de Abertura da exposição do Triptyque para a Trienal de Lisboa já recebeu os primeiros visitantes. O evento reforça o papel da capital como polo de reflexão sobre o território e a habitação. Com o pôr do sol marcado para as 20:52, as horas tardias convidam a longas caminhadas pelas ruas da baixa. O dia mantém-se limpo, com mínimas de 20°C e máximas de 33°C. A conversão monetária mantém-se estável, cotando 1 USD a 0.88 EUR. Os residentes evitam o calor do meio-dia, preferindo a penumbra das galerias e o aragem que sopra do Tejo ao cair da noite.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Parque das Águas acolhe o segundo domingo do ciclo Vizinhanças.",
-              "lede": "A programação cultural descentralizada ocupa os jardins da cidade do Porto.",
-              "body": "O Parque das Águas recebe o segundo domingo do Vizinhanças, promovendo encontros comunitários e artísticos ao ar livre. A qualidade do ar permanece em níveis justos, registando um valor de PM2.5 de 7, ideal para passeios matinais sob copas frondosas. O ambiente convida a pausas demoradas junto aos lagos e recantos arborizados. No plano financeiro, 1 USD equivale a 0.88 EUR para os viajantes que gerem as suas despesas na cidade. O Porto avança no verão com um ritmo calmo, onde os moradores aproveitam os espaços verdes antes do calor apertar. A observação atenta revela um quotidiano focado no bem-estar local.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "02",
-              "headline": "O chef Vítor Matos estreia-se na alta cozinha japonesa num hotel recuperado.",
-              "lede": "A reabertura de um espaço hoteleiro traz novidades à rota gastronómica invicta.",
-              "body": "Um hotel histórico reabre no Porto com um restaurante que marca a estreia do chef Vítor Matos na cozinha japonesa. A proposta une a disciplina oriental aos produtos locais, criando uma simbiose pouco habitual na restauração nortenha. Os clientes encontram um ambiente intimista, ideal para noites tranquilas de verão. A qualidade do ar regista PM2.5 de 7, mantendo a atmosfera agradável para circular a pé pela cidade. A conversão de 1 USD para 0.88 EUR orienta as escolhas dos visitantes estrangeiros. Este novo poiso gastronómica confirma a vitalidade discreta da culinária na Invicta.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "03",
-              "headline": "O Festival de Teatro de Rua celebra a multiculturalidade.",
-              "lede": "As artes performativas ocupam o espaço público com o Encontro de Culturas.",
-              "body": "O Festival de Teatro de Rua celebra a multiculturalidade através de companhias que animam praças e recantos. O evento promove a partilha de tradições e expressões cénicas vindas de vários pontos. A qualidade do ar, com PM2.5 de 7, favorece a permanência prolongada nas ruas durante as apresentações. A taxa de câmbio de 1 USD por 0.88 EUR facilita o planeamento de quem visita a região. Os espectadores sentam-se nos muretes e escadarias, seguindo cada ato com atenção redobrada. É uma forma de habitar o território através da festa e da pausa partilhada.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A lontra regressa à Serra de Sintra após décadas de ausência.",
-              "lede": "O primeiro registo em várias décadas confirma a recuperação ecológica na serra.",
-              "body": "A lontra voltou a ser avistada na Serra de Sintra, de onde havia desaparecido há longas décadas. Este primeiro registo científico e visual em várias gerações atesta a melhoria da qualidade dos cursos de água locais. Os observadores da natureza mantêm a discrição para não perturbar o animal no seu habitat recuperado. O céu parcialmente nublado abranda o calor, com temperaturas entre os 17°C e os 33°C. O pôr do sol ocorre às 20:53, tingindo a vegetação densa com tons dourados. No câmbio, 1 USD vale 0.88 EUR. A serra confirma assim o seu estatuto de santuário natural protegido.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "02",
-              "headline": "As exposições caninas regressam aos espaços verdes de Sintra.",
-              "lede": "Criadores e aficionados reúnem-se para avaliar exemplares de várias raças.",
-              "body": "As Exposições Caninas regressam a Sintra, atraindo participantes de todo o país para julgamentos e exibições técnicas. Os prados verdejantes servem de cenário a este evento tradicional que preenche o calendário de julho. O termómetro varia entre os 17°C e os 33°C sob um céu parcialmente nublado. Com o sol a esconder-se às 20:53, as tardes longas permitem passeios relaxados pelos arredores dos palácios. A cotação de 1 USD para 0.88 EUR apoia os viajantes na gestão financeira da estadia. A vila histórica mantém o seu silêncio matinal habitual, longe da agitação costeira.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
-            },
-            {
-              "n": "03",
-              "headline": "O microclima da serra abranda as tardes quentes de julho.",
-              "lede": "A neblina matinal dá lugar a abertas suaves entre pinhais e fetos.",
-              "body": "A Serra de Sintra regista temperaturas entre os 17°C e os 33°C, num regime de céu parcialmente nublado típico do verão atlântico. O contraste térmico entre a manhã fresca e a tarde aquecida molda a experiência de quem percorre os trilhos. O pôr do sol fixa-se às 20:53, oferecendo tréguas luminosas junto aos miradouros sobranceiros ao oceano. A taxa de câmbio de 1 USD por 0.88 EUR permanece estável para os turistas na região. A notícia do regresso da lontra à serra acrescenta um motivo de contemplação para quem caminha devagar. Sintra continua a ser um território de mistério e silêncio recuperado.",
-              "source": "saudade desk",
-              "source_date": "2026-07-27"
             }
           ]
         }
