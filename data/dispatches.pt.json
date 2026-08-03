@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-08-03T06:00:00+09:00",
-  "next_filing": "2026-08-03T21:00:00+00:00",
+  "filed_at": "2026-08-04T06:00:00+09:00",
+  "next_filing": "2026-08-04T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "O renovado parque desportivo na Alta de Lisboa já abriu.",
-          "lede": "Os residentes ganham um novo espaço de ar livre para as tardes de verão.",
-          "body": "A Alta de Lisboa conta agora com um renovado parque desportivo, perfeitamente integrado na malha urbana da zona norte. Este espaço verde convida a caminhadas matinais e a treinos ao ar livre longe da agitação do centro. Para quem planeia a estadia, vale a pena notar que o câmbio atual se mantém nos 1 USD para 0.87 EUR. A requalificação privilegia materiais duráveis e zonas de sombra naturais, essenciais nos meses mais quentes. Os moradores locais já adotaram os circuitos pedonais para as suas rotinas diárias. É um excelente ponto de paragem para quem aprecia a arquitetura paisagística contemporânea da cidade.",
+          "headline": "O Parque Tejo recebe o regresso do grande festival musical da estação.",
+          "lede": "A Operação Verão 2026 traz novas energias à frente ribeirinha da capital.",
+          "body": "As margens do Tejo voltam a encher-se de acordes e passos lentos com a nova edição do festival que marca a agenda estival da cidade. A Operação Verão 2026 consolida o Parque Tejo como o grande anfiteatro ribeirinho para a música ao vivo. Os visitantes encontram um recinto amplo, desenhado para acolher grandes multidões sem perder a fluidez do passeio junto à água. A programação estende-se por várias semanas, cruzando géneros e gerações sob o céu aberto de agosto. Para quem chega de transportes públicos, os percursos pedestres a partir das estações próximas foram reforçados. É aconselhado chegar cedo para aproveitar a luz tardia sobre o rio antes dos concertos principais.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "02",
-          "headline": "O Parque Tejo prepara-se para acolher a nova edição do festival.",
-          "lede": "A Operação Verão 2026 traz de volta os grandes palcos à zona ribeirinha.",
-          "body": "A Operação Verão 2026 em Lisboa define o ritmo cultural da temporada com o regresso do gigante de espetáculos ao Parque Tejo. Os acessos fluviais e as ciclovias da zona oriental funcionam em pleno para absorver o fluxo de visitantes. A programação musical anima as noites quentes junto ao rio, oferecendo alternativas para todos os gostos. Quem caminha pela margem percebe a transformação recente desta frente ribeirinha em polo de lazer. As autoridades locais reforçaram os horários dos transportes públicos para facilitar as deslocações noturnas. Recomenda-se a compra antecipada de bilhetes para evitar filas nas entradas.",
+          "headline": "A Alta de Lisboa inaugura o seu renovado espaço desportivo.",
+          "lede": "O novo parque oferece amplas zonas verdes e equipamentos modernos aos residentes.",
+          "body": "O tecido urbano da Alta de Lisboa ganha um novo fôlego com a abertura oficial do seu renovado parque desportivo. Este espaço foi pensado para devolver a escala humana aos bairros em expansão, criando zonas de sombra e percursos pedonais bem definidos. Os moradores e visitantes dispõem agora de infraestruturas modernizadas para a prática de exercício ao ar livre e para o descanso em tranquilidade. A intervenção priorizou a integração de espécies arbóreas adaptadas ao clima local, garantindo frescor nos dias de maior calor estival. É um local perfeito para caminhadas matinais ou para ler um livro nos bancos de madeira recentemente instalados.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "03",
-          "headline": "A próxima festividade de agosto trará alterações habituais aos serviços.",
-          "lede": "A Assunção de Nossa Senhora altera o funcionamento de repartições e bancos.",
-          "body": "Com a proximidade da Assunção de Nossa Senhora a 2026-08-15, os serviços públicos e as instituições bancárias em Lisboa encerrarão as suas portas. Os viajantes devem antecipar qualquer gestão burocrática ou troca de moeda para evitar contratempos durante o feriado. O comércio tradicional nos bairros históricos manterá horários reduzidos ou fechará para descanso do pessoal. Por outro lado, os espaços verdes e as esplanadas continuam acessíveis para quem prefere passear com calma. A cidade respira um ritmo mais lento e contemplativo nestas datas festivas. Planeie as suas refeições com antecedência, pois muitos restaurantes locais fecham para férias.",
+          "headline": "A cadência de agosto aproxima a pausa feriada da Assunção de Nossa Senhora.",
+          "lede": "No dia 2026-08-15, os serviços públicos fecham portas enquanto a cidade abranda.",
+          "body": "Com a proximidade do feriado da Assunção de Nossa Senhora, a 2026-08-15, Lisboa prepara-se para o habitual ritmo mais sossegado de meados de agosto. Os serviços administrativos, repartições públicas e instituições bancárias fecharão as portas, exigindo alguma antecipação nas burocracias de última hora. No comércio de bairro, muitas portas encerram para o descanso anual dos proprietários, alterando temporariamente o pulsar das ruas. Para quem transita com moeda estrangeira, a taxa de câmbio mantém-se estável nos 1 USD para 0.87 EUR nos principais balcões do centro. É o momento ideal para redescobrir os museus menos concorridos e as esplanadas onde ainda há mesas livres.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "A temperatura oscila entre 18°C e 23°C sob céus nublados.",
-          "lede": "O ar apresenta qualidade fair com PM2.5 a 6, ideal para longas caminhadas.",
-          "body": "O Porto acolhe os visitantes com uma atmosfera fresca e nublada, registando temperaturas entre 18°C e 23°C ao longo do dia. A qualidade do ar é considerada fair, com um valor de PM2.5 fixado em 6, proporcionando um ambiente limpo para deambular pela ribeira. O pôr do sol acontece pelas 20:49, estendendo o crepúsculo sobre as pontes do Douro. A taxa de câmbio permanece estável em 1 USD para 0.87 EUR para transações correntes. O céu encoberto atenua o calor, tornando as caminhadas pelas ruas graníticas muito mais agradáveis. Aproveite para observar o movimento calmo dos barcos rabelos ancorados na margem.",
+          "headline": "A neblina matinal dissolve-se devagar sob a temperatura amena de agosto.",
+          "lede": "Os termómetros oscilam entre 19 e 24°C, antecedendo um pôr do sol às 20:47.",
+          "body": "A atmosfera portuense desperta envolvida numa bruma suave típica das manhãs atlanticas, mantendo a qualidade do ar em níveis excelentes com PM2.5 a 6. A amplitude térmica diária permanece contida, variando suavemente entre os 19 e os 24°C, o que convida a longas caminhadas sem o peso do calor excessivo. O horizonte limpo limpa a vista sobre o rio Douro à medida que a tarde avança calmamente. As esplanadas enchem-se de leitores e observadores que aguardam o cair da noite, marcado para as 20:47. É uma semana ideal para percorrer as ruas de granito sem pressas, aproveitando a brisa fresca que sobe da foz.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "02",
-          "headline": "O festival Post Punk Strikes Back Again anima as noites da cidade.",
-          "lede": "A música independente toma conta dos espaços culturais portuenses.",
-          "body": "O festival Post Punk Strikes Back Again traz ao Porto nomes consagrados como David J, dos Bauhaus, e os industriais Test Dept. Os concertos decorrem em salas emblemáticas, reunindo entusiastas do género de várias origens. A programação cultural complementa-se com exposições dedicadas ao património desportivo local, incluindo o espólio do F. C. Porto. Para quem prefere deslocações eficientes, a rede de metro funciona com regularidade habitual entre os locais dos concertos. O ambiente urbano respira criatividade e partilha artística nestes dias de agosto. É uma excelente oportunidade para descobrir recantos menos óbvios da noite portuense.",
+          "headline": "O Festival de Francesinhas celebra a tradição gastronómica da cidade.",
+          "lede": "Três casas típicas reúnem-se para prestar homenagem ao prato mais emblemático do Porto.",
+          "body": "O panorama culinário da Invicta volta a celebrar a sua identidade mais rica com mais uma edição dedicada à famosa francesinha. O evento conta com a participação de 3 restaurantes tradicionais do Porto, garantindo a autenticidade dos molhos e a rigidez das receitas seculares. É uma excelente oportunidade para saborear este ícone local num ambiente de convívio comunitário e partilha à mesa. Paralelamente, a agenda cultural abriga propostas distintas, como o festival Post Punk Strikes Back Again, que traz sonoridades alternativas desde nomes clássicos como David J até projetos industriais. A cidade equilibra assim a herança popular com correntes artísticas contemporâneas.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "03",
-          "headline": "O feriado de meados de agosto condiciona o comércio local.",
-          "lede": "A Assunção de Nossa Senhora a 2026-08-15 pede planeamento prévio aos viajantes.",
-          "body": "A chegada da Assunção de Nossa Senhora a 2026-08-15 implicará o encerramento de repartições públicas, bancos e correios no Porto. Os serviços essenciais mantêm piquetes, mas o ritmo geral da cidade abranda significativamente. Os visitantes devem assegurar reservas em alojamentos e restaurantes com antecedência devido à afluência sazonal. A conversão de divisas à taxa de 1 USD para 0.87 EUR deve ser feita antes da data festiva. As ruas históricas ganham uma serenidade invulgar durante a manhã do feriado. É o momento perfeito para observar os detalhes arquitetónicos sem a pressa habitual do tráfego.",
+          "headline": "O feriado de 2026-08-15 impõe o silêncio administrativo nas ruas do Porto.",
+          "lede": "A Assunção de Nossa Senhora suspende a atividade dos serviços públicos e bancos.",
+          "body": "O calendário avança para o feriado de 15 de agosto, data da Assunção de Nossa Senhora, que trará uma pausa generalizada aos escritórios e repartições. Os serviços públicos, os balcões bancários e os correios encerrarão as portas nesse dia, convidando moradores e visitantes a resolverem pendências burocráticas com antecedência. A taxa de câmbio mantém-se fixada em 1 USD para 0.87 EUR, facilitando as trocas para os viajantes estrangeiros que deambulam pela baixa histórica. Com o abrandamento institucional, as praças e os jardins públicos ganham um protagonismo redobrado, propícios para pausas prolongadas sob as árvores centenárias da cidade.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "A serra regista temperaturas entre 18°C e 25°C com céu encoberto.",
-          "lede": "A qualidade do ar mantém-se excelente com PM2.5 a 3 na região.",
-          "body": "Sintra apresenta um clima ameno, com temperaturas a variarem entre 18°C e 25°C sob um teto de nuvens que protege a vegetação luxuriante. O ar puro regista um índice PM2.5 de 3, garantindo condições ótimas para trilhos na serra. O pôr do sol ocorre às 20:46, permitindo longas horas de luz difusa entre os palácios e jardins. A taxa de câmbio local encontra-se nos 1 USD para 0.87 EUR. O microclima característico da vila continua a oferecer uma trégua bem-vinda face ao calor do litoral. É o cenário ideal para observar a fauna local, incluindo a recente e bem-sucedida recuperação da lontra na Serra de Sintra.",
+          "headline": "A serra oculta-se na neblina matinal sob uma temperatura suave e constante.",
+          "lede": "Com termómetros entre 19 e 25°C e ar puro, o poente surge pelas 20:45.",
+          "body": "A atmosfera serrana de Sintra amanhece envolta no nevoeiro característico que desce do Atlântico, conferindo um silêncio quase sagrado à paisagem verde. A qualidade do ar regista excelentes índices, com PM2.5 fixados em apenas 4, tornando cada respiração um exercício de frescura pura. As temperaturas oscilam de forma muito moderada entre os 19 e os 25°C, criando um microclima perfeito para explorar os trilhos históricos sem fadiga excessiva. O sol despede-se mais tarde, com o ocaso calendarizado para as 20:45, prolongando o crepúsculo sobre as copas das árvores. É uma semana de contemplação perfeita para quem procura refúgio nas encostas sombreadas do palácio.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "02",
-          "headline": "O Festival OCASO na Quinta da Ribafria une arte e tecnologia.",
-          "lede": "A programação cultural enriquece os espaços históricos da vila.",
-          "body": "A Quinta da Ribafria acolhe o Festival OCASO, um cruzamento singular entre a criação artística contemporânea e as novas tecnologias. As instalações interativas dialogam com a pedra antiga dos jardins e solares. Em simultâneo, novos espaços de lazer como o Parque Planeta Verão no Alegro Sintra oferecem alternativas para famílias. A oferta cultural da região equilibra o património clássico com iniciativas modernas e atrativas. Os acessos aos locais dos eventos beneficiam de transportes regulares a partir do centro histórico. Recomenda-se o uso de calçado confortável para percorrer os recintos ao ar livre.",
+          "headline": "A biodiversidade da serra celebra o regresso histórico da lontra.",
+          "lede": "Após décadas de ausência, a espécie reaparece nos cursos de água sintrenses.",
+          "body": "A natureza de Sintra vive um momento de rara beleza com a confirmação do regresso da lontra aos ribeiros da serra após longas décadas de ausência. Este retorno comprova a melhoria gradual dos ecossistemas locais e a recuperação dos corredores ecológicos fluviais. Em paralelo, a Quinta da Ribafria acolhte o Festival OCASO, cruzando a criação artística contemporânea com a tecnologia num cenário arquitetónico manuelino. Para as famílias que visitam a região, há também novos espaços de lazer infantil inaugurados recentemente no concelho. Sintra prova assim ser um território vivo onde o património natural e a programação cultural caminham lado a lado.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         },
         {
           "n": "03",
-          "headline": "O feriado de Assunção de Nossa Senhora altera a rotina da vila.",
-          "lede": "A data de 2026-08-15 traz encerramentos previstos em serviços administrativos.",
-          "body": "Por altura da Assunção de Nossa Senhora a 2026-08-15, os serviços públicos, bancos e repartições em Sintra fecharão as portas. Os visitantes devem prever esta paragem temporária para transações financeiras e câmbios à taxa de 1 USD para 0.87 EUR. Os monumentos nacionais mantêm-se acessíveis, embora com fluxos de visitantes mais intensos devido ao fim de semana prolongado. As pastelarias tradicionais continuam abertas para servir os famosos queijamentos e travesseiros. Aconselha-se a utilização de transportes públicos para evitar constrangimentos de estacionamento junto aos palácios. Desfrute da tranquilidade matinal antes da chegada dos grupos turísticos.",
+          "headline": "A chegada da Assunção de Nossa Senhora altera o ritmo pacato da vila.",
+          "lede": "No dia 2026-08-15, os serviços e repartições fecham para o descanso estival.",
+          "body": "O descanso de meados de agosto aproxima-se com o feriado da Assunção de Nossa Senhora, marcado para 2026-08-15. Como é hábito, os serviços da administração pública, os postos de atendimento e as instituições bancárias suspenderão o funcionamento nesse dia. Os viajantes que necessitem de efetuar transações financeiras encontram o câmbio estável nos balcões locais, cotado a 1 USD para 0.87 EUR. Com o fecho temporário dos escritórios, a vila ganha uma cadência mais lenta, ideal para deambular pelas ruelas antigas e pelos jardins românticos. É aconselhado reservar com antecedência as visitas aos monumentos mais procurados devido à afluência típica da época.",
           "source": "saudade desk",
-          "source_date": "2026-08-03"
+          "source_date": "2026-08-04"
         }
       ]
     }
