@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-05T06:00:00+09:00",
+  "updated": "2026-08-06T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-06T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las verbenas de agosto animan los barrios del centro.",
+              "lede": "La música al aire libre y los encuentros vecinales ocupan las plazas durante las noches de este mes.",
+              "body": "El centro de Madrid recupera su pulso estival con las tradicionales verbenas que llenan de actividad las calles y plazas principales. Las celebraciones de agosto ofrecen una alternativa cultural para quienes permanecen en la ciudad durante las semanas de mayor calor. Entre la programación destacan actuaciones musicales puntuales y propuestas artísticas como las de Silvia Superstar en los escenarios habilitados. Los vecinos y visitantes aprovechan las horas nocturnas para disfrutar de las terrazas y del ambiente festivo que caracteriza a los distritos centrales en estas fechas. Conviene consultar los horarios específicos de cada barrio para planificar los desplazamientos a pie o en transporte público.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "02",
+              "headline": "Un piano de cola público invita a tocar en la calle.",
+              "lede": "Una iniciativa gratuita permite a cualquier transeúnte convertirse en músico por un día.",
+              "body": "Los espacios públicos de Madrid suman propuestas culturales espontáneas orientadas a la participación ciudadana. Un piano de cola instalado al aire libre ofrece la oportunidad de interpretar piezas musicales de manera totalmente libre y gratuita. Esta iniciativa busca acercar la cultura a los viandantes y dinamizar la vida urbana con notas musicales inesperadas en medio del bullicio diario. Residentes y viajeros se detienen a escuchar o a tocar el instrumento durante sus paseos por la ciudad. La propuesta forma parte de una serie de intervenciones urbanas diseñadas para fomentar la convivencia y el uso creativo del espacio público en la temporada estival.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario estival recuerda el festivo de Asunción.",
+              "lede": "La festividad del 15 de agosto afectará a la apertura de oficinas administrativas y comercios locales.",
+              "body": "La próxima llegada del festivo de Asunción el 15 de agosto requiere cierta previsión en la organización de gestiones administrativas y compras cotidianas en Madrid. Durante esa jornada festiva, las oficinas de la administración pública, las sucursales bancarias y las oficinas de correos permanecerán cerradas al público. El tipo de cambio actual se sitúa en 1 USD a 0.87 EUR para quienes realicen transacciones financieras o divisa extranjera en la ciudad. Los comercios tradicionales y los grandes espacios comerciales ajustarán sus horarios habituales o suspenderán su actividad comercial general. Conviene realizar los trámites necesarios con antelación para evitar inconvenientes derivados del cierre de servicios institucionales durante el día festivo.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las lluvias intermitentes acompañan una temperatura de 24 a 32°C.",
+              "lede": "Un registro de 0.4mm de precipitación y cielos variables marcan la jornada antes de la puesta de sol a las 21:02.",
+              "body": "Barcelona experimenta un clima típicamente estival con temperaturas que oscilan entre los 24 y los 32°C a lo largo del día. Se han registrado ligeras precipitaciones de 0.4mm que apenas alteran el ritmo de las calles pero aportan algo de humedad ambiental. La calidad del aire se mantiene en niveles considerados como fair, con un valor de PM2.5 de 12 que permite pasear al aire libre sin restricciones. La puesta de sol está prevista para las 21:02, prolongando las horas de luz para disfrutar de la ciudad al atardecer. Los viajeros y residentes pueden recorrer los parques y paseos marítimos con total tranquilidad, aunque conviene estar atentos a posibles chubascos esporádicos durante la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "02",
+              "headline": "El arte fotográfico y el diseño urbano ocupan las galerías.",
+              "lede": "Las exposiciones temporales y muestras culturales dinamizan la agenda artística de la ciudad esta semana.",
+              "body": "La agenda cultural de Barcelona destaca por propuestas consolidadas como Art Photo BCN, que reúne a creadores y aficionados a la fotografía contemporánea. Los espacios expositivos de la ciudad acogen muestras vinculadas a la tradición de festivales de iluminación urbana similares a Llum BCN. Estas iniciativas transforman la percepción de la arquitectura local mediante intervenciones visuales y recorridos recomendados para los amantes del diseño. Paralelamente, la oferta comercial y cultural se amplia con nuevas aperturas de tiendas de diseño y estilo de vida en puntos estratégicos. Los visitantes encontrarán una ciudad activa donde la creación artística contemporánea dialoga permanentemente con el patrimonio urbano tradicional.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "03",
+              "headline": "La festividad del 15 de agosto altera los servicios urbanos.",
+              "lede": "El festivo de Asunción modificará los horarios de oficinas públicas y entidades bancarias la próxima semana.",
+              "body": "La celebración de la festividad de Asunción el 15 de agosto traerá consigo el cierre temporal de oficinas de la administración pública, bancos y oficinas de correos en toda Barcelona. Los viajeros internacionales deben tener en cuenta que el tipo de cambio oficial se sitúa en 1 USD a 0.87 EUR para sus operaciones financieras. Conviene planificar las gestiones bancarias y administrativas con varios días de antelación para evitar sorpresas ante la inminencia de la jornada festiva. Si bien la hostelería y los servicios orientados al turismo mantendrán sus puertas abiertas con normalidad, la actividad institucional quedará completamente interrumpida. Los residentes aprovechan estas fechas para organizar desplazamientos cortos o disfrutar de los espacios públicos urbanos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las tormentas y 8 a 14°C definen la jornada porteña.",
+              "lede": "Un registro de 28.4mm de precipitación y la puesta de sol a las 18:16 marcan el ritmo del día.",
+              "body": "Buenos Aires atraviesa una jornada invernal fresca con temperaturas que se mueven entre los 8 y los 14°C. Las condiciones meteorológicas incluyen tormentas que han dejado un acumulado de 28.4mm de precipitación en distintos puntos de la ciudad. La calidad del aire se sitúa en niveles fair, con una concentración de PM2.5 registrada en 19. La puesta de sol ocurre puntualmente a las 18:16, dando paso a unas noches frías ideales para refugiarse en espacios culturales cerrados. Los paseantes deben transitar con precaución por las aceras debido a la acumulación puntual de agua tras las lluvias recientes. El transporte público opera con normalidad a pesar de las precipitaciones registradas durante las primeras horas del día.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "02",
+              "headline": "El tango y los grandes festivales musicales anticipan la temporada.",
+              "lede": "La ciudad vibra con preparativos tangueros y el anuncio de nuevas ediciones de festivales internacionales.",
+              "body": "La actividad cultural porteña gira esta semana en torno al tango, con preparativos avanzados para su esperado Festival y Mundial. Los milongueros y aficionados afinan los detalles para participar en las milongas y exhibiciones programadas en diversos centros culturales. Paralelamente, la música internacional gana espacio con el anuncio oficial de la próxima edición de Primavera Sound Buenos Aires, que ya ha confirmado su sede y la presencia de reconocidas bandas como Gorillaz y The Strokes. Los espacios verdes y centros de exposiciones como el Centro de Exposiciones y Convenciones continúan albergando proyectos arquitectónicos y muestras premiadas. La vida cultural de la ciudad mantiene así un pulso constante que combina la tradición rioplatense con las grandes tendencias musicales globales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario recuerda el feriado del General San Martín.",
+              "lede": "El próximo paso a la inmutabilidad del prócer nacional traerá cierres administrativos a mediados de mes.",
+              "body": "El horizonte calendario de agosto señala la llegada del Paso a la Inmortalidad del General José de San Martín, fijado para el 17 de agosto. Esta conmemoración nacional implicará el cese temporal de actividades en las oficinas de la administración pública, bancos y entidades postales de la capital. Los residentes y visitantes deben anticipar cualquier trámite administrativo o financiero relevante antes de la llegada de la fecha festiva. Los servicios esenciales de transporte y los espacios públicos mantendrán esquemas adaptados a los fines de semana largos habituales en el país. Conviene revisar las agendas particulares para coordinar traslados y compras con suficiente margen de previsión.",
+              "source": "saudade desk",
+              "source_date": "2026-08-06"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-05T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La Galería de Ganadores del concurso Buenos Aires y el Río abre sus puertas en Parque Salguero - 23 para mostrar la relación visual entre la urbe y su estuario. Las imágenes seleccionadas capturan la melancolía y la inmensidad del paisaje fluvial en diversas épocas del año. La muestra invita a detenerse y observar el río desde una perspectiva artística y contemplativa. Es una visita ideal para los días de tregua entre chaparrones. El acceso al recinto es libre para todos los caminantes interesados en el paisaje local.",
               "source": "saudade desk",
               "source_date": "2026-07-31"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-30T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid alcanza los 38°C este final de julio con cielos parcialmente nublados.",
-              "lede": "Las tardes estivales prolongan la luz hasta las 21:31, invitando a buscar refugio en la sombra.",
-              "body": "El termómetro oscila entre los 24 y los 38°C durante estas jornadas de pleno verano en la capital. Los madrileños buscan alternativas al calor intenso en las terrazas de Madrid Río al caer la tarde. Con un tipo de cambio en 1 USD frente a 0.88 EUR, el presupuesto del viajero se mantiene estable. La agenda cultural ofrece cine al aire libre y las proyecciones del Festival de Cine de Madrid con la obra 'Kipuka'. Conviene planificar los paseos largos a primera hora de la mañana para evitar las horas de mayor insolación.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de la Guitarra y el cine de verano marcan las noches madrileñas.",
-              "lede": "La programación estival combina acordes clásicos con proyecciones cinematográficas bajo el cielo nocturno.",
-              "body": "Las noches de este final de julio en Madrid ofrecen múltiples opciones culturales para los residentes que no han viajado. El Festival de la Guitarra inunda distintos espacios urbanos con su música instrumental mientras el sol se esconde tras el horizonte. Paralelamente, los cines de verano recuperan clásicos y novedades en plazas y parques de la ciudad. El cine de Madrid también acoge propuestas singulares como la proyección sobre el volcán Tajogaite. Es recomendable consultar los horarios con antelación debido a la alta demanda estacional.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "03",
-              "headline": "Tarifas especiales en el Parque Warner para los vecinos de Toledo.",
-              "lede": "Los municipios cercanos disfrutan de ventajas exclusivas en los recintos de ocio madrileños.",
-              "body": "El Ayuntamiento de Toledo ha acordado precios especiales en el Parque Warner y ofertas únicas en otros parques de ocio de Madrid. Esta iniciativa busca incentivar el turismo de proximidad durante los meses estivales. Los visitantes pueden combinar estas jornadas de atracciones con paseos tranquilos por las zonas verdes urbanas. Con una temperatura máxima prevista de 38°C, es imprescindible mantenerse hidratado durante la visita a los recintos al aire libre. La oferta se mantendrá activa durante las próximas semanas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra una calidad del aire favorable con niveles de PM2.5 en 10.",
-              "lede": "El ambiente urbano se mantiene limpio y apto para recorrer los paseos marítimos a pie.",
-              "body": "Las condiciones atmosféricas en la ciudad condal son óptimas para la actividad al aire libre con un índice de PM2.5 situado en 10. El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR para las transacciones cotidianas. La oferta cultural de la semana incluye el Circuit Festival LGTBIQ+, que llena diversos puntos de la capital catalana con su edición más ambiciosa. Los espacios públicos y las terrazas disfrutan de una afluencia constante de paseantes y observadores silenciosos. Es un momento excelente para caminar sin rumbo fijo por el barrio gótico.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "02",
-              "headline": "El Poble Espanyol y el festival BARTS acogen propuestas musicales de gran formato.",
-              "lede": "La música en directo convive con exposiciones cinematográficas y muestras fotográficas gratuitas.",
-              "body": "La programación cultural de esta semana destaca por la presencia de artistas como Morrissey dentro del marco del BARTS Festival en el Poble Espanyol. Los aficionados al cine y la cultura pop también pueden visitar una exposición de Star Wars gratuita que incluye piezas originales de los rodajes. Además, la Galería de Olympus presenta una muestra fotográfica experimental en la ciudad. Estas actividades ofrecen un respiro cultural de calidad en espacios cerrados y semicubiertos. La afluencia moderada permite disfrutar de las obras con tranquilidad.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "03",
-              "headline": "Exposiciones experimentales y muestras de cine ocupan las galerías barcelonesas.",
-              "lede": "El circuito artístico local amplía su oferta con propuestas visuales de carácter internacional.",
-              "body": "La agenda de la ciudad combina la fotografía contemporánea con muestras temáticas de gran calado popular. La Galería de Olympus expone su selección experimental, ideal para quienes buscan miradas fotográficas pausadas. Paralelamente, los grandes recintos como el Poble Espanyol concentran una parte importante de la vida musical del fin de semana. El transporte público funciona con total normalidad para conectar todos los puntos culturales. Conviene revisar los horarios de acceso a las exposiciones gratuitas para evitar esperas innecesarias en taquilla.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con un cielo totalmente cubierto y temperaturas de 10 a 15°C.",
-              "lede": "La puesta de sol a las 18:11 marca el inicio de unas tardes frescas de invierno austral.",
-              "body": "El clima porteño se mantiene estable con temperaturas que oscilan entre los 10 y los 15°C bajo un cielo overcast. La calidad del aire es buena, registrando un valor de PM2.5 de 14 en las estaciones de monitoreo urbano. La ciudad avanza en sus proyectos de mejora urbana, destacando la histórica obra de renovación en la pista de atletismo del Parque Chacabuco. Por otro lado, la Galería de Ganadores expone las obras del concurso Buenos Aires y el Río en el Parque Salguero. Las calles invitan a caminar con abrigo ligero mientras se observa el ritmo cotidiano.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "02",
-              "headline": "El Bendita Tú Festival de Cine trae cortometrajes feministas y queer a la ciudad.",
-              "lede": "Las salas independientes y centros culturales acogen una programación cinematográfica diversa y comprometida.",
-              "body": "La cartelera cultural de Buenos Aires suma esta semana propuestas independientes de gran valor artístico y social. El Bendita Tú Festival de Cine 2026 despliega una selección de cortometrajes que abordan nuevas narrativas audiovisuales. Los espacios alternativos se llenan de espectadores interesados en el cine de autor y los debates posteriores. Esta oferta se complementa con la apertura de nuevos espacios de marketing experiencial en los barrios comerciales, como la propuesta de Carolina Herrera en su 212 HOUSE. Es una semana propicia para disfrutar de los espacios culturales cerrados.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
-            },
-            {
-              "n": "03",
-              "headline": "El Parque Chacabuco inicia los preparativos para la renovación de su pista de atletismo.",
-              "lede": "Los deportistas locales verán modernizadas las instalaciones tras una intervención muy esperada por la comunidad.",
-              "body": "La pista de atletismo del tradicional Parque Chacabuco se prepara para acometer una histórica obra de remodelación. Los trabajos mejorarán la superficie de entrenamiento para los corredores y vecinos que utilizan diariamente este espacio público. Mientras tanto, los paseantes pueden recorrer la muestra fotográfica del concurso Buenos Aires y el Río en las inmediaciones de Parque Salguero. Con una temperatura máxima de 15°C y cielos nublados, las actividades al aire libre requieren una indumentaria adecuada para el frío. La ciudad mantiene su habitual dinamismo cultural y deportivo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-30"
             }
           ]
         }
