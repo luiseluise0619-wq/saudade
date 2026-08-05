@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-05T06:00:00+09:00",
-  "next_filing": "2026-08-05T21:00:00+00:00",
+  "filed_at": "2026-08-06T06:00:00+09:00",
+  "next_filing": "2026-08-06T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Las esculturas inflables de la exposición Euphoria ocupan las calles.",
-          "lede": "Una muestra de arte gigante invita a recorrer piezas monumentales al aire libre.",
-          "body": "El paseo urbano se transforma este mes con una propuesta cultural singular en el espacio público. Grandes volúmenes inflables dialogan con la arquitectura tradicional y ofrecen una perspectiva distinta del paisaje madrileño. La experiencia permite interactuar directamente con las obras en plazas muy concurridas. Es una alternativa ideal para caminar sin prisa durante las horas de menor insolación estival. Conviene consultar los horarios específicos de acceso para disfrutar del recorrido con tranquilidad.",
+          "headline": "Las verbenas de agosto animan los barrios del centro.",
+          "lede": "La música al aire libre y los encuentros vecinales ocupan las plazas durante las noches de este mes.",
+          "body": "El centro de Madrid recupera su pulso estival con las tradicionales verbenas que llenan de actividad las calles y plazas principales. Las celebraciones de agosto ofrecen una alternativa cultural para quienes permanecen en la ciudad durante las semanas de mayor calor. Entre la programación destacan actuaciones musicales puntuales y propuestas artísticas como las de Silvia Superstar en los escenarios habilitados. Los vecinos y visitantes aprovechan las horas nocturnas para disfrutar de las terrazas y del ambiente festivo que caracteriza a los distritos centrales en estas fechas. Conviene consultar los horarios específicos de cada barrio para planificar los desplazamientos a pie o en transporte público.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "02",
-          "headline": "El festival infantil acerca los libros al juego cotidiano.",
-          "lede": "Los espacios municipales acogen actividades literarias diseñadas para los más pequeños.",
-          "body": "La lectura adquiere un formato lúdico en los parques y centros culturales de la capital. Diferentes talleres fomentan la imaginación mediante dinámicas donde las páginas impresas se convierten en pasatiempos. Las familias encuentran en estas propuestas un refugio fresco frente al calor de agosto. La iniciativa promueve el uso de las bibliotecas de barrio como puntos de encuentro estival. Es una excelente ocasión para redescubrir el hábito lector en un entorno distendido y participativo.",
+          "headline": "Un piano de cola público invita a tocar en la calle.",
+          "lede": "Una iniciativa gratuita permite a cualquier transeúnte convertirse en músico por un día.",
+          "body": "Los espacios públicos de Madrid suman propuestas culturales espontáneas orientadas a la participación ciudadana. Un piano de cola instalado al aire libre ofrece la oportunidad de interpretar piezas musicales de manera totalmente libre y gratuita. Esta iniciativa busca acercar la cultura a los viandantes y dinamizar la vida urbana con notas musicales inesperadas en medio del bullicio diario. Residentes y viajeros se detienen a escuchar o a tocar el instrumento durante sus paseos por la ciudad. La propuesta forma parte de una serie de intervenciones urbanas diseñadas para fomentar la convivencia y el uso creativo del espacio público en la temporada estival.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "03",
-          "headline": "La festividad de la Asunción modificará los horarios comerciales y administrativos.",
-          "lede": "El próximo 2026-08-15 las oficinas públicas y los bancos permanecerán cerrados.",
-          "body": "El calendario laboral se detiene de forma oficial a mediados de mes con motivo de la festividad nacional. Los residentes habituales deben anticipar cualquier trámite administrativo o gestión bancaria antes de esa fecha. El comercio local suele adaptar sus aperturas a la afluencia turística propia del periodo estival. Las calles principales muestran un ritmo más pausado durante las jornadas festivas. Es un momento propicio para recorrer los espacios verdes urbanos con menor bullicio vehicular.",
+          "headline": "El calendario estival recuerda el festivo de Asunción.",
+          "lede": "La festividad del 15 de agosto afectará a la apertura de oficinas administrativas y comercios locales.",
+          "body": "La próxima llegada del festivo de Asunción el 15 de agosto requiere cierta previsión en la organización de gestiones administrativas y compras cotidianas en Madrid. Durante esa jornada festiva, las oficinas de la administración pública, las sucursales bancarias y las oficinas de correos permanecerán cerradas al público. El tipo de cambio actual se sitúa en 1 USD a 0.87 EUR para quienes realicen transacciones financieras o divisa extranjera en la ciudad. Los comercios tradicionales y los grandes espacios comerciales ajustarán sus horarios habituales o suspenderán su actividad comercial general. Conviene realizar los trámites necesarios con antelación para evitar inconvenientes derivados del cierre de servicios institucionales durante el día festivo.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Los termómetros oscilan entre 25 y 33°C con cielos despejados.",
-          "lede": "La brisa marina acompaña una jornada de aire calificado como fair.",
-          "body": "El ambiente veraniego se mantiene estable en el litoral barcelonés durante toda la jornada. La puesta de sol está prevista para las 21:04, ofreciendo un crepúsculo largo y luminoso sobre el mar. Los niveles de PM2.5 se sitúan en 14, manteniendo una calidad del aire aceptable para pasear al aire libre. Conviene planificar las caminatas matinales o vespertinas para evitar las horas centrales de mayor insolación. Las terrazas y paseos marítimos registran una actividad constante y tranquila.",
+          "headline": "Las lluvias intermitentes acompañan una temperatura de 24 a 32°C.",
+          "lede": "Un registro de 0.4mm de precipitación y cielos variables marcan la jornada antes de la puesta de sol a las 21:02.",
+          "body": "Barcelona experimenta un clima típicamente estival con temperaturas que oscilan entre los 24 y los 32°C a lo largo del día. Se han registrado ligeras precipitaciones de 0.4mm que apenas alteran el ritmo de las calles pero aportan algo de humedad ambiental. La calidad del aire se mantiene en niveles considerados como fair, con un valor de PM2.5 de 12 que permite pasear al aire libre sin restricciones. La puesta de sol está prevista para las 21:02, prolongando las horas de luz para disfrutar de la ciudad al atardecer. Los viajeros y residentes pueden recorrer los parques y paseos marítimos con total tranquilidad, aunque conviene estar atentos a posibles chubascos esporádicos durante la tarde.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "02",
-          "headline": "El Festival de Arquitecturas inaugura cinco nuevas instalaciones efímeras.",
-          "lede": "El diseño urbano contemporáneo dialoga con el patrimonio histórico de la ciudad.",
-          "body": "Cinco intervenciones inéditas transforman rincones discretos del tejido urbano durante este mes. Los creadores reinterpretan el espacio público mediante estructuras geométricas que priorizan la escala humana y la sombra. La iniciativa invita a observar los patios y plazas desde una sensibilidad renovada y reflexiva. Los recorridos se realizan de manera libre y sin masificaciones matutinas. Es un ejercicio excelente para los amantes del diseño que buscan comprender la evolución morfológica de Barcelona.",
+          "headline": "El arte fotográfico y el diseño urbano ocupan las galerías.",
+          "lede": "Las exposiciones temporales y muestras culturales dinamizan la agenda artística de la ciudad esta semana.",
+          "body": "La agenda cultural de Barcelona destaca por propuestas consolidadas como Art Photo BCN, que reúne a creadores y aficionados a la fotografía contemporánea. Los espacios expositivos de la ciudad acogen muestras vinculadas a la tradición de festivales de iluminación urbana similares a Llum BCN. Estas iniciativas transforman la percepción de la arquitectura local mediante intervenciones visuales y recorridos recomendados para los amantes del diseño. Paralelamente, la oferta comercial y cultural se amplia con nuevas aperturas de tiendas de diseño y estilo de vida en puntos estratégicos. Los visitantes encontrarán una ciudad activa donde la creación artística contemporánea dialoga permanentemente con el patrimonio urbano tradicional.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "03",
-          "headline": "El Circuit Festival consolida su programación acuática y festiva.",
-          "lede": "Las actividades lúdicas reúnen a miles de visitantes en el litoral metropolitano.",
-          "body": "La cita internacional del turismo LGBTIQ+ despliega su agenda principal en diversos enclaves de la costa. El tradicional Water Park Day congrega a los asistentes en un ambiente de convivencia y buen ambiente. Las infraestructuras de transporte público operan con normalidad para absorber los desplazamientos hacia los recintos. Los comercios locales notan una afluencia constante de participantes durante toda la semana. Conviene consultar los canales oficiales para conocer los accesos recomendados y evitar aglomeraciones puntuales.",
+          "headline": "La festividad del 15 de agosto altera los servicios urbanos.",
+          "lede": "El festivo de Asunción modificará los horarios de oficinas públicas y entidades bancarias la próxima semana.",
+          "body": "La celebración de la festividad de Asunción el 15 de agosto traerá consigo el cierre temporal de oficinas de la administración pública, bancos y oficinas de correos en toda Barcelona. Los viajeros internacionales deben tener en cuenta que el tipo de cambio oficial se sitúa en 1 USD a 0.87 EUR para sus operaciones financieras. Conviene planificar las gestiones bancarias y administrativas con varios días de antelación para evitar sorpresas ante la inminencia de la jornada festiva. Si bien la hostelería y los servicios orientados al turismo mantendrán sus puertas abiertas con normalidad, la actividad institucional quedará completamente interrumpida. Los residentes aprovechan estas fechas para organizar desplazamientos cortos o disfrutar de los espacios públicos urbanos.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Una suave llovizna marca el pulso invernal con temperaturas frescas.",
-          "lede": "Los termómetros se mueven entre 12 y 15°C bajo un cielo gris.",
-          "body": "El registro de precipitación marca 0.5mm, dejando las veredas porteñas húmedas y silenciosas. La puesta de sol se adelanta a las 18:15, acortando las horas de luz natural en la ciudad. El aire presenta una condición favorable, con un índice de PM2.5 en 12 que facilita la circulación peatonal. Las cafeterías tradicionales se convierten en el refugio predilecto para resguardarse del viento fresco. Es una jornada ideal para caminar abrigado por los barrios arbolados sin prisa.",
+          "headline": "Las tormentas y 8 a 14°C definen la jornada porteña.",
+          "lede": "Un registro de 28.4mm de precipitación y la puesta de sol a las 18:16 marcan el ritmo del día.",
+          "body": "Buenos Aires atraviesa una jornada invernal fresca con temperaturas que se mueven entre los 8 y los 14°C. Las condiciones meteorológicas incluyen tormentas que han dejado un acumulado de 28.4mm de precipitación en distintos puntos de la ciudad. La calidad del aire se sitúa en niveles fair, con una concentración de PM2.5 registrada en 19. La puesta de sol ocurre puntualmente a las 18:16, dando paso a unas noches frías ideales para refugiarse en espacios culturales cerrados. Los paseantes deben transitar con precaución por las aceras debido a la acumulación puntual de agua tras las lluvias recientes. El transporte público opera con normalidad a pesar de las precipitaciones registradas durante las primeras horas del día.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "02",
-          "headline": "Buenos Aires se viste de tango al comenzar agosto.",
-          "lede": "El Festival y el Mundial preparan escenarios y milongas por toda la ciudad.",
-          "body": "La música ciudadana inunda los centros culturales y las tradicionales pistas de baile barriales. La programación incluye conciertos, exhibiciones y la esperada Semana de las Milongas en diversos puntos cardinales. Los espacios públicos y teatros afinan sus detalles para recibir a bailarines de todo el mundo. Es una ocasión excelente para sumergirse en la disciplina cultural más representativa del Río de la Plata. Se recomienda reservar con antelación para las galas principales debido a la alta demanda.",
+          "headline": "El tango y los grandes festivales musicales anticipan la temporada.",
+          "lede": "La ciudad vibra con preparativos tangueros y el anuncio de nuevas ediciones de festivales internacionales.",
+          "body": "La actividad cultural porteña gira esta semana en torno al tango, con preparativos avanzados para su esperado Festival y Mundial. Los milongueros y aficionados afinan los detalles para participar en las milongas y exhibiciones programadas en diversos centros culturales. Paralelamente, la música internacional gana espacio con el anuncio oficial de la próxima edición de Primavera Sound Buenos Aires, que ya ha confirmado su sede y la presencia de reconocidas bandas como Gorillaz y The Strokes. Los espacios verdes y centros de exposiciones como el Centro de Exposiciones y Convenciones continúan albergando proyectos arquitectónicos y muestras premiadas. La vida cultural de la ciudad mantiene así un pulso constante que combina la tradición rioplatense con las grandes tendencias musicales globales.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         },
         {
           "n": "03",
-          "headline": "El descanso del General San Martín se aproxima en el calendario.",
-          "lede": "El feriado del 2026-08-17 alterará la actividad administrativa habitual.",
-          "body": "La pausa oficial en honor al prócer nacional modificará los horarios bancarios y gubernamentales de la próxima semana. Los residentes aprovechan estos días para planificar escapadas breves o disfrutar de la agenda cultural porteña. Las instituciones públicas permanecerán cerradas durante la jornada festiva principal. Conviene revisar el funcionamiento de los servicios municipales esenciales antes de realizar gestiones presenciales. La ciudad adopta un ritmo más reposado durante los fines de semana largos de invierno.",
+          "headline": "El calendario recuerda el feriado del General San Martín.",
+          "lede": "El próximo paso a la inmutabilidad del prócer nacional traerá cierres administrativos a mediados de mes.",
+          "body": "El horizonte calendario de agosto señala la llegada del Paso a la Inmortalidad del General José de San Martín, fijado para el 17 de agosto. Esta conmemoración nacional implicará el cese temporal de actividades en las oficinas de la administración pública, bancos y entidades postales de la capital. Los residentes y visitantes deben anticipar cualquier trámite administrativo o financiero relevante antes de la llegada de la fecha festiva. Los servicios esenciales de transporte y los espacios públicos mantendrán esquemas adaptados a los fines de semana largos habituales en el país. Conviene revisar las agendas particulares para coordinar traslados y compras con suficiente margen de previsión.",
           "source": "saudade desk",
-          "source_date": "2026-08-05"
+          "source_date": "2026-08-06"
         }
       ]
     }
