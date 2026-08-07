@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-06T06:00:00+09:00",
+  "updated": "2026-08-07T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-07T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La cerveza artesana marca el ritmo de agosto.",
+              "lede": "El festival Beermad reúne propuestas independientes en la capital.",
+              "body": "La undécima edición de Beermad ocupa un espacio destacado en la agenda cultural de Madrid durante este mes de agosto. Los aficionados a la cerveza artesana encuentran en este encuentro una cuidada selección de marcas locales y nacionales. Paralelamente, el Festival Escenas de Verano alcanza su ecuador con una programación que incluye conciertos, cine al aire libre y diversas disciplinas de artes escénicas en varios puntos de la región. Para quienes visitan la ciudad desde el extranjero, el tipo de cambio oficial se sitúa en 1 USD frente a 0.87 EUR. Las oficinas bancarias y de correos operarán con total normalidad esta semana, a la espera de los festivos nacionales previstos para el calendario del próximo 15 de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "02",
+              "headline": "El parque móvil madrileño envejece de forma notable.",
+              "lede": "La mitad de los turismos circulantes supera ya los 15 años.",
+              "body": "Un reciente análisis sobre el parque automovilístico madrileño y nacional revela que la mitad de los turismos que circulan superan ya los 15 años de antigüedad. Este dato invita a repensar la movilidad urbana y el uso de los transportes públicos en los desplazamientos cotidianos. El metro y la red de autobuses urbanos continúan siendo la opción más eficiente para recorrer la ciudad sin depender del vehículo privado. Las instituciones locales recuerdan la importancia de consultar las restricciones de acceso a las zonas de bajas emisiones antes de planificar cualquier trayecto. Los visitantes extranjeros deben recordar que la tasa de conversión monetaria actual es de 1 USD por cada 0.87 EUR para sus gestiones financieras y pagos con tarjeta.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "03",
+              "headline": "La sierra madrileña se prepara para el eclipse solar.",
+              "lede": "Un municipio concreto ofrece la observación más prolongada del fenómeno.",
+              "body": "Los observadores del cielo y los viajeros con vocación astronómica ya buscan el enclave perfecto para presenciar el próximo eclipse solar. Dentro de la Comunidad de Madrid, existe un municipio específico donde el fenómeno se podrá contemplar durante más tiempo que en el resto de la región. Se recomienda planificar el desplazamiento con antelación, ya que la afluencia hacia las zonas rurales suele ser elevada en estas fechas estivales. Por otro lado, las celebraciones locales de mediados de agosto se acercan paulatinamente, por lo que conviene revisar los horarios comerciales especiales. El tipo de cambio financiero se mantiene estable en 1 USD equivalente a 0.87 EUR, facilitando las transacciones a los turistas internacionales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cielos cubiertos y temperaturas suaves en la costa.",
+              "lede": "La jornada oscila entre los 24 y los 32°C con una calidad de aire justa.",
+              "body": "El termómetro se mueve hoy entre los 24 y los 32°C bajo un cielo plenamente overcast que mitiga la intensidad del sol estival en la ciudad condal. El poniente barcelonés registra una calidad del aire catalogada como fair, con un índice de PM2.5 de 12. La puesta de sol está prevista para las 21:01, regalando una tarde larga para los paseos reposados por los paseos marítimos y los parques urbanos. El tipo de cambio actual se mantiene en 1 USD por 0.87 EUR, un valor útil para los visitantes internacionales que organizan sus compras y reservas culturales de última hora en galerías y espacios patrimoniales de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "02",
+              "headline": "El invernadero modernista reabre sus puertas al público.",
+              "lede": "La joya de la Exposición Universal de 1888 recupera su esplendor.",
+              "body": "El emblemático invernadero modernista construido para la Exposición Universal de 1888 vuelve a recibir visitantes de manera totalmente gratuita tras sus cuidadas tareas de restauración. Los interesados en la arquitectura de la época deben consultar las fechas disponibles y realizar su reserva previa a través de los canales institucionales habilitados. Esta propuesta se suma a la variada oferta cultural del mes, que incluye la muestra Arquitectura | Oficis en la galería ÚNICO y el festival Art Photo BCN. La moneda extranjera cotiza a 1 USD por 0.87 EUR, y las oficinas bancarias mantendrán sus horarios habituales durante los próximos días laborables antes del festivo del 15 de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "03",
+              "headline": "El Casino Barcelona acoge la etapa reina del CEP.",
+              "lede": "El circuito nacional de póker reúne a jugadores en el litoral.",
+              "body": "Las instalaciones del Casino Barcelona albergan estos días la esperada etapa reina del CEP, atrayendo a numerosos aficionados y profesionales del sector hacia el Port Olímpic. Esta cita convive con una oferta artística muy rica, destacando exposiciones fotográficas y propuestas de diseño industrial en galerías del Eixample. Para los desplazamientos urbanos, la red de metro y los autobuses operan con total regularidad bajo un clima típicamente mediterráneo de 24 a 32°C. Los servicios administrativos de la ciudad recuerdan que el festivo de la Asunción, el 15 de agosto, alterará ligeramente la apertura de oficinas públicas y entidades bancarias a finales de la próxima semana.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Mañanas frías y cielos despejados en la capital austral.",
+              "lede": "La temperatura se mueve entre los 5 y los 13°C con aire muy limpio.",
+              "body": "El invierno porteño se muestra hoy riguroso pero amable con los caminantes, registrando temperaturas que van desde los 5 hasta los 13°C bajo un cielo totalmente clear. La calidad del aire es excelente en toda la geografía urbana, con un índice de PM2.5 de 1, ideal para recorrer los espacios verdes y boulevares. La puesta de sol ocurre puntualmente a las 18:01, anticipando noches frescas que invitan a resguardarse en cafés históricos y salas de exposiciones. La ciudad ultiman los detalles de su tradicional agenda cultural, mientras los residentes recuerdan que el próximo feriado nacional por el Paso a la Inmortalidad del General José de San Martín tendrá lugar el 17 de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "02",
+              "headline": "El tango inunda los barrios con su Festival y Mundial.",
+              "lede": "Buenos Aires vibra con la música ciudadana mientras prepara su gran cita.",
+              "body": "La ciudad se transforma por completo al compás del dos por cuatro, dando inicio a su tradicional Festival y Mundial de Tango que convoca a bailarines de todo el planeta. Las milongas tradicionales, los centros culturales y las plazas principales acogen exhibiciones, clases magistrales y conciertos gratuitos para vecinos y visitantes. En paralelo, la arquitectura contemporánea celebra el reconocimiento a la Galería de Primer Lugar del Concurso Parque en el Centro de Exposiciones y Convenciones. Con una temperatura fresca de 5 a 13°C y aire limpio de nivel 1 en PM2.5, caminar por la ciudad al atardecer se convierte en una experiencia profundamente evocadora antes de la llegada del feriado del 17 de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            },
+            {
+              "n": "03",
+              "headline": "La música de los 90 regresa a los escenarios porteños.",
+              "lede": "Un festival monográfico recupera los grandes temas de aquella década.",
+              "body": "La nostalgia noventera toma protagonismo esta semana en Buenos Aires con el anuncio del festival dedicado en exclusiva a la música de esa época, generando gran expectación por la venta de entradas. Esta propuesta festiva complementa la variada oferta institucional, donde destacan los avances en proyectos urbanísticos como el Parque del Sol Termal junto a Córdoba y Santiago. Los residentes aprovechan el clima invernal de 5 a 13°C para disfrutar de la ciudad a pie, recordando que las oficinas públicas, bancos y correos cerrarán sus puertas el lunes 17 de agosto por el feriado nacional en homenaje al General San Martín.",
+              "source": "saudade desk",
+              "source_date": "2026-08-07"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-06T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los días de lluvia en Buenos Aires transforman la dinámica de los barrios históricos, donde el agua resalta las texturas de ladrillo y los adoquines centenarios. Los cafés de esquina se convierten en el punto de encuentro natural para observar el tránsito pausado de los transeúntes bajo paraguas. Las librerías y galerías de arte ofrecen el refugio perfecto para pasar las horas vespertinas mientras los chubascos persisten de forma intermitente. Es un momento ideal para experimentar la ciudad sin prisa, prestando atención a los detalles arquitectónicos que suelen pasar desapercibidos en los días de mayor actividad laboral.",
               "source": "saudade desk",
               "source_date": "2026-08-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-31T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival Escenas de Verano anima agosto con música y teatro.",
-              "lede": "La programación cultural llega a los barrios para recibir el mes estival.",
-              "body": "El Festival Escenas de Verano da la bienvenida al mes de agosto con una programación llena de música en vivo, cine de verano y teatro. Las plazas y los centros culturales de la ciudad acogen propuestas artísticas para quienes permanecen en la capital durante el periodo estival. Es una ocasión excelente para disfrutar de espectáculos al aire libre sin salir del asfalto madrileño. Los escenarios efímeros transforman la rutina nocturna de los distritos. El tipo de cambio actual se sitúa en 1 USD = 0.87 EUR para los visitantes internacionales.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "Water Lantern Festival ilumina las aguas con mensajes de esperanza.",
-              "lede": "Miles de deseos convergen en una cita nocturna junto al agua.",
-              "body": "Water Lantern Festival llega a Madrid para iluminar el agua con miles de deseos y mensajes de esperanza. Los asistentes depositan farolillos flotantes que crean destellos efímeros sobre la superficie acuática. La convocatoria reúne a numeroso público en busca de un momento de pausa y contemplación colectiva. Conviene llegar con antelación para asegurar un buen lugar en la ribera. El tipo de cambio oficial permanece en 1 USD = 0.87 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "San Blas-Canillejas suma un nuevo espacio verde dedicado al papa Benedicto XVI.",
-              "lede": "El distrito amplía su red de parques con una zona dedicada al pontífice.",
-              "body": "San Blas-Canillejas contará con un parque dedicado al papa Benedicto XVI en su callejero. El nuevo recinto ofrece arbolado y zonas de descanso para los vecinos del distrito oriental. Esta intervención urbanística mejora la dotación de zonas verdes en el tejido residencial. Los residentes ya pueden pasear por sus senderos y disfrutar de la tranquilidad matutina. La cotización monetaria en vigor es de 1 USD = 0.87 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo cubierto acompaña una jornada suave de 23 a 31°C.",
-              "lede": "La nubosidad suaviza el ambiente vespertino mientras el sol se despide a las 21:09.",
-              "body": "La jornada se presenta con un rango térmico de 23–31°C y cielos completamente cubiertos que difuminan la luz del verano mediterráneo. La calidad del aire se mantiene en niveles considerados justos, con un registro de PM2.5 10 que aconseja prudencia a personas sensibles. El ocaso está previsto para las 21:09, prolongando las horas de luz en las calles y paseos marítimos. El tipo de cambio actual se sitúa en 1 USD = 0.87 EUR. Estas condiciones meteorológicas invitan a recorrer la ciudad sin el agobio de la insolación directa.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "El Grec 2026 clausura una edición histórica con casi 143.000 espectadores.",
-              "lede": "El festival de artes escénicas cierra medio siglo de trayectoria artística.",
-              "body": "El Festival Grec de Barcelona cierra con casi 143.000 espectadores la edición de sus 50 años de historia. El certamen consolida su peso internacional tras congregar a grandes nombres de la escena mundial en diversos equipamientos culturales. Paralelamente, la exposición de verano de Carmen Thyssen en la Costa Brava rescata la obra de Cuixart y anticipa su nuevo museo en Barcelona. Estas citas confirman el dinamismo artístico que caracteriza el pulso cultural catalán. La moneda oficial opera con una equivalencia de 1 USD = 0.87 EUR para los viajeros extranjeros.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "SAGA Barcelona Game Fest convoca a los creadores de videojuegos.",
-              "lede": "El universo digital reúne todas sus facetas en un gran encuentro profesional.",
-              "body": "El festival SAGA Barcelona Game Fest aglutinará todas las caras del videojuego en un evento diseñado para profesionales y entusiastas del sector. Las jornadas exploran desde la vertiente creativa hasta la industria técnica y el diseño narrativo. La ciudad reafirma así su posición como polo tecnológico y cultural en el sur de Europa. Los visitantes que lleguen desde fuera de la eurozona pueden realizar sus transacciones a un tipo de cambio de 1 USD = 0.87 EUR. Las instalaciones acogen presentaciones y muestras interactivas durante todo el fin de semana.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Tormentas con granizo y 22.9mm de precipitación marcan el día.",
-              "lede": "La temperatura oscila entre 14 y 23°C bajo un cielo inestable.",
-              "body": "La ciudad registra hoy un rango térmico de 14–23°C acompañado por un episodio de tormentas que deja 22.9mm de precipitación, incluyendo la caída puntual de granizo. La caída de agua obliga a los transeúntes a buscar refugio en los cafés tradicionales y galerías comerciales del centro. Pese a la inestabilidad climática, la calidad del aire se mantiene en niveles buenos, con un registro de PM2.5 8 que limpia la atmósfera urbana. El atardecer está fijado a las 18:12, marcando una caída temprana de la luz diurna. Conviene extremar las precauciones al circular por las esquinas con acumulaciones de agua.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "Bendita Tú Festival de Cine trae cortometrajes feministas y queer.",
-              "lede": "Las pantallas porteñas acogen una cuidada selección de cine independiente.",
-              "body": "Bendita Tú Festival de Cine 2026 llega a Buenos Aires con una programación de cortometrajes feministas y queer que dialogan con las realidades contemporáneas. Las proyecciones se acompañan de debates abiertos con realizadoras y teóricas de la cultura audiovisual. Este encuentro refuerza la diversidad de propuestas en el circuito de salas independientes de la capital. Los espectadores encontrarán refugio frente al clima lluvioso en las butacas de los cines adheridos. La programación se desarrolla en varios centros culturales de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "Parque Salguero exhibe la galería del concurso Buenos Aires y el Río.",
-              "lede": "El espacio ribereño expone las obras premiadas del certamen fotográfico.",
-              "body": "La Galería de Ganadores del concurso Buenos Aires y el Río abre sus puertas en Parque Salguero - 23 para mostrar la relación visual entre la urbe y su estuario. Las imágenes seleccionadas capturan la melancolía y la inmensidad del paisaje fluvial en diversas épocas del año. La muestra invita a detenerse y observar el río desde una perspectiva artística y contemplativa. Es una visita ideal para los días de tregua entre chaparrones. El acceso al recinto es libre para todos los caminantes interesados en el paisaje local.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
             }
           ]
         }
