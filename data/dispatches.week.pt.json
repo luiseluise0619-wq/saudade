@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-08-06T06:00:00+09:00",
+  "updated": "2026-08-09T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-09T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A praça prepara-se para a paragem do feriado.",
+              "lede": "Os serviços municipais ajustam o ritmo habitual com a aproximação da Assunção de Nossa Senhora.",
+              "body": "A cidade antecipa o calendário da próxima semana com a chegada iminente da Assunção de Nossa Senhora, marcada para o dia 15 de agosto. Os balcões públicos, repartições do Estado e instituições bancárias fecham as portas nesse dia festivo, exigindo alguma antecipação nos trâmites burocráticos e postais. Os mercados de bairro mantêm abertas apenas as bancas essenciais nas primeiras horas da manhã. O câmbio oficial permanece estável nos mercados financeiros, cotando-se a 1 USD para 0,87 EUR nas casas especializadas do centro histórico. Os residentes aproveitam os dias anteriores para resolver pendências administrativas antes da pausa coletiva que esvazia temporariamente as ruas da baixa.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "02",
+              "headline": "O eléctrico desce a calçada com a lentidão habitual.",
+              "lede": "As carruagens antigas cruzam as artérias da cidade num percurso pontuado pelo som do ferro.",
+              "body": "O sistema de transporte sobre carris mantém a sua cadência regular pelas colinas da cidade antiga. Os passageiros partilham o espaço exíguo com os residentes que transportam sacos de compras vindos do mercado. A circulação faz-se sem sobressaltos de trânsito ao longo das ruas estreitas onde o casario abriga do calor estival. Os eléctricos mais antigos continuam a ser o meio preferido para subir as encostas íngremes sem esforço mecânico excessivo. As paragens intermédias enchem-se de passageiros que esperam pacientemente pela chegada da próxima composição. A rotina urbana desenrola-se assim, entre o ranger metálico dos eixos e a vista constante sobre o casario e o rio.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "03",
+              "headline": "O jardim botânico oferece sombra aos bancos de madeira.",
+              "lede": "A vegetação densa protege os visitantes do sol intenso que brilha sobre os canteiros.",
+              "body": "As copas das árvores centenárias criam corredores de penumbra nos caminhos calcetados do jardim. Os frequentadores habituais procuram os recantos mais afastados para ler ou conversar em voz baixa. A água dos pequenos lagos reflete a luz dourada da tarde que começa a declinar lentamente sobre as colinas. Os jardineiros cuidam das espécies tropicais que resistem bem ao clima seco desta época do ano. Não há pressa nos bancos de madeira onde o tempo parece deter-se por breves instantes. O silêncio apenas é quebrado pelo canto dos pássaros e pelo pisar suave sobre a gravilha miúda dos taludes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O nevoeiro matinal cobre as pontes sobre o rio.",
+              "lede": "A temperatura oscila entre 20 e 24°C enquanto a neblina recua lentamente da ribeira.",
+              "body": "A madrugada traz uma humidade característica que envolve as margens do Douro numa penumbra espessa. A temperatura mantém-se amena, variando entre 20 e 24°C ao longo do dia, ideal para longas caminhadas sem o desgaste do calor excessivo. A qualidade do ar regista níveis considerados justos, com o índice de PM2.5 fixado em 10, garantindo uma atmosfera limpa para a prática desportiva matinal. As transações correntes continuam a transcorrer sob a taxa de câmbio de 1 USD para 0,87 EUR. O sol despede-se finalmente pelas 20:41, tingindo de tons acinzentados a superfície tranquila da água. Os barcos rabelo permanecem atracados à espera dos primeiros visitantes que descem para ver o casario empilhado.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "02",
+              "headline": "A ribeira prepara o descanso para o feriado próximo.",
+              "lede": "Os estabelecimentos locais ajustam os horários antes da celebração da Assunção de Nossa Senhora.",
+              "body": "O calendário marca a proximidade da Assunção de Nossa Senhora a 15 de agosto, alterando o pulso comercial da cidade. Os escritórios públicos e as entidades bancárias encerrarão as portas nesse dia festivo, aconselhando a resolução prévia de pagamentos e documentos. Os cafés tradicionais e as tascas mantêm o serviço habitual, embora com menor afluência de trabalhadores nos balcões. Os residentes aproveitam a luz suave das 20:41 para passear pelas ruas empedradas junto à muralha Fernandina. A taxa de câmbio de 1 USD para 0,87 EUR facilita as trocas comerciais com os turistas que ainda visitam a baixa histórica. O ambiente respira uma calma pré-feriado que convida à contemplação das fachadas azulejadas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "03",
+              "headline": "O parque municipal acolhe leitores sob as árvores.",
+              "lede": "A brisa húmida vinda do mar refresca os relvados onde os cidadãos descansam.",
+              "body": "Os espaços verdes da cidade encontram-se num estado de manutenção exemplar graças à humidade matinal. Com a qualidade do ar a registar um valor de PM2.5 de 10, o ambiente convida a permanências prolongadas ao ar livre. As famílias instalam-se nos relvados sombreados enquanto os termómetros marcam valores entre 20 e 24°C. O crepúsculo prolonga-se até perto das 20:41, permitindo desfrutar das últimas horas de claridade nos bancos de pedra. Os canteiros mostram folhagens viçosas que resistem bem à transição para a segunda metade do mês. A tranquilidade do local contrasta agradavelmente com o bulício mecânico das avenidas circundantes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra oculta-se sob nuvens passageiras.",
+              "lede": "A temperatura oscila entre 19 e 25°C sob um céu parcialmente nublado que abriga a vila.",
+              "body": "A atmosfera serrana apresenta-se calma e húmida, com a temperatura a oscilar suavemente entre 19 e 25°C. O céu parcialmente nublado atenua a incidência direta da luz solar sobre os palácios históricos. A qualidade do ar mantém-se excelente, registando um valor de PM2.5 de apenas 4, o que purifica a vegetação densa dos parques. A taxa de câmbio de 1 USD para 0,87 EUR mantém-se inalterada nas conversões correntes praticadas na região. O sol prolonga o dia até às 20:40, altura em que os tonéis de sombra cobrem as encostas íngremes. Os visitantes caminham pelos trilhos arborizados protegidos por uma brisa fresca que desce dos picos mais elevados.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "02",
+              "headline": "A vila ajusta os passos para o feriado que se avizinha.",
+              "lede": "Os serviços essenciais avisam sobre o fecho de portas no dia da Assunção de Nossa Senhora.",
+              "body": "A chegada iminente da Assunção de Nossa Senhora a 15 de agosto altera discretamente a rotina administrativa da serra. Os serviços públicos, os bancos e os postos de atendimento ao cidadão encerrarão no próprio dia festivo. Os comerciantes locais organizam as encomendas para garantir o abastecimento regular durante a pausa prolongada. A taxa de câmbio de 1 USD para 0,87 EUR continua a orientar os pagamentos efetuados pelos viajantes estrangeiros nas lojas de artesanato. Com a temperatura a fixar-se entre 19 e 25°C, os passeios pelas ruas estreitas decorrem sem o sufoco do calor estival. Os residentes aproveitam a serenidade destes dias para realizar tarefas domésticas antes das comemorações.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            },
+            {
+              "n": "03",
+              "headline": "O parque histórico respira a pureza da atmosfera serrana.",
+              "lede": "A vegetação luxuriante beneficia de um índice de poluição reduzido e de temperaturas amenas.",
+              "body": "Os jardins românticos da serra beneficiam de condições ambientais privilegiadas, com um índice de PM2.5 fixado em 4. A temperatura moderada, variando entre 19 e 25°C, cria um microclima propício a longas caminhadas de observação botânica. O entardecer prolonga-se até às 20:40, proporcionando uma transição suave e luminosa entre o dia e a noite. Os fetos centenários e as árvores frondosas absorvem a humidade constante que sobe dos vales profundos. Os observadores encontram nos caminhos sinuosos um refúgio de silêncio longe do rebuliço costeiro. A natureza exibe um equilíbrio perfeito que perdura inalterado ao longo das estações.",
+              "source": "saudade desk",
+              "source_date": "2026-08-09"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-06T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Pensar o Parque Natural integra os debates propostos na agenda cultural para os concelhos de Mafra, Sintra e Torres Vedras. A proteção da serra exige a atenção constante de residentes e visitantes. O dia avança com temperaturas entre 18 e 26°C e o pôr do sol às 20:48 sob um céu overcast. A qualidade do ar regista PM2.5 de 5, considerada fair. O câmbio local fixa-se em 1 USD para 0.87 EUR. Lembre-se que o feriado da Assunção de Nossa Senhora, a 2026-08-15, implicará o encerramento de serviços públicos e estabelecimentos bancários na vila.",
               "source": "saudade desk",
               "source_date": "2026-08-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-07-31T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A Brasileira recebe o festival Sara Vai com artistas conterrâneos.",
-              "lede": "O emblemático espaço da cidade acolhe encontros musicais que celebram a cultura e a proximidade entre criadores.",
-              "body": "As portas abrem-se para receber o festival Sara Vai, uma iniciativa que traz artistas conterrâneos para atuações intimistas em Lisboa. É uma oportunidade rara para escutar vozes de além-mar num dos cafés mais históricos da cidade. Para quem viaja e faz contas ao câmbio, vale notar que a cotação se mantém firme em 1 USD para 0.87 EUR. A programação estende-se por vários dias, cruzando memórias e sonoridades contemporâneas num ambiente de partilha. As mesas da esplanada ganham um ritmo diferente, embaladas por conversas longas e acordes acústicos que marcam o final de tarde na baixa.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "O Parque das Nações retoma a normalidade após incidente com gás.",
-              "lede": "Trabalhadores relataram susto com odor intenso, mas a situação encontra-se totalmente controlada pelas autoridades locais.",
-              "body": "Uma fuga de gás registada recentemente no Parque das Nações gerou alarme entre os trabalhadores da zona ribeirinha, que relataram um cheiro muito forte. A pronta intervenção das equipas de socorro evitou males maiores e a circulação pedonal decorre agora sem restrições. Quem passeia pelos jardins à beira-rio pode desfrutar do espaço público com total tranquilidade, aproveitando as zonas verdes e as sombras das estruturas modernas. A vida quotidiana regressou ao seu curso habitual, longe do sobressalto inicial. Os cafés e as esplanadas continuam a ser o refúgio perfeito para observar o movimento lento do Tejo.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "A Trienal de Lisboa inaugura a exposição do Triptyque na Galeria de Abertura.",
-              "lede": "A arquitetura e o pensamento urbano cruzam-se numa mostra que desafia o olhar do visitante atento.",
-              "body": "A Galeria de Abertura acolhe a nova exposição do atelier Triptyque, integrada na programação da Trienal de Lisboa. O espaço convida a uma reflexão profunda sobre as formas de habitar e construir o território contemporâneo. Paralelamente, a agenda cultural da cidade adensa-se com iniciativas como o Tribeca Festival Lisboa e o Worten Mock Fest, que cruzam cinema e inovação empresarial. Para os visitantes que chegam de fora, a taxa de câmbio de 1 USD para 0.87 EUR facilita o planeamento de despesas em livrarias e bilheteiras locais. É uma semana rica em propostas visuais que merecem ser descobertas a passo calmo, longe das grandes multidões turísticas.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O festival Post Punk Strikes Back Again reúne nomes lendários na Invicta.",
-              "lede": "De David J, dos Bauhaus, aos industriais Test Dept, o cartaz promete noites de intensa sonoridade.",
-              "body": "O Porto acolhe o festival Post Punk Strikes Back Again, trazendo à cidade nomes incontornáveis da música alternativa internacional. O alinhamento conta com a presença marcante de David J, figura histórica dos Bauhaus, e com a força sonora dos industriais Test Dept. As atuações decorrem em salas emblemáticas, oferecendo aos entusiastas do género uma oportunidade memorável. Com uma temperatura a oscilar entre 18 e 23°C e um céu predominantemente nublado, o clima convida a refugiar-se em espaços fechados bem iluminados pela música. A qualidade do ar permanece em níveis justos, com um índice PM2.5 fixado em 8, garantindo passeios confortáveis entre os locais dos concertos.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "O Porto/Post/Doc reflete sobre as migrações através do ciclo No País dos Outros.",
-              "lede": "O cinema documental assume um papel central na análise das deslocações humanas e das fronteiras contemporâneas.",
-              "body": "O festival Porto/Post/Doc apresenta o ciclo temático No País dos Outros, convidando o público a pensar sobre as dinâmicas da migração. Através de projeções e debates, a iniciativa propõe um olhar sensível sobre as histórias de quem cruza territórios em busca de novos futuros. Paralelamente, a cidade enche-se de cor com o festival de máscaras vindo de Porto-Novo, onde artistas beninenses desfilam com trajes tradicionais. Com a taxa de câmbio nos 1 USD para 0.87 EUR, os visitantes estrangeiros encontram facilidade na aquisição de bilhetes para as sessões de cinema. A noite cai pelas 20:52, marcando o início das exibições que prolongam as conversas até tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "As visitas comentadas revelam os detalhes da exposição temporária Plenos.",
-              "lede": "A agenda cultural propõe um percurso guiado pelo património artístico e pelas coleções em exibição na cidade.",
-              "body": "A programação cultural da cidade destaca esta semana as visitas comentadas à exposição temporária Plenos, permitindo uma leitura aprofundada das obras selecionadas. Sob um céu encoberto e temperaturas amenas entre 18 e 23°C, estas iniciativas oferecem uma alternativa tranquila para as tardes na cidade. A qualidade do ar, classificada como justa com PM2.5 a 8, torna muito agradáveis os percursos pedonais entre os diferentes polos culturais. O pôr do sol, apontado para as 20:52, deixa tempo suficiente para terminar as visitas e desfrutar de um copo de vinho numa esplanada abrigada. Para quem visita a cidade, a gestão financeira beneficia da cotação de 1 USD para 0.87 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Nafarros promove o tradicional Festival do Caracol com petiscos e música.",
-              "lede": "A localidade convisa residentes e visitantes para saborear a gastronomia típica acompanhada de animação popular.",
-              "body": "A localidade de Nafarros acolhe mais uma edição do Festival do Caracol, celebrando os sabores tradicionais com petiscos, música e artesanato local. Sob um céu totalmente encoberto e temperaturas que variam entre 18 e 26°C, o ambiente convida a passeios descontraídos pela freguesia. A qualidade do ar é considerada justa, registando um valor de PM2.5 de 5, o que favorece as caminhadas ao ar livre. O pôr do sol ocorre pelas 20:49, permitindo longas horas de convívio à mesa e pelas ruas enfeitadas. Para os viajantes internacionais, o câmbio oficial fixa-se em 1 USD para 0.87 EUR, facilitando as pequenas despesas nas tasquinhas e bancas de artesanato da festa.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "02",
-              "headline": "O Parque Natural de Sintra debate o futuro ambiental do território serrano.",
-              "lede": "Encontros institucionais procuram repensar a preservação da paisagem protegida e a gestão dos fluxos de visitantes.",
-              "body": "A iniciativa Pensar o Parque Natural, promovida pela autarquia, reúne especialistas e cidadãos para debater os rumos ecológicos da serra. O objetivo passa por encontrar equilíbrios entre a conservação botânica e a fruição pública deste património mundial. Com termómetros a marcar entre 18 e 26°C sob uma cobertura de nuvens, o clima serrano mantém-se fresco e propício à reflexão longe do calor intenso do litoral. A qualidade do ar permanece estável, com um índice PM2.5 de 5. A agenda cultural abrange ainda os concelhos vizinhos de Mafra e Torres Vedras, alargando o horizonte de quem explora a região. A noite avança serenamente até ao pôr do sol previsto para as 20:49.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
-            },
-            {
-              "n": "03",
-              "headline": "O Alegro Sintra inaugura parque infantil gigante para as férias escolares.",
-              "lede": "O espaço de diversão foi pensado para ocupar os mais novos com atividades contínuas durante todo o dia.",
-              "body": "Para responder às necessidades das famílias durante a pausa letiva, o Alegro Sintra criou um parque gigante dedicado inteiramente às crianças. A proposta oferece animação ininterrupta, garantindo um ambiente seguro e lúdico para os dias sem tédio dos mais pequenos. Enquanto as famílias aproveitam a oferta comercial, a cotação monetária de 1 USD para 0.87 EUR continua vantajosa para visitantes vindos de fora da zona euro. Lá fora, o dia apresenta-se com temperaturas entre 18 e 26°C e um céu cinzento que amacia a luz sobre a serra. A qualidade do ar regista 5 de PM2.5, assegurando um ambiente limpo para todas as atividades desenvolvidas ao longo do dia na zona comercial e de lazer.",
-              "source": "saudade desk",
-              "source_date": "2026-07-31"
             }
           ]
         }
