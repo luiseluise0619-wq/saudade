@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-08-11T06:00:00+09:00",
+  "updated": "2026-08-12T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-12T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Clear evening skies settle over the courtyards of MMCA Seoul as Christine Sun Kim opens.",
+              "lede": "Temperatures hold between 20°C and 29°C under mainly clear skies, with sunset arriving at 19:29.",
+              "body": "The MMCA×LG OLED Series 2026 presents Christine Sun Kim and her new work, Have Many Dumb Fights Against Rock, on view through November 29, 2026. Step through the galleries as the late afternoon sun recedes and the air stays remarkably fair at a PM2.5 reading of 8. Outside the museum grounds, currency exchanges trade at 1 USD for 1412 KRW. Plan your visit before dusk settles fully over the historical galleries. The courtyards offer quiet spaces to pause between exhibitions while the weather remains settled.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "02",
+              "headline": "National Liberation Day approaches with bank closures and quiet streets across the capital.",
+              "lede": "Government offices, banks, and post offices close for the upcoming Liberation Day holiday on August 17.",
+              "body": "As Liberation Day approaches on August 17, 2026, residents complete administrative errands ahead of the long weekend closures. Neighborhood markets and quiet side streets take on a slower pace as families prepare for the commemorative day. Public transit schedules adjust slightly to accommodate holiday travelers heading toward historical sites and parks. Ensure your banking needs are met before offices close. The city remains largely peaceful during this late summer stretch, offering a fine opportunity for unhurried observation.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "03",
+              "headline": "The Davis Cup brings international tennis back to a historic Seoul venue this season.",
+              "lede": "Seoul prepares for the upcoming Korea-India Davis Cup tie at a revered local sports landmark.",
+              "body": "Historic Seoul venues welcome international competition as the Korea-India Davis Cup tie arrives in the capital. Observers and tennis enthusiasts gather at the storied grounds to watch the matches unfold. The surrounding neighborhoods bustle with quiet anticipation as visitors navigate the historic venue. Take time to explore the adjacent pathways after the matches conclude and the evening chill sets in. It is a rewarding moment to experience the city's sporting heritage against the backdrop of late summer.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain falls across the city as precipitation totals reach 54.2mm through the afternoon.",
+              "lede": "Temperatures range from 22°C to 25°C under heavy rain, with sunset occurring at 18:35.",
+              "body": "The relentless precipitation brings 54.2mm of rain down upon the asphalt and pavement, muting the usual sounds of the metropolis. Air quality registers as fair with a PM2.5 measurement of 10, while the exchange rate holds at 1 USD for 159 JPY. Seek shelter beneath the broad eaves of neighborhood arcades or within quiet station galleries. The rain washes clean the stone pathways of Ueno and the pavements of Ginza. Travelers equipped with sturdy umbrellas find the city delightfully uncrowded during these wet afternoon hours.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "02",
+              "headline": "Mountain Day closures conclude as the city resumes its standard weekly rhythm.",
+              "lede": "Banks and public offices reopen following the August 11 Mountain Day national holiday.",
+              "body": "The Mountain Day holiday on August 11, 2026, brought a day of quiet rest and excursions to nearby peaks. Government offices, post offices, and major financial institutions reopen their doors today, resuming normal business hours. Commuters return to the train lines with measured steps, shaking off the dampness of recent storms. Public transit systems operate on regular schedules once again. Take advantage of the renewed normalcy to handle administrative errands or visit quiet neighborhood bakeries.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "03",
+              "headline": "RANSHOU reopens the closed National Theatre with a new exhibition titled FUTURE HISTORY.",
+              "lede": "The historic venue opens its doors anew to host contemporary artistic explorations in central Tokyo.",
+              "body": "The recently closed National Theatre comes back to life as RANSHOU stages FUTURE HISTORY inside the storied walls. Visitors stepping in from the damp streets find thoughtful curation and expansive installations. The exhibition offers a reflective space away from the heavy rain outside. Walk through the galleries at a slow pace to appreciate the transformation of this landmark cultural space. It stands as a notable meeting point for design and architecture observers this week.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Clear blue skies stretch above the Tagus River as summer temperatures reach 32°C.",
+              "lede": "Temperatures range from 20°C to 32°C under mainly clear skies, with sunset at 20:35.",
+              "body": "The bright Lisbon sun illuminates the limestone facades of the Alfama district through a warm, cloudless day. Air quality remains fair with a PM2.5 level of 8, while currency exchanges trade at 1 USD for 0.87 EUR. Seek out shaded benches in the Jardim da Estrela during the warmest afternoon hours. The evening approaches slowly, culminating in a late sunset at 20:35 that casts a golden glow over the river. It is an ideal moment for an unhurried walk along the waterfront promenades.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "02",
+              "headline": "Assumption Day approaches with impending holiday closures across government offices and banks.",
+              "lede": "Government offices, banks, and post offices will close for Assunção de Nossa Senhora on August 15.",
+              "body": "As the Feast of the Assumption arrives on August 15, 2026, local residents prepare for a day of nationwide rest and quiet festivities. Government offices, banks, and official post offices will close their doors for the holiday. Plan your currency exchanges and administrative visits accordingly before the end of the week. Neighborhood shops in historic quarters may also adjust their operating hours to observe the feast day. The city takes on a slower, reflective rhythm during the holiday weekend.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            },
+            {
+              "n": "03",
+              "headline": "Cultural programming expands as Lisbon prepares for its upcoming arts festival season.",
+              "lede": "No Art and the Tribeca Festival Lisbon announce expansive lineups securing cultural futures through 2028.",
+              "body": "Lisbon's No Art festival returns for its 2026 edition, while the Tribeca Festival Lisbon expands its footprint with secured programming through 2028. Cultural observers can anticipate rich cinematic and artistic offerings across various venues in the capital. These events anchor the city's vibrant creative scene as summer reaches its midpoint. Walk through the Bairro Alto or Chiado to discover pop-up galleries and independent screenings. The convergence of local tradition and new art makes this week particularly engaging for quiet explorers.",
+              "source": "saudade desk",
+              "source_date": "2026-08-12"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-11T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Community reading spaces expand outdoors into shaded municipal parks for the summer season. Preparations are also underway for the upcoming International Orchid Exhibition returning for its 10th edition. Art lovers continue to explore independent galleries guided by new cultural itineraries mapped across the city. Convening EMEA 2026 preparations bring international professionals to various academic and design venues. Quiet observers can find sanctuary in community reading rooms tucked away from the main tourist paths.",
               "source": "saudade desk",
               "source_date": "2026-08-05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-04T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The midday heat lingers past sunset under clear skies.",
-              "lede": "Temperatures reach 35°C today. Seek air-conditioned galleries to avoid the heavy afternoon haze.",
-              "body": "The late afternoon brings a high of 35°C alongside a low of 26°C under mainly clear skies, though the air quality remains poor with PM2.5 at 21. Visitors navigating the city can exchange currency at a rate of 1 USD to 1427 KRW. Amid the warm weather, the Gaudí exhibition marking the 100th anniversary has officially landed in Seoul, drawing crowds following its success with 330,000 visitors in Japan. It offers a quiet, indoor respite from the intense heat outside. Meanwhile, public offices and banks prepare for the upcoming 광복절 holiday on 2026-08-17, which will affect standard administrative hours later in the month. Plan outdoor walks for the cooler evening hours when the sun drops below the horizon at 19:37.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "02",
-              "headline": "Indoor exhibitions offer quiet refuge from poor air quality.",
-              "lede": "Fine dust concentrations remain elevated today. Public spaces naturally pivot toward air-filtered interiors.",
-              "body": "Air quality readings show a PM2.5 level of 21, making indoor spaces the preferred choice for a calm afternoon. The recent closure of WATERBOMB SEOUL 2026 highlights the city's shift toward large-scale cultural programming, contrasting with the serene atmosphere inside the city's newly opened design showcases. Exchange rates hold steady at 1 USD to 1427 KRW as travelers settle into local routines. Residents planning trips or errands should note that the upcoming 광복절 holiday falls on 2026-08-17, bringing routine closures to banks and government buildings next week. Temperatures span a wide range from 26°C to 35°C today under mainly clear skies, with sunset arriving at 19:37.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "03",
-              "headline": "Financial institutions prepare for the upcoming August holiday.",
-              "lede": "The national holiday on 2026-08-17 will temporarily alter banking hours across the capital.",
-              "body": "As the city experiences temperatures ranging from 26°C to 35°C under clear skies, residents are looking ahead to the public holiday of 광복절 on 2026-08-17. Government offices and banks will close for the day, so financial errands are best handled well in advance. Foreign visitors exchanging currency will find a rate of 1 USD to 1427 KRW at local banks before the holiday closure. The poor air quality, marked by a PM2.5 level of 21, encourages quiet indoor activities, such as viewing the newly arrived Gaudí centenary exhibition. Sunset occurs at 19:37, signaling a slow cooling of the streets after a long, warm day.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light drizzle accompanies mild temperatures across the capital.",
-              "lede": "A minimal 0.1mm of precipitation falls today. The air remains fair despite high UV exposure.",
-              "body": "Temperatures hover between a comfortable 22°C and 28°C under a light drizzle that leaves just 0.1mm of precipitation on the pavement. The UV index reaches a very high level today, requiring sun protection despite the overcast mist. Air quality is fair with PM2.5 at 16, making it pleasant to explore new neighborhood additions like the recently opened Kinokuniya in Little Tokyo or the Andersson Bell flagship in Aoyama. Currency exchange holds at 1 USD to 157 JPY for travelers settling accounts. Residents should also note that the upcoming mountain holiday, 山の日, falls on 2026-08-11, prompting early closure notices for many administrative offices next week. Sunset is marked at 18:43.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "02",
-              "headline": "Neighborhood flagships open quietly as the light drizzle settles.",
-              "lede": "New retail spaces invite unhurried browsing amidst fair air quality.",
-              "body": "The fair air quality, registering a PM2.5 value of 16, offers a clear backdrop for exploring the city's latest openings, including the fresh Aoyama flagship from Andersson Bell. Today's weather brings mild temperatures from 22°C to 28°C alongside a trace of precipitation at 0.1mm, accompanied by a very high UV rating. Travelers will find the exchange rate steady at 1 USD to 157 JPY. With the public holiday 山の日 approaching on 2026-08-11, local government offices and banks are preparing for holiday closures next week. Evening approaches as the sun sets at 18:43, casting a soft light over the quiet residential lanes and newly established cultural spaces.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "03",
-              "headline": "Administrative offices prepare for the approaching mountain holiday.",
-              "lede": "The public holiday on 2026-08-11 will close banks and municipal desks early next week.",
-              "body": "As Tokyo prepares for the upcoming 山の日 holiday on 2026-08-11, residents are completing necessary banking and administrative tasks before the closure of public offices. The exchange rate remains stable at 1 USD to 157 JPY. Today's weather brings mild temperatures spanning 22°C to 28°C with a negligible 0.1mm of precipitation from a light afternoon drizzle, though the UV index remains very high. Air quality is fair with PM2.5 recorded at 16, offering comfortable conditions for walking through neighborhood commercial districts like Aoyama or visiting the newly opened Little Tokyo Kinokuniya. Sunset arrives promptly at 18:43.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame a mild and balanced afternoon.",
-              "lede": "Temperatures range from 20°C to 27°C today. The air quality is exceptionally clean.",
-              "body": "Lisbon enjoys calm, partly cloudy conditions today with temperatures moving between 20°C and 27°C. Air quality is rated as good, with PM2.5 down to a low level of 6, making outdoor strolls along the river particularly pleasant. Visitors will find the currency exchange rate stable at 1 USD to 0.87 EUR. Civic life continues at a steady pace, highlighted by neighborhood library literacy initiatives in partnership with local park districts. Looking ahead, residents are noting the upcoming public holiday of Assunção de Nossa Senhora on 2026-08-15, which will bring standard closures to government offices and banks later this month. Sunset graces the city late at 20:44, extending the evening light across the hills.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "02",
-              "headline": "Clean coastal air accompanies the quiet rhythm of August.",
-              "lede": "PM2.5 levels drop to 6 today, offering ideal conditions for walking the historic quarters.",
-              "body": "The coastal breeze brings exceptionally clean air to the capital today, with PM2.5 resting at 6 under partly cloudy skies. Temperatures stay mild and comfortable, ranging from 20°C to 27°C as the afternoon progresses. Financial transactions align with an exchange rate of 1 USD to 0.87 EUR. Local community spaces continue their seasonal routines, supported by recent civic partnerships between libraries and park districts to promote public literacy. Meanwhile, preparations begin for the upcoming Assunção de Nossa Senhora holiday on 2026-08-15, which will affect government and banking schedules next week. The sun sets at 20:44, leaving a long, luminous twilight over the river.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
-            },
-            {
-              "n": "03",
-              "headline": "Banking schedules adjust ahead of the mid-August national holiday.",
-              "lede": "The public holiday on 2026-08-15 will temporarily suspend civic administrative services.",
-              "body": "With the Assunção de Nossa Senhora holiday approaching on 2026-08-15, residents are reminded that banks and official government offices will observe closures later this month. Travelers exchanging currency will note a steady rate of 1 USD to 0.87 EUR. Today's weather features a comfortable range of 20°C to 27°C under partly cloudy skies, accompanied by good air quality with PM2.5 at 6. The mild conditions make it an ideal time to visit local parks or engage with newly expanded library literacy programs. Evening arrives slowly as the sun dips below the horizon at 20:44, casting long shadows over the stone streets.",
-              "source": "saudade desk",
-              "source_date": "2026-08-04"
             }
           ]
         }
