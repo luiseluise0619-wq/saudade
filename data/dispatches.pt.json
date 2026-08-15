@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-08-15T06:00:00+09:00",
-  "next_filing": "2026-08-15T21:00:00+00:00",
+  "filed_at": "2026-08-16T06:00:00+09:00",
+  "next_filing": "2026-08-16T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Lisboa",
+      "city": "LISBOA",
       "items": [
         {
           "n": "01",
-          "headline": "A Assunção de Nossa Senhora suspende a rotina habitual da cidade.",
-          "lede": "Os serviços públicos fecham portas neste dia 2026-08-15, exigindo antecipar compras e recados essenciais.",
-          "body": "A celebração da Assunção de Nossa Senhora traz uma pausa evidente ao ritmo lisboeta neste dia 2026-08-15. Repartições públicas, bancos e balcões de atendimento suspendem o expediente, enquanto o comércio local ajusta os horários habituais. Quem chega de fora nota a cotação de 1 USD a valer 0.86 EUR nas casas de câmbio centrais. É um dia propício para caminhar sem pressas pelas ruas vazias do centro histórico. Os cafés mantêm portas abertas para os moradores que ficam na cidade. A quietude domina os bairros tradicionais antes do regresso à normalidade.",
+          "headline": "O Festival de Magia de Rua ocupa a cidade com 175 espetáculos.",
+          "lede": "Quinze artistas reúnem-se na próxima semana para atuações ao ar livre.",
+          "body": "A próxima semana traz o Festival de Magia de Rua de Lisboa à cidade, reunindo 15 artistas em 175 espetáculos espalhados por vários pontos urbanos. É uma excelente oportunidade para assistir a performances de proximidade no espaço público. Para os visitantes que chegam agora, o câmbio oficial encontra-se fixado em 1 USD para 0.86 EUR. O ambiente urbano equilibra a animação dos festivais com o ritmo calmo de agosto. Caminhar pelas ruas torna-se um exercício de descoberta inesperada em cada esquina. A magia acontece sem palco formal, apenas com a cumplicidade do público e dos artistas.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "02",
-          "headline": "Quinze artistas ocupam a rua com centenas de espetáculos mágicos.",
-          "lede": "O Festival de Magia de Rua de Lisboa traz 175 atuações para praças e jardins.",
-          "body": "A próxima semana reserva uma ocupação artística invulgar no espaço público da capital. O Festival de Magia de Rua de Lisboa reúne 15 artistas para um total de 175 espetáculos ao ar livre. As praças e os percursos pedonais transformam-se em palcos improvisados para públicos de todas as idades. É uma oportunidade para redescobrir recantos urbanos através da ilusão e da partilha coletiva. O câmbio oficial permanece estável em 1 USD para 0.86 EUR para os visitantes estrangeiros. A programação convida a desacelerar e a ocupar os lugares de encontro da cidade.",
+          "headline": "O Parque das Nações prepara novas zonas de sombra e arvoredo.",
+          "lede": "Quase tudo vai mudar num dos maiores espaços verdes da capital.",
+          "body": "O Parque das Nações avança para uma requalificação profunda que visa trazer mais árvores, restaurantes e zonas de sombra para os frequentadores. Esta intervenção pretende melhorar o conforto térmico e a fruição diária do espaço público por residentes e visitantes. A iniciativa Vamos somar Talentos de Lisboa complementa a dinâmica comunitária da zona norte da cidade. Com o câmbio estável em 1 USD por 0.86 EUR, planear despesas correntes mantém-se simples. As melhorias paisagísticas prometem transformar a experiência de quem passeia junto ao rio nos dias mais quentes. A sombra recém-criada convida a pausas mais longas ao ar livre.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "03",
-          "headline": "Grandes parques preparam mudanças profundas na paisagem urbana.",
-          "lede": "Mais árvores, zonas de sombra e esplanadas ganham espaço nos planos de requalificação.",
-          "body": "Os espaços verdes da capital preparam transformações significativas na sua estrutura e desenho. O projeto prevê a plantação de mais árvores, a ampliação de zonas de sombra e a integração de novas áreas de restauração. A intervenção abrange também o Parque das Nações, somando novos talentos e dinâmicas à zona ribeirinha. Os residentes encontram um ambiente propício para passeios matinais sob a aragem estival. A taxa de câmbio fixa-se em 1 USD por 0.86 EUR, facilitando o planeamento dos viajantes. Estas melhorias reforçam o compromisso com o conforto térmico e a fruição pública.",
+          "headline": "Os serviços públicos retomam a normalidade após o feriado.",
+          "lede": "A Assunção de Nossa Senhora fechou repartições no dia 15 de agosto.",
+          "body": "Após a celebração da Assunção de Nossa Senhora a 15 de agosto, a cidade regressa hoje ao seu funcionamento habitual. Os bancos, correios e serviços administrativos reabrem portas para normalizar o atendimento aos cidadãos e viajantes. Quem precisar de realizar operações financeiras pode contar com a taxa de câmbio de 1 USD para 0.86 EUR nos balcões habituais. O fim de semana prolongado deixou as ruas mais tranquilas e propícias a longas caminhadas sem pressas. Aproveite este domingo para observar os detalhes arquitetónicos que habitualmente passam despercebidos no tráfego diário. A cidade respira um silêncio raro antes de retomar o pulso laboral da segunda-feira.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         }
       ]
     },
     {
-      "city": "Porto",
+      "city": "PORTO",
       "items": [
         {
           "n": "01",
-          "headline": "O nevoeiro matinal abraça a Ribeira antes de ceder ao calor.",
-          "lede": "Os termómetros oscilam entre 19 e 27°C, com o ar em condições justas.",
-          "body": "A manhã portuense começa envolvida numa neblina persistente que desvanece lentamente com o avançar do dia. A temperatura varia entre 19 e 27°C, acompanhada por uma qualidade do ar considerada justa, registando um valor de PM2.5 de 11. O pôr do sol ocorre às 20:33, prolongando a claridade sobre o rio Douro. A taxa de câmbio de 1 USD por 0.86 EUR mantém-se estável para quem chega de fora. É o cenário ideal para caminhar pelas margens e observar o movimento dos barcos rabelos. A cidade respira com serenidade sob este microclima atlântico.",
+          "headline": "A névoa matinal acompanha as temperaturas entre 20 e 30°C.",
+          "lede": "A qualidade do ar é considerada fair, com PM2.5 a 10.",
+          "body": "O Porto amanhece envolto numa neblina característica que dissipa gradualmente ao longo da manhã, dando lugar a máximas de 30°C e mínimas de 20°C. A qualidade do ar mantém-se fair, registando um valor de PM2.5 de 10, ideal para atividades ao ar livre. O pôr do sol ocorre placidamente pelas 20:32, prolongando a luz dourada sobre a Ribeira. A taxa de câmbio atual permanece nos 1 USD para 0.86 EUR para visitantes internacionais. É um dia excelente para caminhar pelas margens do Douro sem a urgência dos horários apertados. A brisa atlântica suaviza o calor da tarde junto à foz.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "02",
-          "headline": "O feriado de Assunção de Nossa Senhora altera o ritmo portuense.",
-          "lede": "Os serviços essenciais encerram neste dia 2026-08-15, exigindo atenção aos horários.",
-          "body": "As celebrações da Assunção de Nossa Senhora suspendem a atividade administrativa habitual neste dia 2026-08-15. Bancos, repartições e repartições postais mantêm portas fechadas ao público. Os visitantes devem prever os pagamentos e trocas cambiais, tendo presente que 1 USD equivale a 0.86 EUR. O comércio tradicional reduz o funcionamento, priorizando o descanso dos empregados. Ruas e praças ganham uma atmosfera sossegada, ideal para leituras prolongadas em esplanadas abertas. Os transportes públicos funcionam com horários ajustados aos dias festivos.",
+          "headline": "O Parque de Campismo do Porto Moniz reabre amanhã.",
+          "lede": "Os campistas voltam a dispor de infraestruturas renovadas na natureza.",
+          "body": "O Parque de Campismo do Porto Moniz reabre amanhã, oferecendo aos entusiastas do turismo de natureza um espaço totalmente recuperado. Esta reabertura traz novas condições para quem procura explorar a região com total autonomia e proximidade à paisagem. As temperaturas locais, a oscilar entre 20 e 30°C, convidam a estadas ao ar livre sob céus limpos ou ligeiramente enevoados. A conversão monetária permanece favorável a 1 USD para 0.86 EUR. O pôr do sol previsto para as 20:32 marca o fim ideal para um dia de caminhada. A natureza envolvente garante o descanso merecido para quem viaja devagar.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "03",
-          "headline": "O campismo do Porto Moniz reabre as portas aos viajantes.",
-          "lede": "A infraestrutura retoma a atividade e acolhe quem procura o contacto com a natureza.",
-          "body": "A boa nova chega para os praticantes de turismo itinerante com a reabertura oficial do Parque de Campismo do Porto Moniz. O espaço volta a receber campistas que buscam a tranquilidade da costa e a proximidade com o mar. As instalações foram preparadas para assegurar uma estadia confortável e integrada na paisagem circundante. A cotação de 1 USD a 0.86 EUR apoia os turistas internacionais na gestão das despesas de viagem. Esta reabertura valoriza a oferta de alojamento ao ar livre na região. É um convite para desacelerar e pernoitar sob o céu estrelado atlântico.",
+          "headline": "A cidade recupera o ritmo após o feriado de 15 de agosto.",
+          "lede": "Os serviços essenciais voltam ao funcionamento regular este domingo.",
+          "body": "Passado o feriado da Assunção de Nossa Senhora a 15 de agosto, o Porto retoma a sua atividade quotidiana habitual. Os viajantes encontram novamente todos os estabelecimentos comerciais e serviços públicos a funcionar em horário normal. Com uma qualidade do ar classificada como fair e PM2.5 de 10, o ambiente convida a passeios relaxados pela baixa histórica. A taxa de câmbio de 1 USD para 0.86 EUR facilita o planeamento de compras e transações. O termómetro oscila agradavelmente entre 20 e 30°C sob o céu do norte. As esplanadas voltam a encher-se lentamente com a luz suave do entardecer até às 20:32.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         }
       ]
     },
     {
-      "city": "Sintra",
+      "city": "SINTRA",
       "items": [
         {
           "n": "01",
-          "headline": "Céus parcialmente nublados acompanham a brisa suave na serra.",
-          "lede": "A temperatura oscila entre 20 e 25°C, com qualidade do ar favorável.",
-          "body": "A vila serrana apresenta temperaturas amenas entre 20 e 25°C sob um céu parcialmente nublado. A qualidade do ar mantém-se justa, com um registo de PM2.5 de 11. O pôr do sol desenha-se às 20:32, iluminando tardiamente as copas das árvores centenárias. A taxa de câmbio de 1 USD para 0.86 EUR apoia os visitantes estrangeiros na gestão financeira. As condições meteorológicas favorecem longas caminhadas pelos trilhos sombreados da serra. A humidade matinal dissipa-se sem calor excessivo, oferecendo um clima propício à contemplação. A natureza local respira num equilíbrio perfeito.",
+          "headline": "A serra mantém-se sob céus nublados com 19 a 31°C.",
+          "lede": "A qualidade do ar regista um valor de PM2.5 de 7.",
+          "body": "Sintra amanhece sob um manto nublado que preserva a frescura matinal antes de atingir os 31°C de temperatura máxima, descendo até aos 19°C à noite. A qualidade do ar é fair, com um índice de PM2.5 de 7, garantindo uma atmosfera limpa na montanha. O pôr do sol desenha-se no horizonte pelas 20:31, tingindo a vegetação densa com tons cinzentos e dourados. O câmbio oficial fixa-se em 1 USD para 0.86 EUR para quem chega de fora da zona euro. A humidade característica da serra convida a passeios abrigados sob a copa das árvores centenárias. O silêncio habitual da vila romântica permanece inalterado.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "02",
-          "headline": "O feriado de Assunção de Nossa Senhora traz silêncio à vila.",
-          "lede": "Os serviços públicos suspendem o atendimento neste dia 2026-08-15.",
-          "body": "O feriado da Assunção de Nossa Senhora, a 2026-08-15, impõe uma pausa administrativa em Sintra. Os serviços estatais, bancos e balcões postais encerram, suspendendo o fluxo burocrático habitual. Para os viajantes, o câmbio oficial permanece fixado em 1 USD equivalente a 0.86 EUR. O comércio local ajusta os horários, servindo sobretudo quem passeia sem pressas pelos palácios. O silêncio peculiar da serra acentua-se com a diminuição do tráfego automóvel. É um dia excelente para evitar os pontos mais concorridos e procurar recantos recônditos.",
+          "headline": "O Parque Natural de Sintra-Cascais mantém a proteção integral.",
+          "lede": "A Ministra do Ambiente afastou qualquer risco de desclassificação.",
+          "body": "A tutela ambiental garantiu recentemente que o Parque Natural de Sintra-Cascais não corre riscos de desclassificação, mantendo o seu estatuto de proteção. A notícia tranquiliza residentes e observadores atentos à preservação da fauna e flora locais. Os cavalos selvagens continuam a circular livremente pelas áreas designadas do parque natural. Enquanto isso, o Festival Clarão faz uma pausa planeada para preparar um novo ciclo cultural. As temperaturas variam entre 19 e 31°C, com o céu encoberto a filtrar a luz solar. A taxa de câmbio mantém-se estável em 1 USD para 0.86 EUR para os viajantes.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         },
         {
           "n": "03",
-          "headline": "A serra prepara experiências especiais para o próximo eclipse solar.",
-          "lede": "Sintra antecipa programas de observação astronómica em harmonia com a paisagem natural.",
-          "body": "A vila histórica prepara já uma experiência singular dedicada ao fenómeno do eclipse solar. As autoridades locais desenham programas específicos de observação astronómica integrados no património natural. A permanência dos cavalos selvagens no parque natural acrescenta um encanto selvagem e livre à paisagem protegida. A confirmação recente da manutenção do estatuto do parque afasta quaisquer riscos de desclassificação. Os visitantes continuam a usufruir de um ecossistema protegido e vigiado com rigor. A taxa de câmbio de 1 USD por 0.86 EUR facilita a planificação de estadias prolongadas na região.",
+          "headline": "A vila regressa à calma após o fim de semana prolongado.",
+          "lede": "O feriado de 15 de agosto trouxe um fluxo moderado de visitantes.",
+          "body": "Depois das celebrações da Assunção de Nossa Senhora a 15 de agosto, Sintra recupera o seu ritmo contemplativo habitual. Os serviços administrativos e bancários reabrem portas para prestar apoio aos residentes e visitantes. A taxa de câmbio de 1 USD para 0.86 EUR facilita o pagamento de entradas nos monumentos e serviços locais. O termómetro marca entre 19 e 31°C, acompanhado por um céu predominantemente overcast. O pôr do sol pelas 20:31 convida a recolher aos palácios e quintas históricos. A serra oferece recantos recatados para quem procura o silêncio e a observação solitária.",
           "source": "saudade desk",
-          "source_date": "2026-08-15"
+          "source_date": "2026-08-16"
         }
       ]
     }
