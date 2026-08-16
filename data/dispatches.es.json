@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-16T06:00:00+09:00",
-  "next_filing": "2026-08-16T21:00:00+00:00",
+  "filed_at": "2026-08-17T06:00:00+09:00",
+  "next_filing": "2026-08-17T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Las oficinas bancarias y de la administración pública permanecen cerradas tras el festivo de Asunción.",
-          "lede": "El calendario laboral de mediados de agosto deja una jornada de oficinas cerradas y calles residenciales especialmente silenciosas en la capital.",
-          "body": "Tras la festividad del 15 de agosto de 2026, las gestiones administrativas presenciales y las sucursales bancarias interrumpen su actividad habitual hasta el lunes. Los servicios municipales esenciales y los transportes públicos mantienen sus frecuencias de fin de verano, adaptadas a una menor afluencia de pasajeros en el centro. Es un momento propicio para pasear por barrios históricos donde el comercio tradicional descansa y las terrazas se llenan únicamente con residentes locales. Las oficinas de correos y los registros oficiales reanudarán sus turnos de atención al ciudadano en el horario habitual. Conviene planificar cualquier trámite financiero pendiente para el inicio de la próxima semana laborable.",
+          "headline": "La calidad del aire se mantiene en niveles justos con un PM2.5 de 12.",
+          "lede": "Las condiciones atmosféricas actuales invitan a pasear sin prisa por los espacios verdes de la capital.",
+          "body": "La calidad del aire en la ciudad registra hoy un índice justo, marcado por una concentración de partículas PM2.5 situada en 12. Este registro permite disfrutar de los recorridos urbanos y de las actividades al aire libre con total tranquilidad. El tipo de cambio actual se fija de forma estable en 1 USD frente a 0.86 EUR para quienes realizan transacciones en la región. Las mañanas ofrecen una atmósfera despejada ideal para caminar por los bulevares históricos. Conviene aprovechar estas horas templadas antes de que el calor del mediodía gane intensidad en las plazas principales. La ciudad respira con calma en este ecuador de agosto.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "02",
-          "headline": "El tipo de cambio vigente sitúa el euro en un valor de 1 USD equivalente a 0.86 EUR.",
-          "lede": "Los viajeros internacionales que visitan la ciudad encuentran una cotización estable para sus transacciones en efectivo y pagos con tarjeta.",
-          "body": "La paridad cambiaria actual sitúa cada dólar estadounidense en 0.86 EUR, una referencia útil para calcular presupuestos de viaje y consumos diarios en restaurantes y museos. La mayoría de los establecimientos de hostelería y transporte aceptan pagos electrónicos sin comisiones ocultas, facilitando la movilidad urbana. Para quienes prefieren el dinero en efectivo, los cajeros automáticos operan con normalidad en todos los distritos comerciales. Las librerías independientes y los cafés de especialidad recuerdan que este valor facilita la adquisición de publicaciones locales y guías de arquitectura. Conviene revisar las condiciones específicas de cada entidad bancaria de origen antes de realizar retiradas en moneda extranjera.",
+          "headline": "Las exposiciones culturales gratuitas ocupan los espacios públicos de la Comunidad.",
+          "lede": "La programación estival recupera propuestas artísticas de acceso libre para residentes y visitantes.",
+          "body": "La oferta cultural de la región mantiene abiertas diversas exposiciones gratuitas para disfrutar durante lo que queda de verano en Madrid. Esta iniciativa municipal permite recorrer muestras históricas y temáticas sin coste alguno en salas de toda el área metropolitana. Entre las opciones destaca la esperada exposición sobre la E.G.B., un nostálgico viaje generacional que convive con la intensa programación de los Veranos de la Villa. Los espacios expositivos ofrecen refugio climático y contenido divulgativo de gran calidad durante las horas centrales del día. Es una oportunidad excelente para conocer el archivo gráfico y cotidiano de décadas pasadas sin salir del circuito urbano.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "03",
-          "headline": "Buitrago del Lozoya celebró recientemente su Festival del Eclipse con propuestas culturales al aire libre.",
-          "lede": "La sierra norte madrileña acogió actividades divulgativas y educativas orientadas a poner en valor el patrimonio astronómico regional.",
-          "body": "El municipio madrileño de Buitrago del Lozoya albergó una nueva edición del Festival del Eclipse, reuniendo a visitantes y curiosos en torno a talleres y observaciones guiadas. Esta iniciativa cultural busca descentralizar la oferta de ocio estival, proponiendo escapadas didácticas a menos de una hora de la capital. Mientras tanto, en los espacios verdes urbanos como el Parque Juan Carlos I, los servicios municipales atienden incidencias puntuales en la fauna de los estanques con discreción y rigor técnico. La programación cultural de los distritos incluye también exposiciones gratuitas y ciclos de comedia protagonizados por figuras como Goyo Jiménez y Galder Varas. El final del verano ofrece así un equilibrio entre el patrimonio natural de la sierra y la renovada agenda escénica metropolitana.",
+          "headline": "Buitrago del Lozoya acogió el reciente Festival del Eclipse con actividades divulgativas.",
+          "lede": "La sierra madrileña consolidó su agenda educativa con talleres astronómicos y culturales.",
+          "body": "El municipio de Buitrago del Lozoya celebró con éxito el Festival del Eclipse, un evento centrado en la divulgación científica y las propuestas educativas para todos los públicos. La jornada reunió a familias y observadores interesados en la astronomía en un entorno patrimonial único junto al río Lozoya. Esta iniciativa forma parte de los planes promovidos por la Comunidad de Madrid para descentralizar la cultura y acercarla a los enclaves históricos de la sierra. Además de las observaciones guiadas, el programa incluyó talleres participativos y conferencias divulgativas sin coste. Quienes visiten la zona estos días pueden combinar el recorrido por la muralla medieval con la tranquilidad de los parajes naturales cercanos.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El cielo cubierto acompaña una jornada templada con temperaturas entre 25 y 33°C.",
-          "lede": "La nubosidad persistente suaviza la sensación térmica mientras la calidad del aire se mantiene en niveles considerados justos con un PM2.5 de 13.",
-          "body": "El termómetro barcelonés se mueve hoy en un rango de 25 a 33°C bajo un cielo completamente cubierto que mitiga la insolación directa sobre el pavimento urbano. Los niveles de calidad del aire registran un índice PM2.5 de 13, una lectura justa que aconseja prudencia a personas sensibles durante la práctica de ejercicio al aire libre. La puesta de sol está prevista para las 20:49, prolongando unas tardes de luz difusa ideales para caminar sin prisa por los paseos arbolados. Los parques metropolitanos mantienen sus horarios habituales de apertura, permitiendo el tránsito peatonal con total tranquilidad. Es una jornada meteorológicamente atípica para mediados de agosto, perfecta para observar la arquitectura modernista sin el peso de la insolación veraniega.",
+          "headline": "El cielo permanece cubierto con temperaturas que oscilan entre los 25 y los 31°C.",
+          "lede": "La jornada se presenta templada y sin grandes sobresaltos lumínicos hasta la caída del sol.",
+          "body": "El termómetro barcelonés se mueve hoy en una horquilla de 25 a 31°C bajo un cielo completamente overcast que suaviza la incidencia directa de los rayos solares. Esta nubosidad persistente crea una atmósfera apacible para recorrer el litoral o adentrarse en los callejones del barrio gótico. El tipo de cambio vigente se sitúa en 1 USD por 0.86 EUR, facilitando el intercambio comercial cotidiano en comercios y paradas locales. La puesta de sol está prevista para las 20:48, ofreciendo un crepúsculo largo sobre el mar Mediterráneo. Es un día óptimo para caminar sin prisa, protegido del calor extremo habitual de estas fechas estivales en la costa catalana.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "02",
-          "headline": "Los supermercados principales abren sus puertas este fin de semana tras el festivo del 15 de agosto.",
-          "lede": "Las grandes cadenas de alimentación mantienen horarios especiales para facilitar las compras cotidianas de residentes y visitantes.",
-          "body": "Tras la festividad de Asunción celebrada el 15 de agosto de 2026, establecimientos como Mercadona, Carrefour, Lidl, Alcampo y Dia operan con normalidad adaptada al calendario dominical y festivo. Esta continuidad comercial permite abastecer despensas y adquirir productos frescos sin alterar las rutinas de descanso en los barrios. Las oficinas bancarias y los organismos de la administración pública permanecen cerrados hasta el lunes, concentrando toda la actividad ciudadana en el sector servicios y el comercio de proximidad. La Guardia Urbana mantiene los dispositivos de vigilancia preventiva tras el reciente incendio forestal controlado en el parque natural de Collserola. Se recuerda la prohibición absoluta de encender fuego en áreas arboladas y zonas de influencia forestal.",
+          "headline": "Una nueva pérgola fotovoltaica renueva el paisaje urbano de la plaza central.",
+          "lede": "El espacio público incorpora dos nuevos prados y una zona infantil de diseño sostenible.",
+          "body": "La ciudad ha estrenado una moderna pérgola fotovoltaica en uno de sus parques principales, integrando generación de energía limpia y mobiliario urbano funcional. El proyecto abarca una plaza central diáfana, flanqueada por dos nuevos prados de césped y una zona infantil totalmente equipada para los más pequeños. Esta intervención mejora la habitabilidad del barrio y ofrece espacios de sombra muy necesarios durante las jornadas cálidas de verano. Los vecinos ya disfrutan de este punto de encuentro que combina diseño contemporáneo y compromiso medioambiental. La estructura alimenta parte de la red de iluminación del parque, consolidando el modelo de transición ecológica de Barcelona en los espacios de vecindad.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "03",
-          "headline": "El parque de atracciones del Tibidabo ilumina las noches de verano con su nuevo Laser Show.",
-          "lede": "Música, tecnología y haces de luz transforman el horizonte nocturno de la montaña mágica en un espectáculo visual gratuito.",
-          "body": "Las noches de agosto en Barcelona suman un atractivo contemporáneo con las proyecciones lumínicas del Tibidabo, donde la tecnología y la música dialogan sobre la silueta de la ciudad. Este espectáculo nocturno complementa la oferta de ocio tradicional en la cumbre barcelonesa, accesible mediante el histórico Tranvía Blau y los funiculares de la zona alta. En paralelo, el tejido comercial metropolitano continúa su expansión con la reciente apertura de tres nuevas tiendas de Decathlon en la provincia, diversificando la oferta de equipamiento deportivo. Los visitantes que deseen realizar transacciones monetarias encuentran un tipo de cambio estable de 1 USD equivalente a 0.86 EUR en cajeros y oficinas de cambio autorizadas. La ciudad combina así su patrimonio histórico con innovaciones de entretenimiento estival discretas y cuidadas.",
+          "headline": "El parque de atracciones histórico conserva la tradición de los primeros autos de choque.",
+          "lede": "Un rincón singular de la ciudad mantiene viva la memoria lúdica de generaciones enteras.",
+          "body": "El pequeño parque de atracciones de barrio que introdujo los primeros autos de choque en España sigue operando como un refugio de nostalgia urbana. Este recinto familiar ofrece una escala humana muy diferente a los grandes complejos temáticos, priorizando el encanto tradicional y la cercanía vecinal. Las atracciones mecánicas, cuidadas con esmero artesanal, continúan funcionando bajo la sombra de los árboles centenarios del parque. Es un plan excelente para observar la dinámica local y conectar con la historia recreativa de la ciudad lejos de las rutas turísticas masificadas. La visita permite redescubrir el valor de los espacios de ocio tradicionales que resisten el paso del tiempo en los barrios.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Una suave llovizna con 1.4 mm de precipitación marca una jornada fresca de 13 a 17°C.",
-          "lede": "El termómetro porteño desciende hasta los 13°C en un domingo gris y húmedo que invita a refugiarse en librerías y cafés tradicionales.",
-          "body": "La temperatura en Buenos Aires oscila hoy entre los 13 y los 17°C, acompañada por una llovizna ligera que acumula 1.4 mm de precipitación sobre el asfalto. La calidad del aire se mantiene en niveles buenos con un registro de PM2.5 en 10, garantizando una atmósfera limpia tras el paso frontal. La puesta de sol ocurrirá puntualmente a las 18:23, acortando las horas de luz natural y favoreciendo el ritmo pausado de los interiores. Los espacios culturales y los teatros de la avenida Corrientes preparan sus salas para el inicio de una semana intensa de actividades artísticas. Es una jornada típicamente porteña para recorrer los soportales del centro histórico con paraguas y abrigo ligero.",
+          "headline": "El feriado nacional por el General San Martín modifica los servicios urbanos hoy lunes.",
+          "lede": "La jornada conmemorativa suspende la actividad administrativa habitual en toda la capital.",
+          "body": "Buenos Aires conmemora hoy el Paso a la Inmortalidad del General José de San Martín, instaurando un feriado nacional que altera el ritmo habitual de la metrópoli. Las oficinas gubernamentales, los bancos y las oficinas de correo permanecen cerradas durante toda la jornada, por lo que se recomienda posponer los trámites presenciales. El termómetro se mueve entre los 11 y los 15°C bajo un cielo overcast, mientras la calidad del aire se mantiene en niveles justos con un PM2.5 de 9. La puesta de sol está fijada para las 18:24, marcando el inicio de una tarde fresca y silenciosa en las avenidas arboladas. El transporte público opera con frecuencias reducidas propias de los días festivos en la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "02",
-          "headline": "Los organismos oficiales y bancos cierran sus puertas el lunes por el Paso a la Inmortalidad de San Martín.",
-          "lede": "El traslado del feriado patrio del 17 de agosto genera un fin de semana largo con cese temporal de trámites administrativos.",
-          "body": "El lunes 17 de agosto de 2026 se conmemora el Paso a la Inmortalidad del General José de San Martín, configurando un fin de semana largo de descanso en todo el país. Las oficinas de la administración pública, los bancos y las dependencias postales suspenden la atención presencial hasta el martes por la mañana. Los servicios de transporte público ajustan sus frecuencias a los cronogramas habituales de días feriados, facilitando desplazamientos tranquilos hacia los espacios verdes. Las autoridades sanitarias recuerdan la vigencia de la vigilancia epidemiológica por casos de dengue y chikungunya, recomendando el uso de repelente en áreas húmedas. Las farmacias de turno y los servicios de urgencia hospitalaria mantendrán sus guardias completas durante toda la jornada festiva.",
+          "headline": "La exposición Desde el taller II explora los desvíos creativos del proceso artístico.",
+          "lede": "Las galerías porteñas ponen el foco en el trastienda de la creación plástica contemporánea.",
+          "body": "La muestra Desde el taller II abre sus puertas para revelar los procesos internos, los errores fértiles y los desvíos creativos de los artistas locales. Esta propuesta expositiva invita al espectador a mirar más allá de la obra acabada, examinando bocetos, notas de trabajo y pruebas de material. La visita ofrece un contrapunto reflexivo y pausado ideal para aprovechar la tregua térmica que otorgan las temperaturas de hoy, entre los 11 y los 15°C. Los espacios culturales de los barrios tradicionales mantienen sus puertas abiertas para recibir a quienes buscan refugio del frío exterior. Es una oportunidad imperdible para entender el pulso del arte contemporáneo desde su cocina más íntima y experimental.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         },
         {
           "n": "03",
-          "headline": "El Festival y Mundial de Tango transformará más de 50 sedes desde el próximo 19 de agosto.",
-          "lede": "Vicentico y Abel Pintos abrirán la gran cita porteña dedicada al 2x4 con conciertos gratuitos y milongas en toda la ciudad.",
-          "body": "A partir del 19 de agosto, Buenos Aires se convertirá en la capital mundial del tango con una programación extendida por más de 50 sedes culturales. La apertura oficial correrá a cargo de reconocidos artistas como Vicentico y Abel Pintos, dando inicio a semanas de exhibiciones, clases magistrales y conciertos. Esta cita se suma a la reciente repercusión del Festival La Mujer y el Cine 2026, que ofreció cinco jornadas de proyecciones gratuitas y estrenos nacionales. Los visitantes encontrarán una oferta cultural diversa que respeta la tradición musical y cinematográfica de los barrios porteños. Conviene consultar la reserva previa de localidades para los eventos más concurridos del mundial de tango a través de los canales oficiales.",
+          "headline": "El Festival La Mujer y el Cine ofrece cinco días de proyecciones gratuitas.",
+          "lede": "La cartelera porteña se llena de estrenos y actividades culturales abiertas a todo el público.",
+          "body": "La nueva edición del Festival La Mujer y el Cine despliega una programación de cinco días con proyecciones gratuitas, estrenos destacados y encuentros con realizadoras. Las salas de la ciudad acogen este ciclo que busca visibilizar la autoría femenina en la cinematografía contemporánea con debates y retrospectivas. Esta oferta se suma a las opciones culturales que complementan el fin de semana largo y el feriado de hoy lunes en la capital. Con un ambiente fresco y cielo cubierto, las funciones de tarde se convierten en el plan predilecto de los cinéfilos locales. Conviene consultar la programación específica para retirar las entradas gratuitas con antelación en cada sede participante.",
           "source": "saudade desk",
-          "source_date": "2026-08-16"
+          "source_date": "2026-08-17"
         }
       ]
     }
