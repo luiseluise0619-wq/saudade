@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-17T06:00:00+09:00",
-  "next_filing": "2026-08-17T21:00:00+00:00",
+  "filed_at": "2026-08-19T06:00:00+09:00",
+  "next_filing": "2026-08-19T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "La calidad del aire se mantiene en niveles justos con un PM2.5 de 12.",
-          "lede": "Las condiciones atmosféricas actuales invitan a pasear sin prisa por los espacios verdes de la capital.",
-          "body": "La calidad del aire en la ciudad registra hoy un índice justo, marcado por una concentración de partículas PM2.5 situada en 12. Este registro permite disfrutar de los recorridos urbanos y de las actividades al aire libre con total tranquilidad. El tipo de cambio actual se fija de forma estable en 1 USD frente a 0.86 EUR para quienes realizan transacciones en la región. Las mañanas ofrecen una atmósfera despejada ideal para caminar por los bulevares históricos. Conviene aprovechar estas horas templadas antes de que el calor del mediodía gane intensidad en las plazas principales. La ciudad respira con calma en este ecuador de agosto.",
+          "headline": "Madrid se cubre bajo cielos nublados mientras el termómetro marca entre 24 y 34°C.",
+          "lede": "La ciudad transita el final de agosto con una luz atenuada y un ambiente propicio para el descanso vespertino.",
+          "body": "El cielo permanece cubierto en la capital mientras la temperatura oscila entre 24 y 34°C, templando las horas centrales de la jornada. Al caer la tarde, la puesta de sol se registra a las 21:07, ofreciendo una transición suave hacia la noche madrileña. En el ámbito económico, la tasa de cambio vigente se sitúa en 1 USD por cada 0.86 EUR para las transacciones internacionales. Durante estas noches de verano, varios monumentos y espacios emblemáticos de la ciudad se iluminan de manera especial, transformando el paisaje urbano. Los paseos nocturnos por el centro recuperan una calma muy particular bajo este dosel de luz artificial y cielos discretos.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "02",
-          "headline": "Las exposiciones culturales gratuitas ocupan los espacios públicos de la Comunidad.",
-          "lede": "La programación estival recupera propuestas artísticas de acceso libre para residentes y visitantes.",
-          "body": "La oferta cultural de la región mantiene abiertas diversas exposiciones gratuitas para disfrutar durante lo que queda de verano en Madrid. Esta iniciativa municipal permite recorrer muestras históricas y temáticas sin coste alguno en salas de toda el área metropolitana. Entre las opciones destaca la esperada exposición sobre la E.G.B., un nostálgico viaje generacional que convive con la intensa programación de los Veranos de la Villa. Los espacios expositivos ofrecen refugio climático y contenido divulgativo de gran calidad durante las horas centrales del día. Es una oportunidad excelente para conocer el archivo gráfico y cotidiano de décadas pasadas sin salir del circuito urbano.",
+          "headline": "El Parque de Atracciones de Madrid mantiene su programación estival para familias y visitantes.",
+          "lede": "Las jornadas de verano ofrecen alternativas de ocio consolidadas en los espacios verdes y recreativos de la región.",
+          "body": "El Parque de Atracciones de Madrid continúa recibiendo visitantes en sus instalaciones habituales durante estas semanas estivales. Esta oferta de ocio se complementa con iniciativas culturales recientes impulsadas en la región, como el Festival del Eclipse celebrado en Buitrago del Lozoya. Aquellas actividades divulgativas y culturales buscaron acercar la ciencia y el patrimonio local a residentes y viajeros curiosos. Paralelamente, instituciones como el Goethe-Institut mantienen viva la agenda cultural madrileña con ciclos específicos de cine y pensamiento. La combinación de parques tradicionales y propuestas intelectuales define el pulso actual de una ciudad que dosifica su energía veraniega con mesura.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "03",
-          "headline": "Buitrago del Lozoya acogió el reciente Festival del Eclipse con actividades divulgativas.",
-          "lede": "La sierra madrileña consolidó su agenda educativa con talleres astronómicos y culturales.",
-          "body": "El municipio de Buitrago del Lozoya celebró con éxito el Festival del Eclipse, un evento centrado en la divulgación científica y las propuestas educativas para todos los públicos. La jornada reunió a familias y observadores interesados en la astronomía en un entorno patrimonial único junto al río Lozoya. Esta iniciativa forma parte de los planes promovidos por la Comunidad de Madrid para descentralizar la cultura y acercarla a los enclaves históricos de la sierra. Además de las observaciones guiadas, el programa incluyó talleres participativos y conferencias divulgativas sin coste. Quienes visiten la zona estos días pueden combinar el recorrido por la muralla medieval con la tranquilidad de los parajes naturales cercanos.",
+          "headline": "La red de intercambio y las instituciones culturales adaptan sus horarios al calendario estival.",
+          "lede": "Los servicios urbanos operan con normalidad mientras la ciudad asimila el ritmo pausado de agosto.",
+          "body": "Con un tipo de cambio fijado en 1 USD equivalente a 0.86 EUR, los viajeros extranjeros continúan realizando sus gestiones cotidianas sin contratiempos en oficinas bancarias y comercios. Los cielos nublados que cubren la capital con temperaturas de 24 a 34°C invitan a priorizar las actividades en recintos cerrados o bajo la sombra de los grandes árboles urbanos. La programación cultural impulsada por centros internacionales y ayuntamientos de la comunidad ofrece refugio intelectual frente al calor persistente de la meseta. Los residentes aprovechan estas semanas de menor densidad vehicular para redescubrir rincones históricos y exposiciones temporales sin las aglomeraciones habituales del resto del año.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El cielo permanece cubierto con temperaturas que oscilan entre los 25 y los 31°C.",
-          "lede": "La jornada se presenta templada y sin grandes sobresaltos lumínicos hasta la caída del sol.",
-          "body": "El termómetro barcelonés se mueve hoy en una horquilla de 25 a 31°C bajo un cielo completamente overcast que suaviza la incidencia directa de los rayos solares. Esta nubosidad persistente crea una atmósfera apacible para recorrer el litoral o adentrarse en los callejones del barrio gótico. El tipo de cambio vigente se sitúa en 1 USD por 0.86 EUR, facilitando el intercambio comercial cotidiano en comercios y paradas locales. La puesta de sol está prevista para las 20:48, ofreciendo un crepúsculo largo sobre el mar Mediterráneo. Es un día óptimo para caminar sin prisa, protegido del calor extremo habitual de estas fechas estivales en la costa catalana.",
+          "headline": "Barcelona registra una calidad del aire fair con un índice de PM2.5 de 13.",
+          "lede": "Las condiciones atmosféricas en la ciudad condal permiten disfrutar de los espacios públicos con total tranquilidad.",
+          "body": "La atmósfera barcelonesa presenta una calidad del aire catalogada como fair, registrando un valor de PM2.5 de 13 en las estaciones de medición urbana. Este panorama ambiental favorece los desplazamientos a pie por los barrios históricos y los paseos marítimos de la capital catalana. En el plano financiero, la cotización oficial se mantiene estable en 1 USD por cada 0.86 EUR para operaciones de cambio. Los residentes aprovechan estas condiciones moderadas para recorrer las calles y plazas sin la presión de alertas ambientales severas. La ciudad respira con un compás pausado mientras el verano avanza hacia su tramo final.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "02",
-          "headline": "Una nueva pérgola fotovoltaica renueva el paisaje urbano de la plaza central.",
-          "lede": "El espacio público incorpora dos nuevos prados y una zona infantil de diseño sostenible.",
-          "body": "La ciudad ha estrenado una moderna pérgola fotovoltaica en uno de sus parques principales, integrando generación de energía limpia y mobiliario urbano funcional. El proyecto abarca una plaza central diáfana, flanqueada por dos nuevos prados de césped y una zona infantil totalmente equipada para los más pequeños. Esta intervención mejora la habitabilidad del barrio y ofrece espacios de sombra muy necesarios durante las jornadas cálidas de verano. Los vecinos ya disfrutan de este punto de encuentro que combina diseño contemporáneo y compromiso medioambiental. La estructura alimenta parte de la red de iluminación del parque, consolidando el modelo de transición ecológica de Barcelona en los espacios de vecindad.",
+          "headline": "El Parque de las Trece Rosas incorpora una nueva pérgola fotovoltaica.",
+          "lede": "La infraestructura sostenible urbana suma espacios de sombra y generación de energía limpia en los barrios.",
+          "body": "El Parque de las Trece Rosas estrena oficialmente su nueva pérgola fotovoltaica, una instalación destinada a fomentar el autoconsumo energético en el espacio público. Esta intervención se alinea con las políticas locales orientadas a la transición ecológica y al diseño de zonas verdes más eficientes. Paralelamente, la agenda científica ha destacado eventos como el Science Fest Barcelona, dedicado a explorar los límites entre el cosmos y el caos mediante debates abiertos. Estas iniciativas demuestran el compromiso continuo de la ciudad con la divulgación del conocimiento y la sostenibilidad aplicada al urbanismo diario.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "03",
-          "headline": "El parque de atracciones histórico conserva la tradición de los primeros autos de choque.",
-          "lede": "Un rincón singular de la ciudad mantiene viva la memoria lúdica de generaciones enteras.",
-          "body": "El pequeño parque de atracciones de barrio que introdujo los primeros autos de choque en España sigue operando como un refugio de nostalgia urbana. Este recinto familiar ofrece una escala humana muy diferente a los grandes complejos temáticos, priorizando el encanto tradicional y la cercanía vecinal. Las atracciones mecánicas, cuidadas con esmero artesanal, continúan funcionando bajo la sombra de los árboles centenarios del parque. Es un plan excelente para observar la dinámica local y conectar con la historia recreativa de la ciudad lejos de las rutas turísticas masificadas. La visita permite redescubrir el valor de los espacios de ocio tradicionales que resisten el paso del tiempo en los barrios.",
+          "headline": "Collserola refuerza su protección forestal mientras la actividad ciudadana se adapta al entorno.",
+          "lede": "El pulmón verde de la ciudad recibe atención prioritaria para garantizar su preservación frente al riesgo estival.",
+          "body": "El parque natural de Collserola continúa bajo estrictas labores de vigilancia y protección para salvaguardar su masa forestal frente a posibles incidencias climáticas. Las autoridades locales recuerdan la importancia de preservar este valioso entorno que define el límite occidental de Barcelona. Los senderos del parque siguen abiertos para caminantes prudentes que buscan refugio bajo la sombra de pinos y encinas. Mientras tanto, la vida urbana transcurre con normalidad en los distritos colindantes, equilibrando el dinamismo metropolitano con el respeto absoluto por los espacios naturales circundantes.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El feriado nacional por el General San Martín modifica los servicios urbanos hoy lunes.",
-          "lede": "La jornada conmemorativa suspende la actividad administrativa habitual en toda la capital.",
-          "body": "Buenos Aires conmemora hoy el Paso a la Inmortalidad del General José de San Martín, instaurando un feriado nacional que altera el ritmo habitual de la metrópoli. Las oficinas gubernamentales, los bancos y las oficinas de correo permanecen cerradas durante toda la jornada, por lo que se recomienda posponer los trámites presenciales. El termómetro se mueve entre los 11 y los 15°C bajo un cielo overcast, mientras la calidad del aire se mantiene en niveles justos con un PM2.5 de 9. La puesta de sol está fijada para las 18:24, marcando el inicio de una tarde fresca y silenciosa en las avenidas arboladas. El transporte público opera con frecuencias reducidas propias de los días festivos en la ciudad.",
+          "headline": "Buenos Aires amanece con cielos cubiertos y temperaturas entre 6 y 14°C.",
+          "lede": "El invierno austral impone una atmósfera fresca y sobria que acompaña la llegada de los grandes festivales culturales.",
+          "body": "La jornada porteña discurre bajo un cielo completamente overcast, con temperaturas que se mueven entre los 6 y los 14°C. La puesta de sol se adelanta hasta las 18:25, acortando las horas de luz natural y marcando el compás de las actividades vespertinas. Este clima fresco invita a abrigarse adecuadamente para recorrer las librerías, cafés y salas de teatro de la ciudad. Con la llegada de este frente frío moderado, la vida urbana adopta un ritmo interior y reflexivo, muy característico de las semanas invernales en el Río de la Plata.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "02",
-          "headline": "La exposición Desde el taller II explora los desvíos creativos del proceso artístico.",
-          "lede": "Las galerías porteñas ponen el foco en el trastienda de la creación plástica contemporánea.",
-          "body": "La muestra Desde el taller II abre sus puertas para revelar los procesos internos, los errores fértiles y los desvíos creativos de los artistas locales. Esta propuesta expositiva invita al espectador a mirar más allá de la obra acabada, examinando bocetos, notas de trabajo y pruebas de material. La visita ofrece un contrapunto reflexivo y pausado ideal para aprovechar la tregua térmica que otorgan las temperaturas de hoy, entre los 11 y los 15°C. Los espacios culturales de los barrios tradicionales mantienen sus puertas abiertas para recibir a quienes buscan refugio del frío exterior. Es una oportunidad imperdible para entender el pulso del arte contemporáneo desde su cocina más íntima y experimental.",
+          "headline": "Desde hoy, Buenos Aires se convierte en el epicentro mundial del tango en más de 50 sedes.",
+          "lede": "El festival más importante del género da comienzo a su edición anual con una programación extensa y descentralizada.",
+          "body": "A partir de hoy, 19 de agosto, Buenos Aires da inicio al mayor festival de tango del mundo, desplegando su programación en más de 50 sedes distribuidas por toda la geografía urbana. Milongas, conciertos y clases magistrales transforman centros culturales y bodegones tradicionales en puntos de encuentro ineludibles para los aficionados. Esta cita monumental coincide con los preparativos de la Media Maratón de Buenos Aires 2026, cuyos circuitos y puestos de entrega de kits ya ultiman detalles organizativos. Los corredores y visitantes comparten el espacio público con los bailarines en una convivencia armónica propia de la efervescencia cultural porteña.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         },
         {
           "n": "03",
-          "headline": "El Festival La Mujer y el Cine ofrece cinco días de proyecciones gratuitas.",
-          "lede": "La cartelera porteña se llena de estrenos y actividades culturales abiertas a todo el público.",
-          "body": "La nueva edición del Festival La Mujer y el Cine despliega una programación de cinco días con proyecciones gratuitas, estrenos destacados y encuentros con realizadoras. Las salas de la ciudad acogen este ciclo que busca visibilizar la autoría femenina en la cinematografía contemporánea con debates y retrospectivas. Esta oferta se suma a las opciones culturales que complementan el fin de semana largo y el feriado de hoy lunes en la capital. Con un ambiente fresco y cielo cubierto, las funciones de tarde se convierten en el plan predilecto de los cinéfilos locales. Conviene consultar la programación específica para retirar las entradas gratuitas con antelación en cada sede participante.",
+          "headline": "El cine alemán y las propuestas urbanas enriquecen la agenda cultural de la semana.",
+          "lede": "Las pantallas y los espacios de reflexión ciudadana amplían sus horizontes con muestras internacionales.",
+          "body": "El tradicional Festival de Cine Alemán ha anunciado los detalles de su vigesimosexta programación en Buenos Aires, ofreciendo una selección rigurosa de producciones contemporáneas. Las proyecciones se suman a las iniciativas de diseño urbano agrupadas bajo plataformas que revalorizan la identidad arquitectónica y paisajística de la capital. A pesar de las temperaturas de 6 a 14°C y la persistencia de los cielos grises, la actividad en los centros culturales no decae. Los espectadores locales y los viajeros atentos encuentran en estos ciclos una excusa perfecta para desafiar el frío invernal y habitar la ciudad desde sus mejores expresiones artísticas.",
           "source": "saudade desk",
-          "source_date": "2026-08-17"
+          "source_date": "2026-08-19"
         }
       ]
     }
