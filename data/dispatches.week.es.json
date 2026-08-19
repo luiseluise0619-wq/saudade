@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-19T06:00:00+09:00",
+  "updated": "2026-08-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cielo cubierto modera las temperaturas en la capital.",
+              "lede": "La jornada registra una amplitud térmica de 21 a 31°C con nula precipitación acumulada.",
+              "body": "La jornada se presenta completamente overcast, con temperaturas que oscilan entre los 21 y los 31°C. Apenas se registran 0.1mm de precipitación, permitiendo caminar con tranquilidad bajo la luz tenue que antecede al ocaso de las 21:05. La calidad del aire se mantiene en niveles considerados justos, con un registro de PM2.5 de 8. Para quienes realizan transacciones financieras o cambian divisa extranjera, el tipo de cambio oficial se sitúa en 1 USD por cada 0.86 EUR. El cielo sin brillo directo suaviza la piedra de los edificios históricos. Los paseos por los bulevares resultan cómodos ante la ausencia de sol intenso. Conviene llevar una prenda ligera para cuando caiga la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Escena Escorial recibe al Ballet Español de la CAM.",
+              "lede": "La programación cultural destaca con propuestas artísticas en espacios patrimoniales de la región madrileña.",
+              "body": "La oferta cultural de la Comunidad ofrece este mes alternativas de gran interés para residentes y viajeros atentos. El Ballet Español de la CAM llega al Festival Escena Escorial con montajes que destacan por su elegancia formal. Paralelamente, el Goethe-Institut acoge las sesiones de Madrid a Tempo, un espacio dedicado a la reflexión sonora y musical. En el ámbito comercial y de diseño, Mango Home alcanza las 10 tiendas en España con su tercera apertura en Madrid, ampliando las opciones para el hogar. Asimismo, el Gran Festival Musical de los Pueblos Ibéricos congrega diversas expresiones tradicionales. Estos eventos enriquecen la agenda estival sin alterar la calma característica de las calles residenciales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "03",
+              "headline": "El atardecer tardío invita a recorrer los parques urbanos.",
+              "lede": "La puesta de sol a las 21:05 prolonga las horas de luz en los jardines y plazas de Madrid.",
+              "body": "La caída del sol a las 21:05 otorga una tregua lumínica muy valorada por quienes observan la ciudad sin prisa. Los parques y jardines recuperan el pulso vecinal a medida que desciende ligeramente el calor acumulado del día. Las condiciones atmosféricas actuales favorecen la estancia al aire libre, sin agobios climáticos notables. La calidad del aire, con un índice PM2.5 de 8, mantiene el ambiente despejado de partículas contaminantes molestas. Las terrazas de los cafés tradicionales registran una ocupación moderada, propicia para la lectura o la conversación pausada. La ciudad transita el final del verano con una serenidad contenida que se percibe en cada rincón.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Tormentas ocasionales refrescan el litoral barcelonés.",
+              "lede": "El termómetro marca entre 25 y 31°C mientras caen 3.2mm de lluvia.",
+              "body": "El clima de la jornada muestra un registro térmico de 25 a 31°C acompañado de tormentas que dejan 3.2mm de precipitación acumulada. El atardecer está previsto para las 20:43, ofreciendo un horizonte nublado pero luminoso tras las lluvias. La calidad del aire se sitúa en un nivel fair, con un registro de PM2.5 de 15. El cambio de divisa se mantiene estable con 1 USD equivalente a 0.86 EUR. Las calles de los barrios históricos muestran superficies húmedas que reflejan el alumbrado público con claridad. Conviene llevar paraguas ligero ante la previsión de chubascos intermitentes durante la tarde. El agua limpia las aceras y devuelve un aroma fresco al aire marino.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "02",
+              "headline": "Reabre una importante estación del metro tras dos meses.",
+              "lede": "La red de transporte recupera la normalidad operativa en un tramo clave.",
+              "body": "Tras casi dos meses sin parada, reabre esta importante estación del metro de Barcelona, facilitando los desplazamientos cotidianos. La recuperación de este nodo reduce los tiempos de conexión entre los barrios y el centro metropolitano. En paralelo, la agenda cultural ofrece el cierre de ciclos tan singulares como el Festival de Música Antiga dels Pirineus [FeMAP], que concluye su edición del 15.º aniversario. Por otro lado, la arquitectura contemporánea protagoniza la actualidad con la inauguración de una galería de 5 instalaciones dentro del Festival de Arquitecturas de Barcelona - 4. Asimismo, el Balla Barcelona Festival presenta propuestas lúdicas como el Hop on The Top Open Air Halloween. La movilidad urbana fluye con mayor previsibilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "03",
+              "headline": "La caída de la noche sobre el Mediterráneo marca el ritmo diario.",
+              "lede": "La puesta de sol a las 20:43 cierra una jornada de actividad cultural intensa.",
+              "body": "A las 20:43 se produce la puesta de sol, poniendo fin a un día marcado por la inestabilidad meteorológica y las tormentas de 3.2mm. Los espacios públicos recuperan la tranquilidad tras el paso de los chubascos que han refrescado el ambiente costero. La temperatura se estabiliza dentro del rango de 25 a 31°C, propiciando paseos nocturnos junto a los diques del puerto. La calidad del aire, con un índice PM2.5 de 15, permite respirar con total comodidad cerca del mar. Los viajeros que regresan a sus alojamientos encuentran un ritmo pausado en las calles secundarias del Eixample y Gràcia. La ciudad descansa bajo un cielo que lentamente se despeja de nubes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Ambiente fresco y cielo cubierto en las calles porteñas.",
+              "lede": "La temperatura se mueve entre 8 y 18°C bajo un cielo completamente overcast.",
+              "body": "La jornada porteña discurre con temperaturas frías que van de los 8 a los 18°C. El cielo se mantiene overcast durante todo el día, sin previsión de precipitaciones inmediatas que alteren el paso de los transeúntes. La calidad del aire es fair, registrando un valor de PM2.5 de 19. El ocaso se adelanta hasta las 18:26, acortando las horas de luz natural en los parques y diagonales. Las avenidas principales muestran el ir y venir habitual de quienes buscan refugio en cafés tradicionales. Es recomendable abrigarse con capas intermedias para contrarrestar la humedad típica del estuario. La atmósfera gris otorga a la arquitectura porteña una estampa melancólica y clásica.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "02",
+              "headline": "El cine independiente y los grandes festivales ocupan la agenda.",
+              "lede": "La cartelera cultural de la ciudad ofrece muestras gratuitas y anuncios musicales.",
+              "body": "La programación cultural destaca con opciones para todos los gustos en distintos puntos de la capital. Toda la programación del Festival de Cine Tailandés en Buenos Aires se proyecta de forma gratuita en Atlas Cines Alcorta, ofreciendo cuatro películas en funciones especiales. En el terreno musical, Creamfields Argentina 2026 ya dio a conocer a sus artistas principales, con Charlotte de Witte, Fisher y The Blessed Madonna encabezando la nueva edición. Además, el Festival La Mujer y el Cine presenta una edición destacada que incluye un documental sobre Siri Hustvedt y Paul Auster. Estas propuestas enriquecen la vida urbana y atraen a espectadores interesados en el arte contemporáneo y el cine de autor.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            },
+            {
+              "n": "03",
+              "headline": "El atardecer anticipado a las 18:26 da paso a la noche urbana.",
+              "lede": "La caída temprana de la luz transforma el ritmo de los barrios tradicionales.",
+              "body": "La puesta de sol a las 18:26 marca el inicio de la actividad nocturna en una ciudad que transita temperaturas de 8 a 18°C. El cielo overcast se funde con la iluminación artificial de las librerías y cafés de Corrientes y Palermo. La calidad del aire se mantiene estable con un índice PM2.5 de 19, permitiendo caminatas tranquilas por las veredas arboladas. Los vecinos aprovechan las funciones de cine gratuito y las muestras culturales antes de regresar a sus hogares. El ambiente fresco invita a buscar espacios interiores resguardados del viento del río. Buenos Aires despide el día con su habitual combinación de nostalgia y movimiento constante.",
+              "source": "saudade desk",
+              "source_date": "2026-08-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Las propuestas dedicadas a la repostería artesanal y el cacao ocupan la agenda de ocio familiar en previsión de las celebraciones infantiles de mediados de agosto. El evento reúne a maestros pasteleros locales en espacios habilitados para la ocasión, facilitando el acceso peatonal desde diversos puntos de la red de transporte. El cielo cubierto y los registros de 8 a 10°C configuran el telón de fondo meteorológico ideal para disfrutar de productos elaborados y calientes. Conviene anotar que el próximo 2026-08-17 se conmemorará el Paso a la Inmortalidad del General José de San Martín, festividad que trasladará el descanso oficial y alterará los horarios comerciales y bancarios habituales de la próxima semana.",
               "source": "saudade desk",
               "source_date": "2026-08-11"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-10T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Fundación Canal acoge la mayor exposición retrospectiva del fotógrafo Sebastião Salgado tras su fallecimiento.",
-              "lede": "La muestra titulada 'Aqua Mater' invita a una profunda contemplación sobre el agua y la naturaleza en el espacio madrileño.",
-              "body": "La Fundación Canal de Madrid presenta estos días la esperada exposición 'Aqua Mater', rindiendo homenaje al legado fotográfico de Sebastião Salgado. Este recorrido visual sumerge al visitante en paisajes monumentales donde el agua es la absoluta protagonista. Para los viajeros que planeen visitar las salas durante esta semana, es recomendable adquirir las entradas con antelación debido al aforo limitado. El tipo de cambio actual se sitúa en 1 USD equivalente a 0.87 EUR para los visitantes internacionales. Las verbenas de agosto en los barrios del centro continúan animando las noches estivales con propuestas culturales. Mientras tanto, los equipos locales colaboran en las labores de extinción de los incendios de Segovia junto al Parque Nacional de Guadarrama. La agenda cultural de la capital combina así el arte fotográfico con el pulso cotidiano de sus calles y plazas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "02",
-              "headline": "El Parque Warner mantiene abiertas sus atracciones veraniegas con acceso directo mediante compra online.",
-              "lede": "Las entradas anticipadas facilitan el acceso fluido al recinto durante los días centrales del mes de agosto.",
-              "body": "El Parque Warner de Madrid constituye una alternativa recurrente para escapar de la rutina urbana durante las jornadas de calor. Las taquillas virtuales y los puntos de venta oficiales gestionan la afluencia diaria para garantizar una estancia ordenada. Conviene revisar las conexiones de transporte público disponibles desde el sur de la región antes de emprender el trayecto. El tipo de cambio oficial se mantiene estable en 1 USD por 0.87 EUR para quienes gestionan divisas extranjeras. En el ámbito municipal, la atención se divide entre la oferta cultural y el seguimiento de los incendios de Segovia cerca de Guadarrama. Los visitantes encontrarán en la ciudad una atmósfera sosegada, propia de las semanas de menor actividad administrativa. Planificar las visitas con antelación asegura una experiencia sin contratiempos en los principales espacios de ocio del extrarradio.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "03",
-              "headline": "El próximo festivo nacional de Asunción el 15 de agosto alterará los horarios comerciales habituales.",
-              "lede": "Las oficinas gubernamentales y las entidades bancarias permanecerán cerradas durante la jornada festiva del viernes.",
-              "body": "El calendario madrileño se prepara para la festividad de la Asunción el 15 de agosto, fecha que modificará la rutina habitual de los servicios públicos. Los residentes y viajeros deben anticipar cualquier trámite administrativo antes del fin de semana, ya que las oficinas y bancos cerrarán sus puertas. El tipo de cambio monetario se sitúa en 1 USD equivalente a 0.87 EUR para las transacciones en moneda extranjera. Paralelamente, los servicios de emergencia coordinan medios aéreos y terrestres para apoyar en los incendios declarados en Segovia y el entorno de Guadarrama. La ciudad mantiene su oferta cultural con exposiciones como 'Aqua Mater' en la Fundación Canal y las verbenas del distrito centro. Conviene caminar sin prisa por los paseos arbolados mientras la capital transita con calma hacia el ecuador del mes estival.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La ciudad registra temperaturas de 24 a 30°C bajo cielos nublados y una calidad del aire favorable.",
-              "lede": "El ambiente suave y sin sol directo favorece los largos paseos por el litoral y los parques urbanos.",
-              "body": "Barcelona amanece con un registro térmico que oscila entre 24 y 30°C, acompañado de cielos completamente cubiertos y una puesta de sol prevista a las 20:57. La calidad del aire se mantiene en niveles buenos, con un índice de PM2.5 situado en 8, ideal para la actividad al aire libre. Para los visitantes extranjeros, el tipo de cambio opera a 1 USD por 0.87 EUR en los establecimientos de cambio. Las propuestas internacionales del Grec Festival 2026 continúan ofreciendo alternativas culturales de primer nivel en distintos escenarios de la ciudad. Asimismo, el Sant Pau Festival 2026 programa seis conciertos exclusivos de música de cámara en un entorno arquitectónico excepcional. Conviene disfrutar de estas jornadas de transición estival observando la arquitectura modernista bajo una luz difusa y tranquila.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "02",
-              "headline": "El Brunch Electronik Festival anima las jornadas musicales con una alta afluencia de público local.",
-              "lede": "Los conciertos de música electrónica se desarrollan con dispositivos especiales de seguridad ciudadana en los recintos.",
-              "body": "El Brunch Electronik Festival congrega a numerosos aficionados a la música electrónica en Barcelona, combinando sesiones al aire libre con una cuidada producción. Las autoridades locales han reforzado la vigilancia, logrando recientemente la detención de carteristas y la recuperación de dispositivos móviles sustraídos en el recinto. La temperatura ambiental se mueve entre 24 y 30°C bajo cielos cubiertos, mientras el atardecer llega puntualmente a las 20:57. La calidad del aire registra un valor de PM2.5 de 8, garantizando condiciones óptimas para el público asistente. Los viajeros pueden utilizar el tipo de cambio oficial de 1 USD a 0.87 EUR para sus gastos cotidianos. Complementando la oferta musical, el Grec Festival 2026 y el Sant Pau Festival 2026 enriquecen la agenda cultural con ciclos de cámara e intervenciones internacionales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "03",
-              "headline": "El festivo de la Asunción el 15 de agosto afectará la apertura de oficinas públicas y entidades bancarias.",
-              "lede": "Los servicios administrativos permanecerán cerrados durante la jornada festiva del viernes en toda la ciudad.",
-              "body": "El próximo 15 de agosto se celebrará la festividad de la Asunción, jornada en la que la actividad institucional se detendrá temporalmente en Barcelona. Las oficinas gubernamentales, los bancos y las oficinas de correos cerrarán sus puertas, por lo que se recomienda gestionar cualquier diligencia con antelación. Las condiciones meteorológicas actuales muestran valores de 24 a 30°C con nubosidad persistente y una puesta de sol a las 20:57. La calidad del aire se mantiene estable con un PM2.5 de 8, y el tipo de cambio se fija en 1 USD por 0.87 EUR. Los residentes y visitantes pueden aprovechar el paréntesis festivo para recorrer los conciertos del Sant Pau Festival 2026 o las propuestas escénicas del Grec Festival. La ciudad adopta un ritmo pausado, idóneo para observar el patrimonio histórico sin las prisas habituales del calendario laboral.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra mañanas frías de 4 a 11°C bajo cielos despejados y aire limpio.",
-              "lede": "La atmósfera despejada y la buena calidad del aire invitan a recorrer los espacios verdes ribereños.",
-              "body": "La ciudad porteña experimenta temperaturas invernales que varían entre 4 y 11°C, marcadas por cielos predominantemente despejados y una puesta de sol a las 18:19. La calidad del aire es excelente, registrando un valor de PM2.5 de 4, lo que resulta muy favorable para caminar por la costanera. Los espacios públicos como el Parque Salguero albergan exposiciones al aire libre, destacando la muestra del concurso Buenos Aires y el Río. Para quienes aprecian el arte contemporáneo, la obra de Isidoro Valcárcel Medina regresa al centro de la escena cultural porteña con propuestas reflexivas. Asimismo, las salas de la ciudad acogen la muestra artística Coto Brus durante este mes de agosto. Conviene abrigarse adecuadamente para disfrutar de las horas de sol y la claridad característica de las tardes de invierno en el Río de la Plata.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de la Torta y el Chocolate celebra el Día del Niño con actividades en la ciudad.",
-              "lede": "Los eventos familiares ofrecen espacios gastronómicos y recreativos para los más pequeños en distintos puntos.",
-              "body": "Con la llegada de las celebraciones por el Día del Niño, Buenos Aires acoge el Festival de la Torta y el Chocolate, una propuesta culinaria que reúne a familias enteras. Las actividades se complementan con la exposición de la galería de ganadores del concurso Buenos Aires y el Río en el Parque Salguero. Las temperaturas se mantienen frescas entre 4 y 11°C, con cielos limpios y un atardecer que se adelanta a las 18:19. La calidad del aire se sitúa en un excelente nivel con 4 de PM2.5, propicio para actividades recreativas al aire libre. En el plano artístico, el centro porteño exhibe las instalaciones de Isidoro Valcárcel Medina y la muestra internacional de Coto Brus. La ciudad combina así la calidez de sus encuentros tradicionales con una sólida agenda cultural adaptada al invierno austral.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
-            },
-            {
-              "n": "03",
-              "headline": "El feriado del Paso a la Inmortalidad del General San Martín el 17 de agosto modificará los servicios.",
-              "lede": "Las oficinas públicas y bancarias cerrarán el lunes por el fin de semana largo conmemorativo.",
-              "body": "El calendario porteño se aproxima al feriado del Paso a la Inmortalidad del General José de San Martín, establecido para el lunes 17 de agosto. Esta jornada de descanso nacional implicará el cierre de oficinas gubernamentales, bancos y dependencias postales en toda la ciudad. Las condiciones meteorológicas para estos días previos muestran registros de 4 a 11°C, mañanas frías, cielos despejados y un atardecer a las 18:19. La calidad del aire permanece óptima con un índice de PM2.5 de 4. Los ciudadanos y viajeros pueden aprovechar el fin de semana largo para visitar exposiciones como la de Isidoro Valcárcel Medina o los espacios culturales del Parque Salguero. El ritmo urbano se ralentiza momentáneamente, permitiendo observar la arquitectura tradicional con la quietud propia de los días festivos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-10"
             }
           ]
         }
