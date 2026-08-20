@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-08-20T06:00:00+09:00",
+  "updated": "2026-08-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain falls across the city as the late August monsoon continues.",
+              "lede": "Temperatures hover between 23 and 24°C with 31.1mm of precipitation recorded today.",
+              "body": "Heavy rain falls across the city as the late August monsoon continues. Temperatures hover between 23 and 24°C with 31.1mm of precipitation recorded today. Sunset arrives at 19:17, casting dim grey light over wet pavement. Air quality registers as poor with PM2.5 at 29, suggesting indoor gallery visits over long walks outdoors. Travelers exchanging currency will find a rate of 1 USD to 1396 KRW at local banks. Civic discussions quietly center on urban spaces, specifically how Yongsan Park might address housing needs. Local residents navigate the wet sidewalks carefully under sturdy umbrellas. The damp air clings to old stone walls near the historic center. Quiet cafes offer dry refuge from the steady downpour.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "Indoor spaces offer quiet refuge while outdoor air quality remains poor.",
+              "lede": "PM2.5 levels reach 29 today under overcast skies and persistent rain.",
+              "body": "Indoor spaces offer quiet refuge while outdoor air quality remains poor. PM2.5 levels reach 29 today under overcast skies and persistent rain. The exchange rate holds steady at 1 USD to 1396 KRW for visiting travelers. Urban planners debate the future of Yongsan Park amidst ongoing discussions on city growth. Outside, 31.1mm of rain slickers the asphalt as daylight fades toward the 19:17 sunset. Temperatures stay mild, locked between 23 and 24°C throughout the afternoon hours. Sidewalk pedestrians move with deliberate speed beneath dark canopies. Traditional tea houses provide warmth against the damp chill. The city slows its usual brisk pace to match the heavy weather.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "Evening settles early over wet streets as sunset approaches at 19:17.",
+              "lede": "Rain totals reach 31.1mm with temperatures resting near 23 to 24°C.",
+              "body": "Evening settles early over wet streets as sunset approaches at 19:17. Rain totals reach 31.1mm with temperatures resting near 23 to 24°C. Air quality remains poor at 29 for PM2.5, keeping parks mostly empty today. Travelers exchange currency at a rate of 1 USD to 1396 KRW in commercial districts. Conversations in neighborhood tea rooms touch lightly on proposals for Yongsan Park conversion. The persistent rain washes clean the stone lanterns guarding temple courtyards. Quiet observers find solace in the steady drumming of water on tile roofs. Street lamps reflect long yellow streaks on puddles below. The damp evening brings a stillness rarely found in the bustling capital.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies stretch above the streets as late summer settles in.",
+              "lede": "Temperatures range from 24 to 30°C with moderate air quality recorded today.",
+              "body": "Overcast skies stretch above the streets as late summer settles in. Temperatures range from 24 to 30°C with moderate air quality recorded today. PM2.5 levels measure at 35 under heavy cloud cover that softens the afternoon glare. Sunset occurs at 18:24, marking an earlier end to daylight hours. Visitors exchanging currency receive 159 JPY for every 1 USD. Recent civic events bring fresh energy, including a new lululemon flagship store opening. Art enthusiasts gather for conversations with co-curators at TOKYO NODE. Meanwhile, digital explorers trace virtual routes through the City Dango area in Forza Horizon 6. The city balances quiet cultural reflection with vibrant urban developments. Sidewalks remain active despite the subdued lighting overhead.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "Cloud cover keeps the afternoon heat mild across the metropolitan districts.",
+              "lede": "The thermometer reads between 24 and 30°C with a moderate air reading.",
+              "body": "Cloud cover keeps the afternoon heat mild across the metropolitan districts. The thermometer reads between 24 and 30°C with a moderate air reading. PM2.5 stands at 35, and sunset arrives promptly at 18:24. The exchange rate rests at 1 USD to 159 JPY for arriving guests. Retail districts draw crowds for the new lululemon flagship store opening in town. Cultural spaces host thoughtful exhibitions, such as Tony Oursler's works featured at TOKYO NODE. Digital culture fans note virtual landmarks like the City Dango area in Forza Horizon 6. Quiet observers find shaded benches in neighborhood parks to watch the commuter flow. The overcast canopy provides comfortable walking weather for afternoon strolls. Evening approaches with a calm, steady rhythm.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "Daylight fades by 18:24 beneath a thick layer of grey clouds.",
+              "lede": "Temperatures hold between 24 and 30°C with PM2.5 air metrics at 35.",
+              "body": "Daylight fades by 18:24 beneath a thick layer of grey clouds. Temperatures hold between 24 and 30°C with PM2.5 air metrics at 35. Travelers exchange funds at the current rate of 1 USD to 159 JPY. The urban landscape blends commerce and art with the lululemon flagship store opening. Curators discuss contemporary installations at TOKYO NODE for interested visitors. Virtual worlds intersect with reality through features like the City Dango area in Forza Horizon 6. Moderate air quality makes outdoor walking pleasant despite the lack of direct sun. Neighborhood alleyways glow softly as lanterns turn on for the evening. Residents enjoy quiet dinners in small local eateries hidden from main avenues. The transition to night feels gentle and unhurried.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies shade the riverfront as the late summer breeze picks up.",
+              "lede": "Temperatures range from 19 to 26°C with remarkably fair air quality today.",
+              "body": "Overcast skies shade the riverfront as the late summer breeze picks up. Temperatures range from 19 to 26°C with remarkably fair air quality today. PM2.5 levels rest at a very clean 8, making walks exceptionally clear. Sunset stretches to 20:23, offering long evening hours of muted light. Travelers will find an exchange rate of 1 USD to 0.86 EUR at local institutions. Cultural life thrives as the Gulbenkian Museum reopens with its original vision restored. The city also hosts the annual Moxie Festival alongside a free street magic festival featuring 175 shows. Traditional celebrations like the Shri Ram Janmabhumi Mandir opening add further depth to community gatherings. Cobblestone streets echo softly under the grey clouds. Quiet observers linger near the Tagus to watch the tide.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "Clean coastal air moves through the historic hills under overcast skies.",
+              "lede": "PM2.5 registers at 8 with comfortable temperatures spanning 19 to 26°C.",
+              "body": "Clean coastal air moves through the historic hills under overcast skies. PM2.5 registers at 8 with comfortable temperatures spanning 19 to 26°C. Daylight lingers until the 20:23 sunset over the western horizon. Currency exchange stands at 1 USD to 0.86 EUR for visitors arriving this week. Cultural venues offer rich experiences, notably the newly reopened Gulbenkian Museum with its restored vision. Festivities fill public squares with the Moxie Festival and a grand free street magic festival boasting 175 shows. Community events mark significant milestones like the Shri Ram Janmabhumi Mandir opening. Trams rumble past old yellow facades in the damp afternoon air. Pedestrians walk at an easy pace along the Tagus embankment. The muted light brings a peaceful stillness to the ancient capital.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "Evening light lingers past the 20:23 sunset above the broad river.",
+              "lede": "Temperatures stay mild between 19 and 26°C with fair air quality.",
+              "body": "Evening light lingers past the 20:23 sunset above the broad river. Temperatures stay mild between 19 and 26°C with fair air quality. PM2.5 sits low at 8, ensuring crisp breathing during neighborhood strolls. The exchange rate holds at 1 USD to 0.86 EUR at currency exchange booths. Art lovers explore the newly renovated Gulbenkian Museum following its careful restoration. Public plazas brim with life thanks to the Moxie Festival and a free street magic festival presenting 175 shows. Cultural reflection continues with commemorations for the Shri Ram Janmabhumi Mandir opening. Overcast clouds diffuse the fading daylight across pastel rooftops. Residents gather in small squares to converse in the cooling air. The city rests quietly in the gentle grasp of late August.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-20T06:00:00+09:00",
       "cities": [
@@ -552,98 +644,6 @@
               "body": "Lisbon's No Art festival returns for its 2026 edition, while the Tribeca Festival Lisbon expands its footprint with secured programming through 2028. Cultural observers can anticipate rich cinematic and artistic offerings across various venues in the capital. These events anchor the city's vibrant creative scene as summer reaches its midpoint. Walk through the Bairro Alto or Chiado to discover pop-up galleries and independent screenings. The convergence of local tradition and new art makes this week particularly engaging for quiet explorers.",
               "source": "saudade desk",
               "source_date": "2026-08-12"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-11T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The overcast skies hold 22 to 32°C over the Han River today.",
-              "lede": "An overcast canopy softens the afternoon heat across the capital.",
-              "body": "The afternoon air sits at a warm 22 to 32°C under thick, quiet skies that obscure the late-summer sun. Sunset arrives punctually at 19:30, leaving a long, grey dusk over the stone pathways of Seoul. Air quality remains fair with a stable PM2.5 reading of 10, making outdoor walks through quiet neighborhoods comfortable despite the humidity. Travelers settling accounts will find a steady exchange rate of 1 USD to 1417 KRW across major banking networks. The city hums with a restrained, steady rhythm as residents move beneath the heavy clouds, anticipating the shift toward autumn.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "Civic spaces honor artistic heritage as autumn literary preparations begin quietly.",
-              "lede": "Exhibitions celebrate master calligraphers while cultural committees plan ahead for autumn symposia.",
-              "body": "Visitors wandering through central galleries will find Chusa Kim Jeong-hui's art and companions on prominent display, offering a profound glimpse into traditional Korean scholarship. Meanwhile, literary organizers are already looking ahead to the upcoming Seoul writers festival in September, which will explore literature and human values in the AI era. These quiet cultural currents run deep through the city's academic and artistic districts this week. Music enthusiasts are also noting the recent opening-night setlist from the aespa SYNK : COMPLæXITY tour, which has energized local venues. Alongside these events, the HUMAN MADE store has officially opened its doors, drawing curious design observers to its minimalist interior.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "Government offices prepare for closure ahead of the upcoming National Liberation Day.",
-              "lede": "Residents should finalize administrative errands before the mid-August holiday slows city services.",
-              "body": "As the calendar advances toward the approaching public holiday of 광복절 on 2026-08-17, residents and long-term travelers should plan their administrative schedules accordingly. Government offices, banks, and post offices will observe closures on the holiday, bringing a temporary pause to official transactions across the metropolis. Markets and smaller neighborhood shops may also adjust their operating hours to allow staff to observe the national day of remembrance. It is wise to complete any essential paperwork or currency exchanges early in the week to avoid mid-week delays. The brief holiday closure offers the city a rare moment of stillness before the late-summer activities resume.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Steady rain falls across the capital as temperatures cool to 21°C.",
-              "lede": "Wet streets reflect the grey evening light as 10.3mm of precipitation falls.",
-              "body": "A persistent drizzle brings 10.3mm of precipitation to the asphalt and concrete, cooling the city down to a comfortable range of 21 to 26°C. Umbrellas line the entrances of train stations and quiet neighborhood kissaten as the afternoon turns into evening. Sunset occurs at 18:36, casting a muted glow over rain-slicked pavements in districts like Ginza and Shibuya. Air quality remains remarkably clean and fair, with a low PM2.5 reading of 9 purifying the damp air. Travelers exchanging currency will note a stable rate of 1 USD to 159 JPY at local exchange counters.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "Mountain Day closures bring a quiet pause to administrative offices across the city.",
-              "lede": "Today marks a national day of appreciation for mountains, closing banks and municipal buildings.",
-              "body": "Today is 山の日 (Mountain Day), a national holiday on 2026-08-11 dedicated to celebrating and connecting with Japan's natural peaks. Because of this public holiday, government offices, municipal services, and major financial institutions are closed for the day. Public squares and parks are subdued as residents take advantage of the day off to rest indoors or visit quiet indoor galleries. Retail districts remain partially active, though routine postal and bureaucratic errands must wait until tomorrow morning. The holiday provides a gentle, reflective rhythm to a normally relentless urban landscape.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "Renovated stages and international festivals anchor Tokyo's cultural calendar today.",
-              "lede": "The recently reopened National Theatre hosts avant-garde exhibitions while global arts are celebrated.",
-              "body": "Culture lovers seeking shelter from the rain will find rich offerings in Tokyo's newly revitalized performance spaces. The RANSHOU exhibition has officially reopened the closed National Theatre with the striking FUTURE HISTORY presentation, bridging classical Japanese architecture with modern art. Meanwhile, regional cultural ties are being honored through dedicated showcases celebrating Bruneian talent at a local Tokyo arts festival. Cinematic observers are also discussing the atmospheric Tokyo Burst: Crime City presentation featured in the Fantasia International Film Festival 2026 lineup. These curated events offer thoughtful travelers plenty of indoor inspiration while the seasonal rain continues outside.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the Tagus River as afternoon temperatures reach 29°C.",
-              "lede": "A gentle coastal breeze tempers the warm August afternoon along the historic waterfront.",
-              "body": "The afternoon temperature moves between 21 and 29°C under a canopy of partly cloudy skies that soften the intense Iberian sun. Sunset arrives at 20:36, casting long golden shadows over the cobbled alleys of Alfama and the limestone plazas of Baixa. Air quality remains exceptionally clear and fair, registering a low PM2.5 level of 4 across the metropolitan area. Visitors managing travel funds will find an exchange rate of 1 USD to 0.87 EUR available at local financial institutions. The pleasant weather invites long, unhurried strolls past river viewpoints as the day slowly gives way to a breezy evening.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "Cultural festivals and sporting fixtures prepare the capital for a lively late summer.",
-              "lede": "Tribeca Festival Lisbon secures its long-term future while local sports fixtures draw crowds.",
-              "body": "Lisbon's cultural footprint continues to expand with the recent announcement that the Tribeca Festival Lisbon is securing its future through 2028, promising years of rich cinematic storytelling ahead. Sports enthusiasts are also noting the upcoming match between SL Benfica and CF Belenenses at the Rugby Park Lisbon, which promises a spirited afternoon for local fans. Meanwhile, urban planners are looking further ahead to 2028, when a giant London-style food market will open in the heart of the city following successful precedents in Lisbon and New York. These developments blend the city's historic charm with modern international ambitions, creating a dynamic environment for returning travelers.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "Preparations begin for the upcoming Assumption of Our Lady public holiday closures.",
-              "lede": "Government services and banks will pause operations later this week for Assunção de Nossa Senhora.",
-              "body": "With the public holiday of Assunção de Nossa Senhora approaching on 2026-08-15, residents are gently reminded to complete their administrative and banking tasks early in the week. Government offices, post offices, and major financial branches will close in observance of the holiday, shifting the city's pace into a relaxed weekend rhythm. Many local families use this mid-August window to visit nearby coastal retreats, such as the popular Salina Splash water park which reopened just 30 minutes from Lisbon with slides and pools for all ages. Travelers should anticipate modified public transport schedules and quieter neighborhood streets as the city embraces the holiday spirit.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
             }
           ]
         }
