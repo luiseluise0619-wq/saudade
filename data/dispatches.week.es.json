@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-20T06:00:00+09:00",
+  "updated": "2026-08-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cambio oficial sitúa el euro en 0.86 dólares estadounidenses en la capital.",
+              "lede": "Los mercados de divisas marcan una estabilidad clara en las transacciones de esta semana de agosto.",
+              "body": "Los viajeros que visitan la ciudad durante estas jornadas estivales encuentran un tipo de cambio estable fijado en 1 USD equivalente a 0.86 EUR. Esta cotización facilita la planificación de los gastos cotidianos en los comercios locales y librerías del centro histórico. Conviene revisar las tarjetas y métodos de pago habituales antes de iniciar las rutas urbanas por los barrios tradicionales. La actividad comercial mantiene sus horarios habituales a pesar del calor característico de finales de agosto en la meseta central.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Anfibia convoca obras audiovisuales en su nueva edición internacional.",
+              "lede": "La creación contemporánea encuentra espacios de difusión cultural en diversos centros madrileños.",
+              "body": "La convocatoria internacional del V Festival Anfibia atrae estos días a creadores y realizadores de diferentes procedencias geográficas. Las proyecciones y encuentros fomentan la reflexión sobre las narrativas visuales en los espacios culturales adscritos al certamen. Los espectadores pueden consultar la programación detallada en los canales oficiales del evento para planificar sus visitas vespertinas. Esta cita consolida a la ciudad como un punto de encuentro relevante para el cine documental y experimental durante el periodo estival.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "Tres escapadas cercanas ofrecen refugio natural a finales de agosto.",
+              "lede": "Los entornos naturales próximos a la región permiten huir del asfalto urbano en pocas horas.",
+              "body": "Las rutas hacia la sierra y los pueblos circundantes se presentan como alternativas idóneas para los días de mayor intensidad térmica. Los itinerarios propuestos recientemente invitan a descubrir parajes de gran valor paisajístico a escasa distancia del núcleo urbano. Se recomienda salir temprano por la mañana para aprovechar las horas de menor radiación solar en los senderos forestales. Estas opciones de turismo de proximidad combinan patrimonio histórico, arquitectura tradicional y tranquilidad absoluta para el viajero observador.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La temperatura oscila entre 23 y 30°C con tormentas y granizo ocasional.",
+              "lede": "El cielo barcelonés registra 13.8mm de precipitación y el atardecer se fija a las 20:42.",
+              "body": "El ambiente en la ciudad se mantiene húmedo y variable tras los episodios de lluvia y tormenta que han dejado 13.8mm de precipitación acumulada. Con una calidad del aire evaluada como fair y un nivel de PM2.5 en 13, los paseos matinales siguen siendo recomendables antes de que el termómetro alcance los 30°C máximos. La puesta de sol ocurre puntualmente a las 20:42, otorgando una tregua lumínica muy apreciada en los paseos marítimos y plazas arboladas. Se aconseja llevar paraguas ligero y calzado adecuado para transitar por las aceras mojadas tras las precipitaciones recientes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "Nueve parques con sombra ofrecen refugio frente al calor estival barcelonés.",
+              "lede": "Los espacios verdes de la ciudad garantizan estancias frescas ideales para familias y lectores.",
+              "body": "La red de parques urbanos con densa vegetación proporciona el resguardo necesario durante las horas centrales del día en Barcelona. Estos nueve enclaves seleccionados destacan por sus grandes copas de árboles y fuentes ornamentales en funcionamiento continuo. Los visitantes encuentran en ellos un silencio relativo y una temperatura más amable para descansar o pasear con niños pequeños. Conviene recordar que el acceso a estos recintos públicos es libre durante todo el horario diurno establecido por la administración local.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival de Música Antiga dels Pirineus concluye su decimoquinta edición.",
+              "lede": "La clausura del certamen musical cierra un ciclo de conciertos en enclaves patrimoniales únicos.",
+              "body": "El prestigioso Festival de Música Antiga dels Pirineus [FeMAP] pone fin a las celebraciones de su 15.º aniversario tras semanas de actuaciones memorables. Los conciertos han recorrido iglesias románicas y pequeños auditorios pirenaicos, atrayendo a numerosos aficionados al repertorio histórico. Aunque el grueso de la programación finaliza, el impacto cultural perdura en las comunidades locales que han acogido los recitales. Los viajeros interesados en la música antigua ya pueden aguardar los anuncios de la próxima convocatoria para el año venidero.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cielo porteño permanece nublado con temperaturas entre 6 y 12°C.",
+              "lede": "La tarde se despide a las 18:27 en una jornada de calidad del aire moderada.",
+              "body": "El clima de la capital argentina se mantiene fresco y cubierto, con valores térmicos que se mueven entre los 6°C mínimos y los 12°C máximos. La calidad del aire se registra como moderate, con un índice de PM2.5 situado en 12 que invita a recorrer las avenidas arboladas con abrigo ligero. La caída del sol se produce a las 18:27, marcando el inicio paulatino de la actividad en los teatros y salas culturales de la metrópoli. Las condiciones meteorológicas actuales resultan sumamente propicias para disfrutar de largas caminatas urbanas sin agobios térmicos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Llegás ocupa 10 salas teatrales con entradas a mitad de precio.",
+              "lede": "Más de 50 obras conforman la programación escénica que anima las noches porteñas.",
+              "body": "La vuelta del Festival Llegás trae consigo una propuesta excepcional para los amantes de las artes escénicas en Buenos Aires. Un total de 10 salas teatrales independientes abren sus puertas para albergar más de 50 obras con localidades a mitad de precio. Esta iniciativa fomenta el acceso democrático a la cultura y revitaliza el circuito artístico de los barrios durante esta semana. Se recomienda adquirir las localidades con antelación a través de los canales habilitados debido a la alta demanda del público local y viajero.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival de Cine Tailandés ofrece funciones gratuitas en Atlas Cines Alcorta.",
+              "lede": "Cuatro días de proyecciones descubren el cine contemporáneo de Tailandia en la cartelera.",
+              "body": "La programación completa del Festival de Cine Tailandés en Buenos Aires se desarrolla con entrada libre en las salas de Atlas Cines Alcorta. Este ciclo especial de 4 días constituye una oportunidad única para descubrir producciones cinematográficas contemporáneas poco habituales en las pantallas comerciales de la región. Los cinéfilos pueden consultar los horarios de las funciones matutinas y vespertinas en la entrada principal del complejo comercial. La iniciativa enriquece la oferta cultural internacional de la ciudad con propuestas estéticas diversas y lejanas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-20T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La llegada del Paso a la Inmortalidad del General José de San Martín el 2026-08-17 modificará la dinámica habitual de la próxima semana. Las oficinas públicas, los bancos y las dependencias administrativas cerrarán sus puertas durante dicha jornada conmemorativa. Conviene anticipar cualquier trámite burocrático o cambio de divisas antes de la pausa oficial del fin de semana largo. El transporte público funcionará con las frecuencias reducidas aplicadas habitualmente en días feriados nacionales. La ciudad se prepara para un periodo de menor actividad institucional y mayor descanso en los barrios residenciales.",
               "source": "saudade desk",
               "source_date": "2026-08-13"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-11T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Delegación del Gobierno aconseja limitar el acceso a Guadarrama por el eclipse.",
-              "lede": "Las autoridades piden precaución en la sierra madrileña ante la afluencia prevista para este fenómeno celeste.",
-              "body": "Los espacios naturales protegidos de la Cuenca Alta del Manzanares y la sierra de Guadarrama concentran las recomendaciones oficiales para evitar aglomeraciones innecesarias. Conviene planificar el desplazamiento con antelación si busca un mirador despejado en los parques periféricos de la capital. Los centros culturales y las terrazas elevadas preparan actividades especiales para seguir el tránsito astronómico sin alterar la rutina urbana. El tipo de cambio actual se sitúa en 1 USD frente a 0.87 EUR para quienes realicen transacciones financieras esta semana. Conviene recordar que el próximo 2026-08-15 se celebra la festividad de Asunción, lo que afectará al horario habitual de oficinas públicas y entidades bancarias.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición sobre el Madrid de la posguerra abre sus puertas al público.",
-              "lede": "El archivo municipal repasa el crecimiento urbanístico y social de la capital entre 1940 y 1985.",
-              "body": "La muestra temporal titulada Madrid en construcción, 1940-1985 examina los cambios arquitectónicos que transformaron la fisonomía de los barrios periféricos y el centro histórico durante décadas clave. Las salas expositivas permiten observar planos inéditos, fotografías de época y documentos oficiales que detallan la expansión metropolitana. Es un recorrido sosegado por la memoria urbana que complementa la agenda cultural de la ciudad junto a propuestas como el diálogo artístico organizado por Afundación. La visita requiere una pausa prolongada para apreciar el detalle de los materiales cartográficos expuestos. Las instituciones recuerdan la vigencia de los horarios estivales en museos y galerías durante todo este mes de agosto.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "El arte contemporáneo dialogue con el archivo en la Colección Afundación.",
-              "lede": "Un recorrido que vincula la creación actual con los fondos históricos del MAC.",
-              "body": "La exposición EL DEBER DE LO NUEVO propone una lectura rigurosa sobre la evolución de las formas plásticas y su persistencia en el imaginario colectivo actual. Las salas madrileñas acogen esta selección de piezas que examinan la modernidad desde una perspectiva crítica y reflexiva. La visita permite comprender mejor los nexos entre diferentes generaciones de creadores peninsulares y gallegos. Los visitantes encontrarán en este espacio un refugio fresco frente a las altas temperaturas veraniegas de la capital. Recuerde que el 2026-08-15 será jornada festiva nacional por la Asunción, por lo que conviene verificar la apertura de centros privados y recintos expositivos antes de desplazarse.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La ciudad registra 24–31°C con cielos cubiertos y escasas precipitaciones.",
-              "lede": "El ambiente se mantiene cálido pero contenido bajo una capa de nubes que suaviza la luz del atardecer.",
-              "body": "Los termómetros se mueven hoy entre 24 y 31°C en una jornada caracterizada por la estabilidad atmosférica y una precipitación casi nula de 0.2mm. La calidad del aire se califica como fair con un registro de PM2.5 de 8, lo que favorece los paseos largos por el litoral y los parques urbanos. El sol se ocultará a las 20:56, ofreciendo un crepúsculo prolongado sobre el frente marítimo barcelonés. El tipo de cambio actual se mantiene estable en 1 USD por 0.87 EUR para los visitantes extranjeros. Conviene tener presente que la festividad de Asunción llegará el próximo 2026-08-15, modificando los servicios administrativos habituales en toda Cataluña.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "El Sant Pau Festival ofrece música de cámara en el recinto modernista.",
-              "lede": "Seis conciertos exclusivos llenan de acordes clásicos los patios y naves del antiguo hospital.",
-              "body": "El conjunto arquitectónico de Sant Pau acoge esta nueva edición musical que consolida su programación cultural de verano con propuestas de alta calidad acústica. Las actuaciones de cámara aprovechan la sobriedad y la belleza ornamental de los espacios diseñados por Domènech i Montaner. Este ciclo forma parte de la amplia oferta estival de la ciudad, que este año también incluye el cierre del exitoso Grec Festival y el balance de grandes convocatorias como el Brunch Electronik Festival, que reunió recientemente a 65000 asistentes. La experiencia combina la contemplación patrimonial con la escucha atenta en las horas vespertinas. Se recomienda adquirir las localidades con antelación debido al aforo limitado de los espacios interiores.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "La oferta hotelera de lujo se amplía con la apertura de BLESS Barcelona.",
-              "lede": "Palladium consolida su estrategia en el segmento exclusivo con un nuevo establecimiento en la ciudad.",
-              "body": "La inauguración de BLESS Barcelona refuerza la presencia de marcas hoteleras de alta gama en zonas neurálgicas de la trama urbana catalana. Este proyecto forma parte de la expansión internacional del grupo Palladium, enfocada en la experiencia de diseño y el servicio personalizado. La llegada de este tipo de infraestructuras modifica sutilmente el pulso comercial y hostelero de los ejes donde se ubican. Los viajeros que valoren la arquitectura interior y la restauración de autor encontrarán en este espacio un nuevo referente local. Las previsiones meteorológicas y el calendario laboral siguen condicionados por la cercanía del 2026-08-15, fecha en la que se conmemora la Asunción en todo el territorio nacional.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Centro Cultural Recoleta expone la obra conceptual de Isidoro Valcárcel Medina.",
-              "lede": "La muestra explora la dimensión del tiempo como materia artística en el espacio público y museístico.",
-              "body": "Bajo el título El tiempo como material, la retrospectiva invita a repensar los ritmos cotidianos y la acción creativa mediante instalaciones minimalistas. Las salas del centro cultural ofrecen un recorrido riguroso por la trayectoria de este referente del arte conceptual español. Es una propuesta idónea para los días frescos de agosto, permitiendo una contemplación sosegada lejos del bullicio exterior. El termómetro marca hoy entre 8 y 10°C bajo cielos completamente cubiertos que invitan a refugio en los museos de la ciudad. La calidad del aire es buena, con un índice de PM2.5 de 9. El sol se pondrá puntualmente a las 18:20, cerrando una jornada apacible en los cafés tradicionales del barrio.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "02",
-              "headline": "Parque Salguero muestra las propuestas ganadoras del concurso Buenos Aires y el Río.",
-              "lede": "La Galería de Ganadores expone los proyectos arquitectónicos para reinterpretar la relación urbana con la costa.",
-              "body": "La muestra instalada en el espacio de Parque Salguero detalla las ideas seleccionadas para integrar la ribera en la dinámica cotidiana de la capital. Los paneles exponen maquetas, planos y memorias descriptivas enfocadas en la recuperación paisajística y ecológica del frente fluvial. Es una visita de gran interés para quienes siguen de cerca el urbanismo contemporáneo y el diseño de espacios públicos accesibles. Las temperaturas invernales, oscilantes entre 8 y 10°C, acompañan los recorridos al aire libre por los parques ribereños durante las horas centrales del día. El atardecer llegará a las 18:20, marcando el descenso térmico nocturno en toda la franja metropolitana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
-            },
-            {
-              "n": "03",
-              "headline": "Se prepara el Festival de la Torta y el Chocolate para celebrar el Día del Niño.",
-              "lede": "Los barrios porteños se preparan para acoger encuentros gastronómicos y actividades familiares este fin de semana.",
-              "body": "Las propuestas dedicadas a la repostería artesanal y el cacao ocupan la agenda de ocio familiar en previsión de las celebraciones infantiles de mediados de agosto. El evento reúne a maestros pasteleros locales en espacios habilitados para la ocasión, facilitando el acceso peatonal desde diversos puntos de la red de transporte. El cielo cubierto y los registros de 8 a 10°C configuran el telón de fondo meteorológico ideal para disfrutar de productos elaborados y calientes. Conviene anotar que el próximo 2026-08-17 se conmemorará el Paso a la Inmortalidad del General José de San Martín, festividad que trasladará el descanso oficial y alterará los horarios comerciales y bancarios habituales de la próxima semana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-11"
             }
           ]
         }
