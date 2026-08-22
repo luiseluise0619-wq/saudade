@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-21T06:00:00+09:00",
+  "updated": "2026-08-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Ayuntamiento remodela el parque de Canillejas para el disfrute vecinal.",
+              "lede": "Los espacios verdes del distrito estrenan mejoras estructurales este verano.",
+              "body": "El Ayuntamiento de Madrid ha completado la intervención en el parque de Canillejas dentro de las recientes obras de mejora urbana. La remodelación devuelve al vecindario un espacio renovado para el paseo matutino y el descanso bajo los árboles. Las actuaciones han priorizado la accesibilidad peatonal y la plantación de nuevas especies vegetales adaptadas al clima local. Es un buen momento para redescubrir este rincón periférico antes de que comience el curso escolar. Los residentes locales ya disfrutan de los senderos rehabilitados y las nuevas zonas de sombra. La intervención forma parte del plan municipal de puesta en valor de los parques históricos de los barrios.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "02",
+              "headline": "El Retiro acoge el festival de títeres durante esta semana estival.",
+              "lede": "La programación cultural incluye funciones al aire libre para todos los públicos.",
+              "body": "El parque de El Retiro mantiene su oferta cultural de agosto con el tradicional festival de títeres en sus paseos históricos. Las actuaciones se suceden durante las tardes para aprovechar la bajada de temperaturas al caer el sol. Es recomendable consultar los horarios oficiales en los puntos de información del recinto antes de asistir. Este evento coincide con las fiestas de San Sebastián de los Reyes en la región, ofreciendo múltiples alternativas de ocio. Las familias madrileñas aprovechan los fines de semana para pasear entre los escenarios montados junto a los monumentos. La entrada a todas las funciones sigue siendo gratuita.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "03",
+              "headline": "El Gran Festival Musical de los Pueblos Ibéricos anima las calles.",
+              "lede": "La música tradicional y contemporánea resuena en varios escenarios urbanos.",
+              "body": "La agenda cultural madrileña destaca estos días por la celebración del Gran Festival Musical de los Pueblos Ibéricos. Este encuentro reúne a formaciones de diferentes regiones para mostrar la riqueza sonora de la península. Los conciertos se reparten por plazas y auditorios al aire libre facilitando el acceso gratuito a madrileños y visitantes. La tasa de cambio actual de 1 USD a 0.85 EUR favorece las compras de los viajeros internacionales que acuden a los espectáculos. Los asistentes pueden disfrutar de propuestas acústicas variadas mientras recorren el centro histórico a pie. Las jornadas musicales se extienden hasta bien entrada la noche.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra temperaturas entre 23 y 30°C con cielos nubosos.",
+              "lede": "La puesta de sol se fija a las 20:39 con una calidad de aire favorable.",
+              "body": "La jornada dominical en Barcelona discurre con termómetros que se mueven entre 23 y 30°C y un panorama parcialmente nuboso. El indicador de PM2.5 se sitúa en 5, lo que garantiza una calidad de aire excelente para pasear al aire libre. La puesta de sol está prevista para las 20:39, alargando las horas de luz vespertina en el litoral y los paseos marítimos. Estas condiciones meteorológicas resultan idóneas para recorrer los barrios de la ciudad sin agobios térmicos excesivos. Los visitantes encontrarán terrazas abiertas y una atmósfera tranquila en las calles secundarias del casco antiguo. El tipo de cambio oficial se mantiene estable en 1 USD equivalente a 0.85 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "02",
+              "headline": "Los parques con sombra ofrecen refugio frente al calor estival.",
+              "lede": "Nueve espacios arbolados destacan como los mejores lugares para familias.",
+              "body": "Los espacios verdes de Barcelona con abundante arbolado se convierten en el mejor destino para escapar de las horas centrales del día. Los nueve parques principales seleccionados por su densidad de sombra garantizan un respiro fresco para quienes viajan con niños. Entre ellos destacan los recintos históricos del Eixample y las zonas ajardinadas cercanas a la montaña de Montjuïc. Los bancos de piedra bajo los tilos y plataneros invitan a la lectura sosegada y la pausa meditativa. Decathlon ha consolidado además su presencia comercial en el corazón del Eixample para cualquier imprevisto de equipamiento deportivo. Los senderos ajardinados se mantienen limpios y bien señalizados durante todo el mes de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "03",
+              "headline": "La agenda cultural anticipa ciclos de cine coreano y novela negra.",
+              "lede": "El festival Cubelles Noir y las proyecciones especiales marcan el otoño.",
+              "body": "La programación cultural barcelonesa empieza a desvelar sus grandes citas para las próximas semanas del final del verano. La escritora y cineasta Roció Juárez inaugurará próximamente el Festival de Novela Negra Cubelles Noir en la provincia. Asimismo, la ciudad se prepara para recibir en septiembre un ciclo monográfico dedicado al cine coreano con la presencia de directores destacados. Estas iniciativas consolidan el papel de Barcelona como punto de encuentro para creadores internacionales de diversas disciplinas. Las librerías independientes y los centros cívicos ya exponen los programas de mano de ambos eventos. La vida cultural barcelonesa recupera paulatinamente su pulso habitual tras el paréntesis central de agosto.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires amanece con un clima fresco entre 5 y 12°C y cielos cubiertos.",
+              "lede": "La puesta de sol llega a las 18:28 con un aire puro y limpio.",
+              "body": "El termómetro porteño oscila hoy entre los 5 y los 12°C bajo un cielo completamente cubierto que marca el compás de la jornada invernal. Los niveles de PM2.5 se mantienen en 5, reflejando una excelente calidad del aire en los distintos barrios de la capital. La puesta de sol se producirá puntualmente a las 18:28, cerrando una tarde propicia para caminar por avenidas arboladas. El abrigo ligero resulta indispensable para quienes decidan recorrer a pie las calles de San Telmo o Palermo. Estas temperaturas invitan a refugiarse en cafés históricos y librerías tradicionales del centro. El clima acompaña las actividades culturales que colman la agenda de la metrópoli.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival y Mundial de Tango llena las calles con música porteña.",
+              "lede": "Milongas callejeras y certámenes internacionales convocan a bailarines de todo el mundo.",
+              "body": "La ciudad vibra intensamente estos días gracias a la celebración de una nueva edición del Festival y Mundial de Tango. Las milongas abiertas, los conciertos en auditorios y las rondas clasificatorias se multiplican por centros culturales y espacios públicos. Bailarines profesionales y aficionados convergen en las pistas para mantener viva la gran tradición rioplatense. Las teterías y cafés cercanos a las sedes del evento reciben a un público entusiasta que busca resguardarse del frío exterior. Este acontecimiento anual reafirma a Buenos Aires como la capital mundial indiscutible del género. La programación diaria incluye clases magistrales y presentaciones de libros especializados en la historia tanguera.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            },
+            {
+              "n": "03",
+              "headline": "La cartelera cultural anuncia la llegada del Mubi Fest para octubre.",
+              "lede": "El cine independiente prepara su desembarco en las salas de la ciudad.",
+              "body": "Mientras el mundial de tango acapara la atención inmediata, la ciudad ya programa los grandes eventos de los próximos meses. Una nueva edición del Mubi Fest Buenos Aires ha confirmado su celebración del 22 al 25 de octubre, atrayendo a cinéfilos y creadores. Las salas independientes de la ciudad seleccionan lo mejor del cine de autor contemporáneo para proyectarlo durante esas jornadas. Esta anticipación permite a los viajeros planificar sus visitas culturales con tranquilidad y criterio estético. La oferta cinematográfica complementa el rico tejido de galerías de arte y museos abiertos durante todo el año. Buenos Aires demuestra así su capacidad constante para reinventar su pulso artístico estacional.",
+              "source": "saudade desk",
+              "source_date": "2026-08-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-21T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La ciudad se prepara para acoger el mayor festival de tango del mundo a partir del 19 de agosto. Más de 50 sedes repartidas por los barrios albergarán conciertos, milongas y clases magistrales. Paralelamente, los proyectos urbanísticos avanzan en la planificación de un nuevo barrio con costa y rambla. La Orquesta del Plata afina sus repertorios para las actuaciones inaugurales de la próxima semana. El pulso tanguero comienza a sentirse en cada rincón de la cultura porteña.",
               "source": "saudade desk",
               "source_date": "2026-08-14"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-13T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El parque forestal de Valdebebas acoge la observación del eclipse solar histórico.",
-              "lede": "Los espacios verdes de la ciudad se llenan de observadores para un acontecimiento astronómico único.",
-              "body": "El parque forestal de Valdebebas - Felipe VI de Madrid se llena de gente para disfrutar el eclipse en este acontecimiento histórico. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 12. Es conveniente buscar zonas despejadas en miradores y parques urbanos para seguir el fenómeno de forma segura. La Comunidad de Madrid celebra además en Buitrago del Lozoya un festival con actividades divulgativas, educativas y culturales con motivo del eclipse solar. Los viajeros encontrarán una ciudad volcada en la divulgación científica y el uso pausado de sus grandes pulmones verdes durante estas jornadas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "02",
-              "headline": "La EMVS amplía su atención mediante un modelo de gestión directa de incidencias.",
-              "lede": "La administración local mejora la resolución de avisos cotidianos para los residentes madrileños.",
-              "body": "EMVS Madrid amplía la atención a sus inquilinos mediante un modelo integral de gestión directa de incidencias. Esta medida optimiza la respuesta en los barrios y simplifica los trámites administrativos diarios. El tipo de cambio actual se sitúa en 1 USD frente a 0.87 EUR para las transacciones internacionales de los visitantes. Los paseos por el centro urbano transcurren con la calma habitual del mes de agosto mientras los servicios municipales continúan operativos. Conviene revisar las agendas locales para conocer los horarios específicos de los centros culturales durante estas semanas de menor intensidad urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "03",
-              "headline": "Las oficinas públicas cierran el 2026-08-15 por la festividad de Asunción.",
-              "lede": "El calendario festivo nacional modifica los horarios habituales de bancos y oficinas en la capital.",
-              "body": "Ante la llegada de la festividad de Asunción prevista para el 2026-08-15, la actividad institucional experimentará un parón temporal. Las oficinas gubernamentales, entidades bancarias y las sucursales de correos permanecerán cerradas durante la jornada festiva. Los visitantes deben planificar sus gestiones financieras y compras con antelación para evitar inconvenientes en los establecimientos comerciales tradicionales. Las calles del casco histórico reducen su ritmo habitual y ofrecen un escenario propicio para la lectura y el paseo silencioso. El transporte público funcionará con los horarios propios de los días festivos en toda la red metropolitana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo cubierto acompaña los paseos urbanos con temperaturas de 25 a 33°C.",
-              "lede": "El ambiente veraniego se suaviza bajo una capa de nubes mientras la puesta de sol llega a las 20:53.",
-              "body": "El termómetro se mueve entre 25 y 33°C en una jornada de cielos cubiertos y luz difusa en la capital catalana. La calidad del aire se sitúa en niveles justos con un índice PM2.5 de 9. La puesta de sol se producirá a las 20:53, alargando la tarde en los paseos marítimos y las plazas del Eixample. Wizz Air adelanta la apertura de su base en Santiago e inaugurará nuevas rutas con Madrid y Barcelona, facilitando la llegada de nuevos viajeros. El tipo de cambio oficial se mantiene en 1 USD por 0.87 EUR para los pagos en moneda extranjera. Las condiciones meteorológicas invitan a recorrer la ciudad sin prisas y disfrutar de la brisa marina.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "02",
-              "headline": "El Born y el parque de Pegaso incorporan nuevos sistemas de vigilancia.",
-              "lede": "El espacio público refuerza su observación patrimonial mediante cámaras en enclaves emblemáticos.",
-              "body": "El Born, los búnkeres del Carmel y el parque de Pegaso son nuevos espacios que Barcelona vigila con cámaras para proteger el patrimonio y la convivencia. Estas medidas buscan preservar los entornos ajardinados y los restos históricos de la masificación desordenada. En el plano cultural, la agenda destaca la exposición que recuerda los globos, dirigibles o aeroplanos que surcaban el cielo de Barcelona el siglo pasado. Asimismo, el Sant Pau Festival 2026 ofrece seis conciertos de música de cámara en Barcelona en un recinto modernista excepcional. La combinación de historia aeronáutica y música clásica define la oferta cultural de estos días estivales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "03",
-              "headline": "La festividad de Asunción del 2026-08-15 altera los servicios administrativos.",
-              "lede": "El calendario laboral afecta a la apertura de oficinas y comercios locales en Cataluña.",
-              "body": "Con motivo de la festividad de Asunción el 2026-08-15, la actividad oficial de la ciudad experimentará interrupciones puntuales. Las oficinas de la administración pública, las sucursales bancarias y los servicios postales permanecerán cerrados durante toda la jornada. Los mercados municipales y comercios de barrio adaptarán sus horarios o suspenderán la apertura según cada distrito. Es recomendable consultar las restricciones de movilidad y la disponibilidad de los transportes metropolitanos de cara al fin de semana festivo. La ciudad adopta el silencio propio de las grandes festividades estivales, ideal para observadores tranquilos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Una ligera llovizna marca el pulso urbano con temperaturas de 7 a 11°C.",
-              "lede": "El invierno porteño se muestra fresco y húmedo con un registro pluviométrico de 0.3mm al caer la tarde.",
-              "body": "El clima de la jornada registra temperaturas entre 7 y 11°C acompañadas de 0.3mm de precipitación en forma de llovizna ligera. La puesta de sol se registrará puntualmente a las 18:21, acortando las horas de luz natural en las calles arboladas. La calidad del aire se mantiene en parámetros justos con un nivel de PM2.5 de 13 en las estaciones de medición. Las veredas húmedas y el cielo gris invitan a refugiarse en los cafés tradicionales de San Telmo y Recoleta. Los transeúntes caminan abrigados mientras observan la llovizna caer sobre las cúpulas de la avenida de Mayo.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "02",
-              "headline": "Los espacios verdes reducen el tránsito peatonal debido al clima invernal.",
-              "lede": "Los parques y plazas de la ciudad adoptan la quietud característica de las jornadas húmedas de agosto.",
-              "body": "Los Bosques de Palermo y el Jardín Botánico muestran senderos despejados y una atmósfera de absoluto sosiego bajo la fina llovizna. La humedad ambiental realza el aroma a tierra mojada y eucaliptos en los grandes pulmones verdes de la capital. Los visitantes aprovechan para recorrer los museos y librerías del centro en busca de refugio contra el viento fresco del río. La ciudad fluye con un compás pausado donde el compás de los colectivos marca el ritmo diario. Es una semana excelente para observar la arquitectura porteña desde el interior de los cafés notables.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
-            },
-            {
-              "n": "03",
-              "headline": "Se aproxima el feriado del Paso a la Inmortalidad del General José de San Martín.",
-              "lede": "El calendario nacional anuncia un fin de semana largo para los próximos días en el país.",
-              "body": "La llegada del Paso a la Inmortalidad del General José de San Martín el 2026-08-17 modificará la dinámica habitual de la próxima semana. Las oficinas públicas, los bancos y las dependencias administrativas cerrarán sus puertas durante dicha jornada conmemorativa. Conviene anticipar cualquier trámite burocrático o cambio de divisas antes de la pausa oficial del fin de semana largo. El transporte público funcionará con las frecuencias reducidas aplicadas habitualmente en días feriados nacionales. La ciudad se prepara para un periodo de menor actividad institucional y mayor descanso en los barrios residenciales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-13"
             }
           ]
         }
