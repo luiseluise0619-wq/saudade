@@ -1,95 +1,95 @@
 {
   "edition": "en",
-  "filed_at": "2026-08-21T06:00:00+09:00",
-  "next_filing": "2026-08-21T21:00:00+00:00",
+  "filed_at": "2026-08-24T06:00:00+09:00",
+  "next_filing": "2026-08-24T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "SEOUL",
+      "city": "Seoul",
       "items": [
         {
           "n": "01",
-          "headline": "Heavy rain falls across the city as the late August monsoon continues.",
-          "lede": "Temperatures hover between 23 and 24°C with 31.1mm of precipitation recorded today.",
-          "body": "Heavy rain falls across the city as the late August monsoon continues. Temperatures hover between 23 and 24°C with 31.1mm of precipitation recorded today. Sunset arrives at 19:17, casting dim grey light over wet pavement. Air quality registers as poor with PM2.5 at 29, suggesting indoor gallery visits over long walks outdoors. Travelers exchanging currency will find a rate of 1 USD to 1396 KRW at local banks. Civic discussions quietly center on urban spaces, specifically how Yongsan Park might address housing needs. Local residents navigate the wet sidewalks carefully under sturdy umbrellas. The damp air clings to old stone walls near the historic center. Quiet cafes offer dry refuge from the steady downpour.",
+          "headline": "Clear evening skies settle over the Han River as summer wanes.",
+          "lede": "Temperatures span 23 to 32°C under mainly clear skies, with the sun setting precisely at 19:13.",
+          "body": "The late August air holds a moderate stillness, registering a PM2.5 reading of 42. It is a quiet time to walk the perimeter of Yongsan Park, where recent planning discussions hint at long-term shifts in the urban landscape after decades of consensus. Meanwhile, currency markets trade steadily at 1384 KRW per USD. Evening walkers will find the riverbanks clear and inviting as dusk arrives.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "02",
-          "headline": "Indoor spaces offer quiet refuge while outdoor air quality remains poor.",
-          "lede": "PM2.5 levels reach 29 today under overcast skies and persistent rain.",
-          "body": "Indoor spaces offer quiet refuge while outdoor air quality remains poor. PM2.5 levels reach 29 today under overcast skies and persistent rain. The exchange rate holds steady at 1 USD to 1396 KRW for visiting travelers. Urban planners debate the future of Yongsan Park amidst ongoing discussions on city growth. Outside, 31.1mm of rain slickers the asphalt as daylight fades toward the 19:17 sunset. Temperatures stay mild, locked between 23 and 24°C throughout the afternoon hours. Sidewalk pedestrians move with deliberate speed beneath dark canopies. Traditional tea houses provide warmth against the damp chill. The city slows its usual brisk pace to match the heavy weather.",
+          "headline": "A new design outpost opens its doors in the capital.",
+          "lede": "Palace Skateboards unveils its third Seoul store this week alongside an exclusive regional capsule collection.",
+          "body": "Retail corridors in the city center welcome the new storefront as urban exploration continues to intersect with contemporary street culture. Visitors navigating the commercial districts will note the steady exchange rate of 1384 KRW to the USD. The clear evening weather, peaking at 32°C earlier in the afternoon, makes late-afternoon strolls between neighborhood boutiques particularly pleasant before the 19:13 sunset.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "03",
-          "headline": "Evening settles early over wet streets as sunset approaches at 19:17.",
-          "lede": "Rain totals reach 31.1mm with temperatures resting near 23 to 24°C.",
-          "body": "Evening settles early over wet streets as sunset approaches at 19:17. Rain totals reach 31.1mm with temperatures resting near 23 to 24°C. Air quality remains poor at 29 for PM2.5, keeping parks mostly empty today. Travelers exchange currency at a rate of 1 USD to 1396 KRW in commercial districts. Conversations in neighborhood tea rooms touch lightly on proposals for Yongsan Park conversion. The persistent rain washes clean the stone lanterns guarding temple courtyards. Quiet observers find solace in the steady drumming of water on tile roofs. Street lamps reflect long yellow streaks on puddles below. The damp evening brings a stillness rarely found in the bustling capital.",
+          "headline": "Civic infrastructure expands to connect local medical networks abroad.",
+          "lede": "Seoul bridges local medical providers with international buyers in a quiet push for global healthcare exchange.",
+          "body": "City administrators continue to foster international ties, linking domestic clinics with overseas partners in an effort to broaden regional health services. Amid these institutional developments, the daily environment remains calm under moderate air quality with a PM2.5 level of 42. Temperatures hover between 23 and 32°C. Currency exchange remains stable at 1384 KRW per USD, supporting smooth transactions for visiting professionals and residents alike.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         }
       ]
     },
     {
-      "city": "TOKYO",
+      "city": "Tokyo",
       "items": [
         {
           "n": "01",
-          "headline": "Overcast skies stretch above the streets as late summer settles in.",
-          "lede": "Temperatures range from 24 to 30°C with moderate air quality recorded today.",
-          "body": "Overcast skies stretch above the streets as late summer settles in. Temperatures range from 24 to 30°C with moderate air quality recorded today. PM2.5 levels measure at 35 under heavy cloud cover that softens the afternoon glare. Sunset occurs at 18:24, marking an earlier end to daylight hours. Visitors exchanging currency receive 159 JPY for every 1 USD. Recent civic events bring fresh energy, including a new lululemon flagship store opening. Art enthusiasts gather for conversations with co-curators at TOKYO NODE. Meanwhile, digital explorers trace virtual routes through the City Dango area in Forza Horizon 6. The city balances quiet cultural reflection with vibrant urban developments. Sidewalks remain active despite the subdued lighting overhead.",
+          "headline": "Overcast skies and heavy air frame the final week of August.",
+          "lede": "Temperatures range from 24 to 32°C under grey clouds, with sunset arriving at 18:20.",
+          "body": "The Tokyo atmosphere remains heavy today, accompanied by poor air quality as PM2.5 levels reach 77. Travelers navigating the city should note the exchange rate resting near 159 JPY per USD. Despite the overcast canopy, neighborhoods retain their usual methodical rhythm. Public transit and local services continue without interruption, offering a stable environment for residents returning from seasonal journeys.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "02",
-          "headline": "Cloud cover keeps the afternoon heat mild across the metropolitan districts.",
-          "lede": "The thermometer reads between 24 and 30°C with a moderate air reading.",
-          "body": "Cloud cover keeps the afternoon heat mild across the metropolitan districts. The thermometer reads between 24 and 30°C with a moderate air reading. PM2.5 stands at 35, and sunset arrives promptly at 18:24. The exchange rate rests at 1 USD to 159 JPY for arriving guests. Retail districts draw crowds for the new lululemon flagship store opening in town. Cultural spaces host thoughtful exhibitions, such as Tony Oursler's works featured at TOKYO NODE. Digital culture fans note virtual landmarks like the City Dango area in Forza Horizon 6. Quiet observers find shaded benches in neighborhood parks to watch the commuter flow. The overcast canopy provides comfortable walking weather for afternoon strolls. Evening approaches with a calm, steady rhythm.",
+          "headline": "Cedar wood finds new form in a quiet gallery exhibition.",
+          "lede": "Takuto Ohta transforms 200 cedar logs into a dynamic furniture experiment in Tokyo.",
+          "body": "Craftsmanship takes center stage in the capital this week as natural materials are reimagined through sculptural design. Visitors exploring local galleries will contend with poor air quality marked by a PM2.5 count of 77 under an overcast sky. Temperatures range from 24 to 32°C, keeping the indoors appealing during the afternoon peak. Currency exchange holds steady at 159 JPY per USD for international patrons.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "03",
-          "headline": "Daylight fades by 18:24 beneath a thick layer of grey clouds.",
-          "lede": "Temperatures hold between 24 and 30°C with PM2.5 air metrics at 35.",
-          "body": "Daylight fades by 18:24 beneath a thick layer of grey clouds. Temperatures hold between 24 and 30°C with PM2.5 air metrics at 35. Travelers exchange funds at the current rate of 1 USD to 159 JPY. The urban landscape blends commerce and art with the lululemon flagship store opening. Curators discuss contemporary installations at TOKYO NODE for interested visitors. Virtual worlds intersect with reality through features like the City Dango area in Forza Horizon 6. Moderate air quality makes outdoor walking pleasant despite the lack of direct sun. Neighborhood alleyways glow softly as lanterns turn on for the evening. Residents enjoy quiet dinners in small local eateries hidden from main avenues. The transition to night feels gentle and unhurried.",
+          "headline": "New retail flagships open their doors across the metropolitan sprawl.",
+          "lede": "A lululemon flagship store opens its doors in Tokyo, adding a fresh commercial anchor to the district.",
+          "body": "Urban retail districts expand further this week with the arrival of a major new flagship location. Shoppers should keep in mind the current financial baseline of 159 JPY per USD. Outside, the weather remains overcast with temperatures spanning 24 to 32°C and air quality registering a PM2.5 level of 77. Sunset occurs at 18:20, drawing an early close to the grey afternoon light across the city streets.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         }
       ]
     },
     {
-      "city": "LISBON",
+      "city": "Lisbon",
       "items": [
         {
           "n": "01",
-          "headline": "Overcast skies shade the riverfront as the late summer breeze picks up.",
-          "lede": "Temperatures range from 19 to 26°C with remarkably fair air quality today.",
-          "body": "Overcast skies shade the riverfront as the late summer breeze picks up. Temperatures range from 19 to 26°C with remarkably fair air quality today. PM2.5 levels rest at a very clean 8, making walks exceptionally clear. Sunset stretches to 20:23, offering long evening hours of muted light. Travelers will find an exchange rate of 1 USD to 0.86 EUR at local institutions. Cultural life thrives as the Gulbenkian Museum reopens with its original vision restored. The city also hosts the annual Moxie Festival alongside a free street magic festival featuring 175 shows. Traditional celebrations like the Shri Ram Janmabhumi Mandir opening add further depth to community gatherings. Cobblestone streets echo softly under the grey clouds. Quiet observers linger near the Tagus to watch the tide.",
+          "headline": "Thunderstorms and passing rain arrive across the Portuguese capital.",
+          "lede": "Temperatures span 20 to 25°C accompanied by 4.5mm of precipitation and afternoon thunderstorms.",
+          "body": "The Atlantic front brings refreshing moisture to the cobblestone streets, cooling the late summer air down to comfortable levels. Sunset falls at 20:19, casting long evening reflections over wet limestone facades. Air quality remains fair with a clean PM2.5 reading of 6, while financial transactions hold at 0.85 EUR per USD. It is an ideal afternoon to seek shelter inside the newly reopened Gulbenkian Museum.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "02",
-          "headline": "Clean coastal air moves through the historic hills under overcast skies.",
-          "lede": "PM2.5 registers at 8 with comfortable temperatures spanning 19 to 26°C.",
-          "body": "Clean coastal air moves through the historic hills under overcast skies. PM2.5 registers at 8 with comfortable temperatures spanning 19 to 26°C. Daylight lingers until the 20:23 sunset over the western horizon. Currency exchange stands at 1 USD to 0.86 EUR for visitors arriving this week. Cultural venues offer rich experiences, notably the newly reopened Gulbenkian Museum with its restored vision. Festivities fill public squares with the Moxie Festival and a grand free street magic festival boasting 175 shows. Community events mark significant milestones like the Shri Ram Janmabhumi Mandir opening. Trams rumble past old yellow facades in the damp afternoon air. Pedestrians walk at an easy pace along the Tagus embankment. The muted light brings a peaceful stillness to the ancient capital.",
+          "headline": "The Gulbenkian Museum welcomes visitors back to its restored galleries.",
+          "lede": "Lisbon's landmark cultural institution reopens after an extensive renovation, restoring its original architectural vision.",
+          "body": "Art enthusiasts returning to the city can wander through light-filled exhibition spaces following the completion of major restoration works. Outside, intermittent thunderstorms drop 4.5mm of rain, with temperatures ranging from 20 to 25°C. The fair air quality, marked by a PM2.5 level of 6, makes post-rain walking pleasant. Financial exchanges trade at 0.85 EUR per USD as day transitions into evening before the 20:19 sunset.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         },
         {
           "n": "03",
-          "headline": "Evening light lingers past the 20:23 sunset above the broad river.",
-          "lede": "Temperatures stay mild between 19 and 26°C with fair air quality.",
-          "body": "Evening light lingers past the 20:23 sunset above the broad river. Temperatures stay mild between 19 and 26°C with fair air quality. PM2.5 sits low at 8, ensuring crisp breathing during neighborhood strolls. The exchange rate holds at 1 USD to 0.86 EUR at currency exchange booths. Art lovers explore the newly renovated Gulbenkian Museum following its careful restoration. Public plazas brim with life thanks to the Moxie Festival and a free street magic festival presenting 175 shows. Cultural reflection continues with commemorations for the Shri Ram Janmabhumi Mandir opening. Overcast clouds diffuse the fading daylight across pastel rooftops. Residents gather in small squares to converse in the cooling air. The city rests quietly in the gentle grasp of late August.",
+          "headline": "Street performance festivals bring illusion and wonder to public squares.",
+          "lede": "A free street magic festival returns to Lisbon, filling neighborhood plazas with 175 scheduled shows.",
+          "body": "Performers animate public spaces across the city, offering impromptu gatherings despite the incoming rain showers. Today's weather brings 4.5mm of precipitation and thunderstorms, with temperatures moving between 20 and 25°C. The atmosphere clears nicely thanks to a favorable PM2.5 air quality measure of 6. Visitors can manage local expenses with the exchange rate steady at 0.85 EUR per USD as evening approaches the Tagus riverfront.",
           "source": "saudade desk",
-          "source_date": "2026-08-21"
+          "source_date": "2026-08-24"
         }
       ]
     }
