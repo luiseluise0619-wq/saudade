@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-23T06:00:00+09:00",
+  "updated": "2026-08-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid reabre este lunes el túnel de la M-30 hacia la A-5.",
+              "lede": "Terminan tres semanas de obras intensas en uno de los nudos viarios principales de la ciudad.",
+              "body": "Los desplazamientos en coche hacia el suroeste recuperan la normalidad tras finalizar las intervenciones previstas en la infraestructura madrileña. Esta reapertura alivia la circulación urbana y permite planificar trayectos directos sin desvíos prolongados por superficie. Conviene revisar las aplicaciones de movilidad antes de arrancar para confirmar el flujo del tráfico en hora punta. La medida favorece la conexión rápida con las vías de salida hacia Extremadura durante los últimos compases del verano. Los residentes y viajeros habituales notarán una reducción notable en los tiempos de recorrido diario por este sector.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición «Madrid en construcción, 1940-1985» repasa la memoria urbana.",
+              "lede": "Una mirada reposada a la transformación arquitectónica y social de la capital durante décadas clave.",
+              "body": "Las salas expositivas acogen un recorrido visual por el crecimiento y la morfología de la ciudad en el siglo pasado. Las fotografías y los documentos de archivo exponen el pulso diario de una metrópoli en plena metamorfosis histórica. Es una visita aconsejable para quienes buscan comprender el trazado actual de los barrios y las grandes arterias madrileñas. La muestra fomenta la observación pausada del patrimonio construido y de la evolución de sus espacios públicos. Se recomienda consultar los horarios de apertura en las taquillas antes de planificar el acceso al recinto cultural.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "03",
+              "headline": "El festival Centroamérica Cuenta programa actividades en Madrid en septiembre.",
+              "lede": "El encuentro literario reunirá a creadores y lectores en diversas sedes culturales de la región.",
+              "body": "Entre el 10 y el 19 de septiembre, la programación cultural incluye debates y presentaciones con presencia internacional. Las citas abarcan un total de 30 actividades repartidas entre varias localidades, con Madrid como uno de sus ejes principales. Esta iniciativa fomenta el diálogo transatlántico en torno a la narrativa contemporánea y el oficio de escribir. Los asistentes pueden adquirir las entradas gratuitas o reservar plaza a través de los canales oficiales de las instituciones colaboradoras. Constituye una excelente oportunidad para descubrir nuevas voces literarias en un entorno de cercanía y reflexión.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra hoy temperaturas de 23 a 30°C con chubascos aislados.",
+              "lede": "El cielo variable deja 1.9mm de precipitación y una puesta de sol prevista para las 20:37.",
+              "body": "El ambiente veraniego se mantiene en la ciudad con una calidad del aire catalogada como fair y un nivel de PM2.5 de 6. Conviene llevar un paraguas ligero ante la previsión de chubascos breves mientras se recorren las calles del centro histórico. La caída de la tarde ofrece una luz propicia para pasear junto al mar o por los jardines urbanos más resguardados. Los paseos marítimos y las plazas recuperan la calma a medida que desciende ligeramente la humedad ambiental. La jornada invita a disfrutar del espacio público con la tranquilidad característica de los atardeceres mediterráneos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "02",
+              "headline": "Nueve parques con sombra ofrecen refugio climático en Barcelona.",
+              "lede": "Espacios arbolados ideales para pasear con niños durante las horas centrales del día.",
+              "body": "La red de zonas verdes de la ciudad destaca por su alta densidad de vegetación y áreas de descanso bien conservadas. Estos enclaves naturales permiten escapar del calor estival gracias a las coberturas vegetales que reducen la radiación directa. Los datos municipales confirman mejoras significativas en el entorno escolar, donde la exposición al NO2 en el exterior de los centros educativos bajó un 40% de 2018 a 2025. Visitar estos parques con los más pequeños garantiza un entorno limpio, silencioso y protegido de la congestión del tráfico rodado. Las fuentes de agua potable y los bancos de madera facilitan una estancia cómoda y prolongada.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "03",
+              "headline": "Decathlon consolida su presencia con una nueva tienda en L'Eixample.",
+              "lede": "El corazón comercial del distrito suma un nuevo espacio dedicado al equipamiento deportivo.",
+              "body": "La apertura refuerza la oferta de proximidad en una de las zonas más transitadas y comerciales de la trama urbana barcelonesa. El establecimiento se integra en la arquitectura tradicional del barrio ofreciendo soluciones prácticas para aficionados y deportistas cotidianos. Los residentes de la zona cuentan ahora con un punto de referencia accesible a pie para adquirir material técnico y textil. Esta inauguración se alinea con la estrategia de revitalizar los ejes comerciales urbanos mediante formatos adaptados al peatón. La ubicación facilita el acceso rápido en transporte público desde cualquier punto de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires amanece con un registro de 5 a 11°C y cielo cubierto.",
+              "lede": "La jornada se mantiene fresca y estable, con la puesta de sol marcada para las 18:29.",
+              "body": "El ambiente invernal predomina en las calles porteñas bajo un cielo completamente overcast y una buena calidad del aire con PM2.5 de 9. Las bajas temperaturas invitan a abrigarse con solidez al caminar por los barrios tradicionales y las avenidas arboladas. La caída tempranera de la tarde a las 18:29 acorta las horas de luz natural, propiciando la actividad en espacios culturales cerrados. Conviene llevar abrigo adicional si se planea permanecer al aire libre durante las horas nocturnas en la ciudad. El clima actual favorece el ritmo pausado de los cafés históricos y las librerías del centro.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival y Mundial de Tango llena de música los rincones porteños.",
+              "lede": "La cita cultural más emblemática del compás 2x4 despliega milongas y exhibiciones multitudinarias.",
+              "body": "La ciudad vibra con una nueva edición del encuentro internacional que congrega a bailarines y maestros de todo el mundo. Las pistas de baile y los auditorios acogen espectáculos gratuitos que celebran la identidad musical de la capital argentina. Es el momento perfecto para acercarse a las milongas tradicionales y disfrutar del talento en las categorías de pista y escenario. Se recomienda consultar la programación diaria para asegurar la entrada a los conciertos y clases magistrales en los centros culturales. Esta celebración reafirma la vigencia del género en cada barrio y salón histórico de Buenos Aires.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Internacional de Buenos Aires anuncia su programación teatral.",
+              "lede": "Las artes escénicas preparan sus mejores producciones para las próximas semanas en la cartelera local.",
+              "body": "El FIBA 2026 detalla las obras y los escenarios que acogerán propuestas de vanguardia y dramaturgia clásica. La oferta artística se complementa con festivales temáticos como el Mubi Fest, previsto del 22 al 25 de octubre, y las propuestas del Festival de la Peruanidad. Estas iniciativas consolidan una agenda cultural diversa que anima a los espectadores a recorrer diferentes salas teatrales de la ciudad. Las localidades suelen agotarse con rapidez, por lo que conviene revisar la venta anticipada en las plataformas oficiales. El circuito teatral porteño demuestra así su dinamismo constante durante todo el año.",
+              "source": "saudade desk",
+              "source_date": "2026-08-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A partir del 19 de agosto, Buenos Aires se convertirá en la capital mundial del tango con una programación extendida por más de 50 sedes culturales. La apertura oficial correrá a cargo de reconocidos artistas como Vicentico y Abel Pintos, dando inicio a semanas de exhibiciones, clases magistrales y conciertos. Esta cita se suma a la reciente repercusión del Festival La Mujer y el Cine 2026, que ofreció cinco jornadas de proyecciones gratuitas y estrenos nacionales. Los visitantes encontrarán una oferta cultural diversa que respeta la tradición musical y cinematográfica de los barrios porteños. Conviene consultar la reserva previa de localidades para los eventos más concurridos del mundial de tango a través de los canales oficiales.",
               "source": "saudade desk",
               "source_date": "2026-08-16"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Línea 9 de metro reabre su tramo clausurado.",
-              "lede": "El servicio recupera la normalidad entre Arganda del Rey y Rivas Vaciamadrid tras semanas de obras.",
-              "body": "Los desplazamientos por el sureste madrileño recuperan su fluidez habitual este mes. Metro de Madrid reabre este viernes el tramo de la Línea 9 cortado desde julio. Los usuarios ya pueden transitar sin necesidad de transbordos en autobús entre Arganda del Rey y Rivas Vaciamadrid. La infraestructura mejora sus frecuencias tras las labores estivales de mantenimiento y renovación de vías. Conviene consultar los horarios actualizados antes de planificar trayectos largos por la red suburbana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "02",
-              "headline": "Cierres administrativos por el festivo de la Asunción.",
-              "lede": "El calendario laboral del 2026-08-15 afecta a oficinas públicas y entidades bancarias.",
-              "body": "La festividad nacional de la Asunción altera el ritmo habitual de la capital este viernes. Las administraciones públicas, oficinas de correos y sucursales bancarias permanecerán cerradas durante toda la jornada. El tipo de cambio oficial se mantiene estable en 1 USD frente a 0.87 EUR para las transacciones internacionales. Los comercios del centro operan con horarios reducidos o adaptados al descanso estival. Es recomendable aplazar las gestiones burocráticas hasta el próximo lunes laborable.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "03",
-              "headline": "El arte contemporáneo se asoma a las pantallas virtuales.",
-              "lede": "La exposición dialoga con fondos históricos mediante plataformas digitales accesibles.",
-              "body": "La oferta cultural madrileña amplía sus horizontes hacia el formato digital en estas fechas. El público puede visitar en línea la muestra titulada «El deber de lo nuevo». La exposición reúne y enfrenta los fondos pictóricos de Afundación y del Museo de Arte Contemporáneo de Madrid. Esta iniciativa permite observar las piezas desde cualquier lugar con conexión a internet. Una propuesta reposada para disfrutar del patrimonio artístico sin las aglomeraciones presenciales del verano.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Cielos despejados y calor intenso en el litoral.",
-              "lede": "Los termómetros oscilan entre 25°C y 35°C bajo un sol persistente.",
-              "body": "El verano barcelonés muestra su cara más cálida con registros térmicos elevados en toda la ciudad. La temperatura se mueve entre 25°C y 35°C bajo un cielo completamente despejado. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 de 11. El ocaso se produce puntual a las 20:52, ofreciendo una tregua lumínica sobre el Mediterráneo. Conviene limitar la exposición directa al sol durante las horas centrales y buscar la sombra en los parques.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "02",
-              "headline": "Pausas institucionales por la festividad de la Asunción.",
-              "lede": "El 2026-08-15 trae cierres generalizados en la administración y la banca.",
-              "body": "La celebración de la Asunción este 2026-08-15 paraliza la actividad administrativa en Cataluña. Los bancos, oficinas gubernamentales y notarías suspenden la atención al público durante la jornada festiva. Las operaciones de cambio de divisa se fijan en 1 USD equivalente a 0.87 EUR en los mercados financieros. Los grandes ejes comerciales adaptan sus aperturas según las normativas turísticas vigentes en los barrios. Los servicios municipales esenciales continúan operando con dotaciones mínimas de guardia.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "03",
-              "headline": "El Parque Güell y el diálogo natural de los creadores.",
-              "lede": "La obra de Gaudí convive con reflexiones sobre el paisaje y el arte.",
-              "body": "Los espacios verdes de la ciudad invitan a contemplar la relación entre arquitectura y naturaleza. El Parque Güell continúa recibiendo visitantes interesados en el legado modernista de Antoni Gaudí. Exposiciones paralelas analizan también la figura de Joan Miró frente a la del propio Gaudí. Ambas trayectorias exploran caminos afines para interpretar las formas orgánicas del entorno natural. Es recomendable pasear a primera hora de la mañana para evitar el calor acumulado en las piedras.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Jornada fresca con lloviznas dispersas en el Río de la Plata.",
-              "lede": "El mercurio marca entre 10°C y 13°C con acumulación mínima de lluvia.",
-              "body": "El invierno porteño se manifiesta con un clima fresco y húmedo en las calles de la capital. La temperatura se mueve entre 10°C y 13°C con una precipitación muy escasa de 0.2mm en forma de llovizna. La calidad del aire es óptima, registrando un valor de PM2.5 de 10. La puesta de sol llega a las 18:22, recortando las horas de luz diurna. Los parques urbanos lucen solitarios y húmedos bajo un cielo plomizo.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "02",
-              "headline": "Vigilancia sanitaria y preparativos para el fin de semana largo.",
-              "lede": "El 2026-08-17 conmemora el Paso a la Inmortalidad del General José de San Martín.",
-              "body": "El calendario oficial contempla el feriado del Paso a la Inmortalidad del General José de San Martín el 2026-08-17. Las oficinas públicas y los bancos permanecerán cerrados el próximo lunes por este motivo patriótico. En el ámbito sanitario, la aparición de un nuevo caso de dengue en Buenos Aires activa la vigilancia epidemiológica local. Las autoridades recuerdan mantener las precauciones mientras el chikungunya persiste en el NOA. Conviene revisar los servicios de transporte antes de viajar durante el puente festivo.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
-            },
-            {
-              "n": "03",
-              "headline": "La cuenta regresiva hacia el gran encuentro del dos por cuatro.",
-              "lede": "El festival mundial de tango comenzará el 19 de agosto en múltiples sedes.",
-              "body": "La ciudad se prepara para acoger el mayor festival de tango del mundo a partir del 19 de agosto. Más de 50 sedes repartidas por los barrios albergarán conciertos, milongas y clases magistrales. Paralelamente, los proyectos urbanísticos avanzan en la planificación de un nuevo barrio con costa y rambla. La Orquesta del Plata afina sus repertorios para las actuaciones inaugurales de la próxima semana. El pulso tanguero comienza a sentirse en cada rincón de la cultura porteña.",
-              "source": "saudade desk",
-              "source_date": "2026-08-14"
             }
           ]
         }
