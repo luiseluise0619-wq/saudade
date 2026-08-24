@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-08-24T06:00:00+09:00",
-  "next_filing": "2026-08-24T21:00:00+00:00",
+  "filed_at": "2026-08-25T06:00:00+09:00",
+  "next_filing": "2026-08-25T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "A chuva curta interrompe a tarde quente.",
-          "lede": "Os termoscópios marcam 20 a 25°C com 4.5mm de precipitação prevista.",
-          "body": "A atmosfera lisboeta oscila entre o bafo húmido e a trovoada passageira. Os céus carregam-se a oeste antes de cederem ao sol baixo das 20:19. Pelas ruas, a troca comercial faz-se a 1 USD por 0.85 EUR. A qualidade do ar mantém-se estável, registando um valor de PM2.5 de 6. A cidade prepara-se para acolher o festival MEO Kalorama, cujos horários e cartaz já mobilizam os entusiastas de música. Paralelamente, o debate cultural ganha fôlego com os preparativos para o Festival Política e os Dias da Literatura de Lisboa. É um final de agosto que convida a passeios atentos entre a calçada molhada e as conversas de café.",
+          "headline": "O Metro de Lisboa estende o seu horário.",
+          "lede": "A rede subterrânea prolonga a circulação para acomodar o público do festival MEO Kalorama.",
+          "body": "As noites de fim de verão ganham novos ritmos na cidade com a realização do festival MEO Kalorama. Para facilitar o regresso a casa dos espectadores, o Metro de Lisboa prolonga o horário habitual de funcionamento durante os dias do evento. As composições circulam até mais tarde nas linhas principais, garantindo uma alternativa fluida ao transporte rodoviário. Quem visita a capital nesta altura encontra uma cidade em movimento, onde a música anima os espaços públicos e as margens do Tejo. A taxa de câmbio atual fixa-se em 1 USD para 0.86 EUR, mantendo estáveis as trocas para os viajantes estrangeiros que chegam para os eventos culturais de final de agosto.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "02",
-          "headline": "O festival MEO Kalorama define os acessos da cidade.",
-          "lede": "Os preparativos logísticos reorganizam o fluxo de visitantes na capital.",
-          "body": "Com a proximidade do MEO Kalorama 2026, os transportes urbanos ajustam frequências para escoar o público. A oferta cultural da capital cruza-se com a reflexão cívica, lembrando os 50 anos da Constituição no próximo mês. A qualidade do ar com PM2.5 de 6 favorece a permanência ao ar livre apesar da trovoada recente e dos 4.5mm de precipitação acumulada. A taxa de câmbio permanece estável em 1 USD para 0.85 EUR, facilitando as transações dos viajantes estrangeiros. Entre debates literários e grandes palcos musicais, Lisboa vive um pulso dinâmico mas ordenado, ideal para quem aprecia o ritmo lento das transições estivais.",
+          "headline": "A preparação para o Tribeca Festival Lisboa avança.",
+          "lede": "O cinema internacional regressa à capital em dezembro, com estreias e convidados de destaque.",
+          "body": "Embora o evento principal esteja marcado apenas para o mês de dezembro, os preparativos para o Tribeca Festival Lisboa já se fazem notar nos círculos culturais da cidade. A programação promete trazer realizadores, atores e produções de relevo internacional para várias salas da capital. Os residentes aproveitam os dias mais longos para planear a agenda cultural do outono, que se avizinha preenchida. O câmbio oficial transaciona-se a 1 USD para 0.86 EUR, facilitando o planeamento financeiro de quem reserva alojamento e bilhetes com antecedência. Lisboa prepara-se assim, de forma discreta mas constante, para consolidar o seu papel de palco privilegiado para as artes cinematográficas na Europa do Sul.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "03",
-          "headline": "A literatura ocupa os dias de transição estival.",
-          "lede": "A primeira edição dos Dias da Literatura de Lisboa debate a perenidade dos livros.",
-          "body": "As salas de conferência e os auditórios municipais abrem portas para discutir o futuro da escrita. A temperatura amena de 20 a 25°C acompanha os debates que antecedem o Festival Política. A trovoada e os 4.5mm de precipitação obrigam a abrigos breves nos cafés históricos da baixa. Com o câmbio fixado em 1 USD por 0.85 EUR e o ar limpo a marcar PM2.5 de 6, a circulação pedestre flui sem sobressaltos. O pôr do sol ocorre às 20:19, prolongando o crepúsculo sobre o Tejo. É o momento perfeito para redescobrir alfarrabistas e recantos tranquilos longe do rebuliço turístico.",
+          "headline": "A mobilidade noturna adapta-se aos grandes palcos.",
+          "lede": "As linhas subterrâneas respondem à procura gerada pelos grandes eventos de final de agosto.",
+          "body": "A articulação entre os transportes públicos e os grandes eventos culturais volta a ser testada com o prolongamento do serviço do Metro de Lisboa por causa do festival MEO Kalorama. As autoridades locais recomendam o uso do metropolitano para evitar constrangimentos de trânsito nas zonas circundantes aos recintos dos concertos. Esta medida responde diretamente às necessidades de mobilidade de milhares de residentes e visitantes que participam nas festividades urbanas. A cotação da moeda mantém-se estável, com 1 USD a valer 0.86 EUR, permitindo transações sem sobressaltos para os viajantes. A cidade mantém o seu ritmo habitual, unindo a eficiência dos serviços urbanos à tranquilidade própria das suas ruas tradicionais.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "A trovoada atravessa a foz e refresca o granito.",
-          "lede": "A cidade regista 19 a 20°C acompanhados por 14.8mm de chuva intensa.",
-          "body": "A pluviosidade marca o ritmo desta segunda-feira na Invicta, com o mercúrio fixado entre 19 e 20°C. O ar limpo apresenta um nível de PM2.5 de 5, garantindo clareza após as descargas eléctricas. A conversão cambial pratica-se a 1 USD por 0.85 EUR. No Parque da Cidade, os preparativos para o Dia do Brasil celebram a diversidade cultural com dança e música. Em simultâneo, o Aquário de Porto Pim reabre as portas após uma profunda requalificação patrimonial. O sol despede-se mais tarde, pelas 20:20, iluminando as poças de água refletidas nas lajes de granito da Ribeira.",
+          "headline": "O Parque da Cidade acolhe o Dia do Brasil.",
+          "lede": "A 17.ª edição do evento enche o espaço verde com samba, forró e maracatu.",
+          "body": "O termómetro marca entre 18 e 22°C sob uma precipitação leve de 2mm, acompanhada por aguaceiros passageiros que refrescam a relva. O Parque da Cidade do Porto recebe a 17.ª edição do Dia do Brasil, transformando os caminhos arborizados num ponto de encontro para a cultura lusófona. Há música ao vivo, com samba, forró e maracatu a ecoar por entre as árvores até ao pôr do sol, previsto para as 20:18. A qualidade do ar permanece em níveis considerados justos, com o índice PM2.5 a registar o valor 6, ideal para passeios longos ao ar livre. O câmbio oficial situa-se em 1 USD para 0.86 EUR, facilitando as trocas comerciais nas bancas de artesanato e gastronomia espalhadas pelo recinto do parque.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "02",
-          "headline": "O Parque da Cidade acolhe o intercâmbio cultural.",
-          "lede": "A 17.ª edição do Dia do Brasil no Porto atrai famílias aos espaços verdes.",
-          "body": "Mesmo com 14.8mm de precipitação e episódios de trovoada, o âncora festivo mantém-se firme nos relvados do parque. A temperatura amena de 19 a 20°C convida a casacos leves e passos firmes. A qualidade do ar regista excelentes valores, com PM2.5 de 5. Para os visitantes internacionais, a taxa de câmbio de 1 USD para 0.85 EUR simplifica as compras locais. A cultura urbana ganha destaque adicional com a chegada do festival The World Battle URB-X. A noite cai placidamente pelas 20:20, oferecendo tréguas à chuva persistente que lavou os telhados históricos.",
+          "headline": "A cultura urbana ocupa as ruas com The World Battle.",
+          "lede": "O festival URB-X traz dança, desporto e expressões contemporâneas à Invicta.",
+          "body": "A cidade respira novas linguagens urbanas com a chegada do festival The World Battle URB-X, que decorre sob temperaturas amenas entre 18 e 22°C. A precipitação de 2mm traz breves períodos de chuva que obrigam a atenção redobrada nos espaços ao ar livre, mas sem perturbar as exibições de dança e as competições desportivas. Com o sol a descer no horizonte até às 20:18, os espectadores reúnem-se para assistir aos talentos internacionais e locais. A qualidade do ar mantém-se estável, com PM2.5 a 6, num ambiente urbano limpo e propício à circulação a pé. O câmbio de 1 USD para 0.86 EUR apoia os visitantes estrangeiros que acompanham este roteiro dedicado às culturas urbanas e à criatividade contemporânea na zona norte.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "03",
-          "headline": "O Aquário de Porto Pim reabre ao público.",
-          "lede": "O espaço museológico recupera o seu papel pedagógico na fachada atlântica.",
-          "body": "A conclusão das obras de requalificação devolve à cidade um polo histórico de interesse científico e marítimo. A visita decorre sob uma temperatura de 19 a 20°C e uma pluviosidade notável de 14.8mm. O ar mantém-se puro, com índice PM2.5 de 5, e a moeda estrangeira troca-se a 0.85 EUR por cada 1 USD. Enquanto a trovoada cessa gradualmente rumo ao ocaso das 20:20, as ruas pedonais recuperam a serenidade habitual. Os fluxos turísticos esbatem-se na penumbra húmida, permitindo aos residentes caminhar com vagar junto aos velhos muros da muralha Fernandina.",
+          "headline": "O Festival de Documentários prepara a agenda de fim de mês.",
+          "lede": "A partir do dia 31 de agosto, a cidade foca-se na nona arte e no cinema documental.",
+          "body": "Os preparativos para o Festival de Documentários, que arrancará a partir do dia 31 de agosto, mobilizam os espaços culturais da cidade. Enquanto os aguaceiros de 2mm deixam o solo húmido e a temperatura oscila entre 18 e 22°C, os cinéfilos procuram abrigos em salas e centros culturais. A qualidade do ar regista um valor de 6 no índice PM2.5, refletindo uma atmosfera calma e sem poluição excessiva na zona ribeirinha e central. O pôr do sol acontece pelas 20:18, permitindo ainda aproveitar os últimos claruns do dia para caminhadas breves pela baixa histórica. A taxa de câmbio de 1 USD para 0.86 EUR continua a ser a referência nas transações correntes para os viajantes que chegam para o final da estação estival.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "A neblina densa abraça os palácios da serra.",
-          "lede": "Os termómetros marcam 19 a 23°C com aguaceiros dispersos e 6mm de chuva.",
-          "body": "A serra veste-se de cinzento húmido sob uma precipitação suave de 6mm. A temperatura oscila entre os 19 e os 23°C, criando um microclima fresco ideal para caminhadas matinais abrigadas. A qualidade do ar regista um valor de PM2.5 de 7, mantendo-se em patamares aceitáveis. As transações financeiras operam à base de 1 USD por 0.85 EUR. Nos espaços culturais, a exposição em Mira Sintra com trabalhos de Gabriela Casinhas e Salvador Costa atrai visitantes curiosos. A penumbra antecipa o pôr do sol das 20:20, silenciando as copas das árvores seculares fustigadas pelos aguaceiros passageiros.",
+          "headline": "O céu nublado envolve a serra em tons cinzentos.",
+          "lede": "A meteorologia de 18 a 23°C convida a passeios tranquilos sob a copas dos carvalhais.",
+          "body": "A vila de Sintra apresenta-se sob um manto totalmente overcast, com temperaturas que variam suavemente entre 18 e 23°C. O pôr do sol ocorre às 20:18, marcando o fim de mais um dia calmo nas encostas protegidas do Parque Natural. A qualidade do ar regista um valor de 6 no parâmetro PM2.5, mantendo-se num patamar justo para quem percorre os trilhos pedestres habituais. A conversão monetária permanece inalterada nos mercados locais, cotando-se a 1 USD para 0.86 EUR para os visitantes que chegam de fora da zona euro. A circulação automóvel e pedonal decorre com normalidade pelas ruas empedradas, longe da agitação estival mais intensa, permitindo escutar o murmúrio da água nas fontes antigas.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "02",
-          "headline": "A arte local expõe-se nos centros culturais.",
-          "lede": "Mira Sintra acolhe os trabalhos plásticos de Gabriela Casinhas e Salvador Costa.",
-          "body": "A programação cultural descentralizada traz novas perspetivas artísticas aos bairros residenciais da freguesia. Fora dos circuitos palacianos, a vida local decorre sob 19 a 23°C e 6mm de precipitação intermitente. O ar serrano apresenta um nível de PM2.5 de 7, enquanto a taxa de câmbio se fixa estavelmente em 1 USD para 0.85 EUR. Os debates sobre a preservação paisagística continuam a mobilizar residentes preocupados com o futuro verde da região. À medida que o sol se esconde pelas 20:20, as ruas ganham uma quietude melancólica, perfeita para observadores atentos que evitam as multidões diurnas.",
+          "headline": "O debate sobre o território mobiliza a comunidade.",
+          "lede": "Mais de 7.500 assinaturas exigem atenção parlamentar para o futuro do parque natural.",
+          "body": "A conservação paisagística volta a estar no centro das atenções locais após a petição para se fazer cidade no Parque Natural de Sintra-Cascais ter reunido mais de 7.500 assinaturas. Este movimento cívico força agora o debate no parlamento, ecoando nas conversas dos cafés e praças da vila histórica. Sob um céu totalmente overcast e com temperaturas amenas entre 18 e 23°C, residentes e associações discutem o equilíbrio entre o desenvolvimento urbano e a preservação ambiental. O ar mantém-se limpo, com PM2.5 em 6, enquanto o sol se põe pontualmente às 20:18. No plano financeiro, a taxa de câmbio de 1 USD para 0.86 EUR garante estabilidade nas despesas quotidianas de quem visita a região para estadias prolongadas de reflexão.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         },
         {
           "n": "03",
-          "headline": "Os trilhos da serra respiram com a humidade.",
-          "lede": "A vegetação luxuriante beneficia com os aguaceiros persistentes de final de agosto.",
-          "body": "A paisagem cultural respira fundo após os 6mm de chuva que regaram os jardins românticos. Com marcas de 19 a 23°C e uma qualidade de ar limpa de PM2.5 de 7, pasear pelos caminhos sombreados exige calçado aderente. A conversão de divisas mantém-se inalterada a 1 USD por 0.85 EUR. O debate sobre a salvaguarda ambiental do Parque Natural continua presente nas conversas de café e nos fóruns públicos. O crepúsculo desce pontualmente às 20:20, apagando os reflexos dourados nos vidros das antigas vilas apalaçadas escondidas entre a densa ramagem.",
+          "headline": "O Festival MIMMOS prepara as marionetas para setembro.",
+          "lede": "A arte milenar do teatro de animação regressa em breve para animar os espaços culturais.",
+          "body": "Com a chegada iminente do mês de setembro, os preparativos para o Festival De Marionetas MIMMOS começam a estruturar a programação artística da vila. A atmosfera nublada, com termómetros a marcar entre 18 e 23°C, cria o cenário ideal para ensaios e reuniões de produção em espaços fechados e auditórios locais. A qualidade do ar permanece estável, registando 6 no índice PM2.5, o que assegura um ambiente saudável para os passeios a pé entre os palácios e os jardins românticos. O anoitecer instala-se às 20:18, fechando o dia com uma serenidade característica da serra. Para os visitantes estrangeiros, a taxa de câmbio de 1 USD para 0.86 EUR facilita a aquisição antecipada de entradas para os espetáculos que ocuparão as ruas e salas sintrenses.",
           "source": "saudade desk",
-          "source_date": "2026-08-24"
+          "source_date": "2026-08-25"
         }
       ]
     }
