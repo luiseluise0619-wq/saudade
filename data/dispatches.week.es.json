@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-24T06:00:00+09:00",
+  "updated": "2026-08-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Reabre el tramo norte de la Línea 10 de Metro.",
+              "lede": "La conexión entre Plaza de Castilla y Cuzco vuelve a funcionar tras las obras estivales.",
+              "body": "Los viajeros habituales de la red subterránea recuperan una conexión clave tras semanas de ajustes técnicos en el norte de la capital. El tramo comprendido entre las estaciones de Plaza de Castilla y Cuzco vuelve a recibir trenes con total normalidad desde hoy. No obstante, las labores de mejora continúan activas en otros puntos de la misma infraestructura, concretamente en los inmediatos accesos a Santiago Bernabéu. Para cubrir este trayecto que sigue interrumpido, la compañía mantiene operativos los autobuses gratuitos de apoyo destinados a los usuarios. Conviene planificar los desplazamientos cotidianos con un ligero margen de tiempo adicional debido a estos trasbordos obligatorios.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "02",
+              "headline": "El parque de Vallecas reúne especies vegetales de toda la península.",
+              "lede": "Un paseo botánico local permite contemplar la diversidad ecológica peninsular sin salir de los límites urbanos.",
+              "body": "Los rincones verdes del sur de la ciudad esconden colecciones de flora autóctona que merecen una visita reposada durante las horas matinales. Este espacio público singular agrupa ejemplares representativos de los diferentes ecosistemas que configuran el territorio nacional. Los visitantes pueden observar la adaptación de arbustos mediterráneos y plantas de alta montaña en un mismo recorrido didáctico. Es un remanso de tranquilidad ideal para los observadores pacientes que buscan la sombra en los días calurosos del final de agosto. Los senderos pavimentados facilitan un paseo silencioso lejos del tráfico rodado y de la actividad intensa de las grandes avenidas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "03",
+              "headline": "La divisa norteamericana se sitúa en 0.86 EUR.",
+              "lede": "Los viajeros internacionales operan con este tipo de cambio al planificar sus compras y estancias.",
+              "body": "El mercado de divisas mantiene una equivalencia estable para quienes llegan a la península con dólares estadounidenses en sus carteras. Cada dólar se intercambia actualmente por 0.86 EUR en las principales entidades bancarias y casas de cambio autorizadas. Esta proporción resulta especialmente favorable para el turista extranjero al adquirir bienes y servicios locales durante su estancia. Conviene recordar que las próximas festividades autonómicas, como el Día de Asturias y el Día de Extremadura previstas para el 2026-09-08, alterarán la apertura habitual de oficinas públicas y bancos. Se aconseja realizar las gestiones financieras con antelación para evitar contratiempos en los cajeros automáticos y sucursales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Aeropuerto del Prat acoge una muestra sobre el comercio local.",
+              "lede": "Los pasajeros en tránsito descubren la historia de los establecimientos tradicionales de los barrios barceloneses.",
+              "body": "Las instalaciones aeroportuarias integran temporalmente un recorrido visual dedicado a la memoria comercial de la ciudad condal. La exposición fotográfica destaca la labor cotidiana de los mercados municipales y las tiendas centenarias que configuran la identidad urbana. Es una propuesta cultural inesperada para quienes aguardan la salida de sus vuelos en las terminales del Prat. Las imágenes reflejan la trastienda de los oficios artesanales y la relación de cercanía entre los tenderos y su clientela histórica. Esta iniciativa acerca el latido cotidiano de los barrios a los viajeros antes de que abandonen el territorio catalán.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "02",
+              "headline": "Cielos cubiertos y temperaturas de 23 a 30°C este martes.",
+              "lede": "El ambiente se mantiene templado bajo nubes persistentes mientras la puesta de sol llega a las 20:34.",
+              "body": "La jornada transcurre con una atmósfera estable y sin precipitaciones destacables en el litoral barcelonés. El termómetro se mueve en el rango previsto de 23 a 30°C, ofreciendo un respiro relativo frente a los picos de calor extremo de semanas anteriores. La capa de nubes cubre el cielo urbano y atenúa la radiación solar directa durante las horas centrales del día. Los paseos marítimos y los parques periurbanos recuperan gradualmente la calma tras el episodio de humo que afectó recientemente a Collserola y Torre Baró. Conviene estar atentos a las indicaciones locales si se planean rutas de senderismo por las zonas forestales colindantes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "03",
+              "headline": "La cotización monetaria se establece en 0.86 EUR por dólar.",
+              "lede": "El tipo de cambio actual facilita los cálculos económicos para los visitantes procedentes de Norteamérica.",
+              "body": "Las transacciones comerciales y el cambio de moneda operan bajo una paridad de 1 USD igual a 0.86 EUR en los establecimientos autorizados. Esta cifra permite a los viajeros extranjeros calcular con precisión sus presupuestos diarios para transporte, alojamiento y restauración. Es importante tener presente que el calendario laboral avanza hacia festividades autonómicas señaladas en otras regiones para el 2026-09-08, como el Día de Asturias y el Día de Extremadura. Aunque no afectan directamente al comercio diario catalán, ciertos servicios bancarios nacionales y organismos oficiales cerrarán sus puertas. Se recomienda anticipar cualquier trámite administrativo antes de que lleguen esas fechas festivas en el territorio peninsular.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival y Mundial de Tango llena las milongas porteñas.",
+              "lede": "Bailarines y aficionados convergen en las pistas de la ciudad para celebrar la gran cita anual del género.",
+              "body": "La música del 2X4 resuena en cada rincón de Buenos Aires durante esta semana consagrada por completo al compás arrabalero. Las milongas tradicionales y los grandes escenarios acogen exhibiciones, clases magistrales y competencias internacionales de primer nivel. Residentes y visitantes comparten la pasión por el abrazo milonguero en una atmósfera de absoluta devoción estética y popular. Este encuentro anual consolida a la capital argentina como el epicentro indiscutible de la cultura tanguera global. Las calles del centro y los centros culturales barcelonenses bullen con una programación continua que se extiende hasta bien entrada la madrugada.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "02",
+              "headline": "Calidad del aire excelente y lectura de PM2.5 en 8.",
+              "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos peatonales por los parques y plazas.",
+              "body": "Los registros ambientales de la jornada muestran un índice muy favorable para la salud respiratoria de los transeúntes. Con una concentración de partículas PM2.5 situada en 8, el aire porteño se respira con total ligereza esta semana. Esta limpieza ambiental invita a recorrer a pie los barrios históricos sin la habitual preocupación por la polución vehicular. Los árboles de las avenidas principales muestran los primeros indicios del cambio estacional mientras los caminantes disfrutan de la brisa austral. Es una oportunidad excelente para sentarse en los bancos de madera de las plazas a observar el ritmo pausado de la metrópoli.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            },
+            {
+              "n": "03",
+              "headline": "Cien bodegones tradicionales ofrecen descuentos durante una semana.",
+              "lede": "La ruta gastronómica popular de la ciudad celebra la cocina casera con promociones especiales en sus mesas.",
+              "body": "Los templos culinarios de barrio más entrañables de Buenos Aires participan en una iniciativa conjunta para ensalzar su legado gastronómico. Un centenar de establecimientos históricos aplican rebajas temporales en sus platos más emblemáticos, desde las milanesas generosas hasta los guisos tradicionales. Es la ocasión perfecta para sentarse sin prisa en mesas de madera gastada y disfrutar de porciones generosas. Los comensales locales y los viajeros curiosos redescubren así el valor de la sobremesa porteña en un ambiente de cercanía. Se recomienda consultar el mapa oficial de los locales adheridos para reservar con antelación debido a la alta demanda.",
+              "source": "saudade desk",
+              "source_date": "2026-08-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-24T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La nueva edición del Festival La Mujer y el Cine despliega una programación de cinco días con proyecciones gratuitas, estrenos destacados y encuentros con realizadoras. Las salas de la ciudad acogen este ciclo que busca visibilizar la autoría femenina en la cinematografía contemporánea con debates y retrospectivas. Esta oferta se suma a las opciones culturales que complementan el fin de semana largo y el feriado de hoy lunes en la capital. Con un ambiente fresco y cielo cubierto, las funciones de tarde se convierten en el plan predilecto de los cinéfilos locales. Conviene consultar la programación específica para retirar las entradas gratuitas con antelación en cada sede participante.",
               "source": "saudade desk",
               "source_date": "2026-08-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-16T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las oficinas bancarias y de la administración pública permanecen cerradas tras el festivo de Asunción.",
-              "lede": "El calendario laboral de mediados de agosto deja una jornada de oficinas cerradas y calles residenciales especialmente silenciosas en la capital.",
-              "body": "Tras la festividad del 15 de agosto de 2026, las gestiones administrativas presenciales y las sucursales bancarias interrumpen su actividad habitual hasta el lunes. Los servicios municipales esenciales y los transportes públicos mantienen sus frecuencias de fin de verano, adaptadas a una menor afluencia de pasajeros en el centro. Es un momento propicio para pasear por barrios históricos donde el comercio tradicional descansa y las terrazas se llenan únicamente con residentes locales. Las oficinas de correos y los registros oficiales reanudarán sus turnos de atención al ciudadano en el horario habitual. Conviene planificar cualquier trámite financiero pendiente para el inicio de la próxima semana laborable.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "02",
-              "headline": "El tipo de cambio vigente sitúa el euro en un valor de 1 USD equivalente a 0.86 EUR.",
-              "lede": "Los viajeros internacionales que visitan la ciudad encuentran una cotización estable para sus transacciones en efectivo y pagos con tarjeta.",
-              "body": "La paridad cambiaria actual sitúa cada dólar estadounidense en 0.86 EUR, una referencia útil para calcular presupuestos de viaje y consumos diarios en restaurantes y museos. La mayoría de los establecimientos de hostelería y transporte aceptan pagos electrónicos sin comisiones ocultas, facilitando la movilidad urbana. Para quienes prefieren el dinero en efectivo, los cajeros automáticos operan con normalidad en todos los distritos comerciales. Las librerías independientes y los cafés de especialidad recuerdan que este valor facilita la adquisición de publicaciones locales y guías de arquitectura. Conviene revisar las condiciones específicas de cada entidad bancaria de origen antes de realizar retiradas en moneda extranjera.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "03",
-              "headline": "Buitrago del Lozoya celebró recientemente su Festival del Eclipse con propuestas culturales al aire libre.",
-              "lede": "La sierra norte madrileña acogió actividades divulgativas y educativas orientadas a poner en valor el patrimonio astronómico regional.",
-              "body": "El municipio madrileño de Buitrago del Lozoya albergó una nueva edición del Festival del Eclipse, reuniendo a visitantes y curiosos en torno a talleres y observaciones guiadas. Esta iniciativa cultural busca descentralizar la oferta de ocio estival, proponiendo escapadas didácticas a menos de una hora de la capital. Mientras tanto, en los espacios verdes urbanos como el Parque Juan Carlos I, los servicios municipales atienden incidencias puntuales en la fauna de los estanques con discreción y rigor técnico. La programación cultural de los distritos incluye también exposiciones gratuitas y ciclos de comedia protagonizados por figuras como Goyo Jiménez y Galder Varas. El final del verano ofrece así un equilibrio entre el patrimonio natural de la sierra y la renovada agenda escénica metropolitana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo cubierto acompaña una jornada templada con temperaturas entre 25 y 33°C.",
-              "lede": "La nubosidad persistente suaviza la sensación térmica mientras la calidad del aire se mantiene en niveles considerados justos con un PM2.5 de 13.",
-              "body": "El termómetro barcelonés se mueve hoy en un rango de 25 a 33°C bajo un cielo completamente cubierto que mitiga la insolación directa sobre el pavimento urbano. Los niveles de calidad del aire registran un índice PM2.5 de 13, una lectura justa que aconseja prudencia a personas sensibles durante la práctica de ejercicio al aire libre. La puesta de sol está prevista para las 20:49, prolongando unas tardes de luz difusa ideales para caminar sin prisa por los paseos arbolados. Los parques metropolitanos mantienen sus horarios habituales de apertura, permitiendo el tránsito peatonal con total tranquilidad. Es una jornada meteorológicamente atípica para mediados de agosto, perfecta para observar la arquitectura modernista sin el peso de la insolación veraniega.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "02",
-              "headline": "Los supermercados principales abren sus puertas este fin de semana tras el festivo del 15 de agosto.",
-              "lede": "Las grandes cadenas de alimentación mantienen horarios especiales para facilitar las compras cotidianas de residentes y visitantes.",
-              "body": "Tras la festividad de Asunción celebrada el 15 de agosto de 2026, establecimientos como Mercadona, Carrefour, Lidl, Alcampo y Dia operan con normalidad adaptada al calendario dominical y festivo. Esta continuidad comercial permite abastecer despensas y adquirir productos frescos sin alterar las rutinas de descanso en los barrios. Las oficinas bancarias y los organismos de la administración pública permanecen cerrados hasta el lunes, concentrando toda la actividad ciudadana en el sector servicios y el comercio de proximidad. La Guardia Urbana mantiene los dispositivos de vigilancia preventiva tras el reciente incendio forestal controlado en el parque natural de Collserola. Se recuerda la prohibición absoluta de encender fuego en áreas arboladas y zonas de influencia forestal.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "03",
-              "headline": "El parque de atracciones del Tibidabo ilumina las noches de verano con su nuevo Laser Show.",
-              "lede": "Música, tecnología y haces de luz transforman el horizonte nocturno de la montaña mágica en un espectáculo visual gratuito.",
-              "body": "Las noches de agosto en Barcelona suman un atractivo contemporáneo con las proyecciones lumínicas del Tibidabo, donde la tecnología y la música dialogan sobre la silueta de la ciudad. Este espectáculo nocturno complementa la oferta de ocio tradicional en la cumbre barcelonesa, accesible mediante el histórico Tranvía Blau y los funiculares de la zona alta. En paralelo, el tejido comercial metropolitano continúa su expansión con la reciente apertura de tres nuevas tiendas de Decathlon en la provincia, diversificando la oferta de equipamiento deportivo. Los visitantes que deseen realizar transacciones monetarias encuentran un tipo de cambio estable de 1 USD equivalente a 0.86 EUR en cajeros y oficinas de cambio autorizadas. La ciudad combina así su patrimonio histórico con innovaciones de entretenimiento estival discretas y cuidadas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Una suave llovizna con 1.4 mm de precipitación marca una jornada fresca de 13 a 17°C.",
-              "lede": "El termómetro porteño desciende hasta los 13°C en un domingo gris y húmedo que invita a refugiarse en librerías y cafés tradicionales.",
-              "body": "La temperatura en Buenos Aires oscila hoy entre los 13 y los 17°C, acompañada por una llovizna ligera que acumula 1.4 mm de precipitación sobre el asfalto. La calidad del aire se mantiene en niveles buenos con un registro de PM2.5 en 10, garantizando una atmósfera limpia tras el paso frontal. La puesta de sol ocurrirá puntualmente a las 18:23, acortando las horas de luz natural y favoreciendo el ritmo pausado de los interiores. Los espacios culturales y los teatros de la avenida Corrientes preparan sus salas para el inicio de una semana intensa de actividades artísticas. Es una jornada típicamente porteña para recorrer los soportales del centro histórico con paraguas y abrigo ligero.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "02",
-              "headline": "Los organismos oficiales y bancos cierran sus puertas el lunes por el Paso a la Inmortalidad de San Martín.",
-              "lede": "El traslado del feriado patrio del 17 de agosto genera un fin de semana largo con cese temporal de trámites administrativos.",
-              "body": "El lunes 17 de agosto de 2026 se conmemora el Paso a la Inmortalidad del General José de San Martín, configurando un fin de semana largo de descanso en todo el país. Las oficinas de la administración pública, los bancos y las dependencias postales suspenden la atención presencial hasta el martes por la mañana. Los servicios de transporte público ajustan sus frecuencias a los cronogramas habituales de días feriados, facilitando desplazamientos tranquilos hacia los espacios verdes. Las autoridades sanitarias recuerdan la vigencia de la vigilancia epidemiológica por casos de dengue y chikungunya, recomendando el uso de repelente en áreas húmedas. Las farmacias de turno y los servicios de urgencia hospitalaria mantendrán sus guardias completas durante toda la jornada festiva.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival y Mundial de Tango transformará más de 50 sedes desde el próximo 19 de agosto.",
-              "lede": "Vicentico y Abel Pintos abrirán la gran cita porteña dedicada al 2x4 con conciertos gratuitos y milongas en toda la ciudad.",
-              "body": "A partir del 19 de agosto, Buenos Aires se convertirá en la capital mundial del tango con una programación extendida por más de 50 sedes culturales. La apertura oficial correrá a cargo de reconocidos artistas como Vicentico y Abel Pintos, dando inicio a semanas de exhibiciones, clases magistrales y conciertos. Esta cita se suma a la reciente repercusión del Festival La Mujer y el Cine 2026, que ofreció cinco jornadas de proyecciones gratuitas y estrenos nacionales. Los visitantes encontrarán una oferta cultural diversa que respeta la tradición musical y cinematográfica de los barrios porteños. Conviene consultar la reserva previa de localidades para los eventos más concurridos del mundial de tango a través de los canales oficiales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-16"
             }
           ]
         }
