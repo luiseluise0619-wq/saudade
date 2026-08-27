@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-08-26T06:00:00+09:00",
+  "updated": "2026-08-27T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-27T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A estação do Cais do Sodré reabre hoje.",
+              "lede": "Após 19 dias de obras profundas, o metro recupera a normalidade na margem ribeirinha.",
+              "body": "A circulação subterrânea volta a fluir com a reabertura da estação do Cais do Sodré nesta quinta-feira. Foram 19 dias de intervenções necessárias para melhorar a infraestrutura e a segurança dos passageiros diários. Os passageiros que dependem desta linha verde encontram agora um espaço renovado e pronto a responder ao fluxo habitual. É o fim de um período de desvios e ajustamentos nos autocarros de superfície. A cidade respira melhor com este eixo central novamente operacional.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "02",
+              "headline": "O festival Meo Kalorama ocupa o Parque da Bela Vista.",
+              "lede": "Os horários e os mapas de transportes já estão definidos para os próximos dias de música.",
+              "body": "A agenda cultural da capital volta a concentrar-se no Parque da Bela Vista com mais uma edição do Meo Kalorama. A organização publicou os horários detalhados dos concertos e os mapas do recinto para orientar o público. Os transportes públicos foram reforçados para facilitar o acesso de quem chega de vários pontos da cidade. Recomenda-se a consulta prévia dos percursos para evitar aglomerações nas entradas principais. A música ao vivo regressa aos grandes palcos ao ar livre.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "03",
+              "headline": "A taxa de câmbio mantém-se estável para quem chega de fora.",
+              "lede": "O dólar norte-americano fixa-se em 0.86 EUR nas transações correntes.",
+              "body": "Os viajantes que chegam com divisa estrangeira encontram uma referência clara no mercado cambial de hoje. Cada 1 USD equivale exatamente a 0.86 EUR nas trocas oficiais registadas. Esta proporção facilita o planeamento financeiro de quem visita a cidade para estadias curtas ou longas. Os estabelecimentos locais continuam a aceitar os meios de pagamento eletrónicos habituais sem complicações. A economia diária decorre com a previsibilidade desejada por residentes e visitantes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A chuva forte condiciona o Parque da Cidade.",
+              "lede": "Os termómetros marcam entre 16 e 18°C sob uma precipitação acumulada de 29.5mm.",
+              "body": "O Porto enfrenta um dia marcado pela instabilidade meteorológica e aguaceiros persistentes. A temperatura oscila entre os 16 e os 18°C, acompanhada por uma queda de 29.5mm de precipitação e risco de trovoada. A qualidade do ar permanece num patamar considerado fair, registando 6 de PM2.5. O pôr do sol ocorre pelas 20:15, fechando um dia de luz cinzenta e ruas molhadas. Quem caminha pelos espaços verdes deve acautelar-se contra o vento e a chuva miudinha.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "02",
+              "headline": "O Brunch Electronik estreia-se no Parque da Cidade.",
+              "lede": "O artista Shimza lidera o cartaz da primeira edição deste evento ao ar livre.",
+              "body": "A programação musical da Invicta acolhe pela primeira vez o Brunch Electronik no vasto espaço do Parque da Cidade. Shimza é o nome em destaque para animar o público numa tarde que exigirá atenção ao estado do tempo. As entradas já estão disponíveis para os entusiastas da música eletrónica que procuram novas experiências urbanas. A organização preparou estruturas abrigadas para mitigar os efeitos da precipitação esperada. É uma nova dinâmica que se instala nos relvados nortenhos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "03",
+              "headline": "As exposições gratuitas cruzam o Atlântico na agenda cultural.",
+              "lede": "O humor internacional e a pintura contemporânea ocupam as galerias da cidade.",
+              "body": "A oferta artística do Porto diversifica-se com novas mostras abertas ao público em vários espaços municipais. Uma exposição gratuita reúne trabalhos de artistas de todo o mundo centrados no humor gráfico transatlântico. Em paralelo, decorrem visitas comentadas às peças em exibição temporária, promovendo o cruzamento de saberes. A taxa de câmbio de 1 USD por 0.86 EUR facilita as aquisições de catálogos por visitantes estrangeiros. A cultura serve de refúgio perfeito para escapar aos dias de trovoada.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra recebe aguaceiros dispersos e temperaturas amenas.",
+              "lede": "O termómetro varia entre 16 e 20°C com uma precipitação leve de 3.4mm.",
+              "body": "A vila serrana desperta com uma atmosfera húmida e fresca típica das encostas atlânticas. Os valores térmicos situam-se entre os 16 e os 20°C, enquanto a precipitação não ultrapassa os 3.4mm. A qualidade do ar é fair, registando um valor de 4 de PM2.5 nos postos de monitorização. O sol despede-se da serra pelas 20:15, iluminando a neblina matinal que ainda toca os palácios. É um clima propício para caminhadas lentas sob a proteção de capas leves.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival MIMMOS prepara a animação para setembro.",
+              "lede": "A arte das marionetas regressa às ruas e auditórios históricos da vila.",
+              "body": "A agenda cultural de Sintra já aquece motores para a chegada do Festival De Marionetas MIMMOS no próximo mês. Este encontro artístico promete encher os recintos locais com espetáculos dedicados a todas as idades. As companhias convidadas preparam intervenções em espaços públicos e salas abrigadas da vila. É uma oportunidade imperdível para redescobrir o património local através da manipulação de bonecos. A programação detalhada será divulgada muito em breve pela autarquia.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            },
+            {
+              "n": "03",
+              "headline": "O debate sobre o futuro do parque natural mobiliza residentes.",
+              "lede": "Mais de 7.500 assinaturas exigem maior participação na gestão do território.",
+              "body": "A cidadania ativa ganha força em Sintra com a entrega de um projeto cívico focado no Parque Natural. Mais de 7.500 assinaturas foram validadas, forçando discussões formais ao nível parlamentar local. O objetivo principal passa por preservar a identidade paisagística e ordenar o crescimento urbano na zona protegida. Os visitantes também beneficiam indiretamente desta tutela rigorosa sobre a floresta e os trilhos pedestres. A conversão financeira de 1 USD para 0.86 EUR apoia os turistas internacionais que visitam o concelho.",
+              "source": "saudade desk",
+              "source_date": "2026-08-27"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-26T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O final do dia em Sintra é marcado por uma serenidade ímpar, com o sol a ocultar-se lentamente pelas 20:28 no horizonte atlântico. Com a temperatura estável entre os 20 e os 28°C e o ar limpo com PM2.5 nos 10, os caminhos que serpenteiam a montanha revelam-se ideais para uma caminhada contemplativa. O cenário overcast atenua o calor, permitindo observar a flora autóctone sem pressas ou agitação. Os transportes locais funcionam com regularidade para escoar os visitantes que regressam do centro histórico para a vila. A paridade financeira de 1 USD para 0.86 EUR facilita pequenas despesas em chás e pastelaria tradicional ao cair da noite. Sintra recupera assim o seu silêncio secular após a partida dos autocarros turísticos.",
               "source": "saudade desk",
               "source_date": "2026-08-18"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-17T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival de Magia de Rua ocupa a cidade com 175 espetáculos.",
-              "lede": "Quinze artistas reúnem-se em vários pontos para atuações públicas durante a próxima semana.",
-              "body": "As ruas da capital recebem o Festival de Magia de Rua de Lisboa, reunindo 15 artistas em 175 espetáculos na próxima semana. É uma excelente oportunidade para observar a cidade através do lirismo inesperado de pequenos truques ao ar livre. As praças e os largos tradicionais transformam-se em palcos discretos para quem caminha sem pressa. A qualidade do ar permanece em níveis considerados justos, com o índice PM2.5 a registar 12. O câmbio atual fixa-se em 1 USD para 0.86 EUR, facilitando as trocas comerciais quotidianas dos visitantes. A programação cultural convida a pausas prolongadas junto aos locais habituais de passagem. O ritmo urbano abranda ligeiramente para acolher estas pequenas artes e o olhar atento dos transeuntes.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "02",
-              "headline": "A Operação Verão 2026 desenha os novos roteiros musicais no Parque Tejo.",
-              "lede": "O festival gigante regressa à margem ribeirinha para marcar a agenda cultural estival.",
-              "body": "O Parque Tejo volta a assumir um papel central na animação da cidade com o regresso do seu grande festival de música. Esta iniciativa integra a Operação Verão 2026 em Lisboa, traçando o guia definitivo para os espetáculos ao ar livre. A vasta extensão ribeirinha permite desfrutar de concertos com amplo horizonte sobre o rio. Para quem chega de fora, o câmbio oficial encontra-se estável em 1 USD para 0.86 EUR. A qualidade do ar mantém-se justa, com um valor de PM2.5 de 12, garantindo condições aceitáveis para estar ao ar livre. O espaço convida a longas caminhadas ao entardecer, longe do bulgário excessivo do centro histórico. A mobilidade urbana está reforçada para absorver o fluxo natural de público em direção à zona oriental.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "03",
-              "headline": "O Parque das Nações acolhe a iniciativa Vamos somar Talentos de Lisboa.",
-              "lede": "A zona moderna da capital promove encontros criativos e novas propostas comunitárias.",
-              "body": "O Parque das Nações serve de palco para o programa Vamos somar Talentos de Lisboa, valorizando a expressão artística local. A arquitetura ampla da zona norte ribeirinha contrasta com a calçada antiga dos bairros históricos. Com a qualidade do ar em patamares justos de PM2.5 a 12, passear pelos jardins e passeios marítimos torna-se muito agradável. A taxa de câmbio de 1 USD para 0.86 EUR mantém-se vantajosa para os viajantes estrangeiros a liquidar despesas correntes. A zona oferece recantos silenciosos para observadores tranquilos que preferem a modernidade geométrica aos relevos tradicionais. Os cafés e esplanadas locais refletem o ritmo sossegado desta parte da cidade. É um bom momento para redescobrir as margens do rio sem pressas nem horários rígidos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu encoberto define o ritmo do Porto com termómetros a atingir os 32°C.",
-              "lede": "A temperatura oscila entre os 20°C e os 32°C sob uma luz difusa até ao pôr do sol.",
-              "body": "O Porto regista hoje temperaturas compreendidas entre os 20°C e os 32°C, mantendo um céu totalmente encoberto ao longo do dia. O sol despede-se mais tarde, marcando o ocaso pelas 20:30. A qualidade do ar é considerada justa, registando um valor de PM2.5 de 9. Para os visitantes internacionais, a taxa de câmbio de 1 USD para 0.86 EUR continua a ser aplicada com normalidade nas transações. A atmosfera cinzenta suaviza a intensidade do calor, tornando as caminhadas urbanas mais toleráveis. É o dia ideal para percorrer as ruas íngremes da Ribeira sem a incidência direta da luz solar estival. Os jardins públicos oferecem sombra e silêncio aos que procuram refúgio na cidade antiga. A cidade respira com serenidade sob este manto de nuvens altas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival Internacional de Folclore celebra as tradições no Porto Formoso.",
-              "lede": "A 19.ª edição reúne grupos de várias origens para partilhar expressões culturais.",
-              "body": "A agenda cultural destaca o 19.º Festival Internacional de Folclore do Porto Formoso, reunindo grupos vindos dos Açores, França e Polónia. Este encontro promove a partilha de matrizes tradicionais e ritmos ancestrais perante o público curioso. No exterior, o termómetro marca valores entre os 20°C e os 32°C, sob um céu densamente encoberto. O cair da noite acontece pelas 20:30, prolongando a luz suave sobre as celebrações. A qualidade do ar permanece justa, com um nível de PM2.5 fixado em 9. A conversão monetária permanece estável em 1 USD para 0.86 EUR para quem visita a região. Os espaços verdes e os locais de convívio ganham nova vida com o intercâmbio cultural. A música tradicional ecoa de forma contida, respeitando a sobriedade característica da paisagem nortenha.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "03",
-              "headline": "O Parque de Campismo do Porto Moniz reabre as portas aos viajantes.",
-              "lede": "O espaço de acolhimento na natureza volta a receber campistas após o período de interrupção.",
-              "body": "O Parque de Campismo do Porto Moniz reabre amanhã, oferecendo uma nova alternativa de alojamento junto à natureza atlântica. O clima local acompanha as tendências da região, com temperaturas entre os 20°C e os 32°C e muita nebulosidade. O pôr do sol ocorre pelas 20:30, permitindo desfrutar de longos finais de tarde à beira-mar. A qualidade do ar regista um índice justo de PM2.5 a 9. O câmbio atual mantém-se nos 0.86 EUR por cada 1 USD. A reabertura deste espaço beneficia os viajantes que procuram formas mais austeras e contemplativas de pernoitar. A paisagem envolvente mantém-se verde e húmida, beneficiando da cobertura de nuvens persistente. É um convite para desacelerar o passo e observar a costa com atenção e silêncio.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra de Sintra contempla o céu encoberto com máximas de 32°C.",
-              "lede": "A serra respira sob uma atmosfera fechada e húmida, com temperaturas entre os 20°C e os 32°C.",
-              "body": "Sintra regista hoje uma amplitude térmica de 20°C a 32°C, sob um céu totalmente encoberto que suaviza a vegetação densa. O pôr do sol desenha-se pelas 20:29, tingindo a névoa matutina com tons discretos no horizonte. A qualidade do ar local é justa, registando um valor de PM2.5 de 10. A taxa de câmbio de 1 USD para 0.86 EUR serve de referência fiável para as despesas correntes dos turistas. A humidade típica da serra mistura-se com o calor abafado do dia, criando um microclima muito particular. Os trilhos pedonais exigem calçado adequado devido à densidade da vegetação e à ausência de sol direto. Os palácios e quintas históricas mantêm a sua serenidade habitual entre as copas das árvores seculares. É um cenário propício à introspeção e à escuta atenta dos sons da floresta.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "02",
-              "headline": "Os cavalos selvagens cruzam livremente os trilhos do parque natural.",
-              "lede": "A presença destes animais na serra reforça o caráter silvestre e intocado da paisagem protegida.",
-              "body": "A circulação de cavalos selvagens soltos no parque natural de Sintra continua a marcar o quotidiano da serra. Estes animais movem-se livremente pelos bosques, integrando-se na paisagem com total naturalidade. O termómetro varia entre os 20°C e os 32°C, num ambiente dominado por um céu encoberto. O ocaso acontece pelas 20:29, encerrando o dia com uma penumbra suave sobre os vales profundos. A qualidade do ar permanece justa, com o índice PM2.5 a fixar-se em 10. Para transações monetárias, a cotação oficial fixa 1 USD em 0.86 EUR. Os visitantes devem manter uma distância respeitosa ao observar a fauna local nos caminhos menos frequentados. A atmosfera da serra permanece calma, oferecendo um refúgio autêntico para quem procura fugir ao ritmo acelerado das grandes cidades litorais.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
-            },
-            {
-              "n": "03",
-              "headline": "O silêncio da serra prolonga-se até ao pôr do sol das 20:29.",
-              "lede": "A neblina matutina dá lugar a uma tarde calma sob o céu cinzento e abafado.",
-              "body": "O final de tarde na serra de Sintra convida à contemplação silenciosa dos seus bosques seculares. Com o termómetro a oscilar entre os 20°C e os 32°C e o céu encoberto, o ambiente mantém-se fresco apesar do calor. O sol oculta-se na linha do horizonte pelas 20:29, fechando mais um ciclo diário na montanha. A qualidade do ar regista um valor justo de PM2.5 de 10. A taxa de câmbio oficial permanece estável em 1 USD para 0.86 EUR. Os caminhos de pedra calcária exigem um passo lento e consciente por parte de quem os percorre. A vila histórica recupera alguma tranquilidade à medida que os visitantes diurnos regressam aos centros urbanos. É o momento perfeito para escutar o vento entre os fetos e as árvores frondosas da encosta.",
-              "source": "saudade desk",
-              "source_date": "2026-08-17"
             }
           ]
         }
