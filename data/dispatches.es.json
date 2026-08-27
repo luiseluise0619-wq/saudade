@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-26T06:00:00+09:00",
-  "next_filing": "2026-08-26T21:00:00+00:00",
+  "filed_at": "2026-08-27T06:00:00+09:00",
+  "next_filing": "2026-08-27T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Madrid",
+      "city": "MADRID",
       "items": [
         {
           "n": "01",
-          "headline": "Reabre el tramo norte de la Línea 10 de Metro.",
-          "lede": "La conexión entre Plaza de Castilla y Cuzco vuelve a funcionar tras las obras estivales.",
-          "body": "Los viajeros habituales de la red subterránea recuperan una conexión clave tras semanas de ajustes técnicos en el norte de la capital. El tramo comprendido entre las estaciones de Plaza de Castilla y Cuzco vuelve a recibir trenes con total normalidad desde hoy. No obstante, las labores de mejora continúan activas en otros puntos de la misma infraestructura, concretamente en los inmediatos accesos a Santiago Bernabéu. Para cubrir este trayecto que sigue interrumpido, la compañía mantiene operativos los autobuses gratuitos de apoyo destinados a los usuarios. Conviene planificar los desplazamientos cotidianos con un ligero margen de tiempo adicional debido a estos trasbordos obligatorios.",
+          "headline": "Los chubascos intermitentes marcan las tardes de agosto.",
+          "lede": "La temperatura oscila entre los 17°C y los 23°C bajo un cielo variable.",
+          "body": "Las precipitaciones alcanzan hoy los 1.4mm en los distintos distritos de la capital. Conviene llevar paraguas ligero al recorrer las calles antes de la caída del sol a las 20:55. Los parques urbanos muestran un suelo húmedo y fresco que invita a caminar sin prisa. Los chubascos de finales de verano limpian el aire y dejan una tregua agradable para el paseo vespertino. Los viajeros encontrarán terrazas menos concurridas tras cada breve chaparrón. Es una oportunidad excelente para observar la arquitectura madrileña reflejada sobre el asfalto mojado.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "02",
-          "headline": "El parque de Vallecas reúne especies vegetales de toda la península.",
-          "lede": "Un paseo botánico local permite contemplar la diversidad ecológica peninsular sin salir de los límites urbanos.",
-          "body": "Los rincones verdes del sur de la ciudad esconden colecciones de flora autóctona que merecen una visita reposada durante las horas matinales. Este espacio público singular agrupa ejemplares representativos de los diferentes ecosistemas que configuran el territorio nacional. Los visitantes pueden observar la adaptación de arbustos mediterráneos y plantas de alta montaña en un mismo recorrido didáctico. Es un remanso de tranquilidad ideal para los observadores pacientes que buscan la sombra en los días calurosos del final de agosto. Los senderos pavimentados facilitan un paseo silencioso lejos del tráfico rodado y de la actividad intensa de las grandes avenidas.",
+          "headline": "El cambio oficial se sitúa en 1 USD frente a 0.86 EUR.",
+          "lede": "Esta tasa facilita las transacciones cotidianas para los visitantes extranjeros en comercios locales.",
+          "body": "Los viajeros provenientes de zonas con divisa estadounidense comprobarán un tipo de cambio estable en las casas autorizadas. La conversión actual de 1 USD por cada 0.86 EUR se mantiene constante en el centro. Este valor resulta útil para planificar los gastos en librerías tradicionales, cafés históricos y mercados de abastos. Conviene revisar las comisiones específicas de cada entidad antes de realizar operaciones en efectivo. La previsión financiera aporta tranquilidad a quienes disfrutan de estancias prolongadas en los barrios residenciales. El comercio de proximidad acepta pagos electrónicos con total normalidad.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "03",
-          "headline": "La divisa norteamericana se sitúa en 0.86 EUR.",
-          "lede": "Los viajeros internacionales operan con este tipo de cambio al planificar sus compras y estancias.",
-          "body": "El mercado de divisas mantiene una equivalencia estable para quienes llegan a la península con dólares estadounidenses en sus carteras. Cada dólar se intercambia actualmente por 0.86 EUR en las principales entidades bancarias y casas de cambio autorizadas. Esta proporción resulta especialmente favorable para el turista extranjero al adquirir bienes y servicios locales durante su estancia. Conviene recordar que las próximas festividades autonómicas, como el Día de Asturias y el Día de Extremadura previstas para el 2026-09-08, alterarán la apertura habitual de oficinas públicas y bancos. Se aconseja realizar las gestiones financieras con antelación para evitar contratiempos en los cajeros automáticos y sucursales.",
+          "headline": "La agenda cultural adelanta propuestas para el fin de semana.",
+          "lede": "La ciudad prepara sus salas de cine y espacios públicos para los próximos días.",
+          "body": "Los preparativos avanzan rumbo a la 19ª edición del Festival de Cine Italiano de Madrid, que llenará las pantallas de otoño. Mientras tanto, las actividades de los últimos días de agosto incluyen piscinas, cine al aire libre y títeres en los barrios. El reciente triunfo del Real Madrid por 4-1 en su estreno casero anima las conversaciones en las terrazas. Los festejos locales combinan propuestas culturales diversas antes de la llegada de las celebraciones de septiembre. Los residentes aprovechan la oferta de ocio urbano mientras el clima se mantiene templado. Cada rincón ofrece una pausa perfecta para el observador atento.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         }
       ]
     },
     {
-      "city": "Barcelona",
+      "city": "BARCELONA",
       "items": [
         {
           "n": "01",
-          "headline": "El Aeropuerto del Prat acoge una muestra sobre el comercio local.",
-          "lede": "Los pasajeros en tránsito descubren la historia de los establecimientos tradicionales de los barrios barceloneses.",
-          "body": "Las instalaciones aeroportuarias integran temporalmente un recorrido visual dedicado a la memoria comercial de la ciudad condal. La exposición fotográfica destaca la labor cotidiana de los mercados municipales y las tiendas centenarias que configuran la identidad urbana. Es una propuesta cultural inesperada para quienes aguardan la salida de sus vuelos en las terminales del Prat. Las imágenes reflejan la trastienda de los oficios artesanales y la relación de cercanía entre los tenderos y su clientela histórica. Esta iniciativa acerca el latido cotidiano de los barrios a los viajeros antes de que abandonen el territorio catalán.",
+          "headline": "La calidad del aire se mantiene en niveles razonablemente favorables.",
+          "lede": "El índice registra un valor de PM2.5 de 19 en las estaciones de medición.",
+          "body": "Los niveles de partículas finas permiten pasear con tranquilidad por el litoral y los parques urbanos. La atmósfera limpia favorece las caminatas matutinas sin las molestias típicas de otras jornadas densas. Conviene aprovechar estas condiciones para recorrer los barrios históricos a pie o en bicicleta. La brisa marina ayuda a mantener la claridad ambiental en toda la franja costera. Los observadores más exigentes valorarán este respiro en el pulso diario de la gran ciudad. La atmósfera estable acompaña las actividades al aire libre programadas para los próximos días.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "02",
-          "headline": "Cielos cubiertos y temperaturas de 23 a 30°C este martes.",
-          "lede": "El ambiente se mantiene templado bajo nubes persistentes mientras la puesta de sol llega a las 20:34.",
-          "body": "La jornada transcurre con una atmósfera estable y sin precipitaciones destacables en el litoral barcelonés. El termómetro se mueve en el rango previsto de 23 a 30°C, ofreciendo un respiro relativo frente a los picos de calor extremo de semanas anteriores. La capa de nubes cubre el cielo urbano y atenúa la radiación solar directa durante las horas centrales del día. Los paseos marítimos y los parques periurbanos recuperan gradualmente la calma tras el episodio de humo que afectó recientemente a Collserola y Torre Baró. Conviene estar atentos a las indicaciones locales si se planean rutas de senderismo por las zonas forestales colindantes.",
+          "headline": "El tipo de cambio opera con estabilidad en el entorno financiero.",
+          "lede": "Cada USD cotiza a 0.86 EUR en las principales oficinas de cambio.",
+          "body": "La paridad monetaria se mantiene sin grandes sobresaltos para quienes visitan la capital catalana. La equivalencia de 1 USD por 0.86 EUR simplifica el presupuesto diario en transporte y restauración. Las tarjetas internacionales operan con fluidez en la red de comercios adheridos de los diferentes distritos. Los viajeros internacionales pueden calcular sus gastos con precisión gracias a esta cotización constante. Conviene recordar que las pequeñas tiendas de barrio valoran los pagos directos para agilizar el servicio. Esta estabilidad monetaria acompaña el ritmo pausado de la temporada estival.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "03",
-          "headline": "La cotización monetaria se establece en 0.86 EUR por dólar.",
-          "lede": "El tipo de cambio actual facilita los cálculos económicos para los visitantes procedentes de Norteamérica.",
-          "body": "Las transacciones comerciales y el cambio de moneda operan bajo una paridad de 1 USD igual a 0.86 EUR en los establecimientos autorizados. Esta cifra permite a los viajeros extranjeros calcular con precisión sus presupuestos diarios para transporte, alojamiento y restauración. Es importante tener presente que el calendario laboral avanza hacia festividades autonómicas señaladas en otras regiones para el 2026-09-08, como el Día de Asturias y el Día de Extremadura. Aunque no afectan directamente al comercio diario catalán, ciertos servicios bancarios nacionales y organismos oficiales cerrarán sus puertas. Se recomienda anticipar cualquier trámite administrativo antes de que lleguen esas fechas festivas en el territorio peninsular.",
+          "headline": "El calendario cultural anuncia eventos singulares en diversos puntos.",
+          "lede": "El Thai Festival ofrecerá más de 20 actividades gratuitas este próximo fin de semana.",
+          "body": "La oferta ciudadana incluye propuestas variadas, como la exposición sobre el comercio local instalada en el aeropuerto del Prat. Por su parte, la red comercial amplía sus opciones con la apertura de la tienda número 19 de Decathlon en Cornellà de Llobregat. Paralelamente, los preparativos avanzan en el parque del terror para Halloween, donde ya se buscan actores. Estas iniciativas dinamizan la vida urbana sin alterar la calma de los paseantes cotidianos. La combinación de cultura, comercio y ocio ofrece múltiples alternativas para quienes recorren la provincia estos días. La agenda local equilibra tradición y novedades puntuales.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         }
       ]
     },
     {
-      "city": "Buenos Aires",
+      "city": "BUENOS AIRES",
       "items": [
         {
           "n": "01",
-          "headline": "El Festival y Mundial de Tango llena las milongas porteñas.",
-          "lede": "Bailarines y aficionados convergen en las pistas de la ciudad para celebrar la gran cita anual del género.",
-          "body": "La música del 2X4 resuena en cada rincón de Buenos Aires durante esta semana consagrada por completo al compás arrabalero. Las milongas tradicionales y los grandes escenarios acogen exhibiciones, clases magistrales y competencias internacionales de primer nivel. Residentes y visitantes comparten la pasión por el abrazo milonguero en una atmósfera de absoluta devoción estética y popular. Este encuentro anual consolida a la capital argentina como el epicentro indiscutible de la cultura tanguera global. Las calles del centro y los centros culturales barcelonenses bullen con una programación continua que se extiende hasta bien entrada la madrugada.",
+          "headline": "Una suave lluvia acompaña el descenso térmico de la tarde.",
+          "lede": "Los termómetros se mueven entre los 12°C y los 18°C con chubascos persistentes.",
+          "body": "Las precipitaciones suman 4.7mm sobre las calles arboladas de la ciudad. El sol se oculta temprano, marcando el compás a las 18:31 en este tramo del año. Conviene abrigarse con prendas de media estación para recorrer los cafetines tradicionales y las librerías. El agua da brillo a las veredas adoquinadas y refuerza la atmósfera melancólica típica de los días grises. Los parques muestran un aspecto solitario pero apacible, ideal para caminatas con paraguas. La humedad ambiente invita a refugiarse en espacios cerrados llenos de historia y literatura.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "02",
-          "headline": "Calidad del aire excelente y lectura de PM2.5 en 8.",
-          "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos peatonales por los parques y plazas.",
-          "body": "Los registros ambientales de la jornada muestran un índice muy favorable para la salud respiratoria de los transeúntes. Con una concentración de partículas PM2.5 situada en 8, el aire porteño se respira con total ligereza esta semana. Esta limpieza ambiental invita a recorrer a pie los barrios históricos sin la habitual preocupación por la polución vehicular. Los árboles de las avenidas principales muestran los primeros indicios del cambio estacional mientras los caminantes disfrutan de la brisa austral. Es una oportunidad excelente para sentarse en los bancos de madera de las plazas a observar el ritmo pausado de la metrópoli.",
+          "headline": "La moda y el tango convergen en la agenda cultural porteña.",
+          "lede": "El festival Buenos Aires Está de Moda despliega más de 70 actividades oficiales.",
+          "body": "La creatividad local inunda los barrios con presentaciones exclusivas y propuestas de diseño independiente. A pocos metros, la galería oculta por donde alguna vez pasó Slash celebra un festival de rock gratuito titulado De Christian Dior al punk rock. Paralelamente, la ciudad vibra con una nueva edición del Festival y Mundial de Tango, llenando las milongas de ritmo. Los aficionados también celebran la confirmación de sedes para la FIP Senior World Cup. Esta densa programación artística ofrece refugio perfecto contra la jornada fresca y lluviosa. Cada barrio exhibe su particular identidad a través de estos encuentros.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         },
         {
           "n": "03",
-          "headline": "Cien bodegones tradicionales ofrecen descuentos durante una semana.",
-          "lede": "La ruta gastronómica popular de la ciudad celebra la cocina casera con promociones especiales en sus mesas.",
-          "body": "Los templos culinarios de barrio más entrañables de Buenos Aires participan en una iniciativa conjunta para ensalzar su legado gastronómico. Un centenar de establecimientos históricos aplican rebajas temporales en sus platos más emblemáticos, desde las milanesas generosas hasta los guisos tradicionales. Es la ocasión perfecta para sentarse sin prisa en mesas de madera gastada y disfrutar de porciones generosas. Los comensales locales y los viajeros curiosos redescubren así el valor de la sobremesa porteña en un ambiente de cercanía. Se recomienda consultar el mapa oficial de los locales adheridos para reservar con antelación debido a la alta demanda.",
+          "headline": "El ritmo urbano se adapta al refugio de los espacios cubiertos.",
+          "lede": "Los cafés históricos reciben a los transeúntes que buscan reparo del clima fresco.",
+          "body": "Con una temperatura máxima que apenas alcanza los 18°C, la vida ciudadana se despliega bajo techo. Las librerías de la Avenida Corrientes y los zaguanes antiguos ofrecen el cobijo necesario frente al agua. Los viajeros encuentran en este clima una invitación perfecta para la lectura pausada y la observación silenciosa. Las veredas mojadas reflejan las luces tenues de los antiguos faroles porteños al caer la tarde. La ciudad mantiene su elegancia intacta bajo el cielo nublado de finales de agosto. Es un momento propicio para redescubrir los detalles arquitectónicos menos transitados.",
           "source": "saudade desk",
-          "source_date": "2026-08-26"
+          "source_date": "2026-08-27"
         }
       ]
     }
