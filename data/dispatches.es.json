@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-27T06:00:00+09:00",
-  "next_filing": "2026-08-27T21:00:00+00:00",
+  "filed_at": "2026-08-28T06:00:00+09:00",
+  "next_filing": "2026-08-28T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "MADRID",
+      "city": "Madrid",
       "items": [
         {
           "n": "01",
-          "headline": "Los chubascos intermitentes marcan las tardes de agosto.",
-          "lede": "La temperatura oscila entre los 17°C y los 23°C bajo un cielo variable.",
-          "body": "Las precipitaciones alcanzan hoy los 1.4mm en los distintos distritos de la capital. Conviene llevar paraguas ligero al recorrer las calles antes de la caída del sol a las 20:55. Los parques urbanos muestran un suelo húmedo y fresco que invita a caminar sin prisa. Los chubascos de finales de verano limpian el aire y dejan una tregua agradable para el paseo vespertino. Los viajeros encontrarán terrazas menos concurridas tras cada breve chaparrón. Es una oportunidad excelente para observar la arquitectura madrileña reflejada sobre el asfalto mojado.",
+          "headline": "La línea 7 de Metro reabre por completo tras finalizar sus obras.",
+          "lede": "El tramo entre Gregorio Marañón y Pitis recupera la normalidad este sábado.",
+          "body": "Los viajeros habituales de la red subterránea madrileña celebran la conclusión de los trabajos en la línea 7 de Metro. La reapertura total facilita los desplazamientos entre Gregorio Marañón y Pitis tras semanas de cortes parciales. Esta mejora coincide con el inicio de la programación cultural de septiembre en la capital. Los residentes recuperan sus rutas habituales justo a tiempo para los nuevos eventos urbanos. Conviene revisar los trayectos antes de viajar para aprovechar la conectividad restablecida en todo este sector de la red.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "02",
-          "headline": "El cambio oficial se sitúa en 1 USD frente a 0.86 EUR.",
-          "lede": "Esta tasa facilita las transacciones cotidianas para los visitantes extranjeros en comercios locales.",
-          "body": "Los viajeros provenientes de zonas con divisa estadounidense comprobarán un tipo de cambio estable en las casas autorizadas. La conversión actual de 1 USD por cada 0.86 EUR se mantiene constante en el centro. Este valor resulta útil para planificar los gastos en librerías tradicionales, cafés históricos y mercados de abastos. Conviene revisar las comisiones específicas de cada entidad antes de realizar operaciones en efectivo. La previsión financiera aporta tranquilidad a quienes disfrutan de estancias prolongadas en los barrios residenciales. El comercio de proximidad acepta pagos electrónicos con total normalidad.",
+          "headline": "Las fiestas de Arganzuela y el Festival de Piano llenan los distritos.",
+          "lede": "La ciudad acoge pianos en la calle y conciertos gratuitos hasta el 4 de septiembre.",
+          "body": "La agenda cultural madrileña ofrece cinco planes gratuitos entre el 28 de agosto y el 4 de septiembre. Las fiestas de Arganzuela y el Festival de Piano transforman plazas y centros culturales con música en vivo. Un piano de cola abierto espera a cualquier aficionado que desee tocar al aire libre. La programación incluye más de 400 horas de formación y conciertos repartidos por distintos barrios. Es una ocasión propicia para disfrutar del espacio público antes de que finalice el verano en la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "03",
-          "headline": "La agenda cultural adelanta propuestas para el fin de semana.",
-          "lede": "La ciudad prepara sus salas de cine y espacios públicos para los próximos días.",
-          "body": "Los preparativos avanzan rumbo a la 19ª edición del Festival de Cine Italiano de Madrid, que llenará las pantallas de otoño. Mientras tanto, las actividades de los últimos días de agosto incluyen piscinas, cine al aire libre y títeres en los barrios. El reciente triunfo del Real Madrid por 4-1 en su estreno casero anima las conversaciones en las terrazas. Los festejos locales combinan propuestas culturales diversas antes de la llegada de las celebraciones de septiembre. Los residentes aprovechan la oferta de ocio urbano mientras el clima se mantiene templado. Cada rincón ofrece una pausa perfecta para el observador atento.",
+          "headline": "Escena Escorial inaugura un nuevo espacio para las artes escénicas.",
+          "lede": "La Comunidad de Madrid suma un festival musical en la sierra.",
+          "body": "El panorama cultural de la región da la bienvenida a Escena Escorial este otoño. Este nuevo festival de música y artes escénicas amplía la oferta más allá del núcleo urbano. Las actuaciones buscan atraer a espectadores interesados en propuestas musicales cuidadas en entornos monumentales. La iniciativa complementa la temporada de conciertos que recorre diversos municipios madrileños en las próximas semanas. Los visitantes encontrarán una alternativa reposada para disfrutar del patrimonio y la escena artística fuera de los circuitos habituales.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         }
       ]
     },
     {
-      "city": "BARCELONA",
+      "city": "Barcelona",
       "items": [
         {
           "n": "01",
-          "headline": "La calidad del aire se mantiene en niveles razonablemente favorables.",
-          "lede": "El índice registra un valor de PM2.5 de 19 en las estaciones de medición.",
-          "body": "Los niveles de partículas finas permiten pasear con tranquilidad por el litoral y los parques urbanos. La atmósfera limpia favorece las caminatas matutinas sin las molestias típicas de otras jornadas densas. Conviene aprovechar estas condiciones para recorrer los barrios históricos a pie o en bicicleta. La brisa marina ayuda a mantener la claridad ambiental en toda la franja costera. Los observadores más exigentes valorarán este respiro en el pulso diario de la gran ciudad. La atmósfera estable acompaña las actividades al aire libre programadas para los próximos días.",
+          "headline": "La línea 1 del metro de Barcelona reabre entre Florida y Plaça de Sants.",
+          "lede": "El tramo recupera el servicio este sábado tras concluir las obras previstas.",
+          "body": "Los desplazamientos por el sur de la red metropolitana recuperan su fluidez habitual este fin de semana. La línea 1 del metro de Barcelona reabre por completo el tramo comprendido entre Florida y Plaça de Sants este sábado. Los residentes y viajeros que se desplazan por estos barrios pueden planificar sus trayectos con normalidad. Esta intervención mejora la conectividad en una de las arterias más transitadas de la red subterránea. Conviene recordar que la temperatura exterior oscila entre 25 y 31°C bajo cielos cubiertos.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "02",
-          "headline": "El tipo de cambio opera con estabilidad en el entorno financiero.",
-          "lede": "Cada USD cotiza a 0.86 EUR en las principales oficinas de cambio.",
-          "body": "La paridad monetaria se mantiene sin grandes sobresaltos para quienes visitan la capital catalana. La equivalencia de 1 USD por 0.86 EUR simplifica el presupuesto diario en transporte y restauración. Las tarjetas internacionales operan con fluidez en la red de comercios adheridos de los diferentes distritos. Los viajeros internacionales pueden calcular sus gastos con precisión gracias a esta cotización constante. Conviene recordar que las pequeñas tiendas de barrio valoran los pagos directos para agilizar el servicio. Esta estabilidad monetaria acompaña el ritmo pausado de la temporada estival.",
+          "headline": "El mercado de La Boqueria estrena nuevas normas para su puestos.",
+          "lede": "La reforma elimina los cucuruchos de jamón y los zumos en vaso para frenar la masificación.",
+          "body": "El emblemático mercado de La Boqueria emprende una profunda reforma en su oferta comercial y estética. La nueva normativa prohíbe la venta de cucuruchos de jamón, bravas o zumos en vaso para evitar la deriva en parque temático turístico. El objetivo es preservar la función de mercado de abastos tradicional para los vecinos del barrio. Los compradores locales encuentran así un espacio más sosegado y auténtico en el corazón de Las Ramblas. La calidad del aire se mantiene en niveles favorables con un índice PM2.5 de 7 en toda la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "03",
-          "headline": "El calendario cultural anuncia eventos singulares en diversos puntos.",
-          "lede": "El Thai Festival ofrecerá más de 20 actividades gratuitas este próximo fin de semana.",
-          "body": "La oferta ciudadana incluye propuestas variadas, como la exposición sobre el comercio local instalada en el aeropuerto del Prat. Por su parte, la red comercial amplía sus opciones con la apertura de la tienda número 19 de Decathlon en Cornellà de Llobregat. Paralelamente, los preparativos avanzan en el parque del terror para Halloween, donde ya se buscan actores. Estas iniciativas dinamizan la vida urbana sin alterar la calma de los paseantes cotidianos. La combinación de cultura, comercio y ocio ofrece múltiples alternativas para quienes recorren la provincia estos días. La agenda local equilibra tradición y novedades puntuales.",
+          "headline": "El Thai Festival y el Ripollet Rock animan el fin de semana.",
+          "lede": "La agenda urbana combina gastronomía asiática y música heavy metal con entrada libre.",
+          "body": "La agenda de Barcelona propone dos citas bien diferenciadas para el fin de semana del 29 y 30 de agosto. El Thai Festival aterriza en la ciudad con más de 20 actividades gratuitas centradas en la cultura tailandesa. Paralelamente, el Ripollet Rock 2026 reúne a bandas como Rhapsody of Fire y Crematory en una nueva edición para los amantes del género. Las temperaturas se mueven entre 25 y 31°C con atardeceres previstos a las 20:31. Son opciones ideales para disfrutar del ocio estival al aire libre antes de que despunte septiembre.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         }
       ]
     },
     {
-      "city": "BUENOS AIRES",
+      "city": "Buenos Aires",
       "items": [
         {
           "n": "01",
-          "headline": "Una suave lluvia acompaña el descenso térmico de la tarde.",
-          "lede": "Los termómetros se mueven entre los 12°C y los 18°C con chubascos persistentes.",
-          "body": "Las precipitaciones suman 4.7mm sobre las calles arboladas de la ciudad. El sol se oculta temprano, marcando el compás a las 18:31 en este tramo del año. Conviene abrigarse con prendas de media estación para recorrer los cafetines tradicionales y las librerías. El agua da brillo a las veredas adoquinadas y refuerza la atmósfera melancólica típica de los días grises. Los parques muestran un aspecto solitario pero apacible, ideal para caminatas con paraguas. La humedad ambiente invita a refugiarse en espacios cerrados llenos de historia y literatura.",
+          "headline": "El festival Buenos Aires Está de Moda lanza su tercera edición.",
+          "lede": "Más de 70 actividades culturales recorren la ciudad durante estos días.",
+          "body": "La capital argentina acoge una nueva edición de su encuentro dedicado al diseño y la creación local. Buenos Aires Está de Moda despliega un programa con más de 70 actividades distribuidas por distintos puntos urbanos. Los asistentes pueden participar en exposiciones, talleres y muestras que ponen en valor la identidad textil del país. El termómetro marca hoy entre 8 y 17°C bajo un cielo cubierto, con puesta de sol a las 18:32. La calidad del aire se registra como justa, con un valor de PM2.5 de 10.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "02",
-          "headline": "La moda y el tango convergen en la agenda cultural porteña.",
-          "lede": "El festival Buenos Aires Está de Moda despliega más de 70 actividades oficiales.",
-          "body": "La creatividad local inunda los barrios con presentaciones exclusivas y propuestas de diseño independiente. A pocos metros, la galería oculta por donde alguna vez pasó Slash celebra un festival de rock gratuito titulado De Christian Dior al punk rock. Paralelamente, la ciudad vibra con una nueva edición del Festival y Mundial de Tango, llenando las milongas de ritmo. Los aficionados también celebran la confirmación de sedes para la FIP Senior World Cup. Esta densa programación artística ofrece refugio perfecto contra la jornada fresca y lluviosa. Cada barrio exhibe su particular identidad a través de estos encuentros.",
+          "headline": "Los faroles flotantes iluminan la llegada de la primavera porteña.",
+          "lede": "Buenos Aires recrea una noche de inspiración tailandesa con miles de luces en el agua.",
+          "body": "La ciudad se prepara para acoger una de las experiencias visuales más esperadas de la temporada. El festival de faroles flotantes regresa este año para transformar los espacios acuáticos en un paisaje de luces. Esta celebración singular invita a los vecinos a disfrutar de una noche de calma y contemplación. El evento coincide con la apertura de la agenda primaveral en los parques de la ciudad. Con una temperatura fresca entre 8 y 17°C, los asistentes acuden abrigados a pasear junto a las riberas al atardecer.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         },
         {
           "n": "03",
-          "headline": "El ritmo urbano se adapta al refugio de los espacios cubiertos.",
-          "lede": "Los cafés históricos reciben a los transeúntes que buscan reparo del clima fresco.",
-          "body": "Con una temperatura máxima que apenas alcanza los 18°C, la vida ciudadana se despliega bajo techo. Las librerías de la Avenida Corrientes y los zaguanes antiguos ofrecen el cobijo necesario frente al agua. Los viajeros encuentran en este clima una invitación perfecta para la lectura pausada y la observación silenciosa. Las veredas mojadas reflejan las luces tenues de los antiguos faroles porteños al caer la tarde. La ciudad mantiene su elegancia intacta bajo el cielo nublado de finales de agosto. Es un momento propicio para redescubrir los detalles arquitectónicos menos transitados.",
+          "headline": "El Festival Internacional Vagamundos llega a los escenarios locales.",
+          "lede": "La programación artística fomenta el intercambio cultural entre creadores independientes.",
+          "body": "Las propuestas escénicas de la ciudad se enriquecen con la llegada del Festival Internacional Vagamundos 2026. Este encuentro reúne a artistas de diversas disciplinas para ofrecer obras en salas independientes de Buenos Aires. La iniciativa busca generar un diálogo pausado entre creadores y público en espacios de aforo reducido. Los espectadores encontrarán obras de teatro, danza y narración oral ideales para las tardes frescas de esta época. La jornada concluye con el ocaso a las 18:32 y una atmósfera propicia para el teatro de sala.",
           "source": "saudade desk",
-          "source_date": "2026-08-27"
+          "source_date": "2026-08-28"
         }
       ]
     }

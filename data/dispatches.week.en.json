@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-08-27T06:00:00+09:00",
+  "updated": "2026-08-28T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-28T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light drizzle settles over the pavement as Seoul lingers at 28°C.",
+              "lede": "The afternoon air carries a faint trace of moisture, leaving the city quiet.",
+              "body": "The afternoon air carries a faint trace of moisture, leaving the city quiet. Today brings 24–28°C with just 0.2mm of precipitation, keeping the atmosphere cool and subdued. Sunset arrives at 19:07, casting a long, muted gray across the asphalt. Air quality remains fair with PM2.5 resting at 13. Meanwhile, the exchange rate sits at 1 USD to 1380 KRW. Walkers along the stone walls will find the evening particularly clear of heavy crowds. It is an ideal hour for quiet observation.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "02",
+              "headline": "Do Ho Suh gathers over 500 works at the MMCA.",
+              "lede": "The extensive retrospective fills the galleries with intricate fabric architecture and scaled models.",
+              "body": "The extensive retrospective fills the galleries with intricate fabric architecture and scaled models. Visitors stepping in from the light drizzle outside will find quiet rooms dedicated to domestic memory and transit. Outside, the exchange rate hovers at 1 USD to 1380 KRW while temperatures hold near 28°C. This exhibition demands unhurried attention to detail. Give yourself an entire afternoon to move through the rooms. The scale shifts continuously between intimate thread and monumental structure.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "03",
+              "headline": "Violin virtuoso Kavakos brings festival announcements to the concert hall.",
+              "lede": "A careful stillness settles into the auditorium as the new program is unveiled.",
+              "body": "A careful stillness settles into the auditorium as the new program is unveiled. As evening approaches and sunset nears at 19:07, classical music patrons gather in the foyer. The air outside stays mild at 24–28°C under fair conditions, with PM2.5 at 13. Financial markets record 1 USD trading at 1380 KRW today. This announcement marks the quiet start of the autumn cultural season. Tickets will require advance planning for those hoping to secure seats in the inner tier.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Tokyo records a warm high of 31°C under faint evening drizzle.",
+              "lede": "Light precipitation leaves the asphalt damp just before the sun dips down.",
+              "body": "Light precipitation leaves the asphalt damp just before the sun dips down. Today's temperature ranges from 23 to 31°C, accompanied by 0.5mm of precipitation. Air quality is moderate, registering PM2.5 at 34 across the wards. Sunset arrives at 18:15, marking an early end to the daylight. Financial transactions adjust to 1 USD trading at 159 JPY. Pedestrians navigate the wet pavement with steady umbrellas and unhurried steps. The evening heat remains trapped close to the ground.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "02",
+              "headline": "Two major Tokyo museums close their doors temporarily for structural renovations.",
+              "lede": "Curators pack away the permanent collections as galleries prepare for extended quiet.",
+              "body": "Curators pack away the permanent collections as galleries prepare for extended quiet. Regular visitors must alter their usual autumn itineraries while these spaces undergo renewal. Outside, the thermometer reaches 31°C with a touch of light drizzle measuring 0.5mm. The currency exchange rate sits firmly at 1 USD to 159 JPY. Air quality is moderate with PM2.5 at 34. Check ahead before planning any gallery visits this week. The city's cultural calendar shifts toward smaller independent project spaces instead.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "03",
+              "headline": "Tim Burton's Labyrinth exhibition invites travelers into strange, familiar corridors.",
+              "lede": "The immersive installation offers a deliberate escape from the late summer humidity.",
+              "body": "The immersive installation offers a deliberate escape from the late summer humidity. Inside the darkened rooms, visitors trace familiar cinematic sketches and sculptural monsters. The outside air reads moderate with PM2.5 at 34 under a warm 31°C high. Sunset occurs promptly at 18:15 as evening traffic builds along the avenues. The exchange rate holds steady at 1 USD to 159 JPY. This retrospective rewards slow observation rather than rushed viewing. Take time to examine the costume details behind the glass cases.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies stretch across Lisbon as temperatures settle at 25°C.",
+              "lede": "A flat gray light mutes the pastel facades of the historic quarters.",
+              "body": "A flat gray light mutes the pastel facades of the historic quarters. Today brings a calm temperature range of 17–25°C under heavy, unbroken cloud cover. Air quality remains exceptionally good with PM2.5 resting low at 11. Sunset arrives late at 20:13, extending the long northern hemisphere dusk over the river. The financial exchange rate is calculated at 1 USD to 0.86 EUR. Walking through Alfama feels remarkably peaceful without the direct glare of the afternoon sun.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "02",
+              "headline": "Delegates arrive by the Tagus as the World Aviation Festival gets underway.",
+              "lede": "The riverside convention center fills with quiet professional conversations.",
+              "body": "The riverside convention center fills with quiet professional conversations. Outside, the overcast weather keeps the city cool at 17–25°C. Air quality is good, registering PM2.5 at 11 for anyone walking along the waterfront. The exchange rate stands at 1 USD to 0.86 EUR for visiting international guests. Evening approaches slowly with sunset scheduled for 20:13. Public transit lines running toward Parque das Nações maintain their normal schedules. The surrounding cafes offer a quiet refuge from the conference crowds.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            },
+            {
+              "n": "03",
+              "headline": "Park Hyatt announces a projected debut in Comporta, shifting focus southward.",
+              "lede": "Plans unfold for a low-profile retreat tucked quietly among the pine trees.",
+              "body": "Plans unfold for a low-profile retreat tucked quietly among the pine trees. This new development draws attention away from the capital toward the undisturbed Alentejo coast. Back in Lisbon, the day remains overcast with temperatures between 17 and 25°C. Air conditions are clean with PM2.5 at 11. Financial tracking shows 1 USD equals 0.86 EUR. Daylight lingers until 20:13 over the damp cobblestone streets. It is a contemplative season for coastal architects and travelers seeking silence.",
+              "source": "saudade desk",
+              "source_date": "2026-08-28"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-27T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Lisbon's hospitality landscape welcomes a distinctive new boutique hotel designed entirely like a traditional Portuguese village. Cobbled interior pathways, small communal plazas, and decentralized rooms encourage guests to experience the property as a community rather than a standard hotel. This human-scale design approach contrasts with larger commercial developments, offering a quiet, domestic rhythm for travelers. Located within easy reach of historic tram lines, the hotel serves as a thoughtful base for exploring the city's winding streets. It is a quiet exercise in placemaking that redefines urban hospitality.",
               "source": "saudade desk",
               "source_date": "2026-08-19"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-18T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light drizzle settles over the city as the temperature spans 23 to 31°C.",
-              "lede": "A trace of 0.3mm precipitation dampens the pavement while sunset arrives at 19:21.",
-              "body": "Light drizzle settles over the city as the temperature spans 23 to 31°C, accompanied by a modest 0.3mm precipitation that keeps the air remarkably still. Sunset arrives precisely at 19:21, casting a long gray shadow across the asphalt while the evening commute unfolds under moderate air quality with PM2.5 at 38. Travelers walking through Seongsu will find quiet refuge in So Koizumi’s Seoul Exhibition blending scent and design at 025S Seongsu Haus, offering a sensory respite from the humidity. The exchange rate holds steady at 1 USD to 1412 KRW, making local purchases straightforward for visitors managing foreign currency. Public offices and banks resumed normal hours today following yesterday's official observance of Liberation Day on August 17, ending the long holiday weekend. This makes today ideal for quiet gallery visits without the usual holiday crowds lingering near the gates.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "02",
-              "headline": "The APOproject hosts Traces of Movement through August 29, 2026, at K-ARTNOW.",
-              "lede": "Es Devlin’s Wonderland exhibition also draws quiet crowds looking for immersive design spaces.",
-              "body": "The APOproject hosts Traces of Movement through August 29, 2026, at K-ARTNOW, offering visitors an intentional space for contemplation amid the late summer rush. Meanwhile, Es Devlin’s Wonderland exhibition continues to draw quiet crowds looking for immersive design experiences that stretch the boundaries of traditional gallery curation. The currency exchange rate remains stable at 1 USD to 1412 KRW, providing predictable budgeting for travelers navigating the district's creative hubs. Moderate air quality with a PM2.5 reading of 38 encourages unhurried outdoor strolls between exhibition venues, provided you keep an umbrella close at hand. Temperatures range between 23 and 31°C today, accompanied by 0.3mm of light precipitation that refreshes the surrounding courtyards. Following yesterday's Liberation Day holiday on August 17, the city breathes at a slower pace, returning to its familiar rhythm as banks and official institutions reopen their doors to the public.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "03",
-              "headline": "Palace Skateboards opens its third South Korean store in the capital today.",
-              "lede": "The currency trades at 1 USD to 1412 KRW while evening approaches at 19:21.",
-              "body": "Palace Skateboards opens its third South Korean store in the capital today, bringing its distinctive aesthetic to local streetwear enthusiasts and observant visitors alike. The exchange rate stands firmly at 1 USD to 1412 KRW, offering a reliable benchmark for retail transactions throughout the neighborhood. Temperatures span 23 to 31°C with 0.3mm of precipitation, leaving sidewalks slick with a very light drizzle as sunset approaches at 19:21. Moderate air quality with a PM2.5 level of 38 hangs over the streets, matching the overcast mood of the late afternoon sky. With yesterday's official Liberation Day holiday on August 17 now concluded, commercial districts operate on standard weekday schedules, allowing for seamless errands. Visitors seeking cultural enrichment can pair their retail stops with an afternoon visit to So Koizumi’s exhibition at 025S Seongsu Haus or Es Devlin’s installation.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the streets as temperatures hover between 23 and 31°C.",
-              "lede": "Evening falls at 18:28 over a city recovering from the recent Fukagawa Hachiman Festival water dousings.",
-              "body": "Partly cloudy skies frame the streets as temperatures hover between 23 and 31°C, offering a warm and humid backdrop for late summer afternoon walks. Evening falls steadily at 18:28 over a city still buzzing from the recent Fukagawa Hachiman Festival, where participants were joyfully doused with buckets of water in historic street water fights. The currency exchange rate sits at 1 USD to 159 JPY, requiring careful calculation for travelers exchanging funds at local financial institutions. Air quality remains moderate with a PM2.5 reading of 26, keeping visibility clear across neighborhood rooftops and elevated train lines. Travelers looking ahead to upcoming athletic calendars will note that the expanded WBSC Premier12 2027 has unveiled its new format, building anticipation for the international road to Tokyo. Public spaces around local shrines are finally returning to their serene routines after days of spirited festival celebrations and community gatherings.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "02",
-              "headline": "Festivalgoers recall the dousing at the Tokyo shrine festival under moderate skies.",
-              "lede": "PM2.5 measures at 26 while the exchange rate holds steady at 1 USD to 159 JPY.",
-              "body": "Festivalgoers recall the recent dousing at the Tokyo shrine festival under partly cloudy skies that soften the afternoon glare across the neighborhood. Street corners that recently turned into giant water fights are drying out as the temperature range settles comfortably between 23 and 31°C. PM2.5 measures at 26, indicating moderate air quality that makes outdoor lingering pleasant despite the summer humidity. The exchange rate holds steady at 1 USD to 159 JPY, a familiar figure for visitors purchasing transit cards or enjoying quiet meals at neighborhood kissaten. Sunset arrives promptly at 18:28, casting long evening shadows over local parks and residential alleys alike. Sports enthusiasts are already discussing the expanded WBSC Premier12 2027 and its newly unveiled format on the road to Tokyo, adding a layer of quiet anticipation to local conversations.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "03",
-              "headline": "The road to Tokyo takes shape as the WBSC Premier12 2027 unveils its new format.",
-              "lede": "Sunset arrives at 18:28 while temperatures span 23 to 31°C under partly cloudy skies.",
-              "body": "The road to Tokyo takes shape as the WBSC Premier12 2027 officially unveils its new format, capturing the attention of sports observers across the metropolitan area. Sunset arrives at 18:28 while temperatures span 23 to 31°C under partly cloudy skies that offer intermittent shade from the afternoon sun. Moderate air quality with a PM2.5 level of 26 ensures comfortable walking conditions through the city's expansive gardens and park paths. The currency exchange rate remains fixed at 1 USD to 159 JPY, guiding travelers as they navigate local markets and neighborhood shops. Remnants of the Fukagawa Hachiman Festival—where participants were splashed with buckets of water in neighborhood water fights—have faded, leaving shrines remarkably peaceful today. Residents and returning travelers can enjoy the quiet public plazas without the heavy crowds that marked the weekend festivities.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies stretch across the capital with temperatures ranging from 22 to 27°C.",
-              "lede": "Fair air quality with PM2.5 at 13 accompanies an evening sunset timed at 20:27.",
-              "body": "Overcast skies stretch across the capital with temperatures ranging from 22 to 27°C, bringing a welcome coolness to the sloping streets of the old quarters. Fair air quality with a PM2.5 reading of 13 makes breathing easy for those exploring the city on foot without the intense glare of direct sunlight. The exchange rate trades at 1 USD to 0.86 EUR, providing a predictable baseline for everyday transactions in local cafes and shops. Sunset arrives late at 20:27, offering a long, muted twilight over the Tagus River and the surrounding hillsides. Travelers seeking contemporary architecture will find inspiration at the newly reopened Calouste Gulbenkian Museum during this landmark anniversary year. Meanwhile, visitors can also explore the newly opened boutique hotel designed like a traditional village, offering an intimate retreat from the bustling downtown avenues.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "02",
-              "headline": "The Calouste Gulbenkian Museum welcomes visitors in a landmark reopening year.",
-              "lede": "Temperatures span 22 to 27°C under overcast skies while sunset arrives at 20:27.",
-              "body": "The Calouste Gulbenkian Museum welcomes visitors in a landmark reopening year, offering quiet galleries and shaded gardens for contemplative afternoon strolls. Temperatures span 22 to 27°C under overcast skies that provide natural diffusion for photography and leisurely walks along the city's historic avenues. Fair air quality with a PM2.5 level of 13 lingers over the city, keeping the atmosphere crisp and pleasant for outdoor observers. The currency exchange rate is valued at 1 USD to 0.86 EUR, remaining stable for all visitor expenses and museum ticket purchases. Sunset arrives at 20:27, giving residents and travelers ample daylight to enjoy the evening breeze before the lights of the city flicker on. Those looking beyond standard accommodations can also examine Lisbon’s new boutique hotel designed like a village, or review the definitive guide to summer music festivals and the giant's return to Parque Tejo.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
-            },
-            {
-              "n": "03",
-              "headline": "A new boutique hotel designed like a village opens quietly in the city.",
-              "lede": "Fair air quality with PM2.5 at 13 supports unhurried walks as sunset nears at 20:27.",
-              "body": "A new boutique hotel designed like a village opens quietly in the city, offering travelers a secluded sanctuary tucked away from the main tourist arteries. Fair air quality with a PM2.5 score of 13 supports unhurried walks through historic neighborhoods as evening approaches under heavy overcast skies. Temperatures range from 22 to 27°C, keeping outdoor dining and strolls comfortable throughout the afternoon and late evening hours. The currency exchange rate holds steady at 1 USD to 0.86 EUR, ensuring straightforward budgeting for dining and cultural excursions. Sunset arrives at 20:27, casting a soft, diffuse light over the riverfront before the night sets in across the hills. Travelers can also consult the definitive guide to summer music festivals in Lisbon to track the giant's return to Parque Tejo alongside the landmark reopening of the Calouste Gulbenkian Museum.",
-              "source": "saudade desk",
-              "source_date": "2026-08-18"
             }
           ]
         }
