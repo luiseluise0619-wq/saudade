@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-29T06:00:00+09:00",
+  "updated": "2026-08-30T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-30T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR.",
+              "lede": "Los visitantes extranjeros que planean transacciones en la capital observan esta paridad cambiaria en las oficinas bancarias del centro.",
+              "body": "El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR. Esta proporción financiera guía las gestiones cotidianas de quienes llegan desde fuera de la zona euro. Las entidades bancarias y las casas de cambio operan con normalidad bajo este parámetro monetario estricto. Conviene revisar las comisiones aplicadas en cada operación antes de realizar cualquier movimiento de efectivo significativo. Los residentes habituales apenas notan esta cifra, pero resulta fundamental para los viajeros de corta estancia. El comercio local mantiene sus precios habituales al margen de estas fluctuaciones cambiarias internacionales.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Parque Warner mantiene temporalmente cerrada una de sus montañas rusas principales.",
+              "lede": "Los servicios de emergencia atendieron recientemente un incidente aislado en la atracción de Batman con resultado de herido grave.",
+              "body": "El Parque Warner mantiene temporalmente cerrada una de sus montañas rusas principales. Un hombre de 49 años resultó herido de manera potencialmente grave en la atracción de Batman durante una jornada reciente. Los equipos médicos desplazados al lugar actuaron con rapidez para estabilizar al afectado y trasladarlo al centro hospitalario correspondiente. Las instalaciones del recinto de ocio continúan abiertas al público general, aunque el área afectada permanece balizada y bajo revisión técnica exhaustiva. Los visitantes habituales pueden disfrutar del resto de la oferta lúdica del parque sin mayores inconvenientes. La dirección colabora plenamente con las autoridades locales para esclarecer los detalles técnicos del suceso.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario oficial anuncia festividades autonómicas para las próximas semanas en España.",
+              "lede": "El Día de Asturias y el Día de Extremadura se celebrarán simultáneamente el 2026-09-08.",
+              "body": "El calendario oficial anuncia festividades autonómicas para las próximas semanas en España. El Día de Asturias y el Día de Extremadura se celebrarán simultáneamente el 2026-09-08, seguidos por la Diada Nacional de Catalunya el 2026-09-11. Estas fechas conmemorativas implican modificaciones puntuales en los horarios comerciales y administrativos de los territorios afectados. Quienes viajen desde Madrid hacia dichas regiones deben prever cierres en oficinas públicas y entidades bancarias durante las jornadas festivas. Los servicios esenciales de transporte público mantienen sus frecuencias habituales adaptadas a la demanda de los días de celebración. Planificar las gestiones con antelación evita cualquier contratiempo imprevisto en los desplazamientos peninsulares.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Los cielos despejados dominan la jornada con temperaturas entre 21 y 31°C.",
+              "lede": "La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 9.",
+              "body": "Los cielos despejados dominan la jornada con temperaturas entre 21 y 31°C. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 9. La puesta de sol está prevista para las 20:28, ofreciendo una tarde prolongada ideal para pasear junto al litoral. El ambiente cálido invita a recorrer los espacios verdes de la ciudad urbana al caer la tarde. Conviene llevar protección solar ligera durante las horas centrales del día debido a la intensidad lumínica. El tipo de cambio vigente de 1 USD por 0.86 EUR facilita las compras de los turistas internacionales en los comercios de proximidad.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Moll de la Fusta acoge este fin de semana la esperada llegada del Thai Festival.",
+              "lede": "Barcelona recupera este evento cultural tras siete años sin celebrarse en la ciudad.",
+              "body": "El Moll de la Fusta acoge este fin de semana la esperada llegada del Thai Festival. Barcelona recupera este evento cultural tras siete años sin celebrarse en la ciudad. El programa incluye más de 20 actividades gratuitas enfocadas en la gastronomía, la danza y las tradiciones de Tailandia. Los visitantes pueden saborear especialidades culinarias auténticas dispuestas en los diferentes puestos instalados frente al mar mediterráneo. Esta cita coincide con la recta final del quincuagésimo Festival Grec, enriqueciendo la oferta cultural estival. La afluencia de público es notable desde las primeras horas de la mañana, por lo que se recomienda acudir con paciencia.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario de festivos autonómicos señala el 2026-09-11 para la Diada Nacional de Catalunya.",
+              "lede": "Las administraciones públicas y las oficinas bancarias permanecerán cerradas durante esa jornada festiva.",
+              "body": "El calendario de festivos autonómicos señala el 2026-09-11 para la Diada Nacional de Catalunya. Las administraciones públicas y las oficinas bancarias permanecerán cerradas durante esa jornada festiva. Asimismo, las conmemoraciones del Día de Asturias y el Día de Extremadura tendrán lugar el 2026-09-08 en sus respectivas comunidades. Los viajeros deben tener en cuenta estas fechas clave al organizar desplazamientos interurbanos o trámites burocráticos pendientes. El comercio local en Barcelona ajustará sus horarios según la normativa vigente para días festivos institucionales. La ciudad mantiene el ritmo pausado característico de finales de agosto mientras se prepara para septiembre.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Los cielos nublados acompañan una jornada fresca con temperaturas de 10 a 17°C.",
+              "lede": "La calidad del aire se sitúa en niveles justos con un registro de PM2.5 de 17.",
+              "body": "Los cielos nublados acompañan una jornada fresca con temperaturas de 10 a 17°C. La calidad del aire se sitúa en niveles justos con un registro de PM2.5 de 17. El ocaso llegará puntualmente a las 18:33, marcando el inicio de una noche apacible en los barrios porteños. El ambiente otoñal invita a buscar refugio en cafés tradicionales y librerías del centro histórico. Es recomendable vestir una prenda de abrigo ligera para contrarrestar la humedad típica del río de la Plata. Los parques urbanos muestran un aspecto sobrio bajo la cubierta de nubes persistentes.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "La agenda cultural porteña se dinamiza con la llegada de múltiples festivales temáticos.",
+              "lede": "El festival Buenos Aires Está de Moda lanza su tercera edición con más de 70 actividades.",
+              "body": "La agenda cultural porteña se dinamiza con la llegada de múltiples festivales temáticos. El festival Buenos Aires Está de Moda lanza su tercera edición con más de 70 actividades repartidas por distintos puntos urbanos. Paralelamente, la ciudad acoge propuestas singulares como el Festival de Cine y Música y el multitudinario Love The 90’s. Estas iniciativas transforman el pulso cotidiano de los espacios públicos y ofrecen alternativas de ocio para todos los gustos. Los asistentes disfrutan de una programación variada que combina diseño, proyecciones audiovisuales y actuaciones musicales en vivo. Conviene consultar la programación previa para acceder a los diferentes recintos culturales habilitados.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "Un singular evento de inspiración asiática ilumina la primavera con miles de faroles flotantes.",
+              "lede": "Buenos Aires se transforma en Tailandia por una única noche durante este esperado encuentro.",
+              "body": "Un singular evento de inspiración asiática ilumina la primavera con miles de faroles flotantes. Buenos Aires se transforma en Tailandia por una única noche durante este esperado encuentro estacional. Los asistentes se reúnen junto al agua para participar en una ceremonia tradicional que simboliza buenos augurios. Esta celebración convive con otras muestras artísticas y gastronómicas que enriquecen el fin de semana en la metrópoli. Los espacios verdes elegidos para la ocasión experimentan una gran afluencia de curiosos y observadores silenciosos. Es una oportunidad perfecta para experimentar un rincón de Asia en el sur del continente.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-29T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Mientras el mundial de tango acapara la atención inmediata, la ciudad ya programa los grandes eventos de los próximos meses. Una nueva edición del Mubi Fest Buenos Aires ha confirmado su celebración del 22 al 25 de octubre, atrayendo a cinéfilos y creadores. Las salas independientes de la ciudad seleccionan lo mejor del cine de autor contemporáneo para proyectarlo durante esas jornadas. Esta anticipación permite a los viajeros planificar sus visitas culturales con tranquilidad y criterio estético. La oferta cinematográfica complementa el rico tejido de galerías de arte y museos abiertos durante todo el año. Buenos Aires demuestra así su capacidad constante para reinventar su pulso artístico estacional.",
               "source": "saudade desk",
               "source_date": "2026-08-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-21T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cambio oficial sitúa el euro en 0.86 dólares estadounidenses en la capital.",
-              "lede": "Los mercados de divisas marcan una estabilidad clara en las transacciones de esta semana de agosto.",
-              "body": "Los viajeros que visitan la ciudad durante estas jornadas estivales encuentran un tipo de cambio estable fijado en 1 USD equivalente a 0.86 EUR. Esta cotización facilita la planificación de los gastos cotidianos en los comercios locales y librerías del centro histórico. Conviene revisar las tarjetas y métodos de pago habituales antes de iniciar las rutas urbanas por los barrios tradicionales. La actividad comercial mantiene sus horarios habituales a pesar del calor característico de finales de agosto en la meseta central.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Anfibia convoca obras audiovisuales en su nueva edición internacional.",
-              "lede": "La creación contemporánea encuentra espacios de difusión cultural en diversos centros madrileños.",
-              "body": "La convocatoria internacional del V Festival Anfibia atrae estos días a creadores y realizadores de diferentes procedencias geográficas. Las proyecciones y encuentros fomentan la reflexión sobre las narrativas visuales en los espacios culturales adscritos al certamen. Los espectadores pueden consultar la programación detallada en los canales oficiales del evento para planificar sus visitas vespertinas. Esta cita consolida a la ciudad como un punto de encuentro relevante para el cine documental y experimental durante el periodo estival.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "03",
-              "headline": "Tres escapadas cercanas ofrecen refugio natural a finales de agosto.",
-              "lede": "Los entornos naturales próximos a la región permiten huir del asfalto urbano en pocas horas.",
-              "body": "Las rutas hacia la sierra y los pueblos circundantes se presentan como alternativas idóneas para los días de mayor intensidad térmica. Los itinerarios propuestos recientemente invitan a descubrir parajes de gran valor paisajístico a escasa distancia del núcleo urbano. Se recomienda salir temprano por la mañana para aprovechar las horas de menor radiación solar en los senderos forestales. Estas opciones de turismo de proximidad combinan patrimonio histórico, arquitectura tradicional y tranquilidad absoluta para el viajero observador.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La temperatura oscila entre 23 y 30°C con tormentas y granizo ocasional.",
-              "lede": "El cielo barcelonés registra 13.8mm de precipitación y el atardecer se fija a las 20:42.",
-              "body": "El ambiente en la ciudad se mantiene húmedo y variable tras los episodios de lluvia y tormenta que han dejado 13.8mm de precipitación acumulada. Con una calidad del aire evaluada como fair y un nivel de PM2.5 en 13, los paseos matinales siguen siendo recomendables antes de que el termómetro alcance los 30°C máximos. La puesta de sol ocurre puntualmente a las 20:42, otorgando una tregua lumínica muy apreciada en los paseos marítimos y plazas arboladas. Se aconseja llevar paraguas ligero y calzado adecuado para transitar por las aceras mojadas tras las precipitaciones recientes.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "02",
-              "headline": "Nueve parques con sombra ofrecen refugio frente al calor estival barcelonés.",
-              "lede": "Los espacios verdes de la ciudad garantizan estancias frescas ideales para familias y lectores.",
-              "body": "La red de parques urbanos con densa vegetación proporciona el resguardo necesario durante las horas centrales del día en Barcelona. Estos nueve enclaves seleccionados destacan por sus grandes copas de árboles y fuentes ornamentales en funcionamiento continuo. Los visitantes encuentran en ellos un silencio relativo y una temperatura más amable para descansar o pasear con niños pequeños. Conviene recordar que el acceso a estos recintos públicos es libre durante todo el horario diurno establecido por la administración local.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival de Música Antiga dels Pirineus concluye su decimoquinta edición.",
-              "lede": "La clausura del certamen musical cierra un ciclo de conciertos en enclaves patrimoniales únicos.",
-              "body": "El prestigioso Festival de Música Antiga dels Pirineus [FeMAP] pone fin a las celebraciones de su 15.º aniversario tras semanas de actuaciones memorables. Los conciertos han recorrido iglesias románicas y pequeños auditorios pirenaicos, atrayendo a numerosos aficionados al repertorio histórico. Aunque el grueso de la programación finaliza, el impacto cultural perdura en las comunidades locales que han acogido los recitales. Los viajeros interesados en la música antigua ya pueden aguardar los anuncios de la próxima convocatoria para el año venidero.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo porteño permanece nublado con temperaturas entre 6 y 12°C.",
-              "lede": "La tarde se despide a las 18:27 en una jornada de calidad del aire moderada.",
-              "body": "El clima de la capital argentina se mantiene fresco y cubierto, con valores térmicos que se mueven entre los 6°C mínimos y los 12°C máximos. La calidad del aire se registra como moderate, con un índice de PM2.5 situado en 12 que invita a recorrer las avenidas arboladas con abrigo ligero. La caída del sol se produce a las 18:27, marcando el inicio paulatino de la actividad en los teatros y salas culturales de la metrópoli. Las condiciones meteorológicas actuales resultan sumamente propicias para disfrutar de largas caminatas urbanas sin agobios térmicos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Llegás ocupa 10 salas teatrales con entradas a mitad de precio.",
-              "lede": "Más de 50 obras conforman la programación escénica que anima las noches porteñas.",
-              "body": "La vuelta del Festival Llegás trae consigo una propuesta excepcional para los amantes de las artes escénicas en Buenos Aires. Un total de 10 salas teatrales independientes abren sus puertas para albergar más de 50 obras con localidades a mitad de precio. Esta iniciativa fomenta el acceso democrático a la cultura y revitaliza el circuito artístico de los barrios durante esta semana. Se recomienda adquirir las localidades con antelación a través de los canales habilitados debido a la alta demanda del público local y viajero.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival de Cine Tailandés ofrece funciones gratuitas en Atlas Cines Alcorta.",
-              "lede": "Cuatro días de proyecciones descubren el cine contemporáneo de Tailandia en la cartelera.",
-              "body": "La programación completa del Festival de Cine Tailandés en Buenos Aires se desarrolla con entrada libre en las salas de Atlas Cines Alcorta. Este ciclo especial de 4 días constituye una oportunidad única para descubrir producciones cinematográficas contemporáneas poco habituales en las pantallas comerciales de la región. Los cinéfilos pueden consultar los horarios de las funciones matutinas y vespertinas en la entrada principal del complejo comercial. La iniciativa enriquece la oferta cultural internacional de la ciudad con propuestas estéticas diversas y lejanas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-21"
             }
           ]
         }

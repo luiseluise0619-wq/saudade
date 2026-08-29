@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-08-29T06:00:00+09:00",
+  "updated": "2026-08-30T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-08-30T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Parque da Bela Vista recebe o Meo Kalorama.",
+              "lede": "O festival traz música e movimento aos espaços verdes da cidade.",
+              "body": "Entre os dias 30 de agosto, o Parque da Bela Vista transforma-se num dos maiores palcos ao ar livre da capital com a quinta edição do Meo Kalorama. Nomes como Robbie Williams, Deftones e Ms. Lauryn Hill passam pelo recinto verde nesta reta final de agosto. Com temperaturas entre 19 e 27°C e céu parcialmente nublado, as condições convidam a longas caminhadas entre os concertos. O pôr do sol acontece pelas 20:10, marcando o início das atuações principais. Os visitantes devem consultar os horários atualizados e os mapas de transportes públicos para planear a chegada ao evento de forma tranquila e sem surpresas. A qualidade do ar mantém-se num nível considerado fair, com índices de PM2.5 a 5, garantindo um ambiente agradável para desfrutar da programação musical ao ar livre.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "O Castelo de São Jorge acolhe o Coletivo Gira.",
+              "lede": "A música e a história encontram-se nas muralhas antigas.",
+              "body": "O Castelo de São Jorge serve de cenário para as atuações do Coletivo Gira neste fim de semana de final de agosto em Lisboa. O programa cultural enche os pátios históricos de sonoridades cuidadas, cruzando a herança patrimonial com a criação artística contemporânea. A brisa da tarde suaviza a temperatura máxima de 27°C, tornando a subida à colina histórica num passeio particularmente aprazível para residentes e viajantes. A moeda estrangeira troca-se a 1 USD por 0.86 EUR nas casas de câmbio locais, facilitando as transações para quem visita a cidade. As ruas circundantes mantêm o ritmo pausado de fim de semana, ideal para observar o Tejo sob uma luz difusa e tranquila.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "A luz suave de agosto cobre os miradouros lisboetas.",
+              "lede": "O céu parcialmente nublado abranda o calor do final do verão.",
+              "body": "Com o termómetro a oscilar entre 19 e 27°C, o final de agosto em Lisboa oferece uma trégua bem-vinda aos dias de calor intenso. O pôr do sol ocorre pontualmente às 20:10, projetando tons dourados sobre os telhados tradicionais da cidade e as águas do rio. A qualidade do ar regista um valor de PM2.5 de 5, mantendo-se fair para passeios a pé sem pressa. Quem percorre as ruas nota o silêncio matutino nos bairros antigos, onde os cafés servem o primeiro café com a calma habitual. A taxa de câmbio fixa-se em 1 USD para 0.86 EUR, refletindo a estabilidade económica quotidiana. É o momento perfeito para observar os detalhes da arquitetura pombalina e o vai-vem discreto dos elétricos nas colinas.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Parque da Cidade estreia o Brunch Electronik.",
+              "lede": "Shimza lidera a primeira edição do evento nos espaços verdes portuenses.",
+              "body": "O Parque da Cidade recebe pela primeira vez o Brunch Electronik, tendo Shimza como um dos principais destaques desta estreia portuense. A programação cultural convida a desfrutar dos extensos relvados e da proximidade atlântica com uma banda sonora eletrónica cuidada. As condições meteorológicas apontam para temperaturas entre 17 e 23°C, acompanhadas por 0.6mm de precipitação sob a forma de aguaceiros dispersos. O pôr do sol ocorre às 20:11, tingindo o horizonte ocidental de tons cinzentos e dourados característicos da foz. Com a qualidade do ar em níveis fair e PM2.5 a 7, o ambiente convida a caminhar pelos trilhos arborizados do parque sem pressas nem agitação excessiva.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "A Exposição de Camélias revela o património botânico.",
+              "lede": "O Porto celebra a tradição floral com mostras e exposições temáticas.",
+              "body": "A trigésima edição da Exposição de Camélias do Porto traz o rigor da botânica clássica aos espaços culturais da cidade. Este evento consolidado celebra a longa tradição de cultivo que caracteriza os jardins privados e públicos da região norte. No exterior, os aguaceiros ligeiros de 0.6mm regam discretamente as ruas de granito, onde a temperatura oscila suavemente entre 17 e 23°C. O câmbio atual mantém-se estável em 1 USD por 0.86 EUR. O pôr do sol às 20:11 convida a recolher aos cafés históricos da Baixa, onde se saboreia um livro ou um café enquanto a chuva miúda cai sobre os paralelepípedos.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "O humor internacional cruza o Atlântico até à Invicta.",
+              "lede": "Exposições gratuitas reúnem artistas de várias geografias no Porto.",
+              "body": "Uma nova exposição gratuita reúne artistas de todo o mundo no Porto, celebrando o humor gráfico com perspetivas vindas de ambos os lados do Atlântico. A mostra convida a uma leitura atenta e pausada das obras expostas nas salas da cidade. O ambiente exterior reflete a brandura do final de agosto, com temperaturas entre 17 e 23°C e uma precipitação residual de 0.6mm. A qualidade do ar regista um índice fair, com PM2.5 nos 7 pontos. À medida que o sol se põe pelas 20:11, as luzes da cidade refletem-se no rio Douro, criando uma atmosfera de contemplação silenciosa nas margens.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sintra avança com a recuperação do parque habitacional.",
+              "lede": "Obras discretas devolvem dignidade aos edifícios tradicionais da vila.",
+              "body": "A vila de Sintra implementa novos projetos de recuperação do parque habitacional, visando preservar a traça arquitetónica original e melhorar o conforto dos residentes locais. Esta intervenção urbana decorre com o ritmo calmo que caracteriza a serra, longe da intensidade turística das horas de maior calor. O termómetro regista valores entre 18 e 24°C, acompanhados por céu parcialmente nublado que filtra a luz solar sobre a vegetação luxuriante. A taxa de câmbio fixa-se em 1 USD por 0.86 EUR. O pôr do sol acontece às 20:11, mergulhando os palácios e os bosques numa penumbra mágica e silenciosa antes do cair da noite.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "02",
+              "headline": "A serra abriga caminhos tranquilos sob nuvens passageiras.",
+              "lede": "O microclima sintrense oferece frescura e serenidade aos visitantes.",
+              "body": "As temperaturas em Sintra variam entre 18 e 24°C, proporcionando um refúgio térmico ideal para quem procura escapar ao calor das zonas urbanas circundantes. O céu parcialmente nublado cria sombras em movimento sobre as copas das árvores centenárias dos parques da serra. A qualidade do ar permanece em níveis fair, com as partículas PM2.5 fixadas em 4, garantindo uma atmosfera pura para a prática de caminhadas lentas. O pôr do sol às 20:11 marca o recolher gradual das ruas centrais da vila, onde os visitantes encontram recantos sossegados para observar o entardecer entre muros cobertos de musgo.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            },
+            {
+              "n": "03",
+              "headline": "O silêncio regressa aos trilhos históricos de Sintra.",
+              "lede": "A paisagem cultural revela-se nos detalhes arquitetónicos e naturais.",
+              "body": "Com a estabilização das condições climatéricas e temperaturas máximas a atingir os 24°C, Sintra recupera o seu passo contemplativo habitual no final de agosto. O céu parcialmente nublado protege os monumentos e os jardins românticos de uma exposição solar excessiva. O pôr do sol pontual às 20:11 assinala o fecho dos espaços exteriores e o início de uma noite fresca, com mínimas a descer até aos 18°C. A taxa de câmbio de 1 USD para 0.86 EUR facilita o planeamento financeiro dos viajantes internacionais que escolhem a vila para estadias prolongadas. Cada recanto da serra convida à introspeção e ao respeito pelo silêncio secular do lugar.",
+              "source": "saudade desk",
+              "source_date": "2026-08-30"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-29T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A paisagem cultural respira fundo após os 6mm de chuva que regaram os jardins românticos. Com marcas de 19 a 23°C e uma qualidade de ar limpa de PM2.5 de 7, pasear pelos caminhos sombreados exige calçado aderente. A conversão de divisas mantém-se inalterada a 1 USD por 0.85 EUR. O debate sobre a salvaguarda ambiental do Parque Natural continua presente nas conversas de café e nos fóruns públicos. O crepúsculo desce pontualmente às 20:20, apagando os reflexos dourados nos vidros das antigas vilas apalaçadas escondidas entre a densa ramagem.",
               "source": "saudade desk",
               "source_date": "2026-08-24"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-22T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A Biblioteca Itinerante chega ao Parque Quinta das Conchas.",
-              "lede": "Os livros viajam até aos relvados norte da cidade, oferecendo leitura ao ar livre sob o céu variável.",
-              "body": "As tardes de agosto pedem sombra e papel impresso. A Biblioteca Itinerante de Lisboa passa a estar também no Parque Quinta das Conchas, ampliando os pontos de encontro com a leitura pública. Entre temperaturas de 17 e 25°C e o céu parcialmente nublado, o espaço verde acolhe leitores e curiosos junto aos caminhos arborizados. O pôr do sol acontece por volta das 20:21, prolongando o tempo útil para caminhar pelos jardins. Para quem chega de fora, a taxa de câmbio fixa-se em 1 USD para 0.85 EUR nos pagamentos locais. É uma oportunidade silenciosa para redescobrir a cidade longe do ruído habitual das artérias centrais. Traga um casaco leve para o final da tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "02",
-              "headline": "O MEO Kalorama prepara os palcos para os dias de festa.",
-              "lede": "O festival de música ocupa a agenda cultural da capital com grandes nomes internacionais.",
-              "body": "A reta final de agosto traz a agitação criativa do MEO Kalorama 2026. As datas, cartaz, horários e como chegar ao festival em Lisboa já dominam as conversas nos cafés e praças. Os preparativos avançam nos recintos designados, mobilizando milhares de festivaleiros que cruzam a cidade de metro e autocarro. Enquanto isso, o termómetro oscila suavemente entre 17 e 25°C, garantindo um clima ameno para os concertos ao ar livre. Quem viaja para assistir aos espetáculos encontra câmbio a 1 USD por 0.85 EUR. A programação musical equilibra-se com a oferta artística espalhada por vários pontos urbanos. Planeie os percursos com antecedência para evitar filas nos transportes públicos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "03",
-              "headline": "A arte pública transforma treze espaços urbanos em palcos.",
-              "lede": "O festival Lisboa Mágica espalha 175 espetáculos gratuitos por toda a malha urbana.",
-              "body": "A cultura ocupa a rua sem bilheteira nem barreiras. O evento Lisboa Mágica leva 175 espetáculos gratuitos a 13 espaços da cidade, animando praças, pátios e jardins históricos. Sob um céu parcialmente nublado e temperaturas que rondam os 17 a 25°C, famílias e transeuntes param para assistir aos números de circo contemporâneo e teatro de rua. A luz do dia estende-se até às 20:21, hora em que o sol se esconde no Tejo. A taxa de câmbio permanece estável em 1 USD para 0.85 EUR para os visitantes estrangeiros. Perto dali, galerias independentes mostram iniciativas singulares, como a exposição de Konstantin com 600 pénis, que reflete percursos de vida e afirmação pessoal. Lisboa respira um nomadismo artístico discreto e constante.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Aquário de Porto Pim reabre as portas ao público.",
-              "lede": "O espaço museológico recupera o seu lugar na frente marítima após obras profundas.",
-              "body": "A arquitetura ligada ao mar recupera o fôlego na região norte. O Aquário de Porto Pim reabre ao público após requalificação, devolvendo à comunidade um polo essencial de divulgação científica e patrimonial. A qualidade do ar regista níveis considerados justos, com o indicador de PM2.5 fixado em 9, ideal para caminhadas longas junto à costa atlântica. Os visitantes estrangeiros continuam a beneficiar da taxa de câmbio de 1 USD para 0.85 EUR nas transações correntes. O ambiente urbano mistura-se com os preparativos para os eventos de fim de verão. Aproveite a manhã calma para visitar as salas renovadas e observar as espécies locais. É um regresso aguardado por pescadores, biólogos e curiosos da história marítima.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "02",
-              "headline": "A cultura urbana conquista a Baixa com o festival URB-X.",
-              "lede": "Dança, desporto e música de rua dinamizam praças e pavilhões da Invicta.",
-              "body": "O Porto acolhe novas linguagens corporais e rítmicas este fim de semana. O Festival The World Battle URB-X chega ao Porto com cultura urbana, dança e desporto, reunindo atletas e artistas de várias origens. A atmosfera respira energia jovem, enquanto a qualidade do ar se mantém justa, com PM2.5 a 9. Os cafés históricos e as tascas tradicionais servem refeições a quem circula pela cidade, aceitando pagamentos com a cotação de 1 USD para 0.85 EUR. Paralelamente, os sabores locais marcam presença em campanhas festivas, e o Vinho do Porto associa-se ao Festival de Vilar de Mouros, cruzando a tradição vinícola com os grandes palcos musicais do norte. Caminhar pelas ruas empedradas exige calçado confortável e atenção aos declives.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "03",
-              "headline": "Os arraiais da Madeira inspiram brindes nas esplanadas do norte.",
-              "lede": "A Cerveja Coral celebra a tradição insular com uma nova campanha nas ruas portuenses.",
-              "body": "As pontes entre regiões estreitam-se através dos sabores tradicionais. A Cerveja Coral celebra os arraiais da Madeira com nova campanha, marcando presença nos balcões e esplanadas da Invicta. Enquanto o ar da cidade se mantém limpo e justo, com um valor de PM2.5 de 9, os residentes aproveitam o final de tarde para conversar ao ar livre. A economia local opera com a taxa de câmbio de 1 USD para 0.85 EUR, facilitando as compras dos viajantes internacionais. Este dinamismo comercial acompanha a chegada de eventos como o festival URB-X e a reabertura do Aquário de Porto Pim. O Porto mantém o seu ritmo próprio, unindo o granito antigo a novas formas de festa popular.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A Casa da Cultura de Mira Sintra acolhe arte solidária.",
-              "lede": "A comunidade local expõe trabalhos que unem causas sociais e expressão plástica.",
-              "body": "As vilas periféricas mostram a sua dinâmica criativa longe dos circuitos turísticos tradicionais. A Casa da Cultura de Mira Sintra inaugura uma exposição solidária, reunindo peças criadas por residentes e artistas da freguesia. Com temperaturas a oscilar entre 16 e 24°C e o céu parcialmente nublado, o ambiente convida a passeios tranquilos pelas zonas residenciais e espaços verdes envolventes. O pôr do sol ocorre pelas 20:22, iluminando os telhados com uma luz dourada e suave. Os visitantes estrangeiros encontram a cotação monetária estável em 1 USD para 0.85 EUR. É um espaço de partilha comunitária que contrasta com o debate em torno da preservação ambiental na serra. Visite sem pressas e descubra o lado menos visível da região.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "02",
-              "headline": "Gabriela Casinhas e Salvador Costa expõem em Mira Sintra.",
-              "lede": "Duas visões artísticas encontram-se num espaço cultural de proximidade.",
-              "body": "A programação cultural descentralizada traz novas propostas visuais aos bairros sintrenses. Uma exposição em Mira Sintra mostra trabalhos de Gabriela Casinhas e Salvador Costa, oferecendo ao público um percurso por linguagens plásticas contemporâneas. Fora das portas, o termómetro marca entre 16 e 24°C, acompanhado por nuvens passageiras que suavizam o calor de agosto. O sol despede-se do horizonte às 20:22, marcando o fim de mais um dia calmo na serra. Para transações financeiras, a taxa de câmbio oficial permanece em 1 USD para 0.85 EUR. Enquanto a petição quer travar a urbanização do Parque Natural de Sintra-Cascais ganha assinaturas e debate cívico, os habitantes procuram refúgio nas galerias e cafés locais. A vila preserva a sua identidade entre o verde da montanha e a pedra antiga.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
-            },
-            {
-              "n": "03",
-              "headline": "A proteção da serra mobiliza residentes e associações locais.",
-              "lede": "O futuro do Parque Natural de Sintra-Cascais debate-se em petições e assembleias.",
-              "body": "A paisagem cultural de Sintra continua a ser objeto de vigilância cívica e afeto coletivo. Uma petição quer travar a urbanização do Parque Natural de Sintra-Cascais, mobilizando cidadãos preocupados com a integridade ecológica da serra. Sob uma atmosfera amena de 16 a 24°C e céu parcialmente nublado, os passeios pelos trilhos mantêm-se agradáveis para quem procura silêncio e natureza. O pôr do sol atrasa-se até às 20:22, permitindo contemplar os palácios escondidos entre a vegetação densa. Os turistas que visitam a região contam com o câmbio de 1 USD para 0.85 EUR. A par destas discussões sobre o território, iniciativas culturais como as exposições na Casa da Cultura de Mira Sintra mantêm viva a vida comunitária. Sintra continua a ser um refúgio onde o passado e o ambiente natural exigem cuidado constante.",
-              "source": "saudade desk",
-              "source_date": "2026-08-22"
             }
           ]
         }
