@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-08-28T06:00:00+09:00",
-  "next_filing": "2026-08-28T21:00:00+00:00",
+  "filed_at": "2026-08-29T06:00:00+09:00",
+  "next_filing": "2026-08-29T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Madrid",
+      "city": "MADRID",
       "items": [
         {
           "n": "01",
-          "headline": "La línea 7 de Metro reabre por completo tras finalizar sus obras.",
-          "lede": "El tramo entre Gregorio Marañón y Pitis recupera la normalidad este sábado.",
-          "body": "Los viajeros habituales de la red subterránea madrileña celebran la conclusión de los trabajos en la línea 7 de Metro. La reapertura total facilita los desplazamientos entre Gregorio Marañón y Pitis tras semanas de cortes parciales. Esta mejora coincide con el inicio de la programación cultural de septiembre en la capital. Los residentes recuperan sus rutas habituales justo a tiempo para los nuevos eventos urbanos. Conviene revisar los trayectos antes de viajar para aprovechar la conectividad restablecida en todo este sector de la red.",
+          "headline": "La línea 6 de Metro reabre entre Argüelles y Ciudad Universitaria.",
+          "lede": "El tramo por Moncloa recupera su servicio habitual dos días antes de lo previsto.",
+          "body": "Los desplazamientos por el noroeste de la red recuperan su normalidad habitual esta semana. La reapertura de la línea 6 entre Argüelles y Ciudad Universitaria por Moncloa se adelanta al martes, facilitando el tránsito de los viajeros antes del inicio de septiembre. Conviene recordar que el tipo de cambio oficial se mantiene en 1 USD frente a 0.86 EUR para quienes operan con divisas extranjeras. La programación cultural sigue activa con propuestas como el Festival de Piano y las celebraciones de Arganzuela hasta principios de septiembre. La tranquilidad vuelve a los pasillos subterráneos tras las obras de mejora.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "Las fiestas de Arganzuela y el Festival de Piano llenan los distritos.",
-          "lede": "La ciudad acoge pianos en la calle y conciertos gratuitos hasta el 4 de septiembre.",
-          "body": "La agenda cultural madrileña ofrece cinco planes gratuitos entre el 28 de agosto y el 4 de septiembre. Las fiestas de Arganzuela y el Festival de Piano transforman plazas y centros culturales con música en vivo. Un piano de cola abierto espera a cualquier aficionado que desee tocar al aire libre. La programación incluye más de 400 horas de formación y conciertos repartidos por distintos barrios. Es una ocasión propicia para disfrutar del espacio público antes de que finalice el verano en la ciudad.",
+          "headline": "Las tardes despejadas alcanzan los 30°C con puestas de sol a las 20:52.",
+          "lede": "El termómetro oscila entre los 15°C y los 30°C bajo cielos completamente limpios.",
+          "body": "Las condiciones meteorológicas estables acompañan los paseos vespertinos por los parques y bulevares de la capital. El mercurio marca una mínima de 15°C al amanecer y alcanza los 30°C durante las horas centrales de la tarde. La luz natural se extiende hasta las 20:52, ofreciendo largos crepúsculos ideales para la observación urbana sin prisas. En el plano financiero, la conversión monetaria se sitúa estable en 1 USD por 0.86 EUR. Las grandes citas musicales, como los conciertos de The Weeknd en el Estadio Riyadh Air Metropolitano, concentran la atención pública del fin de semana.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "Escena Escorial inaugura un nuevo espacio para las artes escénicas.",
-          "lede": "La Comunidad de Madrid suma un festival musical en la sierra.",
-          "body": "El panorama cultural de la región da la bienvenida a Escena Escorial este otoño. Este nuevo festival de música y artes escénicas amplía la oferta más allá del núcleo urbano. Las actuaciones buscan atraer a espectadores interesados en propuestas musicales cuidadas en entornos monumentales. La iniciativa complementa la temporada de conciertos que recorre diversos municipios madrileños en las próximas semanas. Los visitantes encontrarán una alternativa reposada para disfrutar del patrimonio y la escena artística fuera de los circuitos habituales.",
+          "headline": "El calendario autonómico anuncia festivos nacionales a principios de septiembre.",
+          "lede": "El Día de Asturias y Extremadura se celebran el 8 de septiembre, seguidos por la Diada el 11 de septiembre.",
+          "body": "Los residentes que planifiquen gestiones administrativas deben tener en cuenta las próximas jornadas festivas en el calendario regional. El Día de Asturias y el Día de Extremadura tendrán lugar el 8 de septiembre, afectando al horario de oficinas públicas y entidades bancarias. Pocos días después, el 11 de septiembre, se conmemorará la Diada Nacional de Catalunya con cierres similares en su territorio. Conviene anticipar cualquier trámite oficial para evitar inconvenientes durante estas fechas señaladas. El ritmo de la ciudad se adapta con calma a estas pausas en el calendario laboral.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     },
     {
-      "city": "Barcelona",
+      "city": "BARCELONA",
       "items": [
         {
           "n": "01",
-          "headline": "La línea 1 del metro de Barcelona reabre entre Florida y Plaça de Sants.",
-          "lede": "El tramo recupera el servicio este sábado tras concluir las obras previstas.",
-          "body": "Los desplazamientos por el sur de la red metropolitana recuperan su fluidez habitual este fin de semana. La línea 1 del metro de Barcelona reabre por completo el tramo comprendido entre Florida y Plaça de Sants este sábado. Los residentes y viajeros que se desplazan por estos barrios pueden planificar sus trayectos con normalidad. Esta intervención mejora la conectividad en una de las arterias más transitadas de la red subterránea. Conviene recordar que la temperatura exterior oscila entre 25 y 31°C bajo cielos cubiertos.",
+          "headline": "El puerto acoge un festival tailandés con más de 20 actividades gratuitas.",
+          "lede": "La dársena portuaria se transforma este fin de semana con ferias gastronómicas y exhibiciones de muay thai.",
+          "body": "El frente marítimo de la ciudad recibe una propuesta cultural singular durante este fin de semana. El puerto de Barcelona acoge un festival de inspiración tailandesa que incluye más de 20 actividades gratuitas abiertas al público. Los visitantes pueden recorrer puestos de feria gastronómica, presenciar demostraciones de muay thai y disfrutar de espacios dedicados al bienestar. La calidad del aire se mantiene en niveles muy favorables, registrando un valor de PM2.5 de 6. Para los viajeros internacionales, el tipo de cambio oficial cotiza en 1 USD por 0.86 EUR.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "El mercado de La Boqueria estrena nuevas normas para su puestos.",
-          "lede": "La reforma elimina los cucuruchos de jamón y los zumos en vaso para frenar la masificación.",
-          "body": "El emblemático mercado de La Boqueria emprende una profunda reforma en su oferta comercial y estética. La nueva normativa prohíbe la venta de cucuruchos de jamón, bravas o zumos en vaso para evitar la deriva en parque temático turístico. El objetivo es preservar la función de mercado de abastos tradicional para los vecinos del barrio. Los compradores locales encuentran así un espacio más sosegado y auténtico en el corazón de Las Ramblas. La calidad del aire se mantiene en niveles favorables con un índice PM2.5 de 7 en toda la ciudad.",
+          "headline": "American Airlines anuncia una nueva ruta estacional entre Charlotte y Barcelona.",
+          "lede": "La conectividad transatlántica se amplía para facilitar la llegada de viajeros norteamericanos.",
+          "body": "Las opciones de conectividad aérea desde el continente americano suman una nueva alternativa directa hacia la capital catalana. American Airlines ha confirmado la apertura de una nueva ruta estacional que enlazará la ciudad de Charlotte con el aeropuerto local. Esta incorporación refuerza el flujo de visitantes en una temporada marcada por una excelente calidad del aire, con un índice PM2.5 de 6. En el ámbito económico, la equivalencia monetaria se establece en 1 USD frente a 0.86 EUR. La oferta cultural se completa con exposiciones temporales como Llenguatges materials en las salas de la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "El Thai Festival y el Ripollet Rock animan el fin de semana.",
-          "lede": "La agenda urbana combina gastronomía asiática y música heavy metal con entrada libre.",
-          "body": "La agenda de Barcelona propone dos citas bien diferenciadas para el fin de semana del 29 y 30 de agosto. El Thai Festival aterriza en la ciudad con más de 20 actividades gratuitas centradas en la cultura tailandesa. Paralelamente, el Ripollet Rock 2026 reúne a bandas como Rhapsody of Fire y Crematory en una nueva edición para los amantes del género. Las temperaturas se mueven entre 25 y 31°C con atardeceres previstos a las 20:31. Son opciones ideales para disfrutar del ocio estival al aire libre antes de que despunte septiembre.",
+          "headline": "El calendario marca las próximas festividades autonómicas de septiembre.",
+          "lede": "Las celebraciones de Asturias, Extremadura y Cataluña modificarán los horarios comerciales habituales.",
+          "body": "El final del verano viene acompañado de diversas jornadas festivas en distintas comunidades autónomas del país. El 8 de septiembre se celebran simultáneamente el Día de Asturias y el Día de Extremadura, con el consecuente cierre de administraciones públicas. A pocos días vista, el 11 de septiembre se conmemorará la Diada Nacional de Catalunya, paralizando la actividad institucional en el territorio catalán. Quienes deban realizar gestiones en oficinas postales o bancarias durante estas fechas deben consultar los horarios especiales. La atmósfera urbana mantiene su habitual serenidad en vísperas de estos descansos festivos.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     },
     {
-      "city": "Buenos Aires",
+      "city": "BUENOS AIRES",
       "items": [
         {
           "n": "01",
-          "headline": "El festival Buenos Aires Está de Moda lanza su tercera edición.",
-          "lede": "Más de 70 actividades culturales recorren la ciudad durante estos días.",
-          "body": "La capital argentina acoge una nueva edición de su encuentro dedicado al diseño y la creación local. Buenos Aires Está de Moda despliega un programa con más de 70 actividades distribuidas por distintos puntos urbanos. Los asistentes pueden participar en exposiciones, talleres y muestras que ponen en valor la identidad textil del país. El termómetro marca hoy entre 8 y 17°C bajo un cielo cubierto, con puesta de sol a las 18:32. La calidad del aire se registra como justa, con un valor de PM2.5 de 10.",
+          "headline": "Las jornadas grises registran temperaturas entre los 9°C y los 17°C.",
+          "lede": "El cielo permanece completamente cubierto mientras la puesta de sol se adelanta a las 18:33.",
+          "body": "El clima porteño se mantiene fresco y cubierto durante toda la jornada, con registros térmicos que oscilan entre los 9°C de mínima y los 17°C de máxima. La luz diurna disminuye de forma perceptible, situando el ocaso a las 18:33 bajo una atmósfera estable. La calidad del aire se mantiene en niveles considerados justos, con una lectura de PM2.5 de 9. Estas condiciones invigan al descanso en espacios interiores y a recorrer exposiciones de diseño histórico en los centros culturales. El ritmo de la ciudad fluye con la sobriedad propia de los días nublados de invierno.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "Los faroles flotantes iluminan la llegada de la primavera porteña.",
-          "lede": "Buenos Aires recrea una noche de inspiración tailandesa con miles de luces en el agua.",
-          "body": "La ciudad se prepara para acoger una de las experiencias visuales más esperadas de la temporada. El festival de faroles flotantes regresa este año para transformar los espacios acuáticos en un paisaje de luces. Esta celebración singular invita a los vecinos a disfrutar de una noche de calma y contemplación. El evento coincide con la apertura de la agenda primaveral en los parques de la ciudad. Con una temperatura fresca entre 8 y 17°C, los asistentes acuden abrigados a pasear junto a las riberas al atardecer.",
+          "headline": "Tango BA 2026 y el Mundial de Tango despliegan su programación completa.",
+          "lede": "La música ciudadana inunda los auditorios con una guía de actividades que abarca toda la semana.",
+          "body": "La gran cita anual con el compás dos por cuatro convoca a bailarines y aficionados en diversos puntos de la capital. La programación oficial de Tango BA 2026 y el Mundial de Tango detalla una agenda extensa con conciertos, milongas y competencias internacionales. Las actividades se desarrollan bajo un cielo plenamente cubierto, con temperaturas que se mueven entre los 9°C y los 17°C. La calidad del aire se sitúa en un índice PM2.5 de 9, propiciando los encuentros bajo techo. La puesta de sol a las 18:33 marca el inicio de las veladas musicales en los escenarios principales.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "El Festival Internacional Vagamundos llega a los escenarios locales.",
-          "lede": "La programación artística fomenta el intercambio cultural entre creadores independientes.",
-          "body": "Las propuestas escénicas de la ciudad se enriquecen con la llegada del Festival Internacional Vagamundos 2026. Este encuentro reúne a artistas de diversas disciplinas para ofrecer obras en salas independientes de Buenos Aires. La iniciativa busca generar un diálogo pausado entre creadores y público en espacios de aforo reducido. Los espectadores encontrarán obras de teatro, danza y narración oral ideales para las tardes frescas de esta época. La jornada concluye con el ocaso a las 18:32 y una atmósfera propicia para el teatro de sala.",
+          "headline": "La memoria de Eileen Gray y el diseño local ocupan la agenda cultural.",
+          "lede": "Las muestras de arquitectura y el festival Buenos Aires Está de Moda dinamizan la semana.",
+          "body": "La oferta artística de la ciudad diversifica sus propuestas con exposiciones que dialogan entre la arquitectura, la pintura y la memoria. Una nueva muestra rescata la figura y el legado de Eileen Gray, cruzando disciplinas creativas en un mismo espacio de exhibición. Paralelamente, el festival Buenos Aires Está de Moda inaugura su tercera edición con un circuito de más de 70 actividades distribuidas por distintos barrios. Las jornadas se desarrollan con una atmósfera fresca y nublada, con temperaturas que van de los 9°C a los 17°C. La caída de la tarde a las 18:33 invita a recorrer los espacios cerrados dedicados al arte contemporáneo.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     }
