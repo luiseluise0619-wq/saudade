@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-08-28T06:00:00+09:00",
-  "next_filing": "2026-08-28T21:00:00+00:00",
+  "filed_at": "2026-08-29T06:00:00+09:00",
+  "next_filing": "2026-08-29T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "O Parque da Bela Vista acolhe o Meo Kalorama.",
-          "lede": "A quinta edição do festival anima os relvados da zona oriental da cidade.",
-          "body": "O Parque da Bela Vista prepara-se para receber a 5ª edição do Meo Kalorama. A música ocupa os espaços verdes e atrai milhares de visitantes ao longo do fim de semana. A taxa de câmbio atual fixa-se em 1 USD para 0.86 EUR para quem chega de fora. O programa cultural estende-se a vários pontos da capital, incluindo o Castelo de São Jorge com o Coletivo Gira. Convirá planear as deslocações de metro e autocarro com antecedência devido ao fluxo de público. Os residentes aproveitam o final de agosto para desfrutar dos concertos ao ar livre e da oferta artística que antecede o regresso das aulas e da rotina habitual.",
+          "headline": "O Parque da Bela Vista recebe a quinta edição do festival Meo Kalorama.",
+          "lede": "Os portões abrem-se para três dias de música e acampamento urbano na zona oriental da cidade.",
+          "body": "O Parque da Bela Vista prepara-se para acolher a quinta edição do festival Meo Kalorama, reunindo milhares de festivaleiros junto aos palcos montados na relva. A organização disponibiliza guias detalhados com horários dos concertos, mapas do recinto e reforço de transportes públicos para facilitar os acessos à zona oriental da cidade. O ar apresenta qualidade considerada fair, com níveis de PM2.5 a rondar 7, mantendo-se estável para atividades ao ar livre prolongadas. A taxa de câmbio permanece nos mercados a 1 USD para 0.86 EUR para quem chega de fora da zona euro. Convém planear a chegada com antecedência, consultar os desvios de trânsito na área envolvente e optar pelo metro ou autocarros para evitar filas prolongadas junto aos acessos principais.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "O Castelo de São Jorge recebe o Coletivo Gira.",
-          "lede": "A programação cultural do fim de semana cruza várias sonoridades na colina histórica.",
-          "body": "As muralhas do Castelo de São Jorge servem de cenário para as atuações do Coletivo Gira. Este evento complementa a oferta cultural da cidade, juntamente com o festival Meo Kalorama no Parque da Bela Vista. Para os viajantes internacionais, a conversão monetária mantém-se estável em 1 USD para 0.86 EUR. O acesso ao monumento exige subidas íngremes, pelo que se recomenda calçado confortável e tempo livre para contemplar a vista sobre o Tejo. As iniciativas artísticas continuam a preencher a agenda lisboeta, antecipando o Festival Política que regressa em setembro com a sua programação completa já anunciada para breve.",
+          "headline": "O Castelo de São Jorge acolhe o Coletivo Gira neste fim de semana.",
+          "lede": "A alta da cidade junta a herança medieval à programação cultural promovida por artistas residentes.",
+          "body": "As muralhas históricas do Castelo de São Jorge servem de cenário para as atuações do Coletivo Gira, cruzando a visita patrimonial com momentos de escuta atenta. Este fim de semana prolonga a oferta cultural da capital, coincidindo com grandes eventos musicais espalhados por outras freguesias ribeirinhas. A qualidade do ar mantém-se em patamares fair, registando 7 em PM2.5, sob uma brisa constante que atravessa o Tejo. A cotação cambial de referência fixa-se em 1 USD para 0.86 EUR nas principais casas de câmbio da baixa pombalina. Os visitantes que sobem a colina histórica encontram um ritmo mais pausado nos pátios interiores, ideais para observar a paisagem urbana enquanto os ensaios decorrem discretamente nas encostas ensolaradas.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "O Parque das Nações promove o talento local.",
-          "lede": "A iniciativa soma talentos da freguesia e valoriza o tecido comunitário ribeirinho.",
-          "body": "O projeto Vamos somar Talentos de Lisboa destaca criadores e agentes culturais no Parque das Nações. A zona moderna da cidade ganha nova dinâmica com estas apresentações voltadas para os moradores e visitantes curiosos. A taxa de câmbio permanece nos 1 USD para 0.86 EUR nos principais postos de câmbio locais. Os passeios à beira-rio convidam a caminhadas matinais antes do calor da tarde se fazer sentir plenamente. Lisboa vive dias de transição entre o turismo balnear e a retoma dos grandes eventos urbanos, consolidando a sua identidade multicultural através da música, do teatro e da participação cívica em vários bairros.",
+          "headline": "O festival É Um Encontro regressa à Amadora no próximo mês de setembro.",
+          "lede": "A periferia metropolitana aquece motores para receber novas expressões artísticas e encontros comunitários.",
+          "body": "A programação cultural de setembro já se desenha com o regresso do festival É Um Encontro ao concelho da Amadora, descentralizando a oferta da grande Lisboa. Os preparativos avançam nos bairros e centros culturais locais, antecipando uma agenda repleta de exposições e conversas abertas ao público. A qualidade do ar na região metropolitana regista níveis fair, com o indicador de PM2.5 fixado em 7. A par disso, a conversão monetária opera com a taxa de 1 USD equivalente a 0.86 EUR. Quem reside ou visita a área suburbana encontra um ambiente propício a longas caminhadas pelas praças remodeladas, beneficiando de uma rede de transportes que liga rapidamente os concelhos vizinhos ao centro da capital sem sobressaltos.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "O céu nublado acompanha os dias de fim de agosto no Porto.",
-          "lede": "As temperaturas oscilam entre os 16 e os 21°C com qualidade do ar muito favorável.",
-          "body": "O termómetro marca entre 16 e os 21°C sob um manto de nuvens que suaviza a luz sobre o Douro. A qualidade do ar é considerada boa, registando um valor de PM2.5 de 5 na estação de monitorização. O sol despede-se mais tarde, marcando o pôr do sol pelas 20:14. A taxa de câmbio troca 1 USD por 0.86 EUR para os visitantes estrangeiros. O Brunch Electronik estreia-se na cidade com a atuação de Shimza no Parque da Cidade, prometendo atrair entusiastas da música eletrónica. As galerias locais inauguram também a exposição Zangam-se as comadres, descobrem-se as verdades, celebrando a narrativa visual e o humor de artistas internacionais chegados de várias origens.",
+          "headline": "O Parque da Cidade estreia-se como palco do Brunch Electronik com Shimza.",
+          "lede": "A mancha verde ribeirinha acolhte ritmos contemporâneos sob a neblina matinal caraterística da foz.",
+          "body": "O Parque da Cidade abre pela primeira vez os seus relvados para receber o Brunch Electronik, tendo o DJ Shimza como um dos principais destaques do cartaz. A manhã começa envolta numa neblina típica que dissipa gradualmente, deixando antever temperaturas entre 15°C e 23°C até ao pôr do sol marcado para as 20:12. A taxa de câmbio local mantém-se estável em 1 USD para 0.86 EUR para os viajantes internacionais que circulam pela Invicta. Em paralelo, a Câmara do Porto atribui passes gratuitos a jovens de bairros municipais para o festival World Battle, promovendo a inclusão cultural. Recomenda-se o uso de calçado confortável para percorrer os extensos caminhos do parque e a utilização de transportes públicos para aceder ao recinto sem preocupações com estacionamento.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "O Parque da Cidade estreia o Brunch Electronik.",
-          "lede": "A música eletrónica de Shimza inaugura este formato em solo portuense.",
-          "body": "O vasto relvado do Parque da Cidade acolhe pela primeira vez o Brunch Electronik, tendo como principal destaque o artista Shimza. A meteorologia apoia o evento com temperaturas amenas de 16 a 21°C e o ar limpo com PM2.5 a 5. A conversão financeira situa-se em 1 USD para 0.86 EUR. Para além da música, a cidade oferece exposições gratuitas de humor gráfico com artistas mundiais e exibições literárias como a apresentação do conto tradicional Blimundo em setembro. Os transportes públicos reforçam as ligações à zona ocidental para facilitar o fluxo de festivaleiros que procuram desfrutar do espaço verde junto ao oceano atlântico.",
+          "headline": "A Visita Comentada revela os detalhes da exposição temporária Plenos.",
+          "lede": "As salas municipais convidam a uma observação pausada de peças raramente expuestas ao grande público.",
+          "body": "A agenda cultural da semana destaca a Visita Comentada à exposição temporária Plenos, oferecendo aos participantes uma perspetiva detalhada sobre as obras patentes nas galerias da cidade. O termómetro oscila suavemente entre 15°C e 23°C, enquanto a habitual neblina matinal dá lugar a finais de tarde luminosos que terminam por volta das 20:12. Para quem chega de fora, o câmbio oficial permanece em 1 USD para 0.86 EUR. Outra nota de destaque vai para a iniciativa municipal que apoia a presença de jovens no festival World Battle através da distribuição de passes. Os visitantes encontrarão galerias tranquilas e um ritmo citadino propício à contemplação estética, longe do bulgório turístico habitual das zonas ribeirinhas mais concorridas.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "A exposição gratuita reúne artistas de todo o mundo.",
-          "lede": "O humor atravessa o Atlântico e fixa residência cultural nas galerias da Invicta.",
-          "body": "Uma nova exposição gratuita traz ao Porto criadores de humor gráfico de várias latitudes geográficas. A iniciativa cruza perspetivas culturais e linguagens visuais acessíveis a residentes e viajantes atentos. O registo meteorológico aponta para 16 a 21°C com céu overcast e a luz diurna a estender-se até às 20:14. O índice de qualidade do ar mantém-se excelente, com partículas PM2.5 a 5. A moeda estrangeira converte-se à razão de 1 USD para 0.86 EUR. Estes eventos culturais reforçam o papel da cidade como polo de atração artística e de debate estético, ideal para quem prefere caminhar sem pressas pelas ruas graníticas da baixa.",
+          "headline": "O provérbio Zangam-se as comadres inspira nova exposição na cidade.",
+          "lede": "As galerias portuenses exploram registos visuais e narrativas populares em torno da ironia quotidiana.",
+          "body": "Sob o mote Zangam-se as comadres, descobrem-se as verdades, uma nova exposição inaugura no Porto, desafiando os visitantes a decifrarem o humor e a franqueza dos hábitos locais. A atmosfera exterior é fresca, com mínimas de 15°C e máximas que atingem 23°C, sob um nevoeiro ligeiro que se desvanece antes do sol se pôr pelas 20:12. A economia local transaciona à razão de 1 USD por 0.86 EUR. Paralelamente, o município fomenta a integração social ao oferecer centenas de passes para a World Battle a jovens de bairros municipais. Caminhar pelas ruas da baixa revela uma cidade atenta ao seu património imaterial, onde a tradição oral e a criação artística contemporânea coabitam de forma harmoniosa e surpreendente para quem observa com calma.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "A serra de Sintra respira sob um céu encoberto.",
-          "lede": "A temperatura oscila entre os 16 e os 23°C com ar puro e limpo na vila.",
-          "body": "O termómetro na serra marca entre 16 e os 23°C, acompanhado por um céu overcast tipicamente atlântico. A qualidade do ar é muito boa, com um registo de PM2.5 fixado em 6 nas estações locais. A noite cai por volta das 20:14, permitindo longas caminhadas vespertinas pelos trilhos arborizados. A taxa de câmbio permanece estável em 1 USD para 0.86 EUR. O debate sobre o futuro urbano e a preservação do Parque Natural de Sintra Cascais mobilizou mais de 7.500 assinaturas para discussão parlamentar. A vila mantém o seu ritmo pausado, convidando os visitantes a refugiarem-se nos palácios históricos e nos jardins românticos longe do bulgório litoral.",
+          "headline": "O festival Jazz em Monserrate convida a abrandar no parque romântico.",
+          "lede": "Os jardins botânicos acolhem acordes acústicos entre espécies exóticas e arquitetura decaída.",
+          "body": "O festival Jazz em Monserrate regressa para lembrar que a serra se desfruta sem pressas, tendo como pano de fundo a vegetação luxuriante e o palacete de inspiração oriental. A qualidade do ar na serra é classificada como fair, fixando-se o índice de PM2.5 em 6, o que garante uma respiração leve durante os percursos pedestres. A taxa de câmbio cambial opera nos valores correntes de 1 USD para 0.86 EUR. A par da música, a autarquia avança com projetos para recuperar o parque habitacional municipal, melhorando as condições de residência na vila histórica. Aconselha-se a utilização de agasalhos leves para os concertos ao ar livre no final da tarde, quando a humidade característica da serra começa a fazer-se sentir entre as copas das árvores seculares.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "02",
-          "headline": "O festival Jazz em Monserrate convida ao abrandamento.",
-          "lede": "A música harmoniza-se com a vegetação exótica do parque romântico.",
-          "body": "O festival Jazz em Monserrate continua a ser o pretexto ideal para desacelerar o ritmo na serra sintrense. Os concertos decorrem em perfeita simbiografia com a natureza circundante, sob temperaturas de 16 a 23°C e céus nublados. O ar purificado apresenta valores de PM2.5 de 6, garantindo uma respiração plena durante os passeios. O pôr do sol ocorre às 20:14. A taxa de câmbio para visitantes internacionais é de 1 USD para 0.86 EUR. Paralelamente, o futuro da região debate-se na esfera pública após recolher mais de 7.500 assinaturas civis para proteger a identidade paisagística do Parque Natural de Sintra Cascais contra pressões imobiliárias desregradas.",
+          "headline": "A recuperação do parque habitacional avança na vila histórica de Sintra.",
+          "lede": "As intervenções municipais devolvem dignidade a edifícios tradicionais na encosta da serra.",
+          "body": "A vila de Sintra vê o seu parque habitacional beneficiar de obras de recuperação estrutural, promovendo a habitação digna e a preservação arquitetónica dos edifícios antigos. Enquanto os trabalhos decorrem discretamente nas ruas secundárias, os visitantes continuam a usufruir da serenidade dos bosques e dos eventos culturais como o Jazz em Monserrate. Os sensores atmosféricos indicam uma qualidade do ar fair, com PM2.5 em 6. A conversão de moeda estrangeira mantém-se estável face à divisa europeia, cotando-se a 1 USD para 0.86 EUR. Quem percorre os trilhos sombreados da serra encontra um cenário de transição estival tranquilo, ideal para observadores solitários que evitam as horas de maior afluência junto aos monumentos principais.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         },
         {
           "n": "03",
-          "headline": "O Parque Natural de Sintra Cascais debate o seu futuro.",
-          "lede": "Mais de 7.500 assinaturas forçam a discussão sobre a gestão do território serrano.",
-          "body": "Um projeto cívico para se fazer cidade e proteger a ecologia local mobilizou mais de 7.500 assinaturas, levando o tema ao parlamento. A iniciativa reflete o apego dos residentes à Serra de Sintra e à conservação do seu património natural. O clima acompanha com 16 a 23°C, céu overcast e o sol a ocultar-se às 20:14. O ar mantém-se limpo, com PM2.5 a 6. A cotação monetária fixa-se em 1 USD para 0.86 EUR. Quem visita a vila neste período pode alternar entre os debates de cidadania, os concertos do festival Jazz em Monserrate e a contemplação silenciosa dos bosques húmidos que definem a mística romântica deste lugar único.",
+          "headline": "Os Jardins de Monserrate recebem notas de jazz na transição de agosto.",
+          "lede": "A música improvisada ecoa entre fetos arbóreos e recantos bucólicos da serra romântica.",
+          "body": "O ciclo Jazz em Monserrate continua a marcar o ritmo cultural da região, oferecendo concertos intimistas num dos jardins mais emblemáticos de Portugal. A qualidade do ar na vila mantém-se fair, registando um valor de 6 em PM2.5, ideal para longas caminhadas sem pressas. Nas transações financeiras, aplica-se a proporção habitual de 1 USD para 0.86 EUR. Ao mesmo tempo, o município prossegue com os planos de reabilitação urbana voltados para a recuperação do parque habitacional local. Recomenda-se a compra antecipada de bilhetes para os espetáculos e a preferência pelos autocarros locais para subir à serra, respeitando o silêncio e o ritmo vagaroso que este património natural exige de quem o visita.",
           "source": "saudade desk",
-          "source_date": "2026-08-28"
+          "source_date": "2026-08-29"
         }
       ]
     }
