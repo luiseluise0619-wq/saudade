@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-01T06:00:00+09:00",
+  "updated": "2026-09-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Línea 6 de Metro reabre entre Ciudad Universitaria y Argüelles.",
+              "lede": "Los trayectos recuperan la normalidad tras las obras de mejora estival.",
+              "body": "La Línea 6 de Metro reabre por completo entre Ciudad Universitaria y Argüelles, facilitando de nuevo el tránsito directo por el oeste madrileño. Con una temperatura exterior que oscila entre 18 y 35°C bajo cielos claros y puesta de sol a las 20:45, el transporte subterráneo ofrece un alivio térmico constante. La calidad del aire se mantiene en niveles favorables con un índice PM2.5 de 5, ideal para caminar al aire libre tras la caída del sol. Las oficinas bancarias y de cambio operan con normalidad aplicando el tipo de cambio oficial de 1 USD a 0.86 EUR. Se recomienda planificar los desplazamientos hacia los campus universitarios aprovechando esta plena operatividad de la red.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "02",
+              "headline": "Matadero Madrid arranca la temporada con el festival L.E.V.",
+              "lede": "El centro cultural inaugura el curso con arte digital e instalaciones inmersivas.",
+              "body": "Matadero Madrid arrancará la temporada con el festival L.E.V. Matadero, la exposición de Carlos Aires y el ciclo del coreógrafo Damien Jalet. La octava edición del festival L.E.V. Matadero apuesta por el arte digital con innovadoras propuestas y experiencias inmersivas que ocuparán las naves industriales. Las tardes despejadas alcanzan los 35°C antes de refrescar hasta los 18°C pasada la medianoche. Con una calidad del aire de PM2.5 en 5 y una tasa de cambio de 1 USD a 0.86 EUR, los visitantes extranjeros encuentran un contexto económico y ambiental muy estable para recorrer las muestras. Conviene consultar los horarios específicos de las funciones de Damien Jalet para asegurar el acceso a las salas principales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario marca festividades autonómicas próximas en el horizonte.",
+              "lede": "Diversas regiones se preparan para sus celebraciones patronales durante septiembre.",
+              "body": "El calendario oficial señala la proximidad de varias festividades autonómicas que afectarán al ritmo administrativo de España en los próximos días. Entre ellas figuran el Día de Asturias y el Día de Extremadura el 2026-09-08, seguidos por la Diada Nacional de Catalunya el 2026-09-11 y la Festividad de la Bien Aparecida el 2026-09-15. En Madrid, las oficinas gubernamentales y los bancos operarán con normalidad esta semana, a pesar de los cierres previstos en los territorios celebrantes. El clima madrileño se mantiene estable entre 18 y 35°C con aire limpio de PM2.5 5 y una paridad cambiaria de 1 USD a 0.86 EUR. Es aconsejable anticipar cualquier trámite interregional que dependa de estas comunidades autónomas antes de que comiencen los festejos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Orquesta del Festival de Bayreuth inicia su gira española.",
+              "lede": "Pablo Heras-Casado dirige el programa conmemorativo en el arranque musical de septiembre.",
+              "body": "BARCELONA presencia el triunfal inicio de la gira española de la Orquesta del Festival de Bayreuth y Pablo Heras-Casado en una cita sinfónica muy esperada. El maestro Heras-Casado es el gran protagonista de esta gira que celebra el 150 aniversario del Festival de Bayreuth con conciertos memorables. Bajo los cielos totalmente overcast de esta semana, las temperaturas oscilan suavemente entre 22 y 30°C, con puesta de sol prevista a las 20:23. La calidad del aire se sitúa en un nivel fair con un registro de PM2.5 de 7, propicio para los paseos urbanos vespertinos. Los viajeros internacionales pueden realizar transacciones financieras con un tipo de cambio fijado en 1 USD equivalente a 0.86 EUR en todas las entidades locales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "02",
+              "headline": "La red de restauración comercial renueva sus espacios principales.",
+              "lede": "La Tagliatella reabre dos de sus locales más emblemáticos en la ciudad condal.",
+              "body": "La Tagliatella reabre dos restaurantes en Barcelona e impulsa la renovación de su red, actualizando los interiores de estos conocidos puntos de encuentro gastronómico. La reapertura coincide con una agenda cultural intensa y un clima típicamente mediterráneo de 22 a 30°C bajo cielos cubiertos. La humedad ambiental propia del régimen overcast suaviza el ambiente urbano durante las horas centrales del día, prolongando el atardecer hasta las 20:23. Con una calidad del aire calificada como fair y un valor de PM2.5 en 7, las terrazas del Eixample operan con total normalidad. Los pagos con tarjeta extranjera aplican el cambio vigente de 1 USD por 0.86 EUR, facilitando el consumo cotidiano sin comisiones ocultas en los establecimientos adheridos a la red.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario autonómico altera los servicios administrativos periféricos.",
+              "lede": "Las oficinas públicas ajustan sus horarios ante las festividades de septiembre.",
+              "body": "El avance del calendario introduce fechas clave como el Día de Asturias y el Día de Extremadura el 2026-09-08, la Diada Nacional de Catalunya el 2026-09-11 y la Festividad de la Bien Aparecida el 2026-09-15. Durante la Diada, la actividad institucional barcelonesa sufrirá pausas notables en organismos oficiales y entidades bancarias. Las temperaturas se mantendrán estables entre 22 y 30°C bajo cielos cubiertos, mientras que la calidad del aire registrará un índice PM2.5 de 7. El tipo de cambio oficial se mantiene estable en 1 USD frente a 0.86 EUR para todas las operaciones monetarias. Se aconseja a los viajeros consultar los horarios comerciales en Cataluña antes de planificar visitas a museos o dependencias públicas durante la semana festiva.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Centro de Exposiciones y Convenciones divulga su nuevo proyecto.",
+              "lede": "La Galería de Primer Lugar Concurso Parque redefine el paisaje arquitectónico local.",
+              "body": "Se conocen los detalles de la Galería de Primer Lugar Concurso Parque, Centro de Exposiciones y Convenciones en Buenos Aires, una obra que reordena el espacio público verde. El diseño ganador prioriza la integración paisajística con el entorno urbano en una temporada de transición climática. Con una temperatura matutina y vespertina que oscila entre 9 y 20°C bajo cielos cubiertos, el abrigo ligero resulta indispensable para caminar. La puesta de sol se adelanta hasta las 18:35, marcando el inicio de las actividades culturales nocturnas en los barrios tradicionales. La calidad del aire muestra excelentes registros con un nivel PM2.5 de 16, garantizando una atmósfera limpia para el descanso y el paseo prolongado por los parques urbanos de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "02",
+              "headline": "El circuito musical independiente acoge propuestas de raíces profundas.",
+              "lede": "El festival Muddy Roots y el ciclo de cine ocupan los escenarios porteños.",
+              "body": "El Muddy Roots Buenos Aires 2026 en CAFF reúne a los seguidores de la música de raíz en un encuentro íntimo de formato acústico y eléctrico. Paralelamente, la agenda cultural se enriquece con el Festival de Cine y Música y el Festival de Cine de la Provincia de Buenos Aires (FICPBA) 2026. Estas propuestas ocupan salas alternativas con proyecciones y conciertos programados hasta entrada la noche. El termómetro marca valores frescos de 9 a 20°C bajo un cielo persistentemente overcast que atenúa la luz diurna hasta el atardecer de las 18:35. La calidad del aire se mantiene en buenos parámetros con un índice PM2.5 de 16, ideal para transitar a pie entre los diferentes espacios culturales de la ciudad sin inconvenientes ambientales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            },
+            {
+              "n": "03",
+              "headline": "Los espacios verdes urbanos operan con normalidad bajo el cielo gris.",
+              "lede": "Los parques porteños ofrecen refugio tranquilo durante las jornadas de temperaturas templadas.",
+              "body": "Los parques y plazas de la ciudad mantienen sus horarios habituales de apertura, convirtiéndose en el destino preferido para los caminantes matutinos. Con registros térmicos que van de los 9 a los 20°C y cielos cubiertos que difuminan la luz del día, el ritmo urbano fluye sin sobresaltos. La puesta de sol a las 18:35 invita a resguardarse en cafés históricos y librerías de barrio antes del descenso térmico nocturno. La calidad del aire se consolida como buena, marcando un PM2.5 de 16 que favorece la práctica deportiva al aire libre en la Costanera y los bosques de Palermo. Se recomienda llevar ropa de abrigo moderada para disfrutar plenamente de la caminata vespertina sin verse afectado por la humedad ambiental.",
+              "source": "saudade desk",
+              "source_date": "2026-09-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-01T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Con una temperatura máxima que apenas alcanza los 18°C, la vida ciudadana se despliega bajo techo. Las librerías de la Avenida Corrientes y los zaguanes antiguos ofrecen el cobijo necesario frente al agua. Los viajeros encuentran en este clima una invitación perfecta para la lectura pausada y la observación silenciosa. Las veredas mojadas reflejan las luces tenues de los antiguos faroles porteños al caer la tarde. La ciudad mantiene su elegancia intacta bajo el cielo nublado de finales de agosto. Es un momento propicio para redescubrir los detalles arquitectónicos menos transitados.",
               "source": "saudade desk",
               "source_date": "2026-08-27"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-26T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Reabre el tramo norte de la Línea 10 de Metro.",
-              "lede": "La conexión entre Plaza de Castilla y Cuzco vuelve a funcionar tras las obras estivales.",
-              "body": "Los viajeros habituales de la red subterránea recuperan una conexión clave tras semanas de ajustes técnicos en el norte de la capital. El tramo comprendido entre las estaciones de Plaza de Castilla y Cuzco vuelve a recibir trenes con total normalidad desde hoy. No obstante, las labores de mejora continúan activas en otros puntos de la misma infraestructura, concretamente en los inmediatos accesos a Santiago Bernabéu. Para cubrir este trayecto que sigue interrumpido, la compañía mantiene operativos los autobuses gratuitos de apoyo destinados a los usuarios. Conviene planificar los desplazamientos cotidianos con un ligero margen de tiempo adicional debido a estos trasbordos obligatorios.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "El parque de Vallecas reúne especies vegetales de toda la península.",
-              "lede": "Un paseo botánico local permite contemplar la diversidad ecológica peninsular sin salir de los límites urbanos.",
-              "body": "Los rincones verdes del sur de la ciudad esconden colecciones de flora autóctona que merecen una visita reposada durante las horas matinales. Este espacio público singular agrupa ejemplares representativos de los diferentes ecosistemas que configuran el territorio nacional. Los visitantes pueden observar la adaptación de arbustos mediterráneos y plantas de alta montaña en un mismo recorrido didáctico. Es un remanso de tranquilidad ideal para los observadores pacientes que buscan la sombra en los días calurosos del final de agosto. Los senderos pavimentados facilitan un paseo silencioso lejos del tráfico rodado y de la actividad intensa de las grandes avenidas.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "La divisa norteamericana se sitúa en 0.86 EUR.",
-              "lede": "Los viajeros internacionales operan con este tipo de cambio al planificar sus compras y estancias.",
-              "body": "El mercado de divisas mantiene una equivalencia estable para quienes llegan a la península con dólares estadounidenses en sus carteras. Cada dólar se intercambia actualmente por 0.86 EUR en las principales entidades bancarias y casas de cambio autorizadas. Esta proporción resulta especialmente favorable para el turista extranjero al adquirir bienes y servicios locales durante su estancia. Conviene recordar que las próximas festividades autonómicas, como el Día de Asturias y el Día de Extremadura previstas para el 2026-09-08, alterarán la apertura habitual de oficinas públicas y bancos. Se aconseja realizar las gestiones financieras con antelación para evitar contratiempos en los cajeros automáticos y sucursales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Aeropuerto del Prat acoge una muestra sobre el comercio local.",
-              "lede": "Los pasajeros en tránsito descubren la historia de los establecimientos tradicionales de los barrios barceloneses.",
-              "body": "Las instalaciones aeroportuarias integran temporalmente un recorrido visual dedicado a la memoria comercial de la ciudad condal. La exposición fotográfica destaca la labor cotidiana de los mercados municipales y las tiendas centenarias que configuran la identidad urbana. Es una propuesta cultural inesperada para quienes aguardan la salida de sus vuelos en las terminales del Prat. Las imágenes reflejan la trastienda de los oficios artesanales y la relación de cercanía entre los tenderos y su clientela histórica. Esta iniciativa acerca el latido cotidiano de los barrios a los viajeros antes de que abandonen el territorio catalán.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "Cielos cubiertos y temperaturas de 23 a 30°C este martes.",
-              "lede": "El ambiente se mantiene templado bajo nubes persistentes mientras la puesta de sol llega a las 20:34.",
-              "body": "La jornada transcurre con una atmósfera estable y sin precipitaciones destacables en el litoral barcelonés. El termómetro se mueve en el rango previsto de 23 a 30°C, ofreciendo un respiro relativo frente a los picos de calor extremo de semanas anteriores. La capa de nubes cubre el cielo urbano y atenúa la radiación solar directa durante las horas centrales del día. Los paseos marítimos y los parques periurbanos recuperan gradualmente la calma tras el episodio de humo que afectó recientemente a Collserola y Torre Baró. Conviene estar atentos a las indicaciones locales si se planean rutas de senderismo por las zonas forestales colindantes.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "La cotización monetaria se establece en 0.86 EUR por dólar.",
-              "lede": "El tipo de cambio actual facilita los cálculos económicos para los visitantes procedentes de Norteamérica.",
-              "body": "Las transacciones comerciales y el cambio de moneda operan bajo una paridad de 1 USD igual a 0.86 EUR en los establecimientos autorizados. Esta cifra permite a los viajeros extranjeros calcular con precisión sus presupuestos diarios para transporte, alojamiento y restauración. Es importante tener presente que el calendario laboral avanza hacia festividades autonómicas señaladas en otras regiones para el 2026-09-08, como el Día de Asturias y el Día de Extremadura. Aunque no afectan directamente al comercio diario catalán, ciertos servicios bancarios nacionales y organismos oficiales cerrarán sus puertas. Se recomienda anticipar cualquier trámite administrativo antes de que lleguen esas fechas festivas en el territorio peninsular.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival y Mundial de Tango llena las milongas porteñas.",
-              "lede": "Bailarines y aficionados convergen en las pistas de la ciudad para celebrar la gran cita anual del género.",
-              "body": "La música del 2X4 resuena en cada rincón de Buenos Aires durante esta semana consagrada por completo al compás arrabalero. Las milongas tradicionales y los grandes escenarios acogen exhibiciones, clases magistrales y competencias internacionales de primer nivel. Residentes y visitantes comparten la pasión por el abrazo milonguero en una atmósfera de absoluta devoción estética y popular. Este encuentro anual consolida a la capital argentina como el epicentro indiscutible de la cultura tanguera global. Las calles del centro y los centros culturales barcelonenses bullen con una programación continua que se extiende hasta bien entrada la madrugada.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "Calidad del aire excelente y lectura de PM2.5 en 8.",
-              "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos peatonales por los parques y plazas.",
-              "body": "Los registros ambientales de la jornada muestran un índice muy favorable para la salud respiratoria de los transeúntes. Con una concentración de partículas PM2.5 situada en 8, el aire porteño se respira con total ligereza esta semana. Esta limpieza ambiental invita a recorrer a pie los barrios históricos sin la habitual preocupación por la polución vehicular. Los árboles de las avenidas principales muestran los primeros indicios del cambio estacional mientras los caminantes disfrutan de la brisa austral. Es una oportunidad excelente para sentarse en los bancos de madera de las plazas a observar el ritmo pausado de la metrópoli.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "Cien bodegones tradicionales ofrecen descuentos durante una semana.",
-              "lede": "La ruta gastronómica popular de la ciudad celebra la cocina casera con promociones especiales en sus mesas.",
-              "body": "Los templos culinarios de barrio más entrañables de Buenos Aires participan en una iniciativa conjunta para ensalzar su legado gastronómico. Un centenar de establecimientos históricos aplican rebajas temporales en sus platos más emblemáticos, desde las milanesas generosas hasta los guisos tradicionales. Es la ocasión perfecta para sentarse sin prisa en mesas de madera gastada y disfrutar de porciones generosas. Los comensales locales y los viajeros curiosos redescubren así el valor de la sobremesa porteña en un ambiente de cercanía. Se recomienda consultar el mapa oficial de los locales adheridos para reservar con antelación debido a la alta demanda.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
             }
           ]
         }

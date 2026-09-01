@@ -1,7 +1,7 @@
 {
   "edition": "pt",
-  "filed_at": "2026-09-01T06:00:00+09:00",
-  "next_filing": "2026-09-01T21:00:00+00:00",
+  "filed_at": "2026-09-02T06:00:00+09:00",
+  "next_filing": "2026-09-02T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "O cais da estação Praça de Espanha do metro de Lisboa reabre na quinta-feira.",
-          "lede": "A normalidade regressa às plataformas subterrâneas da cidade após semanas de obras de requalificação.",
-          "body": "Os passageiros que circulam diariamente pela rede metropolitana encontram finalmente o acesso restabelecido no final desta semana. Com temperaturas a oscilar entre os 18 e os 26°C sob um céu persistentemente overcast, a circulação subterrânea torna-se o refúgio ideal para escapar à luz cinzenta que cobre a capital. A taxa de câmbio fixa-se em 1 USD para 0.86 EUR, mantendo estável a chegada de visitantes de fora da zona euro. A qualidade do ar permanece num patamar fair, com PM2.5 nos 5 microgramas por metro cúbico. É o momento oportuno para retomar velhos hábitos de percurso, observando o fluxo calmo dos passageiros que regressam aos seus trajetos habituais pela cidade.",
+          "headline": "O cais da estação Praça de Espanha reabre na quinta-feira.",
+          "lede": "A linha azul recupera a normalidade plena para quem cruza a cidade.",
+          "body": "Depois de semanas de intervenção técnica, o cais da estação Praça de Espanha do metro de Lisboa reabre na quinta-feira. O terminal retoma a totalidade da circulação, facilitando as conexões diárias de quem se desloca pelo subsolo lisboeta. A atmosfera nas plataformas volta ao ritmo habitual de partidas e chegadas. Os passageiros encontram agora um espaço renovado e pronto para o fluxo regular da rentrée. As frequências de comboios restabelecem-se sem constrangimentos de maior para os utentes habituais. É uma boa altura para rediscutir os percursos subterrâneos na capital.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "02",
-          "headline": "O Festival Nacional de Folclore Usos e Costumes anima as ruas de Lisboa.",
-          "lede": "As tradições coreográficas e musicais ocupam os espaços públicos da cidade com trajes e sonoridades seculares.",
-          "body": "A herança cultural de várias regiões do país desfila pela capital, trazendo cor e ritmo aos largos tradicionais. Sob o termómetro a marcar entre 18 e os 26°C, os passeios ao ar livre decorrem sob um céu overcast que abriga os espectadores do sol intenso. A cotação monetária regista 1 USD equivalente a 0.86 EUR, facilitando as trocas comerciais nos mercados de artesanato locais. A qualidade do ar avaliada em fair, com PM2.5 fixados em 5, convida a longas caminhadas sem pressas pelos bairros históricos. Os residentes e visitantes cruzam-se com os ranchos e escutam as modas antigas, num encontro geracional que celebra a identidade comunitária.",
+          "headline": "O Teatro Nacional D. Maria II reabre as portas na rentrée teatral.",
+          "lede": "O eixo central da cultura lisboeta acolhe criações muito antecipadas.",
+          "body": "A rentrée teatral traz espetáculos marcantes de norte a sul do país, destacando-se as novas criações de Tiago Rodrigues e Sara Barros Leitão. Em Lisboa, o histórico Teatro Nacional D. Maria II reabre finalmente ao público após um período de ausência. A programação aposta forte na dramaturgia contemporânea e no regresso dos espectadores às salas tradicionais. Paralelamente, o Parque das Nações convida a comunidade com a iniciativa Vamos somar Talentos de Lisboa. A conversão cambial fixa-se em 1 USD para 0.86 EUR nos mercados financeiros. A tarde convida a uma caminhada lenta pelas ruas centrais.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "03",
-          "headline": "O Parque das Nações acolhe a iniciativa Vamos somar Talentos de Lisboa.",
-          "lede": "A zona ribeirinha transforma-se num ponto de encontro para a criatividade urbana e o associativismo local.",
-          "body": "As margens do Tejo servem de palco para mostrar o dinamismo cultural e artístico da freguesia. Com o pôr do sol marcado para as 20:07, os finais de tarde prolongam-se junto à água com temperaturas amenas entre os 18 e os 26°C. O cenário atmosférico permanece overcast, garantindo uma luz suave e difusa ideal para a observação urbana. Para quem chega de fora, o câmbio de 1 USD por 0.86 EUR assegura transações previsíveis. A qualidade do ar mantém-se fair, registando um valor de PM2.5 de 5. Este evento reforça o sentido de pertença comunitária, celebrando a expressão artística de quem habita e molda o quotidiano desta zona moderna da cidade.",
+          "headline": "A temperatura oscila entre 19°C e 30°C sob céu parcialmente nublado.",
+          "lede": "O ar mantém-se limpo e a qualidade do ambiente regista níveis muito favoráveis.",
+          "body": "A terça-feira apresenta-se com céu parcialmente nublado e marcas térmicas compreendidas entre 19°C e 30°C. O sol despede-se do horizonte às 20:05, oferecendo um final de tarde sereno junto ao rio. A qualidade do ar permanece em patamares considerados justos, com o índice de PM2.5 fixado em 5. Estas condições climatéricas são perfeitas para desfrutar dos espaços públicos ao ar livre sem pressas. A cidade respira o ambiente calmo de setembro, longe do bulgório intenso do pico estival. Caminhar pelas colinas torna-se um exercício de contemplação e silêncio.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Um festival internacional de guitarra a 30 minutos do Porto homenageia Bernardo Sassetti.",
-          "lede": "A música de cordas cruza-se com a memória do pianista e compositor numa programação dedicada à escuta atenta.",
-          "body": "A meia hora de viagem do centro da cidade, a música ganha relevo em locais improváveis e salas acolhedoras. O termómetro varia entre os 14 e os 23°C, acompanhado por uma neblina matinal que se dissipa lentamente. O pôr do sol ocorre às 20:07, prolongando a luz dourada sobre a paisagem verdejante do norte. A cotação oficial fixa-se em 1 USD para 0.86 EUR, mantendo o câmbio estável para os viajantes internacionais. A qualidade do ar é considerada good, com PM2.5 nos 9 microgramas por metro cúbico. É um convite para sair dos circuitos urbanos habituais e procurar concertos intimistas onde o silêncio e a técnica se fundem com a paisagem.",
+          "headline": "O nevoeiro matinal dissipa-se lentamente sobre a cidade invicta.",
+          "lede": "A variação térmica entre 15°C e 26°C desenha um dia típico de transição.",
+          "body": "A manhã começa envolta em nevoeiro cerrado que vai cedendo lugar a uma claridade suave. A temperatura oscila entre os 15°C de mínima e os 26°C de máxima previstos para hoje. O pôr do sol ocorre às 20:06, prolongando as horas de luz para quem vagueia pelas ruas graníticas. A qualidade do ar regista um valor de PM2.5 fixado em 7, mantendo-se em níveis aceitáveis para circular a pé. A taxa de câmbio permanece estável em 1 USD para 0.86 EUR. É o cenário ideal para observar o movimento calmo dos residentes e o bater lento das águas do Douro.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "02",
-          "headline": "O Brunch Electronik estreia-se no Porto com Shimza no Parque da Cidade.",
-          "lede": "A música eletrónica contemporânea ocupa o maior espaço verde portuense numa tarde de convívio ao ar livre.",
-          "body": "Os relvados do Parque da Cidade recebem esta estreia musical que junta residentes e visitantes em redor de sonoridades rítmicas. A atmosfera matinal é marcada por uma persistente neblina, com temperaturas a oscilar entre os 14 e os 23°C ao longo do dia. O pôr do sol às 20:07 assinala o fim da jornada festiva sob a luz difusa característica da foz. Com a taxa de câmbio em 1 USD por 0.86 EUR, a acessibilidade financeira para turistas permanece inalterada. A qualidade do ar regista um nível good, com PM2.5 fixados em 9. O evento propõe uma ocupação sustentável do espaço verde, exigindo respeito pela flora e pelo sossego circundante.",
+          "headline": "A música de cordas ecoa a trinta minutos de distância do centro.",
+          "lede": "Um festival internacional de guitarra presta homenagem à sensibilidade de Bernardo Sassetti.",
+          "body": "A agenda cultural da região estende-se para além do burgo com um festival internacional de guitarra situado a 30 minutos do Porto. O evento inclui um tributo especial dedicado à obra do compositor Bernardo Sassetti. Para quem prefere exposições e roteiros urbanos, a Agenda propõe visitas comentadas e exposições temporárias em espaços patrimoniais. Nos concelhos vizinhos, como Porto de Mós, o investimento municipal assegura a compra de antigos terrenos para a criação de novos parques verdes. A oferta comercial também se renova, com a reabertura do Burger King no Plaza Madeira em nova localização.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "03",
-          "headline": "O Porto recebe uma exposição de humor gráfico vinda do Brasil em setembro.",
-          "lede": "A sátira ilustrada e a reflexão visual ocupam as galerias da cidade com trabalhos de reconhecidos artistas gráficos.",
-          "body": "A agenda cultural portuense enriquece-se com este intercâmbio artístico que cruza o Atlântico através do desenho de imprensa. A manhã começa envolta em nevoeiro, mas a temperatura atinge máximas agradáveis de 23°C, descendo até aos 14°C à noite. O anoitecer chega pontualmente às 20:07, fechando o dia com tons cinzentos e húmidos típicos da região. Os visitantes encontram uma taxa de câmbio de 1 USD para 0.86 EUR nas transações correntes. A qualidade do ar mantém-se num patamar good, com PM2.5 em 9. Em paralelo, a agenda destaca a visita comentada à exposição temporária Plenos, ideal para quem aprecia a lentidão da contemplação artística detalhada.",
+          "headline": "O silêncio do nevoeiro matinal convida à contemplação das margens.",
+          "lede": "A atmosfera portuense recupera a serenidade após o agitado verão atlântico.",
+          "body": "As primeiras horas do dia trazem uma neblina densa que cobre a foz e as pontes metálicas. Com a progressão das horas, o termómetro atinge os 26°C, aquecendo discretamente as esplanadas ribeirinhas. A cidade desacelera o passo e convida os observadores a apreciarem os detalhes arquitetónicos do centro histórico. A conversão monetária permanece inalterada em 0.86 EUR por cada USD. Os jardins públicos e as zonas ajardinadas oferecem refúgio e sombra aos transeuntes mais atentos. A tarde convida a sentar num banco de jardim e deixar o tempo passar sem urgências.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Sintra recupera o seu parque habitacional com foco na comunidade local.",
-          "lede": "A vila serrana investe na reabilitação urbana para fixar residentes e preservar a arquitetura tradicional.",
-          "body": "As intervenções nos edifícios históricos visam devolver vitalidade aos bairros residenciais fora dos circuitos estritamente turísticos. O clima na serra apresenta-se overcast, com termómetros entre os 17 e os 23°C, criando uma atmosfera húmida e silenciosa. O pôr do sol acontece às 20:08, iluminando brevemente as copas das árvores antes da penumbra noturna. A taxa de câmbio opera nos 1 USD para 0.86 EUR, facilitando a gestão financeira de quem visita a região. A qualidade do ar é fair, com PM2.5 registados em apenas 4 microgramas por metro cúbico. É a altura ideal para caminhar pelas calçadas antigas, observando o trabalho discreto de restauro que protege a identidade arquitetónica da vila.",
+          "headline": "O céu totalmente encoberto protege a serra de brumas densas.",
+          "lede": "A oscilação térmica entre 17°C e 26°C molda um microclima de puro recolhimento.",
+          "body": "A serra de Sintra desperta sob um manto cinzento e fechado, mantendo a temperatura entre 17°C e 26°C. O sol oculta-se pelas 20:06, encerrando o dia com uma penumbra precoce entre a vegetação luxuriante. A qualidade do ar apresenta-se excelente, registando um valor de PM2.5 de apenas 4. A paridade cambial mantém-se nos 0.86 EUR por cada USD. O ambiente convida a leituras longas e passeios abrigados sob as copas antigas dos parques românticos. A humidade típica da montanha confere às pedras seculares um brilho discreto e melancólico.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "02",
-          "headline": "A neblina matinal abraça os palácios e jardins históricos de Sintra.",
-          "lede": "A paisagem cultural da serra revela-se sob um manto nublado que convida a passeios contemplativos.",
-          "body": "A humidade característica da montanha molda a vegetação luxuriante, conferindo um tom melancólico e poético aos trilhos pedestres. Com temperaturas a variar de 17 a 23°C e um céu persistentemente overcast, o ambiente é perfeito para caminhadas sem pressas. O pôr do sol está fixado para as 20:08, encerrando um dia de luz suave ideal para fotografia e observação. A cotação de 1 USD por 0.86 EUR mantém-se estável para despesas de viagem. A qualidade do ar é considerada fair, com PM2.5 nos 4. Quem percorre os caminhos arborizados encontra o silêncio habitual da serra, longe da agitação estival, redescobrindo o lado mais secreto e recatado da antiga vila aristocrática.",
+          "headline": "A autarquia investe na recuperação do parque habitacional sintrense.",
+          "lede": "As intervenções municipais visam qualificar o tecido urbano e residencial local.",
+          "body": "Através de iniciativas promovidas pela autarquia, Sintra recupera o seu parque habitacional com foco na sustentabilidade. O portal oficial cm-sintra.pt detalha os projetos em curso para melhorar as condições de habitação na região. Esta dinâmica municipal decorre em paralelo com a preservação do vasto património paisagístico e monumental que caracteriza a vila. Os visitantes que chegam nesta altura do ano encontram ruas menos congestionadas e uma atmosfera de profunda tranquilidade. É o momento oportuno para percorrer os trilhos menos conhecidos da serra sem o ruído do turismo de massas.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         },
         {
           "n": "03",
-          "headline": "Os miradouros serranos oferecem vistas longas sob o céu cinzento da serra.",
-          "lede": "A paisagem entre a montanha e o oceano adquire um tom intemporal sob a cobertura de nuvens baixas.",
-          "body": "Os pontos de observação mais elevados permitem contemplar o horizonte atlântico através de uma névoa ligeira e difusa. O termómetro marca valores entre os 17 e os 23°C, garantindo uma caminhada fresca e confortável pelos trilhos florestais. O entardecer chega às 20:08, tingindo o céu encoberto com nuances ténues antes da noite. A equivalência monetária permanece nos 1 USD para 0.86 EUR. Com a qualidade do ar classificada como fair e PM2.5 em 4, a atmosfera respira-se com pureza na encosta. É o refúgio perfeito para leitores solitários e observadores pacientes que buscam o isolamento construtivo entre a vegetação densa e os muros de pedra musgosa.",
+          "headline": "A bruma constante abraça os palácios históricos da serra mística.",
+          "lede": "O ar puro da montanha e a calmaria de setembro definem o ritmo da vila.",
+          "body": "Sob um teto de nuvens persistentes, a vila serrana conserva o seu ar de enigma literário. Os termómetros alcançam um máximo agradável de 26°C, descendo até aos 17°C com a chegada da noite. A taxa de câmbio estabiliza nos 0.86 EUR por USD, facilitando o planeamento financeiro dos viajantes estrangeiros. A qualidade do ar, marcada pelo índice de PM2.5 em 4, garante uma respiração leve em qualquer percurso pedestre. Os jardins palacianos exibem a vegetação viçosa alimentada pelas neblinas matinais. Caminhar por estas veredas é um exercício de escuta atenta e silêncio interior.",
           "source": "saudade desk",
-          "source_date": "2026-09-01"
+          "source_date": "2026-09-02"
         }
       ]
     }
