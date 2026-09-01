@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-08-31T06:00:00+09:00",
+  "updated": "2026-09-01T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-01T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Veranos de la Villa despide su 42ª edición tras congregar a más de 120.000 personas.",
+              "lede": "El festival madrileño cierra un ciclo cultural marcado por una alta participación ciudadana en múltiples espacios públicos.",
+              "body": "Tras semanas de programación multidisciplinar, la 42ª edición de Veranos de la Villa ha concluido con una asistencia que supera las 120.000 personas. Este ciclo cultural ha llenado plazas, parques y centros culturales de la ciudad con propuestas artísticas diversas y accesibles para todos los públicos. La buena acogida confirma el arraigo de este festival en el calendario estival de la capital española. Los espacios al aire libre vuelven ahora a su ritmo habitual mientras la ciudad se prepara para la transición hacia el otoño. Los residentes y visitantes habituales recuerdan que el tipo de cambio oficial se mantiene estable en 1 USD frente a 0.86 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "02",
+              "headline": "Casa Árabe busca soluciones ciudadanas para asegurar su continuidad en Madrid.",
+              "lede": "Un festival cultural reciente visibiliza la necesidad de proteger la emblemática sede madrileña frente a procesos de venta.",
+              "body": "La preocupación por el futuro institucional de Casa Árabe en Madrid ha movilizado a la comunidad cultural mediante iniciativas artísticas específicas. Recientemente, un festival ciudadano denunció los riesgos de poner en venta la cultura y desvincular a la institución de su sede histórica. Los espacios de debate y las muestras artísticas celebradas han recordado el valor patrimonial y diplomático de este edificio en el tejido urbano. Mientras tanto, la actividad cotidiana continúa en su entorno, permitiendo a los transeúntes acceder a las librerías y muestras temporales que promueven el entendimiento intercultural. El tipo de cambio actual se sitúa en 1 USD equivalentes a 0.86 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "03",
+              "headline": "El lago del tercer parque más grande de Madrid acoge el festival de la pequeña Tailandia.",
+              "lede": "Más de 1.000 farolillos flotantes iluminan las aguas en un encuentro cultural de gran formato.",
+              "body": "La llegada del festival conocido como la pequeña Tailandia ha transformado el paisaje nocturno del tercer parque más grande de la capital. Más de 1.000 farolillos flotantes han sido dispuestos sobre la superficie del lago principal, creando una estampa de luz y silencio muy concurrida por los paseantes. Esta iniciativa busca acercar las tradiciones del sudeste asiático a los madrileños a través de la gastronomía y las artes visuales. Las autoridades recuerdan a quienes visitan la ciudad durante este mes que el tipo de cambio se mantiene en 1 USD por cada 0.86 EUR, facilitando las transacciones comerciales en los comercios locales y mercados tradicionales de la zona.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Reabre la estación de Verdaguer de la L4 y su pasillo de enlace con la L5.",
+              "lede": "La finalización de las obras de mejora devuelve la normalidad a uno de los intercambiadores clave de la red.",
+              "body": "Los usuarios del metro de Barcelona celebran la reapertura de la estación de Verdaguer en la línea L4. Los trabajos han permitido recuperar por completo el pasillo de enlace directo con la línea L5, reduciendo notablemente los tiempos de transbordo diario. Esta mejora infraestructural optimiza la movilidad urbana en un punto estratégico del Eixample barcelonés. Los viajeros habituales valoran positivamente la recuperación de este acceso principal tras semanas de restricciones operativas. En el ámbito económico y práctico, la moneda oficial mantiene su paridad de referencia fijada en 1 USD frente a 0.86 EUR para las transacciones cotidianas de los visitantes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "02",
+              "headline": "La Orquesta del Festival de Bayreuth y Pablo Heras-Casado inauguran su gira española en Barcelona.",
+              "lede": "La prestigiosa formación sinfónica trae su repertorio clásico a los auditorios principales de la ciudad condal.",
+              "body": "El inicio de la gira española de la Orquesta del Festival de Bayreuth, bajo la batuta del director Pablo Heras-Casado, ha tenido un recibimiento triunfal en los escenarios barceloneses. Este acontecimiento musical consolida a la ciudad como un referente indiscutible para las grandes giras sinfónicas internacionales durante la temporada de conciertos. Los amantes de la música clásica han llenado el aforo para presenciar un programa riguroso y de alta calidad artística. Las librerías musicales y las salas de ensayo del centro cultural barcelonés experimentan un ambiente animado con la llegada de este evento. Los turistas internacionales pueden operar con normalidad gracias a la tasa de cambio de 1 USD por cada 0.86 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "03",
+              "headline": "Los espacios culturales de Barcelona integran nuevas propuestas escénicas para el mes de septiembre.",
+              "lede": "La agenda de otoño comienza a desplegarse en los teatros y centros cívicos de los diferentes barrios.",
+              "body": "La programación cultural de Barcelona diversifica su oferta con el inicio del mes de septiembre, atrayendo tanto a público local como a viajeros pausados. Las salas teatrales y los centros cívicos renuevan sus carteleras con producciones contemporáneas y ciclos de cine independiente. Esta dinámica estacional coincide con la normalización de los principales ejes de transporte público tras el periodo vacacional estival. Los visitantes que recorren las calles del Gòtic o Gràcia encontrarán abiertas todas las librerías independientes y los mercados de abastos tradicionales. Se recuerda que la equivalencia monetaria actual se sitúa en 1 USD por 0.86 EUR para las compras habituales en la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra 10–17°C y ligera llovizna bajo un cielo apacible de tarde.",
+              "lede": "La capital amanece con buena calidad del aire y una atmósfera húmeda propicia para los paseos urbanos.",
+              "body": "Con un registro térmico que oscila entre los 10 y los 17°C y apenas 0.4mm de precipitación en forma de llovizna dispersa, la tarde porteña invita a la caminata reposada. La calidad del aire se mantiene en niveles buenos, marcando un índice PM2.5 de 13, lo que favorece la actividad al aire libre sin inconvenientes. El ocaso está previsto para las 18:35, tiñendo de tonos grises y dorados las cúpulas del centro histórico y los árboles de los bulevares. Los transeúntes caminan abrigados con gabardinas ligeras por las avenidas arboladas, disfrutando de la quietud característica que precede a la noche. Los cafés tradicionales ofrecen refugio contra la humedad ambiental a los observadores silenciosos de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Llegás y el circuito FIBA 2026 dinamizan la cartelera teatral porteña.",
+              "lede": "Comienza una amplia muestra de artes escénicas con medio centenar de obras y entradas rebajadas.",
+              "body": "La actividad teatral de Buenos Aires se intensifica con el inicio del Festival Llegás, que ofrece más de 50 obras protagonizadas por más de 500 artistas con localidades a mitad de precio. Paralelamente, la ciudad ultiman los preparativos para el FIBA 2026, consolidando un gran festival internacional de artes escénicas que ocupará salas públicas y privadas. Los espectadores locales aprovechan esta semana para redescubrir el circuito independiente en los barrios de Abasto y San Telmo. Estos encuentros reafirman la vitalidad dramatúrgica de la capital argentina en un entorno climatológico fresco de 10–17°C. La caída del sol a las 18:35 marca el inicio de las funciones nocturnas en los teatros históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            },
+            {
+              "n": "03",
+              "headline": "El Malba clausura con éxito el Festival La Mujer y el Cine y celebra el puente cultural tanguero.",
+              "lede": "Salas llenas y galas de premios cierran un ciclo cinematográfico mientras el tango une Argentina y China.",
+              "body": "El Museo de Arte Latinoamericano de Buenos Aires ha albergado la gala de clausura del Festival La Mujer y el Cine, registrando salas llenas y una gran promesa de continuidad institucional. Este encuentro ha premiado el talento audiovisual en un ambiente de celebración íntima y respetuosa con los creadores. En paralelo, los lazos internacionales se fortalecen mediante iniciativas como el intercambio del tango como puente cultural entre Argentina y China. Con una temperatura exterior de 10–17°C y una ligera llovizna de 0.4mm que discurre tranquila, los asistentes transitan por los museos bajo una buena calidad del aire PM2.5 de 13. El atardecer a las 18:35 despide una jornada dedicada por completo al arte y al pensamiento.",
+              "source": "saudade desk",
+              "source_date": "2026-09-01"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-08-31T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los templos culinarios de barrio más entrañables de Buenos Aires participan en una iniciativa conjunta para ensalzar su legado gastronómico. Un centenar de establecimientos históricos aplican rebajas temporales en sus platos más emblemáticos, desde las milanesas generosas hasta los guisos tradicionales. Es la ocasión perfecta para sentarse sin prisa en mesas de madera gastada y disfrutar de porciones generosas. Los comensales locales y los viajeros curiosos redescubren así el valor de la sobremesa porteña en un ambiente de cercanía. Se recomienda consultar el mapa oficial de los locales adheridos para reservar con antelación debido a la alta demanda.",
               "source": "saudade desk",
               "source_date": "2026-08-26"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-24T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid reabre este lunes el túnel de la M-30 hacia la A-5.",
-              "lede": "Terminan tres semanas de obras intensas en uno de los nudos viarios principales de la ciudad.",
-              "body": "Los desplazamientos en coche hacia el suroeste recuperan la normalidad tras finalizar las intervenciones previstas en la infraestructura madrileña. Esta reapertura alivia la circulación urbana y permite planificar trayectos directos sin desvíos prolongados por superficie. Conviene revisar las aplicaciones de movilidad antes de arrancar para confirmar el flujo del tráfico en hora punta. La medida favorece la conexión rápida con las vías de salida hacia Extremadura durante los últimos compases del verano. Los residentes y viajeros habituales notarán una reducción notable en los tiempos de recorrido diario por este sector.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición «Madrid en construcción, 1940-1985» repasa la memoria urbana.",
-              "lede": "Una mirada reposada a la transformación arquitectónica y social de la capital durante décadas clave.",
-              "body": "Las salas expositivas acogen un recorrido visual por el crecimiento y la morfología de la ciudad en el siglo pasado. Las fotografías y los documentos de archivo exponen el pulso diario de una metrópoli en plena metamorfosis histórica. Es una visita aconsejable para quienes buscan comprender el trazado actual de los barrios y las grandes arterias madrileñas. La muestra fomenta la observación pausada del patrimonio construido y de la evolución de sus espacios públicos. Se recomienda consultar los horarios de apertura en las taquillas antes de planificar el acceso al recinto cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "03",
-              "headline": "El festival Centroamérica Cuenta programa actividades en Madrid en septiembre.",
-              "lede": "El encuentro literario reunirá a creadores y lectores en diversas sedes culturales de la región.",
-              "body": "Entre el 10 y el 19 de septiembre, la programación cultural incluye debates y presentaciones con presencia internacional. Las citas abarcan un total de 30 actividades repartidas entre varias localidades, con Madrid como uno de sus ejes principales. Esta iniciativa fomenta el diálogo transatlántico en torno a la narrativa contemporánea y el oficio de escribir. Los asistentes pueden adquirir las entradas gratuitas o reservar plaza a través de los canales oficiales de las instituciones colaboradoras. Constituye una excelente oportunidad para descubrir nuevas voces literarias en un entorno de cercanía y reflexión.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra hoy temperaturas de 23 a 30°C con chubascos aislados.",
-              "lede": "El cielo variable deja 1.9mm de precipitación y una puesta de sol prevista para las 20:37.",
-              "body": "El ambiente veraniego se mantiene en la ciudad con una calidad del aire catalogada como fair y un nivel de PM2.5 de 6. Conviene llevar un paraguas ligero ante la previsión de chubascos breves mientras se recorren las calles del centro histórico. La caída de la tarde ofrece una luz propicia para pasear junto al mar o por los jardines urbanos más resguardados. Los paseos marítimos y las plazas recuperan la calma a medida que desciende ligeramente la humedad ambiental. La jornada invita a disfrutar del espacio público con la tranquilidad característica de los atardeceres mediterráneos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "02",
-              "headline": "Nueve parques con sombra ofrecen refugio climático en Barcelona.",
-              "lede": "Espacios arbolados ideales para pasear con niños durante las horas centrales del día.",
-              "body": "La red de zonas verdes de la ciudad destaca por su alta densidad de vegetación y áreas de descanso bien conservadas. Estos enclaves naturales permiten escapar del calor estival gracias a las coberturas vegetales que reducen la radiación directa. Los datos municipales confirman mejoras significativas en el entorno escolar, donde la exposición al NO2 en el exterior de los centros educativos bajó un 40% de 2018 a 2025. Visitar estos parques con los más pequeños garantiza un entorno limpio, silencioso y protegido de la congestión del tráfico rodado. Las fuentes de agua potable y los bancos de madera facilitan una estancia cómoda y prolongada.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "03",
-              "headline": "Decathlon consolida su presencia con una nueva tienda en L'Eixample.",
-              "lede": "El corazón comercial del distrito suma un nuevo espacio dedicado al equipamiento deportivo.",
-              "body": "La apertura refuerza la oferta de proximidad en una de las zonas más transitadas y comerciales de la trama urbana barcelonesa. El establecimiento se integra en la arquitectura tradicional del barrio ofreciendo soluciones prácticas para aficionados y deportistas cotidianos. Los residentes de la zona cuentan ahora con un punto de referencia accesible a pie para adquirir material técnico y textil. Esta inauguración se alinea con la estrategia de revitalizar los ejes comerciales urbanos mediante formatos adaptados al peatón. La ubicación facilita el acceso rápido en transporte público desde cualquier punto de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con un registro de 5 a 11°C y cielo cubierto.",
-              "lede": "La jornada se mantiene fresca y estable, con la puesta de sol marcada para las 18:29.",
-              "body": "El ambiente invernal predomina en las calles porteñas bajo un cielo completamente overcast y una buena calidad del aire con PM2.5 de 9. Las bajas temperaturas invitan a abrigarse con solidez al caminar por los barrios tradicionales y las avenidas arboladas. La caída tempranera de la tarde a las 18:29 acorta las horas de luz natural, propiciando la actividad en espacios culturales cerrados. Conviene llevar abrigo adicional si se planea permanecer al aire libre durante las horas nocturnas en la ciudad. El clima actual favorece el ritmo pausado de los cafés históricos y las librerías del centro.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival y Mundial de Tango llena de música los rincones porteños.",
-              "lede": "La cita cultural más emblemática del compás 2x4 despliega milongas y exhibiciones multitudinarias.",
-              "body": "La ciudad vibra con una nueva edición del encuentro internacional que congrega a bailarines y maestros de todo el mundo. Las pistas de baile y los auditorios acogen espectáculos gratuitos que celebran la identidad musical de la capital argentina. Es el momento perfecto para acercarse a las milongas tradicionales y disfrutar del talento en las categorías de pista y escenario. Se recomienda consultar la programación diaria para asegurar la entrada a los conciertos y clases magistrales en los centros culturales. Esta celebración reafirma la vigencia del género en cada barrio y salón histórico de Buenos Aires.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival Internacional de Buenos Aires anuncia su programación teatral.",
-              "lede": "Las artes escénicas preparan sus mejores producciones para las próximas semanas en la cartelera local.",
-              "body": "El FIBA 2026 detalla las obras y los escenarios que acogerán propuestas de vanguardia y dramaturgia clásica. La oferta artística se complementa con festivales temáticos como el Mubi Fest, previsto del 22 al 25 de octubre, y las propuestas del Festival de la Peruanidad. Estas iniciativas consolidan una agenda cultural diversa que anima a los espectadores a recorrer diferentes salas teatrales de la ciudad. Las localidades suelen agotarse con rapidez, por lo que conviene revisar la venta anticipada en las plataformas oficiales. El circuito teatral porteño demuestra así su dinamismo constante durante todo el año.",
-              "source": "saudade desk",
-              "source_date": "2026-08-24"
             }
           ]
         }
