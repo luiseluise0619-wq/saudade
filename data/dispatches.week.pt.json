@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-02T06:00:00+09:00",
+  "updated": "2026-09-03T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-03T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O cais da estação Praça de Espanha reabre.",
+              "lede": "A linha azul recupera a normalidade na quinta-feira.",
+              "body": "Os passageiros que utilizam diariamente o metropolitano de Lisboa encontram finalmente o acesso renovado na Praça de Espanha. A reabertura do cais estava calendarizada para esta quinta-feira, encerrando um período de intervenções profundas na infraestrutura. Quem regressa à rotina urbana nota a fluidez recuperada nos corredores subterrâneos. A taxa de câmbio permanece estável em 1 USD para 0.86 EUR para quem chega de fora. O ritmo da cidade ajusta-se aos primeiros sinais da transição estival.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival Queer Lisboa abre com Ira Sachs.",
+              "lede": "O cinema independente ocupa as salas da capital.",
+              "body": "A programação cinematográfica arranca com a exibição do filme The man I love, marcando o tom cultural do mês. A cidade acolhe realizadores e espectadores em salas tradicionais, celebrando a diversidade de olhares através da sétima arte. Paralelamente, os preparativos para o Festival Cuca Monga avançam para os dias 25 e 26 de Setembro. A conversão cambialeira fixa-se nos mercados em 1 USD para 0.86 EUR. Lisboa oferece assim um contraponto reflexivo nas noites que começam a arrefecer.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "03",
+              "headline": "A exposição sobre os superpoderes animais.",
+              "lede": "Uma proposta cultural dedicada às famílias e aos mais novos.",
+              "body": "Os museus lisboetas apostam em percursos pedagógicos para os miúdos, revelando adaptações sorprendentes da fauna. A mostra convida a observar detalhes biológicos pouco conhecidos através de instalações interactivas. Enquanto a rentrée escolar se avizinha, estes espaços mantêm portas abertas para visitas tranquilas ao fim da tarde. A moeda estrangeira troca-se a 1 USD para 0.86 EUR nos balcões locais. É uma oportunidade para redescobrir a cidade longe do ruído habitual.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A manhã começa envolta em nevoeiro leve.",
+              "lede": "A temperatura oscila entre 17 e 28°C na Invicta.",
+              "body": "O termómetro alcança os 28°C nas horas de maior calor, enquanto as primeiras horas do dia mantêm a bruma típica do Douro. A qualidade do ar regista níveis considerados justos, com PM2.5 nos 16, permitindo caminhadas matinais sem restrições. O pôr do sol acontece pontualmente às 20:04, prolongando o crepúsculo sobre as pontes. Quem viaja de fora beneficia de uma conversão de 1 USD para 0.86 EUR. O ambiente urbano respira a calma própria de Setembro.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "02",
+              "headline": "A Escola do Porto revela a sua história oral.",
+              "lede": "A galeria expõe o período compreendido entre 1968 e 1978.",
+              "body": "A exposição Escola do Porto: Lado B convida a uma reflexão profunda sobre a arquitectura e o pensamento urbanístico daquela década. Os documentos e registos orais expostos traçam um retrato íntimo da formação de uma geração de criadores. A poucos minutos da cidade, um festival internacional de guitarra prepara um tributo especial a Bernardo Sassetti. A cotação monetária mantém-se estável com 1 USD equivalente a 0.86 EUR. O Porto consolida o seu eixo cultural com sobriedade.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "03",
+              "headline": "Novos espaços verdes ganham forma na região.",
+              "lede": "O antigo Campo da Fiandeira será transformado em parque.",
+              "body": "Em Porto de Mós, a aquisição do terreno assegura a criação de uma nova área verde em Mira de Aire, expandindo os pulmões naturais da zona. Paralelamente, o comércio local renova-se com a reabertura do Burger King no Plaza Madeira. As condições atmosféricas mantêm-se estáveis, com máximas de 28°C e mínimas de 17°C sob céus difusos. A claridade do final do dia convida a cruzar o rio com tempo. A economia local opera com a taxa de câmbio de 1 USD para 0.86 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O calor intenso contrasta com o céu encoberto.",
+              "lede": "A temperatura atinge os 38°C na serra.",
+              "body": "O termómetro marca valores elevados, oscilando entre 17 e 38°C, sob uma espessa camada de nuvens que suaviza a luz directa. A qualidade do ar apresenta-se muito favorável, registando PM2.5 nos 8. O pôr do sol regista-se às 20:05, fechando um dia de abafada tranquilidade entre os palácios. Os visitantes estrangeiros encontram a referência de 1 USD para 0.86 EUR nas transacções correntes. A serra exige passos lentos e hidratação constante.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival MUSCARIUM encerra o seu ciclo.",
+              "lede": "A programação artística regressa na sexta-feira à serra.",
+              "body": "O evento cultural conclui a sua edição anual com performances que ocupam os espaços cénicos de Sintra. Artistas e público reúnem-se para as últimas apresentações antes da mudança de estação. O valor de referência monetária fixa-se em 1 USD para 0.86 EUR para quem chega de fora. O ambiente na vila recupera a serenidade após o fluxo turístico de Verão. As ruas estreitas voltam a ser domínio exclusivo de quem observa com atenção.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            },
+            {
+              "n": "03",
+              "headline": "A recuperação do parque habitacional avança.",
+              "lede": "A autarquia investe na reabilitação de edifícios residenciais.",
+              "body": "O programa municipal de Sintra foca-se na valorização do património edificado para uso residencial, garantindo a sustentabilidade da comunidade local. Sob o céu overcast e temperaturas que chegam aos 38°C, a vila histórica mantém o seu ritmo pausado. A pureza do ar, com índice PM2.5 de 8, favorece a permanência nos jardins românticos. A taxa de câmbio permanece inalterada em 1 USD para 0.86 EUR. O cair da noite traz o alívio térmico esperado pela serra.",
+              "source": "saudade desk",
+              "source_date": "2026-09-03"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-02T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Um projeto cívico para se fazer cidade e proteger a ecologia local mobilizou mais de 7.500 assinaturas, levando o tema ao parlamento. A iniciativa reflete o apego dos residentes à Serra de Sintra e à conservação do seu património natural. O clima acompanha com 16 a 23°C, céu overcast e o sol a ocultar-se às 20:14. O ar mantém-se limpo, com PM2.5 a 6. A cotação monetária fixa-se em 1 USD para 0.86 EUR. Quem visita a vila neste período pode alternar entre os debates de cidadania, os concertos do festival Jazz em Monserrate e a contemplação silenciosa dos bosques húmidos que definem a mística romântica deste lugar único.",
               "source": "saudade desk",
               "source_date": "2026-08-28"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-27T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A estação do Cais do Sodré reabre hoje.",
-              "lede": "Após 19 dias de obras profundas, o metro recupera a normalidade na margem ribeirinha.",
-              "body": "A circulação subterrânea volta a fluir com a reabertura da estação do Cais do Sodré nesta quinta-feira. Foram 19 dias de intervenções necessárias para melhorar a infraestrutura e a segurança dos passageiros diários. Os passageiros que dependem desta linha verde encontram agora um espaço renovado e pronto a responder ao fluxo habitual. É o fim de um período de desvios e ajustamentos nos autocarros de superfície. A cidade respira melhor com este eixo central novamente operacional.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "02",
-              "headline": "O festival Meo Kalorama ocupa o Parque da Bela Vista.",
-              "lede": "Os horários e os mapas de transportes já estão definidos para os próximos dias de música.",
-              "body": "A agenda cultural da capital volta a concentrar-se no Parque da Bela Vista com mais uma edição do Meo Kalorama. A organização publicou os horários detalhados dos concertos e os mapas do recinto para orientar o público. Os transportes públicos foram reforçados para facilitar o acesso de quem chega de vários pontos da cidade. Recomenda-se a consulta prévia dos percursos para evitar aglomerações nas entradas principais. A música ao vivo regressa aos grandes palcos ao ar livre.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "03",
-              "headline": "A taxa de câmbio mantém-se estável para quem chega de fora.",
-              "lede": "O dólar norte-americano fixa-se em 0.86 EUR nas transações correntes.",
-              "body": "Os viajantes que chegam com divisa estrangeira encontram uma referência clara no mercado cambial de hoje. Cada 1 USD equivale exatamente a 0.86 EUR nas trocas oficiais registadas. Esta proporção facilita o planeamento financeiro de quem visita a cidade para estadias curtas ou longas. Os estabelecimentos locais continuam a aceitar os meios de pagamento eletrónicos habituais sem complicações. A economia diária decorre com a previsibilidade desejada por residentes e visitantes.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A chuva forte condiciona o Parque da Cidade.",
-              "lede": "Os termómetros marcam entre 16 e 18°C sob uma precipitação acumulada de 29.5mm.",
-              "body": "O Porto enfrenta um dia marcado pela instabilidade meteorológica e aguaceiros persistentes. A temperatura oscila entre os 16 e os 18°C, acompanhada por uma queda de 29.5mm de precipitação e risco de trovoada. A qualidade do ar permanece num patamar considerado fair, registando 6 de PM2.5. O pôr do sol ocorre pelas 20:15, fechando um dia de luz cinzenta e ruas molhadas. Quem caminha pelos espaços verdes deve acautelar-se contra o vento e a chuva miudinha.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "02",
-              "headline": "O Brunch Electronik estreia-se no Parque da Cidade.",
-              "lede": "O artista Shimza lidera o cartaz da primeira edição deste evento ao ar livre.",
-              "body": "A programação musical da Invicta acolhe pela primeira vez o Brunch Electronik no vasto espaço do Parque da Cidade. Shimza é o nome em destaque para animar o público numa tarde que exigirá atenção ao estado do tempo. As entradas já estão disponíveis para os entusiastas da música eletrónica que procuram novas experiências urbanas. A organização preparou estruturas abrigadas para mitigar os efeitos da precipitação esperada. É uma nova dinâmica que se instala nos relvados nortenhos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "03",
-              "headline": "As exposições gratuitas cruzam o Atlântico na agenda cultural.",
-              "lede": "O humor internacional e a pintura contemporânea ocupam as galerias da cidade.",
-              "body": "A oferta artística do Porto diversifica-se com novas mostras abertas ao público em vários espaços municipais. Uma exposição gratuita reúne trabalhos de artistas de todo o mundo centrados no humor gráfico transatlântico. Em paralelo, decorrem visitas comentadas às peças em exibição temporária, promovendo o cruzamento de saberes. A taxa de câmbio de 1 USD por 0.86 EUR facilita as aquisições de catálogos por visitantes estrangeiros. A cultura serve de refúgio perfeito para escapar aos dias de trovoada.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra recebe aguaceiros dispersos e temperaturas amenas.",
-              "lede": "O termómetro varia entre 16 e 20°C com uma precipitação leve de 3.4mm.",
-              "body": "A vila serrana desperta com uma atmosfera húmida e fresca típica das encostas atlânticas. Os valores térmicos situam-se entre os 16 e os 20°C, enquanto a precipitação não ultrapassa os 3.4mm. A qualidade do ar é fair, registando um valor de 4 de PM2.5 nos postos de monitorização. O sol despede-se da serra pelas 20:15, iluminando a neblina matinal que ainda toca os palácios. É um clima propício para caminhadas lentas sob a proteção de capas leves.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival MIMMOS prepara a animação para setembro.",
-              "lede": "A arte das marionetas regressa às ruas e auditórios históricos da vila.",
-              "body": "A agenda cultural de Sintra já aquece motores para a chegada do Festival De Marionetas MIMMOS no próximo mês. Este encontro artístico promete encher os recintos locais com espetáculos dedicados a todas as idades. As companhias convidadas preparam intervenções em espaços públicos e salas abrigadas da vila. É uma oportunidade imperdível para redescobrir o património local através da manipulação de bonecos. A programação detalhada será divulgada muito em breve pela autarquia.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
-            },
-            {
-              "n": "03",
-              "headline": "O debate sobre o futuro do parque natural mobiliza residentes.",
-              "lede": "Mais de 7.500 assinaturas exigem maior participação na gestão do território.",
-              "body": "A cidadania ativa ganha força em Sintra com a entrega de um projeto cívico focado no Parque Natural. Mais de 7.500 assinaturas foram validadas, forçando discussões formais ao nível parlamentar local. O objetivo principal passa por preservar a identidade paisagística e ordenar o crescimento urbano na zona protegida. Os visitantes também beneficiam indiretamente desta tutela rigorosa sobre a floresta e os trilhos pedestres. A conversão financeira de 1 USD para 0.86 EUR apoia os turistas internacionais que visitam o concelho.",
-              "source": "saudade desk",
-              "source_date": "2026-08-27"
             }
           ]
         }
