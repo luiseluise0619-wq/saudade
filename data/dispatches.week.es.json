@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-04T06:00:00+09:00",
+  "updated": "2026-09-05T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-05T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid se despliega bajo cielos overcast y temperaturas de 23–35°C.",
+              "lede": "La ciudad transita el fin de semana del 4, 5 y 6 de septiembre de 2026 con un ambiente templado y calidad de aire moderada.",
+              "body": "El mercurio oscila entre los 23 y los 35°C en una jornada de cielos cubiertos que suavizan el atardecer hasta las 20:40. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 15, permitiendo paseos tranquilos por los parques urbanos sin las exigencias del sol directo. El tipo de cambio oficial se sitúa en 1 USD frente a 0.86 EUR, una referencia útil para los viajeros que gestionan sus gastos cotidianos en los cafés de barrio. Conviene recordar que las oficinas públicas y los bancos operan con normalidad este viernes, aunque se perfilan festivos autonómicos próximos como el Día de Asturias y el Día de Extremadura el 8 de septiembre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "El 44º Festival de Otoño celebra el legado cultural de América en Madrid.",
+              "lede": "La Comunidad de Madrid inaugura su tradicional programación artística con un profundo homenaje a la música y las artes escénicas.",
+              "body": "La Comunidad de Madrid celebra el 44º Festival de Otoño con un homenaje al legado cultural de América en la música y las artes escénicas. Las salas y teatros de la capital acogen propuestas que entrelazan las tradiciones escénicas de ambos lados del Atlántico, consolidando un espacio de encuentro para creadores y espectadores. Esta cita cultural, que marca el pulso de septiembre, invita a recorrer la programación del fin de semana del 4, 5 y 6 de septiembre de 2026 con propuestas que van desde la danza contemporánea hasta conciertos de cámara. Los asistentes encontrarán en los foyers los boletines detallados con los horarios de cada función y las recomendaciones de acceso.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "Más de 1.000 farolillos iluminarán un lago de Madrid.",
+              "lede": "Los espacios públicos de la capital suman propuestas lumínicas para recibir la temporada de otoño con serenidad.",
+              "body": "Más de 1.000 farolillos iluminarán un lago de Madrid durante este precioso festival, ofreciendo a los paseantes una estampa de calma y contemplación al caer la tarde. Esta intervención efímera transforma el entorno acuático en un punto de reunión para quienes buscan observar la ciudad desde una perspectiva reposada. Las inmediaciones del lago contarán con señalización específica para regular el flujo peatonal y garantizar una experiencia segura para todos los asistentes. Es una de las actividades destacadas dentro de la agenda cultural del fin de semana del 4, 5 y 6 de septiembre de 2026, ideal para combinar con una caminata vespertina bajo el cielo overcast.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona transcurre entre nubes parciales y registros térmicos de 23–31°C.",
+              "lede": "La fachada marítima y los barrios interiores disfrutan de una atmósfera estable con la caída del sol fijada a las 20:18.",
+              "body": "El termómetro se mueve entre los 23 y los 31°C en una jornada de cielos parcialmente nubados que invitan a recorrer las calles sin prisa. La calidad del aire se mantiene en niveles moderados, con un índice PM2.5 de 13 que asegura una buena visibilidad en los miradores de la ciudad. Para los viajeros internacionales, el tipo de cambio oficial se sitúa en 1 USD equivalente a 0.86 EUR. La actividad ciudadana transcurre con normalidad en comercios y redes de transporte, a la espera de las celebraciones institucionales y festivos que tendrán lugar en los próximos días en Cataluña, como la Diada Nacional de Catalunya el 11 de septiembre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "El Palau Sant Jordi acoge los conciertos de Aitana en Barcelona.",
+              "lede": "La agenda musical de la ciudad se activa con grandes convocatorias en los recintos cubiertos de Montjuïc.",
+              "body": "Los conciertos de Aitana en Barcelona concentran la atención de los aficionados a la música pop, con horarios específicos de acceso y recomendaciones de movilidad hacia el Palau Sant Jordi. Las autoridades locales y los organizadores sugieren utilizar el transporte público y consultar los trayectos de autobús recomendados para evitar aglomeraciones en los accesos al recinto. Esta cita musical coincide con el inicio de septiembre, un mes que también trae a la ciudad el triunfal inicio de la gira española de la Orquesta del Festival de Bayreuth y Pablo Heras-Casado. Los espectadores encontrarán en los puntos de información del recinto los detalles sobre los flujos de entrada y las paradas de metro más cercanas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "El Spotify Camp Nou proyecta la creación de un nuevo parque de atracciones.",
+              "lede": "El recinto deportivo de Les Corts amplía su horizonte urbano con propuestas de ocio integradas en su interior.",
+              "body": "El Barça tendrá un pequeño parque de atracciones en el Spotify Camp Nou, un proyecto concebido para diversificar los usos del espacio más allá de las jornadas de competición. El Barcelona planea crear un parque de atracciones en el interior del Camp Nou que complementará la oferta turística y recreativa del distrito. Esta iniciativa se suma a la renovación urbanística del entorno del estadio, integrando áreas verdes y zonas de esparcimiento para los vecinos y visitantes. Quienes paseen por la zona comprobarán cómo los trabajos de remodelación siguen avanzando de forma armónica con el tejido residencial del barrio.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires recibe la jornada con 6–12°C y una llovizna ligera de 0.2mm.",
+              "lede": "El invierno austral se despide con una atmósfera fresca y limpia, acompañada por un atardecer a las 18:37.",
+              "body": "La temperatura se mueve entre los 6 y los 12°C, acompañada por una llovizna testimonial de 0.2mm que apenas moja las veredas adoquinadas. La calidad del aire se califica como fair, con un registro de PM2.5 de 12 que permite disfrutar de las caminatas con abrigo ligero por los parques porteños. Los cafés de esquina ofrecen refugio contra la brisa húmeda mientras la ciudad despliega su agenda cultural de septiembre. No se registran restricciones en los servicios públicos ni en las instituciones bancarias, garantizando una operativa fluida para los residentes y los viajeros que recorren los barrios históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "Seis muestras de arte configuran el recorrido cultural de septiembre en Buenos Aires.",
+              "lede": "Las galerías y centros de exposición de la capital inauguran propuestas que convocan a la observación reposada.",
+              "body": "La agenda de septiembre destaca con 6 muestras de arte para visitar en septiembre en Buenos Aires, distribuidas en distintos puntos neurálgicos de la capital. Los espacios expositivos abren sus puertas para mostrar desde pintura contemporánea hasta instalaciones lumínicas y archivo fotográfico. Paralelamente, el Centro de Exposiciones y Convenciones presenta los proyectos seleccionados en la galería de primer lugar del concurso para el nuevo parque urbano. Estas propuestas invitan al viajero a trazar un itinerario pausado por los barrios tradicionales, combinando la arquitectura urbana con las paradas en salas de arte independientes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival de Cine y Música convoca a los espectadores porteños.",
+              "lede": "Las salas independientes de la ciudad combinan proyecciones y actuaciones en directo durante las primeras semanas del mes.",
+              "body": "El Festival de Cine y Música reúne creadores y público en torno a proyecciones especiales y conciertos de cámara en auditorios de escala íntima. Esta programación se entrelaza con el espíritu de Linda, el sitio para vivir la Ciudad más linda del mundo, que promueve el descubrimiento de rincones apacibles y arquitectura patrimonial. Los asistentes pueden consultar la programación diaria en los soportes digitales de los centros culturales adheridos, donde se detallan los horarios de cada función. Es una oportunidad excelente para experimentar la vida cultural de la capital desde una perspectiva pausada y atenta a los detalles.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-04T06:00:00+09:00",
       "cities": [
@@ -554,98 +646,6 @@
               "body": "Un singular evento de inspiración asiática ilumina la primavera con miles de faroles flotantes. Buenos Aires se transforma en Tailandia por una única noche durante este esperado encuentro estacional. Los asistentes se reúnen junto al agua para participar en una ceremonia tradicional que simboliza buenos augurios. Esta celebración convive con otras muestras artísticas y gastronómicas que enriquecen el fin de semana en la metrópoli. Los espacios verdes elegidos para la ocasión experimentan una gran afluencia de curiosos y observadores silenciosos. Es una oportunidad perfecta para experimentar un rincón de Asia en el sur del continente.",
               "source": "saudade desk",
               "source_date": "2026-08-30"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-29T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "MADRID",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La línea 6 de Metro reabre entre Argüelles y Ciudad Universitaria.",
-              "lede": "El tramo por Moncloa recupera su servicio habitual dos días antes de lo previsto.",
-              "body": "Los desplazamientos por el noroeste de la red recuperan su normalidad habitual esta semana. La reapertura de la línea 6 entre Argüelles y Ciudad Universitaria por Moncloa se adelanta al martes, facilitando el tránsito de los viajeros antes del inicio de septiembre. Conviene recordar que el tipo de cambio oficial se mantiene en 1 USD frente a 0.86 EUR para quienes operan con divisas extranjeras. La programación cultural sigue activa con propuestas como el Festival de Piano y las celebraciones de Arganzuela hasta principios de septiembre. La tranquilidad vuelve a los pasillos subterráneos tras las obras de mejora.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "02",
-              "headline": "Las tardes despejadas alcanzan los 30°C con puestas de sol a las 20:52.",
-              "lede": "El termómetro oscila entre los 15°C y los 30°C bajo cielos completamente limpios.",
-              "body": "Las condiciones meteorológicas estables acompañan los paseos vespertinos por los parques y bulevares de la capital. El mercurio marca una mínima de 15°C al amanecer y alcanza los 30°C durante las horas centrales de la tarde. La luz natural se extiende hasta las 20:52, ofreciendo largos crepúsculos ideales para la observación urbana sin prisas. En el plano financiero, la conversión monetaria se sitúa estable en 1 USD por 0.86 EUR. Las grandes citas musicales, como los conciertos de The Weeknd en el Estadio Riyadh Air Metropolitano, concentran la atención pública del fin de semana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "03",
-              "headline": "El calendario autonómico anuncia festivos nacionales a principios de septiembre.",
-              "lede": "El Día de Asturias y Extremadura se celebran el 8 de septiembre, seguidos por la Diada el 11 de septiembre.",
-              "body": "Los residentes que planifiquen gestiones administrativas deben tener en cuenta las próximas jornadas festivas en el calendario regional. El Día de Asturias y el Día de Extremadura tendrán lugar el 8 de septiembre, afectando al horario de oficinas públicas y entidades bancarias. Pocos días después, el 11 de septiembre, se conmemorará la Diada Nacional de Catalunya con cierres similares en su territorio. Conviene anticipar cualquier trámite oficial para evitar inconvenientes durante estas fechas señaladas. El ritmo de la ciudad se adapta con calma a estas pausas en el calendario laboral.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            }
-          ]
-        },
-        {
-          "city": "BARCELONA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El puerto acoge un festival tailandés con más de 20 actividades gratuitas.",
-              "lede": "La dársena portuaria se transforma este fin de semana con ferias gastronómicas y exhibiciones de muay thai.",
-              "body": "El frente marítimo de la ciudad recibe una propuesta cultural singular durante este fin de semana. El puerto de Barcelona acoge un festival de inspiración tailandesa que incluye más de 20 actividades gratuitas abiertas al público. Los visitantes pueden recorrer puestos de feria gastronómica, presenciar demostraciones de muay thai y disfrutar de espacios dedicados al bienestar. La calidad del aire se mantiene en niveles muy favorables, registrando un valor de PM2.5 de 6. Para los viajeros internacionales, el tipo de cambio oficial cotiza en 1 USD por 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "02",
-              "headline": "American Airlines anuncia una nueva ruta estacional entre Charlotte y Barcelona.",
-              "lede": "La conectividad transatlántica se amplía para facilitar la llegada de viajeros norteamericanos.",
-              "body": "Las opciones de conectividad aérea desde el continente americano suman una nueva alternativa directa hacia la capital catalana. American Airlines ha confirmado la apertura de una nueva ruta estacional que enlazará la ciudad de Charlotte con el aeropuerto local. Esta incorporación refuerza el flujo de visitantes en una temporada marcada por una excelente calidad del aire, con un índice PM2.5 de 6. En el ámbito económico, la equivalencia monetaria se establece en 1 USD frente a 0.86 EUR. La oferta cultural se completa con exposiciones temporales como Llenguatges materials en las salas de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "03",
-              "headline": "El calendario marca las próximas festividades autonómicas de septiembre.",
-              "lede": "Las celebraciones de Asturias, Extremadura y Cataluña modificarán los horarios comerciales habituales.",
-              "body": "El final del verano viene acompañado de diversas jornadas festivas en distintas comunidades autónomas del país. El 8 de septiembre se celebran simultáneamente el Día de Asturias y el Día de Extremadura, con el consecuente cierre de administraciones públicas. A pocos días vista, el 11 de septiembre se conmemorará la Diada Nacional de Catalunya, paralizando la actividad institucional en el territorio catalán. Quienes deban realizar gestiones en oficinas postales o bancarias durante estas fechas deben consultar los horarios especiales. La atmósfera urbana mantiene su habitual serenidad en vísperas de estos descansos festivos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            }
-          ]
-        },
-        {
-          "city": "BUENOS AIRES",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las jornadas grises registran temperaturas entre los 9°C y los 17°C.",
-              "lede": "El cielo permanece completamente cubierto mientras la puesta de sol se adelanta a las 18:33.",
-              "body": "El clima porteño se mantiene fresco y cubierto durante toda la jornada, con registros térmicos que oscilan entre los 9°C de mínima y los 17°C de máxima. La luz diurna disminuye de forma perceptible, situando el ocaso a las 18:33 bajo una atmósfera estable. La calidad del aire se mantiene en niveles considerados justos, con una lectura de PM2.5 de 9. Estas condiciones invigan al descanso en espacios interiores y a recorrer exposiciones de diseño histórico en los centros culturales. El ritmo de la ciudad fluye con la sobriedad propia de los días nublados de invierno.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "02",
-              "headline": "Tango BA 2026 y el Mundial de Tango despliegan su programación completa.",
-              "lede": "La música ciudadana inunda los auditorios con una guía de actividades que abarca toda la semana.",
-              "body": "La gran cita anual con el compás dos por cuatro convoca a bailarines y aficionados en diversos puntos de la capital. La programación oficial de Tango BA 2026 y el Mundial de Tango detalla una agenda extensa con conciertos, milongas y competencias internacionales. Las actividades se desarrollan bajo un cielo plenamente cubierto, con temperaturas que se mueven entre los 9°C y los 17°C. La calidad del aire se sitúa en un índice PM2.5 de 9, propiciando los encuentros bajo techo. La puesta de sol a las 18:33 marca el inicio de las veladas musicales en los escenarios principales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
-            },
-            {
-              "n": "03",
-              "headline": "La memoria de Eileen Gray y el diseño local ocupan la agenda cultural.",
-              "lede": "Las muestras de arquitectura y el festival Buenos Aires Está de Moda dinamizan la semana.",
-              "body": "La oferta artística de la ciudad diversifica sus propuestas con exposiciones que dialogan entre la arquitectura, la pintura y la memoria. Una nueva muestra rescata la figura y el legado de Eileen Gray, cruzando disciplinas creativas en un mismo espacio de exhibición. Paralelamente, el festival Buenos Aires Está de Moda inaugura su tercera edición con un circuito de más de 70 actividades distribuidas por distintos barrios. Las jornadas se desarrollan con una atmósfera fresca y nublada, con temperaturas que van de los 9°C a los 17°C. La caída de la tarde a las 18:33 invita a recorrer los espacios cerrados dedicados al arte contemporáneo.",
-              "source": "saudade desk",
-              "source_date": "2026-08-29"
             }
           ]
         }
