@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-09-04T06:00:00+09:00",
+  "updated": "2026-09-05T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-05T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The autumn sky clears over Seoul at 28 degrees.",
+              "lede": "Temperatures settle between 18 and 28 degrees under partly cloudy skies.",
+              "body": "The early autumn air brings clear skies to Seoul today, with temperatures hovering comfortably between 18 and 28 degrees as the sun sets at 18:56. Air quality remains fair, registering a low PM2.5 level of 9, making it ideal for walking the stone paths of the city. For travelers exchanging currency, the rate stands at 1 USD to 1350 KRW. Visitors heading toward the traditional quarters will find the weather calm and dust-free. It is a quiet moment to observe the changing light on the tiled roofs before evening settles.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "Frieze Seoul opens with significant contemporary sales.",
+              "lede": "Do Ho Suh maps four decades of home at the MMCA retrospective.",
+              "body": "Seoul's cultural calendar is exceptionally vibrant this week as Frieze Seoul 2026 opens with strong figures, led by a 1.28 million USD Adrian Ghenie painting in opening sales. Nearby, the National Museum of Modern and Contemporary Art hosts a major retrospective where Do Ho Suh maps four decades of home, memory, and migration. Concurrently, South Korea's very first Cubism exhibition opens to the public, offering rare historical perspective. International visitors can also sample a new taste of global dining as Chipotle arrives in Asia with its first restaurant opening right here in the capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "Morning walkers find quiet corners along the city walls.",
+              "lede": "Fair air and mild conditions invite long walks through historical neighborhoods.",
+              "body": "The fair air quality and mild morning temperatures provide an invitation to explore the ancient city walls without haste. With PM2.5 readings staying low at 9, residents take advantage of the pleasant outdoor conditions before the midday warmth reaches 28 degrees. The exchange rate holds steady at 1350 KRW per USD for those settling expenses at local teahouses. As daylight fades around 18:56, the neighborhoods near the historic gates grow still. It is a season of quiet transitions for the city and its observant visitors.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Steady rain falls across Tokyo under moderate skies.",
+              "lede": "Temperatures span 21 to 26 degrees as 14.8mm of precipitation accumulates.",
+              "body": "A steady accumulation of 14.8mm of precipitation keeps Tokyo damp today as temperatures range from 21 to 26 degrees. Air quality registers as moderate with a PM2.5 reading of 13, and sunset arrives early at 18:04 through the heavy cloud cover. Financial transactions find the exchange rate at 1 USD to 156 JPY. Travelers should carry sturdy umbrellas while navigating the wet asphalt and slick stone steps of the city's gardens. The rain subdues the usual rush, leaving the canals and paved alleys exceptionally still.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "Film festivals and gallery cafes shape the rainy afternoon.",
+              "lede": "Tokyo DisneySea evolves while the upcoming film festival announces gala screenings.",
+              "body": "Cultural life indoors thrives despite the wet weather, anchored by announcements for the 39th Tokyo International Film Festival, which sets Zeze Takahisa's Sukiyaki alongside Godzilla Minus Zero and Colony for gala screenings. Meanwhile, a unique Japanese Starbucks functioning as an art gallery hosts a fresh exhibition by painters from Tokyo's top art school. Tokyo DisneySea continues its careful evolution after 25 years of welcoming guests to its maritime themes. Visitors seeking shelter will find these creative spaces offering warmth against the damp elements.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "Wet pavement reflects the neon lights of evening.",
+              "lede": "Moderate air and steady rain create quiet reflections in the districts.",
+              "body": "The steady downpour leaves city sidewalks slick and deeply reflective as the 156 JPY to 1 USD exchange rate governs purchases. With 14.8mm of rain having fallen and temperatures resting between 21 and 26 degrees, evening routines adjust to the moisture. The moderate air quality keeps PM2.5 levels at 13, ensuring the atmosphere remains clear despite the clouds. By 18:04, the sun sets unseen behind the gray canopy, turning the streetlamps into blurs of yellow against the asphalt. It is an evening best spent watching the city through the steamy glass of a quiet cafe.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Warm afternoon light lingers over Lisbon at 34 degrees.",
+              "lede": "Partly cloudy skies push temperatures from 23 to 34 degrees by late afternoon.",
+              "body": "Lisbon experiences a warm stretch today with temperatures climbing from 23 to 34 degrees under partly cloudy skies. The sun holds the horizon until 20:01, casting long golden angles over the stone pavement of the hills. Air quality remains fair with a PM2.5 level of 15, while the currency exchange settles at 1 USD to 0.86 EUR. Travelers are advised to seek the shaded courtyards of the historic districts during the warmest afternoon hours. The atmosphere carries the dry, classic heat characteristic of early September on the Tagus.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "02",
+              "headline": "The 20th MOTELX horror film festival opens its expanded program.",
+              "lede": "The newly renovated Gulbenkian Museum welcomes visitors back to its original vision.",
+              "body": "The cultural calendar offers exceptional depth this week as MOTELX 2026 launches its 20th Lisbon Horror Film Festival from September 3 to 13 with an expanded program of screenings and statistics. Across town, the newly reopened Gulbenkian Museum invites art lovers to experience its spaces following a major renovation that successfully restores its original vision. Visitors navigating these venues will find the 0.86 EUR to 1 USD exchange rate convenient for ticketing and cafe stops. These institutions provide cool, contemplative interior spaces away from the daytime heat.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            },
+            {
+              "n": "03",
+              "headline": "Evening breezes cool the cobblestones as sunset approaches.",
+              "lede": "Fair air and late twilight make the descending hours ideal for walking.",
+              "body": "As temperatures retreat from the 34 degree peak toward the 23 degree low, a light breeze begins to move off the river. Fair air quality with a PM2.5 value of 15 keeps the atmosphere crisp for evening strollers along the promenade. The exchange rate holds at 0.86 EUR for travelers settling dining tabs as the city prepares for night. Sunset at 20:01 marks the end of the heat, turning the river into a ribbon of deep blue. Locals and observers alike take to the viewpoints to watch the lights come alive across the capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-05"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-04T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Travelers find quiet refuge in local literary corners as rain showers persist. Precipitation totals 2.8mm while temperatures span 18°C to 22°C with fair air quality marked at a PM2.5 of 6. Currency exchange rests at 1 USD = 0.86 EUR. Visitors tracing the theme of Lost in Lisbon will find shelter in historic reading rooms. Outside, hotel pools open to the public in Lisbon, ready for you to take a dip in the city’s coolest summer when the weather clears. The long evening concludes with sunset at 20:14.",
               "source": "saudade desk",
               "source_date": "2026-08-27"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-26T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies frame the Design Miami Seoul 2026 exhibition.",
-              "lede": "Samsung hosts the Design Is an Act of Love exhibition amidst gentle overcast weather.",
-              "body": "Overcast skies keep the temperature between 23 and 30°C across the city today, making gallery walking comfortable. Air quality remains fair with PM2.5 at 19, allowing unhurried visits to the design pavilions. Design Miami Seoul 2026 returns for its second edition as a major global collectible design platform. Visitors can also explore Samsung’s special Design Is an Act of Love exhibition downtown. Financial transactions trade smoothly at a rate of 1 USD to 1383 KRW at local exchange booths. Sunset arrives precisely at 19:10, casting a soft grey light over the architectural showcases.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "Yongsan Park remains protected as greenbelt zones stay untouched.",
-              "lede": "Recent urban decisions ensure Yongsan Park and local greenbelts are securely excluded from housing plans.",
-              "body": "The local atmosphere benefits from steady temperatures of 23 to 30°C under an overcast canopy. Recent civic policy confirms that Yongsan Park and Seoul greenbelt areas are formally excluded from the 73000-household development plan. This preservation protects vital urban green spaces for quiet observers and afternoon strollers. The exchange rate holds steady at 1 USD to 1383 KRW for travelers managing expenses. Air quality stays stable with PM2.5 recorded at 19, keeping outdoor breathing light and clear. Sunset falls at 19:10, drawing a quiet close to the park's walking hours.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "The Park Seobo Museum examines the late master painter's legacy.",
-              "lede": "Quiet museum galleries offer deep reflection on what the late painter left behind.",
-              "body": "Gentle overcast conditions persist with temperatures ranging from 23 to 30°C throughout the district. Inside, the Park Seobo Museum opens its rooms to reconstruct the profound legacy left behind by the late painter. The exhibition offers visitors a contemplative space away from the bustling city streets outside. Currency exchange counters operate at 1 USD to 1383 KRW for international visitors. Fine particulate matter stays low with PM2.5 at 19, ensuring comfortable movement between cultural venues. Daylight fades gracefully as sunset arrives at 19:10, marking the end of viewing hours.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Park Hotel Tokyo unveils its Treasure Box artist room.",
-              "lede": "Paralym Art artist Misa Ohashi transforms hotel spaces into quiet galleries under overcast skies.",
-              "body": "Overcast skies keep daytime temperatures ranging from 25 to 33°C across the capital. Air quality registers at a fair PM2.5 level of 24, providing stable conditions for city walks. At Park Hotel Tokyo, the new Treasure Box artist room showcases intricate works by Paralym Art artist Misa Ohashi. Travelers will find foreign exchange rates holding near 1 USD to 159 JPY at financial institutions. Evening approaches with sunset occurring at 18:17, dimming the metropolitan skyline in soft hues. Observers can enjoy the calm artistic interiors while the humid summer weather lingers outside.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "Novotech establishes its new office presence in Tokyo.",
-              "lede": "International corporate expansions continue quietly beneath the steady overcast weather.",
-              "body": "The city experiences steady overcast conditions with temperatures oscillating between 25 and 33°C. Air quality remains fair, marked by a PM2.5 reading of 24 across the metropolitan wards. Novotech formally strengthens its regional presence by opening a brand new office in Tokyo today. Currency exchange counters operate reliably at 1 USD to 159 JPY for arriving business travelers. Sunset arrives at 18:17, casting gentle evening shadows over the newly established corporate districts. The surrounding streets maintain a composed rhythm as the late summer evening settles in.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "Odaiba Marine Park prepares for the Aqua Symphony drone show.",
-              "lede": "Evening waterside viewpoints offer clear sights of the waterfront light displays.",
-              "body": "Coastal air remains warm with temperatures spanning 25 to 33°C under an overcast sky. PM2.5 particulate levels register at 24, keeping the seaside atmosphere reasonably clear for evening visitors. Odaiba Marine Park prepares to host the scheduled Aqua Symphony drone show above the bay waters. Travelers managing travel funds will note exchange rates holding at 1 USD to 159 JPY. Sunset takes place at 18:17, providing an immediate transition into night for the waterfront spectators. Walking paths along the park remain open for quiet observers seeking evening breezes.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Rain showers reach the cobblestones as Comporta welcomes a luxury debut.",
-              "lede": "Park Hyatt expands its hospitality footprint toward Portugal while 24.6mm of rain falls.",
-              "body": "Showers bring 24.6mm of precipitation to the capital, cooling temperatures down to a crisp 19 to 23°C range. The wet weather clears the air nicely, leaving PM2.5 levels at a pristine 8. Park Hyatt sets its sights on Portugal with a projected debut in nearby Comporta, expanding coastal lodging. Financial exchanges trade at a stable rate of 1 USD to 0.86 EUR across local banks. Sunset occurs late at 20:16, offering extended evening light despite the earlier cloud cover. Travelers should keep umbrellas close at hand while navigating the slick limestone pavements.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "02",
-              "headline": "The 42nd annual Moxie Festival kicks off across the city.",
-              "lede": "Festive local gatherings continue despite steady rain showers and wet streets.",
-              "body": "Rain showers add 24.6mm of rainfall to the city streets while temperatures hover between 19 and 23°C. Air quality is exceptionally clean with PM2.5 readings resting at 8 following the precipitation. The 42nd annual Moxie Festival officially kicks off in Lisbon, drawing residents into neighborhood cultural spaces. Currency exchange rates are pegged at 1 USD to 0.86 EUR for visitors exchanging foreign currency. Sunset arrives at 20:16, illuminating the wet tile facades with a dramatic end-of-day glow. Pavement cafes offer sheltered spots to observe the festive activities through rain-streaked windows.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
-            },
-            {
-              "n": "03",
-              "headline": "Wet alleyways reflect the fading light after a rainy afternoon.",
-              "lede": "Post-shower calm settles over historic neighborhoods with 24.6mm of measured precipitation.",
-              "body": "The day concludes with total precipitation reaching 24.6mm and temperatures resting comfortably between 19 and 23°C. Clean maritime air keeps particulate pollution low, with PM2.5 registered cleanly at 8. Visitors walking through the historic quarters will find currency exchanges operating at 1 USD to 0.86 EUR. The quiet atmosphere provides a stark contrast to the lively festival events happening elsewhere in the city. Sunset marks the end of twilight at 20:16, casting reflections across the damp stone steps of the old town. Umbrellas and waterproof jackets remain essential gear for anyone exploring after dark.",
-              "source": "saudade desk",
-              "source_date": "2026-08-26"
             }
           ]
         }
