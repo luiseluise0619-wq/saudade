@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-06T06:00:00+09:00",
+  "updated": "2026-09-07T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-07T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Casa de Vacas reúne la antología de Antonio Pedrero en el Retiro.",
+              "lede": "El espacio municipal expone siete décadas de pintura sobre el paisaje y la figura.",
+              "body": "El centro cultural Casa de Vacas, situado junto al estanque del parque de El Retiro, alberga una extensa muestra retrospectiva que repasa siete décadas de trayectoria artística de Antonio Pedrero. La exposición reúne una cuidada selección de óleos y dibujos donde el autor plasma su personal visión del paisaje castellano y la naturaleza estática con pincelada firme. Los visitantes que caminen esta semana por los paseos arbolados del parque encontrarán en este refugio artístico una parada sosegada antes de que comience el bullicio otoñal. El acceso a la sala es libre hasta completar aforo, permitiendo un recorrido íntimo por la evolución de este creador fundamental. La luz suave de septiembre sobre los estanques acompaña el trayecto de los viandantes que buscan el silencio entre las páginas de la historia pictórica local.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival de Otoño y el ciclo Madrid a Tempo convocan las agendas musicales.",
+              "lede": "La capital acoge el cuadragésimo cuarto festival escénico y las citas de piano clásico.",
+              "body": "La Comunidad de Madrid inaugura los ecos culturales de septiembre con el inicio de su cuadragésimo cuarto Festival de Otoño, un homenaje constante al legado musical y escénico de América en los escenarios de la región. Paralelamente, el segundo Festival Internacional de Piano Madrid a Tempo llena los auditorios de la ciudad con interpretaciones de repertorio clásico a cargo de prestigiosos intérpretes internacionales. Los melómanos también tienen una cita imprescindible en el vigésimo octavo Festival COMA'26, que consolida el tejido contemporáneo con más de 20 conciertos repartidos por diversos espacios culturales. Estas propuestas coinciden con un tipo de cambio estable de 1 USD por 0.86 EUR, facilitando la planificación de los viajeros internacionales que deseen adquirir localidades para los recitales programados durante los próximos días en los teatros y centros asociados.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "03",
+              "headline": "Atención a los festivos autonómicos de Asturias y Extremadura en los desplazamientos.",
+              "lede": "El martes 2026-09-08 trae cierres administrativos en varias comunidades del territorio nacional.",
+              "body": "El calendario de la península marca festividad autonómica el martes 2026-09-08 por la celebración del Día de Asturias y el Día de Extremadura, lo que afectará a la actividad administrativa habitual. Quienes viajen desde Madrid hacia estas regiones comprobarán que oficinas públicas, entidades bancarias y algunas sucursales de correos permanecen cerradas al público durante la jornada festiva. La Diada Nacional de Catalunya, prevista para el jueves 2026-09-11, y la Festividad de la Bien Aparecida el martes 2026-09-15 completarán este ciclo de celebraciones territoriales del mes. Se recomienda a los observadores y viajeros consultar la apertura de museos y pequeños comercios locales antes de planificar sus trayectos y visitas por las zonas afectadas. Las oficinas de turismo de la capital operan con normalidad para ofrecer asistencia a quienes transiten por las principales estaciones de transporte.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La ciudad registra un cielo cubierto y temperaturas suaves entre 22 y 29°C.",
+              "lede": "El ambiente se mantiene gris con una calidad del aire calificada como pobre por partículas finas.",
+              "body": "La jornada dominical y el inicio de semana en Barcelona se desarrollan bajo un cielo completamente overcast, con temperaturas que oscilan entre los 22 y los 29°C a lo largo de la franja litoral. El atardecer está previsto para las 20:14, regalando una luz difusa sobre las fachadas del Eixample y los paseos marítimos de la Barceloneta. Los índices de calidad del aire se sitúan en niveles considerados pobres, registrando PM2.5 en 11, por lo que se aconseja moderar las actividades físicas prolongadas en espacios abiertos muy transitados. Con una tasa de cambio fijada en 1 USD por 0.86 EUR, los visitantes extranjeros encuentran un marco financiero previsible para sus consumos cotidianos en cafés y librerías del barrio gótico. Las suaves brisas marinas apenas logran despejar la calima ligera que acompaña este primer tramo de septiembre en la fachada mediterránea.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "02",
+              "headline": "El Parc del Fòrum despide el Extreme Barcelona tras congregar a 32.000 visitantes.",
+              "lede": "El festival de deportes urbanos clausura su decimoctava edición superando los registros anteriores.",
+              "body": "El Parc del Fòrum ha cerrado las puertas de la decimoctava edición del festival Extreme Barcelona tras recibir a 32.000 visitantes durante el fin de semana. La cifra supera la asistencia registrada el año pasado, consolidando la cita como un referente europeo de las disciplinas acrobáticas sobre ruedas y monopatín. Los aficionados que paseen estos días por los alrededores aún podrán observar las labores de desmontaje de las estructuras efímeras instaladas junto al mar. Muy cerca de allí, la Galería de Bricktopia expone muestras de artesanía contemporánea dentro de la programación del Festival EME3, ofreciendo un contrapunto reposado y creativo al bullicio deportivo anterior. Por otro lado, la directiva del FC Barcelona avanza en sus planes para construir un parque de atracciones en el interior del Camp Nou, un proyecto urbanístico y de ocio que transformará el uso cotidiano de las instalaciones deportivas en el futuro.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "03",
+              "headline": "Previsión de cierres por los festivos autonómicos de Asturias, Extremadura y Cataluña.",
+              "lede": "El martes 2026-09-08 y el jueves 2026-09-11 modifican los horarios de atención ciudadana.",
+              "body": "El calendario de septiembre trae jornadas festivas consecutivas que alterarán el ritmo habitual de las gestiones en Cataluña y otras regiones del Estado. El martes 2026-09-08 se celebra simultáneamente el Día de Asturias y el Día de Extremadura, jornadas en las que algunas delegaciones institucionales con sede en Barcelona reducirán sus servicios presenciales. La Diada Nacional de Catalunya tendrá lugar el jueves 2026-09-11, un día de carácter festivo generalizado que implicará el cierre de oficinas bancarias, administraciones públicas y centros educativos en todo el territorio catalán. Los comercios del centro histórico mantendrán horarios especiales o adaptados a la afluencia de paseantes locales durante la festividad. Asimismo, la Festividad de la Bien Aparecida el martes 2026-09-15 cerrará este ciclo de conmemoraciones autonómicas que marcan el pulso administrativo del mes para residentes y viajeros.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Una atmósfera fresca y gris domina las calles con mínimas de 6 y máximas de 11°C.",
+              "lede": "El cielo permanece cubierto mientras el sol se oculta temprano a las 18:39 en la ciudad.",
+              "body": "El clima porteño se muestra riguroso y típicamente invernal en este inicio de semana, registrando temperaturas que se mueven entre los 6 y los 11°C bajo un cielo persistentemente overcast. La calidad del aire se mantiene en niveles fair, con un registro de PM2.5 en 11 que permite transitar sin restricciones por las avenidas arboladas de Palermo y Recoleta. El atardecer se adelanta hasta las 18:39, tiñendo de tonos azulados los cordones de adoquines y las tradicionales confiterías donde los vecinos buscan reparo frente al viento fresco del río. Las chaquetas abrigadas y las bufandas vuelven a ser imprescindibles para quienes eligen caminar por la Costanera o recorrer los mercados de antigüedades de San Telmo. La ciudad adopta un ritmo reposado, propicio para la lectura en librerías de viejo y el disfrute silencioso de las esquinas porteñas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "02",
+              "headline": "El Centro de Exposiciones y Convenciones expone los proyectos del nuevo parque urbano.",
+              "lede": "La muestra municipal reúne las propuestas arquitectónicas seleccionadas en el concurso público.",
+              "body": "El Centro de Exposiciones y Convenciones de Buenos Aires alberga la muestra con los trabajos premiados en el reciente concurso para el diseño del nuevo parque urbano. Los visitantes pueden examinar las maquetas y los planos detallados que proponen integrar áreas verdes y espacios de encuentro ciudadano en el tejido metropolitano. Esta exposición dialoga con la rica tradición paisajística de los parques locales, ofreciendo al observador una mirada pausada sobre el futuro urbanístico de la capital. Las salas del centro brindan un refugio cálido y luminoso frente al frío exterior que domina las calles durante estas jornadas de septiembre. Es un recorrido ideal para los amantes del urbanismo y la arquitectura que desean comprender las transformaciones silenciosas que experimenta la geografía urbana de la ciudad en los últimos años.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            },
+            {
+              "n": "03",
+              "headline": "El Banff Mountain Film Festival y el Festival de Cine y Música animan las carteleras.",
+              "lede": "Las proyecciones de montaña y los ciclos audiovisuales ocupan los auditorios culturales de la capital.",
+              "body": "La agenda cultural de la semana destaca por la llegada del Banff Mountain Film Festival 2026 a Buenos Aires, ofreciendo una cuidada programación de documentales sobre expediciones, naturaleza y deportes de aventura. Las entradas para las distintas funciones ya se encuentran disponibles en los canales habituales de los complejos adheridos al ciclo audiovisual. De manera paralela, el Festival de Cine y Música despliega sus proyecciones y recitales en diferentes salas independientes, uniendo la sensibilidad de la gran pantalla con composiciones sonoras en directo. Estas propuestas enriquecen las tardes frías de los residentes y viajeros que buscan refugio cultural en los barrios de Colegiales y Villa Crespo. Los espacios alternativos reafirman así su papel como puntos de encuentro imprescindibles para quienes prefieren la observación reposada del arte contemporáneo en los meses de transición.",
+              "source": "saudade desk",
+              "source_date": "2026-09-07"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-06T06:00:00+09:00",
       "cities": [
@@ -554,98 +646,6 @@
               "body": "El Museo de Arte Latinoamericano de Buenos Aires ha albergado la gala de clausura del Festival La Mujer y el Cine, registrando salas llenas y una gran promesa de continuidad institucional. Este encuentro ha premiado el talento audiovisual en un ambiente de celebración íntima y respetuosa con los creadores. En paralelo, los lazos internacionales se fortalecen mediante iniciativas como el intercambio del tango como puente cultural entre Argentina y China. Con una temperatura exterior de 10–17°C y una ligera llovizna de 0.4mm que discurre tranquila, los asistentes transitan por los museos bajo una buena calidad del aire PM2.5 de 13. El atardecer a las 18:35 despide una jornada dedicada por completo al arte y al pensamiento.",
               "source": "saudade desk",
               "source_date": "2026-09-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-08-31T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El aire de la capital registra índices limpios con 4 de PM2.5.",
-              "lede": "La atmósfera madrileña favorece los largos paseos por los parques históricos durante el final de agosto.",
-              "body": "El aire de la capital registra índices limpios con 4 de PM2.5. La atmósfera madrileña favorece los largos paseos por los parques históricos durante el final de agosto. Los madrileños disfrutan de las últimas semanas de los ciclos al aire libre como Veranos en el Parque 2026. Al mismo tiempo, los espacios culturales como Casa Árabe convocan iniciativas ciudadanas para proteger su continuidad urbana. El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR para los visitantes extranjeros. Conviene tener presentes los futuros festivos autonómicos de septiembre en otras regiones españolas por si se tramitan gestiones.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "02",
-              "headline": "La cultura independiente organiza encuentros para preservar su patrimonio.",
-              "lede": "Los espacios tradicionales de la ciudad buscan fórmulas estables ante los cambios del sector inmobiliario.",
-              "body": "La cultura independiente organiza encuentros para preservar su patrimonio. Los espacios tradicionales de la ciudad buscan fórmulas estables ante los cambios del sector inmobiliario. Las actividades estivales como Veranos en el Parque 2026 siguen convocando a los vecinos al caer la tarde. Con una calidad del aire excelente marcada en 4 de PM2.5, la ciudad invita a la contemplación pausada. El cambio monetario se mantiene firme en 1 USD por cada 0.86 EUR en las principales entidades bancarias. Los residentes aprovechan la calma estival previa a las celebraciones del 8 de septiembre en el norte peninsular.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "03",
-              "headline": "Las librerías del centro amplían su horario nocturno en septiembre.",
-              "lede": "Los lectores aprovechan la bajada térmica para buscar volúmenes descatalogados en los soportales.",
-              "body": "Las librerías del centro amplían su horario nocturno en septiembre. Los lectores aprovechan la bajada térmica para buscar volúmenes descatalogados en los soportales. La agenda urbana incluye iniciativas culturales como el festival vecinal en defensa de Casa Árabe. El indicador de partículas PM2.5 se mantiene en 4, garantizando una excelente visibilidad en las calles. La cotización de 1 USD a 0.86 EUR facilita las compras de moneda extranjera en el centro. Las administraciones públicas recuerdan las fechas de los festivos de la próxima semana en Asturias y Extremadura.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo permanece cubierto con temperaturas entre 20 y 29°C.",
-              "lede": "La ciudad costera experimenta una jornada gris con la puesta de sol prevista a las 20:26.",
-              "body": "El cielo permanece cubierto con temperaturas entre 20 y 29°C. La ciudad costera experimenta una jornada gris con la puesta de sol prevista a las 20:26. El nivel de contaminación atmosférica se sitúa en 8 de PM2.5, ofreciendo una calidad del aire calificada como justa. Recientemente, el Moll de la Fusta ha acogido el Thai Festival con decenas de propuestas gastronómicas gratuitas. Los viajeros internacionales pueden operar con una equivalencia cambiaria de 1 USD por 0.86 EUR. Conviene estar atentos al calendario ante la llegada de festividades autonómicas vecinas durante la semana próxima.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "02",
-              "headline": "El Moll de la Fusta despide el ciclo estival con muestras gastronómicas.",
-              "lede": "Los paseos marítimos recuperan la tranquilidad tras las celebraciones asiáticas del fin de semana.",
-              "body": "El Moll de la Fusta despide el ciclo estival con muestras gastronómicas. Los paseos marítimos recuperan la tranquilidad tras las celebraciones asiáticas del fin de semana. El termómetro oscila suavemente entre 20 y 29°C bajo un cielo completamente encapotado. La puesta de sol se adelanta a las 20:26, anunciando el progresivo acortamiento de las jornadas. La calidad del aire registra un valor de 8 en el índice PM2.5 para toda la zona urbana. Las transacciones financieras se calculan aplicando el tipo de cambio oficial de 1 USD equivalente a 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "03",
-              "headline": "El balance cultural estival cierra con alta participación ciudadana.",
-              "lede": "Los auditorios y espacios abiertos completan sus programaciones artísticas antes del inicio escolar.",
-              "body": "El balance cultural estival cierra con alta participación ciudadana. Los auditorios y espacios abiertos completan sus programaciones artísticas antes del inicio escolar. Con un registro de 8 para el PM2.5 y temperaturas de 20 a 29°C, el clima acompaña los desplazamientos a pie. La puesta de sol ocurre a las 20:26, marcando el fin de las tardes largas de verano. Los visitantes extranjeros manejan una tasa de cambio fijada en 1 USD por cada 0.86 EUR. Se acerca la Diada Nacional de Catalunya el 11 de septiembre, por lo que se prevén cierres comerciales puntuales.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La tarde porteña se presenta fresca con registros entre 12 y 16°C.",
-              "lede": "El cielo permanece cubierto y la puesta de sol se anticipa a las 18:34 en toda la ciudad.",
-              "body": "La tarde porteña se presenta fresca con registros entre 12 y 16°C. El cielo permanece cubierto y la puesta de sol se anticipa a las 18:34 en toda la ciudad. La calidad del aire se mantiene en niveles muy favorables con un registro de 10 de PM2.5. La agenda cultural se dinamiza con el festival Buenos Aires Está de Moda y sus numerosas actividades. Asimismo, el FICPBA rinde homenaje al músico Charly García con proyecciones gratuitas para el público. Los faroles flotantes de la primavera próxima completan las propuestas estacionales de los espacios verdes urbanos.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "02",
-              "headline": "Las salas de cine recuperan clásicos musicales en sus funciones gratuitas.",
-              "lede": "Los espectadores llenan los auditorios atraídos por los homenajes audiovisuales a figuras del rock nacional.",
-              "body": "Las salas de cine recuperan clásicos musicales en sus funciones gratuitas. Los espectadores llenan los auditorios atraídos por los homenajes audiovisuales a figuras del rock nacional. El ambiente exterior es fresco, con temperaturas que se mueven entre 12 y 16°C bajo nubes persistentes. La puesta de sol llega puntual a las 18:34, cerrando una jornada de cielos cubiertos. La atmósfera urbana respira aire limpio con una concentración de 10 de PM2.5 en los barrios residenciales. El diseño y la moda local ocupan las calles mediante la tercera edición de Buenos Aires Está de Moda.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
-            },
-            {
-              "n": "03",
-              "headline": "Los diseñadores locales exponen sus colecciones en circuitos alternativos.",
-              "lede": "El comercio de autor fomenta los recorridos peatonales por los barrios del norte de la capital.",
-              "body": "Los diseñadores locales exponen sus colecciones en circuitos alternativos. El comercio de autor fomenta los recorridos peatonales por los barrios del norte de la capital. La temperatura oscila suavemente de 12 a 16°C mientras el cielo permanece completamente overcast. La caída de la tarde se produce a las 18:34, dando paso a la iluminación artificial de las avenidas. El indicador de partículas PM2.5 se sitúa en 10, garantizando una excelente condición ambiental para pasear. Los festivales temáticos y las muestras cinematográficas gratuitas marcan el pulso cultural de esta semana.",
-              "source": "saudade desk",
-              "source_date": "2026-08-31"
             }
           ]
         }
