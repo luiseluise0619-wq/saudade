@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-09-07T06:00:00+09:00",
-  "next_filing": "2026-09-07T21:00:00+00:00",
+  "filed_at": "2026-09-08T06:00:00+09:00",
+  "next_filing": "2026-09-08T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "O Parque das Nações acolhe novamente a iniciativa TRITON 1 Lisboa.",
-          "lede": "A zona ribeirinha volta a dinamizar-se com propostas culturais para os residentes.",
-          "body": "O Parque das Nações recebe de novo o evento TRITON 1 Lisboa, atraindo visitantes ao eixo ribeirinho da cidade. As propostas artísticas e expositivas continuam a marcar o roteiro de fim-de-semana na capital. Paralelamente, o Museu de Arte, Arquitetura e Tecnologia planeia a inauguração de uma nova galeria até ao final do ano. No plano cambial, o câmbio oficial fixa-se em 1 USD para 0.86 EUR. O movimento cultural estende-se ainda a salas de espetáculo e espaços públicos, apesar de algumas alterações pontuais na agenda de festivais.",
+          "headline": "O céu nublado acompanha a descida suave da temperatura até 27°C.",
+          "lede": "As ruas mantêm o ritmo calmo de setembro, com o sol a despedir-se às 19:56.",
+          "body": "A atmosfera urbana sob o céu cinzento convida a passeios longos e silenciosos pela baixa e pelos miradouros da capital. Com o mercúrio a oscilar entre os 19°C e os 27°C, a luz difusa molda a cidade de forma muito particular. O final de tarde estabiliza com o pôr-do-sol cravado às 19:56, permitindo transições suaves entre o dia de trabalho e o recolhimento noturno. Os viajantes encontram nas galerias e salas de exposição um refúgio perfeito para o ritmo lento da estação. A conversão cambial situa-se nos mercados internacionais em 1 USD para 0.86 EUR, mantendo a estabilidade financeira para quem chega de fora. É o momento ideal para observar as pedras da calçada molhadas pela humidade matinal, sem a urgência dos meses de maior calor.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "02",
-          "headline": "As galerias e espaços expositivos atualizam o roteiro de arte na cidade.",
-          "lede": "Os museus mantêm as portas abertas com novos percursos para os observadores atentos.",
-          "body": "O roteiro de exposições em Lisboa ganha novos pontos de interesse para quem prefere caminhar sem pressa pelas ruas da cidade. A programação artística consolida-se em vários espaços institucionais e galerias independentes. Enquanto isso, o Museu de Arte, Arquitetura e Tecnologia prepara a abertura de uma nova sala prevista para este ano de 2026. A taxa de câmbio permanece estável nos mercados, cotando-se a 1 USD por 0.86 EUR. Os visitantes encontram uma cidade atenta aos detalhes visuais, com propostas que cruzam a arquitetura contemporânea e o património urbano histórico.",
+          "headline": "As galerias da cidade acolhem o roteiro de arte deste fim-de-semana.",
+          "lede": "Novas exposições abrem portas, enquanto o Festival da Madeira arranca na quinta-feira.",
+          "body": "A agenda cultural da capital enriquece-se com propostas variadas que ocupam diferentes espaços urbanos e culturais. As exposições em Lisboa desenham um roteiro de arte ideal para este fim-de-semana, apelando a um olhar atento e pausado sobre a criação contemporânea. Paralelamente, o Festival da Madeira começa na quinta-feira em Lisboa, trazendo sonoridades e tradições insulares para o coração da cidade. Nos registos desportivos, destaca-se o talento nacional com os portugueses a encherem o pódio do Triton Lisboa, demonstrando excelência e precisão. Por fim, nota para a diversidade cultural que continua a expandir-se com a chegada da comunidade chinesa para o primeiro festival de dragon boat na cidade este mês. São pontos de encontro que mostram uma Lisboa plural, atenta ao cruzamento de culturas e tradições seculares.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "03",
-          "headline": "A programação cultural ajusta-se com novas datas e itinerários.",
-          "lede": "Alguns eventos reformulam os seus calendários enquanto a cidade retoma o ritmo habitual.",
-          "body": "A agenda cultural da capital regista algumas alterações recentes, incluindo uma vaga de cancelamentos num festival que traria Jerry Seinfeld a Lisboa. Contudo, os espaços museológicos e as galerias mantêm as suas portas abertas aos residentes e viajantes. O câmbio oficial mantém-se inalterado, com 1 USD a equivaler a 0.86 EUR. As propostas artísticas no Parque das Nações e noutros pontos da cidade oferecem alternativas consistentes para os observadores que procuram tranquilidade e contemplação urbana longe das grandes aglomerações turísticas.",
+          "headline": "A taxa de câmbio permanece estável para os visitantes internacionais.",
+          "lede": "Cada USD equivale a 0.86 EUR, facilitando o planeamento financeiro na cidade.",
+          "body": "A gestão financeira das viagens para quem chega de fora da zona euro beneficia de uma cotação clara e previsível nos mercados globais. Com a taxa de câmbio fixada em 1 USD para 0.86 EUR, os visitantes conseguem planear com exatidão as despesas em cafés, livrarias e transportes públicos. Esta estabilidade monetária harmoniza-se com o ambiente tranquilo que se vive nas ruas e nos jardins da capital durante estes dias de transição estival. Os residentes aproveitam a calmaria para frequentar os mercados locais e as esplanadas tradicionais sem pressas. A cidade funciona a um ritmo compassado, onde o dinheiro e o tempo parecem ajustar-se às necessidades de quem prefere observar o mundo com vagar. É uma oportunidade para redescobrir o comércio de bairro e os serviços essenciais que sustentam a vida quotidiana lisboeta.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "A manhã começa com nevoeiro e temperaturas amenas entre 16 e 24°C.",
-          "lede": "A qualidade do ar mantém-se num patamar favorável para caminhadas prolongadas pela cidade.",
-          "body": "A atmosfera portuense desperta envolvida numa neblina matinal típica, com os termómetros a oscilar entre os 16 e os 24°C. O índice de qualidade do ar regista um valor de PM2.5 de 5, garantindo condições muito favoráveis para o passeio. O pôr do sol ocorre pontualmente às 19:57, iluminando as margens do rio com tons dourados. No plano financeiro, a cotação oficial fixa-se em 1 USD para 0.86 EUR. Os espaços verdes e as ruas da baixa convidam a uma observação calma, longe da urgência quotidiana e centrada na simplicidade do momento.",
+          "headline": "A chuva cai sobre a Invicta com um acumulado de 10.5mm de precipitação.",
+          "lede": "As temperaturas variam entre 18°C e 23°C, sob um ar de qualidade considerada fair.",
+          "body": "A atmosfera portuense veste-se de cinzento húmido com a chegada de 10.5mm de precipitação que obriga a passos mais firmes pelas ruas de granito. O termómetro regista uma amplitude térmica contida, variando entre os 18°C de mínima e os 23°C de máxima ao longo do dia. A qualidade do ar mantém-se fair, com o índice de PM2.5 fixado em 6, garantindo uma respiração limpa apesar da humidade persistente. O sol despede-se exatamente às 19:56, devolvendo à Ribeira e aos cais do Douro a penumbra típica do início de outono. A taxa de câmbio de 1 USD para 0.86 EUR permanece estável para quem visita a cidade e procura o abrigo das livrarias e cafés históricos. É uma jornada perfeita para escutar o som da água a correr pelas calçadas inclinadas e sentir a verdadeira essência nortenha.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "02",
-          "headline": "O Parque da Cidade celebra o Dia do Brasil com sabores regionais.",
-          "lede": "A comunidade reúne-se nos espaços verdes para assinalar a data com música e gastronomia.",
-          "body": "O Parque da Cidade converte-se no epicentro das celebrações da independência do Brasil, acolhendo sabores e ritmos tradicionais. O ambiente verde do parque acolhe residentes e visitantes que participam nas comemorações ao ar livre. A temperatura amena, entre os 16 e os 24°C, acompanha a afluência pública até ao final da tarde, com o sol a ocultar-se às 19:57. A qualidade do ar permanece limpa, com PM2.5 em 5. Para quem transaciona em moeda estrangeira, a conversão mantém-se estável nos balcões locais com 1 USD cotado a 0.86 EUR.",
+          "headline": "O Parque da Cidade acolhe as celebrações do Dia do Brasil no Porto.",
+          "lede": "Sabores e ritmos regionais marcam a independência, unindo comunidades em espaço verde.",
+          "body": "O extenso relvado do Parque da Cidade transforma-se no epicentro das comemorações com o Dia do Brasil no Porto, atraindo famílias e curiosos. Sabores e ritmos regionais marcam de forma viva a celebração da independência do Brasil no Porto, preenchendo o espaço público com música e convívio. Para os amantes da arte e da história, o Museu Nacional Soares dos Reis abriga até 31 de janeiro a exposição Coleção IFC: Matéria de Sonhos, apresentando mais de 200 joias portuguesas produzidas entre os séculos XVII e XIX. Em simultâneo, há uma exposição de acesso grátis para ver agora à entrada do Hospital de São João, aproximando a cultura dos cidadãos em trânsito diário. Estas iniciativas provam que a vida cultural da cidade não se esgota nos grandes museus, encontrando morada em pontos inesperados do tecido urbano.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "03",
-          "headline": "O antigo terminal da Garagem Atlântico prepara a sua futura reabertura.",
-          "lede": "O património urbano da Invicta recupera memórias enquanto aguarda o horizonte de 2028.",
-          "body": "A histórica Garagem Atlântico, antigo terminal de autocarros da cidade, aponta a sua reabertura para 2028 como futuro espaço cultural e criativo. Este projeto de reabilitação urbana devolve à cidade uma infraestrutura com nova utilidade pública e artística. Enquanto isso, o quotidiano decorre sob uma atmosfera calma, com a qualidade do ar a registar PM2.5 de 5 e temperaturas entre 16 e 24°C. O nevoeiro matinal dissipa-se gradualmente antes do pôr do sol fixado para as 19:57. A taxa de câmbio permanece inalterada nos 0.86 EUR por cada 1 USD.",
+          "headline": "O câmbio monetário apoia o regresso calmo aos espaços culturais da cidade.",
+          "lede": "Com 1 USD cotado a 0.86 EUR, os roteiros patrimoniais seguem sem sobressaltos.",
+          "body": "A paridade cambial de 1 USD para 0.86 EUR facilita a circulação de visitantes estrangeiros pelos circuitos museológicos e comerciais do Grande Porto. Com o céu ainda marcado pela chuva recente e o ar limpo com PM2.5 em 6, a deslocação aos pontos de interesse faz-se com tranquilidade. Os espaços cobertos, como as salas do MNSR ou as galerias hospitalares, oferecem o refúgio ideal para escapar aos 10.5mm de precipitação acumulada. Os residentes aproveitam a pausa chuvosa para revisitar o património ourives e as coleções de joias seculares que definem a identidade artística da região. É uma semana dedicada à contemplação interior, onde o conforto do granito molhado dialoga com a riqueza do artesanato histórico e o calor das festas recentemente vividas nos parques.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "A serra abriga-se sob um céu nublado com termómetros entre 18 e 26°C.",
-          "lede": "A atmosfera cinzenta confere à paisagem um silêncio propício à contemplação.",
-          "body": "A vila serrana apresenta um registo térmico entre os 18 e os 26°C sob um manto persistente de nuvens. A qualidade do ar mantém-se estável e limpa, com o indicador de PM2.5 fixado em 6. O cair da noite faz-se notar às 19:59, altura em que a humidade começa a adensar-se entre a vegetação densa. A conversão monetária local mantém o valor de referência de 1 USD para 0.86 EUR. Os percursos pedestres e os trilhos florestais ganham uma serenidade particular com a ausência de sol direto, convidando o caminhante a uma observação pausada.",
+          "headline": "A serra oculta-se sob um céu overcast com temperaturas entre 18°C e 24°C.",
+          "lede": "O ar puro da serra apresenta PM2.5 em 4, enquanto o sol se põe às 19:57.",
+          "body": "A vila mystica de Sintra desperta sob um manto de nuvens que suaviza os contornos dos palácios e das árvores seculares. O termómetro oscila de forma agradável entre os 18°C e os 24°C, criando um microclima perfeito para longas caminhadas pelas encostas arborizadas. A qualidade do ar é considerada boa, registando um valor de PM2.5 de 4, o que convida a respirar fundo a humidade vegetal da serra. O dia desvanece-se lentamente com o pôr-do-sol marcado para as 19:57, altura em que as névoas começam a envolver os torreões românticos. Nos mercados cambiais, mantém-se a cotação de 1 USD para 0.86 EUR, assegurando estabilidade para os viajantes que escolhem a vila para repousar. É uma paisagem que impõe silêncio e respeito, ideal para quem procura a calma longe do bulício litoral.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "02",
           "headline": "A Praia Grande prepara-se para acolher o 4.º Festival da Sardinha.",
-          "lede": "A linha do horizonte marítimo antecipa o evento gastronómico marcado para os próximos dias.",
-          "body": "A Praia Grande afina os preparativos para receber a quarta edição do Festival da Sardinha, com início agendado para o período entre 11 e 18 de setembro. A localidade piscatória conjuga a tradição culinária com a habitual brisa atlântica sob céus nublados. Os termómetros registam valores entre 18 e 26°C, enquanto a qualidade do ar se mantém satisfatória com PM2.5 em 6. O pôr do sol ocorre às 19:59, encerrando o dia com luz difusa sobre a costa. A taxa de câmbio oficial permanece em 0.86 EUR por cada 1 USD nos serviços locais.",
+          "lede": "O evento gastronómico decorre entre 11 e 13 de setembro, celebrando os sabores locais.",
+          "body": "A fachada atlântica do concelho aquece os preparativos para o regresso de uma das tradições culinárias mais aguardadas do final de verão. O 4.º Festival da Sardinha regressa à Praia Grande entre 11 e 13 de setembro, prometendo atrair comensais aos restaurantes da orla marítima. Em simultâneo, as infraestruturas locais continuam a melhorar com a piscina de Agualva-Cacém a reabrir com melhores condições para a prática desportiva dos residentes. Para encerrar o ciclo artístico da temporada, o Festival MUSCARIUM regressa na sexta-feira, trazendo propostas performativas vanguardistas aos espaços culturais sintrenses. Esta dinâmica combina a preservação das matrizes piscatórias com a renovação de equipamentos públicos e a aposta na arte contemporânea. Sintra prova assim que a sua identidade oscila harmoniosamente entre o peso da história imperial e a vitalidade das comunidades modernas.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         },
         {
           "n": "03",
-          "headline": "O festival MUSCARIUM regressa na sexta-feira para encerrar o seu ciclo.",
-          "lede": "As iniciativas culturais preenchem os espaços da região com propostas artísticas contemporâneas.",
-          "body": "O festival MUSCARIUM prepara o seu regresso para a próxima sexta-feira, marcando o encerramento formal do seu ciclo anual de atividades. A programação artística integra-se na dinâmica cultural da região, oferecendo alternativas para residentes e visitantes. O contexto meteorológico apresenta temperaturas entre 18 e 26°C e céu totalmente encoberto, com o sol a pôr-se às 19:59. A qualidade do ar regista um valor de PM2.5 de 6, garantindo estabilidade ambiental. No plano económico, o câmbio oficial opera com 1 USD equivalente a 0.86 EUR.",
+          "headline": "A estabilidade cambial em 0.86 EUR por dólar acompaña a transição cultural.",
+          "lede": "O ar bom da serra e a taxa de 1 USD a 0.86 EUR facilitam o turismo.",
+          "body": "A gestão financeira para quem explora a vila romântica beneficia da cotação internacional fixada em 1 USD para 0.86 EUR. Com a qualidade do ar excelente nos níveis de PM2.5 a 4 e temperaturas amenas entre 18°C e 24°C, os percursos pedestres estão plenamente favorecidos. O céu overcast filtra a luz de setembro, iluminando de forma difusa os jardins botânicos e as fachadas históricas antes do ocaso das 19:57. Os visitantes podem assim desfrutar com total tranquilidade dos preparativos para o festival gastronómico na costa e das exibições artísticas na vila. É um período de transição graciosa, onde a natureza serrana e a oferta cultural local se alinham para proporcionar uma experiência de viagem memorável e contida.",
           "source": "saudade desk",
-          "source_date": "2026-09-07"
+          "source_date": "2026-09-08"
         }
       ]
     }
