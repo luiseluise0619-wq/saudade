@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-07T06:00:00+09:00",
+  "updated": "2026-09-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El termómetro alcanza los 35°C bajo cielos cubiertos.",
+              "lede": "La atmósfera se mantiene templada con una mínima de 22°C y aire aceptable.",
+              "body": "La ciudad experimenta hoy temperaturas que oscilan entre los 22°C y los 35°C, con un ambiente marcadamente nublado que suaviza la luz del atardecer previsto para las 20:35. La calidad del aire se registra en niveles aceptables, con un promedio de PM2.5 situado en 13. Para quienes realizan transacciones económicas en la capital, el tipo de cambio oficial de referencia se sitúa en 1 USD equivalente a 0.86 EUR. Este clima invita a buscar refugio en los espacios interiores o bajo la sombra de los árboles urbanos. El atardecer llega con puntualidad, cerrando una jornada de transición estival.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "02",
+              "headline": "Las galerías de arte inauguran temporada con más de 60 exposiciones.",
+              "lede": "Los espacios expositivos de la capital abren con horarios extraordinarios esta semana.",
+              "body": "El circuito cultural madrileño arranca su actividad principal con una propuesta de gran envergadura que reúne más de 60 exposiciones en diferentes salas. Las galerías extienden sus horarios habituales para recibir a los visitantes en este inicio de temporada artística. Paralelamente, el Festival COMA’26 despliega su ambiciosa programación contemporánea por distintos escenarios de la ciudad. Los amantes de la música culta y las artes visuales encuentran una oferta diversa que activa los barrios céntricos. Es un momento propicio para recorrer los espacios independientes y las salas institucionales que renuevan sus colecciones temporales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "03",
+              "headline": "El parque público estatal de vivienda facilita alquileres realistas.",
+              "lede": "Se presenta el primer portal oficial orientado a salarios reales.",
+              "body": "La administración central ha dado a conocer el primer portal dedicado en exclusiva al parque público estatal de vivienda. La iniciativa busca incidir en el mercado inmobiliario mediante la promoción de alquileres adaptados a los ingresos medios de los ciudadanos. Esta herramienta digital centraliza la oferta disponible y facilita las gestiones administrativas para los demandantes de vivienda protegida. En paralelo, el Parque del Capricho exhibe sus mejores rincones en su galería de imágenes oficial, recordando el valor patrimonial de los jardines históricos de la ciudad. Ambas iniciativas configuran una semana donde lo público cobra especial relevancia.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La niebla matinal acompaña una jornada de 21°C a 32°C.",
+              "lede": "El litoral amanece con brumas y una calidad del aire calificada como pobre.",
+              "body": "Las temperaturas en la ciudad condal se mueven hoy entre una mínima de 21°C y una máxima de 32°C, bajo un manto de niebla que discurre cerca del mar. El sol se oculta oficialmente a las 20:13, dejando una tarde de tonos difuminados sobre el asfalto. La calidad del aire registra niveles pobres, con partículas PM2.5 en 13, aconsejando moderación en actividades físicas prolongadas al aire libre. En el plano financiero, la cotización de referencia se mantiene en 1 USD por 0.86 EUR. El ambiente atmosférico densifica los paseos matutinos por los barrios cercanos a la costa.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "02",
+              "headline": "Reabre el pasillo de enlace entre las líneas L1 y L3 en plaza Catalunya.",
+              "lede": "Finalizan dos meses de obras de mejora en la infraestructura subterránea.",
+              "body": "Los viajeros que transitan a diario por el metro recuperan la normalidad con la reapertura del pasillo que conecta las líneas L1 y L3 en la concurrida plaza Catalunya. Esta intervención concluye tras dos meses de trabajos intensivos destinados a optimizar los flujos de pasajeros en el subsuelo. Mientras tanto, en la superficie, continúan las labores de rehabilitación de las históricas fachadas de los antiguos Talleres de Renfe situados en el parque del Clot. Estas obras de preservación arquitectónica devuelven el esplendor industrial a uno de los pulmones verdes del distrito de Sant Martí, cuidando el patrimonio local.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "03",
+              "headline": "Piezas originales de la saga Star Wars se exponen en la ciudad.",
+              "lede": "Una muestra reúne objetos de gran valor coleccionista en un espacio cultural.",
+              "body": "La agenda cultural barcelonesa acoge una destacada exposición que reúne piezas originales de la saga cinematográfica 'Star Wars', valoradas en miles de euros. Los seguidores del universo de ciencia ficción pueden contemplar de cerca elementos de atrezo y maquetas utilizadas en las producciones originales. Por otro lado, el tejido empresarial de la ciudad experimenta movimientos con la apertura de nuevas oficinas corporativas en el centro. La llegada de firmas de asesoría y la incorporación de perfiles directivos refuerzan el dinamismo económico urbano. La confluencia entre ocio cultural y actividad profesional caracteriza el pulso cotidiano de estos días.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Una jornada fresca con cielo parcialmente nublado y 15°C de máxima.",
+              "lede": "El termómetro desciende hasta los 7°C en una mañana de aire limpio.",
+              "body": "El clima porteño se muestra propio del tramo final del invierno, registrando una temperatura mínima de 7°C y una máxima que apenas alcanza los 15°C. El cielo se presenta parcialmente nublado durante gran parte de la jornada, permitiendo ver los últimos rayos de sol antes del ocaso fijado a las 18:40. La calidad del aire se mantiene en niveles justos y favorables, con un registro de PM2.5 en 12. Este fresco panorama meteorológico invita a caminar abrigado por las avenidas arboladas y a disfrutar de los cafés tradicionales del centro histórico sin prisas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "02",
+              "headline": "El Parque de la Innovación inaugura nuevos espacios públicos.",
+              "lede": "La zona norte de la ciudad habilite áreas verdes para el uso ciudadano.",
+              "body": "El nuevo Parque de la Innovación continúa expandiendo su superficie transitable con la apertura formal de sus espacios públicos abiertos a la comunidad. Este desarrollo urbanístico integra zonas parquizadas con arquitectura contemporánea, ofreciendo un nuevo punto de encuentro para la ciudadanía. Además, el predio sirve de escaparate para proyectos arquitectónicos destacados, como el primer lugar del concurso destinado al centro de exposiciones y convenciones. La transformación de esta área consolida un corredor moderno que prioriza la movilidad peatonal y la integración paisajística en el tejido urbano de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            },
+            {
+              "n": "03",
+              "headline": "El festival Banff Mountain llega a la cartelera porteña.",
+              "lede": "Se anuncian las fechas y la programación del tradicional encuentro audiovisual.",
+              "body": "La agenda cultural de la ciudad recibe al Banff Mountain Festival 2026, que confirma sus fechas y el detalle de su programación cinematográfica dedicada a la aventura y la naturaleza. Los aficionados al cine documental de montaña ya pueden adquirir sus localidades para las proyecciones previstas en las salas habituales. En paralelo, iniciativas musicales como Boombastic reafirman su proyección internacional conectando la península con Buenos Aires y Miami. Estas propuestas consolidan el puente cultural transatlántico, atrayendo a un público diverso interesado en las expresiones artísticas globales y el cine documental de expedición.",
+              "source": "saudade desk",
+              "source_date": "2026-09-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-07T06:00:00+09:00",
       "cities": [
@@ -554,98 +646,6 @@
               "body": "Los parques y plazas de la ciudad mantienen sus horarios habituales de apertura, convirtiéndose en el destino preferido para los caminantes matutinos. Con registros térmicos que van de los 9 a los 20°C y cielos cubiertos que difuminan la luz del día, el ritmo urbano fluye sin sobresaltos. La puesta de sol a las 18:35 invita a resguardarse en cafés históricos y librerías de barrio antes del descenso térmico nocturno. La calidad del aire se consolida como buena, marcando un PM2.5 de 16 que favorece la práctica deportiva al aire libre en la Costanera y los bosques de Palermo. Se recomienda llevar ropa de abrigo moderada para disfrutar plenamente de la caminata vespertina sin verse afectado por la humedad ambiental.",
               "source": "saudade desk",
               "source_date": "2026-09-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Veranos de la Villa despide su 42ª edición tras congregar a más de 120.000 personas.",
-              "lede": "El festival madrileño cierra un ciclo cultural marcado por una alta participación ciudadana en múltiples espacios públicos.",
-              "body": "Tras semanas de programación multidisciplinar, la 42ª edición de Veranos de la Villa ha concluido con una asistencia que supera las 120.000 personas. Este ciclo cultural ha llenado plazas, parques y centros culturales de la ciudad con propuestas artísticas diversas y accesibles para todos los públicos. La buena acogida confirma el arraigo de este festival en el calendario estival de la capital española. Los espacios al aire libre vuelven ahora a su ritmo habitual mientras la ciudad se prepara para la transición hacia el otoño. Los residentes y visitantes habituales recuerdan que el tipo de cambio oficial se mantiene estable en 1 USD frente a 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "02",
-              "headline": "Casa Árabe busca soluciones ciudadanas para asegurar su continuidad en Madrid.",
-              "lede": "Un festival cultural reciente visibiliza la necesidad de proteger la emblemática sede madrileña frente a procesos de venta.",
-              "body": "La preocupación por el futuro institucional de Casa Árabe en Madrid ha movilizado a la comunidad cultural mediante iniciativas artísticas específicas. Recientemente, un festival ciudadano denunció los riesgos de poner en venta la cultura y desvincular a la institución de su sede histórica. Los espacios de debate y las muestras artísticas celebradas han recordado el valor patrimonial y diplomático de este edificio en el tejido urbano. Mientras tanto, la actividad cotidiana continúa en su entorno, permitiendo a los transeúntes acceder a las librerías y muestras temporales que promueven el entendimiento intercultural. El tipo de cambio actual se sitúa en 1 USD equivalentes a 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "03",
-              "headline": "El lago del tercer parque más grande de Madrid acoge el festival de la pequeña Tailandia.",
-              "lede": "Más de 1.000 farolillos flotantes iluminan las aguas en un encuentro cultural de gran formato.",
-              "body": "La llegada del festival conocido como la pequeña Tailandia ha transformado el paisaje nocturno del tercer parque más grande de la capital. Más de 1.000 farolillos flotantes han sido dispuestos sobre la superficie del lago principal, creando una estampa de luz y silencio muy concurrida por los paseantes. Esta iniciativa busca acercar las tradiciones del sudeste asiático a los madrileños a través de la gastronomía y las artes visuales. Las autoridades recuerdan a quienes visitan la ciudad durante este mes que el tipo de cambio se mantiene en 1 USD por cada 0.86 EUR, facilitando las transacciones comerciales en los comercios locales y mercados tradicionales de la zona.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Reabre la estación de Verdaguer de la L4 y su pasillo de enlace con la L5.",
-              "lede": "La finalización de las obras de mejora devuelve la normalidad a uno de los intercambiadores clave de la red.",
-              "body": "Los usuarios del metro de Barcelona celebran la reapertura de la estación de Verdaguer en la línea L4. Los trabajos han permitido recuperar por completo el pasillo de enlace directo con la línea L5, reduciendo notablemente los tiempos de transbordo diario. Esta mejora infraestructural optimiza la movilidad urbana en un punto estratégico del Eixample barcelonés. Los viajeros habituales valoran positivamente la recuperación de este acceso principal tras semanas de restricciones operativas. En el ámbito económico y práctico, la moneda oficial mantiene su paridad de referencia fijada en 1 USD frente a 0.86 EUR para las transacciones cotidianas de los visitantes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "02",
-              "headline": "La Orquesta del Festival de Bayreuth y Pablo Heras-Casado inauguran su gira española en Barcelona.",
-              "lede": "La prestigiosa formación sinfónica trae su repertorio clásico a los auditorios principales de la ciudad condal.",
-              "body": "El inicio de la gira española de la Orquesta del Festival de Bayreuth, bajo la batuta del director Pablo Heras-Casado, ha tenido un recibimiento triunfal en los escenarios barceloneses. Este acontecimiento musical consolida a la ciudad como un referente indiscutible para las grandes giras sinfónicas internacionales durante la temporada de conciertos. Los amantes de la música clásica han llenado el aforo para presenciar un programa riguroso y de alta calidad artística. Las librerías musicales y las salas de ensayo del centro cultural barcelonés experimentan un ambiente animado con la llegada de este evento. Los turistas internacionales pueden operar con normalidad gracias a la tasa de cambio de 1 USD por cada 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "03",
-              "headline": "Los espacios culturales de Barcelona integran nuevas propuestas escénicas para el mes de septiembre.",
-              "lede": "La agenda de otoño comienza a desplegarse en los teatros y centros cívicos de los diferentes barrios.",
-              "body": "La programación cultural de Barcelona diversifica su oferta con el inicio del mes de septiembre, atrayendo tanto a público local como a viajeros pausados. Las salas teatrales y los centros cívicos renuevan sus carteleras con producciones contemporáneas y ciclos de cine independiente. Esta dinámica estacional coincide con la normalización de los principales ejes de transporte público tras el periodo vacacional estival. Los visitantes que recorren las calles del Gòtic o Gràcia encontrarán abiertas todas las librerías independientes y los mercados de abastos tradicionales. Se recuerda que la equivalencia monetaria actual se sitúa en 1 USD por 0.86 EUR para las compras habituales en la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra 10–17°C y ligera llovizna bajo un cielo apacible de tarde.",
-              "lede": "La capital amanece con buena calidad del aire y una atmósfera húmeda propicia para los paseos urbanos.",
-              "body": "Con un registro térmico que oscila entre los 10 y los 17°C y apenas 0.4mm de precipitación en forma de llovizna dispersa, la tarde porteña invita a la caminata reposada. La calidad del aire se mantiene en niveles buenos, marcando un índice PM2.5 de 13, lo que favorece la actividad al aire libre sin inconvenientes. El ocaso está previsto para las 18:35, tiñendo de tonos grises y dorados las cúpulas del centro histórico y los árboles de los bulevares. Los transeúntes caminan abrigados con gabardinas ligeras por las avenidas arboladas, disfrutando de la quietud característica que precede a la noche. Los cafés tradicionales ofrecen refugio contra la humedad ambiental a los observadores silenciosos de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Llegás y el circuito FIBA 2026 dinamizan la cartelera teatral porteña.",
-              "lede": "Comienza una amplia muestra de artes escénicas con medio centenar de obras y entradas rebajadas.",
-              "body": "La actividad teatral de Buenos Aires se intensifica con el inicio del Festival Llegás, que ofrece más de 50 obras protagonizadas por más de 500 artistas con localidades a mitad de precio. Paralelamente, la ciudad ultiman los preparativos para el FIBA 2026, consolidando un gran festival internacional de artes escénicas que ocupará salas públicas y privadas. Los espectadores locales aprovechan esta semana para redescubrir el circuito independiente en los barrios de Abasto y San Telmo. Estos encuentros reafirman la vitalidad dramatúrgica de la capital argentina en un entorno climatológico fresco de 10–17°C. La caída del sol a las 18:35 marca el inicio de las funciones nocturnas en los teatros históricos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
-            },
-            {
-              "n": "03",
-              "headline": "El Malba clausura con éxito el Festival La Mujer y el Cine y celebra el puente cultural tanguero.",
-              "lede": "Salas llenas y galas de premios cierran un ciclo cinematográfico mientras el tango une Argentina y China.",
-              "body": "El Museo de Arte Latinoamericano de Buenos Aires ha albergado la gala de clausura del Festival La Mujer y el Cine, registrando salas llenas y una gran promesa de continuidad institucional. Este encuentro ha premiado el talento audiovisual en un ambiente de celebración íntima y respetuosa con los creadores. En paralelo, los lazos internacionales se fortalecen mediante iniciativas como el intercambio del tango como puente cultural entre Argentina y China. Con una temperatura exterior de 10–17°C y una ligera llovizna de 0.4mm que discurre tranquila, los asistentes transitan por los museos bajo una buena calidad del aire PM2.5 de 13. El atardecer a las 18:35 despide una jornada dedicada por completo al arte y al pensamiento.",
-              "source": "saudade desk",
-              "source_date": "2026-09-01"
             }
           ]
         }
