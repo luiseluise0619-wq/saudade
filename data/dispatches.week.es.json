@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-08T06:00:00+09:00",
+  "updated": "2026-09-09T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-09T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El XXI Suma Flamenca llena los teatros.",
+              "lede": "La música de guitarra regresa a los escenarios madrileños en septiembre.",
+              "body": "El XXI Suma Flamenca 2026 trae de vuelta la gran tradición del cante y la guitarra a diversos rincones de la capital. Los aficionados al género disfrutan de una programación extensa en teatros y auditorios seleccionados. Es recomendable consultar la disponibilidad de localidades con antelación para asegurar el acceso a las funciones más solicitadas. Las calles conservan el ritmo pausado del final del verano mientras la cultura ocupa el centro de la agenda diaria. La ciudad ofrece refugio en sus salas para quienes buscan la cercanía del arte en vivo.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "02",
+              "headline": "Avanzan las obras en el Parque Ventas.",
+              "lede": "El alcalde supervisa los trabajos de construcción del nuevo espacio verde.",
+              "body": "Almeida visita las obras de construcción de Parque Ventas para comprobar el avance de este importante proyecto urbano. La intervención busca dotar a la zona este de nuevas áreas de recreo y arbolado maduro. Los paseantes ya pueden intuir los futuros trazados peatonales que conectarán los barrios adyacentes. Este tipo de actuaciones redefinen el paisaje cotidiano de la ciudad, priorizando el bienestar de los residentes. La intervención sigue su curso planificado sin alterar de forma grave el tráfico rodado de los alrededores.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "03",
+              "headline": "La Diada aproxima cierres administrativos en Cataluña.",
+              "lede": "El calendario autonómico altera la actividad institucional esta semana.",
+              "body": "Con motivo de la Diada Nacional de Catalunya el 2026-09-11, las oficinas públicas, bancos y servicios postales de la región modificarán sus horarios habituales. Los viajeros que realicen gestiones o trámites interregionales desde la capital deben tener en cuenta estas variaciones operativas. Este festivo marca una pausa institucional muy respetada por los residentes. La movilidad ferroviaria y por carretera hacia el nordeste peninsular también suele registrar mayor afluencia durante estas jornadas de conmemoración. Es prudente anticipar cualquier movimiento logístico necesario.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Precaución por tormentas y granizo en la costa.",
+              "lede": "La temperatura oscila entre los 19 y los 27°C con 14.2mm de precipitación.",
+              "body": "El mercurio se mueve entre los 19 y los 27°C bajo cielos inestables que dejan 14.2mm de precipitación y episodios de tormenta con granizo. La puesta de sol está prevista para las 20:11, marcando el fin de una jornada pasada por agua. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 11. Los paseos marítimos y los parques urbanos exigen calzado adecuado y paraguas a mano. La ciudad experimenta ese característico silencio húmedo que transforma la luz sobre los adoquines mojados.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Serielizados reúne a creadores en Barcelona.",
+              "lede": "Carmen Machi y Ferran Adrià participan en la cita cultural de septiembre.",
+              "body": "El festival Serielizados de Barcelona cuenta este año con figuras tan destacadas como Carmen Machi, Ferran Adrià, Rodrigo Sorogoyen, Victoria Martín y Steven Moffat. Las salas de proyección acogen encuentros y estrenos muy esperados por los seguidores del formato audiovisual. Es una excelente oportunidad para profundizar en la autoría contemporánea y el análisis narrativo. Los asistentes pueden adquirir sus abonos en los puntos habilitados por toda la ciudad. Las charlas fomentan el intercambio de ideas en un ambiente relajado y accesible.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "03",
+              "headline": "Cierres por festivo y nuevo espacio gastronómico.",
+              "lede": "La Diada Nacional de Catalunya afecta a la administración el 2026-09-11.",
+              "body": "La festividad de la Diada Nacional de Catalunya el 2026-09-11 supondrá el cierre de oficinas gubernamentales, bancos y correos en todo el territorio catalán. Conviene planificar cualquier diligencia con antelación para evitar inconvenientes de última hora. Paralelamente, un gran festival gastronómico abre un espacio permanente de catas, talleres y experiencias en Barcelona. Esta nueva sede culinaria ofrece un punto de encuentro estable para los amantes de la buena mesa y el producto local. La iniciativa enriquece la oferta cultural y de ocio del otoño barcelonés.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Llovizna persistente y aire templado en la capital.",
+              "lede": "La temperatura se sitúa entre los 10 y los 18°C con 1.5mm de precipitación.",
+              "body": "El termómetro marca registros de 10 a 18°C acompañados por una suave llovizna que deja 1.5mm de precipitación en las calles porteñas. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 11. La puesta de sol ocurre a las 18:40, tiñendo el horizonte de gris y ocre. Los cafés de esquina invigan a resguardarse con una infusión caliente y un libro. Es una jornada ideal para el compás lento, observando el tráfico urbano desde el cobijo de los soportales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Boombastic amplía sus horizontes hacia Buenos Aires.",
+              "lede": "La cita musical consolida su expansión internacional tras su paso por España.",
+              "body": "El festival Boombastic se queda en España y crece con nuevos festivales en Miami y Buenos Aires, confirmando su proyección transatlántica. Esta expansión genera expectativas entre los seguidores de la música urbana y los eventos multitudinarios. La organización proyecta ediciones cuidadas que conectan las escenas artísticas de ambos lados del Atlántico. La sede local en Buenos Aires servirá como plataforma para nuevos talentos y grandes nombres del cartel. La noticia refuerza el intercambio cultural permanente entre la península y el Cono Sur.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            },
+            {
+              "n": "03",
+              "headline": "Comienza el gran festival internacional de teatro.",
+              "lede": "Las artes escénicas toman los escenarios porteños en este inicio de temporada.",
+              "body": "Empieza el gran festival internacional de teatro de Buenos Aires con una amplia cartelera que abarca salas independientes y grandes teatros oficiales. Los espectadores pueden disfrutar de propuestas nacionales e internacionales de gran calado reflexivo. La programación invita a recorrer diferentes barrios siguiendo el rastro de la dramaturgia contemporánea. Se recomienda consultar los horarios específicos de cada función para evitar colas en las taquillas. Esta cita reafirma la vitalidad cultural indiscutible de la capital argentina durante el mes de septiembre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-09"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-08T06:00:00+09:00",
       "cities": [
@@ -554,98 +646,6 @@
               "body": "La programación de septiembre en Buenos Aires ofrece una variada gama de actividades para sobrellevar los días de clima adverso mediante exposiciones de diseño, muestras de arte y ciclos escénicos en espacios techados. Los residentes y viajeros encuentran en los centros culturales y galerías un refugio idóneo para la contemplación artística sin renunciar al pulso creativo de la metrópoli. Meteorológicamente, el día registra un episodio de tormentas con 8.4 mm de precipitación y temperaturas que se desplazan escasamente entre los 12°C y los 18°C. La luz del día se desvanece a las 18:36 bajo nubes densas y tormentosas que caracterizan el final del invierno austral. No obstante, la calidad del aire se conserva en parámetros estables de orden fair, con un indicador de PM2.5 en 10. Conviene equiparse con calzado impermeable y paraguas robustos para transitar los cruces urbanos y aprovechar la nutrida cartelera de espectáculos que ofrece la ciudad durante estos días.",
               "source": "saudade desk",
               "source_date": "2026-09-03"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-02T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Línea 6 de Metro reabre entre Ciudad Universitaria y Argüelles.",
-              "lede": "Los trayectos recuperan la normalidad tras las obras de mejora estival.",
-              "body": "La Línea 6 de Metro reabre por completo entre Ciudad Universitaria y Argüelles, facilitando de nuevo el tránsito directo por el oeste madrileño. Con una temperatura exterior que oscila entre 18 y 35°C bajo cielos claros y puesta de sol a las 20:45, el transporte subterráneo ofrece un alivio térmico constante. La calidad del aire se mantiene en niveles favorables con un índice PM2.5 de 5, ideal para caminar al aire libre tras la caída del sol. Las oficinas bancarias y de cambio operan con normalidad aplicando el tipo de cambio oficial de 1 USD a 0.86 EUR. Se recomienda planificar los desplazamientos hacia los campus universitarios aprovechando esta plena operatividad de la red.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "Matadero Madrid arranca la temporada con el festival L.E.V.",
-              "lede": "El centro cultural inaugura el curso con arte digital e instalaciones inmersivas.",
-              "body": "Matadero Madrid arrancará la temporada con el festival L.E.V. Matadero, la exposición de Carlos Aires y el ciclo del coreógrafo Damien Jalet. La octava edición del festival L.E.V. Matadero apuesta por el arte digital con innovadoras propuestas y experiencias inmersivas que ocuparán las naves industriales. Las tardes despejadas alcanzan los 35°C antes de refrescar hasta los 18°C pasada la medianoche. Con una calidad del aire de PM2.5 en 5 y una tasa de cambio de 1 USD a 0.86 EUR, los visitantes extranjeros encuentran un contexto económico y ambiental muy estable para recorrer las muestras. Conviene consultar los horarios específicos de las funciones de Damien Jalet para asegurar el acceso a las salas principales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "El calendario marca festividades autonómicas próximas en el horizonte.",
-              "lede": "Diversas regiones se preparan para sus celebraciones patronales durante septiembre.",
-              "body": "El calendario oficial señala la proximidad de varias festividades autonómicas que afectarán al ritmo administrativo de España en los próximos días. Entre ellas figuran el Día de Asturias y el Día de Extremadura el 2026-09-08, seguidos por la Diada Nacional de Catalunya el 2026-09-11 y la Festividad de la Bien Aparecida el 2026-09-15. En Madrid, las oficinas gubernamentales y los bancos operarán con normalidad esta semana, a pesar de los cierres previstos en los territorios celebrantes. El clima madrileño se mantiene estable entre 18 y 35°C con aire limpio de PM2.5 5 y una paridad cambiaria de 1 USD a 0.86 EUR. Es aconsejable anticipar cualquier trámite interregional que dependa de estas comunidades autónomas antes de que comiencen los festejos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Orquesta del Festival de Bayreuth inicia su gira española.",
-              "lede": "Pablo Heras-Casado dirige el programa conmemorativo en el arranque musical de septiembre.",
-              "body": "BARCELONA presencia el triunfal inicio de la gira española de la Orquesta del Festival de Bayreuth y Pablo Heras-Casado en una cita sinfónica muy esperada. El maestro Heras-Casado es el gran protagonista de esta gira que celebra el 150 aniversario del Festival de Bayreuth con conciertos memorables. Bajo los cielos totalmente overcast de esta semana, las temperaturas oscilan suavemente entre 22 y 30°C, con puesta de sol prevista a las 20:23. La calidad del aire se sitúa en un nivel fair con un registro de PM2.5 de 7, propicio para los paseos urbanos vespertinos. Los viajeros internacionales pueden realizar transacciones financieras con un tipo de cambio fijado en 1 USD equivalente a 0.86 EUR en todas las entidades locales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "La red de restauración comercial renueva sus espacios principales.",
-              "lede": "La Tagliatella reabre dos de sus locales más emblemáticos en la ciudad condal.",
-              "body": "La Tagliatella reabre dos restaurantes en Barcelona e impulsa la renovación de su red, actualizando los interiores de estos conocidos puntos de encuentro gastronómico. La reapertura coincide con una agenda cultural intensa y un clima típicamente mediterráneo de 22 a 30°C bajo cielos cubiertos. La humedad ambiental propia del régimen overcast suaviza el ambiente urbano durante las horas centrales del día, prolongando el atardecer hasta las 20:23. Con una calidad del aire calificada como fair y un valor de PM2.5 en 7, las terrazas del Eixample operan con total normalidad. Los pagos con tarjeta extranjera aplican el cambio vigente de 1 USD por 0.86 EUR, facilitando el consumo cotidiano sin comisiones ocultas en los establecimientos adheridos a la red.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "El calendario autonómico altera los servicios administrativos periféricos.",
-              "lede": "Las oficinas públicas ajustan sus horarios ante las festividades de septiembre.",
-              "body": "El avance del calendario introduce fechas clave como el Día de Asturias y el Día de Extremadura el 2026-09-08, la Diada Nacional de Catalunya el 2026-09-11 y la Festividad de la Bien Aparecida el 2026-09-15. Durante la Diada, la actividad institucional barcelonesa sufrirá pausas notables en organismos oficiales y entidades bancarias. Las temperaturas se mantendrán estables entre 22 y 30°C bajo cielos cubiertos, mientras que la calidad del aire registrará un índice PM2.5 de 7. El tipo de cambio oficial se mantiene estable en 1 USD frente a 0.86 EUR para todas las operaciones monetarias. Se aconseja a los viajeros consultar los horarios comerciales en Cataluña antes de planificar visitas a museos o dependencias públicas durante la semana festiva.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Centro de Exposiciones y Convenciones divulga su nuevo proyecto.",
-              "lede": "La Galería de Primer Lugar Concurso Parque redefine el paisaje arquitectónico local.",
-              "body": "Se conocen los detalles de la Galería de Primer Lugar Concurso Parque, Centro de Exposiciones y Convenciones en Buenos Aires, una obra que reordena el espacio público verde. El diseño ganador prioriza la integración paisajística con el entorno urbano en una temporada de transición climática. Con una temperatura matutina y vespertina que oscila entre 9 y 20°C bajo cielos cubiertos, el abrigo ligero resulta indispensable para caminar. La puesta de sol se adelanta hasta las 18:35, marcando el inicio de las actividades culturales nocturnas en los barrios tradicionales. La calidad del aire muestra excelentes registros con un nivel PM2.5 de 16, garantizando una atmósfera limpia para el descanso y el paseo prolongado por los parques urbanos de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "El circuito musical independiente acoge propuestas de raíces profundas.",
-              "lede": "El festival Muddy Roots y el ciclo de cine ocupan los escenarios porteños.",
-              "body": "El Muddy Roots Buenos Aires 2026 en CAFF reúne a los seguidores de la música de raíz en un encuentro íntimo de formato acústico y eléctrico. Paralelamente, la agenda cultural se enriquece con el Festival de Cine y Música y el Festival de Cine de la Provincia de Buenos Aires (FICPBA) 2026. Estas propuestas ocupan salas alternativas con proyecciones y conciertos programados hasta entrada la noche. El termómetro marca valores frescos de 9 a 20°C bajo un cielo persistentemente overcast que atenúa la luz diurna hasta el atardecer de las 18:35. La calidad del aire se mantiene en buenos parámetros con un índice PM2.5 de 16, ideal para transitar a pie entre los diferentes espacios culturales de la ciudad sin inconvenientes ambientales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "Los espacios verdes urbanos operan con normalidad bajo el cielo gris.",
-              "lede": "Los parques porteños ofrecen refugio tranquilo durante las jornadas de temperaturas templadas.",
-              "body": "Los parques y plazas de la ciudad mantienen sus horarios habituales de apertura, convirtiéndose en el destino preferido para los caminantes matutinos. Con registros térmicos que van de los 9 a los 20°C y cielos cubiertos que difuminan la luz del día, el ritmo urbano fluye sin sobresaltos. La puesta de sol a las 18:35 invita a resguardarse en cafés históricos y librerías de barrio antes del descenso térmico nocturno. La calidad del aire se consolida como buena, marcando un PM2.5 de 16 que favorece la práctica deportiva al aire libre en la Costanera y los bosques de Palermo. Se recomienda llevar ropa de abrigo moderada para disfrutar plenamente de la caminata vespertina sin verse afectado por la humedad ambiental.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
             }
           ]
         }
