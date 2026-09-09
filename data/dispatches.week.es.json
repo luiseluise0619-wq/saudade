@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-09T06:00:00+09:00",
+  "updated": "2026-09-10T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Sala Berlanga expone el cine más reciente del festival de San Sebastián.",
+              "lede": "Las producciones firmadas bajo la etiqueta Made in Spain ocupan las pantallas madrileñas durante esta semana de septiembre.",
+              "body": "Los amantes del séptimo arte tienen una cita ineludible en el corazón del barrio de Argüelles. La Sala Berlanga acoge una selecta muestra del cine nacional presentado en la última edición del certamen donostiarra. Es una oportunidad excelente para descubrir títulos independientes antes de su llegada comercial a salas comerciales. La programación incluye encuentros con directores y coloquios tras las proyecciones vespertinas. Conviene consultar la web oficial para asegurar una butaca en las sesiones de tarde. El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR para quienes visiten la capital desde fuera de la zona euro.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Es Latina anuncia los detalles musicales para su cierre.",
+              "lede": "Shakira presenta el cartel oficial que reunirá a talentos diversos en las actuaciones de clausura.",
+              "body": "La música en directo continúa marcando el compás cultural de la temporada otoñal en Madrid. El esperado ciclo Es Latina integrará propuestas tan variadas como las de Amaia o Nathy Peluso dentro de sus conciertos principales. Las citas musicales prometen agotar las localidades disponibles en los recintos previstos para los espectáculos. El ambiente en las calles refleja la expectación previa a este gran evento internacional. Los viajeros que planeen sus compras o reservas de entradas deben tener presente que la tasa de conversión oficial marca 1 USD equivalente a 0.86 EUR. La ciudad equilibra así sus grandes citas escénicas con la tranquilidad cotidiana de sus paseos arbolados.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "03",
+              "headline": "La exposición Madrid entre épocas repasa la historia urbana de la capital.",
+              "lede": "Los espacios expositivos municipales abren sus puertas a un recorrido por la transformación arquitectónica de la ciudad.",
+              "body": "La agenda cultural madrileña ofrece paradas pausadas para comprender la evolución de sus plazas y edificios emblemáticos. La muestra temporal Madrid entre épocas examina los cambios urbanísticos que definen el paisaje actual de la Villa. Es un plan idóneo para las mañanas templadas de septiembre, lejos del bullicio de las grandes arterias comerciales. Además, conviene recordar que la Diada Nacional de Catalunya se celebra el 11 de septiembre, afectando a ciertos trámites institucionales nacionales. Asimismo, la festividad de la Bien Aparecida tendrá lugar el 15 de septiembre. Para los visitantes internacionales, el tipo de cambio se mantiene estable en 1 USD por 0.86 EUR durante toda la jornada.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La plaza-parque de Glòries destaca entre los finalistas europeos de espacio público.",
+              "lede": "El diseño verde del nuevo pulmón urbano barcelonés compite por el prestigioso reconocimiento continental.",
+              "body": "El termómetro marca hoy entre 18 y 25°C bajo un cielo completamente overcast que invita a caminar sin prisas. La calidad del aire es moderada, registrando un valor de PM2.5 de 8 en las estaciones de medición ambiental. La reconvertida plaza de las Glòries consolida su papel como referente paisajístico tras ser seleccionada como finalista del Premio Europeo del Espacio Público. Los vecinos disfrutan ya de los senderos ajardinados y las áreas de descanso que priorizan al peatón sobre el tráfico rodado. La puesta de sol se producirá puntualmente a las 20:09, cerrando una jornada apacible. La moneda oficial opera con un tipo de cambio de 1 USD por 0.86 EUR para los pagos locales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "02",
+              "headline": "Ölend prepara la apertura de su primera tienda física en Barcelona.",
+              "lede": "La firma de diseño de mochilas locales inaugura un nuevo espacio comercial en el centro histórico.",
+              "body": "El comercio de proximidad sigue sumando propuestas creativas en las calles del Eixample y el Barrio Gótico. La marca barcelonesa Ölend ultima los detalles para abrir su primer establecimiento físico, acercando sus colecciones artesanales al público local y viajero. Con una temperatura exterior oscilante entre 18 y 25°C y el cielo de tono overcast, la caminata urbana resulta sumamente agradable. Los niveles de calidad del aire se mantienen estables con un índice PM2.5 de 8. La caída de la tarde llegará a las 20:09, momento ideal para contemplar la iluminación de los escaparates. Las transacciones monetarias se realizan con la equivalencia de 1 USD a 0.86 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "03",
+              "headline": "La Diada Nacional de Catalunya modifica los horarios comerciales y administrativos.",
+              "lede": "La festividad del 11 de septiembre altera la rutina institucional de la capital catalana.",
+              "body": "La ciudad se prepara para conmemorar la Diada Nacional de Catalunya este 11 de septiembre, seguida próximamente por la festividad de la Bien Aparecida el 15 de septiembre. Los organismos oficiales, oficinas bancarias y centros administrativos permanecerán cerrados durante la jornada festiva. Las temperaturas previstas se mueven entre los 18 y los 25°C con nubes persistentes y ambiente fresco, mientras que la calidad del aire marca un moderado PM2.5 de 8. La puesta de sol ocurrirá a las 20:09, marcando el fin de las actividades al aire libre. Los visitantes deben tener en cuenta que el cambio de divisa oficial se sitúa en 1 USD por 0.86 EUR para sus gestiones financieras.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El FIBA transforma Buenos Aires en el gran epicentro de las artes escénicas.",
+              "lede": "El festival internacional de teatro llena las salas y espacios culturales durante 12 jornadas consecutivas.",
+              "body": "El invierno porteño se despide con una intensa agenda cultural que moviliza a creadores de todo el mundo. La ciudad registra hoy temperaturas de 11 a 18°C bajo un cielo overcast, mientras la calidad del aire muestra un índice PM2.5 de 18. El Festival Internacional de Buenos Aires convierte los escenarios locales en puntos de encuentro imprescindibles para los amantes del teatro contemporáneo y la danza. Las funciones se distribuyen por múltiples barrios, invitando a recorrer la arquitectura urbana entre función y función. El ocaso llegará a las 18:41, dando paso a las representaciones nocturnas en los auditorios adheridos al circuito oficial del evento.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Boombastic expande su horizonte musical hacia Buenos Aires.",
+              "lede": "La reconocida marca de festivales anuncia nuevas ramificaciones internacionales que conectan España y Argentina.",
+              "body": "La cooperación cultural entre ambas orillas del Atlántico sigue cosechando proyectos de gran envergadura artística. El festival Boombastic consolida su crecimiento global sumando ediciones en Miami y Buenos Aires, fortaleciendo el intercambio de talento musical. Esta noticia coincide con el arranque del FIBA, la gran cita teatral que domina la vida cultural porteña durante estos 12 días. Las condiciones meteorológicas actuales presentan una temperatura que oscila entre 11 y 18°C con una atmósfera overcast y un registro PM2.5 de 18 en las mediciones de calidad del aire. La puesta de sol está prevista para las 18:41, ofreciendo una tarde propicia para pasear por los bulevares de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            },
+            {
+              "n": "03",
+              "headline": "El Centro de Exposiciones y Convenciones expone los proyectos para el nuevo parque.",
+              "lede": "Una galería abierta al público muestra las propuestas arquitectónicas seleccionadas para el concurso del predio.",
+              "body": "El urbanismo y el diseño paisajístico ocupan un lugar destacado en la agenda de exposiciones de la ciudad. El Centro de Exposiciones y Convenciones alberga la muestra con los mejores diseños presentados al concurso de arquitectura para el nuevo parque urbano. Los visitantes pueden recorrer maquetas y planos detallados que redefinen el uso del espacio verde en la metrópoli. Con el termómetro marcando de 11 a 18°C y un cielo overcast, la visita cultural es perfecta para la tarde. La calidad del aire se sitúa en un nivel moderado con PM2.5 de 18. El sol descenderá definitivamente en el horizonte porteño a las 18:41, cerrando un ciclo diario de observación tranquila.",
+              "source": "saudade desk",
+              "source_date": "2026-09-10"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-09T06:00:00+09:00",
       "cities": [
@@ -554,98 +646,6 @@
               "source": "saudade desk",
               "source_date": "2026-09-04",
               "city": "Buenos Aires"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-03T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Retiro acoge la exposición de retratos de Tim Flach.",
-              "lede": "Treinta y cuatro retratos de animales amenazados conviven con los árboles históricos del parque madrileño durante este mes.",
-              "body": "El parque de El Retiro acoge estos días la exposición titulada ‘Emociones en peligro’, una muestra que reúne treinta y cuatro retratos de animales amenazados tomados por el fotógrafo Tim Flach. Las imágenes ofrecen una mirada cercana a la fauna más vulnerable del planeta en un entorno verde que invita al paseo matutino. Con temperaturas que oscilan entre los 20 y los 37°C y cielos parcialmente nublados con atardeceres a las 20:44, las mañanas siguen siendo cálidas pero amables para caminar bajo la sombra de los castaños. La calidad del aire se mantiene en niveles buenos, registrando un PM2.5 de 11, lo que facilita las actividades al aire libre sin inconvenientes. Para quienes gestionan pagos o divisas desde el extranjero, el tipo de cambio oficial se sitúa en 1 USD frente a 0.86 EUR. Esta propuesta artística en plena naturaleza combina la contemplación botánica con la conciencia ambiental en un espacio público esencial.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "02",
-              "headline": "Iberdrola patrocina la muestra sobre la evolución tecnológica de la electricidad.",
-              "lede": "Un amplio recorrido por el futuro energético se exhibe en la capital con entrada abierta al público.",
-              "body": "La ciudad de Madrid alberga actualmente la mayor exposición dedicada a la evolución tecnológica y el futuro de la electricidad, una iniciativa impulsada por Iberdrola que examina los retos de la transición energética. Este espacio expositivo detalla los avances en redes inteligentes y almacenamiento limpio mediante paneles didácticos y maquetas interactivas orientadas a todos los públicos. El ambiente exterior presenta temperaturas de hasta 37°C por la tarde, por lo que este tipo de recintos culturales interiores ofrecen un respiro necesario durante las horas centrales del día. La atmósfera urbana disfruta de una buena calidad de aire, con un índice PM2.5 de 11 y cielos parcialmente nublados que suavizan ligeramente la radiación solar antes de la caída del sol a las 20:44. Los viajeros internacionales pueden planificar sus visitas financieras o de ocio utilizando la referencia de cambio de 1 USD a 0.86 EUR. Es una parada recomendada para comprender la transformación técnica que experimenta el sector eléctrico peninsular.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "03",
-              "headline": "Comienzan las obras de recuperación en el Parque de Bomberos de San Martín.",
-              "lede": "La Comunidad de Madrid inicia los trabajos de restauración en el recinto afectado por el incendio de Sierra Oeste.",
-              "body": "La Comunidad de Madrid ha puesto en marcha de manera oficial las obras destinadas a recuperar el Parque de Bomberos de San Martín de Valdeiglesias, que sufrió importantes daños a causa del incendio forestal registrado en la zona de Sierra Oeste. Estas labores de reconstrucción buscan dotar nuevamente a la comarca de unas instalaciones operativas y modernas para la seguridad civil y la prevención medioambiental. Mientras tanto, en la capital se vive un panorama meteorológico estable pero caluroso, con mínimas de 20°C y máximas que alcanzan los 37°C bajo cielos parcialmente nublados. La calidad del aire se mantiene en niveles buenos con un PM2.5 de 11, mientras que el sol se oculta puntualmente a las 20:44. En el ámbito práctico para los visitantes extranjeros, el tipo de cambio monetario se sitúa en 1 USD por cada 0.86 EUR. Conviene recordar en el calendario próximo que el 2026-09-08 se celebra el Día de Asturias y el Día de Extremadura, festividades que alterarán ligeramente los servicios administrativos y bancarios en esas regiones.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Reabre la estación Verdaguer de la L4 del metro y su enlace con la L5.",
-              "lede": "Los viajeros recuperan una de las conexiones clave de la red subterránea tras concluir las obras de mejora.",
-              "body": "La estación Verdaguer ha reabierto sus puertas en la línea L4 del metro de Barcelona, restableciendo por completo el transbordo fluido hacia la línea L5 para beneficio diario de miles de usuarios. Esta renovación mejora la accesibilidad y la fluidez del tránsito subterráneo en pleno Eixample, optimizando los trayectos cotidianos por la ciudad condal. En la superficie, la jornada transcurre con cielos principalmente despejados y temperaturas templadas que van desde los 21°C hasta los 31°C, marcando el ocaso a las 20:21. La calidad del aire se registra en niveles calificados como fair, con un valor de PM2.5 situado en 17. Para quienes manejan transacciones económicas durante su viaje, la equivalencia monetaria oficial se fija en 1 USD equivalente a 0.86 EUR. Asimismo, conviene tener presente en las agendas de viaje que el 2026-09-08 se celebran el Día de Asturias y el Día de Extremadura, fechas a tener en cuenta para trámites burocráticos y bancarios de carácter estatal.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "02",
-              "headline": "Heras-Casado encabeza la gira del aniversario del Festival de Bayreuth.",
-              "lede": "El prestigioso director musical protagoniza las celebraciones con un repertorio sinfónico de gran altura artística.",
-              "body": "El director de orquesta Pablo Heras-Casado se erige en protagonista principal de la gira conmemorativa del 150 aniversario del célebre Festival de Bayreuth, llevando su batuta a escenarios internacionales de primer orden. Esta participación destaca la presencia de talentos musicales peninsulares en las grandes citas sinfónicas del circuito europeo de música clásica. Las condiciones climáticas en Barcelona acompañan con un ambiente mayormente despejado, temperaturas comprendidas entre los 21°C y los 31°C, y un atardecer que se produce a las 20:21. Los registros de calidad del aire se sitúan en niveles justos o fair, con una concentración de PM2.5 en 17, permitiendo paseos apacibles junto al mar o por los jardines históricos de la ciudad. En el plano financiero, la moneda extranjera opera con un tipo de cambio estable de 1 USD por 0.86 EUR. Cabe señalar además que el calendario festivo incluye el 2026-09-11 la Diada Nacional de Catalunya, jornada que comportará cierres generalizados en oficinas públicas y comercios locales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "03",
-              "headline": "El Korean Film Festival Barcelona arranca con una destacada acogida.",
-              "lede": "La cartelera barcelonesa inaugura su muestra cinematográfica con la película más vista del año en Corea del Sur.",
-              "body": "La programación cultural de la ciudad suma un nuevo atractivo con el inicio del Korean Film Festival Barcelona, cuya proyección inaugural está protagonizada por el largometraje más taquillero del año en Corea del Sur. Las salas adscritas al ciclo ofrecen una ventana singular hacia las narrativas contemporáneas del cine asiático en versión original subtitulada. Afuera, el clima se muestra agradable y mayormente despejado, con termómetros que se mueven entre los 21°C y los 31°C, culminando la tarde con la puesta de sol a las 20:21. La calidad del aire permanece en parámetros de orden fair, con un nivel de PM2.5 de 17 que asegura una atmósfera ligera para caminar por los barrios tradicionales. El cambio de divisa se mantiene invariable en 1 USD por 0.86 EUR para los pagos con tarjeta o efectivo. Es oportuno recordar de cara al calendario que el 2026-09-15 se celebra la festividad de la Bien Aparecida, completando un ciclo de festejos autonómicos que afectan el funcionamiento habitual de administraciones.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Comienza el Festival Llegás con medio centenar de obras teatrales.",
-              "lede": "La cartelera porteña ofrece entradas a mitad de precio con la participación de más de quinientos artistas en escena.",
-              "body": "La escena cultural de Buenos Aires se dinamiza con el inicio del Festival Llegás, un encuentro escénico que reúne más de cincuenta obras y a más de quinientos artistas con localidades a mitad de precio. Esta iniciativa acerca el circuito de salas independientes y comerciales a un público más amplio durante las primeras semanas de septiembre. En el plano meteorológico, la jornada presenta condiciones inestables marcadas por un registro de 8.4 mm de precipitación, tormentas eléctricas y temperaturas frescas que oscilan entre los 12°C y los 18°C. El atardecer porteño se adelanta hasta las 18:36 bajo un cielo cubierto por los fenómenos de tormenta. La calidad del aire se mantiene en niveles considerados como fair, con un índice de PM2.5 situado en 10. Estas condiciones invigen a refugiarse en los espacios teatrales cerrados de la avenida Corrientes o de los barrios tradicionales para disfrutar de la dramaturgia local en un ambiente resguardado.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "02",
-              "headline": "El Centro de Exposiciones expone el proyecto ganador para el Parque.",
-              "lede": "La Galería del Concurso Parque muestra las maquetas y planos de la nueva infraestructura urbana en Buenos Aires.",
-              "body": "El Centro de Exposiciones y Convenciones de Buenos Aires exhibe la Galería de Primer Lugar correspondiente al Concurso Parque, una muestra dedicada a los diseños urbanísticos y paisajísticos seleccionados para transformar el área verde. La exposición permite observar en detalle las propuestas arquitectónicas que definirán el futuro de este sector público destinado al esparcimiento ciudadano y la integración ambiental. Las condiciones del tiempo en la ciudad son húmedas y desfavorables para pasear al aire libre, con 8.4 mm de lluvia acumulada, tormentas eléctricas en desarrollo y un registro térmico que va de los 12°C a los 18°C. La puesta de sol ocurre temprano, a las 18:36, marcando una tarde de tonos grises y precipitaciones intermitentes. A pesar de la tormenta, la calidad del aire se reporta como fair, con un nivel moderado de PM2.5 de 10. Recorrir este recinto ferial subterráneo constituye una alternativa excelente para mantenerse activo culturalmente mientras las tormentas cruzan la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
-            },
-            {
-              "n": "03",
-              "headline": "Septiembre activa la agenda cultural con propuestas teatrales y de diseño.",
-              "lede": "Los espacios cerrados de la ciudad concentran las actividades ante un temporal de lluvia y tormentas eléctricas.",
-              "body": "La programación de septiembre en Buenos Aires ofrece una variada gama de actividades para sobrellevar los días de clima adverso mediante exposiciones de diseño, muestras de arte y ciclos escénicos en espacios techados. Los residentes y viajeros encuentran en los centros culturales y galerías un refugio idóneo para la contemplación artística sin renunciar al pulso creativo de la metrópoli. Meteorológicamente, el día registra un episodio de tormentas con 8.4 mm de precipitación y temperaturas que se desplazan escasamente entre los 12°C y los 18°C. La luz del día se desvanece a las 18:36 bajo nubes densas y tormentosas que caracterizan el final del invierno austral. No obstante, la calidad del aire se conserva en parámetros estables de orden fair, con un indicador de PM2.5 en 10. Conviene equiparse con calzado impermeable y paraguas robustos para transitar los cruces urbanos y aprovechar la nutrida cartelera de espectáculos que ofrece la ciudad durante estos días.",
-              "source": "saudade desk",
-              "source_date": "2026-09-03"
             }
           ]
         }
