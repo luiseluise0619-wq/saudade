@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-10T06:00:00+09:00",
+  "updated": "2026-09-11T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-11T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A Madeira instala-se no centro de Lisboa com onze dias de entrada livre.",
+              "lede": "Os sabores e as tradições do arquipélago ocupam a praça.",
+              "body": "A cultura madeirense ganha destaque no centro de Lisboa durante um evento com entrada livre. Os visitantes podem provar lapas, bolo do caco e poncha num ambiente festivo. Este cantinho da Madeira em Lisboa celebra a gastronomia e as tradições locais ao longo de onze dias. É uma oportunidade rara para experienciar os sabores insulares sem sair da capital. O câmbio atual fixa-se em 1 USD para 0.86 EUR para quem chega de fora. O programa inclui mostras etnográficas e encontros com produtores tradicionais. Os residentes aproveitam o final de tarde para visitar os expositores instalados na praça.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "02",
+              "headline": "A fotografia documental encontra abrigo na galeria lisboeta.",
+              "lede": "Um maquinista da TAP expõe retratos de geografias distantes.",
+              "body": "Trabalha na TAP e fotografa países onde poucos chegam. Agora, vai ter uma exposição em Lisboa que revela esses mundos distantes. As imagens registam rostos, silêncios e paisagens de territórios raramente visitados por turistas convencionais. Cada fotografia resulta de longas horas de espera e de um olhar atento sobre a alteridade. A taxa de câmbio de 1 USD para 0.86 EUR facilita a aquisição de catálogos para visitantes internacionais. A mostra convida a uma pausa contemplativa no meio da agitação urbana. Os observadores mais pacientes encontram nestes retratos uma cartografia humana singular.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "03",
+              "headline": "As esplanadas aproveitam o ritmo calmo da baixa lisboeta.",
+              "lede": "A cidade respira entre o Tejo e as colinas.",
+              "body": "O quotidiano da cidade decorre com a serenidade habitual de setembro. Com a taxa de câmbio nos 1 USD para 0.86 EUR, os viajantes planeiam o orçamento para os próximos dias. As conversas nas esplanadas misturam-se com o som longínquo dos elétricos. Os mercados locais exibem os primeiros frutos de outono nas bancas tradicionais. Quem caminha sem destino encontra pequenos refúgios de sombra sob as árvores antigas. A luz dourada da tarde pousa suavemente sobre as fachadas revestidas a azulejo. É um tempo de transição que convida à leitura e à observação silenciosa.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro marca 26°C sob céu limpo na Ribeira.",
+              "lede": "A qualidade do ar mantém-se favorável com um índice PM2.5 de 8.",
+              "body": "O Porto regista temperaturas entre 15°C e 26°C num dia predominantemente limpo. O sol despede-se às 19:50, tingindo o Douro com tons de cobre. A qualidade do ar apresenta valores justos, com um registo de PM2.5 de 8. Com a taxa de câmbio fixada em 1 USD para 0.86 EUR, os visitantes passeiam calmamente pela margem do rio. As esplanadas enchem-se de residentes que aproveitam a tarde amena. Os barcos rabelos balançam levemente com o movimento da água. É o cenário ideal para uma caminhada longa junto às pontes históricas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "02",
+              "headline": "A diversidade cultural ocupa as ruas com três dias de festival.",
+              "lede": "O Porto Pride celebra a comunidade com música e partilha.",
+              "body": "O Porto Pride celebra a diversidade com três dias de festival na cidade. O evento reúne concertos, debates e iniciativas artísticas em vários pontos urbanos. Em paralelo, a celebração da independência do Brasil marca o ritmo com sabores e sons regionais. O Instituto do Vinho do Porto anuncia também um novo festival de música para as próximas semanas. A taxa de câmbio de 1 USD para 0.86 EUR facilita o acesso aos eventos pagos. Os espaços públicos transformam-se em locais de encontro para moradores e visitantes. A programação cultural convida a descobrir recantos menos óbvios da Invicta.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "03",
+              "headline": "A cidade prepara-se para a chegada do Festival Colombo.",
+              "lede": "As memórias insulares viajam até ao arquipélago vizinho.",
+              "body": "Enquanto o Porto vive o presente com 26°C no termómetro e o pôr do sol às 19:50, o pensamento viaja. O Festival Colombo realiza-se de 17 a 20 de setembro no Porto Santo. Esta iniciativa antecipa semanas de intensa programação histórica e marítima nas ilhas. Os residentes locais planeiam deslocações enquanto desfrutam da aeração matinal. A qualidade do ar permanece estável com PM2.5 de 8 em toda a região. As ruas do centro histórico mantêm a sua cadência lenta e habitual. Cada detalhe urbano convida a uma pausa contemplativa antes da mudança de estação.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A Serra de Sintra acolhe o termómetro nos 29°C.",
+              "lede": "O céu parcialmente nublado abriga o anoitecer pelas 19:52.",
+              "body": "A vila serrana regista temperaturas entre 17°C e 29°C sob um céu parcialmente nublado. A qualidade do ar apresenta-se muito limpa, com um valor de PM2.5 de 5. O sol oculta-se por trás da serra às 19:52, baixando a temperatura de forma gradual. A taxa de câmbio de 1 USD para 0.86 EUR apoia os viajantes estrangeiros nas pousadas locais. Os trilhos arborizados oferecem refúgio contra o calor da tarde. A humidade característica da vegetação densa mantém o verde intenso dos fetos. Os visitantes caminham com prudência pelos caminhos empedrados e antigos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "02",
+              "headline": "A música clássica ecoa nos jardins românticos de Monserrate.",
+              "lede": "O ciclo Jazz em Monserrate leva acordes únicos ao palácio.",
+              "body": "O Jazz em Monserrate leva música a cenário único de Sintra, unindo arquitetura e paisagem. Os concertos aproveitam a acústica natural dos jardins botânicos ao cair da tarde. Com temperaturas a atingir os 29°C durante o dia, os espetáculos noturnos trazem frescura. A qualidade do ar fixa-se num excelente índice de PM2.5 de 5. A taxa de câmbio de 1 USD para 0.86 EUR facilita a compra de bilhetes online. O pôr do sol às 19:52 serve de pano de fundo para as primeiras notas musicais. Os espectadores sentam-se na relva, respeitando o silêncio do lugar.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            },
+            {
+              "n": "03",
+              "headline": "Os palácios da serra conservam o ritmo pausado do outono.",
+              "lede": "A brisa atlântica refresca as encostas arborizadas.",
+              "body": "A atmosfera na serra mantém-se tranquila apesar das temperaturas máximas de 29°C. O céu parcialmente nublado protege os visitantes durante as caminhadas matinais. A qualidade do ar com PM2.5 de 5 garante uma respiração leve entre os bosques. O sol desaparece no horizonte atlântico às 19:52, encerrando mais um dia de turismo regrado. A taxa de câmbio de 1 USD para 0.86 EUR orienta o comércio de artesanato local. Os cafés da vila servem queijadas frescas aos caminhantes que regressam da montanha. É um tempo de recolhimento que antecede as brumas mais frias de outubro.",
+              "source": "saudade desk",
+              "source_date": "2026-09-11"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-10T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O Festival MUSCARIUM regressa sexta-feira para encerrar ciclo de criações artísticas inovadoras. A programação aposta na experimentação cénica e no diálogo com o património local. Os espectadores são convidados a assistir a espetáculos intimistas pela vila. A referência cambial mantém-se em 1 USD para 0.86 EUR. Sintra encerra assim a semana com uma forte carga artística.",
               "source": "saudade desk",
               "source_date": "2026-09-05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-04T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O festival MotelX regressa com sustos e prazeres à la carte.",
-              "lede": "As salas de cinema da cidade acolhem novas sessões de terror e mistério.",
-              "body": "Setembro traz de volta as noites de cinema mais intensas da capital com o festival MotelX. O programa deste ano aposta em sustos, aflições e prazeres à la carte que aterram em Lisboa para saciar os cinéfilos mais corajosos. É o momento ideal para desfrutar das salas escuras enquanto a programação se desdobra em várias secções temáticas. Os bilhetes encontram-se disponíveis nos locais habituais para quem procura este género de cinema. Para os visitantes estrangeiros, convém notar que a taxa de câmbio se mantém estável em 1 USD para 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival Política muda-se para a freguesia de São Vicente.",
-              "lede": "A iniciativa cultural ocupa novos espaços na zona oriental da cidade.",
-              "body": "A edição deste mês do Festival Política muda-se para São Vicente, oferecendo debates, exposições e cinema documental num novo cenário. Este evento promove a reflexão cívica e artística sem nunca perder o tom ponderado que lhe é característico. A mudança de local permite redescobrir recantos históricos desta colina lisboeta através de um olhar contemporâneo. Os participantes encontram facilmente acessos pedonais a partir do eixo central da cidade. É uma excelente oportunidade para circular calmamente pela zona e observar o quotidiano dos bairros tradicionais.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "03",
-              "headline": "As águas do Tejo preparam-se para o Lisboa Dragon Boat Festival.",
-              "lede": "A competição náutica realiza-se entre 25 e 27 setembro.",
-              "body": "O rio Tejo acolhe em breve a nova edição do Lisboa Dragon Boat Festival, marcado para os dias 25 a 27 setembro. As equipas intensificam os treinos nas margens enquanto a cidade assiste aos preparativos finais para esta prova desportiva. Trata-se de um espetáculo visual marcante que anima a frente ribeirinha com o ritmo cadenciado dos tambores a bordo. Os espectadores podem assistir às regatas a partir do passeio marítimo com total comodidade. É um programa perfeito para as tardes amenas de final de mês junto à água.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A cidade avança com 19 a 28°C sob um céu overcast.",
-              "lede": "O pôr do sol ocorre pelas 20:02 num dia de ar moderado.",
-              "body": "A Invicta regista temperaturas entre 19 e 28°C num cenário de céu overcast que abranda o ritmo das ruas. O pôr do sol pelas 20:02 convona os residentes a recolherem-se lentamente para as esplanadas abrigadas da Invicta. Os níveis de qualidade do ar indicam valores moderados, com PM2.5 a 26, aconselhando alguma contenção em esforços físicos prolongados ao ar livre. Para os viajantes que planeiam transações comerciais, a taxa de câmbio oficial permanece fixada em 1 USD para 0.86 EUR. O ambiente urbano respira a serenidade própria dos finais de verão nortenhos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "02",
-              "headline": "Cartoons e sátira ocupam a nova exposição de entrada gratuita.",
-              "lede": "O humor gráfico ganha destaque num espaço dedicado à cultura visual.",
-              "body": "O Porto acolhe uma nova exposição dedicada aos cartoons, à sátira e ao melhor humor gráfico nacional e internacional. A iniciativa destaca-se por ter entrada gratuita, permitindo o acesso livre de todos os curiosos e entusiastas da ilustração. É um espaço onde o traço crítico convida à reflexão pausada sobre os pequenos hábitos do quotidiano moderno. Os visitantes podem apreciar as obras ao seu próprio ritmo, sem pressas nem multidões excessivas. A mostra enriquece a oferta cultural da cidade neste início de setembro.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "03",
-              "headline": "O antigo terminal da Garagem Atlântico prepara o seu futuro.",
-              "lede": "O espaço reabre em 2028 como polo cultural e criativo.",
-              "body": "A histórica Garagem Atlântico prepara uma transformação profunda para reabrir em 2028 como espaço cultural e criativo na cidade. Este antigo terminal de autocarros vai devolver à comunidade uma área central votada ao esquecimento durante vários anos. O projeto arquitetónico respeitará a traça original enquanto acolhe novas valências artísticas e estúdios de trabalho. Os transeuntes já conseguem notar os primeiros movimentos de preparação nas imediações do quarteirão. A requalificação urbana continua a desenhar silenciosamente novas centralidades no tecido portuense.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra regista 20 a 32°C com céu overcast e ar fair.",
-              "lede": "O pôr do sol fixa-se às 20:03 num cenário de bruma suave.",
-              "body": "A vila serrana apresenta termómetros entre 20 e 32°C sob um céu overcast que atenua a intensidade do sol. O pôr do sol ocorre às 20:03, oferecendo uma luz difusa ideal para percorrer os trilhos empedrados sem o calor abrasador do meio-dia. A qualidade do ar é considerada fair, com PM2.5 a 12, garantindo um ambiente agradável para passeios a pé pelos parques e jardins históricos. A taxa de câmbio oficial mantém-se em 1 USD para 0.86 EUR para quem necessita de câmbios locais. A atmosfera mantém o recato habitual longe da agitação turística estival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "02",
-              "headline": "A Praia Grande acolhe mais uma edição do Festival da Sardinha.",
-              "lede": "A costa atlântica celebra os sabores tradicionais à beira-mar.",
-              "body": "A Praia Grande recebe por estes dias mais uma edição do tradicional Festival da Sardinha, celebrando a gastronomia piscatória local. O evento convida residentes e visitantes a saborear o peixe fresco assado enquanto contemplam a rebentação das ondas atlânticas. É um ponto de encontro informal que junta gerações à mesa com vista privilegiada para o oceano. A brisa marítima tempera o calor do final de tarde nestas comemorações à beira-água. A recomendação passa por chegar cedo para garantir lugar nas esplanadas ribeirinhas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
-            },
-            {
-              "n": "03",
-              "headline": "O Festival MUSCARIUM regressa sexta-feira para encerrar ciclo.",
-              "lede": "A programação artística ocupa os últimos dias da semana na vila.",
-              "body": "O Festival MUSCARIUM regressa esta sexta-feira para encerrar oficialmente o seu ciclo de espetáculos e residências artísticas em Sintra. A programação aposta na criação contemporânea e no diálogo entre diferentes disciplinas performativas em espaços singulares da vila. É o pretexto ideal para explorar salas menos conhecidas e edifícios recuperados para a fruição cultural. Os bilhetes para as sessões de encerramento podem ser adquiridos nos pontos de venda habituais. A curadoria privilegia momentos de escuta atenta e silêncio contemplativo.",
-              "source": "saudade desk",
-              "source_date": "2026-09-04"
             }
           ]
         }
