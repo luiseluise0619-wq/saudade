@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-11T06:00:00+09:00",
+  "updated": "2026-09-12T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-12T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Matadero Madrid abre su temporada con el festival Back to the Book.",
+              "lede": "La programación incluye exposiciones y encuentros con creadores en un entorno de cielos despejados.",
+              "body": "El centro cultural Matadero Madrid inaugura su programación anual con el festival Back to the Book. La iniciativa reúne exposiciones de artes visuales, destacando la obra de Carlos Aires, y encuentros de conversación con figuras de la danza como el coreógrafo Damien Jalet. Los visitantes pueden recorrer los espacios culturales disfrutando de una temperatura exterior que oscila entre 16 y 32°C bajo un cielo principalmente despejado que se extiende hasta la puesta de sol a las 20:28. Con una calidad del aire moderada y un índice PM2.5 de 9, el paseo por los recintos públicos resulta cómodo durante las horas centrales de la tarde. Es recomendable consultar los horarios específicos de cada sala antes de planificar la visita vespertina.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "02",
+              "headline": "El parque sobre la M-30 alcanza el 70% de su superficie ajardinada.",
+              "lede": "La gran zona verde madrileña avanza en su construcción con más de 16.000 metros cuadrados.",
+              "body": "El proyecto urbano destinado a levantar un gran parque en altura sobre la M-30 avanza con firmeza en su fase de ejecución. La infraestructura alcanza ya el 70% de su superficie completada, sumando un total de 16.370 metros cuadrados de zonas verdes y jardines para el uso ciudadano. Esta semana, el termómetro se mueve entre 16 y 32°C con condiciones estables y ausencia de precipitaciones. Los paseantes aprovechan la franja posterior a las 20:28 para recorrer los tramos ya abiertos y observar la evolución de las plantaciones. La calidad del aire se mantiene en niveles moderados con 9 de PM2.5, permitiendo el descanso al aire libre en los nuevos espacios públicos recuperados para la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "03",
+              "headline": "La Comunidad de Madrid reconoce la labor artística con el Premio Apertura 2026.",
+              "lede": "El galardón institucional distingue la trayectoria y sensibilidad creadora de la artista Elena Goñi.",
+              "body": "La escena cultural madrileña celebra la concesión del Premio Apertura 2026 a la reconocida pintora Elena Goñi por parte de la Comunidad de Madrid. Este reconocimiento destaca el rigor y la constancia en el panorama pictórico actual. Mientras las galerías y los espacios expositivos ajustan sus agendas, conviene recordar que la festividad de la Bien Aparecida se celebra el 15 de septiembre, fecha que afectará al horario de apertura de oficinas gubernamentales y entidades bancarias. En el plano financiero, la tasa de cambio se sitúa en 1 USD equivalente a 0.86 EUR. Las temperaturas de la semana se mueven entre 16 y 32°C, con atardeceres claros a las 20:28 que invitan a recorrer las exposiciones recién inauguradas en la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival DART ofrece 10 proyecciones gratuitas en distintos espacios urbanos.",
+              "lede": "La muestra acerca el cine documental sobre arte contemporáneo con acceso libre para el público.",
+              "body": "El Festival DART arranca su nueva edición en Barcelona con una programación que incluye 10 proyecciones gratuitas repartidas por la ciudad. Los espectadores pueden acceder a documentales especializados en creadores contemporáneos y corrientes artísticas actuales. Las condiciones meteorológicas acompañan los trayectos urbanos, con temperaturas que varían entre 20 y 27°C y cielos parcialmente nublados hasta la caída del sol a las 20:05. La calidad del aire se sitúa en niveles moderados, con un registro de PM2.5 en 8. En el ámbito económico local, el tipo de cambio se mantiene estable en 1 USD por 0.86 EUR. Se recomienda llegar con antelación a las proyecciones para asegurar localidad en los espacios habilitados por el festival.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "02",
+              "headline": "El ModComFest celebra su quinta edición dedicada a la música de Max Richter.",
+              "lede": "El ciclo sonoro reúne conciertos y charlas en torno a la obra del compositor minimalista.",
+              "body": "Barcelona acoge la quinta edición del ModComFest, un encuentro centrado en la exploración de la música contemporánea y, de forma monográfica, en el universo compositivo de Max Richter. El festival propone conciertos y encuentros en salas seleccionadas de la geografía urbana. La meteorología muestra cielos parcialmente nublados y registros térmicos de 20 a 27°C, con puesta de sol a las 20:05. La calidad del aire registra valores moderados con 8 de PM2.5. Paralelamente, los aficionados al diseño gráfico y la fotografía pueden visitar la colaboración entre Bershka y Ed Templeton en su exposición fotográfica temporal. El tipo de cambio oficial permanece en 1 USD equivalente a 0.86 EUR para las transacciones internacionales de los visitantes extranjeros.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "03",
+              "headline": "Último domingo de apertura comercial autorizada para las tiendas de la ciudad.",
+              "lede": "Los establecimientos comerciales aprovechan la jornada dominical antes de retomar el calendario habitual.",
+              "body": "Los comercios de Barcelona afrontan el último domingo de apertura autorizada de la temporada, permitiendo a los residentes realizar sus compras de fin de semana con normalidad. Ante la proximidad de la festividad de la Bien Aparecida el 15 de septiembre, es prudente recordar que los servicios administrativos, oficinas gubernamentales y entidades bancarias modificarán sus horarios habituales durante dicha jornada festiva. La ciudad experimenta temperaturas de 20 a 27°C bajo cielos parcialmente nublados y un atardecer que se adelanta a las 20:05. La calidad del aire ofrece un índice moderado de PM2.5 en 8. Para quienes planifiquen actividades culturales, las exposiciones y proyecciones del circuito local operan con normalidad dentro del horario establecido para estos días de transición estival.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Inauguran el Festival de artes escénicas de Buenos Aires con quince países.",
+              "lede": "La muestra teatral transforma la cartelera porteña con una amplia selección de creadores internacionales.",
+              "body": "La ciudad inaugura una nueva edición de su festival de artes escénicas, reuniendo a compañías procedentes de 15 países en distintos escenarios y salas teatrales de la capital. El evento coincide con un ambiente fresco y húmedo, marcado por una temperatura que oscila entre 8 y 12°C y una ligera llovizna que ha dejado 0.2 mm de precipitación en las calles. El sol se oculta temprano, marcando el ocaso a las 18:43. La calidad del aire se sitúa en un rango moderado, con un registro de PM2.5 en 16. Es aconsejable llevar abrigo impermeable al salir de las funciones nocturnas debido a la persistencia de la humedad ambiental y la bajada térmica que acompaña a la caída de la tarde en la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "02",
+              "headline": "El cine internacional destaca en la agenda cultural tras su paso por Venecia.",
+              "lede": "La producción Ritorno a Buenos Aires, del director Marco Bechis, llega al circuito local de exhibición.",
+              "body": "El panorama cinematográfico porteño recibe la proyección de Ritorno a Buenos Aires, la obra del director italo-chileno Marco Bechis presentada recientemente en el Festival de Venecia. El largometraje explora memorias y relatos de carácter íntimo que conectan ambas orillas. En el exterior, la jornada discurre con termómetros que se mueven entre 8 y 12°C y una ligera llovizna acumulando 0.2 mm de agua. El cielo gris y la puesta de sol a las 18:43 invitan a buscar refugio en las salas de cine de la avenida Corrientes. La calidad del aire muestra un nivel moderado con PM2.5 en 16. Los espectadores encontrarán salas acondicionadas para contrarrestar el fresco clima exterior mientras disfrutan de la programación especial dedicada al cine independiente y documental.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            },
+            {
+              "n": "03",
+              "headline": "Paseos urbanos bajo la llovizna y temperaturas otoñales en la capital.",
+              "lede": "Las librerías y los cafés notables ofrecen resguardo frente al clima fresco de septiembre.",
+              "body": "Los espacios interiores de Buenos Aires recuperan su protagonismo tradicional ante un clima que registra mínimas de 8°C y máximas de 12°C. La ligera llovizna acumulada en 0.2 mm apenas moja las veredas adoquinadas, mientras el atardecer se anticipa a las 18:43 dejando una atmósfera apacible en los barrios históricos. Con una calidad del aire moderada y un índice PM2.5 en 16, los caminantes optan por recorrer los cafés tradicionales y las librerías del centro. La actividad cultural se mantiene intensa con la llegada de muestras escénicas y estrenos cinematográficos internacionales que dinamizan las salas de la ciudad. Es recomendable transitar con calzado adecuado debido a la humedad superficial en plazas y parques durante las primeras horas de la mañana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-12"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-11T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La diversidad cultural de Buenos Aires se enriquece este fin de semana con la celebración del Festival del Fuego, un ritual de origen japonés destinado a atraer la prosperidad y la buena fortuna. La iniciativa convoca a vecinos y visitantes a participar en ceremonias simbólicas y talleres prácticos en espacios culturales habilitados. Esta propuesta se complementa con la actividad habitual del Festival de Cine y Música, que continúa ofreciendo funciones en salas independientes. Ambas convocatorias demuestran la vitalidad artística de la ciudad, ofreciendo refugio intelectual y estético frente a la brisa fría de septiembre. Se recomienda consultar los horarios específicos de cada actividad para planificar la asistencia.",
               "source": "saudade desk",
               "source_date": "2026-09-06"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-05T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid se despliega bajo cielos overcast y temperaturas de 23–35°C.",
-              "lede": "La ciudad transita el fin de semana del 4, 5 y 6 de septiembre de 2026 con un ambiente templado y calidad de aire moderada.",
-              "body": "El mercurio oscila entre los 23 y los 35°C en una jornada de cielos cubiertos que suavizan el atardecer hasta las 20:40. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 15, permitiendo paseos tranquilos por los parques urbanos sin las exigencias del sol directo. El tipo de cambio oficial se sitúa en 1 USD frente a 0.86 EUR, una referencia útil para los viajeros que gestionan sus gastos cotidianos en los cafés de barrio. Conviene recordar que las oficinas públicas y los bancos operan con normalidad este viernes, aunque se perfilan festivos autonómicos próximos como el Día de Asturias y el Día de Extremadura el 8 de septiembre.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "02",
-              "headline": "El 44º Festival de Otoño celebra el legado cultural de América en Madrid.",
-              "lede": "La Comunidad de Madrid inaugura su tradicional programación artística con un profundo homenaje a la música y las artes escénicas.",
-              "body": "La Comunidad de Madrid celebra el 44º Festival de Otoño con un homenaje al legado cultural de América en la música y las artes escénicas. Las salas y teatros de la capital acogen propuestas que entrelazan las tradiciones escénicas de ambos lados del Atlántico, consolidando un espacio de encuentro para creadores y espectadores. Esta cita cultural, que marca el pulso de septiembre, invita a recorrer la programación del fin de semana del 4, 5 y 6 de septiembre de 2026 con propuestas que van desde la danza contemporánea hasta conciertos de cámara. Los asistentes encontrarán en los foyers los boletines detallados con los horarios de cada función y las recomendaciones de acceso.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "03",
-              "headline": "Más de 1.000 farolillos iluminarán un lago de Madrid.",
-              "lede": "Los espacios públicos de la capital suman propuestas lumínicas para recibir la temporada de otoño con serenidad.",
-              "body": "Más de 1.000 farolillos iluminarán un lago de Madrid durante este precioso festival, ofreciendo a los paseantes una estampa de calma y contemplación al caer la tarde. Esta intervención efímera transforma el entorno acuático en un punto de reunión para quienes buscan observar la ciudad desde una perspectiva reposada. Las inmediaciones del lago contarán con señalización específica para regular el flujo peatonal y garantizar una experiencia segura para todos los asistentes. Es una de las actividades destacadas dentro de la agenda cultural del fin de semana del 4, 5 y 6 de septiembre de 2026, ideal para combinar con una caminata vespertina bajo el cielo overcast.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona transcurre entre nubes parciales y registros térmicos de 23–31°C.",
-              "lede": "La fachada marítima y los barrios interiores disfrutan de una atmósfera estable con la caída del sol fijada a las 20:18.",
-              "body": "El termómetro se mueve entre los 23 y los 31°C en una jornada de cielos parcialmente nubados que invitan a recorrer las calles sin prisa. La calidad del aire se mantiene en niveles moderados, con un índice PM2.5 de 13 que asegura una buena visibilidad en los miradores de la ciudad. Para los viajeros internacionales, el tipo de cambio oficial se sitúa en 1 USD equivalente a 0.86 EUR. La actividad ciudadana transcurre con normalidad en comercios y redes de transporte, a la espera de las celebraciones institucionales y festivos que tendrán lugar en los próximos días en Cataluña, como la Diada Nacional de Catalunya el 11 de septiembre.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "02",
-              "headline": "El Palau Sant Jordi acoge los conciertos de Aitana en Barcelona.",
-              "lede": "La agenda musical de la ciudad se activa con grandes convocatorias en los recintos cubiertos de Montjuïc.",
-              "body": "Los conciertos de Aitana en Barcelona concentran la atención de los aficionados a la música pop, con horarios específicos de acceso y recomendaciones de movilidad hacia el Palau Sant Jordi. Las autoridades locales y los organizadores sugieren utilizar el transporte público y consultar los trayectos de autobús recomendados para evitar aglomeraciones en los accesos al recinto. Esta cita musical coincide con el inicio de septiembre, un mes que también trae a la ciudad el triunfal inicio de la gira española de la Orquesta del Festival de Bayreuth y Pablo Heras-Casado. Los espectadores encontrarán en los puntos de información del recinto los detalles sobre los flujos de entrada y las paradas de metro más cercanas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "03",
-              "headline": "El Spotify Camp Nou proyecta la creación de un nuevo parque de atracciones.",
-              "lede": "El recinto deportivo de Les Corts amplía su horizonte urbano con propuestas de ocio integradas en su interior.",
-              "body": "El Barça tendrá un pequeño parque de atracciones en el Spotify Camp Nou, un proyecto concebido para diversificar los usos del espacio más allá de las jornadas de competición. El Barcelona planea crear un parque de atracciones en el interior del Camp Nou que complementará la oferta turística y recreativa del distrito. Esta iniciativa se suma a la renovación urbanística del entorno del estadio, integrando áreas verdes y zonas de esparcimiento para los vecinos y visitantes. Quienes paseen por la zona comprobarán cómo los trabajos de remodelación siguen avanzando de forma armónica con el tejido residencial del barrio.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires recibe la jornada con 6–12°C y una llovizna ligera de 0.2mm.",
-              "lede": "El invierno austral se despide con una atmósfera fresca y limpia, acompañada por un atardecer a las 18:37.",
-              "body": "La temperatura se mueve entre los 6 y los 12°C, acompañada por una llovizna testimonial de 0.2mm que apenas moja las veredas adoquinadas. La calidad del aire se califica como fair, con un registro de PM2.5 de 12 que permite disfrutar de las caminatas con abrigo ligero por los parques porteños. Los cafés de esquina ofrecen refugio contra la brisa húmeda mientras la ciudad despliega su agenda cultural de septiembre. No se registran restricciones en los servicios públicos ni en las instituciones bancarias, garantizando una operativa fluida para los residentes y los viajeros que recorren los barrios históricos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "02",
-              "headline": "Seis muestras de arte configuran el recorrido cultural de septiembre en Buenos Aires.",
-              "lede": "Las galerías y centros de exposición de la capital inauguran propuestas que convocan a la observación reposada.",
-              "body": "La agenda de septiembre destaca con 6 muestras de arte para visitar en septiembre en Buenos Aires, distribuidas en distintos puntos neurálgicos de la capital. Los espacios expositivos abren sus puertas para mostrar desde pintura contemporánea hasta instalaciones lumínicas y archivo fotográfico. Paralelamente, el Centro de Exposiciones y Convenciones presenta los proyectos seleccionados en la galería de primer lugar del concurso para el nuevo parque urbano. Estas propuestas invitan al viajero a trazar un itinerario pausado por los barrios tradicionales, combinando la arquitectura urbana con las paradas en salas de arte independientes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival de Cine y Música convoca a los espectadores porteños.",
-              "lede": "Las salas independientes de la ciudad combinan proyecciones y actuaciones en directo durante las primeras semanas del mes.",
-              "body": "El Festival de Cine y Música reúne creadores y público en torno a proyecciones especiales y conciertos de cámara en auditorios de escala íntima. Esta programación se entrelaza con el espíritu de Linda, el sitio para vivir la Ciudad más linda del mundo, que promueve el descubrimiento de rincones apacibles y arquitectura patrimonial. Los asistentes pueden consultar la programación diaria en los soportes digitales de los centros culturales adheridos, donde se detallan los horarios de cada función. Es una oportunidad excelente para experimentar la vida cultural de la capital desde una perspectiva pausada y atenta a los detalles.",
-              "source": "saudade desk",
-              "source_date": "2026-09-05"
             }
           ]
         }
