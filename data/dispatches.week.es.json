@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-12T06:00:00+09:00",
+  "updated": "2026-09-14T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-14T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La música de Magicéltica y el deporte llenan septiembre",
+              "lede": "Las calles madrileñas acogen propuestas culturales diversas antes de los festivos de temporada.",
+              "body": "El XI Festival Magicéltica ofrece un punto de encuentro para los amantes de la música tradicional en la capital. Muy cerca, la actividad deportiva toma protagonismo con la celebración de LAP57 Madrid Race Week. Las familias también encuentran su espacio con el regreso del festival de literatura infantil FLIC a varios puntos de la ciudad. Además, la expectativa crece ante la inminente residencia musical de Shakira, que desplegará doce conciertos y su propio espacio temático durante casi un mes. El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR para quienes visitan la región.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "02",
+              "headline": "Cierres administrativos por la Festividad de la Bien Aparecida",
+              "lede": "El 2026-09-15 marca una jornada de menor actividad institucional en la región.",
+              "body": "Con motivo de la Festividad de la Bien Aparecida el 2026-09-15, la actividad oficial se reduce de forma notable en Madrid. Los residentes y visitantes deben tener en cuenta que las oficinas gubernamentales, las sucursales bancarias y las oficinas postales permanecerán cerradas durante toda la jornada festiva. Los comercios locales ajustan también sus horarios habituales para adaptarse al calendario de celebraciones. Es recomendable planificar con antelación cualquier gestión administrativa o financiera antes del día festivo para evitar inconvenientes de última hora en el centro de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "03",
+              "headline": "Paseos otoñales y lectura infantil en los barrios",
+              "lede": "Los espacios públicos recuperan la calma tras el verano con la llegada de nuevas propuestas.",
+              "body": "El regreso del festival FLIC dinamiza bibliotecas y plazas con actividades orientadas al público infantil y familiar. Los parques madrileños ofrecen un refugio tranquilo mientras la ciudad se prepara para recibir una intensa agenda cultural y musical. Las librerías de barrio muestran novedades editoriales y los cafés recuperan su ritmo pausado habitual de septiembre. El tipo de cambio oficial permanece en 1 USD por 0.86 EUR, facilitando las transacciones comerciales a los viajeros internacionales que recorren las librerías y los rincones históricos del casco antiguo madrileño.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Temperaturas agradables y cielos parcialmente nublados en Barcelona",
+              "lede": "El mercurio se mueve entre los 20 y los 32°C en una jornada de calidad del aire moderada.",
+              "body": "La ciudad registra hoy temperaturas que oscilan entre los 20 y los 32°C bajo cielos parcialmente nublados. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 11. El atardecer está previsto para las 20:02, permitiendo disfrutar de las últimas horas de luz en los paseos marítimos y los parques urbanos. El tipo de cambio se sitúa en 1 USD equivalente a 0.86 EUR, un dato útil para los viajeros que realizan compras o consumiciones en el comercio local de la ciudad condal durante estos días.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "02",
+              "headline": "K-pop y nuevas aperturas comerciales en la agenda urbana",
+              "lede": "El Estadi Olímpic acoge un gran evento musical mientras el comercio de Sants se expande.",
+              "body": "El Estadi Olímpic recibe el Music Bank World Tour, consolidando a Barcelona como una parada clave para los grandes eventos musicales internacionales de K-pop. En el ámbito comercial, Decathlon refuerza su presencia en la ciudad con la apertura de un nuevo establecimiento bajo el formato Decathlon City en el barrio de Sants. Por otra parte, las familias pueden disfrutar de los nuevos toboganes instalados en los parques infantiles locales. Estos espacios públicos combinan el diseño moderno con la seguridad para los más pequeños en los distintos barrios.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "03",
+              "headline": "Ajustes locales por la Festividad de la Bien Aparecida",
+              "lede": "La jornada del 2026-09-15 trae modificaciones operativas en los servicios públicos.",
+              "body": "Ante la llegada de la Festividad de la Bien Aparecida el 2026-09-15, la administración local y las oficinas bancarias modifican sus horarios habituales de atención. Los servicios postales y las dependencias gubernamentales permanecerán cerradas al público durante esta jornada festiva. Los ciudadanos y viajeros deben prever estas restricciones temporales al realizar trámites administrativos o cambios de divisa a la tasa de 1 USD por 0.86 EUR. Los espacios públicos y paseos ajardinados mantendrán sus accesos abiertos para el descanso de los transeúntes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Jornada fresca y completamente cubierta en Buenos Aires",
+              "lede": "El termómetro marca entre los 6 y los 13°C con una excelente calidad del aire.",
+              "body": "El clima porteño se presenta hoy fresco y cubierto, con temperaturas que se mueven en un rango de 6 a 13°C. La calidad del aire es buena, registrando un valor de PM2.5 de 5, ideal para caminar por los tradicionales barrios de la capital. El ocaso llegará puntualmente a las 18:44, cerrando una tarde de cielos grises y atmósfera tranquila. Los cafés históricos y las librerías del centro ofrecen un refugio cálido frente al ambiente exterior propio de esta época del año en el hemisferio sur.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "02",
+              "headline": "Cine internacional y memoria cultural en la cartelera",
+              "lede": "El Festival de Venecia resuena en la ciudad con proyecciones y homenajes recientes.",
+              "body": "La agenda cultural de Buenos Aires mira hacia el cine con la presentación de la obra 'Ritorno a Buenos Aires', dirigida por el italo-chileno Marco Bechis tras su paso por el Festival de Venecia. Este estreno convive con muestras de memoria histórica y debates sobre el cine documental. Paralelamente, la tecnología y el arte escénico se cruzan en iniciativas singulares, como la recreación mediante inteligencia artificial del histórico encuentro entre Graciela Borges y Paul Newman acontecido en 1962, capturando la atención de cinéfilos y nostálgicos locales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            },
+            {
+              "n": "03",
+              "headline": "Paseos tranquilos bajo el cielo gris de septiembre",
+              "lede": "Los espacios verdes de la ciudad invitan a la observación reposada durante la tarde.",
+              "body": "Con una temperatura que no supera los 13°C y un cielo completamente overcast, los parques porteños como los Bosques de Palermo muestran su cara más solitaria y contemplativa. Los caminantes aprovechan el aire limpio, con un índice PM2.5 de 5, para recorrer senderos arbolados antes de que el sol se ponga a las 18:44. Las librerías de la Avenida Corrientes y los teatros tradicionales mantienen su programación vespertina intacta, ofreciendo un refugio cultural idóneo para los residentes y viajeros que prefieren el ritmo pausado de la temporada.",
+              "source": "saudade desk",
+              "source_date": "2026-09-14"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-12T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La agenda cultural de la semana destaca por la llegada del Banff Mountain Film Festival 2026 a Buenos Aires, ofreciendo una cuidada programación de documentales sobre expediciones, naturaleza y deportes de aventura. Las entradas para las distintas funciones ya se encuentran disponibles en los canales habituales de los complejos adheridos al ciclo audiovisual. De manera paralela, el Festival de Cine y Música despliega sus proyecciones y recitales en diferentes salas independientes, uniendo la sensibilidad de la gran pantalla con composiciones sonoras en directo. Estas propuestas enriquecen las tardes frías de los residentes y viajeros que buscan refugio cultural en los barrios de Colegiales y Villa Crespo. Los espacios alternativos reafirman así su papel como puntos de encuentro imprescindibles para quienes prefieren la observación reposada del arte contemporáneo en los meses de transición.",
               "source": "saudade desk",
               "source_date": "2026-09-07"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-06T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Casa de Vacas reúne siete décadas de la obra pictórica de Antonio Pedrero en El Retiro.",
-              "lede": "La sala municipal del parque madrileño acoge una amplia antológica que repasa la trayectoria del artista.",
-              "body": "El centro cultural Casa de Vacas, situado junto al estanque del parque de El Retiro, alberga una extensa muestra retrospectiva dedicada a Antonio Pedrero. La exposición reúne piezas clave que recorren más de setenta años de trabajo continuo y observación plástica. Es una oportunidad excelente para caminar sin prisa bajo los árboles y detenerse ante paisajes y retratos de profunda solidez técnica. La entrada es libre hasta completar aforo durante todo el horario de apertura del recinto. Los visitantes habituales encontrarán en este espacio un remanso de calma en pleno centro urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "02",
-              "headline": "La Casa de Campo convoca un concurso para adjudicar la gestión de dos conocidos quioscos.",
-              "lede": "El Ayuntamiento busca nuevos operadores para modernizar la hostelería del parque más extenso de la capital.",
-              "body": "El vasto territorio verde de la Casa de Campo inicia un proceso administrativo para renovar su oferta de restauración en puntos estratégicos. El pliego busca hosteleros interesados en explotar dos quioscos tradicionales durante los próximos 25 años. La medida pretende mejorar los servicios destinados a corredores, ciclistas y madrileños que buscan tranquilidad al aire libre. Las bases técnicas exigen respeto absoluto por el entorno paisajístico y arquitectónico original. Se espera que las futuras instalaciones equilibren la tradición del lugar con estándares modernos de sostenibilidad.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "03",
-              "headline": "Las oficinas bancarias y de la administración pública operarán con normalidad tras los festivos autonómicos.",
-              "lede": "Varias regiones celebran sus días institucionales esta semana, alterando ligeramente la actividad comercial periférica.",
-              "body": "Con motivo de las festividades autonómicas programadas para los próximos días en distintos puntos del territorio nacional, conviene recordar ciertas precauciones logísticas. El Día de Asturias y el Día de Extremadura se conmemoran el 2026-09-08, seguidos por la Diada Nacional de Catalunya el 2026-09-11 y la Festividad de la Bien Aparecida el 2026-09-15. Aunque la Comunidad de Madrid mantiene su calendario habitual, las transacciones y envíos hacia estas regiones sufrirán pequeños retrasos operativos. El tipo de cambio actual se mantiene estable en 1 USD equivalente a 0.86 EUR para quienes operen en divisa extranjera.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La ciudad registra un cielo cubierto con temperaturas de 23 a 31°C y calidad de aire moderada.",
-              "lede": "El ambiente se mantiene templado mientras la puesta de sol se fija a las 20:16.",
-              "body": "La jornada dominical se presenta con una marcada cobertura nubosa que suaviza la sensación térmica en los paseos marítimos y calles interiores. Los termómetros se mueven en un rango de 23 a 31°C, acompañados por un índice de PM2.5 de 12, lo que define una calidad del aire calificada como moderada. Al caer la tarde, la puesta de sol prevista para las 20:16 invita a buscar terrazas resguardadas o a pasear sin prisa por los barrios históricos. El tipo de cambio oficial se mantiene estable, fijando 1 USD en 0.86 EUR para los viajeros internacionales que planifiquen sus gastos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "02",
-              "headline": "La Orquesta del Festival de Bayreuth inaugura su gira española bajo la batuta de Pablo Heras-Casado.",
-              "lede": "El prestigioso conjunto sinfónico inicia su recorrido nacional con un concierto muy esperado por los aficionados.",
-              "body": "La agenda cultural de la capital catalana acoge el inicio triunfal de la gira española de la Orquesta del Festival de Bayreuth. Dirigida magistralmente por Pablo Heras-Casado, la formación ofrece interpretaciones de gran rigor clásico en los escenarios principales de la ciudad. Este acontecimiento musical atrae a melómanos de diversas procedencias que valoran la precisión instrumental y la profundidad acústica. Las entradas llevan semanas agotadas, reflejando el gran interés que despierta la cita. Es un hito para la temporada sinfónica que consolida el pulso artístico local.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "03",
-              "headline": "Bauhaus anuncia la contratación de 70 profesionales para su nuevo centro y expansión territorial.",
-              "lede": "La cadena de bricolaje refuerza su presencia comercial con aperturas estratégicas en Meridiana y Gavà.",
-              "body": "El sector comercial de Barcelona registra movimientos de empleo estables con la llegada de nuevas superficies dedicadas al equipamiento del hogar. La firma Bauhaus ha iniciado un proceso selectivo para incorporar a 70 profesionales destinados a su nueva tienda en la avenida Meridiana y a la ampliación de sus instalaciones en Gavà. Estas aperturas buscan dinamizar la economía local y ofrecer un servicio más cercano a los residentes de los distintos distritos. Los interesados pueden consultar los perfiles requeridos a través de los canales oficiales de empleo de la compañía. La infraestructura logística de la zona metropolitana asimila este crecimiento con total normalidad.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con un cielo totalmente cubierto, temperaturas de 2 a 10°C y aire limpio.",
-              "lede": "El frío invernal domina la jornada dominical mientras la puesta de sol ocurre a las 18:38.",
-              "body": "La capital argentina experimenta un domingo fresco y típicamente invernal, con registros térmicos que oscilan entre los 2 y los 10°C bajo un cielo gris y persistente. La calidad del aire se mantiene en niveles excelentes, registrando un valor de PM2.5 de 4 que favorece las caminatas matutinas por los parques arbolados. La caída del sol, prevista para las 18:38, marcará el descenso definitivo de la temperatura y el encendido de las luces urbanas. Es una jornada propicia para refugiarse en librerías tradicionales y cafés históricos del centro. Los caminantes prudentes agradecerán llevar abrigo adicional para capear el viento austral.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "02",
-              "headline": "El Banff Mountain Film Festival 2026 desembarca en la ciudad con su tradicional muestra audiovisual.",
-              "lede": "El Centro de Exposiciones y Convenciones acoge las proyecciones de cine de montaña, aventura y naturaleza.",
-              "body": "La cartelera cultural porteña suma una propuesta imperdible para los amantes del cine documental y las expediciones al aire libre. El Banff Mountain Film Festival 2026 inicia sus proyecciones en Buenos Aires, reuniendo los mejores cortometrajes internacionales sobre exploración y conservación ambiental. Las funciones se desarrollan en el Centro de Exposiciones y Convenciones, un espacio moderno que facilita el acceso del público. La programación incluye debates paralelos y encuentros con realizadores que comparten sus experiencias en cumbres remotas. Las localidades pueden adquirirse anticipadamente a través de los canales oficiales del evento.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival del Fuego introduce en la agenda porteña el tradicional ritual japonés de prosperidad.",
-              "lede": "La comunidad local celebra una jornada de encuentro cultural centrada en la renovación y el bienestar.",
-              "body": "La diversidad cultural de Buenos Aires se enriquece este fin de semana con la celebración del Festival del Fuego, un ritual de origen japonés destinado a atraer la prosperidad y la buena fortuna. La iniciativa convoca a vecinos y visitantes a participar en ceremonias simbólicas y talleres prácticos en espacios culturales habilitados. Esta propuesta se complementa con la actividad habitual del Festival de Cine y Música, que continúa ofreciendo funciones en salas independientes. Ambas convocatorias demuestran la vitalidad artística de la ciudad, ofreciendo refugio intelectual y estético frente a la brisa fría de septiembre. Se recomienda consultar los horarios específicos de cada actividad para planificar la asistencia.",
-              "source": "saudade desk",
-              "source_date": "2026-09-06"
             }
           ]
         }
