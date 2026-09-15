@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-15T06:00:00+09:00",
+  "updated": "2026-09-16T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-16T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las lanzaderas gratuitas facilitan la llegada a los conciertos de Shakira en Madrid.",
+              "lede": "El cielo permanece cubierto mientras el transporte especial conecta los puntos clave de la ciudad.",
+              "body": "Bajo un cielo gris de 18 a 27°C y apenas 0.2mm de precipitación, la movilidad urbana se adapta a los grandes eventos musicales. Los asistentes cuentan con autobuses lanzadera gratuitos para llegar sin contratiempos a las actuaciones y al espacio temático Macondo Park. Conviene consultar los cortes de tráfico previstos en los accesos principales para planificar el trayecto con calma. La atmósfera musical se complementa este fin de semana con el Festival Jardín de las Delicias, marcando el cierre estival. Por su parte, la reciente festividad de la Bien Aparecida dejó oficinas y administraciones cerradas temporalmente. El tipo de cambio actual se sitúa en 1 USD por 0.87 EUR para los visitantes internacionales que recorren las calles.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Jardín de las Delicias despide el verano musical en la capital.",
+              "lede": "Las temperaturas suaves y el ambiente nublado acompañan el último gran evento al aire libre.",
+              "body": "El termómetro oscila entre los 18 y los 27°C con una mínima presencia de lluvia de 0.2mm, ideal para disfrutar de la música sin agobios. Este encuentro despide la temporada estival en un recinto preparado para acoger a miles de espectadores locales y visitantes. Las opciones de transporte público se han reforzado para garantizar una llegada fluida y ordenada durante todas las jornadas. Los residentes aprovechan el aire fair con un índice PM2.5 de 6 para pasear por los parques antes del atardecer previsto a las 20:22. La reciente celebración de la Bien Aparecida mantiene el ritmo pausado en los trámites administrativos de la región. El cambio oficial se mantiene estable en 1 USD frente a 0.87 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "03",
+              "headline": "El mercado de Tapapiés ajusta su formato para evitar la masificación vecinal.",
+              "lede": "Los organizadores priorizan la convivencia calmada frente al consumo rápido en las calles del barrio.",
+              "body": "El conocido evento gastronómico y cultural modifica este año su dinámica para proteger la tranquilidad cotidiana de sus residentes. Las calles mantienen una temperatura agradable de 18 a 27°C bajo un cielo overcast que suaviza el paseo vespertino. La calidad del aire se mantiene en niveles fair, registrando un PM2.5 de 6 en los medidores locales. El atardecer llega puntualmente a las 20:22, dejando una luz difusa sobre las plazas y los comercios tradicionales de la zona. Tras la reciente festividad de la Bien Aparecida, los servicios públicos recuperan su horario habitual de atención. Quienes llegan de fuera pueden realizar sus transacciones financieras aplicando el cambio oficial de 1 USD por 0.87 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Dalí se instala en Barcelona con una nueva exposición permanente e inmersiva.",
+              "lede": "Las tormentas vespertinas invitan a buscar refugio en los espacios culturales del centro urbano.",
+              "body": "La ciudad recibe una propuesta artística singular mientras el termómetro se mueve entre los 21 y los 26°C. El pronóstico señala 9.4mm de precipitación en forma de tormenta, por lo que se recomienda llevar paraguas y calzado adecuado. La puesta de sol se adelanta hasta las 19:58, acortando las horas de luz natural para las visitas al aire libre. La calidad del aire es poor, con un índice PM2.5 de 11 que aconseja moderar el esfuerzo físico exterior. Esta oferta cultural convive con otras iniciativas como la Auliak Collection y el festival Disney impulsado por Movistar. Los viajeros internacionales pueden gestionar sus gastos utilizando el tipo de cambio de 1 USD por 0.87 EUR en los establecimientos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Altaveu anima Sant Boi de Llobregat con propuestas musicales diversas.",
+              "lede": "El área metropolitana acoge conciertos singulares mientras las tormentas recorren la franja costera.",
+              "body": "Las jornadas musicales del Baix Llobregat se desarrollan con una temperatura de 21 a 26°C y avisos por tormenta. Se prevén hasta 9.4mm de lluvia, por lo que conviene revisar la programación de los espacios cerrados y al aire libre. El atardecer a las 19:58 marca el inicio de las actuaciones nocturnas en los auditorios municipales y plazas habilitadas. La atmósfera muestra una calidad del aire poor con 11 de PM2.5, propia de episodios de inestabilidad meteorológica. Paralelamente, la agenda cultural incluye la muestra permanente de Dalí y la llegada del festival Disney a la ciudad condal. La moneda extranjera mantiene su equivalencia de 1 USD por 0.87 EUR para los turistas que visitan la región.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "03",
+              "headline": "La Auliak Collection y el universo Disney enriquecen la agenda cultural urbana.",
+              "lede": "Los espacios expositivos de la ciudad ofrecen refugio frente a la inestabilidad meteorológica.",
+              "body": "Bajo un cielo tormentoso que dejará unos 9.4mm de precipitación, la oferta de galerías y salas de exposiciones cobra protagonismo. Las temperaturas oscilan entre los 21 y los 26°C, con una atmósfera de calidad poor y un registro PM2.5 de 11. La puesta de sol a las 19:58 invita a cenar temprano en los bistrós tradicionales del Eixample o el Gòtic. Estas propuestas se suman a la recién estrenada muestra inmersiva dedicada a Salvador Dalí en el corazón de Barcelona. Los servicios administrativos retoman la normalidad tras los festivos regionales recientes que afectaron a las oficinas públicas. Los pagos con tarjeta aplican sin problemas el cambio actual de 1 USD por 0.87 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Teatro Picadero acoge el Festival Ennio Morricone con una gran orquesta en escena.",
+              "lede": "El ambiente fresco de septiembre invita a disfrutar de la música en salas históricas.",
+              "body": "Con un registro térmico de 6 a 12°C y un cielo completamente overcast, la capital porteña adopta un ritmo pausado. Cincuenta artistas, entre músicos y coros, interpretan las obras más emblemáticas del compositor italiano en pleno centro. La puesta de sol se produce a las 18:45, dejando una tarde propicia para los espectáculos bajo techo y las funciones teatrales. La calidad del aire se mantiene en parámetros fair, con un valor PM2.5 de 7 que acompaña los paseos urbanos. En paralelo, la ciudad da inicio a la fase final de su torneo principal y acoge el festival de cine de montaña Banff. Los visitantes disfrutan de las librerías y cafés tradicionales abrigados del viento austral.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "02",
+              "headline": "El Banff Mountain Film Festival presenta su edición número veintiséis en la ciudad.",
+              "lede": "Las proyecciones de cine de aventura atraen a los amantes de la naturaleza en estas jornadas frías.",
+              "body": "El termómetro se mueve entre los 6 y los 12°C bajo un manto overcast que caracteriza la semana en Buenos Aires. Este festival de cine documental ofrece una ventana hacia expediciones extremas y paisajes remotos desde las salas locales. La caída del sol a las 18:45 marca la salida hacia las funciones vespertinas y los encuentros con realizadores invitados. La atmósfera urbana registra una calidad del aire fair, con un medidor PM2.5 situado en 7. La agenda cultural se completa con la apertura de la fase final de competiciones deportivas y conciertos sinfónicos destacados. Los caminantes recorren los barrios históricos protegidos por abrigos ligeros y bufandas de lana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            },
+            {
+              "n": "03",
+              "headline": "La fase final del torneo deportivo comienza hoy con su ceremonia de apertura y sorteo.",
+              "lede": "El ambiente futbolero convive con la intensa programación cultural de teatros y centros de arte.",
+              "body": "La ciudad vive el inicio de una cita deportiva decisiva mientras las temperaturas rondan entre los 6 y los 12°C. El cielo overcast acompaña las jornadas de los aficionados que se desplazan por los distintos puntos de encuentro habilitados. El atardecer llega a las 18:45, dando paso a una noche de actividad en los circuitos gastronómicos de Palermo y San Telmo. La calidad del aire se mantiene en niveles fair con un índice PM2.5 de 7, ideal para caminar con tranquilidad. Las salas de conciertos y los festivales de cine como el Banff enriquecen una agenda urbana muy diversa. Los residentes disfrutan de los espacios públicos con la calma habitual del invierno que se despide.",
+              "source": "saudade desk",
+              "source_date": "2026-09-16"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-15T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Empieza el gran festival internacional de teatro de Buenos Aires con una amplia cartelera que abarca salas independientes y grandes teatros oficiales. Los espectadores pueden disfrutar de propuestas nacionales e internacionales de gran calado reflexivo. La programación invita a recorrer diferentes barrios siguiendo el rastro de la dramaturgia contemporánea. Se recomienda consultar los horarios específicos de cada función para evitar colas en las taquillas. Esta cita reafirma la vitalidad cultural indiscutible de la capital argentina durante el mes de septiembre.",
               "source": "saudade desk",
               "source_date": "2026-09-09"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-08T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El termómetro alcanza los 35°C bajo cielos cubiertos.",
-              "lede": "La atmósfera se mantiene templada con una mínima de 22°C y aire aceptable.",
-              "body": "La ciudad experimenta hoy temperaturas que oscilan entre los 22°C y los 35°C, con un ambiente marcadamente nublado que suaviza la luz del atardecer previsto para las 20:35. La calidad del aire se registra en niveles aceptables, con un promedio de PM2.5 situado en 13. Para quienes realizan transacciones económicas en la capital, el tipo de cambio oficial de referencia se sitúa en 1 USD equivalente a 0.86 EUR. Este clima invita a buscar refugio en los espacios interiores o bajo la sombra de los árboles urbanos. El atardecer llega con puntualidad, cerrando una jornada de transición estival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "02",
-              "headline": "Las galerías de arte inauguran temporada con más de 60 exposiciones.",
-              "lede": "Los espacios expositivos de la capital abren con horarios extraordinarios esta semana.",
-              "body": "El circuito cultural madrileño arranca su actividad principal con una propuesta de gran envergadura que reúne más de 60 exposiciones en diferentes salas. Las galerías extienden sus horarios habituales para recibir a los visitantes en este inicio de temporada artística. Paralelamente, el Festival COMA’26 despliega su ambiciosa programación contemporánea por distintos escenarios de la ciudad. Los amantes de la música culta y las artes visuales encuentran una oferta diversa que activa los barrios céntricos. Es un momento propicio para recorrer los espacios independientes y las salas institucionales que renuevan sus colecciones temporales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "03",
-              "headline": "El parque público estatal de vivienda facilita alquileres realistas.",
-              "lede": "Se presenta el primer portal oficial orientado a salarios reales.",
-              "body": "La administración central ha dado a conocer el primer portal dedicado en exclusiva al parque público estatal de vivienda. La iniciativa busca incidir en el mercado inmobiliario mediante la promoción de alquileres adaptados a los ingresos medios de los ciudadanos. Esta herramienta digital centraliza la oferta disponible y facilita las gestiones administrativas para los demandantes de vivienda protegida. En paralelo, el Parque del Capricho exhibe sus mejores rincones en su galería de imágenes oficial, recordando el valor patrimonial de los jardines históricos de la ciudad. Ambas iniciativas configuran una semana donde lo público cobra especial relevancia.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La niebla matinal acompaña una jornada de 21°C a 32°C.",
-              "lede": "El litoral amanece con brumas y una calidad del aire calificada como pobre.",
-              "body": "Las temperaturas en la ciudad condal se mueven hoy entre una mínima de 21°C y una máxima de 32°C, bajo un manto de niebla que discurre cerca del mar. El sol se oculta oficialmente a las 20:13, dejando una tarde de tonos difuminados sobre el asfalto. La calidad del aire registra niveles pobres, con partículas PM2.5 en 13, aconsejando moderación en actividades físicas prolongadas al aire libre. En el plano financiero, la cotización de referencia se mantiene en 1 USD por 0.86 EUR. El ambiente atmosférico densifica los paseos matutinos por los barrios cercanos a la costa.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "02",
-              "headline": "Reabre el pasillo de enlace entre las líneas L1 y L3 en plaza Catalunya.",
-              "lede": "Finalizan dos meses de obras de mejora en la infraestructura subterránea.",
-              "body": "Los viajeros que transitan a diario por el metro recuperan la normalidad con la reapertura del pasillo que conecta las líneas L1 y L3 en la concurrida plaza Catalunya. Esta intervención concluye tras dos meses de trabajos intensivos destinados a optimizar los flujos de pasajeros en el subsuelo. Mientras tanto, en la superficie, continúan las labores de rehabilitación de las históricas fachadas de los antiguos Talleres de Renfe situados en el parque del Clot. Estas obras de preservación arquitectónica devuelven el esplendor industrial a uno de los pulmones verdes del distrito de Sant Martí, cuidando el patrimonio local.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "03",
-              "headline": "Piezas originales de la saga Star Wars se exponen en la ciudad.",
-              "lede": "Una muestra reúne objetos de gran valor coleccionista en un espacio cultural.",
-              "body": "La agenda cultural barcelonesa acoge una destacada exposición que reúne piezas originales de la saga cinematográfica 'Star Wars', valoradas en miles de euros. Los seguidores del universo de ciencia ficción pueden contemplar de cerca elementos de atrezo y maquetas utilizadas en las producciones originales. Por otro lado, el tejido empresarial de la ciudad experimenta movimientos con la apertura de nuevas oficinas corporativas en el centro. La llegada de firmas de asesoría y la incorporación de perfiles directivos refuerzan el dinamismo económico urbano. La confluencia entre ocio cultural y actividad profesional caracteriza el pulso cotidiano de estos días.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Una jornada fresca con cielo parcialmente nublado y 15°C de máxima.",
-              "lede": "El termómetro desciende hasta los 7°C en una mañana de aire limpio.",
-              "body": "El clima porteño se muestra propio del tramo final del invierno, registrando una temperatura mínima de 7°C y una máxima que apenas alcanza los 15°C. El cielo se presenta parcialmente nublado durante gran parte de la jornada, permitiendo ver los últimos rayos de sol antes del ocaso fijado a las 18:40. La calidad del aire se mantiene en niveles justos y favorables, con un registro de PM2.5 en 12. Este fresco panorama meteorológico invita a caminar abrigado por las avenidas arboladas y a disfrutar de los cafés tradicionales del centro histórico sin prisas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "02",
-              "headline": "El Parque de la Innovación inaugura nuevos espacios públicos.",
-              "lede": "La zona norte de la ciudad habilite áreas verdes para el uso ciudadano.",
-              "body": "El nuevo Parque de la Innovación continúa expandiendo su superficie transitable con la apertura formal de sus espacios públicos abiertos a la comunidad. Este desarrollo urbanístico integra zonas parquizadas con arquitectura contemporánea, ofreciendo un nuevo punto de encuentro para la ciudadanía. Además, el predio sirve de escaparate para proyectos arquitectónicos destacados, como el primer lugar del concurso destinado al centro de exposiciones y convenciones. La transformación de esta área consolida un corredor moderno que prioriza la movilidad peatonal y la integración paisajística en el tejido urbano de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
-            },
-            {
-              "n": "03",
-              "headline": "El festival Banff Mountain llega a la cartelera porteña.",
-              "lede": "Se anuncian las fechas y la programación del tradicional encuentro audiovisual.",
-              "body": "La agenda cultural de la ciudad recibe al Banff Mountain Festival 2026, que confirma sus fechas y el detalle de su programación cinematográfica dedicada a la aventura y la naturaleza. Los aficionados al cine documental de montaña ya pueden adquirir sus localidades para las proyecciones previstas en las salas habituales. En paralelo, iniciativas musicales como Boombastic reafirman su proyección internacional conectando la península con Buenos Aires y Miami. Estas propuestas consolidan el puente cultural transatlántico, atrayendo a un público diverso interesado en las expresiones artísticas globales y el cine documental de expedición.",
-              "source": "saudade desk",
-              "source_date": "2026-09-08"
             }
           ]
         }
