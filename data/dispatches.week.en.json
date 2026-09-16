@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-09-14T06:00:00+09:00",
+  "updated": "2026-09-17T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-17T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The autumn sky over Seoul holds an overcast gray as temperatures settle.",
+              "lede": "Overcast skies bring a gentle 16 to 26°C range across the city streets.",
+              "body": "The autumn sky over Seoul holds an overcast gray as temperatures settle between 16 and 26°C. Sunset arrives quietly at 18:37, casting soft shadows over the quiet avenues. Air quality remains moderate with PM2.5 resting at 28, keeping the horizon slightly hazy. Visitors navigating the city will find the exchange rate steady at 1 USD to 1368 KRW. It is a calm time for quiet walks through the neighborhoods before the seasonal shifts take full hold. The weather invites slow afternoons spent exploring galleries or quiet neighborhood tea houses. You feel the distinct rhythm of the city changing gear for the autumn months.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "Chagall, Hockney and Kusama open their works to the public this week.",
+              "lede": "Major exhibitions and the SPAF festival mark the current cultural calendar.",
+              "body": "An exhibition featuring works by Chagall, Hockney and Kusama opens in Seoul, drawing quiet crowds to local galleries. Meanwhile, SPAF brings global and experimental works to Seoul this fall, offering thoughtful performances across various intimate venues. Art enthusiasts will also note the strong showing for Korean art amid subdued opening days at Frieze Seoul. In the commercial districts, the culinary landscape expands as Chipotle shares its first Seoul opening with curious diners and shareholders alike. These cultural offerings provide ample shelter and inspiration beneath the mild, overcast skies of mid-September. It is an ideal week to immerse oneself in the city's vibrant yet restrained artistic expressions.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "Prepare for upcoming Chuseok holiday closures across banks and offices.",
+              "lede": "Government offices and financial institutions will close for the autumn holiday.",
+              "body": "Prepare for upcoming Chuseok holiday closures across banks and government offices starting soon. The festive holiday period falls on 2026-09-24, 2026-09-25, and 2026-09-26, transforming the bustling metropolis into a remarkably peaceful retreat. Residents are stocking up on provisions and arranging travel early to navigate the holiday exodus with ease. Public squares and transit hubs will experience temporary shifts in their usual daily rhythms as families gather to celebrate. Travelers should plan currency exchanges and administrative errands well ahead of the holiday dates to avoid sudden inconveniences. The city embraces a quiet, reflective atmosphere during these cherished days of rest and gratitude.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A light drizzle falls across Tokyo streets as evening approaches early.",
+              "lede": "Temperatures hover between 19 and 24°C alongside 1.2mm of precipitation.",
+              "body": "A light drizzle falls across Tokyo streets as evening approaches early with sunset at 17:46. Temperatures hover comfortably between 19 and 24°C, accompanied by 1.2mm of precipitation that dampens the pavement in a quiet sheen. Air quality stays fair, with PM2.5 recorded at a modest 11. Travelers will find the financial exchange rate operating steadily at 1 USD to 155 JPY. The damp air brings a clean, crisp freshness to the city's hidden alleys and tree-lined walkways. It is a gentle weather pattern that encourages carrying an umbrella and taking unhurried walks beneath the darkening evening sky. The city hums softly beneath its canopy of gray clouds.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "Takashi Miike and Cate Blanchett bring unique cinematic visions to the capital.",
+              "lede": "Film screenings and cultural talks enrich the autumn cultural calendar.",
+              "body": "Takashi Miike brings trouble to Tokyo with screenings linked to his latest gritty projects, engaging local cinephiles. Cate Blanchett is set to attend the Tokyo Festival for the Japan premiere of Displacement Film Fund Shorts. Kering adds to the intellectual discourse by hosting a Women In Motion talk in Tokyo featuring Amy Homma, Kazunari Ninomiya, and Chieko Murata. Looking ahead to transport developments, preparations continue for opening our doors to Tokyo riders in 2027 with Nihon Kotsu and GO. These cultural happenings offer a rich indoor refuge from the damp autumn drizzle outside. The city's creative spaces remain deeply inspiring for those seeking quiet artistic contemplation.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "Public holiday closures arrive with Respect for the Aged Day and Autumn Equinox.",
+              "lede": "Government offices and banks observe upcoming national holidays this month.",
+              "body": "Public holiday closures arrive with Respect for the Aged Day on 2026-09-21 and Autumn Equinox on 2026-09-23. Government offices, post offices, and financial institutions will observe these national holidays, leading to altered weekday schedules. Residents and returning travelers should note these dates when planning administrative tasks or banking errands across the city. Public parks and museums may see gentle surges in visitors enjoying their days off amidst the autumn drizzle. It is a traditional season for paying respects and enjoying quiet moments of reflection as the seasons transition. Plan your urban transits and errands around these festive closures to ensure a smooth journey.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies frame the warm Tagus river breeze in Lisbon this week.",
+              "lede": "Temperatures range from 19 to 28°C under a calm, overcast canopy.",
+              "body": "Overcast skies frame the warm Tagus river breeze in Lisbon this week as temperatures range from 19 to 28°C. The generous warmth balances comfortably against the soft, diffused light of an overcast afternoon. Air quality remains exceptionally fair, with PM2.5 registering at just 5 across the capital. For financial transactions, the exchange rate holds steady at 1 USD to 0.87 EUR. The calm weather provides an ideal backdrop for walking the historic cobblestone hills without the fierce glare of the summer sun. Locals linger at outdoor tables, enjoying the gentle maritime air and the unhurried pace of the neighborhoods. It is a season of quiet transitions along the Atlantic coast.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "Local autumn festivals and regional gatherings return for the weekend.",
+              "lede": "Community celebrations and seasonal events animate the surrounding districts.",
+              "body": "Local autumn festivals and regional gatherings return for the weekend, bringing community warmth to the area. While some areas host the beloved Johnny Appleseed Festival, others see eccentric cultural happenings like the Seinfeld Festival considering unusual legal steps against performers. High school tennis and soccer matches provide spirited afternoon viewing for local sports enthusiasts. Time-lapse projects capturing Lisbon and Sesimbra highlight the dramatic play of light across the coastal geography. These diverse happenings offer residents and observant travelers plenty of reasons to explore both the city center and nearby coastal towns. The weekend promises a rich tapestry of small-town charm and metropolitan leisure.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "The city moves at a relaxed pace with standard weekday routines intact.",
+              "lede": "Banks and administrative offices operate normally under clear seasonal conditions.",
+              "body": "The city moves at a relaxed pace with standard weekday routines intact throughout the capital. Banks, post offices, and municipal bureaus maintain their regular schedules with no impending holiday interruptions this week. Travelers can complete their errands and currency exchanges efficiently before heading out to coastal viewpoints. Public transport networks operate smoothly, offering easy connections between the historic districts and the waterfront. The absence of immediate public holidays allows visitors to experience the authentic daily cadence of Lisbon life. It is a serene period to observe the quiet interactions that define the soul of the city.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-14T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "The city embraces its technology focus as Web Summit prepares for its 11th edition in Lisbon. Venues across the city prepare to host thousands of entrepreneurs, speakers, and observers. Hotels and cafes notice an uptick in professional visitors collaborating over morning espresso. Public transit operators coordinate increased frequencies on routes leading to the main event grounds. The summit reinforces Lisbon's standing as a meeting point for international digital culture. Networking events spill into historic neighborhoods after formal sessions conclude.",
               "source": "saudade desk",
               "source_date": "2026-09-03"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-02T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light drizzle settles over the pavement.",
-              "lede": "The afternoon air cools toward 21°C as a brief 0.2mm mist brushes the streets.",
-              "body": "The afternoon air cools toward 21°C as a brief 0.2mm mist brushes the streets, giving the evening an unhurried quiet. Daytime highs reach 29°C before sunset arrives at 19:00. Air quality remains fair with PM2.5 resting at 21. For travelers managing expenses, the exchange rate holds at 1 USD to 1375 KRW. The gentle moisture makes it an ideal afternoon to step indoors and view the Cubism Exhibition at Centre Pompidou Hanwha in Seoul. You can also explore the immersive rooms where Es Devlin Fills a Seoul Gallery With Books, Mirrors, Light, and Sound. These exhibitions anchor the ongoing schedule of five shows to see during Seoul art week. It is a contemplative season where Seoul celebrates this fall through quiet design and deliberate space.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "Es Devlin fills the galleries with mirrored light.",
-              "lede": "Books and sound blend into a quiet labyrinth inside the exhibition space.",
-              "body": "Books and sound blend into a quiet labyrinth inside the exhibition space. Visitors wander through stacked paper and shifting reflections as the afternoon slips past 19:00. The air outside stays steady at 21 to 29°C under 0.2mm of light drizzle. Walking between venues during Seoul art week offers a moment to notice the city's seasonal shift. With air quality marked as fair at 21 PM2.5, the strolls between galleries remain clear and comfortable. The exchange rate holds firm at 1 USD to 1375 KRW for your purchases. Alongside the Devlin installation, the Cubism Exhibition at Centre Pompidou Hanwha in Seoul draws steady crowds. These five shows to see during Seoul art week map out where Seoul celebrates this fall through understated artistic direction.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "Art week brings thoughtful installations to the galleries.",
-              "lede": "Five distinct exhibitions invite slow observation across the city districts.",
-              "body": "Five distinct exhibitions invite slow observation across the city districts. The local currency exchanges at 1 USD to 1375 KRW, assisting travelers picking up exhibition catalogues. Outside, the weather shifts mildly between 21 and 29°C with a trace of 0.2mm precipitation. Sunset falls at 19:00, casting long shadows over the pavement while air quality registers a fair 21 PM2.5. Among the highlights, the Cubism Exhibition at Centre Pompidou Hanwha in Seoul anchors the classical side of the programming. Nearby, Es Devlin Fills a Seoul Gallery With Books, Mirrors, Light, and Sound for a sensory pause. These presentations form the core of the five shows to see during Seoul art week, marking the spots where Seoul celebrates this fall with remarkable restraint and modern curation.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the late afternoon.",
-              "lede": "Temperatures hover between 23 and 31°C as the sun drops at 18:08.",
-              "body": "Temperatures hover between 23 and 31°C as the sun drops at 18:08 behind a veil of broken clouds. Air quality registers as poor with PM2.5 at 33, making a light mask useful for sensitive travelers. Financial transactions settle around an exchange rate of 1 USD to 160 JPY. Cultural calendars turn toward the 39th Tokyo International Film Festival Sets Takahisa Zeze, Godzilla Minus Zero, and Colony for Gala Screenings. Film enthusiasts are noting that Zeze Takahisa’s 'Sukiyaki' to Open Tokyo Film Festival on a high note. Retail wanderers will find the new Birkenstock store opening worth a quiet visit between screenings. Meanwhile, families and game fans can explore the interactive rooms where The 'Dragon Quest The Dive' Exhibition In Tokyo Is Great Fun.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "Film festival preparations gather momentum across the city.",
-              "lede": "Takahisa Zeze prepares to open the cultural showcase with new works.",
-              "body": "Takahisa Zeze prepares to open the cultural showcase with new works. The 39th Tokyo International Film Festival Sets Takahisa Zeze, Godzilla Minus Zero, and Colony for Gala Screenings, drawing cinephiles to the screening halls. It has been confirmed that Zeze Takahisa’s 'Sukiyaki' to Open Tokyo Film Festival as the opening feature. Outside the theaters, the weather ranges from 23 to 31°C under partly cloudy skies. Sunset occurs at 18:08, followed by a hazy evening under a poor air quality index of 33 PM2.5. Travelers will find the exchange rate steady at 1 USD to 160 JPY. Away from the cinemas, visitors can stop by the new Birkenstock store opening or experience the playful rooms where The 'Dragon Quest The Dive' Exhibition In Tokyo Is Great Fun.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "Exhibitions and retail openings shape the neighborhood walks.",
-              "lede": "Quiet streets accommodate new arrivals from footwear flagships to gaming installations.",
-              "body": "Quiet streets accommodate new arrivals from footwear flagships to gaming installations. The atmosphere is tempered by temperatures spanning 23 to 31°C with partly cloudy intervals. Sunset arrives early at 18:08, while air quality remains poor with PM2.5 at 33. Travelers can exchange currency at a rate of 1 USD to 160 JPY before heading out. Shoppers will note the recent Birkenstock store opening in a quiet district side street. For entertainment, the immersive spaces where The 'Dragon Quest The Dive' Exhibition In Tokyo Is Great Fun offer a pleasant afternoon diversion. Cultural anticipation builds as the 39th Tokyo International Film Festival Sets Takahisa Zeze, Godzilla Minus Zero, and Colony for Gala Screenings, highlighted by the news that Zeze Takahisa’s 'Sukiyaki' to Open Tokyo Film Festival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies stretch above the Tagus river.",
-              "lede": "Temperatures move gently from 19 to 30°C while daylight extends to 20:05.",
-              "body": "Temperatures move gently from 19 to 30°C while daylight extends to 20:05 under partly cloudy skies. Air quality remains exceptionally fair with PM2.5 resting at 5. Visitors will find the local exchange rate operating at 1 USD to 0.86 EUR. Sports enthusiasts can catch the Lisbon Varsity Football @ Park River fixtures, following the recent Preview - Lisbon vs Park River Football - Aug 28, 2026 match. For those planning weekend itineraries, The definitive guide to your weekend in Lisbon, if you’re looking for fun and free things to do offers reliable walking routes. The mild afternoon warmth invites residents to linger in neighborhood plazas before the evening breeze sets in across the historic hills.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "02",
-              "headline": "Football matches draw quiet crowds to the river parks.",
-              "lede": "Local teams meet on the grass as the afternoon temperature reaches 30°C.",
-              "body": "Local teams meet on the grass as the afternoon temperature reaches 30°C from a morning low of 19°C. The air is remarkably clean with a fair PM2.5 reading of 5. Financial exchanges hover at 1 USD to 0.86 EUR for incoming visitors. Athletics fans continue discussing the Lisbon Varsity Football @ Park River schedule, building on the earlier Preview - Lisbon vs Park River Football - Aug 28, 2026 event. As evening approaches with the sunset at 20:05, walkers can consult The definitive guide to your weekend in Lisbon, if you’re looking for fun and free things to do. The partly cloudy skies offer comfortable shade for exploring the cobbled lanes and viewpoints.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
-            },
-            {
-              "n": "03",
-              "headline": "Weekend guides point toward quiet plazas and free pathways.",
-              "lede": "Clear air and mild warmth define the afternoon across the capital.",
-              "body": "Clear air and mild warmth define the afternoon across the capital. Air quality is exceptionally fair with a PM2.5 value of 5. Temperatures span from 19 to 30°C beneath a partly cloudy canopy, holding daylight until the sunset at 20:05. The financial exchange rate settles at 1 USD to 0.86 EUR. Travelers looking to navigate the city can rely on The definitive guide to your weekend in Lisbon, if you’re looking for fun and free things to do. Sports followers keep an eye on the Lisbon Varsity Football @ Park River fixtures, following up on the recent Preview - Lisbon vs Park River Football - Aug 28, 2026 encounter. It is a harmonious week for walking the shaded avenues of the city.",
-              "source": "saudade desk",
-              "source_date": "2026-09-02"
             }
           ]
         }
