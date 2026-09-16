@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-15T06:00:00+09:00",
+  "updated": "2026-09-17T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-17T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O céu cinzento cobre a cidade com temperaturas entre 19 e 28 graus.",
+              "lede": "A tarde avança sob um manto nublado até ao pôr do sol às 19:41, mantendo a calmo ritmo habitual.",
+              "body": "As temperaturas oscilam suavemente entre 19 e 28 graus, criando uma atmosfera ideal para longas caminhadas sem o calor intenso do verão. O céu permanece totalmente coberto por nuvens baixas, prolongando a luz difusa até ao pôr do sol marcado para as 19:41. Para quem chega de fora, a taxa de câmbio atual fixa 1 USD em 0.87 EUR, facilitando o planeamento financeiro nas esplanadas da capital. É um dia excelente para observar o Tejo cinzento e desfrutar da tranquilidade urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival da Madeira traz sabores tradicionais à capital.",
+              "lede": "Até domingo, o bolo do caco, as espetadas e a poncha marcam presença na cidade.",
+              "body": "A gastronomia insular instala-se em Lisboa com o Festival da Madeira, decorrendo até domingo. Os visitantes podem saborear o autêntico bolo do caco, as tradicionais espetadas em pau de louro e a genuína poncha. Este evento festivo celebra a cultura madeirense no coração da capital, oferecendo uma pausa acolhedora e saborosa para residentes e viajantes. A curadoria do festival aposta na genuinidade dos produtos, transportando os aromas do arquipélago para as ruas lisboetas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "João Pimenta Gomes apresenta o seu disco a solo Dois Desertos.",
+              "lede": "O músico prepara também uma exposição em Lisboa, cruzando sonoridades e memórias visuais.",
+              "body": "A agenda cultural destaca a apresentação do disco a solo Dois Desertos, da autoria de João Pimenta Gomes. O artista prepara paralelamente uma nova exposição na cidade, consolidando um trajeto de exploração artística e sonora. Em paralelo, a cena cultural lisboeta acolhe o olhar de artistas que resgatam memórias familiares e identitárias em galerias locais. São propostas discretas mas profundas para quem prefere observar o pulso criativo da cidade longe dos grandes circuitos turísticos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O ar mantém-se fresco e limpo com 17 a 24 graus.",
+              "lede": "A qualidade do ar regista um valor de PM2.5 de 6 sob um céu totalmente encoberto.",
+              "body": "A cidade invicta regista temperaturas entre 17 e 24 graus, acompanhadas por um céu encoberto que suaviza a paisagem urbana. A qualidade do ar permanece em níveis muito favoráveis, com um índice de PM2.5 de 6, permitindo passeios tranquilos pelas margens do Douro. O pôr do sol ocorre às 19:40, encerrando o dia com tons difusos sobre a foz. A taxa de câmbio de 1 USD para 0.87 EUR mantém-se estável para visitantes internacionais.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "O Mosteiro de São Bento da Vitória prepara a sua reabertura.",
+              "lede": "As portas do histórico espaço voltam a abrir ao público no dia 1 de outubro.",
+              "body": "O Mosteiro de São Bento da Vitória aguarda a sua reabertura oficial marcada para o dia 1 de outubro, renovando um dos polos patrimoniais mais importantes do Porto. Enquanto os preparativos finais decorrem no interior, o exterior convida a caminhadas atentas pelos claustros e ruas circundantes. A programação futura promete devolver o edifício à dinâmica cultural da cidade, oferecendo novas perspetivas sobre a arquitetura maneirista local.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "O Festival Colombo arranca em Porto Santo com dezenas de atuações.",
+              "lede": "Quatro dias de recriação histórica reúnem mais de 400 participantes na ilha.",
+              "body": "A animação cultural viaja até Porto Santo com o início do Festival Colombo, que arranca amanhã para quatro dias de intensa recriação histórica. O evento conta com 58 atuações programadas e a participação de mais de 400 figurantes e artistas. Esta viagem ao século XV transforma a paisagem insular num palco vivo, atraindo observadores interessados na herança dos descobrimentos e na vivência comunitária tradicional.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra abriga-se sob nuvens com termómetros entre 16 e 24 graus.",
+              "lede": "A qualidade do ar regista PM2.5 de 5, com o sol a ocultar-se pelas 19:42.",
+              "body": "A vila de Sintra apresenta um clima ameno, com temperaturas que variam entre 16 e 24 graus. O céu permanece encoberto, conferindo à serra uma penumbra mística ideal para contemplação. A qualidade do ar é excelente, marcando um valor de PM2.5 de 5. A conversão cambial mantém-se nos 0.87 EUR por cada 1 USD, e o pôr do sol acontece pontualmente às 19:42, desenhando sombras longas sobre os palácios históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival da Sardinha arranca hoje na Praia Grande.",
+              "lede": "A iniciativa costeira celebra os sabores atlânticos junto à falésia.",
+              "body": "O Festival da Sardinha abre hoje portas na Praia Grande, celebrando a tradição piscatória local à beira-mar. O evento convida moradores e visitantes a apreciar o peixe fresco grelhado com vista para o oceano Atlântico. Esta celebração gastronómica alia-se ao ambiente natural protegido da costa sintrense, proporcionando uma pausa descontraída para quem procura os sabores autênticos da região.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            },
+            {
+              "n": "03",
+              "headline": "A Quinta da Ribafria acolhe o regresso do Festival Imaginário.",
+              "lede": "Em paralelo, Alvarinhos celebra 70 anos de história com uma exposição etnográfica.",
+              "body": "A programação cultural da vila desdobra-se em vários pontos de interesse, destacando-se o Festival Imaginário na Quinta da Ribafria. Nas proximidades, a localidade de Alvarinhos celebra 70 anos de história através de uma dedicada Exposição Etnográfica Saloia. Para completar o fim de semana, o 42.º Festival de Folclore da Rinchoa realiza-se este sábado, mantendo vivas as danças e cantares tradicionais da região saloia.",
+              "source": "saudade desk",
+              "source_date": "2026-09-17"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-15T06:00:00+09:00",
       "cities": [
@@ -557,98 +649,6 @@
               "body": "O final do dia em Sintra possui uma solenidade própria quando a luz começa a desvanecer-se por entre as copas das árvores centenárias. Com o sunset fixado às 19:53, os visitantes e moradores aproveitam as últimas horas de claridade para cruzar os parques botânicos. A variação térmica entre 18 e 24°C proporciona um clima ideal para caminhar sem pressa pelas encostas íngremes. A qualidade do ar permanece em níveis muito aceitáveis (PM2.5 em 5), garantindo a pureza da atmosfera serrana. O câmbio de 1 USD para 0.86 EUR apoia a estadia de quem procura refúgio na poesia discreta da paisagem cultural. É o momento em que a serra recupera a sua quietude secular.",
               "source": "saudade desk",
               "source_date": "2026-09-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Parque das Nações recebe novamente as regatas da classe TRITON 1.",
-              "lede": "A competição náutica traz movimento constante à doca e às margens do Tejo.",
-              "body": "As águas calmas do Parque das Nações servem de cenário para a nova etapa da TRITON 1 Lisboa. É uma oportunidade para observar de perto os barcos e a preparação rigorosa das equipas técnicas. Quem passeia pela zona ribeirinha nota o ir e vir habitual dos atletas e a organização nos cais. O câmbio atual fixa-se em 1 USD para 0.86 EUR nos principais postos da cidade. Aproveite o final da tarde para caminhar pelo paredão, longe do ruído do trânsito automóvel. O vento do rio mantém-se fresco, exigindo um casaco leve para quem prolongue a estadia até ao pôr do sol.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "Avenida Nova celebra as tradições e a cultura da Madeira no centro urbano.",
-              "lede": "As Avenidas Novas vestem-se com os sabores e os ritmos tradicionais da ilha.",
-              "body": "O festival dedicado à cultura madeirense instalado nas Avenidas Novas atrai residentes e curiosos em busca de produtos genuínos. Entre bancas de artesanato e especialidades gastronómicas, o ambiente recupera o espírito festivo trazido diretamente do arquipélago. Para quem chega de fora, o câmbio mantém-se estável em 1 USD para 0.86 EUR nas casas de câmbio locais. É um ponto de encontro calmo para provar o bolo do caco e escutar sonoridades atlânticas sem sair da capital. O espaço foi pensado para um passeio lento, ideal para quem aprecia o comércio tradicional e a partilha de saberes antigos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "O humor e a reflexão cultural dividem atenções nos palcos lisboetas.",
-              "lede": "A programação cultural da cidade debate novos formatos e celebra a identidade regional.",
-              "body": "As conversas em torno do Commedia a La Carte Fest geram curiosidade sobre os rumos dos festivais de comédia na cidade. Em paralelo, eventos como o Festival da Madeira mantêm viva a ponte cultural entre as regiões autónomas e a capital. A taxa de câmbio de 1 USD para 0.86 EUR facilita o planeamento financeiro dos viajantes que chegam de fora da zona euro. A cidade avança para o outono com uma agenda rica em pequenas exposições e encontros literários nas bibliotecas de bairro. É o momento ideal para redescobrir os espaços cobertos e as salas de espetáculo mais recatadas de Lisboa.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Parque da Cidade acolheu as celebrações da independência do Brasil.",
-              "lede": "Sabores e ritmos regionais marcaram o ponto alto do programa festivo.",
-              "body": "O Parque da Cidade transformou-se no epicentro das comemorações da independência do Brasil, reunindo famílias e visitantes nos relvados amplos. A programação cultural destacou a música e a gastronomia típica, criando um ambiente de festa partilhada ao ar livre. Para os viajantes, a conversão monetária permanece nos 0.86 EUR por cada 1 USD. Os trilhos arborizados do parque continuam acessíveis para caminhadas matinais tranquilas, longe da agitação do centro histórico. É um espaço amplo que convida à observação da natureza e ao descanso sob a sombra dos plátanos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "Porto Santo revela-se através de uma exposição fotográfica de memórias.",
-              "lede": "A galeria recupera imagens antigas que evocam a insularidade e a calma atlântica.",
-              "body": "Uma nova exposição na cidade convida a revisitar Porto Santo através de um espólio fotográfico carregado de nostalgia. As imagens mostram a paisagem árida e as praias douradas da ilha vizinha, contrastando com o granito urbano do Porto. A visita faz-se a um ritmo pausado, ideal para dias em que a meteorologia pede abrigo em espaços culturais fechados. A taxa de câmbio local fixa-se em 1 USD para 0.86 EUR, facilitando as transações correntes nos cafetins ao redor. Aproveite para prolongar a tarde numa livraria próxima e absorver a tranquilidade que estas mostras visuais transmitem ao observador atento.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "A Universidade do Porto encerra o ciclo inspirado em Valter Hugo Mãe.",
-              "lede": "A exposição literária despede-se do público com notas de grande sensibilidade artística.",
-              "body": "A U.Porto encerra a exposição dedicada ao universo estético e literário inspirado na obra de Valter Hugo Mãe. O percurso expositivo atraiu leitores e estudiosos dispostos a decifrar as texturas visuais ligadas aos romances do autor. Quem visita a baixa do Porto encontra o comércio a funcionar com a taxa de 1 USD para 0.86 EUR. O movimento nas ruas é o habitual para esta altura do ano, misturando estudantes universitários e turistas de passo lento. É o momento oportuno para revisitar as galerias da universidade antes da transição para a próxima programação artística.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu encoberto e os 18 a 22°C definem o ritmo calmo da serra.",
-              "lede": "A qualidade do ar mantém-se excelente com níveis de PM2.5 em 3.",
-              "body": "A temperatura oscila entre 18 e 22°C sob um céu totalmente encoberto, ideal para longas caminhadas pelos trilhos protegidos de Sintra. Com o pôr do sol marcado para as 19:55, as horas de luz aproveitam-se melhor nas zonas arborizadas do parque natural. A qualidade do ar é excelente, registando um valor de 3 para as partículas PM2.5, o que favorece a respiração profunda entre a vegetação húmida. Os visitantes internacionais encontram a taxa de câmbio fixada em 1 USD para 0.86 EUR nas caixas automáticas da vila. Vista uma camisola corta-vento para enfrentar a neblina característica que costuma abraçar os palácios no final da tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "A praia intocada do parque protegido aguarda os caminhantes mais atentos.",
-              "lede": "A areia dourada e as falésias dramáticas mantêm-se isoladas do turismo de massa.",
-              "body": "Escondida a 35 minutos de Lisboa, esta praia integrada no parque protegido oferece um refúgio de falésias dramáticas e areia dourada. O acesso exige uma caminhada atenta pelos caminhos declivosos da arriba, recompensada pelo silêncio do oceano Atlântico. Com a temperatura exterior a variar entre 18 e 22°C e o ar limpo com PM2.5 em 3, o passeio costeiro ganha um encanto particular. A conversão de moeda nos arredores pratica o câmbio de 1 USD para 0.86 EUR. Lembre-se de que o sol se põe pelas 19:55, pelo que o regresso ao topo deve ser planeado com antecedência para evitar a penumbra nos trilhos de terra.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "A preparação para o Festival da Sardinha anima a Praia Grande.",
-              "lede": "O 4.º Festival da Sardinha regressa entre 11 e 13 de setembro.",
-              "body": "Os preparativos avançam na Praia Grande para o arranque da quarta edição do Festival da Sardinha, agendado para os dias 11 a 13 de setembro. A vila costeira começa a receber os primeiros forasteiros atraídos pelo cheiro a mar e pela expetativa do evento gastronómico. O termómetro marca entre 18 e 22°C, enquanto o ar puro da região regista um índice PM2.5 de 3, garantindo um ambiente muito agradável à beira-mar. O câmbio oficial permanece estável em 1 USD para 0.86 EUR para quem necessite de levantar numerário. O pôr do sol ocorre pontualmente às 19:55, pintando o horizonte marítimo com tons cinzentos e dourados antes da noite cair.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
             }
           ]
         }
