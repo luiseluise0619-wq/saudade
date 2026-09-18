@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-16T06:00:00+09:00",
+  "updated": "2026-09-19T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-19T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival de gildas reúne cincuenta recetas este sábado.",
+              "lede": "Los bares de la capital celebran un encuentro gastronómico dedicado al aperitivo clásico con música en directo y toro mecánico.",
+              "body": "El ocio madrileño se concentra este fin de semana en torno al mayor festival dedicado a la gilda. Solo este sábado en Madrid, los asistentes podrán probar hasta 50 variedades diferentes de este emblemático pincho vasco. La cita combina la degustación con actuaciones musicales en directo y atracciones singulares como un toro mecánico. Es una oportunidad excelente para recorrer el ambiente de los barrios y redescubrir el vermú clásico. Con un tipo de cambio de 1 USD a 0.87 EUR, los visitantes extranjeros encuentran una ventaja moderada en su presupuesto para consumiciones. Conviene llegar temprano para evitar aglomeraciones en los puestos más populares del recinto.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "02",
+              "headline": "El Jardín de las Delicias despliega su cartel musical.",
+              "lede": "El recinto madrileño abre sus puertas para acoger una nueva edición del festival con directos y horarios escalonados.",
+              "body": "La música pop y alternativa toman el protagonismo en la agenda cultural de la Comunidad. El Festival Jardín de las Delicias de Madrid 2026 detalla sus horarios, cartel completo y las rutas recomendadas para llegar sin contratiempos. Las puertas del recinto se abren desde primera hora de la tarde para recibir al público de forma ordenada. Los servicios de transporte público refuerzan sus frecuencias en las líneas de autobús más cercanas. La organización aconseja consultar la aplicación oficial para conocer los accesos habilitados y las restricciones de objetos prohibidos. Este evento marca el pulso musical del fin de semana en la región con una propuesta consolidada.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "03",
+              "headline": "Una exposición municipal repasa la respuesta ante crisis.",
+              "lede": "La Comunidad de Madrid muestra en una muestra pública la labor de sus equipos de emergencia e infraestructuras.",
+              "body": "El espacio expositivo institucional abre sus puertas para mostrar la trastienda de la gestión pública ante situaciones críticas. La muestra detalla cómo operan los equipos humanos y qué protocolos siguen las infraestructuras esenciales de la región. Mediante paneles informativos y material audiovisual, el visitante comprende la complejidad técnica de la seguridad ciudadana. La entrada es gratuita y permanece abierta durante todo el fin de semana en horario habitual. Es una visita pausada que permite valorar el trabajo invisible que sostiene la normalidad urbana. Las instalaciones cuentan con accesibilidad completa para personas con movilidad reducida.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Los autobuses clásicos ocupan el espacio urbano este fin de semana.",
+              "lede": "Una muestra retrospectiva reúne vehículos históricos que marcaron la movilidad de la Ciudad Condal durante décadas.",
+              "body": "El patrimonio rodado de Barcelona sale a la calle en una exposición pensada para nostálgicos y curiosos. Barcelona acoge una exposición de autobuses clásicos este fin de semana con todos los detalles para visitar las carrocerías restauradas. Los vehículos se exhiben en una ubicación céntrica que permite observar de cerca la evolución del diseño y la ingeniería del transporte público. La calidad del aire se mantiene en niveles moderados, con un índice PM2.5 de 8, lo que favorece el paseo al aire libre. El termograma marca hoy temperaturas de 18 a 26°C bajo un cielo completamente overcast. El atardecer está previsto para las 19:53, ofreciendo una luz suave para la fotografía urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "02",
+              "headline": "Gaudí cobra vida en una experiencia inmersiva digital.",
+              "lede": "Los edificios jamás construidos por el arquitecto catalán se pueden recorrer gracias a una nueva muestra tecnológica.",
+              "body": "La arquitectura imposible del modernismo encuentra por fin un espacio físico para ser contemplada. Entrar en los edificios nunca construidos de Gaudí ya es posible en Barcelona gracias a esta exposición inmersiva. La tecnología de realidad virtual y proyecciones tridimensionales traslada al espectador al interior de proyectos que quedaron únicamente sobre el papel. La visita requiere reserva previa debido al aforo limitado de las salas de proyección. Con un tipo de cambio de 1 USD a 0.87 EUR, los viajeros internacionales pueden adquirir sus entradas con un pequeño margen favorable. Las condiciones meteorológicas actuales, con una temperatura de 18 a 26°C y cielos overcast, invitan a refugiarse en espacios culturales cerrados.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival •B fusiona música urbana y destellos funk.",
+              "lede": "Una renovada Mushkaa encabeza el cartel musical junto a las propuestas electrónicas de Stereo Madness.",
+              "body": "La escena musical independiente de la ciudad se cita en el Festival •B para mostrar las últimas tendencias del sonido metropolitano. Una Mushkaa renovada y los destellos funk de Stereo Madness brillan en el Festival •B ante un público entregado. Las actuaciones se desarrollan en un recinto al aire libre adaptado para garantizar una acústica óptima. El cielo overcast y los termómetros oscilando entre los 18 y los 26°C acompañan la jornada festiva sin sobresaltos térmicos. La calidad del aire registra un valor PM2.5 de 8, considerado moderado para la actividad exterior. Se recomienda utilizar los Cercanías o el metro para llegar al recinto, ya que el aparcamiento en la zona es estrictamente limitado.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El MALBA rinde homenaje a Frida Kahlo en una gran muestra.",
+              "lede": "El Museo de Arte Latinoamericano de Buenos Aires acoge una exposición monográfica dedicada a la pintora mexicana.",
+              "body": "Las salas del museo porteño se visten de color para recibir una de las propuestas pictóricas más esperadas del año. Especial: Buenos Aires celebra a Frida Kahlo con exposición en el Museo de Arte Latinoamericano reúne piezas icónicas y documentación biográfica. El recorrido invita a una observación detenida de la obra y su contexto político y emocional. Hoy la ciudad registra una temperatura entre 16 y 20°C bajo un cielo overcast, ideal para recorrer galerías sin prisas. La calidad del aire se sitúa en un nivel moderado, con un registro PM2.5 de 22. Conviene comprar los tickets de acceso con antelación digital para evitar las filas en la entrada principal del museo.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "02",
+              "headline": "El cine de montaña llega al circuito cultural porteño.",
+              "lede": "Jeep presenta la vigésimo sexta edición del Banff Mountain Film Festival con producciones internacionales de aventura.",
+              "body": "La pantalla grande se llena de cumbres lejanas y expediciones extremas en una nueva edición del certamen audiovisual. Jeep presenta la edición 26° del Banff Mountain Film Festival en Buenos Aires con una selección de cortometrajes documentales. Las proyecciones muestran paisajes remotos y relatos de superación personal rodados en los rincones más inaccesibles del planeta. Las funciones se realizan en salas seleccionadas del centro de la ciudad con subtitulado en español. El atardecer porteño se adelanta hasta las 18:48, marcando el inicio de las funciones nocturnas. El clima exterior se mantiene fresco, con una temperatura de 16 a 20°C y ambiente overcast que no requiere paraguas pero sí abrigo ligero.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            },
+            {
+              "n": "03",
+              "headline": "Comienza la fase final de la competición en la capital.",
+              "lede": "La ceremonia de apertura y el sorteo de los grupos marcan el pistoletazo de salida del torneo deportivo.",
+              "body": "El movimiento deportivo internacional recala en Buenos Aires con el inicio de los encuentros decisivos de la temporada. Ceremonia de apertura y sorteo de los grupos. Hoy comienza la fase final en Buenos Aires con la participación de las delegaciones clasificadas. Las instalaciones preparadas para el evento reciben a los primeros espectadores y equipos técnicos bajo estrictas medidas de organización. La temperatura exterior oscila entre los 16 y los 20°C, con una atmósfera overcast propia de la temporada. La calidad del aire muestra un índice PM2.5 de 22, manteniendo parámetros moderados en toda la traza urbana. Se recomienda consultar las modificaciones temporales en las líneas de transporte que conectan con el complejo deportivo.",
+              "source": "saudade desk",
+              "source_date": "2026-09-19"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-16T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El urbanismo y el diseño paisajístico ocupan un lugar destacado en la agenda de exposiciones de la ciudad. El Centro de Exposiciones y Convenciones alberga la muestra con los mejores diseños presentados al concurso de arquitectura para el nuevo parque urbano. Los visitantes pueden recorrer maquetas y planos detallados que redefinen el uso del espacio verde en la metrópoli. Con el termómetro marcando de 11 a 18°C y un cielo overcast, la visita cultural es perfecta para la tarde. La calidad del aire se sitúa en un nivel moderado con PM2.5 de 18. El sol descenderá definitivamente en el horizonte porteño a las 18:41, cerrando un ciclo diario de observación tranquila.",
               "source": "saudade desk",
               "source_date": "2026-09-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El XXI Suma Flamenca llena los teatros.",
-              "lede": "La música de guitarra regresa a los escenarios madrileños en septiembre.",
-              "body": "El XXI Suma Flamenca 2026 trae de vuelta la gran tradición del cante y la guitarra a diversos rincones de la capital. Los aficionados al género disfrutan de una programación extensa en teatros y auditorios seleccionados. Es recomendable consultar la disponibilidad de localidades con antelación para asegurar el acceso a las funciones más solicitadas. Las calles conservan el ritmo pausado del final del verano mientras la cultura ocupa el centro de la agenda diaria. La ciudad ofrece refugio en sus salas para quienes buscan la cercanía del arte en vivo.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "Avanzan las obras en el Parque Ventas.",
-              "lede": "El alcalde supervisa los trabajos de construcción del nuevo espacio verde.",
-              "body": "Almeida visita las obras de construcción de Parque Ventas para comprobar el avance de este importante proyecto urbano. La intervención busca dotar a la zona este de nuevas áreas de recreo y arbolado maduro. Los paseantes ya pueden intuir los futuros trazados peatonales que conectarán los barrios adyacentes. Este tipo de actuaciones redefinen el paisaje cotidiano de la ciudad, priorizando el bienestar de los residentes. La intervención sigue su curso planificado sin alterar de forma grave el tráfico rodado de los alrededores.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "La Diada aproxima cierres administrativos en Cataluña.",
-              "lede": "El calendario autonómico altera la actividad institucional esta semana.",
-              "body": "Con motivo de la Diada Nacional de Catalunya el 2026-09-11, las oficinas públicas, bancos y servicios postales de la región modificarán sus horarios habituales. Los viajeros que realicen gestiones o trámites interregionales desde la capital deben tener en cuenta estas variaciones operativas. Este festivo marca una pausa institucional muy respetada por los residentes. La movilidad ferroviaria y por carretera hacia el nordeste peninsular también suele registrar mayor afluencia durante estas jornadas de conmemoración. Es prudente anticipar cualquier movimiento logístico necesario.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Precaución por tormentas y granizo en la costa.",
-              "lede": "La temperatura oscila entre los 19 y los 27°C con 14.2mm de precipitación.",
-              "body": "El mercurio se mueve entre los 19 y los 27°C bajo cielos inestables que dejan 14.2mm de precipitación y episodios de tormenta con granizo. La puesta de sol está prevista para las 20:11, marcando el fin de una jornada pasada por agua. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 11. Los paseos marítimos y los parques urbanos exigen calzado adecuado y paraguas a mano. La ciudad experimenta ese característico silencio húmedo que transforma la luz sobre los adoquines mojados.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Serielizados reúne a creadores en Barcelona.",
-              "lede": "Carmen Machi y Ferran Adrià participan en la cita cultural de septiembre.",
-              "body": "El festival Serielizados de Barcelona cuenta este año con figuras tan destacadas como Carmen Machi, Ferran Adrià, Rodrigo Sorogoyen, Victoria Martín y Steven Moffat. Las salas de proyección acogen encuentros y estrenos muy esperados por los seguidores del formato audiovisual. Es una excelente oportunidad para profundizar en la autoría contemporánea y el análisis narrativo. Los asistentes pueden adquirir sus abonos en los puntos habilitados por toda la ciudad. Las charlas fomentan el intercambio de ideas en un ambiente relajado y accesible.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "Cierres por festivo y nuevo espacio gastronómico.",
-              "lede": "La Diada Nacional de Catalunya afecta a la administración el 2026-09-11.",
-              "body": "La festividad de la Diada Nacional de Catalunya el 2026-09-11 supondrá el cierre de oficinas gubernamentales, bancos y correos en todo el territorio catalán. Conviene planificar cualquier diligencia con antelación para evitar inconvenientes de última hora. Paralelamente, un gran festival gastronómico abre un espacio permanente de catas, talleres y experiencias en Barcelona. Esta nueva sede culinaria ofrece un punto de encuentro estable para los amantes de la buena mesa y el producto local. La iniciativa enriquece la oferta cultural y de ocio del otoño barcelonés.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Llovizna persistente y aire templado en la capital.",
-              "lede": "La temperatura se sitúa entre los 10 y los 18°C con 1.5mm de precipitación.",
-              "body": "El termómetro marca registros de 10 a 18°C acompañados por una suave llovizna que deja 1.5mm de precipitación en las calles porteñas. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 11. La puesta de sol ocurre a las 18:40, tiñendo el horizonte de gris y ocre. Los cafés de esquina invigan a resguardarse con una infusión caliente y un libro. Es una jornada ideal para el compás lento, observando el tráfico urbano desde el cobijo de los soportales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Boombastic amplía sus horizontes hacia Buenos Aires.",
-              "lede": "La cita musical consolida su expansión internacional tras su paso por España.",
-              "body": "El festival Boombastic se queda en España y crece con nuevos festivales en Miami y Buenos Aires, confirmando su proyección transatlántica. Esta expansión genera expectativas entre los seguidores de la música urbana y los eventos multitudinarios. La organización proyecta ediciones cuidadas que conectan las escenas artísticas de ambos lados del Atlántico. La sede local en Buenos Aires servirá como plataforma para nuevos talentos y grandes nombres del cartel. La noticia refuerza el intercambio cultural permanente entre la península y el Cono Sur.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
-            },
-            {
-              "n": "03",
-              "headline": "Comienza el gran festival internacional de teatro.",
-              "lede": "Las artes escénicas toman los escenarios porteños en este inicio de temporada.",
-              "body": "Empieza el gran festival internacional de teatro de Buenos Aires con una amplia cartelera que abarca salas independientes y grandes teatros oficiales. Los espectadores pueden disfrutar de propuestas nacionales e internacionales de gran calado reflexivo. La programación invita a recorrer diferentes barrios siguiendo el rastro de la dramaturgia contemporánea. Se recomienda consultar los horarios específicos de cada función para evitar colas en las taquillas. Esta cita reafirma la vitalidad cultural indiscutible de la capital argentina durante el mes de septiembre.",
-              "source": "saudade desk",
-              "source_date": "2026-09-09"
             }
           ]
         }
