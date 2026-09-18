@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-09-16T06:00:00+09:00",
-  "next_filing": "2026-09-16T21:00:00+00:00",
+  "filed_at": "2026-09-19T06:00:00+09:00",
+  "next_filing": "2026-09-19T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Las lanzaderas gratuitas facilitan la llegada a los conciertos de Shakira en Madrid.",
-          "lede": "El cielo permanece cubierto mientras el transporte especial conecta los puntos clave de la ciudad.",
-          "body": "Bajo un cielo gris de 18 a 27°C y apenas 0.2mm de precipitación, la movilidad urbana se adapta a los grandes eventos musicales. Los asistentes cuentan con autobuses lanzadera gratuitos para llegar sin contratiempos a las actuaciones y al espacio temático Macondo Park. Conviene consultar los cortes de tráfico previstos en los accesos principales para planificar el trayecto con calma. La atmósfera musical se complementa este fin de semana con el Festival Jardín de las Delicias, marcando el cierre estival. Por su parte, la reciente festividad de la Bien Aparecida dejó oficinas y administraciones cerradas temporalmente. El tipo de cambio actual se sitúa en 1 USD por 0.87 EUR para los visitantes internacionales que recorren las calles.",
+          "headline": "El festival de gildas reúne cincuenta recetas este sábado.",
+          "lede": "Los bares de la capital celebran un encuentro gastronómico dedicado al aperitivo clásico con música en directo y toro mecánico.",
+          "body": "El ocio madrileño se concentra este fin de semana en torno al mayor festival dedicado a la gilda. Solo este sábado en Madrid, los asistentes podrán probar hasta 50 variedades diferentes de este emblemático pincho vasco. La cita combina la degustación con actuaciones musicales en directo y atracciones singulares como un toro mecánico. Es una oportunidad excelente para recorrer el ambiente de los barrios y redescubrir el vermú clásico. Con un tipo de cambio de 1 USD a 0.87 EUR, los visitantes extranjeros encuentran una ventaja moderada en su presupuesto para consumiciones. Conviene llegar temprano para evitar aglomeraciones en los puestos más populares del recinto.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "02",
-          "headline": "El Festival Jardín de las Delicias despide el verano musical en la capital.",
-          "lede": "Las temperaturas suaves y el ambiente nublado acompañan el último gran evento al aire libre.",
-          "body": "El termómetro oscila entre los 18 y los 27°C con una mínima presencia de lluvia de 0.2mm, ideal para disfrutar de la música sin agobios. Este encuentro despide la temporada estival en un recinto preparado para acoger a miles de espectadores locales y visitantes. Las opciones de transporte público se han reforzado para garantizar una llegada fluida y ordenada durante todas las jornadas. Los residentes aprovechan el aire fair con un índice PM2.5 de 6 para pasear por los parques antes del atardecer previsto a las 20:22. La reciente celebración de la Bien Aparecida mantiene el ritmo pausado en los trámites administrativos de la región. El cambio oficial se mantiene estable en 1 USD frente a 0.87 EUR.",
+          "headline": "El Jardín de las Delicias despliega su cartel musical.",
+          "lede": "El recinto madrileño abre sus puertas para acoger una nueva edición del festival con directos y horarios escalonados.",
+          "body": "La música pop y alternativa toman el protagonismo en la agenda cultural de la Comunidad. El Festival Jardín de las Delicias de Madrid 2026 detalla sus horarios, cartel completo y las rutas recomendadas para llegar sin contratiempos. Las puertas del recinto se abren desde primera hora de la tarde para recibir al público de forma ordenada. Los servicios de transporte público refuerzan sus frecuencias en las líneas de autobús más cercanas. La organización aconseja consultar la aplicación oficial para conocer los accesos habilitados y las restricciones de objetos prohibidos. Este evento marca el pulso musical del fin de semana en la región con una propuesta consolidada.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "03",
-          "headline": "El mercado de Tapapiés ajusta su formato para evitar la masificación vecinal.",
-          "lede": "Los organizadores priorizan la convivencia calmada frente al consumo rápido en las calles del barrio.",
-          "body": "El conocido evento gastronómico y cultural modifica este año su dinámica para proteger la tranquilidad cotidiana de sus residentes. Las calles mantienen una temperatura agradable de 18 a 27°C bajo un cielo overcast que suaviza el paseo vespertino. La calidad del aire se mantiene en niveles fair, registrando un PM2.5 de 6 en los medidores locales. El atardecer llega puntualmente a las 20:22, dejando una luz difusa sobre las plazas y los comercios tradicionales de la zona. Tras la reciente festividad de la Bien Aparecida, los servicios públicos recuperan su horario habitual de atención. Quienes llegan de fuera pueden realizar sus transacciones financieras aplicando el cambio oficial de 1 USD por 0.87 EUR.",
+          "headline": "Una exposición municipal repasa la respuesta ante crisis.",
+          "lede": "La Comunidad de Madrid muestra en una muestra pública la labor de sus equipos de emergencia e infraestructuras.",
+          "body": "El espacio expositivo institucional abre sus puertas para mostrar la trastienda de la gestión pública ante situaciones críticas. La muestra detalla cómo operan los equipos humanos y qué protocolos siguen las infraestructuras esenciales de la región. Mediante paneles informativos y material audiovisual, el visitante comprende la complejidad técnica de la seguridad ciudadana. La entrada es gratuita y permanece abierta durante todo el fin de semana en horario habitual. Es una visita pausada que permite valorar el trabajo invisible que sostiene la normalidad urbana. Las instalaciones cuentan con accesibilidad completa para personas con movilidad reducida.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Dalí se instala en Barcelona con una nueva exposición permanente e inmersiva.",
-          "lede": "Las tormentas vespertinas invitan a buscar refugio en los espacios culturales del centro urbano.",
-          "body": "La ciudad recibe una propuesta artística singular mientras el termómetro se mueve entre los 21 y los 26°C. El pronóstico señala 9.4mm de precipitación en forma de tormenta, por lo que se recomienda llevar paraguas y calzado adecuado. La puesta de sol se adelanta hasta las 19:58, acortando las horas de luz natural para las visitas al aire libre. La calidad del aire es poor, con un índice PM2.5 de 11 que aconseja moderar el esfuerzo físico exterior. Esta oferta cultural convive con otras iniciativas como la Auliak Collection y el festival Disney impulsado por Movistar. Los viajeros internacionales pueden gestionar sus gastos utilizando el tipo de cambio de 1 USD por 0.87 EUR en los establecimientos.",
+          "headline": "Los autobuses clásicos ocupan el espacio urbano este fin de semana.",
+          "lede": "Una muestra retrospectiva reúne vehículos históricos que marcaron la movilidad de la Ciudad Condal durante décadas.",
+          "body": "El patrimonio rodado de Barcelona sale a la calle en una exposición pensada para nostálgicos y curiosos. Barcelona acoge una exposición de autobuses clásicos este fin de semana con todos los detalles para visitar las carrocerías restauradas. Los vehículos se exhiben en una ubicación céntrica que permite observar de cerca la evolución del diseño y la ingeniería del transporte público. La calidad del aire se mantiene en niveles moderados, con un índice PM2.5 de 8, lo que favorece el paseo al aire libre. El termograma marca hoy temperaturas de 18 a 26°C bajo un cielo completamente overcast. El atardecer está previsto para las 19:53, ofreciendo una luz suave para la fotografía urbana.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "02",
-          "headline": "El Festival Altaveu anima Sant Boi de Llobregat con propuestas musicales diversas.",
-          "lede": "El área metropolitana acoge conciertos singulares mientras las tormentas recorren la franja costera.",
-          "body": "Las jornadas musicales del Baix Llobregat se desarrollan con una temperatura de 21 a 26°C y avisos por tormenta. Se prevén hasta 9.4mm de lluvia, por lo que conviene revisar la programación de los espacios cerrados y al aire libre. El atardecer a las 19:58 marca el inicio de las actuaciones nocturnas en los auditorios municipales y plazas habilitadas. La atmósfera muestra una calidad del aire poor con 11 de PM2.5, propia de episodios de inestabilidad meteorológica. Paralelamente, la agenda cultural incluye la muestra permanente de Dalí y la llegada del festival Disney a la ciudad condal. La moneda extranjera mantiene su equivalencia de 1 USD por 0.87 EUR para los turistas que visitan la región.",
+          "headline": "Gaudí cobra vida en una experiencia inmersiva digital.",
+          "lede": "Los edificios jamás construidos por el arquitecto catalán se pueden recorrer gracias a una nueva muestra tecnológica.",
+          "body": "La arquitectura imposible del modernismo encuentra por fin un espacio físico para ser contemplada. Entrar en los edificios nunca construidos de Gaudí ya es posible en Barcelona gracias a esta exposición inmersiva. La tecnología de realidad virtual y proyecciones tridimensionales traslada al espectador al interior de proyectos que quedaron únicamente sobre el papel. La visita requiere reserva previa debido al aforo limitado de las salas de proyección. Con un tipo de cambio de 1 USD a 0.87 EUR, los viajeros internacionales pueden adquirir sus entradas con un pequeño margen favorable. Las condiciones meteorológicas actuales, con una temperatura de 18 a 26°C y cielos overcast, invitan a refugiarse en espacios culturales cerrados.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "03",
-          "headline": "La Auliak Collection y el universo Disney enriquecen la agenda cultural urbana.",
-          "lede": "Los espacios expositivos de la ciudad ofrecen refugio frente a la inestabilidad meteorológica.",
-          "body": "Bajo un cielo tormentoso que dejará unos 9.4mm de precipitación, la oferta de galerías y salas de exposiciones cobra protagonismo. Las temperaturas oscilan entre los 21 y los 26°C, con una atmósfera de calidad poor y un registro PM2.5 de 11. La puesta de sol a las 19:58 invita a cenar temprano en los bistrós tradicionales del Eixample o el Gòtic. Estas propuestas se suman a la recién estrenada muestra inmersiva dedicada a Salvador Dalí en el corazón de Barcelona. Los servicios administrativos retoman la normalidad tras los festivos regionales recientes que afectaron a las oficinas públicas. Los pagos con tarjeta aplican sin problemas el cambio actual de 1 USD por 0.87 EUR.",
+          "headline": "El Festival •B fusiona música urbana y destellos funk.",
+          "lede": "Una renovada Mushkaa encabeza el cartel musical junto a las propuestas electrónicas de Stereo Madness.",
+          "body": "La escena musical independiente de la ciudad se cita en el Festival •B para mostrar las últimas tendencias del sonido metropolitano. Una Mushkaa renovada y los destellos funk de Stereo Madness brillan en el Festival •B ante un público entregado. Las actuaciones se desarrollan en un recinto al aire libre adaptado para garantizar una acústica óptima. El cielo overcast y los termómetros oscilando entre los 18 y los 26°C acompañan la jornada festiva sin sobresaltos térmicos. La calidad del aire registra un valor PM2.5 de 8, considerado moderado para la actividad exterior. Se recomienda utilizar los Cercanías o el metro para llegar al recinto, ya que el aparcamiento en la zona es estrictamente limitado.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El Teatro Picadero acoge el Festival Ennio Morricone con una gran orquesta en escena.",
-          "lede": "El ambiente fresco de septiembre invita a disfrutar de la música en salas históricas.",
-          "body": "Con un registro térmico de 6 a 12°C y un cielo completamente overcast, la capital porteña adopta un ritmo pausado. Cincuenta artistas, entre músicos y coros, interpretan las obras más emblemáticas del compositor italiano en pleno centro. La puesta de sol se produce a las 18:45, dejando una tarde propicia para los espectáculos bajo techo y las funciones teatrales. La calidad del aire se mantiene en parámetros fair, con un valor PM2.5 de 7 que acompaña los paseos urbanos. En paralelo, la ciudad da inicio a la fase final de su torneo principal y acoge el festival de cine de montaña Banff. Los visitantes disfrutan de las librerías y cafés tradicionales abrigados del viento austral.",
+          "headline": "El MALBA rinde homenaje a Frida Kahlo en una gran muestra.",
+          "lede": "El Museo de Arte Latinoamericano de Buenos Aires acoge una exposición monográfica dedicada a la pintora mexicana.",
+          "body": "Las salas del museo porteño se visten de color para recibir una de las propuestas pictóricas más esperadas del año. Especial: Buenos Aires celebra a Frida Kahlo con exposición en el Museo de Arte Latinoamericano reúne piezas icónicas y documentación biográfica. El recorrido invita a una observación detenida de la obra y su contexto político y emocional. Hoy la ciudad registra una temperatura entre 16 y 20°C bajo un cielo overcast, ideal para recorrer galerías sin prisas. La calidad del aire se sitúa en un nivel moderado, con un registro PM2.5 de 22. Conviene comprar los tickets de acceso con antelación digital para evitar las filas en la entrada principal del museo.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "02",
-          "headline": "El Banff Mountain Film Festival presenta su edición número veintiséis en la ciudad.",
-          "lede": "Las proyecciones de cine de aventura atraen a los amantes de la naturaleza en estas jornadas frías.",
-          "body": "El termómetro se mueve entre los 6 y los 12°C bajo un manto overcast que caracteriza la semana en Buenos Aires. Este festival de cine documental ofrece una ventana hacia expediciones extremas y paisajes remotos desde las salas locales. La caída del sol a las 18:45 marca la salida hacia las funciones vespertinas y los encuentros con realizadores invitados. La atmósfera urbana registra una calidad del aire fair, con un medidor PM2.5 situado en 7. La agenda cultural se completa con la apertura de la fase final de competiciones deportivas y conciertos sinfónicos destacados. Los caminantes recorren los barrios históricos protegidos por abrigos ligeros y bufandas de lana.",
+          "headline": "El cine de montaña llega al circuito cultural porteño.",
+          "lede": "Jeep presenta la vigésimo sexta edición del Banff Mountain Film Festival con producciones internacionales de aventura.",
+          "body": "La pantalla grande se llena de cumbres lejanas y expediciones extremas en una nueva edición del certamen audiovisual. Jeep presenta la edición 26° del Banff Mountain Film Festival en Buenos Aires con una selección de cortometrajes documentales. Las proyecciones muestran paisajes remotos y relatos de superación personal rodados en los rincones más inaccesibles del planeta. Las funciones se realizan en salas seleccionadas del centro de la ciudad con subtitulado en español. El atardecer porteño se adelanta hasta las 18:48, marcando el inicio de las funciones nocturnas. El clima exterior se mantiene fresco, con una temperatura de 16 a 20°C y ambiente overcast que no requiere paraguas pero sí abrigo ligero.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         },
         {
           "n": "03",
-          "headline": "La fase final del torneo deportivo comienza hoy con su ceremonia de apertura y sorteo.",
-          "lede": "El ambiente futbolero convive con la intensa programación cultural de teatros y centros de arte.",
-          "body": "La ciudad vive el inicio de una cita deportiva decisiva mientras las temperaturas rondan entre los 6 y los 12°C. El cielo overcast acompaña las jornadas de los aficionados que se desplazan por los distintos puntos de encuentro habilitados. El atardecer llega a las 18:45, dando paso a una noche de actividad en los circuitos gastronómicos de Palermo y San Telmo. La calidad del aire se mantiene en niveles fair con un índice PM2.5 de 7, ideal para caminar con tranquilidad. Las salas de conciertos y los festivales de cine como el Banff enriquecen una agenda urbana muy diversa. Los residentes disfrutan de los espacios públicos con la calma habitual del invierno que se despide.",
+          "headline": "Comienza la fase final de la competición en la capital.",
+          "lede": "La ceremonia de apertura y el sorteo de los grupos marcan el pistoletazo de salida del torneo deportivo.",
+          "body": "El movimiento deportivo internacional recala en Buenos Aires con el inicio de los encuentros decisivos de la temporada. Ceremonia de apertura y sorteo de los grupos. Hoy comienza la fase final en Buenos Aires con la participación de las delegaciones clasificadas. Las instalaciones preparadas para el evento reciben a los primeros espectadores y equipos técnicos bajo estrictas medidas de organización. La temperatura exterior oscila entre los 16 y los 20°C, con una atmósfera overcast propia de la temporada. La calidad del aire muestra un índice PM2.5 de 22, manteniendo parámetros moderados en toda la traza urbana. Se recomienda consultar las modificaciones temporales en las líneas de transporte que conectan con el complejo deportivo.",
           "source": "saudade desk",
-          "source_date": "2026-09-16"
+          "source_date": "2026-09-19"
         }
       ]
     }
