@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-19T06:00:00+09:00",
+  "updated": "2026-09-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O FESTin traz o cinema brasileiro ao coração da cidade.",
+              "lede": "A 17ª edição do festival destaca a cultura do Brasil nas salas de Lisboa.",
+              "body": "A capital acolhe mais uma edição do FESTin, reforçando o intercâmbio cultural com o Brasil em várias salas de cinema locais. Para quem prefere a música e o ritmo, as margens do Tejo convidam a dançar em Monsanto. O câmbio atual fixa-se em 1 USD para 0.87 EUR. A agenda cultural deste fim de semana traz ainda o novo filme de Almodóvar e a voz inconfundível de Marisa Monte. É um momento propício para cruzar referências atlânticas sem sair dos bairros históricos de Lisboa. Os viajantes encontram uma cidade atenta aos cruzamentos artísticos contemporâneos, onde a língua partilhada serve de ponte para encontros memoráveis em salas aconchegantes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "02",
+              "headline": "O Metro de Lisboa leva a moda e a joalharia às Oficinas de Calvanas.",
+              "lede": "A iniciativa em parceria com a UTOPIA by Cata Vassalo surpreende os passageiros.",
+              "body": "As antigas Oficinas de Calvanas transformam-se num espaço inesperado de exibição artística através de uma colaboração recente. A rede subterrânea do metropolitano aproxima a criação contemporânea do quotidiano urbano. As peças de joalharia e os conceitos de moda dialogam com a arquitetura industrial deste espaço singular. Quem circula pela cidade descobre novas geografias criativas fora dos circuitos tradicionais das galerias centrais. É uma forma silenciosa de reativar memórias locais e valorizar o talento nacional. A curadoria aposta na proximidade entre o design de autor e o observador atento que viaja de metro.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "03",
+              "headline": "As tardes de outono convidam a passeios prolongados entre colinas.",
+              "lede": "A programação cultural cruza exposições de arte e cinema de autor.",
+              "body": "A programação deste fim de semana oferece múltiplas escolhas para quem prefere vagar sem pressa pelas ruas da cidade. Entre exposições de grande qualidade e concertos intimistas, Lisboa mantém o seu ritmo vagaroso e acolhedor. O câmbio oficial permanece estável em 1 USD para 0.87 EUR para as transações correntes. As esplanadas junto ao rio beneficiam de uma luz dourada típica desta transição de estação. Os visitantes podem alternar entre museus silenciosos e caminhadas pelos miradouros arborizados. É a altura ideal para observar o Tejo com a serenidade que os dias mais frescos exigem.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Os termómetros alcançam 32°C sob céus limpos na Invicta.",
+              "lede": "A temperatura oscila entre 18 e 32°C com a qualidade do ar em níveis aceitáveis.",
+              "body": "O Porto regista uma amplitude térmica acentuada hoje, com mínimas de 18°C e máximas que chegam aos 32°C. O céu mantém-se limpo ao longo de todo o dia, permitindo vistas desafogadas sobre o rio Douro até ao pôr do sol marcado para as 19:35. Os índices de poluição atmosférica continuam baixos, com o indicador PM2.5 fixado em 11. O câmbio atual encontra-se em 1 USD para 0.87 EUR. A cidade vive um ritmo calmo, ideal para deambular pelas margens ribeirinhas e observar o reflexo da luz na água. É um dia excelente para aproveitar os espaços verdes ao ar livre antes da chegada do crepúsculo.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "02",
+              "headline": "A qualidade do ar mantém-se favorável para caminhadas ribeirinhas.",
+              "lede": "O valor de PM2.5 nos 11 garante um ambiente limpo na foz do Douro.",
+              "body": "As condições meteorológicas convidam a longas caminhadas pela foz e pelos jardins históricos da cidade. Com o ar limpo e a ausência de nuvens, a atmosfera urbana respira com clareza durante todo o domingo. A taxa de câmbio oficial de 1 USD para 0.87 EUR facilita as trocas comerciais habituais para os visitantes estrangeiros. As esplanadas junto à Ribeira enchem-se de leitores e observadores que aproveitam a tarde luminosa. O pôr do sol previsto para as 19:35 encerra o dia com tons dourados sobre as pontes históricas. O Porto oferece assim um cenário de rara tranquilidade aos que procuram o silêncio nas margens do rio.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "03",
+              "headline": "O cair da noite traz temperaturas amenas para o final de semana.",
+              "lede": "O pôr do sol ocorre às 19:35, encerrando um dia de calor moderado.",
+              "body": "Com o termómetro a descer gradualmente a partir dos 32°C registados durante a tarde, a noite portuária torna-se perfeita para um passeio a pé. A estabilidade do câmbio em 1 USD para 0.87 EUR assegura previsibilidade financeira para quem viaja. A atmosfera na cidade é de recato, longe das agitações turísticas das épocas altas. As ruas empedradas recuperam a sua acústica natural à medida que o tráfego diminui após o crepúsculo. Os cafés tradicionais mantêm as portas abertas para conversas pausadas ao som de loiça antiga. É o momento em que a identidade portuária se revela na sua forma mais genuína e sossegada.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra acolhe o Festival Imaginário entre a arte e a natureza.",
+              "lede": "A Quinta da Ribafria recebe propostas culturais centradas na criatividade e nas famílias.",
+              "body": "O Festival Imaginário regressa à Quinta da Ribafria, transformando os jardins históricos de Sintra num polo de encontro artístico. A programação privilegia o cruzamento entre as artes performativas e a paisagem natural romântica que caracteriza a serra. Os termómetros oscilam entre 19 e 32°C sob um céu parcialmente nublado que abriga a vegetação luxuriante. A qualidade do ar é excelente, registando um valor de PM2.5 de apenas 7. O câmbio atual permanece estável em 1 USD para 0.87 EUR. É um fim de semana propício para explorar os recantos sombreados da vila com toda a tranquilidade.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "02",
+              "headline": "O Parque da Pena lança novas visitas guiadas especializadas.",
+              "lede": "Os percursos revelam os segredos botânicos e arquitetónicos da paisagem romântica.",
+              "body": "Os visitantes da serra dispõem agora de itinerários orientados que desvendam os detalhes mais recônditos do Parque da Pena. Estas caminhadas aprofundam o conhecimento sobre a flora exótica e a conceção cenográfica idealizada no século XIX. O ambiente climático é ameno, com temperaturas entre 19 e 32°C e nuvens dispersas a filtrar a luz solar. A atmosfera de mistério característicos da serra intensifica-se com a brisa suave que sopra entre as árvores seculares. O índice de qualidade do ar situa-se num excelente patamar de 7 para o indicador PM2.5. O pôr do sol está previsto para as 19:37, iluminando os palácios com tons dourados únicos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            },
+            {
+              "n": "03",
+              "headline": "O crepúsculo sobre a serra desenha-se sob céus parcialmente nublados.",
+              "lede": "O pôr do sol às 19:37 encerra um dia de temperaturas altas na vila.",
+              "body": "O final de tarde na serra convida ao recolhimento após as caminhadas pelos trilhos sombreados e jardins botânicos. Com máximas de 32°C e mínimas de 19°C, o clima convive harmoniosamente com a humidade natural da vegetação densa. O câmbio oficial fixa-se em 1 USD para 0.87 EUR para facilidade dos visitantes estrangeiros. A qualidade do ar mantém-se puríssima, registando PM2.5 de 7. À medida que a noite se aproxima e o sol se esconde às 19:37, os palácios históricos mergulham num silêncio profundo. Sintra recupera assim a sua aura intemporal, longe do bulgório diurno das ruas mais centrais.",
+              "source": "saudade desk",
+              "source_date": "2026-09-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-19T06:00:00+09:00",
       "cities": [
@@ -557,98 +649,6 @@
               "body": "A fugida para o litoral sintrense faz-se rapidamente a partir da capital, oferecendo um refúgio de natureza pura. A faixa costeira exibe o seu esplendor com temperaturas a alcançarem os 33°C e mínimas de 19°C. A qualidade do ar, classificada como fair com PM2.5 a 8, convida a longas caminhadas junto à rebentação das ondas. O sol despede-se mais tarde, pelas 19:49, prolongando o dia de praia para quem prefere a calma do final da tarde. A taxa de câmbio de 1 USD para 0.86 EUR acompanha as transações correntes dos viajantes. É o cenário ideal para observar o contraste entre a serra sombria e o oceano aberto.",
               "source": "saudade desk",
               "source_date": "2026-09-13"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-12T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival Mamã África ocupa a cidade com ritmos e sabores.",
-              "lede": "A Lisboa crioula acolhe tradições até domingo. A gastronomia preenche os espaços.",
-              "body": "O Festival Mamã África enche a Lisboa crioula de ritmos, gastronomia e tradições até domingo. Os visitantes encontram um ambiente de partilha cultural junto ao rio. A taxa de câmbio atual situa-se em 1 USD para 0.86 EUR para quem chega de fora. O evento celebra a herança musical com concertos de entrada livre. A culinária tradicional completa a programação do fim de semana prolongado.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "02",
-              "headline": "O Parque das Nações recebe a iniciativa Vamos somar Talentos.",
-              "lede": "A zona oriental ganha nova dinâmica comunitária. A participação é aberta.",
-              "body": "Vamos somar Talentos de Lisboa chega ao Parque das Nações com foco na comunidade. O programa destaca iniciativas locais e projetos criativos na zona ribeirinha. Os viajantes encontram esplanadas tranquilas para observar o Tejo. A taxa de câmbio permanece estável em 1 USD para 0.86 EUR. O espaço público convida a longas caminhadas sem pressa ao final da tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "03",
-              "headline": "O cinema independente ocupa a capital com o Tribeca Festival Lisboa.",
-              "lede": "A edição de 2026 traz convidados internacionais. A experiência ganha novos contornos.",
-              "body": "O Tribeca Festival Lisboa 2026 propõe uma nova forma de viver o cinema na cidade. As salas e praças acolhem projeções e conversas com convidados de destaque. Paralelamente, o festival da Madeira celebra os sabores insulares com lapas, bolo do caco e poncha com entrada livre. A taxa de câmbio vigora em 1 USD para 0.86 EUR. O roteiro cultural cruza a sétima arte com a tradição gastronómica.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A névoa matinal levanta sobre a cidade entre os 17 e os 31°C.",
-              "lede": "A qualidade do ar mantém-se moderada. O pôr do sol acontece às 19:48.",
-              "body": "A temperatura oscila entre 17 e 31°C com neblina matinal a dissipar-se lentamente. A qualidade do ar apresenta um índice moderado com PM2.5 em 12. A taxa de câmbio encontra-se fixada em 1 USD para 0.86 EUR. O sol despede-se pelas 19:48 sobre o rio Douro. As Jornadas Europeias do Património decorrem na Universidade do Porto na Casa Comum.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "02",
-              "headline": "O Parque da Cidade recupera a tranquilidade habitual.",
-              "lede": "A Câmara do Porto levanta o embargo a uma obra próxima. As investigações continuam.",
-              "body": "A Câmara do Porto continua a investigar a ocorrência de aves no Parque da Cidade. Em simultâneo, o município levantou o embargo a uma obra junto ao mesmo parque que corrigiu os problemas apontados. O passeio verde recupera o ritmo calmo para leitores e caminhantes. A temperatura atinge os 31°C durante a tarde. O valor de 1 USD equivale a 0.86 EUR nos câmbios locais.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "03",
-              "headline": "A Voz de Trás-os-Montes ecoa em festivais de música.",
-              "lede": "O IVDP organiza concertos dedicados à região norte. A atmosfera convida à escuta.",
-              "body": "O IVDP organiza o festival de música A Voz de Trás-os-Montes com sonoridades tradicionais. As harmonias cruzam-se com a brisa que antecede o pôr do sol às 19:48. A qualidade do ar regista PM2.5 em 12 num dia quente de 31°C. Os visitantes aproveitam para cruzar o património universitário e as margens do rio. A conversão monetária pratica-se a 1 USD por 0.86 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu limpo acompanha os termómetros entre os 17 e os 31°C.",
-              "lede": "A qualidade do ar é considerada fair. O sol recolhe-se às 19:50.",
-              "body": "O termómetro marca entre 17 e 31°C sob um céu limpo e luminoso. A qualidade do ar apresenta um nível fair com PM2.5 em 5. A conversão de moeda fixa-se em 1 USD para 0.86 EUR. O pôr do sol ocorre às 19:50 sobre as serras e o Atlântico. As condições meteorológicas favorecem os passeios pedestres pelos trilhos sombreados da serra.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival da Sardinha anima a Praia Grande desde hoje.",
-              "lede": "A praia protegida a 35 minutos de Lisboa aguarda os visitantes. A areia dourada brilha.",
-              "body": "O Festival da Sardinha arranca hoje na Praia Grande com animação junto ao mar. Esta praia intocada fica situada num parque protegido a curta distância de Lisboa. A paisagem combina areia dourada e falésias dramáticas sob uma temperatura de 31°C. A taxa de câmbio opera a 1 USD para 0.86 EUR. A brisa atlântica atenua o calor da tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
-            },
-            {
-              "n": "03",
-              "headline": "O ciclo Jazz em Monserrate preenche o cenário romântico.",
-              "lede": "A música ecoa entre espécies botânicas raras. O entardecer chega às 19:50.",
-              "body": "O Jazz em Monserrate leva a música a um cenário único da vila de Sintra. Os concertos aproveitam a acústica natural dos jardins históricos ao cair da tarde. O céu mantém-se limpo com temperatura a alcançar os 31°C. A qualidade do ar regista um valor de PM2.5 em 5. A taxa de câmbio permanece em 1 USD para 0.86 EUR para os viajantes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-12"
             }
           ]
         }
