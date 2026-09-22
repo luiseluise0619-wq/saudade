@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-09-22T06:00:00+09:00",
-  "next_filing": "2026-09-22T21:00:00+00:00",
+  "filed_at": "2026-09-23T06:00:00+09:00",
+  "next_filing": "2026-09-23T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Madrid",
+      "city": "MADRID",
       "items": [
         {
           "n": "01",
-          "headline": "La Odisea ofrece un viaje inmersivo.",
-          "lede": "La cartelera cultural de la capital suma nuevas experiencias sensoriales orientadas al público pausado.",
-          "body": "Los espacios culturales de la capital integran nuevas propuestas de carácter tecnológico e inmersivo. Entre ellas destaca La Odisea, una propuesta que invita a recorrer narrativas visuales de gran formato. Al mismo tiempo, la ciudad mantiene su pulso cinematográfico tras su paso por el Festival de San Sebastián, donde el sector audiovisual local ha demostrado su dinamismo. Las salas independientes acogen proyecciones singulares, como el documental canario La Berma, galardonado en el reciente Festival de Cine de Madrid. Para los visitantes interesados en la historia industrial y científica, la exposición organizada por Iberdrola sobre el futuro de la electricidad ofrece una mirada rigurosa a la evolución tecnológica. El tipo de cambio actual se sitúa en 1 USD frente a 0.87 EUR, facilitando la planificación de estancias culturales prolongadas en los museos y centros expositivos de la ciudad.",
+          "headline": "El Parque de Atracciones inicia su plan de retirada de amianto.",
+          "lede": "El Ayuntamiento de Madrid anuncia la ejecución de los trabajos en el recinto.",
+          "body": "El Ayuntamiento de Madrid ha confirmado el inicio de un plan específico para la retirada de amianto del Parque de Atracciones de la capital. Esta intervención busca actualizar las instalaciones y garantizar la seguridad a largo plazo para todos los visitantes habituales y nuevos residentes. Las labores se planifican con rigor técnico para evitar cualquier afectación a las zonas verdes colindantes y al ritmo habitual de la Casa de Campo. Conviene estar atento a los avisos municipales sobre posibles restricciones temporales en accesos específicos del recinto recreativo durante las próximas semanas. La medida responde a una demanda largamente esperada para la modernización de este espacio histórico.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "02",
-          "headline": "El sector audiovisual madrileño brilla en los festivales.",
-          "lede": "La presencia de creadores locales en certámenes recientes consolida la posición de la ciudad en el mapa cultural.",
-          "body": "Madrid consolida su papel como eje creador gracias al respaldo institucional y privado a sus creadores. La participación de la ciudad en el Festival de San Sebastián ha puesto de relieve la madurez de sus propuestas audiovisuales. En el ámbito local, la atención se centra en obras de autor como La Berma, del director canario Agustín Domínguez, que ha obtenido el reconocimiento del jurado en el Festival de Cine de Madrid. Estos hitos culturales conviven con iniciativas de divulgación científica, como la muestra inaugurada por S. M. el Rey sobre la evolución de la red eléctrica nacional. Quienes recorran los centros de exposiciones encontrarán una programación diversa que equilibra el patrimonio técnico con las nuevas expresiones artísticas. Las transacciones comerciales y las entradas a estos espacios se benefician de una estabilidad monetaria donde 1 USD equivale a 0.87 EUR.",
+          "headline": "La exposición 'Yo fui a EGB' clausura su paso por Madrid.",
+          "lede": "La muestra cierra sus puertas tras recibir a 71500 visitantes en la capital.",
+          "body": "La exitosa exposición 'Yo fui a EGB' se despide definitivamente de Madrid tras registrar una notable afluencia de 71500 visitantes a lo largo de su temporada. Este recorrido nostálgico por la cultura material de las décadas pasadas ha resonado profundamente entre varias generaciones de madrileños y viajeros curiosos. Quienes aún no hayan acudido disponen de muy pocas horas para recorrer las salas antes del desmontaje definitivo de las piezas. Los organizadores destacan la gran participación ciudadana y el cuidado con el que se han conservado los objetos expuestos. El espacio buscará ahora nuevas propuestas culturales para el próximo trimestre.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "03",
-          "headline": "La tecnología y el patrimonio industrial ocupan las salas.",
-          "lede": "Las exposiciones temporales de esta semana combinan la ingeniería histórica con la creación documental contemporánea.",
-          "body": "La agenda expositiva de Madrid ofrece esta semana un recorrido singular por la innovación técnica y la memoria visual. La muestra impulsada por Iberdrola bajo la presidencia de S. M. el Rey repasa los hitos de la electricidad y su proyección de futuro. Paralelamente, la oferta de ocio cultural se enriquece con propuestas como La Odisea y los circuitos de cine independiente que celebran el éxito de cintas como La Berma en el Festival de Cine de Madrid. El respaldo institucional al tejido creativo también se proyecta hacia certámenes de referencia exterior como el Festival de San Sebastián. Los viajeros que deseen adquirir catálogos o entradas encontrarán un entorno financiero estable con una equivalencia cambiaria de 1 USD por 0.87 EUR. Es una ocasión propicia para visitar los centros culturales menos frecuentados y disfrutar de una programación reposada y reflexiva.",
+          "headline": "Madrid proyecta su industria audiovisual en el Festival de San Sebastián.",
+          "lede": "La capital refuerza su posición estratégica en los foros de cine del País Vasco.",
+          "body": "Madrid consolida su papel como motor de la creación cinematográfica y televisiva mediante su participación institucional en el Festival de San Sebastián. La delegación madrileña impulsa encuentros profesionales destinados a atraer nuevos proyectos y consolidar las redes de coproducción internacional. Esta apuesta por el sector audiovisual coincide con un momento de gran dinamismo en los platós y estudios situados en la Comunidad. Los observadores del sector destacan la importancia de estas alianzas para proyectar el talento local más allá de nuestras fronteras geográficas. Las instituciones locales reafirman así su compromiso con la estabilidad y el crecimiento de la industria cultural.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         }
       ]
     },
     {
-      "city": "Barcelona",
+      "city": "BARCELONA",
       "items": [
         {
           "n": "01",
-          "headline": "Barcelona registra cielos cubiertos entre 19 y 28°C.",
-          "lede": "El ambiente otoñal se instala suavemente bajo una atmósfera templada y cielos predominantemente nublados.",
-          "body": "La ciudad amanece bajo unas condiciones meteorológicas estables, con temperaturas que oscilan entre los 19 y los 28°C y el sol ocultándose a las 19:48. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 12, lo que permite pasear con tranquilidad por los parques y paseos marítimos. En el plano cultural, la ciudad acoge la 14.ª edición del Asian Film Festival Barcelona, que en esta ocasión centra su atención principal en la cinematografía de la India. Además, el Palacio de Gaudí participa en una ambiciosa exposición inmersiva que permite recorrer edificios nunca construidos del arquitecto mediante realidad virtual y pantallas gigantes. Para completar las jornadas de paseo, iniciativas gastronómicas como Tapas en The Social Hub sirven de antesala al Festival·B. Las gestiones financieras de los viajeros se benefician de un tipo de cambio fijado en 1 USD por 0.87 EUR.",
+          "headline": "Bruma matinal y temperaturas suaves en Barcelona con 19 a 28 grados.",
+          "lede": "La jornada presenta cielos con niebla ligera y una calidad del aire moderada.",
+          "body": "La atmósfera barcelonesa amanece este martes con un paisaje de bruma y niebla ligera que discurre lentamente hacia el litoral antes de la llegada del atardecer previsto para las 19:47. Las temperaturas oscilan entre los 19 y los 28 grados, configurando un ambiente templado propio de este periodo estacional. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 12 que permite pasear con tranquilidad por los parques urbanos. Quienes deseen planificar un recorrido por la ciudad encontrarán condiciones estables, ideales para la observación sosegada de la arquitectura. El tipo de cambio oficial se sitúa en 1 USD frente a 0.87 EUR para los visitantes internacionales.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "02",
-          "headline": "La realidad virtual acerca la obra inédita de Gaudí.",
-          "lede": "Nuevos espacios expositivos permiten adentrarse en los proyectos arquitectónicos que el genio nunca llegó a materializar.",
-          "body": "Bajo un cielo cubierto y temperaturas agradables que se mueven entre los 19 y los 28°C, Barcelona invita a descubrir su patrimonio desde una perspectiva innovadora. La puesta de sol está prevista para las 19:48, ofreciendo tardes propicias para la contemplación urbana con una calidad del aire moderada y un índice PM2.5 de 12. La gran novedad cultural es la apertura de la muestra inmersiva sobre Gaudí, que utiliza pantallas gigantes y realidad virtual para recrear edificios no construidos, incluyendo un rascacielos pensado para Nueva York. En paralelo, el Asian Film Festival Barcelona celebra su 14.ª edición dedicando un espacio preferente a las producciones de la India. Antes de los grandes eventos musicales como el Festival·B, la gastronomía local propone encuentros como el de Tapas en The Social Hub. Los visitantes extranjeros operan con un tipo de cambio de 1 USD a 0.87 EUR.",
+          "headline": "El CaixaForum rastrea la profunda huella de la historia del arte.",
+          "lede": "Una nueva exposición examina la fuerza creadora del pasado en el presente.",
+          "body": "Las salas del CaixaForum Barcelona acogen un recorrido expositivo que explora de qué manera la historia del arte clásico influye de forma directa en las prácticas contemporáneas. La muestra pone de relieve la vigencia de los lenguajes visuales tradicionales a través de instalaciones y piezas de creadores actuales. Este análisis riguroso invita al espectador a detenerse y reflexionar sobre la persistencia de los mitos y las formas estéticas a lo largo de los siglos. Es una visita recomendada para quienes buscan una perspectiva pausada y profunda sobre la evolución del discurso artístico en la ciudad. El centro mantiene sus horarios habituales para facilitar el acceso a esta propuesta.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "03",
-          "headline": "El Asian Film Festival sitúa su foco en la India.",
-          "lede": "La decimocuarta edición del certamen asiático despliega una programación diversa en las salas de la ciudad.",
-          "body": "La agenda barcelonesa combina el cine internacional con la exploración arquitectónica en unas jornadas de cielos cubiertos y termómetros situados entre 19 y 28°C. Con la puesta de sol fijada a las 19:48 y un registro moderado de PM2.5 en 12, el clima favorece la asistencia a las salas oscuras. En su 14.ª edición, el Asian Film Festival Barcelona destaca por poner el foco en la cinematografía procedente de la India. Los aficionados a la arquitectura pueden visitar la nueva exposición inmersiva del Palacio de Gaudí, que recrea mediante tecnología avanzada los diseños y rascacielos que el arquitecto ideó para Nueva York. Como preámbulo a citas culturales como el Festival·B, la ruta gastronómica de Tapas en The Social Hub anima las horas diurnas. El valor de referencia monetaria se mantiene en 1 USD por cada 0.87 EUR para los residentes y viajeros internacionales.",
+          "headline": "El universo cibernético de Salvador Dalí se instala en la ciudad de forma permanente.",
+          "lede": "La obra digital del genio ampurdanés abre un nuevo espacio de contemplación.",
+          "body": "Barcelona incorpora a su oferta cultural permanente una propuesta inmersiva dedicada a la faceta más cibernética y experimental de Salvador Dalí. Esta instalación fija permite adentrarse en los mundos oníricos del artista mediante herramientas tecnológicas avanzadas que reinterpretan sus lienzos icónicos. El montaje busca ofrecer una experiencia sensorial distinta, alejada de los formatos expositivos convencionales y adaptada a las nuevas formas de expresión digital. Los residentes y viajeros ya pueden adquirir sus entradas para este recorrido que dialoga con la vanguardia histórica catalana. La iniciativa refuerza el circuito de museos tecnológicos del área metropolitana.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         }
       ]
     },
     {
-      "city": "Buenos Aires",
+      "city": "BUENOS AIRES",
       "items": [
         {
           "n": "01",
-          "headline": "Buenos Aires transcurre fresca con 6 a 14°C y cielos grises.",
-          "lede": "El ambiente reposado de la capital se acompasa con temperaturas frías y una atmósfera plenamente otoñal.",
-          "body": "La ciudad avanza bajo un clima fresco con temperaturas que van de los 6 a los 14°C bajo cielos completamente cubiertos. El sol se oculta temprano, marcando el ocaso a las 18:50, mientras que la calidad del aire se mantiene en un nivel fair con un índice PM2.5 de 3. El circuito cultural y comercial ofrece alternativas singulares para los residentes que buscan refugio bajo techo. El Etreum Horror Film Fest Argentina celebra su sexta edición con una cuidada selección de cine de género. Los amantes de la gastronomía disfrutan del festival culinario dedicado a las cocinas francesas, que incluye clases magistrales de croissant y catas guiadas. En el ámbito del comercio minorista, la marca Decathlon consolida su presencia con una nueva tienda en la ciudad dentro de su plan de inversiones. Un apunte nostálgico recorre los mentideros locales al recordar la historia del fallido parque temático Tierra Santa en Europa.",
+          "headline": "Cielos cubiertos y ambiente fresco en Buenos Aires entre 8 y 16 grados.",
+          "lede": "La jornada transcurre con nubosidad persistente y un atardecer programado a las 18:50.",
+          "body": "Buenos Aires registra hoy temperaturas que se mueven entre los 8 y los 16 grados bajo un cielo predominantemente cubierto de nubes. El aire se mantiene en parámetros moderados con un registro de PM2.5 en 22, propicio para caminar abrigados por los barrios tradicionales. La puesta de sol tendrá lugar a las 18:50, marcando el fin de una tarde apacible para la lectura en cafés históricos o librerías del centro. El ritmo de la ciudad se a compasa a la climatología fresca, ideal para disfrutar de los espacios interiores sin prisas. Conviene llevar ropa de abrigo ligera si se planea permanecer al aire libre hasta entrada la noche.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "02",
-          "headline": "Las cocinas francesas protagonizan el circuito culinario porteño.",
-          "lede": "Talleres de panadería y cenas temáticas animan las jornadas frías en los barrios tradicionales de la ciudad.",
-          "body": "Con temperaturas que oscilan entre los 6 y los 14°C y un cielo persistentemente cubierto, la capital invita a resguardarse en espacios interiores. La puesta de sol a las 18:50 abre paso a unas noches largas bajo una atmósfera con aire fair y un registro de PM2.5 situado en 3. La programación cultural destaca por la sexta edición del Etreum Horror Film Fest Argentina, un punto de encuentro para los seguidores del cine fantástico. Paralelamente, el festival culinario de cocina francesa ofrece clases de croissant y cenas exclusivas con reconocidos chefs en distintos puntos de la ciudad. El sector comercial registra la llegada de grandes firmas con la apertura de la nueva tienda de Decathlon, respaldada por una importante inversión. Entre la memoria urbana y el presente, persisten relatos curiosos como el proyecto frustrado del parque temático Tierra Santa en Europa.",
+          "headline": "Los tapices de Goya de las Colecciones Reales llegan a Sudamérica.",
+          "lede": "Las obras maestras se exhiben por primera vez ante el público argentino.",
+          "body": "Una selección excepcional de tapices históricos procedentes de las Colecciones Reales españolas visita por primera vez Buenos Aires en un acontecimiento cultural sin precedentes. Esta llegada permite admirar el genio pictórico y textil de Francisco de Goya a través de piezas de gran valor patrimonial y delicada conservación. Los especialistas han preparado el montaje museístico con estrictos controles de luz y humedad para proteger los tejidos originales durante su estancia. Los aficionados al arte clásico encontrarán en esta muestra una oportunidad única para contemplar obras maestras raramente desplazadas de sus sedes europeas. La exposición ya recibe a sus primeros visitantes bajo rigurosas normas de silencio y respeto.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         },
         {
           "n": "03",
-          "headline": "El cine fantástico celebra su sexta edición en la capital.",
-          "lede": "El Etreum Horror Film Fest reúne a creadores y espectadores en torno a nuevas propuestas del género.",
-          "body": "El pulso cultural de Buenos Aires se refugia en salas y espacios cerrados al amparo de una temperatura que se mueve entre los 6 y los 14°C. Los cielos permanecen cubiertos durante toda la jornada hasta la caída del sol a las 18:50, en un entorno con calidad del aire fair y un valor PM2.5 de 3. El Etreum Horror Film Fest Argentina cumple su sexta edición consolidándose como una cita de referencia para el cine de género. Muy cerca de las salas de proyección, el circuito gastronómico francés atrae a los gourmets con catas de queso y clases de croissant impartidas por chefs destacados. En el comercio urbano, destaca la apertura de la nueva tienda de Decathlon dentro de los planes de expansión de la firma en el país. Como anécdota del pasado reciente, los cronistas locales recuerdan el singular proyecto del parque temático Tierra Santa en Europa.",
+          "headline": "La cúpula sin nombre revela un secreto arquitectónico centenario.",
+          "lede": "Una apertura histórica permite descubrir una joya oculta tras un siglo de silencio.",
+          "body": "Los circuitos urbanos de Buenos Aires suman un atractivo singular con la apertura al público de la denominada cúpula sin nombre, un secreto arquitectónico de 100 años de antigüedad. Este espacio recuperado ofrece una perspectiva inédita sobre los Tejados porteños y los detalles ornamentales de la arquitectura de principios del siglo pasado. Las visitas guiadas permiten conocer los trabajos de restauración que han devuelto el esplendor original a este rincón olvidado del patrimonio local. Se aconseja reservar con antelación debido al aforo reducido que exige la conservación de la estructura histórica. Es una recomendación imprescindible para los observadores atentos de la fisonomía urbana.",
           "source": "saudade desk",
-          "source_date": "2026-09-22"
+          "source_date": "2026-09-23"
         }
       ]
     }
