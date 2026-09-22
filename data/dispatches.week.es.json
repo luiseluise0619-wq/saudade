@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-22T06:00:00+09:00",
+  "updated": "2026-09-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "MADRID",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Parque de Atracciones inicia su plan de retirada de amianto.",
+              "lede": "El Ayuntamiento de Madrid anuncia la ejecución de los trabajos en el recinto.",
+              "body": "El Ayuntamiento de Madrid ha confirmado el inicio de un plan específico para la retirada de amianto del Parque de Atracciones de la capital. Esta intervención busca actualizar las instalaciones y garantizar la seguridad a largo plazo para todos los visitantes habituales y nuevos residentes. Las labores se planifican con rigor técnico para evitar cualquier afectación a las zonas verdes colindantes y al ritmo habitual de la Casa de Campo. Conviene estar atento a los avisos municipales sobre posibles restricciones temporales en accesos específicos del recinto recreativo durante las próximas semanas. La medida responde a una demanda largamente esperada para la modernización de este espacio histórico.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición 'Yo fui a EGB' clausura su paso por Madrid.",
+              "lede": "La muestra cierra sus puertas tras recibir a 71500 visitantes en la capital.",
+              "body": "La exitosa exposición 'Yo fui a EGB' se despide definitivamente de Madrid tras registrar una notable afluencia de 71500 visitantes a lo largo de su temporada. Este recorrido nostálgico por la cultura material de las décadas pasadas ha resonado profundamente entre varias generaciones de madrileños y viajeros curiosos. Quienes aún no hayan acudido disponen de muy pocas horas para recorrer las salas antes del desmontaje definitivo de las piezas. Los organizadores destacan la gran participación ciudadana y el cuidado con el que se han conservado los objetos expuestos. El espacio buscará ahora nuevas propuestas culturales para el próximo trimestre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "Madrid proyecta su industria audiovisual en el Festival de San Sebastián.",
+              "lede": "La capital refuerza su posición estratégica en los foros de cine del País Vasco.",
+              "body": "Madrid consolida su papel como motor de la creación cinematográfica y televisiva mediante su participación institucional en el Festival de San Sebastián. La delegación madrileña impulsa encuentros profesionales destinados a atraer nuevos proyectos y consolidar las redes de coproducción internacional. Esta apuesta por el sector audiovisual coincide con un momento de gran dinamismo en los platós y estudios situados en la Comunidad. Los observadores del sector destacan la importancia de estas alianzas para proyectar el talento local más allá de nuestras fronteras geográficas. Las instituciones locales reafirman así su compromiso con la estabilidad y el crecimiento de la industria cultural.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        },
+        {
+          "city": "BARCELONA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Bruma matinal y temperaturas suaves en Barcelona con 19 a 28 grados.",
+              "lede": "La jornada presenta cielos con niebla ligera y una calidad del aire moderada.",
+              "body": "La atmósfera barcelonesa amanece este martes con un paisaje de bruma y niebla ligera que discurre lentamente hacia el litoral antes de la llegada del atardecer previsto para las 19:47. Las temperaturas oscilan entre los 19 y los 28 grados, configurando un ambiente templado propio de este periodo estacional. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 12 que permite pasear con tranquilidad por los parques urbanos. Quienes deseen planificar un recorrido por la ciudad encontrarán condiciones estables, ideales para la observación sosegada de la arquitectura. El tipo de cambio oficial se sitúa en 1 USD frente a 0.87 EUR para los visitantes internacionales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "El CaixaForum rastrea la profunda huella de la historia del arte.",
+              "lede": "Una nueva exposición examina la fuerza creadora del pasado en el presente.",
+              "body": "Las salas del CaixaForum Barcelona acogen un recorrido expositivo que explora de qué manera la historia del arte clásico influye de forma directa en las prácticas contemporáneas. La muestra pone de relieve la vigencia de los lenguajes visuales tradicionales a través de instalaciones y piezas de creadores actuales. Este análisis riguroso invita al espectador a detenerse y reflexionar sobre la persistencia de los mitos y las formas estéticas a lo largo de los siglos. Es una visita recomendada para quienes buscan una perspectiva pausada y profunda sobre la evolución del discurso artístico en la ciudad. El centro mantiene sus horarios habituales para facilitar el acceso a esta propuesta.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "El universo cibernético de Salvador Dalí se instala en la ciudad de forma permanente.",
+              "lede": "La obra digital del genio ampurdanés abre un nuevo espacio de contemplación.",
+              "body": "Barcelona incorpora a su oferta cultural permanente una propuesta inmersiva dedicada a la faceta más cibernética y experimental de Salvador Dalí. Esta instalación fija permite adentrarse en los mundos oníricos del artista mediante herramientas tecnológicas avanzadas que reinterpretan sus lienzos icónicos. El montaje busca ofrecer una experiencia sensorial distinta, alejada de los formatos expositivos convencionales y adaptada a las nuevas formas de expresión digital. Los residentes y viajeros ya pueden adquirir sus entradas para este recorrido que dialoga con la vanguardia histórica catalana. La iniciativa refuerza el circuito de museos tecnológicos del área metropolitana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        },
+        {
+          "city": "BUENOS AIRES",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cielos cubiertos y ambiente fresco en Buenos Aires entre 8 y 16 grados.",
+              "lede": "La jornada transcurre con nubosidad persistente y un atardecer programado a las 18:50.",
+              "body": "Buenos Aires registra hoy temperaturas que se mueven entre los 8 y los 16 grados bajo un cielo predominantemente cubierto de nubes. El aire se mantiene en parámetros moderados con un registro de PM2.5 en 22, propicio para caminar abrigados por los barrios tradicionales. La puesta de sol tendrá lugar a las 18:50, marcando el fin de una tarde apacible para la lectura en cafés históricos o librerías del centro. El ritmo de la ciudad se a compasa a la climatología fresca, ideal para disfrutar de los espacios interiores sin prisas. Conviene llevar ropa de abrigo ligera si se planea permanecer al aire libre hasta entrada la noche.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "Los tapices de Goya de las Colecciones Reales llegan a Sudamérica.",
+              "lede": "Las obras maestras se exhiben por primera vez ante el público argentino.",
+              "body": "Una selección excepcional de tapices históricos procedentes de las Colecciones Reales españolas visita por primera vez Buenos Aires en un acontecimiento cultural sin precedentes. Esta llegada permite admirar el genio pictórico y textil de Francisco de Goya a través de piezas de gran valor patrimonial y delicada conservación. Los especialistas han preparado el montaje museístico con estrictos controles de luz y humedad para proteger los tejidos originales durante su estancia. Los aficionados al arte clásico encontrarán en esta muestra una oportunidad única para contemplar obras maestras raramente desplazadas de sus sedes europeas. La exposición ya recibe a sus primeros visitantes bajo rigurosas normas de silencio y respeto.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "La cúpula sin nombre revela un secreto arquitectónico centenario.",
+              "lede": "Una apertura histórica permite descubrir una joya oculta tras un siglo de silencio.",
+              "body": "Los circuitos urbanos de Buenos Aires suman un atractivo singular con la apertura al público de la denominada cúpula sin nombre, un secreto arquitectónico de 100 años de antigüedad. Este espacio recuperado ofrece una perspectiva inédita sobre los Tejados porteños y los detalles ornamentales de la arquitectura de principios del siglo pasado. Las visitas guiadas permiten conocer los trabajos de restauración que han devuelto el esplendor original a este rincón olvidado del patrimonio local. Se aconseja reservar con antelación debido al aforo reducido que exige la conservación de la estructura histórica. Es una recomendación imprescindible para los observadores atentos de la fisonomía urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-22T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La cartelera cultural porteña destaca esta semana por la presentación de la película Ritorno a Buenos Aires, del director italo-chileno Marco Bechis, tras su paso por el Festival de Venecia. Paralelamente, la presencia de agrupaciones musicales como Stray Kids recorriendo Palermo y los paseos de Hyunjin y Bang Chan añade un pulso juvenil a los circuitos gastronómicos. Los cafés y bistrós de Palermo Soho y Hollywood registran una actividad animada pero ordenada por parte de los seguidores. El cielo permanece completamente cubierto con temperaturas entre 9 y 19°C, invitando a buscar cobijo en las salas oscuras de cine. La caída del sol a las 18:45 disuelve la neblina vespertina en los parques y plazas de la metrópoli.",
               "source": "saudade desk",
               "source_date": "2026-09-15"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La música de Magicéltica y el deporte llenan septiembre",
-              "lede": "Las calles madrileñas acogen propuestas culturales diversas antes de los festivos de temporada.",
-              "body": "El XI Festival Magicéltica ofrece un punto de encuentro para los amantes de la música tradicional en la capital. Muy cerca, la actividad deportiva toma protagonismo con la celebración de LAP57 Madrid Race Week. Las familias también encuentran su espacio con el regreso del festival de literatura infantil FLIC a varios puntos de la ciudad. Además, la expectativa crece ante la inminente residencia musical de Shakira, que desplegará doce conciertos y su propio espacio temático durante casi un mes. El tipo de cambio actual se sitúa en 1 USD frente a 0.86 EUR para quienes visitan la región.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "Cierres administrativos por la Festividad de la Bien Aparecida",
-              "lede": "El 2026-09-15 marca una jornada de menor actividad institucional en la región.",
-              "body": "Con motivo de la Festividad de la Bien Aparecida el 2026-09-15, la actividad oficial se reduce de forma notable en Madrid. Los residentes y visitantes deben tener en cuenta que las oficinas gubernamentales, las sucursales bancarias y las oficinas postales permanecerán cerradas durante toda la jornada festiva. Los comercios locales ajustan también sus horarios habituales para adaptarse al calendario de celebraciones. Es recomendable planificar con antelación cualquier gestión administrativa o financiera antes del día festivo para evitar inconvenientes de última hora en el centro de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Paseos otoñales y lectura infantil en los barrios",
-              "lede": "Los espacios públicos recuperan la calma tras el verano con la llegada de nuevas propuestas.",
-              "body": "El regreso del festival FLIC dinamiza bibliotecas y plazas con actividades orientadas al público infantil y familiar. Los parques madrileños ofrecen un refugio tranquilo mientras la ciudad se prepara para recibir una intensa agenda cultural y musical. Las librerías de barrio muestran novedades editoriales y los cafés recuperan su ritmo pausado habitual de septiembre. El tipo de cambio oficial permanece en 1 USD por 0.86 EUR, facilitando las transacciones comerciales a los viajeros internacionales que recorren las librerías y los rincones históricos del casco antiguo madrileño.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Temperaturas agradables y cielos parcialmente nublados en Barcelona",
-              "lede": "El mercurio se mueve entre los 20 y los 32°C en una jornada de calidad del aire moderada.",
-              "body": "La ciudad registra hoy temperaturas que oscilan entre los 20 y los 32°C bajo cielos parcialmente nublados. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 11. El atardecer está previsto para las 20:02, permitiendo disfrutar de las últimas horas de luz en los paseos marítimos y los parques urbanos. El tipo de cambio se sitúa en 1 USD equivalente a 0.86 EUR, un dato útil para los viajeros que realizan compras o consumiciones en el comercio local de la ciudad condal durante estos días.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "K-pop y nuevas aperturas comerciales en la agenda urbana",
-              "lede": "El Estadi Olímpic acoge un gran evento musical mientras el comercio de Sants se expande.",
-              "body": "El Estadi Olímpic recibe el Music Bank World Tour, consolidando a Barcelona como una parada clave para los grandes eventos musicales internacionales de K-pop. En el ámbito comercial, Decathlon refuerza su presencia en la ciudad con la apertura de un nuevo establecimiento bajo el formato Decathlon City en el barrio de Sants. Por otra parte, las familias pueden disfrutar de los nuevos toboganes instalados en los parques infantiles locales. Estos espacios públicos combinan el diseño moderno con la seguridad para los más pequeños en los distintos barrios.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Ajustes locales por la Festividad de la Bien Aparecida",
-              "lede": "La jornada del 2026-09-15 trae modificaciones operativas en los servicios públicos.",
-              "body": "Ante la llegada de la Festividad de la Bien Aparecida el 2026-09-15, la administración local y las oficinas bancarias modifican sus horarios habituales de atención. Los servicios postales y las dependencias gubernamentales permanecerán cerradas al público durante esta jornada festiva. Los ciudadanos y viajeros deben prever estas restricciones temporales al realizar trámites administrativos o cambios de divisa a la tasa de 1 USD por 0.86 EUR. Los espacios públicos y paseos ajardinados mantendrán sus accesos abiertos para el descanso de los transeúntes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Jornada fresca y completamente cubierta en Buenos Aires",
-              "lede": "El termómetro marca entre los 6 y los 13°C con una excelente calidad del aire.",
-              "body": "El clima porteño se presenta hoy fresco y cubierto, con temperaturas que se mueven en un rango de 6 a 13°C. La calidad del aire es buena, registrando un valor de PM2.5 de 5, ideal para caminar por los tradicionales barrios de la capital. El ocaso llegará puntualmente a las 18:44, cerrando una tarde de cielos grises y atmósfera tranquila. Los cafés históricos y las librerías del centro ofrecen un refugio cálido frente al ambiente exterior propio de esta época del año en el hemisferio sur.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "Cine internacional y memoria cultural en la cartelera",
-              "lede": "El Festival de Venecia resuena en la ciudad con proyecciones y homenajes recientes.",
-              "body": "La agenda cultural de Buenos Aires mira hacia el cine con la presentación de la obra 'Ritorno a Buenos Aires', dirigida por el italo-chileno Marco Bechis tras su paso por el Festival de Venecia. Este estreno convive con muestras de memoria histórica y debates sobre el cine documental. Paralelamente, la tecnología y el arte escénico se cruzan en iniciativas singulares, como la recreación mediante inteligencia artificial del histórico encuentro entre Graciela Borges y Paul Newman acontecido en 1962, capturando la atención de cinéfilos y nostálgicos locales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Paseos tranquilos bajo el cielo gris de septiembre",
-              "lede": "Los espacios verdes de la ciudad invitan a la observación reposada durante la tarde.",
-              "body": "Con una temperatura que no supera los 13°C y un cielo completamente overcast, los parques porteños como los Bosques de Palermo muestran su cara más solitaria y contemplativa. Los caminantes aprovechan el aire limpio, con un índice PM2.5 de 5, para recorrer senderos arbolados antes de que el sol se ponga a las 18:44. Las librerías de la Avenida Corrientes y los teatros tradicionales mantienen su programación vespertina intacta, ofreciendo un refugio cultural idóneo para los residentes y viajeros que prefieren el ritmo pausado de la temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
             }
           ]
         }

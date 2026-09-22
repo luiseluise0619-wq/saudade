@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-09-22T06:00:00+09:00",
+  "updated": "2026-09-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Clear autumn skies arrive as Chuseok closures begin.",
+              "lede": "Temperatures hover between 17 and 26°C under mainly clear skies, though poor air quality at PM2.5 25 lingers.",
+              "body": "The city prepares for Chuseok starting tomorrow, September 24, with three days of major holiday closures extending through September 26. Banks, government offices, and many neighborhood shops will close their doors as families gather. Currency exchanges currently trade at 1 USD to 1356 KRW. Despite the haze, visitors still wander the galleries to view the Spanish Middle Ages Art Exhibition currently on display. Take a moment to stock up on provisions today before the holiday quiet descends upon the streets.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "A historic sweep echoes through local athletic circles.",
+              "lede": "Back, Ku, and Park complete a legendary Korean sweep, tying a 42-year record in Seoul.",
+              "body": "Sports enthusiasts across the capital are discussing the remarkable recent achievement by Back, Ku, and Park, who secured a historic sweep that ties a 42-year record in Seoul. The weather remains clear with a high of 26°C and a pleasant low of 17°C by sunset at 18:28. As the city readies for the upcoming Chuseok holidays starting September 24, public squares hold a quiet anticipation. Currency exchanges sit at 1 USD to 1356 KRW, offering a stable rate for travelers navigating the autumn air. Evening walks near the parks provide a welcome respite before holiday closures begin tomorrow.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "International dancers gather ahead of the autumn festivities.",
+              "lede": "U.S. K-Pop Cover Dance Champions head to Seoul for the 2026 Gangnam Festival.",
+              "body": "The rhythm of international rehearsal spills into dance studios as the U.S. K-Pop Cover Dance Champions arrive in Seoul for the 2026 Gangnam Festival. Tennis fans are equally engaged as Lanlana Tararudee faces Sohyun Park in Round 2 of the WTA Seoul tournament. Outside, clear skies bring daytime temperatures up to 26°C before dropping to 17°C after sunset at 18:28. Air quality remains poor at PM2.5 25, prompting some walkers to wear masks along the avenues. With Chuseok beginning on September 24 and lasting through September 26, travelers should note that government offices and banks will observe closures during this three-day period.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Autumn Equinox brings overcast quiet to the capital.",
+              "lede": "Today marks the national holiday of Autumn Equinox under steady overcast skies.",
+              "body": "Today is 秋分の日, a public holiday marking the autumnal equinox, bringing a gentle pause to the usual rush of the city. Temperatures range from 20 to 23°C beneath a heavy layer of clouds, with sunset arriving early at 17:37. Air quality remains moderate at PM2.5 23, and financial exchanges trade at 1 USD to 157 JPY. Travelers visiting Tokyo Disney Resort should note the recent advisory that the park has sold out of liquids, with drinks gone from theme park shelves. Government offices and major banks are closed today for the holiday, making it an ideal time for quiet strolls through resting neighborhood gardens.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "Cosmic art retrospectives draw quiet crowds indoors.",
+              "lede": "Mariko Mori’s landmark Tokyo retrospective traces an extraordinary cosmic journey.",
+              "body": "Art observers seeking shelter from the overcast 23°C weather find deep solace inside museum galleries this week. Mariko Mori’s landmark Tokyo retrospective is currently tracing an extraordinary cosmic journey through light and sculpture. Outside, the Autumn Equinox holiday brings a stillness to the streets, with public offices closed for the day. Air quality registers at a moderate PM2.5 23, and the currency exchange rate holds at 1 USD to 157 JPY. Visitors should remember that Tokyo Disney Resort has recently experienced shortages with drinks gone from theme park shelves, so bringing bottled water from outside is advised before heading out.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "Cultural echoes stretch outward from the capital.",
+              "lede": "The spirit of local celebration travels abroad as Tokyo X exhibitions open.",
+              "body": "While the domestic Autumn Equinox holiday quiets local commerce today, Tokyo's cultural footprint extends far across the Pacific. The Tokyo X Japanese festival is currently underway in Houston on Saturday, inviting international audiences to experience traditional arts. Back home in Tokyo, temperatures stay capped between 20 and 23°C under overcast skies, with sunset coming at 17:37. Financial markets reflect an exchange rate of 1 USD to 157 JPY. Travelers navigating the city today will find banks and administrative offices closed for the public holiday, leaving public parks delightfully uncrowded for quiet afternoon reflection.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Warm afternoon light settles over the Tagus river.",
+              "lede": "Partly cloudy skies accompany warm daytime temperatures reaching up to 33°C.",
+              "body": "Lisbon experiences a warm stretch today with temperatures climbing from a low of 20°C up to a hot 33°C under partly cloudy skies. Sunset stretches late to 19:32, casting a golden hue over the historic limestone facades. Air quality remains comfortably fair at PM2.5 11, while currency markets exchange at 1 USD to 0.87 EUR. Civic conversations trace recent professional gatherings from the PCMA Convening EMEA 2026, where five key takeaways were recently announced. Meanwhile, residents look ahead to the upcoming Implantação da República public holiday on October 5, which will bring brief administrative closures to the city in the coming weeks.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "02",
+              "headline": "Baking traditions and autumn flavors inspire local kitchens.",
+              "lede": "A seasonal baking contest brings joy and apple pies reminiscent of harvest festivals.",
+              "body": "The spirit of traditional harvest celebrations reaches local bakeries this week, inspired by the joyous baking contest and apple pies associated with the 58th annual Johnny Appleseed Festival. The weather in Lisbon remains warm at 33°C under partly cloudy skies, dropping to a comfortable 20°C after the sun dips below the horizon at 19:32. Air quality is pristine at PM2.5 11, and the exchange rate rests at 1 USD to 0.87 EUR. Travelers resting at outdoor cafes can enjoy the mild breeze without urgency. Administrative offices remain fully open today, with no major local holidays interrupting the flow of daily commerce until October 5.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            },
+            {
+              "n": "03",
+              "headline": "Professional delegates trade notes in the coastal capital.",
+              "lede": "Reflections from the PCMA Convening EMEA 2026 linger in the city's meeting halls.",
+              "body": "Conference venues and quiet hotel courtyards continue to discuss the five key takeaways from the recent PCMA Convening EMEA 2026 hosted in Lisbon. The city enjoys fair air quality at PM2.5 11 and an exchange rate of 1 USD to 0.87 EUR. Afternoon temperatures peak near 33°C before cooling to 20°C under partly cloudy skies, with daylight holding until sunset at 19:32. Neighborhood bakeries display seasonal treats that echo the warmth of autumn celebrations found elsewhere. Visitors planning trips for early next month should note that the Implantação da República holiday on October 5 will close banks and public offices.",
+              "source": "saudade desk",
+              "source_date": "2026-09-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-22T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "The city moves at a relaxed pace with standard weekday routines intact throughout the capital. Banks, post offices, and municipal bureaus maintain their regular schedules with no impending holiday interruptions this week. Travelers can complete their errands and currency exchanges efficiently before heading out to coastal viewpoints. Public transport networks operate smoothly, offering easy connections between the historic districts and the waterfront. The absence of immediate public holidays allows visitors to experience the authentic daily cadence of Lisbon life. It is a serene period to observe the quiet interactions that define the soul of the city.",
               "source": "saudade desk",
               "source_date": "2026-09-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies frame the transitional air of mid-September.",
-              "lede": "Temperatures settle between 18 and 26°C as sunset arrives at 18:41 under moderate air quality.",
-              "body": "The afternoon air feels heavy with autumn's approach, holding a moderate PM2.5 reading of 41. Outside, the exchange rate sits at 1 USD to 1343 KRW for incoming travelers. Seoul welcomes its first officially recognized Oktoberfest this week, bringing traditional brews to local plazas. Meanwhile, quieter cultural spaces like the ParkSeoBo Museum offer a subtle retreat from the city's denser commercial districts. Visitors navigating the streets will notice the upcoming 추석 holidays spanning from 2026-09-24 through 2026-09-26, when many government offices and banks observe multi-day closures. Plan your banking errands accordingly before the holiday traffic builds across the Han River bridges.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "Museum thresholds invite quiet reflection away from commercial corridors.",
-              "lede": "The newly opened spaces offer a measured look at contemporary local design and mid-century art.",
-              "body": "Seoul's artistic landscape expands quietly this season beyond the major entertainment hubs. The ParkSeoBo Museum avoids grand theatricality, presenting instead a restrained masterclass in texture and monochrome discipline. Nearby commercial ventures, including the recent arrival of Chipotle Mexican Grill with valuation questions still in play, contrast sharply with these contemplative galleries. Visitors studying the city's architectural evolution often look back to historic touchpoints like the Seoul 1988 era and its cultural shifts. With temperatures holding comfortably between 18 and 26°C under overcast skies, walking between these indoor spaces remains pleasant. Be sure to complete any urgent government paperwork before the 2026-09-24 추석 holiday closures begin next week.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Public squares adapt as autumn festival culture takes root.",
-              "lede": "Outdoor gatherings shift from summer humidity to the crisp evening air of late September.",
-              "body": "Seoul hosts its first officially recognized Oktoberfest this week, introducing European festive traditions to local park grounds. The overcast canopy keeps daytime temperatures capped at 26°C, making long strolls past outdoor seating areas comfortable. Travelers exchanging currency will find a steady rate of 1 USD to 1343 KRW at local financial institutions. As you plan your transit schedule, keep in mind that the upcoming 추석 holidays on 2026-09-24, 2026-09-25, and 2026-09-26 will quiet down administrative districts considerably. Post offices and public banks will close their doors for the holiday duration, so settle your financial transactions early in the week.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Warm overcast skies linger over the eastern capital.",
-              "lede": "Temperatures range from 23 to 31°C as evening falls around 17:50 under moderate air quality.",
-              "body": "The late summer warmth persists across the city with a moderate PM2.5 reading of 20 in the afternoon air. Financial transactions settle around an exchange rate of 1 USD to 154 JPY for visitors converting foreign currency. Tokyo DisneySea marks its 25th anniversary, with cast members maintaining the park's renowned standards of cleanliness and safety. Meanwhile, public spaces and transit hubs prepare for the upcoming 敬老の日 holiday on 2026-09-21 and the 秋分の日 holiday on 2026-09-23. Government offices, banks, and post offices will observe these national closures, making early-week errand-running essential for residents. Walkways near the waterfront remain breezy as the sun sets before 18:00.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "Digital installations and retrospective exhibitions map modern movement.",
-              "lede": "Cultural venues across the capital balance retrospective design histories with large-scale immersive projects.",
-              "body": "Tokyo's creative calendar offers deep dives into both street culture and cutting-edge digital media this week. The traveling exhibition '50 Years of VISION' maps the global evolution of skateboarding through archival boards and imagery. Simultaneously, development continues on teamLab's new Tokyo museum, shaping up to be the digital art group's biggest ever project upon completion. Outdoor festival crowds also gather for events like the Tokyo X Festival at Reliant Center under a 23 to 31°C overcast canopy. As holiday closures approach for 敬老の日 on 2026-09-21 and 秋分の日 on 2026-09-23, public transit systems will experience weekend-style congestion. Travelers should consult local train schedules to navigate these civic holiday peaks smoothly.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Civic spaces maintain order amid shifting seasonal rhythms.",
-              "lede": "Cleanliness and quiet organization define the capital's sprawling parks and transit corridors.",
-              "body": "Even under persistent overcast skies with temperatures peaking near 31°C, Tokyo's public management remains remarkably steady. At Tokyo DisneySea, cast members mark the park's 25th year by keeping grounds exceptionally clean and safe for families. Financial exchanges hold at 1 USD to 154 JPY as tourists navigate the city's extensive rail networks. Residents should note that the calendar features two consecutive autumn holidays: 敬老の日 on 2026-09-21 and 秋分の日 on 2026-09-23. On these dates, municipal offices, postal services, and major financial institutions will close their counters to observe the national rest days. Plan your administrative tasks for the middle of the week before the holiday pauses take effect.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear blue skies stretch across the Atlantic coastline.",
-              "lede": "Afternoon temperatures reach 33°C before cooling to 20°C at night under fair air quality.",
-              "body": "The late summer sun beats down on Lisbon's cobblestone hills with a fair PM2.5 reading of 9 in the crisp air. Sunset illuminates the Tagus River precisely at 19:46, casting long shadows across the historic plazas. Travelers managing expenses will find an exchange rate of 1 USD to 0.86 EUR at local banks and bureaus. Cultural venues are currently navigating a shifting festival landscape, marked by recent artist withdrawals and scheduling changes at local events. Despite these behind-the-scenes adjustments, alternative celebrations like the Lisbon horror festival continue to draw crowds interested in independent cinema and dark arts. Pedestrians should wear light clothing and carry water as the midday temperature climbs toward its 33°C peak.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "02",
-              "headline": "Cultural schedules shift as autumn festival lineups undergo revisions.",
-              "lede": "Local arts communities adjust their autumn calendars following high-profile cancellations across city venues.",
-              "body": "Lisbon's autumn cultural circuit experiences a period of internal realignment this week. Following the public announcement of headliners, several comedians and artists pulled out of scheduled festival appearances, prompting organizers to rethink their programming. In contrast, alternative gatherings like the city's dedicated horror festival continue to attract audiences with independent cinema, unique performances, and nocturnal screenings. Outdoors, clear skies and temperatures spanning 20 to 33°C make evening walks along the riverfront appealing after the intense daytime heat subsides. Currency conversions sit steadily at 1 USD to 0.86 EUR for arriving international visitors. Transit services operate on regular schedules, providing reliable connections between downtown hills and the coastal outskirts.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
-            },
-            {
-              "n": "03",
-              "headline": "Sunlit viewpoints remain the prime destination for quiet observers.",
-              "lede": "The Tagus estuary catches the afternoon glare as clear skies dominate the Portuguese capital.",
-              "body": "Observation points across Graça and Alfama offer sweeping vistas of the river under uninterrupted clear skies. With the air quality index remaining fair at a PM2.5 level of 9, walking the city's steepest inclines feels invigorating despite the 33°C high. Financial transactions are calculated at 1 USD to 0.86 EUR, offering straightforward value for travelers dining at neighborhood tascas. While local cultural debates stir around festival lineups and artist boycotts, the city's everyday rhythms remain unhurried. Trams and funiculars glide up the limestone slopes on their normal timetables, carrying residents away from the midday warmth. Evening arrives slowly, with the sun dipping below the horizon just before 19:46 to cool the stone facades.",
-              "source": "saudade desk",
-              "source_date": "2026-09-14"
             }
           ]
         }
