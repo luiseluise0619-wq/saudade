@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-23T06:00:00+09:00",
+  "updated": "2026-09-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La música independiente gratuita llega este fin de semana a varios escenarios madrileños.",
+              "lede": "Artistas como Jimena Amarillo, Shego y Dorian participan en las jornadas de conciertos al aire libre.",
+              "body": "La capital acoge este fin de semana un festival gratuito de música independiente que reunirá a numerosos artistas y seguidores en distintos puntos de la ciudad. Entre los nombres confirmados figuran Jimena Amarillo, Shego y Dorian, ofreciendo una amplia programación para todos los públicos. Con una previsión meteorológica que marca temperaturas entre 17 y 34°C bajo cielos parcialmente nublados y una puesta de sol a las 20:08, los asistentes disfrutarán de jornadas musicales al atardecer. La calidad del aire se mantiene en niveles pobres con un registro de PM2.5 de 11, por lo que conviene tenerlo en cuenta durante las horas de mayor actividad exterior. El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR para quienes visiten la ciudad estos días.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "El Siglo de Oro protagoniza una nueva exposición cultural en Madrid.",
+              "lede": "La muestra explora el rico crisol de destinos y la llegada de grandes creadores a la corte.",
+              "body": "Los espacios culturales de la ciudad amplían su oferta con la inauguración de la exposición «Madrid en el Siglo de Oro. Crisol de destinos y desembarco de genios». Esta propuesta invita a recorrer el pulso histórico y artístico de una época determinante para el patrimonio local. El termómetro oscila entre 17 y 34°C con intervalos de nubes y claros, mientras que el ocaso llega puntualmente a las 20:08. La atmósfera presenta índices de PM2.5 en 11, marcando una calidad del aire pobre que aconseja paseos tranquilos entre sala y sala. Para los viajeros internacionales, la tasa de cambio vigente se mantiene en 1 USD por 0.88 EUR. Muy pronto, la actividad cultural continuará con la llegada del IX Festival Cine por Mujeres 2026 a la Sala Berlanga a partir del 28 de octubre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "Un nuevo espacio de ocio temático abre sus puertas de cara a Halloween.",
+              "lede": "La oferta de entretenimiento madrileña suma un macroparque dedicado al terror.",
+              "body": "La oferta de ocio de Madrid incorpora un macroparque temático de terror que abre sus puertas coincidiendo con la proximidad de la temporada de Halloween. Este nuevo recinto busca atraer a los aficionados a las experiencias inmersivas y al misterio en las afueras de la capital. Las condiciones meteorológicas muestran un ambiente cálido con mínimas de 17 y máximas de 34°C bajo cielos parcialmente nublados, registrando el anochecer a las 20:08. La calidad del aire registra un nivel pobre con PM2.5 en 11, un factor propio de los días estables en el entorno metropolitano. En el ámbito económico, la equivalencia monetaria actual ofrece 0.88 EUR por cada 1 USD, facilitando las gestiones a los visitantes extranjeros que planifiquen sus rutas por la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona celebra el día festivo de la Mercè con cielos cubiertos.",
+              "lede": "El parque del Tibidabo y el Zoo ofrecen entradas gratuitas para los menores durante las fiestas.",
+              "body": "La ciudad celebra la festividad de La Mercè con una jornada marcada por el cielo totalmente cubierto y temperaturas que se mueven entre 18 y 29°C. La puesta de sol está prevista para las 19:45, cerrando una tarde de celebraciones urbanas en calles y plazas. Con motivo de esta fecha señalada, espacios emblemáticos como el parque de atracciones del Tibidabo y el Zoo de Barcelona han programado accesos gratuitos destinados especialmente a los menores. La calidad del aire se sitúa en niveles pobres con un valor de PM2.5 de 18, aconsejando moderación en los desplazamientos deportivos al aire libre. Para los visitantes extranjeros, la referencia monetaria se mantiene en 1 USD por 0.88 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "Aperturas y cierres comerciales en Barcelona durante el día de La Mercè.",
+              "lede": "Los establecimientos de alimentación ajustan sus horarios habituales debido al festivo local.",
+              "body": "La festividad de La Mercè altera la dinámica comercial habitual en Barcelona, generando consultas sobre qué supermercados abren sus puertas este 24 de septiembre. Cadenas como Mercadona, Lidl, Aldi o Carrefour adaptan sus turnos o permanecen cerradas según cada ubicación para cumplir con el calendario laboral local. Los residentes y viajeros que necesiten realizar compras básicas deben consultar las excepciones previstas para este día festivo. El tiempo permanece nuboso, con un registro térmico que va de 18 a 29°C y la caída del sol a las 19:45. La calidad del aire muestra un índice PM2.5 de 18, considerado pobre, mientras que el tipo de cambio oficial opera con 1 USD equivalente a 0.88 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "Paseos tranquilos bajo cielo gris en los espacios verdes de Barcelona.",
+              "lede": "El ambiente otoñal acompaña los recorridos por los parques urbanos durante la festividad.",
+              "body": "Los parques barceloneses ofrecen un refugio de calma durante la jornada festiva de La Mercè, ideal para pasear sin prisas bajo una bóveda de nubes. El mercurio marca valores entre 18 y 29°C, proporcionando una temperatura templada a pesar de la ausencia de sol directo y con el ocaso fijado a las 19:45. La calidad del aire es pobre, registrando 18 en la escala de PM2.5, por lo que se recomienda un ritmo pausado en los espacios abiertos de la ciudad. Quienes se encuentren de viaje por Cataluña pueden realizar sus transacciones financieras tomando como referencia la tasa de cambio de 1 USD por 0.88 EUR. Las familias aprovechan la jornada festiva para visitar los recintos lúdicos que ofrecen gratuidades infantiles en este día tan señalado.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cielos cubiertos y ambiente fresco en las calles de Buenos Aires.",
+              "lede": "La agenda cultural de la ciudad destaca por muestras internacionales y festivales de cine.",
+              "body": "Buenos Aires transcurre estos días bajo un cielo completamente cubierto y temperaturas que oscilan entre 12 y 21°C, marcando el atardecer a las 18:51. La calidad del aire se mantiene en niveles muy favorables, catalogada como justa con un registro de PM2.5 de 6. La agenda cultural porteña brilla con eventos destacados como el MUBI Fest, que reúne lo mejor del cine contemporáneo en salas seleccionadas. Además, la presencia argentina en el Festival de San Sebastián 2026 acapara la atención de críticos y cinéfilos locales. Paralelamente, los amantes del arte patrimonial pueden contemplar los tapices de Goya de las Colecciones Reales, expuestos por primera vez en América.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "El circuito comercial y cultural porteño suma nuevas propuestas.",
+              "lede": "El centro comercial OH! Buenos Aires incorpora marcas internacionales a pocos meses de su apertura.",
+              "body": "La renovación comercial de la capital avanza con la incorporación de nuevas marcas internacionales al recientemente inaugurado shopping OH! Buenos Aires. Este espacio se consolida como un punto de encuentro para quienes buscan diseño y ocio en un entorno moderno. Las condiciones meteorológicas acompañan con una amplitud térmica de 12 a 21°C bajo un manto de nubes, produciéndose la puesta de sol a las 18:51. Los indicadores ambientales señalan una calidad del aire justa con un índice PM2.5 de 6, propicio para caminar por los bulevares de la ciudad. Mientras tanto, la oferta artística se enriquece con la llegada de los tapices de Goya procedentes de las Colecciones Reales y la celebración del MUBI Fest.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "El cine y el arte clásico convergen en la programación de Buenos Aires.",
+              "lede": "Las proyecciones del MUBI Fest conviven con la histórica visita de los tapices de Goya.",
+              "body": "La vida cultural de Buenos Aires ofrece un delicado equilibrio entre las proyecciones cinematográficas del MUBI Fest y la exposición de los tapices de Goya enviados desde las Colecciones Reales. Esta confluencia artística atrae tanto a residentes curiosos como a viajeros atentos a las grandes citas de la temporada. El clima se mantiene fresco, con temperaturas entre 12 y 21°C bajo un cielo totalmente cubierto y el ocaso a las 18:51. La atmósfera limpia muestra una calidad justa con partículas PM2.5 en 6, ideal para recorrer las salas y galerías sin agobios. En el plano urbano, la apertura continuada de nuevos espacios comerciales como el shopping OH! Buenos Aires amplía las opciones de paseo en la metrópoli.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La ciudad vive el inicio de una cita deportiva decisiva mientras las temperaturas rondan entre los 6 y los 12°C. El cielo overcast acompaña las jornadas de los aficionados que se desplazan por los distintos puntos de encuentro habilitados. El atardecer llega a las 18:45, dando paso a una noche de actividad en los circuitos gastronómicos de Palermo y San Telmo. La calidad del aire se mantiene en niveles fair con un índice PM2.5 de 7, ideal para caminar con tranquilidad. Las salas de conciertos y los festivales de cine como el Banff enriquecen una agenda urbana muy diversa. Los residentes disfrutan de los espacios públicos con la calma habitual del invierno que se despide.",
               "source": "saudade desk",
               "source_date": "2026-09-16"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-15T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Macondo Park abre sus puertas con la residencia de Shakira en Madrid.",
-              "lede": "El festival cultural trae doce conciertos y un parque temático efímero a la ciudad.",
-              "body": "La llegada de la residencia artística de Shakira transforma la agenda cultural madrileña de esta semana con un despliegue sin precedentes en el espacio Macondo Park. Doce conciertos y múltiples actividades escénicas ocuparán los escenarios principales, atrayendo a visitantes de toda la región. Los residentes que busquen tranquilidad durante estos días encontrarán refugio en los parques históricos y los cafés menos concurridos del centro. El tipo de cambio actual se sitúa en 1 USD frente a 0.87 EUR para los viajeros internacionales que planifiquen sus compras de entradas en taquilla. Se recomienda consultar los horarios especiales de transporte público debido a la alta afluencia de público prevista en los recintos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "02",
-              "headline": "El festival COMA26 y el Coro de la Comunidad de Madrid celebran la nueva temporada.",
-              "lede": "La música coral y contemporánea protagonizan los auditorios de la capital este mes.",
-              "body": "La programación musical de septiembre avanza con la esperada unión del Coro de la Comunidad de Madrid al festival COMA26. Las salas de conciertos de la ciudad acogen estrenos de autores actuales y piezas sinfónicas de gran formato. Este evento consolida a Madrid como un punto de encuentro esencial para la interpretación contemporánea. Los asistentes deben recordar que el tipo de cambio monetario se mantiene en 1 USD por 0.87 EUR para las transacciones en librerías y taquillas culturales. Las restricciones de movilidad en el entorno de los auditorios aconsejan el uso del metropolitano para llegar con puntualidad a las funciones vespertinas programadas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "03",
-              "headline": "Titirimadroño regresa a Puente de Vallecas con programación para octubre.",
-              "lede": "El festival de títeres y artes escénicas de calle anuncia sus fechas otoñales.",
-              "body": "El distrito de Puente de Vallecas se prepara para acoger una nueva edición del festival Titirimadroño durante el próximo mes de octubre. Las plazas y los centros culturales del barrio recuperarán el teatro de marionetas y las propuestas artísticas familiares. Es una ocasión excelente para redescubrir la periferia madrileña a través de la cultura de proximidad y el ocio al aire libre. La jornada festiva de la Bien Aparecida trae cierres puntuales en oficinas administrativas este 2026-09-15, por lo que conviene planificar cualquier gestión oficial con antelación. Los visitantes extranjeros pueden operar con un cambio de 1 USD a 0.87 EUR en los establecimientos comerciales adheridos de la zona.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra temperaturas de 21 a 30°C bajo cielos parcialmente nublados.",
-              "lede": "La tarde mantiene una atmósfera cálida hasta la puesta de sol prevista a las 20:00.",
-              "body": "Las calles barcelonesas disfrutan de una jornada típicamente mediterránea con temperaturas que oscilan entre 21 y 30°C y una calidad del aire moderada con un nivel de PM2.5 en 9. La puesta de sol a las 20:00 invita a pasear por los paseos marítimos y los jardines urbanos sin la intensidad lumínica del verano. Con un tipo de cambio fijado en 1 USD frente a 0.87 EUR, los viajeros extranjeros pueden realizar transacciones cotidianas con estabilidad en comercios locales. La festividad de la Bien Aparecida este 2026-09-15 afecta de manera moderada a ciertos trámites burocráticos y horarios de oficinas públicas en la ciudad. Los parques urbanos permanecen abiertos en su horario habitual para el disfrute de los transeúntes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "02",
-              "headline": "El Estadi Olímpic acoge el Music Bank World Tour y la gran cita del K-pop.",
-              "lede": "El mayor festival de música coreana de Europa llena el recinto de Montjuïc.",
-              "body": "El Estadi Olímpic de Montjuïc se convierte en el epicentro europeo de la música coreana con la llegada del Music Bank World Tour. Miles de seguidores se darán cita en los alrededores de la montaña para disfrutar de este macroevento musical de escala internacional. Se aconseja utilizar el transporte público y anticipar los desplazamientos debido a la alta concentración de asistentes en los accesos. Los visitantes pueden aprovechar su estancia para visitar exposiciones fotográficas locales, como la muestra de Josep M. Miedes en la Biblioteca de Sant Joan. Las finanzas de los turistas extranjeros se benefician de una conversión estable de 1 USD por 0.87 EUR en las taquillas y comercios del entorno olímpico.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "03",
-              "headline": "La Biblioteca de Sant Joan expone la mirada fotográfica sobre Eivissa.",
-              "lede": "Josep M. Miedes retrata la isla pitiusa desde la perspectiva barcelonesa.",
-              "body": "La sala de exposiciones de la Biblioteca de Sant Joan inaugura la muestra fotográfica Una mirada a Eivissa des de Barcelona, obra del fotógrafo Josep M. Miedes. El proyecto documenta la luz y el paisaje insular a través de una mirada pausada y profundamente urbana. La entrada es libre para los residentes y viajeros que busquen un respiro cultural en los espacios públicos del distrito. Con un clima agradable de 21 a 30°C y una calidad del aire moderada de 9 PM2.5, el recorrido por los barrios resulta especialmente cómodo. El atardecer a las 20:00 marca el final de la jornada en las terrazas exteriores y los patios interiores de la red de bibliotecas municipales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con cielos cubiertos y temperaturas de 9 a 19°C.",
-              "lede": "La tarde porteña transcurre bajo una capa de nubes y una calidad del aire en niveles justos.",
-              "body": "El clima porteño de este 2026-09-15 se caracteriza por la nubosidad constante y temperaturas que se mueven entre 9 y 19°C. La calidad del aire se mantiene en un rango fair con un registro de PM2.5 en 13, propicio para caminatas urbanas abrigadas. La puesta de sol se producirá puntualmente a las 18:45, marcando la transición hacia la apacible noche de la ciudad. Los cafés tradicionales de los barrios históricos ofrecen refugio frente a la humedad ambiental propia de la estación. Los visitantes encontrarán en las librerías y plazas un ritmo cotidiano sosegado y propicio para la observación tranquila de la arquitectura local.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "02",
-              "headline": "La fase final en Buenos Aires arranca con la ceremonia de apertura.",
-              "lede": "El sorteo de los grupos da inicio a las jornadas decisivas de la competición.",
-              "body": "Los auditorios y los espacios designados para el torneo en Buenos Aires acogen la ceremonia inaugural y el esperado sorteo de los grupos. La ciudad recibe a delegaciones y seguidores que participan en esta fase final de gran relevancia deportiva y cultural. Las calles cercanas a los centros de convenciones experimentan cortes temporales de tráfico que los transeúntes sabrán sortear a pie. Las temperaturas frescas de 9 a 19°C acompañan los desplazamientos peatonales por los bulevares principales. Con una calidad del aire fair y un registro de PM2.5 en 13, la atmósfera urbana permanece estable mientras cae la tarde hasta las 18:45.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "n": "03",
-              "headline": "El cine y la música internacional convergen en las calles de la capital.",
-              "lede": "El estreno de la obra de Marco Bechis convive con la presencia de artistas invitados.",
-              "body": "La cartelera cultural porteña destaca esta semana por la presentación de la película Ritorno a Buenos Aires, del director italo-chileno Marco Bechis, tras su paso por el Festival de Venecia. Paralelamente, la presencia de agrupaciones musicales como Stray Kids recorriendo Palermo y los paseos de Hyunjin y Bang Chan añade un pulso juvenil a los circuitos gastronómicos. Los cafés y bistrós de Palermo Soho y Hollywood registran una actividad animada pero ordenada por parte de los seguidores. El cielo permanece completamente cubierto con temperaturas entre 9 y 19°C, invitando a buscar cobijo en las salas oscuras de cine. La caída del sol a las 18:45 disuelve la neblina vespertina en los parques y plazas de la metrópoli.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
             }
           ]
         }
