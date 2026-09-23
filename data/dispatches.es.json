@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-09-23T06:00:00+09:00",
-  "next_filing": "2026-09-23T21:00:00+00:00",
+  "filed_at": "2026-09-24T06:00:00+09:00",
+  "next_filing": "2026-09-24T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "MADRID",
+      "city": "Madrid",
       "items": [
         {
           "n": "01",
-          "headline": "El Parque de Atracciones inicia su plan de retirada de amianto.",
-          "lede": "El Ayuntamiento de Madrid anuncia la ejecución de los trabajos en el recinto.",
-          "body": "El Ayuntamiento de Madrid ha confirmado el inicio de un plan específico para la retirada de amianto del Parque de Atracciones de la capital. Esta intervención busca actualizar las instalaciones y garantizar la seguridad a largo plazo para todos los visitantes habituales y nuevos residentes. Las labores se planifican con rigor técnico para evitar cualquier afectación a las zonas verdes colindantes y al ritmo habitual de la Casa de Campo. Conviene estar atento a los avisos municipales sobre posibles restricciones temporales en accesos específicos del recinto recreativo durante las próximas semanas. La medida responde a una demanda largamente esperada para la modernización de este espacio histórico.",
+          "headline": "La música independiente gratuita llega este fin de semana a varios escenarios madrileños.",
+          "lede": "Artistas como Jimena Amarillo, Shego y Dorian participan en las jornadas de conciertos al aire libre.",
+          "body": "La capital acoge este fin de semana un festival gratuito de música independiente que reunirá a numerosos artistas y seguidores en distintos puntos de la ciudad. Entre los nombres confirmados figuran Jimena Amarillo, Shego y Dorian, ofreciendo una amplia programación para todos los públicos. Con una previsión meteorológica que marca temperaturas entre 17 y 34°C bajo cielos parcialmente nublados y una puesta de sol a las 20:08, los asistentes disfrutarán de jornadas musicales al atardecer. La calidad del aire se mantiene en niveles pobres con un registro de PM2.5 de 11, por lo que conviene tenerlo en cuenta durante las horas de mayor actividad exterior. El tipo de cambio actual se sitúa en 1 USD equivalente a 0.88 EUR para quienes visiten la ciudad estos días.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "02",
-          "headline": "La exposición 'Yo fui a EGB' clausura su paso por Madrid.",
-          "lede": "La muestra cierra sus puertas tras recibir a 71500 visitantes en la capital.",
-          "body": "La exitosa exposición 'Yo fui a EGB' se despide definitivamente de Madrid tras registrar una notable afluencia de 71500 visitantes a lo largo de su temporada. Este recorrido nostálgico por la cultura material de las décadas pasadas ha resonado profundamente entre varias generaciones de madrileños y viajeros curiosos. Quienes aún no hayan acudido disponen de muy pocas horas para recorrer las salas antes del desmontaje definitivo de las piezas. Los organizadores destacan la gran participación ciudadana y el cuidado con el que se han conservado los objetos expuestos. El espacio buscará ahora nuevas propuestas culturales para el próximo trimestre.",
+          "headline": "El Siglo de Oro protagoniza una nueva exposición cultural en Madrid.",
+          "lede": "La muestra explora el rico crisol de destinos y la llegada de grandes creadores a la corte.",
+          "body": "Los espacios culturales de la ciudad amplían su oferta con la inauguración de la exposición «Madrid en el Siglo de Oro. Crisol de destinos y desembarco de genios». Esta propuesta invita a recorrer el pulso histórico y artístico de una época determinante para el patrimonio local. El termómetro oscila entre 17 y 34°C con intervalos de nubes y claros, mientras que el ocaso llega puntualmente a las 20:08. La atmósfera presenta índices de PM2.5 en 11, marcando una calidad del aire pobre que aconseja paseos tranquilos entre sala y sala. Para los viajeros internacionales, la tasa de cambio vigente se mantiene en 1 USD por 0.88 EUR. Muy pronto, la actividad cultural continuará con la llegada del IX Festival Cine por Mujeres 2026 a la Sala Berlanga a partir del 28 de octubre.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "03",
-          "headline": "Madrid proyecta su industria audiovisual en el Festival de San Sebastián.",
-          "lede": "La capital refuerza su posición estratégica en los foros de cine del País Vasco.",
-          "body": "Madrid consolida su papel como motor de la creación cinematográfica y televisiva mediante su participación institucional en el Festival de San Sebastián. La delegación madrileña impulsa encuentros profesionales destinados a atraer nuevos proyectos y consolidar las redes de coproducción internacional. Esta apuesta por el sector audiovisual coincide con un momento de gran dinamismo en los platós y estudios situados en la Comunidad. Los observadores del sector destacan la importancia de estas alianzas para proyectar el talento local más allá de nuestras fronteras geográficas. Las instituciones locales reafirman así su compromiso con la estabilidad y el crecimiento de la industria cultural.",
+          "headline": "Un nuevo espacio de ocio temático abre sus puertas de cara a Halloween.",
+          "lede": "La oferta de entretenimiento madrileña suma un macroparque dedicado al terror.",
+          "body": "La oferta de ocio de Madrid incorpora un macroparque temático de terror que abre sus puertas coincidiendo con la proximidad de la temporada de Halloween. Este nuevo recinto busca atraer a los aficionados a las experiencias inmersivas y al misterio en las afueras de la capital. Las condiciones meteorológicas muestran un ambiente cálido con mínimas de 17 y máximas de 34°C bajo cielos parcialmente nublados, registrando el anochecer a las 20:08. La calidad del aire registra un nivel pobre con PM2.5 en 11, un factor propio de los días estables en el entorno metropolitano. En el ámbito económico, la equivalencia monetaria actual ofrece 0.88 EUR por cada 1 USD, facilitando las gestiones a los visitantes extranjeros que planifiquen sus rutas por la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         }
       ]
     },
     {
-      "city": "BARCELONA",
+      "city": "Barcelona",
       "items": [
         {
           "n": "01",
-          "headline": "Bruma matinal y temperaturas suaves en Barcelona con 19 a 28 grados.",
-          "lede": "La jornada presenta cielos con niebla ligera y una calidad del aire moderada.",
-          "body": "La atmósfera barcelonesa amanece este martes con un paisaje de bruma y niebla ligera que discurre lentamente hacia el litoral antes de la llegada del atardecer previsto para las 19:47. Las temperaturas oscilan entre los 19 y los 28 grados, configurando un ambiente templado propio de este periodo estacional. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 12 que permite pasear con tranquilidad por los parques urbanos. Quienes deseen planificar un recorrido por la ciudad encontrarán condiciones estables, ideales para la observación sosegada de la arquitectura. El tipo de cambio oficial se sitúa en 1 USD frente a 0.87 EUR para los visitantes internacionales.",
+          "headline": "Barcelona celebra el día festivo de la Mercè con cielos cubiertos.",
+          "lede": "El parque del Tibidabo y el Zoo ofrecen entradas gratuitas para los menores durante las fiestas.",
+          "body": "La ciudad celebra la festividad de La Mercè con una jornada marcada por el cielo totalmente cubierto y temperaturas que se mueven entre 18 y 29°C. La puesta de sol está prevista para las 19:45, cerrando una tarde de celebraciones urbanas en calles y plazas. Con motivo de esta fecha señalada, espacios emblemáticos como el parque de atracciones del Tibidabo y el Zoo de Barcelona han programado accesos gratuitos destinados especialmente a los menores. La calidad del aire se sitúa en niveles pobres con un valor de PM2.5 de 18, aconsejando moderación en los desplazamientos deportivos al aire libre. Para los visitantes extranjeros, la referencia monetaria se mantiene en 1 USD por 0.88 EUR.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "02",
-          "headline": "El CaixaForum rastrea la profunda huella de la historia del arte.",
-          "lede": "Una nueva exposición examina la fuerza creadora del pasado en el presente.",
-          "body": "Las salas del CaixaForum Barcelona acogen un recorrido expositivo que explora de qué manera la historia del arte clásico influye de forma directa en las prácticas contemporáneas. La muestra pone de relieve la vigencia de los lenguajes visuales tradicionales a través de instalaciones y piezas de creadores actuales. Este análisis riguroso invita al espectador a detenerse y reflexionar sobre la persistencia de los mitos y las formas estéticas a lo largo de los siglos. Es una visita recomendada para quienes buscan una perspectiva pausada y profunda sobre la evolución del discurso artístico en la ciudad. El centro mantiene sus horarios habituales para facilitar el acceso a esta propuesta.",
+          "headline": "Aperturas y cierres comerciales en Barcelona durante el día de La Mercè.",
+          "lede": "Los establecimientos de alimentación ajustan sus horarios habituales debido al festivo local.",
+          "body": "La festividad de La Mercè altera la dinámica comercial habitual en Barcelona, generando consultas sobre qué supermercados abren sus puertas este 24 de septiembre. Cadenas como Mercadona, Lidl, Aldi o Carrefour adaptan sus turnos o permanecen cerradas según cada ubicación para cumplir con el calendario laboral local. Los residentes y viajeros que necesiten realizar compras básicas deben consultar las excepciones previstas para este día festivo. El tiempo permanece nuboso, con un registro térmico que va de 18 a 29°C y la caída del sol a las 19:45. La calidad del aire muestra un índice PM2.5 de 18, considerado pobre, mientras que el tipo de cambio oficial opera con 1 USD equivalente a 0.88 EUR.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "03",
-          "headline": "El universo cibernético de Salvador Dalí se instala en la ciudad de forma permanente.",
-          "lede": "La obra digital del genio ampurdanés abre un nuevo espacio de contemplación.",
-          "body": "Barcelona incorpora a su oferta cultural permanente una propuesta inmersiva dedicada a la faceta más cibernética y experimental de Salvador Dalí. Esta instalación fija permite adentrarse en los mundos oníricos del artista mediante herramientas tecnológicas avanzadas que reinterpretan sus lienzos icónicos. El montaje busca ofrecer una experiencia sensorial distinta, alejada de los formatos expositivos convencionales y adaptada a las nuevas formas de expresión digital. Los residentes y viajeros ya pueden adquirir sus entradas para este recorrido que dialoga con la vanguardia histórica catalana. La iniciativa refuerza el circuito de museos tecnológicos del área metropolitana.",
+          "headline": "Paseos tranquilos bajo cielo gris en los espacios verdes de Barcelona.",
+          "lede": "El ambiente otoñal acompaña los recorridos por los parques urbanos durante la festividad.",
+          "body": "Los parques barceloneses ofrecen un refugio de calma durante la jornada festiva de La Mercè, ideal para pasear sin prisas bajo una bóveda de nubes. El mercurio marca valores entre 18 y 29°C, proporcionando una temperatura templada a pesar de la ausencia de sol directo y con el ocaso fijado a las 19:45. La calidad del aire es pobre, registrando 18 en la escala de PM2.5, por lo que se recomienda un ritmo pausado en los espacios abiertos de la ciudad. Quienes se encuentren de viaje por Cataluña pueden realizar sus transacciones financieras tomando como referencia la tasa de cambio de 1 USD por 0.88 EUR. Las familias aprovechan la jornada festiva para visitar los recintos lúdicos que ofrecen gratuidades infantiles en este día tan señalado.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         }
       ]
     },
     {
-      "city": "BUENOS AIRES",
+      "city": "Buenos Aires",
       "items": [
         {
           "n": "01",
-          "headline": "Cielos cubiertos y ambiente fresco en Buenos Aires entre 8 y 16 grados.",
-          "lede": "La jornada transcurre con nubosidad persistente y un atardecer programado a las 18:50.",
-          "body": "Buenos Aires registra hoy temperaturas que se mueven entre los 8 y los 16 grados bajo un cielo predominantemente cubierto de nubes. El aire se mantiene en parámetros moderados con un registro de PM2.5 en 22, propicio para caminar abrigados por los barrios tradicionales. La puesta de sol tendrá lugar a las 18:50, marcando el fin de una tarde apacible para la lectura en cafés históricos o librerías del centro. El ritmo de la ciudad se a compasa a la climatología fresca, ideal para disfrutar de los espacios interiores sin prisas. Conviene llevar ropa de abrigo ligera si se planea permanecer al aire libre hasta entrada la noche.",
+          "headline": "Cielos cubiertos y ambiente fresco en las calles de Buenos Aires.",
+          "lede": "La agenda cultural de la ciudad destaca por muestras internacionales y festivales de cine.",
+          "body": "Buenos Aires transcurre estos días bajo un cielo completamente cubierto y temperaturas que oscilan entre 12 y 21°C, marcando el atardecer a las 18:51. La calidad del aire se mantiene en niveles muy favorables, catalogada como justa con un registro de PM2.5 de 6. La agenda cultural porteña brilla con eventos destacados como el MUBI Fest, que reúne lo mejor del cine contemporáneo en salas seleccionadas. Además, la presencia argentina en el Festival de San Sebastián 2026 acapara la atención de críticos y cinéfilos locales. Paralelamente, los amantes del arte patrimonial pueden contemplar los tapices de Goya de las Colecciones Reales, expuestos por primera vez en América.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "02",
-          "headline": "Los tapices de Goya de las Colecciones Reales llegan a Sudamérica.",
-          "lede": "Las obras maestras se exhiben por primera vez ante el público argentino.",
-          "body": "Una selección excepcional de tapices históricos procedentes de las Colecciones Reales españolas visita por primera vez Buenos Aires en un acontecimiento cultural sin precedentes. Esta llegada permite admirar el genio pictórico y textil de Francisco de Goya a través de piezas de gran valor patrimonial y delicada conservación. Los especialistas han preparado el montaje museístico con estrictos controles de luz y humedad para proteger los tejidos originales durante su estancia. Los aficionados al arte clásico encontrarán en esta muestra una oportunidad única para contemplar obras maestras raramente desplazadas de sus sedes europeas. La exposición ya recibe a sus primeros visitantes bajo rigurosas normas de silencio y respeto.",
+          "headline": "El circuito comercial y cultural porteño suma nuevas propuestas.",
+          "lede": "El centro comercial OH! Buenos Aires incorpora marcas internacionales a pocos meses de su apertura.",
+          "body": "La renovación comercial de la capital avanza con la incorporación de nuevas marcas internacionales al recientemente inaugurado shopping OH! Buenos Aires. Este espacio se consolida como un punto de encuentro para quienes buscan diseño y ocio en un entorno moderno. Las condiciones meteorológicas acompañan con una amplitud térmica de 12 a 21°C bajo un manto de nubes, produciéndose la puesta de sol a las 18:51. Los indicadores ambientales señalan una calidad del aire justa con un índice PM2.5 de 6, propicio para caminar por los bulevares de la ciudad. Mientras tanto, la oferta artística se enriquece con la llegada de los tapices de Goya procedentes de las Colecciones Reales y la celebración del MUBI Fest.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         },
         {
           "n": "03",
-          "headline": "La cúpula sin nombre revela un secreto arquitectónico centenario.",
-          "lede": "Una apertura histórica permite descubrir una joya oculta tras un siglo de silencio.",
-          "body": "Los circuitos urbanos de Buenos Aires suman un atractivo singular con la apertura al público de la denominada cúpula sin nombre, un secreto arquitectónico de 100 años de antigüedad. Este espacio recuperado ofrece una perspectiva inédita sobre los Tejados porteños y los detalles ornamentales de la arquitectura de principios del siglo pasado. Las visitas guiadas permiten conocer los trabajos de restauración que han devuelto el esplendor original a este rincón olvidado del patrimonio local. Se aconseja reservar con antelación debido al aforo reducido que exige la conservación de la estructura histórica. Es una recomendación imprescindible para los observadores atentos de la fisonomía urbana.",
+          "headline": "El cine y el arte clásico convergen en la programación de Buenos Aires.",
+          "lede": "Las proyecciones del MUBI Fest conviven con la histórica visita de los tapices de Goya.",
+          "body": "La vida cultural de Buenos Aires ofrece un delicado equilibrio entre las proyecciones cinematográficas del MUBI Fest y la exposición de los tapices de Goya enviados desde las Colecciones Reales. Esta confluencia artística atrae tanto a residentes curiosos como a viajeros atentos a las grandes citas de la temporada. El clima se mantiene fresco, con temperaturas entre 12 y 21°C bajo un cielo totalmente cubierto y el ocaso a las 18:51. La atmósfera limpia muestra una calidad justa con partículas PM2.5 en 6, ideal para recorrer las salas y galerías sin agobios. En el plano urbano, la apertura continuada de nuevos espacios comerciales como el shopping OH! Buenos Aires amplía las opciones de paseo en la metrópoli.",
           "source": "saudade desk",
-          "source_date": "2026-09-23"
+          "source_date": "2026-09-24"
         }
       ]
     }

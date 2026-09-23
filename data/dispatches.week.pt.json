@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-23T06:00:00+09:00",
+  "updated": "2026-09-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O câmbio fixa-se em 1 USD para 0.88 EUR nos balcões da baixa.",
+              "lede": "A taxa de conversão mantém-se estável para quem chega de fora da zona euro.",
+              "body": "As ruas da baixa lisboeta mantêm o ritmo habitual de final de setembro. A taxa de câmbio atual de 1 USD para 0.88 EUR reflete-se discretamente no comércio tradicional e nas casas de câmbio da Baixa Pombalina. Enquanto a cidade se prepara lentamente para o feriado da Implantação da República a 2026-10-05, os serviços públicos e os bancos funcionarão com normalidade até à véspera. É o momento ideal para caminhar sem pressas pela calçada ainda morna pelo sol de outono. Os cafés históricos conservam as mesas na esplanada, oferecendo um refúgio tranquilo para observar o transeunte comum e o movimento constante dos elétricos amarelos que serpenteiam as colinas da capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "A exposição de Yuran Henrique e o cinema documental ocupam os espaços culturais.",
+              "lede": "As salas e galerias da cidade acolhem mostras visuais e debates de âmbito urbano.",
+              "body": "A programação cultural da capital traz novas perspetivas visuais para os espaços expositivos locais. Yuran Henrique é o artista convidado para a exposição \"Verdes Plurais\", dando continuidade ao diálogo estético que cruza diferentes geografias e sensibilidades. Em paralelo, o Festival Política ocupa as salas de cinema com olhares diversos sobre a cidade de Lisboa, questionando a vivência urbana e o futuro das comunidades. Nos intervalos das sessões, o público procura as livrarias independentes e os pátios interiores escondidos nas zonas históricas. Estas iniciativas convidam a uma paragem prolongada, longe do bulgário turístico, valorizando o tempo lento da observação artística.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "A economia local integra novos fluxos tecnológicos e corporativos.",
+              "lede": "A chegada de equipas internacionais altera discretamente o tecido empresarial ribeirinho.",
+              "body": "O panorama corporativo lisboeta regista novos movimentos com a chegada de entidades estrangeiras ao território. A consultora norte-americana Bain alarga o negócio em Portugal e traz para Lisboa uma nova equipa de inteligência artificial, instalando-se no eixo central da cidade. Esta presença reforça a posição da capital como polo de atração para serviços avançados e tecnologia. Contudo, o quotidiano dos bairros antigos permanece inalterado, preservando as mercearias de bairro e as conversas de porta aberta. Os residentes habituais cruzam-se com os novos profissionais nas mesmas padarias matinais, mantendo o equilíbrio delicado entre a tradição secular e a modernidade digital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A temperatura oscila entre 16 e 21°C sob céu parcialmente nublado.",
+              "lede": "O ar mantém-se moderado com o PM2.5 em 14, ideal para deambular pela Ribeira.",
+              "body": "O Porto respira um ambiente calmo com uma temperatura entre 16 e 21°C e o sol a preparar a sua descida no horizonte até às 19:28. A qualidade do ar regista níveis moderados, com o índice PM2.5 a fixar-se em 14, proporcionando caminhadas agradáveis junto à margem do rio Douro. Para quem efectua transações financeiras, o câmbio oficial permanece em 1 USD para 0.88 EUR. O feriado da Implantação da República, marcado para 2026-10-05, aproxima-se discretamente, lembrando aos residentes que os serviços do Estado e os balcões bancários encerrarão nessa segunda-feira. É um período propício para desfrutar da cidade a passos curtos, observando o reflexo das pontes na água mansa.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "O festival de cinema resgata memórias familiares e o Queer Lion celebra o sucesso.",
+              "lede": "As salas portuenses acolhem projeções intimistas e o reconhecimento de obras internacionais.",
+              "body": "A agenda cinematográfica da Invicta destaca-se pelo resgate de registos visuais de antanho. Filmes de família esquecidos ganham nova vida neste festival de cinema do Porto, oferecendo aos espectadores um visse de memórias coletivas e domésticas quase perdidas. A norte, o eco cultural estende-se com o filme \"London\", rodado em Porto Alegre e vencedor do Queer Lion no Festival de Veneza, a suscitar interesse nos cinéfilos locais. Estes momentos de partilha visual convidam a uma reflexão sobre a preservação do passado. As salas escuras tornam-se refúgios acolhedores contra o vento fresco que começa a anunciar o final da tarde ribeirinha.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "As marionetas preparam o regresso e o espírito dos descobrimentos viaja nas ilhas.",
+              "lede": "A programação cultural antecipa eventos outonais dedicados à tradição e ao teatro de animação.",
+              "body": "A cidade antecipa já os eventos que marcarão o próximo mês nas ruas e auditórios. O 37º Festival de Marionetas do Porto regressa em outubro, prometendo ocupar praças e recintos fechados com espetáculos de grande delicadeza técnica e visual. Em paralelo, o espírito de viagem faz-se notar com o Festival Colombo no Porto Santo, uma evocação histórica que viaja ao tempo dos descobrimentos e ecoa nos círculos culturais da cidade. Os livreiros e alfarrabistas do centro histórico preparam as prateleiras para as primeiras chuvas, enquanto os cafés centenários acolhem leitores silenciosos abrigados da brisa atlântica que desce o rio.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro alcança 29°C sob céus limpos e ar puro na serra.",
+              "lede": "A temperatura oscila entre 17 e 29°C, com o PM2.5 em 7 e o pôr do sol às 19:31.",
+              "body": "Sintra apresenta um microclima luminoso com temperaturas a variar entre 17 e 29°C sob um céu essencialmente limpo. A qualidade do ar é excelente, registando um valor de PM2.5 de 7, o que convida a longos passeios pelos trilhos arborizados da serra. O pôr do sol ocorre pontualmente às 19:31, tingindo os palácios de tons dourados e ocres profundos. No plano financeiro, a taxa de câmbio mantém-se em 1 USD para 0.88 EUR para os visitantes estrangeiros. Com o feriado da Implantação da República a aproximar-se a 2026-10-05, os serviços públicos e as repartições locais preparam o encerramento habitual, aconselhando os cidadãos a antecipar burocracias e trâmites administrativos para a semana corrente.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "02",
+              "headline": "A arte e a cidadania ocupam o MU.SA com o debate sobre a paisagem natural.",
+              "lede": "O museu municipal acolhe reflexões estéticas sobre a preservação do território sintrense.",
+              "body": "A discussão sobre a identidade e a proteção ambiental ganha expressão nos espaços culturais do concelho. A iniciativa \"Pensar o Parque Natural\" leva arte e cidadania ao MU.SA em Sintra, cruzando criações plásticas com o debate cívico sobre a preservação do Parque Natural de Sintra-Cascais. Esta reflexão artística surge num momento em que a comunidade acompanha de perto temas como a salvaguarda paisagística e a construção na faixa natural. Os visitantes encontram no museu um espaço de contemplação e diálogo ponderado. A curadoria aposta na sensibilização para os equilíbrios frágeis entre a intervenção humana e a integridade da serra milenar.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            },
+            {
+              "n": "03",
+              "headline": "A saúde mental prepara a reativação de serviços essenciais até novembro.",
+              "lede": "O executivo municipal anuncia prazos concretos para a reabertura da unidade de atendimento.",
+              "body": "A gestão local avança com melhorias significativas nos equipamentos de apoio social e sanitário da região. O autarca confirmou recentemente que a unidade de saúde mental reabre em Sintra até novembro, respondendo a uma necessidade antiga dos utentes e famílias da comunidade. Esta intervenção visa assegurar cuidados de proximidade mais eficientes e humanizados no território sintrense. Enquanto as obras e os preparativos finais decorrem nos bastidores, os residentes continuam a usufruir da serenidade dos largos ajardinados e das vilas históricas. É uma fase de transição tranquila, onde o ritmo pausado da serra abranda as urgências do quotidiano moderno.",
+              "source": "saudade desk",
+              "source_date": "2026-09-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-23T06:00:00+09:00",
       "cities": [
@@ -551,104 +643,6 @@
               "body": "A programação cultural da vila desdobra-se em vários pontos de interesse, destacando-se o Festival Imaginário na Quinta da Ribafria. Nas proximidades, a localidade de Alvarinhos celebra 70 anos de história através de uma dedicada Exposição Etnográfica Saloia. Para completar o fim de semana, o 42.º Festival de Folclore da Rinchoa realiza-se este sábado, mantendo vivas as danças e cantares tradicionais da região saloia.",
               "source": "saudade desk",
               "source_date": "2026-09-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-15T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Miguel Barros regressa a Lisboa com uma exposição feita de azul e saudade.",
-              "lede": "Quase 20 anos depois, o olhar do artista volta à capital numa mostra comovente.",
-              "body": "Quase 20 anos depois da sua última grande apresentação na cidade, o criador regressa com um conjunto de obras marcadas pelo tom azul e pela profunda introspeção que a capital inspira. É um percurso visual que convida o observador a redescobrir recantos urbanos através de uma sensibilidade rarefeita. A taxa de câmbio atual fixa-se em 1 USD para 0.87 EUR, facilitando o planeamento de quem visita as galerias locais. Pela cidade, iniciativas culturais continuam a surgir de forma discreta, preenchendo os dias de setembro com subtis encontros artísticos. Quem caminha pelas ruas nota uma atmosfera propícia à contemplação e à descoberta pausada. As galerias do centro aguardam os visitantes com horários alargados para esta temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "LISBOA",
-              "n": "02",
-              "headline": "A fotografia de rua ganha nova vida com os olhares dos motoristas da Bolt.",
-              "lede": "Uma exposição singular transforma quem conduz pela cidade em autor de retratos urbanos.",
-              "body": "As ruas de Lisboa são vistas todos os dias por quem está ao volante, conhecendo cada atalho e cada luz da madrugada. A iniciativa recente da Bolt transforma precisamente os olhares desses motoristas de TVDE numa surpreendente exposição fotográfica espalhada pela cidade. Em vez do ritmo apressado das viagens, as imagens captam instantes de pausa, expressões e detalhes arquitetónicos que habitualmente escapam a quem caminha com pressa. A taxa de câmbio permanece estável em 1 USD para 0.87 EUR para as transações correntes. É um registo genuíno sobre o quotidiano lisboeta, visto por quem habita o trânsito diário. A mostra oferece uma perspetiva fresca sobre a mobilidade urbana e a humanidade dos percursos que cruzam a metrópole.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "LISBOA",
-              "n": "03",
-              "headline": "A exposição de fotografia Algarve 63 mostra-se em Lisboa.",
-              "lede": "Imagens de outras décadas revelam a sul do país um encanto intemporal e distante.",
-              "body": "A região sul viaja até à capital através de um conjunto de registos fotográficos que documentam o Algarve de 1963. A exposição, agora acolhida em espaços culturais lisboetas, propõe uma viagem no tempo até a uma faixa costeira ainda moldada pela calma piscatória e rural. Para quem planeia deslocações, a conversão financeira mantém-se em 1 USD para 0.87 EUR, um dado útil para visitantes estrangeiros. As imagens em preto e branco revelam praias desertas e rostos marcados pelo sol, criando um contraste poético com o pulsar da Lisboa contemporânea. É uma oportunidade rara para observar a transformação do território português através da lente de criadores atentos. A visita a estas salas prolonga-se por todo o mês, sem pressas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A névoa matinal cobre a baixa enquanto o termómetro marca entre 16 e 23°C.",
-              "lede": "A qualidade do ar mantém-se moderada, com níveis de PM2.5 nos 17.",
-              "body": "A manhã no Porto arranca envolta numa neblina característica que desce o rio Douro e abranda o ritmo da cidade. Com temperaturas a oscilar entre os 16 e os 23°C, o dia convida a passeios longos pelos jardins e zonas ribeirinhas, onde a humidade se mistura com o cheiro a calcário molhado. Os indicadores apontam para uma qualidade do ar moderada, registando valores de PM2.5 em 17, o que aconselha alguma cautela a quem pratica exercício físico prolongado ao ar livre. À medida que a tarde avança, o sol prepara-se para o ocaso pelas 19:43, tingindo as pontes de dourado. A taxa de câmbio local fixa-se em 1 USD para 0.87 EUR, facilitando o comércio nos mercados tradicionais. É um momento de transição climática suave, ideal para observadores atentos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "PORTO",
-              "n": "02",
-              "headline": "O Parque da Cidade continua sob atenção rigorosa após incidentes recentes.",
-              "lede": "A autarquia levanta o embargo a um empreendimento próximo enquanto investigações decorrem.",
-              "body": "O pulmão verde do Porto vive semanas de profunda reflexão ecológica após o desaparecimento e morte de 41 patos e gansos, um caso que completa 1 mês sem uma explicação oficial definitiva por parte das autoridades competentes. Apesar das interrogações que persistem na comunidade sobre a segurança da fauna local, a Câmara Municipal procedeu recentemente ao levantamento do embargo que suspendia um empreendimento imobiliário adjacente ao parque. Com a qualidade do ar nos 17 de PM2.5 e temperaturas amenas entre 16 e 23°C, os frequentadores habituais continuam a percorrer os trilhos arborizados com redobrada atenção aos lagos. O pôr do sol ocorre pontualmente às 19:43, iluminando as copas das árvores com uma luz melancólica. As autoridades locais prometem manter a vigilância ambiental na zona.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "PORTO",
-              "n": "03",
-              "headline": "O Porto Pride celebra a diversidade com três dias de festival na Invicta.",
-              "lede": "A cidade acolhe encontros culturais marcados pela cor e pela festa urbana.",
-              "body": "A energia festiva do Porto Pride tomou conta da cidade ao longo de 3 dias dedicados à celebração da diversidade e dos direitos civis. Com eventos distribuídos por vários pontos urbanos, o festival reuniu milhares de participantes numa atmosfera de inclusão e partilha artística. As temperaturas, variando entre 16 e 23°C, acompanharam os percursos a pé entre concertos e debates, enquanto a qualidade do ar se mantinha nos 17 de PM2.5. Para os visitantes internacionais, a conversão monetária permanece nos 1 USD para 0.87 EUR. O sol despede-se às 19:43, dando início às programações noturnas em espaços culturais fechados. É um retrato vibrante da vitalidade cívica que caracteriza a sociedade portuense contemporânea.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A Serra de Sintra veste-se de céu parcialmente nublado e temperaturas amenas.",
-              "lede": "Com máximas de 24°C e mínimas de 18°C, a serra convida a caminhadas lentas.",
-              "body": "A atmosfera serrana de Sintra apresenta-se hoje sob um manto de nuvens passageiras que filtram a luz sobre a vegetação luxuriante. Os termómetros registam valores entre os 18 e os 24°C, proporcionando um clima ideal para deambular pelos trilhos históricos sem o calor sufocante do verão. A qualidade do ar é considerada justa, registando um valor de PM2.5 em 7, o que garante uma excelente visibilidade entre as copas dos carvalhos e fetos. A taxa de câmbio mantém-se estável em 1 USD para 0.87 EUR, facilitando as compras nas pequenas lojas do centro histórico. O sol desce no horizonte pelas 19:45, projetando sombras longas sobre as fachadas românticas dos palácios. É um cenário de silêncio e bruma que recompensa o visitante paciente.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "SINTRA",
-              "n": "02",
-              "headline": "O Festival da Sardinha arranca hoje na Praia Grande para celebrar os sabores atlânticos.",
-              "lede": "A gastronomia costeira junta-se à brisa marítima num dos eventos mais esperados da costa.",
-              "body": "A linha de costa de Sintra ganha animação com o arranque oficial do Festival da Sardinha na Praia Grande. O evento celebra os produtos do mar com propostas culinárias tradicionais servidas face ao oceano Atlântico. Com a temperatura do ar a oscilar entre 18 e 24°C e uma qualidade do ar limpa fixada em 7 de PM2.5, as condições exteriores são perfeitas para desfrutar de uma refeição ao ar livre. Para os viajantes estrangeiros, a conversão monetária de 1 USD para 0.87 EUR continua a ser vantajosa nos estabelecimentos locais. O sol despede-se mais tarde, pelas 19:45, oferecendo um pôr do mar memorável sobre as arribas escarpadas. Os restaurantes da zona recomendam reserva prévia para os jantares do festival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
-            },
-            {
-              "city": "SINTRA",
-              "n": "03",
-              "headline": "Jazz em Monserrate leva música a um cenário único e recôndito de Sintra.",
-              "lede": "Os jardins botânicos transformam-se numa sala de espetáculos ao ar livre.",
-              "body": "O ciclo Jazz em Monserrate regressa para preencher os jardins românticos com harmonias subtis e sofisticadas. A programação musical decorre num cenário botânico incomparável, onde exóticas espécies arbóreas servem de acústica natural para os concertos. Sob um céu parcialmente nublado e temperaturas entre 18 e 24°C, o público desfruta de um ambiente de rara tranquilidade. A qualidade do ar, com um índice de PM2.5 em 7, convida a respirar fundo entre os fetos arbóreos e os relvados ingleses. O cair da noite, marcado para as 19:45, ilumina discretamente os caminhos sinuosos do parque palaciano. A taxa de câmbio de 1 USD para 0.87 EUR apoia o turismo cultural que procura estas experiências intimistas na vila.",
-              "source": "saudade desk",
-              "source_date": "2026-09-15"
             }
           ]
         }
