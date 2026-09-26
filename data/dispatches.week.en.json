@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-09-26T06:00:00+09:00",
+  "updated": "2026-09-27T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-27T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The autumn sky over Seoul remains overcast as Chuseok concludes.",
+              "lede": "Temperatures hover between 16 and 26°C with poor air quality at 52 PM2.5.",
+              "body": "The lingering holiday atmosphere blends quietly with the resumption of city routines. Visitors walking through central districts should note the poor air quality marked by a PM2.5 reading of 52. Temperatures range from a brisk 16 to a mild 26°C beneath heavy grey skies. Currency exchanges settle around 1355 KRW per 1 USD. Civic life carries on with the recent conclusion of the Chuseok holiday, though government offices and banks return to standard operating hours after the recent dates. Meanwhile, cultural venues draw crowds looking inward, particularly as the Seoul International Music Festival looks beyond the familiar to curate its latest programmes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "02",
+              "headline": "New public spaces open across the capital for quiet observers.",
+              "lede": "The youth observatory opens its doors this autumn season.",
+              "body": "Urban exploration finds a fresh focal point with the recent opening of the Seoul youth observatory. The facility offers residents a measured viewpoint to observe the sprawling capital. This development arrives alongside ongoing civic discussions regarding the preservation and management of Seoul's green spaces, balancing urban density with accessible parks. Afternoon temperatures reaching 26°C make shaded walkways appealing despite the overcast canopy. Observers will find public transit operating on normal schedules, unaffected by the recent holiday closures. Exchange rates remain steady at 1355 KRW to the dollar, offering predictable budgeting for travelers navigating the city's markets.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "03",
+              "headline": "A historic athletic sweep anchors the city's sports conversations.",
+              "lede": "Back, Ku, and Park complete a Korean sweep to tie a 42-year record.",
+              "body": "Athletic achievements ripple quietly through local cafes as Back, Ku, and Park complete a historic Korean sweep. Their victory ties a 42-year record in Seoul, offering a moment of shared reflection for long-term residents. The city itself moves at a deliberate pace under overcast skies and poor air quality conditions marked at 52 PM2.5. Travelers navigating the streets will benefit from keeping currency conversions in mind at 1355 KRW per 1 USD. As autumn settles in with temperatures spanning 16 to 26°C, parks and cultural halls provide steady shelter from the humid, grey atmosphere.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Dense drizzle falls across Tokyo streets as autumn deepens.",
+              "lede": "Precipitation reaches 3.9mm with temperatures ranging between 18 and 22°C.",
+              "body": "The afternoon brings a persistent, dense drizzle to the capital with 3.9mm of precipitation recorded. Temperatures remain mild, moving from 18 to 22°C under grey skies with a moderate air quality of 22 PM2.5. Currency markets trade near 158 JPY to 1 USD, providing consistent rates for visitors. The wet weather encourages quiet indoor pursuits across the city's neighborhoods. Cultural calendars look ahead with anticipation, noting industry leaders exploring new international anime awards for 2027 alongside upcoming festival tributes.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "02",
+              "headline": "Classic automotive design gathers at Tokyo Midtown in the rain.",
+              "lede": "Seventeen Ferrari cars, from the F40 to recent models, gather for display.",
+              "body": "A striking collection of 17 Ferrari cars gathers at Tokyo Midtown, drawing enthusiasts despite the wet conditions. The exhibition features vehicles ranging from the classic F40 to the latest models, gleaming softly under the overcast drizzle. Outside the venue, air quality registers at a moderate 22 PM2.5 while temperatures hover around 18 to 22°C. Public transit continues to run with quiet efficiency, insulated from the weather. Travelers will find everyday transactions smooth at the prevailing exchange rate of 158 JPY per 1 USD.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "03",
+              "headline": "Film and animation circles prepare for upcoming autumn symposia.",
+              "lede": "The Tokyo Film Festival sets a Mizoguchi tribute and anime symposium.",
+              "body": "Preparations for the autumn cultural season gather momentum as the Tokyo Film Festival announces its upcoming Mizoguchi tribute and anime award symposium. These events highlight the city's enduring role in cinematic arts. The damp weather, featuring 3.9mm of precipitation, keeps outdoor strolling brief but atmospheric. Temperatures spanning 18 to 22°C make light layers essential for anyone moving between galleries and screening rooms. Financial exchanges hold steady at 158 JPY to 1 USD, and moderate air quality indices near 22 PM2.5 ensure comfortable breathing during transit.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies frame a warm autumn afternoon across Lisbon.",
+              "lede": "Temperatures range from 21 to 28°C with fair air quality at 9 PM2.5.",
+              "body": "Warm air blankets the Portuguese capital as temperatures climb between 21 and 28°C under an overcast sky. Air quality remains exceptionally fair, registering at 9 PM2.5 and offering clear breathing along the riverfront. Financial transactions align with an exchange rate of 0.88 EUR per 1 USD. Residents preparing for the upcoming Implantação da República public holiday on October 5 should note that government offices, banks, and post offices will close for the day. Meanwhile, the city's parks and viewpoints provide shaded rest from the lingering seasonal warmth.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "02",
+              "headline": "Europe's largest Lego brick exhibition opens in the Portuguese capital.",
+              "lede": "Legomania brings massive brick models to Lisbon for local observers.",
+              "body": "Creative engineering takes center stage as Legomania opens in Lisbon, presenting Europe's largest exhibition of Lego brick models. The sprawling displays draw families and quiet observers alike into intricate miniature worlds. Outside the exhibition halls, the weather remains warm at 21 to 28°C beneath an overcast canopy. Air quality is rated fair at 9 PM2.5, making walking tours pleasant. Travelers should remember that the upcoming October 5 holiday for the Implantação da República will bring standard closures to administrative offices and banks across the city.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            },
+            {
+              "n": "03",
+              "headline": "Cultural milestones mark the historic roots of Lisbon public institutions.",
+              "lede": "The Lisbon Public Library prepares to host its 100th anniversary.",
+              "body": "Civic pride centers on the Lisbon Public Library as plans unfold to host its 100th anniversary celebrations. The milestone reflects a century of literary stewardship in the city. Visitors can explore the historic quarters at a relaxed pace, aided by a favorable exchange rate of 0.88 EUR per 1 USD. Temperatures peak around 28°C before cooling to 21°C in the evening, with fair air quality recorded at 9 PM2.5. Residents should keep the upcoming October 5 holiday in mind for administrative planning, as Implantação da República closures will affect routine public services.",
+              "source": "saudade desk",
+              "source_date": "2026-09-27"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-26T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Looking ahead to Implantação da República on 2026-10-05, residents note that upcoming public closures will soon affect banks, government offices, and municipal administration. Until then, the warm late-September climate persists, offering ideal conditions for coastal walks and visits to botanical gardens. The stable exchange rate of 1 USD to 0.87 EUR facilitates easy travel planning for those extending their stay into the autumn shoulder season. Cultural life remains anchored in everyday routines, far removed from the hustle of larger capitals. As evening approaches and sunset nears at 19:35, streetlamps flicker on along the historic tram lines. Lisbon settles into a quiet evening, preserving the timeless charm of its coastal hills.",
               "source": "saudade desk",
               "source_date": "2026-09-21"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-20T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear skies anchor the autumn air as Seoul prepares for Chuseok closures.",
-              "lede": "Temperatures span 17 to 27°C under mainly clear skies, with sunset arriving at 18:32.",
-              "body": "Clear autumn weather sets in across the capital this week, bringing daytime highs of 27°C and comfortable evening lows around 17°C under mostly clear skies. Sunset settles early at 18:32, lengthening the shadows across quiet residential alleys. As the city prepares for the upcoming Chuseok holidays from 2026-09-24 to 2026-09-26, travelers should note that major banks, government offices, and many traditional markets will close for the holiday period. Financial exchanges operate at a rate of 1 USD to 1388 KRW while local air quality remains moderate at a PM2.5 reading of 18. Cultural venues like SPAF continue to bring experimental performances to local stages this fall. Planning ahead ensures smooth transit before holiday travel peaks across the peninsula.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "02",
-              "headline": "Tennis exhibitions join seasonal arts on local stages.",
-              "lede": "Moderate air quality accompanies daytime temperatures reaching 27°C.",
-              "body": "The local cultural calendar fills with notable announcements this week as Seoul prepares to host the Six Exhibition Tournament in December, featuring leading tennis players. Similar high-profile announcements bring elite names like Aryna Sabalenka, Elena Rybakina, and Iga Swiatek to Seoul for exhibition matches. Outdoors, air quality remains moderate with a PM2.5 level of 18, making daytime walks pleasant as temperatures reach 27°C. The exchange rate holds steady at 1 USD to 1388 KRW. Residents and visitors navigating the city ahead of the late-September Chuseok break will find transit systems operating normally until holiday closures begin on 2026-09-24. Evening strolls capture the crisp transition into early autumn.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "03",
-              "headline": "Chuseok holiday preparations alter the rhythm of the city.",
-              "lede": "Public offices close for the holiday period spanning 2026-09-24 to 2026-09-26.",
-              "body": "Seoul enters its quietest preparatory phase ahead of the Chuseok national holidays running from 2026-09-24 to 2026-09-26. Government offices, banks, and post offices will observe mandatory closures during these three days. Temperatures hover between a mild 17 and 27°C, accompanied by clean, clear skies and a moderate PM2.5 air quality index of 18. Currency exchange holds at 1 USD to 1388 KRW. While commercial districts bustle with gift shoppers, public transport operators advise checking schedules for holiday adjustments. Cultural festivals like SPAF offer quiet afternoon exhibitions before the holiday exodus empties central neighborhoods. Sunset at 18:32 marks the end of another mild September day.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Steady rain falls across Tokyo during the double holiday week.",
-              "lede": "Temperatures range from 21 to 23°C alongside 66.8mm of precipitation.",
-              "body": "A persistent rain system blankets Tokyo this week, bringing 66.8mm of precipitation and keeping temperatures tightly bound between 21 and 23°C. Sunset occurs early at 17:41 through the grey mist. Travelers should note the arrival of consecutive public holidays, starting with Respect for the Aged Day on 2026-09-21 and followed by Autumnal Equinox Day on 2026-09-23. During these national holidays, government offices, banks, and post offices remain closed. The currency exchange rate sits at 1 USD to 158 JPY, while air quality maintains a moderate PM2.5 level of 17. The wet weather encourages quiet indoor routines, gallery visits, and contemplation of the city's changing autumn slate.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "02",
-              "headline": "Film festival selections bring early cinematic focus to the rainy season.",
-              "lede": "Moderate air quality accompanies steady rain and temperatures around 21 to 23°C.",
-              "body": "Tokyo's cultural calendar takes shape as the Tokyo International Film Festival reveals its upcoming animation and gala selections. High-profile international films led by acclaimed directors and actors join a robust anime lineup featuring 7 distinct films. This cinematic anticipation provides a welcome diversion from the steady rain, which totals 66.8mm of precipitation under a moderate PM2.5 air quality reading of 17. Temperatures range from 21 to 23°C as sunset arrives at 17:41. The exchange rate holds near 1 USD to 158 JPY. Commuters will encounter modified schedules due to the double public holiday span encompassing 敬老の日 on 2026-09-21 and 秋分の日 on 2026-09-23.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "03",
-              "headline": "Double holiday closures affect routine errands across the metropolis.",
-              "lede": "Observe bank and administrative closures on 2026-09-21 and 2026-09-23.",
-              "body": "Tokyo residents adapt to a compressed work week interrupted by two national holidays: 敬老の日 on 2026-09-21 and 秋分の日 on 2026-09-23. Essential administrative services, banking institutions, and post offices will observe these holidays with full closures. Persistent rain accounts for 66.8mm of precipitation, keeping temperatures cool between 21 and 23°C. The exchange rate rests at 1 USD to 158 JPY, with air quality showing moderate PM2.5 figures at 17. Sunset falls at 17:41, casting wet reflections across station asphalt. Public transit networks maintain regular holiday timetables, though neighborhood shops may alter their hours to observe the autumn equinox quietly.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the late-summer heat across Lisbon.",
-              "lede": "Temperatures climb from 21 to 32°C under fair air quality and late sunset.",
-              "body": "Lisbon experiences a warm, partly cloudy week with temperatures ranging from a comfortable 21°C overnight to a warm 32°C during peak afternoon hours. Air quality remains fair, registering a low PM2.5 level of 8. Sunset lingers until 19:36, casting a golden glow over the Tagus riverfront. The currency exchange rate holds at 1 USD to 0.87 EUR. While local festivities like the Johnny Appleseed Festival wrap up their weekend programming abroad, Lisbon residents enjoy quiet strolls through shaded gardens and riverside plazas. No immediate public holidays interrupt the local schedule, allowing standard business hours and transit services to operate with steady, unhurried reliability.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "02",
-              "headline": "Fair air and warm afternoons draw residents to park terraces.",
-              "lede": "Temperatures peak at 32°C while evening sunsets arrive at 19:36.",
-              "body": "The afternoon heat reaches 32°C under partly cloudy skies, dropping to a pleasant 21°C after dark. Air quality is fair with a PM2.5 reading of 8, offering clear conditions for outdoor observation. Sunset at 19:36 stretches the evening light across historic limestone facades. The financial exchange rate stands at 1 USD to 0.87 EUR. Weekend athletic fixtures and community gatherings animate local sports grounds, while cafes fill their outdoor tables along the boulevards. Without upcoming public holidays this week, administrative offices and banks maintain normal operations. Transit systems, including the iconic trams and funiculars, run on standard schedules.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
-            },
-            {
-              "n": "03",
-              "headline": "Uninterrupted autumn routines settle into the capital districts.",
-              "lede": "The exchange rate holds at 1 USD to 0.87 EUR under fair air quality.",
-              "body": "Normal weekday rhythms resume across Lisbon without the interruption of national holidays. Temperatures span 21 to 32°C beneath partly cloudy skies, with air quality remaining fair at a PM2.5 level of 8. Sunset occurs at 19:36, providing long, lingering twilights over the hills. Currency exchange operates at 1 USD to 0.87 EUR. Local sports matches and community events fill the weekend calendar. Banks, post offices, and municipal offices remain fully open throughout the week, offering seamless execution for travelers handling administrative tasks. Public squares offer shaded refuge during the midday warmth before evening breezes cool the stone pathways.",
-              "source": "saudade desk",
-              "source_date": "2026-09-20"
             }
           ]
         }
