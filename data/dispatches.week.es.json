@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-27T06:00:00+09:00",
+  "updated": "2026-09-28T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-28T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La música del festival Moratalaz Blues regresa a la Cuña Verde de O’Donnell.",
+              "lede": "Los escenarios al aire libre recuperan las noches de otoño con programación gratuita para los vecinos.",
+              "body": "El distrito de Moratalaz vuelve a acoger las tradicionales noches de música en la Cuña Verde de O’Donnell. La programación destaca por reunir a destacados intérpretes del género en un entorno arbolado muy frecuentado por paseantes y vecinos del barrio. Es una oportunidad excelente para disfrutar de conciertos al aire libre antes de que el descenso térmico nocturno obligue a buscar refugio en salas cerradas. Se recomienda llegar con antelación para asegurar un buen asiento sobre el césped y abrigarse con una prenda ligera para el tramo final de las actuaciones. El festival consolida este espacio verde como uno de los epicentros musicales de la temporada en la zona este de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "El Parque de Berlín acoge la misa tradicional en honor a san Miguel Arcángel.",
+              "lede": "El distrito de Chamartín celebra a su patrón con una convocatoria abierta en los jardines principales.",
+              "body": "Los vecinos de Chamartín se citan en el Parque de Berlín para conmemorar la festividad de san Miguel Arcángel. La ceremonia religiosa se celebra en uno de los rincones más emblemáticos del recinto, rodeado de estatuas y fuentes que caracterizan al parque. Esta cita anual reúne a residentes de todas las edades en un ambiente de vecindad y calma matutina. Tras los actos litúrgicos, los asistentes suelen aprovechar para caminar entre los rosales y observar los estanques antes de que comience el trasiego vespertino. Es un recordatorio de cómo los espacios verdes de la ciudad conservan tradiciones muy arraigadas en el calendario litúrgico y social de cada distrito.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Hispanidad 2026 despliega su programación por distintos enclaves madrileños.",
+              "lede": "La agenda cultural incluye conciertos gratuitos y actividades artísticas repartidas por plazas y escenarios históricos.",
+              "body": "Madrid celebra una nueva edición del Festival Hispanidad con una amplia oferta de espectáculos de acceso libre. La programación abarca recitales, encuentros literarios y muestras escénicas en lugares emblemáticos de la ciudad. Conviene revisar los horarios específicos de cada jornada para planificar los desplazamientos en transporte público, ya que la afluencia de público suele ser elevada en los puntos céntricos. Esta cita cultural sirve además como antesala a las próximas festividades de octubre, recordando la cercanía de la Fiesta Nacional de España y del Día de la Comunitat Valenciana. Es un momento propicio para caminar sin prisa y descubrir propuestas artísticas procedentes de muy diversos puntos de la geografía iberoamericana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La niebla matinal acompaña una jornada suave con temperaturas de 20 a 26°C.",
+              "lede": "El mercurio se mantiene en registros agradables mientras el aire matutino deja una visibilidad reducida.",
+              "body": "Barcelona amanece bajo una fina capa de bruma que disimula el perfil litoral y la silueta de Collserola. Con una temperatura mínima de 20°C y una máxima prevista de 26°C, el ambiente resulta idóneo para recorrer los paseos marítimos y los parques urbanos sin el sofoco estival. La precipitación registrada es prácticamente imperceptible con 0.1mm, lo que garantiza una jornada seca y apacible para la movilidad a pie o en bicicleta. La calidad del aire se mantiene en niveles considerados justos, con un índice de PM2.5 de 5 que aconseja disfrutar del exterior con total tranquilidad. El ocaso se producirá a las 19:38, marcando el inicio paulatino de unas temperaturas más frescas al caer la noche.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival de Jazz de Barcelona celebra su sesenta aniversario con grandes citas.",
+              "lede": "El certamen musical arranca su programación con diez conciertos imprescindibles en salas emblemáticas.",
+              "body": "La sexagésima edición del Festival de Jazz de Barcelona da inicio a una temporada otoñal marcada por la excelencia instrumental. Las entradas para los recitales más esperados vuelven a registrar una alta demanda entre los aficionados locales y visitantes. Paralelamente, la agenda cultural de la ciudad acoge el Asian Film Festival Barcelona, poniendo el foco en producciones cinematográficas procedentes de la India. Estas propuestas enriquecen la oferta de ocio urbano mientras la ciudad transita hacia el mes de octubre. Para quienes se desplacen estos días, cabe recordar que las oficinas bancarias y organismos oficiales operarán con normalidad hasta la llegada de las festividades de la Fiesta Nacional de España el 2026-10-12 y el Dia de la Comunitat Valenciana el 2026-10-09.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "El Ayuntamiento de Barcelona apoya la reapertura progresiva del parque de Collserola.",
+              "lede": "Los senderos naturales recuperan el pulso ciudadano a medida que avanzan las labores de desescalada.",
+              "body": "Los amantes del senderismo y la naturaleza reciben con alivio el anuncio sobre la paulatina recuperación de los accesos al parque natural de Collserola. Esta medida permite retomar las caminatas por los pulmones verdes que rodean la capital catalana, siguiendo siempre las indicaciones de los servicios forestales. En paralelo, la ciudad mantiene abierta la exposición de autobuses históricos, una muestra que repasa la evolución del transporte público municipal a través de vehículos emblemáticos conservados con mimo. Ambas opciones configuran un fin de semana excelente para compaginar el patrimonio técnico de la ciudad con la tranquilidad de sus espacios naturales más cercanos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las precipitaciones intermitentes dejan acumulados ligeros y una tarde fresca.",
+              "lede": "El termómetro se mueve entre los 14 y los 20°C bajo un cielo gris y chubascos ocasionales.",
+              "body": "La jornada porteña transcurre bajo un régimen de lluvias aisladas que han dejado 2.9mm de precipitación en distintos barrios. Con una temperatura mínima de 14°C y una máxima que apenas alcanzará los 20°C, el abrigo ligero se convierte en el mejor aliado para caminar por la ciudad. La calidad del aire se mantiene en parámetros estables y favorables, con un registro de PM2.5 de 6 que asegura una atmósfera limpia tras el paso de los chaparrones. El sol se ocultará puntualmente a las 18:54, dando paso a una noche húmeda pero apacible. Es un clima propicio para refugiarse en librerías de viejo, cafés tradicionales o salas de exposiciones mientras amaina la humedad exterior.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival FILBA arranca con la presencia de figuras internacionales de las letras.",
+              "lede": "Emmanuel Carrère y Claire Keegan encabezan la apertura del tradicional encuentro literario en la capital.",
+              "body": "Buenos Aires inaugura una nueva edición del Festival FILBA, consolidándose una vez más como la capital literaria de la región. La presencia de autores de la talla de Emmanuel Carrère y Claire Keegan atrae a numerosos lectores a los distintos auditorios y librerías adheridas. Este evento se enmarca en un calendario cultural muy activo que ya anticipa grandes citas futuras, como la anunciada participación de Martín Caparrós en la apertura de la Feria del Libro de Buenos Aires 2027. Paralelamente, el Complejo Teatral de Buenos Aires celebra el reconocimiento internacional obtenido por sus producciones recientes en el Festival de San Sebastián. Para quienes deban realizar gestiones administrativas, es útil tener presente que el próximo 2026-10-12 se celebrará el Día del Respeto a la Diversidad Cultural, jornada que afectará a la apertura de oficinas públicas y bancarias.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "Las industrias culturales debaten sobre modelos de gestión y desarrollo federal.",
+              "lede": "El Festival de Jesús María es presentado en el MICA 2026 como referente de sostenibilidad festiva.",
+              "body": "El sector cultural argentino encuentra en los encuentros sectoriales un espacio fundamental para el intercambio de experiencias de gestión. Durante las recientes jornadas del MICA 2026, el Festival de Jesús María fue destacado como un modelo exitoso de industria cultural capaz de dinamizar las economías regionales. Estas reuniones técnicas reafirman el papel de los festivales populares no solo como espacios de celebración, sino como complejos entramados logísticos y económicos. Para el viajero atento, estos debates reflejan la vitalidad con la que el país proyecta sus tradiciones hacia el futuro, combinando la raíz folclórica con criterios modernos de producción. Las librerías, los teatros independientes y los centros culturales del circuito porteño absorben con naturalidad este pulso creativo constante.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-27T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El pulso cultural de Buenos Aires se refugia en salas y espacios cerrados al amparo de una temperatura que se mueve entre los 6 y los 14°C. Los cielos permanecen cubiertos durante toda la jornada hasta la caída del sol a las 18:50, en un entorno con calidad del aire fair y un valor PM2.5 de 3. El Etreum Horror Film Fest Argentina cumple su sexta edición consolidándose como una cita de referencia para el cine de género. Muy cerca de las salas de proyección, el circuito gastronómico francés atrae a los gourmets con catas de queso y clases de croissant impartidas por chefs destacados. En el comercio urbano, destaca la apertura de la nueva tienda de Decathlon dentro de los planes de expansión de la firma en el país. Como anécdota del pasado reciente, los cronistas locales recuerdan el singular proyecto del parque temático Tierra Santa en Europa.",
               "source": "saudade desk",
               "source_date": "2026-09-22"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-21T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Diez artistas emergentes ocupan las salas de Circuitos de Artes Plásticas 2026.",
-              "lede": "La Comunidad de Madrid acoge las obras de creadores jóvenes en una muestra indispensable este otoño.",
-              "body": "Los espacios expositivos de la región vuelven a abrir sus puertas al talento novel con la presentación de la nueva edición de Circuitos de Artes Plásticas. Esta iniciativa ofrece al visitante un recorrido pausado por las propuestas de diez artistas emergentes que exploran los límites de la materia y el concepto. Es una oportunidad excelente para caminar sin prisa por las salas y descubrir las nuevas voces del arte contemporáneo madrileño. La entrada es libre durante los horarios habituales de apertura al público. Los fines de semana suelen registrar mayor afluencia, por lo que se recomienda la visita matinal. Las galerías ofrecen folletos informativos detallados para acompañar el trayecto visual por cada una de las obras seleccionadas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "El cardenal José Cobo inaugura la Semana de la Palabra en la capital.",
-              "lede": "Las reflexiones sobre el diálogo y la cultura marcan el inicio de estas jornadas.",
-              "body": "La tradicional Semana de la Palabra ha dado comienzo con un llamamiento a la escucha y al encuentro humano. Durante el acto inaugural, el cardenal José Cobo recordó que Dios no se cansa de llamar, estableciendo un tono reflexivo para las conferencias venideras. Diversos espacios culturales y religiosos de la ciudad acogerán mesas redondas, lecturas públicas y encuentros abiertos a toda la ciudadanía. Es un buen momento para detenerse en los templos históricos y los auditorios que participan en el ciclo. Las actividades se extienden a lo largo de varios días con acceso libre hasta completar aforo. Se aconseja consultar la programación previa para elegir las charlas de mayor interés cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "Macondo Park trae a Madrid el universo cultural y musical de Shakira.",
-              "lede": "Doce conciertos y un festival temático transforman la agenda de ocio madrileña.",
-              "body": "La llegada de la residencia artística de Shakira bajo el nombre de Macondo Park promete una temporada intensa en la capital. El programa incluye un ciclo de 12 conciertos únicos y un festival cultural diseñado para sumergir al público en un imaginario desbordante. Los espacios habilitados para este acontecimiento ya ultiman los detalles técnicos para recibir a miles de espectadores procedentes de distintos puntos. Conviene planificar los desplazamientos en transporte público debido a la concentración de eventos en el recinto designado. Las taquillas oficiales recuerdan la importancia de adquirir las localidades con antelación para evitar aglomeraciones de última hora. La ciudad vibra así con una propuesta musical que fusiona grandes despliegues escénicos y arte urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival·B cierra su edición en el Parc del Fòrum con una asistencia récord.",
-              "lede": "Más de 35.000 personas celebran la música independiente bajo un cielo típicamente otoñal.",
-              "body": "El Parc del Fòrum ha despedido una de sus ediciones más memorables tras congregar a más de 35.000 personas en torno a las actuaciones de más de 40 artistas. Con una temperatura oscilante entre los 19 y los 32°C y un cielo completamente overcast, los asistentes disfrutaron de las jornadas musicales sin el calor agobiante de los meses estivales. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 de 11, favoreciendo el paseo al aire libre cerca del litoral barcelonés. El atardecer, fijado a las 19:50, regaló tonalidades grises y suaves sobre el mar mientras sonaban los últimos compases del festival. Los organizadores destacan la excelente respuesta del público y la fluidez en los accesos al recinto.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "El Ayuntamiento anuncia la futura apertura de tiendas asequibles en la ciudad.",
-              "lede": "El alcalde Collboni detalla en Nueva York las nuevas medidas para el comercio local.",
-              "body": "Durante su reciente estancia en Nueva York, el alcalde Collboni ha presentado las líneas maestras para fomentar la apertura de establecimientos comerciales con precios accesibles en los barrios barceloneses. Esta iniciativa busca proteger el tejido comercial de proximidad y garantizar la diversidad de la oferta en los ejes peatonales. Los viajeros que recorran las calles comerciales notarán en los próximos meses cambios orientados a revitalizar locales en desuso. Es una medida pensada para consolidar el comercio tradicional frente a la uniformidad de las grandes franquicias globales. Las asociaciones de comerciantes han recibido la noticia con expectación y diálogo constructivo sobre su implementación práctica. La medida complementa el paseo reposado por los mercados municipales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "Diez joyas de la arquitectura contemporánea trazan un mapa alternativo de Barcelona.",
-              "lede": "De Enric Miralles a Jean Nouvel, el patrimonio moderno merece una mirada detenida.",
-              "body": "Barcelona atesora en sus calles una de las muestras más ricas de diseño urbano y arquitectura de los siglos XX y XXI. Un recorrido recomendado para esta semana invita a descubrir diez obras imprescindibles firmadas por maestros como Jean Nouvel y Enric Miralles. Con un ambiente moderado y un cielo cubierto que invita a caminar sin prisa, el observador puede apreciar los juegos de luz y volúmenes de estos edificios singulares. La brisa marina acompaña el trayecto entre los barrios del Poblenou y el Eixample, donde se concentran varias de estas piezas clave. Se recomienda llevar calzado cómodo para recorrer los exteriores y disfrutar de los espacios públicos circundantes. Las oficinas de turismo ofrecen guías especializadas para profundizar en el contexto de cada construcción.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires celebra la llegada de la primavera entre flores y parques.",
-              "lede": "Planes al aire libre para disfrutar del Día de la Primavera con temperaturas frescas.",
-              "body": "La ciudad se prepara para recibir la estación de las flores con una agenda repleta de actividades en parques y plazas. Con temperaturas que oscilan entre los 11 y los 17°C y un cielo persistentemente overcast, el abrigo ligero es indispensable para caminar por los espacios verdes. La calidad del aire se sitúa en niveles moderados, con un registro de PM2.5 de 17, permitiendo disfrutar de largas caminatas sin inconvenientes. El atardecer, previsto para las 18:49, marca el final de unas jornadas ideales para contemplar la floración de los lapachos en avenidas y plazas. Los vecinos aprovechan para organizar encuentros tranquilos al aire libre y paseos en bicicleta por los senderos arbolados. Los jardines botánicos y los bosques de Palermo ofrecen el escenario perfecto para esta transición estacional.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "El Museo de Arte Latinoamericano rinde homenaje a la figura de Frida Kahlo.",
-              "lede": "Una exposición temporal imperdible atrae a los amantes del arte a las salas del Malba.",
-              "body": "El Museo de Arte Latinoamericano de Buenos Aires acoge una cuidada retrospectiva dedicada a Frida Kahlo que continúa convocando a numeroso público. La muestra reúne piezas clave y documentos fotográficos que adentran al visitante en la intimidad creativa de la artista mexicana. Aprovechando la frescura de las temperaturas exteriores, que se mueven entre los 11 y los 17°C, la visita al museo constituye un refugio cultural excelente. Se aconseja reservar las entradas en línea para asegurar el acceso en el horario preferido y evitar filas en el vestíbulo. Las salas cuentan con audioguías detalladas que facilitan una lectura pausada de cada obra expuesta. Al salir, la tarde porteña invita a continuar el recorrido por las librerías y cafés tradicionales del barrio.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival de Cine Alemán proyecta trece títulos singulares hasta el 23 de septiembre.",
-              "lede": "Las salas porteñas acogen una selecta muestra de cinematografía contemporánea europea.",
-              "body": "Los cinéfilos de la ciudad tienen una cita imprescindible con la nueva edición del Festival de Cine Alemán, que exhibe trece sorprendentes películas hasta el 23 de septiembre. Bajo el cielo nublado de estos días y con registros térmicos que no superan los 17°C, las salas de proyección ofrecen un reparo cálido y cultural. La programación incluye dramas, comedias y documentales que reflejan las inquietudes estéticas del cine germano actual. Es recomendable consultar la cartelera para conocer los horarios de las funciones con subtítulos y los coloquios posteriores con algunos directores invitados. Las entradas pueden adquirirse en las taquillas de la sede principal o a través de sus canales digitales habituales. Un plan perfecto para las tardes frescas que caracterizan el arranque de esta semana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
             }
           ]
         }
