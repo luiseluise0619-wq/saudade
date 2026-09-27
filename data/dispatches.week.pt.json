@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-24T06:00:00+09:00",
+  "updated": "2026-09-28T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-28T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Lisboa",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Festival Queer Lisboa celebra a sua trigésima edição com cinema premiado.",
+              "lede": "O filme francês La Gradiva venceu a edição comemorativa. As salas mantêm a programação regular de outono.",
+              "body": "A capital encerra setembro com o reflexo cultural do Festival Queer Lisboa. A 30.ª edição destacou o filme francês La Gradiva, premiado pelo júri internacional. Para quem percorre a cidade, o câmbio atual fixa-se em 1 USD para 0.88 EUR. O Parque Eduardo VII acolhe três sugestões imperdíveis de roteiro urbano esta semana. Os residentes preparam-se também para o feriado nacional da Implantação da República a 2026-10-05, que trará alterações habituais aos serviços públicos.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "A Orquestra Metropolitana de Lisboa atua no Festival Jovens Músicos.",
+              "lede": "Teresa Macedo Ferreira junta-se à programação musical. Os espaços culturais da cidade adaptam-se ao ritmo da estação.",
+              "body": "A música erudita ocupa o calendário lisboeta com a colaboração da Orquestra Metropolitana de Lisboa e Teresa Macedo Ferreira. O Festival Jovens Músicos 2026 atrai públicos atentos aos auditórios centrais. No plano financeiro, a taxa de câmbio permanece estável em 0.88 EUR por cada USD. As margens do rio recebem também o entusiasmo do Lisboa Dragon Boat Festival. As repartições públicas e bancos lembrarão aos cidadãos o fecho próximo devido ao feriado de 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "O Parque Eduardo VII revela percursos botânicos e miradouros renovados.",
+              "lede": "Três paragens essenciais definem o passeio pelo parque. O outono instala-se calmamente sobre a colina.",
+              "body": "Aproveitar as avenidas centrais exige passos pausados entre os canteiros do Parque Eduardo VII. Três sugestões imperdíveis guiam o visitante pelas encostas arborizadas com vista para o Tejo. Com o euro cotado a 0.88 face ao USD, as esplanadas mantêm preços acessíveis aos viajantes. A agenda cultural ecoa o recente sucesso do Festival Queer Lisboa e o vigor da Orquestra Metropolitana de Lisboa. Aproxima-se o feriado de 2026-10-05 relativo à Implantação da República, aconselhando precaução em diligências administrativas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "city": "Porto",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Festival de Marionetas do Porto regressa com dez dias de espetáculos.",
+              "lede": "A programação explora o tema Ficções e Realidades. A temperatura oscila entre 16 e 22°C sob céus nublados.",
+              "body": "A Invicta acolhe o Festival de Marionetas do Porto durante 10 dias de representações dedicadas a Ficções e Realidades. A meteorologia regista 16–22°C com 0.6mm de precipitação e chuva leve, enquanto o sol se põe pelas 19:21. A qualidade do ar permanece em níveis fáceis, com PM2.5 a 11. O câmbio oficial situa-se em 1 USD para 0.88 EUR. O feriado da Implantação da República em 2026-10-05 condicionará o funcionamento de repartições e bancos na próxima semana.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "A Igreja da Lapa expõe o coração de D. Pedro durante três dias.",
+              "lede": "A relíquia histórica recebe visitantes em silêncio. A brisa atlântica traz uma leve precipitação de 0.6mm.",
+              "body": "A Igreja da Lapa abre portas para três dias de contemplação em torno do coração de D. Pedro. Fora de portas, a cidade respira a 16–22°C, com o pôr do sol marcado para as 19:21 e uma humidade residual de 0.6mm de chuva leve. A qualidade do ar regista PM2.5 em 11. Serralves prepara uma festa de encerramento para o mês de setembro, combinando cinema e música. O comércio local ajusta horários prevendo o feriado de 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "Serralves despede-se de setembro com uma festa de cinema e música.",
+              "lede": "O parque e o museu celebram o final do mês. A qualidade do ar mantém-se fair com PM2.5 de 11.",
+              "body": "O Porto diz adeus a setembro com eventos culturais que unem Serralves, o cinema e a música. A temperatura exterior move-se entre 16 e 22°C, acompanhada por 0.6mm de chuva leve e anoitecer às 19:21. A taxa de câmbio é de 0.88 EUR por cada USD. Paralelamente, o Pingo Doce reabre a sua loja no centro do Porto Santo, renovando o quotidiano insular. Os residentes anotam o encerramento de serviços devido ao feriado de 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        },
+        {
+          "city": "Sintra",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Novas visitas guiadas revelam o lado romântico do Parque da Pena.",
+              "lede": "O percurso explora recantos históricos e trilhos arborizados. A temperatura atinge 26°C sob céus nublados.",
+              "body": "A Serra de Sintra convida a caminhadas contemplativas através de novas visitas guiadas dedicadas à vertente mais romântica do Parque da Pena. O termómetro varia entre 17 e 26°C, com o céu encoberto e anoitecer às 19:25. A qualidade do ar apresenta valores justos de PM2.5 a 8. A taxa de câmbio pratica-se a 0.88 EUR por USD. Os serviços administrativos lembram o fecho oficial de repartições no feriado nacional de 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "02",
+              "headline": "O Parque Natural de Sintra-Cascais mantém a sua proteção paisagística.",
+              "lede": "A vegetação densa beneficia da nebulosidade típica da serra. O pôr do sol ocorre às 19:25.",
+              "body": "A preservação do Parque Natural de Sintra-Cascais continua no centro das atenções locais e institucionais. Com uma amplitude térmica de 17–26°C e céu overcast, o ambiente convida à observação tranquila da natureza. A qualidade do ar regista um índice limpo de PM2.5 a 8. A conversão monetária permanece em 0.88 EUR por dólar americano. Os visitantes devem prever o impacto do feriado de 2026-10-05 na abertura de instituições públicas e correios.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            },
+            {
+              "n": "03",
+              "headline": "Os trilhos arborizados de Sintra oferecem refúgio sob céus nublados.",
+              "lede": "A atmosfera outonal suaviza a luz sobre os palácios. A temperatura máxima chega aos 26°C.",
+              "body": "Caminhar pelas encostas de Sintra revela matizes únicos sob um céu overcast e temperaturas de 17 a 26°C. O crepúsculo instala-se pontualmente às 19:25, com a qualidade do ar a marcar PM2.5 em 8. O câmbio atual opera em 0.88 EUR por 1 USD. Enquanto o Parque da Pena estreia roteiros românticos, a comunidade prepara-se para a pausa do feriado de 2026-10-05 dedicado à Implantação da República.",
+              "source": "saudade desk",
+              "source_date": "2026-09-28"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-24T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "As celebrações tradicionais ganham espaço na agenda sintrense com a realização do 42.º Festival de Folclore da Rinchoa este sábado, complementando as comemorações dos 70 anos de história de Alvarinhos com a respetiva Exposição Etnográfica Saloia. O ambiente meteorológico acompanha estas atividades com temperaturas de 16 a 24°C e céu parcialmente nublado, prolongando-se a luz natural até ao pôr do sol às 19:41. A qualidade do ar regista um índice PM2.5 de 7, garantindo uma atmosfera límpida na serra. Para quem visita a zona, a cotação de 1 USD para 0.87 EUR facilita as despesas diárias. É uma semana dedicada à preservação do património imaterial e à fruição calma dos espaços verdes.",
               "source": "saudade desk",
               "source_date": "2026-09-18"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-17T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu cinzento cobre a cidade com temperaturas entre 19 e 28 graus.",
-              "lede": "A tarde avança sob um manto nublado até ao pôr do sol às 19:41, mantendo a calmo ritmo habitual.",
-              "body": "As temperaturas oscilam suavemente entre 19 e 28 graus, criando uma atmosfera ideal para longas caminhadas sem o calor intenso do verão. O céu permanece totalmente coberto por nuvens baixas, prolongando a luz difusa até ao pôr do sol marcado para as 19:41. Para quem chega de fora, a taxa de câmbio atual fixa 1 USD em 0.87 EUR, facilitando o planeamento financeiro nas esplanadas da capital. É um dia excelente para observar o Tejo cinzento e desfrutar da tranquilidade urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival da Madeira traz sabores tradicionais à capital.",
-              "lede": "Até domingo, o bolo do caco, as espetadas e a poncha marcam presença na cidade.",
-              "body": "A gastronomia insular instala-se em Lisboa com o Festival da Madeira, decorrendo até domingo. Os visitantes podem saborear o autêntico bolo do caco, as tradicionais espetadas em pau de louro e a genuína poncha. Este evento festivo celebra a cultura madeirense no coração da capital, oferecendo uma pausa acolhedora e saborosa para residentes e viajantes. A curadoria do festival aposta na genuinidade dos produtos, transportando os aromas do arquipélago para as ruas lisboetas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "03",
-              "headline": "João Pimenta Gomes apresenta o seu disco a solo Dois Desertos.",
-              "lede": "O músico prepara também uma exposição em Lisboa, cruzando sonoridades e memórias visuais.",
-              "body": "A agenda cultural destaca a apresentação do disco a solo Dois Desertos, da autoria de João Pimenta Gomes. O artista prepara paralelamente uma nova exposição na cidade, consolidando um trajeto de exploração artística e sonora. Em paralelo, a cena cultural lisboeta acolhe o olhar de artistas que resgatam memórias familiares e identitárias em galerias locais. São propostas discretas mas profundas para quem prefere observar o pulso criativo da cidade longe dos grandes circuitos turísticos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O ar mantém-se fresco e limpo com 17 a 24 graus.",
-              "lede": "A qualidade do ar regista um valor de PM2.5 de 6 sob um céu totalmente encoberto.",
-              "body": "A cidade invicta regista temperaturas entre 17 e 24 graus, acompanhadas por um céu encoberto que suaviza a paisagem urbana. A qualidade do ar permanece em níveis muito favoráveis, com um índice de PM2.5 de 6, permitindo passeios tranquilos pelas margens do Douro. O pôr do sol ocorre às 19:40, encerrando o dia com tons difusos sobre a foz. A taxa de câmbio de 1 USD para 0.87 EUR mantém-se estável para visitantes internacionais.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "02",
-              "headline": "O Mosteiro de São Bento da Vitória prepara a sua reabertura.",
-              "lede": "As portas do histórico espaço voltam a abrir ao público no dia 1 de outubro.",
-              "body": "O Mosteiro de São Bento da Vitória aguarda a sua reabertura oficial marcada para o dia 1 de outubro, renovando um dos polos patrimoniais mais importantes do Porto. Enquanto os preparativos finais decorrem no interior, o exterior convida a caminhadas atentas pelos claustros e ruas circundantes. A programação futura promete devolver o edifício à dinâmica cultural da cidade, oferecendo novas perspetivas sobre a arquitetura maneirista local.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "03",
-              "headline": "O Festival Colombo arranca em Porto Santo com dezenas de atuações.",
-              "lede": "Quatro dias de recriação histórica reúnem mais de 400 participantes na ilha.",
-              "body": "A animação cultural viaja até Porto Santo com o início do Festival Colombo, que arranca amanhã para quatro dias de intensa recriação histórica. O evento conta com 58 atuações programadas e a participação de mais de 400 figurantes e artistas. Esta viagem ao século XV transforma a paisagem insular num palco vivo, atraindo observadores interessados na herança dos descobrimentos e na vivência comunitária tradicional.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra abriga-se sob nuvens com termómetros entre 16 e 24 graus.",
-              "lede": "A qualidade do ar regista PM2.5 de 5, com o sol a ocultar-se pelas 19:42.",
-              "body": "A vila de Sintra apresenta um clima ameno, com temperaturas que variam entre 16 e 24 graus. O céu permanece encoberto, conferindo à serra uma penumbra mística ideal para contemplação. A qualidade do ar é excelente, marcando um valor de PM2.5 de 5. A conversão cambial mantém-se nos 0.87 EUR por cada 1 USD, e o pôr do sol acontece pontualmente às 19:42, desenhando sombras longas sobre os palácios históricos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival da Sardinha arranca hoje na Praia Grande.",
-              "lede": "A iniciativa costeira celebra os sabores atlânticos junto à falésia.",
-              "body": "O Festival da Sardinha abre hoje portas na Praia Grande, celebrando a tradição piscatória local à beira-mar. O evento convida moradores e visitantes a apreciar o peixe fresco grelhado com vista para o oceano Atlântico. Esta celebração gastronómica alia-se ao ambiente natural protegido da costa sintrense, proporcionando uma pausa descontraída para quem procura os sabores autênticos da região.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
-            },
-            {
-              "n": "03",
-              "headline": "A Quinta da Ribafria acolhe o regresso do Festival Imaginário.",
-              "lede": "Em paralelo, Alvarinhos celebra 70 anos de história com uma exposição etnográfica.",
-              "body": "A programação cultural da vila desdobra-se em vários pontos de interesse, destacando-se o Festival Imaginário na Quinta da Ribafria. Nas proximidades, a localidade de Alvarinhos celebra 70 anos de história através de uma dedicada Exposição Etnográfica Saloia. Para completar o fim de semana, o 42.º Festival de Folclore da Rinchoa realiza-se este sábado, mantendo vivas as danças e cantares tradicionais da região saloia.",
-              "source": "saudade desk",
-              "source_date": "2026-09-17"
             }
           ]
         }

@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-09-24T06:00:00+09:00",
-  "next_filing": "2026-09-24T21:00:00+00:00",
+  "filed_at": "2026-09-28T06:00:00+09:00",
+  "next_filing": "2026-09-28T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "O câmbio fixa-se em 1 USD para 0.88 EUR nos balcões da baixa.",
-          "lede": "A taxa de conversão mantém-se estável para quem chega de fora da zona euro.",
-          "body": "As ruas da baixa lisboeta mantêm o ritmo habitual de final de setembro. A taxa de câmbio atual de 1 USD para 0.88 EUR reflete-se discretamente no comércio tradicional e nas casas de câmbio da Baixa Pombalina. Enquanto a cidade se prepara lentamente para o feriado da Implantação da República a 2026-10-05, os serviços públicos e os bancos funcionarão com normalidade até à véspera. É o momento ideal para caminhar sem pressas pela calçada ainda morna pelo sol de outono. Os cafés históricos conservam as mesas na esplanada, oferecendo um refúgio tranquilo para observar o transeunte comum e o movimento constante dos elétricos amarelos que serpenteiam as colinas da capital.",
+          "headline": "O Festival Queer Lisboa celebra a sua trigésima edição com cinema premiado.",
+          "lede": "O filme francês La Gradiva venceu a edição comemorativa. As salas mantêm a programação regular de outono.",
+          "body": "A capital encerra setembro com o reflexo cultural do Festival Queer Lisboa. A 30.ª edição destacou o filme francês La Gradiva, premiado pelo júri internacional. Para quem percorre a cidade, o câmbio atual fixa-se em 1 USD para 0.88 EUR. O Parque Eduardo VII acolhe três sugestões imperdíveis de roteiro urbano esta semana. Os residentes preparam-se também para o feriado nacional da Implantação da República a 2026-10-05, que trará alterações habituais aos serviços públicos.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "02",
-          "headline": "A exposição de Yuran Henrique e o cinema documental ocupam os espaços culturais.",
-          "lede": "As salas e galerias da cidade acolhem mostras visuais e debates de âmbito urbano.",
-          "body": "A programação cultural da capital traz novas perspetivas visuais para os espaços expositivos locais. Yuran Henrique é o artista convidado para a exposição \"Verdes Plurais\", dando continuidade ao diálogo estético que cruza diferentes geografias e sensibilidades. Em paralelo, o Festival Política ocupa as salas de cinema com olhares diversos sobre a cidade de Lisboa, questionando a vivência urbana e o futuro das comunidades. Nos intervalos das sessões, o público procura as livrarias independentes e os pátios interiores escondidos nas zonas históricas. Estas iniciativas convidam a uma paragem prolongada, longe do bulgário turístico, valorizando o tempo lento da observação artística.",
+          "headline": "A Orquestra Metropolitana de Lisboa atua no Festival Jovens Músicos.",
+          "lede": "Teresa Macedo Ferreira junta-se à programação musical. Os espaços culturais da cidade adaptam-se ao ritmo da estação.",
+          "body": "A música erudita ocupa o calendário lisboeta com a colaboração da Orquestra Metropolitana de Lisboa e Teresa Macedo Ferreira. O Festival Jovens Músicos 2026 atrai públicos atentos aos auditórios centrais. No plano financeiro, a taxa de câmbio permanece estável em 0.88 EUR por cada USD. As margens do rio recebem também o entusiasmo do Lisboa Dragon Boat Festival. As repartições públicas e bancos lembrarão aos cidadãos o fecho próximo devido ao feriado de 2026-10-05.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "03",
-          "headline": "A economia local integra novos fluxos tecnológicos e corporativos.",
-          "lede": "A chegada de equipas internacionais altera discretamente o tecido empresarial ribeirinho.",
-          "body": "O panorama corporativo lisboeta regista novos movimentos com a chegada de entidades estrangeiras ao território. A consultora norte-americana Bain alarga o negócio em Portugal e traz para Lisboa uma nova equipa de inteligência artificial, instalando-se no eixo central da cidade. Esta presença reforça a posição da capital como polo de atração para serviços avançados e tecnologia. Contudo, o quotidiano dos bairros antigos permanece inalterado, preservando as mercearias de bairro e as conversas de porta aberta. Os residentes habituais cruzam-se com os novos profissionais nas mesmas padarias matinais, mantendo o equilíbrio delicado entre a tradição secular e a modernidade digital.",
+          "headline": "O Parque Eduardo VII revela percursos botânicos e miradouros renovados.",
+          "lede": "Três paragens essenciais definem o passeio pelo parque. O outono instala-se calmamente sobre a colina.",
+          "body": "Aproveitar as avenidas centrais exige passos pausados entre os canteiros do Parque Eduardo VII. Três sugestões imperdíveis guiam o visitante pelas encostas arborizadas com vista para o Tejo. Com o euro cotado a 0.88 face ao USD, as esplanadas mantêm preços acessíveis aos viajantes. A agenda cultural ecoa o recente sucesso do Festival Queer Lisboa e o vigor da Orquestra Metropolitana de Lisboa. Aproxima-se o feriado de 2026-10-05 relativo à Implantação da República, aconselhando precaução em diligências administrativas.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "A temperatura oscila entre 16 e 21°C sob céu parcialmente nublado.",
-          "lede": "O ar mantém-se moderado com o PM2.5 em 14, ideal para deambular pela Ribeira.",
-          "body": "O Porto respira um ambiente calmo com uma temperatura entre 16 e 21°C e o sol a preparar a sua descida no horizonte até às 19:28. A qualidade do ar regista níveis moderados, com o índice PM2.5 a fixar-se em 14, proporcionando caminhadas agradáveis junto à margem do rio Douro. Para quem efectua transações financeiras, o câmbio oficial permanece em 1 USD para 0.88 EUR. O feriado da Implantação da República, marcado para 2026-10-05, aproxima-se discretamente, lembrando aos residentes que os serviços do Estado e os balcões bancários encerrarão nessa segunda-feira. É um período propício para desfrutar da cidade a passos curtos, observando o reflexo das pontes na água mansa.",
+          "headline": "O Festival de Marionetas do Porto regressa com dez dias de espetáculos.",
+          "lede": "A programação explora o tema Ficções e Realidades. A temperatura oscila entre 16 e 22°C sob céus nublados.",
+          "body": "A Invicta acolhe o Festival de Marionetas do Porto durante 10 dias de representações dedicadas a Ficções e Realidades. A meteorologia regista 16–22°C com 0.6mm de precipitação e chuva leve, enquanto o sol se põe pelas 19:21. A qualidade do ar permanece em níveis fáceis, com PM2.5 a 11. O câmbio oficial situa-se em 1 USD para 0.88 EUR. O feriado da Implantação da República em 2026-10-05 condicionará o funcionamento de repartições e bancos na próxima semana.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "02",
-          "headline": "O festival de cinema resgata memórias familiares e o Queer Lion celebra o sucesso.",
-          "lede": "As salas portuenses acolhem projeções intimistas e o reconhecimento de obras internacionais.",
-          "body": "A agenda cinematográfica da Invicta destaca-se pelo resgate de registos visuais de antanho. Filmes de família esquecidos ganham nova vida neste festival de cinema do Porto, oferecendo aos espectadores um visse de memórias coletivas e domésticas quase perdidas. A norte, o eco cultural estende-se com o filme \"London\", rodado em Porto Alegre e vencedor do Queer Lion no Festival de Veneza, a suscitar interesse nos cinéfilos locais. Estes momentos de partilha visual convidam a uma reflexão sobre a preservação do passado. As salas escuras tornam-se refúgios acolhedores contra o vento fresco que começa a anunciar o final da tarde ribeirinha.",
+          "headline": "A Igreja da Lapa expõe o coração de D. Pedro durante três dias.",
+          "lede": "A relíquia histórica recebe visitantes em silêncio. A brisa atlântica traz uma leve precipitação de 0.6mm.",
+          "body": "A Igreja da Lapa abre portas para três dias de contemplação em torno do coração de D. Pedro. Fora de portas, a cidade respira a 16–22°C, com o pôr do sol marcado para as 19:21 e uma humidade residual de 0.6mm de chuva leve. A qualidade do ar regista PM2.5 em 11. Serralves prepara uma festa de encerramento para o mês de setembro, combinando cinema e música. O comércio local ajusta horários prevendo o feriado de 2026-10-05.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "03",
-          "headline": "As marionetas preparam o regresso e o espírito dos descobrimentos viaja nas ilhas.",
-          "lede": "A programação cultural antecipa eventos outonais dedicados à tradição e ao teatro de animação.",
-          "body": "A cidade antecipa já os eventos que marcarão o próximo mês nas ruas e auditórios. O 37º Festival de Marionetas do Porto regressa em outubro, prometendo ocupar praças e recintos fechados com espetáculos de grande delicadeza técnica e visual. Em paralelo, o espírito de viagem faz-se notar com o Festival Colombo no Porto Santo, uma evocação histórica que viaja ao tempo dos descobrimentos e ecoa nos círculos culturais da cidade. Os livreiros e alfarrabistas do centro histórico preparam as prateleiras para as primeiras chuvas, enquanto os cafés centenários acolhem leitores silenciosos abrigados da brisa atlântica que desce o rio.",
+          "headline": "Serralves despede-se de setembro com uma festa de cinema e música.",
+          "lede": "O parque e o museu celebram o final do mês. A qualidade do ar mantém-se fair com PM2.5 de 11.",
+          "body": "O Porto diz adeus a setembro com eventos culturais que unem Serralves, o cinema e a música. A temperatura exterior move-se entre 16 e 22°C, acompanhada por 0.6mm de chuva leve e anoitecer às 19:21. A taxa de câmbio é de 0.88 EUR por cada USD. Paralelamente, o Pingo Doce reabre a sua loja no centro do Porto Santo, renovando o quotidiano insular. Os residentes anotam o encerramento de serviços devido ao feriado de 2026-10-05.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "O termómetro alcança 29°C sob céus limpos e ar puro na serra.",
-          "lede": "A temperatura oscila entre 17 e 29°C, com o PM2.5 em 7 e o pôr do sol às 19:31.",
-          "body": "Sintra apresenta um microclima luminoso com temperaturas a variar entre 17 e 29°C sob um céu essencialmente limpo. A qualidade do ar é excelente, registando um valor de PM2.5 de 7, o que convida a longos passeios pelos trilhos arborizados da serra. O pôr do sol ocorre pontualmente às 19:31, tingindo os palácios de tons dourados e ocres profundos. No plano financeiro, a taxa de câmbio mantém-se em 1 USD para 0.88 EUR para os visitantes estrangeiros. Com o feriado da Implantação da República a aproximar-se a 2026-10-05, os serviços públicos e as repartições locais preparam o encerramento habitual, aconselhando os cidadãos a antecipar burocracias e trâmites administrativos para a semana corrente.",
+          "headline": "Novas visitas guiadas revelam o lado romântico do Parque da Pena.",
+          "lede": "O percurso explora recantos históricos e trilhos arborizados. A temperatura atinge 26°C sob céus nublados.",
+          "body": "A Serra de Sintra convida a caminhadas contemplativas através de novas visitas guiadas dedicadas à vertente mais romântica do Parque da Pena. O termómetro varia entre 17 e 26°C, com o céu encoberto e anoitecer às 19:25. A qualidade do ar apresenta valores justos de PM2.5 a 8. A taxa de câmbio pratica-se a 0.88 EUR por USD. Os serviços administrativos lembram o fecho oficial de repartições no feriado nacional de 2026-10-05.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "02",
-          "headline": "A arte e a cidadania ocupam o MU.SA com o debate sobre a paisagem natural.",
-          "lede": "O museu municipal acolhe reflexões estéticas sobre a preservação do território sintrense.",
-          "body": "A discussão sobre a identidade e a proteção ambiental ganha expressão nos espaços culturais do concelho. A iniciativa \"Pensar o Parque Natural\" leva arte e cidadania ao MU.SA em Sintra, cruzando criações plásticas com o debate cívico sobre a preservação do Parque Natural de Sintra-Cascais. Esta reflexão artística surge num momento em que a comunidade acompanha de perto temas como a salvaguarda paisagística e a construção na faixa natural. Os visitantes encontram no museu um espaço de contemplação e diálogo ponderado. A curadoria aposta na sensibilização para os equilíbrios frágeis entre a intervenção humana e a integridade da serra milenar.",
+          "headline": "O Parque Natural de Sintra-Cascais mantém a sua proteção paisagística.",
+          "lede": "A vegetação densa beneficia da nebulosidade típica da serra. O pôr do sol ocorre às 19:25.",
+          "body": "A preservação do Parque Natural de Sintra-Cascais continua no centro das atenções locais e institucionais. Com uma amplitude térmica de 17–26°C e céu overcast, o ambiente convida à observação tranquila da natureza. A qualidade do ar regista um índice limpo de PM2.5 a 8. A conversão monetária permanece em 0.88 EUR por dólar americano. Os visitantes devem prever o impacto do feriado de 2026-10-05 na abertura de instituições públicas e correios.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         },
         {
           "n": "03",
-          "headline": "A saúde mental prepara a reativação de serviços essenciais até novembro.",
-          "lede": "O executivo municipal anuncia prazos concretos para a reabertura da unidade de atendimento.",
-          "body": "A gestão local avança com melhorias significativas nos equipamentos de apoio social e sanitário da região. O autarca confirmou recentemente que a unidade de saúde mental reabre em Sintra até novembro, respondendo a uma necessidade antiga dos utentes e famílias da comunidade. Esta intervenção visa assegurar cuidados de proximidade mais eficientes e humanizados no território sintrense. Enquanto as obras e os preparativos finais decorrem nos bastidores, os residentes continuam a usufruir da serenidade dos largos ajardinados e das vilas históricas. É uma fase de transição tranquila, onde o ritmo pausado da serra abranda as urgências do quotidiano moderno.",
+          "headline": "Os trilhos arborizados de Sintra oferecem refúgio sob céus nublados.",
+          "lede": "A atmosfera outonal suaviza a luz sobre os palácios. A temperatura máxima chega aos 26°C.",
+          "body": "Caminhar pelas encostas de Sintra revela matizes únicos sob um céu overcast e temperaturas de 17 a 26°C. O crepúsculo instala-se pontualmente às 19:25, com a qualidade do ar a marcar PM2.5 em 8. O câmbio atual opera em 0.88 EUR por 1 USD. Enquanto o Parque da Pena estreia roteiros românticos, a comunidade prepara-se para a pausa do feriado de 2026-10-05 dedicado à Implantação da República.",
           "source": "saudade desk",
-          "source_date": "2026-09-24"
+          "source_date": "2026-09-28"
         }
       ]
     }
