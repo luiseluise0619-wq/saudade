@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-09-29T06:00:00+09:00",
-  "next_filing": "2026-09-29T21:00:00+00:00",
+  "filed_at": "2026-09-30T06:00:00+09:00",
+  "next_filing": "2026-09-30T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El Tribunal Superior de Justicia abre el año judicial madrileño.",
-          "lede": "La Comunidad de Madrid marca el pulso institucional con la apertura oficial en el alto tribunal.",
-          "body": "La agenda de la capital retoma su ritmo habitual tras el verano con la apertura solemne del año judicial en el Tribunal Superior de Justicia de Madrid. Este acto convoca a los principales representantes de la región en un entorno de sobriedad y trabajo continuo. Las calles adyacentes recuperan el tránsito pausado de profesionales y viandantes que observan el fluir cotidiano de la ciudad. Mientras tanto, el tipo de cambio se mantiene en 1 USD frente a 0.88 EUR para quienes planean transacciones esta semana. Conviene recordar en el calendario que el 2026-10-09 se celebra el Dia de la Comunitat Valenciana y el 2026-10-12 llegará la Fiesta Nacional de España, fechas que afectarán la apertura de oficinas públicas.",
+          "headline": "La calidad del aire se mantiene en niveles moderados con 12 de PM2.5.",
+          "lede": "Los espacios abiertos de la capital ofrecen una atmósfera estable para caminar sin prisas.",
+          "body": "La calidad del aire en la capital registra hoy un valor moderado con 12 de PM2.5, permitiendo paseos tranquilos por los parques históricos de la ciudad. El tipo de cambio actual se sitúa en 1 USD frente a 0.88 EUR para quienes planean transacciones esta semana. La Comunidad de Madrid inaugura una exposición con 70 piezas sobre el Siglo de Oro en la capital. Los museos y salas de exhibición ajustan sus horarios habituales de apertura de martes a domingo. Conviene recordar que la Fiesta Nacional de España se celebrará próximamente el 12 de octubre, afectando la apertura de oficinas públicas.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "02",
-          "headline": "La exposición Fotografía como biografía recibe visitas guiadas.",
-          "lede": "Las salas madrileñas ofrecen recorridos pausados por la memoria visual y la intimidad retratada.",
-          "body": "Los espacios culturales de la ciudad invitan esta semana a recorrer la muestra Fotografía como biografía mediante visitas guiadas especialmente diseñadas para observadores atentos. Este recorrido permite examinar de cerca cómo la imagen fija documenta la trayectoria personal y el paso del tiempo con una mirada íntima. La propuesta se integra en la oferta otoñal de Madrid, ofreciendo un refugio silencioso frente al bullicio exterior. El tipo de cambio actual se sitúa estable en 1 USD equivalente a 0.88 EUR para los visitantes internacionales. De cara al próximo calendario festivo, recuerde que el 2026-10-09 y el 2026-10-12 traerán cierres en la administración pública debido a la proximidad del Dia de la Comunitat Valenciana y la Fiesta Nacional de España.",
+          "headline": "El festival mADRID aCTUAL regresa con nuevas propuestas culturales para la ciudad.",
+          "lede": "La agenda de otoño se dinamiza con música y exposiciones en distintos distritos.",
+          "body": "La agenda cultural madrileña se enriquece esta semana con el regreso del Festival mADRID aCTUAL y sus nuevas propuestas artísticas. Paralelamente, el festival Multiculturas recorre varios distritos celebrando la diversidad con actividades abiertas al público. El Estadio Ontime Butarque acogió recientemente con gran éxito la celebración del festival Madrid Salvaje. Para quienes cambian divisa, la referencia se mantiene en 1 USD por 0.88 EUR en las principales casas de cambio. Las instituciones públicas recuerdan que el 12 de octubre llegará la Fiesta Nacional de España, jornada festiva con servicios mínimos en la administración.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "03",
-          "headline": "El Festival COMA 26 reúne obras nuevas con el coro de la CAM.",
-          "lede": "La música contemporánea encuentra su espacio en Madrid con el concierto del coro y el trío de Andrés Coll.",
-          "body": "La programación musical de la temporada avanza con las obras nuevas del Festival COMA 26, que este año cuenta con la participación destacada del coro de la CAM. A esta cita se suma el Andrés Coll Cosmic Trio, aportando sonoridades experimentales a los auditorios madrileños en una velada dedicada a la creación actual. Los asistentes disfrutan de interpretaciones rigurosas en salas donde reina la escucha atenta y el respeto por el silencio. En el plano financiero, la cotización de referencia marca 1 USD por cada 0.88 EUR. La planificación semanal debe tener en cuenta que el 2026-10-09 y el 2026-10-12 son jornadas festivas nacionales y autonómicas, incluyendo el Dia de la Comunitat Valenciana y la Fiesta Nacional de España, con la consiguiente pausa en los servicios administrativos.",
+          "headline": "Las oficinas públicas mantendrán cierres por la Fiesta Nacional de España.",
+          "lede": "El calendario laboral anticipa jornadas festivas que alterarán la rutina administrativa.",
+          "body": "El calendario de festivos nacionales señala la llegada de la Fiesta Nacional de España el 12 de octubre, afectando la tramitación administrativa ordinaria. Las oficinas gubernamentales, bancos y oficinas postales permanecerán cerradas durante dicha jornada festiva oficial. Para los residentes y visitantes que realizan operaciones financieras, la equivalencia monetaria actual se fija en 1 USD por 0.88 EUR. La Comunidad de Madrid mantiene abierta su muestra con 70 piezas históricas del Siglo de Oro. Se recomienda consultar los horarios específicos de los centros culturales debido a los ajustes propios del calendario festivo que se avecina en todo el territorio.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Barcelona registra 21 a 23°C con tormentas dispersas al caer la tarde.",
-          "lede": "La ciudad experimenta un clima templado con 9.3mm de precipitación y el aire en calidad fair.",
-          "body": "El termómetro barcelonés se mueve entre los 21 y los 23°C en una jornada marcada por la humedad y un nivel de PM2.5 de 7, considerado fair para la salud ambiental. Las previsiones meteorológicas indican 9.3mm de precipitación acumulada y la llegada de alguna tormenta ocasional que refrescará los pavimentos antes del anochecer, fijado hoy a las 19:36. La moneda extranjera opera con un cambio de 1 USD a 0.88 EUR en las oficinas locales. Además, conviene tener presente que el 2026-10-09 se celebra el Dia de la Comunitat Valenciana y el 2026-10-12 la Fiesta Nacional de España, jornadas que modificarán los horarios de la administración. La exposición de autobuses históricos sigue atrayendo a curiosos nostálgicos hacia los espacios de cocheras y transporte recuperado.",
+          "headline": "Las mañanas registran temperaturas de 20 a 27°C con presencia de niebla.",
+          "lede": "El litoral amanece cubierto por una bruma ligera que disipa hacia el mediodía.",
+          "body": "Barcelona amanece hoy con temperaturas que oscilan entre 20 y 27°C y una densa niebla matinal que disipa progresivamente antes del atardecer previsto para las 19:34. En el ámbito financiero, la cotización oficial de referencia se sitúa en 1 USD por 0.88 EUR. El histórico Bernat Pescaire ha reabierto sus puertas al público bajo la tutela de la UB tras su reciente renovación. Los espacios verdes y paseos marítimos ofrecen una atmósfera tranquila para los observadores matinales. Cabe recordar que el 12 de octubre se celebrará la Fiesta Nacional de España, festividad que modificará los horarios comerciales habituales.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "02",
-          "headline": "La Rambla reabre al tráfico en sentido mar tras dos años cerrada.",
-          "lede": "El emblemático paseo barcelonés recupera paulatinamente la circulación vehicular en dirección marítima.",
-          "body": "Después de más de dos años de obras y cortes continuados, La Rambla de Barcelona reabre finalmente el sentido mar de la circulación para mejorar la movilidad urbana de la zona. Los peatones y conductores comparten ahora un espacio reconfigurado que busca devolver la fluidez a este eje central de la ciudad condal. La intervención urbanística coincide con el cierre de la exposición Tecnología [in]visible, que se despide tras haber acogido a 45.000 visitantes en sus salas. El clima actual muestra temperaturas de 21 a 23°C y 9.3mm de lluvia con tormenta pasajera, bajo un índice PM2.5 de 7. Al planificar la semana, recuerde que el 2026-10-09 y el 2026-10-12 son festivos señalados como el Dia de la Comunitat Valenciana y la Fiesta Nacional de España.",
+          "headline": "Barcelona se convierte en la capital del documental musical con el Festival In-Edit.",
+          "lede": "El cine documental y las propuestas de terror dinamizan la agenda cultural otoñal.",
+          "body": "La ciudad acoge una nueva edición del Festival In-Edit, consolidándose como la capital europea del documental musical. De forma paralela, Horrorland regresa a la provincia como uno de los parques de terror más destacados del continente. Eme Studios amplía su presencia con la apertura de una nueva sede en territorio barcelonés. Las condiciones meteorológicas muestran valores térmicos de 20 a 27°C y una niebla matutina que precede a la puesta de sol de las 19:34. Las oficinas de cambio operan bajo el tipo de cambio de 1 USD a 0.88 EUR. Los servicios municipales operarán con normalidad hasta la llegada del festivo del 12 de octubre.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "03",
-          "headline": "Collserola avanza hacia su reapertura progresiva según el ayuntamiento.",
-          "lede": "El consistorio barcelonés apoya la vuelta gradual al parque natural a medida que avanza la desescalada.",
-          "body": "Los amantes de la naturaleza y los senderos forestales reciben con optimismo el anuncio del Ayuntamiento de Barcelona sobre el apoyo a la reapertura progresiva del parque de Collserola en cuanto sea posible la desescalada. Este pulmón verde recuperará su acceso ciudadano de forma controlada tras los recientes episodios restrictivos. En el plano meteorológico, la jornada registra de 21 a 23°C con 9.3mm de precipitación y riesgo de tormenta antes del ocaso a las 19:36, manteniendo una calidad del aire fair con PM2.5 de 7. El tipo de cambio se fija en 1 USD equivalente a 0.88 EUR. Se recuerda que las festividades del 2026-10-09 (Dia de la Comunitat Valenciana) y el 2026-10-12 (Fiesta Nacional de España) traerán cierres administrativos inminentes.",
+          "headline": "El Bernat Pescaire reabre sus puertas recuperando un espacio emblemático.",
+          "lede": "La emblemática librería recupera su actividad habitual para estudiantes y lectores.",
+          "body": "El histórico espacio cultural Bernat Pescaire abre de nuevo sus puertas de la mano de la UB, recuperando su actividad literaria en la ciudad. La jornada transcurre con temperaturas de 20 a 27°C y una niebla matinal que da paso a una tarde despejada hasta las 19:34. Para los visitantes extranjeros, la conversión de moneda se mantiene estable en 1 USD por 0.88 EUR. Se acerca el festivo nacional del 12 de octubre, por lo que las instituciones y administraciones públicas recuerdan la conveniencia de adelantar gestiones. La agenda de otoño continúa su curso con eventos como el Festival In-Edit y la apertura de Eme Studios.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Buenos Aires registra 14 a 18°C con chubascos y ocaso a las 18:55.",
-          "lede": "La capital argentina transcurre la jornada con lluvia intermitente y un índice de calidad del aire moderate.",
-          "body": "El clima porteño ofrece temperaturas de 14 a 18°C acompañadas por 7.7mm de precipitación en forma de chubascos dispersos que mojan las veredas de adoquines. La puesta de sol está prevista para las 18:55, dejando una tarde gris ideal para la lectura al resguardo. Los sensores ambientales marcan un nivel de PM2.5 de 18, situando la calidad del aire en un rango moderate para la ciudad. En el ámbito cultural, el Barrio Chino vibra estos días con el colorido Festival de Medio Otoño, mientras se prepara el Festival Mascotear y el prestigioso FILBA 2026 con figuras como Amalia Sanz. Conviene anotar que el próximo 2026-10-12 se celebrará el Día del Respeto a la Diversidad Cultural, jornada festiva nacional que traerá el cese de actividades bancarias y gubernamentales.",
+          "headline": "La calidad del aire porteño registra un nivel moderado con 9 de PM2.5.",
+          "lede": "Las plazas y avenidas disfrutan de una atmósfera limpia ideal para caminar.",
+          "body": "El monitoreo ambiental de Buenos Aires indica hoy una calidad del aire moderada con un registro de 9 de PM2.5 en la atmósfera urbana. Esta condición favorece los recorridos peatonales por los tradicionales espacios verdes y parques de la capital. La agenda cultural de la ciudad destaca la celebración del décimo aniversario del Festival Nueva Ópera. Muy cerca de allí, el Barrio Chino vibra con la celebración comunitaria del colorido Festival de Medio Otoño. Asimismo, el festival Mascotear convoca a los vecinos en diversos puntos recreativos de la metrópoli. Conviene tener presente que el calendario nacional señala el próximo feriado del Día del Respeto a la Diversidad Cultural el 12 de octubre.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "02",
-          "headline": "El FILBA 2026 celebra el valor del encuentro literario en CABA.",
-          "lede": "Amalia Sanz protagoniza las jornadas de debate y lectura en los espacios culturales de Buenos Aires.",
-          "body": "La literatura toma la ciudad con el desarrollo del FILBA 2026, donde autores y lectores participan en mesas de diálogo que resaltan el valor del encuentro literario, destacando la intervención de Amalia Sanz. Paralelamente, la agenda cultural anuncia la cuarta edición del Festival Internacional de Improvisación Teatral de Buenos Aires, programado del 21 al 24 de octubre en distintos teatros de CABA según difunde Marcela Fittipaldi Magazine. Las calles porteñas acompañan estos eventos bajo un clima fresco de 14 a 18°C, con 7.7mm de lluvia intermitente y un nivel de PM2.5 de 18 que define un aire moderate. El atardecer llegará puntualmente a las 18:55. Es importante tener presente que el feriado del 2026-10-12 por el Día del Respeto a la Diversidad Cultural alterará la atención en oficinas públicas y bancos.",
+          "headline": "El Barrio Chino celebra el Festival de Medio Otoño con gran participación.",
+          "lede": "Las calles del barrio vibran con tradiciones orientales y gastronomía típica.",
+          "body": "El Barrio Chino de Buenos Aires se llena de linternas y visitantes con motivo del tradicional Festival de Medio Otoño. La oferta cultural de la semana se completa con el Festival Nueva Ópera, que conmemora diez años de trayectoria en los escenarios porteños. Además, el Obelisco es testigo del primer Festival de Drag Queens, donde diez reinas compiten por un premio significativo. El aire de la ciudad se mantiene con registros estables de 9 de PM2.5 según las estaciones de medición ambiental. La administración pública recuerda que el feriado del Día del Respeto a la Diversidad Cultural se celebrará el 12 de octubre, alterando los trámites bancarios.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         },
         {
           "n": "03",
-          "headline": "El Barrio Chino celebra el Festival de Medio Otoño con color y tradición.",
-          "lede": "Los enclaves tradicionales de Buenos Aires se llenan de farolillos y actividades comunitarias al aire libre.",
-          "body": "Los festejos tradicionales continúan atrayendo a vecinos y paseantes, ya que el Barrio Chino de Buenos Aires vibra estos días con el colorido Festival de Medio Otoño. Las linternas y la gastronomía típica ofrecen un punto de encuentro cálido frente a los chubascos de 7.7mm que caen sobre la ciudad. La temperatura oscila entre los 14 y los 18°C, con el sol poniéndose a las 18:55 y un registro de PM2.5 de 18 que mantiene la atmósfera en un nivel moderate. Muy cerca de allí, la oferta de ocio se completa con iniciativas como el Festival Mascotear. Se recuerda a los residentes que la agenda laboral se detendrá el 2026-10-12 con motivo del Día del Respeto a la Diversidad Cultural, afectando a la administración pública, correos y entidades bancarias.",
+          "headline": "Las oficinas públicas y bancos ajustan sus servicios por el feriado del 12 de octubre.",
+          "lede": "El fin de semana largo por el Día del Respeto a la Diversidad Cultural modifica la atención.",
+          "body": "El próximo feriado del Día del Respeto a la Diversidad Cultural, fijado para el 12 de octubre, implicará el cierre temporal de oficinas gubernamentales y entidades bancarias. Los residentes aprovechan los últimos días de aire estable, medido hoy en 9 de PM2.5, para pasear al aire libre. La agenda urbana incluye propuestas diversas como el Festival Mascotear y el esperado certamen de Drag Queens junto al Obelisco. El Festival Nueva Ópera también celebra su décima edición con funciones especiales en salas de la ciudad. Se recomienda planificar con antelación cualquier diligencia administrativa ante la inminencia del fin de semana largo.",
           "source": "saudade desk",
-          "source_date": "2026-09-29"
+          "source_date": "2026-09-30"
         }
       ]
     }
