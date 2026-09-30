@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-09-29T06:00:00+09:00",
+  "updated": "2026-09-30T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-09-30T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La calidad del aire se mantiene en niveles moderados con 12 de PM2.5.",
+              "lede": "Los espacios abiertos de la capital ofrecen una atmósfera estable para caminar sin prisas.",
+              "body": "La calidad del aire en la capital registra hoy un valor moderado con 12 de PM2.5, permitiendo paseos tranquilos por los parques históricos de la ciudad. El tipo de cambio actual se sitúa en 1 USD frente a 0.88 EUR para quienes planean transacciones esta semana. La Comunidad de Madrid inaugura una exposición con 70 piezas sobre el Siglo de Oro en la capital. Los museos y salas de exhibición ajustan sus horarios habituales de apertura de martes a domingo. Conviene recordar que la Fiesta Nacional de España se celebrará próximamente el 12 de octubre, afectando la apertura de oficinas públicas.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "02",
+              "headline": "El festival mADRID aCTUAL regresa con nuevas propuestas culturales para la ciudad.",
+              "lede": "La agenda de otoño se dinamiza con música y exposiciones en distintos distritos.",
+              "body": "La agenda cultural madrileña se enriquece esta semana con el regreso del Festival mADRID aCTUAL y sus nuevas propuestas artísticas. Paralelamente, el festival Multiculturas recorre varios distritos celebrando la diversidad con actividades abiertas al público. El Estadio Ontime Butarque acogió recientemente con gran éxito la celebración del festival Madrid Salvaje. Para quienes cambian divisa, la referencia se mantiene en 1 USD por 0.88 EUR en las principales casas de cambio. Las instituciones públicas recuerdan que el 12 de octubre llegará la Fiesta Nacional de España, jornada festiva con servicios mínimos en la administración.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "03",
+              "headline": "Las oficinas públicas mantendrán cierres por la Fiesta Nacional de España.",
+              "lede": "El calendario laboral anticipa jornadas festivas que alterarán la rutina administrativa.",
+              "body": "El calendario de festivos nacionales señala la llegada de la Fiesta Nacional de España el 12 de octubre, afectando la tramitación administrativa ordinaria. Las oficinas gubernamentales, bancos y oficinas postales permanecerán cerradas durante dicha jornada festiva oficial. Para los residentes y visitantes que realizan operaciones financieras, la equivalencia monetaria actual se fija en 1 USD por 0.88 EUR. La Comunidad de Madrid mantiene abierta su muestra con 70 piezas históricas del Siglo de Oro. Se recomienda consultar los horarios específicos de los centros culturales debido a los ajustes propios del calendario festivo que se avecina en todo el territorio.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las mañanas registran temperaturas de 20 a 27°C con presencia de niebla.",
+              "lede": "El litoral amanece cubierto por una bruma ligera que disipa hacia el mediodía.",
+              "body": "Barcelona amanece hoy con temperaturas que oscilan entre 20 y 27°C y una densa niebla matinal que disipa progresivamente antes del atardecer previsto para las 19:34. En el ámbito financiero, la cotización oficial de referencia se sitúa en 1 USD por 0.88 EUR. El histórico Bernat Pescaire ha reabierto sus puertas al público bajo la tutela de la UB tras su reciente renovación. Los espacios verdes y paseos marítimos ofrecen una atmósfera tranquila para los observadores matinales. Cabe recordar que el 12 de octubre se celebrará la Fiesta Nacional de España, festividad que modificará los horarios comerciales habituales.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "02",
+              "headline": "Barcelona se convierte en la capital del documental musical con el Festival In-Edit.",
+              "lede": "El cine documental y las propuestas de terror dinamizan la agenda cultural otoñal.",
+              "body": "La ciudad acoge una nueva edición del Festival In-Edit, consolidándose como la capital europea del documental musical. De forma paralela, Horrorland regresa a la provincia como uno de los parques de terror más destacados del continente. Eme Studios amplía su presencia con la apertura de una nueva sede en territorio barcelonés. Las condiciones meteorológicas muestran valores térmicos de 20 a 27°C y una niebla matutina que precede a la puesta de sol de las 19:34. Las oficinas de cambio operan bajo el tipo de cambio de 1 USD a 0.88 EUR. Los servicios municipales operarán con normalidad hasta la llegada del festivo del 12 de octubre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "03",
+              "headline": "El Bernat Pescaire reabre sus puertas recuperando un espacio emblemático.",
+              "lede": "La emblemática librería recupera su actividad habitual para estudiantes y lectores.",
+              "body": "El histórico espacio cultural Bernat Pescaire abre de nuevo sus puertas de la mano de la UB, recuperando su actividad literaria en la ciudad. La jornada transcurre con temperaturas de 20 a 27°C y una niebla matinal que da paso a una tarde despejada hasta las 19:34. Para los visitantes extranjeros, la conversión de moneda se mantiene estable en 1 USD por 0.88 EUR. Se acerca el festivo nacional del 12 de octubre, por lo que las instituciones y administraciones públicas recuerdan la conveniencia de adelantar gestiones. La agenda de otoño continúa su curso con eventos como el Festival In-Edit y la apertura de Eme Studios.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La calidad del aire porteño registra un nivel moderado con 9 de PM2.5.",
+              "lede": "Las plazas y avenidas disfrutan de una atmósfera limpia ideal para caminar.",
+              "body": "El monitoreo ambiental de Buenos Aires indica hoy una calidad del aire moderada con un registro de 9 de PM2.5 en la atmósfera urbana. Esta condición favorece los recorridos peatonales por los tradicionales espacios verdes y parques de la capital. La agenda cultural de la ciudad destaca la celebración del décimo aniversario del Festival Nueva Ópera. Muy cerca de allí, el Barrio Chino vibra con la celebración comunitaria del colorido Festival de Medio Otoño. Asimismo, el festival Mascotear convoca a los vecinos en diversos puntos recreativos de la metrópoli. Conviene tener presente que el calendario nacional señala el próximo feriado del Día del Respeto a la Diversidad Cultural el 12 de octubre.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Barrio Chino celebra el Festival de Medio Otoño con gran participación.",
+              "lede": "Las calles del barrio vibran con tradiciones orientales y gastronomía típica.",
+              "body": "El Barrio Chino de Buenos Aires se llena de linternas y visitantes con motivo del tradicional Festival de Medio Otoño. La oferta cultural de la semana se completa con el Festival Nueva Ópera, que conmemora diez años de trayectoria en los escenarios porteños. Además, el Obelisco es testigo del primer Festival de Drag Queens, donde diez reinas compiten por un premio significativo. El aire de la ciudad se mantiene con registros estables de 9 de PM2.5 según las estaciones de medición ambiental. La administración pública recuerda que el feriado del Día del Respeto a la Diversidad Cultural se celebrará el 12 de octubre, alterando los trámites bancarios.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            },
+            {
+              "n": "03",
+              "headline": "Las oficinas públicas y bancos ajustan sus servicios por el feriado del 12 de octubre.",
+              "lede": "El fin de semana largo por el Día del Respeto a la Diversidad Cultural modifica la atención.",
+              "body": "El próximo feriado del Día del Respeto a la Diversidad Cultural, fijado para el 12 de octubre, implicará el cierre temporal de oficinas gubernamentales y entidades bancarias. Los residentes aprovechan los últimos días de aire estable, medido hoy en 9 de PM2.5, para pasear al aire libre. La agenda urbana incluye propuestas diversas como el Festival Mascotear y el esperado certamen de Drag Queens junto al Obelisco. El Festival Nueva Ópera también celebra su décima edición con funciones especiales en salas de la ciudad. Se recomienda planificar con antelación cualquier diligencia administrativa ante la inminencia del fin de semana largo.",
+              "source": "saudade desk",
+              "source_date": "2026-09-30"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-29T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La vida cultural de Buenos Aires ofrece un delicado equilibrio entre las proyecciones cinematográficas del MUBI Fest y la exposición de los tapices de Goya enviados desde las Colecciones Reales. Esta confluencia artística atrae tanto a residentes curiosos como a viajeros atentos a las grandes citas de la temporada. El clima se mantiene fresco, con temperaturas entre 12 y 21°C bajo un cielo totalmente cubierto y el ocaso a las 18:51. La atmósfera limpia muestra una calidad justa con partículas PM2.5 en 6, ideal para recorrer las salas y galerías sin agobios. En el plano urbano, la apertura continuada de nuevos espacios comerciales como el shopping OH! Buenos Aires amplía las opciones de paseo en la metrópoli.",
               "source": "saudade desk",
               "source_date": "2026-09-24"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-23T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "MADRID",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Parque de Atracciones inicia su plan de retirada de amianto.",
-              "lede": "El Ayuntamiento de Madrid anuncia la ejecución de los trabajos en el recinto.",
-              "body": "El Ayuntamiento de Madrid ha confirmado el inicio de un plan específico para la retirada de amianto del Parque de Atracciones de la capital. Esta intervención busca actualizar las instalaciones y garantizar la seguridad a largo plazo para todos los visitantes habituales y nuevos residentes. Las labores se planifican con rigor técnico para evitar cualquier afectación a las zonas verdes colindantes y al ritmo habitual de la Casa de Campo. Conviene estar atento a los avisos municipales sobre posibles restricciones temporales en accesos específicos del recinto recreativo durante las próximas semanas. La medida responde a una demanda largamente esperada para la modernización de este espacio histórico.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición 'Yo fui a EGB' clausura su paso por Madrid.",
-              "lede": "La muestra cierra sus puertas tras recibir a 71500 visitantes en la capital.",
-              "body": "La exitosa exposición 'Yo fui a EGB' se despide definitivamente de Madrid tras registrar una notable afluencia de 71500 visitantes a lo largo de su temporada. Este recorrido nostálgico por la cultura material de las décadas pasadas ha resonado profundamente entre varias generaciones de madrileños y viajeros curiosos. Quienes aún no hayan acudido disponen de muy pocas horas para recorrer las salas antes del desmontaje definitivo de las piezas. Los organizadores destacan la gran participación ciudadana y el cuidado con el que se han conservado los objetos expuestos. El espacio buscará ahora nuevas propuestas culturales para el próximo trimestre.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "03",
-              "headline": "Madrid proyecta su industria audiovisual en el Festival de San Sebastián.",
-              "lede": "La capital refuerza su posición estratégica en los foros de cine del País Vasco.",
-              "body": "Madrid consolida su papel como motor de la creación cinematográfica y televisiva mediante su participación institucional en el Festival de San Sebastián. La delegación madrileña impulsa encuentros profesionales destinados a atraer nuevos proyectos y consolidar las redes de coproducción internacional. Esta apuesta por el sector audiovisual coincide con un momento de gran dinamismo en los platós y estudios situados en la Comunidad. Los observadores del sector destacan la importancia de estas alianzas para proyectar el talento local más allá de nuestras fronteras geográficas. Las instituciones locales reafirman así su compromiso con la estabilidad y el crecimiento de la industria cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            }
-          ]
-        },
-        {
-          "city": "BARCELONA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Bruma matinal y temperaturas suaves en Barcelona con 19 a 28 grados.",
-              "lede": "La jornada presenta cielos con niebla ligera y una calidad del aire moderada.",
-              "body": "La atmósfera barcelonesa amanece este martes con un paisaje de bruma y niebla ligera que discurre lentamente hacia el litoral antes de la llegada del atardecer previsto para las 19:47. Las temperaturas oscilan entre los 19 y los 28 grados, configurando un ambiente templado propio de este periodo estacional. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 12 que permite pasear con tranquilidad por los parques urbanos. Quienes deseen planificar un recorrido por la ciudad encontrarán condiciones estables, ideales para la observación sosegada de la arquitectura. El tipo de cambio oficial se sitúa en 1 USD frente a 0.87 EUR para los visitantes internacionales.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "02",
-              "headline": "El CaixaForum rastrea la profunda huella de la historia del arte.",
-              "lede": "Una nueva exposición examina la fuerza creadora del pasado en el presente.",
-              "body": "Las salas del CaixaForum Barcelona acogen un recorrido expositivo que explora de qué manera la historia del arte clásico influye de forma directa en las prácticas contemporáneas. La muestra pone de relieve la vigencia de los lenguajes visuales tradicionales a través de instalaciones y piezas de creadores actuales. Este análisis riguroso invita al espectador a detenerse y reflexionar sobre la persistencia de los mitos y las formas estéticas a lo largo de los siglos. Es una visita recomendada para quienes buscan una perspectiva pausada y profunda sobre la evolución del discurso artístico en la ciudad. El centro mantiene sus horarios habituales para facilitar el acceso a esta propuesta.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "03",
-              "headline": "El universo cibernético de Salvador Dalí se instala en la ciudad de forma permanente.",
-              "lede": "La obra digital del genio ampurdanés abre un nuevo espacio de contemplación.",
-              "body": "Barcelona incorpora a su oferta cultural permanente una propuesta inmersiva dedicada a la faceta más cibernética y experimental de Salvador Dalí. Esta instalación fija permite adentrarse en los mundos oníricos del artista mediante herramientas tecnológicas avanzadas que reinterpretan sus lienzos icónicos. El montaje busca ofrecer una experiencia sensorial distinta, alejada de los formatos expositivos convencionales y adaptada a las nuevas formas de expresión digital. Los residentes y viajeros ya pueden adquirir sus entradas para este recorrido que dialoga con la vanguardia histórica catalana. La iniciativa refuerza el circuito de museos tecnológicos del área metropolitana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            }
-          ]
-        },
-        {
-          "city": "BUENOS AIRES",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Cielos cubiertos y ambiente fresco en Buenos Aires entre 8 y 16 grados.",
-              "lede": "La jornada transcurre con nubosidad persistente y un atardecer programado a las 18:50.",
-              "body": "Buenos Aires registra hoy temperaturas que se mueven entre los 8 y los 16 grados bajo un cielo predominantemente cubierto de nubes. El aire se mantiene en parámetros moderados con un registro de PM2.5 en 22, propicio para caminar abrigados por los barrios tradicionales. La puesta de sol tendrá lugar a las 18:50, marcando el fin de una tarde apacible para la lectura en cafés históricos o librerías del centro. El ritmo de la ciudad se a compasa a la climatología fresca, ideal para disfrutar de los espacios interiores sin prisas. Conviene llevar ropa de abrigo ligera si se planea permanecer al aire libre hasta entrada la noche.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "02",
-              "headline": "Los tapices de Goya de las Colecciones Reales llegan a Sudamérica.",
-              "lede": "Las obras maestras se exhiben por primera vez ante el público argentino.",
-              "body": "Una selección excepcional de tapices históricos procedentes de las Colecciones Reales españolas visita por primera vez Buenos Aires en un acontecimiento cultural sin precedentes. Esta llegada permite admirar el genio pictórico y textil de Francisco de Goya a través de piezas de gran valor patrimonial y delicada conservación. Los especialistas han preparado el montaje museístico con estrictos controles de luz y humedad para proteger los tejidos originales durante su estancia. Los aficionados al arte clásico encontrarán en esta muestra una oportunidad única para contemplar obras maestras raramente desplazadas de sus sedes europeas. La exposición ya recibe a sus primeros visitantes bajo rigurosas normas de silencio y respeto.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
-            },
-            {
-              "n": "03",
-              "headline": "La cúpula sin nombre revela un secreto arquitectónico centenario.",
-              "lede": "Una apertura histórica permite descubrir una joya oculta tras un siglo de silencio.",
-              "body": "Los circuitos urbanos de Buenos Aires suman un atractivo singular con la apertura al público de la denominada cúpula sin nombre, un secreto arquitectónico de 100 años de antigüedad. Este espacio recuperado ofrece una perspectiva inédita sobre los Tejados porteños y los detalles ornamentales de la arquitectura de principios del siglo pasado. Las visitas guiadas permiten conocer los trabajos de restauración que han devuelto el esplendor original a este rincón olvidado del patrimonio local. Se aconseja reservar con antelación debido al aforo reducido que exige la conservación de la estructura histórica. Es una recomendación imprescindible para los observadores atentos de la fisonomía urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-23"
             }
           ]
         }
