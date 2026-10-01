@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-09-28T06:00:00+09:00",
+  "updated": "2026-10-01T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-01T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O centro pastoral dos jesuítas reabre portas na cidade.",
+              "lede": "O CUPAV acolhe novamente encontros e silêncio na capital.",
+              "body": "As portas do CUPAV, o centro pastoral dos jesuítas, reabrem finalmente em Lisboa. Este espaço renovado convida a momentos de pausa no buliço urbano. É um local de encontro discreto para quem procura reflexão. A programação cultural e espiritual retoma o seu ritmo habitual. Os visitantes encontram aqui uma atmosfera propícia à leitura e ao descanso. A taxa de câmbio atual fixa-se em 1 USD para 0.88 EUR para os viajantes.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "02",
+              "headline": "O Festival Queer Lisboa celebra o cinema francês.",
+              "lede": "O filme La Gradiva vence a 30.ª edição do certame.",
+              "body": "A edição número 30 do Festival Queer Lisboa consagrou o filme francês La Gradiva como grande vencedor. As salas de cinema da cidade acolheram sessões esgotadas ao longo da semana. O público respondeu com curiosidade a esta seleção cinematográfica exigente. As projeções noturnas trouxeram cinefilia e debate aos bairros lisboetas. A taxa de câmbio permanece em 1 USD para 0.88 EUR. O próximo fim de semana prolongado trará o feriado da Implantação da República em 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "03",
+              "headline": "O Lisboa Dragon Boat Festival estreia-se nas águas do Tejo.",
+              "lede": "Mais de 700 participantes inauguram a competição náutica.",
+              "body": "Mais de 700 participantes marcam presença na primeira edição do Lisboa Dragon Boat Festival. O rio Tejo serve de palco a esta vibrante competição de barcos de dragão. As equipas deslizam pela água sob o olhar atento dos passeantes na margem. Este evento desportivo traz nova vida náutica à frente ribeirinha da cidade. A organização prepara já as finais para o próximo fim de semana. Recorde-se que o feriado da Implantação da República ocorre a 2026-10-05.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A temperatura desce e o céu cobre-se de nuvens no Porto.",
+              "lede": "Os termómetros marcam entre 13 e 22°C sob um manto cinzento.",
+              "body": "A cidade vive dias de transição com temperaturas entre 13 e 22°C e o céu totalmente overcast. O pôr do sol acontece pontualmente às 19:16, fechando a tarde com luz difusa. A qualidade do ar permanece fair, registando um valor de PM2.5 de 12. Estas condições convidam a longas caminhadas abrigadas pelas ruas graníticas. Os cafés históricos acolhem quem procura refúgio do vento fresco. A taxa de câmbio opera a 1 USD para 0.88 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "02",
+              "headline": "O Mosteiro de São Bento da Vitória reabre com quatro dias de música.",
+              "lede": "Performances artísticas animam o monumento histórico recuperado.",
+              "body": "O Mosteiro de São Bento da Vitória reabre portas no Porto com um ciclo de quatro dias de música e performances. O espaço monástico recupera a centralidade cultural na baixa portuense. Os espectadores preenchem o claustro para escutar os concertos intimistas programados. A oferta artística cruza a tradição patrimonial com a criação contemporânea. A qualidade do ar na cidade é fair com PM2.5 em 12. O termómetro varia entre 13 e 22°C enquanto a noite cai às 19:16.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "03",
+              "headline": "A palavra dita regressa no festival Encontro do conto.",
+              "lede": "A narração oral ocupa espaços culturais da Invicta.",
+              "body": "O festival Encontro do conto traz contadores de histórias de vários pontos para partilhar narrativas. As palavras ganham corpo em bibliotecas e salas acolhedoras da cidade. O público escuta em silêncio atento as lendas e memórias partilhadas em voz alta. É um momento de partilha essencial numa altura em que o céu do Porto se mantém overcast. A temperatura oscila entre 13 e 22°C. A taxa de câmbio fixa-se em 1 USD para 0.88 EUR, e o feriado de 2026-10-05 aproxima-se.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sintra acolhe novas visitas guiadas pelo Parque da Pena.",
+              "lede": "Percursos inéditos revelam o lado mais romântico da serra.",
+              "body": "Novas visitas guiadas percorrem agora o Parque da Pena, revelando recantos e histórias de cariz romântico. O nevoeiro característico envolve a vegetação luxuriante sob temperaturas de 15 a 20°C. O céu permanece overcast e a noite encerra a serra às 19:20. A qualidade do ar é considerada fair, com um índice de PM2.5 de 4. Estes passeios pedestres exigem calçado adequado devido à humidade matinal. A taxa de câmbio local mantém-se em 1 USD para 0.88 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "02",
+              "headline": "O projeto Alvarinhos’26 inaugura nova sede e espaço etnográfico.",
+              "lede": "A cultura local ganha um ponto de encontro permanente.",
+              "body": "O projeto Alvarinhos’26 inaugura a sua nova sede acompanhada por uma exposição etnográfica dedicada à região. Este núcleo museológico preserva memórias rurais e saberes ancestrais da vila de Sintra. Os visitantes podem explorar artefactos e testemunhos visuais do passado saloio. A iniciativa dinamiza a vida comunitária longe do eixo estritamente monumental. A temperatura exterior varia entre 15 e 20°C sob um céu overcast. A noite desce placidamente pelas encostas às 19:20.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            },
+            {
+              "n": "03",
+              "headline": "A serra prepara-se para o fim de semana prolongado de Outubro.",
+              "lede": "O feriado da Implantação da República altera o ritmo da vila.",
+              "body": "O feriado da Implantação da República, a celebrar a 2026-10-05, trará visitantes aos palácios e trilhos sintrenses. Serviços públicos e repartições bancárias fecharão as portas nessa data festiva. A vila aguarda um fluxo moderado de excursionistas à procura de tranquilidade serrana. O termómetro marca entre 15 e 20°C, acompanhado por céu overcast e ar limpo com PM2.5 de 4. O sol despede-se às 19:20, deixando a serra envolta em penumbra poética.",
+              "source": "saudade desk",
+              "source_date": "2026-10-01"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-09-28T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O Festival Imaginário regressa à Quinta da Ribafria em Sintra, colocando em destaque as artes, a família e a natureza. No mesmo fim de semana, realiza-se este sábado o 42º Festival de Folclore da Rinchoa, celebrando as tradições locais. Com os termómetros a atingirem os 30°C e a qualidade do ar estável em PM2.5 de 6, o ambiente convida à participação comunitária ao ar livre. A taxa de câmbio de 1 USD para 0.87 EUR apoia os viajantes na gestão de pequenas despesas diárias. O concelho vibra assim com uma programação que cruza o património edificado e as expressões populares.",
               "source": "saudade desk",
               "source_date": "2026-09-19"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-18T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O rio Tejo acolhe as embarcações do Lisboa Dragon Boat Festival.",
-              "lede": "As margens da cidade preparam-se para receber a competição de barcos-dragão, unindo a tradição náutica e o convívio comunitário.",
-              "body": "As águas calmas do Tejo tornam-se o palco principal do Lisboa Dragon Boat Festival, atraindo equipas e observadores para a frente ribeirinha. É uma excelente oportunidade para assistir a provas de velocidade e sincronização num ambiente descontraído. Para quem chega de fora, a taxa de câmbio atual situa-se em 1 USD para 0.87 EUR, facilitando as trocas comerciais e o turismo na capital. A programação local destaca também a presença de leitores e visitantes ligados à comunidade luso-brasileira através de iniciativas d'O jornal do Brasil em Portugal. Pela tarde, o vento brando convida a um passeio prolongado ao longo da doca, observando o movimento constante dos barcos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "02",
-              "headline": "Os ritmos de Monsanto e o Festival da Madeira animam o fim de semana.",
-              "lede": "A agenda cultural da cidade divide-se entre os espaços verdes protegidos e as celebrações insulares em solo lisboeta.",
-              "body": "A programação deste fim de semana em Lisboa oferece alternativas distintas para quem prefere a natureza urbana ou a animação cultural. É tempo de dançar em Monsanto, aproveitando os trilhos arborizados e o ar fresco que desce pelas encostas do parque florestal. Em simultâneo, o Festival da Madeira traz sonoridades e tradições do arquipélago para pontos específicos da cidade, celebrando a identidade regional com música e gastronomia. Com o câmbio oficial fixado em 1 USD para 0.87 EUR, os visitantes estrangeiros encontram facilidade nas transações correntes. Recomenda-se verificar os horários dos transportes locais para aceder facilmente a ambos os eventos sem pressas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "03",
-              "headline": "O jornal do Brasil em Portugal aproxima as comunidades na capital.",
-              "lede": "A imprensa escrita reforça os laços culturais entre os dois lados do Atlântico com edições dedicadas ao quotidiano lisboeta.",
-              "body": "A circulação d'O jornal do Brasil em Portugal continua a desempenhar um papel relevante na integração e na partilha de notícias para a comunidade expatriada e leitores locais. Esta leitura atenta complementa a oferta cultural da cidade, que este mês inclui iniciativas como o Lisboa Dragon Boat Festival e as festividades da Madeira. As trocas financeiras mantêm-se estáveis com a cotação de 1 USD para 0.87 EUR, permitindo gerir o orçamento de viagens e estadias com previsibilidade. Os cafés tradicionais da baixa continuam a ser o local de eleição para folhear estas publicações a meio da manhã. É um ritmo pausado que convida a saborear a cidade sem urgências.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Porto regista temperaturas amenas e céu limpo até ao pôr do sol.",
-              "lede": "A variação térmica entre 14 e 26°C convida a longas caminhadas pela ribeira e pelos jardins históricos da Invicta.",
-              "body": "As condições meteorológicas na cidade apresentam-se favoráveis, com uma amplitude térmica de 14 a 26°C e um céu predominantemente limpo ao longo do dia. O pôr do sol ocorre pontualmente às 19:38, tingindo as pontes sobre o Douro com tons dourados ideais para a fotografia urbana. A qualidade do ar é considerada justa, registando um valor de PM2.5 de 6, o que garante um ambiente agradável para atividades ao ar livre. Para os viajantes internacionais, o câmbio mantém-se estável em 1 USD para 0.87 EUR. Enquanto isso, longe do continente, o Festival Colombo arranca no Porto Santo com uma ocupação hoteleira a 93%, sendo encarado como um contributo fundamental para a economia local.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival Colombo impulsiona a economia e o turismo insular.",
-              "lede": "A taxa de ocupação hoteleira atinge 93% no Porto Santo, celebrando a herança histórica do navegador.",
-              "body": "Enquanto a Invicta desfruta de um clima claro com temperaturas entre 14 e 26°C, as atenções turísticas nacionais viram-se também para o Porto Santo com o arranque do Festival Colombo. Este evento tem sido amplamente encarado como um contributo decisivo para a economia da ilha, refletindo-se numa expressiva ocupação hoteleira a 93%. No Porto continental, a qualidade do ar regista um índice favorável de PM2.5 de 6, tornando propício o descanso nos parques urbanos até o sol se pôr às 19:38. A taxa de câmbio de 1 USD para 0.87 EUR permanece vantajosa para visitantes que planeiam estadias prolongadas em território nacional. É uma semana marcada pelo equilíbrio entre o sossego duriense e a animação histórica insular.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "03",
-              "headline": "A qualidade do ar e o final de tarde convidam a cruzar a ponte.",
-              "lede": "Com o termómetro a atingir 26°C e o ar limpo, o final de dia na margem do Douro ganha outra serenidade.",
-              "body": "O termómetro na cidade oscila suavemente entre 14 e 26°C, proporcionando um ambiente térmico equilibrado para residentes e visitantes. A qualidade do ar permanece em níveis justos, com PM2.5 de 6, assegurando passeios tranquilos pelas zonas pedonais. À medida que a tarde avança, o pôr do sol pelas 19:38 marca o encerramento das atividades diurnas ao ar livre. Nas notícias que cruzam o país, destaca-se o Festival Colombo no Porto Santo, cuja forte adesão com 93% de ocupação hoteleira dinamiza a economia regional. A moeda estrangeira troca-se a 1 USD para 0.87 EUR, facilitando o comércio local e a restauração. A cidade respira um ritmo pausado, ideal para observadores atentos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sintra acolhe o Festival Imaginário e as celebrações etnográficas locais.",
-              "lede": "A vila serrana combina a herança cultural, a natureza e as artes de rua num ambiente nublado e fresco.",
-              "body": "A serra de Sintra apresenta temperaturas entre 16 e 24°C sob um céu parcialmente nublado, criando uma atmosfera mística ideal para explorar o património local. O pôr do sol ocorre às 19:41, iluminando suavemente a vegetação densa antes da chegada da noite. A qualidade do ar regista um valor de PM2.5 de 7, mantendo-se num patamar justo para passeios pedestres. No plano cultural, destaca-se o regresso do Festival Imaginário à Quinta da Ribafria, colocando as artes, a família e a natureza em evidência. Em simultâneo, a região celebra o Alvarinhos com uma Exposição Etnográfica Saloia que assinala 70 anos de história local. A taxa de câmbio atual fixa-se em 1 USD para 0.87 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "02",
-              "headline": "A Quinta da Ribafria recebe o Festival Imaginário entre arvoredos.",
-              "lede": "A programação cultural aposta na proximidade entre as famílias, o teatro de rua e a paisagem natural.",
-              "body": "O Festival Imaginário regressa à Quinta da Ribafria em Sintra, oferecendo um espaço onde as artes, a família e a natureza ganham destaque. Com uma temperatura que varia entre 16 e 24°C e um céu parcialmente nublado, o clima é perfeito para caminhar pelos jardins históricos da vila. A qualidade do ar mantém-se em níveis aceitáveis com PM2.5 de 7, enquanto o câmbio de 1 USD para 0.87 EUR apoia o turismo cultural. A agenda de fim de semana fica completa com o 42.º Festival de Folclore da Rinchoa, que se realiza este sábado, celebrando as raízes etnográficas da região. O dia termina com o ocaso às 19:41, convidando ao recolhimento nas ruas empedradas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
-            },
-            {
-              "n": "03",
-              "headline": "O folclore e as tradições saloias marcam o fim de semana em Sintra.",
-              "lede": "As comemorações etnográficas e o 42.º Festival de Folclore da Rinchoa animam o concelho.",
-              "body": "As celebrações tradicionais ganham espaço na agenda sintrense com a realização do 42.º Festival de Folclore da Rinchoa este sábado, complementando as comemorações dos 70 anos de história de Alvarinhos com a respetiva Exposição Etnográfica Saloia. O ambiente meteorológico acompanha estas atividades com temperaturas de 16 a 24°C e céu parcialmente nublado, prolongando-se a luz natural até ao pôr do sol às 19:41. A qualidade do ar regista um índice PM2.5 de 7, garantindo uma atmosfera límpida na serra. Para quem visita a zona, a cotação de 1 USD para 0.87 EUR facilita as despesas diárias. É uma semana dedicada à preservação do património imaterial e à fruição calma dos espaços verdes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-18"
             }
           ]
         }
