@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-10-01T06:00:00+09:00",
+  "updated": "2026-10-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Clear autumn skies settle over Seoul as temperatures range from 10 to 20°C.",
+              "lede": "The crisp weather invites quiet evening walks along the fortress walls.",
+              "body": "Clear skies and comfortable autumn air define the week as temperatures range from 10 to 20°C with sunset arriving at 18:14. Air quality remains fair with PM2.5 at 7, making it ideal for visiting the Friedrich Kunath exhibition at Pace Seoul, titled The Nearest Faraway Place, which explores themes of longing and distance. Currency exchange stands at 1 USD to 1361 KRW. Government offices and banks will close on 2026-10-05 for National Foundation Day, known as 개천절, so travelers should plan errands accordingly. Later in the week, the city turns its attention toward classical music as the Seoul Festival explores pianism with events ranging from piano to harp and jazz performances.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "The EU Green Day Festival opens alongside major cultural exhibitions across the city.",
+              "lede": "Quiet galleries and green spaces offer refuge from the bustling autumn streets.",
+              "body": "The EU Delegation hosts its second EU Green Day Festival this week, bringing environmental discussions and public exhibitions to the capital. Art enthusiasts can also attempt to secure entry to the sold-out Do Ho Suh exhibition currently drawing quiet crowds at the MMCA. The current exchange rate is 1 USD to 1361 KRW. Temperatures between 10 and 20°C provide a pleasant climate for exploring outdoor installations. The upcoming public holiday on 2026-10-05 for 개천절 will alter standard operating hours for many public institutions. Observers seeking quiet corners will find the surrounding alleys of Samcheong-dong especially serene under the evening sky as sunset hits at 18:14.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "Fall evenings bring clear air and early sunsets to the historic neighborhoods.",
+              "lede": "Evening walks along the city's ancient pathways reveal the quiet transition into October.",
+              "body": "With sunset now occurring at 18:14, the evening chill sets in quickly as temperatures drop toward the lower end of the 10 to 20°C range. Air quality holds steady at PM2.5 7, preserving the clarity of the night views over the city. Financial transactions settle at 1 USD to 1361 KRW. Residents are preparing for the upcoming holiday closure on 2026-10-05 for 개천절, which will pause standard administrative services. Cultural venues continue to host contemplative events, including the ongoing exploration of pianism across the Seoul Festival. Quiet observers will find the palace stone walls particularly still during these cooler dusk hours before the holiday weekend begins.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light drizzle falls across the city as the 39th Tokyo International Film Festival prepares its lineup.",
+              "lede": "Quiet streets reflect the evening light under mild autumn conditions.",
+              "body": "A gentle 0.9mm of precipitation brings light drizzle to the streets today, while temperatures hover between 19 and 22°C. Sunset occurs at 17:24, and air quality remains moderate with PM2.5 at 10. Financial exchange is steady at 1 USD to 158 JPY. Cultural preparation is underway as the 39th Tokyo International Film Festival reveals its full 2026 lineup, featuring historic firsts in animation and competition entries from directors such as Garin Nugroho, Milcho Manchevski, and Qiu Jiongjiong. Retrospectives dedicated to Kenji Mizoguchi and Youssef Chahine will also anchor the program. Travelers should note that Sports Day, or スポーツの日, is approaching on 2026-10-12, which will affect government offices and banking hours next week.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "The historic first animation lineup is announced for the upcoming Tokyo film festival.",
+              "lede": "Cinematic retrospectives bring classic works back to local independent theaters.",
+              "body": "Mild temperatures ranging from 19 to 22°C accompany the light drizzle of 0.9mm precipitation today. Sunset falls early at 17:24, casting long shadows over the damp pavement. Air quality is recorded at PM2.5 10, and the exchange rate holds at 1 USD to 158 JPY. The Tokyo Film Festival has unveiled its comprehensive 2026 lineup, introducing a historic first animation section alongside competition selections featuring world premieres and retrospectives for masters like Lisandro Alonso and Ulrike Ottinger. Residents are also mindful of the calendar ahead, noting that the public holiday for スポーツの日 on 2026-10-12 will soon close civic institutions for the day. Cafes near the screening venues provide warm refuge from the persistent evening moisture.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "Cinematic retrospectives and world premieres shape the cultural rhythm of October.",
+              "lede": "Damp autumn air settles over the city as evening approaches.",
+              "body": "The steady 0.9mm of precipitation keeps the asphalt damp while temperatures remain mild between 19 and 22°C. Air quality sits at a moderate PM2.5 10, and currency exchanges at 1 USD to 158 JPY. Sunset arrives promptly at 17:24, signaling the transition to quiet autumn nights. The 39th Tokyo International Film Festival continues to draw attention with its extensive program, including works by visionary directors and historic animation showcases. Looking ahead, the public holiday of スポーツの日 on 2026-10-12 will result in routine closures for banks and public offices. Quiet observers will find the neighborhood bookshops and independent cinemas welcoming retreats during these overcast evening hours.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies stretch over Lisbon as temperatures reach a warm 27°C.",
+              "lede": "The city hums with international gatherings while the Atlantic air remains still.",
+              "body": "Overcast skies frame the city today with temperatures spanning 16 to 27°C under fair air quality marked at PM2.5 6. Sunset occurs at 19:17, and the exchange rate trades at 1 USD to 0.89 EUR. The massive SBC Summit Lisbon opens its doors to 40,000 attendees, bringing a noticeable swell of international visitors as municipal officials welcome the gathering to Portugal. In musical milestones, Placebo marks 30 years with performances connecting Lisbon, Madrid, and Barcelona. Residents are preparing for the upcoming public holiday on 2026-10-05 for Implantação da República, which will close government offices, banks, and post offices across the capital. Travelers walking the steeper lanes will find the overcast warmth ideal for unhurried observation.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "Placebo marks 30 years of music as the SBC Summit brings thousands to the capital.",
+              "lede": "A busy week of international summits unfolds beneath quiet, grey maritime clouds.",
+              "body": "Temperatures range from a mild 16°C to a warm 27°C beneath persistent overcast skies. Air quality remains fair with PM2.5 at 6, and sunset is marked at 19:17. Financial exchanges operate at 1 USD to 0.89 EUR. The city accommodates a large influx of visitors as the SBC Summit Lisbon opens with 40,000 attendees, drawing lively discussions to the waterfront districts. Meanwhile, fans of alternative rock note that Placebo is celebrating 30 years with celebratory dates across Lisbon, Madrid, and Barcelona. Civic life will pause briefly on 2026-10-05 for Implantação da República, a national holiday that closes administrative offices and banks. The quieter residential viewpoints offer a stark, peaceful contrast to the bustling conference centers.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "Grey autumn clouds linger above the river while the holiday weekend approaches.",
+              "lede": "The afternoon heat softens under a thick blanket of maritime overcast.",
+              "body": "The thermometer records a comfortable range between 16 and 27°C beneath heavy overcast skies. Air quality is fair at PM2.5 6, and evening arrives as sunset touches 19:17. Currency exchange holds steady at 1 USD to 0.89 EUR. The capital remains energetic following the opening of the SBC Summit Lisbon with its 40,000 participants, alongside anniversary concerts from touring bands like Placebo celebrating 30 years. Residents note that municipal services and banks will observe closures on 2026-10-05 for Implantação da República. The shaded stone benches of Alfama offer a quiet perspective on the river as the city prepares for the upcoming public holiday.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-01T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Residents note the upcoming public holiday of Implantação da República on 2026-10-05, noting minor schedule adjustments. Government offices, banks, and post offices will close on that Monday, so administrative errands require completion today or early next week. The exchange rate of 1 USD to 0.88 EUR remains steady at commercial banks before the holiday break. Meanwhile, local planners look ahead to autumn festivals and cultural programming slated for later in the season. The impending holiday adds a subtle sense of anticipation to the winding neighborhood streets. Lisbon rests comfortably in the balance between late summer warmth and autumn routine.",
               "source": "saudade desk",
               "source_date": "2026-09-26"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-25T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light drizzle settles across Seoul during the Chuseok holiday period.",
-              "lede": "Temperatures hover between 18 and 24°C with minimal precipitation of 0.5mm. Sunset arrives at 18:25.",
-              "body": "The Chuseok holiday continues across the city, bringing adjusted hours for many government offices and banks. A light drizzle of 0.5mm moistens the pavement while temperatures range from 18 to 24°C under overcast skies. Sunset falls early at 18:25, casting a grey shadow over the Han River. Air quality remains poor today with PM2.5 concentrations reaching 32, suggesting quieter indoor pursuits or museum visits. For travelers exchanging currency, the current rate sits at 1 USD to 1369 KRW. The city moves at a remarkably unhurried pace as families gather for the seasonal festival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "New cultural spaces open quietly as the Seoul International Music Festival unfolds.",
-              "lede": "Dansaekhwa pioneers find a permanent home in new galleries across the capital.",
-              "body": "Seoul's cultural calendar offers peaceful refuge from the damp air and poor air quality marked by PM2.5 at 32. The Seoul International Music Festival expands its repertoire this week, looking far beyond familiar compositions to showcase contemporary experimental works. Meanwhile, newly inaugurated museums dedicated to Dansaekhwa pioneers invite quiet contemplation of monochromatic Korean abstract art. Visitors navigating these spaces can utilize an exchange rate of 1 USD to 1369 KRW for tickets and publications. The holiday atmosphere lingers, allowing observers to appreciate the galleries without the usual weekend crowds rushing through the exhibition rooms.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "Athletic achievements mark a quiet historic week in local sporting circles.",
-              "lede": "Back, Ku, and Park tie a 42-year record in the capital.",
-              "body": "Athletic dedication shares space with the ongoing Chuseok holiday quietness across the metropolitan area. Back, Ku, and Park recently completed a remarkable Korean sweep, tying a historic 42-year record in Seoul. The achievement resonates softly through local training grounds while the city experiences 18 to 24°C weather and a gentle 0.5mm of rain. Air quality stays poor with PM2.5 at 32, keeping outdoor training sessions brief. Residents resting during the holiday period find solace in these moments of shared cultural and athletic reflection as the sun sets at 18:25.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Steady rain falls across Tokyo streets as the autumn evening approaches.",
-              "lede": "Temperatures range from 21 to 27°C with 4.4mm of precipitation expected today.",
-              "body": "A moderate layer of rain totaling 4.4mm waters the asphalt and temple courtyards throughout the capital. Temperatures remain mild, moving between 21 and 27°C under thick cloud cover. Sunset occurs at 17:34, shortening the afternoon and bringing early lamps to neighborhood alleys. Air quality is registered as moderate with PM2.5 at 23, making for comfortable breathing despite the dampness. Financial exchanges operate at a rate of 1 USD to 159 JPY for travelers settling accounts. Pedestrians move purposefully beneath dark umbrellas, keeping steps measured and quiet.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "Rolf de Heer steps into the jury president role for the Tokyo Film Festival.",
-              "lede": "The autumn festival season begins its preparations amidst the rainy weather.",
-              "body": "Cinematic anticipation builds softly in the background as Rolf de Heer is named jury president for the Tokyo Film Festival. The announcement brings a focused international attention to the city's upcoming cultural schedule. Outside, the steady 4.4mm of rain and 21 to 27°C temperature range invite residents to seek shelter in cozy independent cinemas. Air quality sits at a moderate PM2.5 level of 23. Currency exchange holds steady at 1 USD to 159 JPY. The festival preparations offer a steady rhythm of artistic dedication running parallel to the wet autumn weather.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "Equestrian events bring new dimensions of sport to the capital.",
-              "lede": "Tokyo introduces fresh interpretations of Asian Games dressage to local arenas.",
-              "body": "Equestrian grace takes center stage as Tokyo brings a new dimension to Asian Games dressage disciplines. The careful precision of the riders matches the quiet focus of the city during this damp transitional week. Rain continues to fall lightly with 4.4mm of precipitation, while the thermometer reads between 21 and 27°C. Air quality remains moderate with PM2.5 at 23, ensuring safe conditions for outdoor events. Observers exchanging currency will find a rate of 1 USD to 159 JPY. The evening draws in quickly with sunset at 17:34, wrapping the training grounds in twilight.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies stretch across the hills of Lisbon as autumn settles in.",
-              "lede": "Temperatures range from 18 to 28°C under grey clouds, with sunset at 19:28.",
-              "body": "A broad ceiling of clouds blankets the capital, keeping temperatures pleasantly mild between 18 and 28°C. Air quality is exceptionally fair today, recording a low PM2.5 level of 7. The exchange rate for visitors stands at 1 USD to 0.88 EUR. Sunset occurs at 19:28, extending the twilight over the Tagus River. The overcast light softens the pastel facades of the old quarters, giving the city a subdued, reflective character. Residents and returning travelers find ideal conditions for long, unhurried walks through the cobblestone alleys without the harsh glare of direct sunlight.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "Lego models and baking contests mark the seasonal community gatherings.",
-              "lede": "Europe's largest exhibition of brick architecture opens alongside traditional apple pie celebrations.",
-              "body": "Community events bring warmth to the overcast days as Lisbon hosts Europe's largest exhibition of models built entirely with Lego bricks. Nearby, festive traditions cross oceans as a baking contest brings joy and fresh apple pies reminiscent of the Johnny Appleseed Festival spirit. Air quality remains fair at PM2.5 level 7, while temperatures comfortably bridge 18 to 28°C. Financial transactions utilize the rate of 1 USD to 0.88 EUR. These creative exhibitions offer a delightful diversion for observers wandering through indoor exhibition halls before the sun dips below the horizon at 19:28.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "Cultural programming looks ahead to future celebrations across the capital.",
-              "lede": "Kerma Games launches new digital experiences at SBC Lisbon ahead of upcoming holidays.",
-              "body": "Cultural calendars adjust as the city looks toward the upcoming Implantação da República public holiday on October 5, which will bring scheduled closures to government offices and banks. Kerma Games recently launched \"THE NEXT EPISODE\" at SBC Lisbon, opening the guest list for Snoop Dogg’s birthday celebration set for 2027 in Los Angeles. Temperatures span 18 to 28°C beneath steady overcast skies, while the air quality remains remarkably clean at PM2.5 level 7. Currency exchange is noted at 1 USD to 0.88 EUR. Evening approaches slowly with sunset at 19:28, casting long shadows across the historic plazas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
             }
           ]
         }

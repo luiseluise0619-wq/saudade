@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-01T06:00:00+09:00",
+  "updated": "2026-10-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival Ensaya Carabanchel convoca a los músicos locales en los espacios de creación del barrio.",
+              "lede": "Los estudios de grabación y las salas de ensayo abren sus puertas para mostrar el pulso musical del distrito.",
+              "body": "El distrito sur de la capital acoge una nueva edición de este encuentro que reúne a creadores emergentes y consolidados en torno a la música en directo. Las jornadas permiten conocer los rincones donde germina la creatividad sonora de la ciudad antes de la llegada de las celebraciones nacionales. Conviene consultar la programación específica de cada estudio para asegurar el acceso a los conciertos de formato íntimo. La moneda en curso se mantiene en el cambio de 1 USD a 0.89 EUR para quienes visiten la ciudad desde el extranjero. Las calles del barrio recuperan así un protagonismo cultural basado en la cercanía y el trabajo artesanal de los artistas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival mADRID aCTUAL regresa a los escenarios de la ciudad con propuestas escénicas contemporáneas.",
+              "lede": "La programación cultural se intensifica en salas alternativas y teatros de pequeño formato.",
+              "body": "Los espacios dedicados al microteatro y las artes escénicas de proximidad celebran su cita anual con el público madrileño. La oferta incluye montajes breves que transforman salas históricas en laboratorios de interpretación muy cercanos al espectador. Esta iniciativa coincide en el calendario con el anuncio del primer Festival de Jazz Hispano promovido por la Comunidad de Madrid. Los visitantes deben tener en cuenta que el 2026-10-09 se celebra el Dia de la Comunitat Valenciana y el 2026-10-12 llegará la Fiesta Nacional de España, jornadas que modificarán los horarios comerciales habituales. Planificar los desplazamientos urbanos resulta esencial durante estos puentes festivos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "Las salas de microteatro recuperan el protagonismo en el circuito cultural del otoño madrileño.",
+              "lede": "El espacio donde nació este formato teatral ofrece funciones continuadas durante todo el fin de semana.",
+              "body": "La pequeña sala del centro donde se originó el fenómeno del microteatro programa obras de quince minutos para veinte espectadores. Esta experiencia directa invita a disfrutar de textos incisivos interpretados a escasos centímetros de las primeras filas. Mientras la ciudad se prepara para los festejos del 2026-10-12, los cafés literarios y los teatros de barrio mantienen su actividad habitual. El tipo de cambio actual se sitúa en 1 USD a 0.89 EUR, facilitando las transacciones a los viajeros internacionales. Se recomienda adquirir las entradas con antelación debido al aforo reducido característico de estas salas singulares.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Literatura Italiana de Barcelona inaugura su nueva edición en los espacios culturales.",
+              "lede": "El FLIB reúne a traductores, editores y lectores en torno a la narrativa contemporánea del país vecino.",
+              "body": "Las librerías independientes y los centros cívicos de la ciudad condal acogen presentaciones y encuentros literarios durante estos días. Este evento cultural fomenta el diálogo entre autores mediterráneos y lectores locales interesados en las letras italianas. La agenda coincide con el impulso del nuevo festival Plec, que se celebra en paralelo a los desfiles de la pasarela 080. Los viajeros que planifiquen compras o trámites deben recordar que el 2026-10-09 es festivo por el Dia de la Comunitat Valenciana y el 2026-10-12 se conmemorará la Fiesta Nacional de España. Las administraciones públicas y algunas oficinas bancarias permanecerán cerradas en esas fechas señaladas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Plec debuta en la agenda barcelonesa coincidiendo con las citas de la moda catalana.",
+              "lede": "La confluencia de eventos creativos transforma los espacios expositivos del distrito central.",
+              "body": "La llegada de esta nueva propuesta cultural amplía la oferta artística de la temporada otoñal en Barcelona. Los desfiles de la pasarela 080 y las actividades del festival Plec ocupan naves industriales reconvertidas y plazas públicas. Esta efervescencia creativa se desarrolla bajo un tipo de cambio de 1 USD a 0.89 EUR para los visitantes procedentes de fuera de la zona euro. Conviene estar atento a los calendarios de apertura debido a la proximidad del 2026-10-09 y el 2026-10-12, jornadas de festividad nacional y autonómica. El transporte público funcionará con normalidad, adaptándose a la afluencia de asistentes a los diferentes recintos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "Los espacios arquitectónicos singulares abren sus cubiertas al público en la iniciativa Apertura al cielo.",
+              "lede": "La ciudad invita a redescubrir sus tejados históricos y miradores urbanos desde una perspectiva inédita.",
+              "body": "Esta actividad permite el acceso a azoteas patrimoniales habitualmente cerradas al tránsito general de visitantes. Los recorridos guiados ofrecen una lectura sosegada del trazado urbano y de la evolución constructiva de los edificios más emblemáticos. La programación se articula de forma respetuosa con la tranquilidad vecinal y el descanso en las comunidades de propietarios. La jornada transcurre bajo la previsión de festivos próximos como el 2026-10-09 y el 2026-10-12, fechas en las que los servicios administrativos suspenderán su atención al público. Los cafés de los alrededores mantienen sus horarios habituales para recibir a los observadores urbanos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El FIC.UBA 2026 inicia su cuarta edición con proyecciones internacionales en las salas universitarias.",
+              "lede": "El festival cinematográfico comenzó con el esperado estreno argentino de la obra de Lisandro Alonso.",
+              "body": "Las salas del circuito universitario y cultural proyectan obras independientes durante una semana dedicada al séptimo arte. La temperatura oscila entre los 8 y los 16°C bajo un cielo completamente cubierto que invita a refugiarse en las salas oscuras. El sol se ocultará a las 18:57, marcando el final de las proyecciones vespertinas y el inicio de los debates con realizadores. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 en 9, idóneo para los desplazamientos a pie entre sedes. Los organizadores recuerdan que el 2026-10-12 se celebrará el Día del Respeto a la Diversidad Cultural, modificando la atención en oficinas públicas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "02",
+              "headline": "El barrio del Abasto acoge las primeras actividades gratuitas del Festival Buenos Aires Hammond.",
+              "lede": "Los amantes de los sonidos de teclado clásico tienen una cita ineludible en los centros culturales zonales.",
+              "body": "Los conciertos didácticos y las jam sessions llenan de música los espacios públicos recuperados del histórico barrio porteño. Con una temperatura fresca de 8 a 16°C y un ambiente típicamente nublado, la atmósfera resulta perfecta para pasear sin prisas por las librerías y cafés cercanos. El atardecer está previsto para las 18:57, dando paso a las actuaciones nocturnas en pequeños locales. Los niveles de calidad del aire continúan siendo moderados, con un indicador de PM2.5 en 9 que favorece la actividad al aire libre. La cercanía del feriado del 2026-10-12 por el Día del Respeto a la Diversidad Cultural aconseja revisar los horarios de los centros culturales.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Mascotear convoca a los vecinos en los parques de la ciudad para jornadas dedicadas a los animales.",
+              "lede": "El evento ofrece actividades de bienestar animal y espacios de encuentro para familias y mascotas.",
+              "body": "Los espacios verdes de la ciudad reciben este fin de semana una propuesta lúdica centrada en la convivencia responsable con perros y gatos. La jornada discurre con registros térmicos de 8 a 16°C y un cielo nublado que suaviza la estancia en los parques urbanos. La puesta de sol se producirá a las 18:57, cerrando las actividades al aire libre antes del descenso nocturno de la temperatura. La calidad del aire se registra en un nivel moderado, con PM2.5 en 9, garantizando un entorno agradable para pasear. Se debe tener en cuenta que el próximo 2026-10-12 se conmemorará el Día del Respeto a la Diversidad Cultural, afectando los servicios bancarios y gubernamentales.",
+              "source": "saudade desk",
+              "source_date": "2026-10-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-01T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Con una atmósfera gris y estable que oscila entre los 14 y los 20°C, las esquinas porteñas invitan a detener el paso en las tradicionales mesas de café. La ausencia de precipitaciones permite recorrer los corredores arbolados de Palermo y Belgrano sin inconvenientes logísticos en el transporte público. Los centros culturales y librerías del centro histórico actualizan sus escaparates con novedades editoriales para los lectores de fin de semana. La ciudad transcurre con su ritmo habitual, combinando la arquitectura patrimonial con la pausa propia de los observadores atentos que caminan sin rumbo fijo.",
               "source": "saudade desk",
               "source_date": "2026-09-26"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-25T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival Hispanidad 2026 llena las calles de Madrid con conciertos gratuitos.",
-              "lede": "La ciudad acoge una programación cultural extensa que celebra la diversidad artística.",
-              "body": "Los espacios públicos de Madrid se transforman estos días con motivo del Festival Hispanidad 2026. La agenda incluye numerosos conciertos gratuitos repartidos por distintos puntos emblemáticos de la capital. Con una calidad del aire moderada y un registro de PM2.5 en 8, pasear por los bulevares resulta sumamente agradable. Los visitantes encontrarán además que el tipo de cambio oficial se sitúa en 1 USD equivalente a 0.88 EUR para sus transacciones. Conviene consultar los programas impresos en los centros culturales municipales para planificar las rutas musicales sin prisas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "Macondo Park adelanta la apertura de puertas para los conciertos de Shakira.",
-              "lede": "Nuevos horarios regulan el acceso al recinto para evitar aglomeraciones.",
-              "body": "La organización ha comunicado modificaciones en los horarios previstos para las actuaciones de Shakira en Madrid. Concretamente, Macondo Park adelanta la apertura de puertas para facilitar un ingreso más fluido del público. Este ajuste horario permite disfrutar con calma de las instalaciones antes de que comience la música en directo. La calidad del aire se mantiene estable con valores de PM2.5 en 8, favoreciendo la estancia al aire libre. Los asistentes pueden gestionar sus compras con la referencia cambiaria de 1 USD por 0.88 EUR, asegurando una planificación financiera exacta y transparente durante su visita.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "El parque de Caramuel adopta la denominación oficial en homenaje al papa Francisco.",
-              "lede": "La modificación nomenclatural ya figura en los planos urbanísticos municipales.",
-              "body": "El Ayuntamiento de Madrid ha formalizado el cambio de nombre del tradicional parque de Caramuel. Este espacio verde rinde ahora tributo al papa Francisco en una decisión aprobada recientemente por los órganos competentes. Los vecinos y viajeros que recorren sus senderos disfrutan de una atmósfera tranquila, respaldada por una calidad del aire moderada con PM2.5 en 8. Para quienes organizan sus estancias prolongadas, el mercado financiero opera con una paridad de 1 USD igual a 0.88 EUR. Las exposiciones sobre el Madrid del Siglo de Oro complementan perfectamente esta ruta cultural y urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival Tangent celebra su décima edición en los espacios de L'Eixample.",
-              "lede": "La música contemporánea inunda los rincones más singulares del distrito.",
-              "body": "El distrito de L'Eixample conmemora los 10 años del festival Tangent con una propuesta artística consolidada. Los conciertos íntimos y las actuaciones de formato reducido definen este aniversario tan especial para la ciudad. Con una calidad del aire moderada y un nivel de PM2.5 en 10, los desplazamientos a pie por las manzanas octogonales resultan muy recomendables. Las transacciones comerciales se benefician de una tasa de 1 USD por 0.88 EUR. Se aconseja adquirir las localidades con antelación debido al aforo limitado que caracteriza a estos recintos culturales del Eixample barcelonés.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "Los vecinos del Parque Güell preservan la tranquilidad del cantautor Joan Manuel Serrat.",
-              "lede": "El respeto mutuo define la convivencia cotidiana en el entorno del emblemático parque.",
-              "body": "La vida alrededor del Parque Güell transcurre con la serenidad habitual que valoran tanto los residentes como los caminantes. Los vecinos recuerdan que la presencia de Joan Manuel Serrat en el barrio se vive con absoluta naturalidad y gran respeto a su intimidad. Conviene recordar que la calidad del aire registra valores moderados de PM2.5 en 10, ideales para caminar sin prisa por las cuestas ajardinadas. El tipo de cambio actual se sitúa en 1 USD por 0.88 EUR, facilitando el cambio de divisa en los establecimientos locales. La zona mantiene su atractivo paisajístico intacto para quienes buscan la Barcelona más pausada.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "Los comercios adaptan sus horarios tras la reciente celebración de La Mercè.",
-              "lede": "La normalidad regresa progresivamente a las calles tras los festejos patronales.",
-              "body": "Tras el bullicio de las fiestas de La Mercè, la ciudad recupera su ritmo habitual de apertura comercial y servicios. Los supermercados y mercados municipales retoman sus horarios ordinarios tras las jornadas festivas dedicadas a la patrona. Con un índice de PM2.5 en 10 y una calidad del aire moderada, pasear por los barrios históricos resulta muy cómodo. Quienes utilicen moneda extranjera comprobarán que el cambio oficial se mantiene estable en 1 USD equivalente a 0.88 EUR. Es un momento excelente para recorrer los museos y librerías del centro sin las aglomeraciones típicas de los días grandes.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra una tarde fresca y nublada con una máxima de 25°C.",
-              "lede": "El cielo permanece cubierto mientras la temperatura oscila entre los 15°C y los 25°C.",
-              "body": "La jornada se presenta templada y mayormente overcast en toda la capital federal. Los termómetros marcan una amplitud térmica moderada que va desde los 15°C hasta los 25°C, invitando a pasear por los tradicionales cafetines porteños. La puesta de sol está prevista para las 18:52, ofreciendo una tarde ideal para el ocio bajo techo. Las carteleras teatrales destacan el éxito internacional de las producciones del Complejo Teatral de Buenos Aires, ovacionadas recientemente en el Festival de San Sebastián. Conviene abrigarse ligeramente al caer la tarde para disfrutar plenamente de la atmósfera porteña.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "02",
-              "headline": "Donut Makers Bakery inaugura su nuevo establecimiento en la capital argentina.",
-              "lede": "La oferta gastronómica urbana suma un nuevo punto de encuentro en los barrios.",
-              "body": "La conocida franquicia Donut Makers Bakery ha anunciado la apertura oficial de su local en Buenos Aires. Este espacio amplía las opciones de repostería artesanal disponibles para los residentes y viajeros que recorren la ciudad. Bajo un cielo overcast y temperaturas que se mueven entre los 15°C y los 25°C, el paseo urbano resulta sumamente apacible. La puesta de sol a las 18:52 marca el final de la tarde, dando paso a la habitual vida nocturna de los barrios. Las propuestas culturales y las nuevas aperturas comerciales dinamizan el pulso cotidiano sin alterar la calma característica de la temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
-            },
-            {
-              "n": "03",
-              "headline": "Presentan un nuevo parque cubierto con más de 100 atracciones en la región.",
-              "lede": "El proyecto lúdico inspirado en Balneario Camboriú ya recibe a sus primeros visitantes.",
-              "body": "La agenda de ocio porteña incorpora una novedosa propuesta de entretenimiento bajo techo que incluye más de 100 atracciones mecánicas y recreativas. Esta iniciativa acerca un concepto de parque cubierto muy similar al popular complejo de Balneario Camboriú. Con una temperatura exterior que oscila entre los 15°C y los 25°C bajo un cielo overcast, estas instalaciones ofrecen un refugio perfecto para toda la familia. La caída del sol a las 18:52 invita a trasladarse hacia los restaurantes y salas de teatro del centro. La ciudad combina así su rica tradición escénica con alternativas de entretenimiento moderno y accesible.",
-              "source": "saudade desk",
-              "source_date": "2026-09-25"
             }
           ]
         }
