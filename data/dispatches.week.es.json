@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-02T06:00:00+09:00",
+  "updated": "2026-10-03T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-03T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La lluvia vespertina obliga a mirar los accesos del Macondo Park.",
+              "lede": "El termómetro oscila entre 17 y 21°C mientras las precipitaciones marcan 2.9mm.",
+              "body": "La tarde de este viernes reúne una serie de propuestas culturales muy diversas en la capital. Los asistentes al esperado concierto de Shakira en Macondo Park deben revisar con atención los horarios, los accesos habilitados y el plan de movilidad urbana ante la previsión de tormentas. La caída del sol sobre la ciudad está prevista para las 19:53, momento en que el agua suele acumularse ligeramente en las avenidas periféricas. Conviene salir con margen suficiente y utilizar el transporte público para evitar retenciones innecesarias en los alrededores del recinto. Las previsiones meteorológicas indican que la lluvia cederá hacia la noche, permitiendo disfrutar de la oferta musical con total normalidad y tranquilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "02",
+              "headline": "El Siglo de Oro se expone en la capital con 70 piezas.",
+              "lede": "La Comunidad de Madrid reúne obras clave en una muestra temporal.",
+              "body": "La Comunidad de Madrid ha inaugurado recientemente una exposición que reúne 70 piezas fundamentales para comprender cómo se vivió el Siglo de Oro en la capital. Esta muestra ofrece al visitante una mirada pausada sobre la vida cotidiana, el arte y las costumbres de aquella época de esplendor. Es un plan excelente para las horas centrales del día, especialmente cuando el clima exterior se muestra inestable con registros de 17 a 21°C y episodios de tormenta. La visita se completa fácilmente recorriendo las salas dedicadas a la literatura y la pintura barroca. Las instituciones recuerdan que la Fiesta Nacional de España se celebrará el 2026-10-12, lo que afectará a los horarios habituales de apertura de museos y oficinas públicas a comienzos de la próxima semana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "03",
+              "headline": "Real Madrid World reabre sus puertas el 7 de octubre.",
+              "lede": "El espacio temático recupera su actividad habitual tras una pausa.",
+              "body": "El recinto de ocio Real Madrid World volverá a recibir visitantes el próximo 7 de octubre, incorporando nuevas experiencias inmersivas para todos los aficionados. Esta reapertura coincide con semanas de transición en la agenda cultural madrileña, donde también destaca el festival Multiculturas, presente en varios distritos con propuestas que celebran la riqueza y la diversidad. Para los viajeros internacionales que planean sus compras o reservas, cabe recordar que el tipo de cambio oficial se sitúa en 1 USD a 0.89 EUR. El próximo festivo de la Fiesta Nacional de España, fijado para el 2026-10-12, mantendrá cerrados los bancos y las oficinas gubernamentales, por lo que conviene anticipar cualquier gestión administrativa antes del fin de semana largo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival Barcelona Dibuixa llena de trazos el distrito de Gràcia.",
+              "lede": "La calidad del aire se mantiene moderada con un registro de PM2.5 en 7.",
+              "body": "El conocido festival Barcelona Dibuixa llega este fin de semana a Gràcia, invitando a residentes y paseantes a redescubrir el espacio público a través del dibujo y la creación artística colectiva. Las condiciones atmosféricas acompañan la jornada con una calidad del aire moderada y un valor de PM2.5 en 7, ideal para caminar sin prisa por plazas y callejuelas. Muy cerca de la ciudad, un festival gratuito de blues internacional de alto nivel ofrece notas musicales a solo 15 minutos de la capital catalana. Mientras tanto, el entorno de La Sagrera sigue integrando nuevos espacios verdes para el disfrute vecinal. Conviene tener presente que el tipo de cambio actual se sitúa en 1 USD a 0.89 EUR para quienes gestionen pagos o reservas turísticas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "02",
+              "headline": "El parque Loro Sexi acoge dos nuevos guacamayos donados desde Barcelona.",
+              "lede": "Una familia barcelonesa confía ejemplares al centro andaluz.",
+              "body": "Una familia de Barcelona ha decidido donar dos guacamayos al parque Loro Sexi de Almuñécar, demostrando su absoluta confianza en los profesionales que gestionan sus cuidados. Este gesto refuerza los lazos entre espacios naturales y cuidadores dedicados al bienestar animal en distintos puntos de la geografía española. La actividad ciudadana en Barcelona transcurre con normalidad, marcada por una atmósfera limpia con un índice PM2.5 de 7 y un tipo de cambio estable de 1 USD a 0.89 EUR. Los residentes que preparen sus agendas para la próxima semana deben recordar que el 2026-10-09 se celebra el Dia de la Comunitat Valenciana, y el 2026-10-12 llegará la Fiesta Nacional de España, jornadas que modificarán los servicios bancarios y administrativos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "03",
+              "headline": "La Sagrera avanza en su integración paisajística y de parques urbanos.",
+              "lede": "El área metropolitana combina la música de blues con nuevos espacios verdes.",
+              "body": "Las obras y mejoras en La Sagrera continúan redibujando el mapa urbano de Barcelona, conectando barrios a través de nuevas zonas de paseo y vegetación. A pocos minutos de la urbe, la agenda cultural se dinamiza con un festival gratuito de blues internacional que atrae a numerosos aficionados a la música en directo. La calidad del aire se mantiene en niveles muy favorables, registrando un PM2.5 de 7 que invita a realizar actividades al aire libre durante todo el fin de semana. El tipo de cambio se mantiene en 1 USD por 0.89 EUR. Asimismo, los viajeros deben anotar en sus calendarios los festivos del 2026-10-09 y del 2026-10-12, fechas en las que los organismos oficiales y las oficinas postales permanecerán cerradas por festividad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Los chubascos vespertinos marcan la pauta en el parque costero.",
+              "lede": "El termómetro se mueve entre 13 y 16°C con 10.4mm de precipitación.",
+              "body": "La jornada porteña discurre bajo un cielo gris que deja 10.4mm de lluvia acumulada y temperaturas frescas de 13 a 16°C. El atardecer está previsto para las 18:58, tiñendo de tonos plateados el vasto parque costero de la ciudad. Este espacio natural, reconocido por la UNESCO, abarca 25.000 hectáreas y alberga a 200 especies de aves junto a singulares playas de arena y barro. Es un refugio excelente para observar la biodiversidad local en los días de humedad y llovizna intermitente. Los paseantes deben llevar calzado adecuado para caminar por los senderos húmedos de la reserva antes de que caiga la noche sobre el estuario.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "02",
+              "headline": "Emitex regresa a su sede histórica para celebrar su 30ª edición.",
+              "lede": "La industria textil se reencuentra en el predio tradicional de la ciudad.",
+              "body": "La muestra Emitex vuelve a su sede histórica en Buenos Aires para conmemorar su trigésima edición, reuniendo a profesionales y creadores del sector textil. Este evento destaca entre los imperdibles para disfrutar el fin de semana en la considerada por muchos como una de las ciudades más atractivas del mundo. La agenda cultural se completa con el Festival Nueva Ópera, que cumple 10 años y presenta su nueva edición en escenarios porteños. Con temperaturas que oscilan entre 13 y 16°C y una precipitación de 10.4mm, los desplazamientos urbanos en transporte público resultan la opción más cómoda para recorrer las distintas sedes de exposiciones y festivales durante estos días de lluvia.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Nueva Ópera celebra su décimo aniversario en la ciudad.",
+              "lede": "La música contemporánea toma los espacios culturales de Buenos Aires.",
+              "body": "El Festival Nueva Ópera alcanza su décima edición y despliega una programación especial en diversos teatros y centros culturales de Buenos Aires. Esta celebración musical coincide con una cartelera de fin de semana repleta de opciones para recorrer la ciudad a pesar de los chubascos. Las temperaturas actuales se sitúan entre 13 y 16°C, con acumulados de lluvia de 10.4mm y el ocaso fijado a las 18:58. Los residentes y visitantes deben tener en cuenta que el 2026-10-12 se conmemorará el Día del Respeto a la Diversidad Cultural, fecha en la que los bancos, oficinas gubernamentales y dependencias postales suspenderán su atención al público para retomar sus actividades con normalidad el martes siguiente.",
+              "source": "saudade desk",
+              "source_date": "2026-10-03"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-02T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El desarrollo de la infraestructura urbana avanza con la ampliación del centro de alto rendimiento en el Parque Olímpico, que ahora suma una clínica de rehabilitación y un hotel. Esta mejora coincide con una jornada pasada por agua, con 37.3mm de lluvia y una temperatura fresca de 13 a 19°C. La atmósfera porteña respira con un índice de PM2.5 de 8 gracias a la limpieza del aire por la tormenta. El atardecer llega puntualmente a las 18:53, cerrando un domingo de transición climática en los parques de la metrópoli. Mientras tanto, los festivales del interior como Jesús María se proyectan como modelos de industria cultural en el MICA 2026. Los residentes aprovechan el día para actividades de interior y lectura.",
               "source": "saudade desk",
               "source_date": "2026-09-27"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-26T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "JazzMadrid 2026 rinde tributo a Miles Davis y John Coltrane en otoño.",
-              "lede": "Los centenarios de ambas figuras marcarán una programación extensa de conciertos por toda la ciudad.",
-              "body": "El festival JAZZMADRID 2026 convierte a la capital europea del jazz en el epicentro musical durante el otoño. La programación de esta edición celebra los centenarios de dos leyendas absolutas como Miles Davis y John Coltrane con casi dos meses de conciertos continuados. Los escenarios habituales de la ciudad acogerán ciclos temáticos, encuentros y actuaciones de primer orden internacional. Para quienes planifican sus trayectos por la ciudad estos días, conviene recordar que el tipo de cambio oficial se sitúa en 1 USD frente a 0.88 EUR. Es una época propicia para caminar entre locales de música en vivo al caer la tarde, disfrutando de la pausa otoñal en las terrazas madrileñas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "02",
-              "headline": "Madrid Salvaje convoca los accesos al estadio de Butarque.",
-              "lede": "El cartel musical reúne a miles de asistentes en las inmediaciones del recinto deportivo.",
-              "body": "La celebración de Madrid Salvaje 2026 moviliza este fin de semana a numerosos espectadores hacia las zonas periféricas del sur metropolitano. Los accesos y horarios especiales hacia el estadio de Butarque ya están operativos para regular la llegada de público. Conviene revisar las líneas de transporte público habituales y sus frecuencias especiales para evitar aglomeraciones en las horas punta. La agenda cultural de la ciudad para los días 25, 26 y 27 de septiembre de 2026 ofrece múltiples alternativas musicales más allá de los grandes festivales. Quienes deseen moverse con tranquilidad por la red urbana encontrarán un ritmo pausado en los barrios residenciales, alejados del bullicio de los grandes eventos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "03",
-              "headline": "El calendario marca las próximas festividades autonómicas en octubre.",
-              "lede": "Los servicios administrativos ajustarán sus horarios de atención al ciudadano la próxima semana.",
-              "body": "Aunque la jornada transcurre con total normalidad en las calles de la capital, la proximidad del Dia de la Comunitat Valenciana el 2026-10-09 invita a revisar la agenda de gestiones con organismos oficiales. Los mercados municipales y los comercios tradicionales mantienen sus horarios habituales de apertura otoñal sin alteraciones significativas. Las librerías de barrio y los cafés centenarios ofrecen refugio frente a las primeras brisas frescas de la temporada. Es un momento excelente para pasear por los parques urbanos sin prisa, observando la caída gradual de las hojas y el cambio de luz en las plazas históricas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Jazz de Barcelona celebra su sesenta aniversario.",
-              "lede": "La capital catalana acoge actuaciones internacionales con la calidad acústica de sus auditorios.",
-              "body": "El Festival de Jazz de Barcelona arranca su programación conmemorativa celebrando 60 años de trayectoria ininterrumpida en la ciudad. Entre los 10 conciertos imprescindibles de esta edición destaca la presencia de figuras consagradas y propuestas contemporáneas. La capital mundial del género musical ofrece estos días una atmósfera propicia para el descubrimiento en salas de aforo reducido. La jornada muestra temperaturas que oscilan entre los 18 y los 27°C, marcadas por una ligera presencia de niebla matinal. El ocaso llegará puntualmente a las 19:41, dejando paso a una noche apacible ideal para los desplazamientos a pie por el Eixample.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "02",
-              "headline": "El parque de Collserola avanza hacia su reapertura progresiva.",
-              "lede": "El Ayuntamiento de Barcelona apoya la desescalada de restricciones en el pulmón verde.",
-              "body": "Las autoridades municipales han confirmado el apoyo a la reapertura progresiva del parque de Collserola en cuanto las condiciones técnicas permitan la desescalada. Esta medida devolverá a los caminantes y vecinos el acceso habitual a sus senderos forestales y miradores sobre el Mediterráneo. Las mediciones ambientales actuales registran un índice de calidad del aire calificado como pobre, con niveles de PM2.5 situados en 22, por lo que se recomienda moderar el ejercicio físico intenso en las zonas más abiertas. El tipo de cambio actual se mantiene estable en 1 USD por 0.88 EUR para los visitantes internacionales que realizan transacciones cotidianas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "03",
-              "headline": "Beth Orton prepara su paso otoñal por la agenda musical.",
-              "lede": "La artista británica presentará su obra reciente en los escenarios del circuito peninsular.",
-              "body": "La programación de conciertos continúa sumando nombres destacados para los próximos meses, incluyendo la visita de Beth Orton para presentar su álbum 'The Ground Above' en Barcelona y Madrid en noviembre. Los teatros y auditorios de la ciudad ultiman los detalles técnicos para recibir una temporada rica en propuestas acústicas intimistas. La cercanía del Dia de la Comunitat Valenciana, fijado en el calendario para el 2026-10-09, apenas altera el pulso diario de los comercios locales barceloneses. Las calles del casco antiguo invitan a caminar con calma, disfrutando de las librerías independientes y el silencio relativo de las primeras horas de la tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Open House Buenos Aires abre más de 150 espacios urbanos.",
-              "lede": "La arquitectura oculta de la ciudad se muestra al público durante este fin de semana.",
-              "body": "La nueva edición de Open House Buenos Aires permite recorrer más de 150 espacios arquitectónicos singulares desde adentro, revelando patios, cúpulas y oficinas habitualmente cerradas al transeúnte. Esta iniciativa ciudadana invita a redescubrir el patrimonio edilicio mediante visitas guiadas gratuitas por distintos barrios porteños. El cielo permanece completamente cubierto, con temperaturas que se mueven entre los 14 y los 20°C a lo largo de la jornada. El sol se ocultará a las 18:53, dando paso a una tarde ideal para caminar por los pasajes tradicionales del sur de la capital. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 en 18.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "02",
-              "headline": "El cine y el teatro porteño brillan en los escenarios internacionales.",
-              "lede": "Las producciones locales reciben elogios destacados en festivales de Europa y la región.",
-              "body": "La crítica internacional ha reconocido recientemente el talento de las artes escénicas de Buenos Aires en certámenes de gran prestigio. Por un lado, la película argentina 'Cyrano en mi Cabeza' cosechó una cálida ovación durante su paso por el Festival de San Sebastián. Por otro lado, el Complejo Teatral de Buenos Aires ha llevado dos de sus producciones más destacadas al mismo festival vasco, consolidando el prestigio de la dramaturgia local. Paralelamente, la ciudad bonaerense de Azul celebró la edición número 20 del Festival Cervantino de la Argentina, extendiendo la oferta cultural hacia el interior de la provincia con una amplia variedad de propuestas literarias y artísticas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
-            },
-            {
-              "n": "03",
-              "headline": "Los cafés notables mantienen su rutina en el inicio del fin de semana.",
-              "lede": "Los espacios tradicionales de la ciudad ofrecen refugio frente a la nubosidad vespertina.",
-              "body": "Con una atmósfera gris y estable que oscila entre los 14 y los 20°C, las esquinas porteñas invitan a detener el paso en las tradicionales mesas de café. La ausencia de precipitaciones permite recorrer los corredores arbolados de Palermo y Belgrano sin inconvenientes logísticos en el transporte público. Los centros culturales y librerías del centro histórico actualizan sus escaparates con novedades editoriales para los lectores de fin de semana. La ciudad transcurre con su ritmo habitual, combinando la arquitectura patrimonial con la pausa propia de los observadores atentos que caminan sin rumbo fijo.",
-              "source": "saudade desk",
-              "source_date": "2026-09-26"
             }
           ]
         }
