@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-03T06:00:00+09:00",
+  "updated": "2026-10-04T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-04T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O rio Tejo acolhe barcos com duas mil e quinhentas anos de história.",
+              "lede": "A primeira edição do festival de barcos-dragão trouxe uma tradição milenar às margens da capital portuguesa.",
+              "body": "As águas calmas do Tejo serviram de palco para uma competição ancestral que uniu várias equipas em torno de embarcações ornamentadas com cabeças de dragão. Esta modalidade, com origem nas margens do rio Mi Luo na China, promoveu um intercâmbio cultural assitido por curiosos e residentes ao longo do paredão. A programação integrou demonstrações desportivas e momentos de convívio comunitário que celebraram a cooperação através da remada sincronizada. Quem passou pela zona ribeirinha pôde observar de perto a precisão exigida nestes barcos longos e coloridos. O evento enriqueceu a oferta cultural da cidade neste início de outubro, funcionando como um ponto de encontro entre o património náutico oriental e o cenário urbano lisboeta. É uma nova tradição que se enraíza discretamente na paisagem do estuário.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "02",
+              "headline": "O cinema português viaja até ao Rio de Janeiro.",
+              "lede": "Uma produção nacional foi selecionada para integrar a programação oficial do festival carioca.",
+              "body": "A presença do cinema português em terras brasileiras reforça os laços artísticos entre os dois países através da exibição de obras recentes. Esta seleção destaca a sensibilidade dos realizadores locais na abordagem de narrativas intimistas e de observação social. As salas de projeção no Rio de Janeiro acolhem realizadores e espectadores num diálogo transatlântico que valoriza a língua comum e a estética visual independente. Para os viajantes atentos à cultura contemporânea, esta ponte cinematográfica reflete a vitalidade criativa que continua a cruzar o Atlântico em ambas as direções. A taxa de câmbio atual de 1 USD para 0.89 EUR mantém-se estável para quem planeia transações financeiras ou aquisição de bilhetes e livros em viagens culturais. As narrativas projetadas no grande ecrã continuam a projetar o imaginário urbano português além-fronteiras.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "03",
+              "headline": "Serviços públicos encerram devido ao feriado nacional.",
+              "lede": "A comemoração da Implantação da República altera o funcionamento habitual na segunda-feira.",
+              "body": "A segunda-feira, 2026-10-05, marca o feriado nacional da Implantação da República, o que resulta no encerramento de repartições públicas, bancos e serviços postais em toda a cidade. Os residentes e visitantes devem antecipar qualquer gestativa burocrática ou levantamento de valores necessária antes do início da pausa. O comércio local de rua e os mercados funcionam com horários condicionados, permitindo contudo passeios tranquilos pelas ruas históricas da baixa. A programação cultural do FESTin continua a atrair espectadores interessados em descobrir novas perspetivas cinematográficas nas salas aderentes. Aproveite o dia festivo para caminhar pelos miradouros e jardins da capital, onde o ritmo abranda consideravelmente com a interrupção das obrigações profissionais. É um momento propício para a contemplação urbana e para desfrutar da cidade com menor densidade de tráfego.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro marca 26°C sob uma atmosfera nublada.",
+              "lede": "O ar apresenta qualidade moderada com índices de PM2.5 nos 26, enquanto o sol se despede pelas 19:11.",
+              "body": "A temperatura oscila entre os 17°C e os 26°C nesta jornada de outono marcada por céu encoberto e ausência quase total de precipitação, com apenas 0.1mm registados. O índice de qualidade do ar situa-se num patamar moderado, com partículas PM2.5 a registarem 26, permitindo passeios urbanos confortáveis apesar da cobertura nublada. A taxa de câmbio fixa-se em 1 USD para 0.89 EUR, facilitando o planeamento financeiro de visitantes estrangeiros na cidade. Ao cair da tarde, pelas 19:11, a luz difusa tinge as pontes e as margens do Douro com tons cinzentos e dourados suaves. Os espaços públicos mantêm um ritmo calmo, ideal para observadores atentos que preferem explorar a Invicta sem a pressa das horas de ponta. A atmosfera convida a caminhadas longas pelas ruas empedradas da zona histórica.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "02",
+              "headline": "A zona oriental homenageia os seus clubes com a peladinha na rua.",
+              "lede": "O Parque Desportivo de Ramalde destaca-se com prémio de arquitetura enquanto o Mosteiro de São Bento da Vitória reabre portas.",
+              "body": "As coletividades desportivas da zona oriental do Porto foram recentemente homenageadas num programa que reviveu a tradicional peladinha na rua, celebrando o desporto de proximidade. Em paralelo, o Parque Desportivo de Ramalde recebeu um prestigiado prémio nacional de arquitetura pelo desenho funcional e integração paisagística exemplar. No centro histórico, o Mosteiro de São Bento da Vitória reabriu portas ao público com um concerto inaugural do ciclo Musical-mente, devolvendo sonoridades clássicas aos claustros seculares. Na galeria do atmosfera m Porto, a exposição Olhares – Pela Rota da Seda convida a uma viagem visual através de registos fotográficos marcantes. Estes acontecimentos culturais sublinham a diversidade de iniciativas que animam os bairros portuenses sem perturbar a serenidade quotidiana dos residentes. A taxa de câmbio de 1 USD para 0.89 EUR apoia a circulação de visitantes nestes espaços.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "03",
+              "headline": "Segunda-feira traz o encerramento de serviços devido ao feriado.",
+              "lede": "O dia 2026-10-05 assinala a Implantação da República com alterações no funcionamento da cidade.",
+              "body": "O feriado nacional da Implantação da República, a celebrar em 2026-10-05, impõe o encerramento de repartições públicas, bancos e postos de correio no Porto. Os viajantes devem prever esta paragem institucional nos seus roteiros, embora os espaços culturais de referência e os cafés históricos mantenham portas abertas para quem procura abrigo ou leitura. Com previsões meteorológicas estáveis entre 17°C e 26°C, o dia festivo convida a percorrer os jardins municipais e a zona ribeirinha a passos lentos. A qualidade do ar moderada com PM2.5 em 26 continua a favorecer a permanência ao ar livre durante as horas de luz. Lembre-se de verificar os horários reduzidos dos transportes públicos antes de iniciar deslocações mais longas pela Área Metropolitana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Duche de outono molha os bosques com chuviscos ligeiros.",
+              "lede": "A temperatura varia entre 18°C e 27°C com 0.8mm de precipitação e o sol a ocultar-se às 19:15.",
+              "body": "A serra de Sintra regista hoje aguaceiros ligeiros que acumulam 0.8mm de precipitação, conferindo um brilho húmido à vegetação luxuriante. A temperatura oscila entre os 18°C mínimos e os 27°C máximos, criando uma atmosfera abafada e campestre típica das transições sazonais. A qualidade do ar é considerada fair, com os níveis de PM2.5 fixados em 10, garantindo uma atmosfera limpa e oxigenada entre as copas das árvores. A taxa de câmbio de 1 USD para 0.89 EUR permanece estável para transações correntes na vila histórica. O pôr do sol ocorre pelas 19:15, projetando sombras longas sobre os palácios e os trilhos de musgo. É um cenário de rara tranquilidade para quem aprecia a contemplação da natureza sob céus variáveis.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "02",
+              "headline": "Parques de Sintra voltam a receber cães ao fim de um século.",
+              "lede": "A partir deste domingo, os animais de estimação são admitidos nos espaços verdes sob regras específicas.",
+              "body": "Uma alteração histórica regulamentar entra em vigor este domingo, permitindo que os cães voltem a aceder aos parques de Sintra e Queluz após mais de 100 anos de interdição. Esta medida, pensada para residentes e visitantes acompanhados pelos seus animais, exige o cumprimento de normas estritas de circulação com trela e respeito pelas zonas sensíveis de flora. Em simultâneo, a vila acolhe iniciativas como o Festival das Sopas no Mercado da Várzea e o Festival da Juventude Sintrense em Agualva e Mira Sintra. Outros recintos históricos preparam-se para recuar mais de 100 anos em eventos especiais de reconstituição temporal planeados para este mês. A taxa de câmbio de 1 USD para 0.89 EUR facilita a gestão financeira de quem visita estes recintos patrimoniais. A serra renova assim o seu compromisso com a comunidade através de uma abertura gradual a novas formas de usufruto público.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            },
+            {
+              "n": "03",
+              "headline": "A Implantação da República suspende os serviços na segunda-feira.",
+              "lede": "O feriado de 2026-10-05 altera a rotina institucional na vila sintrense.",
+              "body": "O feriado nacional da Implantação da República, marcado para 2026-10-05, determina o encerramento de repartições estatais, bancos e balcões de atendimento na região. Os visitantes que necessitem de resolver trâmites administrativos devem acautelar esses procedimentos antes do fecho de portas. Apesar dos aguaceiros previstos que totalizam 0.8mm e das temperaturas entre 18°C e 27°C, os trilhos pedestres e os jardins históricos permanecem acessíveis para passeios matinais. A qualidade do ar favorável com PM2.5 em 10 convida a respirar fundo a humidade aromática da serra durante o dia de descanso. Os transportes públicos adaptam os seus horários ao regime de feriado, recomendando-se consulta prévia para evitar esperas prolongadas nas estações de comboio.",
+              "source": "saudade desk",
+              "source_date": "2026-10-04"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-03T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Os jardins românticos do Parque da Pena propõem percursos guiados inéditos para desvendar a história botânica e ornamental do domínio real. A iniciativa aprofunda a ligação entre a intervenção humana e a densa floresta serrana que abraça o palácio colorido. O termómetro varia entre 18 e 33°C sob um céu parcialmente nublado, com o crepúsculo a desenhar-se às 19:33. A qualidade do ar regista um limpo índice de PM2.5 de 10, ideal para quem caminha longas horas sem fadiga excessiva. Para a gestão financeira da viagem, a referência cambial mantém-se nos 0.87 EUR por 1 USD. A proximidade do feriado de 2026-10-05 lembra os residentes e viajantes da importância de antecipar trâmites administrativos essenciais.",
               "source": "saudade desk",
               "source_date": "2026-09-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-21T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival Iminente celebra dez anos de música e arte urbana na cidade.",
-              "lede": "A edição comemorativa traz intervenções visuais e concertos, embora sem a voz de Allen Halloween.",
-              "body": "A capital acolhe mais uma edição marcante do Festival Iminente, celebrando uma década de fusão entre a música contemporânea e a arte urbana. Os palcos e espaços expositivos reúnem criadores de várias geografias, embora a programação deste ano decorra sem a actuação de Allen Halloween. Para quem prefere o ar livre e o movimento, há sessões de dança em Monsanto que convidam a uma pausa ativa. A taxa de câmbio atual fixa-se em 1 USD para 0.87 EUR, facilitando as trocas comerciais para visitantes internacionais. Os festivais e encontros culturais marcam o ritmo de uma estação amena, onde a circulação pedonal é o melhor método de exploração. A agenda cultural estende-se ainda a iniciativas como o Imago Lisboa Photo Festival, consolidando o papel da fotografia nas galerias locais.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "O Metro de Lisboa colabora com o projeto UTOPIA nas Oficinas de Calvanas.",
-              "lede": "A iniciativa cruza o transporte público com a moda e a joalharia de autor assinada por Cata Vassalo.",
-              "body": "As Oficinas de Calvanas recebem uma proposta singular que une a mobilidade urbana à criação artística. O Metro de Lisboa associou-se ao projeto UTOPIA by Cata Vassalo, levando peças de moda e joalharia a um espaço industrial recuperado. A visita a esta exposição oferece uma perspetiva diferente sobre os criadores nacionais e o design contemporâneo. No horizonte, avizinha-se o feriado da Implantação da República a 2026-10-05, data que trará alterações pontuais aos horários de serviços públicos e repartições. Para os viajantes que planeiam compras na cidade, a conversão monetária mantém-se estável com 1 USD cotado a 0.87 EUR. A rede de transportes continua a funcionar com regularidade, permitindo aceder facilmente aos polos culturais dispersos pelas diferentes freguesias da cidade.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "A fotografia contemporânea ocupa galerias e espaços culturais com o Imago Lisboa.",
-              "lede": "O festival de imagem atrai observadores atentos às narrativas visuais e exposições descentralizadas.",
-              "body": "O Imago Lisboa Photo Festival transforma vários pontos da cidade num circuito dedicado à cultura fotográfica. A programação aposta na diversidade de olhares autorais e em conversas com artistas de várias proveniências. Paralelamente, o quotidiano lisboeta segue o seu ritmo habitual, pontuado por propostas como o Festival da Madeira e momentos de lazer na natureza. Com a chegada do outono, as temperaturas convidam a longas caminhadas pelas colinas históricas e miradouros ribeirinhos. Os serviços bancários e administrativos operam sem sobressaltos, tendo já em vista o próximo feriado nacional de 2026-10-05. A moeda estrangeira mantém a sua paridade habitual, com o câmbio de 1 USD a valer 0.87 EUR. É o momento ideal para desfrutar da cidade com calma, longe da urgência estival.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Parque da Cidade regista temperaturas elevadas sob um céu limpo e claro.",
-              "lede": "Os termómetros marcam entre 20 e 33°C, com o pôr do sol fixado pelas 19:33.",
-              "body": "A Invicta apresenta um cenário térmico invulgarmente quente para a época, com máximas que atingem os 33°C e mínimas de 20°C. O céu mantém-se perfeitamente limpo ao longo do dia, proporcionando tardes luminosas que convidam a passeios prolongados até ao crepúsculo, às 19:33. A qualidade do ar é considerada justa, registando um valor de PM2.5 de 10, o que permite atividades ao ar livre com moderação. Paralelamente, o município acompanha com atenção aspetos ecológicos locais após episódios recentes no Parque da Cidade. Os visitantes continuam a encontrar uma cidade vibrante, onde a taxa de câmbio de 1 USD para 0.87 EUR apoia o comércio local. A preparação para o feriado de 2026-10-05 começa a notar-se na gestão autárquica, embora o foco atual permaneça no usufruto do espaço público e da oferta cultural disponível.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival Colombo em Porto Santo evoca a epopeia dos descobrimentos.",
-              "lede": "As comemorações marítimas contrastam com o calor intenso que se faz sentir no norte do país.",
-              "body": "Enquanto o Porto regista dias secos com temperaturas entre 20 e 33°C, as atenções culturais estendem-se também aos territórios insulares através do Festival Colombo. Este evento no Porto Santo recorda a presença do navegador e a história da época dos descobrimentos com recriações históricas e animação de rua. De volta ao continente, a atmosfera citadina beneficia de uma qualidade do ar justa, com o índice PM2.5 a fixar-se em 10. O pôr do sol ocorre às 19:33, iluminando as pontes e as margens do Douro com tons dourados. Para quem efectua transações financeiras, a cotação oficial mantém-se estável em 1 USD para 0.87 EUR. A proximidade do feriado de 2026-10-05 lembra a necessidade de antecipar diligências em repartições públicas e bancos antes do encerramento oficial.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "A qualidade do ar mantém-se justa enquanto o calor domina a paisagem urbana.",
-              "lede": "Com o termómetro a alcançar os 33°C, a cidade desfruta de finais de tarde luminosos.",
-              "body": "O termómetro oscila entre 20 e 33°C, garantindo dias de sol intenso e ausência total de precipitação. A qualidade do ar regista um valor de PM2.5 de 10, mantendo os parâmetros dentro da normalidade para zonas urbanas litorais. O sol despede-se mais tarde, marcando o ocaso pelas 19:33 e prolongando a claridade sobre o rio Douro. No plano cívico, a gestão autêntica e calma da cidade prossegue, acautelando o funcionamento dos serviços antes do próximo feriado de 2026-10-05. A economia local beneficia da estabilidade cambial, transacionando-se a 0.87 EUR por cada 1 USD. Os viajantes encontram um ambiente propício para a contemplação arquitetónica, aproveitando as esplanadas e os jardins da baixa com toda a tranquilidade que a estação exige.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra acolhe o Festival Imaginário com propostas ligadas às artes e à natureza.",
-              "lede": "As temperaturas variam entre 19 e 31°C sob um céu limpo que favorece os percursos arborizados.",
-              "body": "A vila serrana vive dias de animação cultural com o Festival Imaginário, que coloca em relevo a criação artística, as famílias e o património natural. O termómetro apresenta valores compreendidos entre 19 e 31°C, acompanhados por um céu limpo e uma excelente luminosidade diurna. A qualidade do ar é considerada justa, registando um nível de PM2.5 de 9, ideal para caminhadas pelos trilhos românticos da serra. O pôr do sol ocorre pontualmente às 19:36, oferecendo vistas memoráveis sobre a linha do horizonte atlântico. No plano gastronómico e comunitário, destaca-se a partilha de uma mega cachupa, reforçando os laços interculturais na região. A taxa de câmbio permanece inalterada em 1 USD para 0.87 EUR, facilitando as despesas dos visitantes estrangeiros que deambulam pelos palácios e bosques.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "02",
-              "headline": "O encerramento do MUSCARIUM#12 celebra-se com música e gastronomia comunitária.",
-              "lede": "Espetáculos e DJs marcam o culminar do festival, complementados por convívios gastronómicos.",
-              "body": "O festival MUSCARIUM#12 chega ao fim com uma programação eclética que inclui espetáculos performativos, sessões de DJ e momentos de convívio comunitário em torno de pratos tradicionais. As condições meteorológicas acompanham a festa com temperaturas de 19 a 31°C e um céu limpo que convida a estar ao ar livre. A qualidade do ar regista um valor de PM2.5 de 9, mantendo a atmosfera limpa e agradável na encosta da montanha. O crepúsculo instala-se às 19:36, permitindo desfrutar de longas horas de luz natural entre os jardins históricos. Para quem necessita de tratar de burocracias, convém recordar que o feriado da Implantação da República a 2026-10-05 encerrará temporariamente os serviços públicos e bancários habituais. A conversão financeira vigora com a paridade de 1 USD para 0.87 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
-            },
-            {
-              "n": "03",
-              "headline": "A vila serrana desfruta de tardes quentes e limpas com o ocaso às 19:36.",
-              "lede": "A qualidade do ar regista PM2.5 de 9, proporcionando um ambiente propício ao descanso.",
-              "body": "As condições climatéricas continuam estáveis, com mínimas de 19°C e máximas que atingem os 31°C na região sintrense. O céu limpo e a qualidade do ar favorável, com um índice PM2.5 de 9, tornam este período excelente para visitar os parques botânicos e monumentos. O sol despede-se da paisagem protegida às 19:36, altura em que a neblina típica começa a beijar os torreões dos palácios. A vida local decorre sem sobressaltos, mantendo a atenção voltada para eventos culturais e comunitários. Os turistas estrangeiros beneficiam de uma taxa de câmbio de 0.87 EUR por cada 1 USD nas suas trocas comerciais quotidianas. Com o aproximar do feriado nacional de 2026-10-05, os serviços públicos preparam os encerramentos habituais, aconselhando a antecipação de qualquer deslocação a repartições oficiais.",
-              "source": "saudade desk",
-              "source_date": "2026-09-21"
             }
           ]
         }
