@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-10-04T06:00:00+09:00",
-  "next_filing": "2026-10-04T21:00:00+00:00",
+  "filed_at": "2026-10-05T06:00:00+09:00",
+  "next_filing": "2026-10-05T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "El festival Silva de Sirenas reúne cinco propuestas de música antigua en Madrid.",
-          "lede": "Los templos históricos de la capital acogen interpretaciones de repertorios seculares y sacros durante estos días.",
-          "body": "La música antigua encuentra refugio en espacios emblemáticos gracias a la séptima edición del Festival Encuentro Silva de Sirenas. Este certamen musical ofrece a los residentes y visitantes una cuidada selección de cinco propuestas centradas en la recuperación de patrimonio sonoro histórico. Los conciertos se distribuyen en iglesias y auditorios singulares del centro urbano, propiciando una escucha atenta y pausada. Es recomendable consultar los horarios específicos de acceso en cada sede para asegurar la entrada antes de que comiencen las actuaciones.",
+          "headline": "La Comunidad de Madrid dedica una exposición a la astronomía en tiempos de Cervantes",
+          "lede": "Los espacios culturales de la capital integran la ciencia histórica en sus salas principales durante este mes.",
+          "body": "La Comunidad de Madrid ha inaugurado una muestra temporal que repasa los descubrimientos astronómicos y la visión del cosmos durante el Siglo de Oro. La propuesta expositiva reúne instrumentos de navegación, tratados antiguos y grabados originales conservados en archivos históricos de la región. Es una visita pausada que complementa los paseos por el casco antiguo y permite comprender cómo se miraba al cielo en el periodo cervantino. Las salas mantienen aforo controlado para garantizar la observación detallada de las piezas cartográficas y los volúmenes expuestos. Se recomienda consultar los horarios de apertura en las taquillas antes de planificar el acceso a las galerías principales.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "El barrio de Usera celebra el Festival del Medio Otoño hasta hoy.",
-          "lede": "Las calles del distrito culminan sus jornadas culturales con gastronomía tradicional y actividades para todos los públicos.",
-          "body": "Las celebraciones del Festival del Medio Otoño en Usera llegan hoy a su término tras varios días de intensa actividad en el espacio público. Los vecinos y paseantes han podido disfrutar de talleres, pasacalles y una variada oferta gastronómica de origen asiático. Este encuentro refuerza la convivencia intercultural en uno de los barrios más dinámicos de la capital. La programación de clausura invita a recorrer las plazas principales antes del anochecer y despedir la festividad de forma reposada.",
+          "headline": "El festival Multiculturas recorre los distritos de Madrid con propuestas diversas",
+          "lede": "La programación artística y musical ocupa plazas y centros culturales de distintos barrios madrileños.",
+          "body": "El festival Multiculturas despliega su agenda de conciertos y talleres participativos por los diferentes distritos de la ciudad. Las actividades buscan reflejar la riqueza de las expresiones artísticas urbanas mediante muestras gastronómicas y actuaciones musicales al aire libre. Los espacios públicos acogen encuentros abiertos donde vecinos y visitantes comparten tradiciones de diversas procedencias geográficas. Es una oportunidad excelente para recorrer zonas menos habituales de la periferia madrileña a través de su oferta cultural comunitaria. La entrada a la mayoría de los recitales y charlas programadas es libre hasta completar el aforo permitido en cada recinto habilitado.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "La proximidad de dos festivos nacionales exige precaución en las gestiones oficiales.",
-          "lede": "La Comunitat Valenciana y la Fiesta Nacional modificarán el calendario administrativo de los próximos días.",
-          "body": "El calendario de octubre trae consigo jornadas festivas que afectarán al funcionamiento habitual de los servicios públicos y las oficinas bancarias en Madrid. El 9 de octubre y el 12 de octubre interrumpirán temporalmente la actividad administrativa ordinaria en la región. Quienes necesiten realizar trámites presenciales o cambios de divisa, con una tasa de referencia actual de 1 USD por cada 0.89 EUR, deben anticipar sus gestiones. Los comercios y la hostelería mantendrán sus puertas abiertas para recibir a quienes disfruten de los puentes festivos.",
+          "headline": "Aviso administrativo ante los próximos festivos autonómicos y nacionales en España",
+          "lede": "El calendario laboral de octubre incluye jornadas festivas que afectarán a la apertura habitual de oficinas.",
+          "body": "Con motivo de la celebración del Dia de la Comunitat Valenciana el 2026-10-09 y la posterior Fiesta Nacional de España el 2026-10-12, los servicios administrativos y las oficinas bancarias permanecerán cerrados. Conviene recordar que el tipo de cambio oficial se sitúa en 1 USD = 0.89 EUR para las operaciones financieras de esta semana. Las administraciones públicas suspenderán la atención presencial durante estas jornadas festivas, retomando sus horarios habituales al día siguiente laborable. Los viajeros que necesiten realizar gestiones postales o cambios de moneda deben anticipar sus trámites para evitar demoras innecesarias. Los comercios y la red de transporte público mantendrán servicios especiales adaptados a la afluencia propia de estos días señalados.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "La tormenta y las precipitaciones de 161.1mm condicionan los espacios abiertos.",
-          "lede": "Los termómetros se mantienen entre 20°C y 22°C mientras la lluvia obliga a suspender actos al aire libre.",
-          "body": "La inestabilidad meteorológica marca el pulso de la ciudad con un registro acumulado de 161.1mm de precipitación y avisos por tormenta eléctrica. Con temperaturas estables entre 20°C y 22°C, la humedad es elevada pero la calidad del aire se mantiene en niveles justos con un PM2.5 de 8. La lluvia intensa ha obligado a cancelar de manera preventiva eventos emblemáticos, como la celebración del aniversario del parque de atracciones del Tibidabo. El atardecer está previsto para las 19:28, momento en el que los reflejos sobre el asfalto mojado dominan el paisaje urbano.",
+          "headline": "Barcelona registra temperaturas suaves con precipitaciones dispersas durante la jornada",
+          "lede": "El termómetro se mueve entre los 20 y 24°C bajo cielos nublados y chubascos ocasionales.",
+          "body": "La jornada en Barcelona transcurre con temperaturas que oscilan entre los 20 y 24°C y una leve acumulación de precipitación de 1.3mm debido a los chubascos intermitentes. La calidad del aire se mantiene en niveles considerados justos, con un registro de PM2.5 en 6. El atardecer está previsto para las 19:26, marcando el inicio de unas horas nocturnas frescas junto al litoral marítimo. La humedad ambiental se eleva tras las lluvias ligeras, por lo que se aconseja calzado adecuado para caminar por los adoquines del Barrio Gótico. Las paradas de autobús y las líneas de metro operan con total normalidad a pesar de la nubosidad persistente en toda la franja costera.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "Barcelona impulsa el nuevo festival Plec en paralelo a la pasarela 080.",
-          "lede": "La cita cultural fusiona la creación literaria y editorial con las tendencias de diseño contemporáneo.",
-          "body": "El panorama cultural barcelonés suma un nuevo atractivo con la puesta en marcha del festival Plec, una iniciativa que coincide temporalmente con la celebración de la pasarela 080. Este evento busca entablar un diálogo directo entre el mundo del libro, la edición independiente y las artes visuales. Los espacios designados para las charlas y exposiciones ofrecen un refugio cálido frente a las inclemencias meteorológicas del exterior. Los asistentes pueden recorrer las muestras a un ritmo pausado, observando la convergencia entre la estética editorial y las corrientes creativas actuales de la ciudad.",
+          "headline": "El parque fluvial del Besòs continúa cerrado al público por crecida del caudal",
+          "lede": "Las autoridades municipales mantienen las restricciones de acceso tras las últimas lluvias registradas.",
+          "body": "El parque fluvial del Besòs permanece cerrado al público debido a que se encuentra temporalmente impracticable con el río fuera de su cauce habitual. Los servicios municipales de mantenimiento evalúan el estado de los caminos de ribera y los puentes peatonales afectados por el incremento del caudal. Se ruega a los paseantes y ciclistas que respeten las vallas de seguridad instaladas en los accesos principales desde los municipios colindantes. Esta medida preventiva continuará vigente hasta que los técnicos certifiquen la total retirada del agua acumulada en las zonas verdes. Los ciudadanos pueden utilizar rutas alternativas por el interior urbano mientras finalizan las labores de limpieza y revisión estructural.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "El tipo de cambio y el calendario festivo alteran la rutina comercial.",
-          "lede": "Las administraciones recuerdan las fechas de cierre por el Dia de la Comunitat Valenciana y la Fiesta Nacional.",
-          "body": "Las transacciones comerciales y financieras se rigen por el tipo de cambio oficial de 1 USD equivalente a 0.89 EUR en los establecimientos habilitados. Asimismo, conviene tener presente que el calendario laboral se verá interrumpido por la llegada de los próximos días festivos el 9 de octubre y el 12 de octubre. Los servicios postales, oficinas gubernamentales y sucursales bancarias permanecerán cerrados durante esas jornadas señaladas. Se aconseja a los viajeros planificar sus desplazamientos y compras con antelación para evitar inconvenientes imprevistos.",
+          "headline": "Planificación financiera y administrativa ante los festivos de octubre en Cataluña",
+          "lede": "El mercado de divisas opera con normalidad mientras se acercan las jornadas festivas autonómicas y nacionales.",
+          "body": "El tipo de cambio actual se fija en 1 USD = 0.89 EUR para las transacciones monetarias de esta semana en curso. Los calendarios oficiales recuerdan la in llegada del Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12, fechas que modificarán la rutina administrativa. Las entidades bancarias y las oficinas públicas cerrarán sus puertas al público durante estas jornadas festivas señaladas en el calendario laboral. Los viajeros y residentes deben tener en cuenta estos cierres programados para planificar cualquier operación de cambio de divisa o gestión oficial. Los servicios turísticos esenciales y los museos principales adaptarán sus horarios según la normativa vigente para cada día festivo.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Un clima templado y parcialmente nublado acompaña los paseos dominicales.",
-          "lede": "Los termómetros oscilan entre 11°C y 22°C en una jornada ideal para recorrer las ferias y espacios verdes.",
-          "body": "La ciudad disfruta de un clima apacible con temperaturas que varían entre los 11°C de mínima y los 22°C de máxima bajo un cielo parcialmente nublado. La calidad del aire se registra en niveles moderados con un valor de PM2.5 de 15, permitiendo la actividad al aire libre sin inconvenientes. El atardecer está fijado para las 18:59, ofreciendo una luz dorada muy característica sobre los árboles de los bulevares porteños. Los residentes aprovechan el fin de semana para visitar las ferias artesanales y los mercados de proximidad que ocupan plazas y parques.",
+          "headline": "Buenos Aires registra una tarde fresca y completamente cubierta de nubes",
+          "lede": "La temperatura oscila entre los 13 y 20°C mientras la ciudad transita el inicio de semana.",
+          "body": "La atmósfera porteña se presenta hoy con cielos totalmente cubiertos y un rango térmico que se mueve entre los 13 y 20°C. La calidad del aire se mantiene en parámetros calificados como justos, alcanzando un valor de PM2.5 de 14. El sol se ocultará en el horizonte a las 18:59, dando paso a una noche tranquila en los diferentes barrios de la capital. Las condiciones meteorológicas invitan a recorrer los cafés tradicionales y las librerías del centro con la tranquilidad propia del otoño austral. No se esperan precipitaciones significativas durante las próximas horas, por lo que las actividades al aire libre programadas pueden desarrollarse sin inconvenientes mayores.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "El circuito gastronómico de Palermo destaca la cocina a las brasas.",
-          "lede": "Los restaurantes tradicionales y las propuestas de autor atraen a quienes buscan sabores arraigados.",
-          "body": "El barrio de Palermo concentra la atención de los gourmets gracias a un festival culinario que reúne a las mejores parrillas locales e internacionales. Los comensales pueden degustar desde el clásico choripán de establecimientos emblemáticos como Don Julio hasta cortes más elaborados como el chuletón de Sagardi. Este encuentro gastronómico pone en valor el producto local y el dominio ancestral del fuego en la cocina argentina. Se recomienda reservar con suficiente antelación debido a la alta demanda que experimentan estos locales durante el fin de semana.",
+          "headline": "El Festival Nueva Ópera celebra su décima edición en escenarios porteños",
+          "lede": "La programación lírica contemporánea ocupa diversos espacios culturales con estrenos absolutos.",
+          "body": "El Festival Nueva Ópera conmemora su décima edición con una agenda que destaca por la experimentación sonora y escénica en la ciudad. Las salas y teatros colaboradores acogen producciones inéditas que exploran nuevos formatos musicales creados por compositores de la región. Este encuentro consolidado en la agenda cultural ofrece al público la oportunidad de descubrir propuestas vanguardistas alejadas de los circuitos comerciales tradicionales. Las entradas anticipadas pueden adquirirse en las boleterías habilitadas de cada espacio participante en los distintos barrios. Es un evento clave para los seguidores de la música contemporánea que buscan experiencias acústicas innovadoras en un entorno de reflexión artística.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "La agenda cultural de octubre combina artes escénicas y nuevas tecnologías.",
-          "lede": "El Festival Nueva Ópera y el próximo desembarco del cine de inteligencia artificial dinamizan la ciudad.",
-          "body": "La oferta artística de Buenos Aires se expande con hitos como la celebración de la décima edición del Festival Nueva Ópera, que presenta propuestas vanguardistas en distintos escenarios. En paralelo, la ciudad se prepara para acoger a finales de mes el esperado debut del World AI Film Festival. Estas iniciativas reafirman el carácter cultural y creativo de la capital, atrayendo a espectadores interesados en los nuevos lenguajes expresivos. De cara a los próximos días, cabe recordar que el 12 de octubre se celebrará el Día del Respeto a la Diversidad Cultural, modificando el ritmo administrativo habitual.",
+          "headline": "Aviso institucional previo al feriado por el Día del Respeto a la Diversidad Cultural",
+          "lede": "Las instituciones públicas y bancarias ajustan su atención ante la festividad nacional del 12 de octubre.",
+          "body": "La ciudad se prepara para el próximo feriado del Día del Respeto a la Diversidad Cultural, fijado en el calendario para el 2026-10-12. Durante esta jornada conmemorativa, los organismos oficiales, las instituciones educativas y las sucursales bancarias permanecerán cerrados al público. Se aconseja a los residentes y visitantes resolver cualquier trámite administrativo pendiente antes de la llegada de este día festivo. El transporte público funcionará con las frecuencias habituales de los días domingos y feriados en todas sus líneas de subterráneos y colectivos. Los espacios verdes y museos municipales mantendrán esquemas de apertura especiales para recibir al público que pasee por la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     }
