@@ -1,7 +1,7 @@
 {
   "edition": "en",
-  "filed_at": "2026-10-04T06:00:00+09:00",
-  "next_filing": "2026-10-04T21:00:00+00:00",
+  "filed_at": "2026-10-05T06:00:00+09:00",
+  "next_filing": "2026-10-05T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Rain settles across Seoul Botanic Park as autumn deepens.",
-          "lede": "The 7.2mm precipitation cools temperatures to a 14–23°C range.",
-          "body": "The steady rain brings a reflective calm to Seoul Botanic Park as plants integrate into everyday spaces. Temperatures hover between 14°C and 23°C under moderate air quality with PM2.5 at 16. Sunset arrives early at 18:11, casting long shadows over damp pathways. Visitors seeking shelter will find quiet corners among the indoor greenhouses. The exchange rate holds at 1 USD to 1348 KRW across local banks. Wear a light waterproof shell for evening walks.",
+          "headline": "The Gangnam Festival brings street takeovers and large public installations to the district.",
+          "lede": "Giant characters occupy the avenues while the autumn air holds steady at 14 to 19 degrees.",
+          "body": "Autumn arrives in Seoul with clear skies and fair air quality, registering a PM2.5 of 12. The Gangnam Festival returns to the streets with large public installations and celebratory gatherings, altering everyday transit patterns across the southern avenues. At 1 USD to 1348 KRW, travelers will find standard exchange rates while navigating the pedestrian-heavy zones. Sung Jin Park’s portraits of Seoul youth in the 2000s offer a quiet indoor counterpoint to the outdoor pageantry. Temperatures hover between 14 and 19 degrees under partly cloudy conditions, leading down to an early evening sunset at 18:09. Public banks and government offices remain closed today for the National Foundation Day holiday.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "National Foundation Day closures affect public services on Monday.",
-          "lede": "Government offices and banks close for Gaecheonjeol on 2026-10-05.",
-          "body": "As Seoul observes Gaecheonjeol on 2026-10-05, routine administrative tasks must wait. Banks, post offices, and municipal offices remain closed for the holiday. Travelers should plan currency exchanges ahead using the current rate of 1 USD to 1348 KRW. Public transit runs on normal schedules despite the holiday pause. Another closure approaches on 2026-10-09 for Hangeul Day. Quiet residential neighborhoods offer a peaceful alternative to busy commercial districts today.",
+          "headline": "National Foundation Day brings seasonal closures to municipal buildings and financial institutions.",
+          "lede": "Streets observe the 2026-10-05 public holiday quietly, while currency exchanges trade near 1348 KRW per USD.",
+          "body": "Government offices, banks, and public post offices across Seoul observe closures today for National Foundation Day, falling on 2026-10-05. Visitors should plan administrative errands for later in the week, particularly ahead of the upcoming Hangeul Day holiday on 2026-10-09. The mild autumn weather provides comfortable conditions for walking through neighborhood backstreets, undisturbed by vehicle traffic in certain festival zones. Currency counters maintain a rate of 1 USD to 1348 KRW for incoming transactions. Air quality remains fair with a PM2.5 reading of 12, making outdoor observation pleasant as daylight fades past 18:09.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "Cultural exhibitions offer refuge from the damp autumn afternoon.",
-          "lede": "Friedrich Kunath and Paul Cox present reflective works across the city.",
-          "body": "Galleries provide a warm escape from the 7.2mm of rain falling outside. Friedrich Kunath at Pace Seoul explores longing and belonging through contemplative canvases. Paul Cox transforms Frieze Seoul with 336 artworks into a meditative oasis for observers. Meanwhile, Sung Jin Park's portraits of Seoul youth in the 2000s invite quiet nostalgia. Temperatures between 14°C and 23°C make indoor gallery hopping ideal. Evening sets in by 18:11, illuminating the city windows.",
+          "headline": "Sung Jin Park’s retrospective captures the quiet interior lives of Seoul youth from the 2000s.",
+          "lede": "Gallery spaces offer refuge from the Gangnam crowds as temperatures settle near 19 degrees.",
+          "body": "Away from the giant characters taking over the streets of Gangnam during the annual festival, quiet exhibition spaces invite slower contemplation. Sung Jin Park’s Portraits of Seoul Youth in the 2000s provides a nostalgic study of a city in transition. Outside, the air quality index sits at a fair PM2.5 of 12 under a partly cloudy sky. The exchange rate holds at 1 USD to 1348 KRW, giving steady purchasing power for gallery catalogs and cafe stops. Sunset arrives at 18:09, signaling the gradual cooling of the air from a daytime high of 19 degrees down toward the evening low of 14 degrees.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Overcast skies soften the autumn light across Tokyo streets.",
-          "lede": "Temperatures settle between 16°C and 22°C under steady cloud cover.",
-          "body": "An overcast canopy blankets the city with moderate air quality and a PM2.5 reading of 27. Temperatures range from 16°C to 22°C, making walking ideal without a heavy coat. Sunset occurs at 17:21, drawing early evening quiet over residential neighborhoods. The exchange rate rests at 1 USD to 158 JPY for incoming travelers. The quiet weather encourages slow strolls through neighborhood parks and alleyways. No rain is expected to disrupt outdoor itineraries today.",
+          "headline": "Ginza Sony Park reopens with an intentional embrace of incompleteness and open architecture.",
+          "lede": "The renewed public space welcomes visitors as moderate air quality settles over the Chuo district.",
+          "body": "Ginza Sony Park reopens its doors under the guiding concept of incompleteness, offering an evolving architectural space for quiet observers. Tokyo's air quality registers at a moderate PM2.5 of 22, pairing with temperatures ranging from 17 to 22 degrees. The exchange rate holds firmly at 1 USD to 158 JPY for travelers managing everyday expenses. Cultural calendars are active this month, highlighted by the Tokyo Film Festival unveiling its competitive line-up alongside special fragrance store openings in Ginza. Sunset occurs early at 17:19, casting long shadows across the concrete pavilions as the evening chill sets in.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "The Tokyo International Film Festival prepares historic competition lineups.",
-          "lede": "World premieres and new animation showcases arrive later this month.",
-          "body": "Preparations for the Tokyo Film Festival bring quiet anticipation to cultural districts. The competition line-up features notable world premieres from directors including Garin Nugroho, Milcho Manchevski, and Qiu Jiongjiong. A historic first animation lineup expands the festival scope significantly this year. Visitors navigating the city can exchange currency at 1 USD to 158 JPY. Overcast skies at 16°C to 22°C provide comfortable weather for planning festival routes. Evening falls swiftly at 17:21 across the capital.",
+          "headline": "The Tokyo Film Festival announces its international competition line-up for the autumn season.",
+          "lede": "World premieres gather cinephiles indoors as the late afternoon temperature cools toward 17 degrees.",
+          "body": "Cinemas across the capital prepare for the upcoming Tokyo Film Festival, which has just unveiled a competition line-up featuring notable world premieres. The moderate air quality with a PM2.5 of 22 accompanies pleasant autumn temperatures between 17 and 22 degrees under partly cloudy skies. Financial transactions settle at 1 USD to 158 JPY across local banks and exchange booths. While municipal offices remain open today, residents are beginning to look ahead to the Sports Day holiday scheduled for 2026-10-12. Daylight recedes by 17:19, marking the steady shortening of autumn days across the metropolitan area.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "Maison Margiela Fragrances opens a quiet new retail space.",
-          "lede": "New storefront doors open as the city anticipates Sports Day.",
-          "body": "A minimalist new Maison Margiela Fragrances store opens its doors to Tokyo shoppers. The opening adds a refined interior destination as the city heads toward the upcoming Sports Day holiday on 2026-10-12. Public offices and banks will remain open today under comfortable 16°C to 22°C overcast weather. Air quality remains moderate with a PM2.5 level of 27. Travelers can utilize local transit systems without holiday disruptions today. Sunset arrives promptly at 17:21.",
+          "headline": "Moderate air quality and mild afternoon warmth define the first week of October in Tokyo.",
+          "lede": "Partly cloudy skies frame the urban landscape as evening approaches at 17:19.",
+          "body": "Walking the quiet alleys of Tokyo reveals the subtle shift toward deeper autumn, supported by comfortable temperatures of 17 to 22 degrees. Air quality remains moderate with a PM2.5 measurement of 22, typical for the seasonal transition. The exchange rate sits at 1 USD to 158 JPY, influencing retail and dining choices across the city. Retail districts feature new openings, including the recent Maison Margiela Fragrances debut. As sunset arrives sharply at 17:19, streetlamps illuminate the neighborhood pathways, offering an inviting atmosphere for evening strollers before the colder winter weather arrives.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Brief rain showers drift across Lisbon's steep limestone streets.",
-          "lede": "A light 0.7mm of precipitation touches the city as temperatures reach 26°C.",
-          "body": "A passing trace of rain leaves 0.7mm of moisture on the ancient calçada pavements. Temperatures range comfortably from a mild 19°C up to 26°C in the afternoon sun. Air quality remains fair with a low PM2.5 reading of 11. Sunset stretches late to 19:14, giving a long golden hour over the river. The exchange rate holds steady at 1 USD to 0.89 EUR. Carry a light jacket for sudden breezes near the Tagus waterfront.",
+          "headline": "The Republic Day holiday closes banks and public offices across the historic districts.",
+          "lede": "Overcast skies and 0.2mm of precipitation mark the 2026-10-05 public holiday across the capital.",
+          "body": "Portuguese Republic Day falls on 2026-10-05, bringing scheduled closures to government offices, municipal agencies, and banks throughout Lisbon. Travelers should expect quiet commercial streets and adjusted transit schedules for local trams and buses. Weather conditions remain mild with an overcast sky, a trace precipitation of 0.2mm, and temperatures ranging from 18 to 25 degrees. The exchange rate holds steady at 1 USD to 0.89 EUR. Air quality is moderate with a PM2.5 level of 10, keeping the heavy maritime air fresh along the banks of the Tagus River as sunset approaches at 19:13.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "02",
-          "headline": "Republic Day closures affect administrative offices on Monday.",
-          "lede": "Implantação da República on 2026-10-05 pauses public services.",
-          "body": "Portugal observes Implantação da República on 2026-10-05, closing government offices and banks. Travelers should finish essential financial errands today using the 1 USD to 0.89 EUR exchange rate. Post offices and public administration will resume normal hours on Tuesday. Despite the holiday eve, the city maintains its usual relaxed weekend pace. Temperatures between 19°C and 26°C invite residents outdoors before the holiday closures take effect. Evening light fades gracefully by 19:14.",
+          "headline": "The SBC Summit brings international visitors to Lisbon as municipal venues host large gatherings.",
+          "lede": "Overcast skies keep daytime temperatures comfortable between 18 and 25 degrees.",
+          "body": "The SBC Summit Lisbon opens its doors to tens of thousands of attendees, bringing renewed energy to the city's event infrastructure and riverfront spaces. Municipal officials welcome the influx of visitors, while historic institutions like the Ndikama Museum continue their quiet work reconnecting audiences with Benin’s Golden Age. The local currency exchange rate remains stable at 1 USD to 0.89 EUR. Outdoor conditions show an overcast canopy with minimal precipitation at 0.2mm, while air quality maintains a clean PM2.5 reading of 10. Temperatures range from 18 to 25 degrees before evening settles in at 19:13.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         },
         {
           "n": "03",
-          "headline": "The SBC Summit concludes as visitors mingle in the autumn warmth.",
-          "lede": "Tens of thousands gather in Lisbon as international events wrap up.",
-          "body": "The SBC Summit Lisbon concludes its large gathering with 40000 attendees experiencing the city. Local officials welcome departing visitors enjoying the fair air quality and 19°C to 26°C warmth. Only 0.7mm of rain falls, barely interrupting outdoor café seating in historical plazas. Currency exchanges operate at 1 USD to 0.89 EUR for returning travelers. Sunset at 19:14 casts warm tones over the riverbanks. Trams continue their steady climbs up the hills without delay.",
+          "headline": "Long-running cultural exhibitions invite quiet exploration away from the busy summit crowds.",
+          "lede": "Soft light filters through overcast clouds as the temperature reaches 25 degrees.",
+          "body": "Visitors seeking respite from the bustling convention centers can turn to Lisbon's enduring cultural fixtures, including a major exhibition that has anchored the city's museum scene for over a decade. The moderate air quality, measured at a PM2.5 of 10, makes walking the steep calçada stone pavements pleasant despite the overcast skies and 0.2mm of light moisture. Currency conversions hold at 1 USD to 0.89 EUR across local exchange bureaus. Public administrative services remain closed today due to the Republic Day holiday. Daytime highs reach 25 degrees before dropping to 18 degrees under an evening sunset at 19:13.",
           "source": "saudade desk",
-          "source_date": "2026-10-04"
+          "source_date": "2026-10-05"
         }
       ]
     }
