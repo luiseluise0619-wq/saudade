@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-10-05T06:00:00+09:00",
-  "next_filing": "2026-10-05T21:00:00+00:00",
+  "filed_at": "2026-10-06T06:00:00+09:00",
+  "next_filing": "2026-10-06T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Lisboa",
+      "city": "LISBOA",
       "items": [
         {
           "n": "01",
-          "headline": "A Implantação da República silencia hoje os balcões.",
-          "lede": "Os serviços públicos e as repartições bancárias permanecem fechados nesta segunda-feira de feriado nacional.",
-          "body": "A celebração da Implantação da República em 2026-10-05 altera o ritmo habitual da capital portuguesa. Os estabelecimentos bancários e os serviços do Estado mantêm as portas encerradas ao público durante todo o dia. Para quem viaja ou habita na cidade, o câmbio oficial de 1 USD para 0.89 EUR mantém-se ativo apenas nos mercados digitais e terminais automáticos. A calçada lisboeta convõe a um passo mais lento, longe do papelório burocrático e da urgência administrativa. É um dia propício para cruzar a cidade a pé, observando o Tejo sem pressas. As ruas encontram-se mais livres de tráfego pendular, permitindo notar detalhes arquitetónicos que habitualmente escapam na pressa diária.",
+          "headline": "O FESTin ocupa as salas de cinema com uma programação atenta.",
+          "lede": "A capital acolhe novas exibições cinematográficas e encontros culturais.",
+          "body": "A programação do FESTin traz a Lisboa uma seleção atenta de filmes e debates que merecem a visita demorada dos cinéfilos. As salas de cinema da cidade preparam-se para receber espectadores à procura de narrativas distantes e olhares singulares sobre o mundo contemporâneo. No dia a dia, a taxa de câmbio fixa-se em 1 USD para 0.89 EUR, facilitando as transações financeiras para quem chega de fora. O rescaldo do feriado de Implantação da República, celebrado a 5 de outubro, deixa as ruas com um ritmo mais pausado e propício à contemplação. Os transportes públicos funcionam com regularidade habitual, permitindo deslocações sem sobressaltos entre as salas de projeção e os cafés históricos. É uma semana excelente para redescobrir o lado cinematográfico e tranquilo da cidade.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "02",
-          "headline": "O FESTin preenche as salas com cinema em português.",
-          "lede": "A programação cinematográfica traz produções recentes de vários continentes até aos ecrãs da capital.",
-          "body": "As exibições do festival FESTin decorrem em diversos pontos da cidade, oferecendo uma janela para o cinema contemporâneo de expressão portuguesa. Entre as obras em destaque, nota-se também a presença de cinema português selecionado para o festival de cinema do Rio de Janeiro. Esta ponte atlântica reforça o diálogo cultural entre Lisboa e as margens brasileiras através da sétima arte. As sessões convidam a pausas longas nas poltronas escuras das salas de projeção, fugindo ao bulício exterior. É um excelente pretexto para descobrir novos realizadores e narrativas visuais intimistas. A programação estende-se ao longo da semana, garantindo alternativas culturais sólidas para os dias mais amenos.",
+          "headline": "A tradição do Festival Dragon Boat cruza águas lisboetas.",
+          "lede": "A herança milenar chinesa ganha espaço na frente ribeirinha da capital.",
+          "body": "As margens do Tejo testemunharam recentemente a energia do Lisboa Dragon Boat Festival, trazendo para Portugal uma modalidade com 2500 anos de história. Os treinos e as exibições na água recordam a capacidade de renovação cultural que a cidade acolhe com naturalidade. Com a taxa de câmbio nos 0.89 EUR por cada 1 USD, os visitantes estrangeiros encontram estabilidade económica para planear os seus roteiros. Logo após o feriado da Implantação da República de 5 de outubro, a calmaria regressa aos espaços públicos ribeirinhos. Os residentes aproveitam os dias amenos para caminhar junto ao rio, observando o reflexo da luz outonal na água. A harmonia entre o património secular e as novas tradições desportivas define o pulso atual de Lisboa.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "03",
-          "headline": "As margens do Tejo recordam tradições milenares.",
-          "lede": "O Lisboa Dragon Boat Festival trouxe recentemente uma modalidade com 2500 anos às águas do rio.",
-          "body": "A herança náutica das embarcações com cabeça de dragão encontrou no Tejo um cenário improvável mas acolhedor. Esta prática ancestral, com dois mil e quinhentos anos de história, continua a fascinar quem observa a margem ribeirinha. Enquanto isso, na zona monumental, o altar-palco construído há três anos e orçado em três milhões de euros permanece visível e ao abandono. O contraste entre a efemeridade das regatas e a permanência destas estruturas cinzentas marca a paisagem urbana recente. O passeio fluvial continua a ser um exercício de contemplação silenciosa para quem procura o lado menos comercial da cidade. Os visitantes caminham junto à água, registando o silêncio próprio das segundas-feiras festivas.",
+          "headline": "A herança de Santo António cruza fronteiras rumo ao Rio.",
+          "lede": "O festival brasileiro acolhe a figura lisboeta mais devota.",
+          "body": "A iniciativa Santo António o Casamenteiro de Lisboa viajou até ao Festival do Rio, levando um pouco da identidade cultural lisboeta para o outro lado do Atlântico. Esta ponte artística reforça os laços históricos entre as duas margens da língua portuguesa. Financeiramente, a conversão mantém-se estável com 1 USD a valer 0.89 EUR, facilitando o planeamento de viagens e intercâmbios. Na sequência do feriado nacional de 5 de outubro referente à Implantação da República, os serviços públicos retomam o expediente regular. Os espaços culturais da cidade preparam novas exposições para receber o público que procura recantos abrigados. Lisboa respira um ambiente de transição suave entre o verão que se despede e a serenidade do outono.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         }
       ]
     },
     {
-      "city": "Porto",
+      "city": "PORTO",
       "items": [
         {
           "n": "01",
-          "headline": "A chuva fina acompanha os termómetros nos 16 a 26°C.",
-          "lede": "O Porto regista 0.9mm de precipitação e aguaceiros dispersos antes da noite cair pelas 19:09.",
-          "body": "O termómetro oscila suavemente entre 16 e 26°C nesta segunda-feira marcada pela Implantação da República em 2026-10-05. Os aguaceiros deixam 0.9mm de precipitação nas ruas graníticas, conferindo um brilho cinzento e húmido à baixa nortenha. A qualidade do ar permanece moderada, com o indicador PM2.5 a fixar-se em 19. Para quem efetua transações, a taxa de câmbio de 1 USD para 0.89 EUR aplica-se nos caixas automáticos locais. Devido ao feriado nacional, os serviços públicos, bancos e repartições governamentais mantêm as portas fechadas. O pôr do sol ocorre pontualmente às 19:09, tingindo o Douro com tons dourados por baixo das pontes históricas. É uma jornada ideal para abrigar-se em livrarias centenárias ou saborear um café morno enquanto a chuva cai brandamente lá fora.",
+          "headline": "O termómetro marca entre 17 e 21°C sob aguaceiros ligeiros.",
+          "lede": "A cidade Invicta regista precipitação residual e qualidade do ar moderada.",
+          "body": "A atmosfera portuense apresenta-se fresca, com temperaturas a oscilar entre 17 e 21°C e uma precipitação ligeira de 0.6mm que mal molha as pedras da calçada. A qualidade do ar regista níveis moderados, com PM2.5 em 16, mantendo o céu com nuvens passageiras até ao pôr do sol marcado para as 19:08. O câmbio oficial permanece estável nos 0.89 EUR por 1 USD, útil para planear as despesas quotidianas na cidade. Após o feriado de 5 de outubro dedicado à Implantação da República, os serviços públicos funcionam sem interrupções. Os residentes passeiam pelas ruas empedradas com agasalhos leves, desfrutando da luz difusa que caracteriza o outono nortenho. É o momento ideal para caminhar sem pressas pela zona histórica e observar o rio Douro.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "02",
-          "headline": "O Mosteiro de São Bento da Vitória reabre com música.",
-          "lede": "O ciclo Musical-mente marca o regresso dos concertos a este espaço histórico da cidade.",
-          "body": "As portas do Mosteiro de São Bento da Vitória voltam a abrir-se para acolher a programação do ciclo Musical-mente. Este monumento emblemático do Porto recupera a sua função de centro cultural vivo através de notas clássicas. A iniciativa convelhe melómanos e curiosos para o interior das suas paredes seculares, longe da humidade exterior. Perto dali, outras instituições preparam os cidadãos para a vida, como demonstram as novas ações de formação em reanimação promovidas na cidade. A arquitetura contemporânea também se destaca, com o Parque Desportivo de Ramalde a somar recentemente um prémio nacional de arquitetura pelo seu desenho funcional. A cidade equilibra assim a preservação patrimonial com a utilidade pública e o rigor estético moderno.",
+          "headline": "O Mosteiro de São Bento da Vitória reabre com música clássica.",
+          "lede": "O ciclo Musical mente devolve sonoridades seculares ao monumento.",
+          "body": "O Mosteiro de São Bento da Vitória reabre portas ao público, acolhendo um concerto inaugural do ciclo Musical mente que promete encher de notas os claustros históricos. A acústica ímpar do espaço convida a uma paragem prolongada para quem aprecia a simbiose entre arquitetura antiga e interpretação erudita. Fora de portas, o termómetro marca entre 17 e 21°C, acompanhado por 0.6mm de precipitação e uma qualidade do ar moderada com PM2.5 em 16. O sol despede-se às 19:08, permitindo assistir ao cair da noite sobre a cidade antes do recolher. A taxa de câmbio de 1 USD para 0.89 EUR mantém-se inalterada. A paragem festiva do feriado de 5 de outubro já passou, restando o ritmo calmo de uma cidade que trabalha e acolhe com sobriedade.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "03",
-          "headline": "A Rota da Seda cruza o espaço do atmosfera m.",
-          "lede": "A exposição Olhares revela registos visuais de geografias distantes na Invicta.",
-          "body": "A mostra intitulada Olhares – Pela Rota da Seda ocupa atualmente as galerias do atmosfera m no Porto. O percurso expositivo convida a uma viagem contemplativa pelas antigas rotas comerciais da Ásia, através de lentes contemporâneas. É um refúgio visual perfeito para escapar aos aguaceiros miudinhos que marcam a tarde na cidade. Os visitantes encontram nas salas um silêncio propício à observação detalhada de cada fotografia. Esta oferta cultural complementa a oferta museológica da Baixa, oferecendo alternativas para o dia de feriado em que o comércio tradicional reduz o ritmo. A circulação pedonal faz-se com calma, permitindo apreciar a pedra molhada e o reflexo das luzes urbanas ao cair da tarde.",
+          "headline": "O ritmo da dança e do design preenche a agenda portuense.",
+          "lede": "O festival de bachata e a exposição temporária animam o outono.",
+          "body": "O Porto celebra os 10 anos do Bachata Porto Festival, reunindo entusiastas para quatro dias de workshops e partilha artística. Em paralelo, a exposição temporária do Objeto do Mês convida a uma reflexão sobre a década de 2016 a 2025 nos espaços culturais locais. As condições meteorológicas registam 17 a 21°C, com 0.6mm de precipitação e um índice de qualidade do ar moderado de PM2.5 a 16. A noite cai pelas 19:08, convidando a recolhas aconchegantes em cafés tradicionais. A conversão de moeda fixa-se em 0.89 EUR por 1 USD. Superado o feriado de 5 de outubro da Implantação da República, a urbe recupera a sua cadência habitual entre o rio e o casario granítico.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         }
       ]
     },
     {
-      "city": "Sintra",
+      "city": "SINTRA",
       "items": [
         {
           "n": "01",
-          "headline": "A serra abriga-se sob um manto nublado de 17 a 26°C.",
-          "lede": "O céu permanece totalmente coberto em Sintra enquanto o crepúsculo se avizinha para as 19:14.",
-          "body": "Os termómetros na vila marcam entre 17 e 26°C nesta segunda-feira de 2026-10-05, sob um céu predominantemente encoberto. A qualidade do ar apresenta níveis bastante favoráveis, registando um índice PM2.5 de apenas 9. A taxa de câmbio de 1 USD para 0.89 EUR mantém-se estável para visitantes estrangeiros que necessitem de numerário. Devido ao feriado nacional da Implantação da República, os serviços públicos e os balcões bancários estão encerrados. O sol despede-se da serra às 19:14, filtrando a luz cinzenta através da vegetação luxuriante. A humidade típica da montanha convida a caminhar com agasalho leve pelos trilhos arborizados, longe do bulício do litoral. É um cenário de serenidade absoluta para quem busca recantos recatados.",
+          "headline": "A serra acolhe a neblina matinal entre 17 e 21°C.",
+          "lede": "O nevoeiro matutino molda a paisagem romântica com 0.2mm de precipitação.",
+          "body": "A atmosfera sintrense veste-se de nevoeiro característico, com temperaturas a variar entre 17 e 21°C e uma precipitação residual de 0.2mm que humedece a vegetação luxuriante. A qualidade do ar mantém-se em patamares moderados, com PM2.5 situando-se nos 18. O pôr do sol ocorre às 19:12, dissipando lentamente a neblina sobre os palácios e jardins históricos. No plano financeiro, 1 USD equivale a 0.89 EUR, facilitando as contas dos viajantes internacionais. O feriado nacional de 5 de outubro, relativo à Implantação da República, ficou para trás, permitindo que a atividade diária e os acessos aos monumentos decorram sem filas demoradas. É uma semana perfeita para deambubar pelos trilhos sombreados da serra com a devida cautela.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "02",
-          "headline": "Os cães voltam aos parques históricos após mais de um século.",
-          "lede": "A nova diretiva dos Parques de Sintra e Queluz permite a entrada de animais de companhia aos domingos.",
-          "body": "Pela primeira vez em mais de cem anos, os jardins palacianos de Sintra voltaram a abrir as portas aos cães a partir do último domingo. A medida altera discretamente o quotidiano dos passeios dominicais nos dominios de Queluz e da serra. Simultaneamente, a vila prepara-se para o Festival da Juventude Sintrense, que regressa este mês a Agualva e Mira Sintra com iniciativas locais. Na mesma linha de valorização comunitária, o Mercado da Várzea acolheu recentemente o tradicional Festival das Sopas, celebrando os sabores rústicos da região. Estes eventos reforçam o sentido de pertença e a partilha de tradições entre gerações. A serra continua a ser um repositório vivo de memórias antigas e novos hábitos sociais.",
+          "headline": "Os parques de Sintra e Queluz recebem cães após um século.",
+          "lede": "A histórica abertura aos animais altera a rotina dos jardins românticos.",
+          "body": "Os Parques de Sintra e Queluz voltaram a permitir a circulação de cães nos seus espaços verdes ao fim de mais de um século de interdição, marcando uma nova era na gestão destes jardins históricos. Esta medida exige civismo por parte dos tutores, garantindo a preservação da flora e do património arquitetónico envolvente. A temperatura na vila oscila entre 17 e 21°C, com uma leve neblina e 0.2mm de precipitação. O ar apresenta qualidade moderada com PM2.5 em 18, e a noite chega às 19:12. A taxa de câmbio permanece estável em 1 USD para 0.89 EUR. Passado o feriado da Implantação da República de 5 de outubro, a circulação de visitantes decorre com a tranquilidade habitual da serra.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         },
         {
           "n": "03",
-          "headline": "Um parque sintrense recua um século por um dia.",
-          "lede": "A recriação histórica transporta visitantes e residentes para as vivências oitocentistas da serra.",
-          "body": "A programação cultural da vila destaca-se esta semana pela iniciativa que faz um dos parques de Sintra recuar mais de 100 anos no tempo. Figurantes, vestes de época e sonoridades antigas recriam o ambiente romântico que outrora fascinou poetas e reis. Esta viagem cronológica oferece aos caminhantes uma perspetiva singular sobre a evolução paisagística e humana da montanha. O silêncio da aragem húmida pontua cada recanto dos jardins românticos, agora sob o céu encoberto de outubro. A vila recupera assim a sua cadência lenta, propícia à introspeção e à descoberta de detalhes botânicos discretos. É um convite permanente a observar a história não nos livros, mas na própria textura da vegetação e da pedra.",
+          "headline": "A gastronomia local celebra-se no Mercado da Várzea.",
+          "lede": "O Festival das Sopas e as recriações históricas animam a vila.",
+          "body": "O Mercado da Várzea acolhe o Festival das Sopas, enquanto outras iniciativas locais recuam no tempo para mostrar costumes com mais de um século de história. Estas iniciativas culturais reforçam a identidade comunitária de Sintra perante os visitantes atentos. O registo meteorológico aponta para temperaturas entre 17 e 21°C, neblina matinal e 0.2mm de precipitação. A qualidade do ar regista PM2.5 em 18, e o sol põe-se às 19:12. A conversão monetária mantém-se nos 0.89 EUR por cada 1 USD. Após a pausa institucional do feriado de 5 de outubro pela Implantação da República, os serviços municipais e comércios operam dentro da normalidade, convidando a provas gastronómicas sem pressas.",
           "source": "saudade desk",
-          "source_date": "2026-10-05"
+          "source_date": "2026-10-06"
         }
       ]
     }
