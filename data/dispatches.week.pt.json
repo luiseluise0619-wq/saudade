@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-06T06:00:00+09:00",
+  "updated": "2026-10-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A Avenida da Liberdade recebe o Festival Tribeca em outubro.",
+              "lede": "O festival muda-se para a principal avenida da cidade com um programa cultural intenso.",
+              "body": "As ruas centrais da cidade preparam-se para acolher a nova edição do Festival Tribeca Lisboa. A mudança para a Avenida da Liberdade traz uma dinâmica diferente ao espaço público e à circulação habitual. Com a chegada de figuras como Katie Holmes, Edward Burns, Zach Woods e Jerry Seinfeld, o evento atrai observadores atentos de todo o mundo. A atmosfera urbana mantém-se serena, apesar do movimento acrescido nas esplanadas e passeios. O câmbio oficial situa-se em 1 USD para 0.89 EUR, facilitando as trocas comerciais para quem visita a capital. É o momento ideal para caminhar sem pressa pelo eixo central.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "O céu limpo acompanha os dias amenos de outono na capital.",
+              "lede": "Os termómetros marcam entre 15 e 28°C com o sol a descer suavemente pelas colinas.",
+              "body": "As condições meteorológicas continuam generosas para quem prefere explorar a cidade a pé. A amplitude térmica diária oscila entre 15 e 28°C, garantindo tardes luminosas e noites frescas. O pôr do sol acontece pelas 19:08, tingindo o Tejo com tons dourados que convidam à contemplação. A qualidade do ar permanece num patamar considerado fair, com índices de PM2.5 nos 5, o que torna os miradouros especialmente agradáveis. As brisas leves cruzam os bairros históricos sem o bulício sufocante do verão. Os residentes aproveitam para redescobrir os jardins públicos e as praças arborizadas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "A terceira edição do festival de cinema traz novidades aos cinéfilos.",
+              "lede": "A curadoria reforça a presença de nomes internacionais na programação deste outono.",
+              "body": "A programação deste ano aposta em encontros intimistas entre criadores e público. Jerry Seinfeld e os seus convidados reforçam o cartaz com conversas informais sobre o fazer artístico. A organização promete surpresas para a terceira edição do Festival Tribeca Lisboa, consolidando o evento no calendário cultural. Os espaços ao ar livre ao longo da avenida adaptam-se para projeções e debates descontraídos. A moeda norte-americana troca-se a 0.89 EUR, uma referência útil para turistas que planeiam adquirir bilhetes ou publicações locais. Lisboa reafirma assim o seu papel de porto seguro para a cultura contemporânea.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Festival Internacional de Marionetas ocupa os palcos do Rivoli e Campo Alegre.",
+              "lede": "A arte milenar dos cordéis e das formas animadas regressa aos teatros municipais.",
+              "body": "As salas do Rivoli e de Campo Alegre abrem portas para receber o Festival Internacional de Marionetas do Porto. Esta iniciativa traz à Invicta companhias de várias origens, explorando a expressividade do teatro de objetos. A programação paralela estende-se a outros pontos da cidade, cruzando disciplinas artísticas e criando momentos de descoberta para residentes e viajantes. Paralelamente, a Alfândega do Porto abriga a exposição Homem Raiz de Agostinho Santos, celebrando 40 anos de carreira com uma retrospetiva marcante. Com uma taxa de câmbio de 1 USD para 0.89 EUR, o acesso a estes eventos culturais mantém-se simples e acessível.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "O céu encoberto define a paisagem urbana sob temperaturas moderadas.",
+              "lede": "A nebulosidade persistente desenha um cenário melancólico ideal para passeios longos.",
+              "body": "O termómetro regista valores entre 15 e 25°C, mantendo a atmosfera outonal típica da foz do Douro. O céu permanece overcast ao longo de todo o dia, filtrando a luz natural e suavizando as cores graníticas da cidade. O pôr do sol ocorre às 19:05, marcando o fim de tarde com tons cinzentos e dourados discretos. A qualidade do ar é classificada como fair, registando PM2.5 nos 6, o que garante um ambiente perfeitamente respirável junto ao rio. A conversão cambial permanece estável em 1 USD para 0.89 EUR para quem efectua transações correntes. É uma semana propícia para caminhar calmamente pelas pontes e ruas empedradas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "O teatro físico e as artes visuais dinamizam o outono nortenho.",
+              "lede": "Novos projetos artísticos ocupam espaços alternativos e galerias da cidade.",
+              "body": "O Festival Décimas apresenta o espetáculo Fireflies, uma peça que investiga os laços humanos através do movimento e do teatro físico. Esta proposta artística convida o público a refletir sobre a proximidade e a empatia em tempos modernos. Enquanto isso, o horizonte cultural já começa a olhar para o futuro com o anúncio do cartaz do Primavera Sound Barcelona 2027, aguçando a curiosidade sobre quem virá ao Porto. Os espaços públicos da cidade continuam tranquilos, permitindo que os visitantes desfruçam da arquitetura sem pressas. A cidade conserva o seu ritmo pausado e acolhedor.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Mercado da Várzea acolhem o Festival das Sopas e ritmos tradicionais.",
+              "lede": "A gastronomia local junta-se ao forró e a aulas de Zumba num ambiente familiar.",
+              "body": "O Mercado da Várzea de Sintra transforma-se num ponto de encontro comunitário com o Festival das Sopas. O evento combina a tradição culinária dos caldos caseiros com momentos de animação que incluem aulas de Zumba e música de forró. É uma excelente oportunidade para saborear ingredientes regionais e conviver com os habitantes locais. A taxa de câmbio fixa-se em 1 USD para 0.89 EUR, facilitando pequenas compras no mercado. A atmosfera é de partilha e simplicidade, longe dos circuitos puramente turísticos da vila.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "Parques e palácios voltam a receber animais de estimação após um século.",
+              "lede": "Uma nova norma permite a circulação de cães nos jardins históricos da serra.",
+              "body": "A paisagem cultural de Sintra regista uma mudança histórica com o regresso dos cães aos parques e jardins de Queluz e Sintra, depois de mais de um século de interdição. Esta medida, implementada recentemente, altera a rotina dos passeios pelos trilhos arborizados. A meteorologia acompanha este período de transição com céu parcialmente nublado e temperaturas entre 16 e 26°C. O pôr do sol dá-se às 19:09, iluminando a vegetação luxuriante com uma claridade suave. A qualidade do ar é considerada good, com valores de PM2.5 nos 5, proporcionando excelentes condições para caminhadas na natureza.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "A história dos bombeiros locais é recordada numa exposição em Queluz.",
+              "lede": "Vejas antigas e documentos raros contam a dedicação centenária das corporações.",
+              "body": "A cidade de Queluz abriga uma exposição dedicada à história dos Bombeiros de Sintra, exibindo viaturas clássicas e espólio fotográfico. A mostra presta homenagem ao civismo e à proteção do património natural e edificado ao longo de gerações. Paralelamente, algumas zonas específicas da região preparam recriações históricas onde o tempo parece recuar mais de 100 anos num único dia. Com uma conversão de 1 USD para 0.89 EUR, a visita aos núcleos museológicos decorre sem sobressaltos económicos. A serra mantém o seu manto verde e místico, acolhendo quem procura silêncio e memória.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-06T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O feriado da Implantação da República, a celebrar a 2026-10-05, trará visitantes aos palácios e trilhos sintrenses. Serviços públicos e repartições bancárias fecharão as portas nessa data festiva. A vila aguarda um fluxo moderado de excursionistas à procura de tranquilidade serrana. O termómetro marca entre 15 e 20°C, acompanhado por céu overcast e ar limpo com PM2.5 de 4. O sol despede-se às 19:20, deixando a serra envolta em penumbra poética.",
               "source": "saudade desk",
               "source_date": "2026-10-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-09-28T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival Queer Lisboa celebra a sua trigésima edição com cinema premiado.",
-              "lede": "O filme francês La Gradiva venceu a edição comemorativa. As salas mantêm a programação regular de outono.",
-              "body": "A capital encerra setembro com o reflexo cultural do Festival Queer Lisboa. A 30.ª edição destacou o filme francês La Gradiva, premiado pelo júri internacional. Para quem percorre a cidade, o câmbio atual fixa-se em 1 USD para 0.88 EUR. O Parque Eduardo VII acolhe três sugestões imperdíveis de roteiro urbano esta semana. Os residentes preparam-se também para o feriado nacional da Implantação da República a 2026-10-05, que trará alterações habituais aos serviços públicos.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "02",
-              "headline": "A Orquestra Metropolitana de Lisboa atua no Festival Jovens Músicos.",
-              "lede": "Teresa Macedo Ferreira junta-se à programação musical. Os espaços culturais da cidade adaptam-se ao ritmo da estação.",
-              "body": "A música erudita ocupa o calendário lisboeta com a colaboração da Orquestra Metropolitana de Lisboa e Teresa Macedo Ferreira. O Festival Jovens Músicos 2026 atrai públicos atentos aos auditórios centrais. No plano financeiro, a taxa de câmbio permanece estável em 0.88 EUR por cada USD. As margens do rio recebem também o entusiasmo do Lisboa Dragon Boat Festival. As repartições públicas e bancos lembrarão aos cidadãos o fecho próximo devido ao feriado de 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "03",
-              "headline": "O Parque Eduardo VII revela percursos botânicos e miradouros renovados.",
-              "lede": "Três paragens essenciais definem o passeio pelo parque. O outono instala-se calmamente sobre a colina.",
-              "body": "Aproveitar as avenidas centrais exige passos pausados entre os canteiros do Parque Eduardo VII. Três sugestões imperdíveis guiam o visitante pelas encostas arborizadas com vista para o Tejo. Com o euro cotado a 0.88 face ao USD, as esplanadas mantêm preços acessíveis aos viajantes. A agenda cultural ecoa o recente sucesso do Festival Queer Lisboa e o vigor da Orquestra Metropolitana de Lisboa. Aproxima-se o feriado de 2026-10-05 relativo à Implantação da República, aconselhando precaução em diligências administrativas.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival de Marionetas do Porto regressa com dez dias de espetáculos.",
-              "lede": "A programação explora o tema Ficções e Realidades. A temperatura oscila entre 16 e 22°C sob céus nublados.",
-              "body": "A Invicta acolhe o Festival de Marionetas do Porto durante 10 dias de representações dedicadas a Ficções e Realidades. A meteorologia regista 16–22°C com 0.6mm de precipitação e chuva leve, enquanto o sol se põe pelas 19:21. A qualidade do ar permanece em níveis fáceis, com PM2.5 a 11. O câmbio oficial situa-se em 1 USD para 0.88 EUR. O feriado da Implantação da República em 2026-10-05 condicionará o funcionamento de repartições e bancos na próxima semana.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "02",
-              "headline": "A Igreja da Lapa expõe o coração de D. Pedro durante três dias.",
-              "lede": "A relíquia histórica recebe visitantes em silêncio. A brisa atlântica traz uma leve precipitação de 0.6mm.",
-              "body": "A Igreja da Lapa abre portas para três dias de contemplação em torno do coração de D. Pedro. Fora de portas, a cidade respira a 16–22°C, com o pôr do sol marcado para as 19:21 e uma humidade residual de 0.6mm de chuva leve. A qualidade do ar regista PM2.5 em 11. Serralves prepara uma festa de encerramento para o mês de setembro, combinando cinema e música. O comércio local ajusta horários prevendo o feriado de 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "03",
-              "headline": "Serralves despede-se de setembro com uma festa de cinema e música.",
-              "lede": "O parque e o museu celebram o final do mês. A qualidade do ar mantém-se fair com PM2.5 de 11.",
-              "body": "O Porto diz adeus a setembro com eventos culturais que unem Serralves, o cinema e a música. A temperatura exterior move-se entre 16 e 22°C, acompanhada por 0.6mm de chuva leve e anoitecer às 19:21. A taxa de câmbio é de 0.88 EUR por cada USD. Paralelamente, o Pingo Doce reabre a sua loja no centro do Porto Santo, renovando o quotidiano insular. Os residentes anotam o encerramento de serviços devido ao feriado de 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Novas visitas guiadas revelam o lado romântico do Parque da Pena.",
-              "lede": "O percurso explora recantos históricos e trilhos arborizados. A temperatura atinge 26°C sob céus nublados.",
-              "body": "A Serra de Sintra convida a caminhadas contemplativas através de novas visitas guiadas dedicadas à vertente mais romântica do Parque da Pena. O termómetro varia entre 17 e 26°C, com o céu encoberto e anoitecer às 19:25. A qualidade do ar apresenta valores justos de PM2.5 a 8. A taxa de câmbio pratica-se a 0.88 EUR por USD. Os serviços administrativos lembram o fecho oficial de repartições no feriado nacional de 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "02",
-              "headline": "O Parque Natural de Sintra-Cascais mantém a sua proteção paisagística.",
-              "lede": "A vegetação densa beneficia da nebulosidade típica da serra. O pôr do sol ocorre às 19:25.",
-              "body": "A preservação do Parque Natural de Sintra-Cascais continua no centro das atenções locais e institucionais. Com uma amplitude térmica de 17–26°C e céu overcast, o ambiente convida à observação tranquila da natureza. A qualidade do ar regista um índice limpo de PM2.5 a 8. A conversão monetária permanece em 0.88 EUR por dólar americano. Os visitantes devem prever o impacto do feriado de 2026-10-05 na abertura de instituições públicas e correios.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
-            },
-            {
-              "n": "03",
-              "headline": "Os trilhos arborizados de Sintra oferecem refúgio sob céus nublados.",
-              "lede": "A atmosfera outonal suaviza a luz sobre os palácios. A temperatura máxima chega aos 26°C.",
-              "body": "Caminhar pelas encostas de Sintra revela matizes únicos sob um céu overcast e temperaturas de 17 a 26°C. O crepúsculo instala-se pontualmente às 19:25, com a qualidade do ar a marcar PM2.5 em 8. O câmbio atual opera em 0.88 EUR por 1 USD. Enquanto o Parque da Pena estreia roteiros românticos, a comunidade prepara-se para a pausa do feriado de 2026-10-05 dedicado à Implantação da República.",
-              "source": "saudade desk",
-              "source_date": "2026-09-28"
             }
           ]
         }

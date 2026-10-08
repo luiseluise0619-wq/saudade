@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-07T06:00:00+09:00",
+  "updated": "2026-10-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "CentroCentro acoge la obra plástica de Cruz Novillo.",
+              "lede": "La primera exposición dedicada al artista sonoro ocupa las salas municipales.",
+              "body": "El espacio cultural CentroCentro reúne en sus salas la primera exposición monográfica en Madrid dedicada a la trayectoria de Cruz Novillo como artista plástico y sonoro. Es una oportunidad excelente para observar la meticulosa geometría y el rigor estético que definieron la identidad visual moderna de España. La visita permite comprender cómo el diseño gráfico y la experimentación acústica confluyen en una misma sensibilidad metódica. Los visitantes encontrarán un montaje sobrio que invita a la contemplación pausada sin distracciones innecesarias. Conviene programar la llegada con calma para recorrer las piezas con el silencio que merecen. La muestra consolida al edificio de Cibeles como un refugio indispensable para el pensamiento visual contemporáneo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "BYREDO reabre su tienda insignia en el barrio de Salamanca.",
+              "lede": "El espacio renovado presenta la colección Future Memories.",
+              "body": "La firma de perfumería BYREDO ha reabierto sus puertas en Madrid tras una profunda intervención en su establecimiento. La reapertura va acompañada de la presentación de Future Memories, una propuesta olfativa que explora la nostalgia y el tiempo venidero. El local mantiene una atmósfera minimalista donde la madera noble y el aluminio dialogan con discreción. Los residentes que busquen un momento de tregua olfativa encontrarán en este rincón una pausa dentro del bullicio comercial. El personal atiende con un cuidado exquisito, guiando al visitante a través de composiciones complejas y sutiles. Es un ejercicio de diseño comercial que prioriza la experiencia táctil y la memoria personal por encima del consumo acelerado.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "Cierres administrativos por el festivo nacional del lunes 2026-10-12.",
+              "lede": "La Fiesta Nacional altera los servicios públicos y bancarios habituales.",
+              "body": "Con motivo de la Fiesta Nacional de España el lunes 2026-10-12, la actividad administrativa de la capital experimentará modificaciones sustanciales. Las oficinas gubernamentales, las sucursales bancarias y los servicios postales permanecerán cerrados durante toda la jornada festiva. Los viajeros y residentes deben anticipar cualquier gestión oficial para evitar demoras innecesarias a principios de semana. El tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR, un dato útil para quienes operan con divisas extranjeras estos días. Los comercios minoristas del centro operarán con horarios reducidos o permanecerán cerrados según el distrito. Las calles principales ofrecerán un pulso más sosegado, propicio para pasear sin prisas por los bulevares.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival Barcelona Dibuixa toma los espacios de Sant Andreu.",
+              "lede": "Talleres abiertos y creación espontánea en plazas y centros cívicos.",
+              "body": "El distrito de Sant Andreu acoge una nueva edición del festival Barcelona Dibuixa, convirtiendo las calles y plazas en talleres al aire libre. La iniciativa invita a residentes de todas las edades a experimentar con el trazo y el papel de forma totalmente libre. Es una cita pensada para observar el proceso creativo sin la presión del resultado final. Los centros cívicos y las bibliotecas colaboran ofreciendo soportes y materiales para los participantes. Conviene consultar la programación previa para acceder a los espacios con aforo limitado y asegurar una estancia tranquila. La calidad del aire es moderada, con un registro de PM2.5 de 7, lo que acompaña favorablemente las actividades peatonales al aire libre.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "Montjuïc se prepara para recibir el concierto de Oques Grasses.",
+              "lede": "El Estadi Olímpic ajusta sus accesos para la gran cita musical.",
+              "body": "El Estadi Olímpic de Montjuïc ultima los detalles organizativos para acoger el esperado concierto de Oques Grasses. Las autoridades locales han publicado las pautas de movilidad y los horarios de apertura de puertas para garantizar una llegada fluida. Se recomienda utilizar el transporte público y subir con antelación suficiente para evitar aglomeraciones en los funiculares. El entorno de la montaña ofrece un paseo apacible entre pinos y jardines antes de acceder al recinto deportivo. La calidad del aire se mantiene en niveles moderados, con un indicador de PM2.5 en 7, idóneo para transitar a pie por las faldas de la montaña. Los asistentes encontrarán un operativo diseñado para mantener el orden y la tranquilidad vecinal.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "Jornada festiva y cierre de oficinas este 2026-10-12.",
+              "lede": "La festividad nacional modifica los servicios administrativos y bancarios.",
+              "body": "El lunes 2026-10-12 se celebra la Fiesta Nacional de España, lo que implicará el cierre generalizado de oficinas públicas, bancos y administraciones. Los ciudadanos deben prever cualquier trámite bancario con antelación para no verse afectados por la pausa laboral. En el ámbito financiero, la moneda europea cotiza a un tipo de cambio de 1 USD por 0.89 EUR, estable para las transacciones internacionales. El transporte público funcionará con los horarios habituales de días festivos, reduciendo la frecuencia en las líneas urbanas principales. Los museos y centros expositivos mantendrán aperturas especiales, por lo que se aconseja verificar la cartelera antes de desplazarse. Las calles del Eixample mostrarán una quietud inusual, perfecta para la observación arquitectónica.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cielo cubierto y temperaturas templadas en la jornada porteña.",
+              "lede": "El termómetro se mueve entre 13 y 19°C bajo un manto gris.",
+              "body": "La jornada se presenta completamente overcast, con temperaturas que oscilan entre 13 y 19°C en toda la geografía urbana. La caída del sol está prevista para las 19:02, prolongando una tarde de luz difusa y tonos plateados sobre las cúpulas del centro. Es un clima propicio para recorrer las librerías de viejo de la Avenida Corrientes o buscar refugio en un café tradicional. Las condiciones atmosféricas invitan a caminar sin prisa, abrigados con una chaqueta ligera frente a la humedad del río. El ambiente porteño adquiere una sobriedad particular cuando el cielo se cubre por completo. Los parques como los Bosques de Palermo muestran una vegetación densa y silenciosa bajo esta luz atenuada.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "02",
+              "headline": "El cine inusual y el congreso asturiano animan la agenda cultural.",
+              "lede": "Buenos Aires reúne proyecciones independientes y lazos con la diáspora.",
+              "body": "La cartelera cultural de la ciudad acoge la vigesimoprimera edición del Festival de Cine Inusual, un espacio para narrativas alejadas de los circuitos comerciales. Paralelamente, la capital inaugura el V Congreso Mundial de Asturianía, congregando a la Asturias exterior en un encuentro de hermandad e identidad. Estas iniciativas conviven con propuestas de gran escala como el Gran Fondo Argentina 2026, que promueve el deporte infantil solidario. Con una temperatura exterior de 13 a 19°C y cielos cubiertos, recorrer las sedes culturales resulta especialmente cómodo y apacible. Los espectadores encontrarán salas íntimas y debates enriquecedores que reflejan la diversidad intelectual de la metrópoli. La ciudad demuestra una vez más su capacidad para albergar múltiples tradiciones en perfecta convivencia.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            },
+            {
+              "n": "03",
+              "headline": "Cierres por el Día del Respeto a la Diversidad Cultural el 2026-10-12.",
+              "lede": "El feriado nacional del próximo lunes altera la rutina institucional.",
+              "body": "El lunes 2026-10-12 se conmemora el Día del Respeto a la Diversidad Cultural, constituyendo un feriado nacional de carácter inamovible. Las dependencias gubernamentales, los bancos y las oficinas administrativas permanecerán cerradas durante toda la jornada. Los residentes y visitantes deben resolver cualquier trámite financiero antes del fin de semana largo para evitar inconvenientes operativos. El transporte público operará con cronograma de día feriado, disminuyendo ligeramente sus frecuencias habituales. Con una temperatura prevista entre 13 y 19°C y un cielo persistentemente overcast, el feriado invita al descanso en espacios cerrados. Las calles del microcentro experimentarán una pausa notable, ideal para observar la arquitectura sin el bullicio laboral cotidiano.",
+              "source": "saudade desk",
+              "source_date": "2026-10-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-07T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los espacios verdes de la ciudad reciben este fin de semana una propuesta lúdica centrada en la convivencia responsable con perros y gatos. La jornada discurre con registros térmicos de 8 a 16°C y un cielo nublado que suaviza la estancia en los parques urbanos. La puesta de sol se producirá a las 18:57, cerrando las actividades al aire libre antes del descenso nocturno de la temperatura. La calidad del aire se registra en un nivel moderado, con PM2.5 en 9, garantizando un entorno agradable para pasear. Se debe tener en cuenta que el próximo 2026-10-12 se conmemorará el Día del Respeto a la Diversidad Cultural, afectando los servicios bancarios y gubernamentales.",
               "source": "saudade desk",
               "source_date": "2026-10-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Comunidad reúne setenta piezas sobre el Siglo de Oro en la capital.",
-              "lede": "Una nueva exposición repasa la vida cultural y cotidiana de la época dorada madrileña.",
-              "body": "La Comunidad de Madrid ha inaugurado una cuidada exposición que reúne 70 piezas fundamentales para comprender cómo se vivió el Siglo de Oro en la capital. Los visitantes pueden contemplar objetos cotidianos, lienzos y documentos que retratan el pulso de una época irrepetible en las calles madrileñas. La muestra se complementa con visitas guiadas organizadas para profundizar en los detalles históricos de las piezas expuestas. Es una pausa excelente para los caminantes que buscan entender el pasado literario y artístico de la ciudad. Las salas ofrecen un recorrido silencioso y muy didáctico para los observadores más pacientes. Conviene recordar que el tipo de cambio actual se sitúa en 1 USD frente a 0.88 EUR para quienes planeen sus compras culturales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "El parque del Retiro acoge la cuarta edición del veterano encuentro madrileño.",
-              "lede": "Los jardines históricos celebran una nueva cita de su veterano evento con participación ciudadana.",
-              "body": "El parque de El Retiro se prepara para albergar la IV edición del Veteran Retiro Madrid, un encuentro consolidado en la agenda verde de la ciudad. Este evento reúne a entusiastas y curiosos bajo la sombra de los árboles centenarios que definen el paisaje del parque más querido de la capital. La cita coincide con el otoño madrileño, un periodo donde las mañanas invitan a pasear sin prisa por los senderos de tierra. Mientras la ciudad avanza hacia los festejos de octubre, los jardines conservan su habitual tranquilidad matutina para los caminantes y observadores. Es el momento perfecto para recorrer las alamedas antes de que lleguen las jornadas festivas nacionales. Los residentes aprovechan estos días para disfrutar de la vegetación en su transición estacional.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival Cine Por Mujeres presenta los largometrajes en competición.",
-              "lede": "La novena edición del certamen cinematográfico despliega sus proyecciones en salas seleccionadas.",
-              "body": "El Festival Cine Por Mujeres Madrid ha anunciado la programación oficial con los largometrajes que compiten en esta IX edición. Las proyecciones se reparten por distintos espacios culturales de la ciudad, ofreciendo una mirada diversa sobre la creación audiovisual contemporánea. Paralelamente, la agenda cultural incluye propuestas como las visitas guiadas a la exposición La Mecánica de la Verdad. Los próximos días festivos, como el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12, modificarán ligeramente el ritmo institucional madrileño. Los servicios bancarios y las oficinas de la administración pública permanecerán cerrados durante esas jornadas de festividad nacional. Es una semana propicia para compaginar el cine de autor con los paseos por los museos de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Marina seca del Port Vell estrena la pasarela de la moda.",
-              "lede": "La 080 Barcelona Fashion inaugura ubicación junto al mar con un festival de artes.",
-              "body": "La 080 Barcelona Fashion estrena nueva pasarela en la Marina seca del Port Vell, acompañada este año por un festival de las artes de la moda. La ciudad también impulsa el nuevo festival Plec, que coincide con estas jornadas dedicadas al diseño y la creatividad textil. El termómetro se mueve entre 21 y 24°C, con 1.5mm de precipitación y chubascos dispersos que mojarán los adoquines antes de la puesta de sol a las 19:33. La calidad del aire se mantiene en niveles pobres con un registro de PM2.5 de 20, por lo que se recomienda moderar el esfuerzo en los trayectos al aire libre. El tipo de cambio actual se sitúa en 1 USD por cada 0.88 EUR para los visitantes internacionales que recorran los espacios del puerto.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "La ciencia ciudadana y la historia del transporte ocupan la agenda.",
-              "lede": "El festival MUY Science Fest y los autobuses históricos marcan los itinerarios culturales.",
-              "body": "La creadora ibicenca Cristina Linares participa en MUY Science Fest, el mayor festival de ciencia que se celebra por primera vez en Barcelona. Este encuentro acerca la divulgación científica al público general en distintos espacios urbanos poco habituales para este tipo de debates. Muy cerca de allí, la tradicional exposición de autobuses históricos permite a los curiosos examinar vehículos que transportaron a varias generaciones de barceloneses. Con una temperatura exterior de 21 a 24°C y presencia de lluvias ligeras acumulando 1.5mm, los espacios cubiertos y los museos ganan protagonismo frente a los paseos marítimos. La puesta de sol se producirá a las 19:33, marcando el inicio de unas tardes apacibles bajo cielos nublados y con un índice PM2.5 de 20.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "Los festejos de octubre alteran el ritmo administrativo en la ciudad.",
-              "lede": "El calendario marca cierres institucionales ante la llegada de las celebraciones autonómicas.",
-              "body": "La proximidad de festividades como el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12 afectará al funcionamiento de oficinas públicas y entidades bancarias. Los residentes y viajeros deben planificar con antelación sus gestiones administrativas durante estas semanas de transición otoñal. El clima se muestra templado con registros de 21 a 24°C y una ligera lluvia de 1.5mm que refresca el ambiente urbano. El atardecer llegará puntualmente a las 19:33, ofreciendo tonos grises sobre el litoral. Conviene vigilar el índice PM2.5 de 20, que indica una calidad del aire pobre y aconseja caminar con calma por los parques urbanos mientras se disfruta de la programación cultural de la temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El universo de Mafalda cobra vida en una gran experiencia inmersiva.",
-              "lede": "Los personajes de Quino protagonizan una muestra interactiva en la capital porteña.",
-              "body": "El mundo de Mafalda cobra vida en una experiencia inmersiva en Buenos Aires que cautiva a grandes y pequeños por igual. La propuesta invita a recorrer las viñetas más emblemáticas de la historieta argentina a través de escenarios recreados con fidelidad y tecnología visual. La temperatura oscila entre 10 y 15°C, acompañada por una llovizna suave de 1mm que moja las veredas arboladas de la ciudad. El sol se ocultará a las 18:56, dando paso a noches frescas ideales para disfrutar de la variada oferta teatral y cultural que caracteriza a los barrios porteños. La calidad del aire se mantiene en niveles moderados con un valor de PM2.5 de 14, permitiendo pasear con total tranquilidad por las plazas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Mascotear reúne a los amantes de los animales en la ciudad.",
-              "lede": "Un fin de semana dedicado al bienestar animal y la convivencia responsable en espacios verdes.",
-              "body": "Llega el Festival Mascotear 2026 para amantes de perros y gatos, un evento diseñado para celebrar el vínculo con los animales de compañía. El encuentro ofrece actividades educativas, charlas especializadas y espacios de recreación al aire libre para toda la familia. Los asistentes deberán abrigarse ligeramente, ya que el termómetro marca entre 10 y 15°C y se registra 1mm de precipitación en forma de llovizna intermitente. La puesta de sol está prevista para las 18:56, marcando el fin de las actividades diurnas en los parques. Con una calidad del aire moderada y un índice PM2.5 de 14, el ambiente resulta idóneo para recorrer los puestos del festival con paso lento y contemplativo.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "La música contemporánea y las pausas festivas marcan la agenda porteña.",
-              "lede": "El Festival Nueva Ópera celebra su décimo aniversario mientras se acerca el fin de semana largo.",
-              "body": "El Festival Nueva Ópera cumple 10 años y presenta su nueva edición en Buenos Aires con una programación centrada en la experimentación sonora. Los teatros de la ciudad acogen estrenos que desafían los formatos tradicionales del género lírico. De cara al calendario, la llegada del Día del Respeto a la Diversidad Cultural el 2026-10-12 traerá consigo el cierre temporal de oficinas gubernamentales, bancos y dependencias postales. Las temperaturas de 10 a 15°C y la llovizna persistente de 1mm invitan a refugiarse en las salas de conciertos. El atardecer a las 18:56 cierra una jornada donde la calidad del aire, con un PM2.5 de 14, acompaña la melancólica belleza de la ciudad en otoño.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
             }
           ]
         }
