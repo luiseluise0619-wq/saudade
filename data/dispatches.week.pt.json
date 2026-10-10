@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-08T06:00:00+09:00",
+  "updated": "2026-10-10T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O festival Super Bock em Stock regressa este ano a Lisboa.",
+              "lede": "A música volta a ocupar a cidade com concertos inesperados em locais singulares.",
+              "body": "A cidade prepara-se para acolher mais uma edição do festival Super Bock em Stock, trazendo concertos intimistas a vários pontos da capital. Entre as propostas deste ano, destacam-se experiências imersivas únicas, com concertos gratuitos realizados dentro de uma cúpula de som e realidade virtual. Para os visitantes internacionais que planeiam assistir aos espetáculos, a taxa de câmbio atual fixa-se em 1 USD para 0.89 EUR. Os melómanos e observadores atentos encontram assim um pretexto perfeito para deambular pelas ruas ao anoitecer, redescobrindo a cidade através da escuta atenta e da exploração urbana sem pressas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "02",
+              "headline": "A histórica churrasqueira de Lisboa reabre para servir frango assado sempre quente.",
+              "lede": "Um clássico da restauração local recupera portas abertas na vizinhança.",
+              "body": "Depois de um período de ausência, uma das churrasqueiras mais tradicionais e acarinhadas da cidade volta a acender as brasas. O espaço recupera a sua essência original, focando-se no essencial: servir frango assado sempre quente a quem por lá passa a qualquer hora do dia. Num momento em que a taxa de câmbio se mantém estável nos 0.89 EUR por 1 USD, este retorno é um convite aos residentes e viajantes para saborearem a simplicidade da cozinha de bairro. É uma pausa acolhedora no ritmo urbano, ideal para quem aprecia a consistência dos sabores tradicionais numa tarde calma de outono.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "03",
+              "headline": "Concertos gratuitos dentro de uma cúpula de som e realidade virtual.",
+              "lede": "A tecnologia e a acústica cruzam-se numa experiência aberta a todos.",
+              "body": "A programação cultural de Lisboa continua a surpreender com iniciativas que fogem aos palcos tradicionais. Desta vez, o destaque vai para os concertos gratuitos realizados no interior de uma cúpula de som equipada com tecnologia de realidade virtual. Esta abordagem inovadora permite ao público vivenciar a música de uma forma profundamente imersiva e visualmente distinta. Com a taxa de câmbio nos 0.89 EUR por 1 USD, os viajantes que visitam a capital encontram aqui uma excelente alternativa cultural sem custos associados. É mais um exemplo de como os espaços públicos e criativos da cidade acolhem o futuro sem perder a proximidade com quem os habita.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Porto regista temperaturas entre 12 e 22°C sob céu encoberto.",
+              "lede": "A qualidade do ar mantém-se moderada, com valores de PM2.5 nos 16.",
+              "body": "A cidade Invicta desperta sob um céu totalmente encoberto, marcando uma amplitude térmica moderada entre 12 e 22°C ao longo do dia. A qualidade do ar é considerada moderada, registando o particulado PM2.5 nos 16, o que convida a um ritmo mais ponderado nas ruas. O sol despede-se às 19:01, antecipando noites compridas ideais para frequentar as salas de espetáculo locais. Para os visitantes que gerem o orçamento de viagem, a taxa de câmbio permanece fixada em 1 USD para 0.89 EUR. É o cenário ideal para cruzar pontes e avenidas, observando o quotidiano de uma cidade que abriga a cultura com serenidade.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "02",
+              "headline": "Rivoli e Campo Alegre acolhem espetáculos do Festival Internacional de Marionetas.",
+              "lede": "Os palcos do Porto recebem clássicos da literatura adaptados à arte do teatro de marionetas.",
+              "body": "O Festival Internacional de Marionetas do Porto toma conta da cidade, com o Teatro Municipal Rivoli e o Auditório Municipal Campo Alegre a servirem de palco principal. Esta edição traz até ao norte do país várias companhias que reinterpretam clássicos da literatura universal através da milenar arte dos bonecos de manipulação. Com a qualidade do ar a registar um nível moderado de PM2.5 nos 16 e temperaturas amenas entre 12 e 22°C, os espectadores desfrutam de passeios confortáveis entre salas de teatro. O pôr do sol ocorre às 19:01, marcando a transição perfeita para as récitas noturnas. A taxa de câmbio de 1 USD para 0.89 EUR facilita a planificação financeira dos visitantes estrangeiros que procuram este festival.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "03",
+              "headline": "A exposição Arquivo da Desobediência chega ao Porto para reflexão visual.",
+              "lede": "Novas perspetivas artísticas ocupam os espaços culturais da cidade.",
+              "body": "A oferta cultural da cidade enriquece-se com a chegada da exposição Arquivo da Desobediência a um dos espaços da cidade. Este projeto convida a uma observação cuidada sobre os movimentos de resistência social e artística ao longo dos tempos. Sob um céu encoberto e com termómetros a oscilar entre 12 e 22°C, a visita a este tipo de acervo proporciona uma tarde de contemplação tranquila. A qualidade do ar apresenta-se moderada com PM2.5 nos 16, e a noite instala-se pontualmente pelas 19:01. Com a conversão monetária nos 0.89 EUR por 1 USD, os viajantes encontram no Porto um destino culturalmente denso, onde a história e a arte contemporânea coexistem de forma harmoniosa.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sintra avança com temperaturas entre 14 e 25°C e céu encoberto.",
+              "lede": "A qualidade do ar é considerada fair, com PM2.5 nos 6.",
+              "body": "A serra de Sintra apresenta-se sob um manto de nuvens, registando uma temperatura amena que varia entre 14 e 25°C. A qualidade do ar é fair, com o indicador PM2.5 fixado nos 6, garantindo um ambiente limpo e agradável para caminhadas pelos trilhos históricos. O sol despede-se mais tarde, marcando o ocaso pelas 19:06, o que prolonga o encanto das vilas e dos palácios envolventes. Para quem chega de fora, a taxa de câmbio de 1 USD para 0.89 EUR continua vantajosa na gestão de despesas locais. É uma oportunidade perfeita para observar a paisagem protegida num ritmo lento e contemplativo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "02",
+              "headline": "O Mercado da Várzea recebe o Festival das sopas em Sintra.",
+              "lede": "Os sabores tradicionais reúnem os residentes à volta de receitas ancestrais.",
+              "body": "O Mercado da Várzea transforma-se no ponto de encontro gastronómico da região ao acolher o tradicional Festival das sopas. Este evento celebra a culinária local, oferecendo aos visitantes a oportunidade de provar diferentes variações de caldos e sopas preparadas com produtos da terra. A iniciativa decorre num cenário de temperaturas agradáveis entre 14 e 25°C, sob céu encoberto. A qualidade do ar fair, com PM2.5 nos 6, convida a permanecer ao ar livre até ao pôr do sol, que acontece pelas 19:06. Com a taxa de câmbio nos 0.89 EUR por 1 USD, esta experiência gastronómica torna-se acessível e acolhedora para qualquer viajante atento.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            },
+            {
+              "n": "03",
+              "headline": "Exposição VINIL de Luís Vasconcelos celebra 50 anos de música.",
+              "lede": "A fotografia documenta meio século de sonoridades captadas pelas lentes do autor.",
+              "body": "A vila de Sintra abriga atualmente a exposição VINIL, da autoria de Luís Vasconcelos, que celebra 50 anos de música através do registo fotográfico. A mostra exibe memórias visuais de concertos e artistas que marcaram o panorama musical nacional e internacional ao longo de cinco décadas. Os visitantes podem apreciar a exposição beneficiando de uma qualidade do ar fair, com PM2.5 nos 6, e termómetros entre 14 e 25°C. O dia termina com o pôr do sol pelas 19:06, sob um céu encoberto que convida à introspeção. A taxa de câmbio de 1 USD para 0.89 EUR acompanha a visita, permitindo desfrutar do património cultural sintrense sem pressas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-10"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-08T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O Festival das Sopas no Mercado da Várzea convidores a degustar caldos tradicionais preparados com ingredientes locais de excelência. Com temperaturas a rondar os 14 e 27°C e um ambiente overcast, uma sopa quente revela-se o acompanhamento perfeito para a tarde na serra. A qualidade do ar permanece fair, com 5 PM2.5, assegurando um passeio saudável. A taxa de câmbio encontra-se fixada em 1 USD para 0.89 EUR para quem viaja com divisas estrangeiras. O pôr do sol dá-se às 19:18, fechando o dia com tons dourados sobre a vegetação luxuriante. Estes eventos gastronómicos complementam a oferta cultural da região, juntando-se a iniciativas como o Festival da Juventude Sintrense para dinamizar o concelho ao longo de todo o mês.",
               "source": "saudade desk",
               "source_date": "2026-10-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O centro pastoral dos jesuítas reabre portas na cidade.",
-              "lede": "O CUPAV acolhe novamente encontros e silêncio na capital.",
-              "body": "As portas do CUPAV, o centro pastoral dos jesuítas, reabrem finalmente em Lisboa. Este espaço renovado convida a momentos de pausa no buliço urbano. É um local de encontro discreto para quem procura reflexão. A programação cultural e espiritual retoma o seu ritmo habitual. Os visitantes encontram aqui uma atmosfera propícia à leitura e ao descanso. A taxa de câmbio atual fixa-se em 1 USD para 0.88 EUR para os viajantes.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "O Festival Queer Lisboa celebra o cinema francês.",
-              "lede": "O filme La Gradiva vence a 30.ª edição do certame.",
-              "body": "A edição número 30 do Festival Queer Lisboa consagrou o filme francês La Gradiva como grande vencedor. As salas de cinema da cidade acolheram sessões esgotadas ao longo da semana. O público respondeu com curiosidade a esta seleção cinematográfica exigente. As projeções noturnas trouxeram cinefilia e debate aos bairros lisboetas. A taxa de câmbio permanece em 1 USD para 0.88 EUR. O próximo fim de semana prolongado trará o feriado da Implantação da República em 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "O Lisboa Dragon Boat Festival estreia-se nas águas do Tejo.",
-              "lede": "Mais de 700 participantes inauguram a competição náutica.",
-              "body": "Mais de 700 participantes marcam presença na primeira edição do Lisboa Dragon Boat Festival. O rio Tejo serve de palco a esta vibrante competição de barcos de dragão. As equipas deslizam pela água sob o olhar atento dos passeantes na margem. Este evento desportivo traz nova vida náutica à frente ribeirinha da cidade. A organização prepara já as finais para o próximo fim de semana. Recorde-se que o feriado da Implantação da República ocorre a 2026-10-05.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A temperatura desce e o céu cobre-se de nuvens no Porto.",
-              "lede": "Os termómetros marcam entre 13 e 22°C sob um manto cinzento.",
-              "body": "A cidade vive dias de transição com temperaturas entre 13 e 22°C e o céu totalmente overcast. O pôr do sol acontece pontualmente às 19:16, fechando a tarde com luz difusa. A qualidade do ar permanece fair, registando um valor de PM2.5 de 12. Estas condições convidam a longas caminhadas abrigadas pelas ruas graníticas. Os cafés históricos acolhem quem procura refúgio do vento fresco. A taxa de câmbio opera a 1 USD para 0.88 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "O Mosteiro de São Bento da Vitória reabre com quatro dias de música.",
-              "lede": "Performances artísticas animam o monumento histórico recuperado.",
-              "body": "O Mosteiro de São Bento da Vitória reabre portas no Porto com um ciclo de quatro dias de música e performances. O espaço monástico recupera a centralidade cultural na baixa portuense. Os espectadores preenchem o claustro para escutar os concertos intimistas programados. A oferta artística cruza a tradição patrimonial com a criação contemporânea. A qualidade do ar na cidade é fair com PM2.5 em 12. O termómetro varia entre 13 e 22°C enquanto a noite cai às 19:16.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "A palavra dita regressa no festival Encontro do conto.",
-              "lede": "A narração oral ocupa espaços culturais da Invicta.",
-              "body": "O festival Encontro do conto traz contadores de histórias de vários pontos para partilhar narrativas. As palavras ganham corpo em bibliotecas e salas acolhedoras da cidade. O público escuta em silêncio atento as lendas e memórias partilhadas em voz alta. É um momento de partilha essencial numa altura em que o céu do Porto se mantém overcast. A temperatura oscila entre 13 e 22°C. A taxa de câmbio fixa-se em 1 USD para 0.88 EUR, e o feriado de 2026-10-05 aproxima-se.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sintra acolhe novas visitas guiadas pelo Parque da Pena.",
-              "lede": "Percursos inéditos revelam o lado mais romântico da serra.",
-              "body": "Novas visitas guiadas percorrem agora o Parque da Pena, revelando recantos e histórias de cariz romântico. O nevoeiro característico envolve a vegetação luxuriante sob temperaturas de 15 a 20°C. O céu permanece overcast e a noite encerra a serra às 19:20. A qualidade do ar é considerada fair, com um índice de PM2.5 de 4. Estes passeios pedestres exigem calçado adequado devido à humidade matinal. A taxa de câmbio local mantém-se em 1 USD para 0.88 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "02",
-              "headline": "O projeto Alvarinhos’26 inaugura nova sede e espaço etnográfico.",
-              "lede": "A cultura local ganha um ponto de encontro permanente.",
-              "body": "O projeto Alvarinhos’26 inaugura a sua nova sede acompanhada por uma exposição etnográfica dedicada à região. Este núcleo museológico preserva memórias rurais e saberes ancestrais da vila de Sintra. Os visitantes podem explorar artefactos e testemunhos visuais do passado saloio. A iniciativa dinamiza a vida comunitária longe do eixo estritamente monumental. A temperatura exterior varia entre 15 e 20°C sob um céu overcast. A noite desce placidamente pelas encostas às 19:20.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
-            },
-            {
-              "n": "03",
-              "headline": "A serra prepara-se para o fim de semana prolongado de Outubro.",
-              "lede": "O feriado da Implantação da República altera o ritmo da vila.",
-              "body": "O feriado da Implantação da República, a celebrar a 2026-10-05, trará visitantes aos palácios e trilhos sintrenses. Serviços públicos e repartições bancárias fecharão as portas nessa data festiva. A vila aguarda um fluxo moderado de excursionistas à procura de tranquilidade serrana. O termómetro marca entre 15 e 20°C, acompanhado por céu overcast e ar limpo com PM2.5 de 4. O sol despede-se às 19:20, deixando a serra envolta em penumbra poética.",
-              "source": "saudade desk",
-              "source_date": "2026-10-01"
             }
           ]
         }
