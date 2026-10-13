@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-10-12T06:00:00+09:00",
-  "next_filing": "2026-10-12T21:00:00+00:00",
+  "filed_at": "2026-10-13T06:00:00+09:00",
+  "next_filing": "2026-10-13T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "La Fiesta Nacional de España cierra hoy los organismos oficiales.",
-          "lede": "Los bancos y las oficinas públicas permanecen sin actividad durante esta jornada festiva.",
-          "body": "El 2026-10-12 trae consigo la conmemoración de la Fiesta Nacional de España, paralizando la gestión administrativa habitual en toda la capital. Los visitantes y residentes deben tener en cuenta que los trámites en oficinas gubernamentales y sucursales bancarias se reanudarán al día siguiente. El cambio oficial se mantiene estable con 1 USD equivalente a 0.89 EUR para quienes necesiten realizar operaciones financieras. Las calles principales adoptan un ritmo pausado mientras los madrileños disfrutan del día festivo en plazas y paseos. Conviene planificar cualquier diligencia con antelación para evitar sorpresas ante las puertas cerradas de los servicios públicos esenciales.",
+          "headline": "Madrid celebra la Fiesta Nacional de España con restricciones administrativas puntuales.",
+          "lede": "Los servicios públicos y las oficinas bancarias ajustan sus horarios tras el festivo del 12 de octubre.",
+          "body": "El calendario laboral de esta semana viene marcado por la celebración de la Fiesta Nacional de España, fijada el 12 de octubre. Conviene recordar que esta festividad nacional comporta el cierre generalizado de oficinas gubernamentales, entidades bancarias y dependencias postales durante el lunes. Para el viajero y el residente, esto significa planificar con antelación cualquier gestión administrativa o cambio de moneda extranjera. La tasa de cambio vigente se sitúa en 1 USD frente a 0.89 EUR, un dato útil para quienes operan con divisas en estos días festivos. La ciudad retoma paulatinamente su ritmo habitual a partir del martes, con los comercios y servicios abiertos en horario comercial ordinario. Los museos municipales y las principales pinacotecas nacionales mantienen sus puertas abiertas al público con normalidad.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "02",
-          "headline": "Macondo Park acoge hoy el concierto de Shakira.",
-          "lede": "El espacio cultural detalla sus horarios de apertura y cierre para la gran cita musical.",
-          "body": "La agenda dominical en la capital destaca por la celebración musical que acoge Macondo Park en esta jornada. Los asistentes deben consultar previamente los horarios de acceso para gestionar la entrada al recinto con la debida antelación. Este evento se suma a una variada programación cultural que incluye el Festival Cine Por Mujeres Madrid y la exposición de acuarelas de Anne d’Orléans. Quienes prefieran una ruta artística alternativa pueden visitar las salas donde se exhiben Memorias, flores y paisajes. La ciudad combina así grandes citas multitudinarias con espacios de contemplación estética más íntimos y reposados para todos los públicos.",
+          "headline": "El Festival Internacional de Día de Muertos llega a los espacios culturales madrileños.",
+          "lede": "La ciudad acoge nuevas expresiones artísticas y propuestas comerciales en sus principales arterias.",
+          "body": "La oferta cultural de Madrid se amplía esta semana con la llegada del primer Festival Internacional de Día de Muertos. Este evento acerca a diferentes puntos de la capital exposiciones, altares tradicionales y muestras gastronómicas de carácter internacional. Paralelamente, el sector comercial registra novedades significativas en el centro urbano. Uniqlo consolida su presencia comercial en España tras inaugurar un nuevo establecimiento en Madrid, elevando a 8 el número total de tiendas de la firma japonesa en el país. En el ámbito del ocio familiar, el complejo temático Real Madrid World reabre sus puertas tras un periodo de pausa técnica. Las condiciones ambientales se mantienen estables en la capital, registrando un nivel de calidad del aire moderado con un valor de PM2.5 de 13. Estas circunstancias favorecen los paseos al aire libre por los parques urbanos sin restricciones significativas.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "03",
-          "headline": "El Festival Cine Por Mujeres presenta su competición internacional.",
-          "lede": "La muestra cinematográfica selecciona los mejores largometrajes para sus proyecciones en salas.",
-          "body": "Madrid consolida su oferta cultural otoñal con la presentación oficial de los largometrajes seleccionados para la Competición Internacional. Las salas asociadas al festival abren sus puertas para acoger proyecciones que destacan por su mirada autoral y diversa. Paralelamente, los amantes del arte callejero pueden disfrutar del festival que ensalza la resistencia y la destreza de bailar en la calle. Estas actividades convierten el fin de semana en un punto de encuentro ineludible para quienes buscan propuestas creativas al margen del circuito comercial tradicional. La jornada invita a recorrer la ciudad de norte a sur descubriendo talento emergente en cada rincón.",
+          "headline": "La Hispanidad deja paso a la programación cultural otoñal en los teatros de la capital.",
+          "lede": "Los espectáculos piromusicales cierran el ciclo festivo mientras la ciudad recupera su rutina.",
+          "body": "Tras el reciente espectáculo piromusical que conmemoró la Hispanidad en diversos enclaves de Madrid, la actividad cultural se reorienta hacia los auditorios y teatros. El ritmo ciudadano vuelve a centrarse en las agendas de conciertos, exposiciones temporales y muestras de diseño urbano. Los paseantes que recorren el centro encuentran calles concurridas pero transitables, gracias a unos índices de contaminación que se mueven en parámetros moderados. Los mercados de abastos y las librerías del barrio de las Letras retoman sus horarios comerciales habituales tras el paréntesis festivo del lunes. El comercio local aprovecha la llegada de mediados de octubre para presentar sus colecciones de temporada. Es un momento propicio para caminar sin prisa por los bulevares madrileños, observando el cambio tonal en la vegetación de los paseos arbolados.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Barcelona amanece con cielos cubiertos y ambiente fresco.",
-          "lede": "Los termómetros se mueven entre los 17°C y los 22°C bajo una ligera capa de nubes.",
-          "body": "El clima de este 2026-10-12 presenta temperaturas templadas que oscilan entre los 17°C y los 22°C en toda la franja costera. La calidad del aire se registra en niveles moderados con un valor de PM2.5 de 15, aconsejando paseos tranquilos sin grandes exigencias físicas. La puesta de sol está prevista para las 19:15, marcando el final de una jornada donde el cielo permanece completamente overcast. El tipo de cambio se mantiene en 1 USD por 0.89 EUR, facilitando las transacciones habituales de los viajeros internacionales. Las condiciones meteorológicas invitan a recorrer los parques y paseos marítimos con una prenda ligera.",
+          "headline": "Barcelona reanuda su actividad tras la jornada festiva del 12 de octubre.",
+          "lede": "Las administraciones públicas y los servicios bancarios retoman su atención al público tras el festivo nacional.",
+          "body": "La festividad de la Fiesta Nacional de España, celebrada el 12 de octubre, condiciona la apertura de servicios administrativos y bancarios en la capital catalana. Durante este lunes festivo, las oficinas de correos, los organismos oficiales y las entidades bancarias permanecen cerradas al público. Los visitantes que necesiten realizar operaciones financieras deben tener en cuenta la tasa de cambio actual, fijada en 1 USD equivalente a 0.89 EUR. A partir del martes, la actividad económica y comercial recupera su dinamismo habitual en todos los barrios de la ciudad. El transporte público opera con normalidad, facilitando los desplazamientos cotidianos por la red de metro y autobús. Los mercados municipales vuelven a abrir sus puestos con productos de temporada, marcando el pulso cotidiano de la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "02",
-          "headline": "La Hispanidad modifica la apertura comercial en Catalunya.",
-          "lede": "El festivo nacional de hoy altera el horario habitual de grandes superficies y centros comerciales.",
-          "body": "Con motivo del 2026-10-12 y la celebración de la Hispanidad, la actividad comercial sufre modificaciones notables en Barcelona y su área metropolitana. Conviene revisar qué centros comerciales abren sus puertas hoy antes de planificar cualquier compra de última hora. Las oficinas bancarias y la administración pública permanecen cerradas al tratarse de una jornada festiva nacional ineludible. A pesar de los cierres institucionales, la oferta cultural sigue activa con propuestas como el festival Directes Estrella Damm 150 y el certamen In-Edit 2026. Los ciudadanos aprovechan el día libre para pasear por una ciudad que respira un ritmo inusualmente calmado y reflexivo.",
+          "headline": "El Tibidabo conmemora sus 125 años de historia sobre el horizonte barcelonés.",
+          "lede": "El parque de atracciones más antiguo de España celebra su aniversario con propuestas renovadas.",
+          "body": "El parque de atracciones del Tibidabo celebra sus 125 años de historia consolidado como el recinto de ocio más antiguo del país. Situado en la cumbre de la montaña, ofrece vistas panorámicas sobre todo el litoral barcelonés y la llanura circundante. En el ámbito musical, la programación de los próximos meses empieza a revelar citas destacadas. Joan As Police Woman ha confirmado su actuación dentro de la programación del Festival Empremtes Barcelona prevista para 2027. Por su parte, la emblemática discoteca Karma reabre sus puertas en la plaza Reial tras 7 meses de cierre, estrenando una imagen renovada que respeta su legado histórico. La calidad del aire en la ciudad se mantiene en niveles moderados, con un registro de PM2.5 situado en 22. Estas condiciones atmosféricas permiten disfrutar de los espacios abiertos y de los paseos marítimos con total tranquilidad.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "03",
-          "headline": "In-Edit 2026 revela su programación de documentales musicales.",
-          "lede": "El festival de referencia anuncia los títulos que componen su esperada cartelera de este año.",
-          "body": "La música y el cine documental se dan la mano en Barcelona gracias al festival In-Edit 2026, que ya ha desvelado su programación completa. Paralelamente, el Parque Deportivo Ebro recupera la normalidad tras la reaparición de Gorka Buil después de más de seis meses de lesión. La oferta de ocio se completa con las actuaciones del ciclo Directes Estrella Damm 150, que llenan de acordes diversos locales de la ciudad. Los espectadores pueden adquirir sus localidades anticipadamente para evitar aglomeraciones en taquilla durante las proyecciones más concurridas. Es una semana excelente para conectar con la vertiente más sonora y cinematográfica de la cultura urbana.",
+          "headline": "La música de autor y los espacios históricos marcan la agenda cultural de la semana.",
+          "lede": "Homenajes a figuras esenciales de la canción conviven con la reapertura de locales emblemáticos.",
+          "body": "La memoria musical de Barcelona evoca esta semana la figura de Tete Montoliu a través del recuerdo de los versos de Serrat y sus entrañables Paraules d'amor. Este tipo de guiños culturales recuerdan el profundo arraigo de la tradición jazzística y poética en los locales de la ciudad. La recuperación de espacios nocturnos legendarios como el Karma en la plaza Reial dinamiza de nuevo la vida social del barrio Gótico. Los paseantes que transitan por el centro histórico pueden comprobar cómo la ciudad equilibra su patrimonio arquitectónico con la modernización de sus locales de ocio. Las condiciones meteorológicas otoñales acompañan los recorridos a pie por los callejones del Born y el barrio antiguo. El aire moderadamente limpio invita a detenerse en las terrazas y plazas porticadas sin el bullicio masivo del verano.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Una ligera llovizna acompaña el festivo en Buenos Aires.",
-          "lede": "El termómetro marca entre 10°C y 15°C con una mínima acumulación de 0.9mm de precipitación.",
-          "body": "El 2026-10-12 amanece con un clima fresco y húmedo en la capital argentina, registrando temperaturas de 10°C a 15°C. La ligera llovizna deja apenas 0.9mm de precipitación, ideal para caminar con paraguas por los barrios tradicionales. La calidad del aire es fair con un registro de PM2.5 de 6, garantizando una atmósfera limpia y agradable. El ocaso llegará puntualmente a las 19:05, cerrando el día del respeto a la diversidad cultural con tonos crepusculares sobre el río. Los porteños disfrutan de una jornada apacible que invita a resguardarse en cafés literarios y librerías históricas.",
+          "headline": "Buenos Aires transita un lunes fresco con lloviznas y ocaso a las 19:06.",
+          "lede": "El termómetro se mueve entre los 13 y los 18°C mientras persisten precipitaciones leves en la ciudad.",
+          "body": "Las condiciones meteorológicas en Buenos Aires vienen marcadas por un registro térmico que oscila entre los 13 y los 18°C. La jornada presenta una atmósfera húmeda, acompañada por una ligera precipitación acumulada de 2.6mm en forma de llovizna persistente. El sol se ocultará en el horizonte porteño a las 19:06, ofreciendo una tarde de luz difusa ideal para la lectura en espacios interiores. Esta semana también coincide con el cierre de las conmemoraciones vinculadas al Día del Respeto a la Diversidad Cultural celebrado el 12 de octubre. Conviene recordar que las oficinas gubernamentales y bancarias operan con esquemas reducidos o retomarán la atención completa pasada la fecha conmemorativa. El ambiente urbano invita a refugiarse en cafés tradicionales mientras la llovizna fina acompaña el compás cotidiano de las avenidas.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "02",
-          "headline": "Cortes de tráfico por la carrera Gran Fondo Buenos Aires.",
-          "lede": "Varias avenidas y autopistas principales permanecen cortadas debido a la gran cita ciclista.",
-          "body": "La celebración del evento deportivo Gran Fondo Buenos Aires modifica sustancialmente la movilidad urbana durante esta jornada festiva. Los automovilistas deben prestar atención a los desvíos señalizados en las avenidas y autopistas afectadas por el paso de los ciclistas. Esta competición exige planificar los desplazamientos con gran margen de tiempo para evitar demoras innecesarias en los accesos al centro. A pesar de los cortes de tráfico, la ciudad mantiene su espíritu festivo con motivo del feriado nacional. Se recomienda utilizar el transporte subterráneo o caminar para sortear con éxito los tramos reservados exclusivamente para la prueba.",
+          "headline": "El Parque de la Ciudad amplía sus accesos y abre sus puertas de lunes a lunes.",
+          "lede": "Los espacios verdes metropolitanos reorganizan sus horarios para recibir a los visitantes cotidianos.",
+          "body": "El Parque de la Ciudad ha oficializado su apertura de lunes a lunes, facilitando nuevos accesos y horarios para el disfrute de la comunidad. Esta medida permite que los vecinos y visitantes aprovechen los espacios verdes en cualquier jornada de la semana, al margen de los fines de semana. La oferta recreativa de la capital se diversifica con la llegada de propuestas gastronómicas y festivales internacionales. El reconocido festival Meat & Fire, originario de Barcelona, desembarca en Buenos Aires para sorprender al país del asado con técnicas culinarias diversas. Asimismo, la ciudad experimenta un auge notable en la música de raíz con el boom del folklore, manifestado en peñas, festivales masivos y transmisiones en streaming que movilizan a numeroso público. La temperatura actual, entre 13 y 18°C, resulta propicia para recorrer estos espacios al aire libre.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         },
         {
           "n": "03",
-          "headline": "Meat & Fire y el festival de luces renuevan la agenda.",
-          "lede": "La gastronomía internacional y las instalaciones lumínicas atraen a los curiosos este fin de semana.",
-          "body": "Buenos Aires importa el éxito culinario de Barcelona con la llegada de Meat & Fire, buscando sorprender al país del asado con nuevas técnicas. Los interesados también pueden asegurar sus últimas entradas para el festival de luces que transforma un rincón urbano en una playa de Tailandia. Estas propuestas dinamizan el tiempo de ocio durante el fin de semana largo, ofreciendo alternativas originales para todos los públicos. La combinación de festivales gastronómicos y muestras visuales consolida a la capital como un referente cultural inagotable. Conviene adquirir los abonos con antelación para no perderse los espectáculos de mayor demanda en esta temporada.",
+          "headline": "La agenda cultural porteña combina festivales lumínicos y tradiciones musicales.",
+          "lede": "Las entradas para los espectáculos visuales se agotan mientras el folklore gana protagonismo en las peñas.",
+          "body": "El movimiento cultural de Buenos Aires destaca estos días por la alta demanda de localidades para el innovador festival de luces que transforma el paisaje urbano en una playa inspirada en Tailandia. Los residentes apuran la adquisición de las últimas entradas disponibles para este espectáculo visual que altera la fisonomía nocturna de la capital. Paralelamente, la tendencia del folklore sigue en alza, consolidando un circuito de peñas y encuentros musicales que atraen a audiencias de todas las edades. Con una tarde fresca marcada por los 13 a 18°C y una ligera llovizna de 2.6mm, los espacios cerrados y centros culturales se convierten en el refugio predilecto. El atardecer previsto para las 19:06 marca el inicio de una noche apacible en los barrios tradicionales, donde la música en directo y la gastronomía local ofrecen un respiro frente a la humedad ambiente.",
           "source": "saudade desk",
-          "source_date": "2026-10-12"
+          "source_date": "2026-10-13"
         }
       ]
     }
