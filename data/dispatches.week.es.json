@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-12T06:00:00+09:00",
+  "updated": "2026-10-13T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-13T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid celebra la Fiesta Nacional de España con restricciones administrativas puntuales.",
+              "lede": "Los servicios públicos y las oficinas bancarias ajustan sus horarios tras el festivo del 12 de octubre.",
+              "body": "El calendario laboral de esta semana viene marcado por la celebración de la Fiesta Nacional de España, fijada el 12 de octubre. Conviene recordar que esta festividad nacional comporta el cierre generalizado de oficinas gubernamentales, entidades bancarias y dependencias postales durante el lunes. Para el viajero y el residente, esto significa planificar con antelación cualquier gestión administrativa o cambio de moneda extranjera. La tasa de cambio vigente se sitúa en 1 USD frente a 0.89 EUR, un dato útil para quienes operan con divisas en estos días festivos. La ciudad retoma paulatinamente su ritmo habitual a partir del martes, con los comercios y servicios abiertos en horario comercial ordinario. Los museos municipales y las principales pinacotecas nacionales mantienen sus puertas abiertas al público con normalidad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Internacional de Día de Muertos llega a los espacios culturales madrileños.",
+              "lede": "La ciudad acoge nuevas expresiones artísticas y propuestas comerciales en sus principales arterias.",
+              "body": "La oferta cultural de Madrid se amplía esta semana con la llegada del primer Festival Internacional de Día de Muertos. Este evento acerca a diferentes puntos de la capital exposiciones, altares tradicionales y muestras gastronómicas de carácter internacional. Paralelamente, el sector comercial registra novedades significativas en el centro urbano. Uniqlo consolida su presencia comercial en España tras inaugurar un nuevo establecimiento en Madrid, elevando a 8 el número total de tiendas de la firma japonesa en el país. En el ámbito del ocio familiar, el complejo temático Real Madrid World reabre sus puertas tras un periodo de pausa técnica. Las condiciones ambientales se mantienen estables en la capital, registrando un nivel de calidad del aire moderado con un valor de PM2.5 de 13. Estas circunstancias favorecen los paseos al aire libre por los parques urbanos sin restricciones significativas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "03",
+              "headline": "La Hispanidad deja paso a la programación cultural otoñal en los teatros de la capital.",
+              "lede": "Los espectáculos piromusicales cierran el ciclo festivo mientras la ciudad recupera su rutina.",
+              "body": "Tras el reciente espectáculo piromusical que conmemoró la Hispanidad en diversos enclaves de Madrid, la actividad cultural se reorienta hacia los auditorios y teatros. El ritmo ciudadano vuelve a centrarse en las agendas de conciertos, exposiciones temporales y muestras de diseño urbano. Los paseantes que recorren el centro encuentran calles concurridas pero transitables, gracias a unos índices de contaminación que se mueven en parámetros moderados. Los mercados de abastos y las librerías del barrio de las Letras retoman sus horarios comerciales habituales tras el paréntesis festivo del lunes. El comercio local aprovecha la llegada de mediados de octubre para presentar sus colecciones de temporada. Es un momento propicio para caminar sin prisa por los bulevares madrileños, observando el cambio tonal en la vegetación de los paseos arbolados.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona reanuda su actividad tras la jornada festiva del 12 de octubre.",
+              "lede": "Las administraciones públicas y los servicios bancarios retoman su atención al público tras el festivo nacional.",
+              "body": "La festividad de la Fiesta Nacional de España, celebrada el 12 de octubre, condiciona la apertura de servicios administrativos y bancarios en la capital catalana. Durante este lunes festivo, las oficinas de correos, los organismos oficiales y las entidades bancarias permanecen cerradas al público. Los visitantes que necesiten realizar operaciones financieras deben tener en cuenta la tasa de cambio actual, fijada en 1 USD equivalente a 0.89 EUR. A partir del martes, la actividad económica y comercial recupera su dinamismo habitual en todos los barrios de la ciudad. El transporte público opera con normalidad, facilitando los desplazamientos cotidianos por la red de metro y autobús. Los mercados municipales vuelven a abrir sus puestos con productos de temporada, marcando el pulso cotidiano de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "02",
+              "headline": "El Tibidabo conmemora sus 125 años de historia sobre el horizonte barcelonés.",
+              "lede": "El parque de atracciones más antiguo de España celebra su aniversario con propuestas renovadas.",
+              "body": "El parque de atracciones del Tibidabo celebra sus 125 años de historia consolidado como el recinto de ocio más antiguo del país. Situado en la cumbre de la montaña, ofrece vistas panorámicas sobre todo el litoral barcelonés y la llanura circundante. En el ámbito musical, la programación de los próximos meses empieza a revelar citas destacadas. Joan As Police Woman ha confirmado su actuación dentro de la programación del Festival Empremtes Barcelona prevista para 2027. Por su parte, la emblemática discoteca Karma reabre sus puertas en la plaza Reial tras 7 meses de cierre, estrenando una imagen renovada que respeta su legado histórico. La calidad del aire en la ciudad se mantiene en niveles moderados, con un registro de PM2.5 situado en 22. Estas condiciones atmosféricas permiten disfrutar de los espacios abiertos y de los paseos marítimos con total tranquilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "03",
+              "headline": "La música de autor y los espacios históricos marcan la agenda cultural de la semana.",
+              "lede": "Homenajes a figuras esenciales de la canción conviven con la reapertura de locales emblemáticos.",
+              "body": "La memoria musical de Barcelona evoca esta semana la figura de Tete Montoliu a través del recuerdo de los versos de Serrat y sus entrañables Paraules d'amor. Este tipo de guiños culturales recuerdan el profundo arraigo de la tradición jazzística y poética en los locales de la ciudad. La recuperación de espacios nocturnos legendarios como el Karma en la plaza Reial dinamiza de nuevo la vida social del barrio Gótico. Los paseantes que transitan por el centro histórico pueden comprobar cómo la ciudad equilibra su patrimonio arquitectónico con la modernización de sus locales de ocio. Las condiciones meteorológicas otoñales acompañan los recorridos a pie por los callejones del Born y el barrio antiguo. El aire moderadamente limpio invita a detenerse en las terrazas y plazas porticadas sin el bullicio masivo del verano.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires transita un lunes fresco con lloviznas y ocaso a las 19:06.",
+              "lede": "El termómetro se mueve entre los 13 y los 18°C mientras persisten precipitaciones leves en la ciudad.",
+              "body": "Las condiciones meteorológicas en Buenos Aires vienen marcadas por un registro térmico que oscila entre los 13 y los 18°C. La jornada presenta una atmósfera húmeda, acompañada por una ligera precipitación acumulada de 2.6mm en forma de llovizna persistente. El sol se ocultará en el horizonte porteño a las 19:06, ofreciendo una tarde de luz difusa ideal para la lectura en espacios interiores. Esta semana también coincide con el cierre de las conmemoraciones vinculadas al Día del Respeto a la Diversidad Cultural celebrado el 12 de octubre. Conviene recordar que las oficinas gubernamentales y bancarias operan con esquemas reducidos o retomarán la atención completa pasada la fecha conmemorativa. El ambiente urbano invita a refugiarse en cafés tradicionales mientras la llovizna fina acompaña el compás cotidiano de las avenidas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "02",
+              "headline": "El Parque de la Ciudad amplía sus accesos y abre sus puertas de lunes a lunes.",
+              "lede": "Los espacios verdes metropolitanos reorganizan sus horarios para recibir a los visitantes cotidianos.",
+              "body": "El Parque de la Ciudad ha oficializado su apertura de lunes a lunes, facilitando nuevos accesos y horarios para el disfrute de la comunidad. Esta medida permite que los vecinos y visitantes aprovechen los espacios verdes en cualquier jornada de la semana, al margen de los fines de semana. La oferta recreativa de la capital se diversifica con la llegada de propuestas gastronómicas y festivales internacionales. El reconocido festival Meat & Fire, originario de Barcelona, desembarca en Buenos Aires para sorprender al país del asado con técnicas culinarias diversas. Asimismo, la ciudad experimenta un auge notable en la música de raíz con el boom del folklore, manifestado en peñas, festivales masivos y transmisiones en streaming que movilizan a numeroso público. La temperatura actual, entre 13 y 18°C, resulta propicia para recorrer estos espacios al aire libre.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            },
+            {
+              "n": "03",
+              "headline": "La agenda cultural porteña combina festivales lumínicos y tradiciones musicales.",
+              "lede": "Las entradas para los espectáculos visuales se agotan mientras el folklore gana protagonismo en las peñas.",
+              "body": "El movimiento cultural de Buenos Aires destaca estos días por la alta demanda de localidades para el innovador festival de luces que transforma el paisaje urbano en una playa inspirada en Tailandia. Los residentes apuran la adquisición de las últimas entradas disponibles para este espectáculo visual que altera la fisonomía nocturna de la capital. Paralelamente, la tendencia del folklore sigue en alza, consolidando un circuito de peñas y encuentros musicales que atraen a audiencias de todas las edades. Con una tarde fresca marcada por los 13 a 18°C y una ligera llovizna de 2.6mm, los espacios cerrados y centros culturales se convierten en el refugio predilecto. El atardecer previsto para las 19:06 marca el inicio de una noche apacible en los barrios tradicionales, donde la música en directo y la gastronomía local ofrecen un respiro frente a la humedad ambiente.",
+              "source": "saudade desk",
+              "source_date": "2026-10-13"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-12T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Bajo un cielo gris que deja 33.1mm de agua y tormentas intermitentes, la actividad cultural porteña busca el cobijo de los teatros y galerías. Las temperaturas de 15 a 17°C invigen al abrigo ligero y al paso pausado por las veredas de baldosas mojadas. La calidad del aire permanece en fair, con un índice PM2.5 de 9, mientras el atardecer se anticipa a las 19:01. Mientras el World AI Film Festival ultiman detalles para su llegada el 30 de octubre, conviene tener presente el calendario oficial. El feriado del 2026-10-12 por el Día del Respeto a la Diversidad Cultural suspenderá los trámites bancarios y administrativos habituales de la semana.",
               "source": "saudade desk",
               "source_date": "2026-10-07"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-06T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Ayuntamiento abre al público el nuevo parque de Benedicto XVI.",
-              "lede": "Un gran espacio verde de más de cinco hectáreas en San Blas-Canillejas.",
-              "body": "El Ayuntamiento abre al público el nuevo parque de Benedicto XVI, un gran espacio verde de más de cinco hectáreas en San Blas-Canillejas. Este nuevo pulmón ofrece amplios recorridos peatonales y zonas de descanso para los residentes del distrito oriental. Los visitantes encontrarán una vegetación recién asentada y caminos diseñados para la pausa urbana. Conviene recordar que el tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR para quienes gestionen divisas extranjeras. Se aproxima además la festividad del Dia de la Comunitat Valenciana el 2026-10-09, seguida por la Fiesta Nacional de España el 2026-10-12. Durante estas jornadas festivas nacionales, las administraciones públicas y las entidades bancarias permanecerán cerradas al público. Es un momento propicio para recorrer los barrios periféricos con calma y observar la transformación del paisaje urbano madrileño.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "02",
-              "headline": "BYREDO reabre su tienda de Madrid y presenta Future Memories.",
-              "lede": "El espacio comercial regresa con una propuesta olfativa renovada.",
-              "body": "BYREDO reabre su tienda de Madrid y presenta Future Memories en un entorno arquitectónico depurado. La firma sueca actualiza su presencia en el circuito comercial de la capital con esta reapertura. Los viajeros interesados en el diseño contemporáneo y la perfumería de autor pueden visitar el establecimiento durante su horario habitual. Mientras tanto, el mercado de divisas opera con normalidad con una paridad de 1 USD por cada 0.89 EUR. El calendario local avanza hacia el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12. Las oficinas estatales y las sucursales bancarias suspenderán su actividad comercial durante los días festivos señalados. Este paréntesis festivo ofrece una oportunidad ideal para pasear por las calles comerciales sin la prisa habitual de las jornadas laborables.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "03",
-              "headline": "Torrejón de Ardoz expone la arquitectura moderna de Madrid.",
-              "lede": "La mirada fotográfica de Ana Amado revela el patrimonio reciente.",
-              "body": "Torrejón de Ardoz invita a descubrir el Madrid moderno a través de la fotografía de Ana Amado. La muestra titulada “Arquitectura moderna de Madrid” examina las formas urbanas construidas durante las décadas centrales del siglo pasado. Las imágenes capturan la sobriedad geométrica y el rigor constructivo de aquellos edificios emblemáticos. Las transacciones financieras se mantienen estables con un cambio de 1 USD a 0.89 EUR en las entidades de crédito. El horizonte festivo incluye el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12. Con motivo de estas celebraciones nacionales, las oficinas de correos y los organismos oficiales no abrirán sus puertas. Los observadores pacientes encontrarán en esta exposición una clave perfecta para interpretar el trazado arquitectónico de la región madrileña.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona Dibuixa integra medidas de accesibilidad universal.",
-              "lede": "El festival gráfico adapta sus talleres para todos los públicos.",
-              "body": "El festival Barcelona Dibuixa 2026 incluye actividades con medidas de accesibilidad destinadas a garantizar la participación ciudadana sin barreras. Las familias y los paseantes pueden sumarse a las propuestas creativas repartidas por distintos equipamientos culturales de la ciudad. Las previsiones meteorológicas indican temperaturas de 18 a 24°C junto a 5.7mm de precipitación acumulada por chubascos dispersos. La puesta de sol se fijará a las 19:24, marcando el fin de las actividades al aire libre. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 de 17. El tipo de cambio oficial se establece en 1 USD por 0.89 EUR en los mercados de divisas. Se acerca el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12. Las administraciones públicas cerrarán sus oficinas en estas fechas, por lo que conviene planificar cualquier gestión administrativa con antelación.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "02",
-              "headline": "El Circuit de Barcelona-Catalunya despide la velocidad.",
-              "lede": "El asfalto catalán acoge el balance de su intensa cita automovilística.",
-              "body": "El Festival de la Velocidad de Barcelona 2026 cierra un intenso fin de semana en el Circuit con gran afluencia de aficionados al motor. La climatología desafía a un emocionante Festival de la Velocidad en Barcelona con lluvias intermitentes y un ambiente fresco. Los termómetros se moverán entre los 18 y los 24°C, con 5.7mm de precipitación registrados y el cielo gris. La puesta de sol ocurrirá puntualmente a las 19:24, dando paso a una tarde húmeda y tranquila. La calidad del aire registra un valor de PM2.5 de 17, considerado moderado para la movilidad urbana. La tasa de cambio monetario se sitúa en 1 USD equivalente a 0.89 EUR. El calendario oficial señala la inminencia del Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12. Las instituciones oficiales y las entidades bancarias permanecerán cerradas durante dichos días festivos, recomendando precaución a los viajeros.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "03",
-              "headline": "Primavera Sound celebra su vigésimo quinto aniversario.",
-              "lede": "El festival anuncia un cartel histórico para su próxima edición.",
-              "body": "Primavera Sound celebra 25 años con Doechii, Fontaines DC, Massive Attack y Robyn en el cartel oficial. La noticia anima el panorama musical barcelonés mientras la ciudad afronta un clima otoñal y húmedo. Las temperaturas oscilarán entre los 18 y los 24°C, acompañadas por 5.7mm de precipitación y chubascos esporádicos. La puesta de sol se producirá a las 19:24, acortando las horas de luz diurna en el litoral. La calidad del aire muestra un índice de PM2.5 de 17, un nivel moderado habitual en entornos metropolitanos. En el ámbito financiero, el cambio de moneda opera a razón de 1 USD por 0.89 EUR. El calendario de festivos contempla el Dia de la Comunitat Valenciana el 2026-10-09 y la Fiesta Nacional de España el 2026-10-12. Los servicios administrativos del Estado y los bancos suspenderán su atención presencial durante las jornadas festivas mencionadas, garantizando servicios mínimos esenciales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires recibe la primera edición del World AI Film Festival.",
-              "lede": "La capital argentina acoge proyecciones vinculadas a la inteligencia artificial.",
-              "body": "Buenos Aires recibirá la primera edición local del World AI Film Festival en un intercambio cultural orientado a las nuevas pantallas. El cielo porteño se presenta completamente cubierto, con temperaturas que se moverán entre los 14 y los 21°C a lo largo de la jornada. La puesta de sol tendrá lugar a las 19:00, otorgando una luz tenue a las avenidas arboladas de la ciudad. La calidad del aire se mantiene en niveles considerados justos, con un registro de PM2.5 de 8. Los residentes aprovechan los espacios públicos y los cafés tradicionales para observar el ritmo cotidiano sin sobresaltos. El calendario nacional se prepara para la conmemoración del Día del Respeto a la Diversidad Cultural el 2026-10-12. Las oficinas gubernamentales, las entidades bancarias y las dependencias postales permanecerán cerradas durante la festividad oficial. Es conveniente recordar estas pausas institucionales para organizar cualquier trámite necesario en la metrópoli.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "02",
-              "headline": " Palermo celebra la cumbre de la parrilla tradicional.",
-              "lede": "Los mejores referentes gastronómicos se reúnen en el barrio porteño.",
-              "body": "Los mejores parrillas de Buenos Aires y del mundo en un festival en Palermo: el choripán de Don Julio y el chuletón de Sagardi convocan a los devotos del buen comer. El clima se mantiene nublado con temperaturas templadas de 14 a 21°C en todo el ejido urbano. La puesta de sol se registrará a las 19:00, marcando el inicio de las cenas tempranas en los bodegones de la zona. La calidad del aire es fair con un índice de PM2.5 de 8, permitiendo caminar con total tranquilidad por los parques. El entorno urbano se aquieta de cara al próximo feriado del Día del Respeto a la Diversidad Cultural el 2026-10-12. Durante esta fecha oficial, los bancos, las oficinas públicas y los correos suspenderán sus operaciones habituales. Los viajeros encontrarán un ritmo pausado en las calles arboladas, ideal para la observación reposada de la arquitectura local.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
-            },
-            {
-              "n": "03",
-              "headline": "Nuñez expande su infraestructura de espacios de trabajo flexibles.",
-              "lede": "La inversión inmobiliaria transforma el perfil del barrio norteño.",
-              "body": "HIT Cowork invierte US$30M en edificio flexible de Núñez, ampliando la oferta para profesionales independientes y nómadas digitales. Las condiciones atmosféricas muestran un cielo overcast con temperaturas que irán desde los 14 hasta los 21°C. La caída del sol se producirá a las 19:00, prolongando el crepúsculo sobre el río de la Plata. La calidad del aire permanece en niveles favorables con un registro de PM2.5 de 8. La actividad ciudadana transcurre con la calma característica de la primavera austral en los bulevares residenciales. El calendario oficial señala la llegada del Día del Respeto a la Diversidad Cultural el 2026-10-12. Las instituciones estatales, los bancos y las oficinas administrativas permanecerán cerradas al público en esa jornada de descanso nacional. Esta pausa ofrece una oportunidad única para recorrer los espacios verdes del norte porteño sin prisas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-06"
             }
           ]
         }
