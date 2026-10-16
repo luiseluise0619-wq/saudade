@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-10-16T06:00:00+09:00",
+  "updated": "2026-10-17T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-17T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Haneul Park silver grass catches the overcast afternoon light.",
+              "lede": "Autumn's golden and silver masterpiece reaches its peak across the former landfill.",
+              "body": "Temperatures hover between 13°C and 24°C under heavy grey skies as sunset arrives sharply at 17:52. Air quality remains poor today, with PM2.5 readings touching 53, making a protective mask sensible for extended walks. The currency trades at 1 USD to 1332 KRW in local banks and exchanges. Seoul Design Week presents Design Is an Act of Love at Samsung, highlighting authentic Korean design moments. Visitors navigating the city will find Seoul Forest Park hosting quiet seasonal exhibitions through its central pavilion spaces. Plan your outdoor strolls early before the haze settles deeper into the river valleys.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "02",
+              "headline": "Seoul Forest Park welcomes quiet observers beneath heavy grey skies.",
+              "lede": "The central pavilion hosts contemporary design exhibitions away from the central crowds.",
+              "body": "October air lingers between 13°C and 24°C while the sun dips down at 17:52. PM2.5 measurements register at 53, pointing to poor atmospheric clarity across the district. Transactions settle at a rate of 1 USD to 1332 KRW for arriving travelers. Seoul Design Week draws quiet attention to local craft traditions and thoughtful interior concepts. Haneul Park fields sweeping stands of tall silver grass that sway steadily in the cool autumn breeze. Keep movements unhurried and allow the muted afternoon tones to set the rhythm for the day.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "03",
+              "headline": "Authentic Korean craft finds a focused stage during Seoul Design Week.",
+              "lede": "Designers showcase quiet domestic objects alongside Samsung's latest seasonal presentations.",
+              "body": "The thermometer reads from 13°C to 24°C under a persistently overcast sky that dims toward sunset at 17:52. Atmospheric conditions register poor with PM2.5 at 53, advising gentle pacing for outdoor itineraries. Exchange desks settle transactions at 1 USD to 1332 KRW. Seoul Forest Park and Haneul Park provide natural counterpoints to the city's indoor design displays with autumn grasses in full season. Take time to observe the subtle materiality in local studios before the evening chill takes hold.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Partly cloudy skies frame the opening days of the Tokyo Film Festival.",
+              "lede": "The Academy's leadership arrives alongside international screenings and intimate talk sessions.",
+              "body": "Temperatures move comfortably between 16°C and 23°C while daylight fades into dusk at 17:03. Air quality registers at a moderate PM2.5 level of 21, offering clear breathing along the city paths. Financial exchanges process at 1 USD to 158 JPY across local institutions. The Tokyo Film Festival welcomes the Academy's Bill Kramer and Lynette Howell Taylor for special public conversations. Meanwhile, a dedicated Ukrainian Film Festival opens its doors to cinephiles seeking diverse international perspectives. Disney enthusiasts can also explore the newly opened fashion store downtown.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "02",
+              "headline": "The Tokyo Film Festival opens with international delegations in attendance.",
+              "lede": "AMPAS representatives host dedicated talk sessions alongside a robust slate of screenings.",
+              "body": "Mild autumn weather brings temperatures from 16°C to 23°C under broken cloud cover with sunset at 17:03. Air quality remains moderate with a PM2.5 reading of 21 for the afternoon. Travelers convert currency at 1 USD to 158 JPY in commercial districts. The schedule features both mainstream premieres and independent showcases, including a notable Ukrainian Film Festival sidebar. Away from the cinemas, retail districts introduce fresh concepts, including a newly debuted Disney fashion storefront. Walk the quieter side streets between screenings to catch the shifting evening light.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "03",
+              "headline": "Special film screenings and newly opened storefronts animate the autumn streets.",
+              "lede": "Festival talks draw quiet crowds while new retail spaces open their doors across the districts.",
+              "body": "The afternoon settles between 16°C and 23°C with partly cloudy intervals preceding the 17:03 sunset. Moderate air quality with PM2.5 at 21 ensures pleasant conditions for walking between venues. Currency conversion hovers around 1 USD to 158 JPY. AMPAS delegates participate in key sessions during the ongoing Tokyo Film Festival events. Visitors can also explore the newly debuted Disney fashion destination or catch independent features at the Ukrainian Film Festival. Allow ample time for transit between distant screening locations.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies stretch softly across the quiet hills of Lisbon.",
+              "lede": "The National Museum of Ancient Art prepares for its upcoming reopening next month.",
+              "body": "Temperatures range between 18°C and 25°C beneath heavy clouds that disperse the late afternoon light toward sunset at 18:55. Air quality remains exceptionally good, registering a low PM2.5 score of 5. Financial conversions settle at 1 USD to 0.89 EUR across local banking counters. Civic discussions continue as the municipal library seeks a qualified contractor for its long-awaited accessibility project. The National Museum of Ancient Art counts down to its November reopening, promising renewed spaces for classical collections. Walk the shaded stone stairs near the river while the air stays warm and still.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "02",
+              "headline": "The National Museum of Ancient Art prepares quietly for next month's reopening.",
+              "lede": "Cultural calendars point toward November while civic projects seek contractors for accessibility updates.",
+              "body": "Mild temperatures span 18°C to 25°C under an overcast vault of clouds with sunset occurring at 18:55. Atmospheric conditions are pristine, marked by a good PM2.5 index level of 5. Currency exchanges operate at a rate of 1 USD to 0.89 EUR. The municipal library continues its search for a dedicated contractor to advance local building accessibility improvements. Neighborhood streets remain calm as residents move between steep alleyways and river viewpoints. Enjoy the steady autumn warmth without the rush of peak tourist season.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            },
+            {
+              "n": "03",
+              "headline": "Municipal library accessibility projects move slowly through administrative channels.",
+              "lede": "Contractors are sought for public upgrades while the city enjoys crisp autumn air.",
+              "body": "Daytime temperatures measure 18°C to 25°C under overcast skies that soften the view toward the Tagus River until sunset at 18:55. Good air quality with a PM2.5 measure of 5 makes walking through historical districts remarkably pleasant. Exchange rates hold steady at 1 USD to 0.89 EUR. Preparations continue quietly at the National Museum of Ancient Art ahead of its November debut. Take an unhurried pause at a corner café to watch the pale light settle over the old stone facades.",
+              "source": "saudade desk",
+              "source_date": "2026-10-17"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-16T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "An overcast day keeps the atmosphere calm with temperatures spanning 15 to 24°C. Air quality is fair with PM2.5 at 6, and exchange rates settle at 1 USD to 0.89 EUR. Listings for offices for rent in Aveiras de Cima remind observers of the quiet commercial life operating just beyond the city limits. Sunset arrives at 19:04, dimming the light over quiet squares and cobbled lanes. While travelers often focus on the historic center and riverfront venues, the surrounding districts maintain an unhurried workday pace. It is a subtle reminder of the vast, varied landscape that supports daily life in the region.",
               "source": "saudade desk",
               "source_date": "2026-10-11"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-10T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies keep the Han River park quiet as the morning mist lingers.",
-              "lede": "Temperatures settle between 13°C and 24°C under heavy grey clouds. Sunset arrives softly at 18:02.",
-              "body": "The morning air feels heavy today with PM2.5 readings marking poor air quality at 59. Visitors walking near Seoul Grand Park will find quiet paths after the recent public celebrations for 한글날 on 2026-10-09. Exchange counters note the rate at 1 USD equaling 1341 KRW for travelers exchanging currency. Quiet observers strolling through the grounds might notice recent public curiosity surrounding the newly debuted red panda twins. The overcast canopy filters the afternoon light evenly across the grass without harsh glares. Residents keep light jackets ready as autumn humidity clings to the pavement.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "02",
-              "headline": "Seoul Grand Park welcomes visitors to view the newly debuted red panda twins.",
-              "lede": "The naturally-bred cubs draw gentle crowds following the recent 한글날 holiday on 2026-10-09.",
-              "body": "Families arriving at the enclosures experience a mix of quiet wonder and mild amusement alongside park automation displays. The weather stays overcast with temperatures ranging from 13°C to 24°C as evening approaches by 18:02. Air quality remains poor with PM2.5 at 59, prompting many walkers to keep their masks on. Financial exchanges record 1 USD trading at 1341 KRW across city banks. The recent holiday closures for 한글날 on 2026-10-09 mean administrative offices reopen today with normal operating hours. Visitors find the paths peaceful despite the grey skies and subdued light.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "03",
-              "headline": "Financial districts adjust to market shifts while exchange booths hold steady rates.",
-              "lede": "The rate hovers at 1 USD to 1341 KRW amid broader economic caution across the capital.",
-              "body": "Following the recent public holiday of 한글날 on 2026-10-09, local markets opened with cautious sentiment as share indices turned lower. Outside the glass towers, the weather remains overcast with temperatures spanning 13°C to 24°C. The poor air quality index registers PM2.5 at 59, muting distant skyline views until sunset at 18:02. Travelers pausing between appointments will find the park trails quieter than usual after the holiday bustle. Botanical paths near the city center offer a calm retreat under the grey canopy. It is a quiet day for financial errands and slow walks alike.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn skies stretch over the capital with a gentle breeze from the bay.",
-              "lede": "Temperatures range from 15°C to 25°C under bright sunshine. Sunset falls crisp at 17:13.",
-              "body": "Walking through Ueno or older neighborhood alleys reveals moderate air quality with PM2.5 at 28. Currency exchanges note the rate at 1 USD to 158 JPY for arriving visitors. Residents prepare for the upcoming スポーツの日 holiday on 2026-10-12, noting holiday schedules for banks and offices. Historic structures like the Hyakudan Kaidan building welcome visitors again after completing their year-long restoration. The clear daylight illuminates traditional wooden facades and modern glass architecture alike. It is an ideal afternoon for outdoor exploration before the long weekend begins.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "02",
-              "headline": "The historic Hyakudan Kaidan building reopens its wooden corridors to the public.",
-              "lede": "Visitors returning after one year of closure admire intricate artisan carvings in clear autumn light.",
-              "body": "With temperatures moving between 15°C and 25°C, the interior stroll offers a cool contrast to the midday sun. Sunset approaches by 17:13, casting long shadows across traditional staircases. Air quality is moderate with PM2.5 resting at 28 across the district. Financial transactions settle near 1 USD to 158 JPY at local banks ahead of the upcoming スポーツの日 holiday on 2026-10-12. Neighborhoods prepare for traditional dance performances and seasonal autumn events. Residents are advised to complete administrative errands today before the holiday closures take effect.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "03",
-              "headline": "Streets prepare for the approaching スポーツの日 holiday celebrations on 2026-10-12.",
-              "lede": "Banks and municipal offices post closure notices as the three-day weekend approaches.",
-              "body": "Clear skies persist with temperatures spanning 15°C to 25°C under moderate air quality where PM2.5 marks 28. Foreign exchange booths list the rate at 1 USD per 158 JPY. Neighborhood alleys near traditional districts begin preparations for autumn dance programs and community gatherings. Sunset occurs early at 17:13, bringing a sudden chill to the evening air. Travelers should note that government offices will close for the スポーツの日 holiday on 2026-10-12. Parks and public gardens remain open for quiet strolls throughout the long weekend.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast clouds soften the limestone facades across the hills of Lisbon.",
-              "lede": "Temperatures range from 14°C to 28°C under grey skies. Sunset illuminates the Tagus River at 19:05.",
-              "body": "The fair air quality index records PM2.5 at a clean 7, making walks along the river refreshing. Currency exchange rates hold steady with 1 USD trading at 0.89 EUR for travelers. Estádio Nacional extends its operating hours to welcome visiting Celtic fans exploring the capital. Neighborhood reminders echo centuries-old ties to popular saints festivals celebrated throughout the region. The soft, diffused light gives the city's viewpoints a contemplative mood throughout the afternoon. Residents enjoy the mild warmth without the intense glare of summer sun.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "02",
-              "headline": "Estádio Nacional extends visitor hours to accommodate travelling fans along the coast.",
-              "lede": "The overcast canopy keeps temperatures pleasant between 14°C and 28°C for outdoor events.",
-              "body": "Walking through historical quarters reveals fair air quality with PM2.5 measuring at 7. Financial conversions settle at 1 USD to 0.89 EUR in local commercial banks. Sunset paints the horizon behind the suspension bridge at 19:05. Cultural echoes of traditional saints festivals remain visible in neighborhood tiles and quiet plazas. Visitors finding office rentals or municipal information will discover normal operating hours today. The gentle autumn weather invites slow strolls through shaded botanical gardens and cobblestone lanes.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
-            },
-            {
-              "n": "03",
-              "headline": "Botanical pathways remain quiet under the grey autumn canopy near the Tagus.",
-              "lede": "Daily temperatures peak at 28°C before dropping to a mild 14°C by nightfall.",
-              "body": "Air quality is remarkably fair today with PM2.5 resting at 7. Currency exchange booths calculate 1 USD at 0.89 EUR for tourists settling accounts. Sunset arrives punctually at 19:05, closing another calm day in the Portuguese capital. Football supporters arrive as Estádio Nacional extends its opening hours for the week. Local notices continue to celebrate the cultural legacy of traditional saints festivals across the old districts. It is a peaceful time to observe city life moving at an unhurried, measured pace.",
-              "source": "saudade desk",
-              "source_date": "2026-10-10"
             }
           ]
         }
