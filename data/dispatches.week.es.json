@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-16T06:00:00+09:00",
+  "updated": "2026-10-18T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-18T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La estación de metro de Sol reabre tras finalizar los trabajos.",
+              "lede": "Los andenes recuperan la normalidad después de constatarse que las condiciones de seguridad y salud son óptimas para el tránsito diario.",
+              "body": "El acceso principal y las circulaciones habituales funcionan ya sin restricciones para los viajeros que cruzan el centro de la capital. Esta reapertura alivia los trayectos cotidianos y simplifica las conexiones subterráneas en uno de los puntos con mayor afluencia de la red de transporte madrileña. Conviene recordar que el tipo de cambio oficial se sitúa este fin de semana en 1 USD equivalente a 0.89 EUR para quienes realicen transacciones financieras o cambios de divisa. Las autoridades locales confirman que la salubridad y la seguridad han quedado plenamente restablecidas en todo el recinto. Los usuarios pueden transitar por el vestíbulo principal con total tranquilidad mientras continúan sus recorridos urbanos por la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "02",
+              "headline": "El Museo Arqueológico y Paleontológico prorroga su gran exposición.",
+              "lede": "La muestra sobre los fósiles de dientes de sable supera los 80.000 visitantes y extiende sus fechas.",
+              "body": "Las salas de la institución cultural mantienen abiertas sus puertas para acoger al público interesado en este recorrido por la fauna prehistórica de la región. La excelente acogida por parte de residentes y forasteros ha motivado esta prolongación en el calendario de exposiciones temporales. Los visitantes que deseen planificar su jornada cultural deben tener en cuenta que el festivo del Día de todos los Santos se celebrará próximamente el 2026-11-01, fecha que traerá consigo los habituales cierres en oficinas gubernamentales, bancos y administraciones públicas. La visita permite observar piezas paleontológicas únicas halladas en yacimientos locales. Conviene reservar con antelación para asegurar el acceso a las salas durante las mañanas del fin de semana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "03",
+              "headline": "El Parque del Retiro conserva sus paseos sombreados de otoño.",
+              "lede": "Los senderos de tierra compacta ofrecen un refugio tranquilo para la caminata matutina bajo los árboles.",
+              "body": "Las primeras brisas frescas de la temporada animan a recorrer los rincones más apartados de los jardines históricos sin prisa. Los bancos de piedra invitan a la lectura sosegada mientras las hojas comienzan a alfombrar los caminos principales. Es un buen momento para observar la flora urbana antes de que el calendario avance hacia las festividades de noviembre. La estabilidad en los accesos de transporte facilita llegar al parque desde cualquier distrito sin contratiempos operativos. Los paseantes disfrutan de la quietud dominical en los estanques y praderas arboladas de la zona centro.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La tarde barcelonesa registra cielos nubosos y episodios de lluvia.",
+              "lede": "El termómetro oscila entre 16 y 20°C mientras se acumulan 9mm de precipitación bajo tormentas ocasionales.",
+              "body": "El ambiente húmedo caracteriza una jornada dominical marcada por la inestabilidad atmosférica y la presencia de nubes densas en todo el litoral. La puesta de sol se fija a las 19:05, dando paso a una noche apacible y fresca en los barrios tradicionales. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 en 6 que permite pasear con normalidad por la vía pública. Los viajeros que utilicen moneda extranjera encontrarán una referencia de cambio fijada en 1 USD equivalente a 0.89 EUR en las entidades bancarias. Conviene llevar un paraguas ligero al salir debido a los chubascos intermitentes previstos para las próximas horas en la ciudad condal.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "02",
+              "headline": "El distrito de Sarrià - Sant Gervasi acoge el festival Barcelona Dibuixa.",
+              "lede": "Los espacios públicos del vecindario se llenan de talleres abiertos y propuestas de creación artística.",
+              "body": "La iniciativa cultural fomenta la participación ciudadana mediante actividades de dibujo e ilustración instaladas al aire libre. Vecinos de todas las edades se acercan a los puntos habilitados para disfrutar de una jornada dedicada a las artes plásticas. De cara al calendario general, es útil recordar que el festivo del Día de todos los Santos tendrá lugar el 2026-11-01, jornada en la que cerrarán las oficinas administrativas, Correos y las entidades bancarias. La oferta cultural se completa con la presencia de visitantes ilustres vinculados al ámbito gastronómico y artístico que frecuentan los locales tradicionales de la ciudad. Las calles del distrito ofrecen un recorrido animado pero ordenado durante todo el fin de semana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "03",
+              "headline": "Los parques urbanos recuperan su calma tras las lluvias matinales.",
+              "lede": "La vegetación luce renovada y limpia gracias al agua caída en los jardines históricos de la ciudad.",
+              "body": "Los senderos ajardinados presentan un aspecto terso y silencioso ideal para el paseo reposado de los residentes. La bajada moderada en las temperaturas invita a abrigarse ligeramente al transitar por las zonas arboladas cercanas a la montaña. Las condiciones meteorológicas actuales favorecen una observación pausada de la flora local sin aglomeraciones turísticas. Los cafés con solera de los alrededores ofrecen un resguardo cálido donde contemplar el fluir pausado de la tarde dominical. La atmósfera general combina la humedad propia del temporal con la serenidad característica del otoño catalán.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La jornada porteña transcurre bajo cielos cubiertos y clima fresco.",
+              "lede": "El termómetro se mueve entre 7 y 15°C en una tarde de nubes persistentes y ambiente templado.",
+              "body": "El otoño austral muestra su cara más sobria con temperaturas contenidas y una atmósfera gris que invita a la introspección urbana. La puesta de sol está prevista para las 19:10, alargando las horas de luz vespertina para quienes recorren los barrios a pie. La calidad del aire se cataloga como fair, con un registro de PM2.5 en 5 que asegura condiciones óptimas para la actividad al aire libre. Los cafés tradicionales del centro y de los corredores arbolados registran una ocupación tranquila de lectores y caminantes. Conviene llevar una chaqueta abrigada para disfrutar de las caminatas junto al río o por las plazas históricas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "02",
+              "headline": "Juan Pose expone sus fotografías de araucarias patagónicas en el centro.",
+              "lede": "Treinta imágenes de árboles milenarios revelan la majestuosidad de los bosques del sur argentino.",
+              "body": "La muestra cultural acerca al público porteño una mirada íntima y respetuosa sobre estos monumentos vegetales de la Patagonia profunda. Las salas de exposición ofrecen un espacio de contemplación silenciosa donde detenerse ante la textura y la longevidad de los troncos retratados. La agenda cultural de la ciudad se completa estos días con eventos musicales y festivales internacionales que atraen a numerosos aficionados. Paralelamente, la cercanía de celebraciones tradicionales como el Water Lantern Festival llena la cartelera de propuestas lumínicas y rituales comunitarios. Los visitantes pueden combinar esta visita artística con un recorrido pausado por las librerías y galerías de la zona.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            },
+            {
+              "n": "03",
+              "headline": "Los espacios verdes de Palermo despliegan su arbolado en plena floración.",
+              "lede": "Los senderos bordeados de jacarandás y tipas ofrecen un refugio natural en medio del ritmo metropolitano.",
+              "body": "El paseo dominical por los lagos y parques de la zona norte permite apreciar el despertar de la vegetación bajo el cielo nublado. Los caminantes encuentran bancos solitarios frente al agua donde descansar y observar la avifauna local sin prisas. La suavidad del viento y la ausencia de precipitaciones facilitan el uso de la bicicleta y los desplazamientos a pie por los bulevares. Los jardines botánicos y las plazas barriales mantienen sus puertas abiertas para quienes buscan el sosiego de la naturaleza urbana. Es una ocasión excelente para redescubrir la arquitectura paisajística clásica que define el carácter de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-10-18"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-16T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los creadores independientes disponen de unos días extra para enviar sus obras a este certamen internacional centrado en las nuevas tecnologías visuales. Mientras tanto, la ciudad se alista para el feriado del lunes 12 de octubre por el Día del Respeto a la Diversidad Cultural. Durante esa jornada festiva, las oficinas bancarias y las dependencias públicas permanecerán cerradas, aunque los espacios verdes y los museos mantendrán esquemas especiales de apertura para quienes se queden en la metrópoli.",
               "source": "saudade desk",
               "source_date": "2026-10-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Matadero Madrid acoge la muestra colectiva La mecánica de la verdad dentro del LAB 5.",
-              "lede": "El centro cultural presenta nuevas propuestas expositivas mientras la calidad del aire se mantiene en óptimos niveles con 3 de PM2.5.",
-              "body": "La calidad del aire en la capital se mantiene notablemente limpia durante estos días de otoño, registrando un valor de 3 de PM2.5 según los registros ambientales. Esta pureza atmosférica invita a recorrer con calma los espacios culturales de la ciudad, como Matadero Madrid, que ahora mismo acoge la exposición colectiva La mecánica de la verdad en el marco del LAB 5 de Medialab. Es un buen momento para observar las propuestas artísticas contemporáneas sin prisa, aprovechando el buen estado del aire exterior. Paralelamente, la oferta cultural se expande hacia las afueras con la muestra Madrid Cartografía fantasma situada en Hoyo de Manzanares hasta el 26 de octubre. Asimismo, el festival Madrid Actual ha inaugurado su temporada otoñal rindiendo un merecido homenaje a Falla. Para los viajeros internacionales, el tipo de cambio oficial se sitúa en 1 USD frente a 0.89 EUR, facilitando la planificación de estancias y consumos urbanos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "02",
-              "headline": "La Comunidad de Madrid dedica una exposición monográfica a la pintura de castas virreinal.",
-              "lede": "Los museos locales amplían sus horizontes pictóricos mientras se aproximan varias festividades al calendario laboral.",
-              "body": "La programación museística de la región suma estos días un interés especial con la nueva propuesta de la Comunidad de Madrid, que dedica una exposición monográfica a la pintura de castas de la América virreinal. Esta muestra permite adentrarse en la compleja genealogía artística y social del periodo colonial a través de lienzos detallados. Mientras tanto, el panorama musical de la ciudad continúa su curso con el festival Madrid Actual, que ha abierto su edición de otoño con un sentido homenaje al compositor Falla. Quienes prefieran las escapadas fuera del núcleo urbano pueden visitar la exposición Madrid Cartografía fantasma en la localidad de Hoyo de Manzanares, abierta hasta el 26 de octubre. Conviene recordar que el calendario laboral trae consigo próximamente la Fiesta Nacional de España el 12 de octubre, fecha en la que las administraciones públicas y oficinas bancarias permanecerán cerradas. El tipo de cambio actual se mantiene estable en 1 USD por 0.89 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "03",
-              "headline": "Las oficinas públicas y entidades bancarias cerrarán sus puertas con motivo de la festividad nacional.",
-              "lede": "La proximidad de la Fiesta Nacional de España altera el ritmo administrativo habitual de la capital.",
-              "body": "La llegada de la Fiesta Nacional de España el 12 de octubre modifica la actividad habitual de la ciudad, por lo que las oficinas gubernamentales, las entidades bancarias y las oficinas de correos permanecerán cerradas durante la jornada festiva. Es recomendable anticipar cualquier gestión administrativa o cobro de divisas, recordando que el cambio oficial se sitúa en 1 USD por 0.89 EUR. A pesar de los festivos, la agenda cultural sigue ofreciendo alternativas reposadas para los visitantes que paseen por la ciudad y sus alrededores. La exposición Madrid Cartografía fantasma continúa abierta en Hoyo de Manzanares hasta el 26 de octubre, ofreciendo un recorrido cartográfico singular. En el centro, Matadero Madrid mantiene su programación con la exposición colectiva La mecánica de la verdad dentro del LAB 5 de Medialab. Con un aire limpio de 3 de PM2.5, Madrid ofrece un entorno sumamente agradable para el paseo otoñal.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo encapotado define unas jornadas otoñales con temperaturas que oscilan entre 14 y 20°C.",
-              "lede": "La ciudad registra cielos cubiertos y atardeceres a las 19:19, ideales para la exploración urbana pausada.",
-              "body": "El clima de estos días en Barcelona se mueve en un rango térmico moderado, con mínimas de 14°C y máximas de 20°C bajo cielos persistentemente overcast. La puesta de sol se produce puntualmente a las 19:19, marcando el inicio de unas tardes tranquilas que invitan a recorrer los barrios sin las aglomeraciones del verano. En el ámbito gastronómico, uno de los restaurantes más reconocidos de la ciudad ha reabierto transformado en una taberna de tapa creativa que incluye tienda de pollos a l'ast a precios populares. Esta renovación acerca una propuesta culinaria accesible tanto a residentes como a viajeros curiosos. Paralelamente, la ciudad celebra un trienio especial para conmemorar los 60 años de jazz en Barcelona, consolidando su arraigada tradición musical en clubes y locales históricos. Para los visitantes extranjeros, el tipo de cambio monetario se sitúa firmemente en 1 USD por 0.89 EUR, facilitando el presupuesto diario de viaje.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Sitges 2026 reimagina la figura de Drácula de la mano de Burnin Percebes.",
-              "lede": "El cine fantástico toma protagonismo bajo un cielo nublado y temperaturas suaves de hasta 20°C.",
-              "body": "La cita ineludible con el cine fantástico en Cataluña cobra fuerza estos días con Sitges 2026, donde el tándem creativo formado por Burnin Percebes convierte a Drácula en un particular señor de Barcelona con ganas de morirse. Esta reinterpretación aporta una mirada singular y desenfadada al clásico cinematográfico dentro del festival. Mientras tanto, en Barcelona, la vida urbana transcurre con temperaturas de 14 a 20°C y un cielo completamente overcast que acompaña las caminatas vespertinas hasta la puesta de sol a las 19:19. Los aficionados a la música celebran además los 60 años de jazz en Barcelona con un trienio de actividades conmemorativas. En el terreno gastronómico, destaca la reapertura de un conocido restaurante reconvertido en taberna de tapa creativa con tienda de pollos a l'ast a precios populares. El tipo de cambio actual se mantiene en 1 USD por 0.89 EUR, útil para planificar gastos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "03",
-              "headline": "Las administraciones y oficinas bancarias ajustan sus horarios ante la llegada de la Fiesta Nacional.",
-              "lede": "Conviene tener en cuenta los cierres institucionales previstos para el 12 de octubre en toda la red de servicios.",
-              "body": "El calendario institucional de octubre trae consigo la Fiesta Nacional de España el 12 de octubre, jornada en la que las oficinas gubernamentales, bancos y servicios postales permanecerán cerrados al público. Los viajeros deben prever estas pausas administrativas en su itinerario, recordando que el cambio oficial de moneda se fija en 1 USD por 0.89 EUR. A pesar de los festivos, la ciudad mantiene su pulso cultural y comercial bajo un cielo overcast y temperaturas que se mueven entre los 14 y los 20°C. La caída de la tarde se adelanta hacia las 19:19, dando paso a una atmósfera recogida perfecta para disfrutar de la oferta musical que celebra 60 años de jazz en Barcelona. Asimismo, la gastronomía local ofrece novedades interesantes, como la reconversión de un célebre restaurante en taberna de tapa creativa con tienda de pollos a l'ast a precios populares.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires acoge el V Congreso Mundial de Asturianía y la música de Ennio Morricone.",
-              "lede": "La ciudad respira un aire limpio calificado como fair con 5 de PM2.5 mientras celebra diversos encuentros culturales.",
-              "body": "La calidad del aire en la capital argentina se mantiene en niveles aceptables, registrando una marca de 5 de PM2.5 bajo una atmósfera catalogada como fair. Este ambiente propicio acompaña una agenda cultural particularmente rica que estos días reúne a la Asturias exterior en la inauguración del V Congreso Mundial de Asturianía. Paralelamente, el Festival Ennio Morricone desembarca en la ciudad para ofrecer conciertos dedicados a la mítica música de películas que marcó a varias generaciones. El panorama literario y intelectual también encuentra eco en la memoria reciente de la ciudad, recordando los vínculos de la flamante Nobel de Literatura, Anne Carson, con Buenos Aires y sus recurrentes visitas. Los viajeros que recorran los barrios porteños encontrarán además propuestas gastronómicas singulares como el festival Meat & Fire, que celebra la cultura del fuego y las carnes. Es una semana excelente para observar la confluencia de tradiciones internacionales y talento artístico local en las calles.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Ennio Morricone y el congreso de la Asturias exterior animan la agenda cultural porteña.",
-              "lede": "La ciudad combina la música cinematográfica y los encuentros de la diáspora con una calidad del aire fair de 5 de PM2.5.",
-              "body": "La vida cultural de Buenos Aires destaca esta semana por la llegada de grandes eventos internacionales que llenan auditorios y centros de convenciones. El Festival Ennio Morricone llega a la ciudad con un repertorio sinfónico consagrado a la música de cine, mientras que la inauguración del V Congreso Mundial de Asturianía reúne a representantes de la Asturias exterior para celebrar sus lazos culturales. Estos eventos transcurren bajo un cielo despejado de preocupaciones y una calidad del aire fair, marcada por un índice de 5 de PM2.5. Además, la presencia de la reciente Nobel de Literatura Anne Carson sigue resonando en los círculos locales debido a sus recordadas visitas a Buenos Aires. Para los amantes de la gastronomía y los encuentros al aire libre, la feria Meat & Fire aporta una muestra destacada de la cocina a las brasas. Es un momento propicio para caminar por la ciudad y disfrutar de su ritmo pausado.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
-            },
-            {
-              "n": "03",
-              "headline": "El próximo lunes festivo por el Día del Respeto a la Diversidad Cultural modificará los servicios.",
-              "lede": "Se recuerda el cierre de bancos y oficinas públicas el 12 de octubre por la festividad nacional.",
-              "body": "Con motivo de la conmemoración del Día del Respeto a la Diversidad Cultural el 12 de octubre, las instituciones públicas, las oficinas bancarias y las dependencias administrativas de la ciudad permanecerán cerradas. Los viajeros deben tener en cuenta esta pausa laboral al planificar sus gestiones y transacciones durante el fin de semana largo. Afortunadamente, la atmósfera exterior se presenta favorable para el descanso y el ocio, con una calidad del aire fair de 5 de PM2.5. La ciudad sigue ofreciendo alternativas culturales de primer orden, como los conciertos del Festival Ennio Morricone y las jornadas institucionales del V Congreso Mundial de Asturianía que congrega a la Asturias exterior. Quienes busquen experiencias culinarias encontrarán en el evento Meat & Fire una excelente oportunidad para saborear la cocina local. Las calles de la capital ofrecen así un equilibrio perfecto entre descanso festivo y vitalidad artística.",
-              "source": "saudade desk",
-              "source_date": "2026-10-09"
             }
           ]
         }
