@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-19T06:00:00+09:00",
+  "updated": "2026-10-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Museo Thyssen acoge una nueva mirada sobre la obra de Salvador Dalí.",
+              "lede": "La Comunidad de Madrid colabora en esta muestra esencial dedicada al genio surrealista.",
+              "body": "El otoño madrileño profundiza en sus grandes nombres culturales con la reciente colaboración de la Comunidad de Madrid en la nueva exposición que el Museo Nacional Thyssen-Bornemisza dedica a Salvador Dalí. Es una oportunidad excelente para recorrer salas donde el rigor pictórico convive con el onirismo más depurado. Los visitantes encontrarán un montaje sobrio que favorece la contemplación pausada sin aglomeraciones excesivas en las primeras horas de la mañana. Conviene recordar que el tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR para quienes planifiquen adquisiciones en la tienda del museo. La muestra se integra en una agenda ciudadana que también destaca el paso del festival de otoño y las propuestas barrocas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "Madrid se adentra en su pasado barroco con la arquitectura de la época.",
+              "lede": "La exposición Teatro de grandeza recorre la huella urbana de aquellos siglos.",
+              "body": "La capital invita a observar sus cimientos urbanísticos mediante la exposición Teatro de grandeza. Arte, arquitectura y ciudad en el Madrid barroco. Esta propuesta permite comprender cómo se estructuraron plazas, conventos y palacios que aún definen el perfil histórico del centro. Las visitas guiadas complementarias, bajo el título La mecánica de la verdad, ofrecen un acceso detallado a documentos y planos originales rara vez expuestos. El tipo de cambio oficial permanece estable en 1 USD por 0.89 EUR, facilitando el acceso a publicaciones especializadas en librerías de arte locales. Es una semana propicia para caminar por los barrios antiguos mientras las temperaturas acompañan los recorridos a pie por los conventos clausurados y plazuelas discretas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "El festivo de Todos los Santos se aproxima en el calendario madrileño.",
+              "lede": "El 2026-11-01 marcará el cierre temporal de oficinas administrativas y bancos.",
+              "body": "El próximo día festivo nacional, señalado para el 2026-11-01 con motivo del Día de todos los Santos, afectará al ritmo habitual de la administración pública y las entidades bancarias en Madrid. Los viajeros deben prever que oficinas de correos, registros y sedes oficiales permanecerán cerradas durante esa jornada dominical y su posterior traslado laboral si aplica. Mientras tanto, la ciudad se prepara para acoger propuestas culturales diversas, incluido el Halloween Takeover Festival y la llegada de la denominada Santa Trinidad a los escenarios locales. Las librerías de barrio y los cafés tradicionales mantendrán sus puertas abiertas para quienes busquen refugio tranquilo. Con el tipo de cambio en 1 USD por 0.89 EUR, los visitantes extranjeros gestionan sus gastos cotidianos con total previsibilidad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra 17 a 21°C bajo cielos cubiertos y aire limpio.",
+              "lede": "La jornada ofrece 0.2mm de precipitación y una calidad del aire calificada como fair.",
+              "body": "La ciudad amanece con un termómetro que oscila entre 17 y 21°C y una ligera presencia de 0.2mm de precipitación que apenas moja el asfalto. El aire se mantiene en niveles considerados fair, con un registro de PM2.5 de 3 que favorece los paseos largos sin incomodidad respiratoria. El sol descenderá puntualmente a las 19:02, marcando el inicio de unas tardes ideales para recorrer los barrios tradicionales. El tipo de cambio actual se mantiene en 1 USD por 0.89 EUR para las transacciones habituales de los viajeros. Conviene aprovechar la reapertura de la icónica pastelería en la Travessera de les Corts para disfrutar de un café caliente al resguardo del cielo completamente encapotado de este lunes.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival de Literatura Italiana de Barcelona inaugura su nueva edición.",
+              "lede": "El FLIB reúne a autores y traductores en espacios culturales de toda la ciudad.",
+              "body": "La agenda literaria de la capital catalana acoge la nueva edición del FLIB, el Festival de Literatura Italiana de Barcelona, consolidándose como un punto de encuentro imprescindible para los amantes de la narrativa mediterránea. Los encuentros se desarrollan en librerías independientes y centros cívicos que fomentan el diálogo pausado entre creadores y lectores. En paralelo, la actividad económica local recibe el impulso de firmas como Skybound Wealth, que refuerza su expansión en España con la apertura de una nueva oficina en Barcelona. Los visitantes pueden combinar las presentaciones literarias con un paseo por las zonas verdes, como los alrededores del Parque de los Príncipes. El tipo de cambio se fija en 1 USD por 0.89 EUR, facilitando la adquisición de volúmenes importados en los stands del festival.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "El festivo de Todos los Santos modificará los servicios el 2026-11-01.",
+              "lede": "Las administraciones públicas y los bancos cerrarán sus puertas por la festividad.",
+              "body": "De cara al próximo 2026-11-01, fecha en la que se celebra el Día de todos los Santos, la ciudad de Barcelona ajustará sus horarios y servicios institucionales. Los organismos oficiales, las oficinas bancarias y las administraciones locales permanecerán cerradas durante esta jornada festiva nacional. Los viajeros deben anticipar cualquier trámite administrativo necesario antes de este fin de semana largo. A pesar de los cierres oficiales, los espacios públicos y los cementerios históricos registrarán una afluencia ordenada de residentes que acuden a cumplir con la tradición floral. Con un tipo de cambio de 1 USD por 0.89 EUR, la planificación de estancias y compras en comercios de proximidad transcurre sin sobresaltos monetarios en vísperas del festivo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra 11 a 19°C y un índice UV muy alto.",
+              "lede": "El cielo permanece overcast mientras el termómetro avanza hacia los 19°C.",
+              "body": "La capital argentina transcurre este lunes con temperaturas que se mueven entre 11 y 19°C bajo un cielo completamente overcast. A pesar de la cobertura nubosa, el índice UV alcanza un nivel de 8, catalogado como very high, lo que exige precaución en exposiciones prolongadas al aire libre. La calidad del aire se mantiene en parámetros fair, con un registro de PM2.5 de 9 que asegura una atmósfera estable para transitar la ciudad. El atardecer está previsto para las 19:12, alargando las horas de luz vespertina en los parques y paseos ribereños. Es una jornada propicia para recorrer la ciudad a pie, combinando las pausas en cafés tradicionales con la visita a las nuevas instalaciones culturales y escultóricas que enriquecen el espacio público porteño.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "La escultura de Satoshi Nakamoto ya tiene fecha de estreno porteño.",
+              "lede": "El monumento tecnológico se suma a los nuevos atractivos urbanos de la capital.",
+              "body": "El patrimonio escultórico de Buenos Aires incorpora una pieza singular con la anunciada fecha de estreno para la escultura dedicada a Satoshi Nakamoto. Esta obra contemporánea genera expectación entre vecinos y curiosos interesados en la confluencia entre arte urbano y nuevas tecnologías financieras. La agenda cultural de la semana también contempla los preparativos para el Primavera Sound Buenos Aires 2026, cuyos sideshows comienzan a perfilar los escenarios elegidos en distintos puntos de la geografía metropolitana. Los amantes de la lectura y el diseño encontrarán en los barrios tradicionales una oferta constante de muestras y encuentros al aire libre. El clima fresco, con máximas de 19°C y un índice UV de 8, invita a caminar sin prisa entre las plazas arboladas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "Los festivales ciudadanos ocupan los espacios verdes de Buenos Aires.",
+              "lede": "Mascotear 2026 y el Water Lantern Festival convocan a miles de vecinos.",
+              "body": "La vida comunitaria encuentra este mes un punto de encuentro en los grandes parques de la ciudad gracias a una variada oferta de eventos gratuitos. Entre ellos destaca Mascotear 2026, concebido como un festival gratuito para disfrutar en compañía de las mascotas en predios especialmente acondicionados para el bienestar animal. A ello se suma la celebración del Water Lantern Festival, que aporta una atmósfera contemplativa al caer la noche sobre espejos de agua seleccionados. Con un índice UV que llega a 8 y cielos overcast que oscilan entre 11 y 19°C, las actividades al aire libre se desarrollan con un confort térmico muy favorable. El atardecer a las 19:12 marca el momento ideal para presenciar las actividades vespertinas en los pulmones verdes de la metrópolis.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Buenos Aires importa el éxito culinario de Barcelona con la llegada de Meat & Fire, buscando sorprender al país del asado con nuevas técnicas. Los interesados también pueden asegurar sus últimas entradas para el festival de luces que transforma un rincón urbano en una playa de Tailandia. Estas propuestas dinamizan el tiempo de ocio durante el fin de semana largo, ofreciendo alternativas originales para todos los públicos. La combinación de festivales gastronómicos y muestras visuales consolida a la capital como un referente cultural inagotable. Conviene adquirir los abonos con antelación para no perderse los espectáculos de mayor demanda en esta temporada.",
               "source": "saudade desk",
               "source_date": "2026-10-12"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-11T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Fiesta Nacional de España altera los servicios administrativos.",
-              "lede": "El 2026-10-12 trae cierres generalizados en oficinas públicas y entidades bancarias de la capital.",
-              "body": "El festivo nacional del 2026-10-12 suspende la actividad en oficinas estatales, notarías y sucursales bancarias de la Comunidad de Madrid. Conviene adelantar cualquier gestión postal o administrativa antes del domingo. El comercio de barrio y la gran hostelería adaptan sus horarios al calendario festivo. Los museos nacionales y las salas municipales de exposiciones suelen mantener aperturas especiales para los visitantes del puente. La circulación urbana desciende de manera notable durante las primeras horas de la jornada festiva. Los residentes aprovechan la pausa institucional para recorrer los paseos ajardinados y los recintos culturales menos concurridos del centro histórico.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Hispanidad llena las plazas y calles con música en directo.",
-              "lede": "La programación incluye conciertos gratuitos y muestras escénicas en diversos puntos urbanos.",
-              "body": "La Comunidad de Madrid celebra estos días una nueva edición de su festival cultural con una amplia agenda de espectáculos abiertos al público. Las plazas históricas y los auditorios al aire libre albergan conciertos gratuitos que destacan la pluralidad de la creación artística contemporánea. Paralelamente, los espacios expositivos rescatan el patrimonio histórico, como la muestra dedicada al teatro barroco de los siglos XVI y XVII. La finca de Vista Alegre también rinde homenaje con una exposición temática a los personajes hispanos que contribuyeron a la independencia de Estados Unidos. Estos itinerarios culturales coinciden con grandes citas musicales, como el concierto de Shakira previsto hoy sábado en Macondo Park.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "03",
-              "headline": "El tipo de cambio facilita las transacciones para los viajeros internacionales.",
-              "lede": "La cotización oficial se sitúa en 1 USD equivalente a 0.89 EUR.",
-              "body": "Los visitantes procedentes de zonas con divisa estadounidense encuentran un mercado favorable durante su estancia en la capital española. La equivalencia financiera de 1 USD por 0.89 EUR simplifica el presupuesto diario para alojamiento, transporte y consumiciones. Las principales áreas comerciales aceptan pagos electrónicos generalizados sin comisiones ocultas en los establecimientos adheridos. Conviene revisar las condiciones particulares de cada entidad bancaria al retirar efectivo en cajeros automáticos urbanos. Esta estabilidad cambiaria acompaña el flujo de turistas que llegan a Madrid para disfrutar de la intensa agenda festiva del mes de octubre.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Fiesta Nacional de España marca una pausa en la actividad laboral.",
-              "lede": "El 2026-10-12 supone el cierre temporal de oficinas de la administración y sedes bancarias.",
-              "body": "La festividad del 2026-10-12 en Barcelona interrumpe los trámites oficiales en notarías, registros y entidades financieras. Las oficinas de correos y los centros de atención ciudadana permanecen cerrados durante toda la jornada. A pesar del carácter festivo, el transporte público mantiene sus frecuencias habituales de fin de semana para facilitar los desplazamientos metropolitanos. Los mercados municipales y los comercios de alimentación del Eixample ajustan sus persianas según la normativa local. Los paseos marítimos y los parques urbanos registran una mayor afluencia de residentes que aprovechan el día de descanso para pasear con tranquilidad.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "02",
-              "headline": "El circuito cultural de otoño combina jazz internacional y gastronomía popular.",
-              "lede": "El Festival de Jazz acelera su programación mientras la restauración tradicional se reinventa.",
-              "body": "La agenda cultural barcelonesa ofrece propuestas musicales de primer nivel con el desarrollo del Festival de Jazz, que consolida su presencia en auditorios de toda la ciudad. Paralelamente, el sector gastronómico local experimenta transformaciones notables en sus locales más emblemáticos. Uno de los restaurantes más reconocidos de Barcelona ha reabierto recientemente transformado en una taberna de tapas creativas que incluye una sección de pollos a l'ast a precios populares. Esta renovación culinaria convive con el recuerdo de eventos recientes del sector audiovisual, como el paso de figuras internacionales por el festival de cine de Sitges.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "03",
-              "headline": "La conversión monetaria beneficia a los visitantes de fuera de la eurozona.",
-              "lede": "El tipo de cambio vigente sitúa 1 USD en un valor de 0.89 EUR.",
-              "body": "Los viajeros que operan con dólares estadounidenses disponen de una referencia clara en sus transacciones económicas cotidianas en la ciudad condal. La paridad fija de 1 USD a 0.89 EUR permite calcular con precisión el coste de estancias, menús y desplazamientos urbanos. La red de cajeros automáticos y comercios facilita los pagos con tarjeta sin incidencias destacables en los distritos céntricos. Esta relación monetaria acompaña la temporada de festivales y el dinamismo comercial que caracteriza el mes de octubre en Barcelona.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La jornada porteña discurre bajo cielos cubiertos y temperaturas templadas.",
-              "lede": "El mercurio se mueve entre los 8 y los 17°C, con una puesta de sol prevista a las 19:04.",
-              "body": "Las condiciones meteorológicas de este 2026-10-11 presentan un cielo completamente overcast en toda la geografía urbana. La temperatura oscila suavemente desde los 8°C iniciales hasta alcanzar una máxima moderada de 17°C por la tarde. Los niveles de calidad del aire se mantienen en parámetros moderados, registrando un valor de PM2.5 de 8. La puesta de sol tendrá lugar puntualmente a las 19:04, alargando la tarde para quienes paseen por los espacios verdes. Se recomienda llevar una chaqueta ligera para recorrer los parques y avenidas arboladas de la ciudad durante las horas de menor insolación.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "02",
-              "headline": "El Día del Respeto a la Diversidad Cultural modifica los servicios públicos.",
-              "lede": "El festivo del 2026-10-12 trae cierres en oficinas gubernamentales y entidades bancarias.",
-              "body": "La celebración del 2026-10-12 paraliza la actividad en las administraciones públicas, ministerios y sucursales bancarias de la capital argentina. Los servicios postales y la atención presencial en oficinas estatales permanecen inhabilitados durante toda la jornada. El transporte público opera con los diagramas horarios habituales de los días feriados nacionales. La hostelería y los centros culturales del circuito porteño adaptan sus aperturas a la afluencia de público local. Los residentes aprovechan el fin de semana largo para visitar exposiciones y ferias gastronómicas repartidas por los distintos barrios.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
-            },
-            {
-              "n": "03",
-              "headline": "Los festivales internacionales de gastronomía y luces transforman la agenda.",
-              "lede": "Buenos Aires acoge muestras culinarias globales y experiencias visuales inmersivas.",
-              "body": "La oferta de ocio de la ciudad se dinamiza con la llegada de grandes eventos internacionales que atraen a numerosos espectadores. El prestigioso festival Meat & Fire aterriza en Buenos Aires para reunir a los mejores parrilleros del mundo en una celebración dedicada al universo de las brasas. En paralelo, los residentes agotan las últimas localidades disponibles para el festival de luces que recrea un ambiente tropical inspirado en Tailandia. Estas propuestas reafirman el papel de la capital como punto de encuentro para el turismo cultural y gastronómico durante este mes de octubre.",
-              "source": "saudade desk",
-              "source_date": "2026-10-11"
             }
           ]
         }

@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-19T06:00:00+09:00",
+  "updated": "2026-10-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Lisboa",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O roteiro de arte contemporânea preenche os museus da cidade.",
+              "lede": "As galerias e espaços culturais propõem novos percursos pelas exposições de outono.",
+              "body": "As galerias da cidade renovam os seus percursos com exposições temporárias que marcam o calendário cultural deste período. É o momento ideal para revisitar os museus centrais e descobrir coleções de arte contemporânea sem a pressa do turismo estival. Para quem planeia compras de catálogos ou bilhetes, a taxa de câmbio permanece estável em 1 USD para 0.89 EUR. Os espaços expositivos mantêm horários regulares, permitindo visitas calmas ao final da tarde. A programação artística estende-se por vários bairros históricos, ligando a pintura e a escultura a antigos palácios recuperados. Caminhar pelas ruas de Lisboa torna-se assim um exercício de contemplação estética, onde cada esquina revela uma nova proposta visual.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "O cinema e a música ocupam os palcos com o Tribeca e o Super Bock em Stock.",
+              "lede": "O Coliseu de Lisboa acolhe concertos de entrada livre.",
+              "body": "A agenda cultural da capital destaca-se pela chegada de grandes iniciativas artísticas aos principais auditórios. O Tribeca Festival Lisboa reforça a sua presença com uma programação dedicada ao cruzamento entre a sétima arte e a música. Em paralelo, o festival Super Bock em Stock regressa para ocupar várias salas, oferecendo concertos de entrada gratuita no Coliseu de Lisboa com nomes como The Jesus and Mary Chain. Estas iniciativas transformam a noite lisboeta num ponto de encontro para melómanos e cinéfilos. Os transportes públicos funcionam com normalidade, facilitando a deslocação entre os recintos espalhados pela baixa. É aconselhável consultar os horários específicos de cada espetáculo para garantir o acesso às salas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "As coroas regressam ao Parque Eduardo VII na transição para o mês de novembro.",
+              "lede": "Os jardins centrais preparam-se para o Dia de Todos-os-Santos.",
+              "body": "O Parque Eduardo VII volta a receber as tradicionais coroas e exibições botânicas que antecedem o final de outubro. À medida que nos aproximamos do Dia de Todos-os-Santos, a 2026-11-01, os serviços municipais preparam o encerramento temporário de repartições públicas, bancos e correios para o feriado. Os residentes aproveitam estes dias de transição para passear pelos relvados amplos e observar a vegetação adaptada à estação fresca. A taxa de câmbio de 1 USD para 0.89 EUR continua a facilitar a gestão financeira para visitantes estrangeiros a residir temporariamente na capital. Os viveiros do parque mostram já espécies resistentes ao clima ameno que se faz sentir. É um período de sossego nos espaços verdes, ideal para leituras longas ao ar livre.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        },
+        {
+          "city": "Porto",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O céu nublado acompanha as temperaturas amenas na Ribeira.",
+              "lede": "A variação térmica situa-se entre 10 e 17°C sob um manto cinzento.",
+              "body": "A cidade regista temperaturas entre 10 e 17°C, acompanhadas por um céu permanentemente encoberto que suaviza a paisagem urbana. A qualidade do ar mantém-se em níveis moderados, registando PM2.5 de 14, o que convida a longas caminhadas pelas margens do Douro. O sol despede-se mais cedo, com o ocaso fixado pelas 18:46, tingindo o horizonte de tons dourados e cinzentos. Para transações comerciais e câmbios, a referência mantém-se em 1 USD para 0.89 EUR. As ruas calcetadas ganham um brilho particular com a humidade típica desta época do ano, exigindo calçado adequado para caminhar. Os cafés tradicionais acolhem quem procura refúgio do vento fresco que sopra junto à foz.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "A Sé do Porto acolhe concertos gratuitos e o festival Queer Porto.",
+              "lede": "A música sacra e o cinema independente dominam a agenda da semana.",
+              "body": "A Sé do Porto recebe esta noite a atuação do organista do Papa, integrada num ciclo que totaliza 50 concertos gratuitos pela cidade. A programação artística antecipa o festival de cinema Queer Porto, que regressa entre 3 e 7 de novembro com 37 filmes em exibição. Em simultâneo, a cidade prepara-se para acolher as comemorações oficiais do Dia do Exército, envolvendo várias instituições locais. A taxa de câmbio de 1 USD para 0.89 EUR permanece estável nos serviços financeiros da baixa. Os espaços monumentais ajustam os seus horários para receber o público interessado em assistir aos recitais de órgão. É uma semana dedicada à escuta atenta e à descoberta de novas narrativas visuais nas salas portuenses.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "Os serviços municipais preparam o descanso coletivo do feriado próximo.",
+              "lede": "O Dia de Todos-os-Santos altera o funcionamento habitual na próxima semana.",
+              "body": "Com a proximidade do Dia de Todos-os-Santos, a 2026-11-01, os residentes organizam as suas tarefas administrativas antes do encerramento de repartições públicas, bancos e correios. O comércio local ajusta os horários para o fim de semana prolongado que se avizinha na região norte. A circulação pedonal nas praças e jardins decorre com serenidade, sem a afluência massiva dos meses de verão. A taxa de câmbio oficial continua inalterada em 1 USD para 0.89 EUR para operações correntes. Os mercados tradicionais exibem os produtos da época, valorizando os sabores outonais que compõem a gastronomia portuense. Este interregno festivo convida a um ritmo mais lento e à valorização do património local.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        },
+        {
+          "city": "Sintra",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra abriga-se sob nuvens persistentes e temperaturas moderadas.",
+              "lede": "O termómetro oscila entre 13 e 18°C numa atmosfera húmida.",
+              "body": "A vila serrana regista temperaturas entre 13 e 18°C, envolvida num manto de nuvens que esconde ocasionalmente os picos dos palácios. O pôr do sol ocorre às 18:52, encerrando o dia com uma luz difusa sobre a vegetação luxuriante. A qualidade do ar é considerada fair, com um índice de PM2.5 de 6, garantindo uma atmosfera limpa para quem percorre os trilhos pedestres. A taxa de câmbio para visitantes internacionais fixa-se em 1 USD para 0.89 EUR. A humidade característica da montanha intensifica os aromas a terra molhada e folhagem caduca nos jardins românticos. É um cenário propício à introspeção e ao ritmo pausado que caracteriza a serra nesta altura do ano.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "02",
+              "headline": "A cultura e as propostas táteis animam os espaços de Mira Sintra e Cacém.",
+              "lede": "A exposição Emoções e o Festival do Outono celebram a criatividade local.",
+              "body": "As iniciativas culturais descentralizam-se pela freguesia com a exposição Emoções, uma proposta tátil, imersiva e sensorial em Mira Sintra. Em paralelo, os Bombeiros Voluntários de Almoçageme promovem o Festival do Outono, unindo a comunidade em torno de saberes tradicionais. No Cacém, a iniciativa Dinosauria Experience atrai famílias interessadas em paleobotânica e dinossauros. Estes eventos dinamizam o quotidiano urbano e suburbano sem perturbar a tranquilidade característica da região. A taxa de câmbio de 1 USD para 0.89 EUR facilita o planeamento de estadias prolongadas por parte de viajantes atentos. Os acessos rodoviários e ferroviários mantêm a normalidade operacional para todos os deslocados.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            },
+            {
+              "n": "03",
+              "headline": "A comunidade antecipa o fecho de serviços devido ao feriado de novembro.",
+              "lede": "A chegada do Dia de Todos-os-Santos suspende temporariamente a burocracia.",
+              "body": "A preparação para o Dia de Todos-os-Santos, a 2026-11-01, leva os residentes a concluir trâmites burocráticos antes do encerramento de repartições públicas, bancos e correios. A vila de Sintra adopta um compasso de espera, preparando-se para receber os visitantes que tradicionalmente acorrem aos cemitérios e monumentos históricos. A conversão monetária permanece estável em 1 USD para 0.89 EUR, facilitando as trocas comerciais nos estabelecimentos locais. Os trilhos da serra continuam acessíveis, embora exijam precaução devido à humidade matinal nos degraus de pedra. É o momento oportuno para desfrutar da quietude dos palácios antes das celebrações do início do próximo mês.",
+              "source": "saudade desk",
+              "source_date": "2026-10-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A vila de Sintra abriga atualmente a exposição VINIL, da autoria de Luís Vasconcelos, que celebra 50 anos de música através do registo fotográfico. A mostra exibe memórias visuais de concertos e artistas que marcaram o panorama musical nacional e internacional ao longo de cinco décadas. Os visitantes podem apreciar a exposição beneficiando de uma qualidade do ar fair, com PM2.5 nos 6, e termómetros entre 14 e 25°C. O dia termina com o pôr do sol pelas 19:06, sob um céu encoberto que convida à introspeção. A taxa de câmbio de 1 USD para 0.89 EUR acompanha a visita, permitindo desfrutar do património cultural sintrense sem pressas.",
               "source": "saudade desk",
               "source_date": "2026-10-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-08T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A Avenida da Liberdade recebe o Festival Tribeca em outubro.",
-              "lede": "O festival muda-se para a principal avenida da cidade com um programa cultural intenso.",
-              "body": "As ruas centrais da cidade preparam-se para acolher a nova edição do Festival Tribeca Lisboa. A mudança para a Avenida da Liberdade traz uma dinâmica diferente ao espaço público e à circulação habitual. Com a chegada de figuras como Katie Holmes, Edward Burns, Zach Woods e Jerry Seinfeld, o evento atrai observadores atentos de todo o mundo. A atmosfera urbana mantém-se serena, apesar do movimento acrescido nas esplanadas e passeios. O câmbio oficial situa-se em 1 USD para 0.89 EUR, facilitando as trocas comerciais para quem visita a capital. É o momento ideal para caminhar sem pressa pelo eixo central.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "02",
-              "headline": "O céu limpo acompanha os dias amenos de outono na capital.",
-              "lede": "Os termómetros marcam entre 15 e 28°C com o sol a descer suavemente pelas colinas.",
-              "body": "As condições meteorológicas continuam generosas para quem prefere explorar a cidade a pé. A amplitude térmica diária oscila entre 15 e 28°C, garantindo tardes luminosas e noites frescas. O pôr do sol acontece pelas 19:08, tingindo o Tejo com tons dourados que convidam à contemplação. A qualidade do ar permanece num patamar considerado fair, com índices de PM2.5 nos 5, o que torna os miradouros especialmente agradáveis. As brisas leves cruzam os bairros históricos sem o bulício sufocante do verão. Os residentes aproveitam para redescobrir os jardins públicos e as praças arborizadas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "03",
-              "headline": "A terceira edição do festival de cinema traz novidades aos cinéfilos.",
-              "lede": "A curadoria reforça a presença de nomes internacionais na programação deste outono.",
-              "body": "A programação deste ano aposta em encontros intimistas entre criadores e público. Jerry Seinfeld e os seus convidados reforçam o cartaz com conversas informais sobre o fazer artístico. A organização promete surpresas para a terceira edição do Festival Tribeca Lisboa, consolidando o evento no calendário cultural. Os espaços ao ar livre ao longo da avenida adaptam-se para projeções e debates descontraídos. A moeda norte-americana troca-se a 0.89 EUR, uma referência útil para turistas que planeiam adquirir bilhetes ou publicações locais. Lisboa reafirma assim o seu papel de porto seguro para a cultura contemporânea.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Festival Internacional de Marionetas ocupa os palcos do Rivoli e Campo Alegre.",
-              "lede": "A arte milenar dos cordéis e das formas animadas regressa aos teatros municipais.",
-              "body": "As salas do Rivoli e de Campo Alegre abrem portas para receber o Festival Internacional de Marionetas do Porto. Esta iniciativa traz à Invicta companhias de várias origens, explorando a expressividade do teatro de objetos. A programação paralela estende-se a outros pontos da cidade, cruzando disciplinas artísticas e criando momentos de descoberta para residentes e viajantes. Paralelamente, a Alfândega do Porto abriga a exposição Homem Raiz de Agostinho Santos, celebrando 40 anos de carreira com uma retrospetiva marcante. Com uma taxa de câmbio de 1 USD para 0.89 EUR, o acesso a estes eventos culturais mantém-se simples e acessível.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "02",
-              "headline": "O céu encoberto define a paisagem urbana sob temperaturas moderadas.",
-              "lede": "A nebulosidade persistente desenha um cenário melancólico ideal para passeios longos.",
-              "body": "O termómetro regista valores entre 15 e 25°C, mantendo a atmosfera outonal típica da foz do Douro. O céu permanece overcast ao longo de todo o dia, filtrando a luz natural e suavizando as cores graníticas da cidade. O pôr do sol ocorre às 19:05, marcando o fim de tarde com tons cinzentos e dourados discretos. A qualidade do ar é classificada como fair, registando PM2.5 nos 6, o que garante um ambiente perfeitamente respirável junto ao rio. A conversão cambial permanece estável em 1 USD para 0.89 EUR para quem efectua transações correntes. É uma semana propícia para caminhar calmamente pelas pontes e ruas empedradas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "03",
-              "headline": "O teatro físico e as artes visuais dinamizam o outono nortenho.",
-              "lede": "Novos projetos artísticos ocupam espaços alternativos e galerias da cidade.",
-              "body": "O Festival Décimas apresenta o espetáculo Fireflies, uma peça que investiga os laços humanos através do movimento e do teatro físico. Esta proposta artística convida o público a refletir sobre a proximidade e a empatia em tempos modernos. Enquanto isso, o horizonte cultural já começa a olhar para o futuro com o anúncio do cartaz do Primavera Sound Barcelona 2027, aguçando a curiosidade sobre quem virá ao Porto. Os espaços públicos da cidade continuam tranquilos, permitindo que os visitantes desfruçam da arquitetura sem pressas. A cidade conserva o seu ritmo pausado e acolhedor.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Mercado da Várzea acolhem o Festival das Sopas e ritmos tradicionais.",
-              "lede": "A gastronomia local junta-se ao forró e a aulas de Zumba num ambiente familiar.",
-              "body": "O Mercado da Várzea de Sintra transforma-se num ponto de encontro comunitário com o Festival das Sopas. O evento combina a tradição culinária dos caldos caseiros com momentos de animação que incluem aulas de Zumba e música de forró. É uma excelente oportunidade para saborear ingredientes regionais e conviver com os habitantes locais. A taxa de câmbio fixa-se em 1 USD para 0.89 EUR, facilitando pequenas compras no mercado. A atmosfera é de partilha e simplicidade, longe dos circuitos puramente turísticos da vila.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "02",
-              "headline": "Parques e palácios voltam a receber animais de estimação após um século.",
-              "lede": "Uma nova norma permite a circulação de cães nos jardins históricos da serra.",
-              "body": "A paisagem cultural de Sintra regista uma mudança histórica com o regresso dos cães aos parques e jardins de Queluz e Sintra, depois de mais de um século de interdição. Esta medida, implementada recentemente, altera a rotina dos passeios pelos trilhos arborizados. A meteorologia acompanha este período de transição com céu parcialmente nublado e temperaturas entre 16 e 26°C. O pôr do sol dá-se às 19:09, iluminando a vegetação luxuriante com uma claridade suave. A qualidade do ar é considerada good, com valores de PM2.5 nos 5, proporcionando excelentes condições para caminhadas na natureza.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
-            },
-            {
-              "n": "03",
-              "headline": "A história dos bombeiros locais é recordada numa exposição em Queluz.",
-              "lede": "Vejas antigas e documentos raros contam a dedicação centenária das corporações.",
-              "body": "A cidade de Queluz abriga uma exposição dedicada à história dos Bombeiros de Sintra, exibindo viaturas clássicas e espólio fotográfico. A mostra presta homenagem ao civismo e à proteção do património natural e edificado ao longo de gerações. Paralelamente, algumas zonas específicas da região preparam recriações históricas onde o tempo parece recuar mais de 100 anos num único dia. Com uma conversão de 1 USD para 0.89 EUR, a visita aos núcleos museológicos decorre sem sobressaltos económicos. A serra mantém o seu manto verde e místico, acolhendo quem procura silêncio e memória.",
-              "source": "saudade desk",
-              "source_date": "2026-10-08"
             }
           ]
         }
