@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-10-19T06:00:00+09:00",
+  "updated": "2026-10-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The overcast skies settle over Seoul at 8 to 15°C.",
+              "lede": "Moderate air quality registers a PM2.5 level of 24 as the autumn afternoon cools toward sunset at 17:47.",
+              "body": "The overcast skies settle over Seoul at 8 to 15°C today. Moderate air quality registers a PM2.5 level of 24 as the autumn afternoon cools toward sunset at 17:47. Currency exchange stands at 1 USD to 1328 KRW for travelers sorting finances in the capital. Design Week draws quiet crowds to the Samsung Design Is an Act of Love exhibition. Visitors find thoughtful seating areas and restrained displays across the venue. The atmosphere remains measured as observers move between halls.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "Seoul Design Week centers on Samsung's curated exhibition.",
+              "lede": "The Design Is an Act of Love presentation offers a steady counterweight to the urban bustle outside.",
+              "body": "Seoul Design Week centers on Samsung's curated exhibition this week. The Design Is an Act of Love presentation offers a steady counterweight to the urban bustle outside. Overcast temperatures hovering between 8 and 15°C keep pedestrian traffic moving at a deliberate pace. Observers note the clean lines of industrial work on display. It is an ideal afternoon for indoor contemplation away from the moderate air quality readings outdoors. The exchange rate holds steady at 1 USD to 1328 KRW.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "03",
+              "headline": "Six decades of American art arrive for quiet viewing.",
+              "lede": "Lynn Hershman Leeson's retrospective brings decades of artistic inquiry to local galleries.",
+              "body": "Six decades of American art arrive for quiet viewing in the city this week. Lynn Hershman Leeson's retrospective brings decades of artistic inquiry to local galleries. Outside, the weather stays overcast with temperatures between 8 and 15°C under moderate air quality conditions. The sun sets early at 17:47, drawing visitors inside gallery spaces. Financial exchanges operate at 1 USD to 1328 KRW for international guests. It remains a fitting season for long gallery afternoons.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light drizzle marks the Tokyo streets with 0.2mm of precipitation.",
+              "lede": "Temperatures span 18 to 28°C under moderate air quality with a PM2.5 reading of 26.",
+              "body": "Light drizzle marks the Tokyo streets with 0.2mm of precipitation today. Temperatures span 18 to 28°C under moderate air quality with a PM2.5 reading of 26. Sunset arrives early at 16:58, shortening the afternoon light across the gardens. Currency exchange rests at 1 USD to 158 JPY. Travelers should note that 文化の日 approaches on 2026-11-03, bringing upcoming holiday closures to banks and administrative offices. The Shiba Park Hotel library offers a dry sanctuary with its curated collection.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "Shiba Park Hotel highlights Japanese culture through its library.",
+              "lede": "The curated collection provides a quiet retreat from the light drizzle outside.",
+              "body": "Shiba Park Hotel highlights Japanese culture through its curated library collection this week. The curated collection provides a quiet retreat from the light drizzle outside, where 0.2mm of precipitation falls. Temperatures range from 18 to 28°C with moderate air quality at PM2.5 level 26. Visitors can review photography exhibitions like Craig McDean's Ducati retrospective nearby. The exchange rate sits at 1 USD to 158 JPY. Preparation for 文化の日 on 2026-11-03 begins quietly across administrative desks.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "Palais de Tokyo offers free admission on October 21 and 22.",
+              "lede": "New exhibitions invite unhurried exploration as the daylight fades toward 16:58.",
+              "body": "Palais de Tokyo offers free admission on October 21 and 22, 2026, featuring new exhibitions to discover. Temperatures range from 18 to 28°C with 0.2mm of light drizzle. Moderate air quality shows a PM2.5 count of 26. Currency exchange operates at 1 USD to 158 JPY for incoming visitors. As sunset nears at 16:58, residents keep an eye on the calendar for 文化の日 on 2026-11-03. Government offices and banks will observe standard holiday closures then.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies stretch across Lisbon with temperatures at 12 to 21°C.",
+              "lede": "Fair air quality registers a low PM2.5 level of 6 as daylight fades to sunset at 18:50.",
+              "body": "Overcast skies stretch across Lisbon with temperatures at 12 to 21°C today. Fair air quality registers a low PM2.5 level of 6 as daylight fades to sunset at 18:50. Currency exchange rates hold steady at 1 USD to 0.89 EUR. Residents note that Dia de Todos-os-Santos falls on 2026-11-01, meaning upcoming closures for public offices and banks. The diplomatic discussions between Baku and Lisbon concerning embassy openings continue quietly in the background. It remains a measured week for neighborhood walks.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "Baku and Lisbon discuss plans for an Azerbaijani embassy.",
+              "lede": "Diplomatic talks progress quietly while the city experiences mild overcast weather.",
+              "body": "Baku and Lisbon discuss plans for an Azerbaijani embassy in the capital this week. The conversations unfold under overcast skies with temperatures ranging from 12 to 21°C. Air quality remains fair with a PM2.5 measurement of 6. The financial rate is valued at 1 USD to 0.89 EUR. Sunset occurs at 18:50, leaving cool evenings for walks down by the river. Residents prepare for Dia de Todos-os-Santos on 2026-11-01, noting the impending bank and office closures.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "03",
+              "headline": "The approach of Dia de Todos-os-Santos brings quiet preparation.",
+              "lede": "Public offices and banks prepare for holiday schedules ahead of 2026-11-01.",
+              "body": "The approach of Dia de Todos-os-Santos brings quiet preparation to the capital ahead of 2026-11-01. Temperatures stay moderate between 12 and 21°C beneath overcast cloud cover. Fair air quality yields a clean PM2.5 reading of 6. Currency exchange holds at 1 USD to 0.89 EUR for travelers managing accounts. Sunset at 18:50 marks the end of the working day across the hills. Civic discussions regarding diplomatic representation continue without disruption to daily routines.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Clear skies and bright sunlight dominate the afternoon as temperatures span 16 to 31°C. Clean air flows freely through the neighborhoods with PM2.5 recorded at 8. Travelers exchanging currency will work with a rate of 1 USD to 0.89 EUR. Sidewalk cafes remain active as the city absorbs the last warmth of the afternoon. Sunset arrives late at 19:00, offering a long twilight over the river before night settles.",
               "source": "saudade desk",
               "source_date": "2026-10-14"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-13T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Rain falls steadily across the concrete shell slated for demolition.",
-              "lede": "The afternoon brings 20.2mm of precipitation as temperatures range from 15 to 20°C under a heavy sky.",
-              "body": "The afternoon brings 20.2mm of precipitation as temperatures range from 15 to 20°C under a heavy sky. Sunset arrives early at 17:58, casting a grey haze over the streets where modern timber and steel sculptures now occupy a raw concrete shell before its scheduled demolition. Air quality remains moderate with PM2.5 at 17, and the exchange rate holds at 1 USD to 1333 KRW. Walkers seek shelter beneath broad eaves as the steady drizzle dampens the pavement. It is a quiet afternoon for indoor galleries and slow observation.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "02",
-              "headline": "Greenchips arrives with ideas for sustainable living in the city.",
-              "lede": "Seoul embraces ecological craft and material reuse as local venues host exhibitions on sustainable design.",
-              "body": "Seoul embraces ecological craft and material reuse as local venues host exhibitions on sustainable design. Temperatures hover around 15 to 20°C with moderate air quality recorded at PM2.5 17. Visitors navigate the wet streets under umbrellas while exchanging currency at 1 USD to 1333 KRW. The upcoming Greenchips Seoul Festival highlights practical approaches to modern waste reduction through art and public dialogue. Meanwhile, preparations continue for the 2026 Namsan Night Festival running from Oct. 23 to Nov. 14. These seasonal events anchor the city in a contemplative rhythm.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "03",
-              "headline": "Recognized globally, the capital moves through a damp autumn afternoon.",
-              "lede": "A leading US travel magazine names Seoul the world's best big city as rain refreshes the neighborhoods.",
-              "body": "A leading US travel magazine names Seoul the world's best big city as rain refreshes the neighborhoods. The precipitation total reaches 20.2mm by evening, keeping evening temperatures near 15 to 20°C. Currency exchanges stand at 1 USD to 1333 KRW, and air quality registers a moderate PM2.5 of 17. The damp air muffles the usual rush of traffic, leaving pedestrians to move slowly along the slick sidewalks. Sunset at 17:58 marks the end of a muted day of rain. The city settles into a quiet, introspective evening.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies accompany the quiet return to the workweek.",
-              "lede": "Following the recent public holiday of 스포츠の日 on 2026-10-12, the city resumes its steady daily pace.",
-              "body": "Following the recent public holiday of 스포츠の日 on 2026-10-12, the city resumes its steady daily pace. Temperatures range from 16 to 23°C under partly cloudy skies, with air quality showing a moderate PM2.5 reading of 17. The exchange rate settles at 1 USD to 159 JPY, offering stable terms for travelers traversing the capital. Recent events like the local cat festival and traditional neighborhood dance performances lend a gentle warmth to the autumn air. Sunset occurs at 17:09, signaling a cool evening across the districts.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "02",
-              "headline": "Fraser Place Roppongi opens its doors in a quiet contemporary enclave.",
-              "lede": "Contemporary serviced living expands in Tokyo as new hospitality spaces welcome arriving visitors.",
-              "body": "Contemporary serviced living expands in Tokyo as new hospitality spaces welcome arriving visitors. The weather remains mild, featuring partly cloudy skies and temperatures between 16 and 23°C. Air quality is moderate with PM2.5 at 17, and currency is exchanged at 1 USD to 159 JPY. Following the recent 스포츠の日 holiday on 2026-10-12, government offices and banks resume normal operational hours. Travelers find the streets pleasantly unhurried as sunset approaches at 17:09. It is an ideal season for quiet walks through old residential quarters.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "03",
-              "headline": "Traditional dance awakens the rhythm of one of Tokyo's oldest neighborhoods.",
-              "lede": "Historic streets come alive with movement as community dancers preserve local heritage this autumn.",
-              "body": "Historic streets come alive with movement as community dancers preserve local heritage this autumn. Daytime temperatures range between 16 and 23°C beneath a partly cloudy canopy, with sunset arriving promptly at 17:09. Air quality remains moderate at PM2.5 17, and the exchange rate holds steady at 1 USD to 159 JPY. Following yesterday's public holiday of 스포츠の日 on 2026-10-12, post offices and municipal buildings are fully open for errands. Observers can wander through neighborhoods that blend centuries-old civic traditions with contemporary living.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Partly cloudy skies frame the warm afternoon over the Tagus.",
-              "lede": "Temperatures reach 17 to 27°C under fair air quality with PM2.5 standing at 6.",
-              "body": "Temperatures reach 17 to 27°C under fair air quality with PM2.5 standing at 6. The exchange rate is recorded at 1 USD to 0.89 EUR, providing a favorable baseline for travelers settling into local guesthouses. Sunset stretches late to 19:01, casting a long golden light across the stone squares and viewpoints. Recent cultural additions, including the opening of the Category 6 Andaz Lisbon, bring fresh design perspectives to the historic center. The atmosphere is unhurried, inviting slow strolls along the riverfront.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "02",
-              "headline": "The tragicomedy of existence takes form in a thoughtful new exhibition.",
-              "lede": "Local galleries explore complex human narratives as visitors seek shelter from the midday warmth.",
-              "body": "Local galleries explore complex human narratives as visitors seek shelter from the midday warmth. Temperatures range from 17 to 27°C with fair air quality marked by a low PM2.5 of 6. Currency exchange operates at 1 USD to 0.89 EUR, and the evening sunset is timed at 19:01. In the architectural sphere, the newly inaugurated Category 6 Andaz Lisbon welcomes guests using Hyatt points. Sidewalk cafes remain lively as residents and travelers converse under the fading afternoon light. The city moves at a remarkably unhurried pace today.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
-            },
-            {
-              "n": "03",
-              "headline": "Late autumn warmth lingers over the tiled facades of the capital.",
-              "lede": "Fair air conditions and mild temperatures make for ideal walking weather across the city's seven hills.",
-              "body": "Fair air conditions and mild temperatures make for ideal walking weather across the city's seven hills. The thermometer reads between 17 and 27°C, while air quality remains clean with PM2.5 at 6. Financial transactions reflect an exchange rate of 1 USD to 0.89 EUR. Visitors exploring the winding streets can observe recent cultural exhibitions or experience the newly opened Category 6 Andaz Lisbon. Sunset arrives at 19:01, washing the pastel buildings in a soft amber glow. Evening brings a gentle breeze off the Atlantic to cool the streets.",
-              "source": "saudade desk",
-              "source_date": "2026-10-13"
             }
           ]
         }
