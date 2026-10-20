@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-20T06:00:00+09:00",
+  "updated": "2026-10-21T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-21T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cielo cubierto acompaña las jornadas de otoño.",
+              "lede": "La temperatura oscila entre los 8 y los 18°C bajo un cielo plenamente overcast.",
+              "body": "El ambiente en la capital se mantiene fresco y estable durante esta semana de octubre de 2026. Las temperaturas se mueven entre los 8 y los 18°C, exigiendo un abrigo ligero al caer la tarde, que llega puntualmente a las 19:26. El cielo permanece completamente cubierto, ideal para caminar sin prisa por los paseos arbolados de la ciudad. Con el tipo de cambio oficial en 1 USD por 0.89 EUR, los visitantes extranjeros encuentran un mercado previsible para sus transacciones cotidianas. Estas horas de luz templada invitan a la pausa y a la observación reposada de la arquitectura madrileña.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "La agenda cultural convoca a los lectores y creadores.",
+              "lede": "El Festival EÑE explora las poéticas de la identidad mientras se preparan nuevas muestras.",
+              "body": "Madrid acoge esta semana el Festival EÑE bajo el lema poéticas de la identidad, reuniendo a figuras literarias de diversos ámbitos. Paralelamente, la Sala del Centro Municipal Marisa Flórez expone la muestra itinerante un tiempo para mirar que abarca registros visuales de varias décadas. Las instituciones públicas recuerdan que el próximo 1 de noviembre se celebra el Día de todos los Santos, festividad que alterará ligeramente los horarios habituales de oficinas y administraciones. Además, el alcalde Almeida ha presentado recientemente las obras del Parque Ventas ante representantes de varias ciudades iberoamericanas, sumando un nuevo espacio verde de interés para el tejido urbano.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "03",
+              "headline": "El arte de los títeres anuncia su llegada a los escenarios.",
+              "lede": "El festival Pendientes de un Hilo comenzará sus representaciones el 26 de octubre.",
+              "body": "La programación escénica de la ciudad se enriquecerá en pocos días con el arranque del festival Pendientes de un Hilo, previsto para el 26 de octubre. Esta cita anual con los títeres y el teatro visual ofrecerá montajes delicados en distintos espacios culturales de Madrid. Es un momento propicio para seguir la agenda de salas alternativas y teatros de barrio que apoyan este género artesanal. Los residentes ya consultan los carteles impresos en los soportes municipales para asegurar su sitio en las funciones más esperadas del circuito otoñal.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La atmósfera urbana registra valores moderados de aire.",
+              "lede": "El mercurio se sitúa entre los 15 y los 22°C bajo un cielo cubierto.",
+              "body": "Barcelona transcurre estos días con una atmósfera estable y un índice de calidad del aire calificado como moderado, marcado por un registro de PM2.5 en 5. La temperatura se mueve con suavidad entre los 15 y los 22°C, proporcionando un clima sumamente agradable para el paseo peatonal. El cielo se mantiene overcast mientras el sol se oculta a las 19:01, marcando el fin de las horas diurnas. El cambio de moneda opera con normalidad en 1 USD por 0.89 EUR, facilitando el intercambio comercial para quienes llegan desde fuera de la zona euro de visita.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "Las puertas abiertas descubren los tesoros de Horta-Guinardó.",
+              "lede": "El festival 48h Open House permite adentrarse en la arquitectura menos visible.",
+              "body": "La ciudad vive el eco reciente del Festival 48h Open House Barcelona, una iniciativa que ha abierto excepcionalmente las puertas de numerosos edificios singulares en el distrito de Horta-Guinardó. Esta labor de divulgación arquitectónica permite a los residentes y viajeros comprender la trastienda constructiva de los barrios periféricos. De forma simultánea, el festival IF Barcelona consolida su apuesta por el teatro visual y los títeres con una nueva edición enfocada en las formas animadas. Estas propuestas coinciden con la cercanía del Día de todos los Santos el 1 de noviembre, fecha en la que los servicios públicos y gubernamentales adaptarán sus horarios de apertura.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "03",
+              "headline": "La música y el teatro visual dinamizan las jornadas.",
+              "lede": "Radio 3 difunde lo mejor del Festival·B mientras continúan las muestras de artes escénicas.",
+              "body": "El pulso musical de la ciudad encuentra altavoces destacados como la retransmisión especial que Radio 3 dedica a lo mejor del Festival·B celebrado en Barcelona. Los escenarios locales combinan esta vitalidad sonora con la experimentación plástica del teatro de marionetas y formas animadas. Los espectadores que recorren las calles notan una ciudad volcada en sus creadores independientes y en la recuperación de espacios patrimoniales. Con la festividad del 1 de noviembre en el horizonte inmediato, conviene revisar las aperturas de centros cívicos y pequeños museos para evitar imprevistos en los desplazamientos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Una suave llovizna acompaña el termómetro porteño.",
+              "lede": "El registro térmico se mueve entre los 14 y los 19°C con escasa precipitación.",
+              "body": "Buenos Aires experimenta una jornada apacible con una temperatura que oscila entre los 14 y los 19°C. Apenas se han registrado 0.1mm de precipitación en forma de llovizna ligera, refrescando levemente las calles sin interrumpir la actividad urbana. La calidad del aire se mantiene en niveles calificados como fair, con un registro de PM2.5 en 9 que asegura una visibilidad clara en los grandes bulevares. El atardecer se produce a las 19:13, alargando la tarde lo suficiente para disfrutar de caminatas reposadas por los parques de la ciudad. El ambiente general invita a observar el movimiento constante de los árboles bajo el cielo húmedo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "02",
+              "headline": "El parque patagónico y la escultura de Satoshi Nakamoto.",
+              "lede": "Nuevos hitos urbanos y paisajísticos enriquecen el mapa de la capital.",
+              "body": "La geografía urbana de Buenos Aires suma atractivos singulares con la esperada fecha de estreno para la escultura dedicada a Satoshi Nakamoto, un punto de curiosidad para residentes y paseantes. A pocos kilómetros del centro bullicioso, los ciudadanos descubren un rincón que imita los paisajes de la Patagonia, ofreciendo sierras, senderos marcados y vistas panorámicas ideales para el descanso. Este espacio verde se consolidad como un refugio de tranquilidad dentro de la dinámica metropolitana. Quienes buscan escapar del asfalto encuentran allí una atmósfera de profunda quietud y observación detenida de la flora local.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            },
+            {
+              "n": "03",
+              "headline": "La cultura coreana y los faroles iluminan la agenda.",
+              "lede": "Un festival gratuito con gastronomía y K-pop convive con el Water Lantern Festival.",
+              "body": "La agenda de la ciudad se diversifica con celebraciones de carácter internacional que atraen a numeroso público curioso. Mientras los seguidores de la música asisten a convocidades multitudinarias, Buenos Aires acoge un festival coreano con entrada gratuita, propuestas gastronómicas tradicionales y muestras de K-pop. En paralelo, el Water Lantern Festival aporta una dimensión visual sosegada mediante la contemplación de faroles flotantes sobre el agua. Estas actividades reflejan el carácter cosmopolita de la capital, donde las comunidades locales y visitantes comparten espacios de convivencia al aire libre durante las templadas tardes de octubre.",
+              "source": "saudade desk",
+              "source_date": "2026-10-21"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-20T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El movimiento cultural de Buenos Aires destaca estos días por la alta demanda de localidades para el innovador festival de luces que transforma el paisaje urbano en una playa inspirada en Tailandia. Los residentes apuran la adquisición de las últimas entradas disponibles para este espectáculo visual que altera la fisonomía nocturna de la capital. Paralelamente, la tendencia del folklore sigue en alza, consolidando un circuito de peñas y encuentros musicales que atraen a audiencias de todas las edades. Con una tarde fresca marcada por los 13 a 18°C y una ligera llovizna de 2.6mm, los espacios cerrados y centros culturales se convierten en el refugio predilecto. El atardecer previsto para las 19:06 marca el inicio de una noche apacible en los barrios tradicionales, donde la música en directo y la gastronomía local ofrecen un respiro frente a la humedad ambiente.",
               "source": "saudade desk",
               "source_date": "2026-10-13"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-12T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Fiesta Nacional de España cierra hoy los organismos oficiales.",
-              "lede": "Los bancos y las oficinas públicas permanecen sin actividad durante esta jornada festiva.",
-              "body": "El 2026-10-12 trae consigo la conmemoración de la Fiesta Nacional de España, paralizando la gestión administrativa habitual en toda la capital. Los visitantes y residentes deben tener en cuenta que los trámites en oficinas gubernamentales y sucursales bancarias se reanudarán al día siguiente. El cambio oficial se mantiene estable con 1 USD equivalente a 0.89 EUR para quienes necesiten realizar operaciones financieras. Las calles principales adoptan un ritmo pausado mientras los madrileños disfrutan del día festivo en plazas y paseos. Conviene planificar cualquier diligencia con antelación para evitar sorpresas ante las puertas cerradas de los servicios públicos esenciales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "02",
-              "headline": "Macondo Park acoge hoy el concierto de Shakira.",
-              "lede": "El espacio cultural detalla sus horarios de apertura y cierre para la gran cita musical.",
-              "body": "La agenda dominical en la capital destaca por la celebración musical que acoge Macondo Park en esta jornada. Los asistentes deben consultar previamente los horarios de acceso para gestionar la entrada al recinto con la debida antelación. Este evento se suma a una variada programación cultural que incluye el Festival Cine Por Mujeres Madrid y la exposición de acuarelas de Anne d’Orléans. Quienes prefieran una ruta artística alternativa pueden visitar las salas donde se exhiben Memorias, flores y paisajes. La ciudad combina así grandes citas multitudinarias con espacios de contemplación estética más íntimos y reposados para todos los públicos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival Cine Por Mujeres presenta su competición internacional.",
-              "lede": "La muestra cinematográfica selecciona los mejores largometrajes para sus proyecciones en salas.",
-              "body": "Madrid consolida su oferta cultural otoñal con la presentación oficial de los largometrajes seleccionados para la Competición Internacional. Las salas asociadas al festival abren sus puertas para acoger proyecciones que destacan por su mirada autoral y diversa. Paralelamente, los amantes del arte callejero pueden disfrutar del festival que ensalza la resistencia y la destreza de bailar en la calle. Estas actividades convierten el fin de semana en un punto de encuentro ineludible para quienes buscan propuestas creativas al margen del circuito comercial tradicional. La jornada invita a recorrer la ciudad de norte a sur descubriendo talento emergente en cada rincón.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona amanece con cielos cubiertos y ambiente fresco.",
-              "lede": "Los termómetros se mueven entre los 17°C y los 22°C bajo una ligera capa de nubes.",
-              "body": "El clima de este 2026-10-12 presenta temperaturas templadas que oscilan entre los 17°C y los 22°C en toda la franja costera. La calidad del aire se registra en niveles moderados con un valor de PM2.5 de 15, aconsejando paseos tranquilos sin grandes exigencias físicas. La puesta de sol está prevista para las 19:15, marcando el final de una jornada donde el cielo permanece completamente overcast. El tipo de cambio se mantiene en 1 USD por 0.89 EUR, facilitando las transacciones habituales de los viajeros internacionales. Las condiciones meteorológicas invitan a recorrer los parques y paseos marítimos con una prenda ligera.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "02",
-              "headline": "La Hispanidad modifica la apertura comercial en Catalunya.",
-              "lede": "El festivo nacional de hoy altera el horario habitual de grandes superficies y centros comerciales.",
-              "body": "Con motivo del 2026-10-12 y la celebración de la Hispanidad, la actividad comercial sufre modificaciones notables en Barcelona y su área metropolitana. Conviene revisar qué centros comerciales abren sus puertas hoy antes de planificar cualquier compra de última hora. Las oficinas bancarias y la administración pública permanecen cerradas al tratarse de una jornada festiva nacional ineludible. A pesar de los cierres institucionales, la oferta cultural sigue activa con propuestas como el festival Directes Estrella Damm 150 y el certamen In-Edit 2026. Los ciudadanos aprovechan el día libre para pasear por una ciudad que respira un ritmo inusualmente calmado y reflexivo.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "03",
-              "headline": "In-Edit 2026 revela su programación de documentales musicales.",
-              "lede": "El festival de referencia anuncia los títulos que componen su esperada cartelera de este año.",
-              "body": "La música y el cine documental se dan la mano en Barcelona gracias al festival In-Edit 2026, que ya ha desvelado su programación completa. Paralelamente, el Parque Deportivo Ebro recupera la normalidad tras la reaparición de Gorka Buil después de más de seis meses de lesión. La oferta de ocio se completa con las actuaciones del ciclo Directes Estrella Damm 150, que llenan de acordes diversos locales de la ciudad. Los espectadores pueden adquirir sus localidades anticipadamente para evitar aglomeraciones en taquilla durante las proyecciones más concurridas. Es una semana excelente para conectar con la vertiente más sonora y cinematográfica de la cultura urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Una ligera llovizna acompaña el festivo en Buenos Aires.",
-              "lede": "El termómetro marca entre 10°C y 15°C con una mínima acumulación de 0.9mm de precipitación.",
-              "body": "El 2026-10-12 amanece con un clima fresco y húmedo en la capital argentina, registrando temperaturas de 10°C a 15°C. La ligera llovizna deja apenas 0.9mm de precipitación, ideal para caminar con paraguas por los barrios tradicionales. La calidad del aire es fair con un registro de PM2.5 de 6, garantizando una atmósfera limpia y agradable. El ocaso llegará puntualmente a las 19:05, cerrando el día del respeto a la diversidad cultural con tonos crepusculares sobre el río. Los porteños disfrutan de una jornada apacible que invita a resguardarse en cafés literarios y librerías históricas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "02",
-              "headline": "Cortes de tráfico por la carrera Gran Fondo Buenos Aires.",
-              "lede": "Varias avenidas y autopistas principales permanecen cortadas debido a la gran cita ciclista.",
-              "body": "La celebración del evento deportivo Gran Fondo Buenos Aires modifica sustancialmente la movilidad urbana durante esta jornada festiva. Los automovilistas deben prestar atención a los desvíos señalizados en las avenidas y autopistas afectadas por el paso de los ciclistas. Esta competición exige planificar los desplazamientos con gran margen de tiempo para evitar demoras innecesarias en los accesos al centro. A pesar de los cortes de tráfico, la ciudad mantiene su espíritu festivo con motivo del feriado nacional. Se recomienda utilizar el transporte subterráneo o caminar para sortear con éxito los tramos reservados exclusivamente para la prueba.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
-            },
-            {
-              "n": "03",
-              "headline": "Meat & Fire y el festival de luces renuevan la agenda.",
-              "lede": "La gastronomía internacional y las instalaciones lumínicas atraen a los curiosos este fin de semana.",
-              "body": "Buenos Aires importa el éxito culinario de Barcelona con la llegada de Meat & Fire, buscando sorprender al país del asado con nuevas técnicas. Los interesados también pueden asegurar sus últimas entradas para el festival de luces que transforma un rincón urbano en una playa de Tailandia. Estas propuestas dinamizan el tiempo de ocio durante el fin de semana largo, ofreciendo alternativas originales para todos los públicos. La combinación de festivales gastronómicos y muestras visuales consolida a la capital como un referente cultural inagotable. Conviene adquirir los abonos con antelación para no perderse los espectáculos de mayor demanda en esta temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-10-12"
             }
           ]
         }
