@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-23T06:00:00+09:00",
+  "updated": "2026-10-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro marca entre 10 e 22 graus sob céu encoberto.",
+              "lede": "A tarde desce cedo em Lisboa, com o sol a ocultar-se pelas 18:46.",
+              "body": "A atmosfera urbana mantém-se cinzenta e calma. Com o termómetro a oscilar entre os 10 e os 22 graus, o dia convida a passeios sem pressa pela cidade. A noite cai por volta das 18:46, cobrindo as ruas com uma penumbra suave. Nos bancos e caixas de câmbio, a taxa de referência fixa-se em 1 USD para 0.89 EUR. É um período de transição tranquila, ideal para observar o ritmo quotidiano dos bairros históricos sem o bulgúrio do verão.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "02",
+              "headline": "O Museu de Lisboa exibe a nova mostra dedicada aos Animais.",
+              "lede": "O Palácio Pimenta acolhe um olhar inédito sobre a fauna urbana.",
+              "body": "O Museu de Lisboa, instalado no Palácio Pimenta, inaugurou recentemente uma exposição dedicada aos animais de Lisboa. A iniciativa cruza memórias e vestígios da presença animal na história da capital. Paralelamente, o Parque Riverside alargou a oferta de estacionamento em Marvila, facilitando o acesso à zona ribeirinha. Estas novidades culturais e urbanísticas oferecem novas razões para redescobrir recantos menos percorridos da cidade, longe dos roteiros estritamente turísticos tradicionais.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "03",
+              "headline": "Aproxima-se o Dia de Todos-os-Santos com fecho de serviços.",
+              "lede": "A festividade de 2026-11-01 altera o funcionamento administrativo habitual.",
+              "body": "A proximidade do Dia de Todos-os-Santos, a celebrar a 2026-11-01, começa a notar-se na preparação de breves pausas e deslocações familiares. Os serviços públicos essenciais, repartições governamentais e instituições bancárias encerrarão as portas durante a data festiva. Convém antecipar qualquer trâmite burocrático na cidade. No plano cultural, a programação do Tribeca Festival Lisboa continua a dar que falar, destacando-se a fusão entre a música dos MXGPU e a projeção do clássico filme Metropolis de Fritz Lang.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O céu permanece encoberto com temperaturas entre 7 e 16 graus.",
+              "lede": "A qualidade do ar na Invicta regista um nível fair com PM2.5 a 10.",
+              "body": "O Porto amanhece sob um céu totalmente encoberto. As temperaturas movem-se entre os 7 e os 16 graus, conferindo à baixa portuense uma frescura típica de outono avançado. A qualidade do ar permanece em níveis considerados fair, com o índice PM2.5 nos 10. O sol despede-se às 18:40, antecipando noites longas junto ao rio. A taxa de câmbio oficial opera nos 0.89 EUR por cada 1 USD. A cidade respira um ritmo pausado, propício a longas caminhadas pelas margens do Douro.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "02",
+              "headline": "O festival Perlim já tem datas anunciadas para novembro.",
+              "lede": "O popular parque de Natal abre portas a 28 de novembro.",
+              "body": "O universo festivo do Perlim já tem calendarização oficial para a próxima edição, abrindo portas a 28 de novembro, após ter atraído dezenas de milhares de visitantes no ano transato. Enquanto isso, o panorama de grandes eventos musicais ajusta-se na região, após a recente reestruturação de promotores locais, mantendo-se firme a expetativa em redor de futuras confirmações como a de James Blunt no Douro & Porto Wine Festival. A logística regional também avança com os preparativos finais nos acessos ao Porto Seco da Guarda.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "03",
+              "headline": "Os serviços preparam o descanso do Dia de Todos-os-Santos.",
+              "lede": "A efeméride de 2026-11-01 suspende a atividade administrativa.",
+              "body": "Com a chegada iminente do Dia de Todos-os-Santos em 2026-11-01, os residentes preparam a pausa nos afazeres profissionais. Bancos, repartições públicas e secretarias municipais suspenderão o atendimento ao público durante a festividade. É aconselhável planear com antecedência quaisquer pagamentos ou recolhas de documentação. As ruas comerciais e os mercados tradicionais ajustam igualmente os horários de abertura, privilegiando o recolhimento familiar característico desta quadra do calendário litúrgico e civil.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra acolhe o outono com temperaturas de 11 a 18 graus.",
+              "lede": "A qualidade do ar em Sintra regista PM2.5 a 5 sob céu nublado.",
+              "body": "A vila serrana apresenta-se sob um manto de nuvens que atenua a luz da tarde. A amplitude térmica situa-se entre os 11 e os 18 graus, garantindo uma humidade constante típica da vegetação luxuriante do parque natural. A qualidade do ar é excelente, registando PM2.5 de apenas 5. O pôr do sol ocorre às 18:47, iluminando discretamente os palácios e as copas das árvores seculares. A conversão cambial mantém-se estável a 1 USD por 0.89 EUR para quem chega de fora.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "02",
+              "headline": "Sintra prepara a estreia do seu Festival Literário Internacional.",
+              "lede": "O evento cultural decorre de 13 a 22 de novembro com entrada livre.",
+              "body": "A vila prepara-se para acolher a primeira edição do Festival Literário Internacional, agendado de 13 a 22 de novembro. Com curadoria a cargo de Pedro Mexia e Raquel Marinho, o programa incluirá conversas, poesia e música com convidados de relevo, mantendo a total gratuitidade de acesso para residentes e visitantes. Paralelamente, os sabores locais continuam a destacar-se, com a Maçã Reineta a inspirar os chefs da região e a dar mote ao festival gastronómico de Fontanelas, unindo tradição agrícola e alta cozinha.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            },
+            {
+              "n": "03",
+              "headline": "O feriado de Todos-os-Santos altera o ritmo da vila histórica.",
+              "lede": "A data de 2026-11-01 traz encerramentos nos serviços públicos.",
+              "body": "A proximidade do Dia de Todos-os-Santos, assinalado a 2026-11-01, altera discretamente o funcionamento institucional em Sintra. Os serviços camarários, conservatórias e instituições bancárias fecharão as portas durante o dia festivo, convidando moradores e visitantes a desfrutar exclusivamente da paisagem natural. As ruas históricas mantêm o seu passo vagaroso, ideal para cruzar os trilhos arborizados antes que as chuvas mais intensas de novembro transformem de vez a textura dos caminhos da serra.",
+              "source": "saudade desk",
+              "source_date": "2026-10-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A localidade de Almoçageme veste-se de festa com o Festival do Outono promovido pelos bombeiros voluntários, celebrando a genuinidade saloia. Sob um manto de nuvens e temperaturas na faixa dos 15 aos 22°C, a serra respira uma calma profunda. A qualidade do ar permanece estável, com um índice de PM2.5 de 8 que assegura um ambiente limpo para respirar fundo. A noite começa a cair mais cedo, marcando o ocaso pelas 18:55. Enquanto isso, o Cacém recebe a Dinosauria Experience e Mira Sintra a mostra sensorial Emoções. Para os turistas estrangeiros, 1 USD equivale a 0.89 EUR. A proximidade do Dia de Todos-os-Santos a 2026-11-01 obriga a gerir burocracias antes do fecho dos serviços públicos.",
               "source": "saudade desk",
               "source_date": "2026-10-18"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-17T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu nublado abranda o ritmo da cidade sob vinte e cinco graus.",
-              "lede": "A temperatura oscila entre dezoito e vinte e cinco graus com céu encoberto. O pôr do sol ocorre às 18:55.",
-              "body": "A atmosfera mantém-se estável e o ar limpo regista PM2.5 de 5. A taxa de câmbio fixa-se em 1 USD para 0.89 EUR para quem chega de fora. O Festival Super Bock em Stock regressa com entrada gratuita no Coliseu de Lisboa, trazendo nomes como The Jesus and Mary Chain. No Parque das Nações, a valantic inaugura um novo escritório. Enquanto isso, o Motel One expande a operação para o norte após a abertura na capital, e o atmosfera m recebe a nova exposição de Amaro della Quercia.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "02",
-              "headline": "A qualidade do ar favorece longas caminhadas pelas ruas da baixa.",
-              "lede": "Com PM2.5 de 5, a cidade respira com facilidade. A amplitude térmica fixa-se entre 18 e 25°C.",
-              "body": "As correntes de ar mantêm o céu encoberto e a luz suave típica do outono lisboeta. A cotação do euro permanece estável face ao dólar em 0.89 EUR. A vida cultural avança sem sobressaltos com a programação do Coliseu e a inauguração da mostra de Amaro della Quercia no atmosfera m. No Parque das Nações, a valantic consolida a sua presença empresarial. O novo Motel One consolida a oferta hoteleira local antes de chegar ao Porto.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "03",
-              "headline": "A luz suave do entardecer reflete-se sobre o Tejo cinzento.",
-              "lede": "O crepúsculo instala-se às 18:55. A temperatura desce gradualmente até aos dezoito graus.",
-              "body": "A cidade transita calmamente entre o final da tarde e a noite cultural. O Festival Super Bock em Stock abre portas no Coliseu de Lisboa com entrada livre para todos os espectadores. No Parque das Nações, a valantic estreia instalações modernas. A expansão do Motel One para o Porto acontece logo após a aposta na capital. A exposição de Amaro della Quercia no atmosfera m completa a oferta artística urbana desta semana de outubro.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A névoa matinal cobre as margens do Douro com uma caligrafia lenta.",
-              "lede": "O nevoeiro matinal dissipa-se lentamente enquanto a temperatura varia entre 14 e 26°C.",
-              "body": "O ar regista níveis moderados com PM2.5 de 17. A taxa de câmbio opera nos 0.89 EUR por 1 USD. A agenda cultural da Invicta destaca o Festival Queer Porto, agendado entre 3 e 7 de novembro. Pela cidade, o festival de tunas continua a dar música até amanhã. Nas galerias, a arte dos entrançados de palha de Fafe atrai visitantes curiosos. A rede hoteleira ganha novo fôlego com a expansão do Motel One, enquanto a EN243 reabre embora mantenha o corte em Porto de Mós.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "02",
-              "headline": "O termómetro alcança vinte e seis graus sob uma neblina persistente.",
-              "lede": "A amplitude térmica situa-se entre 14 e 26°C. O pôr do sol desenha-se às 18:50.",
-              "body": "A qualidade do ar apresenta valores moderados de 17 em PM2.5. O câmbio mantém-se estável em 0.89 EUR por 1 USD. Os preparativos para o Festival Queer Porto avançam para o período de 3 a 7 de novembro. O festival de tunas anima as ruas da cidade até amanhã. Na frente de exposições, destacam-se os entrançados de palha de Fafe. No plano rodoviário, a EN243 reabre com exceção do troço que permanece cortado em Porto de Mós.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "03",
-              "headline": "As tunas académicas ecoam pela baixa antes do encerramento do festival.",
-              "lede": "A música preenche a Invicta até amanhã. O sol recolhe-se às 18:50.",
-              "body": "Com o ar a registar PM2.5 de 17 e temperaturas de até 26°C, a cidade desfruta de um ambiente ameno. A moeda europeia mantém a paridade de 0.89 EUR face ao dólar. A cidade prepara-se para acolher o Festival Queer Porto entre 3 e 7 de novembro. A exposição sobre a arte dos entrançados de palha de Fafe permanece aberta ao público. A mobilidade urbana regista a reabertura da EN243, mantendo contudo o corte condicionado em Porto de Mós.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra oculta-se sob um manto cerrado de nuvens outonais.",
-              "lede": "O termómetro marca entre 17 e 20°C com céu totalmente encoberto. O sol despede-se às 18:56.",
-              "body": "A qualidade do ar é excelente, registando PM2.5 de 4. A taxa de câmbio permanece inalterada em 0.89 EUR por 1 USD. Mira Sintra acolhe a exposição Emoções, uma proposta tátil, imersiva e sensorial. Em Almoçageme, os Bombeiros Voluntários promovem o Festival do Outono com atividades locais. No Cacém, a iniciativa Dinosauria Experience transporta famílias inteiras para o universo dos dinossauros. A vila serrana abriga-se no silêncio húmido característico desta época do ano.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "02",
-              "headline": "O ar puro da serra estabiliza nos vinte graus de temperatura máxima.",
-              "lede": "A variação térmica fixa-se entre 17 e 20°C. O anoitecer acontece pontualmente às 18:56.",
-              "body": "Com um registo de PM2.5 de 4, o ar da serra convida a passeios tranquilos. A conversão cambial mantém-se nos 0.89 EUR por dólar. A agenda cultural local destaca a exposição Emoções em Mira Sintra, focada numa experiência tátil e sensorial. Os Bombeiros Voluntários de Almoçageme dinamizam o Festival do Outono na região. Paralelamente, o Cacém recebe a Dinosauria Experience, atraindo visitantes de várias zonas para ver as recriações pré-históricas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
-            },
-            {
-              "n": "03",
-              "headline": "O Festival do Outono celebra os sabores e saberes tradicionais da encosta.",
-              "lede": "A iniciativa dos Bombeiros Voluntários de Almoçageme anima a região. A noite cai às 18:56.",
-              "body": "A temperatura oscila suavemente entre 17 e 20°C sob um céu encoberto. A qualidade do ar mantém-se excelente com PM2.5 de 4, e o câmbio opera a 0.89 EUR por 1 USD. Em Mira Sintra, a exposição Emoções desafia os sentidos através de um percurso tátil e imersivo. No Cacém, o evento Dinosauria Experience continua a despertar a curiosidade dos mais novos. A serra respira calma entre o verde escuro das copas e a humidade constante.",
-              "source": "saudade desk",
-              "source_date": "2026-10-17"
             }
           ]
         }
