@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-10-24T06:00:00+09:00",
+  "updated": "2026-10-25T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-25T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Autumn warmth lingers over Seoul as evenings cool.",
+              "lede": "Temperatures hover between 10 and 23°C under partly cloudy skies, dropping quickly after sunset at 17:42.",
+              "body": "The afternoon air carries a moderate quality with PM2.5 resting at 26, making it ideal for walking the ancient paths. Wandering hikers will find the Naksan Trail particularly inviting as daylight fades and the city wall lights up. For those managing money, the exchange rate sits steady at 1 USD to 1324 KRW. Nightfall brings a quieter Seoul that comes alive after dark, revealing the softer pace of the capital's residential alleys.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "02",
+              "headline": "Cultural exhibitions draw crowds inside Seoul's creative spaces.",
+              "lede": "Star-studded K-pop showcases highlight modern design while athletic victories energize local neighborhoods.",
+              "body": "Art enthusiasts can explore a star-studded K-pop exhibition in Seoul featuring major acts like BTS, Stray Kids, G-Dragon, and aespa. Beyond the galleries, sports fans are celebrating as Seoul Samsung claims its 7th straight opening win, setting a fresh franchise record. These moments of public excitement blend seamlessly with the calm transitional weather outdoors. Visitors navigating the city can rely on clear wayfinding and a stable currency exchange of 1 USD to 1324 KRW for all daily transactions.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "03",
+              "headline": "Historic stone paths offer quiet refuge above the capital.",
+              "lede": "Hiking Seoul's Naksan Trail provides an accessible first-timer's city wall hike guide through illuminated history.",
+              "body": "The stone ramparts of Naksan offer a gentle climb for observers seeking perspective on the modern sprawl below. As evening approaches and sunset arrives at 17:42, the pathway reveals sweeping views of lit rooftops. Moderate air quality with a PM2.5 level of 26 keeps the horizon clear enough for distant skyline gazing. Travelers exploring these historic elevations will find the mild 10 to 23°C range comfortable for extended foot travel.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Steady rain falls across Tokyo as autumn deepens.",
+              "lede": "A total of 11.2mm precipitation dampens the streets while temperatures range from 16 to 26°C.",
+              "body": "The afternoon rain brings a quiet hush to busy avenues, matching the early sunset at 16:53. Air quality remains moderate with PM2.5 at 30, keeping the atmosphere slightly veiled under grey clouds. Travelers exchanging currency will note a rate of 1 USD to 157 JPY at local bureaus. As the weather turns wet, residents seek shelter inside neighborhood galleries and underground passages rather than lingering in public parks.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "02",
+              "headline": "Film retrospectives and global showcases animate the rainy capital.",
+              "lede": "The Tokyo Film Festival highlights global standouts while major museum retrospectives trace futuristic visions.",
+              "body": "Cinematic events draw devoted audiences indoors, anchored by the Tokyo Film Festival highlights and international entries like Iran’s Noghreh advancing in the competition. Art lovers can also visit the Mariko Mori retrospective at a Tokyo museum, which presents 30 years of the artist’s visionary work. Culinary exchanges add global flavor, such as Leeward CC propelling food makers from Hawaiʻi to Tokyo for special showcases. The current exchange rate stands at 1 USD to 157 JPY.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "03",
+              "headline": "Preparation begins for the upcoming Bunka no Hi holiday.",
+              "lede": "Public offices and banks will close soon for the national holiday on 2026-11-03.",
+              "body": "Residents are noting calendar closures as Culture Day approaches on 2026-11-03, affecting government bureaus, post offices, and major financial institutions. Travelers should complete essential administrative tasks before the public holiday arrives. Despite the damp conditions with 11.2mm precipitation and temperatures spanning 16 to 26°C, transit networks continue operating on normal schedules. Planning ahead ensures a smooth transition through the long holiday weekend.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Bright skies frame the Atlantic light over Lisbon.",
+              "lede": "Temperatures stretch from 11 to 24°C under partly cloudy skies, with sunset holding until 18:44.",
+              "body": "The fair air quality, marked by a low PM2.5 reading of 6, makes walking through the historic quarters exceptionally refreshing. Sunlight reflects off the limestone pavements and the Tagus river as the afternoon slowly turns to dusk. Financial transactions remain standard with an exchange rate of 1 USD to 0.89 EUR. This pleasant stretch of weather draws residents outdoors to coastal viewpoints and hillside terraces before the evening chill sets in.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "02",
+              "headline": "International gatherings and live music fill the Portuguese capital.",
+              "lede": "The World Aviation Festival convenes industry leaders while major arena concerts draw enthusiastic crowds.",
+              "body": "Lisbon continues to host major international events, highlighted by the World Aviation Festival 2026 focusing on modern industry trends. Music fans recently packed the MEO Arena Lisbon for a memorable gig review featuring Fontaines D.C. In diplomatic circles, Azerbaijan and Portugal are actively discussing the opening of a new embassy in Lisbon. Visitors navigating these professional and cultural hubs benefit from the favorable currency exchange of 1 USD to 0.89 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            },
+            {
+              "n": "03",
+              "headline": "All Saints' Day preparations arrive ahead of the autumn calendar.",
+              "lede": "Government offices and banks will close for the upcoming public holiday on 2026-11-01.",
+              "body": "As the month draws to a close, residents prepare for Dia de Todos-os-Santos on 2026-11-01. Public services, municipal offices, and banks will observe closures for the holiday, so travelers should handle official errands early in the week. The mild weather, featuring daytime highs near 24°C and fair air quality, provides ideal conditions for quiet reflection in local gardens and cemeteries. Public transit will adjust to holiday timetables as locals mark the traditional day of remembrance.",
+              "source": "saudade desk",
+              "source_date": "2026-10-25"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-24T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Daytime temperatures measure 18°C to 25°C under overcast skies that soften the view toward the Tagus River until sunset at 18:55. Good air quality with a PM2.5 measure of 5 makes walking through historical districts remarkably pleasant. Exchange rates hold steady at 1 USD to 0.89 EUR. Preparations continue quietly at the National Museum of Ancient Art ahead of its November debut. Take an unhurried pause at a corner café to watch the pale light settle over the old stone facades.",
               "source": "saudade desk",
               "source_date": "2026-10-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-16T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The autumn air settles over the hanok quiet of Seoul at 14–23°C.",
-              "lede": "Partly cloudy skies frame the changing maple leaves as sunset arrives at 17:54.",
-              "body": "The afternoon air feels crisp as temperatures shift between 14°C and 23°C under partly cloudy skies across the city. Evening arrives promptly with the sun setting at 17:54, signaling residents to adjust their coats for the drop in temperature. Air quality rests at a moderate PM2.5 level of 21, keeping neighborhood strolls clear and comfortable. Financial transactions settle smoothly at a current exchange rate of 1 USD to 1346 KRW for visiting travelers. The city moves at an unhurried, steady pace this week, balancing the changing season with quiet grace.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "02",
-              "headline": "Design exhibitions and quiet study methods mark the Seoul calendar.",
-              "lede": "Samsung showcases OLED artistry while libraries share historical study methods.",
-              "body": "Samsung Electronics brings a refined OLED art exhibition to Seoul Design Week, showcasing the intersection of modern screens and visual expression. Meanwhile, local libraries are sharing traditional Joseon-era study methods ahead of the upcoming college exam season. Cultural explorations continue elsewhere as the Seoul Whistler Film Festival opens its doors to stories of resistance and human persistence. These concurrent events offer observers a rich view into contemporary and historical Korean life alike. Visitors will find plenty of thoughtful indoor exhibitions to escape the midday chill.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "03",
-              "headline": "Evening walks through the palace gardens reveal the crisp October air.",
-              "lede": "Quiet courtyards invite slow contemplation as the evening shadows lengthen.",
-              "body": "The stone pathways of the ancient courtyards retain the gentle warmth of the afternoon sun before the evening chill takes hold. Walkers pace themselves along the stone walls, listening to the dry leaves rustling underfoot. The moderate air quality of 21 ensures that deep breaths remain refreshing during long outdoor circuits. Public spaces feel remarkably calm midweek, offering a quiet respite from the busier commercial districts. It is an ideal time for slow observation before the deeper cold of late autumn arrives.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies and mild temperatures shape the Tokyo afternoon at 16–26°C.",
-              "lede": "The gray canopy softens the autumn light as sunset approaches at 17:05.",
-              "body": "An overcast blanket hangs across the city, holding temperatures comfortably between 16°C and 26°C for those walking the neighborhoods. The fading daylight fades earlier now, with the sun setting at 17:05 across the metropolitan skyline. Air quality registers a moderate PM2.5 reading of 38, making it a good day for standard urban exploration. Travelers exchanging currency will find a stable rate of 1 USD trading at 158 JPY. The subdued lighting gives the city streets a gentle, contemplative atmosphere throughout the afternoon hours.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "02",
-              "headline": "Film leadership and international cinema gatherings bring focus to the capital.",
-              "lede": "The Academy leadership arrives in Tokyo alongside exhibitions that travel beyond major hubs.",
-              "body": "The Tokyo Film Festival welcomes prominent figures this week, including the Academy's Bill Kramer and Lynette Howell Taylor for special leadership summits. Academy CEO Bill Kramer is slated to receive a leadership award and host onstage discussions alongside Toho leadership. Beyond the festival halls, the Palais de Tokyo continues its mission of bringing contemporary art exhibitions out of major urban centers and into broader cultural view. These gatherings draw quiet crowds of film enthusiasts and art observers to local venues. It is a rewarding week for anyone interested in international creative exchange.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "03",
-              "headline": "Park paths and quiet alleyways adapt to the steady overcast light.",
-              "lede": "The muted afternoon sun keeps the neighborhood gardens peaceful and uncrowded.",
-              "body": "Without the glare of direct sunlight, neighborhood gardens and park paths take on a subdued, painterly quiet. The moderate air quality index of 38 allows for comfortable walking without the rush of peak tourist hours. Visitors pause beneath the broad canopy of the urban trees as the afternoon gently turns toward evening. The steady exchange rate of 158 JPY per USD makes local café stops straightforward for international visitors. Everything moves with practiced restraint, matching the quiet rhythm of the season.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Warm overcast days grace Lisbon with temperatures reaching 18–28°C.",
-              "lede": "The Tagus river reflects the muted autumn light as sunset arrives at 18:56.",
-              "body": "A warm overcast canopy covers the capital, keeping temperatures pleasantly mild between 18°C and 28°C. Evening arrives slowly with the sun setting at 18:56, casting a soft glow over the terracotta rooftops. Air quality remains wonderfully fair with a clean PM2.5 reading of 10 for walkers exploring the hills. Travelers managing expenses will find an exchange rate of 1 USD trading at 0.89 EUR. The gentle climate invites unhurried strolls through the winding alleys of the old districts.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "02",
-              "headline": "Civic updates point toward upcoming cultural reopenings across the city.",
-              "lede": "Municipal libraries seek accessibility contractors while major museums prepare for November.",
-              "body": "Local civic administration continues its steady work, with the Lisbon Library currently seeking a qualified contractor for an upcoming accessibility project. Art enthusiasts are already looking ahead to November, when Lisbon’s renowned National Museum of Ancient Art is scheduled to reopen its doors. These quiet civic improvements reflect a city carefully preparing its cultural spaces for the coming months. Visitors will find the usual neighborhood routines undisturbed by these long-term infrastructural developments. It is an ideal season to observe Lisbon's steady dedication to preserving its heritage.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
-            },
-            {
-              "n": "03",
-              "headline": "Miradouros offer peaceful views under the soft October canopy.",
-              "lede": "The fair air quality makes hillside viewpoints exceptionally clear this week.",
-              "body": "The hillside viewpoints remain serene gathering places as locals and travelers pause to watch the river traffic below. With an exceptionally fair air quality index of 10, the horizon across the water appears crisp despite the cloud cover. The warm afternoon temperature of 28°C makes outdoor seating at neighborhood tascas especially inviting. Pedestrians navigate the polished stone pavements at a calm, deliberate pace suited to the afternoon heat. Lisbon maintains its timeless, reflective charm as the autumn week unfolds.",
-              "source": "saudade desk",
-              "source_date": "2026-10-16"
             }
           ]
         }
