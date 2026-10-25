@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-25T06:00:00+09:00",
+  "updated": "2026-10-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Planetario de Madrid celebra su cuadragésimo aniversario con una muestra gratuita.",
+              "lede": "Cuarenta años después de abrir sus puertas para acercar el universo a la capital, el centro inaugura una gran exposición.",
+              "body": "El Planetario de Madrid cumple 4 décadas desde que inició su andadura en el año 1986. Para celebrarlo con la ciudadanía, el espacio astronómico ofrece una amplia exposición gratuita que repasa su historia divulgativa. Es una excelente oportunidad para redescubrir las salas que han despertado vocaciones científicas durante generaciones. Las visitas se pueden compaginar con un paseo por los aledaños del parque de Tierno Galván. Conviene consultar la programación previa para asegurar el acceso a las proyecciones especiales de este fin de semana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "02",
+              "headline": "El tipo de cambio actual se sitúa en 1 USD equivalente a 0.89 EUR.",
+              "lede": "Los viajeros procedentes de Estados Unidos encontrarán esta cotización favorable al planificar sus gastos diarios.",
+              "body": "La paridad monetaria actual marca un valor estables para quienes operan con divisas extranjeras en la capital. Mantener la referencia de 1 USD por cada 0.89 EUR facilita los cálculos en los mercados tradicionales, librerías del centro y cafés históricos. Es recomendable utilizar tarjetas sin comisiones ocultas para optimizar cada transacción. Los cajeros automáticos de la red general aplican esta tasa de conversión de manera automática. Este margen resulta útil para presupuestar las entradas a exposiciones, librerías y restaurantes locales durante los próximos días otoñales.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "03",
+              "headline": "El festivo del Día de todos los Santos afectará a los servicios administrativos el 1 de noviembre.",
+              "lede": "La festividad del 2026-11-01 traerá cierres generales en oficinas gubernamentales, bancos y oficinas postales.",
+              "body": "El próximo domingo 2026-11-01 se celebra la festividad oficial del Día de todos los Santos en todo el territorio nacional. Como es habitual en esta fecha señalada, los organismos públicos, las sucursales bancarias y las oficinas de correos permanecerán cerradas. Los comercios de alimentación del centro mantendrán horarios reducidos o adaptados a la jornada festiva. Se aconseja realizar cualquier gestión administrativa pendiente con suficiente antelación antes del fin de semana. Las calles del casco histórico suelen registrar un ambiente más pausado durante estas horas de conmemoración.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra hoy temperaturas de 15 a 21 grados bajo cielos completamente cubiertos.",
+              "lede": "La puesta de sol se producirá a las 17:54, marcando el avance progresivo de las tardes otoñales.",
+              "body": "Las condiciones meteorológicas actuales en la ciudad presentan un registro térmico moderado que oscila entre los 15 y los 21°C. El cielo se mantiene totalmente cubierto durante toda la jornada, reduciendo la luminosidad natural en las calles del Eixample. La calidad del aire se sitúa en niveles pobres con un índice PM2.5 de 15, por lo que se recomienda moderar las actividades físicas prolongadas al aire libre. La caída del sol a las 17:54 invita a buscar refugio en los interiores de los espacios culturales y cafeterías de barrio. Es una atmósfera propicia para la lectura reposada y los recorridos urbanos sin prisa.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "02",
+              "headline": "El parque residencial de Barcelona crece a un ritmo de unas 2.400 viviendas anuales.",
+              "lede": "Los datos recientes reflejan la evolución constante del tejido habitacional en los distintos barrios.",
+              "body": "El desarrollo urbanístico de la ciudad continúa sumando aproximadamente 2.400 nuevas viviendas cada año al parque residencial existente. Esta transformación altera sutilmente el paisaje arquitectónico de los distritos periféricos y consolidados. Para los observadores atentos, el dinamismo constructivo revela cómo se readaptan los antiguos solares y naves industriales. La integración de estos nuevos edificios busca responder a la demanda habitacional sin romper la escala humana del entorno. Los paseos por los límites urbanos permiten apreciar esta lenta pero constante renovación de la silueta catalana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "03",
+              "headline": "Las oficinas públicas cerrarán el 1 de noviembre con motivo del Día de todos los Santos.",
+              "lede": "La jornada festiva del 2026-11-01 alterará el funcionamiento habitual de bancos y administraciones.",
+              "body": "La llegada del 2026-11-01 trae consigo la festividad nacional del Día de todos los Santos en la capital catalana. Durante este día festivo, las oficinas gubernamentales, las entidades bancarias y las oficinas postales suspenderán su atención presencial habitual. Los servicios esenciales funcionarán con los dispositivos mínimos previstos para los días de descanso laboral. Conviene planificar cualquier trámite financiero o postal con antelación para evitar inconvenientes imprevistos. Los cementerios de la ciudad recibirán a numerosos visitantes en un ambiente de respetuoso recogimiento.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires amanece con temperaturas de 8 a 17 grados y un índice UV muy alto.",
+              "lede": "El cielo permanece cubierto y la puesta de sol está prevista para las 19:17 en la capital.",
+              "body": "La jornada dominical se presenta fresca al amanecer y templada después, con registros térmicos que se mueven entre los 8 y los 17°C. A pesar de la cobertura nubosa predominante, el índice UV alcanza un valor de 8, catalogado como muy alto, lo que exige protección solar durante las horas centrales del día. La calidad del aire se mantiene en niveles justos con un registro PM2.5 de 7. La puesta de sol llegará a las 19:17, alargando una tarde propicia para caminar por los parques y plazas de la ciudad. El clima invita a disfrutar de los espacios abiertos con la precaución debida ante la radiación solar.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "02",
+              "headline": "Inauguran en Buenos Aires una destacada exposición dedicada a Florencio Molina Campos.",
+              "lede": "La muestra cultural rescata el universo pictórico y costumbrista del célebre artista argentino.",
+              "body": "Los espacios expositivos de la ciudad suman una nueva propuesta con la apertura de la muestra dedicada a Florencio Molina Campos. La exhibición reúne obras emblemáticas que retratan con humor y sencillez las costumbres del campo argentino. Es una oportunidad imperdible para apreciar los trazos entrañables que definieron la identidad visual de varias generaciones. Los visitantes pueden recorrer las salas con tranquilidad durante toda la semana en los horarios habituales de apertura. Esta iniciativa enriquece la agenda cultural porteña con un recorrido entrañable por las raíces del sur.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            },
+            {
+              "n": "03",
+              "headline": "El Hanguk Fest ofrece una ventana abierta a la cultura y gastronomía coreana con entrada gratuita.",
+              "lede": "El festival ciudadano reúne sabores tradicionales, actividades y muestras artísticas en un mismo espacio.",
+              "body": "La agenda de festivales de Buenos Aires incluye esta semana una nueva edición del Hanguk Fest, totalmente gratuito para todo el público. El encuentro gastronómico y cultural permite explorar la riqueza de Corea a través de platos típicos, talleres y expresiones artísticas. La propuesta fomenta el intercambio comunitario en un ambiente distendido y abierto a la curiosidad de los asistentes. Es recomendable llegar con tiempo para recorrer los distintos puestos y exposiciones sin agobios. La iniciativa consolida a la capital como un punto de encuentro multicultural donde conviven diversas tradiciones del mundo.",
+              "source": "saudade desk",
+              "source_date": "2026-10-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-25T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La vida comunitaria encuentra este mes un punto de encuentro en los grandes parques de la ciudad gracias a una variada oferta de eventos gratuitos. Entre ellos destaca Mascotear 2026, concebido como un festival gratuito para disfrutar en compañía de las mascotas en predios especialmente acondicionados para el bienestar animal. A ello se suma la celebración del Water Lantern Festival, que aporta una atmósfera contemplativa al caer la noche sobre espejos de agua seleccionados. Con un índice UV que llega a 8 y cielos overcast que oscilan entre 11 y 19°C, las actividades al aire libre se desarrollan con un confort térmico muy favorable. El atardecer a las 19:12 marca el momento ideal para presenciar las actividades vespertinas en los pulmones verdes de la metrópolis.",
               "source": "saudade desk",
               "source_date": "2026-10-20"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-19T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Moments Festival regresa a Madrid con su décima edición dedicada al arte urbano y la música.",
-              "lede": "Espacios culturales de toda la ciudad acogen talleres y proyecciones independientes durante octubre.",
-              "body": "El tejido cultural de la capital acoge una nueva entrega del Moments Festival, diez jornadas que celebran la cultura underground, el diseño y el skate. Paralelamente, el centro cultural Espacio Abierto programa el festival MICE Madrid con propuestas cinematográficas dirigidas al público joven. Para quienes buscan alternativas de ocio a las afueras, Mejorada del Campo estrena Screamfield como el primer parque temático dedicado al género de terror. Las transacciones comerciales en establecimientos culturales se benefician de una estabilidad cambiaria mantenida en 1 USD equivalente a 0.89 EUR. Conviene recordar que el próximo 2026-11-01 se celebra el Día de todos los Santos, jornada en la que la administración pública y las entidades bancarias permanecerán cerradas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "02",
-              "headline": "El deporte y la cultura alternativa dinamizan las agendas del fin de semana madrileño.",
-              "lede": "Los recintos deportivos y las salas de proyección alternan grandes citas competitivas con ciclos independientes.",
-              "body": "La actividad en la ciudad combina competiciones de alto nivel con iniciativas artísticas de carácter independiente. En el ámbito deportivo, la Liga Endesa deja momentos memorables tras el reciente encuentro en el que el Madrid se impuso al Bilbao con un marcado dominio ofensivo sobre la pista. Estos eventos congregan a numerosos aficionados que aprovechan la excelente red de transporte público para sus desplazamientos urbanos. Las librerías independientes y los centros céntricos adaptan sus horarios para acoger charlas y encuentros con creadores locales. Las transacciones financieras y reservas de entradas operan bajo la cotización estable de 1 USD por 0.89 EUR. Los residentes organizan sus agendas teniendo en cuenta el festivo nacional del 2026-11-01, fecha señalada por el Día de todos los Santos que modifica los horarios comerciales habituales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "03",
-              "headline": "La proximidad del Día de todos los Santos reorganiza la actividad administrativa en Madrid.",
-              "lede": "Los servicios públicos y las oficinas bancarias ajustan sus calendarios ante el festivo de noviembre.",
-              "body": "El calendario madrileño se prepara para la llegada del Día de todos los Santos el 2026-11-01, un festivo nacional que tradicionalmente altera los horarios de apertura en oficinas gubernamentales y sucursales bancarias. Los comercios de barrio y los mercados municipales mantienen su ritmo habitual de abastecimiento mientras los visitantes disfrutan de la oferta cultural otoñal. La ciudad registra un ambiente propicio para pasear por parques y bulevares, con una economía local que opera con soltura gracias a un tipo de cambio de 1 USD a 0.89 EUR. Las propuestas de ocio se multiplican por los barrios con la llegada de festivales de cine y muestras de skate, consolidando una temporada otoñal rica en actividades participativas para residentes y viajeros que prefieren la observación reposada.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona recibe tormentas otoñales con temperaturas suaves y buena calidad del aire.",
-              "lede": "El mercurio oscila entre 15 y 20°C mientras la ciudad acumula 21.7mm de precipitación.",
-              "body": "El frente de tormenta que cruza la ciudad deja un registro de 21.7mm de precipitación y temperaturas contenidas entre 15 y 20°C. La calidad del aire se mantiene en niveles considerados justos, con un registro de PM2.5 de 4 que favorece los paseos urbanos tras los chubascos. La puesta de sol se fija a las 19:04, otorgando una luz difusa sobre las calles mojadas del Eixample y Ciutat Vella. Las transacciones comerciales y turísticas operan bajo el tipo de cambio oficial de 1 USD equivalente a 0.89 EUR. Cabe recordar que el inminente 2026-11-01 se celebra el Día de todos los Santos, jornada de festividad nacional en la que los organismos oficiales y las oficinas bancarias suspenderán su atención al público.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Barcelona Dibuixa despliega su programación artística en Sarrià - Sant Gervasi.",
-              "lede": "Los distritos barceloneses acogen muestras de cine independiente y diseño textil de proyección internacional.",
-              "body": "La agenda cultural de la semana destaca por la celebración del festival Barcelona Dibuixa en el distrito de Sarrià - Sant Gervasi, fomentando la creación participativa en espacios públicos. En el ámbito internacional, el Festival de Hyères ha reconocido recientemente el talento del diseñador Brais Albor y ha otorgado el Gran Premio del Jurado a Yui Chen. Paralelamente, el festival de cine argentino de Barcelona (BAAR) ofrece una programación en estado salvaje que atrae a cinéfilos y observadores curiosos. Las actividades se desarrollan bajo un clima inestable marcado por una temperatura de 15 a 20°C y 21.7mm de precipitación. Los visitantes internacionales pueden gestionar sus gastos utilizando la equivalencia de 1 USD por 0.89 EUR. Conviene planificar las gestiones administrativas con antelación ante el cierre de oficinas previsto para el 2026-11-01 por el Día de todos los Santos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "03",
-              "headline": "La previsión meteorológica marca una semana de cielos nubosos y ambiente templado.",
-              "lede": "El atardecer a las 19:04 invita a recorrer los barrios tradicionales bajo la lluvia intermitente.",
-              "body": "La atmósfera barcelonesa se presenta fresca y húmeda, con termómetros que se mueven entre los 15 y 20°C y una acumulación pluvial de 21.7mm que pone a prueba los paraguas de los viandantes. La contaminación fina se mantiene baja, registrando un valor de PM2.5 de 4 que asegura la salubridad del aire urbano. La caída de la tarde a las 19:04 acorta las horas de luz natural, propiciando el refugio en librerías y cafés históricos de la ciudad. Las finanzas de los viajeros extranjeros se benefician de una tasa de cambio estable situada en 1 USD por 0.89 EUR. De cara al fin de semana próximo y al festivo del 2026-11-01 por el Día de todos los Santos, se aconseja consultar los horarios especiales de museos, instituciones públicas y transporte metropolitano.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires transita una semana templada con lloviznas dispersas y ambiente musical.",
-              "lede": "El mercurio se sitúa entre 9 y 16°C mientras la previa del Primavera Sound anima la ciudad.",
-              "body": "Las calles porteñas experimentan condiciones frescas con temperaturas que oscilan entre 9 y 16°C y una ligera llovizna de 0.2mm que apenas moja las veredas. La calidad atmosférica se registra como justa, con un nivel de PM2.5 de 9 que mantiene el aire transparente tras el paso de la humedad. La caída del sol se produce a las 19:11, alargando ligeramente las tardes de primavera austral. La actividad cultural de la ciudad vibra con el inicio de la previa del Primavera Sound Buenos Aires 2026, que incluye encuentros entre artistas y el ciclo de conciertos Primavera en la Ciudad. Paralelamente, el Water Lantern Festival regresa para ofrecer dos noches de luces flotantes y tradición milenaria en espacios acuáticos seleccionados. Los residentes disfrutan de una atmósfera tranquila mientras pasean por los parques y avenidas arboladas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "02",
-              "headline": "La música independiente y los encuentros artísticos anticipan el Primavera Sound.",
-              "lede": "Los escenarios porteños acogen ciclos alternativos y experiencias culturales de inspiración tailandesa.",
-              "body": "La escena local vive momentos de gran efervescencia con el arranque oficial de la previa del Primavera Sound Buenos Aires 2026. Destacan iniciativas singulares como el karaoke protagonizado por artistas de la escena local y el desarrollo del programa Primavera en la Ciudad, que descentraliza la música en vivo. A esta oferta se suma el regreso del Water Lantern Festival, un evento de dos noches donde miles de luces flotantes recrean una milenaria tradición tailandesa sobre el agua. Las condiciones meteorológicas acompañan con temperaturas de 9 a 16°C y una precipitación casi inapreciable de 0.2mm de llovizna. La puesta del sol a las 19:11 marca el inicio de las actividades nocturnas en los barrios tradicionales. La calidad del aire se mantiene estable con un índice de PM2.5 de 9, propiciando el disfrute del espacio público.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
-            },
-            {
-              "n": "03",
-              "headline": "Los espacios al aire libre porteños acogen festivales lumínicos y propuestas urbanas.",
-              "lede": "El atardecer a las 19:11 ilumina una ciudad que combina tradición milenaria y vanguardia musical.",
-              "body": "El atardecer porteño, fijado puntualmente a las 19:11, ofrece postales urbanas con temperaturas templadas de 9 a 16°C. Las ligeras lloviznas dejan un acumulado testimonial de 0.2mm, permitiendo el normal desarrollo de los eventos programados al aire libre. La calidad del aire muestra un valor de PM2.5 de 9, considerado justo para la práctica de actividades recreativas en parques y plazas. La agenda cultural brilla con la celebración del Water Lantern Festival y su despliegue de luces flotantes, consolidando una cita imperdible del calendario local. Al mismo tiempo, la previa del Primavera Sound Buenos Aires 2026 toma los barrios con actuaciones y encuentros entre creadores musicales. Los observadores y viajeros encuentran en la capital un equilibrio perfecto entre la pausa otoñal y la efervescencia artística.",
-              "source": "saudade desk",
-              "source_date": "2026-10-19"
             }
           ]
         }
