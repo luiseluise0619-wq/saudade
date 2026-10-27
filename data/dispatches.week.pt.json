@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-26T06:00:00+09:00",
+  "updated": "2026-10-27T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-27T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A música regressa às profundezas do Metro de Lisboa com o festival Há Música ao Fundo do Túnel.",
+              "lede": "As plataformas subterrâneas acolhem concertos breves para quem cruza a cidade.",
+              "body": "O festival Há Música ao Fundo do Túnel volta a animar as estações da rede metropolitana de Lisboa esta semana. Os passageiros encontram melodias inesperadas entre as viagens diárias, transformando o silêncio habitual dos corredores em ponto de encontro cultural. Esta iniciativa aproxima a arte contemporânea do quotidiano urbano sem perturbar o ritmo dos transportes. Vale a pena abrandar o passo ao som dos acordes que ecoam junto às cancelas. A taxa de câmbio mantém-se estável nos 1 USD para 0.89 EUR para quem chega de fora. O Dia de Todos-os-Santos aproxima-se a 2026-11-01, trazendo o habitual recolhimento às ruas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "O Parque Riverside alarga a oferta de estacionamento na zona ribeirinha de Marvila.",
+              "lede": "A margem do Tejo ganha novas facilidades para receber quem visita a zona oriental.",
+              "body": "O Parque Riverside em Marvila alargou recentemente a sua capacidade de estacionamento, facilitando o acesso à frente ribeirinha. Quem procura caminhar junto ao rio encontra agora mais espaço para deixar o veículo antes de iniciar o passeio. Esta melhoria na infraestrutura local apoia o crescimento calmo do bairro, ligando os armazéns recuperados aos percursos pedestres. A conversão de moeda fixa-se em 1 USD para 0.89 EUR para os viajantes internacionais. A proximidade do Dia de Todos-os-Santos a 2026-11-01 lembra que os serviços públicos e bancários encerrarão brevemente.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "A Leica Store acolhe o olhar atento de Gonçalo Fonseca na exposição New Lisbon.",
+              "lede": "A Galeria na Rua do Ouro expõe registos visuais sobre as transformações urbanas da capital.",
+              "body": "A Leica Store Lisboa exibe a mostra fotográfica New Lisbon, da autoria de Gonçalo Fonseca. O trabalho documenta com precisão documental e sensibilidade as mutações recentes da cidade e das suas gentes. É uma paragem recomendável para os observadores atentos que pretendem compreender a Lisboa contemporânea através da lente. A entrada é livre para todos os visitantes que circulam pelo centro histórico. A cotação cambial permanece nos 1 USD para 0.89 EUR. O feriado do Dia de Todos-os-Santos a 2026-11-01 alterará o funcionamento dos balcões administrativos nos próximos dias.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O festival Queer Porto ocupa a Casa Comum da Universidade do Porto com ciclos literários.",
+              "lede": "A programação cultural cruza o cinema e a literatura com entrada aberta à cidade.",
+              "body": "A Universidade do Porto acolhe o festival Queer Porto na sua Casa Comum, integrando conversas e ciclos dedicados à literatura. O evento promove a reflexão crítica através de obras contemporâneas e encontros com autores. O céu permanece overcast, com temperaturas entre 13 e 18°C e uma precipitação ligeira de 0.4mm que pede agasalho leve. A qualidade do ar regista níveis moderados, com PM2.5 a 24. A taxa de câmbio é de 1 USD para 0.89 EUR. A chegada do Dia de Todos-os-Santos a 2026-11-01 exigirá atenção aos horários de serviços e repartições públicas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "A qualidade do ar mantém-se moderada sob um céu predominantemente nublado na Invicta.",
+              "lede": "A atmosfera urbana regista PM2.5 nos 24 numa tarde sem grandes aberturas de sol.",
+              "body": "A cidade avança sob um manto cinzento com termómetros a oscilar entre 13 e 18°C. A chuva residual de 0.4mm mal molha as laçadas de granito nas ruas da Ribeira, onde o anoitecer acontece pelas 17:36. A qualidade do ar apresenta valores moderados de PM2.5 a 24, aconselhando caminhadas tranquilas sem esforço excessivo. A cotação monetária fixa-se em 1 USD para 0.89 EUR. Com o Dia de Todos-os-Santos marcado para 2026-11-01, os residentes preparam o fim de semana prolongado com o tradicional encerramento de repartições estatais e bancos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "O parque de autocaravanas recuperado acolhes visitantes na margem do Douro.",
+              "lede": "A infraestrutura reabriu com normalidade após os incidentes do verão passado.",
+              "body": "O espaço destinado a autocaravanas junto ao rio continua a funcionar plenamente após a rápida recuperação registada após as festividades de S. João. A oferta de acolhimento turístico recuperou a totalidade da sua capacidade para receber os viajantes que chegam por estrada. As condições atmosféricas mostram-se calmas, com temperaturas entre 13 e 18°C e 0.4mm de precipitação sob céus nublados. O pôr do sol ocorre às 17:36. A moeda estrangeira troca-se a 1 USD para 0.89 EUR. O feriado de 2026-11-01 trará o silêncio característico do Dia de Todos-os-Santos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Sintra prepara a chegada do seu primeiro Festival Literário Internacional com entrada livre.",
+              "lede": "A Serra acolherá em novembro conversas e poesia com curadoria de Pedro Mexia e Raquel Marinho.",
+              "body": "A vila serrana prepara-se para receber o seu primeiro Festival Literário Internacional, agendado para o próximo mês com curadoria de Pedro Mexia e Raquel Marinho. O programa incluirá dez dias de conversas, poesia e encontros com figuras de relevo cultural. O ambiente atual convida a passeios tranquilos, beneficiando de temperaturas entre 13 e 20°C e céu parcialmente nublado. A qualidade do ar é considerada boa, com PM2.5 a 5, ideal para respirar a humidade característica da vegetação densa. O sol desce no horizonte pelas 17:43. A taxa de câmbio é de 1 USD para 0.89 EUR. O Dia de Todos-os-Santos celebra-se a 2026-11-01, determinando o fecho de serviços públicos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "Fontanelas celebra os sabores mais tradicionais num regresso às origens da gastronomia local.",
+              "lede": "A localidade sintrense volta a valorizar os produtos da terra com receitas seculares.",
+              "body": "A localidade de Fontanelas destaca-se esta semana pela valorização dos seus sabores tradicionais, atraindo quem procura a genuinidade da região saloia. Os visitantes encontram produtos artesanais e doçaria típica nos mercados da freguesia. O clima coopera com a descoberta, registando entre 13 e 20°C e céu parcialmente encoberto. A qualidade do ar permanece excelente, com PM2.5 a 5, tornando os trilhos verdes particularmente convidativos. A noite cai calmamente pelas 17:43. A conversão cambial opera a 1 USD para 0.89 EUR. Recorda-se que a 2026-11-01 se cumpre o Dia de Todos-os-Santos, data de paragem institucional em todo o país.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "O ar puro da serra acompanha os caminhantes sob termómetros amenos na vila histórica.",
+              "lede": "A qualidade do ar regista PM2.5 a 5 com o cair da tarde pelas 17:43.",
+              "body": "Os passeios pelas encostas da serra beneficiam de excelentes condições atmosféricas, com valores de PM2.5 fixados em 5, atestando a pureza do ar sintrense. Os termómetros marcam valores entre 13 e 20°C, num cenário de céu parcialmente nublado que suaviza a luz sobre os palácios. O pôr do sol regista-se pontualmente às 17:43, antecipando noites frescas. A taxa de câmbio atinge 1 USD para 0.89 EUR. Com a aproximação do Dia de Todos-os-Santos a 2026-11-01, os serviços públicos e os balcões bancários suspenderão o atendimento habitual, recomendando-se a antecipação de diligências burocráticas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-26T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "O Cacém recebe uma exposição itinerante que desperta a curiosidade dos mais novos sobre a história natural. Sob o céu overcast característico destes dias e temperaturas que rondam os 12 a 19°C, o passeio urbano ganha dinamismo. O ar da região está limpo, com PM2.5 nos 3. O sol recolhe-se às 18:50, terminando o dia com uma luz suave sobre os telhados. Tenha em conta que o feriado de Dia de Todos-os-Santos, a 2026-11-01, condicionará o funcionamento habitual dos bancos e dos serviços do estado na próxima semana.",
               "source": "saudade desk",
               "source_date": "2026-10-21"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-20T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Lisboa",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O roteiro de arte contemporânea preenche os museus da cidade.",
-              "lede": "As galerias e espaços culturais propõem novos percursos pelas exposições de outono.",
-              "body": "As galerias da cidade renovam os seus percursos com exposições temporárias que marcam o calendário cultural deste período. É o momento ideal para revisitar os museus centrais e descobrir coleções de arte contemporânea sem a pressa do turismo estival. Para quem planeia compras de catálogos ou bilhetes, a taxa de câmbio permanece estável em 1 USD para 0.89 EUR. Os espaços expositivos mantêm horários regulares, permitindo visitas calmas ao final da tarde. A programação artística estende-se por vários bairros históricos, ligando a pintura e a escultura a antigos palácios recuperados. Caminhar pelas ruas de Lisboa torna-se assim um exercício de contemplação estética, onde cada esquina revela uma nova proposta visual.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "O cinema e a música ocupam os palcos com o Tribeca e o Super Bock em Stock.",
-              "lede": "O Coliseu de Lisboa acolhe concertos de entrada livre.",
-              "body": "A agenda cultural da capital destaca-se pela chegada de grandes iniciativas artísticas aos principais auditórios. O Tribeca Festival Lisboa reforça a sua presença com uma programação dedicada ao cruzamento entre a sétima arte e a música. Em paralelo, o festival Super Bock em Stock regressa para ocupar várias salas, oferecendo concertos de entrada gratuita no Coliseu de Lisboa com nomes como The Jesus and Mary Chain. Estas iniciativas transformam a noite lisboeta num ponto de encontro para melómanos e cinéfilos. Os transportes públicos funcionam com normalidade, facilitando a deslocação entre os recintos espalhados pela baixa. É aconselhável consultar os horários específicos de cada espetáculo para garantir o acesso às salas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "As coroas regressam ao Parque Eduardo VII na transição para o mês de novembro.",
-              "lede": "Os jardins centrais preparam-se para o Dia de Todos-os-Santos.",
-              "body": "O Parque Eduardo VII volta a receber as tradicionais coroas e exibições botânicas que antecedem o final de outubro. À medida que nos aproximamos do Dia de Todos-os-Santos, a 2026-11-01, os serviços municipais preparam o encerramento temporário de repartições públicas, bancos e correios para o feriado. Os residentes aproveitam estes dias de transição para passear pelos relvados amplos e observar a vegetação adaptada à estação fresca. A taxa de câmbio de 1 USD para 0.89 EUR continua a facilitar a gestão financeira para visitantes estrangeiros a residir temporariamente na capital. Os viveiros do parque mostram já espécies resistentes ao clima ameno que se faz sentir. É um período de sossego nos espaços verdes, ideal para leituras longas ao ar livre.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            }
-          ]
-        },
-        {
-          "city": "Porto",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu nublado acompanha as temperaturas amenas na Ribeira.",
-              "lede": "A variação térmica situa-se entre 10 e 17°C sob um manto cinzento.",
-              "body": "A cidade regista temperaturas entre 10 e 17°C, acompanhadas por um céu permanentemente encoberto que suaviza a paisagem urbana. A qualidade do ar mantém-se em níveis moderados, registando PM2.5 de 14, o que convida a longas caminhadas pelas margens do Douro. O sol despede-se mais cedo, com o ocaso fixado pelas 18:46, tingindo o horizonte de tons dourados e cinzentos. Para transações comerciais e câmbios, a referência mantém-se em 1 USD para 0.89 EUR. As ruas calcetadas ganham um brilho particular com a humidade típica desta época do ano, exigindo calçado adequado para caminhar. Os cafés tradicionais acolhem quem procura refúgio do vento fresco que sopra junto à foz.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "A Sé do Porto acolhe concertos gratuitos e o festival Queer Porto.",
-              "lede": "A música sacra e o cinema independente dominam a agenda da semana.",
-              "body": "A Sé do Porto recebe esta noite a atuação do organista do Papa, integrada num ciclo que totaliza 50 concertos gratuitos pela cidade. A programação artística antecipa o festival de cinema Queer Porto, que regressa entre 3 e 7 de novembro com 37 filmes em exibição. Em simultâneo, a cidade prepara-se para acolher as comemorações oficiais do Dia do Exército, envolvendo várias instituições locais. A taxa de câmbio de 1 USD para 0.89 EUR permanece estável nos serviços financeiros da baixa. Os espaços monumentais ajustam os seus horários para receber o público interessado em assistir aos recitais de órgão. É uma semana dedicada à escuta atenta e à descoberta de novas narrativas visuais nas salas portuenses.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "Os serviços municipais preparam o descanso coletivo do feriado próximo.",
-              "lede": "O Dia de Todos-os-Santos altera o funcionamento habitual na próxima semana.",
-              "body": "Com a proximidade do Dia de Todos-os-Santos, a 2026-11-01, os residentes organizam as suas tarefas administrativas antes do encerramento de repartições públicas, bancos e correios. O comércio local ajusta os horários para o fim de semana prolongado que se avizinha na região norte. A circulação pedonal nas praças e jardins decorre com serenidade, sem a afluência massiva dos meses de verão. A taxa de câmbio oficial continua inalterada em 1 USD para 0.89 EUR para operações correntes. Os mercados tradicionais exibem os produtos da época, valorizando os sabores outonais que compõem a gastronomia portuense. Este interregno festivo convida a um ritmo mais lento e à valorização do património local.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            }
-          ]
-        },
-        {
-          "city": "Sintra",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra abriga-se sob nuvens persistentes e temperaturas moderadas.",
-              "lede": "O termómetro oscila entre 13 e 18°C numa atmosfera húmida.",
-              "body": "A vila serrana regista temperaturas entre 13 e 18°C, envolvida num manto de nuvens que esconde ocasionalmente os picos dos palácios. O pôr do sol ocorre às 18:52, encerrando o dia com uma luz difusa sobre a vegetação luxuriante. A qualidade do ar é considerada fair, com um índice de PM2.5 de 6, garantindo uma atmosfera limpa para quem percorre os trilhos pedestres. A taxa de câmbio para visitantes internacionais fixa-se em 1 USD para 0.89 EUR. A humidade característica da montanha intensifica os aromas a terra molhada e folhagem caduca nos jardins românticos. É um cenário propício à introspeção e ao ritmo pausado que caracteriza a serra nesta altura do ano.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "A cultura e as propostas táteis animam os espaços de Mira Sintra e Cacém.",
-              "lede": "A exposição Emoções e o Festival do Outono celebram a criatividade local.",
-              "body": "As iniciativas culturais descentralizam-se pela freguesia com a exposição Emoções, uma proposta tátil, imersiva e sensorial em Mira Sintra. Em paralelo, os Bombeiros Voluntários de Almoçageme promovem o Festival do Outono, unindo a comunidade em torno de saberes tradicionais. No Cacém, a iniciativa Dinosauria Experience atrai famílias interessadas em paleobotânica e dinossauros. Estes eventos dinamizam o quotidiano urbano e suburbano sem perturbar a tranquilidade característica da região. A taxa de câmbio de 1 USD para 0.89 EUR facilita o planeamento de estadias prolongadas por parte de viajantes atentos. Os acessos rodoviários e ferroviários mantêm a normalidade operacional para todos os deslocados.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "A comunidade antecipa o fecho de serviços devido ao feriado de novembro.",
-              "lede": "A chegada do Dia de Todos-os-Santos suspende temporariamente a burocracia.",
-              "body": "A preparação para o Dia de Todos-os-Santos, a 2026-11-01, leva os residentes a concluir trâmites burocráticos antes do encerramento de repartições públicas, bancos e correios. A vila de Sintra adopta um compasso de espera, preparando-se para receber os visitantes que tradicionalmente acorrem aos cemitérios e monumentos históricos. A conversão monetária permanece estável em 1 USD para 0.89 EUR, facilitando as trocas comerciais nos estabelecimentos locais. Os trilhos da serra continuam acessíveis, embora exijam precaução devido à humidade matinal nos degraus de pedra. É o momento oportuno para desfrutar da quietude dos palácios antes das celebrações do início do próximo mês.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
             }
           ]
         }

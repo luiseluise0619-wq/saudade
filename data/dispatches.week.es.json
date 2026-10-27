@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-26T06:00:00+09:00",
+  "updated": "2026-10-27T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-27T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival Sui Generis Madrid reúne la literatura fantástica en los espacios culturales.",
+              "lede": "La creación imaginativa toma protagonismo esta semana con encuentros literarios dedicados al género fantástico.",
+              "body": "Los lectores y seguidores de la narrativa especulativa tienen una cita imprescindible en la capital gracias al Festival de literatura fantástica 'Sui Generis Madrid'. Diversos centros culturales albergan presentaciones, debates y firmas de libros que exploran mundos alternativos y la imaginación contemporánea. Es una oportunidad excelente para descubrir nuevas voces literarias y reencontrarse con autores consagrados del género. Las actividades se desarrollan con entrada libre hasta completar aforo, por lo que se recomienda llegar con antelación a las salas. La programación invita a una pausa reposada entre páginas y tinta.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "Navarro inaugura la exposición Logos en Arganzuela.",
+              "lede": "El distrito madrileño acoge una nueva muestra artística centrada en el lenguaje visual y conceptual.",
+              "body": "La sala de exposiciones de Arganzuela abre sus puertas a la obra de Navarro con la muestra titulada 'Logos'. Este recorrido artístico profundiza en los signos, las formas y la comunicación visual a través de piezas recientes del autor. El espacio invita a una observación pausada, lejos del ritmo acelerado de las grandes avenidas comerciales cercanas. Es una visita ideal para las tardes de otoño en el distrito, combinando arte contemporáneo y tranquilidad. La entrada es gratuita para todos los públicos durante el horario habitual de apertura.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "El Día de Todos los Santos modifica los horarios comerciales y administrativos.",
+              "lede": "La festividad del 2026-11-01 trae consigo cierres generales en oficinas públicas y entidades bancarias.",
+              "body": "Con la llegada del Día de Todos los Santos el 2026-11-01, la actividad urbana experimenta una pausa institucional. Las administraciones públicas, los bancos y las oficinas de correos permanecerán cerradas durante toda la jornada festiva. Los viajeros que necesiten realizar gestiones financieras o administrativas deben prever sus trámites con antelación. Por su parte, los cementerios y los espacios verdes de la ciudad registran una mayor afluencia de visitantes que acuden a cumplir con la tradición floral. El comercio de barrio ajusta sus horarios particulares, por lo que conviene verificar cada establecimiento.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Museo Diocesano acoge por primera vez una exposición de los Museos Vaticanos.",
+              "lede": "La pinacoteca barcelonesa exhibe piezas históricas cedidas excepcionalmente por la Ciudad del Vaticano.",
+              "body": "Bajo un cielo nublado y temperaturas suaves que oscilan entre 15 y 22°C, la agenda cultural de la ciudad ofrece propuestas de gran calado. El Museo Diocesano de Barcelona presenta un hito histórico al acoger por primera vez una selección de obras procedentes de los Museos Vaticanos. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 de 15, lo que favorece los desplazamientos peatonales por el barrio Gótico. Los visitantes pueden contemplar este tesoro artístico hasta la caída del sol, prevista hacia las 17:52. Se aconseja reservar la entrada con antelación debido a la expectación generada entre los residentes y los observadores atentos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "El festival In-Edit 2026 arranca esta semana con lo mejor del documental musical.",
+              "lede": "Las salas de cine de Barcelona se llenan de proyecciones dedicadas a la cultura sonora.",
+              "body": "La nueva edición del festival In-Edit da comienzo en Barcelona con una programación centrada en el cine documental y la música. Con un ambiente otoñal marcado por cielos cubiertos y un termómetro que se mueve entre 15 y 22°C, las salas oscuras se convierten en el refugio perfecto para los cinéfilos. Los espectadores pueden disfrutar de estrenos y obras de culto que exploran la trayectoria de figuras icónicas de diversos géneros musicales. Las proyecciones se acompañan de encuentros con los directores y coloquios abiertos al público. La tarde avanza con rapidez hacia el ocaso a las 17:52, invitando a prolongar el día al amparo de las proyecciones.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "El Día de Todos los Santos suspende la actividad administrativa habitual.",
+              "lede": "La festividad del 2026-11-01 marca el cierre de oficinas y bancos en toda la ciudad.",
+              "body": "Ante la proximidad del Día de Todos los Santos el 2026-11-01, la ciudad se prepara para una jornada de descanso generalizado. Las instituciones públicas, las entidades bancarias y las oficinas de correos suspenderán sus servicios habituales durante el día festivo. Conviene recordar que el tipo de cambio oficial se sitúa en 1 USD = 0.89 EUR para aquellos viajeros que operen con divisas extranjeras en cajeros automáticos. Las floristerías de los barrios registran una intensa actividad vecinal para honrar la memoria de los difuntos en los cementerios locales. Los espacios públicos y los parques mantendrán sus accesos adaptados al calendario festivo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "WAIFF debuta en Buenos Aires uniendo cine e inteligencia artificial.",
+              "lede": "El nuevo festival internacional explora las fronteras entre la creación audiovisual y la innovación tecnológica.",
+              "body": "Bajo un cielo completamente cubierto y una temperatura que se mueve entre 13 y 17°C, la ciudad acude a nuevas citas culturales. Buenos Aires acoge la primera edición de WAIFF, un festival pionero que entrelaza el cine contemporáneo con la inteligencia artificial y la innovación tecnológica. Con una calidad del aire catalogada como justa y un registro de PM2.5 de 7, las condiciones resultan óptimas para pasear entre sedes culturales. Las proyecciones y los debates se extienden hasta la caída del sol, que hoy se produce a las 19:18. Es una oportunidad fascinante para reflexionar sobre el futuro del arte digital y la narrativa visual en un entorno de apacible observación.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "02",
+              "headline": "El festival dedicado a Jorge Luis Borges celebra al autor en su faceta humorística.",
+              "lede": "Las jornadas invitan a redescubrir la ironía y el ingenio verbal del gran escritor argentino.",
+              "body": "Los espacios culturales porteños dedican sus actividades al ingenio literario con un festival enfocado en el Borges humorista. La propuesta ofrece claves analíticas y lecturas públicas para reír a carcajadas con los textos menos solemnes del célebre autor. El clima fresco y nublado, con registros entre 13 y 17°C, acompaña las caminatas reposadas por las librerías y centros de exposiciones de la ciudad. La calidad del aire se mantiene en niveles favorables con PM2.5 en 7, propiciando el disfrute del espacio público sin agobios. Las actividades finalizan puntualmente antes del atardecer, fijado para las 19:18.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            },
+            {
+              "n": "03",
+              "headline": "Inauguran la exposición de Florencio Molina Campos en los espacios de arte de la ciudad.",
+              "lede": "La obra costumbrista del ilustrador regresa para deleite de los amantes de la tradición pictórica.",
+              "body": "La pinacoteca porteña abre sus puertas a una nueva retrospectiva dedicada a Florencio Molina Campos, referente indiscutible del arte costumbrista local. La muestra reúne pinturas y dibujos emblemáticos que retratan el paisaje y los personajes de la pampa tradicional con trazo único. Con una atmósfera apacible y cielos cubiertos que marcan temperaturas de 13 a 17°C, la visita se convierte en un remanso de calma urbana. El aire limpio de la jornada, con PM2.5 en 7, invita a recorrer el barrio a pie tras salir de la sala de exposiciones. El sol se ocultará a las 19:18, cerrando una tarde perfecta para la contemplación estética.",
+              "source": "saudade desk",
+              "source_date": "2026-10-27"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-26T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La agenda de la ciudad se diversifica con celebraciones de carácter internacional que atraen a numeroso público curioso. Mientras los seguidores de la música asisten a convocidades multitudinarias, Buenos Aires acoge un festival coreano con entrada gratuita, propuestas gastronómicas tradicionales y muestras de K-pop. En paralelo, el Water Lantern Festival aporta una dimensión visual sosegada mediante la contemplación de faroles flotantes sobre el agua. Estas actividades reflejan el carácter cosmopolita de la capital, donde las comunidades locales y visitantes comparten espacios de convivencia al aire libre durante las templadas tardes de octubre.",
               "source": "saudade desk",
               "source_date": "2026-10-21"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-20T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Museo Thyssen acoge una nueva mirada sobre la obra de Salvador Dalí.",
-              "lede": "La Comunidad de Madrid colabora en esta muestra esencial dedicada al genio surrealista.",
-              "body": "El otoño madrileño profundiza en sus grandes nombres culturales con la reciente colaboración de la Comunidad de Madrid en la nueva exposición que el Museo Nacional Thyssen-Bornemisza dedica a Salvador Dalí. Es una oportunidad excelente para recorrer salas donde el rigor pictórico convive con el onirismo más depurado. Los visitantes encontrarán un montaje sobrio que favorece la contemplación pausada sin aglomeraciones excesivas en las primeras horas de la mañana. Conviene recordar que el tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR para quienes planifiquen adquisiciones en la tienda del museo. La muestra se integra en una agenda ciudadana que también destaca el paso del festival de otoño y las propuestas barrocas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "Madrid se adentra en su pasado barroco con la arquitectura de la época.",
-              "lede": "La exposición Teatro de grandeza recorre la huella urbana de aquellos siglos.",
-              "body": "La capital invita a observar sus cimientos urbanísticos mediante la exposición Teatro de grandeza. Arte, arquitectura y ciudad en el Madrid barroco. Esta propuesta permite comprender cómo se estructuraron plazas, conventos y palacios que aún definen el perfil histórico del centro. Las visitas guiadas complementarias, bajo el título La mecánica de la verdad, ofrecen un acceso detallado a documentos y planos originales rara vez expuestos. El tipo de cambio oficial permanece estable en 1 USD por 0.89 EUR, facilitando el acceso a publicaciones especializadas en librerías de arte locales. Es una semana propicia para caminar por los barrios antiguos mientras las temperaturas acompañan los recorridos a pie por los conventos clausurados y plazuelas discretas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "El festivo de Todos los Santos se aproxima en el calendario madrileño.",
-              "lede": "El 2026-11-01 marcará el cierre temporal de oficinas administrativas y bancos.",
-              "body": "El próximo día festivo nacional, señalado para el 2026-11-01 con motivo del Día de todos los Santos, afectará al ritmo habitual de la administración pública y las entidades bancarias en Madrid. Los viajeros deben prever que oficinas de correos, registros y sedes oficiales permanecerán cerradas durante esa jornada dominical y su posterior traslado laboral si aplica. Mientras tanto, la ciudad se prepara para acoger propuestas culturales diversas, incluido el Halloween Takeover Festival y la llegada de la denominada Santa Trinidad a los escenarios locales. Las librerías de barrio y los cafés tradicionales mantendrán sus puertas abiertas para quienes busquen refugio tranquilo. Con el tipo de cambio en 1 USD por 0.89 EUR, los visitantes extranjeros gestionan sus gastos cotidianos con total previsibilidad.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra 17 a 21°C bajo cielos cubiertos y aire limpio.",
-              "lede": "La jornada ofrece 0.2mm de precipitación y una calidad del aire calificada como fair.",
-              "body": "La ciudad amanece con un termómetro que oscila entre 17 y 21°C y una ligera presencia de 0.2mm de precipitación que apenas moja el asfalto. El aire se mantiene en niveles considerados fair, con un registro de PM2.5 de 3 que favorece los paseos largos sin incomodidad respiratoria. El sol descenderá puntualmente a las 19:02, marcando el inicio de unas tardes ideales para recorrer los barrios tradicionales. El tipo de cambio actual se mantiene en 1 USD por 0.89 EUR para las transacciones habituales de los viajeros. Conviene aprovechar la reapertura de la icónica pastelería en la Travessera de les Corts para disfrutar de un café caliente al resguardo del cielo completamente encapotado de este lunes.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de Literatura Italiana de Barcelona inaugura su nueva edición.",
-              "lede": "El FLIB reúne a autores y traductores en espacios culturales de toda la ciudad.",
-              "body": "La agenda literaria de la capital catalana acoge la nueva edición del FLIB, el Festival de Literatura Italiana de Barcelona, consolidándose como un punto de encuentro imprescindible para los amantes de la narrativa mediterránea. Los encuentros se desarrollan en librerías independientes y centros cívicos que fomentan el diálogo pausado entre creadores y lectores. En paralelo, la actividad económica local recibe el impulso de firmas como Skybound Wealth, que refuerza su expansión en España con la apertura de una nueva oficina en Barcelona. Los visitantes pueden combinar las presentaciones literarias con un paseo por las zonas verdes, como los alrededores del Parque de los Príncipes. El tipo de cambio se fija en 1 USD por 0.89 EUR, facilitando la adquisición de volúmenes importados en los stands del festival.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "El festivo de Todos los Santos modificará los servicios el 2026-11-01.",
-              "lede": "Las administraciones públicas y los bancos cerrarán sus puertas por la festividad.",
-              "body": "De cara al próximo 2026-11-01, fecha en la que se celebra el Día de todos los Santos, la ciudad de Barcelona ajustará sus horarios y servicios institucionales. Los organismos oficiales, las oficinas bancarias y las administraciones locales permanecerán cerradas durante esta jornada festiva nacional. Los viajeros deben anticipar cualquier trámite administrativo necesario antes de este fin de semana largo. A pesar de los cierres oficiales, los espacios públicos y los cementerios históricos registrarán una afluencia ordenada de residentes que acuden a cumplir con la tradición floral. Con un tipo de cambio de 1 USD por 0.89 EUR, la planificación de estancias y compras en comercios de proximidad transcurre sin sobresaltos monetarios en vísperas del festivo.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra 11 a 19°C y un índice UV muy alto.",
-              "lede": "El cielo permanece overcast mientras el termómetro avanza hacia los 19°C.",
-              "body": "La capital argentina transcurre este lunes con temperaturas que se mueven entre 11 y 19°C bajo un cielo completamente overcast. A pesar de la cobertura nubosa, el índice UV alcanza un nivel de 8, catalogado como very high, lo que exige precaución en exposiciones prolongadas al aire libre. La calidad del aire se mantiene en parámetros fair, con un registro de PM2.5 de 9 que asegura una atmósfera estable para transitar la ciudad. El atardecer está previsto para las 19:12, alargando las horas de luz vespertina en los parques y paseos ribereños. Es una jornada propicia para recorrer la ciudad a pie, combinando las pausas en cafés tradicionales con la visita a las nuevas instalaciones culturales y escultóricas que enriquecen el espacio público porteño.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "02",
-              "headline": "La escultura de Satoshi Nakamoto ya tiene fecha de estreno porteño.",
-              "lede": "El monumento tecnológico se suma a los nuevos atractivos urbanos de la capital.",
-              "body": "El patrimonio escultórico de Buenos Aires incorpora una pieza singular con la anunciada fecha de estreno para la escultura dedicada a Satoshi Nakamoto. Esta obra contemporánea genera expectación entre vecinos y curiosos interesados en la confluencia entre arte urbano y nuevas tecnologías financieras. La agenda cultural de la semana también contempla los preparativos para el Primavera Sound Buenos Aires 2026, cuyos sideshows comienzan a perfilar los escenarios elegidos en distintos puntos de la geografía metropolitana. Los amantes de la lectura y el diseño encontrarán en los barrios tradicionales una oferta constante de muestras y encuentros al aire libre. El clima fresco, con máximas de 19°C y un índice UV de 8, invita a caminar sin prisa entre las plazas arboladas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
-            },
-            {
-              "n": "03",
-              "headline": "Los festivales ciudadanos ocupan los espacios verdes de Buenos Aires.",
-              "lede": "Mascotear 2026 y el Water Lantern Festival convocan a miles de vecinos.",
-              "body": "La vida comunitaria encuentra este mes un punto de encuentro en los grandes parques de la ciudad gracias a una variada oferta de eventos gratuitos. Entre ellos destaca Mascotear 2026, concebido como un festival gratuito para disfrutar en compañía de las mascotas en predios especialmente acondicionados para el bienestar animal. A ello se suma la celebración del Water Lantern Festival, que aporta una atmósfera contemplativa al caer la noche sobre espejos de agua seleccionados. Con un índice UV que llega a 8 y cielos overcast que oscilan entre 11 y 19°C, las actividades al aire libre se desarrollan con un confort térmico muy favorable. El atardecer a las 19:12 marca el momento ideal para presenciar las actividades vespertinas en los pulmones verdes de la metrópolis.",
-              "source": "saudade desk",
-              "source_date": "2026-10-20"
             }
           ]
         }
