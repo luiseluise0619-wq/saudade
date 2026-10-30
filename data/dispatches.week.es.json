@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-29T06:00:00+09:00",
+  "updated": "2026-10-30T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-30T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El parque Juan Carlos I busca nueva vida para su auditorio.",
+              "lede": "El Ayuntamiento abre concurso para privatizar por 35 años el espacio abandonado.",
+              "body": "El parque Juan Carlos I encamina una nueva etapa administrativa tras la decisión municipal de abrir un concurso público. La licitación busca adjudicar por 35 años la gestión del auditorio abandonado que lleva años sin uso cultural continuo. Los paseantes habituales notarán los cielos overcast de estos días, con temperaturas que oscilan entre 10 y 22°C y el atardecer adelantado a las 18:14. Conviene recordar que el tipo de cambio se sitúa en 1 USD frente a 0.9 EUR para los visitantes extranjeros. Esta transformación urbanística pretende devolver la actividad musical a una de las zonas verdes más amplias del noreste madrileño.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Ateneo de Madrid acoge la exposición (in)Visibles de Diaconía.",
+              "lede": "Las salas históricas de la institución albergan esta propuesta fotográfica y social.",
+              "body": "El Ateneo de Madrid incorpora a su programación cultural la muestra organizada por Diaconía bajo el título (in)Visibles. Es un buen momento para recorrer las instalaciones del centro aprovechando el cielo cubierto y la bajada térmica exterior. Las temperaturas se mueven entre 10 y 22°C, ideales para refugiarse en las salas de lectura y espacios expositivos del centro. Al salir, la noche cae con rapidez a las 18:14, marcando el ritmo pausado del otoño madrileño. Los viajeros internacionales pueden planificar sus compras culturales con una tasa de cambio de 1 USD por 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Cine por Mujeres elige a 8madrid TV como sede virtual.",
+              "lede": "La plataforma televisiva emite una selección especial de largometrajes.",
+              "body": "El Festival Cine por Mujeres Madrid extiende su alcance este año gracias a su alianza con 8madrid TV, que opera como sede virtual del certamen. Mientras el cielo permanece overcast y los termómetros marcan entre 10 y 22°C, las tardes de otoño invitan al visionado de cine independiente en casa. La puesta de sol se adelanta a las 18:14, acortando las horas de luz en las calles de la capital. Se avecina además el festivo del Día de todos los Santos el 2026-11-01, por lo que conviene prever cierres administrativos en bancos y oficinas públicas durante el fin de semana.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Colita expone Món Gitano en el espacio Palo Alto de Barcelona.",
+              "lede": "La histórica fotógrafa catalana reúne su archivo documental de 1962 a 1963.",
+              "body": "El recinto de Palo Alto acoge la muestra fotográfica de Colita que documenta la vida gitana entre los años 1962 y 1963. El cielo de Barcelona se mantiene overcast con una calidad del aire moderada y un nivel de PM2.5 de 11, apto para pasear sin prisas por Poblenou. Las temperaturas se mueven entre 16 y 19°C, propicias para caminar con abrigo ligero antes de que el sol se ponga a las 17:48. Para los viajeros procedentes de fuera de la zona euro, la equivalencia monetaria se mantiene en 1 USD por 0.9 EUR. La exposición ofrece un recorrido íntimo por la memoria visual de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival 42 de Géneros Fantásticos toma la agenda literaria.",
+              "lede": "Barcelona celebra una nueva edición dedicada a la ciencia ficción y la fantasía.",
+              "body": "El Festival 42 de Géneros Fantásticos de Barcelona convoca a lectores y autores en un encuentro que dinamiza la vida cultural de la ciudad. Con un ambiente overcast y registros térmicos de 16 a 19°C, el clima acompaña la lectura y la asistencia a mesas redondas. La calidad del aire registra un índice moderado con PM2.5 de 11, mientras la noche llega puntual a las 17:48. Los visitantes extranjeros deben recordar la referencia cambiaria de 1 USD a 0.9 EUR al adquirir libros y entradas. Las jornadas invitan a explorar nuevos universos narrativos en los espacios habilitados para el evento.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "03",
+              "headline": "Zack De La Rocha protagoniza una cita expositiva en la ciudad.",
+              "lede": "El músico y activista visita Barcelona con motivo de una muestra fotográfica.",
+              "body": "La agenda barcelonesa suma una visita destacada con la presencia de Zack De La Rocha en el marco de una exposición fotográfica. Bajo los cielos overcast de esta jornada otoñal, con temperaturas entre 16 y 19°C, la ciudad transita hacia el fin de semana largo. La calidad del aire se sitúa en niveles moderados con PM2.5 de 11, y el atardecer se anticipa a las 17:48. Asimismo, hay que tener presente que el 2026-11-01 se celebra el Día de todos los Santos, festividad que implicará el cierre habitual de oficinas gubernamentales y entidades bancarias.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El World AI Film Festival ofrece su programa gratuito en Buenos Aires.",
+              "lede": "Las proyecciones de cine creado con inteligencia artificial ocupan las salas.",
+              "body": "Buenos Aires acoge la nueva edición del World AI Film Festival con una programación completa y de entrada libre y gratuita para todo el público. Las salas de proyección se convierten en el punto de encuentro para observar cómo la tecnología dialoga con la autoría cinematográfica tradicional. Este fin de semana coincide además con la celebración de Halloween, que propone desde parques inflables hasta carreras de disfraces con agendas detalladas de precios y horarios para familias. La ciudad bulle con una oferta cultural diversa que abarca tanto la vanguardia digital como el entretenimiento lúdico en los espacios públicos y centros culturales.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "02",
+              "headline": "El festival GENERACIÓN reúne a las estrellas del streaming local.",
+              "lede": "Creadores de contenido y público comparten jornadas en la capital.",
+              "body": "El fenómeno de las plataformas digitales tiene su espacio propio en Buenos Aires con el festival GENERACIÓN, un evento que congrega a las principales figuras del streaming. La cita ofrece paneles y encuentros interactivos para entender las nuevas formas de comunicación audiovisual que lideran las pantallas juveniles. Paralelamente, la oferta urbana incluye propuestas de ocio infantil vinculadas a Halloween y carreras de disfraces organizadas en diversos puntos de la ciudad. El ambiente porteño combina así la cultura de internet con el tradicional paseo callejero propio de la primavera austral.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            },
+            {
+              "n": "03",
+              "headline": "El festival Infinito Super 8 celebra su tercera edición porteña.",
+              "lede": "El formato analógico recupera protagonismo en las pantallas independientes.",
+              "body": "El festival Infinito Super 8 alcanza su tercera edición en Buenos Aires, consolidándose como un referente para el cine experimental en formato analógico. Los realizadores y entusiastas del celuloide se dan cita para proyectar trabajos que defienden la textura y el tiempo del celuloide clásico. Esta propuesta se suma a la intensa agenda cultural del viernes, que también incluye muestras de cine de inteligencia artificial y actividades festivas por Halloween en parques y centros culturales. Es una ocasión idónea para redescubrir la ciudad a través de sus iniciativas artísticas más independientes y singulares.",
+              "source": "saudade desk",
+              "source_date": "2026-10-30"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-29T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La agenda cultural de la ciudad suma un nuevo atractivo con el festival coreano gratuito que celebra la gastronomía y la música del país asiático. La jornada incluye un sentido homenaje al grupo BTS, atrayendo a seguidores de todas las edades en torno a coreografías y muestras visuales. Los puestos callejeros ofrecen especialidades culinarias tradicionales que permiten descubrir nuevos sabores en un entorno animado y seguro. El encuentro promueve el intercambio cultural mediante talleres de caligrafía y proyecciones artísticas al aire libre. Es un punto de encuentro dinámico que refleja la multiculturalidad y la vitalidad creativa que caracterizan a Buenos Aires.",
               "source": "saudade desk",
               "source_date": "2026-10-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-22T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival Literario Otoño Negro convoca a los lectores en las librerías del centro.",
-              "lede": "La agenda cultural madrileña acoge esta semana propuestas inmersivas y citas literarias.",
-              "body": "El Festival Literario Otoño Negro llena las librerías de la ciudad con encuentros dedicados al género y a la creación contemporánea. En paralelo, la agenda cultural ofrece experiencias inmersivas singulares, como la propuesta tecnológica de Iberdrola que recorre la capital. Los espacios escénicos también registran gran afluencia, destacando el lleno absoluto logrado en el concierto de gala del Festival Internacional Andrés Segovia. Asimismo, el circuito de artes visuales y música independiente arranca con fuerza gracias a la sexta edición del Moments Festival. Conviene recordar que el próximo 1 de noviembre se celebrará el Día de todos los Santos, jornada en la que la administración pública y las entidades bancarias permanecerán cerradas. El tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR para quienes planifiquen sus transacciones.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Internacional Andrés Segovia celebra su gran gala con aforo completo.",
-              "lede": "La música de guitarra clásica congrega a numeroso público en los escenarios de la capital.",
-              "body": "La música clásica ocupa un lugar central en la programación otoñal de la ciudad. El concierto de gala del Festival Internacional Andrés Segovia ha colgado el cartel de no hay billetes, reflejando el interés sostenido por el repertorio de guitarra. Los asistentes disfrutan de un ambiente sobrio en auditorios históricos, complementado por la oferta del Moments Festival, que acerca diseño y cultura urbana en su sexta edición. Para los residentes y visitantes que se mueven entre salas de conciertos y muestras de arte, la gestión de divisas se mantiene estable con una cotización de 1 USD por cada 0.89 EUR. De cara al próximo festivo nacional del Día de todos los Santos el 1 de noviembre, es recomendable anticipar cualquier gestión administrativa o bancaria, ya que las oficinas permanecerán cerradas durante esa jornada festiva.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "03",
-              "headline": "El Moments Festival despliega su sexta edición en diversos espacios culturales madrileños.",
-              "lede": "La cultura independiente y el diseño gráfico protagonizan la agenda de otoño en Madrid.",
-              "body": "La sexta edición del Moments Festival aterriza en Madrid para ofrecer un mes repleto de documentales, exposiciones y encuentros sobre subculturas creativas. Esta iniciativa convive con el avance del Festival Literario Otoño Negro, que anima las tardes en los barrios con lecturas y debates. Mientras tanto, el público sigue respondiendo a las grandes citas musicales, como demostró el lleno absoluto en la gala del Festival Internacional Andrés Segovia. Quienes visiten la ciudad estos días encontrarán una tasa de cambio de 1 USD a 0.89 EUR. Conviene tener presente en el calendario que el 1 de noviembre se celebra el Día de todos los Santos, festividad que traerá consigo el cierre habitual de oficinas gubernamentales, notarías y entidades bancarias en toda la región.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival 48h Open House Barcelona abre este fin de semana los edificios de Les Corts.",
-              "lede": "La arquitectura oculta de la ciudad se muestra al público bajo cielos cubiertos y temperaturas suaves.",
-              "body": "Barcelona amanece bajo un cielo totalmente cubierto, con temperaturas que oscilan entre los 13 y los 20°C a medida que se acerca el anochecer a las 18:59. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 de 11, propiciando los paseos urbanos durante estas jornadas de otoño. El evento más esperado por los amantes del diseño es el festival 48h Open House BCN, que abre las puertas de destacados inmuebles arquitectónicos en el distrito de Les Corts. En paralelo, la ciudad rinde homenaje a su memoria musical con una exposición especial por los 150 años del nacimiento de Pau Casals, recordando su faceta más combativa. Para quienes gestionan divisas, el tipo de cambio oficial se sitúa en 1 USD por cada 0.89 EUR. Conviene recordar que el próximo 1 de noviembre se celebra el Día de todos los Santos, jornada de cierre para oficinas públicas y bancos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "02",
-              "headline": "Una gran exposición conmemora los 150 años del nacimiento del músico Pau Casals.",
-              "lede": "La ciudad repasa la trayectoria cívica y artística del violonchelista catalán en sus espacios culturales.",
-              "body": "Bajo una atmósfera gris y con una temperatura que se mueve entre los 13 y los 20°C, Barcelona transita una semana marcada por el patrimonio y la reflexión. Con motivo de los 150 años de su nacimiento, la capital catalana reivindica la figura de un Pau Casals profundamente comprometido con su tiempo a través de una muestra monográfica. Esta cita coincide con los preparativos del festival 48h Open House Barcelona, que permitirá visitar edificios singulares habitualmente cerrados al público. El aire presenta una calidad moderada con un valor de PM2.5 de 11, mientras el sol se oculta puntualmente a las 18:59. El intercambio monetario opera con una equivalencia de 1 USD equivalente a 0.89 EUR. Se recuerda a los ciudadanos que el próximo 1 de noviembre tendrá lugar el festivo del Día de todos los Santos, afectando a la apertura de oficinas gubernamentales y entidades bancarias.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "03",
-              "headline": "El Mercado 1 Kilo de Ayuda organiza su nueva campaña solidaria en la ciudad condal.",
-              "lede": "Iniciativas ciudadanas y citas arquitectónicas marcan el pulso social de Barcelona esta semana.",
-              "body": "El tejido social barcelonés se activa con iniciativas como la preparación del Mercado 1 Kilo de Ayuda, destinada a que 150 familias puedan seleccionar los productos básicos que necesitan. Esta labor solidaria transcurre en paralelo a eventos culturales de gran calado, como el festival 48h Open House BCN y la exposición conmemorativa por los 150 años del nacimiento de Pau Casals. Meteorológicamente, el cielo permanece cubierto con registros térmicos de 13 a 20°C y el ocaso fijado a las 18:59, con una calidad del aire que marca un nivel moderado de PM2.5 en 11. En el plano financiero, la cotización oficial se mantiene en 1 USD por cada 0.89 EUR. Los residentes deben tener en cuenta que el próximo 1 de noviembre se conmemorará el Día de todos los Santos, fecha en la que los servicios administrativos y las sucursales bancarias permanecerán cerradas al público.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Un festival gratuito de ingenio y juegos de lógica regresa a las calles porteñas.",
-              "lede": "Los espacios públicos de la ciudad acogen propuestas lúdicas y culturales bajo una tarde de chubascos.",
-              "body": "Buenos Aires recibe la tarde con chubascos intermitentes que han dejado 7.4mm de precipitación, mientras el termómetro se mueve entre los 15 y los 20°C antes de la puesta de sol a las 19:13. La calidad del aire se mantiene en niveles muy favorables, registrando un valor de PM2.5 de 7. En este contexto de clima húmedo, la oferta cultural pública se dinamiza con el regreso de un festival gratuito dedicado a los acertijos, los juegos de ingenio y los desafíos mentales para todas las edades. Asimismo, los amantes del séptimo arte pueden disfrutar del Festival Infinito Super 8 2026, que ofrece proyecciones y talleres gratuitos de cine experimental. La agenda se completa con espacios dedicados a la difusión de la cultura coreana sin costo de acceso. Para quienes pasean por los parques urbanos tras la lluvia, la atmósfera adquiere la calma característica de la primavera porteña.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Infinito Super 8 2026 ofrece proyecciones y talleres de cine en la capital.",
-              "lede": "Cinéfilos y curiosos se citan en torno al celuloide en una nueva edición de este clásico encuentro.",
-              "body": "Con una temperatura que oscila entre los 15 y los 20°C y tras registrarse 7.4mm de precipitación por chubascos dispersos, la ciudad recupera su ritmo apacible bajo un cielo que despeja hacia las 19:13. El aire de la capital respira limpio gracias a un índice PM2.5 de 7. Los centros culturales de Buenos Aires acogen estos días el Festival Infinito Super 8 2026, una cita entrañable con el cine analógico que incluye talleres y proyecciones gratuitas. Muy cerca, la programación municipal también destaca por el retorno del festival de juegos de ingenio y acertijos, además de las actividades dedicadas a la cultura coreana con entrada libre. Para los caminantes que recorren los espacios verdes, la jornada ofrece un respiro fresco tras la lluvia, ideal para observar la vegetación urbana en plena temporada de floración primaveral.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
-            },
-            {
-              "n": "03",
-              "headline": "Un ciclo gratuito acerca los rasgos de la cultura coreana a los barrios porteños.",
-              "lede": "La agenda de actividades al aire libre y encuentros temáticos anima la primavera de la ciudad.",
-              "body": "Tras los chubascos que han dejado un acumulado de 7.4mm de lluvia, la tarde porteña transcurre con temperaturas templadas de 15 a 20°C y el ocaso previsto para las 19:13. La calidad del aire es fair, con una lectura de PM2.5 de 7 que favorece la actividad al aire libre. La agenda cultural de la semana destaca por la celebración de un festival enfocado en la cultura coreana con entrada gratuita, sumándose a las propuestas de ingenio, juegos y desafíos mentales que recorren la ciudad. También el cine independiente tiene su espacio gracias al Festival Infinito Super 8 2026, con talleres abiertos a la comunidad. Estos eventos reafirman el dinamismo de los espacios públicos y centros culturales, ofreciendo alternativas accesibles para los ciudadanos que disfrutan de la transición estacional en las calles de Buenos Aires.",
-              "source": "saudade desk",
-              "source_date": "2026-10-22"
             }
           ]
         }
