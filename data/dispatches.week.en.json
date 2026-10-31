@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-10-30T06:00:00+09:00",
+  "updated": "2026-10-31T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-31T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast autumn skies settle over Seoul as temperatures range between 7 and 13°C.",
+              "lede": "The afternoon light dims early toward sunset at 17:35, while moderate air quality registers a PM2.5 level of 27.",
+              "body": "The afternoon light dims early toward sunset at 17:35, while moderate air quality registers a PM2.5 level of 27. Overcast autumn skies settle over Seoul as temperatures range between 7 and 13°C. Visitors walking through the city's quieter neighborhoods will find the exchange rate steady at 1 USD = 1335 KRW. Herbal medicine markets continue their quiet seasonal routines, offering deep, earthy aromas that contrast with the cooler city air. A recent cultural exchange conference between Lisbon and Seoul highlighted new avenues for international artistic cooperation. Travelers should keep a warm coat close at hand as the seasonal chill deepens.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "Herbal medicine markets offer quiet refuge as the autumn air turns brisk.",
+              "lede": "The deep scent of dried roots and warming spices fills the alleyways of Yangnyeongsi.",
+              "body": "The deep scent of dried roots and warming spices fills the alleyways of Yangnyeongsi. Herbal medicine markets offer quiet refuge as the autumn air turns brisk. Merchants arrange roots and bark with careful precision under the grey canopy. Academic discussions on peacebuilding, recently connecting Lisbon and Seoul, have brought quiet scholarly visitors to local institutions. Meanwhile, commercial districts see ongoing updates as global beauty brands establish new offices in the capital. Observers can navigate these shifts easily, backed by an exchange rate of 1 USD = 1335 KRW for daily expenses.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "Design and commerce intersect quietly in the capital's evolving commercial quarters.",
+              "lede": "New corporate spaces open quietly as international brands anchor themselves within the city's retail fabric.",
+              "body": "New corporate spaces open quietly as international brands anchor themselves within the city's retail fabric. Design and commerce intersect quietly in the capital's evolving commercial quarters. Front Row establishes a new office presence in Seoul to support ongoing interest in regional aesthetics. Observers strolling past these developments can appreciate the measured pace of urban renewal. Temperatures holding between 7 and 13°C make long walks through the commercial districts comfortable. Financial transactions remain straightforward with the currency trading at 1 USD = 1335 KRW.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cinematic arts take center stage across Tokyo during the autumn festival season.",
+              "lede": "Venues across the capital welcome film lovers for the Tokyo International Film Festival.",
+              "body": "Venues across the capital welcome film lovers for the Tokyo International Film Festival. Cinematic arts take center stage across Tokyo during the autumn festival season. Notable screenings draw quiet crowds interested in the artistic direction of Japanese cinema. Recent discussions at the festival emphasize expanding the international profile of local films. Financial planning for visitors remains stable, with the exchange rate hovering near 1 USD = 157 JPY. Meanwhile, amusement operators look ahead to future expansions, including upcoming attractions planned for Tokyo Disneyland.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "Festival directors advocate for a broader global platform for Japanese cinema.",
+              "lede": "Conversations at the film festival focus on the organic resonance of domestic storytelling.",
+              "body": "Conversations at the film festival focus on the organic resonance of domestic storytelling. Festival directors advocate for a broader global platform for Japanese cinema. Studio leaders reflect on recent international successes that grew from genuine creative ambition rather than calculated strategy. Visitors attending the festival events can easily manage their tickets and dining with an exchange rate of 1 USD = 157 JPY. The surrounding city remains brisk and orderly as autumn deepens into November. Quiet side streets offer a welcome respite from the bustling screening venues.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "Future theme park attractions are announced as long-term creative planning continues.",
+              "lede": "Park operators share details on new ride experiences scheduled to open in upcoming seasons.",
+              "body": "Park operators share details on new ride experiences scheduled to open in upcoming seasons. Future theme park attractions are announced as long-term creative planning continues. Tokyo Disneyland confirms plans for a new Wreck-It Ralph ride slated for a 2027 debut. Observers tracking urban entertainment trends note the steady investments in immersive visitor experiences. Daily travel expenses in the city are calculated using the current exchange rate of 1 USD = 157 JPY. The orderly transit network ensures smooth journeys between festival hubs and leisure destinations.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies and mild autumn warmth settle over Lisbon before the holiday.",
+              "lede": "Temperatures range between 13 and 25°C beneath an overcast canopy as sunset approaches at 17:37.",
+              "body": "Temperatures range between 13 and 25°C beneath an overcast canopy as sunset approaches at 17:37. Overcast skies and mild autumn warmth settle over Lisbon before the holiday. Moderate air quality registers a comfortable PM2.5 level of 12 across the capital. As the city approaches Dia de Todos-os-Santos on 2026-11-01, residents prepare for closures at banks, government offices, and post offices. Financial exchanges operate around 1 USD = 0.9 EUR for travelers settling accounts. Cultural venues, including historic libraries recently added to preservation registries, offer quiet spaces for reflection.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "Historic archives and libraries receive formal recognition for their enduring heritage.",
+              "lede": "The Lisbon Library joins the National Register of Historic Places, honoring its deep literary roots.",
+              "body": "The Lisbon Library joins the National Register of Historic Places, honoring its deep literary roots. Historic archives and libraries receive formal recognition for their enduring heritage. Visitors can explore these newly recognized spaces while enjoying mild temperatures between 13 and 25°C. With Dia de Todos-os-Santos falling on 2026-11-01, travelers should note that public offices and banks will observe holiday closures. International guests will find the local exchange rate steady at 1 USD = 0.9 EUR. Quiet evening walks along the Tagus river offer a serene counterpoint to the holiday preparations.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "Civic dialogues connect southern European heritage with international peace initiatives.",
+              "lede": "Academic conferences examine cultural cooperation and the lasting role of community traditions.",
+              "body": "Academic conferences examine cultural cooperation and the lasting role of community traditions. Civic dialogues connect southern European heritage with international peace initiatives. Discussions bridging Lisbon and Seoul highlight shared commitments to civic harmony. Participants can enjoy the pleasant weather, with daily temperatures moving from 13 to 25°C under overcast skies. As the city prepares for Dia de Todos-os-Santos on 2026-11-01, government services and banks will pause for the holiday. Travelers navigating the city can rely on a stable financial baseline of 1 USD = 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-30T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "As the month draws to a close, residents prepare for Dia de Todos-os-Santos on 2026-11-01. Public services, municipal offices, and banks will observe closures for the holiday, so travelers should handle official errands early in the week. The mild weather, featuring daytime highs near 24°C and fair air quality, provides ideal conditions for quiet reflection in local gardens and cemeteries. Public transit will adjust to holiday timetables as locals mark the traditional day of remembrance.",
               "source": "saudade desk",
               "source_date": "2026-10-25"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-24T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "The overcast skies over Seoul hold steady at 13 to 18°C as autumn settles.",
-              "lede": "Moderate air quality with a PM2.5 of 37 marks the streets today. The exchange rate sits at 1 USD to 1324 KRW.",
-              "body": "The afternoon air feels heavy beneath gray skies, keeping the temperature within a mild range of 13 to 18°C. Moderate air quality registers a PM2.5 reading of 37, so a simple mask serves well for longer walks along the stone walls of Gyeongbokgung. The local currency trades at 1 USD to 1324 KRW, offering a steady rate for visitors browsing quiet bookshops in Samcheong-dong. Sunset arrives promptly at 17:43, pulling a cool blue shadow across the alleys before evening traffic begins. Quiet observers will find the courtyards remarkably still today, offering a rare moment of solitude before the busy weekend rush.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "World Youth Day 2027 registration opens as cultural exhibitions draw quiet crowds.",
-              "lede": "Seoul welcomes global youth announcements while star-studded K-pop showcases open across the city.",
-              "body": "Registration officially opens for World Youth Day 2027 today, following invitations for young travelers to bring their stories to Seoul. Meanwhile, art lovers can explore the massive K-pop exhibition featuring displays from BTS, Stray Kids, G-Dragon, and aespa. Elsewhere in the cultural districts, visitors will notice the removal of older festival sculptures from northern public squares, clearing space for fresh seasonal installations. Humanoid robots from China are also beginning to appear in quiet professional trials across local tech hubs, hinting at tomorrow's workforce. These parallel currents give the city a thoughtful, forward-looking pulse beneath the overcast autumn canopy.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Hanok alleyways remain tranquil as evening descends early on the capital.",
-              "lede": "The fading light at 17:43 invites travelers to seek warmth in neighborhood tea houses.",
-              "body": "Traditional timber eaves catch the last gray light as sunset hits at 17:43 across the old neighborhoods. The moderate air quality of 37 PM2.5 leaves a faint haze over Namsan tower in the distance. Travelers settling into local teahouses in Ikseon-dong can exchange currency at 1 USD to 1324 KRW without hassle. The day’s temperatures between 13 and 18°C demand a woolen scarf for those lingering outside past dusk. It is an ideal moment to observe the quiet transition of the city from afternoon productivity to evening rest.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light rain and 22.4mm of precipitation shape a quiet, indoor day across Tokyo.",
-              "lede": "Temperatures hover between 14 and 16°C while poor air quality registers a PM2.5 of 54.",
-              "body": "A steady drizzle brings 22.4mm of precipitation to the pavement, softening the noise of the Yamanote line. Temperatures remain compressed between 14 and 16°C under low, damp clouds, and air quality reads a poor PM2.5 of 54. The exchange rate holds near 1 USD to 157 JPY for those settling autumn hotel bills. Sunset arrives early at 16:55, turning the wet glass of Shibuya coffee shops into mirrors. Sturdy umbrellas and waterproof footwear are essential for anyone navigating the puddles near the station today.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "DESIGNART TOKYO transforms a former highway into a shared creative space.",
-              "lede": "Global film standouts and new anime draw observers indoors as the festival season begins.",
-              "body": "DESIGNART TOKYO 2026 reclaims a former highway for public creative displays, offering a fresh urban walking route despite the light rain. Film enthusiasts are gathering for the Tokyo Film Festival, highlighting global standouts and innovative new anime works. Ralph Lauren collectors are also arriving for the inaugural PoloFest event, marking a unique first for Japan's fashion calendar. New festival leadership promises fresh directions ahead of the main events, drawing curious crowds to gallery spaces. These exhibitions provide a warm, dry refuge from the damp 14 to 16°C weather outside.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Plan ahead for Culture Day closures on 2026-11-03 across national institutions.",
-              "lede": "Banks and government offices will observe the upcoming public holiday next month.",
-              "body": "Residents and returning travelers should note that the public holiday 文化の日 falls on 2026-11-03. Government offices, banks, and major post offices will close for the day, so financial errands should be completed beforehand. The exchange rate of 1 USD to 157 JPY should be secured prior to the holiday weekend closures. With sunset occurring as early as 16:55, the holiday prep blends naturally into the quiet autumn evening. Take extra time for transit planning as holiday schedules begin to affect regional train lines.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies stretch across Lisbon with a wide temperature range of 10 to 22°C.",
-              "lede": "Fair air quality with a PM2.5 of 6 welcomes long walks under late sunset light at 18:46.",
-              "body": "The Tagus river reflects a muted gray sky as temperatures span a generous 10 to 22°C today. Air quality remains exceptionally fair with a low PM2.5 of 6, making the riverside air crisp and clean. The currency exchange stands at 1 USD to 0.89 EUR, favoring travelers from across the Atlantic. Sunset occurs at 18:46, casting a long, gentle amber glow over the historic stone pavements of Alfama. It is an ideal climate for walking the steep hills without the fierce heat of the summer months.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "The World Aviation Festival and Fontaines D.C. bring energy to the Portuguese capital.",
-              "lede": "International aviation trends meet packed arena gigs as cultural life thrives this week.",
-              "body": "The World Aviation Festival 2026 brings global industry leaders together to discuss future travel trends and technology. Meanwhile, music fans pack the MEO Arena for a memorable gig review performance by Fontaines D.C. Diplomatic channels are also active, with Azerbaijan and Portugal discussing the upcoming opening of a new embassy in Lisbon. These diverse gatherings fill the city's hotels and restaurants with curious international professionals. The mild 10 to 22°C weather makes moving between these various venues a comfortable experience.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Prepare for Dia de Todos-os-Santos closures arriving soon on 2026-11-01.",
-              "lede": "Government offices and local banks will pause operations for the upcoming All Saints' Day holiday.",
-              "body": "Travelers should mark their calendars for Dia de Todos-os-Santos on 2026-11-01, which falls on a Sunday this year with administrative closures carrying into the week. Government offices, banks, and post offices will observe closures, so finalize your administrative tasks early. The currency exchange rate remains stable at 1 USD to 0.89 EUR for any last-minute financial transactions. Sunset at 18:46 provides plenty of late afternoon light for quiet strolls through local cemeteries and neighborhood plazas. Public transit may run on modified holiday timetables, so check local schedules before heading out.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
             }
           ]
         }

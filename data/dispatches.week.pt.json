@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-10-30T06:00:00+09:00",
+  "updated": "2026-10-31T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-10-31T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A taxa de câmbio permanece estável nos mercados financeiros.",
+              "lede": "O valor de 1 USD fixa-se em 0.9 EUR para transações correntes.",
+              "body": "A cotação oficial da moeda norte-americana estabelece-se em 1 USD para 0.9 EUR, mantendo o ritmo habitual nas casas de câmbio da baixa e nos balcões bancários da capital. Os viajantes vindos de fora da zona euro encontram assim valores previsíveis para o planeamento de alojamento, transportes e refeições durante a estadia. Convém recordar que este câmbio reflete a média recente dos mercados internacionais, sem flutuações bruscas a registar esta semana. As taxas de levantamento em caixas automáticas continuam a obedecer aos preçários de cada instituição de origem. A simplicidade nas conversões monetárias facilita o ritmo pausado de quem caminha pela cidade sem pressas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "O festival InShadow prepara o regresso com mais de 80 filmes.",
+              "lede": "A programação de dança e cinema decorre entre 13 de novembro e 18 de dezembro.",
+              "body": "As salas e os espaços culturais da cidade preparam-se para acolher uma nova edição do InShadow, certame que cruza a imagem em movimento com as artes performativas. Entre 13 de novembro e 18 de dezembro, o público poderá assistir a mais de 80 filmes de realizadores nacionais e internacionais. Paralelamente, a agenda cultural destaca o UNICAST, festival de áudio e podcast que oferece entrada livre e transmissões ao vivo da RFM, ideal para quem aprecia escutar histórias com tempo e atenção. Nos museus, a exposição sobre a arte escondida nas notas continua a atrair observadores curiosos pelos detalhes gráficos da moeda. Lisboa mantém uma oferta diversificada para os dias amenos de outono.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "O Dia de Todos-os-Santos altera o funcionamento habitual dos serviços.",
+              "lede": "A data festiva de 2026-11-01 traz encerramentos temporários a repartições e bancos.",
+              "body": "Com a chegada do Dia de Todos-os-Santos em 2026-11-01, os serviços públicos, repartições estatais e instituições bancárias fecham as portas para o descanso regulamentar. Os viajantes e residentes devem antecipar qualquer gestão burocrática ou levantamento de numerário que dependa de atendimento presencial. O comércio tradicional e os espaços de restauração ajustam os horários, abrindo por vezes de forma condicionada durante o domingo festivo. Os cemitérios municipais registam a afluência tradicional de visitantes que cumprem a memória dos entes queridos com silêncio e discrição. A circulação rodoviária nas imediações dos principais locais de culto processa-se com lentidão ponderada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O nevoeiro matinal cobre a foz do Douro sob térmicas moderadas.",
+              "lede": "A temperatura oscila entre 11 e 21°C, com o pôr do sol marcado para as 17:31.",
+              "body": "A atmosfera portuense desperta envolta em nevoeiro característico, registando uma amplitude térmica de 11 a 21°C ao longo do dia. A qualidade do ar apresenta-se moderada, com um valor de PM2.5 de 31, aconselhando alguma contenção a quem pratique exercício físico prolongado ao ar livre. O cair da tarde avança ligeiramente, fixando o pôr do sol pelas 17:31, momento em que a luz dourada se retira das pontes e fachadas graníticas. A taxa de câmbio oficial de 1 USD para 0.9 EUR mantém-se inalterada para transações correntes na cidade. As condições meteorológicas convidam a abrigar nos cafés históricos ou a observar o rio a partir de margens tranquilas.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "A Foz recupera um restaurante emblemático com nova ementa.",
+              "lede": "O espaço reabre para degustar com calma, atenção e prazer.",
+              "body": "Um dos estabelecimentos mais representativos da Foz do Porto reabre portas com uma proposta gastronómica renovada, pensada para ser saboreada sem pressas. A carta aposta na valorização dos produtos locais e na sazonalidade, enquadrando-se no ritmo vagaroso que a estação exige. Na agenda cultural da cidade, a Casa Comum acolhe o festival Queer Porto, incluindo um ciclo dedicado à literatura que promove a reflexão e o diálogo. Para quem prefere a natureza e o envolvimento comunitário, o Parque Verde de Porto de Mós recebe uma sessão criativa voltada para as famílias. O horizonte cultural do Porto continua rico em iniciativas de pequena escala e grande densidade artística.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "Os serviços públicos suspendem a atividade devido à festividade.",
+              "lede": "O feriado de 2026-11-01 suspende temporariamente os balcões e as repartições.",
+              "body": "A celebração do Dia de Todos-os-Santos em 2026-11-01 determina o encerramento generalizado de repartições públicas, tribunais e agências bancárias em toda a cidade. Os cidadãos e visitantes que necessitem de resolver assuntos administrativos devem acautelar essas diligências para os dias úteis subsequentes. Os transportes públicos mantêm o funcionamento, embora com frequências adaptadas aos horários dominicais e feriados. As floristas e os espaços comerciais próximos dos cemitérios conhecem uma procura acrescida por parte de quem mantém vivas as tradições de outono. A cidade adota uma postura de recolhimento compatível com a serenidade da data festiva.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O céu nublado envolve a serra com temperaturas amenas.",
+              "lede": "Os termómetros marcam entre 13 e 24°C, com o pôr do sol às 17:38.",
+              "body": "A vila serrana apresenta um registo térmico entre 13 e 24°C, sob um manto persistente de nuvens que suaviza a luz sobre a paisagem cultural. A qualidade do ar é considerada fair, com um registo de PM2.5 de 10, oferecendo um ambiente limpo para caminhadas pelos trilhos florestais. O pôr do sol ocorre pelas 17:38, antecipando o final das tardes outonais na encosta. No plano financeiro, a equivalência de 1 USD para 0.9 EUR assegura estabilidade nas trocas comerciais para visitantes estrangeiros. A humidade característica da serra aconselha o uso de um casaco leve durante os percursos pedestres pelos jardins históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "02",
+              "headline": "A literatura e as tradições ancestrais dinamizam a agenda cultural.",
+              "lede": "Sintra acolhe festivais literários, espetáculos de fogo e rituais celtas.",
+              "body": "A programação cultural da vila destaca-se esta semana com a realização de um Festival Literário Internacional, reunindo autores e leitores em torno da palavra escrita. Simultaneamente, um festival celta com a duração de 3 dias transporta os visitantes para tempos antigos através de espetáculos de fogo, rituais e recriações com criaturas misteriosas. A música e a memória colectiva encontram também espaço num evento dedicado à história do Festival da Canção. No setor económico, regista-se a aquisição de um parque empresarial com 12.500 m² por um investidor internacional, sinalizando a vitalidade imobiliária local. Sintra equilibra assim o seu património secular com uma intensa e diversificada animação contemporânea.",
+              "source": "saudade desk",
+              "source_date": "2026-10-31"
+            },
+            {
+              "n": "03",
+              "headline": "O descanso do feriado municipal ajusta o ritmo da vila serrana.",
+              "lede": "O Dia de Todos-os-Santos em 2026-11-01 impõe o fecho de serviços e bancos.",
+              "body": "Por força do Dia de Todos-os-Santos em 2026-11-01, os serviços administrativos, postos de atendimento oficial e instituições bancárias encontram-se encerrados. Os visitantes devem ter em conta estas pausas funcionais ao planear compras ou contactos institucionais na região. Os monumentos sob gestão pública mantêm geralmente os horários ajustados aos fins de semana, embora convenha confirmar entradas antecipadamente. As ruas históricas recebem os passos tranquilos de quem aproveita a pausa para contemplar a arquitetura romântica sem a agitação habitual. A atmosfera matinal convida ao recolhimento nos cafés tradicionais da vila.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-30T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A chegada de 2026-11-01 impõe uma paragem nos balcões de atendimento, bancos e serviços postais devido ao feriado do Dia de Todos-os-Santos. Os visitantes e residentes devem precaver-se quanto a horários administrativos na próxima semana. O clima mantém-se estável, com mínimas de 12°C e máximas de 21°C sob um céu persistentemente encoberto. A taxa de câmbio oficial permanece inalterada em 1 USD para 0.89 EUR. Aproveite a serenidade do feriado para explorar o património histórico de Sintra sem pressas, escutando o sussurro do vento entre as árvores seculares.",
               "source": "saudade desk",
               "source_date": "2026-10-25"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-24T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O termómetro marca entre 10 e 22 graus sob céu encoberto.",
-              "lede": "A tarde desce cedo em Lisboa, com o sol a ocultar-se pelas 18:46.",
-              "body": "A atmosfera urbana mantém-se cinzenta e calma. Com o termómetro a oscilar entre os 10 e os 22 graus, o dia convida a passeios sem pressa pela cidade. A noite cai por volta das 18:46, cobrindo as ruas com uma penumbra suave. Nos bancos e caixas de câmbio, a taxa de referência fixa-se em 1 USD para 0.89 EUR. É um período de transição tranquila, ideal para observar o ritmo quotidiano dos bairros históricos sem o bulgúrio do verão.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "O Museu de Lisboa exibe a nova mostra dedicada aos Animais.",
-              "lede": "O Palácio Pimenta acolhe um olhar inédito sobre a fauna urbana.",
-              "body": "O Museu de Lisboa, instalado no Palácio Pimenta, inaugurou recentemente uma exposição dedicada aos animais de Lisboa. A iniciativa cruza memórias e vestígios da presença animal na história da capital. Paralelamente, o Parque Riverside alargou a oferta de estacionamento em Marvila, facilitando o acesso à zona ribeirinha. Estas novidades culturais e urbanísticas oferecem novas razões para redescobrir recantos menos percorridos da cidade, longe dos roteiros estritamente turísticos tradicionais.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Aproxima-se o Dia de Todos-os-Santos com fecho de serviços.",
-              "lede": "A festividade de 2026-11-01 altera o funcionamento administrativo habitual.",
-              "body": "A proximidade do Dia de Todos-os-Santos, a celebrar a 2026-11-01, começa a notar-se na preparação de breves pausas e deslocações familiares. Os serviços públicos essenciais, repartições governamentais e instituições bancárias encerrarão as portas durante a data festiva. Convém antecipar qualquer trâmite burocrático na cidade. No plano cultural, a programação do Tribeca Festival Lisboa continua a dar que falar, destacando-se a fusão entre a música dos MXGPU e a projeção do clássico filme Metropolis de Fritz Lang.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu permanece encoberto com temperaturas entre 7 e 16 graus.",
-              "lede": "A qualidade do ar na Invicta regista um nível fair com PM2.5 a 10.",
-              "body": "O Porto amanhece sob um céu totalmente encoberto. As temperaturas movem-se entre os 7 e os 16 graus, conferindo à baixa portuense uma frescura típica de outono avançado. A qualidade do ar permanece em níveis considerados fair, com o índice PM2.5 nos 10. O sol despede-se às 18:40, antecipando noites longas junto ao rio. A taxa de câmbio oficial opera nos 0.89 EUR por cada 1 USD. A cidade respira um ritmo pausado, propício a longas caminhadas pelas margens do Douro.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "O festival Perlim já tem datas anunciadas para novembro.",
-              "lede": "O popular parque de Natal abre portas a 28 de novembro.",
-              "body": "O universo festivo do Perlim já tem calendarização oficial para a próxima edição, abrindo portas a 28 de novembro, após ter atraído dezenas de milhares de visitantes no ano transato. Enquanto isso, o panorama de grandes eventos musicais ajusta-se na região, após a recente reestruturação de promotores locais, mantendo-se firme a expetativa em redor de futuras confirmações como a de James Blunt no Douro & Porto Wine Festival. A logística regional também avança com os preparativos finais nos acessos ao Porto Seco da Guarda.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Os serviços preparam o descanso do Dia de Todos-os-Santos.",
-              "lede": "A efeméride de 2026-11-01 suspende a atividade administrativa.",
-              "body": "Com a chegada iminente do Dia de Todos-os-Santos em 2026-11-01, os residentes preparam a pausa nos afazeres profissionais. Bancos, repartições públicas e secretarias municipais suspenderão o atendimento ao público durante a festividade. É aconselhável planear com antecedência quaisquer pagamentos ou recolhas de documentação. As ruas comerciais e os mercados tradicionais ajustam igualmente os horários de abertura, privilegiando o recolhimento familiar característico desta quadra do calendário litúrgico e civil.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra acolhe o outono com temperaturas de 11 a 18 graus.",
-              "lede": "A qualidade do ar em Sintra regista PM2.5 a 5 sob céu nublado.",
-              "body": "A vila serrana apresenta-se sob um manto de nuvens que atenua a luz da tarde. A amplitude térmica situa-se entre os 11 e os 18 graus, garantindo uma humidade constante típica da vegetação luxuriante do parque natural. A qualidade do ar é excelente, registando PM2.5 de apenas 5. O pôr do sol ocorre às 18:47, iluminando discretamente os palácios e as copas das árvores seculares. A conversão cambial mantém-se estável a 1 USD por 0.89 EUR para quem chega de fora.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "Sintra prepara a estreia do seu Festival Literário Internacional.",
-              "lede": "O evento cultural decorre de 13 a 22 de novembro com entrada livre.",
-              "body": "A vila prepara-se para acolher a primeira edição do Festival Literário Internacional, agendado de 13 a 22 de novembro. Com curadoria a cargo de Pedro Mexia e Raquel Marinho, o programa incluirá conversas, poesia e música com convidados de relevo, mantendo a total gratuitidade de acesso para residentes e visitantes. Paralelamente, os sabores locais continuam a destacar-se, com a Maçã Reineta a inspirar os chefs da região e a dar mote ao festival gastronómico de Fontanelas, unindo tradição agrícola e alta cozinha.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "O feriado de Todos-os-Santos altera o ritmo da vila histórica.",
-              "lede": "A data de 2026-11-01 traz encerramentos nos serviços públicos.",
-              "body": "A proximidade do Dia de Todos-os-Santos, assinalado a 2026-11-01, altera discretamente o funcionamento institucional em Sintra. Os serviços camarários, conservatórias e instituições bancárias fecharão as portas durante o dia festivo, convidando moradores e visitantes a desfrutar exclusivamente da paisagem natural. As ruas históricas mantêm o seu passo vagaroso, ideal para cruzar os trilhos arborizados antes que as chuvas mais intensas de novembro transformem de vez a textura dos caminhos da serra.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
             }
           ]
         }
