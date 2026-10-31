@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-10-31T06:00:00+09:00",
+  "updated": "2026-11-01T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-01T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El AVE Madrid-Andalucía reanudará su servicio completo el 14 de noviembre.",
+              "lede": "Las conexiones ferroviarias recuperan su normalidad tras el incidente ocurrido en Urda.",
+              "body": "Los viajeros que planeen desplazamientos hacia el sur de España tras el Día de todos los Santos deben tener en cuenta que el trayecto recuperará su operatividad habitual el 14 de noviembre. Hasta esa fecha, las rutas hacia Andalucía mantienen los ajustes operativos necesarios tras el accidente registrado en la zona de Urda. Conviene revisar los horarios actualizados en las estaciones antes de acudir. El tipo de cambio se sitúa en 1 USD frente a 0.9 EUR para quienes necesiten realizar operaciones financieras durante el trayecto. La programación cultural de la ciudad continúa su curso habitual, combinando propuestas musicales y de artes escénicas en diversos espacios urbanos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "02",
+              "headline": "El Movistar Arena acoge el concierto de Morat con accesos regulados.",
+              "lede": "La jornada musical de hoy sábado exige planificar los traslados con antelación.",
+              "body": "El recinto recibe esta noche la actuación de la formación musical en medio de una alta expectación de público. Se recomienda utilizar el transporte público y consultar los accesos habilitados para evitar aglomeraciones en los alrededores del pabellón. La festividad del Día de todos los Santos coincide con esta cita de fin de semana, por lo que el flujo de visitantes en la ciudad es notable. Quienes lleguen desde el extranjero cuentan con una referencia de 1 USD equivalentes a 0.9 EUR en las oficinas de cambio. Conviene recordar que los servicios administrativos y bancarios permanecen cerrados hoy debido al festivo nacional.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "03",
+              "headline": "Las oficinas bancarias y de la administración cierran por el Día de todos los Santos.",
+              "lede": "La festividad del 1 de noviembre altera los servicios presenciales en la capital.",
+              "body": "Con motivo de la celebración del Día de todos los Santos, la actividad institucional y financiera de la ciudad experimenta una pausa generalizada. Los ciudadanos y visitantes deben posponer cualquier gestión administrativa hasta la jornada laborable del lunes. El comercio de barrio y los espacios de hostelería adaptan sus horarios de apertura según la zona comercial. Para los viajeros internacionales, el tipo de cambio oficial se mantiene estable en 1 USD por 0.9 EUR en cajeros automáticos. Las propuestas culturales recientes, como el ciclo Madrid Urban Fest y las iniciativas de Escenas de Verano, siguen enriqueciendo la oferta de ocio urbano.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La calidad del aire se mantiene en niveles regulares durante el festivo.",
+              "lede": "El ambiente parcialmente nublado acompaña una jornada con temperaturas entre 15 y 22°C.",
+              "body": "La atmósfera registra un índice de PM2.5 de 25, situando la calidad del aire en valores pobres que aconsejan moderación en actividades físicas prolongadas al aire libre. El termómetro oscila entre los 15 y 22°C bajo un cielo parcialmente nublado que antecede a la puesta de sol prevista para las 17:46. Coincidiendo con la festividad del Día de todos los Santos, la ciudad ofrece alternativas culturales bajo techo, como la exposición Reyes del Mundo en la sede de la RFEF. El tipo de cambio se establece en 1 USD por 0.9 EUR para los visitantes extranjeros. Los espacios museísticos adaptan sus horarios especiales de apertura para recibir al público local y foráneo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "02",
+              "headline": "Los Museos Vaticanos y el festival In-Edit marcan la agenda cultural de noviembre.",
+              "lede": "El arte sacro del siglo XX y los documentales musicales ocupan los espacios de la ciudad.",
+              "body": "La oferta cultural de Barcelona se amplía este fin de semana con propuestas de gran calado histórico y musical. La muestra de arte sacro procedente de los Museos Vaticanos convive con las proyecciones del Festival In-Edit, que reúne figuras esenciales como Marianne Faithfull y David Bowie. Paralelamente, el Museu Egipci inaugura su sala inmersiva dedicada a la figura del explorador Iny. Con una temperatura exterior que varía de 15 a 22°C y el sol ocultándose a las 17:46, los espacios interiores son el refugio ideal para los visitantes. El aire muestra un registro de PM2.5 de 25, manteniendo un perfil atmosférico discretamente brumoso en los paseos marítimos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "03",
+              "headline": "Los servicios bancarios y administrativos suspenden su atención al público.",
+              "lede": "El festivo del Día de todos los Santos paraliza la actividad oficial en la ciudad.",
+              "body": "La celebración del Día de todos los Santos determina el cierre de oficinas gubernamentales, bancos y dependencias postales durante toda la jornada. Los residentes y viajeros deben planificar sus transacciones financieras teniendo en cuenta que la equivalencia monetaria actual es de 1 USD por 0.9 EUR. A pesar de la festividad, las principales exposiciones y museos de la ciudad permanecen accesibles con horarios adaptados. El cielo se presenta parcialmente nublado con registros térmicos de 15 a 22°C. La puesta de sol a las 17:46 marca el inicio de una noche tranquila donde la actividad cultural privada toma el relevo de la administración pública.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Las tormentas y las precipitaciones marcan la meteorología de este sábado.",
+              "lede": "Se registran 23.2mm de lluvia bajo temperaturas que oscilan entre 17 y 23°C.",
+              "body": "El transcurso del día viene condicionado por un episodio de tormentas que deja acumulados de 23.2mm de precipitación en distintos puntos de la ciudad. El ambiente se mantiene templado con registros térmicos de 17 a 23°C y la puesta de sol programada para las 19:23. La calidad del aire se sitúa en un nivel fair con un valor de PM2.5 de 14, favoreciendo un entorno exterior aceptable pese a la inestabilidad climática. Los desplazamientos urbanos requieren precaución debido a la acumulación puntual de agua en calzadas y pasos subterráneos. Los espacios culturales cerrados se convierten en la opción preferida por los residentes para disfrutar de la jornada sabatina.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "02",
+              "headline": "La Semana del Patrimonio invita a recorrer palacios y museos recuperados.",
+              "lede": "El circuito cultural urbano ofrece acceso especial a sitios arqueológicos de la ciudad.",
+              "body": "A pesar de las condiciones meteorológicas marcadas por la lluvia y las tormentas con 23.2mm de agua caída, la programación cultural sigue adelante. La Semana del Patrimonio propone un recorrido detallado por palacios históricos, museos tradicionales y un sitio arqueológico recientemente recuperado para la ciudadanía. Las temperaturas se mueven entre 17 y 23°C, acompañadas por una calidad de aire fair con un indicador PM2.5 de 14. La puesta de sol ocurrirá a las 19:23, otorgando una tarde larga para visitar muestras en espacios cubiertos. Es una ocasión idónea para redescubrir la arquitectura institucional de la capital sin prisas ni aglomeraciones.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            },
+            {
+              "n": "03",
+              "headline": "El cine y la inteligencia artificial protagonizan los festivales de la temporada.",
+              "lede": "El WAIFF y el Festival OFFNI presentan proyecciones con entrada gratuita.",
+              "body": "La vanguardia audiovisual ocupa un lugar central en la agenda porteña con propuestas innovadoras en torno a la inteligencia artificial. Los galardonados en el WAIFF Buenos Aires y la programación del Festival OFFNI ofrecen una mirada singular sobre la creación cinematográfica contemporánea con acceso libre para los espectadores. Esta oferta cultural contrasta amablemente con el pulso meteorológico exterior, caracterizado por 23.2mm de lluvia, tormentas dispersas y temperaturas de 17 a 23°C. La caída del sol a las 19:23 da paso a funciones nocturnas en salas resguardadas del temporal. Con una calidad del aire fair y un registro de PM2.5 de 14, la atmósfera urbana respira con serenidad tras las precipitaciones.",
+              "source": "saudade desk",
+              "source_date": "2026-11-01"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-10-31T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El otoño porteño regala jornadas apacibles para el disfrute de los espacios públicos y la observación urbana sin prisas. Con una calidad del aire fair y un registro de PM2.5 de 5, los parques y bulevares se convierten en el refugio predilecto de quienes buscan tranquilidad. Los festivales temáticos dedicados al cine experimental, la cultura coreana y los retos de ingenio completan una oferta de fin de semana muy rica en matices. Los residentes aprovechan estas condiciones óptimas para caminar por los barrios históricos y participar en las actividades gratuitas que dinamizan la ciudad. Es un momento propicio para contemplar el compás cotidiano de Buenos Aires con la mirada limpia del viajero paciente.",
               "source": "saudade desk",
               "source_date": "2026-10-25"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-24T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Paseo de la Castellana acoge por primera vez un mercado de diseño.",
-              "lede": "El mercadillo más elegante de Madrid se desplaza a esta gran arteria urbana este fin de semana.",
-              "body": "Los paseantes habituales encontrarán una propuesta diferente en el centro de la vía principal. Las firmas de artesanía y diseño local ocupan un tramo poco habitual para estos eventos comerciales. Es un buen momento para caminar sin prisa bajo los árboles otoñales. Con el tipo de cambio actual de 1 USD a 0.89 EUR, los visitantes extranjeros disfrutan de una paridad favorable para adquirir piezas de creadores madrileños. Conviene acudir por la mañana antes de la mayor afluencia de público.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición sobre dientes de sable abre sus últimas semanas en la capital.",
-              "lede": "Los museos científicos ofrecen un recorrido detallado por la megafauna del pasado.",
-              "body": "La muestra permite observar fósiles y recreaciones de gran precisión histórica. Es una visita pausada que encaja bien en las tardes frescas de otoño en la ciudad. Las salas mantienen un ambiente silencioso propicio para la observación detenida de cada pieza. Los residentes aprovechan el calendario cultural previo al cierre de temporada. Se recomienda consultar los horarios especiales antes de planificar el acceso a las salas principales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "El festival Monkey Week presenta su edición número 18 con un avance en Madrid.",
-              "lede": "La programación incluye 123 actuaciones previstas para su celebración en El Puerto de Santa María.",
-              "body": "Los amantes de la música independiente tienen una cita previa con la presentación oficial en espacios madrileños. Este adelanto muestra el pulso creativo de una de las citas musicales más cuidadas del sur peninsular. Mientras tanto, la ciudad se prepara para la festividad del Día de todos los Santos el 2026-11-01, fecha en la que los servicios administrativos y bancarios permanecerán cerrados. Los cementerios municipales ya registran una mayor afluencia de visitantes silenciosos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival de arquitectura abre este fin de semana las puertas de edificios singulares.",
-              "lede": "Casas de lujo, naves industriales y antiguos cementerios muestran su patrimonio interior.",
-              "body": "Los ciudadanos pueden acceder a espacios habitualmente cerrados al público general durante todo el fin de semana. Esta iniciativa invita a redescubrir la trastienda urbana con una mirada pausada y arquitectónica. Las rutas propuestas cruzan diferentes épocas del diseño catalán sin aglomeraciones excesivas. Con el cambio oficial fijado en 1 USD a 0.89 EUR, los viajeros internacionales cuentan con referencia clara para sus gastos de transporte y café. Las reservas previas son obligatorias para determinados interiores privados.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "El Museo Carmen Thyssen colabora en una muestra internacional sobre el modernismo.",
-              "lede": "Tres obras de la colección viajan temporalmente a Múnich para un proyecto expositivo.",
-              "body": "La pinacoteca barcelonesa cede piezas clave para profundizar en el diálogo artístico europeo de principios de siglo. Esta ausencia temporal en las salas locales invita a mirar con atención el resto del fondo permanente. Los espacios del museo mantienen su ritmo habitual de visitas reposadas. Es una ocasión idónea para conversar con los mediadores culturales sobre las influencias del movimiento. El visitante local valora la discreción de estas semanas previas al invierno.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Barcelona estudia trasladar su Festival de Nadal al parque de la Ciutadella.",
-              "lede": "El consistorio valora este pulmón verde ante la ocupación actual de la plaza Catalunya.",
-              "body": "El cambio de ubicación busca garantizar el desarrollo de las actividades culturales previstas para las próximas semanas. El parque ofrece un entorno arbolado más amplio para la instalación de los escenarios festivos. Los vecinos observan los preparativos con la habitual cautela frente a los cambios en el espacio público. Asimismo, conviene recordar que el 2026-11-01 se celebra el Día de todos los Santos, jornada de cierre general para oficinas bancarias y administraciones públicas. Los transportes funcionarán con los horarios habituales de festivo.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La ciudad registra una temperatura de 13 a 18°C con chubascos aislados.",
-              "lede": "La tarde deja 6.5mm de precipitación y una calidad del aire moderada con un PM2.5 de 11.",
-              "body": "El ambiente húmedo invita a buscar refugio en librerías y cafés tradicionales de la avenida Corrientes. La puesta de sol se fija a las 19:15, alargando una tarde propicia para la lectura junto al río. Conviene llevar un paraguas ligero ante los chaparrones intermitentes que recorren los barrios del norte y del centro. Las calles arboladas de Palermo muestran un tono verde intenso tras el agua caída. El índice de calidad del aire se mantiene en niveles aceptables para caminar al aire libre.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Nueva Ópera celebra su décimo aniversario con propuestas contemporáneas.",
-              "lede": "La programación incluye estrenos y montajes experimentales en distintos escenarios porteños.",
-              "body": "Esta edición redobla su apuesta por formatos líricos de cámara y experimentación sonora. Los espectadores disfrutan de funciones íntimas alejadas de los circuitos comerciales masivos. La iniciativa consolida un espacio para creadores emergentes de toda la región. Las entradas pueden adquirirse en las taquillas de los espacios adheridos con antelación. La climatología fresca acompaña el recorrido nocturno entre teatros independientes.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
-            },
-            {
-              "n": "03",
-              "headline": "Mascotear 2026 llega a Buenos Aires con actividades gratuitas para animales y dueños.",
-              "lede": "El encuentro ofrece desfiles, yoga con cachorros y jornadas de adopción responsable.",
-              "body": "Los espacios verdes de la ciudad se adaptan durante el fin de semana para recibir este festival dedicado a la convivencia urbana con animales. Las familias disfrutan de talleres educativos y áreas de esparcimiento al aire libre. La participación es abierta y no requiere inscripción previa en la mayoría de las zonas habilitadas. Tras los recientes eventos internacionales de K-pop, la agenda cultural de la capital ofrece opciones más reposadas. Se aconseja verificar los accesos según el estado del césped tras las lluvias recientes.",
-              "source": "saudade desk",
-              "source_date": "2026-10-24"
             }
           ]
         }
