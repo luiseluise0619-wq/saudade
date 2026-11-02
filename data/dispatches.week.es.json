@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-01T06:00:00+09:00",
+  "updated": "2026-11-02T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-02T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid registra cielos despejados con temperaturas entre 6 y 19°C.",
+              "lede": "La luz de noviembre se instala en la capital al caer el sol a las 18:10.",
+              "body": "El clima otoñal ofrece mañanas nítidas y tardes apacibles que invitan a recorrer las calles sin prisa. Con un tipo de cambio estable de 1 USD a 0.9 EUR, los paseantes disfrutan del ritmo pausado de la ciudad. Tras la festividad del Día de todos los Santos del 1 de noviembre, la actividad administrativa recupera su pulso habitual. Las terrazas del centro aprovechan las horas centrales de luz antes del descenso térmico vespertino. Es el momento perfecto para observar el tono dorado sobre las fachadas históricas de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "02",
+              "headline": "El Teatro Español acoge la exposición Madrid en el Siglo de Oro.",
+              "lede": "El arte barroco revela cómo eran los antiguos espacios urbanos de la capital.",
+              "body": "La pinacoteca madrileña presenta una muestra que profundiza en la arquitectura y la vida cotidiana de siglos pasados. Esta exposición permite comprender la transformación del plano urbano a través de lienzos y grabados originales. Los visitantes encuentran en estas salas un refugio tranquilo frente al bullicio exterior de noviembre. La pinacoteca mantiene sus horarios habituales tras el reciente festivo de principios de mes. Es una parada indispensable para quienes buscan conectar con la memoria artística y física de Madrid.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "03",
+              "headline": "El ciclo Grandes del Gospel celebra su XXXII edición en Madrid.",
+              "lede": "Las voces corales llenan los auditorios madrileños en las primeras semanas de noviembre.",
+              "body": "Este veterano festival musical regresa a los escenarios de la ciudad con un repertorio clásico y emotivo. Las actuaciones ofrecen un contrapunto sonoro ideal para las tardes frescas de otoño en la capital. Paralelamente, los aficionados al arte pueden visitar la exposición sobre Michael Jackson que acaba de abrir sus puertas. Las entradas para ambos eventos se adquieren fácilmente con la conversión de 1 USD a 0.9 EUR. La programación cultural de la ciudad equilibra la tradición escénica con propuestas contemporáneas de gran formato.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona mantiene una calidad del aire favorable con un índice PM2.5 de 8.",
+              "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos junto al mar.",
+              "body": "La atmósfera limpia de estos días permite contemplar el perfil litoral con una claridad inusual para el mes de noviembre. El tipo de cambio se sitúa en 1 USD frente a 0.9 EUR en los comercios locales. Después del festivo del Día de todos los Santos celebrado el 1 de noviembre, los espacios públicos recuperan su tranquilidad cotidiana. Los parques urbanos se llenan de residentes que aprovechan la suavidad climática para leer o caminar. La ciudad transita hacia el invierno con una calma palpable en cada uno de sus barrios.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición Reyes del Mundo llega a Barcelona tras el triunfo mundialista.",
+              "lede": "La muestra organizada por la RFEF repasa los hitos recientes del deporte español.",
+              "body": "El espacio expositivo invita a los visitantes a revivir los momentos clave de la selección nacional de fútbol en el Mundial 2026. Esta propuesta complementa la variada oferta cultural que caracteriza el inicio de noviembre en la ciudad condal. Los interesados pueden compaginar la visita con los conciertos del Mira Festival o las actividades gratuitas del Festival Raval(s). Con una economía local adaptada a la tasa de 1 USD por 0.9 EUR, la agenda de ocio resulta accesible. Las salas expositivas ofrecen un recorrido sosegado idóneo para las mañanas de este mes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival Raval(s) ofrece más de 50 actividades gratuitas en el barrio.",
+              "lede": "La iniciativa vecinal fomenta la cohesión cultural mediante talleres y muestras abiertas.",
+              "body": "Durante todo el mes, el distrito del Raval se convierte en un punto de encuentro para vecinos y visitantes curiosos. La programación incluye propuestas artísticas diversas que animan las plazas y los centros cívicos de la zona. Tras el descanso laboral del 1 de noviembre por la festividad nacional, el barrio recupera su habitual dinamismo multicultural. Estas actividades se suman a las opciones gratuitas que recorren la ciudad, desde ferias de antigüedades hasta muestras de juegos. Es una oportunidad excelente para observar la vida comunitaria desde una perspectiva cercana y respetuosa.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "San Justo celebra un festival de food trucks en la Plaza San Nicolás.",
+              "lede": "El espacio público se convierte en punto de reunión vecinal durante este fin de semana.",
+              "body": "La Plaza San Nicolás acoge una nueva edición de este encuentro gastronómico al aire libre para toda la familia. Los asistentes disfrutan de propuestas culinarias variadas en un entorno arbolado y de acceso totalmente libre. Este tipo de iniciativas dinamizan la vida de barrio y ofrecen una alternativa de ocio relajada en los espacios verdes. Los vecinos aprovechan las horas de luz para pasear y compartir momentos en las bancas de la plaza. El evento demuestra la vitalidad de las plazas del conurbano como auténticos centros de convivencia social.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "02",
+              "headline": "El World AI Film Festival presenta su programación con entrada libre.",
+              "lede": "Buenos Aires acoge las proyecciones y debates sobre cine generado por inteligencia artificial.",
+              "body": "La capital argentina se consolida como referente tecnológico al albergar este festival pionero en el ámbito audiovisual. Las jornadas incluyen la proyección de los cortos ganadores y encuentros con creadores digitales de distintos puntos del mundo. Todas las funciones cuentan con acceso gratuito, lo que facilita la asistencia de estudiantes y curiosos interesados en el medio. Las salas de proyección fomentan la reflexión sobre el futuro de las narrativas visuales en la era digital. Es una cita imprescindible para observar cómo la innovación técnica se integra en la cultura urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival OFFNI muestra cine independiente con acceso gratuito en la ciudad.",
+              "lede": "La muestra cinematográfica apuesta por formatos experimentales y narrativas fuera del circuito comercial.",
+              "body": "Los cinéfilos porteños disponen de una cartelera alternativa que prioriza la autoría independiente y los lenguajes visuales arriesgados. La programación detalla las fechas y los espacios habilitados para disfrutar de cada una de las películas programadas. Esta propuesta se enmarca en la agenda cultural de noviembre, que busca democratizar el acceso al arte audiovisual. Las proyecciones van acompañadas de charlas con los realizadores, generando un espacio de diálogo íntimo con el público. Buenos Aires reafirma así su vocación de albergar iniciativas culturales diversas y abiertas a la comunidad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-02"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-01T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La agenda de festivales de Buenos Aires incluye esta semana una nueva edición del Hanguk Fest, totalmente gratuito para todo el público. El encuentro gastronómico y cultural permite explorar la riqueza de Corea a través de platos típicos, talleres y expresiones artísticas. La propuesta fomenta el intercambio comunitario en un ambiente distendido y abierto a la curiosidad de los asistentes. Es recomendable llegar con tiempo para recorrer los distintos puestos y exposiciones sin agobios. La iniciativa consolida a la capital como un punto de encuentro multicultural donde conviven diversas tradiciones del mundo.",
               "source": "saudade desk",
               "source_date": "2026-10-26"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-25T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival de globos aerostáticos cruza el cielo madrileño este domingo.",
-              "lede": "Música en directo y pruebas de habilidad acompañan el despegue de los aerostatos.",
-              "body": "El cielo de Madrid acoge este 25 de octubre un espectáculo singular con el festival de globos aerostáticos. La jornada combina despegues matutinos, pruebas de habilidad para los pilotos y actuaciones musicales en directo al aire libre. Con un termómetro que oscila entre los 9 y los 21°C bajo un cielo completamente overcast, la tarde invita a pasear abrigados contemplando la caída del sol prevista para las 19:20. Los visitantes que planean compras o transacciones deben recordar el tipo de cambio oficial de 1 USD a 0.89 EUR. Esta cita aérea marca la agenda dominical antes de que comience el trasiego de la nueva semana en los parques de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "02",
-              "headline": "El cine y las técnicas mixtas ocupan los espacios culturales de la ciudad.",
-              "lede": "La exposición Zurcir y cantar convive con la novena edición del Festival Cine Por Mujeres.",
-              "body": "La agenda cultural de Madrid ofrece refugio frente al ambiente fresco y nublado de octubre con propuestas de gran calado artístico. Por un lado, la exposición Zurcir y cantar exhibe delicadas piezas de técnicas mixtas que invitan a la observación pausada. Por otro lado, la IX edición del Festival Cine Por Mujeres llega a la capital con una notable presencia de cineastas mexicanas en su programación oficial. Con temperaturas entre 9 y 21°C, los cinéfilos y paseantes encuentran en los centros culturales un resguardo perfecto mientras el atardecer se adelanta a las 19:20. Además, los aficionados a la gastronomía oriental pueden disfrutar estos días del SUSHI FEST, un evento temático muy concurrido que complementa la oferta de ocio urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "03",
-              "headline": "El Día de todos los Santos se acerca al calendario administrativo.",
-              "lede": "Las oficinas públicas y bancos ajustarán sus horarios de atención la próxima semana.",
-              "body": "A medida que avanza el otoño y los cielos de Madrid se mantienen overcast con máximas de 21°C y mínimas de 9°C, la ciudad anticipa el festivo del Día de todos los Santos el 1 de noviembre de 2026. Conviene recordar que las oficinas gubernamentales, las sucursales bancarias y las oficinas postales permanecerán cerradas durante esa jornada festiva. Los viajeros y residentes que necesiten realizar gestiones administrativas deben resolver sus trámites con antelación antes del cierre general. La puesta de sol a las 19:20 marca el ritmo de unas tardes cada vez más breves, ideales para recorrer las calles con calma y preparar el calendario del próximo mes sin prisas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival 48h Open House abre veintitrés edificios singulares de L’Eixample.",
-              "lede": "Arquitectura oculta y patios interiores se muestran a los ciudadanos durante este fin de semana.",
-              "body": "Barcelona celebra una nueva edición del festival 48h Open House Barcelona, permitiendo el acceso libre a veintitrés joyas arquitectónicas situadas en el distrito de L’Eixample. Los residentes y visitantes pueden recorrer zaguanes históricos, cubiertas y espacios habitualmente cerrados al público general. La calidad del aire se mantiene en niveles moderados, registrando un valor de PM2.5 de 11, lo que favorece los largos recorridos peatonales por la cuadrícula urbana. Quienes lleguen desde fuera con moneda extranjera encontrarán un tipo de cambio de 1 USD equivalente a 0.89 EUR en las entidades financieras del centro. Es una ocasión excelente para observar los detalles ornamentales del modernismo catalán desde una perspectiva reposada.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "02",
-              "headline": "El Serielizados Fest premia las mejores producciones de ficción audiovisual.",
-              "lede": "Las obras Matar a un oso y Etty figuran entre las galardonadas del festival internacional.",
-              "body": "El Festival Internacional de Series de Barcelona, Serielizados Fest, ha anunciado sus obras ganadoras en una edición marcada por el reconocimiento a producciones de gran sensibilidad narrativa. Títulos como Matar a un oso, Segunda temporada y la interpretación de Carmen Machi han recibido galardones muy celebrados por la crítica especializada. Mientras tanto, las galerías y museos de la ciudad mantienen activas las mejores exposiciones de la temporada para quienes prefieren la pausa de las salas de arte. Con una calidad del aire moderada y un índice PM2.5 de 11, pasear por los barrios históricos resulta sumamente agradable. Las transacciones comerciales se benefician de la estabilidad del tipo de cambio fijado en 1 USD por 0.89 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "03",
-              "headline": "Los servicios administrativos preparan sus cierres por el Día de todos los Santos.",
-              "lede": "El festivo del 1 de noviembre afectará a la apertura de oficinas públicas y bancos.",
-              "body": "La llegada de finales de octubre trae consigo la proximidad del festivo del Día de todos los Santos, fechado para el 1 de noviembre de 2026. Los residentes deben tener en cuenta que las oficinas de la administración pública, las entidades bancarias y las oficinas postales suspenderán su actividad habitual durante esa jornada. Conviene adelantar cualquier trámite burocrático para evitar inconvenientes en los días previos al cierre festivo. La ciudad mantiene una atmósfera tranquila, con una calidad del aire calificada como moderada y un registro de PM2.5 de 11. Los viajeros pueden planificar sus rutas arquitectónicas y visitas culturales con la certeza de que el ritmo urbano se adapta pausadamente a la festividad.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Hanguk Fest celebra la cultura y la gastronomía coreana en Buenos Aires.",
-              "lede": "Un festival gratuito acerca los sabores, juegos y tradiciones de Corea a los vecinos.",
-              "body": "Buenos Aires acoge este fin de semana el Hanguk Fest, un festival gastronómico y cultural dedicado por completo a Corea con entrada totalmente gratuita. Los asistentes pueden disfrutar de platos tradicionales, demostraciones artísticas y un ambiente festivo diseñado para toda la familia. La calidad del aire en la ciudad se presenta en condiciones muy favorables, registrando un nivel de PM2.5 de 5 que invita a disfrutar de los espacios verdes y plazas al aire libre. Esta propuesta se suma a la intensa agenda cultural de la capital, ofreciendo un punto de encuentro multicultural donde la curiosidad y el buen clima urbano se dan la mano en perfecta armonía.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "02",
-              "headline": "El ingenio y la inteligencia artificial protagonizan los encuentros creativos.",
-              "lede": "Un festival de cine hecho con IA y retos mentales ocupan la agenda cultural porteña.",
-              "body": "La creatividad tecnológica y el entretenimiento agudo ocupan un lugar destacado en la programación cultural de Buenos Aires. Por un lado, regresa un popular festival gratuito plagado de juegos, acertijos y desafíos mentales para poner a prueba el ingenio de los participantes. Por otro lado, un referente internacional vinculado a la historia de Apple llega a la ciudad para presentar un novedoso festival de cine elaborado íntegramente con herramientas de inteligencia artificial. Con una calidad del aire catalogada como fair y un índice de PM2.5 de 5, recorrer los centros culturales y espacios expositivos resulta sumamente placentero. Los observadores atentos encontrarán en estas iniciativas un reflejo de la vanguardia digital combinada con el ocio urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
-            },
-            {
-              "n": "03",
-              "headline": "Los espacios públicos invitan al paseo pausado bajo un cielo despejado.",
-              "lede": "La excelente calidad del aire favorece las caminatas por los tradicionales parques de la ciudad.",
-              "body": "El otoño porteño regala jornadas apacibles para el disfrute de los espacios públicos y la observación urbana sin prisas. Con una calidad del aire fair y un registro de PM2.5 de 5, los parques y bulevares se convierten en el refugio predilecto de quienes buscan tranquilidad. Los festivales temáticos dedicados al cine experimental, la cultura coreana y los retos de ingenio completan una oferta de fin de semana muy rica en matices. Los residentes aprovechan estas condiciones óptimas para caminar por los barrios históricos y participar en las actividades gratuitas que dinamizan la ciudad. Es un momento propicio para contemplar el compás cotidiano de Buenos Aires con la mirada limpia del viajero paciente.",
-              "source": "saudade desk",
-              "source_date": "2026-10-25"
             }
           ]
         }
