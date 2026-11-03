@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-02T06:00:00+09:00",
+  "updated": "2026-11-03T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-03T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The morning mist sits low over Seoul as autumn settles.",
+              "lede": "Temperatures hover between 5 and 16°C under an overcast sky.",
+              "body": "The morning mist sits low over Seoul as autumn settles into the quiet alleys of the city. Temperatures hover between 5 and 16°C under an overcast sky, bringing a distinct crispness to the air that turns breath visible by dusk. PM2.5 levels register at 44, keeping the atmosphere slightly hazy as commuters move through the transit networks. Sunset arrives early at 17:32, casting long shadows across stone walls and traditional tile roofs. For travelers keeping track of finances, the exchange rate sits steadily at 1 USD to 1343 KRW. It is a quiet week for mindful observation, far from the hurried pace of the main commercial avenues. Slow down, wrap up in a wool coat, and watch the city transition into its evening quiet.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "New retail flagships open their doors across the capital.",
+              "lede": "Loro Piana takes over The Galleria while Lacoste debuts a café.",
+              "body": "New retail flagships open their doors across the capital, bringing fresh architectural gestures to familiar streetscapes. Loro Piana takes over Seoul’s The Galleria this week, presenting a subdued palette that mirrors the season's quiet mood. Meanwhile, Lacoste has opened its Seoul flagship featuring the brand's very first café in South Korea. These openings unfold against a backdrop of steady international interest, with foreign tourist spending in Seoul set to top 11 trillion Won this year. Visitors strolling through upscale districts will notice a deliberate shift toward experiential spaces that invite lingering rather than rushing. It is an interesting moment to observe how global houses interpret local aesthetics through minimalist design and restrained interiors. Take an afternoon to walk past these new facades and observe the changing rhythm of the shopping quarters.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "Herbal scents drift through traditional markets as weather cools.",
+              "lede": "Dried roots and roots of ginseng fill the historic apothecary stalls.",
+              "body": "Herbal scents drift through traditional markets as weather cools and residents seek seasonal remedies. The historic herbal medicine market offers a sensory sanctuary of dried roots, bark, and warming teas that have sustained local life for generations. Vendors arrange neat bundles of roots under muted light while patrons deliberate quietly over the medicinal properties of each ingredient. This ancient trade continues undisturbed by the digital conveniences reshaping other corners of the city, such as recent corporate tech acquisitions and retail takeovers. Step inside the covered corridors to escape the 5 to 16°C chill and observe the meticulous sorting of botanicals by hand. It is a grounding experience that connects the modern traveler to enduring local rhythms.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Tokyo observes Bunka no Hi under quiet, overcast skies.",
+              "lede": "Public offices close for Culture Day while temperatures reach 20°C.",
+              "body": "Tokyo observes Bunka no Hi under quiet, overcast skies as the city marks the national holiday on 2026-11-03. Government offices, banks, and post offices remain closed for the day, lending residential neighborhoods an unusual stillness. Temperatures range from a mild 12 to 20°C, making it pleasant for long walks through municipal parks and garden paths. Air quality remains moderate with PM2.5 at 19, offering clear views despite the cloud cover. Sunset occurs sharply at 16:44, drawing a premature curtain across daytime wanderings. The exchange rate holds at 1 USD to 158 JPY for those exchanging currency at local hubs. Use the holiday quiet to explore neighborhood libraries and side streets undisturbed by weekday commuter crowds.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "Art Week Tokyo scatters installations across the capital's venues.",
+              "lede": "Visitors navigate distinct galleries as the cultural event connects districts.",
+              "body": "Art Week Tokyo scatters installations across the capital's venues, offering another way of engaging the city through creative spaces. Visitors navigate distinct galleries and museums via dedicated transit routes that link remote neighborhoods to the central wards. The event runs parallel to cinematic celebrations, following recent film festival screenings and enthusiastic fan receptions for directors like Yamazaki Takashi. These cultural happenings draw quiet crowds of observers who prefer thoughtful contemplation over spectacle. Moving between venues provides a natural lesson in Tokyo's scale, revealing hidden courtyards and modest pocket parks along the way. Take a map, board the local train line, and let the gallery shuttle guide your afternoon exploration.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "Fall foliage begins its slow descent over Ueno and Shinjuku.",
+              "lede": "Overcast conditions frame the early autumn transition in public gardens.",
+              "body": "Fall foliage begins its slow descent over Ueno and Shinjuku as the 12 to 20°C weather persists throughout the week. Overcast conditions frame the early autumn transition, muting the greens and golds of park trees into softer pastel hues. Locals gather near pond edges to watch migratory birds settle into their winter routines before the colder December winds arrive. The moderate air quality of PM2.5 19 keeps the atmosphere clean enough for extended outdoor reading sessions on wooden benches. With the early sunset at 16:44, park lanterns flicker on just as the last strollers make their way toward the station gates. It is a peaceful interlude before the winter season fully takes hold of the metropolitan landscape.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "The Tagus river reflects an overcast sky as Lisbon cools down.",
+              "lede": "Temperatures range from 10 to 22°C under soft grey clouds.",
+              "body": "The Tagus river reflects an overcast sky as Lisbon cools down into a gentle November rhythm. Temperatures range from 10 to 22°C under soft grey clouds that mute the city's limestone facades. Air quality is moderate with PM2.5 at 18, ensuring a breathable atmosphere for walking the historic calçada pavements. Sunset stretches to 17:34, giving afternoon strollers ample time to enjoy the fading light along the riverbanks. Financial transactions use the steady exchange rate of 1 USD to 0.89 EUR across local commerce. It is an ideal week to wander through winding alleyways without the intense heat of the summer months.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "Historic libraries and cultural venues welcome quiet visitors.",
+              "lede": "The Lisbon Library joins the National Register of Historic Places.",
+              "body": "Historic libraries and cultural venues welcome quiet visitors seeking shelter and reflection away from the main tourist routes. The Lisbon Library has recently been added to the National Register of Historic Places, cementing its status as an architectural archive. Discussions on peace and community history continue to resonate following recent international conferences held between European and Asian capitals. These civic milestones highlight the city's ongoing dedication to preserving its literary and structural heritage for future generations. Travelers can spend hours browsing rare manuscripts and regional poetry collections in deeply hushed reading rooms. Step inside to appreciate the cool stone interiors and the quiet dedication of local archivists.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "Evening strolls through Alfama offer moments of calm reflection.",
+              "lede": "Fado melodies drift from small doorways as the evening settles in.",
+              "body": "Evening strolls through Alfama offer moments of calm reflection as the day's mild warmth slowly dissipates into the damp night air. Fado melodies drift from small doorways as local musicians tune their guitars for the evening service. The 10 to 22°C temperature range makes a light jacket sufficient for navigating the steep, stair-lined alleys of the old quarters. Street lamps cast a warm glow over damp cobblestones that have polished smooth over centuries of foot traffic. Pause at a viewing terrace to watch the distant lights of the bridge blink on against the darkening horizon. It is a classic Lisbon experience rooted in restraint, memory, and the gentle passage of time.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-02T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "The steep hillside neighborhoods of Alfama and Graça settle into a tranquil rhythm under the grey autumn canopy. Without the intense heat of peak tourist season, travelers can sit undisturbed in small tascas listening to distant Fado echoes. The fair air quality and comfortable 24°C afternoon highs make walking the ancient stairways a gentle endeavor rather than a strenuous chore. The exchange rate at 0.9 EUR to 1 USD keeps cafe bills predictable across the historic quarters. Even the city's iconic trams navigate the tight turns with a measured, unhurried grace. It is a season for observing the ordinary life of the city unfold behind shuttered windows and damp stone walls.",
               "source": "saudade desk",
               "source_date": "2026-10-28"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-27T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn air settles over the city as the thermometer moves between 5 and 16°C.",
-              "lede": "Sunset arrives early at 17:39, casting long shadows across the stone courtyards.",
-              "body": "Clear autumn air settles over the city as the thermometer moves between 5 and 16°C. Sunset arrives early at 17:39, casting long shadows across the stone courtyards. Air quality remains fair with PM2.5 at 8, making evening walks along the ancient walls remarkably crisp. Visitors exchanging currency will find a rate of 1 USD to 1325 KRW at local exchange booths. This week, children in the northern districts gather to harvest rice reserved for winter's migratory birds. Meanwhile, the Seoul National University Alumni Art Exhibition features 22 artists showcasing Beyond Time. Quiet observers will appreciate the steady rhythm of the season.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "Children harvest paddy fields to leave grain for winter’s migratory birds along the river.",
-              "lede": "The seasonal harvest connects urban youth with the ecological cycles of the Han River.",
-              "body": "Children harvest paddy fields to leave grain for winter’s migratory birds along the river. The seasonal harvest connects urban youth with the ecological cycles of the Han River. Temperatures hover from 5 to 16°C under mainly clear skies that fade by 17:39. Clean air conditions, marked by a PM2.5 reading of 8, offer ideal visibility for outdoor observation. In the city center, a pet festival recently brought adoption drives and conversations on loss to public parks. Currency exchange sits steady at 1 USD to 1325 KRW. Art lovers can still view the 22 artists exhibiting Beyond Time at the university museum, reflecting on memory and duration.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "Alumni artists explore themes of memory and duration in a quiet gallery exhibition.",
-              "lede": "Twenty-two makers present works that examine time passing in the capital.",
-              "body": "Alumni artists explore themes of memory and duration in a quiet gallery exhibition. Twenty-two makers present works that examine time passing in the capital. Outside, temperatures range from 5 to 16°C with fair air quality at PM2.5 8. The exchange rate holds at 1 USD to 1325 KRW for travelers sorting finances. As sunset falls at 17:39, civic life shifts indoors to cultural celebrations and milestone anniversaries. Netflix recently marked 10 years of storytelling in Korea, while community spaces hosted gentle dialogues on animal companionship and loss. The week proceeds with a deliberate, unhurried grace suitable for quiet observers.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A light drizzle leaves 0.3mm of precipitation across the streets as evening approaches.",
-              "lede": "The autumn air ranges from 16 to 21°C, carrying the scent of wet asphalt and fallen leaves.",
-              "body": "A light drizzle leaves 0.3mm of precipitation across the streets as evening approaches. The autumn air ranges from 16 to 21°C, carrying the scent of wet asphalt and fallen leaves. Sunset comes early at 16:51, dimming the neon glow of the neighborhoods. Air quality is moderate with PM2.5 at 20, typical for this damp period. Travelers checking financial rates will note 1 USD trades around 157 JPY. The Tokyo Film Festival has opened with rain-soaked red carpets and a focus on Japanese cinema. Residents are also mindful of the upcoming public holiday for Bunka no Hi on 2026-11-03, when administrative offices will close.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "Film festival screenings draw crowds indoors as the autumn rain dampens the pavement.",
-              "lede": "Cinematic tributes and retrospectives offer shelter from the wet evening weather.",
-              "body": "Film festival screenings draw crowds indoors as the autumn rain dampens the pavement. Cinematic tributes and retrospectives offer shelter from the wet evening weather. Temperatures stay mild between 16 and 21°C, with a mere 0.3mm of precipitation recorded today. Sunset arrives at 16:51, prompting early evening reflections under umbrellas. The exchange rate rests at 1 USD to 157 JPY, while moderate air quality registers a PM2.5 level of 20. As the city looks toward the national holiday on 2026-11-03 for Bunka no Hi, local cinemas celebrate domestic storytelling and the resilience of those who fall through the cracks.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "Preparations begin for Bunka no Hi as autumn deepens across the municipal gardens.",
-              "lede": "The national holiday on 2026-11-03 will bring quiet streets and temporary administrative closures.",
-              "body": "Preparations begin for Bunka no Hi as autumn deepens across the municipal gardens. The national holiday on 2026-11-03 will bring quiet streets and temporary administrative closures. Visitors should note that banks and government offices will observe the day off. Meanwhile, daily life moves between 16 and 21°C under overcast skies that drop 0.3mm of rain before sunset at 16:51. Air quality sits at PM2.5 20, and the exchange rate remains 1 USD to 157 JPY. Cultural venues continue their festival showcases, highlighting independent films and women's empowerment lineups. It is a contemplative week for wandering the quieter districts.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies stretch above the river as temperatures reach a mild 23°C.",
-              "lede": "The daily range stays between 11 and 23°C, keeping the stone facades comfortably warm.",
-              "body": "Overcast skies stretch above the river as temperatures reach a mild 23°C. The daily range stays between 11 and 23°C, keeping the stone facades comfortably warm. Sunset falls at 17:42, bringing a gentle dusk over the seven hills. Air quality is moderate with PM2.5 at 10, ensuring breathable air in narrow alleys. Travelers will find an exchange rate of 1 USD to 0.89 EUR. As the city approaches Dia de Todos-os-Santos on 2026-11-01, residents prepare for closures of public offices and banks. Concerts at venues like MEO Arena continue to draw music lovers, adding a modern hum to the historic port city.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "The city anticipates Dia de Todos-os-Santos with quiet markets and shuttered offices.",
-              "lede": "The public holiday on 2026-11-01 marks a time for reflection and family gatherings.",
-              "body": "The city anticipates Dia de Todos-os-Santos with quiet markets and shuttered offices. The public holiday on 2026-11-01 marks a time for reflection and family gatherings. Travelers should complete any official errands before banks and government desks close for the holiday. Weather conditions remain stable, moving from 11 to 23°C beneath heavy cloud cover. Sunset occurs at 17:42, casting a silver hue over the Tagus. The exchange rate holds at 1 USD to 0.89 EUR, and air quality measures at PM2.5 10. Recent live music events have enlivened the eastern waterfront, balancing the melancholy calm of the autumn season.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "Moderate air quality and overcast light create an ideal mood for walking the calçada.",
-              "lede": "PM2.5 levels rest at 10, while afternoon temperatures peak comfortably near 23°C.",
-              "body": "Moderate air quality and overcast light create an ideal mood for walking the calçada. PM2.5 levels rest at 10, while afternoon temperatures peak comfortably near 23°C after a brisk morning low of 11°C. Sunset at 17:42 signals the end of the walking day. Currency exchange is steady at 1 USD to 0.89 EUR. With Dia de Todos-os-Santos arriving on 2026-11-01, locals are stocking up on provisions ahead of holiday closures. The atmosphere remains subdued yet vibrant, punctuated by recent performances at the MEO Arena. Observers will find Lisbon in a reflective cadence this week.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
             }
           ]
         }
