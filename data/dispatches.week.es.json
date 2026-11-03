@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-02T06:00:00+09:00",
+  "updated": "2026-11-03T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-03T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid registra hoy temperaturas entre 6 y 14 grados bajo un cielo completamente overcast.",
+              "lede": "El termómetro desciende con la llegada de la tarde y la puesta de sol se adelanta a las 18:09.",
+              "body": "La jornada se presenta fresca en las calles madrileñas, obligando a los transeúntes a abrigarse mientras caminan por la ciudad. Con una temperatura máxima de 14 grados y una mínima de 6 grados, el ambiente invita a buscar refugio bajo techo. El cielo se mantiene cubierto durante todo el día, restando luz natural a las plazas y paseos. La oscuridad llega puntual a las 18:09, marcando el ritmo pausado de la tarde en la capital. Es un lunes sobrio, ideal para recorrer espacios cerrados y exposiciones que resguardan del frío exterior sin prisa.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "El tipo de cambio actual sitúa el dólar estadounidense en 0.89 euros.",
+              "lede": "Los viajeros internacionales encuentran esta referencia fija al realizar sus transacciones cotidianas en comercios locales.",
+              "body": "La cotización monetaria se mantiene estable al inicio de esta semana de noviembre. Para quienes visitan la ciudad desde fuera de la zona euro, el valor de 1 dólar equivalente a 0.89 euros facilita el cálculo de gastos en librerías, cafés y museos. Conviene tener presente esta proporción al planificar compras de artesanía o entradas para eventos culturales en la capital. Los establecimientos tradicionales y los mercados del centro operan con normalidad bajo esta referencia financiera. La economía diaria transcurre con la predictibilidad propia de los días laborables de otoño.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "El Centro Cultural Fernán Gómez acoge una exposición gratuita con 180 obras del Madrid barroco.",
+              "lede": "La muestra cultural comparte cartelera ciudadana con propuestas dedicadas a los techos y cúpulas históricas.",
+              "body": "La agenda artística de la ciudad ofrece refugio frente al clima fresco con muestras de gran calado patrimonial. El Fernán Gómez exhibe hasta el 17 de enero un centenar y medio largo de piezas que retratan el Siglo de Oro madrileño sin coste de entrada. En paralelo, los interesados en el patrimonio arquitectónico pueden visitar propuestas como las maquetas de cúpulas o la exposición titulada El Gran Azul. Estas iniciativas permiten comprender la evolución urbanística y artística de la Villa desde una perspectiva reposada. Las salas ofrecen un remanso de tranquilidad para observar los detalles pictóricos y constructivos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra una calidad del aire moderada con un valor de PM2.5 de 9.",
+              "lede": "Las condiciones atmosféricas permiten pasear con tranquilidad por los espacios abiertos de la fachada marítima.",
+              "body": "La atmósfera barcelonesa muestra valores estables en sus índices de partículas finas durante esta jornada de noviembre. Con un registro de PM2.5 situado en 9, la calidad del aire se califica como moderada para la práctica de actividades al aire libre. Los caminantes pueden recorrer los paseos arbolados y los parques urbanos sin restricciones significativas en su visibilidad o bienestar. Las corrientes marinas ayudan a disipar la bruma matinal en los barrios costeros de la ciudad condal. Es un contexto propicio para la observación sosegada de la arquitectura urbana y el arbolado viario.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "El tipo de cambio vigente establece 1 dólar estadounidense en 0.89 euros.",
+              "lede": "La equivalencia monetaria facilita el intercambio comercial y el consumo en los comercios de proximidad.",
+              "body": "La estabilidad en los mercados internacionales se refleja en la paridad aplicable en los establecimientos de Cataluña. La proporción de 1 dólar por 0.89 euros guía las transacciones cotidianas de los visitantes extranjeros en librerías, cafeterías y centros expositivos. Este valor constante permite gestionar presupuestos de viaje con precisión en cualquier barrio de la metrópoli. Los mercados municipales y los comercios del Gòtic operan bajo esta misma referencia financiera sin alteraciones. Conviene recordarlo al adquirir publicaciones especializadas o recuerdos de la temporada cultural que ahora comienza.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "El festival literario 42 arranca el 4 de noviembre dedicado a la ciencia ficción.",
+              "lede": "La exposición Reyes del Mundo cierra sus puertas tras exhibirse en la ciudad durante los días 2 y 3 de noviembre.",
+              "body": "La actividad cultural de la ciudad experimenta un relevo inmediato entre grandes citas temáticas. Tras acoger la muestra de la RFEF Reyes del Mundo los días 2 y 3 de noviembre, la atención se desplaza hacia las literaturas especulativas. A partir del 4 de noviembre, Barcelona celebra la sexta edición del Festival 42, un punto de encuentro ineludible para los devotos de la fantasía, la ciencia ficción y el género oscuro. Las librerías y los espacios habilitados ultiman los detalles para recibir a autores y lectores en un ambiente reflexivo. Es una semana de transición donde la memoria deportiva deja paso al pensamiento futurista.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra hoy una temperatura entre 17 y 20 grados con chubascos intermitentes.",
+              "lede": "Las precipitaciones acumulan 13.3 mm mientras el día avanza hacia una puesta de sol prevista a las 19:24.",
+              "body": "El clima porteño se muestra húmedo y variable en este tramo de la primavera austral. Con una mínima de 17 grados y una máxima que alcanza los 20 grados, la atmósfera invita a llevar ropa ligera pero impermeable. Las lluvias dejan un acumulado de 13.3 mm de precipitación, mojando las baldosas de las avenidas y el adoquín de los barrios históricos. El cielo permanece plomizo, otorgando a las calles una luz difusa que suaviza las fachadas antiguas. La caída del sol ocurre a las 19:24, alargando una tarde de aire fresco y suelo mojado que favorece la lectura en cafés resguardados.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "02",
+              "headline": "Miguel Poveda trae a Buenos Aires su gira internacional dedicada a Federico García Lorca.",
+              "lede": "El espectáculo Enlorquecido conecta la poesía granadina con la sensibilidad artística de la capital argentina.",
+              "body": "La agenda de noviembre en Buenos Aires se nutre de propuestas escénicas de resonancia transatlántica. El paso del artista Miguel Poveda con su proyecto Enlorquecido constituye uno de los atractivos musicales más destacados del mes. Esta travesía sonora desde Nueva York hasta el Río de la Plata reinterpreta los versos del poeta en teatros que cuidan la acústica y la cercanía con el público. Los cronistas culturales de Time Out recomiendan seguir de cerca estas actuaciones que entrelazan ambas orillas del idioma. Las salas porteñas ofrecen así un refugio cálido frente a los chubascos primaverales que mojan la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            },
+            {
+              "n": "03",
+              "headline": "El festival WAIFF premia en Buenos Aires las producciones audiovisuales creadas con inteligencia artificial.",
+              "lede": "Expertos del sector cinematográfico y tecnológico debaten sobre los nuevos paradigmas de la creación digital.",
+              "body": "La vanguardia tecnológica se cita en la cartelera cultural porteña a través de las jornadas del festival WAIFF. Las proyecciones y encuentros galardonados en esta edición han convocado a creadores y pensadores en torno a la relación entre máquinas y celuloide. Durante los paneles, figuras procedentes de la interpretación y de empresas como Apple han analizado los cambios metodológicos que introduce la inteligencia artificial en el cine contemporáneo. Estos debates ofrecen una pausa reflexiva para comprender el rumbo estético de la imagen en movimiento. La ciudad acoge estas conversaciones en espacios cerrados donde el clima exterior apenas interrumpe el diálogo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-03"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-02T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La pinacoteca porteña abre sus puertas a una nueva retrospectiva dedicada a Florencio Molina Campos, referente indiscutible del arte costumbrista local. La muestra reúne pinturas y dibujos emblemáticos que retratan el paisaje y los personajes de la pampa tradicional con trazo único. Con una atmósfera apacible y cielos cubiertos que marcan temperaturas de 13 a 17°C, la visita se convierte en un remanso de calma urbana. El aire limpio de la jornada, con PM2.5 en 7, invita a recorrer el barrio a pie tras salir de la sala de exposiciones. El sol se ocultará a las 19:18, cerrando una tarde perfecta para la contemplación estética.",
               "source": "saudade desk",
               "source_date": "2026-10-27"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-26T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Planetario de Madrid celebra su cuadragésimo aniversario con una muestra gratuita.",
-              "lede": "Cuarenta años después de abrir sus puertas para acercar el universo a la capital, el centro inaugura una gran exposición.",
-              "body": "El Planetario de Madrid cumple 4 décadas desde que inició su andadura en el año 1986. Para celebrarlo con la ciudadanía, el espacio astronómico ofrece una amplia exposición gratuita que repasa su historia divulgativa. Es una excelente oportunidad para redescubrir las salas que han despertado vocaciones científicas durante generaciones. Las visitas se pueden compaginar con un paseo por los aledaños del parque de Tierno Galván. Conviene consultar la programación previa para asegurar el acceso a las proyecciones especiales de este fin de semana.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "02",
-              "headline": "El tipo de cambio actual se sitúa en 1 USD equivalente a 0.89 EUR.",
-              "lede": "Los viajeros procedentes de Estados Unidos encontrarán esta cotización favorable al planificar sus gastos diarios.",
-              "body": "La paridad monetaria actual marca un valor estables para quienes operan con divisas extranjeras en la capital. Mantener la referencia de 1 USD por cada 0.89 EUR facilita los cálculos en los mercados tradicionales, librerías del centro y cafés históricos. Es recomendable utilizar tarjetas sin comisiones ocultas para optimizar cada transacción. Los cajeros automáticos de la red general aplican esta tasa de conversión de manera automática. Este margen resulta útil para presupuestar las entradas a exposiciones, librerías y restaurantes locales durante los próximos días otoñales.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "03",
-              "headline": "El festivo del Día de todos los Santos afectará a los servicios administrativos el 1 de noviembre.",
-              "lede": "La festividad del 2026-11-01 traerá cierres generales en oficinas gubernamentales, bancos y oficinas postales.",
-              "body": "El próximo domingo 2026-11-01 se celebra la festividad oficial del Día de todos los Santos en todo el territorio nacional. Como es habitual en esta fecha señalada, los organismos públicos, las sucursales bancarias y las oficinas de correos permanecerán cerradas. Los comercios de alimentación del centro mantendrán horarios reducidos o adaptados a la jornada festiva. Se aconseja realizar cualquier gestión administrativa pendiente con suficiente antelación antes del fin de semana. Las calles del casco histórico suelen registrar un ambiente más pausado durante estas horas de conmemoración.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra hoy temperaturas de 15 a 21 grados bajo cielos completamente cubiertos.",
-              "lede": "La puesta de sol se producirá a las 17:54, marcando el avance progresivo de las tardes otoñales.",
-              "body": "Las condiciones meteorológicas actuales en la ciudad presentan un registro térmico moderado que oscila entre los 15 y los 21°C. El cielo se mantiene totalmente cubierto durante toda la jornada, reduciendo la luminosidad natural en las calles del Eixample. La calidad del aire se sitúa en niveles pobres con un índice PM2.5 de 15, por lo que se recomienda moderar las actividades físicas prolongadas al aire libre. La caída del sol a las 17:54 invita a buscar refugio en los interiores de los espacios culturales y cafeterías de barrio. Es una atmósfera propicia para la lectura reposada y los recorridos urbanos sin prisa.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "02",
-              "headline": "El parque residencial de Barcelona crece a un ritmo de unas 2.400 viviendas anuales.",
-              "lede": "Los datos recientes reflejan la evolución constante del tejido habitacional en los distintos barrios.",
-              "body": "El desarrollo urbanístico de la ciudad continúa sumando aproximadamente 2.400 nuevas viviendas cada año al parque residencial existente. Esta transformación altera sutilmente el paisaje arquitectónico de los distritos periféricos y consolidados. Para los observadores atentos, el dinamismo constructivo revela cómo se readaptan los antiguos solares y naves industriales. La integración de estos nuevos edificios busca responder a la demanda habitacional sin romper la escala humana del entorno. Los paseos por los límites urbanos permiten apreciar esta lenta pero constante renovación de la silueta catalana.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "03",
-              "headline": "Las oficinas públicas cerrarán el 1 de noviembre con motivo del Día de todos los Santos.",
-              "lede": "La jornada festiva del 2026-11-01 alterará el funcionamiento habitual de bancos y administraciones.",
-              "body": "La llegada del 2026-11-01 trae consigo la festividad nacional del Día de todos los Santos en la capital catalana. Durante este día festivo, las oficinas gubernamentales, las entidades bancarias y las oficinas postales suspenderán su atención presencial habitual. Los servicios esenciales funcionarán con los dispositivos mínimos previstos para los días de descanso laboral. Conviene planificar cualquier trámite financiero o postal con antelación para evitar inconvenientes imprevistos. Los cementerios de la ciudad recibirán a numerosos visitantes en un ambiente de respetuoso recogimiento.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires amanece con temperaturas de 8 a 17 grados y un índice UV muy alto.",
-              "lede": "El cielo permanece cubierto y la puesta de sol está prevista para las 19:17 en la capital.",
-              "body": "La jornada dominical se presenta fresca al amanecer y templada después, con registros térmicos que se mueven entre los 8 y los 17°C. A pesar de la cobertura nubosa predominante, el índice UV alcanza un valor de 8, catalogado como muy alto, lo que exige protección solar durante las horas centrales del día. La calidad del aire se mantiene en niveles justos con un registro PM2.5 de 7. La puesta de sol llegará a las 19:17, alargando una tarde propicia para caminar por los parques y plazas de la ciudad. El clima invita a disfrutar de los espacios abiertos con la precaución debida ante la radiación solar.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "02",
-              "headline": "Inauguran en Buenos Aires una destacada exposición dedicada a Florencio Molina Campos.",
-              "lede": "La muestra cultural rescata el universo pictórico y costumbrista del célebre artista argentino.",
-              "body": "Los espacios expositivos de la ciudad suman una nueva propuesta con la apertura de la muestra dedicada a Florencio Molina Campos. La exhibición reúne obras emblemáticas que retratan con humor y sencillez las costumbres del campo argentino. Es una oportunidad imperdible para apreciar los trazos entrañables que definieron la identidad visual de varias generaciones. Los visitantes pueden recorrer las salas con tranquilidad durante toda la semana en los horarios habituales de apertura. Esta iniciativa enriquece la agenda cultural porteña con un recorrido entrañable por las raíces del sur.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
-            },
-            {
-              "n": "03",
-              "headline": "El Hanguk Fest ofrece una ventana abierta a la cultura y gastronomía coreana con entrada gratuita.",
-              "lede": "El festival ciudadano reúne sabores tradicionales, actividades y muestras artísticas en un mismo espacio.",
-              "body": "La agenda de festivales de Buenos Aires incluye esta semana una nueva edición del Hanguk Fest, totalmente gratuito para todo el público. El encuentro gastronómico y cultural permite explorar la riqueza de Corea a través de platos típicos, talleres y expresiones artísticas. La propuesta fomenta el intercambio comunitario en un ambiente distendido y abierto a la curiosidad de los asistentes. Es recomendable llegar con tiempo para recorrer los distintos puestos y exposiciones sin agobios. La iniciativa consolida a la capital como un punto de encuentro multicultural donde conviven diversas tradiciones del mundo.",
-              "source": "saudade desk",
-              "source_date": "2026-10-26"
             }
           ]
         }

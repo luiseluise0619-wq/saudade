@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-11-02T06:00:00+09:00",
-  "next_filing": "2026-11-02T21:00:00+00:00",
+  "filed_at": "2026-11-03T06:00:00+09:00",
+  "next_filing": "2026-11-03T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Madrid registra cielos despejados con temperaturas entre 6 y 19°C.",
-          "lede": "La luz de noviembre se instala en la capital al caer el sol a las 18:10.",
-          "body": "El clima otoñal ofrece mañanas nítidas y tardes apacibles que invitan a recorrer las calles sin prisa. Con un tipo de cambio estable de 1 USD a 0.9 EUR, los paseantes disfrutan del ritmo pausado de la ciudad. Tras la festividad del Día de todos los Santos del 1 de noviembre, la actividad administrativa recupera su pulso habitual. Las terrazas del centro aprovechan las horas centrales de luz antes del descenso térmico vespertino. Es el momento perfecto para observar el tono dorado sobre las fachadas históricas de la ciudad.",
+          "headline": "Madrid registra hoy temperaturas entre 6 y 14 grados bajo un cielo completamente overcast.",
+          "lede": "El termómetro desciende con la llegada de la tarde y la puesta de sol se adelanta a las 18:09.",
+          "body": "La jornada se presenta fresca en las calles madrileñas, obligando a los transeúntes a abrigarse mientras caminan por la ciudad. Con una temperatura máxima de 14 grados y una mínima de 6 grados, el ambiente invita a buscar refugio bajo techo. El cielo se mantiene cubierto durante todo el día, restando luz natural a las plazas y paseos. La oscuridad llega puntual a las 18:09, marcando el ritmo pausado de la tarde en la capital. Es un lunes sobrio, ideal para recorrer espacios cerrados y exposiciones que resguardan del frío exterior sin prisa.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "02",
-          "headline": "El Teatro Español acoge la exposición Madrid en el Siglo de Oro.",
-          "lede": "El arte barroco revela cómo eran los antiguos espacios urbanos de la capital.",
-          "body": "La pinacoteca madrileña presenta una muestra que profundiza en la arquitectura y la vida cotidiana de siglos pasados. Esta exposición permite comprender la transformación del plano urbano a través de lienzos y grabados originales. Los visitantes encuentran en estas salas un refugio tranquilo frente al bullicio exterior de noviembre. La pinacoteca mantiene sus horarios habituales tras el reciente festivo de principios de mes. Es una parada indispensable para quienes buscan conectar con la memoria artística y física de Madrid.",
+          "headline": "El tipo de cambio actual sitúa el dólar estadounidense en 0.89 euros.",
+          "lede": "Los viajeros internacionales encuentran esta referencia fija al realizar sus transacciones cotidianas en comercios locales.",
+          "body": "La cotización monetaria se mantiene estable al inicio de esta semana de noviembre. Para quienes visitan la ciudad desde fuera de la zona euro, el valor de 1 dólar equivalente a 0.89 euros facilita el cálculo de gastos en librerías, cafés y museos. Conviene tener presente esta proporción al planificar compras de artesanía o entradas para eventos culturales en la capital. Los establecimientos tradicionales y los mercados del centro operan con normalidad bajo esta referencia financiera. La economía diaria transcurre con la predictibilidad propia de los días laborables de otoño.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "03",
-          "headline": "El ciclo Grandes del Gospel celebra su XXXII edición en Madrid.",
-          "lede": "Las voces corales llenan los auditorios madrileños en las primeras semanas de noviembre.",
-          "body": "Este veterano festival musical regresa a los escenarios de la ciudad con un repertorio clásico y emotivo. Las actuaciones ofrecen un contrapunto sonoro ideal para las tardes frescas de otoño en la capital. Paralelamente, los aficionados al arte pueden visitar la exposición sobre Michael Jackson que acaba de abrir sus puertas. Las entradas para ambos eventos se adquieren fácilmente con la conversión de 1 USD a 0.9 EUR. La programación cultural de la ciudad equilibra la tradición escénica con propuestas contemporáneas de gran formato.",
+          "headline": "El Centro Cultural Fernán Gómez acoge una exposición gratuita con 180 obras del Madrid barroco.",
+          "lede": "La muestra cultural comparte cartelera ciudadana con propuestas dedicadas a los techos y cúpulas históricas.",
+          "body": "La agenda artística de la ciudad ofrece refugio frente al clima fresco con muestras de gran calado patrimonial. El Fernán Gómez exhibe hasta el 17 de enero un centenar y medio largo de piezas que retratan el Siglo de Oro madrileño sin coste de entrada. En paralelo, los interesados en el patrimonio arquitectónico pueden visitar propuestas como las maquetas de cúpulas o la exposición titulada El Gran Azul. Estas iniciativas permiten comprender la evolución urbanística y artística de la Villa desde una perspectiva reposada. Las salas ofrecen un remanso de tranquilidad para observar los detalles pictóricos y constructivos.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Barcelona mantiene una calidad del aire favorable con un índice PM2.5 de 8.",
-          "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos junto al mar.",
-          "body": "La atmósfera limpia de estos días permite contemplar el perfil litoral con una claridad inusual para el mes de noviembre. El tipo de cambio se sitúa en 1 USD frente a 0.9 EUR en los comercios locales. Después del festivo del Día de todos los Santos celebrado el 1 de noviembre, los espacios públicos recuperan su tranquilidad cotidiana. Los parques urbanos se llenan de residentes que aprovechan la suavidad climática para leer o caminar. La ciudad transita hacia el invierno con una calma palpable en cada uno de sus barrios.",
+          "headline": "Barcelona registra una calidad del aire moderada con un valor de PM2.5 de 9.",
+          "lede": "Las condiciones atmosféricas permiten pasear con tranquilidad por los espacios abiertos de la fachada marítima.",
+          "body": "La atmósfera barcelonesa muestra valores estables en sus índices de partículas finas durante esta jornada de noviembre. Con un registro de PM2.5 situado en 9, la calidad del aire se califica como moderada para la práctica de actividades al aire libre. Los caminantes pueden recorrer los paseos arbolados y los parques urbanos sin restricciones significativas en su visibilidad o bienestar. Las corrientes marinas ayudan a disipar la bruma matinal en los barrios costeros de la ciudad condal. Es un contexto propicio para la observación sosegada de la arquitectura urbana y el arbolado viario.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "02",
-          "headline": "La exposición Reyes del Mundo llega a Barcelona tras el triunfo mundialista.",
-          "lede": "La muestra organizada por la RFEF repasa los hitos recientes del deporte español.",
-          "body": "El espacio expositivo invita a los visitantes a revivir los momentos clave de la selección nacional de fútbol en el Mundial 2026. Esta propuesta complementa la variada oferta cultural que caracteriza el inicio de noviembre en la ciudad condal. Los interesados pueden compaginar la visita con los conciertos del Mira Festival o las actividades gratuitas del Festival Raval(s). Con una economía local adaptada a la tasa de 1 USD por 0.9 EUR, la agenda de ocio resulta accesible. Las salas expositivas ofrecen un recorrido sosegado idóneo para las mañanas de este mes.",
+          "headline": "El tipo de cambio vigente establece 1 dólar estadounidense en 0.89 euros.",
+          "lede": "La equivalencia monetaria facilita el intercambio comercial y el consumo en los comercios de proximidad.",
+          "body": "La estabilidad en los mercados internacionales se refleja en la paridad aplicable en los establecimientos de Cataluña. La proporción de 1 dólar por 0.89 euros guía las transacciones cotidianas de los visitantes extranjeros en librerías, cafeterías y centros expositivos. Este valor constante permite gestionar presupuestos de viaje con precisión en cualquier barrio de la metrópoli. Los mercados municipales y los comercios del Gòtic operan bajo esta misma referencia financiera sin alteraciones. Conviene recordarlo al adquirir publicaciones especializadas o recuerdos de la temporada cultural que ahora comienza.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "03",
-          "headline": "El Festival Raval(s) ofrece más de 50 actividades gratuitas en el barrio.",
-          "lede": "La iniciativa vecinal fomenta la cohesión cultural mediante talleres y muestras abiertas.",
-          "body": "Durante todo el mes, el distrito del Raval se convierte en un punto de encuentro para vecinos y visitantes curiosos. La programación incluye propuestas artísticas diversas que animan las plazas y los centros cívicos de la zona. Tras el descanso laboral del 1 de noviembre por la festividad nacional, el barrio recupera su habitual dinamismo multicultural. Estas actividades se suman a las opciones gratuitas que recorren la ciudad, desde ferias de antigüedades hasta muestras de juegos. Es una oportunidad excelente para observar la vida comunitaria desde una perspectiva cercana y respetuosa.",
+          "headline": "El festival literario 42 arranca el 4 de noviembre dedicado a la ciencia ficción.",
+          "lede": "La exposición Reyes del Mundo cierra sus puertas tras exhibirse en la ciudad durante los días 2 y 3 de noviembre.",
+          "body": "La actividad cultural de la ciudad experimenta un relevo inmediato entre grandes citas temáticas. Tras acoger la muestra de la RFEF Reyes del Mundo los días 2 y 3 de noviembre, la atención se desplaza hacia las literaturas especulativas. A partir del 4 de noviembre, Barcelona celebra la sexta edición del Festival 42, un punto de encuentro ineludible para los devotos de la fantasía, la ciencia ficción y el género oscuro. Las librerías y los espacios habilitados ultiman los detalles para recibir a autores y lectores en un ambiente reflexivo. Es una semana de transición donde la memoria deportiva deja paso al pensamiento futurista.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "San Justo celebra un festival de food trucks en la Plaza San Nicolás.",
-          "lede": "El espacio público se convierte en punto de reunión vecinal durante este fin de semana.",
-          "body": "La Plaza San Nicolás acoge una nueva edición de este encuentro gastronómico al aire libre para toda la familia. Los asistentes disfrutan de propuestas culinarias variadas en un entorno arbolado y de acceso totalmente libre. Este tipo de iniciativas dinamizan la vida de barrio y ofrecen una alternativa de ocio relajada en los espacios verdes. Los vecinos aprovechan las horas de luz para pasear y compartir momentos en las bancas de la plaza. El evento demuestra la vitalidad de las plazas del conurbano como auténticos centros de convivencia social.",
+          "headline": "Buenos Aires registra hoy una temperatura entre 17 y 20 grados con chubascos intermitentes.",
+          "lede": "Las precipitaciones acumulan 13.3 mm mientras el día avanza hacia una puesta de sol prevista a las 19:24.",
+          "body": "El clima porteño se muestra húmedo y variable en este tramo de la primavera austral. Con una mínima de 17 grados y una máxima que alcanza los 20 grados, la atmósfera invita a llevar ropa ligera pero impermeable. Las lluvias dejan un acumulado de 13.3 mm de precipitación, mojando las baldosas de las avenidas y el adoquín de los barrios históricos. El cielo permanece plomizo, otorgando a las calles una luz difusa que suaviza las fachadas antiguas. La caída del sol ocurre a las 19:24, alargando una tarde de aire fresco y suelo mojado que favorece la lectura en cafés resguardados.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "02",
-          "headline": "El World AI Film Festival presenta su programación con entrada libre.",
-          "lede": "Buenos Aires acoge las proyecciones y debates sobre cine generado por inteligencia artificial.",
-          "body": "La capital argentina se consolida como referente tecnológico al albergar este festival pionero en el ámbito audiovisual. Las jornadas incluyen la proyección de los cortos ganadores y encuentros con creadores digitales de distintos puntos del mundo. Todas las funciones cuentan con acceso gratuito, lo que facilita la asistencia de estudiantes y curiosos interesados en el medio. Las salas de proyección fomentan la reflexión sobre el futuro de las narrativas visuales en la era digital. Es una cita imprescindible para observar cómo la innovación técnica se integra en la cultura urbana.",
+          "headline": "Miguel Poveda trae a Buenos Aires su gira internacional dedicada a Federico García Lorca.",
+          "lede": "El espectáculo Enlorquecido conecta la poesía granadina con la sensibilidad artística de la capital argentina.",
+          "body": "La agenda de noviembre en Buenos Aires se nutre de propuestas escénicas de resonancia transatlántica. El paso del artista Miguel Poveda con su proyecto Enlorquecido constituye uno de los atractivos musicales más destacados del mes. Esta travesía sonora desde Nueva York hasta el Río de la Plata reinterpreta los versos del poeta en teatros que cuidan la acústica y la cercanía con el público. Los cronistas culturales de Time Out recomiendan seguir de cerca estas actuaciones que entrelazan ambas orillas del idioma. Las salas porteñas ofrecen así un refugio cálido frente a los chubascos primaverales que mojan la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         },
         {
           "n": "03",
-          "headline": "El Festival OFFNI muestra cine independiente con acceso gratuito en la ciudad.",
-          "lede": "La muestra cinematográfica apuesta por formatos experimentales y narrativas fuera del circuito comercial.",
-          "body": "Los cinéfilos porteños disponen de una cartelera alternativa que prioriza la autoría independiente y los lenguajes visuales arriesgados. La programación detalla las fechas y los espacios habilitados para disfrutar de cada una de las películas programadas. Esta propuesta se enmarca en la agenda cultural de noviembre, que busca democratizar el acceso al arte audiovisual. Las proyecciones van acompañadas de charlas con los realizadores, generando un espacio de diálogo íntimo con el público. Buenos Aires reafirma así su vocación de albergar iniciativas culturales diversas y abiertas a la comunidad.",
+          "headline": "El festival WAIFF premia en Buenos Aires las producciones audiovisuales creadas con inteligencia artificial.",
+          "lede": "Expertos del sector cinematográfico y tecnológico debaten sobre los nuevos paradigmas de la creación digital.",
+          "body": "La vanguardia tecnológica se cita en la cartelera cultural porteña a través de las jornadas del festival WAIFF. Las proyecciones y encuentros galardonados en esta edición han convocado a creadores y pensadores en torno a la relación entre máquinas y celuloide. Durante los paneles, figuras procedentes de la interpretación y de empresas como Apple han analizado los cambios metodológicos que introduce la inteligencia artificial en el cine contemporáneo. Estos debates ofrecen una pausa reflexiva para comprender el rumbo estético de la imagen en movimiento. La ciudad acoge estas conversaciones en espacios cerrados donde el clima exterior apenas interrumpe el diálogo.",
           "source": "saudade desk",
-          "source_date": "2026-11-02"
+          "source_date": "2026-11-03"
         }
       ]
     }
