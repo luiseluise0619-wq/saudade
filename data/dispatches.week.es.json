@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-03T06:00:00+09:00",
+  "updated": "2026-11-04T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-04T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La línea del AVE Madrid-Andalucía reanuda su servicio con límites de velocidad tras Urda.",
+              "lede": "Los viajeros hacia el sur recuperan la conexión ferroviaria habitual con precauciones técnicas en el tramo.",
+              "body": "El trayecto en alta velocidad entre la capital y Andalucía vuelve a operar tras las labores de revisión y normalización en la zona de Urda. Se han establecido restricciones temporales de velocidad en el tramo afectado para garantizar la seguridad de los pasajeros. Conviene revisar los horarios actualizados en estación antes de emprender el viaje hacia el sur peninsular. Esta reapertura alivia los desplazamientos de otoño para quienes eligen el tren frente al vehículo privado. La infraestructura recobra progresivamente su ritmo habitual de circulación ferroviaria.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "02",
+              "headline": "El cielo cubierto domina las calles madrileñas con temperaturas entre 4 y 14°C.",
+              "lede": "El termómetro desciende al caer la tarde mientras la luz se apaga puntualmente a las 18:08.",
+              "body": "Las jornadas de noviembre avanzan bajo una bóveda gris que disuade de los largos paseos al aire libre. La variación térmica exige abrigarse bien desde primera hora de la mañana hasta la caída del sol. Con el tipo de cambio oficial situado en 1 USD a 0.89 EUR, los visitantes extranjeros realizan sus transacciones cotidianas con estabilidad monetaria. Es un buen momento para refugiarse en espacios cerrados como el festival OpenLAB y su propuesta La mecánica de la verdad. Las calles húmedas reflejan la luz sobria del atardecer madrileño.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "03",
+              "headline": "Pasea Madrid amplía su oferta patrimonial con más de 21.500 plazas disponibles.",
+              "lede": "Nuevos itinerarios urbanos permiten descubrir la arquitectura de cúpulas y techos históricos de la ciudad.",
+              "body": "El programa municipal de visitas guiadas abre una temporada especialmente rica en contenidos arquitectónicos y artísticos. Los ciudadanos y viajeros curiosos pueden inscribirse en rutas especializadas dedicadas a las maquetas de cúpulas y los techos ocultos de Madrid. Estas actividades fomentan una mirada pausada sobre edificios emblemáticos que habitualmente pasan inadvertidos en el tráfago diario. Es recomendable consultar la disponibilidad de plazas con antelación debido a la alta demanda estacional. Cada itinerario ofrece una lectura reposada del patrimonio urbano.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La calidad del aire se mantiene en niveles favorables con un registro de PM2.5 de 4.",
+              "lede": "Las condiciones atmosféricas actuales ofrecen un entorno limpio para recorrer el barrio gótico y sus plazas.",
+              "body": "La atmósfera barcelonesa respira con tranquilidad gracias a unos valores de partículas en suspensión sumamente bajos. Con el tipo de cambio en 1 USD a 0.89 EUR, los visitantes internacionales disfrutan de una economía local estable para sus compras. El centro histórico invita a caminar sin prisa entre exposiciones temporales y edificios centenarios. Las mediciones ambientales confirman un día excelente para el uso de espacios públicos al aire libre. La brisa marina limpia el cielo y despeja la perspectiva urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "02",
+              "headline": "La Catedral de Barcelona acoge una muestra monográfica sobre la historia de la Pia Almoina.",
+              "lede": "El recinto gótico expone documentos y piezas clave de su legado asistencial y medieval.",
+              "body": "Los espacios históricos de la Seo barcelonesa abren sus puertas a un recorrido por la evolución de esta antigua institución benéfica. La exposición detalla el papel social que desempeñó la Pia Almoina en la configuración del barrio catedralicio. Los visitantes pueden combinar esta visita cultural con un paseo por los recientes vestigios paleontológicos del Cretácico anunciados en la cartelera local. Es una oportunidad excelente para profundizar en las capas menos visibles de la memoria urbana. La tranquilidad del claustro acompaña la contemplación de las piezas expuestas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "03",
+              "headline": "Sónar 2027 anuncia su regreso a los escenarios originales en el centro de Barcelona.",
+              "lede": "El festival de música electrónica prepara su gran retorno urbano para las próximas ediciones.",
+              "body": "La organización confirma el traslado de su núcleo principal al corazón de la ciudad, recuperando el espíritu de sus primeros años. Esta mudanza facilitará el acceso a residentes y melómanos que prefieren la cercanía de los espacios urbanos tradicionales. La programación futura ya genera expectación entre la comunidad creativa internacional que visita la capital catalana. Mientras tanto, la oferta cultural inmediata se completa con muestras históricas y propuestas científicas en diversos centros cívicos. Barcelona consolida así su calendario de grandes citas musicales con vocación de integración urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Miguel Poveda trae a Buenos Aires su homenaje internacional a la poesía de Lorca.",
+              "lede": "El espectáculo Enlorquecido recala en los escenarios porteños tras su exitoso paso por Nueva York.",
+              "body": "El cantaor andaluz presenta su personal revisión de los versos federicianos en una gira que une ambas orillas atlánticas. Las funciones prometen momentos de honda intensidad lírica para los amantes de la cultura flamenca y la poesía universal. La agenda cultural de noviembre en Buenos Aires se nutre así de propuestas escénicas de primer orden internacional. Los teatros de la avenida Corrientes preparan salas llenas para recibir este diálogo entre música y literatura. La sensibilidad lorquiana encuentra en la ciudad un público siempre receptivo y cómplice.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "02",
+              "headline": "El Parque de la Ciudad se prepara para albergar una nueva edición de Creamfields Argentina.",
+              "lede": "El predio sur recibe los preparativos técnicos para el gran desembarco de la música electrónica.",
+              "body": "Los preparativos logísticos avanzan en el tradicional pulmón del sur porteño para acoger este masivo encuentro sonoro. La llegada del festival moviliza a miles de seguidores que buscan espectáculos al aire libre durante el tramo final del año. Conviene planificar con tiempo los desplazamientos hacia la zona sur debido a la afluencia prevista de público. Las propuestas de ocio nocturno y diurno se multiplican en la agenda urbana de noviembre. El espacio verde recuperará su actividad habitual tras el paso de los escenarios principales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            },
+            {
+              "n": "03",
+              "headline": "Los vecinos de Parque España solicitan regular la frecuencia de eventos masivos.",
+              "lede": "La petición busca equilibrar la vida residencial del barrio con la celebración de actividades culturales.",
+              "body": "Las asociaciones vecinales han elevado una solicitud formal para moderar la intensidad de las convocatorias en el área verde. El objetivo es preservar la tranquilidad cotidiana y proteger el arbolado y el mobiliario urbano del parque. Este debate refleja el pulso constante entre la dinamización cultural de la ciudad y el descanso de quienes la habitan. Las autoridades locales analizan fórmulas de convivencia para mantener el espacio abierto al disfrute ciudadano sin saturarlo. Pasear por la zona sigue siendo un ejercicio apacible en las mañanas de noviembre.",
+              "source": "saudade desk",
+              "source_date": "2026-11-04"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-03T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El cruce entre nuevas pantallas y cultura presencial define las actividades de la semana en diversos auditorios de la capital argentina. Quién es quién en GENERACIÓN, el festival que reúne a las estrellas del streaming en Buenos Aires, moviliza a audiencias jóvenes hacia espacios cerrados y protegidos del agua. Fuera de los recintos, una llovizna acumulada de 2.2mm acompaña el registro térmico de 15 a 22°C. El índice UV se eleva a un nivel muy alto de 8, y la calidad del aire se mantiene moderada con PM2.5 en 14. La puesta de sol a las 19:20 marca el fin de la jornada y el inicio de los paneles nocturnos y proyecciones especiales. Paralelamente, el Festival OFFNI en Buenos Aires y el World AI Film Festival completan una oferta audiovisual diversa. La combinación de humedad primaveral y debates tecnológicos consolida una atmósfera de introspección urbana y descubrimiento cultural.",
               "source": "saudade desk",
               "source_date": "2026-10-29"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-27T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival Sui Generis Madrid reúne la literatura fantástica en los espacios culturales.",
-              "lede": "La creación imaginativa toma protagonismo esta semana con encuentros literarios dedicados al género fantástico.",
-              "body": "Los lectores y seguidores de la narrativa especulativa tienen una cita imprescindible en la capital gracias al Festival de literatura fantástica 'Sui Generis Madrid'. Diversos centros culturales albergan presentaciones, debates y firmas de libros que exploran mundos alternativos y la imaginación contemporánea. Es una oportunidad excelente para descubrir nuevas voces literarias y reencontrarse con autores consagrados del género. Las actividades se desarrollan con entrada libre hasta completar aforo, por lo que se recomienda llegar con antelación a las salas. La programación invita a una pausa reposada entre páginas y tinta.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "Navarro inaugura la exposición Logos en Arganzuela.",
-              "lede": "El distrito madrileño acoge una nueva muestra artística centrada en el lenguaje visual y conceptual.",
-              "body": "La sala de exposiciones de Arganzuela abre sus puertas a la obra de Navarro con la muestra titulada 'Logos'. Este recorrido artístico profundiza en los signos, las formas y la comunicación visual a través de piezas recientes del autor. El espacio invita a una observación pausada, lejos del ritmo acelerado de las grandes avenidas comerciales cercanas. Es una visita ideal para las tardes de otoño en el distrito, combinando arte contemporáneo y tranquilidad. La entrada es gratuita para todos los públicos durante el horario habitual de apertura.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "El Día de Todos los Santos modifica los horarios comerciales y administrativos.",
-              "lede": "La festividad del 2026-11-01 trae consigo cierres generales en oficinas públicas y entidades bancarias.",
-              "body": "Con la llegada del Día de Todos los Santos el 2026-11-01, la actividad urbana experimenta una pausa institucional. Las administraciones públicas, los bancos y las oficinas de correos permanecerán cerradas durante toda la jornada festiva. Los viajeros que necesiten realizar gestiones financieras o administrativas deben prever sus trámites con antelación. Por su parte, los cementerios y los espacios verdes de la ciudad registran una mayor afluencia de visitantes que acuden a cumplir con la tradición floral. El comercio de barrio ajusta sus horarios particulares, por lo que conviene verificar cada establecimiento.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Museo Diocesano acoge por primera vez una exposición de los Museos Vaticanos.",
-              "lede": "La pinacoteca barcelonesa exhibe piezas históricas cedidas excepcionalmente por la Ciudad del Vaticano.",
-              "body": "Bajo un cielo nublado y temperaturas suaves que oscilan entre 15 y 22°C, la agenda cultural de la ciudad ofrece propuestas de gran calado. El Museo Diocesano de Barcelona presenta un hito histórico al acoger por primera vez una selección de obras procedentes de los Museos Vaticanos. La calidad del aire se mantiene en niveles moderados, con un registro de PM2.5 de 15, lo que favorece los desplazamientos peatonales por el barrio Gótico. Los visitantes pueden contemplar este tesoro artístico hasta la caída del sol, prevista hacia las 17:52. Se aconseja reservar la entrada con antelación debido a la expectación generada entre los residentes y los observadores atentos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "El festival In-Edit 2026 arranca esta semana con lo mejor del documental musical.",
-              "lede": "Las salas de cine de Barcelona se llenan de proyecciones dedicadas a la cultura sonora.",
-              "body": "La nueva edición del festival In-Edit da comienzo en Barcelona con una programación centrada en el cine documental y la música. Con un ambiente otoñal marcado por cielos cubiertos y un termómetro que se mueve entre 15 y 22°C, las salas oscuras se convierten en el refugio perfecto para los cinéfilos. Los espectadores pueden disfrutar de estrenos y obras de culto que exploran la trayectoria de figuras icónicas de diversos géneros musicales. Las proyecciones se acompañan de encuentros con los directores y coloquios abiertos al público. La tarde avanza con rapidez hacia el ocaso a las 17:52, invitando a prolongar el día al amparo de las proyecciones.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "El Día de Todos los Santos suspende la actividad administrativa habitual.",
-              "lede": "La festividad del 2026-11-01 marca el cierre de oficinas y bancos en toda la ciudad.",
-              "body": "Ante la proximidad del Día de Todos los Santos el 2026-11-01, la ciudad se prepara para una jornada de descanso generalizado. Las instituciones públicas, las entidades bancarias y las oficinas de correos suspenderán sus servicios habituales durante el día festivo. Conviene recordar que el tipo de cambio oficial se sitúa en 1 USD = 0.89 EUR para aquellos viajeros que operen con divisas extranjeras en cajeros automáticos. Las floristerías de los barrios registran una intensa actividad vecinal para honrar la memoria de los difuntos en los cementerios locales. Los espacios públicos y los parques mantendrán sus accesos adaptados al calendario festivo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "WAIFF debuta en Buenos Aires uniendo cine e inteligencia artificial.",
-              "lede": "El nuevo festival internacional explora las fronteras entre la creación audiovisual y la innovación tecnológica.",
-              "body": "Bajo un cielo completamente cubierto y una temperatura que se mueve entre 13 y 17°C, la ciudad acude a nuevas citas culturales. Buenos Aires acoge la primera edición de WAIFF, un festival pionero que entrelaza el cine contemporáneo con la inteligencia artificial y la innovación tecnológica. Con una calidad del aire catalogada como justa y un registro de PM2.5 de 7, las condiciones resultan óptimas para pasear entre sedes culturales. Las proyecciones y los debates se extienden hasta la caída del sol, que hoy se produce a las 19:18. Es una oportunidad fascinante para reflexionar sobre el futuro del arte digital y la narrativa visual en un entorno de apacible observación.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "02",
-              "headline": "El festival dedicado a Jorge Luis Borges celebra al autor en su faceta humorística.",
-              "lede": "Las jornadas invitan a redescubrir la ironía y el ingenio verbal del gran escritor argentino.",
-              "body": "Los espacios culturales porteños dedican sus actividades al ingenio literario con un festival enfocado en el Borges humorista. La propuesta ofrece claves analíticas y lecturas públicas para reír a carcajadas con los textos menos solemnes del célebre autor. El clima fresco y nublado, con registros entre 13 y 17°C, acompaña las caminatas reposadas por las librerías y centros de exposiciones de la ciudad. La calidad del aire se mantiene en niveles favorables con PM2.5 en 7, propiciando el disfrute del espacio público sin agobios. Las actividades finalizan puntualmente antes del atardecer, fijado para las 19:18.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
-            },
-            {
-              "n": "03",
-              "headline": "Inauguran la exposición de Florencio Molina Campos en los espacios de arte de la ciudad.",
-              "lede": "La obra costumbrista del ilustrador regresa para deleite de los amantes de la tradición pictórica.",
-              "body": "La pinacoteca porteña abre sus puertas a una nueva retrospectiva dedicada a Florencio Molina Campos, referente indiscutible del arte costumbrista local. La muestra reúne pinturas y dibujos emblemáticos que retratan el paisaje y los personajes de la pampa tradicional con trazo único. Con una atmósfera apacible y cielos cubiertos que marcan temperaturas de 13 a 17°C, la visita se convierte en un remanso de calma urbana. El aire limpio de la jornada, con PM2.5 en 7, invita a recorrer el barrio a pie tras salir de la sala de exposiciones. El sol se ocultará a las 19:18, cerrando una tarde perfecta para la contemplación estética.",
-              "source": "saudade desk",
-              "source_date": "2026-10-27"
             }
           ]
         }
