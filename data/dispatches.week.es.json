@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-04T06:00:00+09:00",
+  "updated": "2026-11-05T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-05T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Contemporánea Condeduque acoge cuatro estrenos escénicos",
+              "lede": "El centro cultural recibe propuestas de vanguardia dentro del Festival de Otoño de la ciudad.",
+              "body": "Los escenarios madrileños se llenan de movimiento con la llegada del Festival de Otoño. En este contexto, Contemporánea Condeduque acoge cuatro estrenos escénicos que exploran nuevos lenguajes corporales y sonoros. Los espectadores que busquen propuestas contemporáneas encontrarán una programación cuidada en espacios de gran valor arquitectónico. Con un tipo de cambio fijado en 1 USD a 0.89 EUR, planificar las salidas culturales resulta sencillo para quienes visitan la capital esta semana. Conviene revisar los horarios específicos de cada función para asegurar la entrada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "02",
+              "headline": "Festival Eñe arranca con más de 100 actividades gratuitas",
+              "lede": "La literatura toma plazas, bibliotecas y centros culturales en Madrid y Málaga.",
+              "body": "La palabra escrita es la protagonista indiscutible de estos días gracias al Festival Eñe 2026. La iniciativa arranca con más de 100 actividades gratuitas repartidas entre Madrid y Málaga. Autores, poetas y lectores se dan cita en encuentros abiertos que fomentan la reflexión pausada y el diálogo cercano. Los asistentes pueden disfrutar de lecturas y debates sin necesidad de adquirir entradas previas en la mayoría de los casos. Es una oportunidad excelente para descubrir rincones literarios de la ciudad mientras se pasea bajo el cielo otoñal.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "03",
+              "headline": "Los mercadillos de Navidad preparan su apertura en la capital",
+              "lede": "Las plazas principales afinan los detalles para recibir puestos de artesanía y luces.",
+              "body": "Aunque el invierno aún se anuncia con mesura, los tradicionales mercadillos de Navidad de Madrid ya definen sus fechas de apertura y horarios oficiales. Los artesanos y comerciantes preparan casetas donde la madera y el vidrio soplado serán protagonistas. Pasear por el centro permite observar el montaje silencioso de las estructuras que pronto animarán las plazas más castizas. Es recomendable consultar la información detallada sobre los horarios de cada ubicación para planificar las compras pausadas de temporada. La ciudad transita así, con calma, hacia las semanas más festivas del año.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Jazz de Barcelona programa a Nate Smith en Apolo",
+              "lede": "Los ritmos complejos y la percusión contemporánea llegan a la sala barcelonesa.",
+              "body": "La agenda musical de la ciudad mantiene su pulso firme con las citas del prestigioso Festival de Jazz de Barcelona. Esta semana, la sala Apolo recibe al reconocido baterista Nate Smith en un directo que promete intensidad y precisión técnica. El cielo se mantiene overcast con temperaturas que oscilan entre 12 y 19°C, marcando el atardecer a las 17:41. Con un cambio monetario de 1 USD a 0.89 EUR, los melómanos visitantes pueden gestionar sus entradas con total comodidad. Se aconseja llegar con antelación para disfrutar del ambiente previo en el Paral·lel.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición Reyes del Mundo celebra el triunfo deportivo",
+              "lede": "La RFEF traslada a Barcelona la muestra sobre la Selección española en el Mundial 2026.",
+              "body": "La Real Federación Española de Fútbol lleva a Barcelona la exposición Reyes del Mundo, que conmemora el triunfo de la Selección española en el Mundial 2026. Tras poder visitarse los días 2 y 3 de noviembre, la muestra sigue generando interés entre los aficionados locales y visitantes. El recorrido fotográfico y documental permite revivir los momentos clave de aquella gesta deportiva con una perspectiva sobria. La visita se integra perfectamente en una tarde de paseo por la ciudad, con temperaturas suaves entre 12 y 19°C bajo un cielo típicamente nublado. El atardecer llega puntual a las 17:41, invitando al refugio en espacios culturales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "03",
+              "headline": "El corazón del Raval late al ritmo del festival vecinal",
+              "lede": "Arranca una nueva edición del Festival de Cultura Raval(s) en Barcelona.",
+              "body": "La vida comunitaria y la creación artística local toman las calles con el inicio del Festival de Cultura Raval(s). Este encuentro vecinal demuestra la vitalidad cultural de uno de los barrios con mayor personalidad de Barcelona. Las actividades reflejan la diversidad y el intercambio que caracterizan el tejido social de la zona. Con un clima fresco de 12 a 19°C y cielos cubiertos, recorrer las plazas del barrio invita a la observación pausada. Las jornadas se desarrollan con la caída temprana del sol a las 17:41, ofreciendo una experiencia genuina y alejada de los circuitos puramente turísticos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La literatura juvenil y la cultura digital se citan en Literal",
+              "lede": "Buenos Aires acoge una nueva edición del festival de literatura juvenil Literal.",
+              "body": "Los espacios culturales porteños acogen una nueva edición del festival Literal, un punto de encuentro esencial para la literatura juvenil y la cultura digital. Autores, creadores de contenido y lectores se reúnen para debatir sobre las nuevas formas de narrar en la era tecnológica. La calidad del aire se mantiene fair, con un registro de PM2.5 en 6, lo que favorece los desplazamientos a pie por la ciudad. Los asistentes pueden participar en charlas y talleres diseñados para tender puentes entre el libro impreso y las pantallas. Es una cita ineludible para comprender las inquietudes de las nuevas generaciones de lectores.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "02",
+              "headline": "BITBANG 2026 anuncia sus ganadores y premios de animación",
+              "lede": "El festival internacional celebra lo mejor del cine de animación y la ilustración.",
+              "body": "El festival BITBANG 2026 ha dado a conocer todos sus ganadores y premios tras intensas jornadas dedicadas al cine de animación. Creadores nacionales e internacionales han compartido técnicas, proyecciones y clases magistrales en diversos puntos de la capital. La atmósfera creativa se respira en cada rincón, acompañada por una calidad del aire favorable, con PM2.5 en 6. Quienes disfrutan de las artes visuales encontrarán en el balance de este festival un panorama estimulante de la producción actual. Las obras galardonadas podrán verse en circuitos culturales seleccionados durante las próximas semanas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            },
+            {
+              "n": "03",
+              "headline": "Pinterest anuncia la apertura de un hub de negocios local",
+              "lede": "La plataforma digital instala una nueva base estratégica en Buenos Aires.",
+              "body": "El ecosistema tecnológico y creativo de Buenos Aires suma un nuevo actor internacional con la llegada de Pinterest y la apertura de su hub de negocios. La decisión refuerza el papel de la ciudad como polo de atracción para empresas digitales en la región. Con una calidad del aire calificada como fair y un nivel de PM2.5 en 6, la ciudad ofrece un entorno propicio para pasear entre reuniones y espacios de coworking. Este nuevo centro corporativo dialoga con la vibrante escena cultural de festivales que anima la agenda porteña estos días. La noticia confirma el dinamismo profesional que caracteriza el pulso cotidiano de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-05"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-04T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El festival Infinito Super 8 alcanza su tercera edición en Buenos Aires, consolidándose como un referente para el cine experimental en formato analógico. Los realizadores y entusiastas del celuloide se dan cita para proyectar trabajos que defienden la textura y el tiempo del celuloide clásico. Esta propuesta se suma a la intensa agenda cultural del viernes, que también incluye muestras de cine de inteligencia artificial y actividades festivas por Halloween en parques y centros culturales. Es una ocasión idónea para redescubrir la ciudad a través de sus iniciativas artísticas más independientes y singulares.",
               "source": "saudade desk",
               "source_date": "2026-10-30"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-29T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La exposición Aqua Mater de Sebastião Salgado ocupa el espacio madrileño con fotografías en gran formato.",
-              "lede": "La Comunidad de Madrid acoge esta muestra fotográfica bajo un cielo completamente cubierto.",
-              "body": "El cielo madrileño se mantiene totalmente overcast con temperaturas que oscilan entre los 8 y los 21°C en este tramo final de octubre. Con la puesta de sol fijada a las 18:15 y un índice moderado de calidad del aire con PM2.5 en 12, las caminatas urbanas invitan a la pausa reposada. La Comunidad de Madrid acoge la exposición Aqua Mater con cerca de un centenar de fotografías del artista Sebastião Salgado, ofreciendo un recorrido visual imprescindible para el observador atento. El tipo de cambio actual se sitúa en 1 USD frente a 0.9 EUR, facilitando el acceso a las librerías y cafés del centro histórico. Contemporánea Condeduque se llena de festivales este mes de noviembre, consolidando la agenda cultural del distrito. Es un momento propicio para recorrer las salas cubiertas y disfrutar de la tranquilidad gris que caracteriza las tardes de otoño en la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "02",
-              "headline": "El Institut français de Madrid impulsa su ciclo Focus Francia mientras Condeduque prepara su programación.",
-              "lede": "La agenda cultural de la ciudad combina muestras de cine y propuestas contemporáneas bajo cubierto.",
-              "body": "Bajo unas temperaturas de 8 a 21°C y un ambiente predominantemente overcast, la ciudad avanza hacia los días de descanso otoñal. El Focus Francia en el Institut français de Madrid ofrece una cuidada selección audiovisual para las tardes frescas que culminan con la puesta de sol a las 18:15. Paralelamente, Contemporánea Condeduque se llena de festivales este mes de noviembre, convirtiendo sus espacios en puntos de encuentro para el pensamiento y las artes escénicas. La calidad del aire se registra en un nivel moderado con PM2.5 en 12, permitiendo paseos tranquilos por los bulevares. La tasa de cambio oficial se mantiene estable en 1 USD por 0.9 EUR para los visitantes internacionales. QueerCineMad 2026 completa el panorama cinematográfico de la temporada, atrayendo a quienes buscan narrativas pausadas y reflexivas en salas independientes y centros culturales de toda la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "03",
-              "headline": "El Día de todos los Santos trae cierres administrativos previos al inicio de noviembre.",
-              "lede": "Conviene planificar las gestiones bancarias y oficiales ante el festivo del 2026-11-01.",
-              "body": "El próximo Día de todos los Santos, fechado el 2026-11-01, alterará el ritmo habitual de oficinas gubernamentales, bancos y oficinas postales en toda la región. Conviene anticipar cualquier trámite administrativo antes del fin de semana largo, dado que la jornada festiva cerrará la mayoría de los servicios públicos. Mientras tanto, el termómetro se mueve entre los 8 y los 21°C bajo un manto overcast y una puesta de sol a las 18:15. La calidad del aire se mantiene en parámetros moderados con PM2.5 en 12, y el tipo de cambio opera a 1 USD por 0.9 EUR. La Comunidad de Madrid acoge la exposición Aqua Mater con cerca de un centenar de fotografías del artista Sebastião Salgado, perfecta para visitar durante las horas sin sol. Contemporánea Condeduque se llena de festivales este mes de noviembre, asegurando opciones culturales sosegadas para residentes y viajeros que prefieren el ritmo lento.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona Design Week transforma la ciudad en un laboratorio de experiencias creativas bajo cielos grises.",
-              "lede": "El termómetro se sitúa entre los 16 y los 20°C con aire overcast y atardecer a las 17:50.",
-              "body": "La ciudad vive estos días bajo un cielo overcast con temperaturas que se mueven suavemente entre los 16 y los 20°C. La puesta de sol llega temprano a las 17:50, acortando las horas de luz para los paseos por el litoral y los barrios históricos. La calidad del aire muestra un nivel algo pobre con PM2.5 en 19, aconsejando actividades pausadas en espacios interiores y galerías de diseño. En este contexto, Barcelona Design Week convierte la ciudad en un laboratorio de experiencias creativas, invitando a explorar la artesanía y la innovación industrial. El tipo de cambio actual se sitúa en 1 USD por 0.9 EUR para quienes gestionan divisas extranjeras. Paralelamente, Diez citas fantásticas del Festival 42 reúnen a los amantes de la literatura especulativa en centros cívicos y bibliotecas. Es una semana excelente para recorrer exposiciones técnicas y disfrutar del pulso reposado del diseño catalán.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "02",
-              "headline": "El Port Vell acoge el festival dedicado a la mejor cookie de la ciudad condal.",
-              "lede": "El Santa Mònica explora la dopamina y los datos mientras la gastronomía dulce se instala junto al mar.",
-              "body": "La oferta cultural y gastronómica de la fachada marítima se dinamiza con propuestas singulares a pesar de la nubosidad persistente. Barcelona busca la mejor cookie en un nuevo festival en el Port Vell, reuniendo a obradores locales en un ambiente distendido y familiar. Las temperaturas oscilan entre los 16 y los 20°C con un cielo overcast y una puesta de sol adelantada a las 17:50. La calidad del aire se registra con PM2.5 en 19, un valor pobre que invita a alternar los trayectos al aire libre con visitas a museos cerrados. En La Rambla, 'Boom Crash Candy Crush', una exposición sobre dopamina, datos y militarización en el Santa Mònica de Barcelona, ofrece una profunda reflexión crítica sobre las pantallas. El cambio monetario se mantiene en 1 USD equivalente a 0.9 EUR. Diez citas fantásticas del Festival 42 complementan la agenda con debates literarios en recintos cerrados durante toda la semana.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "03",
-              "headline": "El festivo del 2026-11-01 modifica la actividad administrativa en vísperas de Todos los Santos.",
-              "lede": "Bancos y oficinas públicas permanecerán cerrados durante la festividad del fin de semana.",
-              "body": "La llegada del Día de todos los Santos el 2026-11-01 requiere previsión en las gestiones bancarias, gubernamentales y postales de la capital catalana. Los servicios oficiales suspenderán su atención al público durante la jornada festiva, devolviendo una calma tradicional a las calles del Eixample y Ciutat Vella. Las condiciones meteorológicas presentan valores de 16 a 20°C, ambiente overcast y puesta de sol a las 17:50. La calidad del aire se sitúa en un nivel pobre con PM2.5 en 19, mientras el tipo de cambio opera a 1 USD por 0.9 EUR. Barcelona Design Week convierte la ciudad en un laboratorio de experiencias creativas, permitiendo visitar estudios normalmente inaccesibles al público general. Barcelona busca la mejor cookie en un nuevo festival en el Port Vell, ideal para una pausa dulce antes del cierre general de comercios por el festivo dominical.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival OFFNI despliega su programación con entrada gratuita en salas culturales porteñas.",
-              "lede": "Una fina llovizna de 2.2mm acompaña una jornada templada con temperaturas de 15 a 22°C.",
-              "body": "La tarde porteña recibe una precipitación ligera de 2.2mm en forma de llovizna persistente que moja las baldosas de San Telmo y Palermo. El termómetro marca entre 15 y 22°C, con un índice UV muy alto de 8 que exige precaución aun bajo la capa de nubes. La calidad del aire se mantiene en niveles moderados con PM2.5 en 14, ideal para caminar con paraguas y refugiarse en cines independientes. En este escenario, el Festival OFFNI en Buenos Aires ofrece programación, fechas y cómo ver las películas con entrada gratuita para todo público. La puesta de sol se proyecta hacia las 19:20, alargando las horas de penumbra vespertina en los cafés literarios. Los centros culturales adaptan sus salas para recibir a los espectadores que buscan refugio contra la humedad exterior. La ciudad respira un compás cinematográfico que contrasta amablemente con el goteo constante sobre los árboles plenos de primavera.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "02",
-              "headline": "El World AI Film Festival debuta con su primera edición enfocada en la inteligencia artificial.",
-              "lede": "Paneles, cine y experiencias interactivas ocupan la agenda cultural con una jornada dedicada al sector audiovisual.",
-              "body": "Bajo una llovizna tenue de 2.2mm y temperaturas que van de los 15 a los 22°C, la actividad intelectual de la ciudad se refugia en espacios techados. El índice UV alcanza un nivel muy alto de 8, recordando la intensidad solar primaveral a pesar del cielo cubierto y húmedo. Con una calidad del aire moderada de PM2.5 en 14 y el atardecer programado a las 19:20, los recintos culturales multiplican sus propuestas. Paneles, cine y experiencias interactivas con IA: se conoció el programa completo del World AI Film Festival en Buenos Aires, atrayendo a creadores y pensadores digitales. WAIFF Buenos Aires tendrá su primera edición con una jornada dedicada a la inteligencia artificial y el audiovisual en diferentes sedes. La llovizna invita a permanecer en las butacas, escuchando debates sobre el futuro de las imágenes y la tecnología mientras la ciudad transcurre en silencio.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
-            },
-            {
-              "n": "03",
-              "headline": "El festival GENERACIÓN reúne a las principales figuras del streaming en Buenos Aires.",
-              "lede": "La llovizna de 2.2mm y la puesta de sol a las 19:20 enmarcan el encuentro de creadores digitales.",
-              "body": "El cruce entre nuevas pantallas y cultura presencial define las actividades de la semana en diversos auditorios de la capital argentina. Quién es quién en GENERACIÓN, el festival que reúne a las estrellas del streaming en Buenos Aires, moviliza a audiencias jóvenes hacia espacios cerrados y protegidos del agua. Fuera de los recintos, una llovizna acumulada de 2.2mm acompaña el registro térmico de 15 a 22°C. El índice UV se eleva a un nivel muy alto de 8, y la calidad del aire se mantiene moderada con PM2.5 en 14. La puesta de sol a las 19:20 marca el fin de la jornada y el inicio de los paneles nocturnos y proyecciones especiales. Paralelamente, el Festival OFFNI en Buenos Aires y el World AI Film Festival completan una oferta audiovisual diversa. La combinación de humedad primaveral y debates tecnológicos consolida una atmósfera de introspección urbana y descubrimiento cultural.",
-              "source": "saudade desk",
-              "source_date": "2026-10-29"
             }
           ]
         }
