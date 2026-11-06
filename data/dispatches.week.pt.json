@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-05T06:00:00+09:00",
+  "updated": "2026-11-06T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-06T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O LEFFEST regressa ao Cinema São Jorge com aguardadas sessões de outono.",
+              "lede": "A capital recebe o festival de cinema enquanto a luz de novembro se abranda nas ruas.",
+              "body": "As salas de cinema da cidade preparam-se para acolher mais uma edição do LEFFEST, trazendo realizadores e espectadores ao Cinema São Jorge. Esta altura do ano convida a sessões longas e abrigadas do vento que sopra junto ao Tejo. Com o câmbio atual fixado em 1 USD para 0.89 EUR, os visitantes internacionais encontram maior previsibilidade nas despesas culturais pela cidade. A programação estende-se por vários dias, cruzando o património fílmico com estreias contemporâneas e debates intimistas. É o momento ideal para redescobrir a atmosfera cinéfila da baixa lisboeta ao cair da tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "02",
+              "headline": "Os chuviscos de novembro marcam os dias frescos na capital.",
+              "lede": "A temperatura oscila entre os 13 e os 16°C sob o céu variável da cidade.",
+              "body": "A meteorologia desta semana traz aguaceiros moderados e 1.6mm de precipitação acumulada que lavam as calçadas tradicionais. O sol despede-se cedo, fixando o pôr do sol pelas 17:31, encurtando as tardes ao ar livre. Para quem caminha pelos bairros históricos, o casaco pesado torna-se indispensável perante a humidade típica do Tejo. Os cafés ganham nova centralidade, oferecendo abrigo com o calor de uma bica e o conforto de um pastel de nata. A cidade abranda o ritmo habitual, adaptando-se com serenidade aos tons cinzentos do final de outono.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "03",
+              "headline": "O roteiro cultural de novembro destaca exposições inéditas pela cidade.",
+              "lede": "O projeto da Bienal de Veneza encontra finalmente morada museológica em Lisboa.",
+              "body": "As galerias e espaços culturais da capital renovam a oferta artística com propostas imperdíveis para este mês. Destaca-se a chegada do projeto que representou Portugal na Bienal de Veneza, agora acessível ao público num contexto expositivo próprio. Paralelamente, os roteiros locais sugerem percursos alternativos que cruzam a história e a criação plástica contemporânea. A taxa de câmbio de 0.89 EUR por cada 1 USD facilita o acesso de viajantes aos bilhetes e catálogos especializados. Lisboa confirma assim a sua vocação para acolher grandes narrativas visuais longe das multidões estivais.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A ópera invade o Mercado do Bolhão e os transportes públicos da cidade.",
+              "lede": "O festival leva as vozes líricas aos locais mais inesperados do quotidiano portuense.",
+              "body": "A iniciativa Ópera à Moda do Porto surpreende residentes e passageiros ao ocupar o emblemático Mercado do Bolhão, as carruagens de metro e os autocarros urbanos. É uma forma singular de descentralizar a cultura, aproximando a música erudita das rotinas diárias de quem cruza a Invicta. Com o câmbio oficial em 1 USD para 0.89 EUR, os visitantes estrangeiros podem planear com facilidade o seu orçamento para esta temporada artística. A programação promove encontros espontâneos com a arte, transformando o espaço público num palco improvisado. Esta intervenção lírica reafirma o dinamismo criativo que caracteriza o Porto contemporâneo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "02",
+              "headline": "A chuva persistente molda o ritmo calmo das ruas nortenhas.",
+              "lede": "Os termómetros marcam entre 8 e 14°C sob um aguaceiro persistente.",
+              "body": "A atmosfera do Porto veste-se com a melancolia própria de um outono chuvoso, registando 9mm de precipitação e uma luz difusa que se apaga às 17:24. O frio húmido obriga a passos mais apressados pelas ruas empedradas da Ribeira e de Cedofeita. Os cafés históricos, com as suas madeiras escuras e cheiro a café torrado, tornam-se refúgios indispensáveis para ler ou observar o movimento. A conversão de 1 USD para 0.89 EUR mantém estáveis as contas dos viajantes que procuram a hotelaria tradicional da cidade. É um período de introspeção em que a urbe revela a sua verdadeira essência.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "03",
+              "headline": "A FUJIFILM House of Photography celebra o primeiro aniversário com nova exposição.",
+              "lede": "O espaço cultural na baixa portuense inaugura a mostra Life as You See It.",
+              "body": "Para assinalar o seu primeiro ano de atividade, o polo cultural da marca celebra a data com a abertura de uma exposição fotográfica de grande fôlego. A mostra convida o público a contemplar o olhar de diferentes autores sobre o quotidiano e a paisagem urbana. Em paralelo, multiplicam-se os convites para integrar projetos visuais colaborativos através de registos feitos no telemóvel. A oferta cultural complementa-se com exposições científicas e artísticas inspiradas na natureza, como o caracol de Porto Santo. O Porto prova, assim, ser um território vibrante para a criação e preservação da imagem.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O MU.SA acolhe uma exposição dedicada à evolução da veste litúrgica.",
+              "lede": "Sintra une património e arte sacra numa mostra com o apoio eclesiástico.",
+              "body": "O Museu das Artes de Sintra é o ponto de encontro para a divulgação de um valioso espólio têxtil e litúrgico. A inauguração contou com a presença de altas figuras da diocese, sublinhando a importância histórica e estética das peças expostas. Esta iniciativa cruza-se com outras propostas dedicadas à arte litúrgica espalhadas pelo concelho, atraindo estudiosos e curiosos. A taxa de câmbio de 1 USD para 0.89 EUR apoia os visitantes estrangeiros na gestão das entradas nos museus locais. A vila serrana confirma a sua vocação para albergar eventos culturais de profundidade espiritual e artística.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "02",
+              "headline": "A qualidade do ar mantém-se moderada sob a neblina matinal da serra.",
+              "lede": "O índice PM2.5 regista 18, convidando a passeios tranquilos pelos trilhos sombrios.",
+              "body": "A atmosfera serrana apresenta níveis moderados de poluição atmosférica, permitindo caminhadas seguras entre os bosques seculares da serra de Sintra. A humidade típica da montanha reveste a vegetação de um verde intenso, característico desta transição para o inverno. Os visitantes encontram um ambiente propício à contemplação, longe das enchentes características dos meses mais quentes. A conversão monetária de 0.89 EUR por 1 USD simplifica as trocas comerciais nos estabelecimentos comerciais da vila. A neblina persistente confere às paisagens românticas um manto de mistério intemporal.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            },
+            {
+              "n": "03",
+              "headline": "O centro comercial Alegro Sintra renova o seu espaço comercial.",
+              "lede": "A marca Parfois reabre portas com um conceito arquitetónico totalmente atualizado.",
+              "body": "A oferta comercial do concelho ganha nova vida com a reabertura da loja Parfois no Alegro Sintra, apresentando uma imagem renovada. O espaço foi repensado para proporcionar uma experiência de compra mais fluida e integrada com as novas tendências de design. Para os viajantes que procuram recordações úteis ou acessórios de viagem, a paragem no centro comercial complementa o roteiro cultural. A estabilidad financeira, com a paridade cambial de 1 USD para 0.89 EUR, facilita o consumo ponderado no comércio local. Sintra equilibra, deste modo, a sua herança histórica com a modernidade dos serviços de proximidade.",
+              "source": "saudade desk",
+              "source_date": "2026-11-06"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-05T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Por força do Dia de Todos-os-Santos em 2026-11-01, os serviços administrativos, postos de atendimento oficial e instituições bancárias encontram-se encerrados. Os visitantes devem ter em conta estas pausas funcionais ao planear compras ou contactos institucionais na região. Os monumentos sob gestão pública mantêm geralmente os horários ajustados aos fins de semana, embora convenha confirmar entradas antecipadamente. As ruas históricas recebem os passos tranquilos de quem aproveita a pausa para contemplar a arquitetura romântica sem a agitação habitual. A atmosfera matinal convida ao recolhimento nos cafés tradicionais da vila.",
               "source": "saudade desk",
               "source_date": "2026-11-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-30T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O termómetro marca 27°C sob um céu fechado.",
-              "lede": "A cidade respira entre nuvens densas e o pôr do sol às 17:38.",
-              "body": "As temperaturas em Lisboa atingem os 27°C nesta tarde de outubro, mantendo um ambiente morno mas sob uma luz cinzenta e overcast. A cotação oficial fixa-se em 1 USD para 0.9 EUR para quem chega de fora. O festival de áudio e podcast UNICAST decorre com entrada livre, trazendo sessões ao vivo da RFM. A par disso, o festival de humor Commedia a La Carte Fest arranca hoje nos palcos da capital. É uma semana ideal para alternar entre as salas de espetáculo e os abrigos urbanos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "02",
-              "headline": "A dança e o cinema ocupam os ecrãs da cidade.",
-              "lede": "O InShadow traz dezenas de filmes ligados à tecnologia e ao corpo.",
-              "body": "A programação cultural avança com o InShadow Lisboa, o festival de dança, cinema e tecnologia que exibe 80 filmes. Paralelamente, a exposição STRATAS reúne o trabalho de duas artistas no coração da cidade. Com o termómetro a descer até aos 14°C nas horas mais frescas, o refúgio nos espaços culturais torna-se natural. A taxa de câmbio permanece estável em 0.9 EUR por 1 USD. Os visitantes encontram uma cidade atenta às novas formas de expressão visual e sonora.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "03",
-              "headline": "O Dia de Todos-os-Santos aproxima-se com fecho de serviços.",
-              "lede": "A proximidade do feriado de 2026-11-01 altera o ritmo habitual dos balcões.",
-              "body": "Com a chegada do Dia de Todos-os-Santos em 2026-11-01, os serviços públicos, bancos e repartições governamentais preparam o encerramento temporário. A cidade prepara-se para o fim de semana prolongado, mantendo as ruas calmas para quem prefere passeios desacelerados. As temperaturas oscilam entre os 14°C e os 27°C, sem registo de precipitação relevante. O câmbio mantém-se nos 0.9 EUR por 1 USD. É o momento de garantir as compras essenciais antes do descanso oficial.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A qualidade do ar regista níveis moderados na Invicta.",
-              "lede": "O índice de PM2.5 situa-se em 26, acompanhado pela conversão a 0.9 EUR por 1 USD.",
-              "body": "A atmosfera portuense apresenta uma qualidade do ar moderada, com valores de PM2.5 nos 26, exigindo alguma atenção por parte de quem caminha longas distâncias ao ar livre. A moeda estrangeira troca-se a 0.9 EUR por cada 1 USD. As notícias culturais já olham para o futuro com o anúncio do cartaz do Primavera Sound Porto para 2027, confirmando nomes como Fontaines D.C., Hayley Williams, Chemical Brothers e Lola Young. Os espaços da cidade convidam a pausas longas entre cafés e livrarias.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "02",
-              "headline": "A arte imersiva ganha morada própria na cidade.",
-              "lede": "A Casa das Máquinas abre portas como novo polo cultural dedicado a novas linguagens.",
-              "body": "O panorama artístico do Porto expande-se com a inauguração da Casa das Máquinas, um novo espaço cultural inteiramente dedicado à arte imersiva. Paralelamente, o Family Film Project anuncia novas datas centradas na obra documental de Alan Berliner. Com a qualidade do ar a marcar PM2.5 26, estes refúgios interiores oferecem a atmosfera ideal para tardes de contemplação. A taxa de câmbio de 0.9 EUR por 1 USD facilita o planeamento financeiro dos viajantes que chegam de fora.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "03",
-              "headline": "O feriado de 2026-11-01 altera o pulso administrativo.",
-              "lede": "O Dia de Todos-os-Santos suspende os serviços essenciais e a administração pública.",
-              "body": "O calendário avança para o Dia de Todos-os-Santos a 2026-11-01, determinando o encerramento de repartições públicas, bancos e postos de atendimento ao longo do fim de semana. A cidade ajusta o passo, com o comércio a reorganizar horários e as ruas a esvaziarem-se de burocracia. A qualidade do ar permanece moderada com PM2.5 26. A conversão cambial mantém-se inalterada em 0.9 EUR por 1 USD. Os residentes aproveitam a pausa para visitar espaços culturais abertos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra respira sob um ar limpo e equilibrado.",
-              "lede": "O índice de PM2.5 fixa-se em 9, garantindo condições propícias para caminhadas na bruma.",
-              "body": "A atmosfera serrana apresenta-se particularmente límpida, com o indicador de PM2.5 a registar um valor justo de 9. A taxa de câmbio oficial permanece em 0.9 EUR por 1 USD. A vila vive ainda o rescaldo de eventos recentes, como o Festival Literário Internacional e o festival celta que encheu as ruas de espetáculos de fogo, rituais e criaturas misteriosas. A história do Festival da Canção também encontrou recentemente eco cultural nas salas sintrenses. É o cenário perfeito para percursos pedestres sem pressa.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "02",
-              "headline": "Os ecos dos festivais literários e celtas perduram na vila.",
-              "lede": "A memória dos rituais e da literatura recente ancora-se na pedra antiga dos palácios.",
-              "body": "Sintra mantém a aura mística após acolher o festival celta de três dias, repleto de fogo e figuras lendárias, juntamente com o prestigiado Festival Literário Internacional. A qualidade do ar, marcada por PM2.5 9, convida a respirar fundo entre os jardins húmidos e os palácios históricos. A cotação de 1 USD por 0.9 EUR apoia os visitantes estrangeiros na gestão das entradas monumentais. As sessões esgotadas em torno da história do Festival da Canção provam o apetite cultural local por memórias partilhadas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
-            },
-            {
-              "n": "03",
-              "headline": "A chegada do Dia de Todos-os-Santos silencia os serviços.",
-              "lede": "A data festiva de 2026-11-01 impõe o recolhimento e o fecho de repartições.",
-              "body": "A proximidade do Dia de Todos-os-Santos em 2026-11-01 traz a quietude habitual aos serviços públicos, bancos e repartições da vila. A atmosfera mantém-se serena, amparada por um ar limpo de PM2.5 9 e pela taxa de câmbio de 0.9 EUR por 1 USD. Com o encerramento temporário dos balcões administrativos, os visitantes encontram uma Sintra entregue aos trilhos da serra e à contemplação da natureza. Constrói-se assim um fim de semana de pausa e silêncio institucional.",
-              "source": "saudade desk",
-              "source_date": "2026-10-30"
             }
           ]
         }
