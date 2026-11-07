@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-06T06:00:00+09:00",
+  "updated": "2026-11-07T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-07T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A estação Praça de Espanha do Metro de Lisboa reabre totalmente renovada.",
+              "lede": "Os passageiros voltam a circular por plataformas modernizadas e mais luminosas.",
+              "body": "A renovação da estação Praça de Espanha devolve à cidade um ponto de circulação essencial com acessos melhorados e superfícies limpas. Sob um céu tipicamente encoberto e temperaturas entre 14 e 22°C, a circulação subterrânea ganha uma nova fluidez. O cair da noite ocorre cedo, pelas 17:30, tornando a iluminação renovada da estação particularmente útil para quem regressa a casa no final do dia. Os viajantes estrangeiros continuam a beneficiar de uma taxa de câmbio favorável de 1 USD para 0.9 EUR ao levantar numerário nas proximidades. As intervenções estruturais concluídas asseguram maior conforto diário para residentes e visitantes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "02",
+              "headline": "O festival Super Bock em Stock ocupa salas e palcos emblemáticos da cidade.",
+              "lede": "The Jesus and Mary Chain e Linda Martini encabeçam os concertos deste fim de semana.",
+              "body": "A programação musical espalha-se por vários espaços lisboetas ao longo de duas noites dedicadas ao rock e à pop alternativa. Com as temperaturas a oscilar entre 14 e 22°C sob um manto de nuvens, caminhar entre salas de espetáculo faz-se sem o calor excessivo do verão. A noite cai por volta das 17:30, convidando o público a entrar cedo para os concertos agendados. Os visitantes internacionais encontram uma taxa de câmbio de 1 USD para 0.9 EUR, facilitando a aquisição de bilhetes e refeições ligeiras nas zonas circundantes. É recomendável consultar previamente os horários exatos de cada atuação para evitar filas prolongadas à entrada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "03",
+              "headline": "Novas exposições revelam os bastidores da tecnologia e o património cultural urbano.",
+              "lede": "Os roteiros culturais deste mês destacam a inovação e a criatividade contemporânea em Lisboa.",
+              "body": "A oferta museológica da capital enriquece-se com propostas que cruzam a tecnologia com as artes visuais, atraindo um público curioso. Com o termómetro a marcar entre 14 e 22°C e um céu persistentemente nublado, as visitas a espaços interiores decorrem com total serenidade. O pôr do sol fixa-se pelas 17:30, prolongando as tardes dentro das galerias antes do recolher noturno. Para quem chega de fora, a taxa de câmbio de 1 USD para 0.9 EUR mantém a bilheteira acessível. Este roteiro essencial convida a pausas prolongadas frente a cada obra, longe da pressa quotidiana e em perfeita harmonia com o ritmo calmo da cidade.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A FUJIFILM House of Photography Porto celebra o seu primeiro aniversário com uma exposição.",
+              "lede": "O espaço convida a comunidade a participar numa mostra comemorativa muito especial.",
+              "body": "Com uma qualidade do ar considerada justa e um índice PM2.5 de 13, a Invicta propõe passeios tranquilos pelas ruas da baixa. A celebração do primeiro aniversário da galeria na cidade traz uma exposição participativa que envolve criadores locais e visitantes. Os viajantes que planeiam desfrutar da cultura nortenha encontram uma taxa de câmbio de 1 USD para 0.9 EUR. As galerias e centros culturais oferecem um abrigo ideal para tardes calmas, longe do bulgário das artérias principais. A programação comemorativa prolonga-se ao longo dos próximos dias, promovendo o diálogo entre a fotografia contemporânea e o público.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "02",
+              "headline": "A Casa Comum acolhe o Festival Internacional de Artes e Ópera do Porto.",
+              "lede": "A programação artística cruza a música erudita com novas linguagens visuais e dramáticas.",
+              "body": "O festival ocupa diferentes espaços da universidade e da cidade com récitas, conversas e concertos memoráveis. Com a qualidade do ar a registar um nível justo e PM2.5 de 13, as deslocações a pé entre recintos fazem-se com agradável leveza. A taxa de câmbio de 1 USD para 0.9 EUR continua a ser vantajosa para os visitantes estrangeiros que compram publicações e bilhetes no local. A Casa Comum consolida-se assim como um polo de convergência cultural incontornável para quem aprecia a lentidão criativa. Recomenda-se a reserva antecipada para os espetáculos de ópera de câmara devido à lotação reduzida das salas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "03",
+              "headline": "Novas exposições revelam o foco oculto nas ruínas e a biodiversidade insular.",
+              "lede": "Nuno Henrique inspira-se num pequeno caracol do Porto Santo para uma mostra singular.",
+              "body": "As galerias portuenses dedicam espaço a olhares singulares sobre a arquitetura degradada e as formas naturais microscópicas. A qualidade do ar permanece justa, com PM2.5 de 13, criando um ambiente estável para percursos urbanos contemplativos. Os turistas e residentes podem contar com uma taxa de câmbio de 1 USD para 0.9 EUR para gerir as suas despesas em livrarias e cafés. A exposição que descobre a beleza na ruína convida a uma reflexão demorada sobre o tempo e a matéria. Estes projetos expositivos reafirmam a capacidade do Porto em olhar para o passado com uma sensibilidade esteticamente renovada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O MU.SA recebe uma exposição dedicada à evolução da veste litúrgica.",
+              "lede": "O espólio têxtil e histórico revela séculos de tradição e simbologia religiosa.",
+              "body": "As salas do MU.SA abrigam um percurso minucioso pela paramentaria e pela arte litúrgica tradicional. Sob um céu totalmente encoberto e temperaturas entre 15 e 21°C, a vila serrana oferece um refúgio perfeito para visitas demoradas. A noite instala-se rapidamente na serra, com o pôr do sol marcado para as 17:31, conferindo um ambiente recolhido aos espaços municipais. Quem visita a região beneficia de uma taxa de câmbio de 1 USD para 0.9 EUR nas trocas monetárias correntes. A exposição convida a observar os detalhes minuciosos dos bordados e tecidos antigos com a devida atenção e silêncio.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "02",
+              "headline": "D. Alexandre Palma participa na inauguração da mostra sobre paramentaria.",
+              "lede": "A cerimónia inaugural destacou a importância da preservação do património eclesiástico.",
+              "body": "A reflexão sobre a evolução dos paramentos sacros cruza a história da arte com a liturgia católica. Com temperaturas amenas entre 15 e 21°C e um horizonte consistentemente nublado, o microclima da serra convida a caminhadas curtas entre os palácios e os museus. O sol despede-se cedo, pelas 17:31, antecipando o silêncio noturno que caracteriza as ruas históricas de Sintra. Os viajantes estrangeiros dispõem de uma taxa de câmbio de 1 USD para 0.9 EUR para planear as suas compras locais. Este evento cultural reforça o papel da vila como guardiã de memórias seculares e tradições artísticas refinadas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            },
+            {
+              "n": "03",
+              "headline": "A arte litúrgica contemporânea e histórica dialoga nos espaços culturais sintrenses.",
+              "lede": "A programação cultural da vila aprofunda o conhecimento sobre o património religioso.",
+              "body": "A iniciativa reúne peças de ourivesaria e têxteis que testemunham a mestria de oficinas seculares. O termómetro oscila entre 15 e 21°C sob nuvens densas, mantendo o ambiente propício à contemplação interior nos museus locais. A noite chega pontualmente às 17:31, convidando os visitantes a recolherem-se em espaços acolhedores e a saborear a pastelaria tradicional da região. A taxa de câmbio de 1 USD para 0.9 EUR assegura transações simples para os visitantes internacionais. Sintra confirma assim a sua vocação para acolher exposições de grande rigor técnico e espiritual, longe das multidões estivais.",
+              "source": "saudade desk",
+              "source_date": "2026-11-07"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-06T06:00:00+09:00",
       "cities": [
@@ -549,98 +641,6 @@
               "headline": "O investimento empresarial e a cultura moldam o futuro sintrense.",
               "lede": "Um parque empresarial de 12.500 m² junta-se à vibrante agenda cultural da vila.",
               "body": "O tecido económico de Sintra regista um movimento importante com a compra de um parque empresarial de 12.500 m² por parte de um investidor internacional. Esta operação demonstra a atratividade contínua do concelho não apenas para o turismo contemplativo, mas também para iniciativas de base sustentável. Enquanto a economia local se reorganiza, a agenda cultural continua preenchida com o Festival Literário Internacional e o festival celta de três dias. A qualidade do ar, marcada por um índice PM2.5 de 16, convida a explorar os trilhos da serra com total serenidade e clareza visual. Com temperaturas a atingirem os 25°C, os visitantes aproveitam para caminhar pelos jardins históricos antes da chegada do Tribeca Festival Lisboa 2026 em dezembro. Sintra prova, assim, saber gerir com elegância o contraste entre o seu passado mítico e a modernidade discreta.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-31T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A taxa de câmbio permanece estável nos mercados financeiros.",
-              "lede": "O valor de 1 USD fixa-se em 0.9 EUR para transações correntes.",
-              "body": "A cotação oficial da moeda norte-americana estabelece-se em 1 USD para 0.9 EUR, mantendo o ritmo habitual nas casas de câmbio da baixa e nos balcões bancários da capital. Os viajantes vindos de fora da zona euro encontram assim valores previsíveis para o planeamento de alojamento, transportes e refeições durante a estadia. Convém recordar que este câmbio reflete a média recente dos mercados internacionais, sem flutuações bruscas a registar esta semana. As taxas de levantamento em caixas automáticas continuam a obedecer aos preçários de cada instituição de origem. A simplicidade nas conversões monetárias facilita o ritmo pausado de quem caminha pela cidade sem pressas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "02",
-              "headline": "O festival InShadow prepara o regresso com mais de 80 filmes.",
-              "lede": "A programação de dança e cinema decorre entre 13 de novembro e 18 de dezembro.",
-              "body": "As salas e os espaços culturais da cidade preparam-se para acolher uma nova edição do InShadow, certame que cruza a imagem em movimento com as artes performativas. Entre 13 de novembro e 18 de dezembro, o público poderá assistir a mais de 80 filmes de realizadores nacionais e internacionais. Paralelamente, a agenda cultural destaca o UNICAST, festival de áudio e podcast que oferece entrada livre e transmissões ao vivo da RFM, ideal para quem aprecia escutar histórias com tempo e atenção. Nos museus, a exposição sobre a arte escondida nas notas continua a atrair observadores curiosos pelos detalhes gráficos da moeda. Lisboa mantém uma oferta diversificada para os dias amenos de outono.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "03",
-              "headline": "O Dia de Todos-os-Santos altera o funcionamento habitual dos serviços.",
-              "lede": "A data festiva de 2026-11-01 traz encerramentos temporários a repartições e bancos.",
-              "body": "Com a chegada do Dia de Todos-os-Santos em 2026-11-01, os serviços públicos, repartições estatais e instituições bancárias fecham as portas para o descanso regulamentar. Os viajantes e residentes devem antecipar qualquer gestão burocrática ou levantamento de numerário que dependa de atendimento presencial. O comércio tradicional e os espaços de restauração ajustam os horários, abrindo por vezes de forma condicionada durante o domingo festivo. Os cemitérios municipais registam a afluência tradicional de visitantes que cumprem a memória dos entes queridos com silêncio e discrição. A circulação rodoviária nas imediações dos principais locais de culto processa-se com lentidão ponderada.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O nevoeiro matinal cobre a foz do Douro sob térmicas moderadas.",
-              "lede": "A temperatura oscila entre 11 e 21°C, com o pôr do sol marcado para as 17:31.",
-              "body": "A atmosfera portuense desperta envolta em nevoeiro característico, registando uma amplitude térmica de 11 a 21°C ao longo do dia. A qualidade do ar apresenta-se moderada, com um valor de PM2.5 de 31, aconselhando alguma contenção a quem pratique exercício físico prolongado ao ar livre. O cair da tarde avança ligeiramente, fixando o pôr do sol pelas 17:31, momento em que a luz dourada se retira das pontes e fachadas graníticas. A taxa de câmbio oficial de 1 USD para 0.9 EUR mantém-se inalterada para transações correntes na cidade. As condições meteorológicas convidam a abrigar nos cafés históricos ou a observar o rio a partir de margens tranquilas.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "02",
-              "headline": "A Foz recupera um restaurante emblemático com nova ementa.",
-              "lede": "O espaço reabre para degustar com calma, atenção e prazer.",
-              "body": "Um dos estabelecimentos mais representativos da Foz do Porto reabre portas com uma proposta gastronómica renovada, pensada para ser saboreada sem pressas. A carta aposta na valorização dos produtos locais e na sazonalidade, enquadrando-se no ritmo vagaroso que a estação exige. Na agenda cultural da cidade, a Casa Comum acolhe o festival Queer Porto, incluindo um ciclo dedicado à literatura que promove a reflexão e o diálogo. Para quem prefere a natureza e o envolvimento comunitário, o Parque Verde de Porto de Mós recebe uma sessão criativa voltada para as famílias. O horizonte cultural do Porto continua rico em iniciativas de pequena escala e grande densidade artística.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "03",
-              "headline": "Os serviços públicos suspendem a atividade devido à festividade.",
-              "lede": "O feriado de 2026-11-01 suspende temporariamente os balcões e as repartições.",
-              "body": "A celebração do Dia de Todos-os-Santos em 2026-11-01 determina o encerramento generalizado de repartições públicas, tribunais e agências bancárias em toda a cidade. Os cidadãos e visitantes que necessitem de resolver assuntos administrativos devem acautelar essas diligências para os dias úteis subsequentes. Os transportes públicos mantêm o funcionamento, embora com frequências adaptadas aos horários dominicais e feriados. As floristas e os espaços comerciais próximos dos cemitérios conhecem uma procura acrescida por parte de quem mantém vivas as tradições de outono. A cidade adota uma postura de recolhimento compatível com a serenidade da data festiva.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O céu nublado envolve a serra com temperaturas amenas.",
-              "lede": "Os termómetros marcam entre 13 e 24°C, com o pôr do sol às 17:38.",
-              "body": "A vila serrana apresenta um registo térmico entre 13 e 24°C, sob um manto persistente de nuvens que suaviza a luz sobre a paisagem cultural. A qualidade do ar é considerada fair, com um registo de PM2.5 de 10, oferecendo um ambiente limpo para caminhadas pelos trilhos florestais. O pôr do sol ocorre pelas 17:38, antecipando o final das tardes outonais na encosta. No plano financeiro, a equivalência de 1 USD para 0.9 EUR assegura estabilidade nas trocas comerciais para visitantes estrangeiros. A humidade característica da serra aconselha o uso de um casaco leve durante os percursos pedestres pelos jardins históricos.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "02",
-              "headline": "A literatura e as tradições ancestrais dinamizam a agenda cultural.",
-              "lede": "Sintra acolhe festivais literários, espetáculos de fogo e rituais celtas.",
-              "body": "A programação cultural da vila destaca-se esta semana com a realização de um Festival Literário Internacional, reunindo autores e leitores em torno da palavra escrita. Simultaneamente, um festival celta com a duração de 3 dias transporta os visitantes para tempos antigos através de espetáculos de fogo, rituais e recriações com criaturas misteriosas. A música e a memória colectiva encontram também espaço num evento dedicado à história do Festival da Canção. No setor económico, regista-se a aquisição de um parque empresarial com 12.500 m² por um investidor internacional, sinalizando a vitalidade imobiliária local. Sintra equilibra assim o seu património secular com uma intensa e diversificada animação contemporânea.",
-              "source": "saudade desk",
-              "source_date": "2026-10-31"
-            },
-            {
-              "n": "03",
-              "headline": "O descanso do feriado municipal ajusta o ritmo da vila serrana.",
-              "lede": "O Dia de Todos-os-Santos em 2026-11-01 impõe o fecho de serviços e bancos.",
-              "body": "Por força do Dia de Todos-os-Santos em 2026-11-01, os serviços administrativos, postos de atendimento oficial e instituições bancárias encontram-se encerrados. Os visitantes devem ter em conta estas pausas funcionais ao planear compras ou contactos institucionais na região. Os monumentos sob gestão pública mantêm geralmente os horários ajustados aos fins de semana, embora convenha confirmar entradas antecipadamente. As ruas históricas recebem os passos tranquilos de quem aproveita a pausa para contemplar a arquitetura romântica sem a agitação habitual. A atmosfera matinal convida ao recolhimento nos cafés tradicionais da vila.",
               "source": "saudade desk",
               "source_date": "2026-11-01"
             }
