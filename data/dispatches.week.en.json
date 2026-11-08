@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-03T06:00:00+09:00",
+  "updated": "2026-11-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Dense drizzle settles over the capital as temperatures hover between 3 and 7°C.",
+              "lede": "A steady fall of 6mm precipitation dampens the stone pathways of Gyeongbokgung. The evening sky dims early by 17:27.",
+              "body": "Dense drizzle settles over the capital as temperatures hover between 3 and 7°C. A steady fall of 6mm precipitation dampens the stone pathways of Gyeongbokgung. The evening sky dims early by 17:27. Moderate air quality registers a PM2.5 reading of 29 across the districts. Walkers trade light jackets for heavy wool coats near the palace walls. The currency exchange rests at 1 USD to 1359 KRW today. Inside quiet galleries, visitors seek shelter from the damp chill. The seasonal shift brings a distinct stillness to the northern hills.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "Sung Jin Park’s Kid Echo exhibition explores the rebellious spirit of youth.",
+              "lede": "Photographic prints capture the texture of Seoul in the 2000s. Gallery rooms remain calm refuges from the street moisture.",
+              "body": "Sung Jin Park’s Kid Echo exhibition explores the rebellious spirit of youth. Photographic prints capture the texture of Seoul in the 2000s. Gallery rooms remain calm refuges from the street moisture outside. Visitors pause before frames documenting a distinct era of the city. Nearby spaces also display Keribar’s historical photographs of Korea from 70 years ago. These archival images offer a quiet bridge between decades of rapid urban evolution. Observers trace the subtle changes in neighborhood streetscapes over time. The exhibitions invite slow viewing away from the weather.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "Civic preparations begin as Korea welcomes half a million young pilgrims.",
+              "lede": "The city prepares to host World Youth Day in Seoul. Philanthropic portraits also highlight community contributions across local districts.",
+              "body": "Civic preparations begin as Korea welcomes half a million young pilgrims. The city prepares to host World Youth Day in Seoul in the coming months. Meanwhile, local projects like Portraits in Philanthropy celebrate Sam Seungho Park and other civic figures. These initiatives highlight quiet acts of generosity across the metropolitan area. Infrastructure teams review transport networks to ensure smooth movement during upcoming gatherings. Information desks update multilingual guides for arriving visitors and residents alike. The city maintains its steady pace despite the incoming crowds and grey skies.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Partly cloudy skies frame the city as temperatures reach a mild 17°C.",
+              "lede": "Daylight fades by 16:39 over the eastern districts. Air quality stays moderate with a PM2.5 measure of 17.",
+              "body": "Partly cloudy skies frame the city as temperatures reach a mild 17°C after a cool morning low of 9°C. Daylight fades by 16:39 over the eastern districts, shortening the afternoon hours. Air quality stays moderate with a PM2.5 measure of 17. The currency exchange stands at 1 USD to 158 JPY. Commuters move through the transit interchanges under clean autumn light. Parks retain their remaining amber leaves on branches swaying gently in the breeze. The crisp air marks a definitive transition toward winter.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "Film enthusiasts gather as the Tokyo International Film Festival concludes its run.",
+              "lede": "Screenings weave cultural threads through historical and contemporary cinema. The Wild Heart showcase highlights exceptional domestic storytelling.",
+              "body": "Film enthusiasts gather as the Tokyo International Film Festival concludes its run. Screenings weave cultural threads through historical and contemporary cinema across multiple venues. The Wild Heart showcase highlights exceptional domestic storytelling and experimental features. Audiences compare notes on the best films, old and new, from the 39th Tokyo International Film Festival. Discussions spill into nearby cafes as evening approaches. Critics and casual viewers alike pore over schedules for upcoming retrospectives. Cinema houses offer warmth and artistic discovery as the autumn chill settles in.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "Animation circles look ahead following the announcement of the Nippon Anime Awards.",
+              "lede": "The 2027 honorees point toward enduring craft traditions. Studios share quiet moments between major production cycles.",
+              "body": "Animation circles look ahead following the announcement of the Nippon Anime Awards for 2027. The upcoming honorees point toward enduring craft traditions within the medium. Studios share quiet moments between major production cycles across the western wards. Animators and background painters return to meticulous hand-drawn work. Industry observers note a return to subtle, character-driven narratives in upcoming slates. Exhibition spaces across the capital feature preliminary sketches and cel collections. The city honors its foundational animators while encouraging new voices.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Intermittent rain showers refresh the calçada pavements under a high of 23°C.",
+              "lede": "A mild low of 17°C keeps the night air comfortable. Precipitation totals 2.7mm across the historic quarters.",
+              "body": "Intermittent rain showers refresh the calçada pavements under a high of 23°C and a low of 17°C. Precipitation totals 2.7mm across the historic quarters, leaving limestone steps slick. Sunset arrives at 17:29, casting long shadows over the Tagus. Fair air quality registers at a PM2.5 level of 13. The exchange rate holds steady at 1 USD to 0.9 EUR. Pedestrians pause under awnings to watch clouds drift over the river. The sudden downpours lend a brilliant sheen to the tiled facades of Alfama.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "The 28 tram navigates wet rails through the steep curves of Graça.",
+              "lede": "Drivers maintain cautious speeds along the sloping stone corridors. Passengers shelter beneath umbrellas at historic stops.",
+              "body": "The 28 tram navigates wet rails through the steep curves of Graça. Drivers maintain cautious speeds along the sloping stone corridors during the light showers. Passengers shelter beneath umbrellas at historic stops while waiting for transit. The polished wooden interiors offer a warm retreat from the coastal moisture. Maintenance crews monitor the tracks near the cathedral for any leaf accumulation. Travelers find quiet moments on board as the yellow carriage sways through narrow lanes. The rhythmic clatter echoes against centuries-old walls.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "Gardeners tend to subtropical plantings in the damp earth of Estrela.",
+              "lede": "Palms and jacaranda trees drink in the seasonal moisture. Puddle reflections mirror the wrought-iron park benches.",
+              "body": "Gardeners tend to subtropical plantings in the damp earth of Estrela. Palms and jacaranda trees drink in the seasonal moisture following the afternoon rain. Puddle reflections mirror the wrought-iron park benches along the shaded paths. Local residents walk dogs through the greenery while the air remains clean and mild. The duck pond fills steadily from the light precipitation falling across the lawns. Children sail paper boats near the wrought-iron bandstand. The botanical collections thrive under the gentle autumn climate of the capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-03T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Daylight fades gracefully with sunset recorded at 17:40 over the western hills. The day's temperatures range from 13°C to 26°C under scattered clouds. Air quality stays remarkably fresh with a PM2.5 measurement of 6. Financial transactions are calculated at 1 USD to 0.9 EUR across local establishments. As the calendar turns toward Dia de Todos-os-Santos on 2026-11-01, travelers should note that municipal offices, banks, and post offices will close for the public holiday. The streets take on a reflective, subdued quality as residents honor traditional autumn observances.",
               "source": "saudade desk",
               "source_date": "2026-10-29"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-10-28T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn air settles over the city as temperatures range from 2 to 11°C.",
-              "lede": "Evening arrives swiftly by 17:38, bringing crisp conditions and fine air quality.",
-              "body": "The late October air is remarkably clear, holding a PM2.5 level of 9 that makes evening walks along the fortress walls feel unusually sharp and distinct. Temperatures move between 2 and 11°C, requiring wool layers once the sun drops behind the peaks. Sunset arrives at 17:38, turning the skyline into a study of pale amber and slate grey. Currency exchange holds at 1 USD to 1328 KRW, offering a stable baseline for travelers settling into neighborhood cafes. It is a quiet week for civic life, though the recent pet festival at Olympic Park left behind thoughtful conversations on loss and companionship among locals. The seasonal shift brings out the true pace of the city, measured in quiet footsteps and the rustle of dry leaves.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "02",
-              "headline": "The Olympic Park grounds hold quiet traces of the recent special counsel ballot verification.",
-              "lede": "Over 2 million ballots passed through the venue recently, returning the vast park to stillness.",
-              "body": "The vast expanse of Olympic Park returns to its habitual calm following the verification of 2.47 million ballots by the special counsel inside the indoor facilities. Paces slow down along the perimeter trails where silver grass catches the low autumn light. Visitors walking past the World Peace Gate will find the plazas mostly cleared of administrative commotion. The surrounding neighborhood resumes its ordinary Tuesday rhythm, undisturbed by the civic events that briefly occupied the headlines. Morning joggers use the paved paths under the bright, fair skies, breathing in the 9 PM2.5 air without hindrance. It is a good time to observe the park's immense scale without the usual weekend crowds interrupting the view.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "03",
-              "headline": "New flagship spaces open in the districts while corporate earnings steady the local mood.",
-              "lede": "SK Hynix reports a notable Q3 profit jump alongside fresh retail openings in Seongsu.",
-              "body": "Commercial districts experience a gentle wave of new openings, highlighted by the HELINOX WEAR Seoul flagship store debut in its chosen neighborhood. The retail environment pairs well with broader economic news, notably SK Hynix reporting a Q3 profit jump that beats market forecasts by a significant margin. Despite the financial uptick, the physical streets retain a contemplative, unhurried atmosphere suited for quiet observers. Travelers browsing design shops will find the exchange rate steady at 1328 KRW per USD. The air quality remains fair throughout the afternoon, encouraging long walks between district boundaries. These small commercial notes speak of a city moving deliberately into the colder months with quiet confidence.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Mainly clear skies shape the Tokyo week with temperatures moving between 11 and 18°C.",
-              "lede": "Sunset occurs by 16:50, signaling the rapid approach of early winter evenings.",
-              "body": "The autumn weather offers ideal conditions for wandering the neighborhoods, with daily temperatures settling between 11 and 18°C under largely clear skies. Air quality remains dependable, registering a PM2.5 level of 9 that keeps distant towers visible across the grid. Currency exchange hovers at 1 USD to 158 JPY, guiding daily spending for visitors navigating the transit network. Sunset now arrives early at 16:50, plunging narrow alleys into shadow long before dinner hours begin. This seasonal shift shortens the afternoon light, casting long shadows over temple stone and bicycle racks. It is a gentle, orderly week to observe the city as it prepares for the upcoming cultural holidays.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "02",
-              "headline": "The Tokyo International Film Festival brings international directors and jurists to the capital.",
-              "lede": "Film juries discuss co-productions while exhibition spaces sell out across the market.",
-              "body": "The city plays host to the Tokyo International Film Festival, drawing filmmakers like Rolf de Heer and fellow jury members to deliberate on A-list ratings and global co-productions. Festival directors are actively working to raise the profile of Japanese cinema, supported by local producers driving strong market growth as exhibition spaces sell out completely. Visitors interested in the arts will find cinemas busy with screenings and professional panels. Yet, away from the main festival venues, the surrounding streets maintain their usual polite restraint. The cultural focus enlivens the capital without disrupting its deep-seated civic calm, offering travelers a rewarding week for cinematic exploration.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "03",
-              "headline": "Residents prepare for Culture Day closures as shop-in-shop destinations debut across town.",
-              "lede": "Government offices and banks will close for 文化の日 on 2026-11-03.",
-              "body": "As the calendar advances toward 文化の日 on 2026-11-03, residents take note of the upcoming public holiday. Government offices, banks, and post offices will close for the day, prompting locals to complete administrative errands ahead of time. In retail districts, new destinations such as the destination Tokyo shop-in-shop open their doors to steady crowds. The exchange rate holds at 158 JPY per USD, making purchases straightforward for international visitors. Clear skies and fair air quality make these final pre-holiday days pleasant for outdoor shopping and neighborhood strolls. The quiet anticipation of the holiday adds a reflective stillness to the city's daily routines.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies hang over the capital with mild temperatures ranging from 12 to 24°C.",
-              "lede": "Lisbon's Atlantic air stays warm yet diffuse as sunset arrives at 17:41.",
-              "body": "The Lisbon week begins under a heavy layer of overcast clouds that softens the light falling on the river Tagus. Temperatures remain exceptionally mild, moving between 12 and 24°C through the afternoon hours. Air quality is fair, with a low PM2.5 reading of 8 that makes breathing the coastal air effortless during long walks. Sunset occurs at 17:41, casting a muted grey glow over the limestone pavements and terracotta roofs. The currency exchange remains standard at 1 USD to 0.9 EUR, steadying travelers as they navigate daily expenses. It is a quiet time to observe the city, free from the harsh glare of summer and wrapped in soft Atlantic moisture.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "02",
-              "headline": "Residents prepare for All Saints' Day closures as the holiday approaches on 2026-11-01.",
-              "lede": "Dia de Todos-os-Santos brings upcoming closures to banks and administrative offices.",
-              "body": "With Dia de Todos-os-Santos arriving on 2026-11-01, residents make quiet preparations for the national public holiday. Government offices, banks, and post offices will observe closures, encouraging locals to finalize errands before the weekend begins. Bakeries and flower stalls near cemeteries see a subtle increase in patrons selecting traditional sweets and chrysanthemums. The mild temperatures between 12 and 24°C provide comfortable walking conditions for those tending to family graves or visiting neighborhood churches. Public transport will run on adjusted holiday schedules, so travelers should check departure times before heading out. The impending holiday imbues the historic quarters with a subdued, reflective atmosphere.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
-            },
-            {
-              "n": "03",
-              "headline": "The steep streets of Alfama and Graça remain quiet beneath the overcast autumn canopy.",
-              "lede": "Overcast days offer an ideal pace for slow observation along the historic tram lines.",
-              "body": "The steep hillside neighborhoods of Alfama and Graça settle into a tranquil rhythm under the grey autumn canopy. Without the intense heat of peak tourist season, travelers can sit undisturbed in small tascas listening to distant Fado echoes. The fair air quality and comfortable 24°C afternoon highs make walking the ancient stairways a gentle endeavor rather than a strenuous chore. The exchange rate at 0.9 EUR to 1 USD keeps cafe bills predictable across the historic quarters. Even the city's iconic trams navigate the tight turns with a measured, unhurried grace. It is a season for observing the ordinary life of the city unfold behind shuttered windows and damp stone walls.",
-              "source": "saudade desk",
-              "source_date": "2026-10-28"
             }
           ]
         }

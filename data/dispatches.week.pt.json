@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-07T06:00:00+09:00",
+  "updated": "2026-11-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Lisboa",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O LEFFEST regressa ao Cinema São Jorge com um olhar atento.",
+              "lede": "As salas iluminam-se para receber o festival de cinema que define o pulso cultural da capital.",
+              "body": "O LEFFEST – Lisboa Film Festival está de volta ao Cinema São Jorge, trazendo consigo uma seleção rigorosa de obras contemporâneas e retrospetivas essenciais. Para quem prefere a lentidão das salas escuras, esta é a altura perfeita para escapar à rotina urbana. À superfície, a qualidade do ar mantém-se em níveis aceitáveis, registando PM2.5 de 13, convidando a calmas caminhadas entre sessões. No plano prático, a taxa de câmbio situa-se em 1 USD para 0.9 EUR, facilitando a gestão financeira dos visitantes estrangeiros. A cidade vive um mês particularmente rico em ofertas culturais, com o Alkantara Festival e o Super Bock em Stock a preencherem os fins de semana com danças e sonoridades memoráveis. É um momento de rara simbiose entre o património arquitetónico e a criação artística moderna.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "O Alkantara Festival cruza memórias e futuros na cidade.",
+              "lede": "A dança contemporânea ocupa os espaços lisboetas, desafiando perceções e celebrando a diversidade de corpos e vozes.",
+              "body": "O Alkantara Festival 2026 continua a sua programação em Lisboa, explorando caminhos onde as danças do presente dialogam com memórias ancestrais e futuros possíveis. Os palcos da cidade abrem-se a criadores de várias geografias, proporcionando um espaço de reflexão longe da urgência quotidiana. Enquanto assiste a estes momentos de partilha artística, o visitante pode circular livremente por uma Lisboa de qualidade do ar justa e PM2.5 de 13, ideal para deambulações a pé. Para as trocas comerciais e diárias, a referência cambial de 1 USD para 0.9 EUR permanece estável nos mercados locais. Este alinhamento de propostas culturais convida a abrandar o passo e a observar a forma como a cidade acolhe a vanguarda artística sem perder a sua identidade histórica profunda.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "Os acordes do Super Bock em Stock ecoam pelas ruas.",
+              "lede": "Músicos consagrados e novos talentos repartem-se por salas inesperadas da geografia urbana.",
+              "body": "O festival Super Bock em Stock revela os seus horários definitivos, destacando atuações muito esperadas de nomes como The Jesus and Mary Chain e Linda Martini. A circulação pelos vários espaços decorre com serenidade, beneficiando de uma qualidade do ar com PM2.5 de 13 que favorece os trajetos a pé entre concertos. Quem chega de fora encontra uma taxa de câmbio de 1 USD para 0.9 EUR, perfeitamente integrada no comércio local. A agenda cultural da cidade enriquece-se ainda com as exposições imperdíveis patentes este mês, criando um roteiro essencial para observadores atentos. Lisboa prova, uma vez mais, ser um território onde a música e o património coexistem numa harmonia singular e duradoura.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "Porto",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O termómetro marca valores amenos enquanto o Queer Porto fecha as portas.",
+              "lede": "A noite de encerramento do festival coroa o cinema francês numa edição memorável.",
+              "body": "O Festival Queer Porto despede-se hoje com a sua noite de encerramento, celebrando um recorde de espectadores que prova a vitalidade desta iniciativa. Um filme francês sagrou-se vencedor, conquistando o público e o júri com uma narrativa sensível. Meteorologicamente, o dia regista temperaturas entre 17 e 22°C, acompanhadas por 1.2mm de precipitação em forma de aguaceiros passageiros até ao pôr do sol pelas 17:22. A taxa de câmbio fixa-se em 1 USD para 0.9 EUR, mantendo a estabilidade financeira habitual na Invicta. Paralelamente, a Casa Comum acolhe o Festival Internacional de Artes e Ópera do Porto, enquanto em Porto de Mós uma exposição cruza a arte com as memórias da migração forçada no período colonial. É um convite claro à introspeção e à descoberta cultural pausada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "A Casa Comum abre espaço à ópera e às artes visuais.",
+              "lede": "O festival internacional ecoa nos corredores universitários e culturais da cidade.",
+              "body": "A programação do Festival Internacional de Artes e Ópera do Porto traz novas sonoridades à Casa Comum, consolidando o papel da cidade como polo de excelência artística. Entre aguaceiros pontuais que totalizam 1.2mm de precipitação e marcas térmicas amenas de 17 a 22°C, o ambiente convida a recolher-se em espaços abrigados. O cair da noite, assinalado pontualmente pelas 17:22, devolve às ruas uma penumbra melancólica ideal para quem aprecia caminhar sem pressas. Para os viajantes internacionais, a conversão monetária mantém-se estável nos 1 USD para 0.9 EUR. Enquanto o Queer Porto encerra a sua edição com um registo histórico de assistência, a região continua a desdobrar-se em iniciativas reflexivas, como a mostra em Porto de Mós sobre migrações e arte colonial.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "A arte cruza memórias da migração na região envolvente.",
+              "lede": "Exposições de profundidade histórica dialogam com o presente nas margens do território.",
+              "body": "A exposição inaugurada em Porto de Mós estabelece uma ponte sensível entre a arte contemporânea e as memórias da migração forçada no Portugal colonial. No Porto, a atmosfera urbana é moldada por temperaturas que oscilam entre 17 e 22°C e por 1.2mm de precipitação ligeira. O dia avança célere até ao pôr do sol, previsto para as 17:22, marcando o fim de tarde com luzes douradas sobre o casario. A economia local transcende-se com a taxa de câmbio de 1 USD para 0.9 EUR, facilitada em transações correntes. Com o encerramento do Festival Queer Porto e o dinamismo da Casa Comum na ópera, a cidade encerra a semana num tom de contemplação madura, perfeito para o viajante que procura substância e silêncio.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "Sintra",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra acolhe poetas e pensadores num festival feliz.",
+              "lede": "As palavras encontram abrigo na névoa e na pedra antiga do romantismo sintrense.",
+              "body": "Um festival feliz reúne em Sintra romancistas, poetas e outros pensadores para debates intimistas longe do ruído moderno. O evento decorre sob condições meteorológicas desafiantes, marcadas por temperaturas entre 17 e 21°C e 5.4mm de precipitação associada a trovoadas passageiras. A luz natural desvanece-se cedo, com o pôr do sol apontado para as 17:30, tingindo a vegetação densa de tons outonais profundos. Para os visitantes estrangeiros, a taxa de câmbio mantém-se nos 1 USD para 0.9 EUR, assegurando transações previsíveis nas livrarias e cafés locais. A atmosfera húmida da serra convida a longas permanências em salas aquecidas, onde a literatura e a filosofia se fundem com o espírito contemplativo da vila.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "A trovoada atravessa a paisagem protegida da vila histórica.",
+              "lede": "O rigor do clima outonal convida a abrandar o passo entre palácios e bosques.",
+              "body": "A ocorrência de trovoadas e 5.4mm de chuva molda o ritmo de Sintra, onde a temperatura se mantém suave, variando entre 17 e 21°C. Este cenário climático realça o misticismo dos palácios e jardins, servindo de pano de fundo perfeito para o festival de pensadores que decorre na vila. O entardecer chega às 17:30, encurtando as horas de claridade e exigindo atenção redobrada nos trilhos calcetados da serra. No plano económico, o câmbio oficial permanece estável em 1 USD para 0.9 EUR. A união entre a poesia e a intempérie cria uma oportunidade singular para observar a paisagem cultural com o distanciamento e a serenidade que o lugar exige.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "O crepúsculo antecipado pelas 17:30 silencia os caminhos da serra.",
+              "lede": "Entre livros e refúgios de pedra, a vila recupera a sua calma secular.",
+              "body": "Com o sol a ocultar-se às 17:30, Sintra recolhe-se ao calor dos seus espaços históricos enquanto decorrem os encontros literários do seu festival de pensadores. O dia regista 5.4mm de precipitação e trovoada, acompanhadas por marcas térmicas agradáveis de 17 a 21°C que atenuam a humidade da serra. A par disto, a estabilidade financeira com a taxa de câmbio de 1 USD para 0.9 EUR apoia a estadia de quem viaja em busca de inspiração. Os visitantes encontram na vila um refúgio ideal para a leitura e para a contemplação da natureza sob céus dramáticos. É um tempo de recolhimento onde a palavra escrita assume o protagonismo absoluto sobre a pedra milenar.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-07T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A trajetória do Festival da Canção é recordada em Sintra através de iniciativas que celebram a memória musical e televisiva nacional. Os dias decorrem com um termómetro entre 13 e 24°C, céu predominantemente limpo e anoitecer apontado para as 17:36. A qualidade do ar mantém-se justa, com um índice de PM2.5 de 15 favorável à circulação pedonal. Após o encerramento temporário do Dia de Todos-os-Santos em 2026-11-01, o comércio local e os serviços públicos operam sem restrições. A paridade monetária situa-se em 1 USD para 0.9 EUR, assegurando previsibilidade financeira a quem visita a região. Perante a beleza natural dos jardins e o casario romântico, a vila proporciona um ambiente de serena introspeção.",
               "source": "saudade desk",
               "source_date": "2026-11-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Dia de Todos-os-Santos altera o ritmo habitual dos serviços.",
-              "lede": "Neste 1 de novembro de 2026, repartições públicas, bancos e correios permanecem encerrados.",
-              "body": "A cidade desacelera no Dia de Todos-os-Santos, cumprindo a pausa tradicional de 1 de novembro de 2026. Serviços públicos, instituições bancárias e repartições oficiais fecham portas, convidando a passeios mais longos pelas ruas tranquilas e pelos espaços verdes da capital. Para quem chega de fora, a taxa de câmbio mantém-se estável com 1 USD a valer 0.9 EUR, facilitando as trocas comerciais nos estabelecimentos que continuam abertos. O comércio tradicional ajusta horários, mas a restauração mantém-se acessível para quem prefere observar o movimento calmo das praças. As praças históricas ganham uma luz particular neste domingo de outono, longe da urgência habitual dos dias úteis. É o momento ideal para caminhar sem destino certo, prestando atenção aos detalhes arquitetónicos que habitualmente escapam na pressa quotidiana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "A Fundação Cidade de Lisboa acolhe nova pintura e literatura.",
-              "lede": "Irene Queiroga apresenta o seu mais recente romance em simultâneo com uma exposição plástica.",
-              "body": "A Fundação Cidade de Lisboa abre as suas portas para uma tarde dedicada à expressão artística de Irene Queiroga. A autora revela o seu novo romance, acompanhado por uma seleção cuidada de peças de pintura que dialogam diretamente com a narrativa escrita. Este evento cultural enriquece a agenda da cidade neste início de novembro, oferecendo aos residentes e visitantes um refúgio de contemplação intelectual. A programação cultural da capital continua rica em diversidade, incluindo também a quinta edição do Festival de Danças Africanas e a fascinante exposição que revela a arte escondida nas notas de banco. Para os leitores atentos, há ainda espaço para redescobrir O jornal do Brasil em Portugal, consolidando laços culturais profundos entre as duas margens do Atlântico. Estes encontros intimistas reforçam o papel da cidade como um ponto de convergência para sensibilidades artísticas distintas e duradouras.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Notas e memórias revelam grafismos ocultos no papel moeda.",
-              "lede": "Uma nova exposição em Lisboa expõe os detalhes gráficos e artísticos escondidos nas notas.",
-              "body": "O papel moeda deixa de ser apenas um meio de troca económico para se transformar em suporte de alta expressão estética. A nova exposição inaugurada em Lisboa convida o público a observar de perto os microdetalhes, gravuras e paletas cromáticas que compõem as notas de diferentes origens e épocas. É um exercício de paciência visual que desafia o visitante a encontrar retratos, símbolos e paisagens miniaturizadas. A iniciativa complementa-se perfeitamente com a visita à apresentação literária de Irene Queiroga na Fundação Cidade de Lisboa e com o regresso do vibrante Festival de Danças Africanas na sua quinta edição consecutiva. Enquanto a taxa de câmbio permanece estável com 1 USD a cotar-se a 0.9 EUR, esta mostra lembra que o design monetário encerra séculos de história visual. Observar estas peças é compreender a identidade dos povos através dos traços mais discretos gravados na circulação diária.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Porto regista temperaturas amenas e céu limpo.",
-              "lede": "Com termómetros entre 11 e 24°C, o dia culmina num pôr do sol às 17:30.",
-              "body": "A atmosfera invicta apresenta-se clara e generosa neste dia 1 de novembro de 2026, com uma amplitude térmica que varia entre os 11 e os 24°C. A qualidade do ar mantém-se em níveis moderados, registando um valor de PM2.5 de 20, o que convida a longas caminhadas ao ar livre. À medida que a tarde avança, a luz dourada do outono reflete-se no rio Douro, culminando num pôr do sol pontual pelas 17:30. A taxa de câmbio praticada na região situa-se em 1 USD para 0.9 EUR, facilitando as transações para quem visita a cidade nestes dias festivos. Coincidindo com o Dia de Todos-os-Santos, os serviços públicos e os bancos encontram-se encerrados, garantindo uma atmosfera de recolhimento nas ruas históricas. É um momento de transição perfeita entre o descanso obrigatório do feriado e o retomar lento das rotinas urbanas habituais.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "A Foz recupera um emblema gastronómico com nova ementa.",
-              "lede": "Um restaurante histórico reabre as portas na Foz do Porto para degustação calma.",
-              "body": "O bairro da Foz volta a contar com um dos seus endereços mais emblemáticos para quem aprecia a boa mesa sem pressas. O restaurante reabre com uma ementa renovada, pensada ao detalhe para valorizar os produtos da estação e a tradição atlântica. Este espaço convida a uma experiência de degustação pausada, ideal para as tardes amenas que rondam os 24°C máximos desta época. A reabertura soma-se a outras novidades da mobilidade urbana, como a reabertura do VL8 na Arrábida no âmbito da Linha Rubi, facilitando as deslocações. A agenda cultural da cidade também já olha para o futuro, antecipando o regresso do Festival Literário Babell em 2028 e celebrando os 40 anos de Helena Cardoso na exposição Cartografias Poéticas. É o pretexto ideal para desfrutar da zona ocidental da cidade, combinando boa gastronomia e observação urbana com tranquilidade.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "A Linha Rubi devolve o eixo do VL8 na Arrábida.",
-              "lede": "A circulação automóvel e pedonal retoma a normalidade com a reabertura do VL8.",
-              "body": "A mobilidade na zona da Arrábida ganha um fôlego renovado com a reabertura oficial do VL8, um eixo viário fundamental para a travessia local. Esta intervenção enquadra-se no progresso contínuo da Linha Rubi, que promete transformar a conectividade metropolitana nos próximos anos. Enquanto os automobilistas e pees testam os novos fluxos, a cidade aproveita o ar moderado com PM2.5 de 20 e o céu limpo para passear. A oferta cultural continua rica, destacando-se a mostra Cartografias Poéticas que revisita quatro décadas de percurso artístico de Helena Cardoso. Para os viajantes que circulam pela cidade, a taxa de câmbio de 1 USD para 0.9 EUR permanece constante nos estabelecimentos comerciais que operam no feriado. A cidade respira um equilíbrio invulgar entre obras estruturais de futuro e a preservação do seu ritmo contemplativo clássico.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sintra desfruta de um domingo limpo e outonal.",
-              "lede": "Os termómetros alcançam os 25°C sob céus limpos, com o sol a despedir-se às 17:37.",
-              "body": "A serra mística acolhe o dia 1 de novembro de 2026 com condições meteorológicas generosas, oscilando entre os 12 e os 25°C. A qualidade do ar é considerada fair, registando um valor de PM2.5 de 16, o que torna a atmosfera cristalina para contemplar a paisagem cultural. O pôr do sol ocorre pelas 17:37, tingindo os palácios e as copas das árvores com tons dourados muito peculiares. Devido à celebração do Dia de Todos-os-Santos, as repartições públicas, os bancos e os serviços administrativos encontram-se encerrados em toda a vila. Paralelamente, a taxa de câmbio fixa-se em 1 USD para 0.9 EUR, mantendo a previsibilidade financeira para os visitantes estrangeiros que deambulam pelas ruas históricas. É um dia em que a natureza e a arquitetura romântica dialogam em absoluto silêncio, longe do bulgório habitual dos fins de semana de verão.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "A vila serrana acolhe letras e rituais ancestrais.",
-              "lede": "Sintra equilibra festivais literários e vivências celtas entre o património mundial.",
-              "body": "A programação cultural de Sintra confirma a sua vocação cosmopolita e atemporal com iniciativas que atraem mentes curiosas de várias origens. A vila recebe recentemente o seu Festival Literário Internacional, enquanto se destacam também os espetáculos de fogo, rituais e criaturas misteriosas do festival celta. Estes eventos de cariz imersivo dão nova vida aos espaços arborizados e praças históricas, criando memórias duradouras para quem visita a serra. A dinâmica económica local também evolui, evidenciada pela recente aquisição de um parque empresarial de 12.500 m² por um investidor internacional. Com o horizonte já posto no futuro, a região prepara-se igualmente para acolher o Tribeca Festival Lisboa 2026 em dezembro, unindo cinema e música. Entre o mistério das lendas celtas e o rigor da literatura, Sintra afirma-se como um território onde o tempo parece suspender-se.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "O investimento empresarial e a cultura moldam o futuro sintrense.",
-              "lede": "Um parque empresarial de 12.500 m² junta-se à vibrante agenda cultural da vila.",
-              "body": "O tecido económico de Sintra regista um movimento importante com a compra de um parque empresarial de 12.500 m² por parte de um investidor internacional. Esta operação demonstra a atratividade contínua do concelho não apenas para o turismo contemplativo, mas também para iniciativas de base sustentável. Enquanto a economia local se reorganiza, a agenda cultural continua preenchida com o Festival Literário Internacional e o festival celta de três dias. A qualidade do ar, marcada por um índice PM2.5 de 16, convida a explorar os trilhos da serra com total serenidade e clareza visual. Com temperaturas a atingirem os 25°C, os visitantes aproveitam para caminhar pelos jardins históricos antes da chegada do Tribeca Festival Lisboa 2026 em dezembro. Sintra prova, assim, saber gerir com elegância o contraste entre o seu passado mítico e a modernidade discreta.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
             }
           ]
         }
