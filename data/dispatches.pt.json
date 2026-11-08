@@ -1,95 +1,95 @@
 {
   "edition": "pt",
-  "filed_at": "2026-11-07T06:00:00+09:00",
-  "next_filing": "2026-11-07T21:00:00+00:00",
+  "filed_at": "2026-11-08T06:00:00+09:00",
+  "next_filing": "2026-11-08T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "LISBOA",
+      "city": "Lisboa",
       "items": [
         {
           "n": "01",
-          "headline": "A estação Praça de Espanha do Metro de Lisboa reabre totalmente renovada.",
-          "lede": "Os passageiros voltam a circular por plataformas modernizadas e mais luminosas.",
-          "body": "A renovação da estação Praça de Espanha devolve à cidade um ponto de circulação essencial com acessos melhorados e superfícies limpas. Sob um céu tipicamente encoberto e temperaturas entre 14 e 22°C, a circulação subterrânea ganha uma nova fluidez. O cair da noite ocorre cedo, pelas 17:30, tornando a iluminação renovada da estação particularmente útil para quem regressa a casa no final do dia. Os viajantes estrangeiros continuam a beneficiar de uma taxa de câmbio favorável de 1 USD para 0.9 EUR ao levantar numerário nas proximidades. As intervenções estruturais concluídas asseguram maior conforto diário para residentes e visitantes.",
+          "headline": "O LEFFEST regressa ao Cinema São Jorge com um olhar atento.",
+          "lede": "As salas iluminam-se para receber o festival de cinema que define o pulso cultural da capital.",
+          "body": "O LEFFEST – Lisboa Film Festival está de volta ao Cinema São Jorge, trazendo consigo uma seleção rigorosa de obras contemporâneas e retrospetivas essenciais. Para quem prefere a lentidão das salas escuras, esta é a altura perfeita para escapar à rotina urbana. À superfície, a qualidade do ar mantém-se em níveis aceitáveis, registando PM2.5 de 13, convidando a calmas caminhadas entre sessões. No plano prático, a taxa de câmbio situa-se em 1 USD para 0.9 EUR, facilitando a gestão financeira dos visitantes estrangeiros. A cidade vive um mês particularmente rico em ofertas culturais, com o Alkantara Festival e o Super Bock em Stock a preencherem os fins de semana com danças e sonoridades memoráveis. É um momento de rara simbiose entre o património arquitetónico e a criação artística moderna.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "02",
-          "headline": "O festival Super Bock em Stock ocupa salas e palcos emblemáticos da cidade.",
-          "lede": "The Jesus and Mary Chain e Linda Martini encabeçam os concertos deste fim de semana.",
-          "body": "A programação musical espalha-se por vários espaços lisboetas ao longo de duas noites dedicadas ao rock e à pop alternativa. Com as temperaturas a oscilar entre 14 e 22°C sob um manto de nuvens, caminhar entre salas de espetáculo faz-se sem o calor excessivo do verão. A noite cai por volta das 17:30, convidando o público a entrar cedo para os concertos agendados. Os visitantes internacionais encontram uma taxa de câmbio de 1 USD para 0.9 EUR, facilitando a aquisição de bilhetes e refeições ligeiras nas zonas circundantes. É recomendável consultar previamente os horários exatos de cada atuação para evitar filas prolongadas à entrada.",
+          "headline": "O Alkantara Festival cruza memórias e futuros na cidade.",
+          "lede": "A dança contemporânea ocupa os espaços lisboetas, desafiando perceções e celebrando a diversidade de corpos e vozes.",
+          "body": "O Alkantara Festival 2026 continua a sua programação em Lisboa, explorando caminhos onde as danças do presente dialogam com memórias ancestrais e futuros possíveis. Os palcos da cidade abrem-se a criadores de várias geografias, proporcionando um espaço de reflexão longe da urgência quotidiana. Enquanto assiste a estes momentos de partilha artística, o visitante pode circular livremente por uma Lisboa de qualidade do ar justa e PM2.5 de 13, ideal para deambulações a pé. Para as trocas comerciais e diárias, a referência cambial de 1 USD para 0.9 EUR permanece estável nos mercados locais. Este alinhamento de propostas culturais convida a abrandar o passo e a observar a forma como a cidade acolhe a vanguarda artística sem perder a sua identidade histórica profunda.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "03",
-          "headline": "Novas exposições revelam os bastidores da tecnologia e o património cultural urbano.",
-          "lede": "Os roteiros culturais deste mês destacam a inovação e a criatividade contemporânea em Lisboa.",
-          "body": "A oferta museológica da capital enriquece-se com propostas que cruzam a tecnologia com as artes visuais, atraindo um público curioso. Com o termómetro a marcar entre 14 e 22°C e um céu persistentemente nublado, as visitas a espaços interiores decorrem com total serenidade. O pôr do sol fixa-se pelas 17:30, prolongando as tardes dentro das galerias antes do recolher noturno. Para quem chega de fora, a taxa de câmbio de 1 USD para 0.9 EUR mantém a bilheteira acessível. Este roteiro essencial convida a pausas prolongadas frente a cada obra, longe da pressa quotidiana e em perfeita harmonia com o ritmo calmo da cidade.",
+          "headline": "Os acordes do Super Bock em Stock ecoam pelas ruas.",
+          "lede": "Músicos consagrados e novos talentos repartem-se por salas inesperadas da geografia urbana.",
+          "body": "O festival Super Bock em Stock revela os seus horários definitivos, destacando atuações muito esperadas de nomes como The Jesus and Mary Chain e Linda Martini. A circulação pelos vários espaços decorre com serenidade, beneficiando de uma qualidade do ar com PM2.5 de 13 que favorece os trajetos a pé entre concertos. Quem chega de fora encontra uma taxa de câmbio de 1 USD para 0.9 EUR, perfeitamente integrada no comércio local. A agenda cultural da cidade enriquece-se ainda com as exposições imperdíveis patentes este mês, criando um roteiro essencial para observadores atentos. Lisboa prova, uma vez mais, ser um território onde a música e o património coexistem numa harmonia singular e duradoura.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         }
       ]
     },
     {
-      "city": "PORTO",
+      "city": "Porto",
       "items": [
         {
           "n": "01",
-          "headline": "A FUJIFILM House of Photography Porto celebra o seu primeiro aniversário com uma exposição.",
-          "lede": "O espaço convida a comunidade a participar numa mostra comemorativa muito especial.",
-          "body": "Com uma qualidade do ar considerada justa e um índice PM2.5 de 13, a Invicta propõe passeios tranquilos pelas ruas da baixa. A celebração do primeiro aniversário da galeria na cidade traz uma exposição participativa que envolve criadores locais e visitantes. Os viajantes que planeiam desfrutar da cultura nortenha encontram uma taxa de câmbio de 1 USD para 0.9 EUR. As galerias e centros culturais oferecem um abrigo ideal para tardes calmas, longe do bulgário das artérias principais. A programação comemorativa prolonga-se ao longo dos próximos dias, promovendo o diálogo entre a fotografia contemporânea e o público.",
+          "headline": "O termómetro marca valores amenos enquanto o Queer Porto fecha as portas.",
+          "lede": "A noite de encerramento do festival coroa o cinema francês numa edição memorável.",
+          "body": "O Festival Queer Porto despede-se hoje com a sua noite de encerramento, celebrando um recorde de espectadores que prova a vitalidade desta iniciativa. Um filme francês sagrou-se vencedor, conquistando o público e o júri com uma narrativa sensível. Meteorologicamente, o dia regista temperaturas entre 17 e 22°C, acompanhadas por 1.2mm de precipitação em forma de aguaceiros passageiros até ao pôr do sol pelas 17:22. A taxa de câmbio fixa-se em 1 USD para 0.9 EUR, mantendo a estabilidade financeira habitual na Invicta. Paralelamente, a Casa Comum acolhe o Festival Internacional de Artes e Ópera do Porto, enquanto em Porto de Mós uma exposição cruza a arte com as memórias da migração forçada no período colonial. É um convite claro à introspeção e à descoberta cultural pausada.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "02",
-          "headline": "A Casa Comum acolhe o Festival Internacional de Artes e Ópera do Porto.",
-          "lede": "A programação artística cruza a música erudita com novas linguagens visuais e dramáticas.",
-          "body": "O festival ocupa diferentes espaços da universidade e da cidade com récitas, conversas e concertos memoráveis. Com a qualidade do ar a registar um nível justo e PM2.5 de 13, as deslocações a pé entre recintos fazem-se com agradável leveza. A taxa de câmbio de 1 USD para 0.9 EUR continua a ser vantajosa para os visitantes estrangeiros que compram publicações e bilhetes no local. A Casa Comum consolida-se assim como um polo de convergência cultural incontornável para quem aprecia a lentidão criativa. Recomenda-se a reserva antecipada para os espetáculos de ópera de câmara devido à lotação reduzida das salas.",
+          "headline": "A Casa Comum abre espaço à ópera e às artes visuais.",
+          "lede": "O festival internacional ecoa nos corredores universitários e culturais da cidade.",
+          "body": "A programação do Festival Internacional de Artes e Ópera do Porto traz novas sonoridades à Casa Comum, consolidando o papel da cidade como polo de excelência artística. Entre aguaceiros pontuais que totalizam 1.2mm de precipitação e marcas térmicas amenas de 17 a 22°C, o ambiente convida a recolher-se em espaços abrigados. O cair da noite, assinalado pontualmente pelas 17:22, devolve às ruas uma penumbra melancólica ideal para quem aprecia caminhar sem pressas. Para os viajantes internacionais, a conversão monetária mantém-se estável nos 1 USD para 0.9 EUR. Enquanto o Queer Porto encerra a sua edição com um registo histórico de assistência, a região continua a desdobrar-se em iniciativas reflexivas, como a mostra em Porto de Mós sobre migrações e arte colonial.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "03",
-          "headline": "Novas exposições revelam o foco oculto nas ruínas e a biodiversidade insular.",
-          "lede": "Nuno Henrique inspira-se num pequeno caracol do Porto Santo para uma mostra singular.",
-          "body": "As galerias portuenses dedicam espaço a olhares singulares sobre a arquitetura degradada e as formas naturais microscópicas. A qualidade do ar permanece justa, com PM2.5 de 13, criando um ambiente estável para percursos urbanos contemplativos. Os turistas e residentes podem contar com uma taxa de câmbio de 1 USD para 0.9 EUR para gerir as suas despesas em livrarias e cafés. A exposição que descobre a beleza na ruína convida a uma reflexão demorada sobre o tempo e a matéria. Estes projetos expositivos reafirmam a capacidade do Porto em olhar para o passado com uma sensibilidade esteticamente renovada.",
+          "headline": "A arte cruza memórias da migração na região envolvente.",
+          "lede": "Exposições de profundidade histórica dialogam com o presente nas margens do território.",
+          "body": "A exposição inaugurada em Porto de Mós estabelece uma ponte sensível entre a arte contemporânea e as memórias da migração forçada no Portugal colonial. No Porto, a atmosfera urbana é moldada por temperaturas que oscilam entre 17 e 22°C e por 1.2mm de precipitação ligeira. O dia avança célere até ao pôr do sol, previsto para as 17:22, marcando o fim de tarde com luzes douradas sobre o casario. A economia local transcende-se com a taxa de câmbio de 1 USD para 0.9 EUR, facilitada em transações correntes. Com o encerramento do Festival Queer Porto e o dinamismo da Casa Comum na ópera, a cidade encerra a semana num tom de contemplação madura, perfeito para o viajante que procura substância e silêncio.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         }
       ]
     },
     {
-      "city": "SINTRA",
+      "city": "Sintra",
       "items": [
         {
           "n": "01",
-          "headline": "O MU.SA recebe uma exposição dedicada à evolução da veste litúrgica.",
-          "lede": "O espólio têxtil e histórico revela séculos de tradição e simbologia religiosa.",
-          "body": "As salas do MU.SA abrigam um percurso minucioso pela paramentaria e pela arte litúrgica tradicional. Sob um céu totalmente encoberto e temperaturas entre 15 e 21°C, a vila serrana oferece um refúgio perfeito para visitas demoradas. A noite instala-se rapidamente na serra, com o pôr do sol marcado para as 17:31, conferindo um ambiente recolhido aos espaços municipais. Quem visita a região beneficia de uma taxa de câmbio de 1 USD para 0.9 EUR nas trocas monetárias correntes. A exposição convida a observar os detalhes minuciosos dos bordados e tecidos antigos com a devida atenção e silêncio.",
+          "headline": "A serra acolhe poetas e pensadores num festival feliz.",
+          "lede": "As palavras encontram abrigo na névoa e na pedra antiga do romantismo sintrense.",
+          "body": "Um festival feliz reúne em Sintra romancistas, poetas e outros pensadores para debates intimistas longe do ruído moderno. O evento decorre sob condições meteorológicas desafiantes, marcadas por temperaturas entre 17 e 21°C e 5.4mm de precipitação associada a trovoadas passageiras. A luz natural desvanece-se cedo, com o pôr do sol apontado para as 17:30, tingindo a vegetação densa de tons outonais profundos. Para os visitantes estrangeiros, a taxa de câmbio mantém-se nos 1 USD para 0.9 EUR, assegurando transações previsíveis nas livrarias e cafés locais. A atmosfera húmida da serra convida a longas permanências em salas aquecidas, onde a literatura e a filosofia se fundem com o espírito contemplativo da vila.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "02",
-          "headline": "D. Alexandre Palma participa na inauguração da mostra sobre paramentaria.",
-          "lede": "A cerimónia inaugural destacou a importância da preservação do património eclesiástico.",
-          "body": "A reflexão sobre a evolução dos paramentos sacros cruza a história da arte com a liturgia católica. Com temperaturas amenas entre 15 e 21°C e um horizonte consistentemente nublado, o microclima da serra convida a caminhadas curtas entre os palácios e os museus. O sol despede-se cedo, pelas 17:31, antecipando o silêncio noturno que caracteriza as ruas históricas de Sintra. Os viajantes estrangeiros dispõem de uma taxa de câmbio de 1 USD para 0.9 EUR para planear as suas compras locais. Este evento cultural reforça o papel da vila como guardiã de memórias seculares e tradições artísticas refinadas.",
+          "headline": "A trovoada atravessa a paisagem protegida da vila histórica.",
+          "lede": "O rigor do clima outonal convida a abrandar o passo entre palácios e bosques.",
+          "body": "A ocorrência de trovoadas e 5.4mm de chuva molda o ritmo de Sintra, onde a temperatura se mantém suave, variando entre 17 e 21°C. Este cenário climático realça o misticismo dos palácios e jardins, servindo de pano de fundo perfeito para o festival de pensadores que decorre na vila. O entardecer chega às 17:30, encurtando as horas de claridade e exigindo atenção redobrada nos trilhos calcetados da serra. No plano económico, o câmbio oficial permanece estável em 1 USD para 0.9 EUR. A união entre a poesia e a intempérie cria uma oportunidade singular para observar a paisagem cultural com o distanciamento e a serenidade que o lugar exige.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         },
         {
           "n": "03",
-          "headline": "A arte litúrgica contemporânea e histórica dialoga nos espaços culturais sintrenses.",
-          "lede": "A programação cultural da vila aprofunda o conhecimento sobre o património religioso.",
-          "body": "A iniciativa reúne peças de ourivesaria e têxteis que testemunham a mestria de oficinas seculares. O termómetro oscila entre 15 e 21°C sob nuvens densas, mantendo o ambiente propício à contemplação interior nos museus locais. A noite chega pontualmente às 17:31, convidando os visitantes a recolherem-se em espaços acolhedores e a saborear a pastelaria tradicional da região. A taxa de câmbio de 1 USD para 0.9 EUR assegura transações simples para os visitantes internacionais. Sintra confirma assim a sua vocação para acolher exposições de grande rigor técnico e espiritual, longe das multidões estivais.",
+          "headline": "O crepúsculo antecipado pelas 17:30 silencia os caminhos da serra.",
+          "lede": "Entre livros e refúgios de pedra, a vila recupera a sua calma secular.",
+          "body": "Com o sol a ocultar-se às 17:30, Sintra recolhe-se ao calor dos seus espaços históricos enquanto decorrem os encontros literários do seu festival de pensadores. O dia regista 5.4mm de precipitação e trovoada, acompanhadas por marcas térmicas agradáveis de 17 a 21°C que atenuam a humidade da serra. A par disto, a estabilidade financeira com a taxa de câmbio de 1 USD para 0.9 EUR apoia a estadia de quem viaja em busca de inspiração. Os visitantes encontram na vila um refúgio ideal para a leitura e para a contemplação da natureza sob céus dramáticos. É um tempo de recolhimento onde a palavra escrita assume o protagonismo absoluto sobre a pedra milenar.",
           "source": "saudade desk",
-          "source_date": "2026-11-07"
+          "source_date": "2026-11-08"
         }
       ]
     }

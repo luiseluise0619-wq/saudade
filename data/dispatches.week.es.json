@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-07T06:00:00+09:00",
+  "updated": "2026-11-08T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-08T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Otoño arranca con la mirada de Robert Wilson en homenaje a Fernando Pessoa.",
+              "lede": "La cuadragésima cuarta edición de la cita escénica madrileña llena los teatros de la capital durante noviembre.",
+              "body": "El Festival de Otoño de la Comunidad de Madrid inaugura su cuadragésima cuarta edición con una propuesta escénica de Robert Wilson que rinde homenaje a Fernando Pessoa. Las salas de la región acogen montajes contemporáneos mientras la atmósfera urbana acoge con calma la llegada del frío. Conviene recordar que el cambio actual se sitúa en 1 USD frente a 0.9 EUR para los visitantes extranjeros. En paralelo, el Festival de Jazz de Ciudad Lineal despliega once conciertos gratuitos en distintos espacios del distrito. Los escenarios locales alternan la música en directo con las artes visuales de temporada. La ciudad transita el mes con una amplia oferta cultural accesible para el paseante pausado.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "Alcalá de Henares acoge la quincuagésima quinta edición de su festival cinematográfico.",
+              "lede": "El certamen ALCINE reúne producciones independientes en las salas históricas de la ciudad complutense.",
+              "body": "La Comunidad de Madrid celebra el desarrollo de ALCINE 55, el Festival de Cine de Alcalá de Henares, consolidado como una de las citas imprescindibles del cortometraje europeo. Los espectadores locales disfrutan de proyecciones y encuentros con creadores en los espacios tradicionales del municipio. Mientras tanto, el aire de la capital registra un nivel moderado de partículas PM2.5 en 34, aconsejando paseos tranquilos por los parques urbanos. Quienes busquen propuestas plásticas fuera de los circuitos habituales pueden visitar la intervención del colectivo Alalimón. Su particular mirada del año 3000 permanece expuesta en Madrid hasta el próximo mes de enero. La agenda cultural ofrece refugio frente al descenso térmico otoñal.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "El Festival de Jazz de Ciudad Lineal ofrece once conciertos gratuitos durante noviembre.",
+              "lede": "Los escenarios del distrito madrileño acogen actuaciones abiertas al público en una programación de cercanía.",
+              "body": "El distrito de Ciudad Lineal impulsa su programación musical con el inicio de su festival de jazz, que programa un total de once conciertos de acceso libre para residentes y visitantes. La iniciativa fomenta la escucha atenta en espacios de barrio alejados del bullicio central. En el plano financiero, la cotización oficial se mantiene estable en 1 USD equivalente a 0.9 EUR para las transacciones cotidianas. La calidad del aire urbano se mantiene en registros moderados, con un valor de PM2.5 en 34 que permite disfrutar de las calles con normalidad. Los amantes del arte contemporáneo también pueden acercarse a contemplar la visión futurista del colectivo Alalimón antes de su clausura en enero. Madrid equilibra así su pulso monumental con la intimidad de sus propuestas culturales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival 42 convoca a los amantes de los géneros fantásticos con la figura de H. P. Lovecraft.",
+              "lede": "El certamen barcelonés reúne la literatura especulativa y el misterio en los espacios culturales de la ciudad.",
+              "body": "Barcelona acoge una nueva entrega del Festival 42 de géneros fantásticos, un punto de encuentro donde la literatura de terror y ciencia ficción ocupa el centro del debate intelectual. La figura de H. P. Lovecraft sobrevuela las mesas redondas y presentaciones que animan las jornadas de noviembre. Los viajeros que llegan a Cataluña pueden realizar sus gestiones financieras considerando una tasa de cambio de 1 USD por cada 0.9 EUR. Tras el paso de la exposición Reyes del Mundo durante los primeros días del mes, la agenda urbana continúa con propuestas fotográficas y científicas. Las librerías independientes y los centros cívicos completan una oferta ideal para los días de transición estacional. La ciudad invita a recorrer sus calles con la mirada atenta a los detalles literarios.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "La programación de fin de semana combina el fotoperiodismo con un viaje al periodo Jurásico.",
+              "lede": "Los espacios expositivos de Barcelona diversifican sus propuestas entre la memoria visual y la paleontología.",
+              "body": "La oferta cultural de la capital catalana se despliega este fin de semana con itinerarios que van desde el reporterismo gráfico internacional hasta los grandes yacimientos del Jurásico. Las familias y los observadores curiosos hallan en los museos locales alternativas perfectas para los días de menor intensidad turística. En el aspecto económico, la equivalencia monetaria se sitúa estable en 1 USD por 0.9 EUR. Este ambiente coincide con la resaca del Festival 42, que ha celebrado la literatura fantástica y el legado de autores como H. P. Lovecraft en distintos puntos de la red cultural. Las calles del Eixample y el barrio Gótico conservan ese ritmo pausado propio del otoño mediterráneo. Cada rincón ofrece una pausa silenciosa para quienes buscan contenido más allá del ocio convencional.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "El eco de las grandes exposiciones universales resuena en la agenda cultural barcelonesa.",
+              "lede": "La muestra dedicada a las muestras universales entabla un diálogo histórico con el pasado industrial de la ciudad.",
+              "body": "Las referencias a las grandes exposiciones universales ocupan parte del discurso cultural en Barcelona, conectando el pasado industrial catalán con eventos de calado internacional. La ciudad mantiene su atractivo para el viajero sosegado que prefiere los itinerarios museísticos a las rutas masificadas. Para la planificación económica, cabe recordar que el tipo de cambio oficial se mantiene en 1 USD equivalente a 0.9 EUR. La culminación reciente de muestras como Reyes del Mundo da paso a una programación donde conviven el fotoperiodismo y la divulgación científica sobre el Jurásico. Los cafés tradicionales y los shade-gardens de la ciudad ofrecen refugio frente a las brisas frescas de la temporada. Barcelona consolida así un otoño de reflexión pausada y encuentros literarios.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival Helix entrelaza propuestas internacionales de arte, ciencia y tecnología en Buenos Aires.",
+              "lede": "Las jornadas culturales de noviembre suman espacios de experimentación digital y pensamiento contemporáneo.",
+              "body": "Buenos Aires experimenta una jornada despejada con temperaturas que oscilan entre 11 y 20 °C, favoreciendo los desplazamientos a pie por los barrios tradicionales. El índice UV alcanza un nivel 9, considerado muy alto, por lo que se recomienda protección solar durante las horas centrales del día. La calidad del aire es fair, registrando un valor bajo de PM2.5 en 8 que asegura un ambiente limpio. En este contexto, el Festival Helix reúne en la capital propuestas internacionales que hibridan el arte, la ciencia y la tecnología. Los centros culturales de la ciudad adaptan sus horarios de cara al atardecer, previsto para las 19:29. La ciudad ofrece así un equilibrio perfecto entre la luz diurna y el bullicio intelectual de sus salas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Buenos Aires Rojo Sangre estrena nueva sede en su edición de este año.",
+              "lede": "El certamen de cine fantástico y bizarro anuncia su programación oficial con sorpresas temáticas.",
+              "body": "La escena cinéfila porteña se moviliza con el Festival Buenos Aires Rojo Sangre, que en esta edición cambia de sede para albergar su nutrida cartelera de cine independiente y fantástico. Entre las propuestas destaca la presencia de contenidos interactivos vinculados al universo de Dead by Daylight dentro de las secciones paralelas. Las condiciones meteorológicas acompañan el evento con una franja térmica de 11 a 20 °C y cielos completamente despejados. El índice UV se sitúa en 9, un registro muy alto que exige precaución al aire libre, mientras la contaminación ambiental se mantiene en niveles mínimos con un PM2.5 en 8. La puesta de sol está fijada a las 19:29, permitiendo disfrutar de largas caminatas vespertinas por las avenidas arboladas de la metrópolis austral.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            },
+            {
+              "n": "03",
+              "headline": "La programación oficial del Rojo Sangre confirma su apuesta por el cine de género independiente.",
+              "lede": "Los seguidores del cine de culto descubren nuevas ubicaciones y proyecciones exclusivas en la capital.",
+              "body": "El Festival Buenos Aires Rojo Sangre despliega su programación oficial tras anunciar su traslado a una nueva sede que amplía el confort de los asistentes. Las proyecciones de cine fantástico alternan con muestras de cultura digital, incluyendo guiños al videojuego Dead by Daylight. Afuera, la jornada transcurre con temperaturas de 11 a 20 °C bajo un cielo despejado y limpio. La concentración de partículas PM2.5 se sitúa en 8, reflejando una calidad del aire fair y muy favorable para el descanso urbano. Con un índice UV muy alto de 9 y el ocaso programado para las 19:29, las tardes porteñas invitan a prolongar el café al aire libre antes de ingresar a las salas oscuras. Buenos Aires despide la semana con su habitual vitalidad cultural y templanza climática.",
+              "source": "saudade desk",
+              "source_date": "2026-11-08"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-07T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los cinéfilos porteños disponen de una cartelera alternativa que prioriza la autoría independiente y los lenguajes visuales arriesgados. La programación detalla las fechas y los espacios habilitados para disfrutar de cada una de las películas programadas. Esta propuesta se enmarca en la agenda cultural de noviembre, que busca democratizar el acceso al arte audiovisual. Las proyecciones van acompañadas de charlas con los realizadores, generando un espacio de diálogo íntimo con el público. Buenos Aires reafirma así su vocación de albergar iniciativas culturales diversas y abiertas a la comunidad.",
               "source": "saudade desk",
               "source_date": "2026-11-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El AVE Madrid-Andalucía reanudará su servicio completo el 14 de noviembre.",
-              "lede": "Las conexiones ferroviarias recuperan su normalidad tras el incidente ocurrido en Urda.",
-              "body": "Los viajeros que planeen desplazamientos hacia el sur de España tras el Día de todos los Santos deben tener en cuenta que el trayecto recuperará su operatividad habitual el 14 de noviembre. Hasta esa fecha, las rutas hacia Andalucía mantienen los ajustes operativos necesarios tras el accidente registrado en la zona de Urda. Conviene revisar los horarios actualizados en las estaciones antes de acudir. El tipo de cambio se sitúa en 1 USD frente a 0.9 EUR para quienes necesiten realizar operaciones financieras durante el trayecto. La programación cultural de la ciudad continúa su curso habitual, combinando propuestas musicales y de artes escénicas en diversos espacios urbanos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "El Movistar Arena acoge el concierto de Morat con accesos regulados.",
-              "lede": "La jornada musical de hoy sábado exige planificar los traslados con antelación.",
-              "body": "El recinto recibe esta noche la actuación de la formación musical en medio de una alta expectación de público. Se recomienda utilizar el transporte público y consultar los accesos habilitados para evitar aglomeraciones en los alrededores del pabellón. La festividad del Día de todos los Santos coincide con esta cita de fin de semana, por lo que el flujo de visitantes en la ciudad es notable. Quienes lleguen desde el extranjero cuentan con una referencia de 1 USD equivalentes a 0.9 EUR en las oficinas de cambio. Conviene recordar que los servicios administrativos y bancarios permanecen cerrados hoy debido al festivo nacional.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Las oficinas bancarias y de la administración cierran por el Día de todos los Santos.",
-              "lede": "La festividad del 1 de noviembre altera los servicios presenciales en la capital.",
-              "body": "Con motivo de la celebración del Día de todos los Santos, la actividad institucional y financiera de la ciudad experimenta una pausa generalizada. Los ciudadanos y visitantes deben posponer cualquier gestión administrativa hasta la jornada laborable del lunes. El comercio de barrio y los espacios de hostelería adaptan sus horarios de apertura según la zona comercial. Para los viajeros internacionales, el tipo de cambio oficial se mantiene estable en 1 USD por 0.9 EUR en cajeros automáticos. Las propuestas culturales recientes, como el ciclo Madrid Urban Fest y las iniciativas de Escenas de Verano, siguen enriqueciendo la oferta de ocio urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La calidad del aire se mantiene en niveles regulares durante el festivo.",
-              "lede": "El ambiente parcialmente nublado acompaña una jornada con temperaturas entre 15 y 22°C.",
-              "body": "La atmósfera registra un índice de PM2.5 de 25, situando la calidad del aire en valores pobres que aconsejan moderación en actividades físicas prolongadas al aire libre. El termómetro oscila entre los 15 y 22°C bajo un cielo parcialmente nublado que antecede a la puesta de sol prevista para las 17:46. Coincidiendo con la festividad del Día de todos los Santos, la ciudad ofrece alternativas culturales bajo techo, como la exposición Reyes del Mundo en la sede de la RFEF. El tipo de cambio se establece en 1 USD por 0.9 EUR para los visitantes extranjeros. Los espacios museísticos adaptan sus horarios especiales de apertura para recibir al público local y foráneo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "Los Museos Vaticanos y el festival In-Edit marcan la agenda cultural de noviembre.",
-              "lede": "El arte sacro del siglo XX y los documentales musicales ocupan los espacios de la ciudad.",
-              "body": "La oferta cultural de Barcelona se amplía este fin de semana con propuestas de gran calado histórico y musical. La muestra de arte sacro procedente de los Museos Vaticanos convive con las proyecciones del Festival In-Edit, que reúne figuras esenciales como Marianne Faithfull y David Bowie. Paralelamente, el Museu Egipci inaugura su sala inmersiva dedicada a la figura del explorador Iny. Con una temperatura exterior que varía de 15 a 22°C y el sol ocultándose a las 17:46, los espacios interiores son el refugio ideal para los visitantes. El aire muestra un registro de PM2.5 de 25, manteniendo un perfil atmosférico discretamente brumoso en los paseos marítimos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Los servicios bancarios y administrativos suspenden su atención al público.",
-              "lede": "El festivo del Día de todos los Santos paraliza la actividad oficial en la ciudad.",
-              "body": "La celebración del Día de todos los Santos determina el cierre de oficinas gubernamentales, bancos y dependencias postales durante toda la jornada. Los residentes y viajeros deben planificar sus transacciones financieras teniendo en cuenta que la equivalencia monetaria actual es de 1 USD por 0.9 EUR. A pesar de la festividad, las principales exposiciones y museos de la ciudad permanecen accesibles con horarios adaptados. El cielo se presenta parcialmente nublado con registros térmicos de 15 a 22°C. La puesta de sol a las 17:46 marca el inicio de una noche tranquila donde la actividad cultural privada toma el relevo de la administración pública.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las tormentas y las precipitaciones marcan la meteorología de este sábado.",
-              "lede": "Se registran 23.2mm de lluvia bajo temperaturas que oscilan entre 17 y 23°C.",
-              "body": "El transcurso del día viene condicionado por un episodio de tormentas que deja acumulados de 23.2mm de precipitación en distintos puntos de la ciudad. El ambiente se mantiene templado con registros térmicos de 17 a 23°C y la puesta de sol programada para las 19:23. La calidad del aire se sitúa en un nivel fair con un valor de PM2.5 de 14, favoreciendo un entorno exterior aceptable pese a la inestabilidad climática. Los desplazamientos urbanos requieren precaución debido a la acumulación puntual de agua en calzadas y pasos subterráneos. Los espacios culturales cerrados se convierten en la opción preferida por los residentes para disfrutar de la jornada sabatina.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "La Semana del Patrimonio invita a recorrer palacios y museos recuperados.",
-              "lede": "El circuito cultural urbano ofrece acceso especial a sitios arqueológicos de la ciudad.",
-              "body": "A pesar de las condiciones meteorológicas marcadas por la lluvia y las tormentas con 23.2mm de agua caída, la programación cultural sigue adelante. La Semana del Patrimonio propone un recorrido detallado por palacios históricos, museos tradicionales y un sitio arqueológico recientemente recuperado para la ciudadanía. Las temperaturas se mueven entre 17 y 23°C, acompañadas por una calidad de aire fair con un indicador PM2.5 de 14. La puesta de sol ocurrirá a las 19:23, otorgando una tarde larga para visitar muestras en espacios cubiertos. Es una ocasión idónea para redescubrir la arquitectura institucional de la capital sin prisas ni aglomeraciones.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "El cine y la inteligencia artificial protagonizan los festivales de la temporada.",
-              "lede": "El WAIFF y el Festival OFFNI presentan proyecciones con entrada gratuita.",
-              "body": "La vanguardia audiovisual ocupa un lugar central en la agenda porteña con propuestas innovadoras en torno a la inteligencia artificial. Los galardonados en el WAIFF Buenos Aires y la programación del Festival OFFNI ofrecen una mirada singular sobre la creación cinematográfica contemporánea con acceso libre para los espectadores. Esta oferta cultural contrasta amablemente con el pulso meteorológico exterior, caracterizado por 23.2mm de lluvia, tormentas dispersas y temperaturas de 17 a 23°C. La caída del sol a las 19:23 da paso a funciones nocturnas en salas resguardadas del temporal. Con una calidad del aire fair y un registro de PM2.5 de 14, la atmósfera urbana respira con serenidad tras las precipitaciones.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
             }
           ]
         }
