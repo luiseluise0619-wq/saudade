@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-08T06:00:00+09:00",
+  "updated": "2026-11-09T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-09T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Otoño arranca su 44ª edición con Robert Wilson.",
+              "lede": "La cita cultural madrileña rinde homenaje a la figura de Pessoa en los escenarios de la capital.",
+              "body": "El Festival de Otoño de la Comunidad de Madrid inaugura su cuadragésima cuarta edición con una propuesta escénica firmada por el director Robert Wilson. La obra funciona como un sentido homenaje a la figura y los heterónimos del poeta Fernando Pessoa. Las funciones ocupan varios espacios culturales de la ciudad durante las próximas semanas. Conviene consultar la programación previa para asegurar las entradas en las salas principales. La propuesta consolida el pulso otoñal de la escena madrileña.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "02",
+              "headline": "César Fernández Arias expone su obra reciente en galerías madrileñas.",
+              "lede": "El creador presenta una mirada singular sobre los objetos cotidianos y la materia escultórica.",
+              "body": "Las salas de exposiciones de Madrid acogen una nueva muestra individual dedicada al artista César Fernández Arias. Su trabajo reúne piezas recientes donde el dibujo y el volumen dialogan con la memoria material. La propuesta invita a una observación pausada, lejos de las grandes aglomeraciones del centro urbano. Es una parada recomendada para quienes buscan el pulso artístico menos estridente de la ciudad. La entrada a la sala permanece abierta de martes a domingo en horario continuado.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "03",
+              "headline": "El mayor parque navideño abre a 20 kilómetros de Madrid el 13 de noviembre.",
+              "lede": "El recinto ofrece pista de hielo, iluminación monumental y la llegada anticipada de Papá Noel.",
+              "body": "A solo 20 kilómetros del núcleo urbano, el mayor parque navideño de España abre sus puertas el 13 de noviembre. El espacio cuenta con 100000 metros cuadrados de iluminación decorativa, una amplia pista de hielo y la presencia prevista de Papá Noel volando sobre el recinto. La iniciativa busca transformar el entorno natural en un punto de encuentro familiar previo a las fiestas. Los accesos en transporte público se refuerzan para absorber la alta demanda de visitantes durante los fines de semana. Las entradas anticipadas ya se pueden adquirir en línea.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La música de Vijay Iyer llega al Festival de Jazz de Barcelona.",
+              "lede": "El Conservatori del Liceu acoge una de las citas imprescindibles para los amantes del género.",
+              "body": "El prestigioso pianista Vijay Iyer se presenta en el marco del Festival de Jazz de Barcelona. Las actuaciones tienen lugar en las instalaciones del Conservatori del Liceu, un espacio con excelente acústica para el formato de trío. La atmósfera invita a la escucha atenta de composiciones contemporáneas que cruzan la improvisación y la tradición clásica. Conviene llegar con antelación para acceder a la sala sin prisas. El evento reafirma la vitalidad musical de la temporada barcelonesa de otoño.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "02",
+              "headline": "El MIRA Festival celebra su decimoquinto aniversario con 14000 asistentes.",
+              "lede": "La música electrónica y los espectáculos audiovisuales cierran otra edición de referencia.",
+              "body": "El MIRA Festival ha clausurado la edición de su 15 aniversario tras reunir a 14000 asistentes en sus diferentes espacios. El encuentro consolida su apuesta por la vanguardia sonora y las instalaciones lumínicas de gran formato. Durante las jornadas, el público ha podido disfrutar de estrenos absolutos y colaboraciones entre artistas visuales y músicos electrónicos. La organización ya trabaja en la ampliación de sus horizontes para las próximas convocatorias en la capital catalana. El balance final destaca por el civismo y la fluidez en los accesos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "03",
+              "headline": "Caminatas bajo lluvia ligera con temperaturas de 16 a 19°C.",
+              "lede": "El litoral barcelonés registra valores moderados de contaminación y cielos cubiertos.",
+              "body": "Las calles de Barcelona registran temperaturas suaves que oscilan entre los 16 y los 19°C, acompañadas de 1.2mm de precipitación en forma de lluvia ligera. La puesta de sol se adelanta a las 17:37, marcando el compás vespertino en paseos y parques urbanos. La calidad del aire se mantiene en niveles moderados, con un valor de PM2.5 en 16, ideal para caminatas urbanas sin esfuerzo físico excesivo. Conviene llevar un paraguas ligero ante los chubascos esporádicos que puedan aparecer junto al mar. Las terrazas del Gòtic y la Barceloneta adaptan su servicio al compás meteorológico.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival Buenos Aires Rojo Sangre anuncia su nueva sede y programación.",
+              "lede": "El clásico encuentro de cine fantástico reúne más de un centenar de producciones.",
+              "body": "El Festival Buenos Aires Rojo Sangre regresa con once días dedicados al cine fantástico, bizarro y de terror. La cita incluye estrenos internacionales, clásicos restaurados y la participación de 110 equipos en el concurso de cortometrajes. Esta edición cuenta con una nueva sede oficial que centraliza las proyecciones y los encuentros con realizadores. Los cinéfilos porteños disponen de una parrilla de actividades pensada para maratones de fin de semana. La venta de localidades se realiza directamente en las taquillas del complejo elegido.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Literal reúne la discusión sobre literatura joven en la ciudad.",
+              "lede": "Autores y editores independientes debaten sobre las nuevas voces de la narrativa actual.",
+              "body": "Buenos Aires acoge una nueva entrega del Festival Literal, un espacio de reflexión dedicado a las letras jóvenes. Las mesas de debate abordan los desafíos de la edición independiente y las derivas de la narrativa contemporánea. Diversos referentes del sector se dan cita para compartir lecturas y talleres abiertos al público lector. El ambiente propicia el intercambio de ideas en librerías de barrio y centros culturales adheridos. La asistencia es libre hasta completar el aforo de cada sala.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            },
+            {
+              "n": "03",
+              "headline": "Jornadas luminosas de 14 a 23°C y preparación para el feriado.",
+              "lede": "El cielo despejado y el índice UV muy alto marcan la agenda al aire libre en Buenos Aires.",
+              "body": "Buenos Aires disfruta de temperaturas que van de los 14 a los 23°C bajo cielos completamente despejados. La puesta de sol se registra a las 19:30, alargando las tardes en plazas y parques de la ciudad. La calidad del aire es fair con un nivel de PM2.5 en 12, aunque el índice UV alcanza un valor de 9, considerado muy alto. Se recomienda el uso de protección solar si se planean largas caminatas al aire libre. De cara al próximo feriado del Día de la Soberanía Nacional el 23 de noviembre, los servicios administrativos y bancarios ajustarán sus horarios habituales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-09"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-08T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La vanguardia tecnológica se cita en la cartelera cultural porteña a través de las jornadas del festival WAIFF. Las proyecciones y encuentros galardonados en esta edición han convocado a creadores y pensadores en torno a la relación entre máquinas y celuloide. Durante los paneles, figuras procedentes de la interpretación y de empresas como Apple han analizado los cambios metodológicos que introduce la inteligencia artificial en el cine contemporáneo. Estos debates ofrecen una pausa reflexiva para comprender el rumbo estético de la imagen en movimiento. La ciudad acoge estas conversaciones en espacios cerrados donde el clima exterior apenas interrumpe el diálogo.",
               "source": "saudade desk",
               "source_date": "2026-11-03"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-02T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid registra cielos despejados con temperaturas entre 6 y 19°C.",
-              "lede": "La luz de noviembre se instala en la capital al caer el sol a las 18:10.",
-              "body": "El clima otoñal ofrece mañanas nítidas y tardes apacibles que invitan a recorrer las calles sin prisa. Con un tipo de cambio estable de 1 USD a 0.9 EUR, los paseantes disfrutan del ritmo pausado de la ciudad. Tras la festividad del Día de todos los Santos del 1 de noviembre, la actividad administrativa recupera su pulso habitual. Las terrazas del centro aprovechan las horas centrales de luz antes del descenso térmico vespertino. Es el momento perfecto para observar el tono dorado sobre las fachadas históricas de la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "02",
-              "headline": "El Teatro Español acoge la exposición Madrid en el Siglo de Oro.",
-              "lede": "El arte barroco revela cómo eran los antiguos espacios urbanos de la capital.",
-              "body": "La pinacoteca madrileña presenta una muestra que profundiza en la arquitectura y la vida cotidiana de siglos pasados. Esta exposición permite comprender la transformación del plano urbano a través de lienzos y grabados originales. Los visitantes encuentran en estas salas un refugio tranquilo frente al bullicio exterior de noviembre. La pinacoteca mantiene sus horarios habituales tras el reciente festivo de principios de mes. Es una parada indispensable para quienes buscan conectar con la memoria artística y física de Madrid.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "03",
-              "headline": "El ciclo Grandes del Gospel celebra su XXXII edición en Madrid.",
-              "lede": "Las voces corales llenan los auditorios madrileños en las primeras semanas de noviembre.",
-              "body": "Este veterano festival musical regresa a los escenarios de la ciudad con un repertorio clásico y emotivo. Las actuaciones ofrecen un contrapunto sonoro ideal para las tardes frescas de otoño en la capital. Paralelamente, los aficionados al arte pueden visitar la exposición sobre Michael Jackson que acaba de abrir sus puertas. Las entradas para ambos eventos se adquieren fácilmente con la conversión de 1 USD a 0.9 EUR. La programación cultural de la ciudad equilibra la tradición escénica con propuestas contemporáneas de gran formato.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona mantiene una calidad del aire favorable con un índice PM2.5 de 8.",
-              "lede": "Las condiciones atmosféricas actuales favorecen los largos paseos junto al mar.",
-              "body": "La atmósfera limpia de estos días permite contemplar el perfil litoral con una claridad inusual para el mes de noviembre. El tipo de cambio se sitúa en 1 USD frente a 0.9 EUR en los comercios locales. Después del festivo del Día de todos los Santos celebrado el 1 de noviembre, los espacios públicos recuperan su tranquilidad cotidiana. Los parques urbanos se llenan de residentes que aprovechan la suavidad climática para leer o caminar. La ciudad transita hacia el invierno con una calma palpable en cada uno de sus barrios.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición Reyes del Mundo llega a Barcelona tras el triunfo mundialista.",
-              "lede": "La muestra organizada por la RFEF repasa los hitos recientes del deporte español.",
-              "body": "El espacio expositivo invita a los visitantes a revivir los momentos clave de la selección nacional de fútbol en el Mundial 2026. Esta propuesta complementa la variada oferta cultural que caracteriza el inicio de noviembre en la ciudad condal. Los interesados pueden compaginar la visita con los conciertos del Mira Festival o las actividades gratuitas del Festival Raval(s). Con una economía local adaptada a la tasa de 1 USD por 0.9 EUR, la agenda de ocio resulta accesible. Las salas expositivas ofrecen un recorrido sosegado idóneo para las mañanas de este mes.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival Raval(s) ofrece más de 50 actividades gratuitas en el barrio.",
-              "lede": "La iniciativa vecinal fomenta la cohesión cultural mediante talleres y muestras abiertas.",
-              "body": "Durante todo el mes, el distrito del Raval se convierte en un punto de encuentro para vecinos y visitantes curiosos. La programación incluye propuestas artísticas diversas que animan las plazas y los centros cívicos de la zona. Tras el descanso laboral del 1 de noviembre por la festividad nacional, el barrio recupera su habitual dinamismo multicultural. Estas actividades se suman a las opciones gratuitas que recorren la ciudad, desde ferias de antigüedades hasta muestras de juegos. Es una oportunidad excelente para observar la vida comunitaria desde una perspectiva cercana y respetuosa.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "San Justo celebra un festival de food trucks en la Plaza San Nicolás.",
-              "lede": "El espacio público se convierte en punto de reunión vecinal durante este fin de semana.",
-              "body": "La Plaza San Nicolás acoge una nueva edición de este encuentro gastronómico al aire libre para toda la familia. Los asistentes disfrutan de propuestas culinarias variadas en un entorno arbolado y de acceso totalmente libre. Este tipo de iniciativas dinamizan la vida de barrio y ofrecen una alternativa de ocio relajada en los espacios verdes. Los vecinos aprovechan las horas de luz para pasear y compartir momentos en las bancas de la plaza. El evento demuestra la vitalidad de las plazas del conurbano como auténticos centros de convivencia social.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "02",
-              "headline": "El World AI Film Festival presenta su programación con entrada libre.",
-              "lede": "Buenos Aires acoge las proyecciones y debates sobre cine generado por inteligencia artificial.",
-              "body": "La capital argentina se consolida como referente tecnológico al albergar este festival pionero en el ámbito audiovisual. Las jornadas incluyen la proyección de los cortos ganadores y encuentros con creadores digitales de distintos puntos del mundo. Todas las funciones cuentan con acceso gratuito, lo que facilita la asistencia de estudiantes y curiosos interesados en el medio. Las salas de proyección fomentan la reflexión sobre el futuro de las narrativas visuales en la era digital. Es una cita imprescindible para observar cómo la innovación técnica se integra en la cultura urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival OFFNI muestra cine independiente con acceso gratuito en la ciudad.",
-              "lede": "La muestra cinematográfica apuesta por formatos experimentales y narrativas fuera del circuito comercial.",
-              "body": "Los cinéfilos porteños disponen de una cartelera alternativa que prioriza la autoría independiente y los lenguajes visuales arriesgados. La programación detalla las fechas y los espacios habilitados para disfrutar de cada una de las películas programadas. Esta propuesta se enmarca en la agenda cultural de noviembre, que busca democratizar el acceso al arte audiovisual. Las proyecciones van acompañadas de charlas con los realizadores, generando un espacio de diálogo íntimo con el público. Buenos Aires reafirma así su vocación de albergar iniciativas culturales diversas y abiertas a la comunidad.",
-              "source": "saudade desk",
-              "source_date": "2026-11-02"
             }
           ]
         }
