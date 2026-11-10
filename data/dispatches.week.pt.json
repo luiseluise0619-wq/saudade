@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-09T06:00:00+09:00",
+  "updated": "2026-11-10T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Festival InShadow ocupa a cidade a partir de 13 de Novembro.",
+              "lede": "A dança e a imagem cruzam-se em salas e espaços públicos de Lisboa até 18 de Dezembro.",
+              "body": "As ruas da capital preparam-se para acolher mais uma edição do Festival InShadow, decorrendo entre 13 de Novembro e 18 de Dezembro. É uma oportunidade rara para observar o cruzamento entre o cinema documental, a performance e a dança contemporânea em vários pontos culturais da cidade. Quem caminha por Lisboa nestes dias encontra uma programação dedicada ao corpo e à lente, afastando-se do ritmo habitual do quotidiano urbano. Para os viajantes que chegam agora, a taxa de câmbio mantém-se estável nos 1 USD para 0.89 EUR, facilitando o planeamento financeiro de bilhetes e estadias. Reserve tempo para as exibições menos óbvias e deixe-se guiar pela curiosidade discreta.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "Os horários do Super Bock em Stock já foram revelados.",
+              "lede": "The Jesus and Mary Chain e Linda Martini encabeçam os palcos espalhados pela baixa lisboeta.",
+              "body": "A música independente regressa aos recintos habituais da cidade com o festival Super Bock em Stock. Os horários estão definidos e permitem cruzar diferentes salas e edifícios emblemáticos da Avenida da Liberdade e zonas limítrofes. Nomes consagrados como The Jesus and Mary Chain juntam-se a referências nacionais como Linda Martini, criando um roteiro sonoro nocturno que convida a deambular pela calçada húmida. As trocas monetárias para visitantes estrangeiros continuam alinhadas na proporção de 1 USD para 0.89 EUR. É aconselhável consultar os mapas de circulação com antecedência para evitar filas prolongadas à entrada dos espaços mais procurados.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "As exposições deste fim-de-semana exigem passos lentos.",
+              "lede": "A oferta cultural da capital cruza galerias tradicionais com novas propostas visuais.",
+              "body": "Este fim-de-semana convida a descobrir as exposições que marcam a agenda artística de Lisboa. Entre acervos clássicos e projectos contemporâneos, as galerias da cidade oferecem refúgio contra o vento fresco que começa a anunciar o final do Outono. A conversão de moedas permanece nos 0.89 EUR por cada 1 USD, uma referência útil para quem pondera adquirir catálogos ou peças de edição limitada. Caminhar pelas salas silenciosas permite observar os detalhes menos óbvianos das obras expostas. Prefira as horas da manhã para uma fruição mais calma e desimpedida.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A chuva e as trovoadas marcam o pulso da Invicta.",
+              "lede": "Temperaturas entre 16 e 18°C acompanham a precipitação de 19.5mm e o pôr-do-sol às 17:20.",
+              "body": "O Porto vive dias de transição climática, registando valores entre 16 e 18°C e uma precipitação acumulada de 19.5mm que obriga a passos firmes e guarda-chuvas abertos. A qualidade do ar permanece em níveis justos, com o indicador de PM2.5 fixado em 3, garantindo uma atmosfera limpa apesar da trovoada recente. O pôr-do-sol acontece pelas 17:20, encurtando as tardes e antecipando o brilho das luzes natalícias que serão inauguradas a 28 de novembro. Para os viajantes internacionais, o câmbio oficial opera a 1 USD para 0.89 EUR. Aproveite para procurar abrigo nas livrarias e cafés históricos enquanto a chuva molha o granito.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "A magia do Natal prepara-se para chegar às ruas a 28 de novembro.",
+              "lede": "A cidade investe em iluminações enquanto aguarda o arranque oficial das festividades.",
+              "body": "A partir de 28 de novembro, o Porto acenderá 765 mil euros em iluminações natalícias, transformando a paisagem urbana com novas cores e decorações. Este investimento municipal visa dinamizar o comércio tradicional e devolver o encanto nocturno às artérias principais da baixa. Com o termómetro a oscilar entre 16 e 18°C e 19.5mm de chuva persistente, o ambiente convida a recolher-se em espaços abrigados e a planear as visitas futuras. A taxa de câmbio de 1 USD para 0.89 EUR mantém-se vantajosa para visitantes de fora da zona euro. A cidade respira a calmaria própria das semanas que antecedem o frenesim festivo de Dezembro.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "A Casa Comum acolhe o Festival Internacional de Artes e Ópera.",
+              "lede": "A programação cultural oferece alternativas abrigadas para as tardes chuvosas.",
+              "body": "Enquanto a trovoada e os 19.5mm de precipitação condicionam os passeios ao ar livre, a Casa Comum assume um papel central na oferta cultural da cidade. O Festival Internacional de Artes e Ópera do Porto traz recitais e encontros intimistas a este espaço universitário. Com a qualidade do ar classificada como justa com PM2.5 em 3, respirar na cidade é um exercício suave. A luz desvanece cedo, com o sol a esconder-se pelas 17:20, prolongando as horas dedicadas à escuta e à contemplação. A conversão de 1 USD para 0.89 EUR continua a ser a referência cambial para quem visita a região.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A serra acolhe a poesia e o pensamento em dias de chuva intensa.",
+              "lede": "Com 40.6mm de precipitação e temperaturas entre 18 e 19°C, Sintra celebra a palavra.",
+              "body": "Sintra veste-se de neblina e recolhimento, registando uma precipitação significativa de 40.6mm e temperaturas amenas entre 18 e 19°C. A qualidade do ar mantém-se em níveis justos, com PM2.5 em 4, permitindo respirar a humidade característica da floresta atlântica. O sol despede-se cedo, pelas 17:28, iluminando as copas das árvores antes de a penumbra cobrir os palácios. Neste cenário de romantismo puro, a vila celebra a poesia e a cultura através de encontros literários que juntam pensadores e romancistas. A cotação de 1 USD para 0.89 EUR acompanha os visitantes estrangeiros nas paragens pelas pastelarias tradicionais.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "Um festival feliz reúne poetas e pensadores na vila misteriosa.",
+              "lede": "A palavra dita contrasta com o som da chuva forte nos telhados antigos.",
+              "body": "A programação cultural em Sintra desafia o temporal com iniciativas dedicadas à literatura e ao debate de ideias. Poetas e romancistas encontram-se em salas abrigadas para celebrar a palavra num festival pensado para desacelerar o pensamento. Fora de portas, os 40.6mm de chuva transformam os trilhos da serra em cursos de água efêmeros, exigindo calçado adequado e atenção redobrada. O termómetro marca entre 18 e 19°C, conferindo uma suavidade térmica invulgar para o período de chuvas intensas. O pôr-do-sol ocorre pontualmente às 17:28, fechando o dia com uma luz dourada e fugaz sobre a vegetação densa.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "O futuro PDM e a paisagem natural geram debates na comunidade.",
+              "lede": "O documento estratégico para o território convoca a atenção de residentes e observadores.",
+              "body": "As discussões em torno do futuro Plano Diretor Municipal de Sintra continuam a suscitar interesse pela forma como propõe gerir o equilíbrio entre o casario e o Parque Natural. Para quem observa a vila de fora, estas dinâmicas locais revelam a complexidade de proteger um património classificado. Com 40.6mm de precipitação e marcas térmicas entre 18 e 19°C, os dias são propícios à leitura atenta destes dossiers urbanísticos em espaços fechados. A qualidade do ar regista PM2.5 em 4, enquanto o câmbio se mantém nos 0.89 EUR por cada 1 USD. Deixe-se guiar pela lentidão própria da serra e evite pressas desnecessárias.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-09T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Com a referência cambial fixada em 1 USD para 0.89 EUR, a circulação monetária decorre sem surpresas para quem planeia visitar a região. O ar puríssimo da serra, com índice PM2.5 de 6, convida a passeios demorados pelos trilhos arborizados que serpenteiam a encosta. Os termómetros oscilam entre 9 e 19°C, proporcionando um microclima ameno durante o dia que contrasta com a frescura nocturna após as 17:34. A vila mantém o seu ritmo desacelerado, longe do bulgôr urbano, permitindo apreciar cada detalhe arquitetónico e botânico com a devida serenidade. A harmonia entre a natureza protegida e a herança histórica faz de Sintra um refúgio ímpar para o observador contemplativo.",
               "source": "saudade desk",
               "source_date": "2026-11-04"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-03T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A taxa de câmbio de referência fixa um dólar em 0.89 euros.",
-              "lede": "As transações correntes beneficiam de uma cotação estável nos mercados locais nesta segunda-feira.",
-              "body": "A gestão financeira quotidiana na capital mantém-se previsível com a taxa de câmbio fixada em 1 USD para 0.89 EUR. Visitantes estrangeiros encontram facilidade na troca de divisas em balcões tradicionais e multibancos da baixa. A conversão clara ajuda no planeamento de despesas com transportes públicos, cafés históricos e alojamentos de curta duração. Os estabelecimentos comerciais aceitam pagamentos eletrónicos generalizados, reduzindo a necessidade de circulação de numerário físico. Esta estabilidade cambial favorece a permanência prolongada de viajantes atentos aos detalhes urbanos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "As exposições temporárias marcam o roteiro cultural deste fim de semana.",
-              "lede": "A agenda artística da cidade convida a percursos abertos entre galerias e espaços museológicos.",
-              "body": "Os fins de semana em Lisboa enriquecem-se com propostas expositivas diversificadas espalhadas pelas várias freguesias. Residentes e visitantes encontram itinerários que cruzam a fotografia contemporânea, a pintura e o design gráfico em locais emblemáticos. Daniela Ruah regressa ao streaming com um projeto ligado ao Tribeca Festival Lisboa, despertando interesse nas produções audiovisuais nacionais. Estes momentos culturais oferecem alternativas abrigadas para as tardes mais amenas da estação. O acesso aos espaços é facilitado por uma rede de transportes regulares que cruza o centro histórico.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "Moradores do Bairro Azul solicitam um novo parque canino à autarquia.",
-              "lede": "A qualidade do espaço público urbano gera debates construtivos entre a vizinhança tradicional.",
-              "body": "A vida comunitária no Bairro Azul reflete-se na exigência de melhorias para a convivência urbana e o bem-estar animal. Moradores locais pediram formalmente à Câmara de Lisboa a criação de um parque canino dedicado aos animais de companhia da zona. O projeto visa dotar o bairro de infraestruturas adequadas, preservando simultaneamente as zonas verdes existentes e o descanso coletivo. Esta iniciativa demonstra o cuidado constante dos residentes com a manutenção da harmonia nos espaços de circulação pedonal. A autarquia analisa agora as propostas apresentadas para reordenar o uso do solo local.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "O Porto regista temperaturas entre 11 e 19 graus sob céu nublado.",
-              "lede": "A qualidade do ar mantém-se considerada fair, com níveis de PM2.5 fixados em 11.",
-              "body": "As condições meteorológicas na Invicta apresentam um panorama típico de outono, com termómetros a oscilar entre 11 e 19°C. O céu permanece overcast ao longo de todo o dia, culminando num pôr do sol antecipado para as 17:27. A qualidade do ar é fair, registando um valor de PM2.5 de 11 que permite caminhadas tranquilas pelas ruas graníticas. A taxa de câmbio em vigor mantém-se nos 1 USD para 0.89 EUR, facilitando o comércio local. Os passeios à beira-rio exigem agasalhos leves, enquanto a atmosfera cinzenta convida à contemplação silenciosa da arquitetura ribeirinha.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "A Linha Rubi e o VL8 na Arrábida reabrem ao trânsito este sábado.",
-              "lede": "A circulação rodoviária recupera normalidade com a conclusão destas intervenções estruturais.",
-              "body": "A mobilidade metropolitana regista melhorias significativas com a reabertura do VL8 na Arrábida, agendada para este sábado. Esta intervenção insere-se no desenvolvimento da Linha Rubi, otimizando as ligações entre as margens do rio Douro. Condutores e utilizadores de transportes públicos beneficiam de fluxos mais ordenados nos acessos principais à cidade. As obras decorreram com o objetivo de minimizar o impacto no quotidiano dos residentes. A circulação pedonal nas imediações também foi requalificada, garantindo percursos mais seguros para quem caminha pela zona.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "Uma nova exposição revela o foco oculto e encontra beleza na ruína.",
-              "lede": "A programação cultural antecipa grandes festivais e explora novas linguagens visuais na cidade.",
-              "body": "A reflexão estética sobre o património abandonado ganha destaque numa exposição que encontra beleza na ruína urbana. Em paralelo, a agenda cultural já olha para o futuro com o anúncio do Festival Literário Babell, cujo regresso está marcado para 2028. No plano musical, o Primavera Sound Porto 2027 confirmou um cartaz com 55 artistas, incluindo nomes como Fontaines D.C., FKA Twigs, The Chemical Brothers, Lola Young e beabadoobee. Estas novidades consolidam o papel da cidade como polo de atração artística e literária na Europa. Os espaços expositivos locais permanecem abertos para visitas calmas durante a semana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Sintra acolhe termómetros entre 12 e 21 graus com atmosfera encoberta.",
-              "lede": "O ar apresenta qualidade fair, com índice PM2.5 de 15 sob um pôr do sol às 17:35.",
-              "body": "A serra de Sintra vive dias de transição climática com temperaturas a variar entre 12 e 21°C. O céu mantém-se overcast, conferindo à paisagem romântica uma luminosidade suave e difusa até o sol se pôr às 17:35. A qualidade do ar é fair, registando partículas PM2.5 em 15, o que torna agradáveis os percursos pedestres pelos trilhos arborizados. A taxa de câmbio local permanece alinhada com o resto do país em 1 USD para 0.89 EUR. Os visitantes encontram nas esplanadas abrigadas um refúgio ideal para apreciar a brisa outonal sem pressas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "As festas de São Martinho e o Festival do Outono animam as freguesias.",
-              "lede": "A comunidade local celebra as tradições sazonais com iniciativas culturais descentralizadas.",
-              "body": "O calendário festivo do concelho distingue-se pelas comemorações tradicionais e encontros literários. Casal de Cambra celebra a Festa de São Martinho no Parque Urbano, reunindo famílias em convívio comunitário. Em simultâneo, o quartel dos Bombeiros Voluntários de Almoçageme acolhe o Festival do Outono, valorizando os produtos da região. A vila também recebe o Festival Literário Internacional, atraindo leitores e autores para debates em palácios e bibliotecas históricas. Estas atividades reforçam o espírito de proximidade e a partilha cultural que caracterizam a identidade serrana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "A marca Parfois reabre no Alegro Sintra com um conceito renovado.",
-              "lede": "A oferta comercial do concelho atualiza-se com espaços de venda modernos e luminosos.",
-              "body": "O centro comercial Alegro Sintra integrou recentemente a reabertura da loja Parfois, agora apresentada com um conceito arquitetónico totalmente novo. O espaço foi desenhado para proporcionar uma experiência de compra mais fluida e visualmente integrada. Residentes encontram no local novidades de acessórios e coleções adaptadas à nova estação. Esta remodelação reflete a dinâmica constante do comércio de proximidade na região de Sintra. O acesso ao centro comercial mantém-se facilitado pelas redes de autocarros que servem as diferentes artérias urbanas do município.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
             }
           ]
         }
