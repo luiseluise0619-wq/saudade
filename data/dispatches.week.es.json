@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-09T06:00:00+09:00",
+  "updated": "2026-11-10T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-10T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Otoño arranca con la mirada puesta en Robert Wilson.",
+              "lede": "La 44ª edición de la cita cultural madrileña rinde homenaje a la figura de Fernando Pessoa.",
+              "body": "El Festival de Otoño de la Comunidad de Madrid inaugura esta semana su 44ª edición con un esperado espectáculo de Robert Wilson dedicado a la memoria de Fernando Pessoa. Las salas y teatros de la capital acogen propuestas escénicas de vanguardia mientras el tiempo oscila entre los 13°C y los 16°C. Con una previsión de 16.5mm de lluvia y chubascos frecuentes, conviene llevar paraguas al cruzar las plazas del centro histórico antes de que la noche caiga sobre el asfalto a las 18:02. La calidad del aire se mantiene en niveles buenos, con un registro de PM2.5 de 4, lo que permite pasear con tranquilidad entre función y función. El tipo de cambio actual se sitúa en 1 USD frente a 0.89 EUR, un dato útil para los viajeros que planeen adquirir entradas o catálogos en los vestíbulos de los principales espacios escénicos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "Manuel de Falla ocupa las salas de exposiciones de la capital.",
+              "lede": "Una nueva muestra explora la profunda influencia del compositor en las artes plásticas.",
+              "body": "Madrid dedica estos días un espacio destacado al legado del célebre músico gaditano mediante una exposición que conmemora el 150 aniversario de su nacimiento. La muestra repasa la estrecha relación entre su obra y las corrientes de las artes plásticas, conectando su universo sonoro con la pintura de su época. Los visitantes pueden recorrer las salas bajo una temperatura templada que va desde los 13°C hasta los 16°C, ideal para resguardarse de los 16.5mm de precipitaciones y los chubascos intermitentes que marcarán las jornadas vespertinas. La puesta de sol se adelanta a las 18:02, acortando las horas de luz natural en los parques y paseos arbolados. La atmósfera urbana se respira limpia gracias a un índice de calidad del aire con PM2.5 de 4, facilitando los trayectos a pie entre museos y librerías especializadas sin mayores contratiempos climáticos ni aglomeraciones en el transporte público.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "El flamenco contemporáneo convive con los chubascos de noviembre.",
+              "lede": "La XXI edición de Suma Flamenca reúne a destacados creadores del género en los escenarios madrileños.",
+              "body": "La XXI Suma Flamenca, el festival flamenco de la Comunidad de Madrid, despliega su programación por diversos escenarios de la región en coincidencia con los primeros días de inestabilidad otoñal. Mientras afuera caen 16.5mm de lluvia en forma de chubascos intermitentes, los recintos cerrados ofrecen refugio frente a temperaturas que oscilan entre los 13°C y los 16°C. El ocaso se produce a las 18:02, obligando a los espectadores a transitar por calles mojadas bajo una excelente calidad del aire con PM2.5 en 4. Los viajeros extranjeros pueden realizar sus transacciones con una referencia de cambio de 1 USD por 0.89 EUR al adquirir localidades para los recitales programados. Las instituciones culturales recuerdan que la oferta artística de la semana se completa con conferencias y presentaciones de libros en torno a la tradición jonda y su evolución actual.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival MIRA anticipa el futuro de la música electrónica.",
+              "lede": "La ciudad condal prepara sus próximos encuentros culturales en espacios singulares del litoral.",
+              "body": "Barcelona enfoca su agenda cultural hacia la experimentación sonora con la vista puesta en el futuro de la música electrónica que caracteriza al Festival MIRA. Entre los eventos destacados de la temporada figuran también citas consolidadas como el Barcelona Beer Festival, previsto en el Museu Marítim de Barcelona del 12 al 14 de marzo, y la reciente repercusión del Festival In-Edit 2026, cuyas obras galardonadas con 'Broken English' y 'Kiro' han clausurado con éxito sus proyecciones documentales. Las temperaturas se mueven en un rango suave de 17°C a 23°C bajo un cielo predominantemente cubierto y sin grandes sobresaltos atmosféricos. La puesta de sol tiene lugar a las 17:36, dando paso a tardes apacibles junto a los muelles. La calidad del aire registra un nivel moderado con PM2.5 en 20, un factor a tener en cuenta por quienes prefieren recorrer los paseos marítimos a pie o en bicicleta sin prisas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "El Museu Marítim acoge los preparativos del Barcelona Beer Festival.",
+              "lede": "Las naves históricas del recinto marítimo ultiman su calendario de grandes eventos para marzo.",
+              "body": "El Museu Marítim de Barcelona figura ya en los planes de los aficionados a la cultura certera al anunciar la celebración del Barcelona Beer Festival del 12 al 14 de marzo. Este emblemático espacio arquitectónico junto al puerto sirve de telón de fondo para encuentros de carácter divulgativo y artesanal que atraen tanto a residentes como a visitantes curiosos. Las condiciones meteorológicas actuales muestran un cielo completamente overcast, con temperaturas que van desde los 17°C hasta los 23°C, propicias para caminar por la fachada marítima sin agobios térmicos. La caída del sol se adelanta a las 17:36, marcando el inicio anticipado de las veladas urbanas. La calidad del aire se sitúa en un nivel moderado de 20 para el indicador PM2.5, mientras que el tipo de cambio oficial se mantiene estable en 1 USD por 0.89 EUR para las transacciones comerciales cotidianas en los comercios del barrio.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "El cine documental celebra el éxito de sus recientes galardones.",
+              "lede": "Las pantallas barcelonesas asimilan el palmarés del Festival In-Edit 2026 y sus propuestas.",
+              "body": "El eco del Festival In-Edit 2026 sigue resonando en la oferta cultural de Barcelona tras la reciente clausura y el reconocimiento a trabajos destacados como 'Broken English' y 'Kiro', que se alzaron con los galardones principales de esta edición dedicada al documental musical. Los espectadores aprovechan las horas diurnas para debatir sobre las proyecciones mientras el termómetro marca registros entre los 17°C y los 23°C. El cielo se presenta overcast a lo largo de toda la jornada, con la puesta de sol fijada a las 17:36, un horario que invita a refugiarse en las librerías y salas de proyección independientes. Con una calidad del aire moderada y un valor de PM2.5 en 20, la ciudad transita con calma esta semana de noviembre. Los viajeros internacionales recuerdan que la paridad monetaria se mantiene en 1 USD equivalente a 0.89 EUR al adquirir entradas para las funciones en cartel.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival Salvaje Federal debate sobre literatura regional.",
+              "lede": "El encuentro literario llega a Buenos Aires para descentralizar la discusión cultural y federal.",
+              "body": "La agenda porteña recibe al Festival Salvaje Federal, un espacio itinerante que desembarca en el corazón de Buenos Aires para poner sobre la mesa el debate acerca de la descentralización y la literatura regional frente al centralismo. Paralelamente, la Diputación ofrece a los interesados una visita digital a la exposición 'Castelao. A derradeira leición do mestre' a través de la web del Museo de Pontevedra, permitiendo conectar ambas orillas atlánticas desde cualquier pantalla. Las temperaturas locales oscilan entre los 18°C y los 26°C bajo un cielo overcast, mientras el índice UV alcanza un valor de 9, clasificado como muy alto, lo que exige precaución ante la exposición solar directa. La caída del sol se registra a las 19:31, prolongando las tardes cálidas en las plazas arboladas. La calidad del aire se mantiene en niveles justos con PM2.5 en 6, propiciando el paseo pausado por los tradicionales cafés y librerías de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "02",
+              "headline": "El Museo de Pontevedra abre su muestra digital a los lectores.",
+              "lede": "La exposición sobre Castelao puede recorrerse virtualmente desde las pantallas porteñas.",
+              "body": "Los amantes del arte y la memoria gráfica encuentran esta semana una ventana abierta en la web del Museo de Pontevedra gracias a la visita digital que la Diputación facilita sobre la emblemática exposición 'Castelao. A derradeira leición do mestre'. Esta propuesta se cruza en la agenda cultural de Buenos Aires con la llegada del Festival Salvaje Federal, que discute los centros y periferias de la creación literaria. El clima en la capital argentina se muestra cálido, con mínimas de 18°C y máximas que alcanzan los 26°C bajo un cielo overcast. Es fundamental protegerse de la radiación ultravioleta, ya que el índice UV llega a 9, considerado muy alto. El atardecer se demora hasta las 19:31, regalando crepúsculos amplios sobre el Río de la Plata. La calidad del aire se sitúa en un rango fair con PM2.5 en 6, ideal para caminar sin prisas por los barrios históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            },
+            {
+              "n": "03",
+              "headline": "La conectividad aérea se amplía ante la agenda de eventos deportivos.",
+              "lede": "La final de la Copa Sudamericana impulsa nuevos vuelos directos entre Buenos Aires y Barranquilla.",
+              "body": "El movimiento de viajeros entre el cono sur y el Caribe recibe un estímulo operativo con motivo de la final de la Copa Sudamericana, impulsando la apertura temporal de vuelos directos que conectan Buenos Aires con Barranquilla. Esta nueva ruta aérea facilita el tránsito de aficionados y observadores en vísperas del próximo feriado nacional del Día de la Soberanía Nacional, fijado en el calendario para el 2026-11-23, fecha en la que oficinas gubernamentales, bancos y dependencias postales suspenderán sus servicios habituales. En las calles porteñas, el termómetro marca entre los 18°C y los 26°C bajo un cielo overcast. El índice UV trepa hasta un nivel de 9, catalogado como muy alto, aconsejando el uso de protección solar pese a la nubosidad. La puesta de sol ocurre a las 19:31, mientras la calidad del aire se registra en un nivel fair con PM2.5 en 6, completando una atmósfera urbana propicia para el movimiento pausado de los viajeros.",
+              "source": "saudade desk",
+              "source_date": "2026-11-10"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-09T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Las asociaciones vecinales han elevado una solicitud formal para moderar la intensidad de las convocatorias en el área verde. El objetivo es preservar la tranquilidad cotidiana y proteger el arbolado y el mobiliario urbano del parque. Este debate refleja el pulso constante entre la dinamización cultural de la ciudad y el descanso de quienes la habitan. Las autoridades locales analizan fórmulas de convivencia para mantener el espacio abierto al disfrute ciudadano sin saturarlo. Pasear por la zona sigue siendo un ejercicio apacible en las mañanas de noviembre.",
               "source": "saudade desk",
               "source_date": "2026-11-04"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-03T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid registra hoy temperaturas entre 6 y 14 grados bajo un cielo completamente overcast.",
-              "lede": "El termómetro desciende con la llegada de la tarde y la puesta de sol se adelanta a las 18:09.",
-              "body": "La jornada se presenta fresca en las calles madrileñas, obligando a los transeúntes a abrigarse mientras caminan por la ciudad. Con una temperatura máxima de 14 grados y una mínima de 6 grados, el ambiente invita a buscar refugio bajo techo. El cielo se mantiene cubierto durante todo el día, restando luz natural a las plazas y paseos. La oscuridad llega puntual a las 18:09, marcando el ritmo pausado de la tarde en la capital. Es un lunes sobrio, ideal para recorrer espacios cerrados y exposiciones que resguardan del frío exterior sin prisa.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "El tipo de cambio actual sitúa el dólar estadounidense en 0.89 euros.",
-              "lede": "Los viajeros internacionales encuentran esta referencia fija al realizar sus transacciones cotidianas en comercios locales.",
-              "body": "La cotización monetaria se mantiene estable al inicio de esta semana de noviembre. Para quienes visitan la ciudad desde fuera de la zona euro, el valor de 1 dólar equivalente a 0.89 euros facilita el cálculo de gastos en librerías, cafés y museos. Conviene tener presente esta proporción al planificar compras de artesanía o entradas para eventos culturales en la capital. Los establecimientos tradicionales y los mercados del centro operan con normalidad bajo esta referencia financiera. La economía diaria transcurre con la predictibilidad propia de los días laborables de otoño.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "El Centro Cultural Fernán Gómez acoge una exposición gratuita con 180 obras del Madrid barroco.",
-              "lede": "La muestra cultural comparte cartelera ciudadana con propuestas dedicadas a los techos y cúpulas históricas.",
-              "body": "La agenda artística de la ciudad ofrece refugio frente al clima fresco con muestras de gran calado patrimonial. El Fernán Gómez exhibe hasta el 17 de enero un centenar y medio largo de piezas que retratan el Siglo de Oro madrileño sin coste de entrada. En paralelo, los interesados en el patrimonio arquitectónico pueden visitar propuestas como las maquetas de cúpulas o la exposición titulada El Gran Azul. Estas iniciativas permiten comprender la evolución urbanística y artística de la Villa desde una perspectiva reposada. Las salas ofrecen un remanso de tranquilidad para observar los detalles pictóricos y constructivos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona registra una calidad del aire moderada con un valor de PM2.5 de 9.",
-              "lede": "Las condiciones atmosféricas permiten pasear con tranquilidad por los espacios abiertos de la fachada marítima.",
-              "body": "La atmósfera barcelonesa muestra valores estables en sus índices de partículas finas durante esta jornada de noviembre. Con un registro de PM2.5 situado en 9, la calidad del aire se califica como moderada para la práctica de actividades al aire libre. Los caminantes pueden recorrer los paseos arbolados y los parques urbanos sin restricciones significativas en su visibilidad o bienestar. Las corrientes marinas ayudan a disipar la bruma matinal en los barrios costeros de la ciudad condal. Es un contexto propicio para la observación sosegada de la arquitectura urbana y el arbolado viario.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "El tipo de cambio vigente establece 1 dólar estadounidense en 0.89 euros.",
-              "lede": "La equivalencia monetaria facilita el intercambio comercial y el consumo en los comercios de proximidad.",
-              "body": "La estabilidad en los mercados internacionales se refleja en la paridad aplicable en los establecimientos de Cataluña. La proporción de 1 dólar por 0.89 euros guía las transacciones cotidianas de los visitantes extranjeros en librerías, cafeterías y centros expositivos. Este valor constante permite gestionar presupuestos de viaje con precisión en cualquier barrio de la metrópoli. Los mercados municipales y los comercios del Gòtic operan bajo esta misma referencia financiera sin alteraciones. Conviene recordarlo al adquirir publicaciones especializadas o recuerdos de la temporada cultural que ahora comienza.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "El festival literario 42 arranca el 4 de noviembre dedicado a la ciencia ficción.",
-              "lede": "La exposición Reyes del Mundo cierra sus puertas tras exhibirse en la ciudad durante los días 2 y 3 de noviembre.",
-              "body": "La actividad cultural de la ciudad experimenta un relevo inmediato entre grandes citas temáticas. Tras acoger la muestra de la RFEF Reyes del Mundo los días 2 y 3 de noviembre, la atención se desplaza hacia las literaturas especulativas. A partir del 4 de noviembre, Barcelona celebra la sexta edición del Festival 42, un punto de encuentro ineludible para los devotos de la fantasía, la ciencia ficción y el género oscuro. Las librerías y los espacios habilitados ultiman los detalles para recibir a autores y lectores en un ambiente reflexivo. Es una semana de transición donde la memoria deportiva deja paso al pensamiento futurista.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires registra hoy una temperatura entre 17 y 20 grados con chubascos intermitentes.",
-              "lede": "Las precipitaciones acumulan 13.3 mm mientras el día avanza hacia una puesta de sol prevista a las 19:24.",
-              "body": "El clima porteño se muestra húmedo y variable en este tramo de la primavera austral. Con una mínima de 17 grados y una máxima que alcanza los 20 grados, la atmósfera invita a llevar ropa ligera pero impermeable. Las lluvias dejan un acumulado de 13.3 mm de precipitación, mojando las baldosas de las avenidas y el adoquín de los barrios históricos. El cielo permanece plomizo, otorgando a las calles una luz difusa que suaviza las fachadas antiguas. La caída del sol ocurre a las 19:24, alargando una tarde de aire fresco y suelo mojado que favorece la lectura en cafés resguardados.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "02",
-              "headline": "Miguel Poveda trae a Buenos Aires su gira internacional dedicada a Federico García Lorca.",
-              "lede": "El espectáculo Enlorquecido conecta la poesía granadina con la sensibilidad artística de la capital argentina.",
-              "body": "La agenda de noviembre en Buenos Aires se nutre de propuestas escénicas de resonancia transatlántica. El paso del artista Miguel Poveda con su proyecto Enlorquecido constituye uno de los atractivos musicales más destacados del mes. Esta travesía sonora desde Nueva York hasta el Río de la Plata reinterpreta los versos del poeta en teatros que cuidan la acústica y la cercanía con el público. Los cronistas culturales de Time Out recomiendan seguir de cerca estas actuaciones que entrelazan ambas orillas del idioma. Las salas porteñas ofrecen así un refugio cálido frente a los chubascos primaverales que mojan la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
-            },
-            {
-              "n": "03",
-              "headline": "El festival WAIFF premia en Buenos Aires las producciones audiovisuales creadas con inteligencia artificial.",
-              "lede": "Expertos del sector cinematográfico y tecnológico debaten sobre los nuevos paradigmas de la creación digital.",
-              "body": "La vanguardia tecnológica se cita en la cartelera cultural porteña a través de las jornadas del festival WAIFF. Las proyecciones y encuentros galardonados en esta edición han convocado a creadores y pensadores en torno a la relación entre máquinas y celuloide. Durante los paneles, figuras procedentes de la interpretación y de empresas como Apple han analizado los cambios metodológicos que introduce la inteligencia artificial en el cine contemporáneo. Estos debates ofrecen una pausa reflexiva para comprender el rumbo estético de la imagen en movimiento. La ciudad acoge estas conversaciones en espacios cerrados donde el clima exterior apenas interrumpe el diálogo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-03"
             }
           ]
         }
