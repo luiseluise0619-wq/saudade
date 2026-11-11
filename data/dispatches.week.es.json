@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-10T06:00:00+09:00",
+  "updated": "2026-11-11T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-11T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Planetario celebra cuarenta años de divulgación astronómica.",
+              "lede": "El Planetario de Madrid conmemora 40 años acercando el universo a la ciudadanía madrileña con nuevas proyecciones estelares.",
+              "body": "El Planetario de Madrid celebra 40 años acercando el universo a la ciudadanía con un programa especial de proyecciones y conferencias divulgativas. Las instalaciones municipales renuevan sus contenidos para recibir a los visitantes interesados en la astronomía local. La calidad del aire se mantiene en niveles óptimos, con un registro de PM2.5 de 3, favoreciendo los paseos tranquilos por el parque de Tierno Galván. Para los viajeros internacionales, el tipo de cambio oficial se sitúa en 1 USD equivalente a 0.89 EUR. Esta celebración redescubre un espacio clásico del sur de la capital que sigue educando a varias generaciones.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "02",
+              "headline": "Una exposición explora la influencia de Manuel de Falla en las artes.",
+              "lede": "Las salas madrileñas acogen una muestra dedicada a la profunda huella del compositor en el arte moderno.",
+              "body": "Una exposición en Madrid explora la influencia de Manuel de Falla en las artes plásticas, conectando la música de vanguardia con la pintura y la escultura de su época. Los visitantes pueden recorrer este diálogo estético en los espacios culturales habilitados en el centro histórico de la ciudad. El ambiente urbano disfruta de una excelente calidad del aire, con partículas PM2.5 marcando un discreto 3. Los viajeros que llegan desde Estados Unidos encuentran una referencia monetaria estable, con el tipo de cambio fijado en 1 USD por cada 0.89 EUR. La propuesta cultural invita a una pausa reposada entre partituras y lienzos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "03",
+              "headline": "Torrejón prepara su macrofestival invernal de esculturas de hielo.",
+              "lede": "Vuelven las Mágicas Navidades a la región madrileña con un gran despliegue artístico hasta el 10 de enero.",
+              "body": "Vuelve a Torrejón las Mágicas Navidades, el festival internacional de escultores de hielo hasta el 10 de enero, consolidándose como uno de los grandes atractivos de la temporada en la Comunidad de Madrid. El evento reúne a artistas internacionales que trabajan el hielo en directo para crear recorridos efímeros y luminosos. Paralelamente, el sector comercial local registra nuevas inversiones, destacando que Costco elige esta ciudad de Madrid para su nuevo macrocomplejo comercial donde invertirá 80 millones, con un lugar y fecha de apertura ya definidos. La atmósfera urbana mantiene una calidad del aire notable, con un índice PM2.5 de 3. El cambio de moneda para visitantes extranjeros opera con normalidad a 1 USD por 0.89 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra una tarde templada de noviembre con llovizna suave.",
+              "lede": "La ciudad oscila entre 16 y 22°C con 1.6mm de precipitación bajo un cielo gris que atardece a las 17:35.",
+              "body": "El clima de esta jornada en la capital catalana se mueve entre 16 y 22°C, acompañado por 1.6mm de precipitación en forma de lluvia ligera que moja con calma las aceras del Eixample. La calidad del aire se sitúa en un nivel moderado, registrando 10 de PM2.5 bajo una atmósfera húmeda y otoñal. La puesta de sol ocurre puntualmente a las 17:35, acortando las horas de luz natural para los caminantes. En el ámbito financiero, el tipo de cambio oficial se mantiene estable con 1 USD igual a 0.89 EUR. Los desplazamientos urbanos fluyen sin alteraciones importantes tras la estabilización de los servicios de transporte público.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "02",
+              "headline": "El MEAM une la obra de Gottfried Helnwein con la tradición de Goya.",
+              "lede": "El museo barcelonés propone un recorrido pictórico que entabla diálogo entre el maestro aragonés y el arte contemporáneo.",
+              "body": "Gottfried Helnwein y Goya protagonizan una exposición conjunta en el MEAM Barcelona que examina los claroscuros y la crudeza de la condición humana a través de los siglos. Las salas del museo ofrecen un refugio templado frente a la llovizna exterior que acumula 1.6mm de agua y registra temperaturas de 16 a 22°C. La calidad del aire urbana muestra un valor moderado de PM2.5 en 10, ideal para combinar la visita artística con un paseo antes del anochecer a las 17:35. Para los viajeros procedentes del extranjero, la equivalencia monetaria se establece en 1 USD por 0.89 EUR. La pinacoteca mantiene sus horarios habituales para recibir a los observadores pacientes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "03",
+              "headline": "Llega a Barcelona una propuesta de ocio inflable para estas navidades.",
+              "lede": "El parque hinchable más grande del mundo instala sus estructuras gigantescas en la ciudad con entradas ya a la venta.",
+              "body": "El parque hinchable más grande del mundo llega estas navidades a Barcelona con entradas ya a la venta para residentes y visitantes que buscan experiencias lúdicas singulares. La ciudad afronta estos días con registros térmicos de 16 a 22°C y una ligera precipitación de 1.6mm que apenas altera el compás de las calles. La contaminación atmosférica se mantiene en parámetros moderados con un valor de 10 de PM2.5, mientras el sol se oculta a las 17:35 dando paso a la iluminación festiva. Los viajeros internacionales pueden realizar sus transacciones con la tasa de referencia de 1 USD por 0.89 EUR. La oferta cultural y de ocio de la semana se completa con diversas alternativas de agenda urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires transcurre una jornada templada y nublada de primavera.",
+              "lede": "El termómetro marca entre 20 y 27°C bajo un cielo cubierto que estira la luz diurna hasta las 19:32.",
+              "body": "La capital argentina experimenta temperaturas de 20 a 27°C con un cielo completamente cubierto que suaviza la radiación solar de noviembre. La puesta de sol está prevista para las 19:32, regalando tardes largas propicias para la caminata urbana sin prisa. La calidad del aire se mantiene en niveles moderados, registrando 10 de PM2.5 en las estaciones de medición del municipio. De cara al calendario próximo, cabe recordar que el Día de la Soberanía Nacional se celebrará el 2026-11-23, fecha en la que los bancos, oficinas gubernamentales y dependencias postales permanecerán cerrados por feriado nacional. Los cafés tradicionales operan con normalidad para recibir a los caminantes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival Salvaje Federal debate sobre literatura regional y descentralización.",
+              "lede": "El encuentro cultural convoca a escritores y pensadores en Buenos Aires para reflexionar sobre las letras del interior.",
+              "body": "El Festival Salvaje Federal llega a Buenos Aires para debatir sobre descentralización y literatura regional, reuniendo voces de distintas provincias en un foro de intercambio estético. La cita cultural se desarrolla bajo una cobertura nublada con temperaturas que oscilan entre 20 y 27°C. La calidad ambiental urbana registra un índice moderado de PM2.5 en 10, y el día se extiende con el crepúsculo a las 19:32. En el horizonte administrativo, conviene tener presente el feriado del Día de la Soberanía Nacional el 2026-11-23, jornada en la que la administración pública y las entidades bancarias suspenderán sus actividades habituales. Los espacios de debate literario abren sus puertas al público interesado en la narrativa federal.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            },
+            {
+              "n": "03",
+              "headline": "Bresh Academy celebra su aniversario con un encuentro de música y danza.",
+              "lede": "La institución festeja un año de formación artística con un festival abierto a la comunidad porteña.",
+              "body": "Bresh Academy celebra su primer aniversario con un festival de música, danza y teatro que congrega a la comunidad creativa en diversos espacios de la ciudad. Las actividades transcurren con temperaturas templadas de 20 a 27°C y un cielo cubierto que acompaña la brisa primaveral hasta la caída del sol a las 19:32. Las mediciones ambientales señalan una calidad del aire moderada con 10 de PM2.5. Para quienes planifican gestiones administrativas en las próximas semanas, es útil recordar el próximo feriado del Día de la Soberanía Nacional el 2026-11-23, fecha en la que los bancos, oficinas estatales y correos cerrarán sus puertas al público. La agenda cultural se completa con exposiciones digitales y propuestas museísticas accesibles desde la red.",
+              "source": "saudade desk",
+              "source_date": "2026-11-11"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-10T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El ecosistema tecnológico y creativo de Buenos Aires suma un nuevo actor internacional con la llegada de Pinterest y la apertura de su hub de negocios. La decisión refuerza el papel de la ciudad como polo de atracción para empresas digitales en la región. Con una calidad del aire calificada como fair y un nivel de PM2.5 en 6, la ciudad ofrece un entorno propicio para pasear entre reuniones y espacios de coworking. Este nuevo centro corporativo dialoga con la vibrante escena cultural de festivales que anima la agenda porteña estos días. La noticia confirma el dinamismo profesional que caracteriza el pulso cotidiano de la capital.",
               "source": "saudade desk",
               "source_date": "2026-11-05"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-04T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La línea del AVE Madrid-Andalucía reanuda su servicio con límites de velocidad tras Urda.",
-              "lede": "Los viajeros hacia el sur recuperan la conexión ferroviaria habitual con precauciones técnicas en el tramo.",
-              "body": "El trayecto en alta velocidad entre la capital y Andalucía vuelve a operar tras las labores de revisión y normalización en la zona de Urda. Se han establecido restricciones temporales de velocidad en el tramo afectado para garantizar la seguridad de los pasajeros. Conviene revisar los horarios actualizados en estación antes de emprender el viaje hacia el sur peninsular. Esta reapertura alivia los desplazamientos de otoño para quienes eligen el tren frente al vehículo privado. La infraestructura recobra progresivamente su ritmo habitual de circulación ferroviaria.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "02",
-              "headline": "El cielo cubierto domina las calles madrileñas con temperaturas entre 4 y 14°C.",
-              "lede": "El termómetro desciende al caer la tarde mientras la luz se apaga puntualmente a las 18:08.",
-              "body": "Las jornadas de noviembre avanzan bajo una bóveda gris que disuade de los largos paseos al aire libre. La variación térmica exige abrigarse bien desde primera hora de la mañana hasta la caída del sol. Con el tipo de cambio oficial situado en 1 USD a 0.89 EUR, los visitantes extranjeros realizan sus transacciones cotidianas con estabilidad monetaria. Es un buen momento para refugiarse en espacios cerrados como el festival OpenLAB y su propuesta La mecánica de la verdad. Las calles húmedas reflejan la luz sobria del atardecer madrileño.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "03",
-              "headline": "Pasea Madrid amplía su oferta patrimonial con más de 21.500 plazas disponibles.",
-              "lede": "Nuevos itinerarios urbanos permiten descubrir la arquitectura de cúpulas y techos históricos de la ciudad.",
-              "body": "El programa municipal de visitas guiadas abre una temporada especialmente rica en contenidos arquitectónicos y artísticos. Los ciudadanos y viajeros curiosos pueden inscribirse en rutas especializadas dedicadas a las maquetas de cúpulas y los techos ocultos de Madrid. Estas actividades fomentan una mirada pausada sobre edificios emblemáticos que habitualmente pasan inadvertidos en el tráfago diario. Es recomendable consultar la disponibilidad de plazas con antelación debido a la alta demanda estacional. Cada itinerario ofrece una lectura reposada del patrimonio urbano.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La calidad del aire se mantiene en niveles favorables con un registro de PM2.5 de 4.",
-              "lede": "Las condiciones atmosféricas actuales ofrecen un entorno limpio para recorrer el barrio gótico y sus plazas.",
-              "body": "La atmósfera barcelonesa respira con tranquilidad gracias a unos valores de partículas en suspensión sumamente bajos. Con el tipo de cambio en 1 USD a 0.89 EUR, los visitantes internacionales disfrutan de una economía local estable para sus compras. El centro histórico invita a caminar sin prisa entre exposiciones temporales y edificios centenarios. Las mediciones ambientales confirman un día excelente para el uso de espacios públicos al aire libre. La brisa marina limpia el cielo y despeja la perspectiva urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "02",
-              "headline": "La Catedral de Barcelona acoge una muestra monográfica sobre la historia de la Pia Almoina.",
-              "lede": "El recinto gótico expone documentos y piezas clave de su legado asistencial y medieval.",
-              "body": "Los espacios históricos de la Seo barcelonesa abren sus puertas a un recorrido por la evolución de esta antigua institución benéfica. La exposición detalla el papel social que desempeñó la Pia Almoina en la configuración del barrio catedralicio. Los visitantes pueden combinar esta visita cultural con un paseo por los recientes vestigios paleontológicos del Cretácico anunciados en la cartelera local. Es una oportunidad excelente para profundizar en las capas menos visibles de la memoria urbana. La tranquilidad del claustro acompaña la contemplación de las piezas expuestas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "03",
-              "headline": "Sónar 2027 anuncia su regreso a los escenarios originales en el centro de Barcelona.",
-              "lede": "El festival de música electrónica prepara su gran retorno urbano para las próximas ediciones.",
-              "body": "La organización confirma el traslado de su núcleo principal al corazón de la ciudad, recuperando el espíritu de sus primeros años. Esta mudanza facilitará el acceso a residentes y melómanos que prefieren la cercanía de los espacios urbanos tradicionales. La programación futura ya genera expectación entre la comunidad creativa internacional que visita la capital catalana. Mientras tanto, la oferta cultural inmediata se completa con muestras históricas y propuestas científicas en diversos centros cívicos. Barcelona consolida así su calendario de grandes citas musicales con vocación de integración urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Miguel Poveda trae a Buenos Aires su homenaje internacional a la poesía de Lorca.",
-              "lede": "El espectáculo Enlorquecido recala en los escenarios porteños tras su exitoso paso por Nueva York.",
-              "body": "El cantaor andaluz presenta su personal revisión de los versos federicianos en una gira que une ambas orillas atlánticas. Las funciones prometen momentos de honda intensidad lírica para los amantes de la cultura flamenca y la poesía universal. La agenda cultural de noviembre en Buenos Aires se nutre así de propuestas escénicas de primer orden internacional. Los teatros de la avenida Corrientes preparan salas llenas para recibir este diálogo entre música y literatura. La sensibilidad lorquiana encuentra en la ciudad un público siempre receptivo y cómplice.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "02",
-              "headline": "El Parque de la Ciudad se prepara para albergar una nueva edición de Creamfields Argentina.",
-              "lede": "El predio sur recibe los preparativos técnicos para el gran desembarco de la música electrónica.",
-              "body": "Los preparativos logísticos avanzan en el tradicional pulmón del sur porteño para acoger este masivo encuentro sonoro. La llegada del festival moviliza a miles de seguidores que buscan espectáculos al aire libre durante el tramo final del año. Conviene planificar con tiempo los desplazamientos hacia la zona sur debido a la afluencia prevista de público. Las propuestas de ocio nocturno y diurno se multiplican en la agenda urbana de noviembre. El espacio verde recuperará su actividad habitual tras el paso de los escenarios principales.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
-            },
-            {
-              "n": "03",
-              "headline": "Los vecinos de Parque España solicitan regular la frecuencia de eventos masivos.",
-              "lede": "La petición busca equilibrar la vida residencial del barrio con la celebración de actividades culturales.",
-              "body": "Las asociaciones vecinales han elevado una solicitud formal para moderar la intensidad de las convocatorias en el área verde. El objetivo es preservar la tranquilidad cotidiana y proteger el arbolado y el mobiliario urbano del parque. Este debate refleja el pulso constante entre la dinamización cultural de la ciudad y el descanso de quienes la habitan. Las autoridades locales analizan fórmulas de convivencia para mantener el espacio abierto al disfrute ciudadano sin saturarlo. Pasear por la zona sigue siendo un ejercicio apacible en las mañanas de noviembre.",
-              "source": "saudade desk",
-              "source_date": "2026-11-04"
             }
           ]
         }
