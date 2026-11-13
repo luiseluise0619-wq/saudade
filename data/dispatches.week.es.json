@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-12T06:00:00+09:00",
+  "updated": "2026-11-13T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-13T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "CentroCentro acoge la primera muestra institucional dedicada a Laura Lio.",
+              "lede": "El espacio cultural presenta un recorrido escultórico que dialoga con los materiales orgánicos y el espacio público.",
+              "body": "CentroCentro presenta la primera exposición institucional de Laura Lio en Madrid, consolidando su apuesta por el arte contemporáneo de carácter contemplativo. La muestra reúne obras recientes donde el papel, la madera y el hierro trazan un mapa poético de la naturaleza. Los visitantes pueden recorrer las salas principales con entrada libre durante todo el horario habitual del centro. Es una pausa excelente para los días frescos de otoño en el Paseo del Prado. El cambio oficial se mantiene estable en 1 USD por 0.9 EUR para quienes planifiquen sus compras de catálogos y publicaciones.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "02",
+              "headline": "El festival RIZOMA despliega su edición Plastic Dreams en la capital.",
+              "lede": "El cine independiente y las artes visuales toman diversas salas madrileñas del 16 al 22 de noviembre.",
+              "body": "El festival RIZOMA celebra su edición Plastic Dreams del 16 al 22 de noviembre en Madrid con una programación centrada en la experimentación cinematográfica. Las proyecciones se acompañan de encuentros con cineastas y creadores en enclaves emblemáticos de la ciudad. Se recomienda consultar la programación anticipada en su sitio web para asegurar localidades en las proyecciones especiales. Esta cita cultural convierte cada otoño madrileño en un territorio de descubrimiento para cinéfilos atentos. El tipo de cambio actual de 1 USD a 0.9 EUR facilita la adquisición de entradas y abonos generales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "03",
+              "headline": "El Palacio de Cibeles recibe la exposición de cristal Fruits&Art.",
+              "lede": "Esculturas inspiradas en la botánica ocupan el interior municipal con una precisión técnica sobresaliente.",
+              "body": "Madrid acoge ‘Fruits&Art’, una exposición de esculturas de cristal inspiradas en la naturaleza que revela la delicadeza del vidrio soplado artesanalmente. Las piezas imitan con exactitud botánica frutos, hojas y ramas en un juego constante de transparencias y luz. Esta propuesta complementa la agenda artística de la semana junto a la llegada de los «Reyes del Mundo» con el trofeo de campeones a la ciudad. Las salas municipales ofrecen un refugio tranquilo frente al bullicio exterior de las calles céntricas. Con un cambio de 1 USD por 0.9 EUR, la visita resulta accesible para todos los públicos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona registra aire limpio y cielos cubiertos con suave temperatura.",
+              "lede": "La atmósfera se mantiene estable entre 16 y 20°C, con calidad óptima y el atardecer adelantado a las 17:33.",
+              "body": "La ciudad registra valores térmicos de 16–20°C bajo cielos completamente cubiertos, marcando el compás de un otoño apacible. La calidad del aire es excelente, con un registro de PM2.5 de 2 que invita a caminar sin prisa por los parques y paseos marítimos. El atardecer llega puntual a las 17:33, recortando las siluetas de la arquitectura gótica contra el gris uniforme del cielo. Estas condiciones favorecen los trayectos a pie por Ciutat Vella y el Eixample sin la fatiga del calor estival. El tipo de cambio se sitúa en 1 USD por 0.9 EUR para las transacciones habituales de los viajeros.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "02",
+              "headline": "El festival (In)Fusión Flamenca convoca a referentes del arte jondo.",
+              "lede": "La 24ª edición reúne a Rafael de Utrera y Chicuelo en escenarios singulares de la capital catalana.",
+              "body": "(In)Fusión Flamenca celebra su 24ª edición en Barcelona con Rafael de Utrera, Chicuelo y nuevas miradas al arte jondo. El certamen explora las raíces tradicionales del género mediante fusiones contemporáneas y conciertos en recintos de formato reducido. Paralelamente, el MIRA Festival 2026 cumple 15 años de experimentación audiovisual en Barcelona con instalaciones inmersivas y directos electrónicos. La oferta cultural de la semana se completa con el balance del Parque Científico de Barcelona, cuya investigación bate récords de inversión en 2025 con más de 85 millones de euros destinados a I+D. Las entradas para ambos festivales pueden adquirirse mediante un cambio de 1 USD por 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "03",
+              "headline": "El Parque Científico de Barcelona impulsa la investigación con récord de fondos.",
+              "lede": "Los centros biotecnológicos consolidan su crecimiento tras superar los 85 millones de inversión en 2025.",
+              "body": "La investigación del Parque Científico de Barcelona bate récords de inversión en 2025 con más de 85 millones destinados a proyectos de salud y ciencias de la vida. Este hito refuerza el tejido científico de la ciudad y su capacidad para atraer talento internacional en laboratorios de vanguardia. Mientras tanto, la agenda cultural del fin de semana destaca con el festival de las imágenes en movimiento y el circuito de MIRA Festival 2026. Los visitantes disfrutan de una atmósfera tranquila gracias a los termómetros entre 16 y 20°C y una pureza de aire excelente. El cambio monetario se mantiene en 1 USD por 0.9 EUR en toda la red comercial local.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires transita jornadas cálidas con cielo nublado y radiación extrema.",
+              "lede": "El mercurio alcanza los 29°C con un índice UV de 9 y el sol ocultándose a las 19:34.",
+              "body": "La capital argentina registra una amplitud térmica de 22–29°C bajo un cielo mayormente overcast que no atenúa del todo la sensación térmica primaveral. El índice UV alcanza un nivel de 9 considerado muy fresco, lo que hace imprescindible el uso de protección solar durante los paseos diurnos. El atardecer se demora hasta las 19:34, prolongando las horas de luz en plazas y avenidas arboladas. La calidad del aire se mantiene en parámetros aceptables, con un registro de PM2.5 de 7. Se recuerda a los residentes que el próximo Día de la Soberanía Nacional se celebrará el 2026-11-23, afectando levemente la atención en oficinas públicas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "02",
+              "headline": "Parque Rivadavia acoge la Feria Migrante dedicada a la cultura venezolana.",
+              "lede": "Gastronomía típica, música y artesanías conviven en un encuentro abierto en el corazón de Caballito.",
+              "body": "Se realiza la Feria Migrante en Parque Rivadavia para celebrar la cultura venezolana con puestos de comida tradicional, música en vivo y artesanías. Este evento vecinal forma parte de una agenda plural que incluye también el festival Buenos Aires celebra a Corea, un encuentro gratuito con más de 50 stands, K-pop y platos típicos. Por su parte, el Festival Salvaje Federal llevará la discusión sobre el centralismo literario al corazón de Buenos Aires con mesas de debate y editoriales independientes. Los asistentes deben recordar que el feriado del Día de la Soberanía Nacional el 2026-11-23 alterará los servicios administrativos. La temperatura oscila entre 22 y 29°C con alta radiación.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "03",
+              "headline": "El horizonte cultural porteño suma festivales internacionales y literarios.",
+              "lede": "ULTRA Buenos Aires 2027 anuncia detalles mientras la ciudad debate sobre centralismo literario.",
+              "body": "ULTRA Buenos Aires 2027: cuánto cuestan las entradas, los descuentos especiales y cuál es la nueva sede del festival ya genera expectativa entre los seguidores de la música electrónica. En paralelo, Buenos Aires celebra a Corea en un festival gratuito con más de 50 stands, K-pop y platos típicos que desbordan la oferta gastronómica local. El pensamiento crítico también tiene espacio con el Festival Salvaje Federal llevará la discusión sobre el centralismo literario al corazón de Buenos Aires. Conviene tener presente que el 2026-11-23 se conmemora el Día de la Soberanía Nacional, por lo que bancos y dependencias estatales permanecerán cerrados. El clima se mantiene nublado con máximas de 29°C y calidad de aire justa.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-12T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El Festival Buenos Aires Rojo Sangre confirma su cambio de sede y revela su programación oficial para alegría de los seguidores del cine de género y la experimentación audiovisual. La ciudad recibe este anuncio con una óptima calidad del aire que marca un registro PM2.5 de 9, ideal para los desplazamientos nocturnos hacia las salas de proyección. Los espectadores pueden organizar sus agendas con calma para asistir a los ciclos temáticos y estrenos independientes programados. Este traslado de ubicación renueva el atractivo de un festival arraigado en la agenda cultural porteña.",
               "source": "saudade desk",
               "source_date": "2026-11-07"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-06T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Otoño arranca su 44ª edición con un homenaje a Pessoa.",
-              "lede": "Robert Wilson inaugura el certamen escénico en los escenarios madrileños.",
-              "body": "El Festival de Otoño de la Comunidad de Madrid inicia su 44ª edición con un esperado espectáculo de Robert Wilson en homenaje a Fernando Pessoa. La cita cultural marca el pulso artístico de noviembre en la capital española. Los espectadores pueden adquirir las localidades con un tipo de cambio favorable de 1 USD a 0.89 EUR para visitantes extranjeros. Las salas madrileñas acogen propuestas teatrales de vanguardia durante todo el mes. Es una ocasión idónea para recorrer los espacios culturales de la ciudad al caer la tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "02",
-              "headline": "Ciudad Lineal celebra su festival de jazz con once conciertos gratuitos.",
-              "lede": "La música en vivo ocupa los auditorios del distrito durante el otoño.",
-              "body": "El Festival de Jazz de Ciudad Lineal 2026 ofrece once conciertos gratuitos a lo largo de este mes. Esta iniciativa descentraliza la oferta musical y acerca el género a todos los vecinos y visitantes. Los melómanos disfrutan de intérpretes consagrados y jóvenes promesas sin coste de acceso. La programación se extiende por distintos centros culturales de la zona oriental madrileña. Conviene consultar los horarios específicos en las taquillas antes de cada función.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "03",
-              "headline": "La SGAE y la Puerta del Sol acogen exposiciones sobre Manuel de Falla y el Siglo de Oro.",
-              "lede": "Dos muestras imprescindibles repasan la historia artística y urbana de la Villa.",
-              "body": "La SGAE celebra los 150 años de Manuel de Falla con una exposición monográfica en Madrid. Paralelamente, una maravillosa muestra junto a la Puerta del Sol recrea el Madrid en el Siglo de Oro. Ambas propuestas enriquecen la agenda cultural de noviembre para los caminantes urbanos. Los visitantes pueden planificar sus trayectos utilizando la tasa de cambio de 1 USD a 0.89 EUR. Las salas abren de martes a domingo con acceso libre hasta completar aforo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Park Güell conmemora un siglo de historia con exposiciones fotográficas.",
-              "lede": "El recinto modernista repasa su evolución mediante novecientas imágenes y textos.",
-              "body": "El Park Güell acoge una gran exposición para conmemorar sus 100 años de historia. La muestra reúne un muestrario de 900 fotografías y un centenar de textos inéditos. Los termómetros se sitúan entre los 11°C y los 18°C, con cielos parcialmente nublados hacia la puesta de sol a las 17:40. La calidad del aire es moderada, con un índice PM2.5 de 19. Estas condiciones resultan ideales para pasear sin prisas por los senderos ajardinados del parque barcelonés.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "02",
-              "headline": "La Casa de la Arquitectura Técnica reabre tras una profunda renovación.",
-              "lede": "El emblemático edificio recupera su esplendor para albergar muestras de diseño.",
-              "body": "La Casa de la Arquitectura Técnica de Barcelona reabre sus puertas tras una profunda intervención. El espacio arquitectónico se suma a la agenda cultural junto al World Press Photo 2026 en Barcelona, cuyas fechas ya están confirmadas. Los visitantes extranjeros aprovechan un tipo de cambio de 1 USD a 0.89 EUR para sus gestiones cotidianas. La temperatura oscila entre los 11°C y los 18°C con ambiente fresco al atardecer. Se aconseja recorrer el barrio de la Ribera a pie para apreciar los cambios urbanísticos recientes.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "03",
-              "headline": "Paseos otoñales bajo cielos nublados y aire moderado en la ciudad condal.",
-              "lede": "Las tardes de noviembre invitan a la contemplación pausada de la arquitectura.",
-              "body": "El atardecer llega a las 17:40 sobre una Barcelona con temperaturas de 11°C a 18°C. La calidad del aire registra un nivel moderado de PM2.5 en 19, propicio para la actividad exterior. Los transeúntes disfrutan de los espacios públicos mientras visitan las exposiciones del centenario del Park Güell. Las paradas de transporte público funcionan con absoluta normalidad en todos los distritos. Es un tiempo excelente para observar la transición estacional desde los miradores de la montaña.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival Literal reúne literatura juvenil y cultura digital en Buenos Aires.",
-              "lede": "Los lectores y creadores convergen en un encuentro dedicado a las nuevas narrativas.",
-              "body": "La literatura juvenil y la cultura digital se citan en Buenos Aires en una nueva edición del festival Literal. La ciudad registra temperaturas entre los 17°C y los 25°C con un nivel de radiación UV 8 muy alto. Se prevé una mínima precipitación de 0.2mm en forma de llovizna ligera durante la jornada. La calidad del aire es moderada, con un registro de PM2.5 en 9. El atardecer se fija a las 19:27, alargando las horas de luz para los recorridos urbanos y literarios.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "02",
-              "headline": "Buenos Aires Rojo Sangre anuncia su nueva sede y programación oficial.",
-              "lede": "El clásico festival de cine fantástico despliega 11 días de proyecciones y concursos.",
-              "body": "El Festival Buenos Aires Rojo Sangre cambia de sede y anunció su programación oficial para este año. El evento ofrece once días con estrenos internacionales, clásicos restaurados y 110 equipos en el concurso de cortometrajes. Las condiciones meteorológicas muestran valores térmicos de 17°C a 25°C y una ligera llovizna de 0.2mm. El índice UV 8 aconseja protección solar durante las horas centrales del día. La puesta de sol ocurre a las 19:27, permitiendo disfrutar plenamente de las funciones nocturnas en las salas asociadas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
-            },
-            {
-              "n": "03",
-              "headline": "Ultra Buenos Aires confirma su gran escenario para la edición 2027.",
-              "lede": "La música electrónica anticipa su retorno con la confirmación de su emplazamiento.",
-              "body": "Ultra Buenos Aires confirmó su sede para la edición 2027 del festival de música electrónica. Los asistentes disfrutan de una temperatura agradable de 17°C a 25°C bajo un cielo con ligera llovizna de 0.2mm. La calidad del aire se mantiene estable con PM2.5 en 9, mientras el sol se oculta a las 19:27. Con un índice UV 8 muy alto, es recomendable usar protección al caminar por los parques porteños. Los espacios verdes de la capital ofrecen un refugio tranquilo para los paseantes vespertinos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-06"
             }
           ]
         }
