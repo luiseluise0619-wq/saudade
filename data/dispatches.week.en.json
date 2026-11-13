@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-12T06:00:00+09:00",
+  "updated": "2026-11-13T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-13T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies frame the Han River at 8 to 15 degrees Celsius.",
+              "lede": "The autumn air carries a notable haze as fine particulate matter registers at a PM2.5 level of 42.",
+              "body": "Overcast skies frame the Han River at 8 to 15 degrees Celsius today. The autumn air carries a notable haze as fine particulate matter registers at a PM2.5 level of 42, prompting residents to keep masks close at hand. Financial exchanges trade at 1 USD to 1334 KRW, reflecting steady morning markets following a 2.81% opening rise in the KOSPI. Quiet walkers navigate the concrete paths of Seorae Village, observing a pocket of French character that has quietly maintained its distinct identity for 40 years. It remains a pleasant neighborhood for an unhurried afternoon coffee away from the denser traffic arteries.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "02",
+              "headline": "Seorae Village preserves its distinct neighborhood atmosphere.",
+              "lede": "Local bakeries continue to anchor the quiet residential streets as the afternoon temperature reaches 15 degrees Celsius.",
+              "body": "Seorae Village preserves its distinct neighborhood atmosphere after four decades of quiet integration into the capital. Local bakeries continue to anchor the residential streets as the afternoon temperature reaches 15 degrees Celsius under heavy clouds. Visitors strolling through the district will find independent cafés unaffected by the broader city pace. The local currency holds at 1 USD to 1334 KRW while financial desks monitor morning trends. It is a suitable week to observe how urban micro-neighborhoods retain their character despite decades of surrounding development and infrastructural shifts.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "03",
+              "headline": "Public sports initiatives encourage inclusive community participation.",
+              "lede": "Civic organizers look toward broader recreational programs as regional teams lend support to upcoming community athletic events.",
+              "body": "Public sports initiatives encourage inclusive community participation across the capital districts. Regional athletic organizers look toward broader recreational programs as professional teams lend support to the upcoming Rim Sports Festival. The overcast weather keeps outdoor conditions mild with temperatures hovering around 8 to 15 degrees Celsius. Observers near municipal sports complexes will note steady preparation by local leagues. Currency exchanges settle near 1 USD to 1334 KRW while morning markets digest the recent KOSPI increase of 2.81%.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Clear autumn skies stretch across the capital with temperatures reaching 20 degrees Celsius.",
+              "lede": "The afternoon sun sets early at 16:35, casting long shadows over concrete avenues and quiet residential alleys.",
+              "body": "Clear autumn skies stretch across the capital with temperatures reaching 20 degrees Celsius during peak afternoon hours. The morning minimum touches 8 degrees Celsius under fair conditions, though a PM2.5 reading of 52 suggests a noticeable atmospheric haze. Currency markets trade near 1 USD to 160 JPY for travelers managing exchanges. Residents note that Labour Thanksgiving Day arrives on 2026-11-23, bringing standard administrative closures for banks and public offices. It is an ideal week for quiet strolls through outer parks before the holiday weekend approaches.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "02",
+              "headline": "New retail outposts open quietly in eastern districts.",
+              "lede": "Curious visitors line up for specialty sweets as the city welcomes another international franchise location.",
+              "body": "New retail outposts open quietly in eastern districts as the urban landscape continues its steady evolution. Curious visitors line up for specialty sweets as the city welcomes another international franchise location to its expanding culinary map. The clear weather provides comfortable conditions for walking between neighborhood shops despite the elevated PM2.5 level of 52. Currency exchanges hold steady at 1 USD to 160 JPY. Residents are beginning to plan ahead for the upcoming public holiday on 2026-11-23, noting that government services will pause for Labour Thanksgiving Day.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "03",
+              "headline": "Park paths remain dry under clear skies as evening approaches.",
+              "lede": "Temperatures drop sharply from a daytime high of 20 degrees Celsius once the sun sets at 16:35.",
+              "body": "Park paths remain dry under clear skies as evening approaches across the metropolitan area. Temperatures drop sharply from a daytime high of 20 degrees Celsius once the sun sets at 16:35, signaling a crisp evening. Travelers navigating the transit network will find standard schedules in effect ahead of the holiday on 2026-11-23. Financial transactions reflect a rate of 1 USD to 160 JPY. Observers sitting in neighborhood benches can enjoy the fading light while keeping warm against the evening chill.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Overcast skies hang low over the Tagus River with a trace of precipitation.",
+              "lede": "A light measure of 0.3mm of rain dampens the cobblestone streets while temperatures range gently from 16 to 20 degrees Celsius.",
+              "body": "Overcast skies hang low over the Tagus River with a trace of precipitation marking the afternoon. A light measure of 0.3mm of rain dampens the historic cobblestone streets while temperatures range gently from 16 to 20 degrees Celsius. Air quality remains fair with a comfortable PM2.5 reading of 6, offering clean maritime air for walkers. Currency exchange rates hold steady at 1 USD to 0.9 EUR for visitors settling into local pensions. The city center absorbs the hum of international innovators attending the Web Summit, where robotics and new technologies share space with historic tramlines.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "02",
+              "headline": "Technology delegations gather near the waterfront as autumn conferences unfold.",
+              "lede": "Exhibitors showcase advanced robotics and open models while the city maintains its steady, unhurried cadence.",
+              "body": "Technology delegations gather near the waterfront as major autumn conferences unfold along the riverbanks. Exhibitors showcase advanced robotics and open models while the historic districts maintain their steady, unhurried cadence. Overcast skies keep daytime temperatures mild between 16 and 20 degrees Celsius with a minimal 0.3mm of rain. The air quality index rests at a clean PM2.5 level of 6. Financial transactions reflect a baseline of 1 USD to 0.9 EUR. Evening approaches as sunset hits at 17:24, casting a silvery light over the stone plazas of Baixa.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            },
+            {
+              "n": "03",
+              "headline": "Cultural calendars fill with anniversary metal festivals and late-night showcases.",
+              "lede": "Long-standing musical acts mark decades of performance while the city experiences mild, overcast weather.",
+              "body": "Cultural calendars fill with anniversary metal festivals and late-night showcases across the capital venues. Long-standing musical acts mark decades of performance while the city experiences mild, overcast weather with temperatures between 16 and 20 degrees Celsius. Just 0.3mm of precipitation falls softly on the tiled roofs before clearing by evening. The air quality remains remarkably clear at a PM2.5 level of 6, making pedestrian exploration pleasant. Currency exchanges operate at 1 USD to 0.9 EUR as visitors navigate the hilly neighborhoods under a late November twilight.",
+              "source": "saudade desk",
+              "source_date": "2026-11-13"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-12T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "New hospitality spaces, such as the Category 6 Andaz Lisbon, open their doors to travelers looking for thoughtful contemporary design. Redeveloped properties blend seamlessly into the urban fabric, honoring the city's architectural legacy while offering modern comfort. Outside, the weather remains remarkably clear and warm, with temperatures ranging from 13 to 25°C. The air quality is favorable with PM2.5 at 17, and sunset is marked at 17:35. Visitors checking exchange rates will note 1 USD trades at 0.9 EUR. This is a wonderful week to explore cultural connections, recalling recent academic conferences that stretched from Lisbon to Seoul in the pursuit of shared understanding.",
               "source": "saudade desk",
               "source_date": "2026-11-02"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-01T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light rain falls across the city streets.",
-              "lede": "Temperatures settle between 6 and 10°C as 8.2mm of precipitation dampens the pavement.",
-              "body": "The early November chill arrives quietly alongside persistent light rain. Precipitation totals reach 8.2mm by afternoon, slicking the granite tiles of historic quarters. Temperatures hold low, moving between 6 and 10°C throughout the day. Visitors step indoors to seek refuge from the steady drizzle and poor air quality marked at a PM2.5 level of 32. Currency exchanges trade at 1 USD for 1335 KRW for travelers sorting finances. Cultural discussions continue softly in academic halls following recent international conferences linking Lisbon to Seoul.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "Indoor spaces offer shelter from gray skies.",
-              "lede": "Poor air quality prompts quiet travelers to favor indoor galleries and commercial design flagships.",
-              "body": "The dense mist lingering outside encourages a slower pace indoors. Air quality measures register as poor with a PM2.5 reading of 32 today. Commerce and design enthusiasts find new inspiration in commercial districts as global labels expand their presence, including recent retail arrivals like Front Row opening new offices in Seoul. Financial transactions settle around 1 USD to 1335 KRW. The cool 6 to 10°C weather makes warm tea houses particularly inviting as dusk falls earlier over the capital.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Evening settles early over damp autumn walks.",
-              "lede": "The sun dips below the horizon by 17:34 as damp air blankets the neighborhoods.",
-              "body": "Evening arrives swiftly as the sun sets at 17:34 over the gray cityscape. Total rainfall stays modest at 8.2mm, leaving puddles along quiet alleyways. Outdoor markets empty out faster than usual under the influence of poor air quality with PM2.5 at 32. Travelers adjust their currency at 1 USD per 1335 KRW before heading toward dinner. The thermometer hovers within the 6 to 10°C range, reminding everyone that winter is waiting just behind the autumn rain.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Overcast skies frame the autumn gardens quietly.",
-              "lede": "Temperatures range from 12 to 19°C under a heavy gray canopy.",
-              "body": "An overcast ceiling mutes the autumn light across Tokyo today. Temperatures remain mild, moving between 12 and 19°C across the city districts. Air quality reads as moderate with a PM2.5 level of 47. Currency exchange booths operate at 1 USD to 157 JPY for arriving guests. Residents prepare for upcoming closures on November 3 for Culture Day, known locally as 文化の日. The city maintains its gentle rhythm as film festivals and seasonal cafe openings draw quiet observers indoors.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "Public offices prepare for upcoming holiday closures.",
-              "lede": "Culture Day on November 3 brings administrative pauses across the city.",
-              "body": "Government offices and banks finalize their schedules ahead of the national holiday on November 3. This upcoming day off, known as 文化の日, marks a brief pause in official business. Meanwhile, the city temperature holds steadily between 12 and 19°C under heavy overcast skies. Air quality registers a moderate PM2.5 count of 47. Travelers manage expenses at a rate of 1 USD to 157 JPY. Cultural venues stay active with cinema retrospectives and new seasonal cafes opening their doors.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Early twilight falls as the overcast day fades.",
-              "lede": "Sunset arrives at 16:46, signaling the end of another mild autumn day.",
-              "body": "Daylight fades quickly as the sun sets at 16:46 over the sprawling urban landscape. The overcast canopy deepens into shadow, holding temperatures between 12 and 19°C. Moderate air quality with a PM2.5 level of 47 lingers into the evening hours. Financial exchanges settle at 1 USD to 157 JPY. Residents note the approaching Culture Day holiday on November 3, planning quiet gallery visits or peaceful evenings at home before the national day of reflection.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear blue skies mark All Saints Day in the capital.",
-              "lede": "Temperatures climb to 25°C under bright sunshine for Dia de Todos-os-Santos.",
-              "body": "Bright clear skies welcome residents observing Dia de Todos-os-Santos on November 1. Temperatures reach a warm 13 to 25°C range across the historic hills. Air quality remains clean and moderate with a PM2.5 measurement of 12. Financial transactions use the local currency at 1 USD to 0.9 EUR. Government offices, banks, and post offices remain closed today for the public holiday. Families gather in quiet remembrance, while historic libraries and cultural landmarks welcome visitors seeking peaceful reflection.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "02",
-              "headline": "Public holiday closures alter the city rhythm.",
-              "lede": "Banks and administrative offices pause operations for Dia de Todos-os-Santos.",
-              "body": "The public holiday of Dia de Todos-os-Santos brings a tranquil stillness to Lisbon streets. Official institutions, banks, and post offices are closed for the day. Clear skies and a comfortable 13 to 25°C temperature range invite long walks along the Tagus riverfront. Air quality is favorable with a PM2.5 reading of 12. Visitors convert currency at 1 USD to 0.9 EUR. Cultural discussions continue to connect the city with global counterparts, echoing recent academic dialogues held between Lisbon and Seoul.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
-            },
-            {
-              "n": "03",
-              "headline": "Late afternoon sun illuminates the historic stone facades.",
-              "lede": "Clear conditions persist until sunset arrives at 17:36 over the river.",
-              "body": "The sun descends slowly, casting long golden shadows until sunset at 17:36. Clear weather keeps the daytime high near 25°C before dropping toward a cool 13°C after dark. Air quality stays pleasant with a PM2.5 index of 12. Travelers settle accounts at an exchange rate of 1 USD to 0.9 EUR. As the holiday of Dia de Todos-os-Santos concludes, neighborhood cafes reopen their doors to evening patrons enjoying the mild autumn breeze.",
-              "source": "saudade desk",
-              "source_date": "2026-11-01"
             }
           ]
         }
