@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-13T06:00:00+09:00",
+  "updated": "2026-11-14T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-14T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Palacio de Cibeles expone el trofeo del Mundial este fin de semana.",
+              "lede": "La sala central recibe a los visitantes con una muestra efímera y gratuita.",
+              "body": "El Palacio de Cibeles acoge una exposición efímera y gratuita que permite contemplar de cerca el trofeo del Mundial este fin de semana. Los asistentes pueden acercarse al recinto bajo una temperatura de 11–14°C y la presencia puntual de lluvia de 1.7mm. Conviene llevar paraguas y caminar despacio por las aceras húmedas del paseo de Recoletos. La luz decae pronto con la puesta de sol a las 17:58. El tipo de cambio actual se sitúa en 1 USD frente a 0.9 EUR para quienes planifiquen compras locales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "02",
+              "headline": "El Centro Cultural Eduardo Úrculo celebra la 19ª edición de su muestra cinematográfica.",
+              "lede": "El espacio municipal ofrece proyecciones seleccionadas para el público cinéfilo.",
+              "body": "El Centro Cultural Eduardo Úrculo acoge la 19ª edición de Mi Primer Festival de Cine durante estos días otoñales. Las calles de la capital mantienen un ambiente templado de 11–14°C mientras persisten los chubascos ligeros de 1.7mm. La tarde avanza con rapidez y la oscuridad llega con la puesta de sol a las 17:58. Los viajeros encontrarán un ritmo pausado en las salas y en los cafés cercanos al barrio de Tetuán. Las transacciones comerciales se realizan con una paridad oficial de 1 USD por cada 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "03",
+              "headline": "Las calles madrileñas reciben a los Reyes del Mundo con el trofeo de campeones.",
+              "lede": "La visita de la delegación deportiva anima los espacios públicos de la ciudad.",
+              "body": "Madrid recibe a los Reyes del Mundo con el trofeo de campeones en un evento que congrega a curiosos y aficionados. El cielo gris deja chubascos dispersos que suman 1.7mm de precipitación con termómetros marcando de 11–14°C. La jornada concluye con el anochecer puntual a las 17:58, obligando a buscar refugio bajo techo en los soportales tradicionales. Los visitantes extranjeros operan con un tipo de cambio de 1 USD a 0.9 EUR en comercios y librerías del centro histórico antes de que finalice la semana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El renovado Mercado de la Abaceria abre sus puertas tras una profunda restauración.",
+              "lede": "El histórico recinto del barrio de Gràcia recupera su actividad comercial diaria.",
+              "body": "Todo a punto para la apertura del renovado Mercado de la Abaceria en el corazón de Gràcia. El cielo permanece completamente overcast con temperaturas que oscilan entre 14–18°C y una calidad de aire fair con PM2.5 en 8. La luz tenue se desvanece con la puesta de sol a las 17:32, invitando a pasear sin prisa entre puestos de producto fresco. Las compras cotidianas se resuelven con un cambio monetario de 1 USD equivalente a 0.9 EUR en los establecimientos de la zona.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "02",
+              "headline": "La Universidad de Barcelona acoge el XIII Festival de Filosofía Barcelona Pensa.",
+              "lede": "Las facultades históricas abren sus puertas a debates abiertos sobre el pensamiento actual.",
+              "body": "La Universidad de Barcelona celebra el XIII Festival de Filosofía Barcelona Pensa con conferencias repartidas por distintos espacios académicos. Las calles del Eixample disfrutan de un clima suave de 14–18°C bajo un manto overcast y un índice de calidad de aire fair con PM2.5 de 8. La noche cae con precisión a las 17:32, marcando el fin de las actividades al aire libre. Los visitantes del evento pueden realizar pagos en metálico o tarjeta aplicando la tasa de 1 USD por 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "03",
+              "headline": "El festival DART regresa a Barcelona para explorar los vínculos entre arte y cine.",
+              "lede": "Diez años mirando el arte desde la gran pantalla en las salas asociadas.",
+              "body": "Diez años mirando el arte desde el cine: DART vuelve a Barcelona con una cuidada selección de documentales creativos. La ciudad ofrece un ambiente tranquilo con registros térmicos de 14–18°C, cielos overcast y un nivel de PM2.5 en 8 dentro de una calidad de aire fair. La penumbra llega temprano a las 17:32, propiciando el refugio en las butacas oscuras de las salas de proyección. La moneda local mantiene su valor de referencia frente al dólar con 1 USD igual a 0.9 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Festival de Literatura Salvaje reúne a autores de seis provincias en Buenos Aires.",
+              "lede": "Selva Almada y destacados narradores participan en los encuentros literarios de la temporada.",
+              "body": "El Festival de Literatura Salvaje convoca a Selva Almada y escritores de seis provincias en un encuentro imperdible en Buenos Aires. La atmósfera porteña se muestra cálida pero inestable con temperaturas de 20–29°C y tormentas eléctricas que dejan 7.1mm de precipitación. La calidad del aire se mantiene en niveles fair con un registro de PM2.5 en 6. El atardecer se prolonga hasta las 19:35, ofreciendo tardes largas para la lectura en librerías y cafés de barrio. Cabe recordar que el Día de la Soberanía Nacional se celebrará el 2026-11-23, jornada en la que bancos y oficinas públicas permanecerán cerrados.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "02",
+              "headline": "El FestiBar Buenos Aires ofrece más de 100 bebidas locales e internacionales para degustar.",
+              "lede": "El encuentro de coctelería despliega barras especializadas en distintos puntos de la ciudad.",
+              "body": "FestiBar Buenos Aires 2026 invita a recorrer más de 100 bebidas para degustar en espacios diseñados para la ocasión. El clima registra 20–29°C con episodios de tormenta que suman 7.1mm de agua caída en las últimas horas. La calidad del aire es fair con una lectura de PM2.5 en 6, ideal para caminar con precaución entre chaparrones. El sol se oculta a las 19:35, dando paso a noches templadas de primavera austral. Se recuerda que las instituciones gubernamentales y bancarias cerrarán el próximo 2026-11-23 por el feriado del Día de la Soberanía Nacional.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            },
+            {
+              "n": "03",
+              "headline": "La gastronomía italiana celebra su gran festival regional en las cercanías porteñas.",
+              "lede": "La Plata acoge la muestra culinaria más extensa del país dedicada a recetas tradicionales.",
+              "body": "Llega el festival de gastronomía italiana más grande del país a La Plata, reuniendo productos artesanales y sabores auténticos. El termómetro marca entre 20–29°C bajo un cielo amenazante que descarga 7.1mm en forma de tormenta ocasional. La calidad del aire es fair con PM2.5 situado en 6 en toda la región metropolitana. La luz natural se extiende hasta las 19:35, permitiendo disfrutar de largas sobremesas al aire libre. Los residentes aprovechan para planificar sus gestiones antes del feriado del Día de la Soberanía Nacional fijado para el 2026-11-23, fecha sin actividad bancaria.",
+              "source": "saudade desk",
+              "source_date": "2026-11-14"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-13T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El Festival Buenos Aires Rojo Sangre despliega su programación oficial tras anunciar su traslado a una nueva sede que amplía el confort de los asistentes. Las proyecciones de cine fantástico alternan con muestras de cultura digital, incluyendo guiños al videojuego Dead by Daylight. Afuera, la jornada transcurre con temperaturas de 11 a 20 °C bajo un cielo despejado y limpio. La concentración de partículas PM2.5 se sitúa en 8, reflejando una calidad del aire fair y muy favorable para el descanso urbano. Con un índice UV muy alto de 9 y el ocaso programado para las 19:29, las tardes porteñas invitan a prolongar el café al aire libre antes de ingresar a las salas oscuras. Buenos Aires despide la semana con su habitual vitalidad cultural y templanza climática.",
               "source": "saudade desk",
               "source_date": "2026-11-08"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-07T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Otoño arranca su 44ª edición con un homenaje a Fernando Pessoa.",
-              "lede": "La cita cultural inaugura su programación con una propuesta escénica de Robert Wilson en los escenarios madrileños.",
-              "body": "El Festival de Otoño de la Comunidad de Madrid da comienzo a su 44ª edición con un esperado espectáculo firmado por Robert Wilson en homenaje al poeta Fernando Pessoa. Esta propuesta cultural marca el pulso artístico de la temporada en la capital, coincidiendo además con unas jornadas donde la calidad del aire registra un nivel de PM2.5 de 34. Los espectadores que se desplace por la ciudad encontrarán un tipo de cambio en establecimientos y comercios fijado en 1 USD equivalente a 0.9 EUR. Conviene consultar los horarios de las salas para asegurar el acceso a las funciones principales de este arranque escénico.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de Jazz de Ciudad Lineal ofrece once conciertos gratuitos durante noviembre.",
-              "lede": "Los escenarios del distrito reciben una programación musical abierta a todo el público madrileño.",
-              "body": "El distrito madrileño acoge una nueva edición del Festival de Jazz de Ciudad Lineal 2026, consolidando una agenda cultural que reúne once conciertos gratuitos a lo largo de este mes de noviembre. Esta iniciativa permite disfrutar de propuestas musicales diversas sin coste de entrada en diferentes espacios públicos de la zona. Mientras la ciudad experimenta una calidad del aire con un índice PM2.5 de 34, los visitantes internacionales pueden operar con un tipo de cambio de 1 USD a 0.9 EUR. Se recomienda llegar con antelación a las salas para conseguir una buena ubicación en cada una de las actuaciones programadas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "03",
-              "headline": "Madrid acoge un festival de cine infantil con proyecciones y talleres gratuitos desde hoy.",
-              "lede": "Las pantallas madrileñas programan clásicos como 'Los Goonies' junto a actividades participativas para los más jóvenes.",
-              "body": "A partir del 7 de noviembre, Madrid acoge un festival de cine infantil diseñado para acercar la gran pantalla y la animación a las nuevas generaciones. La programación incluye la proyección de títulos emblemáticos como 'Los Goonies', complementados con talleres gratuitos orientados al público familiar. Ante una calidad del aire que hoy marca un valor PM2.5 de 34, las familias pueden planificar sus trayectos urbanos con total tranquilidad. Los visitantes extranjeros también deben tener en cuenta que el tipo de cambio oficial se sitúa en 1 USD por cada 0.9 EUR en los comercios locales y oficinas de cambio autorizadas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival 42 de géneros fantásticos convoca a los lectores con la figura de H. P. Lovecraft.",
-              "lede": "Barcelona celebra la literatura especulativa con una edición centrada en el legado de los grandes autores.",
-              "body": "El Festival 42 de géneros fantásticos de Barcelona convierte a la ciudad en el epicentro de la literatura insólita, incorporando en su espíritu la figura y el imaginario de H. P. Lovecraft. Bajo un cielo completamente encapotado que oscurece la atmósfera antes de las 17:39, los termómetros se mueven en un rango de 12 a 18°C. Los visitantes que se desplacen por las librerías y recintos del festival pueden realizar sus transacciones aplicando un tipo de cambio de 1 USD a 0.9 EUR. Es una semana excelente para recorrer los espacios interiores dedicados al libro fantástico y la creación especulativa.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Dau cumple 15 años reivindicando el juego de mesa como espacio de encuentro.",
-              "lede": "La cita lúdica celebra su decimoquinta edición con propuestas participativas abiertas a toda la ciudadanía.",
-              "body": "El festival Dau alcanza su decimoquinta edición en Barcelona consolidado como un referente indispensable para entender el juego como un espacio de socialización y encuentro cultural. Las jornadas transcurren bajo una cobertura nubosa y unas temperaturas que oscilan entre los 12 y los 18°C, con la puesta de sol fijada a las 17:39. Los viajeros procedentes de fuera de la eurozona operan con un tipo de cambio de 1 USD igual a 0.9 EUR. El ambiente reposado de las mesas de juego contrasta agradablemente con el ritmo habitual de las calles barcelonesas en esta época otoñal.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "03",
-              "headline": "Barcelona acoge una exposición dedicada al hiperrealismo del austríaco Gottfried Helnwein.",
-              "lede": "Las salas barcelonesas exhiben la obra de uno de los creadores contemporáneos más singulares.",
-              "body": "La pinacoteca barcelonesa ofrece a residentes y viajeros una profunda inmersión en el hiperrealismo a través de una muestra monográfica dedicada al artista austríaco Gottfried Helnwein. La visita se desarrolla con una meteorología típicamente otoñal, marcada por cielos cubiertos, temperaturas de 12 a 18°C y una caída del sol a las 17:39. Para quienes planifiquen sus compras de catálogos y entradas, el tipo de cambio monetario se mantiene en 1 USD por 0.9 EUR. Conviene reservar un par de horas sin prisas para observar con detenimiento los detalles técnicos de cada lienzo expuesto.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Buenos Aires y Montevideo acogen la tercera edición de la muestra de cine español MASS.",
-              "lede": "El circuito cinematográfico exhibe las producciones más destacadas de los festivales de Málaga y San Sebastián.",
-              "body": "Buenos Aires y Montevideo celebran conjuntamente la tercera edición de MASS, una muestra de cine español que trae a ambas capitales lo mejor de las carteleras de los festivales de Málaga y San Sebastián. Los cinéfilos porteños pueden disfrutar de las proyecciones bajo una excelente calidad del aire que registra un nivel de PM2.5 de 9. Las condiciones atmosféricas acompañan de forma óptima los trayectos urbanos entre las salas de proyección y los cafés tradicionales de la ciudad. Es una ocasión propicia para descubrir obras recientes del cine ibérico en un ambiente cultural distendido y de ritmo pausado.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "02",
-              "headline": "La literatura juvenil y la cultura digital se citan en Buenos Aires en el festival Literal.",
-              "lede": "El encuentro literario reúne a autores y lectores en torno a las nuevas formas de narrativa contemporánea.",
-              "body": "La capital argentina acoge una nueva edición del festival Literal, un espacio concebido para examinar los vínculos entre la literatura juvenil, los creadores de contenido y las dinámicas de la cultura digital. Las actividades se desarrollan con una calidad del aire sumamente limpia, cifrada en un índice PM2.5 de 9 en los monitores ambientales de la ciudad. Este contexto favorable invita a recorrer a pie los diferentes puntos de encuentro y librerías adheridas al evento. El público asistente encuentra así un entorno propicio para el intercambio de ideas y la reflexión sobre la lectura en la era digital.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
-            },
-            {
-              "n": "03",
-              "headline": "El Festival Buenos Aires Rojo Sangre anuncia su nueva sede y su programación oficial.",
-              "lede": "El clásico certamen de cine fantástico y bizarro redefine sus espacios para la edición de este año.",
-              "body": "El Festival Buenos Aires Rojo Sangre confirma su cambio de sede y revela su programación oficial para alegría de los seguidores del cine de género y la experimentación audiovisual. La ciudad recibe este anuncio con una óptima calidad del aire que marca un registro PM2.5 de 9, ideal para los desplazamientos nocturnos hacia las salas de proyección. Los espectadores pueden organizar sus agendas con calma para asistir a los ciclos temáticos y estrenos independientes programados. Este traslado de ubicación renueva el atractivo de un festival arraigado en la agenda cultural porteña.",
-              "source": "saudade desk",
-              "source_date": "2026-11-07"
             }
           ]
         }
