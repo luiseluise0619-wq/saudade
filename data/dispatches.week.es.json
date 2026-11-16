@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-15T06:00:00+09:00",
+  "updated": "2026-11-16T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-16T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El Parque Forestal de Valdebebas introduce la siembra de plantas mediante drones municipales.",
+              "lede": "El Ayuntamiento innova en la gestión verde con tecnología aérea para repoblar el norte.",
+              "body": "El Parque Forestal de Valdebebas incorpora un nuevo proyecto impulsado por el Ayuntamiento para sembrar especies vegetales utilizando drones especializados. Esta iniciativa busca optimizar la repoblación de áreas extensas con un enfoque respetuoso y tecnológico. Mientras el cielo permanece cubierto y los termómetros oscilan entre los 11 y los 16°C, los senderos del parque ofrecen un recorrido tranquilo para observar el paisaje otoñal. La puesta de sol se adelanta a las 17:56, marcando el ritmo pausado de las tardes madrileñas. Los paseantes encuentran en este espacio verde un refugio de calma urbana y una muestra de la transformación constante de los pulmones de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "02",
+              "headline": "La exposición Reyes del mundo revive en la capital la memoria de la victoria deportiva.",
+              "lede": "El deporte de base y los grandes eventos convergen en una muestra conmemorativa.",
+              "body": "La muestra cultural que rinde homenaje al triunfo histórico de la selección de fútbol atrae a numerosos visitantes interesados en la historia reciente. Las autoridades municipales y regionales han destacado el papel fundamental de Madrid como gran capital del deporte y punto de encuentro internacional. Con un tipo de cambio fijado en 1 USD frente a 0.9 EUR, los viajeros extranjeros cuentan con una referencia clara para planificar sus jornadas culturales. La visita se completa bajo cielos grises y temperaturas frescas que invitan a recorrer las salas de exposición sin prisa. Es una oportunidad excelente para comprender cómo la pasión colectiva se transforma en patrimonio cultural y memoria compartida.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "03",
+              "headline": "La penumbra vespertina domina las calles madrileñas con el ocaso adelantado a las 17:56.",
+              "lede": "El clima otoñal y el cielo cubierto definen el compás de los paseos urbanos.",
+              "body": "La jornada transcurre bajo un cielo completamente cubierto y temperaturas que se mueven entre los 11 y los 16°C, exigiendo prendas de abrigo ligeras. La moneda extranjera cotiza estable a 1 USD por cada 0.9 EUR para quienes realizan transacciones en comercios locales. Con la caída de la tarde a las 17:56, las luces artificiales de la ciudad comienzan a reflejarse en el asfalto húmedo de noviembre. Los cafés tradicionales y las librerías del centro recuperan su protagonismo como espacios de refugio y lectura pausada. La atmósfera invita al observador atento a detenerse en los detalles cotidianos que marcan la transición hacia las semanas más frías del año.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El festival DAU y la agenda cultural animan el fin de semana en la ciudad.",
+              "lede": "Las propuestas de ocio combinan juegos de mesa, conciertos y homenajes deportivos.",
+              "body": "La agenda cultural barcelonesa ofrece múltiples alternativas de entretenimiento, destacando la celebración del festival DAU y las actuaciones musicales en diversos recintos. Paralelamente, los aficionados al deporte recuerdan figuras históricas con eventos dedicados a Johan Cruyff y encuentros memorables como el disputado por los veteranos del club local frente al Ajax en el Johan Cruyff Arena con un marcador de 4-7. La calidad del aire se mantiene en niveles considerados justos, registrando un valor de PM2.5 de 6. El tipo de cambio actual se sitúa en 1 USD por cada 0.9 EUR, facilitando el cálculo financiero a los visitantes internacionales. Las calles y plazas de la ciudad presentan un ambiente dinámico pero ordenado para el disfrute general.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "02",
+              "headline": "El festival Korea Spotlight reúne a destacados artistas de la escena musical asiática.",
+              "lede": "SOYOU, BIBI, Billlie y oceanfromtheblue convergen en los escenarios barceloneses.",
+              "body": "La música internacional encuentra un espacio destacado en la programación cultural gracias al desembarco del festival Korea Spotlight en la capital catalana. Este evento convoca a seguidores de géneros contemporáneos para disfrutar de las actuaciones en directo de intérpretes reconocidos como SOYOU, BIBI, Billlie y oceanfromtheblue. Las condiciones ambientales acompañan el fin de semana con una calidad del aire justa y un índice de PM2.5 de 6. Para los viajeros que gestionan divisas, la equivalencia monetaria se mantiene en 1 USD equivalente a 0.9 EUR. Los desplazamientos hacia los recintos de conciertos se benefician de una red de transporte público eficiente y puntual.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "03",
+              "headline": "Los espacios públicos disfrutan de una atmósfera estable con calidad del aire en niveles de 6 PM2.5.",
+              "lede": "El equilibrio ambiental permite recorrer los paseos y parques urbanos con total comodidad.",
+              "body": "La ciudad ofrece un entorno propicio para el descanso y la observación urbana gracias a unos registros atmosféricos moderados y estables. Con el indicador de PM2.5 en 6, la calidad del aire se califica como justa para la actividad al aire libre. La moneda local opera bajo el tipo de cambio de 1 USD por 0.9 EUR, asegurando estabilidad en los intercambios comerciales cotidianos. Los residentes y visitantes aprovechan la pausa dominical para pasear por la costa o adentrarse en los barrios históricos sin aglomeraciones excesivas. La oferta de ocio urbano se integra de manera armónica con la rutina diaria de una comunidad que valora el ritmo sosegado.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La música electrónica y los festivales culturales convocan multitudes bajo el sol porteño.",
+              "lede": "Creamfields y el Hanguk Fest llenan los espacios públicos de música y gastronomía.",
+              "body": "La capital argentina vibra con una intensa agenda de fin de semana que incluye la masiva celebración de Creamfields, donde la música electrónica congrega a multitudes en un ambiente de alegría compartida. Asimismo, el Hanguk Fest ofrece una ventana abierta a la cultura coreana con degustaciones de kimchi, demostraciones de danza tradicional y más de 50 puestos gratuitos. El clima se presenta cálido con temperaturas entre los 21 y los 26°C, bajo un cielo overcast que mitiga parcialmente la radiación. No obstante, el índice UV alcanza el nivel 9, considerado muy alto, por lo que se aconseja protección solar adecuada durante los recorridos al aire libre. La puesta de sol se registrará avanzada la tarde, exactamente a las 19:37.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "02",
+              "headline": "El Festival de Fado acerca la melancolía atlántica a los escenarios de la ciudad.",
+              "lede": "Dos de las voces portuguesas más importantes interpretan cantos tradicionales en los auditorios.",
+              "body": "La programación artística internacional suma esta semana la llegada del prestigioso Festival de Fado, reuniendo a dos de los cantantes portugueses más destacados del momento actual. Este encuentro musical dialoga perfectamente con la sensibilidad porteña, ofreciendo recitales íntimos cargados de poesía y cuerda tradicional. El ambiente exterior se mantiene templado, con una franja térmica que va desde los 21 hasta los 26°C y una calidad del aire justa que marca 9 en el índice PM2.5. El cielo permanece overcast, creando una luz suave que acompaña el atardecer hasta las 19:37. Conviene recordar que el próximo lunes 2026-11-23 se celebrará el feriado nacional por el Día de la Soberanía Nacional, por lo que las oficinas gubernamentales, bancos y oficinas de correos permanecerán cerrados ese día.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            },
+            {
+              "n": "03",
+              "headline": "La radiación ultravioleta alcanza un nivel 9 muy alto a pesar de la cobertura nubosa.",
+              "lede": "Las temperaturas oscilan entre los 21 y los 26°C en una jornada de ambiente cálido.",
+              "body": "Las condiciones meteorológicas de este domingo combinan una temperatura agradable de 21 a 26°C con un cielo overcast que disimula la intensidad solar. Sin embargo, los indicadores atmosféricos señalan un índice UV de 9, catalogado como muy alto, haciendo indispensable el uso de protección adecuada al transitar por las calles. La calidad del aire se sitúa en niveles justos con un registro de PM2.5 en 9. La caída del sol ocurrirá a las 19:37, prolongando las horas de luz vespertina para disfrutar de las terrazas y parques de la metrópoli. Se recuerda a los residentes que la próxima semana, el 2026-11-23, tendrá lugar el feriado por el Día de la Soberanía Nacional, afectando la apertura de entidades bancarias y dependencias públicas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-16"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-15T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El movimiento de viajeros entre el cono sur y el Caribe recibe un estímulo operativo con motivo de la final de la Copa Sudamericana, impulsando la apertura temporal de vuelos directos que conectan Buenos Aires con Barranquilla. Esta nueva ruta aérea facilita el tránsito de aficionados y observadores en vísperas del próximo feriado nacional del Día de la Soberanía Nacional, fijado en el calendario para el 2026-11-23, fecha en la que oficinas gubernamentales, bancos y dependencias postales suspenderán sus servicios habituales. En las calles porteñas, el termómetro marca entre los 18°C y los 26°C bajo un cielo overcast. El índice UV trepa hasta un nivel de 9, catalogado como muy alto, aconsejando el uso de protección solar pese a la nubosidad. La puesta de sol ocurre a las 19:31, mientras la calidad del aire se registra en un nivel fair con PM2.5 en 6, completando una atmósfera urbana propicia para el movimiento pausado de los viajeros.",
               "source": "saudade desk",
               "source_date": "2026-11-10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-09T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Otoño arranca su 44ª edición con Robert Wilson.",
-              "lede": "La cita cultural madrileña rinde homenaje a la figura de Pessoa en los escenarios de la capital.",
-              "body": "El Festival de Otoño de la Comunidad de Madrid inaugura su cuadragésima cuarta edición con una propuesta escénica firmada por el director Robert Wilson. La obra funciona como un sentido homenaje a la figura y los heterónimos del poeta Fernando Pessoa. Las funciones ocupan varios espacios culturales de la ciudad durante las próximas semanas. Conviene consultar la programación previa para asegurar las entradas en las salas principales. La propuesta consolida el pulso otoñal de la escena madrileña.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "02",
-              "headline": "César Fernández Arias expone su obra reciente en galerías madrileñas.",
-              "lede": "El creador presenta una mirada singular sobre los objetos cotidianos y la materia escultórica.",
-              "body": "Las salas de exposiciones de Madrid acogen una nueva muestra individual dedicada al artista César Fernández Arias. Su trabajo reúne piezas recientes donde el dibujo y el volumen dialogan con la memoria material. La propuesta invita a una observación pausada, lejos de las grandes aglomeraciones del centro urbano. Es una parada recomendada para quienes buscan el pulso artístico menos estridente de la ciudad. La entrada a la sala permanece abierta de martes a domingo en horario continuado.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "03",
-              "headline": "El mayor parque navideño abre a 20 kilómetros de Madrid el 13 de noviembre.",
-              "lede": "El recinto ofrece pista de hielo, iluminación monumental y la llegada anticipada de Papá Noel.",
-              "body": "A solo 20 kilómetros del núcleo urbano, el mayor parque navideño de España abre sus puertas el 13 de noviembre. El espacio cuenta con 100000 metros cuadrados de iluminación decorativa, una amplia pista de hielo y la presencia prevista de Papá Noel volando sobre el recinto. La iniciativa busca transformar el entorno natural en un punto de encuentro familiar previo a las fiestas. Los accesos en transporte público se refuerzan para absorber la alta demanda de visitantes durante los fines de semana. Las entradas anticipadas ya se pueden adquirir en línea.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La música de Vijay Iyer llega al Festival de Jazz de Barcelona.",
-              "lede": "El Conservatori del Liceu acoge una de las citas imprescindibles para los amantes del género.",
-              "body": "El prestigioso pianista Vijay Iyer se presenta en el marco del Festival de Jazz de Barcelona. Las actuaciones tienen lugar en las instalaciones del Conservatori del Liceu, un espacio con excelente acústica para el formato de trío. La atmósfera invita a la escucha atenta de composiciones contemporáneas que cruzan la improvisación y la tradición clásica. Conviene llegar con antelación para acceder a la sala sin prisas. El evento reafirma la vitalidad musical de la temporada barcelonesa de otoño.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "02",
-              "headline": "El MIRA Festival celebra su decimoquinto aniversario con 14000 asistentes.",
-              "lede": "La música electrónica y los espectáculos audiovisuales cierran otra edición de referencia.",
-              "body": "El MIRA Festival ha clausurado la edición de su 15 aniversario tras reunir a 14000 asistentes en sus diferentes espacios. El encuentro consolida su apuesta por la vanguardia sonora y las instalaciones lumínicas de gran formato. Durante las jornadas, el público ha podido disfrutar de estrenos absolutos y colaboraciones entre artistas visuales y músicos electrónicos. La organización ya trabaja en la ampliación de sus horizontes para las próximas convocatorias en la capital catalana. El balance final destaca por el civismo y la fluidez en los accesos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "03",
-              "headline": "Caminatas bajo lluvia ligera con temperaturas de 16 a 19°C.",
-              "lede": "El litoral barcelonés registra valores moderados de contaminación y cielos cubiertos.",
-              "body": "Las calles de Barcelona registran temperaturas suaves que oscilan entre los 16 y los 19°C, acompañadas de 1.2mm de precipitación en forma de lluvia ligera. La puesta de sol se adelanta a las 17:37, marcando el compás vespertino en paseos y parques urbanos. La calidad del aire se mantiene en niveles moderados, con un valor de PM2.5 en 16, ideal para caminatas urbanas sin esfuerzo físico excesivo. Conviene llevar un paraguas ligero ante los chubascos esporádicos que puedan aparecer junto al mar. Las terrazas del Gòtic y la Barceloneta adaptan su servicio al compás meteorológico.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival Buenos Aires Rojo Sangre anuncia su nueva sede y programación.",
-              "lede": "El clásico encuentro de cine fantástico reúne más de un centenar de producciones.",
-              "body": "El Festival Buenos Aires Rojo Sangre regresa con once días dedicados al cine fantástico, bizarro y de terror. La cita incluye estrenos internacionales, clásicos restaurados y la participación de 110 equipos en el concurso de cortometrajes. Esta edición cuenta con una nueva sede oficial que centraliza las proyecciones y los encuentros con realizadores. Los cinéfilos porteños disponen de una parrilla de actividades pensada para maratones de fin de semana. La venta de localidades se realiza directamente en las taquillas del complejo elegido.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival Literal reúne la discusión sobre literatura joven en la ciudad.",
-              "lede": "Autores y editores independientes debaten sobre las nuevas voces de la narrativa actual.",
-              "body": "Buenos Aires acoge una nueva entrega del Festival Literal, un espacio de reflexión dedicado a las letras jóvenes. Las mesas de debate abordan los desafíos de la edición independiente y las derivas de la narrativa contemporánea. Diversos referentes del sector se dan cita para compartir lecturas y talleres abiertos al público lector. El ambiente propicia el intercambio de ideas en librerías de barrio y centros culturales adheridos. La asistencia es libre hasta completar el aforo de cada sala.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
-            },
-            {
-              "n": "03",
-              "headline": "Jornadas luminosas de 14 a 23°C y preparación para el feriado.",
-              "lede": "El cielo despejado y el índice UV muy alto marcan la agenda al aire libre en Buenos Aires.",
-              "body": "Buenos Aires disfruta de temperaturas que van de los 14 a los 23°C bajo cielos completamente despejados. La puesta de sol se registra a las 19:30, alargando las tardes en plazas y parques de la ciudad. La calidad del aire es fair con un nivel de PM2.5 en 12, aunque el índice UV alcanza un valor de 9, considerado muy alto. Se recomienda el uso de protección solar si se planean largas caminatas al aire libre. De cara al próximo feriado del Día de la Soberanía Nacional el 23 de noviembre, los servicios administrativos y bancarios ajustarán sus horarios habituales.",
-              "source": "saudade desk",
-              "source_date": "2026-11-09"
             }
           ]
         }
