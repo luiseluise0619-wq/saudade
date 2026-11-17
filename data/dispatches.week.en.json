@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-16T06:00:00+09:00",
+  "updated": "2026-11-17T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-17T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Fine drizzle settles over the pavement around Gwanghwamun.",
+              "lede": "Temperatures hover between 9 and 12°C as a light mist collects 2.4mm of moisture across the plazas.",
+              "body": "The afternoon air carries a distinct dampness that mutes the usual hum of downtown traffic. With temperatures ranging between 9 and 12°C, pedestrians adjust their wool coats while stepping carefully over slick granite slabs. A modest accumulation of 2.4mm of precipitation leaves the streets mirroring the glow of nearby lanterns. Meanwhile, financial exchanges trade quietly at 1 USD for 1335 KRW. Air quality remains moderate with PM2.5 at 15, keeping the horizon softly obscured until evening arrives promptly at 17:20.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            },
+            {
+              "n": "02",
+              "headline": "Deoksugung stone-wall path grows quiet under gray skies.",
+              "lede": "Ginkgo leaves gather in damp heaps along the pedestrian walkway as daylight fades early.",
+              "body": "Fall foliage reaches its final stage as fallen leaves carpet the pedestrian lanes near the historic palace walls. The steady mist dampens the ground, making the walking path remarkably peaceful compared to busier weekends. Visitors linger beneath heavy umbrellas, watching the urban landscape transition into evening tones. Sunset arrives by 17:20, drawing office workers toward nearby tea houses to escape the 9 to 12°C chill. Ambient air remains acceptable with a moderate PM2.5 reading of 15.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            },
+            {
+              "n": "03",
+              "headline": "Hanok courtyards in Bukchon capture the stillness of late autumn.",
+              "lede": "Drizzle creates slow, rhythmic patterns across traditional tiled roofs in the old neighborhood.",
+              "body": "The narrow alleys of Bukchon Hanok Village feel especially contemplative under an overcast canopy. The 2.4mm of rainfall darkens the aged timber beams and smooths the sound of footsteps on stone. The afternoon thermometer stays within a narrow 9 to 12°C band, encouraging residents to stay indoors near warmed floors. Currency exchange markets settle near 1335 KRW per USD. The moderate air quality reading of PM2.5 15 ensures clear enough views toward the ancient gates before dusk settles fully.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain channels swiftly through the steep gutters of Kagurazaka.",
+              "lede": "A substantial 32.9mm of precipitation drenches the sloping alleys as daylight closes early.",
+              "body": "The metropolis encounters a thorough soaking today, with 32.9mm of rain pouring across the asphalt and stone staircases. Temperatures rest between 9 and 12°C, bringing a cold moisture that demands heavy rain gear. Currency markets exchange at 160 JPY for 1 USD. Air quality hovers at a moderate PM2.5 level of 18, softened by the persistent downpour. Sunset arrives prematurely at 16:33, casting early shadows over the quiet residential lanes and darkened shopfronts.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            },
+            {
+              "n": "02",
+              "headline": "Public transit platforms stay sheltered as the downpour intensifies outdoors.",
+              "lede": "Commuters navigate the damp concourses while keeping a close eye on upcoming calendar notices.",
+              "body": "Heavy storms bring 32.9mm of water to the city streets, prompting commuters to seek refuge inside the covered Yamanote Line stations. As temperatures span from 9 to 12°C, woolen scarves and umbrellas become standard fixtures on every platform. Travelers should note that 勤労感謝の日 falls on 2026-11-23, which will close banks and government offices next week. Meanwhile, foreign currency exchanges hold steady at 160 JPY per USD. Air quality registers a moderate PM2.5 score of 18.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            },
+            {
+              "n": "03",
+              "headline": "Imperial Palace gardens glisten under a steady curtain of autumn rain.",
+              "lede": "Moisture clings to the pine needles while early evening darkness descends on the moats.",
+              "body": "The expansive gardens take on a monochrome palette as 32.9mm of rainfall ripples across the stone moats. Temperatures range from 9 to 12°C, making long strolls a matter of quiet endurance rather than leisure. The early sunset at 16:33 brings an abrupt end to daytime park visits. Financial tracking puts the exchange rate at 160 JPY to 1 USD. Looking ahead, citizens prepare for the upcoming 勤労感謝の日 holiday on 2026-11-23, ensuring administrative tasks are settled before public offices close for the day.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Rain slicked calçada stones reflect the warm glow of Alfama streetlamps.",
+              "lede": "A notable 21.2mm of rain falls across the hills while afternoon temperatures remain mild.",
+              "body": "The Atlantic front brings 21.2mm of rain to the capital, washing the limestone pavements clean. Temperatures stay pleasantly mild, ranging between 19 and 21°C despite the wet conditions. Financial transactions settle at an exchange rate of 1 USD to 0.91 EUR. Air quality remains fair with a minimal PM2.5 reading of 3, keeping the river air exceptionally crisp. Sunset arrives at 17:21, painting the damp rooftops of the lower city in muted amber tones.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            },
+            {
+              "n": "02",
+              "headline": "The Tejo riverfront disappears behind a thick veil of coastal mist.",
+              "lede": "Commuters ride the sheltered trams as 21.2mm of precipitation waters the city's parks.",
+              "body": "Heavy passing showers drop 21.2mm of rain across the capital, encouraging residents to seek shelter in neighborhood tascas. The air remains relatively warm at 19 to 21°C, contrasting with the cool dampness of the storm. Looking toward the calendar, residents note that Restauração da Independência falls on 2026-12-01, which will bring holiday closures to banks and administrative offices. Currency markets operate at 1 USD for 0.91 EUR. Air quality is fair with PM2.5 at 3, and sunset closes the day at 17:21.",
+              "source": "saudade desk",
+              "source_date": "2026-12-01"
+            },
+            {
+              "n": "03",
+              "headline": "Botanical gardens drink in the steady moisture from Atlantic clouds.",
+              "lede": "Subtropical foliage thrives under a gentle downpour as the afternoon slips into evening.",
+              "body": "The dense canopies of the upper terraces channel 21.2mm of rainfall into the terracotta drainage basins below. Afternoon temperatures hover comfortably between 19 and 21°C, sustaining a lush environment despite the grey skies. Currency exchanges trade quietly at 0.91 EUR per USD. Air quality is marked as fair with a clean PM2.5 level of 3. As the sun dips below the horizon at 17:21, residents begin planning around the upcoming Restauração da Independência holiday on 2026-12-01, noting the impending closure of municipal services.",
+              "source": "saudade desk",
+              "source_date": "2026-11-17"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-16T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Music enthusiasts gather for Moonfest as Moonspell marks 35 years of gothic metal performance. The multi-day celebration honors the enduring legacy of the band within the local and international scene. Venues host dedicated fans who appreciate the dark, atmospheric sounds fitting for the rainy autumn weather. This musical gathering adds a rich cultural layer to the city's calendar alongside major tech summits. It is a moment of deep pride for local music chroniclers.",
               "source": "saudade desk",
               "source_date": "2026-11-11"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-10T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn skies settle over Seoul as temperatures range between 1 and 10 degrees Celsius.",
-              "lede": "The crisp morning air carries the scent of falling leaves through the palace courtyards.",
-              "body": "Clear skies define the day in Seoul as the temperature moves between 1 and 10 degrees Celsius. Sunset arrives early at 17:25, pulling long shadows across the stone pathways of old quarters. Air quality remains fair with PM2.5 resting at 11, making outdoor strolls along the fortress wall pleasant. Travelers exchanging currency will find a rate of 1 USD to 1347 KRW. The city's cultural calendar brings quiet interest, highlighted by recent notes like TXT inviting 1,000 fans to a Seoul theme park and the Busan Science Museum opening a quantum education exhibition with KRISS. Solbi also celebrates a double joy with an art exhibition and upcoming marriage. It is a steady, quiet week for long walks under a pale blue sky.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "02",
-              "headline": "Early evening darkness arrives as the sun dips below the horizon by 17:25.",
-              "lede": "The transition from daylight to dusk is swift in the narrow alleys of Jongno.",
-              "body": "With sunset occurring promptly at 17:25, evening routines in Seoul shift indoors much earlier than in the warmer months. The daytime air remains clear, and particulate levels hold at a fair PM2.5 of 11. Temperatures between 1 and 10 degrees Celsius require a heavy coat for those lingering outside after dark. Financial transactions settle around 1 USD to 1347 KRW. While urban life carries on, cultural spaces buzz with quiet milestones, from Solbi's dual celebration of her art exhibition and marriage to educational milestones like the Busan Science Museum opening a quantum education exhibition with KRISS. Meanwhile, pop culture finds moments of connection, such as TXT inviting 1,000 fans to a Seoul theme park. These small currents weave through the city as the autumn chill settles deep into the concrete.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "03",
-              "headline": "Fair air quality with a PM2.5 reading of 11 keeps the morning walks clear along the Han River.",
-              "lede": "The river banks offer a quiet respite under a bright, unclouded canopy.",
-              "body": "Clean air conditions prevail across the capital today, registering a stable PM2.5 level of 11 under clear skies. Temperatures hover between 1 and 10 degrees Celsius, demanding warm scarves and steady footsteps along the water. As daylight fades by 17:25, the city lights reflect gently on the surface. Financial exchanges hold steady at 1 USD to 1347 KRW for visiting travelers. Cultural notes continue to color the local rhythm, including Solbi celebrating a double joy with her art exhibition and upcoming marriage. Educational spaces also expand horizons, exemplified by the Busan Science Museum opening a quantum education exhibition with KRISS. Even lighter moments find a home here, such as TXT inviting 1,000 fans to a Seoul theme park. It is a balanced week for quiet observation.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Light rain brings 12.1mm of precipitation to the quiet streets of Tokyo.",
-              "lede": "Wet asphalt mirrors the dim lanterns of district side streets under an 8 to 12 degrees Celsius canopy.",
-              "body": "Rain shapes the day in Tokyo with 12.1mm of precipitation falling steadily from grey skies. Temperatures range between 8 and 12 degrees Celsius, and sunset arrives early at 16:38, casting the city in twilight before dinner. Air quality is moderate with a PM2.5 measure of 11. Travelers will note the exchange rate stands at 1 USD to 158 JPY. Looking ahead to public holidays, 勤労感謝の日 falls on 2026-11-23, which will bring routine closures to government offices and banks. The city's cultural pulse remains vibrant despite the damp weather, highlighted by a bigger and more international Art Week Tokyo expanding its reach. The Tokyo International Film Festival 2026 continues weaving cultural threads, while quieter moments unfold, such as T.O.P visiting a Tokyo exhibition without his girlfriend. It is a contemplative week for gallery goers and readers.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "02",
-              "headline": "The Tokyo International Film Festival 2026 weaves cultural threads as light rain persists.",
-              "lede": "Cinemas offer warmth and dry refuge while 12.1mm of precipitation dampens the pavement outside.",
-              "body": "A steady drizzle yields 12.1mm of precipitation across Tokyo today, keeping temperatures bounded between 8 and 12 degrees Celsius. Afternoon turns to dusk quickly with sunset fixed at 16:38. Moderate air quality registers a PM2.5 of 11. Currency exchange operates at a rate of 1 USD to 158 JPY for arriving guests. Residents should mark their calendars for 勤労感謝の日 on 2026-11-23, anticipating closures at municipal offices and financial institutions. Art and cinema anchor the city's mood this week, underscored by Art Week Tokyo expanding its international reach and the Tokyo International Film Festival 2026 weaving cultural threads. Elsewhere, observant travelers might note T.O.P visiting a Tokyo exhibition without his girlfriend. The damp streets invite a slower pace beneath umbrellas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "03",
-              "headline": "Art Week Tokyo expands its international reach as early winter shadows lengthen by 16:38.",
-              "lede": "Galleries across the capital draw visitors seeking shelter from the damp afternoon chill.",
-              "body": "The art scene in the capital broadens its horizons just as temperatures settle between 8 and 12 degrees Celsius. With 12.1mm of precipitation falling through the damp air, the sun sets early at 16:38. Air quality stays at a moderate PM2.5 level of 11. Travelers converting currency will encounter a rate of 1 USD to 158 JPY. A reminder for the coming weeks: 勤労感謝の日 arrives on 2026-11-23, resulting in standard holiday closures for banks and public services. Amidst the wet weather, cultural fixtures like the Tokyo International Film Festival 2026 continue weaving cultural threads. Meanwhile, smaller personal moments catch the eye, such as T.O.P visiting a Tokyo exhibition without his girlfriend. It is a measured, reflective time to wander through indoor spaces.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Thunderstorms sweep over Lisbon, leaving 32.9mm of precipitation in their wake.",
-              "lede": "The steep cobblestones gleam darkly under heavy skies as the Atlantic storms roll inland.",
-              "body": "Lisbon experiences a dramatic weather shift today as thunderstorms bring 32.9mm of precipitation to the hills and plazas. Temperatures remain mild, moving between 18 and 20 degrees Celsius, though the wet wind demands a sturdy jacket. Sunset occurs at 17:27, casting a dramatic, stormy amber light over the Tagus River. Air quality is fair with a low PM2.5 reading of 5. For visitors exchanging currency, the rate holds at 1 USD to 0.89 EUR. The rain slows the outdoor cafe culture, pushing residents into neighborhood tascas and bakeries for shelter. It is a day to watch the water run down the historic facades and listen to the thunder echo off the yellow trams.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "02",
-              "headline": "Mild temperatures between 18 and 20 degrees Celsius persist despite the afternoon storms.",
-              "lede": "The humid air carries the scent of damp stone and salt from the nearby estuary.",
-              "body": "Heavy weather grips the Portuguese capital with thunderstorms delivering 32.9mm of precipitation across the districts. Despite the rain, the air stays remarkably warm with temperatures ranging from 18 to 20 degrees Celsius. Daylight fades by 17:27, cutting the afternoon short beneath grey clouds. Air quality remains exceptionally clear with a fair PM2.5 index of 5. Financial exchanges operate smoothly at 1 USD to 0.89 EUR. The sudden downpours transform familiar walkways into rushing streams, encouraging a contemplative pause in local routines. Travelers find refuge beneath awnings and inside tiled entryways, watching the city weather the storm with its characteristic quiet grace.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
-            },
-            {
-              "n": "03",
-              "headline": "Fair air quality with a PM2.5 of 5 keeps the coastal breeze feeling fresh between storms.",
-              "lede": "The sudden downpours clear the atmosphere above the river, leaving a sharp clarity to the views.",
-              "body": "Clean maritime air flows through the city streets even as thunderstorms drop 32.9mm of precipitation on the rooftops. The air quality index registers a clean PM2.5 of 5 under the shifting cloud cover. Temperatures hover comfortably between 18 and 20 degrees Celsius, softening the chill of the rain. As evening approaches, sunset at 17:27 brings an early dusk to the wet tile facades. Currency conversion for travelers is steady at 1 USD to 0.89 EUR. The heavy rain dampens the usual foot traffic in the historic center, offering a rare stillness to the usually bustling viewpoints. It is a quiet moment to experience the city's melancholic beauty away from the crowds.",
-              "source": "saudade desk",
-              "source_date": "2026-11-10"
             }
           ]
         }
