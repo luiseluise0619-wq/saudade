@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-17T06:00:00+09:00",
+  "updated": "2026-11-18T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-18T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light drizzle settles across Seoul as autumn temperatures drop to 1°C.",
+              "lede": "A minimal 0.3mm of precipitation dampens the asphalt while evening approaches early at 17:19.",
+              "body": "The late autumn air turns sharp today, registering between 1 and 9°C with a trace amount of light drizzle totaling 0.3mm. Sunset arrives promptly at 17:19, leaving the gray streets under an overcast sky with moderate air quality recorded at PM2.5 17. Travelers managing their finances will find the exchange rate steady at 1 USD to 1336 KRW. It is a quiet afternoon for indoor pursuits, making it an ideal time to seek shelter in the city's cultural spaces. The weather invites slow movement through galleries rather than extended walks along the city walls.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "02",
+              "headline": "Contemporary art traces transformation at Seo-Seoul Museum of Art.",
+              "lede": "The 2026 New Media Emerging Artist Exhibition remains open through February 28, 2027.",
+              "body": "Art enthusiasts visiting the Seo-Seoul Museum of Art can currently experience the 2026 New Media Emerging Artist Exhibition, titled 'The Snake That Cannot Shed'. The thoughtful showcase runs through February 28, 2027, offering a deep look into contemporary Korean new media practices. Alongside this exhibition, city conversations turn toward cultural retrospectives, including discussions of Chagall returning to Seoul with a major exhibition tracing art shaped by turmoil. These quiet galleries provide a warm reprieve from the damp chill outside. Visitors navigating the city's creative quarters will find these spaces deeply engaging and unhurried on a weekday afternoon.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "03",
+              "headline": "Residential spaces and public figures shape daily neighborhood discourse.",
+              "lede": "From newlywed home realities to public commentary, urban life remains grounded.",
+              "body": "Local conversations this week touch upon the realities of urban housing, highlighted by recent features on newlywed homes managed through jeonse lease arrangements. Public life in the neighborhoods continues at its usual steady rhythm, accompanied by cultural news such as comedian Park Se-mi's recent projects. These domestic stories reflect the everyday pragmatism of living in a dense metropolis where housing structures dictate daily routines. Observers walking through residential alleys will notice the quiet preparations for the colder weeks ahead. It is a season of inward focus, where homes become the primary landscape for quiet daily rituals.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Heavy rain falls across Tokyo with a total of 24.5mm of precipitation.",
+              "lede": "Temperatures range between 9 and 19°C while daylight fades quickly by 16:32.",
+              "body": "A steady downpour brings 24.5mm of precipitation to the city streets today, accompanied by moderate air quality with PM2.5 at 21. Temperatures span a mild 9 to 19°C, though the heavy rain makes waterproof layers essential for any urban exploration. Sunset occurs early at 16:32, casting a slate-gray tone over the concrete cityscape. Financial transactions reflect an exchange rate of 1 USD to 159 JPY. Pedestrians navigate umbrellas through busy crossings while transit systems operate with standard wet-weather precision. The moisture brings a quiet sheen to the stone pathways of the city's historic gardens.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "02",
+              "headline": "Film retrospectives and artistic hotel rooms define Tokyo's cultural calendar.",
+              "lede": "The city looks back at recent cinematic achievements while permanent art installations welcome visitors.",
+              "body": "Cultural observers are currently reviewing the extensive reports from the recent 2026 Tokyo International Film Festival, which gathered diverse audiences for global cinema. Meanwhile, travelers seeking unique interior spaces can visit the Park Hotel Tokyo, known for its dedicated rooms where art is actively coming into being through resident painters. Looking ahead to warmer seasons, announcements for next year's culinary events confirm that Tokyo DisneySea Food & Wine will return with EPCOT chefs from April 13 to June 30. These creative touchpoints offer rich indoor itineraries for those avoiding the persistent rain outdoors. The city remains a quiet intersection of traditional hospitality and modern artistic experimentation.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "03",
+              "headline": "Preparation begins for Labor Thanksgiving Day closures next week.",
+              "lede": "Government offices and banks will observe the upcoming public holiday on November 23.",
+              "body": "Residents are reminded that the upcoming public holiday, Kinrō Kansha no Hi (Labor Thanksgiving Day), falls on November 23, 2026. Because this holiday lands on a Monday, postal services, government offices, and banking institutions will be closed for the day. Travelers should plan their administrative errands and currency exchanges accordingly before the weekend closure takes effect. Public parks and major museums generally remain accessible, though holiday hours may apply to certain municipal galleries. It is a traditional day dedicated to labor, production, and giving thanks, traditionally marked by quiet neighborhood gatherings across the wards.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Rain showers pass over Lisbon as temperatures hold at 17 to 20°C.",
+              "lede": "A modest 10.4mm of precipitation falls across the hills before sunset at 17:21.",
+              "body": "Lisbon experiences intermittent rain showers today, registering 10.4mm of precipitation while daytime temperatures remain mild between 17 and 20°C. Air quality is exceptionally good, marked at PM2.5 4, making the damp air feel remarkably clean against the historic stone facades. Sunset arrives at 17:21, reflecting golden light off the Tagus River during evening breaks in the clouds. Visitors managing travel budgets will note an exchange rate of 1 USD to 0.91 EUR. The wet cobblestones require careful footing on the steep slopes of the Alfama and Bica districts, but the light rain only deepens the city's melancholic charm.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "02",
+              "headline": "Exhibitions explore botanical design and modern retrospectives across the capital.",
+              "lede": "Artists examine plants as design collaborators while museum retrospectives honor Italian design.",
+              "body": "Creative spaces across the city are currently hosting thoughtful exhibitions, including the ongoing 'ways of growing' showcase where 20 artists explore plants as design collaborators. Additionally, the Lisbon Design Museum is dedicating a comprehensive retrospective exhibition to Paolo Deganello, celebrating influential milestones in modern spatial design. Looking toward the winter cultural season, anticipation builds for the third annual Tribeca Festival Lisboa, scheduled to run from December 9 to 13 with prominent headline artists and filmmakers. These events offer enriching afternoon itineraries away from the coastal wind and passing showers. Galleries and museums provide quiet, contemplative environments for residents and observant travelers alike.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            },
+            {
+              "n": "03",
+              "headline": "December holiday planning begins as Restoration of Independence approaches.",
+              "lede": "Public administrative offices prepare for holiday schedules ahead of December 1.",
+              "body": "As autumn draws toward its close, residents note the upcoming national holiday of Restauração da Independência on December 1, 2026. On this day, government offices, banks, and post offices will observe closures, while historical monuments and select cultural sites maintain modified schedules. Travelers should schedule any necessary financial or municipal tasks well in advance of the coming weekend. The holiday commemorates national sovereignty and traditionally brings a quiet, reflective atmosphere to the historic squares of Baixa and Chiado. It is a peaceful time to observe the city's historical layers before the festive December programming fully takes over the streets.",
+              "source": "saudade desk",
+              "source_date": "2026-11-18"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-17T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Moonspell prepares to celebrate 35 years of gothic metal with Moonfest. The massive musical gathering anchors Lisbon's cultural calendar this season, drawing dedicated fans from across the continent. This musical milestone runs alongside the bustling activity of the ongoing Lisbon Web Summit downtown. Outside event halls, the weather stays partly cloudy with temperatures between 17 and 20°C and a mere 0.2mm of precipitation. Fair air quality rated at PM2.5 of 5 keeps the atmosphere clear as evening falls at 17:25. Visitors can easily manage daily expenses with the exchange rate fixed at 1 USD to 0.9 EUR while enjoying the city's rich cultural offerings.",
               "source": "saudade desk",
               "source_date": "2026-11-12"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-11T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn skies arrive alongside poor air quality readings across the capital.",
-              "lede": "Temperatures span 4 to 14°C today with sunset arriving at 17:24.",
-              "body": "The afternoon air feels crisp under clear skies, yet particulate matter registers at a poor level with PM2.5 at 60. Residents and travelers stepping outdoors might consider wearing a protective mask during extended walks. The current exchange rate stands at 1 USD to 1339 KRW for those exchanging currency today. Evening temperatures drop quickly as daylight fades. Public spaces remain active despite the haze hanging over the river.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "02",
-              "headline": "Namdaemun Market opens its gates after dark for a new food festival.",
-              "lede": "Netflix chefs and traditional tavern vendors take over the historic alleys tonight.",
-              "body": "The historic market comes alive after dark with a special nighttime food festival featuring dishes crafted by prominent Netflix chefs. Traditional tavern spaces offer warm seating away from the chilly autumn air. Visitors can explore food tours weaving through the illuminated stalls long after standard closing hours. This gathering highlights local culinary heritage while welcoming night owls into the old merchant quarters. The atmosphere balances bustling street energy with quiet moments by historical gates.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "03",
-              "headline": "Theaster Gates exhibits African Still Life at White Cube Seoul.",
-              "lede": "The exhibition explores cultural identity through ceramics, music, and archival materials.",
-              "body": "White Cube Seoul currently hosts Theaster Gates and his thoughtful exhibition titled African Still Life. The presentation investigates deep themes of cultural heritage and identity utilizing thoughtfully crafted ceramics alongside archival sound and objects. Visitors seeking a quiet indoor retreat from the evening chill will find deep contemplation within the gallery rooms. The curated pieces encourage slow looking and quiet listening. It stands as a profound cultural anchor in the city this week.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Clear autumn weather graces the city with moderate air quality.",
-              "lede": "Temperatures range from 7 to 14°C today under mainly clear skies.",
-              "body": "The late autumn sun sets early at 16:37, leaving a long and quiet evening across the neighborhoods. Air quality remains moderate with PM2.5 registered at 30, making outdoor strolls pleasant. Travelers will find the exchange rate settled at 1 USD to 158 JPY. Shiba Park Hotel offers a welcoming neighborhood stay for families seeking quiet hospitality this week. Park paths are lined with turning leaves that catch the golden afternoon light.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "02",
-              "headline": "Art Week Tokyo expands its international reach across multiple districts.",
-              "lede": "Galleries and museums open their doors wider for autumn cultural exhibitions.",
-              "body": "The expanded Art Week Tokyo brings together diverse contemporary art spaces across the capital. International visitors and local observers navigate between quiet gallery rooms and large institutional shows. This season builds upon the cultural threads established during the recent Tokyo International Film Festival. Galleries offer thoughtful spaces for contemplation amid the busy urban sprawl. It remains a prime week for quiet observation of contemporary Japanese art.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "03",
-              "headline": "Labor Thanksgiving Day approaches later this month with upcoming closures.",
-              "lede": "Residents note the official holiday arriving on 2026-11-23.",
-              "body": "As the month progresses, residents prepare for the upcoming national holiday of 勤労感謝の日 on 2026-11-23. Government offices, banks, and post offices will observe closures on that Monday. Travelers should plan administrative errands and currency exchanges accordingly before the holiday weekend begins. Public gardens and museums will likely remain open to welcome holiday visitors. The seasonal transition brings a gentle reminder to pause and appreciate daily labor.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Frequent rain showers dampen the cobblestone streets under mild temperatures.",
-              "lede": "Temperatures hover between 16 and 18°C today with 72.9mm of recorded precipitation.",
-              "body": "Rain showers sweep across the historic quarters while sunset arrives at 17:26. Air quality is fair with PM2.5 at 6, providing clean coastal air between downpours. The exchange rate holds at 1 USD to 0.89 EUR for visitors managing expenses. Umbrellas line the entrances of cafes in Baixa and Chiado. The damp stone reflects the soft light of the fading afternoon.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "02",
-              "headline": "Web Summit 2026 opens its massive conference halls in the city.",
-              "lede": "Global technologists and thinkers gather along the riverfront for panel discussions.",
-              "body": "Thousands of attendees arrive at the venue spaces for Web Summit 2026. Discussions range from artificial intelligence agents and hiring practices to decentralized organizational structures. Speakers such as Manus' Tao Zhang share insights on technology without traditional corporate titles. The influx of international visitors fills nearby transit lines and riverfront restaurants. Quiet corners of the city offer a peaceful contrast to the bustling conference center.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
-            },
-            {
-              "n": "03",
-              "headline": "Moonspell celebrates thirty-five years of gothic metal with Moonfest.",
-              "lede": "The iconic local band marks a historic musical milestone in the capital.",
-              "body": "Music enthusiasts gather for Moonfest as Moonspell marks 35 years of gothic metal performance. The multi-day celebration honors the enduring legacy of the band within the local and international scene. Venues host dedicated fans who appreciate the dark, atmospheric sounds fitting for the rainy autumn weather. This musical gathering adds a rich cultural layer to the city's calendar alongside major tech summits. It is a moment of deep pride for local music chroniclers.",
-              "source": "saudade desk",
-              "source_date": "2026-11-11"
             }
           ]
         }
