@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-11-19T06:00:00+09:00",
-  "next_filing": "2026-11-19T21:00:00+00:00",
+  "filed_at": "2026-11-20T06:00:00+09:00",
+  "next_filing": "2026-11-20T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Madrid",
+      "city": "MADRID",
       "items": [
         {
           "n": "01",
-          "headline": "Madrid se prepara para la primera edición del festival La Chula con música en directo.",
-          "lede": "Viva Suecia y Siloé encabezan este nuevo encuentro cultural que dinamiza la agenda de la ciudad.",
-          "body": "La capital acoge estos días el nacimiento de La Chula, un festival que promete marcar un hito en la música contemporánea. Con agrupaciones como Viva Suecia y Siloé al frente del cartel, la cita convoca a los amantes de los sonidos independientes. Los espacios culturales habituales ajustan sus calendarios para recibir este flujo de visitantes. Conviene revisar los horarios de acceso con antelación debido a la afluencia prevista. El tipo de cambio actual se sitúa en 1 USD frente a 0.91 EUR para los viajeros internacionales que planifiquen sus compras de entradas.",
+          "headline": "Cervantes cobra vida en Madrid con una experiencia inmersiva.",
+          "lede": "La realidad virtual permite recorrer la vida del autor en una nueva propuesta cultural.",
+          "body": "La capital española acoge una exposición inmersiva de realidad virtual que transporta al visitante directamente al Siglo de Oro. Cervantes cobra vida en Madrid a través de recreaciones digitales minuciosas que reconstruyen las calles polvorientas y los corrales de comedias de la época. Esta propuesta tecnológica ofrece una perspectiva singular sobre la cotidianidad literaria del escritor más universal de las letras hispánicas. Los espectadores pueden caminar junto al autor y observar cómo se gestaron sus obras más célebres en escenarios tridimensionales detallados. Es una pausa excelente para el viajero curioso que busca entender el pulso histórico de la ciudad mediante herramientas contemporáneas. La visita requiere reserva previa para garantizar una experiencia tranquila y sin aglomeraciones en las salas de proyección.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "02",
-          "headline": "ANIMARIO 2026 reúne la mejor animación contemporánea en las salas madrileñas.",
-          "lede": "El festival cinematográfico ofrece proyecciones y encuentros especializados para creadores y público general.",
-          "body": "La programación de ANIMARIO vuelve a convertir las pantallas locales en un punto de referencia para el cine de animación. Las proyecciones se acompañan de encuentros con autores y talleres formativos. Es recomendable adquirir las localidades en línea para evitar largas esperas en taquilla. Los espacios expositivos mantienen sus puertas abiertas en horarios habituales durante las jornadas del festival. El ambiente invita a recorrer los barrios céntricos con calma entre una sesión y otra.",
+          "headline": "La Comunidad de Madrid inaugura una sede clave para la ciberseguridad.",
+          "lede": "Pentera abre nuevas oficinas en la región para impulsar el sector tecnológico.",
+          "body": "La Comunidad de Madrid consolida su posición como polo tecnológico europeo tras la apertura oficial de la nueva sede de la empresa de ciberseguridad Pentera. Este centro estratégico albergará a equipos especializados en la protección de infraestructuras críticas y el desarrollo de software defensivo avanzado. La llegada de estas corporaciones refuerza el tejido empresarial local y atrae talento internacional especializado en la ingeniería de sistemas seguros. Para el observador atento, este movimiento refleja la transformación silenciosa de los distritos periféricos hacia clústeres de innovación digital. Las instalaciones priorizan la eficiencia energética y la integración arquitectónica en su entorno empresarial inmediato. La actividad en la zona ya muestra un dinamismo renovado entre profesionales y visitantes de negocios.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "03",
-          "headline": "El programa navideño transformará las calles con arte y música tradicional.",
-          "lede": "Bajo el lema Madrid, corazón de la Navidad, la ciudad despliega iluminación y espectáculos.",
-          "body": "Las plazas principales comienzan a engalanarse para albergar la programación festiva de este año. El circuito incluye propuestas artísticas y musicales diseñadas para todos los públicos. Los paseos nocturnos permiten observar el montaje de las estructuras lumínicas en los ejes comerciales. Las autoridades locales recomiendan el uso del transporte público para acceder al centro histórico. La vida urbana se despliega con un ritmo pausado pero constante mientras arranca la temporada.",
+          "headline": "La Chula presenta su primera edición con Viva Suecia y Siloé.",
+          "lede": "Un nuevo festival musical aterriza en la agenda cultural madrileña.",
+          "body": "Madrid suma un nuevo hito a su calendario musical con la presentación de la primera edición de La Chula, un festival que promete revitalizar la escena sonora local. El evento confirma a Viva Suecia y Siloé como cabezas de cartel de un cartel diseñado para los amantes del pop independiente nacional. La cita musical busca consolidarse como un punto de encuentro anual para quienes siguen de cerca la evolución de las bandas en directo. Los organizadores han apostado por recintos accesibles que fomenten la cercanía entre el público y los artistas durante las actuaciones. Las entradas ya están disponibles en los canales habituales para asegurar el aforo en las diferentes jornadas programadas. Es una oportunidad perfecta para descubrir las nuevas apuestas del circuito musical peninsular en un ambiente distendido.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         }
       ]
     },
     {
-      "city": "Barcelona",
+      "city": "BARCELONA",
       "items": [
         {
           "n": "01",
-          "headline": "El Parque del Tibidabo acoge un recital acústico e íntimo de Estopa.",
-          "lede": "Un grupo reducido de 150 personas disfruta de la música en las alturas de la ciudad.",
-          "body": "La emblemática cima barcelonesa fue escenario de una actuación irrepetible para un público muy limitado. La calidad del aire se mantiene en niveles favorables con un registro de PM2.5 de 3, propiciando los paseos al aire libre. La temperatura oscila entre 16 y 20°C bajo una ligera lluvia de 0.3mm que apenas moja las aceras. La puesta de sol se adelanta a las 17:28, acortando las horas de luz natural. El tipo de cambio oficial permanece en 1 USD por 0.91 EUR para los visitantes.",
+          "headline": "Los parques municipales reabren tras el temporal de viento.",
+          "lede": "La jornada deja temperaturas de 14 a 19°C bajo cielos completamente cubiertos.",
+          "body": "Barcelona recupera la calma urbana después de que los Bomberos de Barcelona atendieran 106 servicios motivados por los fuertes ventarrones registrados en las últimas horas. Ante esta situación, el Ayuntamiento de Barcelona ha ordenado la reapertura de los parques públicos este viernes tras finalizar las labores de revisión arbolada. Los termoscopios marcan valores de 14 a 19°C bajo un cielo overcast que suaviza la luz sobre el asfalto mojado. La calidad del aire se mantiene en niveles buenos, registrando un índice PM2.5 de 3 que invita a pasear sin prisa por los espacios verdes recuperados. El atardecer, previsto para las 17:27, teñirá de gris suave los tejados del Eixample y las copas de los árboles recién inspeccionados. Es un momento propicio para recorrer la ciudad con la tranquilidad de que la normalidad ha retornado a los jardines.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "02",
-          "headline": "El MNAC expone la obra y el legado arquitectónico de Jujol en un recorrido de 400 metros.",
-          "lede": "La muestra ofrece una inmersión detallada en los universos creativos del singular arquitecto catalán.",
-          "body": "Las salas del museo presentan un itinerario exhaustivo por los planos, dibujos y objetos diseñados por el colaborador de Gaudí. El espacio expositivo permite observar de cerca la sutileza de sus soluciones constructivas. Se aconseja reservar franja horaria para disfrutar de la visita sin aglomeraciones en las galerías. Las condiciones meteorológicas con una máxima de 20°C acompañan los desplazamientos a pie por la montaña de Montjuïc. Los jardines cercanos invitan a una pausa tranquila tras recorrer la muestra.",
+          "headline": "Picasso y la arquitectura dialogan en una muestra singular.",
+          "lede": "La mirada del pintor malagueño sobre los espacios urbanos y construidos.",
+          "body": "La relación íntima entre la creación artística y la estructura urbana queda al descubierto a través de la exposición dedicada a la arquitectura, según Picasso. La muestra analiza cómo el artista interpretó volúmenes, perspectivas y geometrías en su producción pictórica y gráfica a lo largo de los años. Los visitantes pueden examinar dibujos y lienzos donde los edificios y las formas constructivas actúan como protagonistas silenciosos de su lenguaje visual. Esta propuesta expositiva invita a reconsiderar el paisaje urbano barcelonés desde la óptica fragmentada y genial del pintor. Las salas ofrecen un recorrido reposado que exige la observación detallada de cada trazo y boceto preparatorio. Es una parada indispensable para quienes deseen conectar el patrimonio arquitectónico de la ciudad con las claves estéticas del siglo XX.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "03",
-          "headline": "La pista de hielo natural abre sus puertas en el parque de Navidad de un centro comercial.",
-          "lede": "La instalación ofrece una propuesta de ocio invernal mientras la ciudad transita hacia las festividades.",
-          "body": "Los aficionados al patinaje ya pueden disfrutar de la superficie helada más grande de Barcelona. El recinto comercial ha adaptado sus espacios exteriores para albergar esta clásica actividad de temporada. La ligera precipitación de 0.3mm registrada hoy no afecta al funcionamiento de la pista cubierta. La calidad del aire se mantiene estable, permitiendo combinar las compras con el paseo al aire libre. Las líneas de autobús urbano facilitan el acceso directo al complejo durante todo el día.",
+          "headline": "El fenómeno literario Me llamo Goa convoca a 2.600 lectores.",
+          "lede": "El éxito de Míriam Tirado se transforma en un festival compartido con Madrid.",
+          "body": "El fenómeno literario Me llamo Goa, escrito por Míriam Tirado, trasciende las páginas impresas para convertirse en un festival que reunirá a 2.600 personas entre Barcelona y Madrid. Este encuentro literario nace con el propósito de generar un diálogo directo entre la autora y sus lectores en un entorno participativo y cercano. Las jornadas incluirán charlas, talleres y lecturas en voz alta centradas en los temas emocionales que han cautivado a miles de seguidores. La gran respuesta del público confirma el excelente momento que atraviesa la narrativa introspectiva en el panorama editorial actual. Los asistentes podrán compartir impresiones sobre una obra que ha marcado un punto de inflexión en la literatura contemporánea dirigida a públicos diversos. Las entradas se agotaron con semanas de antelación, reflejando el fervor que despierta esta historia.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         }
       ]
     },
     {
-      "city": "Buenos Aires",
+      "city": "BUENOS AIRES",
       "items": [
         {
           "n": "01",
-          "headline": "El Festival Buenos Aires Rojo Sangre despliega su programación con estrenos y clásicos.",
-          "lede": "Desde la obra de Coca Sarli hasta las nuevas producciones de Cristian Ponce ocupan las salas.",
-          "body": "La cita ineludible del cine de género arranca con una selección diversa que abarca décadas de cinematografía. Las proyecciones se realizan en complejos seleccionados del centro cultural de la ciudad. El índice UV alcanza un nivel muy alto de 9, por lo que se aconseja protección solar en los trayectos diurnos. El cielo permanece overcast con temperaturas que se mueven entre 16 y 26°C. El sol se ocultará puntualmente a las 19:40, cerrando una jornada de actividad cultural intensa.",
+          "headline": "Tormentas y calor húmedo antes del fin de semana largo.",
+          "lede": "Las temperaturas oscilan entre 19 y 26°C con 6.7mm de precipitación acumulada.",
+          "body": "Buenos Aires transcurre estos días bajo una meteorología cambiante que combina temperaturas de 19 a 26°C con lluvias intermitentes. Las previsiones meteorológicas registran 6.7mm de precipitación y episodios de tormenta que refrescan momentáneamente el ambiente porteño. La calidad del aire se sitúa en niveles moderados, con un valor de PM2.5 de 19 debido a la humedad ambiental propia de la estación. El atardecer, fijado a las 19:41, regalará cielos dramáticos sobre el Río de la Plata tras el paso de las nubes de tormenta. Este panorama coincide con la proximidad del Día de la Soberanía Nacional el 2026-11-23, un feriado que alterará los horarios habituales de bancos y oficinas públicas. Conviene planificar las gestiones administrativas con antelación, ya que la ciudad adoptará un ritmo más pausado durante el fin de semana largo.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "02",
-          "headline": "El FICADI 2026 conecta la arquitectura y el diseño a través de la gran pantalla.",
-          "lede": "El festival internacional proyecta documentales y ficciones sobre el hábitat humano y urbano.",
-          "body": "Las proyecciones del Festival Internacional de Cine de Arquitectura y Diseño ocupan diversos espacios institucionales. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 7. Con una temperatura agradable que alcanza los 26°C, resulta ideal caminar entre sedes cinematográficas. Se recuerda a los ciudadanos que el próximo 2026-11-23 se celebra el Día de la Soberanía Nacional, por lo que oficinas gubernamentales y bancos permanecerán cerrados. La ciudad ajusta sus servicios públicos para el fin de semana largo que se aproxima.",
+          "headline": "Joan Castejón triunfa en el Arte Non Stop Festival.",
+          "lede": "El documental La raó del somni, dirigido por Pau Soler, se alza con el galardón.",
+          "body": "El cine documental de orden artístico celebra un nuevo reconocimiento internacional tras la victoria de La raó del somni en el Arte Non Stop Festival de Buenos Aires. Dirigido por Pau Soler, el metraje profundiza en la trayectoria y el universo creativo del pintor Joan Castejón con una sensibilidad notable. La proyección ha cautivado tanto al jurado como al público asistente por su capacidad para retratar el proceso de creación plástica sin estridencias. Los cinéfilos porteños tienen ahora la oportunidad de redescubrir este tipo de propuestas en las salas independientes de la ciudad. El documental destaca por su fotografía pausada y una banda sonora que acompaña los silencios del artista en su estudio. Es una muestra más del intercambio cultural constante que define la cartelera cinematográfica de Buenos Aires.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         },
         {
           "n": "03",
-          "headline": "Primavera Sound Buenos Aires llega a las pantallas mediante transmisiones en vivo.",
-          "lede": "Disney+ emite las actuaciones musicales desde Argentina para los seguidores que siguen el festival a distancia.",
-          "body": "La música en directo inunda los escenarios porteños y se expande de manera digital hacia toda la región. Las condiciones meteorológicas muestran un cielo overcast y una temperatura templada de 21°C promedio. El índice UV se sitúa en un nivel muy alto de 9, exigiendo precaución a quienes asistan a los recintos abiertos. Los transportes públicos operan con normalidad para facilitar la movilidad de los asistentes. Las celebraciones culturales se entrelazan con la llegada del feriado del Día de la Soberanía Nacional el 2026-11-23.",
+          "headline": "El Gaumont acoge la Semana de Cine del Festival de Cannes.",
+          "lede": "Una programación selecta acerca lo mejor del cine europeo a la gran pantalla.",
+          "body": "El histórico Cine Gaumont se convierte estos días en la embajada oficiosa del cine internacional gracias a la Semana de Cine del Festival de Cannes 2026. La programación incluye títulos recientes que pasaron por la Croisette, ofreciendo a los espectadores locales una ventana privilegiada a las tendencias del cine de autor. Los horarios y las entradas ya están disponibles para consultar las proyecciones diarias en sus salas tradicionales del centro porteño. Este ciclo permite disfrutar de obras inéditas en el circuito comercial habitual antes de su llegada definitiva a las plataformas de streaming. Mientras tanto, la programación musical local experimenta ajustes de última hora, como la reciente cancelación del show de Cara Delevingne en el Primavera Sound Buenos Aires. El público cinéfilo encuentra así en el Gaumont un refugio perfecto frente a las tardes de lluvia y tormenta.",
           "source": "saudade desk",
-          "source_date": "2026-11-19"
+          "source_date": "2026-11-20"
         }
       ]
     }

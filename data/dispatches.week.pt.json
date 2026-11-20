@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-19T06:00:00+09:00",
+  "updated": "2026-11-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A chuva leve marca a tarde em Lisboa.",
+              "lede": "Os termómetros marcam entre 13 e 17°C com 0.1mm de precipitação.",
+              "body": "A cidade respira sob uma luz suave e cinzenta, típica de finais de novembro. Os termómetros marcam entre 13 e 17°C, acompanhados por uns escassos 0.1mm de precipitação e uma brisa leve que convida a passos mais lentos pelas calçadas molhadas. A qualidade do ar mantém-se num nível fair, registando 10 de PM2.5, o que torna agradável a permanência ao ar livre. Para quem chega de fora, a taxa de câmbio fixa-se em 1 USD para 0.91 EUR, facilitando o planeamento financeiro para pequenas despesas diárias. O pôr do sol acontece pontualmente às 17:19, encurtando o dia e antecipando o brilho quente das luzes da cidade. É um momento de transição calmo, ideal para observar o Tejo sem pressas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "O Wonderland Lisboa ganha nova opção de estacionamento.",
+              "lede": "Há novidades práticas para poupar tempo na chegada ao recinto.",
+              "body": "A preparação para as festividades de fim de ano avança na cidade com melhorias logísticas importantes para quem se desloca de carro. Se vai ao Wonderland Lisboa, há uma novidade que lhe vai poupar tempo na procura por estacionamento, permitindo evitar as voltas habituais à volta do parque. A oferta cultural e de lazer complementa-se com iniciativas recentes, como a exposição e o livro \"Cadernos Portugueses\", que revelam um Alentejo em transformação, apresentados em Lisboa este sábado. Paralelamente, a agenda cultural recente celebrou a cultura do chá no Festival Até Chá estava escrito nas folhas e uniu vozes como Mariza e Tony Carreira num festival solidário. São opções diversificadas que enriquecem os dias mais frescos passados na capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "A proximidade do feriado altera o ritmo administrativo.",
+              "lede": "Prepare os seus afazimentos tendo em conta a pausa oficial de dezembro.",
+              "body": "Com a aproximação do feriado da Restauração da Independência a 2026-12-01, convém notar as habituais alterações nos serviços públicos e bancários na capital. Embora ainda estejamos a dias da data comemorativa, os residentes e viajantes atentos já começam a organizar os seus calendários para evitar transtornos de última hora. Repartições públicas, bancos e estações de correios encerrarão as portas nesse dia festivo, suspendendo o atendimento presencial habitual. É o momento oportuno para resolver pendências burocráticas e garantir que documentos ou envios postais não fiquem retidos. A cidade desacelera ligeiramente, preparando-se para celebrar uma data histórica com a serenidade que o final de outono exige.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Os aguaceiros marcam o ritmo da Invicta.",
+              "lede": "A temperatura oscila entre 13 e 16°C com 22.6mm de chuva.",
+              "body": "O Porto recebe a humidade atlântica com ruas brilhantes de água e o som constante da chuva a cair sobre o granito antigo. Os termómetros registam valores entre 13 e 16°C, acompanhados por uns expressivos 22.6mm de precipitação que obrigam ao uso de guarda-chuva e calçado resistente. A qualidade do ar permanece fair, com um valor de 5 em PM2.5, garantindo uma atmosfera limpa apesar da instabilidade meteorológica. A taxa de câmbio encontra-se nos 0.91 EUR por cada 1 USD, mantendo a estabilidade para transações correntes de visitantes internacionais. O sol despede-se cedo, fixando o ocaso pelas 17:11, altura em que os cafés se enchem de luz quente e vapor de chá.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "O cinema toma conta da cidade com o Porto/Post/Doc.",
+              "lede": "O festival arranca hoje, trazendo 121 filmes e o ciclo No País dos Outros.",
+              "body": "A chuva lá fora contrasta com a escuridão acolhedora das salas de projeção que hoje ganham vida na cidade. O festival Porto/Post/Doc arranca hoje, traz 121 filmes e o ciclo “No País dos Outros”, oferecendo um vasto panorama cinematográfico para os dias cinzentos. A acolhida ao público faz-se sentir em cada canto, com a iniciativa Acampada a afirmar-se como a melhor companhia para os cinéfilos durante o festival. No plano desportivo e urbano, o Parque Desportivo de Ramalde recebeu três distinções nacionais em 2026, atestando a qualidade dos espaços públicos da cidade. É uma semana rica em propostas culturais que convidam a abrandar o passo e a olhar para o mundo através da lente do documentário.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "O descanso oficial de dezembro aproxima-se no horizonte.",
+              "lede": "Tome nota dos fechos previstos para o feriado da Restauração da Independência.",
+              "body": "À medida que o mês avança rumo ao final, a atenção volta-se para o próximo descanso nacional que marcará o calendário. O feriado da Restauração da Independência, a celebrar a 2026-12-01, trará o encerramento temporário de serviços governamentais, repartições públicas e instituições bancárias. Os viajantes e residentes devem antecipar qualquer gestãofinanceira ou burocrática para garantir que os dias de pausa decorram sem imprevistos práticos. As ruas comerciais ajustarão os horários, e os transportes públicos poderão adotar circulações reduzidas típicas de dias festivos. É um lembrete subtil para desacelerar e alinhar o passo com o ritmo tranquilo da estação.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A névoa envolve os palácios com chuva muito fina.",
+              "lede": "A temperatura situa-se entre 13 e 17°C sob 0.6mm de precipitação.",
+              "body": "Sintra veste-se com a sua capa de nevoeiro habitual, onde a humidade da serra se mistura com a vegetação densa. Os termómetros marcam entre 13 e 17°C, acompanhados por uns discretos 0.6mm de precipitação sob a forma de chuvisco ligeiro. A qualidade do ar está classificada como fair, com o índice PM2.5 fixado em 5, oferecendo uma pureza respirável entre os troncos seculares dos parques. A conversão monetária permanece estável em 1 USD para 0.91 EUR, um dado útil para planear o café quente nas pastelarias históricas do centro. O sol despede-se mais cedo, pelas 17:20, deixando sombras longas e misteriosas nos muros de pedra coberta de musgo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "A vila antecipa futuros encontros culturais na serra.",
+              "lede": "O horizonte cultural já aponta para o regresso de eventos muito aguardados.",
+              "body": "Enquanto a serra abranda sob a humidade outonal, a programação cultural para os tempos vindouros já começa a desenhar-se nos arredores. O festival Espontâneo está de regresso a Sintra em 2027, prometendo voltar a animar os espaços públicos com arte de improviso e partilha comunitária. Para já, o momento é de contemplação silenciosa, ideal para percorrer trilhos solitários entre o Castelo dos Mouros e a Quinta da Regaleira. A ausência de grandes multidões permite ouvir o som da água a correr pelas fontes antigas e o cair das folhas nos jardins palacianos. É a altura perfeita para observar os detalhes arquitetónicos que a pressa do verão costuma esconder dos olhares menos atentos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "O feriado de dezembro trará um silêncio acrescido à serra.",
+              "lede": "Acautele serviços e burocracias antes da pausa oficial de 2026-12-01.",
+              "body": "O calendário caminha firmemente para o próximo descanso nacional, exigindo alguma antecipação por parte de quem vive ou visita a vila. O feriado da Restauração da Independência, marcado para 2026-12-01, resultará no encerramento de serviços do Estado, bancos e repartições postais. Convirá resolver quaisquer assuntos administrativos pendentes nos próximos dias para evitar surpresas com balcões fechados. Os comércios locais manterão dinâmicas próprias, mas os serviços essenciais seguirão o regime de pausa festiva obrigatória. A vila aproveitará a data para um recolhimento ainda maior, longe do bulício urbano e abraçada pela tranquilidade serrana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "A vegetação sintrense respira com os 8.1mm de precipitação e temperaturas amenas entre 16 e 17°C. A qualidade do ar é fair, com o indicador PM2.5 fixado em 5, propício para passeios breves entre os monumentos. O pôr do sol pelas 17:25 convida a recolher aos palácios ou a assistir aos eventos do Festival Espontâneo. A taxa de câmbio de 1 USD para 0.9 EUR apoia os turistas que compram bilhetes para os museus locais. As ruas calcetadas brilham com a água dos aguaceiros intermitentes, conferindo à vila um lirismo discreto. Sintra reafirma o seu estatuto de refúgio literário e natural para esta estação.",
               "source": "saudade desk",
               "source_date": "2026-11-13"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-12T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A baixa recupera a pulsação comercial.",
-              "lede": "A renovada H&M Grandella prepara a reabertura no Chiado para o dia 19 de novembro.",
-              "body": "O comércio histórico de Lisboa ganha um novo capítulo com a reabertura da H&M Grandella no Chiado a 19 de novembro. Este espaço emblemático combina a arquitetura clássica com o retalho contemporaneo na baixa lisboeta. A qualidade do ar permanece em níveis justos, com PM2.5 nos 5. Para quem viaja, a taxa de câmbio fixa-se em 1 USD para 0.9 EUR. É o momento ideal para deambular pelas ruas calcetadas sem a urgência da época alta. Os visitantes encontram uma cidade em transição serena, onde o património comercial se reinventa a cada estação. A luz outonal incide suavemente sobre as fachadas centenárias, convidando a pausas prolongadas nos cafés tradicionais da zona.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "A zona oriental refaz-se da Depressão Charles.",
-              "lede": "Vários veículos ficaram parcialmente submersos junto ao Parque das Nações após a chuvada.",
-              "body": "A Depressão Charles deixou marcas visíveis na zona oriental de Lisboa, onde vários carros ficaram parcialmente submersos. Os residentes locais e os serviços municipais trabalham agora na normalização do espaço público ribeirinho. A qualidade do ar regista valores justos, fixando-se em 5 para os índices de PM2.5. A taxa de câmbio atual mantém-se em 1 USD equivalente a 0.9 EUR para os viajantes internacionais. Apesar dos constrangimentos pontuais provocados pela pluviosidade recente, os percursos pedestres junto ao Tejo recuperam a sua normalidade habitual. A observação atenta revela uma cidade resiliente, capaz de absorver a força dos elementos naturais sem perder o seu ritmo contemplativo e a sua beleza característica.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "A MEO Arena prepara o regresso do trap.",
-              "lede": "O maior festival do género em solo europeu anuncia celebridades para 2027.",
-              "body": "O horizonte cultural da capital já olha para o futuro com o anúncio da nova edição do maior festival de trap da Europa na MEO Arena. Nomes como MC Cabelinho e Orochi vão liderar as celebrações de 5 anos de história em solo português. Enquanto a cidade aguarda este grande evento, a agenda cultural imediata destaca as exposições imperdíveis deste fim de semana. A qualidade do ar na capital mantém-se justa com PM2.5 em 5, e a conversão cambial pratica-se a 1 USD para 0.9 EUR. Lisboa oferece aos observadores atentos um equilíbrio perfeito entre a efervescência artística contemporânea e a tranquilidade dos seus miradouros históricos. Cada esquina revela uma narrativa visual que desafia o viajante a desacelerar o passo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A chuva forte condiciona o quotidiano invicta.",
-              "lede": "Com 39.9mm de precipitação e trovoada, os termómetros oscilam entre os 15 e os 17°C.",
-              "body": "O Porto enfrenta um cenário meteorológico adverso com 39.9mm de precipitação acumulada, trovoada e temperaturas entre os 15 e os 17°C. O anoitecer ocorre pontualmente às 17:18, mergulhando a cidade numa penumbra precoce e densa. A qualidade do ar permanece boa, registando 3 de PM2.5, enquanto o câmbio se mantém nos 0.9 EUR por cada 1 USD. A circulação rodoviária sofreu perturbações recentes após um incêndio num autocarro da STCP junto ao Parque Nascente. Os viajantes devem acautelar os abrigos necessários e privilegiar os percursos pedonais abrigados na baixa histórica. A atmosfera cinzenta confere à Ribeira uma beleza melancólica, perfeita para a leitura prolongada nos salões de chá tradicionais.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "Serralves brilha contra a noite precoce.",
-              "lede": "A iniciativa Serralves em Luz transforma os jardins do museu enquanto o céu se fecha.",
-              "body": "Aproveitando a chegada rápida da noite às 17:18, o evento Serralves em Luz ilumina os trilhos arborizados da fundação. Com a precipitação a atingir os 39.9mm e temperaturas amenas entre os 15 e os 17°C, a visita exige calçado adequado. A qualidade do ar na cidade é boa, marcando 3 de PM2.5, e a cotação cambial opera a 0.9 EUR por 1 USD. Paralelamente, o norte do país monitoriza a reabertura da Marina do Funchal após danos avultados, mostrando a interligação atlântica portuária. No Porto, as árvores seculares do parque refletem as instalações luminosas, criando um refúgio visual acolhedor para quem desafia a trovoada. É um exercício de contemplação urbana sob um manto de chuva persistente.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "A arte cruza memórias coloniais na região.",
-              "lede": "Porto de Mós acolhe uma exposição marcante sobre a migração forçada.",
-              "body": "A atividade cultural estende-se à região com uma exposição em Porto de Mós que cruza arte e memórias da migração forçada no Portugal colonial. No Porto, o termómetro marca entre os 15 e os 17°C sob o peso de 39.9mm de chuva e trovoada iminente. O sol despede-se cedo, às 17:18, antecedendo noites longas de reflexão nos espaços interiores da cidade. A qualidade do ar regista uns excelentes 3 de PM2.5, ao passo que a taxa de câmbio permanece estável em 1 USD para 0.9 EUR. Os viajantes atentos encontram nos museus e galerias do norte um abrigo intelectual perfeito para dias chuvosos. A cidade convida a pausas meditativas, longe da pressa turística convencional, valorizando a profundidade histórica local.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra abriga-se sob aguaceiros suaves.",
-              "lede": "Com 5.8mm de precipitação e temperaturas entre os 16 e os 18°C, a serra respira com calma.",
-              "body": "Sintra acolhe os viajantes com aguaceiros leves, acumulando 5.8mm de precipitação e termómetros entre os 16 e os 18°C. O pôr do sol acontece pelas 17:26, cobrindo a vegetação luxuriante com uma neblina característica e poética. A qualidade do ar encontra-se em patamares justos, registando 5 de PM2.5, com o câmbio a cotar-se a 0.9 EUR por 1 USD. A discussão pública em torno do novo documento base do PDM e as propostas para o Parque Natural geram debates locais. No entanto, a vila mantém o seu foco cultural, celebrando a poesia e a palavra de forma discreta. É o cenário ideal para deambular por ruelas húmidas, escutando o sussurrar da água nas fontes antigas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "A poesia e a palavra encontram pousio.",
-              "lede": "Sintra celebra a cultura literária enquanto a tarde cede à penumbra das 17:26.",
-              "body": "A programação cultural sintrense celebra a poesia, a palavra e a cultura em espaços abrigados da vila histórica. A temperatura oscila suavemente entre os 16 e os 18°C, acompanhada por 5.8mm de chuva dispersa ao longo do dia. A qualidade do ar mantém o índice justo de 5 para PM2.5, e a conversão financeira opera em 0.9 EUR por cada 1 USD. A toponímia e o ordenamento do território continuam a suscitar atenção devido ao futuro PDM e ao Parque Natural. Para o observador atento, a vila romântica revela-se através dos seus recantos literários e livrarias seculares. A brisa húmida da serra convida a leituras pausadas junto às lareiras dos palacetes e hotéis de charme.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "O Parque Natural debate o seu próprio futuro.",
-              "lede": "As diretrizes do futuro PDM trazem reflexão sobre a paisagem protegida de Sintra.",
-              "body": "O documento estruturante do futuro PDM de Sintra gera debate pelas suas referências e propostas para a gestão do Parque Natural. A paisagem serrana suporta 5.8mm de precipitação sob uma faixa térmica de 16 a 18°C. A noite avança depressa, marcando o ocaso às 17:26, enquanto a qualidade do ar se fixa num justo valor de 5 de PM2.5. A taxa de câmbio permanece inalterada nos 0.9 EUR por 1 USD para os visitantes estrangeiros. Entre a literatura e a salvaguarda ambiental, Sintra preserva a sua aura mística e intemporal. O viajante prudente descobre nos trilhos arborizados e nos cafés centenários a verdadeira essência da contemplação serrana outonal.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
             }
           ]
         }
