@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-19T06:00:00+09:00",
+  "updated": "2026-11-20T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-20T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "MADRID",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Cervantes cobra vida en Madrid con una experiencia inmersiva.",
+              "lede": "La realidad virtual permite recorrer la vida del autor en una nueva propuesta cultural.",
+              "body": "La capital española acoge una exposición inmersiva de realidad virtual que transporta al visitante directamente al Siglo de Oro. Cervantes cobra vida en Madrid a través de recreaciones digitales minuciosas que reconstruyen las calles polvorientas y los corrales de comedias de la época. Esta propuesta tecnológica ofrece una perspectiva singular sobre la cotidianidad literaria del escritor más universal de las letras hispánicas. Los espectadores pueden caminar junto al autor y observar cómo se gestaron sus obras más célebres en escenarios tridimensionales detallados. Es una pausa excelente para el viajero curioso que busca entender el pulso histórico de la ciudad mediante herramientas contemporáneas. La visita requiere reserva previa para garantizar una experiencia tranquila y sin aglomeraciones en las salas de proyección.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "La Comunidad de Madrid inaugura una sede clave para la ciberseguridad.",
+              "lede": "Pentera abre nuevas oficinas en la región para impulsar el sector tecnológico.",
+              "body": "La Comunidad de Madrid consolida su posición como polo tecnológico europeo tras la apertura oficial de la nueva sede de la empresa de ciberseguridad Pentera. Este centro estratégico albergará a equipos especializados en la protección de infraestructuras críticas y el desarrollo de software defensivo avanzado. La llegada de estas corporaciones refuerza el tejido empresarial local y atrae talento internacional especializado en la ingeniería de sistemas seguros. Para el observador atento, este movimiento refleja la transformación silenciosa de los distritos periféricos hacia clústeres de innovación digital. Las instalaciones priorizan la eficiencia energética y la integración arquitectónica en su entorno empresarial inmediato. La actividad en la zona ya muestra un dinamismo renovado entre profesionales y visitantes de negocios.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "La Chula presenta su primera edición con Viva Suecia y Siloé.",
+              "lede": "Un nuevo festival musical aterriza en la agenda cultural madrileña.",
+              "body": "Madrid suma un nuevo hito a su calendario musical con la presentación de la primera edición de La Chula, un festival que promete revitalizar la escena sonora local. El evento confirma a Viva Suecia y Siloé como cabezas de cartel de un cartel diseñado para los amantes del pop independiente nacional. La cita musical busca consolidarse como un punto de encuentro anual para quienes siguen de cerca la evolución de las bandas en directo. Los organizadores han apostado por recintos accesibles que fomenten la cercanía entre el público y los artistas durante las actuaciones. Las entradas ya están disponibles en los canales habituales para asegurar el aforo en las diferentes jornadas programadas. Es una oportunidad perfecta para descubrir las nuevas apuestas del circuito musical peninsular en un ambiente distendido.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "city": "BARCELONA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Los parques municipales reabren tras el temporal de viento.",
+              "lede": "La jornada deja temperaturas de 14 a 19°C bajo cielos completamente cubiertos.",
+              "body": "Barcelona recupera la calma urbana después de que los Bomberos de Barcelona atendieran 106 servicios motivados por los fuertes ventarrones registrados en las últimas horas. Ante esta situación, el Ayuntamiento de Barcelona ha ordenado la reapertura de los parques públicos este viernes tras finalizar las labores de revisión arbolada. Los termoscopios marcan valores de 14 a 19°C bajo un cielo overcast que suaviza la luz sobre el asfalto mojado. La calidad del aire se mantiene en niveles buenos, registrando un índice PM2.5 de 3 que invita a pasear sin prisa por los espacios verdes recuperados. El atardecer, previsto para las 17:27, teñirá de gris suave los tejados del Eixample y las copas de los árboles recién inspeccionados. Es un momento propicio para recorrer la ciudad con la tranquilidad de que la normalidad ha retornado a los jardines.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "Picasso y la arquitectura dialogan en una muestra singular.",
+              "lede": "La mirada del pintor malagueño sobre los espacios urbanos y construidos.",
+              "body": "La relación íntima entre la creación artística y la estructura urbana queda al descubierto a través de la exposición dedicada a la arquitectura, según Picasso. La muestra analiza cómo el artista interpretó volúmenes, perspectivas y geometrías en su producción pictórica y gráfica a lo largo de los años. Los visitantes pueden examinar dibujos y lienzos donde los edificios y las formas constructivas actúan como protagonistas silenciosos de su lenguaje visual. Esta propuesta expositiva invita a reconsiderar el paisaje urbano barcelonés desde la óptica fragmentada y genial del pintor. Las salas ofrecen un recorrido reposado que exige la observación detallada de cada trazo y boceto preparatorio. Es una parada indispensable para quienes deseen conectar el patrimonio arquitectónico de la ciudad con las claves estéticas del siglo XX.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "El fenómeno literario Me llamo Goa convoca a 2.600 lectores.",
+              "lede": "El éxito de Míriam Tirado se transforma en un festival compartido con Madrid.",
+              "body": "El fenómeno literario Me llamo Goa, escrito por Míriam Tirado, trasciende las páginas impresas para convertirse en un festival que reunirá a 2.600 personas entre Barcelona y Madrid. Este encuentro literario nace con el propósito de generar un diálogo directo entre la autora y sus lectores en un entorno participativo y cercano. Las jornadas incluirán charlas, talleres y lecturas en voz alta centradas en los temas emocionales que han cautivado a miles de seguidores. La gran respuesta del público confirma el excelente momento que atraviesa la narrativa introspectiva en el panorama editorial actual. Los asistentes podrán compartir impresiones sobre una obra que ha marcado un punto de inflexión en la literatura contemporánea dirigida a públicos diversos. Las entradas se agotaron con semanas de antelación, reflejando el fervor que despierta esta historia.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        },
+        {
+          "city": "BUENOS AIRES",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Tormentas y calor húmedo antes del fin de semana largo.",
+              "lede": "Las temperaturas oscilan entre 19 y 26°C con 6.7mm de precipitación acumulada.",
+              "body": "Buenos Aires transcurre estos días bajo una meteorología cambiante que combina temperaturas de 19 a 26°C con lluvias intermitentes. Las previsiones meteorológicas registran 6.7mm de precipitación y episodios de tormenta que refrescan momentáneamente el ambiente porteño. La calidad del aire se sitúa en niveles moderados, con un valor de PM2.5 de 19 debido a la humedad ambiental propia de la estación. El atardecer, fijado a las 19:41, regalará cielos dramáticos sobre el Río de la Plata tras el paso de las nubes de tormenta. Este panorama coincide con la proximidad del Día de la Soberanía Nacional el 2026-11-23, un feriado que alterará los horarios habituales de bancos y oficinas públicas. Conviene planificar las gestiones administrativas con antelación, ya que la ciudad adoptará un ritmo más pausado durante el fin de semana largo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "02",
+              "headline": "Joan Castejón triunfa en el Arte Non Stop Festival.",
+              "lede": "El documental La raó del somni, dirigido por Pau Soler, se alza con el galardón.",
+              "body": "El cine documental de orden artístico celebra un nuevo reconocimiento internacional tras la victoria de La raó del somni en el Arte Non Stop Festival de Buenos Aires. Dirigido por Pau Soler, el metraje profundiza en la trayectoria y el universo creativo del pintor Joan Castejón con una sensibilidad notable. La proyección ha cautivado tanto al jurado como al público asistente por su capacidad para retratar el proceso de creación plástica sin estridencias. Los cinéfilos porteños tienen ahora la oportunidad de redescubrir este tipo de propuestas en las salas independientes de la ciudad. El documental destaca por su fotografía pausada y una banda sonora que acompaña los silencios del artista en su estudio. Es una muestra más del intercambio cultural constante que define la cartelera cinematográfica de Buenos Aires.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            },
+            {
+              "n": "03",
+              "headline": "El Gaumont acoge la Semana de Cine del Festival de Cannes.",
+              "lede": "Una programación selecta acerca lo mejor del cine europeo a la gran pantalla.",
+              "body": "El histórico Cine Gaumont se convierte estos días en la embajada oficiosa del cine internacional gracias a la Semana de Cine del Festival de Cannes 2026. La programación incluye títulos recientes que pasaron por la Croisette, ofreciendo a los espectadores locales una ventana privilegiada a las tendencias del cine de autor. Los horarios y las entradas ya están disponibles para consultar las proyecciones diarias en sus salas tradicionales del centro porteño. Este ciclo permite disfrutar de obras inéditas en el circuito comercial habitual antes de su llegada definitiva a las plataformas de streaming. Mientras tanto, la programación musical local experimenta ajustes de última hora, como la reciente cancelación del show de Cara Delevingne en el Primavera Sound Buenos Aires. El público cinéfilo encuentra así en el Gaumont un refugio perfecto frente a las tardes de lluvia y tormenta.",
+              "source": "saudade desk",
+              "source_date": "2026-11-20"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-19T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "ULTRA Buenos Aires 2027: cuánto cuestan las entradas, los descuentos especiales y cuál es la nueva sede del festival ya genera expectativa entre los seguidores de la música electrónica. En paralelo, Buenos Aires celebra a Corea en un festival gratuito con más de 50 stands, K-pop y platos típicos que desbordan la oferta gastronómica local. El pensamiento crítico también tiene espacio con el Festival Salvaje Federal llevará la discusión sobre el centralismo literario al corazón de Buenos Aires. Conviene tener presente que el 2026-11-23 se conmemora el Día de la Soberanía Nacional, por lo que bancos y dependencias estatales permanecerán cerrados. El clima se mantiene nublado con máximas de 29°C y calidad de aire justa.",
               "source": "saudade desk",
               "source_date": "2026-11-23"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-12T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La música de cámara y el piano ocupan los espacios culturales este fin de semana.",
-              "lede": "El ciclo Antonash Piano destaca en una programación otoñal que equilibra la literatura fantástica y el cine.",
-              "body": "La agenda cultural madrileña ofrece este fin de semana una variada selección de propuestas que van desde el ciclo Antonash Piano hasta el festival QueerCineMad y los encuentros dedicados a la literatura fantástica. Estos eventos coinciden con una calidad del aire excelente en la ciudad, donde el registro de PM2.5 se sitúa en 2, propiciando los trayectos a pie entre salas de conciertos y librerías especializadas. Los viajeros que planifiquen sus compras o consumos locales encontrarán un tipo de cambio estable de 1 USD a 0.9 EUR al utilizar sus tarjetas o cambiar divisa. Conviene consultar la programación previa en los centros culturales de barrio, ya que algunos auditorios pequeños limitan el aforo a los asistentes con reserva anticipada. La oferta artística de noviembre se completa con exposiciones históricas de gran formato que recuerdan el papel de España en la independencia de Estados Unidos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "Una gran exposición revela el pasado histórico compartido con Estados Unidos.",
-              "lede": "El centro cultural acoge piezas documentales inéditas sobre la independencia norteamericana.",
-              "body": "Los visitantes que recorren la capital estos días pueden visitar la nueva exposición que detalla el papel esencial que desempeñó España en la independencia de Estados Unidos. La muestra reúne documentos originales y objetos de la época en un montaje sobrio que invita a la contemplación pausada sin aglomeraciones turísticas. Las condiciones atmosféricas siguen siendo muy favorables para el paseo urbano, con un índice de PM2.5 de 2 que garantiza una atmósfera limpia en el distrito centro. Quienes deseen adquirir catálogos en las tiendas oficiales de los museos comprobarán que la equivalencia monetaria se mantiene en 1 USD por cada 0.9 EUR. Esta propuesta forma parte de un mes repleto de citas culturales que abarcan desde ciclos de ópera hasta festivales de cine iberoamericano. Es recomendable dedicar al menos dos horas completas al recorrido para examinar con calma la cartela informativa de cada sala.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "El festival Biophest 2026 reúne la creación contemporánea en los escenarios locales.",
-              "lede": "La muestra de cine y artes visuales anima los espacios alternativos durante el mes de noviembre.",
-              "body": "El festival Biophest 2026 se consolida este mes como uno de los puntos de encuentro imprescindibles para los aficionados al cine independiente y las artes visuales en Madrid. La ciudad ofrece un entorno ideal para estos desplazamientos culturales gracias a una calidad del aire notablemente buena, marcada por un nivel de PM2.5 de 2. Los viajeros internacionales pueden gestionar sus gastos cotidianos con un tipo de cambio fijado en 1 USD equivalente a 0.9 EUR, facilitando el acceso a entradas y publicaciones especializadas. Además de Biophest, la cartelera madrileña incluye el Festival de Cine Iberoamericano y diversas funciones líricas que enriquecen las noches de otoño. Los organizadores recomiendan adquirir las localidades a través de las plataformas digitales oficiales para evitar colas en taquilla y asegurar el acceso a los coloquios posteriores con los directores invitados.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las calles de La Barceloneta recuperan su comercio de proximidad totalmente renovado.",
-              "lede": "El histórico barrio marinero estrena el espacio comercial de Lidl tras una profunda reforma interior.",
-              "body": "El barrio de La Barceloneta acoge la reapertura del establecimiento de Lidl, concebido ahora con un diseño más integrado en la trama urbana del frente marítimo. Esta actualización comercial coincide con una jornada pasada por agua en la ciudad, donde se han registrado 28.1mm de precipitaciones y temperaturas que oscilan entre 17°C y 23°C. La caída temprana del sol a las 17:34 acorta las horas de luz diurna, obligando a los paseantes a buscar refugio en los soportales y mercados tradicionales del distrito. Para los visitantes extranjeros que realizan compras en la zona, la conversión monetaria se mantiene estable con 1 USD equivalente a 0.9 EUR. Conviene llevar paraguas resistente y calzado adecuado para transitar por las aceras húmedas del paseo marítimo, donde el viento del este suele intensificarse durante los chubascos de esta época del año.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "La música y la gastronomía al aire libre animan el entorno metropolitano.",
-              "lede": "Un gran festival junto a la ciudad combina parrillas, música en directo y calçotadas populares.",
-              "body": "Las inmediaciones de Barcelona acogen un destacado festival gastronómico que ofrece entrada gratuita y reúne a los amantes de las parrillas al aire libre y las calçotadas populares. El evento se celebra bajo condiciones meteorológicas cambiantes, marcadas por un acumulado de 28.1mm de lluvia y temperaturas templadas de 17°C a 23°C. La puesta de sol se adelanta a las 17:34, obligando a los asistentes a disfrutar de la música en directo y los productos locales bajo las lonas protectoras habilitadas por la organización. Los viajeros que deseen adquirir recuerdos o productos artesanos en los puestos del recinto pueden calcular sus transacciones con la tasa de 1 USD por cada 0.9 EUR. Se aconseja consultar los horarios de los autobuses lanzadera que conectan el centro de Barcelona con el recinto del festival para evitar esperas bajo la llovizna vespertina.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "La agenda cultural de noviembre entrelaza grandes conciertos y programación lírica.",
-              "lede": "Barcelona compite en oferta musical con otras capitales mediante giras internacionales y ópera.",
-              "body": "La programación cultural de noviembre en Cataluña destaca por albergar eventos de gran formato, incluyendo actuaciones internacionales como la de Bryan Adams y prestigiosas temporadas de ópera. Estas citas artísticas se desarrollan en un contexto de ambiente lluvioso, con 28.1mm de precipitación acumulada y un rango térmico de 17°C a 23°C que suaviza el termómetro nocturno. Al atardecer, fijado puntualmente a las 17:34, las luces de los teatros y auditorios barceloneses se encienden para recibir al público asistente. Los turistas internacionales pueden gestionar la compra de localidades utilizando un tipo de cambio de 1 USD a 0.9 EUR en la mayoría de taquillas y plataformas autorizadas. Es recomendable planificar los trayectos en transporte público con margen suficiente, ya que la lluvia suele ralentizar ligeramente la circulación urbana en las horas punta de la tarde.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El debate sobre la descentralización literaria llega con el Festival Salvaje Federal.",
-              "lede": "Escritores y editores de distintas provincias se reúnen para debatir sobre el centralismo cultural.",
-              "body": "El Festival Salvaje Federal se instala en Buenos Aires para propiciar un espacio de reflexión profunda sobre la descentralización y la literatura regional frente al centralismo tradicional. Este encuentro intelectual se desarrolla con una calidad del aire moderada, registrando un índice de PM2.5 de 12 en las estaciones de medición porteñas. Los asistentes que se desplacen entre las distintas sedes del festival también podrán consultar la exposición digital ‘Castelao. A derradeira leición do mestre’ a través de la web del Museo de Pontevedra. De cara a los próximos días festivos, cabe recordar que el 2026-11-23 se celebrará el Día de la Soberanía Nacional, jornada en la que los organismos públicos, bancos y oficinas postales permanecerán cerrados por feriado nacional. Se sugiere a los viajeros programar sus trámites administrativos y cambios de moneda con antelación para evitar inconvenientes durante el fin de semana largo.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "02",
-              "headline": "El Museo del Humor reabre sus puertas en una gran celebración ciudadana.",
-              "lede": "La mítica institución regresa con una muestra monográfica dedicada a Caloi y música en vivo.",
-              "body": "Buenos Aires recupera uno de los espacios culturales más queridos con la reapertura oficial del Museo del Humor, inaugurado con una fiesta gratuita que incluye música en directo y una exposición especial sobre la obra de Caloi. Los visitantes que caminan por la zona disfrutan de una atmósfera urbana con una calidad del aire moderada, situada en 12 de PM2.5 según los registros ambientales recientes. Esta reapertura se vincula además con la intensa actividad de debate cultural que promueve estos días el Festival Salvaje Federal en torno a la identidad literaria del país. Conviene tener presente en el calendario de este mes que el 2026-11-23 tendrá lugar el feriado por el Día de la Soberanía Nacional, fecha que alterará el funcionamiento habitual de la administración pública y las entidades bancarias. Los organizadores del museo recomiendan llegar temprano para acceder a las salas principales sin aglomeraciones durante las primeras jornadas de visita.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
-            },
-            {
-              "n": "03",
-              "headline": "La memoria gráfica y el arte contemporáneo convergen en las salas de la ciudad.",
-              "lede": "Las muestras temporales y los archivos digitales amplían la oferta cultural de los museos.",
-              "body": "La agenda de los museos porteños se enriquece este mes con iniciativas que combinan la tradición del humor gráfico y el acceso a exposiciones virtuales internacionales como la dedicada a Castelao desde Pontevedra. Estas actividades se disfrutan bajo un cielo despejado con una calidad del aire calificada como moderada, con un valor de PM2.5 de 12 que permite recorrer los parques y centros culturales sin mayores restricciones. Los residentes y viajeros deben anotar en su agenda que el próximo 2026-11-23 se conmemorará el Día de la Soberanía Nacional, por lo que los servicios estatales, sucursales bancarias y oficinas postales suspenderán su atención al público. Planificar los desplazamientos urbanos y las gestiones financieras antes de esta pausa festiva garantizará una estancia tranquila y ordenada en la capital durante la segunda mitad de noviembre.",
-              "source": "saudade desk",
-              "source_date": "2026-11-12"
             }
           ]
         }
