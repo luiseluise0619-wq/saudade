@@ -1,95 +1,95 @@
 {
   "edition": "es",
-  "filed_at": "2026-11-20T06:00:00+09:00",
-  "next_filing": "2026-11-20T21:00:00+00:00",
+  "filed_at": "2026-11-21T06:00:00+09:00",
+  "next_filing": "2026-11-21T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "MADRID",
+      "city": "Madrid",
       "items": [
         {
           "n": "01",
-          "headline": "Cervantes cobra vida en Madrid con una experiencia inmersiva.",
-          "lede": "La realidad virtual permite recorrer la vida del autor en una nueva propuesta cultural.",
-          "body": "La capital española acoge una exposición inmersiva de realidad virtual que transporta al visitante directamente al Siglo de Oro. Cervantes cobra vida en Madrid a través de recreaciones digitales minuciosas que reconstruyen las calles polvorientas y los corrales de comedias de la época. Esta propuesta tecnológica ofrece una perspectiva singular sobre la cotidianidad literaria del escritor más universal de las letras hispánicas. Los espectadores pueden caminar junto al autor y observar cómo se gestaron sus obras más célebres en escenarios tridimensionales detallados. Es una pausa excelente para el viajero curioso que busca entender el pulso histórico de la ciudad mediante herramientas contemporáneas. La visita requiere reserva previa para garantizar una experiencia tranquila y sin aglomeraciones en las salas de proyección.",
+          "headline": "La Casa Encendida acoge el festival Abrapalabra.",
+          "lede": "La cita cultural reúne propuestas literarias y escénicas del 9 al 13 de diciembre.",
+          "body": "El centro cultural La Casa Encendida se prepara para recibir una nueva edición de su tradicional encuentro literario y artístico. El festival Abrapalabra ocupará los espacios del edificio durante cinco jornadas consecutivas, ofreciendo lecturas, performances y talleres abiertos al público. Es un refugio excelente para las tardes de diciembre en la ciudad, combinando la creación contemporánea con la reflexión pausada. Conviene revisar los horarios específicos de cada sesión en su web oficial para asegurar el acceso a las salas principales, dado el aforo limitado que caracteriza a la programación.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "02",
-          "headline": "La Comunidad de Madrid inaugura una sede clave para la ciberseguridad.",
-          "lede": "Pentera abre nuevas oficinas en la región para impulsar el sector tecnológico.",
-          "body": "La Comunidad de Madrid consolida su posición como polo tecnológico europeo tras la apertura oficial de la nueva sede de la empresa de ciberseguridad Pentera. Este centro estratégico albergará a equipos especializados en la protección de infraestructuras críticas y el desarrollo de software defensivo avanzado. La llegada de estas corporaciones refuerza el tejido empresarial local y atrae talento internacional especializado en la ingeniería de sistemas seguros. Para el observador atento, este movimiento refleja la transformación silenciosa de los distritos periféricos hacia clústeres de innovación digital. Las instalaciones priorizan la eficiencia energética y la integración arquitectónica en su entorno empresarial inmediato. La actividad en la zona ya muestra un dinamismo renovado entre profesionales y visitantes de negocios.",
+          "headline": "El festival Animario dedica su novena edición al cine de Estonia.",
+          "lede": "La cinematografía báltica contemporánea toma las pantallas madrileñas con una selección de autor.",
+          "body": "La novena edición del festival Animario pone el foco en Estonia, reconocida este año como gran potencia de la animación de autor. Las proyecciones muestran la singularidad visual y narrativa de directores nórdicos que rara vez llegan a los circuitos comerciales habituales. Cada sesión invita a una contemplación reposada, ideal para los espectadores que buscan estepas de celuloide diferentes y texturas artesanales. Las entradas se adquieren directamente en taquilla o a través de los canales habituales del recinto colaborador. Es una oportunidad idónea para observar la evolución estetica del medio fuera de los grandes estudios.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "03",
-          "headline": "La Chula presenta su primera edición con Viva Suecia y Siloé.",
-          "lede": "Un nuevo festival musical aterriza en la agenda cultural madrileña.",
-          "body": "Madrid suma un nuevo hito a su calendario musical con la presentación de la primera edición de La Chula, un festival que promete revitalizar la escena sonora local. El evento confirma a Viva Suecia y Siloé como cabezas de cartel de un cartel diseñado para los amantes del pop independiente nacional. La cita musical busca consolidarse como un punto de encuentro anual para quienes siguen de cerca la evolución de las bandas en directo. Los organizadores han apostado por recintos accesibles que fomenten la cercanía entre el público y los artistas durante las actuaciones. Las entradas ya están disponibles en los canales habituales para asegurar el aforo en las diferentes jornadas programadas. Es una oportunidad perfecta para descubrir las nuevas apuestas del circuito musical peninsular en un ambiente distendido.",
+          "headline": "Madrid anuncia la primera edición del festival musical La Chula.",
+          "lede": "Viva Suecia y Siloé encabezan el cartel de este nuevo encuentro sonoro.",
+          "body": "La agenda cultural de la capital suma un nuevo atractivo con la presentación oficial del festival La Chula. El evento musical ya ha confirmado a bandas consolidadas de la escena nacional como Viva Suecia y Siloé como primeras cabezas de cartel. Esta iniciativa busca consolidarse como un punto de encuentro para los amantes del pop de autor y los directos de formato mediano. La organización irá desvelando los nombres restantes y los escenarios específicos en las próximas semanas. Los viajeros atentos ya pueden marcar el hito en sus calendarios para planificar futuras escapadas musicales a la ciudad.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         }
       ]
     },
     {
-      "city": "BARCELONA",
+      "city": "Barcelona",
       "items": [
         {
           "n": "01",
-          "headline": "Los parques municipales reabren tras el temporal de viento.",
-          "lede": "La jornada deja temperaturas de 14 a 19°C bajo cielos completamente cubiertos.",
-          "body": "Barcelona recupera la calma urbana después de que los Bomberos de Barcelona atendieran 106 servicios motivados por los fuertes ventarrones registrados en las últimas horas. Ante esta situación, el Ayuntamiento de Barcelona ha ordenado la reapertura de los parques públicos este viernes tras finalizar las labores de revisión arbolada. Los termoscopios marcan valores de 14 a 19°C bajo un cielo overcast que suaviza la luz sobre el asfalto mojado. La calidad del aire se mantiene en niveles buenos, registrando un índice PM2.5 de 3 que invita a pasear sin prisa por los espacios verdes recuperados. El atardecer, previsto para las 17:27, teñirá de gris suave los tejados del Eixample y las copas de los árboles recién inspeccionados. Es un momento propicio para recorrer la ciudad con la tranquilidad de que la normalidad ha retornado a los jardines.",
+          "headline": "Barcelona estrena un gran parque hinchable de más de 4.000 metros cuadrados.",
+          "lede": "Una nueva superficie de ocio al aire libre se integra en el paisaje urbano.",
+          "body": "La ciudad cuenta desde esta semana con una instalación singular orientada al juego y al movimiento en espacios abiertos. Se trata de un parque hinchable gigante que supera los 4.000 metros cuadrados de extensión total. La estructura ofrece un recorrido lúdico poco convencional dentro de la trama urbana, pensado para dinamizar zonas de esparcimiento vecinal. Conviene consultar la ubicación exacta y las normas de acceso antes de planificar la visita, especialmente en fines de semana. Es una propuesta inesperada que altera temporalmente la escala de los parques tradicionales de Barcelona.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "02",
-          "headline": "Picasso y la arquitectura dialogan en una muestra singular.",
-          "lede": "La mirada del pintor malagueño sobre los espacios urbanos y construidos.",
-          "body": "La relación íntima entre la creación artística y la estructura urbana queda al descubierto a través de la exposición dedicada a la arquitectura, según Picasso. La muestra analiza cómo el artista interpretó volúmenes, perspectivas y geometrías en su producción pictórica y gráfica a lo largo de los años. Los visitantes pueden examinar dibujos y lienzos donde los edificios y las formas constructivas actúan como protagonistas silenciosos de su lenguaje visual. Esta propuesta expositiva invita a reconsiderar el paisaje urbano barcelonés desde la óptica fragmentada y genial del pintor. Las salas ofrecen un recorrido reposado que exige la observación detallada de cada trazo y boceto preparatorio. Es una parada indispensable para quienes deseen conectar el patrimonio arquitectónico de la ciudad con las claves estéticas del siglo XX.",
+          "headline": "Jornadas de cine de barrio en los espacios públicos de la ciudad.",
+          "lede": "Las proyecciones locales recuperan el pulso comunitario bajo cielos cubiertos.",
+          "body": "Las calles barcelonesas acogen estos días una nueva edición de las proyecciones de cine en el barrio, acercando títulos independientes a plazas y centros cívicos. Con temperaturas que oscilan entre 13 y 18°C y un cielo permanentemente overcast, el ambiente invita a abrigarse con moderación durante los paseos vespertinos. El atardecer llega puntual a las 17:27, marcando el inicio de las sesiones al aire libre o en recintos resguardados del viento. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 en 15, permitiendo caminar sin prisa por los distintos distritos.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "03",
-          "headline": "El fenómeno literario Me llamo Goa convoca a 2.600 lectores.",
-          "lede": "El éxito de Míriam Tirado se transforma en un festival compartido con Madrid.",
-          "body": "El fenómeno literario Me llamo Goa, escrito por Míriam Tirado, trasciende las páginas impresas para convertirse en un festival que reunirá a 2.600 personas entre Barcelona y Madrid. Este encuentro literario nace con el propósito de generar un diálogo directo entre la autora y sus lectores en un entorno participativo y cercano. Las jornadas incluirán charlas, talleres y lecturas en voz alta centradas en los temas emocionales que han cautivado a miles de seguidores. La gran respuesta del público confirma el excelente momento que atraviesa la narrativa introspectiva en el panorama editorial actual. Los asistentes podrán compartir impresiones sobre una obra que ha marcado un punto de inflexión en la literatura contemporánea dirigida a públicos diversos. Las entradas se agotaron con semanas de antelación, reflejando el fervor que despierta esta historia.",
+          "headline": "Mango Home amplía su presencia comercial con una apertura en Murcia.",
+          "lede": "La firma consolida su red de tiendas especializadas en decoración y hogar.",
+          "body": "La expansión de la marca continúa sumando establecimientos especializados en artículos textiles y menaje para la casa. Con esta nueva apertura en Murcia, Mango Home alcanza ya las 12 tiendas operativas en España. Los espacios apuestan por una estética sobria y materiales nobles, alineados con las tendencias actuales de interiorismo calmado. Para los observadores del sector retail, este crecimiento refleja el interés constante por el diseño funcional en el ámbito doméstico peninsular. Las colecciones priorizan tonos neutros y fibras naturales que encajan con una filosofía de vida pausada y consciente.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         }
       ]
     },
     {
-      "city": "BUENOS AIRES",
+      "city": "Buenos Aires",
       "items": [
         {
           "n": "01",
-          "headline": "Tormentas y calor húmedo antes del fin de semana largo.",
-          "lede": "Las temperaturas oscilan entre 19 y 26°C con 6.7mm de precipitación acumulada.",
-          "body": "Buenos Aires transcurre estos días bajo una meteorología cambiante que combina temperaturas de 19 a 26°C con lluvias intermitentes. Las previsiones meteorológicas registran 6.7mm de precipitación y episodios de tormenta que refrescan momentáneamente el ambiente porteño. La calidad del aire se sitúa en niveles moderados, con un valor de PM2.5 de 19 debido a la humedad ambiental propia de la estación. El atardecer, fijado a las 19:41, regalará cielos dramáticos sobre el Río de la Plata tras el paso de las nubes de tormenta. Este panorama coincide con la proximidad del Día de la Soberanía Nacional el 2026-11-23, un feriado que alterará los horarios habituales de bancos y oficinas públicas. Conviene planificar las gestiones administrativas con antelación, ya que la ciudad adoptará un ritmo más pausado durante el fin de semana largo.",
+          "headline": "El cine Gaumont recibe la Semana de Cine del Festival de Cannes 2026.",
+          "lede": "La cartelera porteña ofrece una selección exclusiva de la cinematografía internacional reciente.",
+          "body": "El histórico cine Gaumont se convierte estos días en la sede principal para disfrutar de la Semana de Cine del Festival de Cannes 2026. La programación detallada incluye horarios y venta de entradas anticipadas para obras que han recorrido los certámenes más prestigiosos del mundo. Con temperaturas que escalan de 18 a 28°C bajo un cielo overcast, el clima invita a refugiarse en las salas oscuras durante las horas centrales. El índice UV alcanza un nivel 8 muy alto, por lo que se recomienda precaución al transitar las calles antes de la caída del sol a las 19:42. La calidad del aire registra un PM2.5 de 19, manteniéndose en parámetros moderados.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "02",
-          "headline": "Joan Castejón triunfa en el Arte Non Stop Festival.",
-          "lede": "El documental La raó del somni, dirigido por Pau Soler, se alza con el galardón.",
-          "body": "El cine documental de orden artístico celebra un nuevo reconocimiento internacional tras la victoria de La raó del somni en el Arte Non Stop Festival de Buenos Aires. Dirigido por Pau Soler, el metraje profundiza en la trayectoria y el universo creativo del pintor Joan Castejón con una sensibilidad notable. La proyección ha cautivado tanto al jurado como al público asistente por su capacidad para retratar el proceso de creación plástica sin estridencias. Los cinéfilos porteños tienen ahora la oportunidad de redescubrir este tipo de propuestas en las salas independientes de la ciudad. El documental destaca por su fotografía pausada y una banda sonora que acompaña los silencios del artista en su estudio. Es una muestra más del intercambio cultural constante que define la cartelera cinematográfica de Buenos Aires.",
+          "headline": "Inauguración de la exposición Una ventana a Azerbaiyán en Buenos Aires.",
+          "lede": "Un nuevo puente cultural acerca tradiciones y expresiones artísticas del Cáucaso.",
+          "body": "La agenda de exposiciones de la capital se enriquece con la apertura de Una ventana a Azerbaiyán, una muestra diseñada para descubrir el patrimonio y la estética de aquel país. Las salas albergan piezas artesanales, textiles y registros visuales que dialogan con la arquitectura ecléctica porteña. Es una parada recomendada para los caminantes urbanos que disfrutan de descubrimientos silenciosos en museos y centros culturales independientes. Conviene verificar los horarios de apertura de fin de semana para planificar el recorrido con la calma necesaria.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         },
         {
           "n": "03",
-          "headline": "El Gaumont acoge la Semana de Cine del Festival de Cannes.",
-          "lede": "Una programación selecta acerca lo mejor del cine europeo a la gran pantalla.",
-          "body": "El histórico Cine Gaumont se convierte estos días en la embajada oficiosa del cine internacional gracias a la Semana de Cine del Festival de Cannes 2026. La programación incluye títulos recientes que pasaron por la Croisette, ofreciendo a los espectadores locales una ventana privilegiada a las tendencias del cine de autor. Los horarios y las entradas ya están disponibles para consultar las proyecciones diarias en sus salas tradicionales del centro porteño. Este ciclo permite disfrutar de obras inéditas en el circuito comercial habitual antes de su llegada definitiva a las plataformas de streaming. Mientras tanto, la programación musical local experimenta ajustes de última hora, como la reciente cancelación del show de Cara Delevingne en el Primavera Sound Buenos Aires. El público cinéfilo encuentra así en el Gaumont un refugio perfecto frente a las tardes de lluvia y tormenta.",
+          "headline": "Próximo feriado por el Día de la Soberanía Nacional este 23 de noviembre.",
+          "lede": "Las oficinas públicas y entidades bancarias permanecerán cerradas por el fin de semana largo.",
+          "body": "El calendario nacional señala la llegada del Día de la Soberanía Nacional, conmemorando la fecha oficial del 23 de noviembre. Como es habitual durante los fines de semana largos en Argentina, las administraciones públicas, bancos y oficinas postales suspenderán su atención al público. Los servicios esenciales funcionarán con guardias reducidas, mientras que los espacios verdes y paseos públicos mantendrán sus puertas abiertas para el descanso de residentes y viajeros. Es el momento perfecto para disfrutar de la ciudad a un ritmo más lento, prestando atención a los horarios especiales del comercio barrial.",
           "source": "saudade desk",
-          "source_date": "2026-11-20"
+          "source_date": "2026-11-21"
         }
       ]
     }
