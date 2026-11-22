@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-21T06:00:00+09:00",
+  "updated": "2026-11-22T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-22T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La Casa Encendida acoge el Festival Abrapalabra 2026 en diciembre.",
+              "lede": "El centro cultural programa diversas lecturas y encuentros literarios durante la primera mitad del mes.",
+              "body": "La Casa Encendida organiza el Festival Abrapalabra 2026 en Madrid entre los días 9 y 13 del próximo mes de diciembre. Esta cita reúne a narradores y creadores en torno a la palabra escrita y oral en sus distintas expresiones artísticas. Conviene consultar la programación previa para reservar plaza en los talleres y encuentros previstos. El espacio mantiene su habitual tranquilidad en los pasillos de exposiciones mientras se preparan los recitales. Los visitantes extranjeros encuentran un tipo de cambio estable de 1 USD por 0.91 EUR en las oficinas locales. Es una buena ocasión para recorrer el barrio de Lavapiés antes de que comience el bullicio festivo de final de año.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "02",
+              "headline": "El festival La Chula anuncia a Viva Suecia y Siloé como cabezas de cartel.",
+              "lede": "Madrid suma una nueva cita musical que apuesta por la escena independiente nacional.",
+              "body": "La capital presenta la primera edición de La Chula, un festival que contará con la presencia destacada de grupos como Viva Suecia y Siloé. La propuesta amplía la oferta cultural de la ciudad con escenarios dedicados al pop rock independiente. Los organizadores buscan consolidar un formato de aforo mediano que priorice la comodidad del público asistente. Las entradas anticipadas ya están disponibles en los canales oficiales habituales de venta digital. Esta iniciativa se suma a la intensa agenda de otoño que incluye exposiciones sobre el aprendizaje mediante juguetes y la figura de Cervantes. Los viajeros procedentes de fuera de la zona euro pueden operar con un cambio de 1 USD a 0.91 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "03",
+              "headline": "El Día de la Constitución marcará el cierre parcial de oficinas el 6 de diciembre.",
+              "lede": "La festividad nacional del 2026-12-06 afectará a la apertura de administraciones públicas y bancos.",
+              "body": "El próximo 2026-12-06 se celebra el Día de la Constitución, un festivo nacional que modifica los horarios habituales de servicios administrativos y entidades bancarias. Los comercios del centro de Madrid mantendrán una actividad adaptada a la jornada festiva y de descanso dominical. Es recomendable prever cualquier gestión oficial con antelación para evitar inconvenientes durante el puente festivo. Las calles principales mostrarán la iluminación navideña que ya decora los paseos comerciales desde semanas antes. Los museos y centros de arte suelen mantener horarios especiales que conviene verificar antes de planificar la visita. El tipo de cambio vigente se sitúa en 1 USD por 0.91 EUR para los visitantes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Wondair Park instala un gran árbol hinchable para escalar en Barcelona.",
+              "lede": "El parque indoor ofrece una propuesta lúdica diferente durante la temporada navideña.",
+              "body": "Wondair Park llega a Barcelona esta Navidad con una instalación de parque hinchable indoor que incluye un árbol gigante para escalar. La atracción está pensada tanto para el público familiar como para quienes buscan nuevas formas de ocio bajo techo. El recinto ofrece un espacio resguardado de las temperaturas más frescas de la estación en la ciudad condal. Se aconseja reservar los turnos de acceso con antelación para evitar esperas prolongadas en la entrada principal. Esta novedad se integra en la programación festiva que acompaña los paseos urbanos por los diferentes distritos. Los viajeros internacionales pueden realizar sus transacciones financieras aplicando un cambio de 1 USD por 0.91 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "02",
+              "headline": "Barcelona acoge la primera coffee rave en formato festival con gran expectación.",
+              "lede": "El evento combina la cultura del café de especialidad con música electrónica diurna.",
+              "body": "Este sábado se estrena en Barcelona la primera coffee rave en formato festival, un encuentro que espera reunir a unas 800 personas. La propuesta fusiona sesiones de música electrónica con barras dedicadas al café de especialidad desde primeras horas de la mañana. Los organizadores buscan explorar nuevos formatos de ocio diurno en espacios no convencionales de la geografía urbana. Las entradas se han agotado rápidamente entre los aficionados a las nuevas tendencias culturales y musicales de la ciudad. Paralelamente, las galerías del Eixample exponen obras relacionadas con la campaña viral de TMB y la visión de Picasso sobre la arquitectura. El tipo de cambio actual se mantiene en 1 USD equivalente a 0.91 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "03",
+              "headline": "El Día de la Constitución alterará la rutina administrativa el 6 de diciembre.",
+              "lede": "La festividad del 2026-12-06 traerá cierres en organismos oficiales y entidades bancarias.",
+              "body": "La celebración del Día de la Constitución el 2026-12-06 supondrá una jornada de pausa en la actividad institucional de Barcelona. Los servicios municipales, oficinas gubernamentales y sucursales bancarias permanecerán cerrados durante este día festivo de carácter nacional. Los visitantes deben tener en cuenta estas modificaciones al planificar trámites o cambios de moneda en la ciudad. El comercio local y los espacios de restauración ajustarán sus aperturas según la normativa vigente para días festivos. Las calles del barrio gótico y el paseo de Gràcia ofrecerán un ritmo más pausado, ideal para caminatas sin prisa. La equivalencia monetaria oficial se mantiene estable en 1 USD por 0.91 EUR.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra 17 a 28°C con cielo parcialmente nublado y UV muy alto.",
+              "lede": "La jornada dominical ofrece un clima templado ideal para recorrer los espacios verdes porteños.",
+              "body": "Buenos Aires amanece con temperaturas que oscilan entre 17 y 28°C bajo un cielo parcialmente nublado y una calidad de aire fair con PM2.5 en 12. El índice UV alcanza un nivel 9, considerado muy alto, por lo que se recomienda usar protección solar adecuada durante los trayectos al aire libre. El atardecer está previsto para las 19:43, permitiendo disfrutar de largas horas de luz natural en parques y plazas. La ciudad acoge eventos destacados como el Festival de la India Ratha Yatra y la muestra de diseño de CEPA entre creadores argentinos e italianos. El documental La raó del somni de Pau Soler también destaca en la agenda cultural local. El clima acompaña los paseos por los jacarandás en flor.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "02",
+              "headline": "República Folklore debuta en Buenos Aires con Abel Pintos, Soledad y Cazzu.",
+              "lede": "El nuevo festival celebra las raíces musicales con una convocatoria artística de primer nivel.",
+              "body": "República Folklore llega por primera vez a Buenos Aires con un cartel que reúne a figuras esenciales como Abel Pintos, Soledad y Cazzu. El encuentro musical celebra la diversidad de los ritmos tradicionales y su diálogo con las expresiones contemporáneas de la escena nacional. Las actuaciones se desarrollan en predios preparados para recibir a miles de seguidores de todo el país. Esta propuesta coincide con el fin de semana largo y refuerza el atractivo cultural de la capital durante estos días. Los asistentes pueden combinar los conciertos con la visita a muestras de diseño inéditas y proyecciones de cine independiente. La temperatura oscila entre 17 y 28°C con un índice UV de 9 y el sol ocultándose a las 19:43.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            },
+            {
+              "n": "03",
+              "headline": "El Día de la Soberanía Nacional trae cierres administrativos el 23 de noviembre.",
+              "lede": "La festividad del 2026-11-23 modifica los servicios públicos y bancarios en todo el país.",
+              "body": "El próximo 2026-11-23 se conmemora el Día de la Soberanía Nacional, instaurando un fin de semana largo conmemorativo en Buenos Aires. Las oficinas gubernamentales, bancos y dependencias postales permanecerán cerradas durante la jornada festiva oficial. El transporte público funcionará con cronogramas adaptados a los días domingos y feriados, por lo que conviene revisar los trayectos. Los espacios culturales y gastronómicos mantendrán una oferta especial para los residentes y turistas que permanezcan en la ciudad. Las condiciones meteorológicas serán agradables con registros de 17 a 28°C y una puesta de sol a las 19:43. La calidad del aire se mantiene en niveles razonables de fair con PM2.5 en 12.",
+              "source": "saudade desk",
+              "source_date": "2026-11-22"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-21T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los seguidores de la música electrónica ya consultan la información logística y las condiciones de venta de entradas para Ultra Buenos Aires 2027. Este anuncio anticipado contrasta con la cadencia pausada de los eventos literarios y los festivales de fado que animan la agenda actual de la capital. Las condiciones meteorológicas actuales muestran un rango térmico de 18 a 25°C bajo cielos nublados, ideales para recorrer a pie las librerías del centro sin sufrir agobios térmicos. Es necesario tener presente el índice UV 9, muy alto pese a la cobertura de nubes, y protegerse adecuadamente durante los trayectos peatonales diurnos. La calidad del aire se sitúa en un índice PM2.5 de 9, garantizando un entorno urbano estable hasta la hora del crepúsculo, fijada a las 19:36, momento en que las calles adquieren la quietud característica de las vísperas festivas.",
               "source": "saudade desk",
               "source_date": "2026-11-15"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-14T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Palacio de Cibeles expone el trofeo del Mundial este fin de semana.",
-              "lede": "La sala central recibe a los visitantes con una muestra efímera y gratuita.",
-              "body": "El Palacio de Cibeles acoge una exposición efímera y gratuita que permite contemplar de cerca el trofeo del Mundial este fin de semana. Los asistentes pueden acercarse al recinto bajo una temperatura de 11–14°C y la presencia puntual de lluvia de 1.7mm. Conviene llevar paraguas y caminar despacio por las aceras húmedas del paseo de Recoletos. La luz decae pronto con la puesta de sol a las 17:58. El tipo de cambio actual se sitúa en 1 USD frente a 0.9 EUR para quienes planifiquen compras locales.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "02",
-              "headline": "El Centro Cultural Eduardo Úrculo celebra la 19ª edición de su muestra cinematográfica.",
-              "lede": "El espacio municipal ofrece proyecciones seleccionadas para el público cinéfilo.",
-              "body": "El Centro Cultural Eduardo Úrculo acoge la 19ª edición de Mi Primer Festival de Cine durante estos días otoñales. Las calles de la capital mantienen un ambiente templado de 11–14°C mientras persisten los chubascos ligeros de 1.7mm. La tarde avanza con rapidez y la oscuridad llega con la puesta de sol a las 17:58. Los viajeros encontrarán un ritmo pausado en las salas y en los cafés cercanos al barrio de Tetuán. Las transacciones comerciales se realizan con una paridad oficial de 1 USD por cada 0.9 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "03",
-              "headline": "Las calles madrileñas reciben a los Reyes del Mundo con el trofeo de campeones.",
-              "lede": "La visita de la delegación deportiva anima los espacios públicos de la ciudad.",
-              "body": "Madrid recibe a los Reyes del Mundo con el trofeo de campeones en un evento que congrega a curiosos y aficionados. El cielo gris deja chubascos dispersos que suman 1.7mm de precipitación con termómetros marcando de 11–14°C. La jornada concluye con el anochecer puntual a las 17:58, obligando a buscar refugio bajo techo en los soportales tradicionales. Los visitantes extranjeros operan con un tipo de cambio de 1 USD a 0.9 EUR en comercios y librerías del centro histórico antes de que finalice la semana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El renovado Mercado de la Abaceria abre sus puertas tras una profunda restauración.",
-              "lede": "El histórico recinto del barrio de Gràcia recupera su actividad comercial diaria.",
-              "body": "Todo a punto para la apertura del renovado Mercado de la Abaceria en el corazón de Gràcia. El cielo permanece completamente overcast con temperaturas que oscilan entre 14–18°C y una calidad de aire fair con PM2.5 en 8. La luz tenue se desvanece con la puesta de sol a las 17:32, invitando a pasear sin prisa entre puestos de producto fresco. Las compras cotidianas se resuelven con un cambio monetario de 1 USD equivalente a 0.9 EUR en los establecimientos de la zona.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "02",
-              "headline": "La Universidad de Barcelona acoge el XIII Festival de Filosofía Barcelona Pensa.",
-              "lede": "Las facultades históricas abren sus puertas a debates abiertos sobre el pensamiento actual.",
-              "body": "La Universidad de Barcelona celebra el XIII Festival de Filosofía Barcelona Pensa con conferencias repartidas por distintos espacios académicos. Las calles del Eixample disfrutan de un clima suave de 14–18°C bajo un manto overcast y un índice de calidad de aire fair con PM2.5 de 8. La noche cae con precisión a las 17:32, marcando el fin de las actividades al aire libre. Los visitantes del evento pueden realizar pagos en metálico o tarjeta aplicando la tasa de 1 USD por 0.9 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "03",
-              "headline": "El festival DART regresa a Barcelona para explorar los vínculos entre arte y cine.",
-              "lede": "Diez años mirando el arte desde la gran pantalla en las salas asociadas.",
-              "body": "Diez años mirando el arte desde el cine: DART vuelve a Barcelona con una cuidada selección de documentales creativos. La ciudad ofrece un ambiente tranquilo con registros térmicos de 14–18°C, cielos overcast y un nivel de PM2.5 en 8 dentro de una calidad de aire fair. La penumbra llega temprano a las 17:32, propiciando el refugio en las butacas oscuras de las salas de proyección. La moneda local mantiene su valor de referencia frente al dólar con 1 USD igual a 0.9 EUR.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Literatura Salvaje reúne a autores de seis provincias en Buenos Aires.",
-              "lede": "Selva Almada y destacados narradores participan en los encuentros literarios de la temporada.",
-              "body": "El Festival de Literatura Salvaje convoca a Selva Almada y escritores de seis provincias en un encuentro imperdible en Buenos Aires. La atmósfera porteña se muestra cálida pero inestable con temperaturas de 20–29°C y tormentas eléctricas que dejan 7.1mm de precipitación. La calidad del aire se mantiene en niveles fair con un registro de PM2.5 en 6. El atardecer se prolonga hasta las 19:35, ofreciendo tardes largas para la lectura en librerías y cafés de barrio. Cabe recordar que el Día de la Soberanía Nacional se celebrará el 2026-11-23, jornada en la que bancos y oficinas públicas permanecerán cerrados.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "02",
-              "headline": "El FestiBar Buenos Aires ofrece más de 100 bebidas locales e internacionales para degustar.",
-              "lede": "El encuentro de coctelería despliega barras especializadas en distintos puntos de la ciudad.",
-              "body": "FestiBar Buenos Aires 2026 invita a recorrer más de 100 bebidas para degustar en espacios diseñados para la ocasión. El clima registra 20–29°C con episodios de tormenta que suman 7.1mm de agua caída en las últimas horas. La calidad del aire es fair con una lectura de PM2.5 en 6, ideal para caminar con precaución entre chaparrones. El sol se oculta a las 19:35, dando paso a noches templadas de primavera austral. Se recuerda que las instituciones gubernamentales y bancarias cerrarán el próximo 2026-11-23 por el feriado del Día de la Soberanía Nacional.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
-            },
-            {
-              "n": "03",
-              "headline": "La gastronomía italiana celebra su gran festival regional en las cercanías porteñas.",
-              "lede": "La Plata acoge la muestra culinaria más extensa del país dedicada a recetas tradicionales.",
-              "body": "Llega el festival de gastronomía italiana más grande del país a La Plata, reuniendo productos artesanales y sabores auténticos. El termómetro marca entre 20–29°C bajo un cielo amenazante que descarga 7.1mm en forma de tormenta ocasional. La calidad del aire es fair con PM2.5 situado en 6 en toda la región metropolitana. La luz natural se extiende hasta las 19:35, permitiendo disfrutar de largas sobremesas al aire libre. Los residentes aprovechan para planificar sus gestiones antes del feriado del Día de la Soberanía Nacional fijado para el 2026-11-23, fecha sin actividad bancaria.",
-              "source": "saudade desk",
-              "source_date": "2026-11-14"
             }
           ]
         }
