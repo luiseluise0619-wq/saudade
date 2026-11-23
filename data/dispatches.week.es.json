@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-22T06:00:00+09:00",
+  "updated": "2026-11-23T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-23T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La luz gris de noviembre define las calles.",
+              "lede": "El termómetro se mueve entre 3 y 13°C bajo un cielo completamente cubierto.",
+              "body": "La jornada madrileña transcurre bajo un cielo gris que apenas deja ver el sol antes de la puesta a las 17:52. El ambiente exterior requiere abrigo ligero mientras los paseantes buscan refugio en librerías y cafés históricos del centro. Las temperaturas oscilan entre los fríos 3°C matutinos y unos modestos 13°C en las horas centrales del día. Conviene recordar que el tipo de cambio actual se sitúa en 1 USD por cada 0.91 EUR para quienes planifiquen transacciones internacionales. La ciudad avanza hacia el final del otoño con la vistapuesta en las futuras citas culturales de la temporada.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "02",
+              "headline": "El Siglo de Oro toma las salas de exposición.",
+              "lede": "Cervantes protagoniza la nueva oferta cultural inmersiva de la capital.",
+              "body": "La figura de Cervantes y su tiempo recuperan protagonismo mediante la exposición inmersiva y de realidad virtual titulada Madrid en el Siglo de Oro. Crisol de destinos y desembarco de genios. Esta muestra acerca al visitante a la trastienda literaria e histórica del Siglo de Oro a través de herramientas tecnológicas avanzadas. Los espacios expositivos invitan a recorrer las calles del Madrid antiguo con una perspectiva renovada y accesible. Es una excelente alternativa para resguardarse de las bajas temperaturas y del ambiente típicamente invernal que domina las tardes de la ciudad en estas fechas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "03",
+              "headline": "El calendario oficial apunta hacia el descanso festivo.",
+              "lede": "El próximo Día de la Constitución marcará el cierre temporal de oficinas administrativas.",
+              "body": "El calendario institucional señala la proximidad del Día de la Constitución el 2026-12-06, fecha que traerá consigo los habituales cambios en los horarios de atención al público. Conviene tener presente que las oficinas gubernamentales, las entidades bancarias y las sucursales de correos permanecerán cerradas durante esa jornada festiva. Los residentes y viajeros habituales ya organizan sus gestiones pendientes para evitar contratiempos de última hora en el inicio de diciembre. La planificación anticipada garantiza que los servicios esenciales no sorprendan a nadie con cierres inesperados durante el puente festivo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Una ligera lluvia acompaña el aire templado.",
+              "lede": "Los termómetros registran entre 11 y 17°C con leves chubascos dispersos.",
+              "body": "La jornada barcelonesa se desarrolla con temperaturas agradables que se mueven entre los 11 y los 17°C, acompañadas por una precipitación testimonial de 0.5mm. El aire muestra una calidad fair con niveles de PM2.5 en 4, lo que permite pasear con total tranquilidad por los paseos marítimos y los parques urbanos. La puesta de sol se adelanta hasta las 17:25, tiñendo el Mediterráneo de tonos cobrizos antes de la caída de la noche. Para los visitantes extranjeros, el tipo de cambio vigente se mantiene en 1 USD por cada 0.91 EUR, facilitando el intercambio comercial cotidiano en comercios locales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "02",
+              "headline": "Los domingos de apertura comercial animan el ambiente.",
+              "lede": "El calendario comercial de Navidad define los días festivos con actividad en las tiendas.",
+              "body": "El comercio local de Barcelona se prepara para las semanas de compras navideñas con la confirmación oficial de los domingos en los que las tiendas tienen permiso para abrir sus puertas. Esta medida permite a los compradores organizar sus itinerarios de fin de semana con tranquilidad, evitando aglomeraciones de última hora. Paralelamente, la ciudad sigue cuidando sus espacios públicos con la apertura de áreas infantiles singulares, como los parques con toboganes espectaculares y el nuevo parque hinchable gigante de más de 4.000 metros cuadrados. Estos enclaves ofrecen alternativas de ocio familiar al aire libre que aprovechan la suavidad térmica del clima mediterráneo durante este periodo otoñal.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "03",
+              "headline": "La arquitectura dialoga con el trazo de Picasso.",
+              "lede": "Las instituciones culturales profundizan en la relación entre el arte y los edificios.",
+              "body": "La relación entre la arquitectura y la obra de Picasso ocupa el centro de las propuestas culturales de la ciudad en estos días. Las exposiciones y rutas urbanas invitan a redescubrir la huella del pintor malagueño en los espacios urbanos y los edificios emblemáticos de Barcelona. Esta mirada pausada permite conectar el diseño de la ciudad con la evolución estética del artista. Es un plan ideal para disfrutar de la ciudad a pie, aprovechando que la ligera lluvia matinal da paso a claros templados que invitan a caminar sin prisa por los barrios históricos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El calor primaveral exige precaución bajo el sol.",
+              "lede": "La temperatura alcanza los 29°C bajo un cielo cubierto con índice ultravioleta muy alto.",
+              "body": "El domingo porteño presenta un registro térmico que oscila entre los 19 y los 29°C, acompañado por un cielo totalmente overcast y un nivel de radiación UV de 9 que resulta muy alto para la exposición prolongada. La calidad del aire se mantiene en parámetros fair con un registro de PM2.5 en 10, propiciando salidas moderadas a los espacios verdes de la capital. La puesta de sol se demora hasta las 19:44, regalando atardeceres largos y luminosos característicos de la primavera austral. Los residentes aprovechan las horas de menor intensidad solar para transitar por las avenidas arboladas y las plazas históricas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "02",
+              "headline": "El descanso oficial modifica el ritmo de la capital.",
+              "lede": "El Día de la Soberanía Nacional suspende la actividad administrativa habitual.",
+              "body": "La jornada coincide con la conmemoración del Día de la Soberanía Nacional este 2026-11-23, un feriado que altera profundamente el pulso cotidiano de Buenos Aires. Las oficinas públicas, las instituciones bancarias y las dependencias postales permanecen cerradas durante todo el día, invitando a la ciudadanía al descanso o al ocio barrial. Los cafés notables y las librerías del centro reciben a quienes prefieren un ritmo pausado, lejos del trajín laboral de los días hábiles. Es una oportunidad excelente para observar la arquitectura porteña con la calma que solo los días festivos logran imprimir en las calles.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            },
+            {
+              "n": "03",
+              "headline": "La música y el cine clásico ocupan la agenda.",
+              "lede": "El Festival República Folklore y las proyecciones en 35 milímetros animan el fin de semana.",
+              "body": "La oferta cultural de Buenos Aires destaca este fin de semana por la diversidad de sus propuestas artísticas y cinematográficas. Por un lado, el festival República Folklore celebra la riqueza de las raíces musicales con una gran acogida de público, mientras el BARS rinde homenaje a la memoria de Isabel Sarli con proyecciones especiales en formato de 35 milímetros. Asimismo, eventos espirituales y culturales como el Festival de la India Ratha Yatra aportan color y movimiento a los espacios públicos de la ciudad. Estas iniciativas reafirman la vitalidad creativa de la capital argentina en plena transición hacia los meses estivales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-23"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-22T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Las condiciones meteorológicas de este domingo combinan una temperatura agradable de 21 a 26°C con un cielo overcast que disimula la intensidad solar. Sin embargo, los indicadores atmosféricos señalan un índice UV de 9, catalogado como muy alto, haciendo indispensable el uso de protección adecuada al transitar por las calles. La calidad del aire se sitúa en niveles justos con un registro de PM2.5 en 9. La caída del sol ocurrirá a las 19:37, prolongando las horas de luz vespertina para disfrutar de las terrazas y parques de la metrópoli. Se recuerda a los residentes que la próxima semana, el 2026-11-23, tendrá lugar el feriado por el Día de la Soberanía Nacional, afectando la apertura de entidades bancarias y dependencias públicas.",
               "source": "saudade desk",
               "source_date": "2026-11-16"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-15T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La feria literaria y cultural OpenLAB ocupa los espacios públicos de la capital este fin de semana.",
-              "lede": "El encuentro reúne propuestas de reflexión sobre la verdad y la ciencia en diferentes centros culturales.",
-              "body": "El festival OpenLAB La mecánica de la verdad toma la agenda cultural madrileña con debates abiertos a todos los ciudadanos y visitantes. Los espacios públicos e instituciones colaboran en este ciclo de pensamiento que busca examinar los límites del conocimiento contemporáneo. Es una ocasión excelente para pasear sin prisa entre librerías y foros de discusión repartidos por los barrios céntricos. Con un tipo de cambio de 1 USD a 0.9 EUR, los viajeros norteamericanos encontrarán un coste equilibrado para adquirir volúmenes independientes en las casetas instaladas para la ocasión. La calidad del aire se mantiene en niveles limpios, con un registro de PM2.5 de 3, lo que invita a recorrer las calles a pie mientras se disfruta del pulso intelectual de la ciudad y de sus propuestas de divulgación científica sin aglomeraciones molestas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "Las taquillas de los festivales anticipan la temporada musical con la llegada de Mad Cool 2027.",
-              "lede": "Los organizadores anuncian las primeras coordenadas para el esperado ciclo de conciertos del próximo año.",
-              "body": "La expectación musical regresa a la ciudad con la confirmación de las fechas y la planificación logística para Mad Cool 2027. Los residentes habituales y los viajeros más previsores ya consultan la oferta de abonos anticipados para asegurar su acceso a los recintos. Mientras tanto, la programación cultural inmediata sigue ofreciendo alternativas teatrales y exposiciones en museos menos concurridos durante las mañanas de domingo. Con el tipo de cambio oficial situado en 1 USD frente a 0.9 EUR, la planificación de la estancia y la compra de entradas resultan estables para los visitantes extranjeros. La atmósfera urbana combina la calma otoñal con el bullicio de los preparativos escénicos que transformarán la periferia musical el próximo verano. Es el momento perfecto para trazar rutas tranquilas por los bulevares y descubrir la trastienda creativa que define la identidad artística de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "El trofeo de campeones llega a Madrid y celebra los grandes hitos del deporte internacional.",
-              "lede": "La capital acoge a los Reyes del Mundo en una recepción institucional abierta a los aficionados.",
-              "body": "La llegada de los Reyes del Mundo con el trofeo de campeones aporta un inusual destello de celebración a la agenda deportiva de noviembre. Las plazas principales reciben a los visitantes con la sobriedad habitual de los meses templados, propicia para el paseo sosegado sin las prisas del turismo masivo. La calidad del aire se mantiene en un óptimo valor de PM2.5 de 3, favoreciendo las caminatas largas por parques históricos y alamedas urbanas. El tipo de cambio actual de 1 USD por 0.9 EUR facilita las compras en los comercios tradicionales del centro histórico y librerías de viejo. Los ciudadanos aprovechan la tregua meteorológica para sentarse en terrazas discretas y observar el discurrir cotidiano de una ciudad que siempre recompensa al viajero paciente y dispuesto a mirar más allá de los grandes monumentos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival de las imágenes en movimiento transforma las salas y centros culturales de la ciudad.",
-              "lede": "Una cuidada selección de cine experimental y videoarte ocupa las pantallas de espacios independientes.",
-              "body": "La experimentación audiovisual toma el protagonismo este fin de semana con el festival dedicado íntegramente a las imágenes en movimiento. Los espectadores pueden descubrir creaciones contemporáneas en salas recuperadas para el circuito cultural barcelonés. Esta propuesta convive con el tradicional festival DAU, que llena los centros cívicos de juegos de mesa de autor y dinámicas participativas para todas las edades. La oferta cultural del fin de semana se completa con el mercadillo solidario Posa't la gorra y los conciertos programados por la ciudad. Con una equivalencia de 1 USD a 0.9 EUR, los visitantes extranjeros disfrutan de un acceso muy accesible a todas las actividades de taquilla. Es una oportunidad excelente para refugiarse del fresco matinal en recintos cerrados donde el diseño y la creación independiente marcan el compás de la vida urbana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "La gran retrospectiva de Andy Warhol abre sus puertas en Barcelona con obras icónicas.",
-              "lede": "El recorrido expositivo abarca desde las imágenes de Marilyn Monroe hasta los retratos de Carolina de Mónaco.",
-              "body": "El arte pop internacional recala en los espacios expositivos de la ciudad condal con una ambiciosa muestra dedicada a Andy Warhol. Los visitantes pueden contemplar serigrafías históricas y material audiovisual inédito que documentan la fascinación del artista por la cultura de masas y la aristocracia europea. La muestra se integra en una agenda fin de semana que también incluye los conciertos de Bryan Adams y las propuestas del festival de juegos DAU. Para los viajeros procedentes del área del dólar, el tipo de cambio de 1 USD por 0.9 EUR permite adquirir entradas anticipadas y catálogos con total previsibilidad económica. Conviene recorrer las salas a primera hora de la mañana para disfrutar de las obras con la quietud que demanda una observación verdaderamente atenta, lejos de las aglomeraciones vespertinas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "La AP-7 en Tarragona recupera la normalidad circulatoria tras los incidentes viales recientes.",
-              "lede": "El tráfico rodado fluye ya sin restricciones después de la retirada de los camiones implicados en el corte.",
-              "body": "La reapertura total de la AP-7 en Tarragona devuelve la fluidez a uno de los ejes viarios fundamentales para conectar Barcelona con el sur peninsular. Tras las 12 horas de interrupción motivadas por dos accidentes con tres camiones implicados, los servicios de mantenimiento han completado la limpieza de la calzada. Los conductores y viajeros que planean escapadas de fin de semana hacia la costa tarraconense o el delta del Ebro pueden transitar ya con total normalidad. Esta mejora en la movilidad terrestre coincide con una densa oferta cultural en la capital catalana, que abarca desde exposiciones de Andy Warhol hasta encuentros lúdicos. El tipo de cambio de 1 USD a 0.9 EUR sigue favoreciendo las reservas de transporte y alojamiento en toda la región para los visitantes internacionales que buscan tranquilidad en sus desplazamientos otoñales.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival de Fado trae las mejores voces portuguesas al circuito musical porteño.",
-              "lede": "Dos de los máximos exponentes del género luso interpretan melodías nostálgicas en los auditorios de la ciudad.",
-              "body": "La melancolía atlántica del fado cruza el océano para instalarse en la cartelera cultural de Buenos Aires con la visita de dos destacados cantantes portugueses. Este evento musical se enmarca en una semana especialmente rica en encuentros literarios y ferias editoriales independientes. Con un registro térmico que oscila entre los 18 y los 25°C bajo cielos completamente cubiertos, las caminatas urbanas resultan muy agradables para el viajero. No obstante, conviene extremar las precauciones ante el índice UV 9, considerado muy alto a pesar de la nubosidad reinante. La calidad del aire se mantiene en niveles correctos, con un índice de PM2.5 de 9. Los asistentes a los conciertos pueden pasear por los barrios tradicionales hasta la puesta de sol, prevista para las 19:36, disfrutando del compás pausado de la capital antes de los espectáculos nocturnos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de Literatura Salvaje reúne a escritores de seis provincias en un encuentro federal.",
-              "lede": "Selva Almada y referentes de la narrativa regional protagonizan ferias de editoriales y lecturas en vivo.",
-              "body": "El panorama literario nacional celebra su diversidad con la llegada del Festival Salvaje Federal, un espacio de confluencia para editores independientes y autores de distintas provincias. Las jornadas incluyen presentaciones de libros, debates sobre poéticas territoriales y charlas abiertas al público en centros culturales de la ciudad. El clima acompaña la experiencia con temperaturas de 18 a 25°C y una atmósfera densa y nublada que invita a la lectura sosegada en los cafés notables. Conviene recordar que el próximo 23 de noviembre se celebrará el feriado nacional por el Día de la Soberanía Nacional, por lo que las oficinas públicas, bancos y oficinas postales permanecerán cerradas ese lunes, alterando ligeramente la gestión administrativa habitual. La calidad del aire registra un PM2.5 de 9, mientras el sol se oculta puntualmente a las 19:36 en una tarde ideal para el descubrimiento literario.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "La música electrónica global anuncia su próxima gran cita con los preparativos de Ultra Buenos Aires 2027.",
-              "lede": "La organización confirma los detalles de la futura edición mientras la ciudad disfruta de su agenda otoñal.",
-              "body": "Los seguidores de la música electrónica ya consultan la información logística y las condiciones de venta de entradas para Ultra Buenos Aires 2027. Este anuncio anticipado contrasta con la cadencia pausada de los eventos literarios y los festivales de fado que animan la agenda actual de la capital. Las condiciones meteorológicas actuales muestran un rango térmico de 18 a 25°C bajo cielos nublados, ideales para recorrer a pie las librerías del centro sin sufrir agobios térmicos. Es necesario tener presente el índice UV 9, muy alto pese a la cobertura de nubes, y protegerse adecuadamente durante los trayectos peatonales diurnos. La calidad del aire se sitúa en un índice PM2.5 de 9, garantizando un entorno urbano estable hasta la hora del crepúsculo, fijada a las 19:36, momento en que las calles adquieren la quietud característica de las vísperas festivas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
             }
           ]
         }
