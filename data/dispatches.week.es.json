@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-23T06:00:00+09:00",
+  "updated": "2026-11-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La lluvia ligera y el frío de noviembre marcan las calles madrileñas.",
+              "lede": "Los termómetros se mueven entre los 4 y los 9°C con 0.8mm de precipitación.",
+              "body": "El ambiente en Madrid exige abrigo ligero ante los 4 y los 9°C registrados hoy. Una fina lluvia de 0.8mm moja ligeramente el asfalto mientras la tarde cae sobre la ciudad a las 17:51. El aire muestra una calidad moderada con un nivel de PM2.5 de 14, un dato prudente para pasear sin prisas por el centro histórico. Para quienes llegan desde el extranjero, el tipo de cambio oficial se mantiene estable en 1 USD frente a 0.91 EUR. Conviene recordar que el próximo 6 de diciembre se celebra el Día de la Constitución, seguido por la Inmaculada Concepción el 8 de diciembre, jornadas que alterarán el ritmo habitual de las oficinas públicas y los bancos en la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "El Museo de Historia de Madrid celebra un siglo de su exposición fundacional.",
+              "lede": "La pinacoteca conmemora los 100 años de la muestra El Antiguo Madrid. Historia y ciudad.",
+              "body": "El Museo de Historia de Madrid acoge una conmemoración especial por los 100 años de la exposición El Antiguo Madrid. Historia y ciudad. Es una oportunidad excelente para observar cómo ha evolucionado el urbanismo madrileño a lo largo de las décadas a través de planos, grabados y objetos cotidianos. La visita discurre con calma, ideal para escapar de la bajada térmica exterior que marca temperaturas de hasta 4°C. Las salas ofrecen un refugio cálido y silencioso donde detenerse ante los detalles del pasado municipal. Este homenaje museístico conecta directamente con la memoria tranquila de una ciudad que siempre guarda rincones por redescubrir en cualquier tarde fresca de otoño.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "Un Cervantes virtual y aventurero inaugura el nuevo espacio expositivo.",
+              "lede": "La tecnología inmersiva y la realidad virtual transforman la experiencia literaria en la capital.",
+              "body": "La agenda cultural madrileña suma un espacio innovador con el estreno de una experiencia dedicada a Cervantes. La propuesta combina la realidad virtual y recursos inmersivos para acercar la figura del célebre escritor de una manera diferente. Se trata de un recorrido arriesgado y cercano que busca conectar al visitante con las vivencias del autor a través de entornos digitales muy cuidados. Esta iniciativa complementa la oferta de museos tradicionales y se disfruta especialmente en semanas de climatología adversa, cuando el atardecer se adelanta a las 17:51 y apetece refugiarse bajo techo. Los horarios de visita se adaptarán conforme se acerquen los festivos nacionales de principios de diciembre.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona disfruta de temperaturas suaves y una ligera lluvia vespertina.",
+              "lede": "El mercurio oscila entre los 11 y los 17°C con una precipitación de 0.5mm.",
+              "body": "La capital catalana presenta un clima templado con mínimas de 11 y máximas de 17°C en este tramo final de noviembre. Una fina lluvia de 0.5mm acompaña el día de manera casi imperceptible hasta el atardecer, fijado a las 17:25. La calidad del aire se sitúa en un nivel moderado con PM2.5 en 16, permitiendo recorrer los paseos marítimos y parques con absoluta tranquilidad. El tipo de cambio se mantiene invariable en 1 USD por 0.91 EUR para los visitantes internacionales. Conviene tener presente que el Día de la Constitución el 6 de diciembre y la Inmaculada Concepción el 8 de diciembre traerán cierres comerciales y administrativos parciales en toda la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "La cinematografía española expone cuatro décadas de diseño de producción.",
+              "lede": "La muestra sobre los Premios Goya llega a Barcelona para repasar el oficio artesanal del cine.",
+              "body": "La sala barcelonesa recibe la exposición que celebra los 40 años de Diseño de Producción en los Premios Goya. Esta muestra propone un recorrido detallado por los escenarios y la trastienda visual que han definido el cine nacional durante cuatro décadas. Es una parada obligatoria para los amantes del detalle técnico, el dibujo arquitectónico y la recreación histórica en la gran pantalla. Las piezas expuestas revelan el minucioso trabajo de maquetistas y decoradores alejados de los focos principales. La visita ofrece un respiro cultural idóneo para las tardes de otoño en las que la temperatura exterior ronda los 17°C.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "El Winter Festival 2026 activa la temporada de escalada en Climbat La Foixarda.",
+              "lede": "El centro de La Foixarda acoge el evento anual de escalada deportiva en la montaña de Montjuïc.",
+              "body": "El rocódromo Climbat La Foixarda se convierte en el epicentro deportivo con la llegada del Winter Festival 2026. Este encuentro reúne a aficionados y profesionales en un entorno natural y urbano único dentro de la montaña de Montjuïc. Las instalaciones acogen competiciones y talleres prácticos diseñados para todos los niveles de experiencia en el recinto. La ubicación permite combinar la actividad física con un paseo por los jardines circundantes, beneficiándose de la agradable temperatura diurna de 17°C. Es una propuesta dinámica que dinamiza el fin de semana deportivo barcelonés antes de la llegada de los festivos de diciembre.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires registra una jornada plenamente veraniega con cielos cubiertos.",
+              "lede": "La temperatura alcanza los 30°C con un índice UV muy alto situado en el nivel 9.",
+              "body": "El clima porteño impone un registro cálido con temperaturas que se mueven entre los 20 y los 30°C bajo un cielo totalmente cubierto. El índice ultravioleta alcanza el nivel 9, considerado muy alto, por lo que se aconseja protección solar incluso con nubosidad persistente. La calidad del aire se mantiene en un rango justo con 9 de PM2.5, favoreciendo la circulación peatonal por los barrios tradicionales. El atardecer se demora hasta las 19:45, regalando largas horas de luz diurna para la observación urbana. Tras el reciente feriado del Día de la Soberanía Nacional, la ciudad ya planifica la próxima pausa oficial con la Inmaculada Concepción de María programada para el 8 de diciembre.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "El universo gráfico de Quino y Mafalda abre sus puertas a la memoria porteña.",
+              "lede": "La exitosa muestra sobre Mafalda permite caminar físicamente entre las viñetas originales.",
+              "body": "La exposición dedicada a Mafalda continúa atrayendo a numerosos visitantes tras el paso de figuras ilustres por sus salas. La muestra recrea con precisión el trazo de Quino, permitiendo a los asistentes adentrarse literalmente en las viñetas y escenarios de los personajes. Este homenaje gráfico es un ejercicio de nostalgia y reflexión sobre la identidad urbana que define a Buenos Aires. Las instalaciones interiores ofrecen un respiro climatizado frente al calor exterior que alcanza los 30°C en las calles. Es un recorrido pausado que invita a la lectura reposada y a la sonrisa cómplice en pleno corazón de la capital.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "El festival República Folklore celebra la música de raíz en los espacios porteños.",
+              "lede": "El ciclo cultural reúne el folclore tradicional y las nuevas expresiones acústicas de la región.",
+              "body": "La música de raíz encuentra su espacio protagonista con el desarrollo del festival República Folklore en Buenos Aires. Este evento pone en valor las tradiciones sonoras del país mediante conciertos íntimos y encuentros de payadores y bailarines. La programación destaca por su autenticidad y su capacidad de conectar el cancionero clásico con sonoridades contemporáneas. Con un atardecer que se estira hasta las 19:45, las jornadas musicales al aire libre disfrutan de una temperatura nocturna muy agradable tras los 30°C de máxima diurna. La agenda cultural sigue muy activa en este cierre de noviembre previo a las festividades de diciembre.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Los amantes de la naturaleza pueden visitar el célebre árbol de cristal, considerado el único ejemplar vivo de su especie en todo el continente sudamericano. En paralelo, el Festival Cartón 2026 ha dado a conocer todos sus ganadores, consolidándose como un referente de la animación independiente en la región. La atmósfera urbana se acompaña de temperaturas entre 19 y 28°C, con una breve tormenta que ha dejado 9.8mm de lluvia y una calidad de aire moderada de 14 en PM2.5. Conviene recordar que el próximo 23 de noviembre de 2026 tendrá lugar el feriado por el Día de la Soberanía Nacional, afectando la apertura de dependencias oficiales. El atardecer se prolonga hasta las 19:38, iluminando los parques con la luz dorada característica de la primavera austral bajo un índice UV muy alto de 9.",
               "source": "saudade desk",
               "source_date": "2026-11-17"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-16T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Parque Forestal de Valdebebas introduce la siembra de plantas mediante drones municipales.",
-              "lede": "El Ayuntamiento innova en la gestión verde con tecnología aérea para repoblar el norte.",
-              "body": "El Parque Forestal de Valdebebas incorpora un nuevo proyecto impulsado por el Ayuntamiento para sembrar especies vegetales utilizando drones especializados. Esta iniciativa busca optimizar la repoblación de áreas extensas con un enfoque respetuoso y tecnológico. Mientras el cielo permanece cubierto y los termómetros oscilan entre los 11 y los 16°C, los senderos del parque ofrecen un recorrido tranquilo para observar el paisaje otoñal. La puesta de sol se adelanta a las 17:56, marcando el ritmo pausado de las tardes madrileñas. Los paseantes encuentran en este espacio verde un refugio de calma urbana y una muestra de la transformación constante de los pulmones de la capital.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "02",
-              "headline": "La exposición Reyes del mundo revive en la capital la memoria de la victoria deportiva.",
-              "lede": "El deporte de base y los grandes eventos convergen en una muestra conmemorativa.",
-              "body": "La muestra cultural que rinde homenaje al triunfo histórico de la selección de fútbol atrae a numerosos visitantes interesados en la historia reciente. Las autoridades municipales y regionales han destacado el papel fundamental de Madrid como gran capital del deporte y punto de encuentro internacional. Con un tipo de cambio fijado en 1 USD frente a 0.9 EUR, los viajeros extranjeros cuentan con una referencia clara para planificar sus jornadas culturales. La visita se completa bajo cielos grises y temperaturas frescas que invitan a recorrer las salas de exposición sin prisa. Es una oportunidad excelente para comprender cómo la pasión colectiva se transforma en patrimonio cultural y memoria compartida.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "03",
-              "headline": "La penumbra vespertina domina las calles madrileñas con el ocaso adelantado a las 17:56.",
-              "lede": "El clima otoñal y el cielo cubierto definen el compás de los paseos urbanos.",
-              "body": "La jornada transcurre bajo un cielo completamente cubierto y temperaturas que se mueven entre los 11 y los 16°C, exigiendo prendas de abrigo ligeras. La moneda extranjera cotiza estable a 1 USD por cada 0.9 EUR para quienes realizan transacciones en comercios locales. Con la caída de la tarde a las 17:56, las luces artificiales de la ciudad comienzan a reflejarse en el asfalto húmedo de noviembre. Los cafés tradicionales y las librerías del centro recuperan su protagonismo como espacios de refugio y lectura pausada. La atmósfera invita al observador atento a detenerse en los detalles cotidianos que marcan la transición hacia las semanas más frías del año.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El festival DAU y la agenda cultural animan el fin de semana en la ciudad.",
-              "lede": "Las propuestas de ocio combinan juegos de mesa, conciertos y homenajes deportivos.",
-              "body": "La agenda cultural barcelonesa ofrece múltiples alternativas de entretenimiento, destacando la celebración del festival DAU y las actuaciones musicales en diversos recintos. Paralelamente, los aficionados al deporte recuerdan figuras históricas con eventos dedicados a Johan Cruyff y encuentros memorables como el disputado por los veteranos del club local frente al Ajax en el Johan Cruyff Arena con un marcador de 4-7. La calidad del aire se mantiene en niveles considerados justos, registrando un valor de PM2.5 de 6. El tipo de cambio actual se sitúa en 1 USD por cada 0.9 EUR, facilitando el cálculo financiero a los visitantes internacionales. Las calles y plazas de la ciudad presentan un ambiente dinámico pero ordenado para el disfrute general.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Korea Spotlight reúne a destacados artistas de la escena musical asiática.",
-              "lede": "SOYOU, BIBI, Billlie y oceanfromtheblue convergen en los escenarios barceloneses.",
-              "body": "La música internacional encuentra un espacio destacado en la programación cultural gracias al desembarco del festival Korea Spotlight en la capital catalana. Este evento convoca a seguidores de géneros contemporáneos para disfrutar de las actuaciones en directo de intérpretes reconocidos como SOYOU, BIBI, Billlie y oceanfromtheblue. Las condiciones ambientales acompañan el fin de semana con una calidad del aire justa y un índice de PM2.5 de 6. Para los viajeros que gestionan divisas, la equivalencia monetaria se mantiene en 1 USD equivalente a 0.9 EUR. Los desplazamientos hacia los recintos de conciertos se benefician de una red de transporte público eficiente y puntual.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "03",
-              "headline": "Los espacios públicos disfrutan de una atmósfera estable con calidad del aire en niveles de 6 PM2.5.",
-              "lede": "El equilibrio ambiental permite recorrer los paseos y parques urbanos con total comodidad.",
-              "body": "La ciudad ofrece un entorno propicio para el descanso y la observación urbana gracias a unos registros atmosféricos moderados y estables. Con el indicador de PM2.5 en 6, la calidad del aire se califica como justa para la actividad al aire libre. La moneda local opera bajo el tipo de cambio de 1 USD por 0.9 EUR, asegurando estabilidad en los intercambios comerciales cotidianos. Los residentes y visitantes aprovechan la pausa dominical para pasear por la costa o adentrarse en los barrios históricos sin aglomeraciones excesivas. La oferta de ocio urbano se integra de manera armónica con la rutina diaria de una comunidad que valora el ritmo sosegado.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La música electrónica y los festivales culturales convocan multitudes bajo el sol porteño.",
-              "lede": "Creamfields y el Hanguk Fest llenan los espacios públicos de música y gastronomía.",
-              "body": "La capital argentina vibra con una intensa agenda de fin de semana que incluye la masiva celebración de Creamfields, donde la música electrónica congrega a multitudes en un ambiente de alegría compartida. Asimismo, el Hanguk Fest ofrece una ventana abierta a la cultura coreana con degustaciones de kimchi, demostraciones de danza tradicional y más de 50 puestos gratuitos. El clima se presenta cálido con temperaturas entre los 21 y los 26°C, bajo un cielo overcast que mitiga parcialmente la radiación. No obstante, el índice UV alcanza el nivel 9, considerado muy alto, por lo que se aconseja protección solar adecuada durante los recorridos al aire libre. La puesta de sol se registrará avanzada la tarde, exactamente a las 19:37.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "02",
-              "headline": "El Festival de Fado acerca la melancolía atlántica a los escenarios de la ciudad.",
-              "lede": "Dos de las voces portuguesas más importantes interpretan cantos tradicionales en los auditorios.",
-              "body": "La programación artística internacional suma esta semana la llegada del prestigioso Festival de Fado, reuniendo a dos de los cantantes portugueses más destacados del momento actual. Este encuentro musical dialoga perfectamente con la sensibilidad porteña, ofreciendo recitales íntimos cargados de poesía y cuerda tradicional. El ambiente exterior se mantiene templado, con una franja térmica que va desde los 21 hasta los 26°C y una calidad del aire justa que marca 9 en el índice PM2.5. El cielo permanece overcast, creando una luz suave que acompaña el atardecer hasta las 19:37. Conviene recordar que el próximo lunes 2026-11-23 se celebrará el feriado nacional por el Día de la Soberanía Nacional, por lo que las oficinas gubernamentales, bancos y oficinas de correos permanecerán cerrados ese día.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
-            },
-            {
-              "n": "03",
-              "headline": "La radiación ultravioleta alcanza un nivel 9 muy alto a pesar de la cobertura nubosa.",
-              "lede": "Las temperaturas oscilan entre los 21 y los 26°C en una jornada de ambiente cálido.",
-              "body": "Las condiciones meteorológicas de este domingo combinan una temperatura agradable de 21 a 26°C con un cielo overcast que disimula la intensidad solar. Sin embargo, los indicadores atmosféricos señalan un índice UV de 9, catalogado como muy alto, haciendo indispensable el uso de protección adecuada al transitar por las calles. La calidad del aire se sitúa en niveles justos con un registro de PM2.5 en 9. La caída del sol ocurrirá a las 19:37, prolongando las horas de luz vespertina para disfrutar de las terrazas y parques de la metrópoli. Se recuerda a los residentes que la próxima semana, el 2026-11-23, tendrá lugar el feriado por el Día de la Soberanía Nacional, afectando la apertura de entidades bancarias y dependencias públicas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-16"
             }
           ]
         }
