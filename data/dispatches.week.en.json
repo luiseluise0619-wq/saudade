@@ -1,9 +1,101 @@
 {
   "edition": "en",
-  "updated": "2026-11-23T06:00:00+09:00",
+  "updated": "2026-11-24T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-24T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "SEOUL",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Seoul Botanic Park opens its winter festival inspired by Hermann Hesse.",
+              "lede": "Glasshouse walkways transition toward meditative literary installations as outdoor temperatures dip.",
+              "body": "The temperature spans between -3 and 5°C this week under partly cloudy skies with sunset arriving early at 17:16. Air quality remains good with PM2.5 standing at 5, making outdoor walks crisp and clear. The exchange rate sits at 1 USD to 1349 KRW for travelers exchanging currency. Inside the botanical park, the new winter festival draws inspiration from the writings of Hermann Hesse. Visitors seeking quiet reflection can wander through themed plant displays designed to evoke literary landscapes. It offers a measured respite from the approaching deep cold of late autumn.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "Festival award winners arrive in Seoul ahead of their local theatrical releases.",
+              "lede": "Cinemas across the city prepare for special screenings of celebrated international feature films.",
+              "body": "Temperatures hover between -3 and 5°C with clean air marked by a PM2.5 reading of 5. As daylight fades by 17:16, audiences move indoors toward independent auditoriums. The currency exchange rate holds at 1 USD to 1349 KRW. Curators have programmed a series highlighting major festival winners from abroad before their official domestic premieres. These limited screenings offer local cinephiles an early glimpse into global cinema without the usual crowd noise. It is a quiet week to sit in the dark and watch the screen.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "Ahn Chang-hong's Paradise on Earth exhibition opens for quiet contemplation.",
+              "lede": "Gallery spaces provide shelter from the crisp afternoon air as sunlight wanes over the capital.",
+              "body": "Outside, thermometers read -3 to 5°C under partly cloudy skies while air quality stays favorable at 5 PM2.5. Sunset cuts the afternoon short at 17:16, leaving long shadows across the pavements. Visitors can convert funds at 1 USD to 1349 KRW before entering the gallery halls. Ahn Chang-hong's exhibition titled Paradise on Earth invites visitors to observe works that quietly mourn sacrificed lives. The galleries remain unhurried, offering a space for deliberate viewing away from commercial thoroughfares. Plan your visit during daytime hours to make the most of the dwindling natural light.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        },
+        {
+          "city": "TOKYO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Rain falls steadily across the city streets as evening arrives early.",
+              "lede": "Umbrellas line station entrances while sidewalks glisten beneath a cool grey sky.",
+              "body": "Precipitation reaches 7.3mm of rain today with temperatures ranging from 7 to 18°C. Sunset occurs promptly at 16:29, marking the steady contraction of daylight hours. Air quality remains fair with PM2.5 at 9, and the exchange rate holds at 1 USD to 159 JPY. Following the recent Labour Thanksgiving Day holiday on 2026-11-23, public offices and banks have returned to normal operating hours. Cafes near residential neighborhoods offer dry refuge and warm tea for travelers caught in the persistent drizzle. It is a day to walk slowly and watch the water pool on stone curbs.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "A century-long historical exhibition opens to trace ties between Japan, China, and Taiwan.",
+              "lede": "Museum galleries offer shelter from the wet streets as autumn rainfall continues.",
+              "body": "The weather brings 7.3mm of rain with temperatures spanning 7 to 18°C. Daylight fades early with sunset at 16:29, keeping urban interiors warmly lit against the damp chill. Air quality reads fair at 9 PM2.5, and financial transactions operate at 1 USD to 159 JPY. Following the recent 2026-11-23 public holiday, cultural institutions resume standard schedules without holiday closures. Visitors can examine archival materials detailing a century of shared regional history in quiet exhibition rooms. The afternoon rain makes museum halls particularly still and conducive to careful reading.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "Style insiders gather in quiet neighborhoods as K-food finds a growing audience.",
+              "lede": "Design-led lodgings and independent eateries offer quiet retreats from the damp afternoon.",
+              "body": "Outside, 7.3mm of rain falls while temperatures stay between 7 and 18°C. Nightfall arrives swiftly at 16:29, bringing an early stillness to residential lanes. The air is fair with a PM2.5 count of 9, and travellers can manage expenses at an exchange rate of 1 USD to 159 JPY. Government offices and banks are fully open following the public holiday on 2026-11-23. Select boutiques and food purveyors continue to draw steady interest from visitors exploring design districts. It remains an ideal week for indoor browsing and warm meals away from the main thoroughfares.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        },
+        {
+          "city": "LISBON",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Light rain brushes the limestone paving stones across the historic quarters.",
+              "lede": "The riverfront stays muted under overcast skies as light precipitation dampens the alleys.",
+              "body": "Temperatures range from 11 to 18°C with 3.8mm of light rain expected throughout the day. Sunset arrives at 17:17, casting a soft golden glow just before dusk takes the hills. Air quality registers as moderate with PM2.5 at 19, and the euro exchanges at 1 USD to 0.91 EUR. Residents should note upcoming holiday closures for Restauração da Independência on 2026-12-01 and Imaculada Conceição on 2026-12-08, which will affect government offices and banks next week. For now, trams continue their regular routes along the slopes despite the slippery rails. It is a quiet time to sit inside a corner café and watch the moisture collect on windowpanes.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "02",
+              "headline": "Upcoming December holidays prompt advance planning for administrative visits.",
+              "lede": "Post offices and municipal desks prepare adjusted hours ahead of the approaching national dates.",
+              "body": "The local thermometer shows 11 to 18°C with 3.8mm of light rain falling on the plazas. Daylight diminishes steadily toward the 17:17 sunset over the Tagus. Air quality is moderate at 19 PM2.5, while currency converts at 1 USD to 0.91 EUR. Residents and long-term visitors should keep in mind that public holidays fall on 2026-12-01 for Restauração da Independência and 2026-12-08 for Imaculada Conceição. Official bureaus, banks, and postal services will close on those dates, so errands should be scheduled early. The damp air keeps the gardens green and the city streets pleasantly unhurried.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            },
+            {
+              "n": "03",
+              "headline": "Garden pathways remain quiet as autumn transitions into the damp winter season.",
+              "lede": "Botanical grounds offer sheltered walks beneath damp eucalyptus and old palm trees.",
+              "body": "With temperatures holding at 11 to 18°C and 3.8mm of light rain, the city breathes easier after the autumn humidity. Sunset occurs at 17:17, wrapping the parks in early twilight. Air quality remains moderate with PM2.5 levels at 19, and travelers use an exchange rate of 1 USD to 0.91 EUR. As a reminder for the coming weeks, public holidays on 2026-12-01 and 2026-12-08 will close civic institutions and banks across Lisbon. Public gardens remain open for unhurried observation between rain showers. It is a peaceful moment to walk the shaded paths before the festive December calendar begins.",
+              "source": "saudade desk",
+              "source_date": "2026-11-24"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-23T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Lisbon Christmas Market faces further delays as installation works continue across the historic plazas. Wooden chalets and festive lighting rigs remain partially assembled while municipal coordinators finalize logistics. Residents walking through the square will notice unfinished frameworks waiting for final carpenter adjustments. Artisans and vendors are adjusting their schedules to accommodate the revised opening timeline calmly. Pedestrians can still navigate the perimeter pathways to admire the surrounding Pombaline architecture without obstruction. The delayed setup invites a slower, more patient anticipation of the holiday season.",
               "source": "saudade desk",
               "source_date": "2026-11-16"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-15T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "SEOUL",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Moderate air readings settle over the Han River.",
-              "lede": "PM2.5 levels rest near 16 as the city transitions into a quiet mid-November afternoon.",
-              "body": "Moderate air quality registers across the capital today, with particulate matter hovering around 16. It is a steady gray day well-suited for slow walks along the stone paths of Deoksugung or quiet seating in the alleys of Samcheong-dong. The exchange rate holds near 1337 KRW to the USD, offering clear mathematics for travelers exchanging currency at local banks. Independent game spaces are also finding their footing, as seen in the steady growth of Smilegate's Beaver Rocks indie festival for its fifth edition. Further south in the city's cultural calendar, film enthusiasts note the San Diego Asian Film Festival presenting features like The Seoul Guardians, Tycoon, and Genevieve’s Garden. Meanwhile, municipal planners have set aside 1M in the 2027 budget toward a Worlds final bid, though the tournament has not yet been awarded.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "Theme park invitations draw thousands to outer districts.",
-              "lede": "TXT welcomes 1,000 dedicated fans to a Seoul amusement park for a private gathering.",
-              "body": "The amusement parks on the city edges welcome a specific wave of visitors this weekend as musical acts draw dedicated crowds. TXT has formally invited 1,000 fans to gather at a Seoul theme park for an exclusive seasonal event. Beyond the gates, the wider city remains measured and unhurried, with local neighborhoods maintaining their usual rhythm. Public spaces near the riverbanks offer quiet benches where observers can watch the late autumn leaves drift into the water. Exchange booths operate at 1337 KRW per USD for those settling accounts before the coming week. The air quality stays moderate at PM2.5 16, keeping visibility clear enough to trace the distant ridges of Inwangsan. It is a reliable time for neighborhood errands without the rushing crowds of peak tourist seasons.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "Financial planning centers on steady rates.",
-              "lede": "Travelers exchange currency at 1337 KRW per USD while municipal authorities plan ahead.",
-              "body": "Currency exchange desks across the city record a steady rate of 1337 KRW for every single USD this weekend. This predictable rate allows for quiet, unhurried budgeting at local artisan shops and neighborhood tea houses. City administration continues its long-range preparations, notably allocating 1M in the 2027 draft budget for an esports Worlds final that remains unconfirmed. Cultural footprints extend outward as well, with local cinema programming highlighting international showcases like the San Diego Asian Film Festival selections. Independent gaming finds dedicated spaces thriving, evidenced by the fifth edition of Smilegate's Beaver Rocks festival drawing creators from across the region. Outside, the air quality remains moderate at PM2.5 16, ensuring comfortable conditions for afternoon walks through the old palace grounds.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            }
-          ]
-        },
-        {
-          "city": "TOKYO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Labor Thanksgiving approaches as autumn deepens in the capital.",
-              "lede": "Kinrō Kansha no Hi arrives on 2026-11-23, bringing statutory closures across banks and municipal offices.",
-              "body": "As the capital prepares for the upcoming public holiday of Kinrō Kansha on 2026-11-23, residents mark the approaching closure of banks, government offices, and post offices. Financial exchanges hover around 160 JPY to the USD, shaping the week's expenses for visiting observers. Cultural reflections echo from recent events, including the official translation release of questions from the Tokyo Fan Festival for Final Fantasy XIV. Film lovers note that the 39th Tokyo International Film Festival has recently concluded its run and announced its 2026 award winners. Culinary echoes reach outward too, with a historic Tokyo steakhouse reopening in Wichita under new ownership, and Michelin-recognized Koyoté introducing Tokyo-style ramen to Park City. Within the city itself, quiet temple courtyards offer refuge as the last maples turn deep amber under crisp November skies.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "Film festival honors leave a quiet cultural afterglow.",
-              "lede": "The 39th Tokyo International Film Festival concludes its successful run with celebrated award winners.",
-              "body": "The quiet afterglow of the 39th Tokyo International Film Festival remains visible in local cinemas and neighborhood cafes discussing this year's award winners. Travelers navigating the city will want to note that 勤労感謝の日 falls on 2026-11-23, meaning standard administrative offices and banks will observe a holiday closure. The currency exchange rate sits firmly at 160 JPY per USD, offering a straightforward conversion for travelers settling restaurant tabs and transit IC cards. Digital communities continue discussing the official translation of questions from the recent Tokyo Fan Festival for Final Fantasy XIV. Meanwhile, Tokyo flavors travel abroad, with Koyoté bringing Michelin-recognized ramen to Park City and a classic Tokyo steakhouse finding new life in Wichita. Back home, the city's parks offer serene spaces to observe the falling leaves without the urgency of peak sightseeing seasons.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "Holiday closures require advance planning for administrative tasks.",
-              "lede": "Bank operations and government services will pause for Kinrō Kansha no Hi on 2026-11-23.",
-              "body": "Residents are reminded that government offices and financial institutions will close on 2026-11-23 for 勤労感謝の日, making this weekend the right time to handle official errands. Currency exchanges settle at 160 JPY to the USD, providing a reliable baseline for travelers managing their expenses. Global connections to the city remain strong, from the newly published translation of the Tokyo Fan Festival Q&A for Final Fantasy XIV to the lingering prestige of the 39th Tokyo International Film Festival award winners. Tokyo's culinary influence continues to spread abroad, as seen in Koyoté launching Tokyo-style ramen in Park City and a classic Tokyo steakhouse reopening in Wichita. In Tokyo proper, the pace slows down considerably in residential neighborhoods like Yanaka, where alley cats wander between wooden storefronts and quiet tea houses.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            }
-          ]
-        },
-        {
-          "city": "LISBON",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Web Summit innovations meet the calm Tagus air.",
-              "lede": "Chinese delegations present humanoid robots and open AI models as the Lisbon Web Summit draws curious observers.",
-              "body": "Fair air quality with a PM2.5 reading of 8 greets visitors along the waterfront, where the Lisbon Web Summit has brought unprecedented technological displays. China has mounted its largest-ever delegation to the summit, featuring humanoid robots, flying cars, and open AI models showcased directly on stage. Against this backdrop of future-forward technology, the city maintains its historic charm, with the exchange rate holding steady at 0.9 EUR to the USD. Cultural and hospitality announcements point toward future restorations, such as the planned June 2027 opening of Aethos Lisbon, featuring a restored villa, a private garden, and a members club. Music history also makes its mark as Moonspell prepares to celebrate 35 years of gothic metal with a massive Moonfest in the capital. It is an inspiring time to sit in a Chiado cafe, watching the light bounce off the yellow trams.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "02",
-              "headline": "Gothic metal milestones and garden villas mark the horizon.",
-              "lede": "Moonspell announces a massive Moonfest while future retreats like Aethos Lisbon prepare for a June 2027 debut.",
-              "body": "The local cultural calendar balances industrial heritage with future hospitality, highlighted by Moonspell celebrating 35 years of gothic metal with a massive Moonfest in Lisbon. Looking ahead to mid-2027, travelers note the upcoming June opening of Aethos Lisbon, a restored villa complete with a lush garden and a private members club. Outdoors, the air quality remains exceptionally fair at PM2.5 8, making it ideal for walking the steep cobblestones of Alfama. The currency exchange rate rests at 0.9 EUR per USD, offering clear conversions for everyday dining and transit expenses. Technology enthusiasts continue discussing the massive Chinese delegation at the Lisbon Web Summit, where humanoid robots and flying cars captured international attention on the main stages. It is a harmonious week where historic melancholy meets modern innovation along the river.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
-            },
-            {
-              "n": "03",
-              "headline": "Clean maritime winds clear the historic plazas.",
-              "lede": "Fair air conditions with PM2.5 at 8 accompany the final discussions at the Lisbon Web Summit.",
-              "body": "Clean air readings register across the capital with PM2.5 at 8, offering crisp visibility from the city's many viewpoints. The Lisbon Web Summit wraps up its massive technology showcase, notable this year for China bringing its largest-ever delegation with humanoid robots and flying cars taking the stage. Currency exchange desks maintain a rate of 0.9 EUR to the USD, assisting travelers as they settle into local guesthouses. Beyond the tech events, the city's cultural depth shows in milestones like Moonspell celebrating 35 years of gothic metal at a forthcoming Moonfest. Looking toward future stays, travelers note the planned June 2027 arrival of Aethos Lisbon, a restored villa centered around a private garden and members club. The city moves at a thoughtful pace, inviting long walks past fading pastel facades and sunlit plazas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-15"
             }
           ]
         }
