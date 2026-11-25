@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-24T06:00:00+09:00",
+  "updated": "2026-11-25T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-25T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Madrid registra 6 a 12°C con chubascos dispersos bajo una buena calidad del aire.",
+              "lede": "Los parques de la capital reciben la humedad de los 2mm de precipitación previstos.",
+              "body": "La jornada en Madrid transcurre con temperaturas que oscilan entre los 6 y los 12°C y una leve marca de 2mm de precipitación en forma de chubascos intermitentes que mojan las aceras del centro. El aire se mantiene limpio con un registro de PM2.5 de 4, ideal para pasear antes de que caiga el sol a las 17:51. La moneda extranjera se cambia a 1 USD por 0.91 EUR en las oficinas financieras del paseo de Recoletos. Los espacios culturales de la ciudad adaptan sus horarios a la caída anticipada de la luz otoñal. Conviene llevar abrigo impermeable y calzado cómodo para recorrer las calles húmedas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "CaixaForum Madrid inaugura su gran muestra dedicada a la faceta más íntima del cineasta Berlanga.",
+              "lede": "El centro cultural repasa la trayectoria del director con documentos inéditos y objetos personales.",
+              "body": "Los visitantes que busquen refugio frente a los 6 a 12°C de este martes encuentran en CaixaForum una amplia propuesta expositiva. La muestra dedicada al cineasta Berlanga descubre su archivo más íntimo, complementado por la exposición inmersiva de realidad virtual sobre Cervantes y el festival OpenLAB de culturas tecnológicas. Estas propuestas ofrecen alternativas en recintos cerrados mientras fuera caen los 2mm de precipitación de la tarde madrileña. La parada de metro más cercana facilita el acceso sin depender del coche particular. Se recomienda consultar los horarios específicos de cada sala antes de planificar la visita vespertina.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "Las oficinas públicas cerrarán el próximo Día de la Constitución y por la Inmaculada Concepción.",
+              "lede": "Los madrileños organizan sus gestiones administrativas teniendo en cuenta los festivos de diciembre.",
+              "body": "El calendario laboral de la Comunidad de Madrid señala las próximas festividades del Día de la Constitución el 2026-12-06 y de la Inmaculada Concepción el 2026-12-08. Las administraciones públicas, bancos y oficinas de correos permanecerán cerradas durante ambas jornadas festivas consecutivas. Conviene adelantar los trámites necesarios antes de que comience el puente oficial en la capital. Los comercios del centro mantendrán turnos especiales para atender la demanda de compras propias de estas fechas. Los servicios de transporte público ajustarán sus frecuencias a los horarios habituales de días festivos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Barcelona amanece con 11 a 15°C y lluvia ligera bajo un cielo gris.",
+              "lede": "La ciudad registra 2.3mm de precipitación y una óptima calidad del aire con PM2.5 en 3.",
+              "body": "El ambiente en Barcelona se mueve entre los 11 y los 15°C con una suave lluvia ligera que deja 2.3mm de precipitación sobre los adoquines del Barrio Gótico. La puesta de sol se adelanta a las 17:24, marcando el ritmo pausado de la tarde mediterránea. La calidad del aire se mantiene en niveles muy favorables con un índice PM2.5 de 3. En el plano financiero, el cambio de divisas se sitúa en 1 USD por 0.91 EUR en las entidades bancarias locales. Los paseos marítimos reducen su afluencia debido a la humedad ambiental y la brisa fresca del mar.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "La primera Bienal de Artes Digitales debuta en Barcelona con obras de 33 creadores.",
+              "lede": "Los espacios urbanos acogen instalaciones tecnológicas mientras continúan exposiciones como Art of the Brick.",
+              "body": "La agenda cultural de la capital catalana suma esta semana la inauguración de su primera Bienal de Artes Digitales, reuniendo las propuestas de 33 artistas contemporáneos. Paralelamente, la exposición Art of the Brick continúa recibiendo visitantes en su recinto habitual. Estas opciones de interior resultan idóneas para capear los 2.3mm de lluvia ligera y los 11 a 15°C de temperatura exterior. Los espacios expositivos aprovechan la luz artificial para destacar las piezas multimedia. Conviene adquirir las entradas de forma anticipada para evitar esperas bajo el cielo cubierto de la tarde.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "Los festivos de diciembre modificarán la apertura de servicios administrativos en la ciudad.",
+              "lede": "Residentes y comercios planifican la semana ante el Día de la Constitución y la Inmaculada.",
+              "body": "El próximo puente festivo afectará al funcionamiento ordinario de las oficinas municipales, entidades bancarias y notarías en Barcelona. Las fechas señaladas corresponden al Día de la Constitución el 2026-12-06 y a la Inmaculada Concepción el 2026-12-08. Los residentes aprovechan los días previos para realizar gestiones pendientes en los registros públicos. El transporte metropolitano funcionará con los horarios habituales de días festivos durante ambas jornadas. La actividad comercial del centro mantendrá aperturas adaptadas a la afluencia de visitantes propios de estas festividades.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Buenos Aires alcanza los 30°C con cielo parcialmente nublado y alta radiación solar.",
+              "lede": "La jornada porteña registra un índice UV muy alto y una excelente calidad del aire.",
+              "body": "El clima en Buenos Aires presenta hoy temperaturas que varían entre los 18 y los 30°C bajo un cielo parcialmente nublado. El sol se ocultará a las 19:46, prolongando las horas de luz en plazas y parques de la ciudad. El índice UV alcanza un nivel 9, considerado muy alto, por lo que se aconseja protección solar adecuada durante las horas centrales. La calidad del aire es excelente con un registro de PM2.5 en 4. Los vecinos disfrutan de los espacios arbolados aprovechando la brisa previa al atardecer porteño.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "El Centro Cultural San Martín y los barrios acogen muestras sobre Mafalda y folclore.",
+              "lede": "La programación cultural destaca el legado de Quino y las nuevas ediciones del Festival La Porteña.",
+              "body": "La agenda de Buenos Aires combina homenajes al historietista Quino mediante la conocida muestra sobre Mafalda, junto a celebraciones musicales como el Festival La Porteña y el ciclo República. Estas actividades llenan los espacios culturales de la ciudad con propuestas gratuitas y abiertas a todo público. Con temperaturas que trepan hasta los 30°C, los asistentes buscan los espacios climatizados o las actividades al aire libre al caer la tarde. Los centros barriales organizan talleres y encuentros artísticos coincidiendo con la temporada de festivales urbanos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "El feriado de la Inmaculada Concepción marcará el calendario administrativo de diciembre.",
+              "lede": "Las dependencias oficiales y bancarias de Buenos Aires cerrarán sus puertas el próximo 8 de diciembre.",
+              "body": "El próximo feriado nacional en Argentina corresponderá al Día de la Inmaculada Concepción de María, fijado para el 2026-12-08. Durante esta jornada festiva, la administración pública, las sucursales bancarias y las oficinas postales permanecerán cerradas en toda la ciudad. Los porteños organizan sus pagos y trámites con antelación para evitar inconvenientes en el inicio de la semana. Los servicios de transporte público operarán con cronograma especial adaptado a los días feriados. La hostelería local mantendrá sus puertas abiertas para recibir a quienes disfruten del fin de semana largo.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-24T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "La música en directo inunda los escenarios porteños y se expande de manera digital hacia toda la región. Las condiciones meteorológicas muestran un cielo overcast y una temperatura templada de 21°C promedio. El índice UV se sitúa en un nivel muy alto de 9, exigiendo precaución a quienes asistan a los recintos abiertos. Los transportes públicos operan con normalidad para facilitar la movilidad de los asistentes. Las celebraciones culturales se entrelazan con la llegada del feriado del Día de la Soberanía Nacional el 2026-11-23.",
               "source": "saudade desk",
               "source_date": "2026-11-19"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-17T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La lluvia ligera matiza las calles mientras el Museo del Prado explora la mirada de Rainer Maria Rilke.",
-              "lede": "Con temperaturas entre 11 y 15°C y una precipitación mínima de 0.1mm, la capital transita un lunes apacible.",
-              "body": "El ambiente se mantiene fresco y despejado con una calidad de aire calificada como buena y niveles de PM2.5 en 5. La moneda extranjera se sitúa en 1 USD frente a 0.91 EUR para los viajeros que gestionan divisas en la ciudad. En el ámbito cultural, Madrid conmemora el centenario de la histórica exposición El Antiguo Madrid y recibe la colaboración del Museo Nacional del Prado con la muestra dedicada a Rainer Maria Rilke y el arte español. Las librerías y los cafés del barrio de las Letras ofrecen refugio contra la ligera humedad exterior mientras los paseantes buscan espacios resguardados. Es una semana excelente para recorrer las salas de exposiciones sin las aglomeraciones habituales de los fines de semana. Las aceras de piedra conservan el brillo sutil de la fina lluvia caída por la mañana.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "Los mercados navideños ultiman sus preparativos en las plazas centrales de la ciudad.",
-              "lede": "El atardecer llega puntual a las 17:55, abriendo paso a las primeras luces estacionales.",
-              "body": "Los preparativos para los tradicionales mercados de Navidad 2026 ya muestran sus estructuras de madera en los enclaves más emblemáticos del casco histórico. Los artesanos organizan sus puestos con la calma propia de los días previos a la gran apertura oficial de la temporada festiva. Con una temperatura suave que ronda los 11 a 15°C y una atmósfera limpia, caminar por el centro resulta especialmente cómodo al caer la tarde. Los visitantes pueden planificar sus compras y reservas utilizando el tipo de cambio oficial de 1 USD por 0.91 EUR. Las librerías de viejo y los figones tradicionales recuperan el ritmo pausado de noviembre, ofreciendo un respiro idóneo para quienes observan el pulso cotidiano de la capital. La ciudad se prepara lentamente para el mes de diciembre.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "El festival Grandes del Góspel anuncia el estreno europeo de JOY en los escenarios madrileños.",
-              "lede": "La música coral ocupa los auditorios de la capital con propuestas internacionales de primer orden.",
-              "body": "La programación musical de la temporada avanza con el ciclo Grandes del Góspel 2026, que acoge el esperado estreno europeo de JOY en Madrid. Las entradas y los horarios se pueden consultar con antelación en las taquillas oficiales del circuito cultural madrileño. Con un aire de gran calidad y un cielo que apenas deja caer 0.1mm de lluvia ligera, las tardes invitan a disfrutar de los recintos cerrados. El atardecer a las 17:55 marca el inicio de los conciertos vespertinos en iglesias y auditorios históricos. Los viajeros que llegan desde fuera de la zona euro pueden cambiar su moneda a una tasa de 1 USD por 0.91 EUR en las principales oficinas bancarias del centro. La oferta artística equilibra las muestras patrimoniales del centenario de El Antiguo Madrid con propuestas sonoras de profundo calado espiritual y vocal.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cielo cubierto acompaña las jornadas de jazz y cultura en los auditorios modernistas.",
-              "lede": "La ciudad registra temperaturas de 17 a 21°C bajo un cielo totalmente overcast y un atardecer a las 17:29.",
-              "body": "El ambiente barcelonés se mantiene templado pero cubierto, con una calidad de aire justa y niveles de PM2.5 situados en 6. Los viajeros encuentran un tipo de cambio estable de 1 USD por 0.91 EUR para sus transacciones cotidianas en la Ciudad Condal. En el plano cultural, destaca la presencia de Samara Joy en el Festival de Jazz de Barcelona dentro del marco incomparable del Palau de la Música. Paralelamente, la exposición Boinas verdes en acción permanece abierta al público desde el 16 de noviembre hasta el 4 de diciembre de 2026 en su espacio asignado. Los paseos marítimos y los parques urbanos conservan una quietud propicia para la lectura y la observación sosegada. La humedad propia del litoral se mezcla con la brisa suave de este lunes de noviembre.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "El Palau de la Música acoge los conciertos más íntimos del Festival de Jazz de Barcelona.",
-              "lede": "Las notas graves del contrabajo resuenan bajo las cúpulas de vidrio colorista del modernismo catalán.",
-              "body": "La agenda musical de la semana gira en torno al Festival de Jazz de Barcelona, con actuaciones tan destacadas como la de Samara Joy en el Palau de la Música. Con temperaturas que oscilan entre los 17 y los 21°C y el cielo completamente cubierto, las salas de conciertos ofrecen un refugio cálido y acústicamente perfecto. Los melómanos pueden organizar sus desplazamientos urbanos sabiendo que el atardecer se adelanta a las 17:29. La calidad del aire se mantiene en parámetros justos con 6 de PM2.5, ideal para caminar sin prisa por las calles del Eixample. Para los visitantes internacionales, la equivalencia monetaria se sitúa en 1 USD por 0.91 EUR. La ciudad combina así su rica tradición arquitectónica con una programación sonora de nivel internacional.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "Las salas de exposiciones y los espacios históricos mantienen sus puertas abiertas este noviembre.",
-              "lede": "La muestra Boinas verdes en acción ofrece un recorrido documental hasta principios de diciembre.",
-              "body": "La vida cultural de Barcelona se diversifica con propuestas expositivas como Boinas verdes en acción, abierta del 16 de noviembre al 4 de diciembre de 2026. Con un clima suave de 17 a 21°C bajo un cielo gris y cubierto, las caminatas urbanas resultan sumamente agradables. El sol se oculta temprano, marcando las 17:29 como la hora límite para aprovechar la escasa luz natural en los patios góticos del barrio viejo. Los residentes y visitantes pueden gestionar sus presupuestos con la referencia monetaria de 1 USD equivalente a 0.91 EUR. La calidad del aire es justa, con un registro de PM2.5 en 6 que invita a pasear por los rincones menos transitados de Ciutat Vella. La ciudad discurre con la serenidad característica de los meses de transición hacia el invierno.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Las tormentas de primavera refrescan brevemente los barrios arbolados de la capital argentina.",
-              "lede": "Se registran temperaturas cálidas de 19 a 28°C junto a una precipitación de 9.8mm por tormenta y un índice UV de 9.",
-              "body": "El clima porteño muestra su carácter primaveral con chaparrones que dejan 9.8mm de agua acumulada y un nivel de radiación ultravioleta muy alto, fijado en 9. La calidad del aire se mantiene en un rango moderado con PM2.5 en 14, tras el paso de las tormentas vespertinas. El atardecer se extiende hasta las 19:38, regalando largas horas de luz crepuscular sobre las avenidas arboladas. Se recuerda a los viajeros que el próximo 23 de noviembre de 2026 se celebrará el feriado nacional por el Día de la Soberanía Nacional, fecha en la que bancos y oficinas públicas permanecerán cerrados. La ciudad combina esta pausa administrativa con una intensa actividad cultural en sus plazas y centros barriales. Es un momento propicio para disfrutar de los cafés tradicionales tras el cese de las lluvias.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "El Hanguk Fest y el Fugazzeta Fest celebran la diversidad gastronómica y cultural de la ciudad.",
-              "lede": "La agenda de festivales gratuitos llena los espacios públicos con más de cincuenta stands coreanos y concursos de pizza.",
-              "body": "La oferta cultural y culinaria de Buenos Aires se dinamiza esta semana con dos grandes eventos de entrada libre y gratuita. Por un lado, el Hanguk Fest ofrece kimchi, K-pop y danza tradicional con más de cincuenta stands coreanos. Por otro, el Fugazzeta Fest reúne a los mejores maestros pizzeros de la ciudad en una celebración de la identidad porteña. Todo ello ocurre bajo una temperatura cálida de 19 a 28°C y un índice UV de 9 que exige protección solar adecuada durante las horas centrales del día. La precipitación reciente de 9.8mm ha dejado las calles limpias y listas para el paseo vespertino. El sol se despide cerca de las 19:38, permitiendo disfrutar de los eventos al aire libre con una agradable brisa nocturna. La calidad del aire se sitúa en niveles moderados con 14 de PM2.5.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "El árbol de cristal y el Festival Cartón destacan el patrimonio botánico y audiovisual.",
-              "lede": "El único ejemplar vivo de su especie en Sudamérica y la animación independiente marcan la pauta cultural.",
-              "body": "Los amantes de la naturaleza pueden visitar el célebre árbol de cristal, considerado el único ejemplar vivo de su especie en todo el continente sudamericano. En paralelo, el Festival Cartón 2026 ha dado a conocer todos sus ganadores, consolidándose como un referente de la animación independiente en la región. La atmósfera urbana se acompaña de temperaturas entre 19 y 28°C, con una breve tormenta que ha dejado 9.8mm de lluvia y una calidad de aire moderada de 14 en PM2.5. Conviene recordar que el próximo 23 de noviembre de 2026 tendrá lugar el feriado por el Día de la Soberanía Nacional, afectando la apertura de dependencias oficiales. El atardecer se prolonga hasta las 19:38, iluminando los parques con la luz dorada característica de la primavera austral bajo un índice UV muy alto de 9.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
             }
           ]
         }

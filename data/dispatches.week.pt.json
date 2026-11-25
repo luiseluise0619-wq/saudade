@@ -1,9 +1,101 @@
 {
   "edition": "pt",
-  "updated": "2026-11-24T06:00:00+09:00",
+  "updated": "2026-11-25T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-25T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "LISBOA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "O Museu Nacional de Arte Antiga reabre após longas obras.",
+              "lede": "A renovada requalificação devolve ao público as coleções de referência da cidade.",
+              "body": "As salas do museu acolhem de novo os visitantes sob um céu encoberto que marca os 11 a 16°C desta época. O sol despede-se cedo, pelas 17:17, convidando a prolongar as visitas pelas galerias interiores. É uma oportunidade para rever os acervos fundamentais da pintura e da escultura nacional sem pressas. A cotação cambial situa-se em 1 USD para 0.91 EUR para quem chega de fora. O silêncio das salas restauradas contrasta com o ritmo habitual da baixa lisboeta.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "O novo Parque de Estacionamento Campo Novo abre portas.",
+              "lede": "A infraestrutura facilita o acesso pedonal a esta zona residencial em transformação.",
+              "body": "Com termómetro a oscilar entre os 11 e os 16°C e nuvens persistentes, a circulação pedestre exige agasalho leve. O pôr do sol ocorre às 17:17, encurtando as tardes de novembro na capital. A taxa de câmbio de 1 USD para 0.91 EUR permanece estável para transações correntes. Há exposições imperdíveis pela cidade este fim de semana, com destaque para a iniciativa que permite visitar grandes museus sem pagar até 1 de dezembro. Os serviços públicos manterão o funcionamento habitual até às vésperas do feriado da Restauração da Independência, a 2026-12-01.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "A entrada gratuita nos grandes museus prolonga-se até dezembro.",
+              "lede": "Aproveite os dias nublados para percorrer o património cultural da cidade.",
+              "body": "O termómetro marca entre 11 e 16°C sob uma abóbada cinzenta e constante. O dia termina cedo, com o sol a ocultar-se às 17:17. A taxa de câmbio oficial permanece nos 0.91 EUR por cada 1 USD. Entre as opções culturais, o Museu Nacional de Arte Antiga exibe o resultado das suas recentes obras de requalificação. Lembre-se de que a proximidade do feriado de Restauração da Independência, a 2026-12-01, trará encerramentos pontuais de repartições e bancos na próxima semana. É o momento ideal para redescobrir Lisboa a passo lento.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        },
+        {
+          "city": "PORTO",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Os duches de chuva marcam o ritmo diário na Invicta.",
+              "lede": "A precipitação de 8.5mm obriga a passos firmes pelas ruas de granito.",
+              "body": "A temperatura oscila entre os 10 e os 13°C sob uma atmosfera húmida e fresca. A qualidade do ar permanece em níveis justos, com PM2.5 registados em 3. O sol oculta-se pelas 17:08, antecipando o anoitecer nas margens do Douro. A conversão cambial opera a 1 USD para 0.91 EUR. A recém-lançada proposta para o Parque da Quinta de Salgueiros promete futuro verde à cidade. Prepare o guarda-chuva para os aguaceiros persistentes enquanto explora as galerias locais.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "A exposição «Primeiro uma casa» inaugura no tecido urbano.",
+              "lede": "A proposta cultural desafia o olhar atento dos observadores residentes.",
+              "body": "O Porto regista entre 10 e 13°C e 8.5mm de precipitação acumulada em aguaceiros dispersos. O ar mantém-se limpo, com PM2.5 a 3. A noite desce cedo, fixando o pôr do sol às 17:08. O câmbio atual fixa-se em 1 USD para 0.91 EUR. O concurso municipal para o Parque da Quinta de Salgueiros avança, desenhando novas áreas de lazer. Com o feriado da Restauração da Independência a aproximar-se a 2026-12-01, os serviços públicos ajustam os horários habituais da próxima semana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "O ar limpo acompanha os aguaceiros de novembro na cidade.",
+              "lede": "A qualidade atmosférica favorece longas caminhadas abrigadas pela baixa.",
+              "body": "Com 10 a 13°C no termómetro e 8.5mm de chuva prevista, a cidade respira com tranquilidade graças ao índice PM2.5 de 3. O sol põe-se às 17:08, iluminando brevemente as pontes de granito. A taxa cambial mantém-se nos 0.91 EUR por 1 USD. Entre as visitas recomendadas encontram-se as melhores exposições patentes na Invicta e a recente inauguração artística «Primeiro uma casa». Atente aos encerramentos administrativos programados para o feriado de 2026-12-01.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        },
+        {
+          "city": "SINTRA",
+          "items": [
+            {
+              "n": "01",
+              "headline": "A vila mágica prepara trinta e oito dias de celebração natalícia.",
+              "lede": "A entrada gratuita convida a passeios tranquilos pelas ruas serranas.",
+              "body": "A serra regista temperaturas entre 12 e 15°C e chuviscos ligeiros com 0.8mm de precipitação. A qualidade do ar apresenta valores justos de PM2.5 em 3. O sol oculta-se às 17:18, mergulhando a vegetação densa numa penumbra verde. A taxa de câmbio é de 1 USD para 0.91 EUR. A programação festiva arranca em breve, antecedendo o feriado da Restauração da Independência a 2026-12-01, data que exigirá atenção aos horários de repartições e serviços locais.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "02",
+              "headline": "Os chuviscos matinais molham a encosta arborizada de Sintra.",
+              "lede": "A humidade suave de 0.8mm realça os tons outonais da serra.",
+              "body": "O termómetro marca entre 12 e 15°C, num ambiente calmo e propício à contemplação. A atmosfera mantém-se limpa com PM2.5 a 3. A tarde encerra-se às 17:18 com o pôr do sol na encosta atlântica. A paridade cambial situa-se em 0.91 EUR por cada 1 USD. Os preparativos para o Natal em Sintra decorrem a bom ritmo, oferecendo entrada gratuita aos visitantes. Tenha presente o fecho de bancos e serviços públicos no próximo feriado de 2026-12-01, seguido pela Imaculada Conceição a 2026-12-08.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            },
+            {
+              "n": "03",
+              "headline": "A programação cultural antecipa o ciclo de dezembro na serra.",
+              "lede": "A vila equilibra o repouso sazonal com o início das atividades festivas.",
+              "body": "Entre 12 e 15°C e com uma precipitação residual de 0.8mm, Sintra convida a caminhar com calma. A qualidade do ar regista PM2.5 a 3. O sol despede-se às 17:18, deixando a serra envolta em neblina serena. A cotação cambial opera nos 0.91 EUR por 1 USD. A vila prepara-se para acolher a exposição «Onde Os Mundos Se Cruzam» em dezembro, a par das comemorações natalícias. Note que o feriado de 2026-12-01 alterará o funcionamento normal de correios e serviços administrativos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-25"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-24T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "Com a aproximação do feriado de 2026-12-01 relativo à Restauração da Independência, os residentes organizam as últimas diligências antes do descanso coletivo. A precipitação de 18mm lava os pátios e alimenta as nascentes que murmuram por toda a encosta. A qualidade do ar em 4 PM2.5 garante pureza a cada inspiração matinal. A conversão de 1 USD para 0.91 EUR mantém-se estável para quem visita as casas de chá tradicionais. Envolta em nevoeirospassageiros, Sintra recupera a sua vocação de refúgio literário, onde cada recanto convida ao silêncio, à leitura pausada e à observação atenta da natureza.",
               "source": "saudade desk",
               "source_date": "2026-11-18"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-17T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "LISBOA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A chuva marca o ritmo das ruas e o Tejo cinzento.",
-              "lede": "Com 21.2mm de precipitação e temperaturas entre os 19 e os 21°C, a cidade abriga-se sob o céu cinzento.",
-              "body": "A chuva persistente que cai sobre Lisboa exige passos mais prudentes nas calçadas portuguesas molhadas. O termómetro marca uma amplitude térmica suave entre 19 e os 21°C, mantendo a atmosfera húmida mas sem o frio rigoroso do inverno profundo. A qualidade do ar permanece em níveis bastante favoráveis, registando apenas 3 de PM2.5, o que torna a respiração ao ar livre leve e limpa após cada aguaceiro. O sol despede-se mais cedo, com o ocaso fixado pelas 17:21, iluminando brevemente as fachadas antes da penumbra. Para os visitantes que chegam de fora, a taxa de câmbio atual fixa-se em 1 USD para 0.91 EUR, facilitando as contas nos cafés tradicionais. É um momento propício para procurar abrigo nas livrarias antigas da baixa ou observar o movimento lento dos elétricos pelas colinas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "O final de tarde antecipa a noite nas colinas de Lisboa.",
-              "lede": "A o anoitecer precoce pelas 17:21 encurta os dias e convida ao recolhimento nos interiores.",
-              "body": "A luz do dia recolhe-se cedo sobre as colinas da capital, marcando o ocaso logo pelas 17:21. Com uma precipitação acumulada de 21.2mm e temperaturas amenas entre 19 e os 21°C, o ambiente convida a pausas prolongadas em espaços fechados. A qualidade do ar continua excelente, com um índice de PM2.5 fixado em 3, garantindo clareza na atmosfera mesmo sob o nevoeiro leve da tarde. Quem troca divisas estrangeiras encontra uma referência estável de 1 USD para 0.91 EUR nos balcões da cidade. Este período intermédio entre o outono avançado e as festividades de fim de ano traz uma calma rara aos miradouros habitualmente concorridos. As ruas ganham um reflexo brilhante com a humidade constante, transformando cada passeio numa experiência de contemplação silenciosa e tranquila.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "O comércio prepara-se para a pausa do feriado iminente.",
-              "lede": "A proximidade da Restauração da Independência a 2026-12-01 começa a notar-se no planeamento urbano.",
-              "body": "Embora o dia 2026-12-01 ainda esteja distante, a chegada próxima do feriado da Restauração da Independência começa a influenciar o ritmo administrativo da cidade. Os serviços públicos e as instituições bancárias já preveem os ajustes necessários para o encerramento que se avizinha. Enquanto isso, o quotidiano decorre sob uma precipitação de 21.2mm e temperaturas que oscilam suavemente entre 19 e os 21°C. A qualidade do ar permanece limpa, registando 3 de PM2.5, e a taxa de câmbio mantém-se estável nos 0.91 EUR por cada 1 USD. Com o pôr do sol a acontecer pelas 17:21, as tardes ganham um tom melancólico que favorece as conversas longas à mesa. É o momento ideal para planear passeios pausados antes que o calendário oficial traga as habituais interrupções festivas do final de ano.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            }
-          ]
-        },
-        {
-          "city": "PORTO",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Os aguaceiros moldam a paisagem granítica da Invicta.",
-              "lede": "Com 10.5mm de chuva e termómetros entre 17 e os 18°C, o Porto vive um ritmo pausado.",
-              "body": "A cidade do Porto enfrenta os aguaceiros típicos desta época com uma serenidade que se reflete nas suas ruas de granito. A precipitação acumulada de 10.5mm lava as fachadas históricas enquanto a temperatura se mantém estável entre 17 e os 18°C. A qualidade do ar é considerada justa, registando um valor de 3 para PM2.5, o que garante uma atmosfera agradável para caminhar à beira-rio. O sol recolhe-se cedo, marcando o ocaso pelas 17:13 e tingindo o rio Douro com tons cinzentos e dourados passageiros. Para os viajantes internacionais, o câmbio oficial opera com 1 USD equivalente a 0.91 EUR, mantendo a previsibilidade nos gastos do dia a dia. É o cenário perfeito para procurar refúgio nas caves tradicionais ou saborear um café quente enquanto se observa a chuva miudinha cair sobre as pontes.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "A tarde encurta junto às margens do rio Douro.",
-              "lede": "O pôr do sol precoce pelas 17:13 convida a contemplar o silêncio das águas.",
-              "body": "A noite avança rapidamente sobre a foz do Douro, com o sol a desaparecer do horizonte rigorosamente pelas 17:13. O dia decorre sob a influência de aguaceiros leves, somando 10.5mm de precipitação, e temperaturas moderadas entre 17 e os 18°C. A pureza do ar permanece inalterada, com 3 de PM2.5, permitindo passeios tranquilos pelas zonas ribeirinhas menos frequentadas. A conversão monetária fixa-se em 1 USD para 0.91 EUR, uma referência constante para quem gere orçamento em moeda estrangeira. A humidade no ar realça o brilho escuro do granito secular, conferindo à cidade uma textura visual única e profundamente melancólica. Os residentes aproveitam estas horas para regressar a casa, deixando as ruas entregues ao eco abafado dos passos sobre a calçada molhada.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "O horizonte de dezembro aproxima-se com a pausa festiva.",
-              "lede": "A preparação para o feriado de 2026-12-01 traz uma calma antecipada aos serviços.",
-              "body": "A proximidade da Restauração da Independência, marcada para o dia 2026-12-01, começa discretamente a figurar nas conversas e no planeamento local. Os serviços e as repartições públicas preparam os seus calendários para o fecho temporário que caracteriza esta data festiva. Enquanto isso, o quotidiano portuense segue o seu curso com 10.5mm de chuva e temperaturas amenas entre 17 e os 18°C. A qualidade do ar regista limpos 3 de PM2.5, e a taxa de câmbio permanece estável em 0.91 EUR por cada 1 USD. Com o anoitecer a instalar-se pelas 17:13, a cidade recolhe-se ao calor das suas tradicionais tascas e habitações. É um intervalo de transição onde a paciência e a observação atenta substituem a urgência do turismo de verão.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            }
-          ]
-        },
-        {
-          "city": "SINTRA",
-          "items": [
-            {
-              "n": "01",
-              "headline": "A serra abriga-se sob a chuva e a poesia recente.",
-              "lede": "Com 27.6mm de precipitação e temperaturas entre 18 e os 20°C, Sintra respira cultura.",
-              "body": "A vila de Sintra recebe os aguaceiros mais intensos da região, acumulando 27.6mm de precipitação que alimentam o verde luxuriante da serra. Os termómetros marcam valores agradáveis entre 18 e os 20°C, criando um microclima húmido mas acolhedor para quem caminha pelas encostas. A qualidade do ar regista um excelente índice de 3 em PM2.5, mantendo a atmosfera serrana pura e cristalina. O ocaso ocorre pelas 17:22, antecipando uma noite silenciosa entre palácios e árvores seculares. Nos últimos tempos, a vida cultural local ganhou novo fôlego com o arranque bem-sucedido do primeiro Festival Literário de Sintra, dedicado aos livros, à poesia e à música, além do anúncio do regresso do festival Espontâneo em 2027. Para os visitantes estrangeiros, a taxa de câmbio mantém-se nos 0.91 EUR por cada 1 USD, facilitando a estadia nos hotéis e pastelarias locais.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "02",
-              "headline": "O nevoeiro matiza a paisagem romântica dos palácios.",
-              "lede": "O anoitecer pelas 17:22 encerra um dia de 27.6mm de chuva na montanha.",
-              "body": "A atmosfera mística de Sintra acentua-se com a chegada da tarde, marcando o pôr do sol pelas 17:22 entre copas de árvores encharcadas. A precipitação totaliza 27.6mm, enquanto a temperatura oscila suavemente entre 18 e os 20°C nas zonas mais abrigadas da encosta. A qualidade do ar mantém-se estável com 3 de PM2.5, refletindo a ausência de poluição na vila património mundial. No plano cultural, a memória recente celebra o arranque do primeiro Festival Literário de Sintra, que celebrou os livros, a poesia e a música, antecipando já o regresso do festival Espontâneo para 2027. A conversão financeira opera com a paridade habitual de 1 USD para 0.91 EUR nos comércios locais. É um período de introspeção onde a literatura e a natureza se fundem na perfeição sob o manto cinzento da serra.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
-            },
-            {
-              "n": "03",
-              "headline": "A vila prepara-se para a pausa oficial de dezembro.",
-              "lede": "O feriado de 2026-12-01 aproxima-se, trazendo avisos de encerramento administrativo.",
-              "body": "A proximidade do feriado da Restauração da Independência a 2026-12-01 começa a orientar o calendário institucional e bancário da vila histórica. Os serviços públicos ajustam os seus horários para o encerramento iminente, permitindo que residentes e comerciantes planeiem o descanso com antecedência. Ao ar livre, a chuva faz-se sentir com 27.6mm de precipitação, acompanhada por temperaturas amenas entre 18 e os 20°C. A qualidade do ar regista 3 de PM2.5, e a taxa de câmbio permanece inalterada em 0.91 EUR por cada 1 USD. Enquanto o sol se despede pelas 17:22, a comunidade recorda o sucesso do recente Festival Literário de Sintra, focado em livros, poesia e música, enquanto aguarda o futuro festival Espontâneo em 2027. A vila recupera assim a sua cadência mais íntima e pausada.",
-              "source": "saudade desk",
-              "source_date": "2026-11-17"
             }
           ]
         }
