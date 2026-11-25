@@ -1,7 +1,7 @@
 {
   "edition": "es",
-  "filed_at": "2026-11-24T06:00:00+09:00",
-  "next_filing": "2026-11-24T21:00:00+00:00",
+  "filed_at": "2026-11-25T06:00:00+09:00",
+  "next_filing": "2026-11-25T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
@@ -11,27 +11,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "La lluvia ligera y el frío de noviembre marcan las calles madrileñas.",
-          "lede": "Los termómetros se mueven entre los 4 y los 9°C con 0.8mm de precipitación.",
-          "body": "El ambiente en Madrid exige abrigo ligero ante los 4 y los 9°C registrados hoy. Una fina lluvia de 0.8mm moja ligeramente el asfalto mientras la tarde cae sobre la ciudad a las 17:51. El aire muestra una calidad moderada con un nivel de PM2.5 de 14, un dato prudente para pasear sin prisas por el centro histórico. Para quienes llegan desde el extranjero, el tipo de cambio oficial se mantiene estable en 1 USD frente a 0.91 EUR. Conviene recordar que el próximo 6 de diciembre se celebra el Día de la Constitución, seguido por la Inmaculada Concepción el 8 de diciembre, jornadas que alterarán el ritmo habitual de las oficinas públicas y los bancos en la capital.",
+          "headline": "Madrid registra 6 a 12°C con chubascos dispersos bajo una buena calidad del aire.",
+          "lede": "Los parques de la capital reciben la humedad de los 2mm de precipitación previstos.",
+          "body": "La jornada en Madrid transcurre con temperaturas que oscilan entre los 6 y los 12°C y una leve marca de 2mm de precipitación en forma de chubascos intermitentes que mojan las aceras del centro. El aire se mantiene limpio con un registro de PM2.5 de 4, ideal para pasear antes de que caiga el sol a las 17:51. La moneda extranjera se cambia a 1 USD por 0.91 EUR en las oficinas financieras del paseo de Recoletos. Los espacios culturales de la ciudad adaptan sus horarios a la caída anticipada de la luz otoñal. Conviene llevar abrigo impermeable y calzado cómodo para recorrer las calles húmedas.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "02",
-          "headline": "El Museo de Historia de Madrid celebra un siglo de su exposición fundacional.",
-          "lede": "La pinacoteca conmemora los 100 años de la muestra El Antiguo Madrid. Historia y ciudad.",
-          "body": "El Museo de Historia de Madrid acoge una conmemoración especial por los 100 años de la exposición El Antiguo Madrid. Historia y ciudad. Es una oportunidad excelente para observar cómo ha evolucionado el urbanismo madrileño a lo largo de las décadas a través de planos, grabados y objetos cotidianos. La visita discurre con calma, ideal para escapar de la bajada térmica exterior que marca temperaturas de hasta 4°C. Las salas ofrecen un refugio cálido y silencioso donde detenerse ante los detalles del pasado municipal. Este homenaje museístico conecta directamente con la memoria tranquila de una ciudad que siempre guarda rincones por redescubrir en cualquier tarde fresca de otoño.",
+          "headline": "CaixaForum Madrid inaugura su gran muestra dedicada a la faceta más íntima del cineasta Berlanga.",
+          "lede": "El centro cultural repasa la trayectoria del director con documentos inéditos y objetos personales.",
+          "body": "Los visitantes que busquen refugio frente a los 6 a 12°C de este martes encuentran en CaixaForum una amplia propuesta expositiva. La muestra dedicada al cineasta Berlanga descubre su archivo más íntimo, complementado por la exposición inmersiva de realidad virtual sobre Cervantes y el festival OpenLAB de culturas tecnológicas. Estas propuestas ofrecen alternativas en recintos cerrados mientras fuera caen los 2mm de precipitación de la tarde madrileña. La parada de metro más cercana facilita el acceso sin depender del coche particular. Se recomienda consultar los horarios específicos de cada sala antes de planificar la visita vespertina.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "03",
-          "headline": "Un Cervantes virtual y aventurero inaugura el nuevo espacio expositivo.",
-          "lede": "La tecnología inmersiva y la realidad virtual transforman la experiencia literaria en la capital.",
-          "body": "La agenda cultural madrileña suma un espacio innovador con el estreno de una experiencia dedicada a Cervantes. La propuesta combina la realidad virtual y recursos inmersivos para acercar la figura del célebre escritor de una manera diferente. Se trata de un recorrido arriesgado y cercano que busca conectar al visitante con las vivencias del autor a través de entornos digitales muy cuidados. Esta iniciativa complementa la oferta de museos tradicionales y se disfruta especialmente en semanas de climatología adversa, cuando el atardecer se adelanta a las 17:51 y apetece refugiarse bajo techo. Los horarios de visita se adaptarán conforme se acerquen los festivos nacionales de principios de diciembre.",
+          "headline": "Las oficinas públicas cerrarán el próximo Día de la Constitución y por la Inmaculada Concepción.",
+          "lede": "Los madrileños organizan sus gestiones administrativas teniendo en cuenta los festivos de diciembre.",
+          "body": "El calendario laboral de la Comunidad de Madrid señala las próximas festividades del Día de la Constitución el 2026-12-06 y de la Inmaculada Concepción el 2026-12-08. Las administraciones públicas, bancos y oficinas de correos permanecerán cerradas durante ambas jornadas festivas consecutivas. Conviene adelantar los trámites necesarios antes de que comience el puente oficial en la capital. Los comercios del centro mantendrán turnos especiales para atender la demanda de compras propias de estas fechas. Los servicios de transporte público ajustarán sus frecuencias a los horarios habituales de días festivos.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         }
       ]
     },
@@ -40,27 +40,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Barcelona disfruta de temperaturas suaves y una ligera lluvia vespertina.",
-          "lede": "El mercurio oscila entre los 11 y los 17°C con una precipitación de 0.5mm.",
-          "body": "La capital catalana presenta un clima templado con mínimas de 11 y máximas de 17°C en este tramo final de noviembre. Una fina lluvia de 0.5mm acompaña el día de manera casi imperceptible hasta el atardecer, fijado a las 17:25. La calidad del aire se sitúa en un nivel moderado con PM2.5 en 16, permitiendo recorrer los paseos marítimos y parques con absoluta tranquilidad. El tipo de cambio se mantiene invariable en 1 USD por 0.91 EUR para los visitantes internacionales. Conviene tener presente que el Día de la Constitución el 6 de diciembre y la Inmaculada Concepción el 8 de diciembre traerán cierres comerciales y administrativos parciales en toda la ciudad.",
+          "headline": "Barcelona amanece con 11 a 15°C y lluvia ligera bajo un cielo gris.",
+          "lede": "La ciudad registra 2.3mm de precipitación y una óptima calidad del aire con PM2.5 en 3.",
+          "body": "El ambiente en Barcelona se mueve entre los 11 y los 15°C con una suave lluvia ligera que deja 2.3mm de precipitación sobre los adoquines del Barrio Gótico. La puesta de sol se adelanta a las 17:24, marcando el ritmo pausado de la tarde mediterránea. La calidad del aire se mantiene en niveles muy favorables con un índice PM2.5 de 3. En el plano financiero, el cambio de divisas se sitúa en 1 USD por 0.91 EUR en las entidades bancarias locales. Los paseos marítimos reducen su afluencia debido a la humedad ambiental y la brisa fresca del mar.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "02",
-          "headline": "La cinematografía española expone cuatro décadas de diseño de producción.",
-          "lede": "La muestra sobre los Premios Goya llega a Barcelona para repasar el oficio artesanal del cine.",
-          "body": "La sala barcelonesa recibe la exposición que celebra los 40 años de Diseño de Producción en los Premios Goya. Esta muestra propone un recorrido detallado por los escenarios y la trastienda visual que han definido el cine nacional durante cuatro décadas. Es una parada obligatoria para los amantes del detalle técnico, el dibujo arquitectónico y la recreación histórica en la gran pantalla. Las piezas expuestas revelan el minucioso trabajo de maquetistas y decoradores alejados de los focos principales. La visita ofrece un respiro cultural idóneo para las tardes de otoño en las que la temperatura exterior ronda los 17°C.",
+          "headline": "La primera Bienal de Artes Digitales debuta en Barcelona con obras de 33 creadores.",
+          "lede": "Los espacios urbanos acogen instalaciones tecnológicas mientras continúan exposiciones como Art of the Brick.",
+          "body": "La agenda cultural de la capital catalana suma esta semana la inauguración de su primera Bienal de Artes Digitales, reuniendo las propuestas de 33 artistas contemporáneos. Paralelamente, la exposición Art of the Brick continúa recibiendo visitantes en su recinto habitual. Estas opciones de interior resultan idóneas para capear los 2.3mm de lluvia ligera y los 11 a 15°C de temperatura exterior. Los espacios expositivos aprovechan la luz artificial para destacar las piezas multimedia. Conviene adquirir las entradas de forma anticipada para evitar esperas bajo el cielo cubierto de la tarde.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "03",
-          "headline": "El Winter Festival 2026 activa la temporada de escalada en Climbat La Foixarda.",
-          "lede": "El centro de La Foixarda acoge el evento anual de escalada deportiva en la montaña de Montjuïc.",
-          "body": "El rocódromo Climbat La Foixarda se convierte en el epicentro deportivo con la llegada del Winter Festival 2026. Este encuentro reúne a aficionados y profesionales en un entorno natural y urbano único dentro de la montaña de Montjuïc. Las instalaciones acogen competiciones y talleres prácticos diseñados para todos los niveles de experiencia en el recinto. La ubicación permite combinar la actividad física con un paseo por los jardines circundantes, beneficiándose de la agradable temperatura diurna de 17°C. Es una propuesta dinámica que dinamiza el fin de semana deportivo barcelonés antes de la llegada de los festivos de diciembre.",
+          "headline": "Los festivos de diciembre modificarán la apertura de servicios administrativos en la ciudad.",
+          "lede": "Residentes y comercios planifican la semana ante el Día de la Constitución y la Inmaculada.",
+          "body": "El próximo puente festivo afectará al funcionamiento ordinario de las oficinas municipales, entidades bancarias y notarías en Barcelona. Las fechas señaladas corresponden al Día de la Constitución el 2026-12-06 y a la Inmaculada Concepción el 2026-12-08. Los residentes aprovechan los días previos para realizar gestiones pendientes en los registros públicos. El transporte metropolitano funcionará con los horarios habituales de días festivos durante ambas jornadas. La actividad comercial del centro mantendrá aperturas adaptadas a la afluencia de visitantes propios de estas festividades.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         }
       ]
     },
@@ -69,27 +69,27 @@
       "items": [
         {
           "n": "01",
-          "headline": "Buenos Aires registra una jornada plenamente veraniega con cielos cubiertos.",
-          "lede": "La temperatura alcanza los 30°C con un índice UV muy alto situado en el nivel 9.",
-          "body": "El clima porteño impone un registro cálido con temperaturas que se mueven entre los 20 y los 30°C bajo un cielo totalmente cubierto. El índice ultravioleta alcanza el nivel 9, considerado muy alto, por lo que se aconseja protección solar incluso con nubosidad persistente. La calidad del aire se mantiene en un rango justo con 9 de PM2.5, favoreciendo la circulación peatonal por los barrios tradicionales. El atardecer se demora hasta las 19:45, regalando largas horas de luz diurna para la observación urbana. Tras el reciente feriado del Día de la Soberanía Nacional, la ciudad ya planifica la próxima pausa oficial con la Inmaculada Concepción de María programada para el 8 de diciembre.",
+          "headline": "Buenos Aires alcanza los 30°C con cielo parcialmente nublado y alta radiación solar.",
+          "lede": "La jornada porteña registra un índice UV muy alto y una excelente calidad del aire.",
+          "body": "El clima en Buenos Aires presenta hoy temperaturas que varían entre los 18 y los 30°C bajo un cielo parcialmente nublado. El sol se ocultará a las 19:46, prolongando las horas de luz en plazas y parques de la ciudad. El índice UV alcanza un nivel 9, considerado muy alto, por lo que se aconseja protección solar adecuada durante las horas centrales. La calidad del aire es excelente con un registro de PM2.5 en 4. Los vecinos disfrutan de los espacios arbolados aprovechando la brisa previa al atardecer porteño.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "02",
-          "headline": "El universo gráfico de Quino y Mafalda abre sus puertas a la memoria porteña.",
-          "lede": "La exitosa muestra sobre Mafalda permite caminar físicamente entre las viñetas originales.",
-          "body": "La exposición dedicada a Mafalda continúa atrayendo a numerosos visitantes tras el paso de figuras ilustres por sus salas. La muestra recrea con precisión el trazo de Quino, permitiendo a los asistentes adentrarse literalmente en las viñetas y escenarios de los personajes. Este homenaje gráfico es un ejercicio de nostalgia y reflexión sobre la identidad urbana que define a Buenos Aires. Las instalaciones interiores ofrecen un respiro climatizado frente al calor exterior que alcanza los 30°C en las calles. Es un recorrido pausado que invita a la lectura reposada y a la sonrisa cómplice en pleno corazón de la capital.",
+          "headline": "El Centro Cultural San Martín y los barrios acogen muestras sobre Mafalda y folclore.",
+          "lede": "La programación cultural destaca el legado de Quino y las nuevas ediciones del Festival La Porteña.",
+          "body": "La agenda de Buenos Aires combina homenajes al historietista Quino mediante la conocida muestra sobre Mafalda, junto a celebraciones musicales como el Festival La Porteña y el ciclo República. Estas actividades llenan los espacios culturales de la ciudad con propuestas gratuitas y abiertas a todo público. Con temperaturas que trepan hasta los 30°C, los asistentes buscan los espacios climatizados o las actividades al aire libre al caer la tarde. Los centros barriales organizan talleres y encuentros artísticos coincidiendo con la temporada de festivales urbanos.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         },
         {
           "n": "03",
-          "headline": "El festival República Folklore celebra la música de raíz en los espacios porteños.",
-          "lede": "El ciclo cultural reúne el folclore tradicional y las nuevas expresiones acústicas de la región.",
-          "body": "La música de raíz encuentra su espacio protagonista con el desarrollo del festival República Folklore en Buenos Aires. Este evento pone en valor las tradiciones sonoras del país mediante conciertos íntimos y encuentros de payadores y bailarines. La programación destaca por su autenticidad y su capacidad de conectar el cancionero clásico con sonoridades contemporáneas. Con un atardecer que se estira hasta las 19:45, las jornadas musicales al aire libre disfrutan de una temperatura nocturna muy agradable tras los 30°C de máxima diurna. La agenda cultural sigue muy activa en este cierre de noviembre previo a las festividades de diciembre.",
+          "headline": "El feriado de la Inmaculada Concepción marcará el calendario administrativo de diciembre.",
+          "lede": "Las dependencias oficiales y bancarias de Buenos Aires cerrarán sus puertas el próximo 8 de diciembre.",
+          "body": "El próximo feriado nacional en Argentina corresponderá al Día de la Inmaculada Concepción de María, fijado para el 2026-12-08. Durante esta jornada festiva, la administración pública, las sucursales bancarias y las oficinas postales permanecerán cerradas en toda la ciudad. Los porteños organizan sus pagos y trámites con antelación para evitar inconvenientes en el inicio de la semana. Los servicios de transporte público operarán con cronograma especial adaptado a los días feriados. La hostelería local mantendrá sus puertas abiertas para recibir a quienes disfruten del fin de semana largo.",
           "source": "saudade desk",
-          "source_date": "2026-11-24"
+          "source_date": "2026-11-25"
         }
       ]
     }
