@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-25T06:00:00+09:00",
+  "updated": "2026-11-26T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-26T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El invierno entra en Retiro con los títeres tradicionales.",
+              "lede": "Vuelve Luz de invierno al Espacio Abierto y al Teatro de Títeres del Retiro.",
+              "body": "Los termómetros se mueven hoy entre 3 y 11°C bajo cielos parcialmente nublados que apuran el atardecer a las 17:50. En este tramo de transición estacional, el festival familiar Luz de invierno regresa al Teatro de Títeres del Retiro y al Espacio Abierto para ofrecer una pausa resguardada a los paseantes. Conviene abrigarse bien al cruzar los parques madrileños durante estas tardes frías de noviembre. Las familias encuentran en estas funciones dominadas por la artesanía escénica una alternativa templada frente al descenso térmico. La luz temprana de la tarde invita a refugiarse en los centros culturales antes de que anochezca por completo en los paseos arbolados.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "02",
+              "headline": "Conde Duque expone los cruces entre ciencia y juguete.",
+              "lede": "La muestra sobre juguetes científicos anima las salas del centro cultural.",
+              "body": "El centro cultural Conde Duque acoge una exposición dedicada a los juguetes científicos que combina la historia del diseño con la curiosidad didáctica. Con temperaturas exteriores que rondan los 3 y 11°C y una tasa de cambio de 1 USD a 0.91 EUR, la visita ofrece un resguardo cultural de bajo coste para las mañanas frescas. Al mismo tiempo, la Comunidad de Madrid mantiene abierta su propuesta sobre la huella de la Generación del 27 en las artes contemporáneas. Son opciones ideales para recorrer a pie sin prisa, aprovechando los espacios interiores mientras el cielo permanece parcialmente nublado hasta la caída del sol a las 17:50.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "03",
+              "headline": "La Constitución y la Inmaculada modifican los calendarios oficiales.",
+              "lede": "Los próximos días festivos nacionales alteran los trámites en oficinas y bancos.",
+              "body": "Ante la llegada de los festivos del Día de la Constitución el 2026-12-06 y la Inmaculada Concepción el 2026-12-08, conviene anticipar cualquier gestión bancaria o administrativa en la capital. Los servicios públicos y las oficinas gubernamentales permanecerán cerrados durante esas jornadas festivas que marcan el pulso de la ciudad. El comercio local ajustará sus horarios según las normativas de apertura comercial vigentes para estos puentes de diciembre. Quienes viajen estos días deben tener en cuenta estas pausas institucionales para planificar con calma sus desplazamientos y compras cotidianas por los barrios madrileños.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El arte hecho con piezas de Lego llega a la ciudad.",
+              "lede": "La célebre exposición de construcciones suma un atractivo cultural al Portal de l’Àngel.",
+              "body": "Bajo cielos cubiertos y temperaturas que oscilan entre 10 y 15°C, la ciudad recibe la exposición de arte Lego más famosa del mundo. El aire presenta una calidad fair con un valor de PM2.5 de 3, ideal para caminar sin agobios por el eje comercial del Portal de l’Àngel. Cerca de allí, Levi’s amplía su presencia con un nuevo establecimiento en la misma avenida comercial. El atardecer llega puntual a las 17:24, recortando las siluetas urbanas bajo una luz gris y uniforme que caracteriza estas jornadas de transición otoñal en la capital catalana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "02",
+              "headline": "El Sónar recibe el reconocimiento institucional al mérito cultural.",
+              "lede": "Barcelona otorga su Medalla de Oro a los fundadores del festival de música avanzada.",
+              "body": "La trayectoria de los creadores del Sónar queda inmortalizada con la concesión de la Medalla de Oro al Mérito Cultural por parte del ayuntamiento. Con una tasa de cambio de 1 USD a 0.91 EUR, los visitantes extranjeros encuentran un marco financiero estable para disfrutar de la oferta museística local. La calidad del aire se mantiene en niveles razonables de fair con un índice de PM2.5 de 3, propicio para los trayectos a pie. Las temperaturas de 10 a 15°C y el cielo completamente cubierto invitan a detenerse en librerías y cafés del Eixample tras los paseos matinales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "03",
+              "headline": "Los puentes de diciembre suspenden la rutina administrativa.",
+              "lede": "Los festivos nacionales del 6 y el 8 de diciembre exigen previsión en los trámites.",
+              "body": "Los próximos días festivos correspondientes al Día de la Constitución el 2026-12-06 y a la Inmaculada Concepción el 2026-12-08 modificarán el ritmo habitual de oficinas públicas, notarías y entidades bancarias. Los residentes y viajeros deben resolver sus gestiones antes de que comiencen estas jornadas de descanso institucional. Las calles comerciales del centro mantendrán dinámicas particulares según los permisos especiales de apertura para estas fechas tan señaladas. Es un momento propicio para disfrutar de la arquitectura urbana con la calma propia de los días festivos en Cataluña.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El jazz independiente inunda las salas porteñas.",
+              "lede": "El FEJA 2026 reúne a decenas de músicos en múltiples escenarios de la ciudad.",
+              "body": "Buenos Aires acoge el FEJA 2026 con 27 conciertos y más de 70 músicos repartidos en 16 sedes durante cuatro jornadas dedicadas al jazz. Con un clima cálido que oscila entre 15 y 25°C bajo un cielo overcast y un índice UV de 9 considerado muy alto, se aconseja protección solar moderada en los traslados vespertinos. La calidad del aire es good con un registro de PM2.5 de 5, ideal para caminar entre los diferentes puntos del circuito musical. El atardecer se demora hasta las 19:47, permitiendo disfrutar de las tardecitas largas y sonoras en los barrios tradicionales.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "02",
+              "headline": "El universo de Mafalda se expone con guiños institucionales.",
+              "lede": "La muestra sobre Quino permite adentrarse en las viñetas más célebres del humor gráfico.",
+              "body": "La exposición dedicada a Mafalda sigue atrayendo visitantes tras el recorrido institucional que protagonizaron figuras de la realeza internacional. En paralelo, el Centro Cultural de España en Buenos Aires suma actividades dentro del circuito del Festival de Jazz Argentino, fomentando el intercambio cultural con Galicia y otras regiones. La temperatura actual se sitúa entre 15 y 25°C, con un cielo overcast que suaviza la intensidad del sol a pesar del índice UV de 9. La calidad del aire permanece en niveles de good con 5 de PM2.5, facilitando los recorridos peatonales por los centros culturales de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            },
+            {
+              "n": "03",
+              "headline": "Diciembre se prepara para el feriado de la Inmaculada Concepción.",
+              "lede": "La pausa administrativa del 8 de diciembre reorganiza los calendarios porteños.",
+              "body": "El próximo feriado nacional del Día de la Inmaculada Concepción de María, fijado para el 2026-12-08, alterará el funcionamiento de los bancos y las oficinas gubernamentales en la capital argentina. Conviene programar con antelación cualquier trámite oficial antes de que llegue esta jornada de descanso obligatorio. Los comercios de barrio y los espacios culturales ajustarán sus horarios de apertura según la afluencia prevista para el fin de semana largo. La puesta de sol a las 19:47 marcará el cierre de estos días de tregua en la dinámica urbana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-26"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-25T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El histórico Cine Gaumont se convierte estos días en la embajada oficiosa del cine internacional gracias a la Semana de Cine del Festival de Cannes 2026. La programación incluye títulos recientes que pasaron por la Croisette, ofreciendo a los espectadores locales una ventana privilegiada a las tendencias del cine de autor. Los horarios y las entradas ya están disponibles para consultar las proyecciones diarias en sus salas tradicionales del centro porteño. Este ciclo permite disfrutar de obras inéditas en el circuito comercial habitual antes de su llegada definitiva a las plataformas de streaming. Mientras tanto, la programación musical local experimenta ajustes de última hora, como la reciente cancelación del show de Cara Delevingne en el Primavera Sound Buenos Aires. El público cinéfilo encuentra así en el Gaumont un refugio perfecto frente a las tardes de lluvia y tormenta.",
               "source": "saudade desk",
               "source_date": "2026-11-20"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-19T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Madrid se prepara para la primera edición del festival La Chula con música en directo.",
-              "lede": "Viva Suecia y Siloé encabezan este nuevo encuentro cultural que dinamiza la agenda de la ciudad.",
-              "body": "La capital acoge estos días el nacimiento de La Chula, un festival que promete marcar un hito en la música contemporánea. Con agrupaciones como Viva Suecia y Siloé al frente del cartel, la cita convoca a los amantes de los sonidos independientes. Los espacios culturales habituales ajustan sus calendarios para recibir este flujo de visitantes. Conviene revisar los horarios de acceso con antelación debido a la afluencia prevista. El tipo de cambio actual se sitúa en 1 USD frente a 0.91 EUR para los viajeros internacionales que planifiquen sus compras de entradas.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "02",
-              "headline": "ANIMARIO 2026 reúne la mejor animación contemporánea en las salas madrileñas.",
-              "lede": "El festival cinematográfico ofrece proyecciones y encuentros especializados para creadores y público general.",
-              "body": "La programación de ANIMARIO vuelve a convertir las pantallas locales en un punto de referencia para el cine de animación. Las proyecciones se acompañan de encuentros con autores y talleres formativos. Es recomendable adquirir las localidades en línea para evitar largas esperas en taquilla. Los espacios expositivos mantienen sus puertas abiertas en horarios habituales durante las jornadas del festival. El ambiente invita a recorrer los barrios céntricos con calma entre una sesión y otra.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "03",
-              "headline": "El programa navideño transformará las calles con arte y música tradicional.",
-              "lede": "Bajo el lema Madrid, corazón de la Navidad, la ciudad despliega iluminación y espectáculos.",
-              "body": "Las plazas principales comienzan a engalanarse para albergar la programación festiva de este año. El circuito incluye propuestas artísticas y musicales diseñadas para todos los públicos. Los paseos nocturnos permiten observar el montaje de las estructuras lumínicas en los ejes comerciales. Las autoridades locales recomiendan el uso del transporte público para acceder al centro histórico. La vida urbana se despliega con un ritmo pausado pero constante mientras arranca la temporada.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Parque del Tibidabo acoge un recital acústico e íntimo de Estopa.",
-              "lede": "Un grupo reducido de 150 personas disfruta de la música en las alturas de la ciudad.",
-              "body": "La emblemática cima barcelonesa fue escenario de una actuación irrepetible para un público muy limitado. La calidad del aire se mantiene en niveles favorables con un registro de PM2.5 de 3, propiciando los paseos al aire libre. La temperatura oscila entre 16 y 20°C bajo una ligera lluvia de 0.3mm que apenas moja las aceras. La puesta de sol se adelanta a las 17:28, acortando las horas de luz natural. El tipo de cambio oficial permanece en 1 USD por 0.91 EUR para los visitantes.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "02",
-              "headline": "El MNAC expone la obra y el legado arquitectónico de Jujol en un recorrido de 400 metros.",
-              "lede": "La muestra ofrece una inmersión detallada en los universos creativos del singular arquitecto catalán.",
-              "body": "Las salas del museo presentan un itinerario exhaustivo por los planos, dibujos y objetos diseñados por el colaborador de Gaudí. El espacio expositivo permite observar de cerca la sutileza de sus soluciones constructivas. Se aconseja reservar franja horaria para disfrutar de la visita sin aglomeraciones en las galerías. Las condiciones meteorológicas con una máxima de 20°C acompañan los desplazamientos a pie por la montaña de Montjuïc. Los jardines cercanos invitan a una pausa tranquila tras recorrer la muestra.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "03",
-              "headline": "La pista de hielo natural abre sus puertas en el parque de Navidad de un centro comercial.",
-              "lede": "La instalación ofrece una propuesta de ocio invernal mientras la ciudad transita hacia las festividades.",
-              "body": "Los aficionados al patinaje ya pueden disfrutar de la superficie helada más grande de Barcelona. El recinto comercial ha adaptado sus espacios exteriores para albergar esta clásica actividad de temporada. La ligera precipitación de 0.3mm registrada hoy no afecta al funcionamiento de la pista cubierta. La calidad del aire se mantiene estable, permitiendo combinar las compras con el paseo al aire libre. Las líneas de autobús urbano facilitan el acceso directo al complejo durante todo el día.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El Festival Buenos Aires Rojo Sangre despliega su programación con estrenos y clásicos.",
-              "lede": "Desde la obra de Coca Sarli hasta las nuevas producciones de Cristian Ponce ocupan las salas.",
-              "body": "La cita ineludible del cine de género arranca con una selección diversa que abarca décadas de cinematografía. Las proyecciones se realizan en complejos seleccionados del centro cultural de la ciudad. El índice UV alcanza un nivel muy alto de 9, por lo que se aconseja protección solar en los trayectos diurnos. El cielo permanece overcast con temperaturas que se mueven entre 16 y 26°C. El sol se ocultará puntualmente a las 19:40, cerrando una jornada de actividad cultural intensa.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "02",
-              "headline": "El FICADI 2026 conecta la arquitectura y el diseño a través de la gran pantalla.",
-              "lede": "El festival internacional proyecta documentales y ficciones sobre el hábitat humano y urbano.",
-              "body": "Las proyecciones del Festival Internacional de Cine de Arquitectura y Diseño ocupan diversos espacios institucionales. La calidad del aire se mantiene en niveles justos con un registro de PM2.5 de 7. Con una temperatura agradable que alcanza los 26°C, resulta ideal caminar entre sedes cinematográficas. Se recuerda a los ciudadanos que el próximo 2026-11-23 se celebra el Día de la Soberanía Nacional, por lo que oficinas gubernamentales y bancos permanecerán cerrados. La ciudad ajusta sus servicios públicos para el fin de semana largo que se aproxima.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
-            },
-            {
-              "n": "03",
-              "headline": "Primavera Sound Buenos Aires llega a las pantallas mediante transmisiones en vivo.",
-              "lede": "Disney+ emite las actuaciones musicales desde Argentina para los seguidores que siguen el festival a distancia.",
-              "body": "La música en directo inunda los escenarios porteños y se expande de manera digital hacia toda la región. Las condiciones meteorológicas muestran un cielo overcast y una temperatura templada de 21°C promedio. El índice UV se sitúa en un nivel muy alto de 9, exigiendo precaución a quienes asistan a los recintos abiertos. Los transportes públicos operan con normalidad para facilitar la movilidad de los asistentes. Las celebraciones culturales se entrelazan con la llegada del feriado del Día de la Soberanía Nacional el 2026-11-23.",
-              "source": "saudade desk",
-              "source_date": "2026-11-19"
             }
           ]
         }
