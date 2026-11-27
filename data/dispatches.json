@@ -1,95 +1,95 @@
 {
   "edition": "en",
-  "filed_at": "2026-11-26T06:00:00+09:00",
-  "next_filing": "2026-11-26T21:00:00+00:00",
+  "filed_at": "2026-11-27T06:00:00+09:00",
+  "next_filing": "2026-11-27T21:00:00+00:00",
   "ai_assisted": true,
   "ai_reviewed": true,
   "ai_disclosure": "Grounded in real public data (weather via Open-Meteo, public holidays via Nager.Date) where available, phrased by AI (Gemini) and AI copy-reviewed against the saudade editorial rules. Written for this edition's readers — not translated from English. No human rewrite.",
   "cities": [
     {
-      "city": "Seoul",
+      "city": "SEOUL",
       "items": [
         {
           "n": "01",
-          "headline": "The overcast skies settle over Seoul at 5 to 14 degrees Celsius.",
-          "lede": "Moderate air with a PM2.5 reading of 37 lingers across the avenues as the sun sets by 17:15.",
-          "body": "The late autumn chill takes hold of the city as temperatures hover between 5 and 14 degrees Celsius under a persistent grey canopy. Moderate air quality registers a PM2.5 measure of 37, encouraging residents to seek indoor warmth early. The exchange rate holds steady at 1 USD to 1345 KRW for travelers exchanging currency today. As dusk arrives by 17:15, the streets quiet down before the evening commute. It is a steady rhythm for those walking the older neighborhoods.",
+          "headline": "The autumn air settles over the city under a moderate haze.",
+          "lede": "Temperatures move between 6 and 15°C today as the late afternoon light fades swiftly at 17:15.",
+          "body": "The late autumn air settles over the city under a moderate haze of 39 PM2.5. Temperatures move between 6 and 15°C today as the late afternoon light fades swiftly at 17:15, leaving the streets partially clouded. Currency exchanges trade quietly at 1 USD to 1345 KRW. Residents look ahead to the upcoming Seoul Winter Festival opening on Dec. 11. Meanwhile, late-night transit fares remain at 3,000 won for the nocturnal routes. Readers find quiet refuge in the capital as exhibitions at MMCA prepare to explore the history of Korean reading culture from metal type to AI.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "02",
-          "headline": "Seung Ah Paik's Floating Islands exhibition remains open at Gladstone Seoul.",
-          "lede": "The solo exhibition continues through January 9, 2027, offering a quiet indoor retreat from the overcast weather.",
-          "body": "Art observers looking to escape the 5 to 14 degrees Celsius chill can find quiet refuge inside Gladstone Seoul. Seung Ah Paik's solo exhibition titled Floating Islands remains on view through January 9, 2027. The works offer a measured contemplation on space and architecture that suits the muted light of the season. Visitors can pair the gallery visit with a walk through the surrounding district. It provides a grounded, indoor afternoon away from the moderate PM2.5 air quality outside.",
+          "headline": "Museum galleries prepare for upcoming exhibitions on historical printing.",
+          "lede": "Cultural institutions across the capital begin framing displays dedicated to typography and early artificial intelligence.",
+          "body": "Museum galleries prepare for upcoming exhibitions on historical printing. Cultural institutions across the capital begin framing displays dedicated to typography and early artificial intelligence. Visitors navigating the city during these cooler 6 to 15°C days will find peaceful indoor spaces at the MMCA. The reading culture showcases trace texts from ancient metal type methods forward. Outside, the moderate air quality hovers around 39 PM2.5 while the daily exchange rate holds steady at 1 USD to 1345 KRW. Evening walks grow brisk after sunset at 17:15, steering observers indoors toward quiet galleries and literary retrospectives.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "03",
-          "headline": "Preparations begin as the Seoul Winter Festival returns on December 11.",
-          "lede": "Sauna visits, outdoor skates, and traditional lanterns will soon mark the seasonal transition across the city.",
-          "body": "The city looks ahead to the upcoming Seoul Winter Festival, which officially returns on December 11. Residents are already planning visits to local saunas, outdoor ice skates, and the traditional lantern displays that define the winter calendar. These seasonal traditions offer warmth against the dropping temperatures that currently range between 5 and 14 degrees Celsius. Meanwhile, the Seoul Model Festival continues to showcase diverse cultures and styles across public venues. It is a gentle reminder of the city's ongoing cultural exchange as the year winds down toward its final month.",
+          "headline": "Late night transport options continue to serve the quiet districts.",
+          "lede": "Night transit fares stay fixed at 3,000 won for passengers moving through the darkened neighborhoods.",
+          "body": "Late night transport options continue to serve the quiet districts. Night transit fares stay fixed at 3,000 won for passengers moving through the darkened neighborhoods after sunset. The evening temperature drops toward 6°C beneath a partly cloudy sky, with daytime highs reaching 15°C. Air quality indices record a moderate 39 PM2.5 across the urban basin. Travelers exchanging currency will note the rate resting at 1 USD to 1345 KRW. As December approaches, anticipation builds quietly for the Seoul Winter Festival starting on Dec. 11, offering a welcome seasonal shift for pedestrians.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         }
       ]
     },
     {
-      "city": "Tokyo",
+      "city": "TOKYO",
       "items": [
         {
           "n": "01",
-          "headline": "An overcast sky blankets Tokyo with temperatures between 4 and 14 degrees Celsius.",
-          "lede": "Moderate air quality with a PM2.5 reading of 31 accompanies the early sunset at 16:29.",
-          "body": "The late November weather brings steady, overcast conditions to the capital as temperatures settle between 4 and 14 degrees Celsius. The moderate air quality index records a PM2.5 level of 31, typical for a quiet midweek in the metropolis. Travelers will find the exchange rate steady at 1 USD to 159 JPY when managing travel expenses today. With the sun setting early at 16:29, the city transitions quickly into its evening lighting. It is an ideal afternoon for indoor explorations and quiet observation.",
+          "headline": "A light drizzle brushes the pavement as evening approaches.",
+          "lede": "Precipitation measures a scant 0.1mm while temperatures range from 6 to 16°C beneath poor air quality.",
+          "body": "A light drizzle brushes the pavement as evening approaches. Precipitation measures a scant 0.1mm while temperatures range from 6 to 16°C beneath a poorer air quality reading of 37 PM2.5. Daylight recedes quickly with sunset arriving at 16:28. Financial exchanges settle near 1 USD to 159 JPY. Artisanal bars on the 38th-floor pour selections of Japanese craft gin for quiet patrons watching the gray horizon. Meanwhile, cultural venues display the newly unveiled dolls featuring faces of 2026, capturing contemporary likenesses in traditional craft forms.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "02",
-          "headline": "The Indiana Jones Adventure returns to Tokyo DisneySea this November.",
-          "lede": "The classic attraction reopens its doors just as autumn temperatures drop across the bay.",
-          "body": "Visitors heading to Tokyo DisneySea this month will find the popular Indiana Jones Adventure officially back in operation. The reopening coincides with crisp autumn weather, where temperatures range from 4 to 14 degrees Celsius under overcast skies. The moderate air with a PM2.5 count of 31 makes for comfortable park walking without the harsh glare of summer sun. Guests are advised to check operational hours as the early sunset at 16:29 brings nightfall swiftly. It remains a welcome return for those revisiting the park's classic pathways.",
+          "headline": "High-altitude lounges offer refuge from the damp autumn air.",
+          "lede": "A library of Japanese craft gin awaits visitors in a tower overlooking the darkening bay.",
+          "body": "High-altitude lounges offer refuge from the damp autumn air. A library of Japanese craft gin awaits visitors in a tower overlooking the darkening bay, high above the street-level drizzle. The weather brings 0.1mm of precipitation and temperatures moving between 6 and 16°C. PM2.5 levels register at 37, making the air quality noticeably poor. Currency exchange stands trade at 1 USD to 159 JPY as the early night falls at 16:28. Cultural preparations are already underway for the upcoming TokyoBay Light Wish opening on Thursday, December 10, bringing winter illuminations to the waterfront.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "03",
-          "headline": "A 38th-floor bar in Tokyo offers a library of Japanese craft gin.",
-          "lede": "A quiet high-altitude retreat pairs local spirits with views beneath the overcast afternoon skies.",
-          "body": "Travelers seeking shelter from the 4 to 14 degrees Celsius chill can retreat to a notable 38th-floor bar in Tokyo. The venue features an extensive library of Japanese craft gin, curated for quiet tastings above the city streets. Elsewhere in the arts district, Assemble covers miniature agricultural buildings in intense blue pigment for the Building Blue exhibition. Both destinations offer thoughtful indoor itineraries while the moderate PM2.5 air of 31 lingers outside. As daylight fades by 16:29, these high-rise and gallery spaces provide a measured pause from the urban rush.",
+          "headline": "Artisanal showcases highlight contemporary portrait dolls.",
+          "lede": "Craft galleries present the faces of 2026 in delicate sculptural forms before the winter lights ignite.",
+          "body": "Artisanal showcases highlight contemporary portrait dolls. Craft galleries present the faces of 2026 in delicate sculptural forms before the winter lights ignite across the city. Outside, temperatures linger between 6 and 16°C alongside a trace precipitation of 0.1mm. The air quality sits at 37 PM2.5 under a blanket of haze, and sunset arrives promptly at 16:28. Financial counters record the exchange rate at 1 USD to 159 JPY. Visitors can also find international cultural exchanges this weekend, including performances linked to the Philippines Festival Tokyo 2026.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         }
       ]
     },
     {
-      "city": "Lisbon",
+      "city": "LISBON",
       "items": [
         {
           "n": "01",
-          "headline": "Overcast skies hold over Lisbon with temperatures reaching 10 to 17 degrees Celsius.",
-          "lede": "Fair air quality with a PM2.5 level of 13 welcomes walkers as the sun sets at 17:17.",
-          "body": "Mild autumn weather settles over the capital with temperatures moving between 10 and 17 degrees Celsius beneath an overcast canopy. The fair air quality registers a clean PM2.5 reading of 13, making long walks along the riverfront especially pleasant. Visitors can exchange currency at a stable rate of 1 USD to 0.91 EUR at local institutions. Daylight fades by 17:17, casting a soft, silvery light across the historic limestone facades. It is a calm, restorative atmosphere for residents and observant travelers alike.",
+          "headline": "A morning fog softens the stone facades along the river.",
+          "lede": "Temperatures span 11 to 18°C today while air quality remains fair at a clean 7 PM2.5.",
+          "body": "A morning fog softens the stone facades along the river. Temperatures span 11 to 18°C today while air quality remains fair at a clean 7 PM2.5. The sun dips below the horizon at 17:16, casting a silvery glow over the damp cobblestones. Financial transactions settle at 1 USD to 0.91 EUR. Residents are advised to take note of upcoming public holiday closures for Restauração da Independência on 2026-12-01 and Imaculada Conceição on 2026-12-08, when banks and government offices will close. Public squares remain peaceful as locals enjoy the gentle, misty transition into late autumn.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "02",
-          "headline": "Upcoming December public holidays will affect government offices and banks.",
-          "lede": "Residents prepare for Restauração da Independência on December 1 and Imaculada Conceição on December 8.",
-          "body": "As the calendar turns toward December, residents note the approach of two upcoming public holidays across the country. Restauração da Independência falls on December 1, followed closely by Imaculada Conceição on December 8. Travelers should anticipate standard closures at government offices, banks, and post offices on both dates. Public transport may also operate on reduced holiday schedules during these days of national observance. Planning ahead ensures that administrative errands are handled well before the holiday closures take effect.",
+          "headline": "Upcoming holiday closures require advance planning for administrative tasks.",
+          "lede": "Government offices and banks will observe closures for Restauração da Independência and Imaculada Conceição.",
+          "body": "Upcoming holiday closures require advance planning for administrative tasks. Government offices and banks will observe closures for Restauração da Independência on 2026-12-01 and Imaculada Conceição on 2026-12-08. Residents manage errands early beneath a soft morning fog and mild temperatures ranging from 11 to 18°C. The air quality is notably pristine at 7 PM2.5, offering crisp outdoor conditions before sunset at 17:16. Currency conversions rest at 1 USD to 0.91 EUR. The unhurried pace of the city allows travelers to appreciate the quiet alleys undisturbed by heavy traffic.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         },
         {
           "n": "03",
-          "headline": "The GIMM Festival 2026 and cultural exhibitions animate Lisbon's autumn days.",
-          "lede": "Galleries and cultural spaces host thoughtful programming as the city transitions toward the festive month.",
-          "body": "Cultural observers can explore the ongoing GIMM Festival 2026 alongside the thought-provoking What Are Things For exhibition currently on view in the city. These events offer enriching indoor itineraries during the mild 10 to 17 degrees Celsius weather. The fair air quality, marked by a PM2.5 of 13, encourages lingering outside between gallery visits. Meanwhile, schools like the United Lisbon International School are hosting their annual TOK exhibitions to encourage quiet academic reflection. It all unfolds under the overcast skies that define Lisbon's late autumn mood before dusk arrives at 17:17.",
+          "headline": "Coastal fog lingers over the hills as the mild afternoon unfolds.",
+          "lede": "The mercury reaches 18°C after a cool 11°C dawn under fair air quality conditions.",
+          "body": "Coastal fog lingers over the hills as the mild afternoon unfolds. The mercury reaches 18°C after a cool 11°C dawn under fair air quality conditions marked by 7 PM2.5. Daylight recedes by 17:16, leaving the neighborhoods bathed in a soft twilight. Financial markets operate at an exchange rate of 1 USD to 0.91 EUR. As December approaches, residents prepare for the upcoming national holidays of Restauração da Independência on 2026-12-01 and Imaculada Conceição on 2026-12-08, planning quiet domestic routines around the public office closures.",
           "source": "saudade desk",
-          "source_date": "2026-11-26"
+          "source_date": "2026-11-27"
         }
       ]
     }
