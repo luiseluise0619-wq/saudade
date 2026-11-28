@@ -1,9 +1,101 @@
 {
   "edition": "es",
-  "updated": "2026-11-27T06:00:00+09:00",
+  "updated": "2026-11-28T06:00:00+09:00",
   "ai_assisted": true,
   "ai_disclosure": "Rolling 7-day archive of this edition's daily AI-drafted, AI-reviewed filings.",
   "days": [
+    {
+      "filed_at": "2026-11-28T06:00:00+09:00",
+      "cities": [
+        {
+          "city": "Madrid",
+          "items": [
+            {
+              "n": "01",
+              "headline": "La niebla matinal cubre los paseos del Retiro mientras el termómetro marca entre 6 y 10°C.",
+              "lede": "El Festival de Otoño se despide con teatro y danza contemporánea en diversos escenarios de la ciudad.",
+              "body": "La bruma matutina define el paisaje urbano de Madrid en estas últimas jornadas de noviembre, con temperaturas que oscilan entre 6 y 10°C y una caída temprana del sol a las 17:49. En los espacios culturales, el Festival de Otoño se despide de Madrid con una agenda de clausura que incluye la renovada Antígona de Andrea Jiménez y la danza de Marlene Monteiro Freitas. Para los viajeros que realizan operaciones financieras, el tipo de cambio oficial se sitúa en 1 USD por 0.91 EUR. Las calles del centro ya muestran las luces festivas de diciembre, combinando vino, arte y literatura en los mercados locales. Conviene abrigarse bien antes de caminar por los jardines históricos de la capital durante las primeras horas de la mañana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "02",
+              "headline": "El Movistar Arena acoge el esperado concierto de Víctor Manuel bajo la tenue luz de la tarde.",
+              "lede": "La agenda musical de la capital ofrece refugio frente al frío con grandes citas en recintos cerrados.",
+              "body": "El Movistar Arena de Madrid concentra la atención musical de la semana con el concierto de Víctor Manuel, un evento que requiere consultar con antelación los horarios de apertura de puertas y el repertorio previsto. Afuera, la penumbra otoñal se anticipa rápidamente debido al ocaso fijado para las 17:49, en un ambiente donde los termómetros se mueven discretamente entre 6 y 10°C. Los visitantes extranjeros aprovechan la estabilidad monetaria, calculada a 1 USD por 0.91 EUR, para adquirir publicaciones en las librerías del barrio de las Letras. La ciudad transita así un viernes apacible, donde la cultura de interior compensa la humedad y la niebla persistente que envuelve los monumentos más emblemáticos durante todo el día.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "03",
+              "headline": "Las administraciones públicas recuerdan el calendario de festivos de diciembre en los primeros días de frío.",
+              "lede": "El Día de la Constitución y la Inmaculada Concepción modificarán los horarios comerciales habituales.",
+              "body": "Con la llegada del mes de diciembre, la ciudad se prepara para una serie de jornadas festivas que afectarán a la rutina diaria de oficinas y comercios. Próximamente se celebrarán el Día de la Constitución el 2026-12-06 y la Inmaculada Concepción el 2026-12-08, fechas en las que los servicios administrativos permanecerán cerrados al público. Mientras tanto, el clima se mantiene fresco con registros de 6 a 10°C y una densa niebla matinal que disuade de los largos paseos al aire libre. Los visitantes internacionales pueden gestionar sus cambios de divisa a una tasa constante de 1 USD por 0.91 EUR en las principales entidades bancarias. Es un buen momento para planificar visitas a exposiciones bajo techo y disfrutar de la gastronomía tradicional en los mesones madrileños.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            }
+          ]
+        },
+        {
+          "city": "Barcelona",
+          "items": [
+            {
+              "n": "01",
+              "headline": "El cielo encapotado de Barcelona acompaña los paseos urbanos con temperaturas entre 8 y 15°C.",
+              "lede": "La fotografía de Robert Mapplethorpe llega a la ciudad con una cuidada selección de retratos de Patti Smith.",
+              "body": "Bajo un cielo completamente cubierto y una temperatura que oscila entre 8 y 15°C, Barcelona ofrece un ritmo pausado en sus calles durante este tramo final de noviembre. El atardecer llega puntual a las 17:23, invitando a buscar refugio en las salas de arte y los museos del Eixample. Entre las propuestas culturales destaca la llegada de la fotografía de Robert Mapplethorpe a Barcelona, con una exposición ineludible que incluye retratos icónicos de Patti Smith. En el ámbito financiero, el tipo de cambio se mantiene estable en 1 USD por 0.91 EUR para los viajeros internacionales. La atmósfera gris y sosegada resulta ideal para recorrer los espacios interiores sin la prisa característica de los meses estivales en la capital catalana.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "02",
+              "headline": "La red de parques públicos de la ciudad incorpora nuevos metros cuadrados en la calle Consell de Cent.",
+              "lede": "El parque público crece con la compra de seis viviendas destinadas a la reserva municipal.",
+              "body": "El compromiso municipal con la renaturalización urbana avanza con la incorporación de nuevos espacios verdes en el Eixample. El parque público crece con la compra de seis viviendas de la reserva del 30% de una finca situada en la calle Consell de Cent, ampliando las opciones para el vecindario. La jornada transcurre con temperaturas moderadas de 8 a 15°C bajo un manto de nubes que disipa la luz hasta el ocaso a las 17:23. Los viajeros que transitan por Cataluña cuentan con una equivalencia monetaria firme de 1 USD por 0.91 EUR en comercios y servicios. Las calles residenciales muestran una quietud propia de la temporada, propicia para observar la arquitectura modernista sin aglomeraciones turísticas.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "03",
+              "headline": "Los residentes organizan sus agendas ante las festividades nacionales de los primeros días de diciembre.",
+              "lede": "El Día de la Constitución y la Inmaculada Concepción traerán cierres en oficinas y administraciones.",
+              "body": "El calendario se aproxima a un período de descanso institucional con la llegada de dos jornadas festivas consecutivas en el mes de diciembre. El Día de la Constitución, fijado para el 2026-12-06, y la Inmaculada Concepción, el 2026-12-08, modificarán temporalmente los horarios de atención al ciudadano en organismos oficiales y bancos. Mientras tanto, el clima se mantiene estable entre 8 y 15°C, con cielos grises que acompañan las últimas horas de la tarde hasta que oscurece a las 17:23. Los turistas extranjeros pueden operar con una cotización de 1 USD por 0.91 EUR, facilitando transacciones en alojamientos y restaurantes locales. Conviene revisar las aperturas de comercios singulares antes de planificar desplazamientos urbanos durante los días festivos.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            }
+          ]
+        },
+        {
+          "city": "Buenos Aires",
+          "items": [
+            {
+              "n": "01",
+              "headline": "Un cielo despejado y un índice UV de 9 dominan la jornada porteña con 22 a 31°C.",
+              "lede": "La calidad del aire se mantiene en niveles favorables mientras la ciudad disfruta de una intensa luz solar.",
+              "body": "Buenos Aires recibe el final de la semana con condiciones meteorológicas plenamente veraniegas, registrando temperaturas entre 22 y 31°C bajo un cielo despejado. El índice UV alcanza un valor de 9, considerado muy alto, por lo que se recomienda protección solar durante las horas centrales del día. La calidad del aire permanece en niveles buenos, con un registro de PM2.5 de 10 que favorece las caminatas por los bulevares arbolados. El sol se ocultará recién a las 19:49, regalando muchas horas de luz para disfrutar de los cafés tradicionales y las plazas de Palermo. Es una época propicia para observar la floración de los jacarandás y el ir y venir cotidiano de los porteños en las terrazas de la ciudad.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "02",
+              "headline": "La cartelera cultural de Buenos Aires destaca con muestras de cine europeo y festivales internacionales.",
+              "lede": "El mejor cine español de San Sebastián y Málaga llega a la capital junto con los festivales de Sitges y Biarritz.",
+              "body": "La agenda cultural porteña ofrece una amplia variedad de propuestas audiovisuales que combinan lo mejor de la cinematografía internacional y regional. Se presentan en Buenos Aires lo mejor de los festivales de Sitges y Biarritz, atrayendo a cinéfilos y críticos a las salas independientes de la ciudad. Asimismo, ciclos dedicados al cine español traen producciones recientes sobre fútbol femenino, amores rotos y flamenco procedentes de San Sebastián y Málaga. Todo esto ocurre bajo un clima luminoso de 22 a 31°C, con un nivel de radiación UV de 9 que exige precaución al aire libre. La tarde se prolongará hasta el atardecer a las 19:49, permitiendo disfrutar de largas caminatas urbanas con una excelente calidad del aire.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            },
+            {
+              "n": "03",
+              "headline": "Los residentes planifican el descanso estival ante la cercanía del feriado de la Inmaculada Concepción.",
+              "lede": "El próximo feriado del 2026-12-08 alterará la actividad habitual en oficinas gubernamentales y bancarias.",
+              "body": "El calendario administrativo argentino señala una pausa inminente con la llegada del feriado correspondiente al Día de la Inmaculada Concepción de María, programado para el 2026-12-08. Durante esa jornada, los bancos, oficinas públicas y dependencias estatales permanecerán cerrados, por lo que conviene anticipar cualquier gestión oficial. En el exterior, el termómetro marca entre 22 y 31°C en una jornada completamente despejada, con un índice UV de 9 que aconseja buscar sombra en los parques urbanos. La calidad del aire se mantiene limpia, con un índice PM2.5 de 10, ideal para pasear a pie o en bicicleta. El sol se despedirá cerca de las 19:49, cerrando un día de intenso calor primaveral en la metrópolis.",
+              "source": "saudade desk",
+              "source_date": "2026-11-28"
+            }
+          ]
+        }
+      ]
+    },
     {
       "filed_at": "2026-11-27T06:00:00+09:00",
       "cities": [
@@ -551,98 +643,6 @@
               "body": "El próximo 2026-11-23 se conmemora el Día de la Soberanía Nacional, instaurando un fin de semana largo conmemorativo en Buenos Aires. Las oficinas gubernamentales, bancos y dependencias postales permanecerán cerradas durante la jornada festiva oficial. El transporte público funcionará con cronogramas adaptados a los días domingos y feriados, por lo que conviene revisar los trayectos. Los espacios culturales y gastronómicos mantendrán una oferta especial para los residentes y turistas que permanezcan en la ciudad. Las condiciones meteorológicas serán agradables con registros de 17 a 28°C y una puesta de sol a las 19:43. La calidad del aire se mantiene en niveles razonables de fair con PM2.5 en 12.",
               "source": "saudade desk",
               "source_date": "2026-11-22"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "filed_at": "2026-11-21T06:00:00+09:00",
-      "cities": [
-        {
-          "city": "Madrid",
-          "items": [
-            {
-              "n": "01",
-              "headline": "La Casa Encendida acoge el festival Abrapalabra.",
-              "lede": "La cita cultural reúne propuestas literarias y escénicas del 9 al 13 de diciembre.",
-              "body": "El centro cultural La Casa Encendida se prepara para recibir una nueva edición de su tradicional encuentro literario y artístico. El festival Abrapalabra ocupará los espacios del edificio durante cinco jornadas consecutivas, ofreciendo lecturas, performances y talleres abiertos al público. Es un refugio excelente para las tardes de diciembre en la ciudad, combinando la creación contemporánea con la reflexión pausada. Conviene revisar los horarios específicos de cada sesión en su web oficial para asegurar el acceso a las salas principales, dado el aforo limitado que caracteriza a la programación.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "02",
-              "headline": "El festival Animario dedica su novena edición al cine de Estonia.",
-              "lede": "La cinematografía báltica contemporánea toma las pantallas madrileñas con una selección de autor.",
-              "body": "La novena edición del festival Animario pone el foco en Estonia, reconocida este año como gran potencia de la animación de autor. Las proyecciones muestran la singularidad visual y narrativa de directores nórdicos que rara vez llegan a los circuitos comerciales habituales. Cada sesión invita a una contemplación reposada, ideal para los espectadores que buscan estepas de celuloide diferentes y texturas artesanales. Las entradas se adquieren directamente en taquilla o a través de los canales habituales del recinto colaborador. Es una oportunidad idónea para observar la evolución estetica del medio fuera de los grandes estudios.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "03",
-              "headline": "Madrid anuncia la primera edición del festival musical La Chula.",
-              "lede": "Viva Suecia y Siloé encabezan el cartel de este nuevo encuentro sonoro.",
-              "body": "La agenda cultural de la capital suma un nuevo atractivo con la presentación oficial del festival La Chula. El evento musical ya ha confirmado a bandas consolidadas de la escena nacional como Viva Suecia y Siloé como primeras cabezas de cartel. Esta iniciativa busca consolidarse como un punto de encuentro para los amantes del pop de autor y los directos de formato mediano. La organización irá desvelando los nombres restantes y los escenarios específicos en las próximas semanas. Los viajeros atentos ya pueden marcar el hito en sus calendarios para planificar futuras escapadas musicales a la ciudad.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            }
-          ]
-        },
-        {
-          "city": "Barcelona",
-          "items": [
-            {
-              "n": "01",
-              "headline": "Barcelona estrena un gran parque hinchable de más de 4.000 metros cuadrados.",
-              "lede": "Una nueva superficie de ocio al aire libre se integra en el paisaje urbano.",
-              "body": "La ciudad cuenta desde esta semana con una instalación singular orientada al juego y al movimiento en espacios abiertos. Se trata de un parque hinchable gigante que supera los 4.000 metros cuadrados de extensión total. La estructura ofrece un recorrido lúdico poco convencional dentro de la trama urbana, pensado para dinamizar zonas de esparcimiento vecinal. Conviene consultar la ubicación exacta y las normas de acceso antes de planificar la visita, especialmente en fines de semana. Es una propuesta inesperada que altera temporalmente la escala de los parques tradicionales de Barcelona.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "02",
-              "headline": "Jornadas de cine de barrio en los espacios públicos de la ciudad.",
-              "lede": "Las proyecciones locales recuperan el pulso comunitario bajo cielos cubiertos.",
-              "body": "Las calles barcelonesas acogen estos días una nueva edición de las proyecciones de cine en el barrio, acercando títulos independientes a plazas y centros cívicos. Con temperaturas que oscilan entre 13 y 18°C y un cielo permanentemente overcast, el ambiente invita a abrigarse con moderación durante los paseos vespertinos. El atardecer llega puntual a las 17:27, marcando el inicio de las sesiones al aire libre o en recintos resguardados del viento. La calidad del aire se mantiene en niveles moderados con un registro de PM2.5 en 15, permitiendo caminar sin prisa por los distintos distritos.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "03",
-              "headline": "Mango Home amplía su presencia comercial con una apertura en Murcia.",
-              "lede": "La firma consolida su red de tiendas especializadas en decoración y hogar.",
-              "body": "La expansión de la marca continúa sumando establecimientos especializados en artículos textiles y menaje para la casa. Con esta nueva apertura en Murcia, Mango Home alcanza ya las 12 tiendas operativas en España. Los espacios apuestan por una estética sobria y materiales nobles, alineados con las tendencias actuales de interiorismo calmado. Para los observadores del sector retail, este crecimiento refleja el interés constante por el diseño funcional en el ámbito doméstico peninsular. Las colecciones priorizan tonos neutros y fibras naturales que encajan con una filosofía de vida pausada y consciente.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            }
-          ]
-        },
-        {
-          "city": "Buenos Aires",
-          "items": [
-            {
-              "n": "01",
-              "headline": "El cine Gaumont recibe la Semana de Cine del Festival de Cannes 2026.",
-              "lede": "La cartelera porteña ofrece una selección exclusiva de la cinematografía internacional reciente.",
-              "body": "El histórico cine Gaumont se convierte estos días en la sede principal para disfrutar de la Semana de Cine del Festival de Cannes 2026. La programación detallada incluye horarios y venta de entradas anticipadas para obras que han recorrido los certámenes más prestigiosos del mundo. Con temperaturas que escalan de 18 a 28°C bajo un cielo overcast, el clima invita a refugiarse en las salas oscuras durante las horas centrales. El índice UV alcanza un nivel 8 muy alto, por lo que se recomienda precaución al transitar las calles antes de la caída del sol a las 19:42. La calidad del aire registra un PM2.5 de 19, manteniéndose en parámetros moderados.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "02",
-              "headline": "Inauguración de la exposición Una ventana a Azerbaiyán en Buenos Aires.",
-              "lede": "Un nuevo puente cultural acerca tradiciones y expresiones artísticas del Cáucaso.",
-              "body": "La agenda de exposiciones de la capital se enriquece con la apertura de Una ventana a Azerbaiyán, una muestra diseñada para descubrir el patrimonio y la estética de aquel país. Las salas albergan piezas artesanales, textiles y registros visuales que dialogan con la arquitectura ecléctica porteña. Es una parada recomendada para los caminantes urbanos que disfrutan de descubrimientos silenciosos en museos y centros culturales independientes. Conviene verificar los horarios de apertura de fin de semana para planificar el recorrido con la calma necesaria.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
-            },
-            {
-              "n": "03",
-              "headline": "Próximo feriado por el Día de la Soberanía Nacional este 23 de noviembre.",
-              "lede": "Las oficinas públicas y entidades bancarias permanecerán cerradas por el fin de semana largo.",
-              "body": "El calendario nacional señala la llegada del Día de la Soberanía Nacional, conmemorando la fecha oficial del 23 de noviembre. Como es habitual durante los fines de semana largos en Argentina, las administraciones públicas, bancos y oficinas postales suspenderán su atención al público. Los servicios esenciales funcionarán con guardias reducidas, mientras que los espacios verdes y paseos públicos mantendrán sus puertas abiertas para el descanso de residentes y viajeros. Es el momento perfecto para disfrutar de la ciudad a un ritmo más lento, prestando atención a los horarios especiales del comercio barrial.",
-              "source": "saudade desk",
-              "source_date": "2026-11-21"
             }
           ]
         }
